@@ -104,7 +104,7 @@ while ($count16 <= $count15) {
 	if (string_length(%varcstring527) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring527), 0) ! -1) {
 		$int21 = struct_param($struct20, param_1314);
 		$int22 = struct_param($struct20, param_1315);
-		$int29 = ~script4780($int22);
+		$int29 = ~ca_specific_taskcount($int22);
 		$int30 = $intarray0($int22);
 		if ($int29 = $int30) {
 			$colour31 = 0x0dc10d;
@@ -146,7 +146,7 @@ while ($count16 <= $count15) {
 		if (cc_find($component6, $int13) = ^true) {
 			cc_setop(1, "View");
 			cc_setopbase("<col=ff9040><$string0></col>");
-			cc_setonop("script4801($component12, $count16)");
+			cc_setonop("ca_boss_select($component12, $count16)");
 		}
 		$int13 = calc($int13 + 1);
 	}

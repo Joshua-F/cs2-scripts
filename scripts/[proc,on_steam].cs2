@@ -1,6 +1,6 @@
 // 3769
 [proc,on_steam]()(int)
-if (_6527 ! 1) {
+if (platformtype ! ^platformtype_steam) {
 	return(0);
 }
 return(1);
