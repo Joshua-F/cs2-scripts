@@ -31,7 +31,7 @@ def_int $int21 = calc($int16 + 8);
 .cc_settrans(255);
 .cc_setop(1, "Select <col=ff981f><$string0>");
 if ($int12 = 0) {
-	.cc_setonop("script4812($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $struct11)");
+	.cc_setonop("ca_rewards_tiers_init($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $struct11)");
 }
 $int9 = calc($int9 + 1);
 cc_create($component2, ^iftype_graphic, $int8);
