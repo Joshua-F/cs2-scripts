@@ -22,8 +22,8 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0x03cffd);
 cc_setfill(false);
 cc_setlinewid(2);
-_1128(0, 0);
-if_setontimer("script4724($component1, 0, $int0, 1500, %varbit12346)", $component1);
+cc_setarc(0, 0);
+if_setontimer("spec_regen_arc($component1, 0, $int0, 1500, %varbit12346)", $component1);
 if (%varbit12346 = 1) {
 	cc_sethide(true);
 }

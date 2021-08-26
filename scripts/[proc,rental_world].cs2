@@ -1,5 +1,5 @@
 // 3720
-[proc,script3720]()(int)
+[proc,rental_world]()(int)
 def_int $flags0 = worldflags;
 if (testbit($flags0, 13) = ^true) {
 	return(1);

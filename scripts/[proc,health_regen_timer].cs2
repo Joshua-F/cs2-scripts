@@ -31,7 +31,7 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xf00b04);
 cc_setfill(false);
 cc_setlinewid(2);
-_1128(0, 0);
+cc_setarc(0, 0);
 if_setontimer("script4719($component1, 0, $int0, $int2, %varbit12346)", $component1);
 if (%varbit12346 = 1) {
 	cc_sethide(true);

@@ -1,5 +1,5 @@
 // 5234
-[proc,script5234](component $component0, struct $struct1, string $text0, int $int2, int $width3, int $int4, int $int5)(int)
+[proc,deadman_sigils_buildslot](component $component0, struct $struct1, string $text0, int $int2, int $width3, int $int4, int $int5)(int)
 cc_deleteall($component0);
 def_int $int6 = 0;
 cc_create($component0, ^iftype_rectangle, $int6);
@@ -18,31 +18,31 @@ if ($struct1 ! null) {
 			cc_setcolour(^red);
 			switch_int ($int8) {
 				case 2 :
-					$graphic7 = "graphic_3507";
+					$graphic7 = "deadman_sigil_skulls,4";
 				case 3 :
-					$graphic7 = "graphic_3508";
+					$graphic7 = "deadman_sigil_skulls,5";
 				case default :
-					$graphic7 = "graphic_3506";
+					$graphic7 = "deadman_sigil_skulls,3";
 			}
 		case 2 :
 			cc_setcolour(0x0070ff);
 			switch_int ($int8) {
 				case 2 :
-					$graphic7 = "graphic_3504";
+					$graphic7 = "deadman_sigil_skulls,1";
 				case 3 :
-					$graphic7 = "graphic_3505";
+					$graphic7 = "deadman_sigil_skulls,2";
 				case default :
-					$graphic7 = "graphic_3503";
+					$graphic7 = "deadman_sigil_skulls,0";
 			}
 		case default :
 			cc_setcolour(^yellow);
 			switch_int ($int8) {
 				case 2 :
-					$graphic7 = "graphic_3510";
+					$graphic7 = "deadman_sigil_skulls,7";
 				case 3 :
-					$graphic7 = "graphic_3511";
+					$graphic7 = "deadman_sigil_skulls,8";
 				case default :
-					$graphic7 = "graphic_3509";
+					$graphic7 = "deadman_sigil_skulls,6";
 			}
 	}
 } else {

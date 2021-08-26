@@ -473,7 +473,7 @@
 [**471**](scripts/[proc,quickprayer_button_update].cs2) `[proc,quickprayer_button_update]`  
 [**472**](scripts/[clientscript,quickprayer_close].cs2) `[clientscript,quickprayer_close]`  
 [**473**](scripts/[clientscript,quickprayer_close_timeout].cs2) `[clientscript,quickprayer_close_timeout]`  
-[**474**](scripts/[clientscript,script474].cs2)  
+[**474**](scripts/[clientscript,rareitems_diango_update].cs2) `[clientscript,rareitems_diango_update]`  
 [**475**](scripts/[proc,pest_rewards_divider].cs2) `[proc,pest_rewards_divider]`  
 [**476**](scripts/[clientscript,br_hud_writetimer].cs2) `[clientscript,br_hud_writetimer]`  
 [**477**](scripts/[clientscript,ntk_textbox].cs2) `[clientscript,ntk_textbox]`  
@@ -2174,7 +2174,7 @@
 [**2172**](scripts/[clientscript,script2172].cs2)  
 [**2173**](scripts/[proc,script2173].cs2)  
 [**2174**](scripts/[proc,tournament_beta_world].cs2) `[proc,tournament_beta_world]`  
-[**2175**](scripts/[proc,script2175].cs2)  
+[**2175**](scripts/[proc,nosavegame_world].cs2) `[proc,nosavegame_world]`  
 [**2176**](scripts/[clientscript,logout_layout_update].cs2) `[clientscript,logout_layout_update]`  
 [**2177**](scripts/[proc,setvolumesounds].cs2) `[proc,setvolumesounds]`  
 [**2178**](scripts/[proc,setvolumeareasounds].cs2) `[proc,setvolumeareasounds]`  
@@ -3719,7 +3719,7 @@
 [**3717**](scripts/[proc,league_tutorial_interface_update_button2].cs2) `[proc,league_tutorial_interface_update_button2]`  
 [**3718**](scripts/[proc,league_tutorial_interface_update_graphic].cs2) `[proc,league_tutorial_interface_update_graphic]`  
 [**3719**](scripts/[proc,in_league_tutorial].cs2) `[proc,in_league_tutorial]`  
-[**3720**](scripts/[proc,script3720].cs2)  
+[**3720**](scripts/[proc,rental_world].cs2) `[proc,rental_world]`  
 [**3721**](scripts/[proc,script3721].cs2)  
 [**3722**](scripts/[clientscript,script3722].cs2)  
 [**3723**](scripts/[proc,script3723].cs2)  
@@ -4521,7 +4521,7 @@
 [**4519**](scripts/[proc,script4519].cs2)  
 [**4520**](scripts/[clientscript,script4520].cs2)  
 [**4521**](scripts/[clientscript,script4521].cs2)  
-[**4522**](scripts/[clientscript,script4522].cs2)  
+[**4522**](scripts/[proc,stat_boosts_hud_debug_mes].cs2) `[proc,stat_boosts_hud_debug_mes]`  
 [**4523**](scripts/[clientscript,script4523].cs2)  
 [**4524**](scripts/[clientscript,script4524].cs2)  
 [**4525**](scripts/[proc,script4525].cs2)  
@@ -4723,7 +4723,7 @@
 [**4721**](scripts/[clientscript,spec_regen_timer].cs2) `[clientscript,spec_regen_timer]`  
 [**4722**](scripts/[clientscript,script4722].cs2)  
 [**4723**](scripts/[proc,spec_regen_timer].cs2) `[proc,spec_regen_timer]`  
-[**4724**](scripts/[clientscript,script4724].cs2)  
+[**4724**](scripts/[clientscript,spec_regen_arc].cs2) `[clientscript,spec_regen_arc]`  
 [**4725**](scripts/[clientscript,script4725].cs2)  
 [**4726**](scripts/[proc,script4726].cs2)  
 [**4727**](scripts/[proc,mouseover_text].cs2) `[proc,mouseover_text]`  
@@ -4805,10 +4805,10 @@
 [**4803**](scripts/[proc,ca_boss_disable_search].cs2) `[proc,ca_boss_disable_search]`  
 [**4804**](scripts/[clientscript,ca_overview_init].cs2) `[clientscript,ca_overview_init]`  
 [**4805**](scripts/[proc,ca_overview_draw_interface].cs2) `[proc,ca_overview_draw_interface]`  
-[**4806**](scripts/[proc,script4806].cs2)  
-[**4807**](scripts/[proc,script4807].cs2)  
+[**4806**](scripts/[proc,ca_overview_create_tiers].cs2) `[proc,ca_overview_create_tiers]`  
+[**4807**](scripts/[proc,ca_setup_progress_bar].cs2) `[proc,ca_setup_progress_bar]`  
 [**4808**](scripts/[proc,ca_overview_create_personal].cs2) `[proc,ca_overview_create_personal]`  
-[**4809**](scripts/[proc,script4809].cs2)  
+[**4809**](scripts/[proc,ca_overview_create_personal_stat].cs2) `[proc,ca_overview_create_personal_stat]`  
 [**4810**](scripts/[proc,script4810].cs2)  
 [**4811**](scripts/[clientscript,ca_rewards_init].cs2) `[clientscript,ca_rewards_init]`  
 [**4812**](scripts/[clientscript,ca_rewards_tiers_init].cs2) `[clientscript,ca_rewards_tiers_init]`  
@@ -5227,13 +5227,13 @@
 [**5225**](scripts/[proc,script5225].cs2)  
 [**5226**](scripts/[proc,script5226].cs2)  
 [**5227**](scripts/[proc,script5227].cs2)  
-[**5228**](scripts/[clientscript,script5228].cs2)  
-[**5229**](scripts/[clientscript,script5229].cs2)  
-[**5230**](scripts/[proc,script5230].cs2)  
-[**5231**](scripts/[clientscript,script5231].cs2)  
+[**5228**](scripts/[clientscript,deadman_sigils_init].cs2) `[clientscript,deadman_sigils_init]`  
+[**5229**](scripts/[clientscript,deadman_sigils_draw].cs2) `[clientscript,deadman_sigils_draw]`  
+[**5230**](scripts/[proc,deadman_sigils_draw].cs2) `[proc,deadman_sigils_draw]`  
+[**5231**](scripts/[clientscript,deadman_sigils_reviewsize].cs2) `[clientscript,deadman_sigils_reviewsize]`  
 [**5232**](scripts/[proc,script5232].cs2)  
-[**5233**](scripts/[proc,script5233].cs2)  
-[**5234**](scripts/[proc,script5234].cs2)  
+[**5233**](scripts/[proc,deadman_sigils_buildoffer].cs2) `[proc,deadman_sigils_buildoffer]`  
+[**5234**](scripts/[proc,deadman_sigils_buildslot].cs2) `[proc,deadman_sigils_buildslot]`  
 [**5235**](scripts/[clientscript,script5235].cs2)  
 [**5236**](scripts/[clientscript,script5236].cs2)  
 [**5237**](scripts/[proc,script5237].cs2)  

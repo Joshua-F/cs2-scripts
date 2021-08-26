@@ -11,7 +11,7 @@ if (%varbit12346 = 1 | stat(hitpoints) = stat_base(hitpoints)) {
 		$int4 = 0;
 		cc_sethide(false);
 	}
-	_1128(0, calc(scale($int2, $int3, 65536) % 65536));
+	cc_setarc(0, calc(scale($int2, $int3, 65536) % 65536));
 }
 if ($int2 >= $int3) {
 	$int2 = 0;

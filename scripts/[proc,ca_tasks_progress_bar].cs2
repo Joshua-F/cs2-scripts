@@ -51,13 +51,13 @@ if (cc_find($component0, 0) = ^false) {
 	cc_create($component0, ^iftype_graphic, $int4);
 	cc_setsize(calc($width7 - 4), 27, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("graphic_3392");
+	cc_setgraphic("ca_progress_bar,1");
 	cc_settiling(true);
 	$int4 = calc($int4 + 1);
 	cc_create($component0, ^iftype_graphic, $int4);
 	cc_setsize($width13, 27, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("graphic_3391");
+	cc_setgraphic("ca_progress_bar,0");
 	cc_settiling(true);
 	$int4 = calc($int4 + 1);
 	cc_create($component0, ^iftype_text, $int4);

@@ -85,4 +85,4 @@ if ($int6 <= if_getheight(interface_78:3)) {
 }
 if_setscrollpos(0, 0, interface_78:3);
 ~scrollbar_vertical(interface_78:4, interface_78:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-if_setoninvtransmit("script474($flags0, $flags1, $flags2, $flags3, $flags4){inv}", interface_78:3);
+if_setoninvtransmit("rareitems_diango_update($flags0, $flags1, $flags2, $flags3, $flags4){inv}", interface_78:3);

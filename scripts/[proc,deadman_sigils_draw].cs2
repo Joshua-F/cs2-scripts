@@ -1,5 +1,5 @@
 // 5230
-[proc,script5230](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
+[proc,deadman_sigils_draw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
 def_int $int14 = calc(if_getwidth($component0) - 20);
 cc_deleteall($component3);
 def_int $int15 = 0;
@@ -18,9 +18,9 @@ if (%var261 ! 0 | %var262 ! 0 | %var263 ! 0) {
 	cc_settextfont(p12_full);
 	cc_settext("First, choose a free sigil:");
 	$int16 = calc($int16 + 25);
-	$int15, $int16 = ~script5233(%var261, $component5, 235, $int14, $component3, $int15, $int16);
-	$int15, $int16 = ~script5233(%var262, $component6, 255, $int14, $component3, $int15, $int16);
-	$int15, $int16 = ~script5233(%var263, $component7, 235, $int14, $component3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%var261, $component5, 235, $int14, $component3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%var262, $component6, 255, $int14, $component3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%var263, $component7, 235, $int14, $component3, $int15, $int16);
 	$int16 = calc($int16 + 2);
 	if ($int16 > 160) {
 		$int17 = if_getscrolly($component2);
@@ -68,7 +68,7 @@ if ($namedobj25 ! null) {
 	}
 }
 def_int $int26 = calc(4 + 12 * ~max(~max(paraheight($string0, $width19, p12_full), paraheight($string1, $width19, p12_full)), paraheight($string2, $width19, p12_full)));
-def_int $int27 = ~script5234($component11, $struct20, $string0, 0, $width19, $int26, 0);
-$int27 = ~script5234($component12, $struct21, $string1, 1, $width19, $int26, $int27);
-$int27 = ~script5234($component13, $struct22, $string2, 2, $width19, $int26, $int27);
+def_int $int27 = ~deadman_sigils_buildslot($component11, $struct20, $string0, 0, $width19, $int26, 0);
+$int27 = ~deadman_sigils_buildslot($component12, $struct21, $string1, 1, $width19, $int26, $int27);
+$int27 = ~deadman_sigils_buildslot($component13, $struct22, $string2, 2, $width19, $int26, $int27);
 ~script5232($int16, $int27, if_getlayer($component0), $component0, $component10, $component9);
