@@ -16,7 +16,7 @@ switch_enum ($enum1) {
 		if (%varbit4084 = 1) {
 			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:34));
 		} else if (%varbit13037 = 1) {
-			_2122("graphic_3513", enum(component, component, $enum1, interface_161:34));
+			_2122("resize_map_clickmask_bond", enum(component, component, $enum1, interface_161:34));
 		} else {
 			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:34));
 		}
@@ -28,7 +28,7 @@ switch_enum ($enum1) {
 		if (%varbit4084 = 1) {
 			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:34));
 		} else if (%varbit13037 = 1) {
-			_2122("graphic_3513", enum(component, component, $enum1, interface_161:34));
+			_2122("resize_map_clickmask_bond", enum(component, component, $enum1, interface_161:34));
 		} else {
 			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:34));
 		}
@@ -38,7 +38,7 @@ switch_enum ($enum1) {
 		}
 	case enum_1129 :
 		if (~wiki_icon_enabled = 1) {
-			_2122("graphic_2422", enum(component, component, $enum1, interface_161:34));
+			_2122("fixed_map_clickmask_wiki", enum(component, component, $enum1, interface_161:34));
 		} else {
 			_2122("fixed_map_clickmask", enum(component, component, $enum1, interface_161:34));
 		}
