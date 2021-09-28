@@ -1,13 +1,13 @@
 // 217
-[clientscript,menu](int $int0, string $text0, string $string1)
+[clientscript,menu](string $text0, string $string1, boolean $boolean0)
 def_component $component1 = interface_187:0;
 def_component $component2 = interface_187:3;
 def_component $component3 = interface_187:2;
 def_component $component4 = interface_187:1;
 if (~on_mobile = true) {
-	$int0 = 0;
+	$boolean0 = false;
 }
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	~chatdefault_stopinput;
 }
 ~script219($component1, $component2, $component3, $text0, 33);
@@ -19,11 +19,11 @@ def_int $index8 = string_indexof_string($string1, "|", 0);
 def_string $string2 = "";
 while ($index8 ! -1) {
 	$string2 = substring($string1, 0, $index8);
-	$int6, $height7 = ~menu_createentry($string2, $component2, $component4, $width5, $int6, $height7, $int0);
+	$int6, $height7 = ~menu_createentry($string2, $component2, $component4, $width5, $int6, $height7, $boolean0);
 	$string1 = substring($string1, calc($index8 + 1), string_length($string1));
 	$index8 = string_indexof_string($string1, "|", 0);
 }
-$int6, $height7 = ~menu_createentry($string1, $component2, $component4, $width5, $int6, $height7, $int0);
+$int6, $height7 = ~menu_createentry($string1, $component2, $component4, $width5, $int6, $height7, $boolean0);
 if_setscrollsize(0, $height7, $component2);
 if_setscrollpos(0, 0, $component2);
 if ($height7 > if_getheight($component2)) {

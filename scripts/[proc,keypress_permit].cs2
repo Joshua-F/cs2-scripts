@@ -1,23 +1,23 @@
 // 1701
-[proc,keypress_permit](int $int0, int $int1)(int)
+[proc,keypress_permit](interface $interface0, interface $interface1)(int)
 if (%varcint187 > clientclock) {
 	return(0);
 }
 def_enum $enum2 = ~toplevel_getcomponents;
 if (if_hassub(enum(component, component, $enum2, interface_161:21)) = true) {
-	if (%varcint190 = 1 & $int1 ! 595) {
+	if (%varcint190 = 1 & $interface1 ! interface_595) {
 		return(0);
-	} else if (%varbit9639 = 1 & %varbit9638 = 1 & $int1 ! 134) {
+	} else if (%varbit9639 = 1 & %varbit9638 = 1 & $interface1 ! interface_134) {
 		return(0);
 	}
 }
-if (if_hassub(enum(component, component, $enum2, interface_161:20)) = true & %varcint435 = true & $int0 ! 558) {
+if (if_hassub(enum(component, component, $enum2, interface_161:20)) = true & %varcint435 = true & $interface0 ! interface_558) {
 	return(0);
 }
 if ($enum2 = enum_1132 & if_hassub(interface_165:35) = true) {
-	if ($int0 = 16) {
+	if ($interface0 = interface_16) {
 		$enum2 = $enum2;
-	} else if ($int1 = 595 & %varcint190 = 1) {
+	} else if ($interface1 = interface_595 & %varcint190 = 1) {
 		$enum2 = $enum2;
 	} else {
 		return(0);

@@ -1,5 +1,5 @@
 // 1404
-[clientscript,script1404](int $int0, obj $obj1, int $int2, int $int3, string $string0)
+[clientscript,script1404](int $int0, obj $obj1, int $int2, string $string0, boolean $boolean3)
 def_component $component4 = enum(int, component, enum_1461, $int0);
 if ($component4 = null) {
 	return;
@@ -49,7 +49,7 @@ cc_create($component4, ^iftype_graphic, 5);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(12, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("cross_interface,5");
-if ($int3 = 1) {
+if ($boolean3 = true) {
 	cc_sethide(true);
 	cc_create($component4, ^iftype_text, 6);
 	cc_setsize(56, 32, ^setsize_abs, ^setsize_abs);

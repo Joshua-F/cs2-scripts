@@ -1,6 +1,6 @@
 // 2068
 [proc,toplevel_keypress](int $key0, enum $enum1, boolean $boolean2)
-if (~keypress_permit(-1, -1) = 0) {
+if (~keypress_permit(null, null) = 0) {
 	return;
 }
 def_component $component3 = enum(component, component, $enum1, interface_161:20);

@@ -1,5 +1,5 @@
 // 4316
-[clientscript,clan_rankpopup](int $int0, int $int1, int $int2, int $int3, component $component4, string $string0)
+[clientscript,clan_rankpopup](string $string0, int $int0, int $int1, int $int2, boolean $boolean3, component $component4)
 ~script4206(interface_289:1, interface_289:2, interface_289:3, calc($int0 + 1), $component4);
 if_sethide(true, interface_289:7);
 if_sethide(true, interface_289:8);
@@ -20,7 +20,7 @@ def_int $int12 = enum_getoutputcount(enum_3795);
 while ($int12 > 0) {
 	$int12 = calc($int12 - 1);
 	$int9 = enum(int, int, enum_3795, $int12);
-	if ($int9 >= $int1 & $int9 <= $int2 | $int9 = 128 & $int3 = 1) {
+	if ($int9 >= $int1 & $int9 <= $int2 | $int9 = 128 & $boolean3 = true) {
 		cc_create(interface_289:6, ^iftype_rectangle, $int5);
 		$int5 = calc($int5 + 1);
 		cc_setsize(0, $int6, ^setsize_minus, ^setsize_abs);

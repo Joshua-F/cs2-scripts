@@ -1,6 +1,6 @@
 // 4504
 [clientscript,script4504](int $key0, char $keychar1, string $string0, component $component2, component $component3, int $comsubid4, int $comsubid5, struct $struct6, component $component7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11)
-if (~keypress_permit(-1, 162) = 0) {
+if (~keypress_permit(null, interface_162) = 0) {
 	return;
 }
 if ($key0 = ^key_return) {

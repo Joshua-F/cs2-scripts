@@ -1,5 +1,5 @@
 // 603
-[clientscript,poll_initialise](component $component0, component $component1, component $component2, component $component3, string $text0, string $text1)
+[clientscript,poll_initialise](string $text0, component $component0, component $component1, component $component2, component $component3, string $text1)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:20)) = false) {
 	return;
 }

@@ -1,6 +1,6 @@
 // 1737
 [clientscript,worldmap_search_input](int $key0, char $keychar1, component $component2, int $comsubid3, int $comsubid4, coord $coord5)
-if (~keypress_permit(-1, 595) = 0) {
+if (~keypress_permit(null, interface_595) = 0) {
 	return;
 }
 if (%varcint190 = 1 & cc_find($component2, $comsubid3) = ^true & .cc_find($component2, $comsubid4) = ^true) {

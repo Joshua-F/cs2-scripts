@@ -1,5 +1,5 @@
 // 1406
-[clientscript,script1406](int $int0, int $int1)
+[clientscript,script1406](int $int0, boolean $boolean1)
 if ($int0 > 31) {
 	$int0 = 31;
 }
@@ -41,7 +41,7 @@ while ($int2 <= $int0 & $int2 < $int3) {
 	$component6 = enum(int, component, enum_1461, $intarray0($int2));
 	if_sethide(false, $component6);
 	if_setposition(0, $height7, ^setpos_abs_left, ^setpos_abs_top, $component6);
-	if ($int1 = 0) {
+	if ($boolean1 = false) {
 		~script1631($int2, $intarray0($int2), $component6);
 	}
 	$height7, $int2 = calc($height7 + if_getheight($component6) + $int5), calc($int2 + 1);
@@ -65,7 +65,7 @@ while ($int2 <= $int0) {
 	$component6 = enum(int, component, enum_1461, $intarray0($int2));
 	if_sethide(false, $component6);
 	if_setposition(0, $height7, ^setpos_abs_right, ^setpos_abs_top, $component6);
-	if ($int1 = 0) {
+	if ($boolean1 = false) {
 		~script1631($int2, $intarray0($int2), $component6);
 	}
 	$height7, $int2 = calc($height7 + if_getheight($component6) + $int5), calc($int2 + 1);
@@ -74,6 +74,6 @@ while ($int2 <= 31) {
 	if_sethide(true, enum(int, component, enum_1461, $int2));
 	$int2 = calc($int2 + 1);
 }
-if ($int1 = 0) {
+if ($boolean1 = false) {
 	~chatdefault_stopinput;
 }

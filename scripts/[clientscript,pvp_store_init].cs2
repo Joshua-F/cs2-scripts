@@ -1,5 +1,5 @@
 // 23
-[clientscript,pvp_store_init](component $component0, component $component1, component $component2, component $component3, component $component4, enum $enum5, int $int6, int $int7)
+[clientscript,pvp_store_init](component $component0, component $component1, component $component2, component $component3, component $component4, enum $enum5, boolean $boolean6, boolean $boolean7)
 cc_deleteall($component0);
 cc_deleteall($component3);
 cc_deleteall($component1);
@@ -13,7 +13,7 @@ while ($namedobj11 ! null) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	$int9 = calc($count10 / 9 * $int8);
 	cc_setposition(calc($count10 % 9 * 50), $int9, ^setpos_abs_left, ^setpos_abs_top);
-	if ($namedobj11 = hunters_honour_12855 & $int6 = 1) {
+	if ($namedobj11 = hunters_honour_12855 & $boolean6 = true) {
 		$namedobj11 = rogues_revenge_12856;
 	}
 	cc_setobject($namedobj11, 1);
@@ -93,7 +93,7 @@ if ($int9 > if_getheight($component0)) {
 	if_setscrollsize(0, 0, $component0);
 }
 ~scrollbar_vertical($component3, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if ($int7 = 1) {
+if ($boolean7 = true) {
 	~scrollbar_resize($component3, $component0, calc($int9 - if_getheight($component0)));
 }
 $int15 = ~steelborder($component4, "Bounty Hunter Shop", 0);

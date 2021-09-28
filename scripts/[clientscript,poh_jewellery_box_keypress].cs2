@@ -1,6 +1,6 @@
 // 1689
 [clientscript,poh_jewellery_box_keypress](char $keychar0, int $comsubid1, component $component2, int $comsubid3, string $string0, string $string1, string $string2)
-if (~keypress_permit(590, -1) = 0) {
+if (~keypress_permit(poh_jewellery_box, null) = 0) {
 	return;
 }
 if ($keychar0 ! null & (string_indexof_char($string1, $keychar0) ! -1 | string_indexof_char($string2, $keychar0) ! -1) & cc_find($component2, $comsubid3) = ^true & .cc_find(poh_jewellery_box:0, $comsubid1) = ^true) {

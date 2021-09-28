@@ -3,7 +3,7 @@
 if (clientclock < $clock3) {
 	return;
 }
-if (~keypress_permit(458, -1) = 0) {
+if (~keypress_permit(interface_458, null) = 0) {
 	return;
 }
 if ($keychar0 ! null & (string_indexof_char($string0, $keychar0) ! -1 | string_indexof_char($string1, $keychar0) ! -1)) {

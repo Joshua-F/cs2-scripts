@@ -1,6 +1,6 @@
 // 2522
 [clientscript,decant_itembutton_key](component $component0, char $keychar1, int $key2, string $string0, obj $obj3, string $string1)
-if (~keypress_permit(582, -1) = 1) {
+if (~keypress_permit(interface_582, null) = 1) {
 	if ($key2 = ^key_escape & %varbit4681 = 1) {
 		if_close;
 		return;

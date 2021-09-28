@@ -17,12 +17,12 @@ if (%varcint103 = 1 & %var1780 > 0) {
 	if (%var1780 > 99999) {
 		$text0 = "Membership: 99999+ days left";
 	} else if (%var1780 = 1) {
-		if (%varcint226 = 0) {
+		if (%varcint226 = false) {
 			$text0 = "Membership: <col=ff0000>1 day left</col>";
 		} else {
 			$text0 = "Membership: 1 day left";
 		}
-	} else if (%var1780 <= 3 & %varcint226 = 0) {
+	} else if (%var1780 <= 3 & %varcint226 = false) {
 		$text0 = "Membership: <col=ff0000><tostring(%var1780)> days left</col>";
 	} else {
 		$text0 = "Membership: <tostring(%var1780)> days left";

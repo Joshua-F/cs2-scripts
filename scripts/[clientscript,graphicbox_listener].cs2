@@ -4,7 +4,7 @@ if (clientclock < $clock8) {
 	return;
 }
 if ($boolean0 = false) {
-	if (~keypress_permit(-1, 162) = 0) {
+	if (~keypress_permit(null, interface_162) = 0) {
 		return;
 	} else if ($key1 ! null & $key1 = $key3) {
 		$boolean0 = true;

@@ -1,5 +1,5 @@
 // 2956
-[clientscript,ap_icon_flash](int $int0)
-if ($int0 = 41222171) {
+[clientscript,ap_icon_flash](component $component0)
+if ($component0 = interface_629:27) {
 	if_setontimer("ap_flash_timer(interface_629:27)", interface_629:23);
 }

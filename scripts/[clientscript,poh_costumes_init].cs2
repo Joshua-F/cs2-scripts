@@ -1,6 +1,6 @@
 // 3532
-[clientscript,poh_costumes_init](enum $enum0, boolean $boolean1, int $int2)
-if ($int2 = 1) {
+[clientscript,poh_costumes_init](enum $enum0, boolean $boolean1, boolean $boolean2)
+if ($boolean2 = true) {
 	%varcint58 = 0;
 }
 def_int $comsubid3 = ~steelborder(interface_675:2, "", 0);

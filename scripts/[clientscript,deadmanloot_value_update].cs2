@@ -1,5 +1,5 @@
 // 1169
-[clientscript,deadmanloot_value_update](int $int0, string $text0)
+[clientscript,deadmanloot_value_update](string $text0, int $int0)
 if (cc_find(interface_234:14, calc(5 * 2 + $int0)) = ^true) {
 	cc_settext($text0);
 }

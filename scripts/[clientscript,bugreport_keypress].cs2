@@ -1,6 +1,6 @@
 // 1098
 [clientscript,bugreport_keypress](int $key0, char $keychar1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
-if (~keypress_permit(156, -1) = 0) {
+if (~keypress_permit(interface_156, null) = 0) {
 	return;
 }
 if ($key0 = ^key_return & ~on_mobile = true) {

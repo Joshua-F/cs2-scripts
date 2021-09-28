@@ -1,5 +1,5 @@
 // 450
-[clientscript,rareitems_diango](int $flags0, int $flags1, int $flags2, int $flags3, int $flags4, string $text0)
+[clientscript,rareitems_diango](string $text0, int $flags0, int $flags1, int $flags2, int $flags3, int $flags4)
 if_settext($text0, interface_78:1);
 cc_deleteall(interface_78:3);
 cc_deleteall(interface_78:4);

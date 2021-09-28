@@ -1,5 +1,5 @@
 // 609
-[clientscript,script609](int $int0, int $settextalignh1, fontmetrics $fontmetrics2, fontmetrics $fontmetrics3, int $int4, int $int5, component $component6, string $string0)
+[clientscript,script609](string $string0, int $int0, int $settextalignh1, graphic $graphic2, fontmetrics $fontmetrics3, int $int4, int $int5, component $component6)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:20)) = false) {
 	return;
 }
@@ -39,7 +39,7 @@ while (string_length($string1) > 0) {
 	} else {
 		cc_setcolour($colour13);
 	}
-	cc_settextfont($fontmetrics2);
+	cc_settextfont($graphic2);
 	cc_settextalign($settextalignh1, ^settextalign_top, 0);
 	cc_settextshadow(true);
 	cc_settext($string1);

@@ -11,7 +11,7 @@ if (~bonds_hide = 1) {
 		if_setsize(190, 88, ^setsize_abs, ^setsize_abs, interface_109:24);
 	}
 	if_setposition(0, calc(109 - $int0), ^setpos_abs_left, ^setpos_abs_top, interface_109:36);
-	if (%varcint228 = 0) {
+	if (%varcint228 = false) {
 		if_sethide(true, interface_109:38);
 		if_setsize(190, 24, ^setsize_abs, ^setsize_abs, interface_109:36);
 		$int0 = calc($int0 + 32);

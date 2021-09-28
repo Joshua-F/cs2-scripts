@@ -1,8 +1,8 @@
 // 495
-[clientscript,wilderness_lootingbag_setup](int $int0, string $text0)
+[clientscript,wilderness_lootingbag_setup](string $text0, boolean $boolean0)
 if_settext($text0, interface_81:1);
 def_inv $inv1 = inv_516;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$inv1 = inv;
 }
 ~wilderness_lootingbag_draw($inv1);

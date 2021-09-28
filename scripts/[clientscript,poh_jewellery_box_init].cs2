@@ -1,5 +1,5 @@
 // 1685
-[clientscript,poh_jewellery_box_init](int $int0, int $flags1, string $text0)
+[clientscript,poh_jewellery_box_init](int $int0, string $text0, int $flags1)
 ~chatdefault_stopinput;
 ~steelborder(poh_jewellery_box:1, $text0, 0);
 cc_deleteall(poh_jewellery_box:0);

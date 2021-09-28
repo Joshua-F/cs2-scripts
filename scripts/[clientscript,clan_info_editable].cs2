@@ -1,5 +1,5 @@
 // 4290
-[clientscript,clan_info_editable](component $component0, int $int1, int $int2, string $string0)
+[clientscript,clan_info_editable](string $string0, component $component0, boolean $boolean1, int $int2)
 cc_deleteall($component0);
 def_int $int3 = 0;
 cc_create($component0, ^iftype_graphic, $int3);
@@ -35,7 +35,7 @@ cc_settextshadow(true);
 .cc_settextshadow(true);
 cc_settext($string1);
 .cc_settext($string0);
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	if (string_length($string2) <= 0) {
 		$string2 = "Change";
 	}

@@ -1,7 +1,7 @@
 // 267
-[proc,nzone_lobby_partystatus](int $int0, component $component1)
+[proc,nzone_lobby_partystatus](boolean $boolean0, component $component1)
 def_boolean $boolean2 = false;
-if ($int0 = 0 & %var1065 = -1) {
+if ($boolean0 = false & %var1065 = -1) {
 	$boolean2 = true;
 	if_setontimer(null, $component1);
 } else {
@@ -38,7 +38,7 @@ cc_settrans(150);
 ~create_graphic($component1, 5, "tradebacking", 4, 37, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(150);
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	cc_setop(1, "Kick player");
 	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
@@ -46,7 +46,7 @@ if ($int0 = 1) {
 ~create_graphic($component1, 6, "tradebacking", 4, 52, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(150);
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	cc_setop(1, "Kick player");
 	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
@@ -54,7 +54,7 @@ if ($int0 = 1) {
 ~create_graphic($component1, 7, "tradebacking", 4, 67, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(150);
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	cc_setop(1, "Kick player");
 	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
@@ -62,7 +62,7 @@ if ($int0 = 1) {
 ~create_graphic($component1, 8, "tradebacking", 4, 82, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(150);
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	cc_setop(1, "Kick player");
 	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");

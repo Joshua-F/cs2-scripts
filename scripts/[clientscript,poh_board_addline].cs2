@@ -1,5 +1,5 @@
 // 3110
-[clientscript,poh_board_addline](int $comsubid0, int $int1, int $int2, string $string0)
+[clientscript,poh_board_addline](int $comsubid0, string $string0, int $int1, int $int2)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:20)) = false) {
 	return;
 }

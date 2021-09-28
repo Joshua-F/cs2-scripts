@@ -1,5 +1,5 @@
 // 4357
-[clientscript,clan_board_addline](int $int0, int $flags1, string $string0)
+[clientscript,clan_board_addline](int $int0, string $string0, int $flags1)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:20)) = false) {
 	return;
 }

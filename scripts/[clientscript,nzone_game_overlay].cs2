@@ -1,5 +1,5 @@
 // 255
-[clientscript,nzone_game_overlay](coord $coord0, string $string0)
+[clientscript,nzone_game_overlay](string $string0, coord $coord0)
 if_sethide(false, interface_202:0);
 if_setontimer("nzone_game_hide(interface_202:0, $coord0)", interface_202:7);
 cc_deleteall(interface_202:6);

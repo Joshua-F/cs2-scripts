@@ -1,6 +1,6 @@
 // 4094
 [clientscript,collection_searchbar_keypress](int $key0, char $keychar1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
-if (~keypress_permit(621, -1) = 0) {
+if (~keypress_permit(interface_621, null) = 0) {
 	return;
 }
 if (%varbit9639 = 0) {

@@ -1,6 +1,6 @@
 // 131
 [clientscript,closebutton_key](int $key0)
-if (~keypress_permit(-1, -1) = 0) {
+if (~keypress_permit(null, null) = 0) {
 	return;
 }
 def_enum $enum1 = ~toplevel_getcomponents;

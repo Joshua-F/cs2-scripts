@@ -16,7 +16,7 @@ if ($boolean7 = false & if_gettop = interface_80) {
 if_sethide(false, interface_90:0);
 if (~pvpw_check = 1) {
 	if_setsize(78, 73, ^setsize_abs, ^setsize_abs, interface_90:44);
-	if (%varcint53 = 1) {
+	if (%varcint53 = true) {
 		$int5 = 0;
 	}
 	if_setposition(0, 31, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:50);
@@ -160,7 +160,7 @@ if (~pvpw_check = 1) {
 } else {
 	if_setsize(78, 73, ^setsize_abs, ^setsize_abs, interface_90:44);
 	if_setcolour(^yellow, interface_90:50);
-	if (~on_enhanced = 1 & %varcint53 = 1) {
+	if (~on_enhanced = 1 & %varcint53 = true) {
 		if_sethide(false, interface_90:49);
 		~pvp_icons_comlevelrange($int8);
 		if_setcolour(^yellow, interface_90:49);

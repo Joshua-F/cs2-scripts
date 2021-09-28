@@ -1,13 +1,13 @@
 // 264
-[clientscript,nzone_lobby_overlay](int $int0)
+[clientscript,nzone_lobby_overlay](boolean $boolean0)
 if_sethide(false, interface_207:0);
 if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_207:7);
 if_setsize(1, 1, ^setsize_abs, ^setsize_abs, interface_207:7);
 if_settextalign(^settextalign_right, ^settextalign_bottom, 0, interface_207:7);
 if_setontimer("nzone_lobby_hide(interface_207:0)", interface_207:7);
-~nzone_lobby_partystatus($int0, interface_207:4);
-~nzone_lobby_hint($int0, interface_207:2);
-if ($int0 = 1) {
+~nzone_lobby_partystatus($boolean0, interface_207:4);
+~nzone_lobby_hint($boolean0, interface_207:2);
+if ($boolean0 = true) {
 	if_setonvartransmit(null, interface_207:7);
 } else {
 	if_setonvartransmit("nzone_lobby_partystatus(interface_207:4, interface_207:2){var1065, var1058}", interface_207:7);

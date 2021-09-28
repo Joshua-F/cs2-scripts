@@ -1,12 +1,12 @@
 // 1104
-[clientscript,snapshot_init](int $int0, int $int1, string $string0)
+[clientscript,snapshot_init](boolean $boolean0, boolean $boolean1, string $string0)
 ~chatdefault_stopinput;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	%varcstring370 = $string0;
 }
 if_setonkey("snapshot_onkey(event_key, event_keychar)", snapshot_main:5);
 if_settext("<escape(%varcstring370)><col=ffff00>|", snapshot_main:5);
-%varcint6, %varcint140, %varcint224 = 0, 1, $int0;
+%varcint6, %varcint140, %varcint224 = 0, 1, $boolean0;
 if (playermod = true | staffmodlevel > 0) {
 	%varcint140 = 0;
 	if_setcolour(^white, snapshot_main:11);
