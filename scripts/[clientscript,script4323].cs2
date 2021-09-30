@@ -3,7 +3,7 @@
 if (clientclock < calc(%varcint455 + 10) & %varbit12227 = $count3) {
 	return;
 }
-if (~keypress_permit(null, interface_162) = 0) {
+if (~keypress_permit(null, overlayinterface_162) = 0) {
 	return;
 }
 def_int $int5 = 0;

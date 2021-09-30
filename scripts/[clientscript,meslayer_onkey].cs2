@@ -1,6 +1,6 @@
 // 112
 [clientscript,meslayer_onkey](int $key0, char $keychar1, string $string0)
-if (~keypress_permit(null, interface_162) = 0) {
+if (~keypress_permit(null, overlayinterface_162) = 0) {
 	return;
 }
 if ($key0 = ^key_return) {
