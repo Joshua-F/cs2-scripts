@@ -1,0 +1,6 @@
+// 4604
+[proc,settings_buff_overload_duration]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12364 = calc(1 - %varbit12364);

@@ -1,0 +1,6 @@
+// 4600
+[proc,settings_buff_vengeance_cooldown]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12360 = calc(1 - %varbit12360);

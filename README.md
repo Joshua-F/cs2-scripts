@@ -233,7 +233,7 @@
 [**230**](scripts/[clientscript,makeover_clothes_setup].cs2) `[clientscript,makeover_clothes_setup]`  
 [**231**](scripts/[proc,scrollbar_vertical_rebuild].cs2) `[proc,scrollbar_vertical_rebuild]`  
 [**232**](scripts/[clientscript,league_rewards_init].cs2) `[clientscript,league_rewards_init]`  
-[**233**](scripts/[clientscript,script233].cs2)  
+[**233**](scripts/[clientscript,motw_setmodel].cs2) `[clientscript,motw_setmodel]`  
 [**234**](scripts/[proc,fake_runes_enabled].cs2) `[proc,fake_runes_enabled]`  
 [**235**](scripts/[clientscript,autocast_init].cs2) `[clientscript,autocast_init]`  
 [**236**](scripts/[clientscript,autocast_spellhighlight].cs2) `[clientscript,autocast_spellhighlight]`  
@@ -389,7 +389,7 @@
 [**386**](scripts/[proc,pvp_icons_layout].cs2) `[proc,pvp_icons_layout]`  
 [**387**](scripts/[proc,pvp_icons_comlevelrange].cs2) `[proc,pvp_icons_comlevelrange]`  
 [**388**](scripts/[clientscript,pvp_icons_wildernesslevel].cs2) `[clientscript,pvp_icons_wildernesslevel]`  
-[**389**](scripts/[proc,script389].cs2)  
+[**389**](scripts/[proc,settings_store_button_desktop].cs2) `[proc,settings_store_button_desktop]`  
 [**390**](scripts/[clientscript,combat_wilderness_transmit].cs2) `[clientscript,combat_wilderness_transmit]`  
 [**391**](scripts/[clientscript,poh_options_doors].cs2) `[clientscript,poh_options_doors]`  
 [**392**](scripts/[clientscript,steelbox].cs2) `[clientscript,steelbox]`  
@@ -529,8 +529,8 @@
 [**526**](scripts/[clientscript,tooltip_mouserepeat].cs2) `[clientscript,tooltip_mouserepeat]`  
 [**527**](scripts/[proc,settings_colour_input_update].cs2) `[proc,settings_colour_input_update]`  
 [**528**](scripts/[proc,settings_buff_corruption].cs2) `[proc,settings_buff_corruption]`  
-[**529**](scripts/[proc,script529].cs2)  
-[**530**](scripts/[proc,script530].cs2)  
+[**529**](scripts/[proc,settings_buff_mark_of_darkness].cs2) `[proc,settings_buff_mark_of_darkness]`  
+[**530**](scripts/[proc,settings_buff_shadow_veil].cs2) `[proc,settings_buff_shadow_veil]`  
 [**531**](scripts/[proc,script531].cs2)  
 [**532**](scripts/[clientscript,script532].cs2)  
 [**533**](scripts/[clientscript,script533].cs2)  
@@ -869,7 +869,7 @@
 [**866**](scripts/[proc,script866].cs2)  
 [**867**](scripts/[clientscript,tutorial_progressbar_set].cs2) `[clientscript,tutorial_progressbar_set]`  
 [**868**](scripts/[proc,script868].cs2)  
-[**869**](scripts/[proc,script869].cs2)  
+[**869**](scripts/[proc,settings_buff_death_charge].cs2) `[proc,settings_buff_death_charge]`  
 [**870**](scripts/[clientscript,model_dynamiczoom_init].cs2) `[clientscript,model_dynamiczoom_init]`  
 [**871**](scripts/[clientscript,model_dynamiczoom].cs2) `[clientscript,model_dynamiczoom]`  
 [**872**](scripts/[proc,model_dynamiczoom].cs2) `[proc,model_dynamiczoom]`  
@@ -1348,7 +1348,7 @@
 [**1345**](scripts/[clientscript,br_fogcolour].cs2) `[clientscript,br_fogcolour]`  
 [**1346**](scripts/[proc,br_fogcolour].cs2) `[proc,br_fogcolour]`  
 [**1347**](scripts/[clientscript,br_hud_init].cs2) `[clientscript,br_hud_init]`  
-[**1348**](scripts/[proc,script1348].cs2)  
+[**1348**](scripts/[proc,settings_buff_ward_of_arceuus].cs2) `[proc,settings_buff_ward_of_arceuus]`  
 [**1349**](scripts/[proc,settings_buff_resurrection].cs2) `[proc,settings_buff_resurrection]`  
 [**1350**](scripts/[clientscript,questlist_init].cs2) `[clientscript,questlist_init]`  
 [**1351**](scripts/[proc,questlist_sectioninit].cs2) `[proc,questlist_sectioninit]`  
@@ -3102,7 +3102,7 @@
 [**3099**](scripts/[clientscript,canoe_map_init].cs2) `[clientscript,canoe_map_init]`  
 [**3100**](scripts/[proc,canoe_location_setup].cs2) `[proc,canoe_location_setup]`  
 [**3101**](scripts/[clientscript,canoe_location_hover].cs2) `[clientscript,canoe_location_hover]`  
-[**3102**](scripts/[proc,script3102].cs2)  
+[**3102**](scripts/[proc,canoe_location_you_are_here].cs2) `[proc,canoe_location_you_are_here]`  
 [**3103**](scripts/[proc,canoe_get_state].cs2) `[proc,canoe_get_state]`  
 [**3104**](scripts/[proc,canoe_return_locations].cs2) `[proc,canoe_return_locations]`  
 [**3105**](scripts/[proc,canoe_paddle_log].cs2) `[proc,canoe_paddle_log]`  
@@ -3298,7 +3298,7 @@
 [**3295**](scripts/[clientscript,boardgames_runeversi_options_init].cs2) `[clientscript,boardgames_runeversi_options_init]`  
 [**3296**](scripts/[clientscript,boardgames_runeversi_options_update_selections].cs2) `[clientscript,boardgames_runeversi_options_update_selections]`  
 [**3297**](scripts/[proc,wiki_icon_enabled].cs2) `[proc,wiki_icon_enabled]`  
-[**3298**](scripts/[clientscript,script3298].cs2)  
+[**3298**](scripts/[clientscript,wiki_entity_lookup_target].cs2) `[clientscript,wiki_entity_lookup_target]`  
 [**3299**](scripts/[proc,wiki_chat_search].cs2) `[proc,wiki_chat_search]`  
 [**3300**](scripts/[clientscript,wiki_lookup].cs2) `[clientscript,wiki_lookup]`  
 [**3301**](scripts/[proc,wiki_lookup].cs2) `[proc,wiki_lookup]`  
@@ -3758,11 +3758,11 @@
 [**3755**](scripts/[proc,script3755].cs2)  
 [**3756**](scripts/[clientscript,script3756].cs2)  
 [**3757**](scripts/[clientscript,script3757].cs2)  
-[**3758**](scripts/[proc,script3758].cs2)  
-[**3759**](scripts/[clientscript,script3759].cs2)  
+[**3758**](scripts/[proc,recipe_for_disaster_button].cs2) `[proc,recipe_for_disaster_button]`  
+[**3759**](scripts/[clientscript,recipe_for_disaster_animate].cs2) `[clientscript,recipe_for_disaster_animate]`  
 [**3760**](scripts/[clientscript,script3760].cs2)  
 [**3761**](scripts/[proc,script3761].cs2)  
-[**3762**](scripts/[clientscript,script3762].cs2)  
+[**3762**](scripts/[clientscript,recipe_for_disaster_op].cs2) `[clientscript,recipe_for_disaster_op]`  
 [**3763**](scripts/[clientscript,friendschat_op].cs2) `[clientscript,friendschat_op]`  
 [**3764**](scripts/[proc,friendschat_sendkick].cs2) `[proc,friendschat_sendkick]`  
 [**3765**](scripts/[clientscript,chatchannel_login].cs2) `[clientscript,chatchannel_login]`  
@@ -3972,18 +3972,18 @@
 [**3969**](scripts/[proc,settings_clicked_button].cs2) `[proc,settings_clicked_button]`  
 [**3970**](scripts/[clientscript,script3970].cs2)  
 [**3971**](scripts/[proc,script3971].cs2)  
-[**3972**](scripts/[proc,script3972].cs2)  
+[**3972**](scripts/[proc,settings_music_unlock_message].cs2) `[proc,settings_music_unlock_message]`  
 [**3973**](scripts/[proc,settings_hitsplat_tinting].cs2) `[proc,settings_hitsplat_tinting]`  
 [**3974**](scripts/[proc,settings_wiki_lookup].cs2) `[proc,settings_wiki_lookup]`  
 [**3975**](scripts/[proc,settings_data_orbs].cs2) `[proc,settings_data_orbs]`  
-[**3976**](scripts/[proc,script3976].cs2)  
+[**3976**](scripts/[proc,settings_resizable_transparent_side_panel].cs2) `[proc,settings_resizable_transparent_side_panel]`  
 [**3977**](scripts/[proc,script3977].cs2)  
 [**3978**](scripts/[proc,script3978].cs2)  
 [**3979**](scripts/[proc,settings_special_attack_bar_tooltip].cs2) `[proc,settings_special_attack_bar_tooltip]`  
 [**3980**](scripts/[proc,script3980].cs2)  
 [**3981**](scripts/[proc,script3981].cs2)  
 [**3982**](scripts/[proc,script3982].cs2)  
-[**3983**](scripts/[proc,script3983].cs2)  
+[**3983**](scripts/[proc,settings_show_chat_effects].cs2) `[proc,settings_show_chat_effects]`  
 [**3984**](scripts/[proc,settings_split_private_chat].cs2) `[proc,settings_split_private_chat]`  
 [**3985**](scripts/[proc,settings_hide_private_chat].cs2) `[proc,settings_hide_private_chat]`  
 [**3986**](scripts/[proc,settings_profanity_filter].cs2) `[proc,settings_profanity_filter]`  
@@ -3996,12 +3996,12 @@
 [**3993**](scripts/[proc,script3993].cs2)  
 [**3994**](scripts/[proc,settings_function_button].cs2) `[proc,settings_function_button]`  
 [**3995**](scripts/[proc,script3995].cs2)  
-[**3996**](scripts/[proc,script3996].cs2)  
+[**3996**](scripts/[proc,settings_escape_closes_interface].cs2) `[proc,settings_escape_closes_interface]`  
 [**3997**](scripts/[clientscript,boardgames_runesquares_options_update_rune].cs2) `[clientscript,boardgames_runesquares_options_update_rune]`  
 [**3998**](scripts/[clientscript,settings_client_mode].cs2) `[clientscript,settings_client_mode]`  
 [**3999**](scripts/[proc,boardgames_runesquares_options_update_rune].cs2) `[proc,boardgames_runesquares_options_update_rune]`  
 [**4000**](scripts/[clientscript,boardgames_runesquares_options_update_time].cs2) `[clientscript,boardgames_runesquares_options_update_time]`  
-[**4001**](scripts/[proc,script4001].cs2)  
+[**4001**](scripts/[proc,settings_warning_teleport_to_target].cs2) `[proc,settings_warning_teleport_to_target]`  
 [**4002**](scripts/[proc,settings_warning_dareeyak_teleport].cs2) `[proc,settings_warning_dareeyak_teleport]`  
 [**4003**](scripts/[proc,boardgames_runesquares_options_update_time].cs2) `[proc,boardgames_runesquares_options_update_time]`  
 [**4004**](scripts/[proc,settings_warning_annakarl_teleport].cs2) `[proc,settings_warning_annakarl_teleport]`  
@@ -4016,7 +4016,7 @@
 [**4013**](scripts/[proc,settings_warning_ghorrock_tablet].cs2) `[proc,settings_warning_ghorrock_tablet]`  
 [**4014**](scripts/[proc,settings_loot_drop_notification].cs2) `[proc,settings_loot_drop_notification]`  
 [**4015**](scripts/[proc,settings_drop_item_warnings].cs2) `[proc,settings_drop_item_warnings]`  
-[**4016**](scripts/[proc,script4016].cs2)  
+[**4016**](scripts/[proc,settings_untradeable_loot_notification].cs2) `[proc,settings_untradeable_loot_notification]`  
 [**4017**](scripts/[proc,script4017].cs2)  
 [**4018**](scripts/[proc,settings_accept_aid].cs2) `[proc,settings_accept_aid]`  
 [**4019**](scripts/[proc,boardgames_runesquares_options_update_ranked].cs2) `[proc,boardgames_runesquares_options_update_ranked]`  
@@ -4547,20 +4547,20 @@
 [**4544**](scripts/[clientscript,script4544].cs2)  
 [**4545**](scripts/[clientscript,script4545].cs2)  
 [**4546**](scripts/[clientscript,script4546].cs2)  
-[**4547**](scripts/[proc,script4547].cs2)  
-[**4548**](scripts/[clientscript,script4548].cs2)  
-[**4549**](scripts/[clientscript,script4549].cs2)  
-[**4550**](scripts/[clientscript,script4550].cs2)  
-[**4551**](scripts/[clientscript,script4551].cs2)  
-[**4552**](scripts/[clientscript,script4552].cs2)  
-[**4553**](scripts/[proc,script4553].cs2)  
+[**4547**](scripts/[proc,fishing_spot_indicator_setup].cs2) `[proc,fishing_spot_indicator_setup]`  
+[**4548**](scripts/[clientscript,fishing_spot_indicator_vartransmit].cs2) `[clientscript,fishing_spot_indicator_vartransmit]`  
+[**4549**](scripts/[clientscript,fishing_spot_indicator_invtransmit].cs2) `[clientscript,fishing_spot_indicator_invtransmit]`  
+[**4550**](scripts/[clientscript,fishing_spot_indicator_stattransmit].cs2) `[clientscript,fishing_spot_indicator_stattransmit]`  
+[**4551**](scripts/[clientscript,fishing_spot_indicator_mouseleave].cs2) `[clientscript,fishing_spot_indicator_mouseleave]`  
+[**4552**](scripts/[clientscript,fishing_spot_indicator_mouseover].cs2) `[clientscript,fishing_spot_indicator_mouseover]`  
+[**4553**](scripts/[proc,fishing_spot_indicator_create].cs2) `[proc,fishing_spot_indicator_create]`  
 [**4554**](scripts/[proc,script4554].cs2)  
 [**4555**](scripts/[proc,script4555].cs2)  
 [**4556**](scripts/[proc,script4556].cs2)  
-[**4557**](scripts/[proc,script4557].cs2)  
+[**4557**](scripts/[proc,fishing_spot_indicator_tools_check].cs2) `[proc,fishing_spot_indicator_tools_check]`  
 [**4558**](scripts/[proc,script4558].cs2)  
-[**4559**](scripts/[clientscript,script4559].cs2)  
-[**4560**](scripts/[proc,script4560].cs2)  
+[**4559**](scripts/[clientscript,fishing_spot_indicator_tile_setup].cs2) `[clientscript,fishing_spot_indicator_tile_setup]`  
+[**4560**](scripts/[proc,fishing_spot_indicator_tile_setup].cs2) `[proc,fishing_spot_indicator_tile_setup]`  
 [**4561**](scripts/[proc,welcome_screen_toggle].cs2) `[proc,welcome_screen_toggle]`  
 [**4562**](scripts/[clientscript,script4562].cs2)  
 [**4563**](scripts/[proc,script4563].cs2)  
@@ -4578,8 +4578,8 @@
 [**4575**](scripts/[clientscript,settings_side_dropdown_hover].cs2) `[clientscript,settings_side_dropdown_hover]`  
 [**4576**](scripts/[proc,script4576].cs2)  
 [**4577**](scripts/[proc,settings_toggle_roof].cs2) `[proc,settings_toggle_roof]`  
-[**4578**](scripts/[proc,script4578].cs2)  
-[**4579**](scripts/[proc,script4579].cs2)  
+[**4578**](scripts/[proc,settings_boss_health_overlay].cs2) `[proc,settings_boss_health_overlay]`  
+[**4579**](scripts/[proc,settings_standard_health_overlay].cs2) `[proc,settings_standard_health_overlay]`  
 [**4580**](scripts/[proc,settings_attack_style].cs2) `[proc,settings_attack_style]`  
 [**4581**](scripts/[proc,settings_mouseover_tooltips].cs2) `[proc,settings_mouseover_tooltips]`  
 [**4582**](scripts/[proc,settings_mouseover_text].cs2) `[proc,settings_mouseover_text]`  
@@ -4594,24 +4594,24 @@
 [**4591**](scripts/[proc,settings_buff_bar_tooltip].cs2) `[proc,settings_buff_bar_tooltip]`  
 [**4592**](scripts/[proc,settings_buff_leagues].cs2) `[proc,settings_buff_leagues]`  
 [**4593**](scripts/[proc,settings_buff_home_teleport].cs2) `[proc,settings_buff_home_teleport]`  
-[**4594**](scripts/[proc,script4594].cs2)  
+[**4594**](scripts/[proc,settings_buff_minigame_teleport].cs2) `[proc,settings_buff_minigame_teleport]`  
 [**4595**](scripts/[proc,settings_buff_teleblock].cs2) `[proc,settings_buff_teleblock]`  
-[**4596**](scripts/[proc,script4596].cs2)  
-[**4597**](scripts/[proc,script4597].cs2)  
-[**4598**](scripts/[proc,script4598].cs2)  
-[**4599**](scripts/[proc,script4599].cs2)  
-[**4600**](scripts/[proc,script4600].cs2)  
-[**4601**](scripts/[proc,script4601].cs2)  
-[**4602**](scripts/[proc,script4602].cs2)  
-[**4603**](scripts/[proc,script4603].cs2)  
-[**4604**](scripts/[proc,script4604].cs2)  
-[**4605**](scripts/[proc,script4605].cs2)  
-[**4606**](scripts/[proc,script4606].cs2)  
-[**4607**](scripts/[proc,script4607].cs2)  
-[**4608**](scripts/[proc,script4608].cs2)  
-[**4609**](scripts/[proc,script4609].cs2)  
-[**4610**](scripts/[proc,script4610].cs2)  
-[**4611**](scripts/[proc,script4611].cs2)  
+[**4596**](scripts/[proc,settings_buff_charge_spell].cs2) `[proc,settings_buff_charge_spell]`  
+[**4597**](scripts/[proc,settings_buff_godwars_altar].cs2) `[proc,settings_buff_godwars_altar]`  
+[**4598**](scripts/[proc,settings_buff_dragonfire_shield_cooldown].cs2) `[proc,settings_buff_dragonfire_shield_cooldown]`  
+[**4599**](scripts/[proc,settings_buff_imbued_heart_cooldown].cs2) `[proc,settings_buff_imbued_heart_cooldown]`  
+[**4600**](scripts/[proc,settings_buff_vengeance_cooldown].cs2) `[proc,settings_buff_vengeance_cooldown]`  
+[**4601**](scripts/[proc,settings_buff_vengeance_active].cs2) `[proc,settings_buff_vengeance_active]`  
+[**4602**](scripts/[proc,settings_buff_stamina_duration].cs2) `[proc,settings_buff_stamina_duration]`  
+[**4603**](scripts/[proc,settings_buff_prayer_enhance_duration].cs2) `[proc,settings_buff_prayer_enhance_duration]`  
+[**4604**](scripts/[proc,settings_buff_overload_duration].cs2) `[proc,settings_buff_overload_duration]`  
+[**4605**](scripts/[proc,settings_buff_magic_imbue_duration].cs2) `[proc,settings_buff_magic_imbue_duration]`  
+[**4606**](scripts/[proc,settings_buff_sire_stun_duration].cs2) `[proc,settings_buff_sire_stun_duration]`  
+[**4607**](scripts/[proc,settings_buff_freeze_duration].cs2) `[proc,settings_buff_freeze_duration]`  
+[**4608**](scripts/[proc,settings_buff_sotd_duration].cs2) `[proc,settings_buff_sotd_duration]`  
+[**4609**](scripts/[proc,settings_buff_divine_potion_duration].cs2) `[proc,settings_buff_divine_potion_duration]`  
+[**4610**](scripts/[proc,settings_buff_antifire_duration].cs2) `[proc,settings_buff_antifire_duration]`  
+[**4611**](scripts/[proc,settings_buff_antipoison_duration].cs2) `[proc,settings_buff_antipoison_duration]`  
 [**4612**](scripts/[proc,script4612].cs2)  
 [**4613**](scripts/[proc,script4613].cs2)  
 [**4614**](scripts/[proc,script4614].cs2)  
@@ -4720,7 +4720,7 @@
 [**4717**](scripts/[clientscript,script4717].cs2)  
 [**4718**](scripts/[proc,health_regen_timer].cs2) `[proc,health_regen_timer]`  
 [**4719**](scripts/[clientscript,script4719].cs2)  
-[**4720**](scripts/[clientscript,script4720].cs2)  
+[**4720**](scripts/[clientscript,spec_regen_timer_off].cs2) `[clientscript,spec_regen_timer_off]`  
 [**4721**](scripts/[clientscript,spec_regen_timer].cs2) `[clientscript,spec_regen_timer]`  
 [**4722**](scripts/[clientscript,script4722].cs2)  
 [**4723**](scripts/[proc,spec_regen_timer].cs2) `[proc,spec_regen_timer]`  
@@ -4857,11 +4857,11 @@
 [**4854**](scripts/[clientscript,script4854].cs2)  
 [**4855**](scripts/[clientscript,script4855].cs2)  
 [**4856**](scripts/[proc,script4856].cs2)  
-[**4857**](scripts/[clientscript,script4857].cs2)  
+[**4857**](scripts/[clientscript,ca_bosses_reviewsize].cs2) `[clientscript,ca_bosses_reviewsize]`  
 [**4858**](scripts/[proc,script4858].cs2)  
-[**4859**](scripts/[clientscript,script4859].cs2)  
+[**4859**](scripts/[clientscript,ca_rewards_reviewsize].cs2) `[clientscript,ca_rewards_reviewsize]`  
 [**4860**](scripts/[proc,script4860].cs2)  
-[**4861**](scripts/[clientscript,script4861].cs2)  
+[**4861**](scripts/[clientscript,ca_tasks_reviewsize].cs2) `[clientscript,ca_tasks_reviewsize]`  
 [**4862**](scripts/[proc,script4862].cs2)  
 [**4863**](scripts/[worldmapelementmouserepeat,700].cs2) `[worldmapelementmouserepeat,700]`  
 [**4864**](scripts/[worldmapelementmouserepeat,701].cs2) `[worldmapelementmouserepeat,701]`  
@@ -5235,9 +5235,9 @@
 [**5232**](scripts/[proc,script5232].cs2)  
 [**5233**](scripts/[proc,deadman_sigils_buildoffer].cs2) `[proc,deadman_sigils_buildoffer]`  
 [**5234**](scripts/[proc,deadman_sigils_buildslot].cs2) `[proc,deadman_sigils_buildslot]`  
-[**5235**](scripts/[clientscript,script5235].cs2)  
+[**5235**](scripts/[clientscript,wornitems_deadman_sigils_init].cs2) `[clientscript,wornitems_deadman_sigils_init]`  
 [**5236**](scripts/[clientscript,script5236].cs2)  
 [**5237**](scripts/[proc,script5237].cs2)  
-[**5238**](scripts/[proc,script5238].cs2)  
+[**5238**](scripts/[proc,settings_store_button_mobile].cs2) `[proc,settings_store_button_mobile]`  
 [**5239**](scripts/[clientscript,script5239].cs2)  
-[**5240**](scripts/[clientscript,script5240].cs2)  
+[**5240**](scripts/[clientscript,quest_journal_reset].cs2) `[clientscript,quest_journal_reset]`  

@@ -4,7 +4,7 @@ if ($enum5 = null) {
 	return($int0, 0, $int2, $int3);
 }
 if ($namedobj6 ! null) {
-	_103($newvar4, 5, $int0);
+	_103($newvar4, ^iftype_graphic, $int0);
 	$int0 = calc($int0 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);
@@ -19,7 +19,7 @@ $int8 = enum_getoutputcount($enum5);
 while ($int7 < $int8) {
 	$namedobj9 = enum(int, namedobj, $enum5, $int7);
 	if ($namedobj9 ! null) {
-		_103($newvar4, 5, $int0);
+		_103($newvar4, ^iftype_graphic, $int0);
 		$int0 = calc($int0 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);

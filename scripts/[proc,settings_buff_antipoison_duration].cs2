@@ -1,0 +1,6 @@
+// 4611
+[proc,settings_buff_antipoison_duration]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12371 = calc(1 - %varbit12371);

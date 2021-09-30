@@ -14,5 +14,5 @@ if ($height0 > if_getheight($component3)) {
 	~scrollbar_resize($component4, $component3, 0);
 }
 if ($component1 ! null) {
-	if_setontimer("script4861($height0, $component1, $component2, $component3, $component4, $int6)", $component2);
+	if_setontimer("ca_tasks_reviewsize($height0, $component1, $component2, $component3, $component4, $int6)", $component2);
 }

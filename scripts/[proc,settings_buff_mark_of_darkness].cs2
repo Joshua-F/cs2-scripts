@@ -1,0 +1,6 @@
+// 529
+[proc,settings_buff_mark_of_darkness]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12406 = calc(1 - %varbit12406);

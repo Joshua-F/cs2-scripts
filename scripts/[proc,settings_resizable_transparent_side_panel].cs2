@@ -1,0 +1,9 @@
+// 3976
+[proc,settings_resizable_transparent_side_panel]
+if (~on_mobile = true) {
+	return;
+}
+if (getwindowmode = ^windowmode_fixed) {
+	return;
+}
+%varbit4609 = calc(1 - %varbit4609);
