@@ -3,7 +3,7 @@
 def_string $username1 = removetags($opbase0);
 switch_int ($opindex0) {
 	case 1 :
-		mes("Removing <$username1> from the clan party.");
+		mes("Removing <$username1> from the party.");
 	case 3 :
 		friend_del($username1);
 	case 4 :

@@ -6,7 +6,7 @@ if (~on_mobile = false) {
 	if_setonmouserepeat("script4453(true, $string0, event_com, $graphic1)", $component0);
 }
 if_setonmouseleave("script4453(false, $string0, event_com, $graphic1)", $component0);
-if (%varbit12171 = 1) {
+if (%varbit12171 = 1 | %varbit13058 = 1) {
 	if_setop(1, removetags($string0), $component0);
 }
 if_setontimer(null, $component0);

@@ -17,3 +17,6 @@ cc_create($component0, ^iftype_graphic, 3);
 cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setgraphic(enum(int, graphic, enum_3840, $int1));
+if ($int1 = 5 | $int1 = 4) {
+	cc_setonvartransmit("script5302(event_com, event_comsubid, $component0){var499}");
+}

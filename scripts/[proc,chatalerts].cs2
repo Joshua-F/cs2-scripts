@@ -23,7 +23,7 @@ while ($mesuid0 ! -1) {
 	if ($clock4 <= $clock1) {
 		return;
 	}
-	if (~filtertest($chattype3, $string0, ~script4742($string3, $string2), $clock4, $int2, removetags(chat_playername), $int5) = 1 & ~trade_partner_check($chattype3, $string0, $int5) = 0) {
+	if (~filtertest($chattype3, $string0, ~script4742($string3, $string2), $string2, $clock4, $int2, removetags(chat_playername), $int5) = 1 & ~trade_partner_check($chattype3, $string0, $int5) = 0) {
 		switch_int ($chattype3) {
 			case ^chattype_modchat, ^chattype_publicchat :
 				~chat_alert_enable(2);
@@ -37,8 +37,14 @@ while ($mesuid0 ! -1) {
 				~chat_alert_enable(6);
 			case ^chattype_friendschat, ^chattype_friendschatnotification, ^chattype_chalreq_friendschat :
 				~chat_alert_enable(4);
-			case 41, 43, 44, 46, 109, 110 :
+			case 41, 44, 46, 109, 110, 111, 112 :
 				~chat_alert_enable(5);
+			case 43 :
+				if (~script5309($string2) = 1) {
+					~chat_alert_enable(1);
+				} else {
+					~chat_alert_enable(5);
+				}
 			case default :
 				if (enum(int, boolean, enum_892, $chattype3) = true & $chattype3 ! 108) {
 					~chat_alert_enable(1);

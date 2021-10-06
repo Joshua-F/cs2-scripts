@@ -1,0 +1,38 @@
+// 5272
+[proc,script5272](obj $obj0, int $num1, int $comsubid2, component $component3, component $component4, component $component5)(int)
+cc_clearops;
+if ($obj0 ! null) {
+	cc_setobject($obj0, $num1);
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setop(1, "Withdraw-<~script2579>");
+	if (%varbit6590 ! 0) {
+		cc_setop(2, "Withdraw-1");
+	}
+	if (%varbit6590 ! 1) {
+		cc_setop(3, "Withdraw-5");
+	}
+	if (%varbit6590 ! 2) {
+		cc_setop(4, "Withdraw-10");
+	}
+	if (%varbit6590 ! 3 & %varbit3960 > 0) {
+		cc_setop(5, "Withdraw-<tostring(%varbit3960)>");
+	}
+	cc_setop(6, "Withdraw-X");
+	if (%varbit6590 ! 4) {
+		cc_setop(7, "Withdraw-All");
+	}
+	cc_setop(8, "Withdraw-All-but-1");
+	cc_setop(10, "Examine");
+	cc_settrans(0);
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	cc_setondrag("script5273(event_mousey, 0, $component3, event_com, event_comsubid, $component5)");
+	cc_setondragcomplete("script5274($component3, event_com, event_comsubid, event_drop, event_dropsubid, $comsubid2, 0, $component5)");
+	return(1);
+}
+cc_setobject_nonum(obj_6512, 1);
+cc_setopbase("");
+cc_settrans(0);
+cc_setonop(null);
+cc_setontimer(null);
+cc_setondragcomplete(null);
+return(0);

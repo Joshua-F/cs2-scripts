@@ -1,205 +1,265 @@
 // 773
 [proc,ge_offers_setup_init](component $component0, component $component1, component $component2)
-def_int $width3 = if_getwidth($component0);
-def_int $int4 = calc($width3 - 30);
-def_int $int5 = calc($int4 / 2);
-def_int $y6 = 119;
-def_int $y7 = 136;
-def_graphic $graphic8 = "ge_icons,4";
-def_graphic $graphic9 = "ge_icons,5";
+def_boolean $boolean3 = ~script5305;
+def_int $width4 = if_getwidth($component0);
+def_int $int5 = calc($width4 - 30);
+def_int $int6 = calc($int5 / 2);
+def_int $int7 = calc($int5 / 4);
+def_int $int8 = 119;
+def_int $int9 = 136;
+if ($boolean3 = true) {
+	$int8, $int9 = calc($int8 + 13), calc($int9 + 13);
+}
+def_graphic $graphic10 = "ge_icons,4";
+def_graphic $graphic11 = "ge_icons,5";
 cc_deleteall($component0);
-def_int $int10 = 0;
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid11 = $int10;
-$int10 = calc($int10 + 1);
+def_int $int12 = 0;
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid13 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(70, 31, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("graphic_1121");
 cc_setop(1, "Choose item");
 cc_setonop("opsound(event_opindex, 2)");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid12 = $int10;
-$int10 = calc($int10 + 1);
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid14 = $int12;
+$int12 = calc($int12 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+	cc_setposition(20, $int8, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("ge_smallicons,4");
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+	cc_setop(1, "-1");
+}
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid15 = $int12;
+$int12 = calc($int12 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(15 + $int6 - 25), $int8, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("ge_smallicons,5");
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+	cc_setop(1, "+1");
+}
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid16 = $int12;
+$int12 = calc($int12 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(25, $int9, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic10);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
+	cc_setop(1, "+1");
+}
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid17 = $int12;
+$int12 = calc($int12 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(67, $int9, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic10);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
+	cc_setop(1, "+10");
+}
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid18 = $int12;
+$int12 = calc($int12 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(109, $int9, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic10);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
+	cc_setop(1, "+100");
+}
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid19 = $int12;
+$int12 = calc($int12 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(151, $int9, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic10);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
+}
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid20 = $int12;
+$int12 = calc($int12 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(193, $int9, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic10);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
+	cc_setop(1, "Enter quantity");
+	cc_setonop("opsound(event_opindex, 2)");
+}
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid21 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
-cc_setposition(20, $y6, ^setpos_abs_left, ^setpos_abs_top);
+if ($boolean3 = true) {
+	cc_setposition(calc(15 + $int7 + 5), $int8, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc(15 + $int6 + 5), $int8, ^setpos_abs_left, ^setpos_abs_top);
+}
 cc_setgraphic("ge_smallicons,4");
 cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
 cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
 cc_setop(1, "-1");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid13 = $int10;
-$int10 = calc($int10 + 1);
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid22 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(15 + $int5 - 25), $y6, ^setpos_abs_left, ^setpos_abs_top);
+if ($boolean3 = true) {
+	cc_setposition(calc(15 + $int5 - ($int7 + 20 + 5)), $int8, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc(15 + $int5 - 25), $int8, ^setpos_abs_left, ^setpos_abs_top);
+}
 cc_setgraphic("ge_smallicons,5");
 cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
 cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
 cc_setop(1, "+1");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid14 = $int10;
-$int10 = calc($int10 + 1);
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid23 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(25, $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
-cc_setop(1, "+1");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid15 = $int10;
-$int10 = calc($int10 + 1);
-cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(67, $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
-cc_setop(1, "+10");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid16 = $int10;
-$int10 = calc($int10 + 1);
-cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(109, $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
-cc_setop(1, "+100");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid17 = $int10;
-$int10 = calc($int10 + 1);
-cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(151, $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid18 = $int10;
-$int10 = calc($int10 + 1);
-cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(193, $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
-cc_setop(1, "Enter quantity");
-cc_setonop("opsound(event_opindex, 2)");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid19 = $int10;
-$int10 = calc($int10 + 1);
-cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(15 + $int5 + 5), $y6, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("ge_smallicons,4");
-cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
-cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
-cc_setop(1, "-1");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid20 = $int10;
-$int10 = calc($int10 + 1);
-cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(15 + $int4 - 25), $y6, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("ge_smallicons,5");
-cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
-cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
-cc_setop(1, "+1");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid21 = $int10;
-$int10 = calc($int10 + 1);
-cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(15 + $int5 + 15), $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
+if ($boolean3 = true) {
+	cc_setposition(calc(15 + $int7 + 15), $int9, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc(15 + $int6 + 15), $int9, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic10);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
 cc_setop(1, "-5%");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid22 = $int10;
-$int10 = calc($int10 + 1);
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid24 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(15 + $int5 + 72), $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
+if ($boolean3 = true) {
+	cc_setposition(calc(15 + $int7 + 72), $int9, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc(15 + $int6 + 72), $int9, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic10);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
 cc_setop(1, "Guide price");
 cc_setonop("opsound(event_opindex, 2)");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid23 = $int10;
-$int10 = calc($int10 + 1);
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid25 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(15 + $int5 + $int5 - 107), $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
+if ($boolean3 = true) {
+	cc_setposition(calc(15 + $int5 - ($int7 + 72 + 35)), $int9, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc(15 + $int5 - 107), $int9, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic10);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
 cc_setop(1, "Enter price");
 cc_setonop("opsound(event_opindex, 2)");
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid24 = $int10;
-$int10 = calc($int10 + 1);
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid26 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(15 + $int5 + $int5 - 50), $y7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic($graphic8);
-cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8, null)");
+if ($boolean3 = true) {
+	cc_setposition(calc(15 + $int5 - ($int7 + 15 + 35)), $int9, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc(15 + $int5 - 50), $int9, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic10);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
 cc_setop(1, "+5%");
-def_int $comsubid25 = 0;
-def_int $comsubid26 = 0;
 def_int $comsubid27 = 0;
 def_int $comsubid28 = 0;
 def_int $comsubid29 = 0;
 def_int $comsubid30 = 0;
 def_int $comsubid31 = 0;
 def_int $comsubid32 = 0;
-$int10, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32 = ~ge_offers_initboxes($int10, $component0, $component1, p11_full);
-cc_create($component0, ^iftype_graphic, $int10);
-def_int $comsubid33 = $int10;
-$int10 = calc($int10 + 1);
+def_int $comsubid33 = 0;
+def_int $comsubid34 = 0;
+$int12, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34 = ~ge_offers_initboxes($boolean3, $int12, $component0, $component1, p11_full);
+cc_create($component0, ^iftype_graphic, $int12);
+def_int $comsubid35 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(70, 31, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("ge_smallicons,1");
-$int10 = ~ge_offers_setup_buttontext($component0, $comsubid14, "+1", $int10);
-$int10 = ~ge_offers_setup_buttontext($component0, $comsubid15, "+10", $int10);
-$int10 = ~ge_offers_setup_buttontext($component0, $comsubid16, "+100", $int10);
-def_int $comsubid34 = $int10;
-$int10 = ~ge_offers_setup_buttontext($component0, $comsubid17, "", $int10);
-$int10 = ~ge_offers_setup_buttontext($component0, $comsubid18, "...", $int10);
-$int10 = ~ge_offers_setup_buttongraphic($component0, $comsubid21, "ge_smallicons,2", $int10);
-$int10 = ~ge_offers_setup_buttongraphic($component0, $comsubid22, "ge_smallicons,0", $int10);
-$int10 = ~ge_offers_setup_buttontext($component0, $comsubid23, "...", $int10);
-$int10 = ~ge_offers_setup_buttongraphic($component0, $comsubid24, "ge_smallicons,3", $int10);
-cc_create($component0, ^iftype_text, $int10);
-def_int $comsubid35 = $int10;
-$int10 = calc($int10 + 1);
+def_int $comsubid36 = -1;
+if ($boolean3 = false) {
+	$int12 = ~ge_offers_setup_buttontext($component0, $comsubid16, "+1", $int12);
+	$int12 = ~ge_offers_setup_buttontext($component0, $comsubid17, "+10", $int12);
+	$int12 = ~ge_offers_setup_buttontext($component0, $comsubid18, "+100", $int12);
+	$comsubid36 = $int12;
+	$int12 = ~ge_offers_setup_buttontext($component0, $comsubid19, "", $int12);
+	$int12 = ~ge_offers_setup_buttontext($component0, $comsubid20, "...", $int12);
+}
+$int12 = ~ge_offers_setup_buttongraphic($component0, $comsubid23, "ge_smallicons,2", $int12);
+$int12 = ~ge_offers_setup_buttongraphic($component0, $comsubid24, "ge_smallicons,0", $int12);
+$int12 = ~ge_offers_setup_buttontext($component0, $comsubid25, "...", $int12);
+$int12 = ~ge_offers_setup_buttongraphic($component0, $comsubid26, "ge_smallicons,3", $int12);
+cc_create($component0, ^iftype_text, $int12);
+def_int $comsubid37 = $int12;
+$int12 = calc($int12 + 1);
 cc_setsize(if_getwidth($component2), if_getheight($component2), ^setsize_abs, ^setsize_abs);
 cc_setposition(if_getx($component2), if_gety($component2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-~ge_offers_setup_draw($component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35);
-if_setonvartransmit("ge_offers_setup_draw($component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35){var1151, var563, var1043}", $component0);
-if_setoninvtransmit("ge_offers_setup_draw($component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35){inv}", $component0);
-if (cc_find($component0, $comsubid12) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity(-1, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
-}
-if (cc_find($component0, $comsubid13) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity(1, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
-}
+~ge_offers_setup_draw($boolean3, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37);
+if_setonvartransmit("ge_offers_setup_draw($boolean3, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37){var1151, var563, var1043}", $component0);
+if_setoninvtransmit("ge_offers_setup_draw($boolean3, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37){inv}", $component0);
 if (cc_find($component0, $comsubid14) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity(1, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, -1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
 }
 if (cc_find($component0, $comsubid15) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity(10, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, 1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
 }
 if (cc_find($component0, $comsubid16) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity(100, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, 1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
 }
 if (cc_find($component0, $comsubid17) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity(^max_32bit_int, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, 10, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
+}
+if (cc_find($component0, $comsubid18) = ^true) {
+	cc_setonop("ge_offers_setup_changequantity($boolean3, 100, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
 }
 if (cc_find($component0, $comsubid19) = ^true) {
-	cc_setonop("ge_offers_setup_changeprice(-1, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
-}
-if (cc_find($component0, $comsubid20) = ^true) {
-	cc_setonop("ge_offers_setup_changeprice(1, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, ^max_32bit_int, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
 }
 if (cc_find($component0, $comsubid21) = ^true) {
-	cc_setonop("ge_offers_setup_changeprice(-5, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
+	cc_setonop("ge_offers_setup_changeprice($boolean3, -1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
 }
-if (cc_find($component0, $comsubid24) = ^true) {
-	cc_setonop("ge_offers_setup_changeprice(5, event_opindex, $component0, $comsubid11, $comsubid17, $comsubid34, $comsubid25, $comsubid26, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $component2, $comsubid35)");
+if (cc_find($component0, $comsubid22) = ^true) {
+	cc_setonop("ge_offers_setup_changeprice($boolean3, 1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
+}
+if (cc_find($component0, $comsubid23) = ^true) {
+	cc_setonop("ge_offers_setup_changeprice($boolean3, -5, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
+}
+if (cc_find($component0, $comsubid26) = ^true) {
+	cc_setonop("ge_offers_setup_changeprice($boolean3, 5, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37)");
 }

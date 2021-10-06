@@ -1,40 +1,40 @@
 // 778
-[clientscript,ge_offers_setup_changeprice](int $int0, int $opindex1, component $component2, int $comsubid3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, component $component15, int $comsubid16)
-if ($opindex1 ! 1 | %var1151 = null) {
+[clientscript,ge_offers_setup_changeprice](boolean $boolean0, int $int1, int $opindex2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $component16, int $comsubid17)
+if ($opindex2 ! 1 | %var1151 = null) {
 	return;
 }
-def_int $int17 = 0;
-if ($int0 = 1) {
+def_int $int18 = 0;
+if ($int1 = 1) {
 	if (%varbit4398 < ^max_32bit_int) {
 		%varbit4398 = calc(%varbit4398 + 1);
 	}
 	sound_synth(ge_up_amount, 1, 0);
-} else if ($int0 = -1) {
+} else if ($int1 = -1) {
 	if (%varbit4398 > 1) {
 		%varbit4398 = calc(%varbit4398 - 1);
 	}
 	sound_synth(ge_down_amount, 1, 0);
-} else if ($int0 = 5) {
-	$int17 = calc(%varbit4398 / 20);
-	if ($int17 <= 0) {
-		$int17 = 1;
+} else if ($int1 = 5) {
+	$int18 = calc(%varbit4398 / 20);
+	if ($int18 <= 0) {
+		$int18 = 1;
 	}
-	if (calc(^max_32bit_int - $int17) < %varbit4398) {
+	if (calc(^max_32bit_int - $int18) < %varbit4398) {
 		%varbit4398 = ^max_32bit_int;
 	} else {
-		%varbit4398 = calc(%varbit4398 + $int17);
+		%varbit4398 = calc(%varbit4398 + $int18);
 	}
 	sound_synth(ge_up_amount, 1, 0);
-} else if ($int0 = -5) {
-	$int17 = calc(%varbit4398 / 20);
-	if ($int17 <= 0) {
-		$int17 = 1;
+} else if ($int1 = -5) {
+	$int18 = calc(%varbit4398 / 20);
+	if ($int18 <= 0) {
+		$int18 = 1;
 	}
-	if ($int17 >= %varbit4398) {
+	if ($int18 >= %varbit4398) {
 		%varbit4398 = 1;
 	} else {
-		%varbit4398 = calc(%varbit4398 - $int17);
+		%varbit4398 = calc(%varbit4398 - $int18);
 	}
 	sound_synth(ge_down_amount, 1, 0);
 }
-~ge_offers_setup_draw($component2, $comsubid3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $component15, $comsubid16);
+~ge_offers_setup_draw($boolean0, $component3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $comsubid15, $component16, $comsubid17);

@@ -84,7 +84,7 @@ def_string $string18 = "";
 def_int $int21 = 0;
 while ($mesuid10 ! -1 & $component9 ! null) {
 	$chattype11, $int12, $string13, $string14, $string15, $int15, $string18, $int21 = chat_gethistoryex_byuid($mesuid10);
-	if (~panetest($chattype11, $string13, $int15) = 1 & ~filtertest($chattype11, $string13, ~script4742($string18, $string15), $int12, $int2, $string0, $int15) = 1) {
+	if (~panetest($chattype11, $string13, $int15, $string15) = 1 & ~filtertest($chattype11, $string13, ~script4742($string18, $string15), $string15, $int12, $int2, $string0, $int15) = 1) {
 		switch_int ($chattype11) {
 			case ^chattype_publicchat, ^chattype_modchat :
 				$int7 = ~script203(~script4742($string18, "<$string13>:"), "<$string4><$string15></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
@@ -108,6 +108,10 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 				$int7 = ~script199(~script4742($string18, "<col=1a31f2><$string15></col>"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
 			case ^chattype_friendschat :
 				$int7 = ~script203(~script4742($string18, "[<$string3><$string14></col>] <$string13>:"), "<$string7><$string15></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
+			case 111 :
+				$int7 = ~script199(~script4742($string18, "<col=1a31f2><$string15></col>"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
+			case 112 :
+				$int7 = ~script199(~script4742($string18, "<col=1a31f2><$string15></col>"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
 			case 41 :
 				if (activeclansettings_find_affined(0) = true & activeclanchannel_find_affined(0) = true) {
 					$clanslot17 = activeclanchannel_getuserslot(removetags($string13));
@@ -143,7 +147,14 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					$int7 = ~script4483(~script4742($string18, "[<$string2><$string14></col>]"), null, 0, 0, "<$string13>:", "<$string11><$string15></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
 				}
 			case 43 :
-				if (activeclanchannel_find_affined(0) = true) {
+				if (~script5309($string15) = 1) {
+					$string13, $string15 = ~script632($string15);
+					if (activeclansettings_find_affined(1) = true) {
+						$int7 = ~script203(~script4742($string18, "[<$string2><activeclansettings_getclanname></col>]"), $string15, $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
+					} else {
+						$int7 = ~script203(~script4742($string18, ""), $string15, $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
+					}
+				} else if (activeclanchannel_find_affined(0) = true) {
 					$int7 = ~script4483(~script4742($string18, "[<$string2><activeclanchannel_getclanname></col>]"), null, 0, 0, "", $string15, $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
 				} else {
 					$int7 = ~script4483(~script4742($string18, ""), null, 0, 0, "", $string15, $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $int3, $boolean4);
@@ -235,6 +246,30 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 			case 109 :
 				if_setopbase("<col=0xffffff><$string13></col>", $component9);
 				if_setop(2, "Form clan", $component9);
+				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
+				if_setonmouserepeat(null, $component9);
+				if_setonmouseleave(null, $component9);
+				if ($int15 = 1) {
+					if_setop(6, "Message", $component9);
+				} else {
+					if_setop(6, "Add friend", $component9);
+					if_setop(7, "Add ignore", $component9);
+				}
+			case 111 :
+				if_setopbase("<col=0xffffff><$string13></col>", $component9);
+				if_setop(2, "Form group", $component9);
+				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
+				if_setonmouserepeat(null, $component9);
+				if_setonmouseleave(null, $component9);
+				if ($int15 = 1) {
+					if_setop(6, "Message", $component9);
+				} else {
+					if_setop(6, "Add friend", $component9);
+					if_setop(7, "Add ignore", $component9);
+				}
+			case 112 :
+				if_setopbase("<col=0xffffff><$string13></col>", $component9);
+				if_setop(2, "Group with", $component9);
 				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
 				if_setonmouserepeat(null, $component9);
 				if_setonmouseleave(null, $component9);

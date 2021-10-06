@@ -1,0 +1,18 @@
+// 5260
+[clientscript,script5260](int $clock0, component $component1, int $comsubid2, string $string0, int $world3, boolean $boolean4)
+if (clientclock >= $clock0 & cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans(225);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 255, calc(clientclock + 2))");
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, 255)");
+	}
+	cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, 255)");
+	cc_setonop("script5259(event_opindex, event_com, event_comsubid, $string0, $world3)");
+	if ($boolean4 = true) {
+		if ($world3 ! -1) {
+			resume_countdialog(tostring($world3));
+		} else {
+			resume_countdialog("0");
+		}
+	}
+}

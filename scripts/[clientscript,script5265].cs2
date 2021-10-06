@@ -1,0 +1,12 @@
+// 5265
+[clientscript,script5265](component $component0, component $component1, int $int2)
+def_int $width3 = if_getwidth($component1);
+def_int $height4 = if_getheight($component1);
+def_int $comsubid5 = ~thinbox($component1, 0);
+cc_create($component1, ^iftype_text, $comsubid5);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+~script5283($component0, $component1, $int2);

@@ -1,0 +1,12 @@
+// 5280
+[proc,script5280](component $component0)
+def_int $int1 = calc((42 - 36) * 3 - 2);
+def_int $int2 = calc((36 - 32) * 2);
+def_int $int3 = inv_size(inv_660);
+while ($int3 > 0) {
+	$int3 = calc($int3 - 1);
+	if (cc_find($component0, $int3) = ^true) {
+		~script5281(inv_getobj(inv_660, $int3), inv_getnum(inv_660, $int3), $component0);
+		cc_setposition(calc($int1 + $int3 % 4 * 42), calc($int2 + $int3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	}
+}

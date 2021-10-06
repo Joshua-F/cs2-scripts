@@ -1,0 +1,9 @@
+// 5302
+[clientscript,script5302](component $component0, int $comsubid1, component $component2)
+if (%varbit1777 ! 4 & %varbit1777 ! 5) {
+	return;
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setgraphic(enum(int, graphic, enum_3840, %varbit1777));
+	if_setop(1, enum(int, string, enum_3839, %varbit1777), $component2);
+}

@@ -1,0 +1,228 @@
+// 5257
+[proc,script5257](component $component0, int $comsubid1, int $comsubid2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, component $component8, component $component9)
+if (%varbit13063 = 1) {
+	~clan_stonebutton_init("<col=0dc10d>Inviting</col>", $component9, "p12_full");
+	if_setonop("opsound(event_opindex, 2)", $component9);
+} else if (%varbit13063 = 2) {
+	~clan_stonebutton_init("<col=ff0000>Not inviting</col>", $component9, "p12_full");
+	if_setonop("opsound(event_opindex, 2)", $component9);
+} else {
+	if_setonmouserepeat(null, $component9);
+	if_setonmouseleave(null, $component9);
+	if_setontimer(null, $component9);
+	~clan_stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", $component9);
+	if_setop(1, "Invite", $component9);
+	if_setonop("opsound(0, 0)", $component9);
+}
+cc_deleteall($component8);
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = -1;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = -1;
+def_int $width18 = if_getwidth($component3);
+def_int $int19 = 0;
+def_int $world20 = -1;
+def_int $world21 = -1;
+def_int $int22 = 0;
+def_string $string0 = "";
+def_int $int23 = 0;
+if (%varbit13060 = 3 & activeclansettings_find_affined(1) = true) {
+	if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+		$string0 = activeclansettings_getclanname;
+		cc_settext($string0);
+		$int23 = parawidth($string0, 190, b12_full);
+		cc_setsize($int23, 0, ^setsize_abs, ^setsize_minus);
+		if (%varclansetting39 = 1) {
+			.cc_setgraphic(enum(int, graphic, enum_3798, 39));
+			.cc_setposition(calc((5 + $int23) / 2), -1, ^setpos_abs_centre, ^setpos_abs_centre);
+			cc_setposition(calc((0 - (13 + 5)) / 2), 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		} else {
+			.cc_setgraphic(null);
+			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		}
+	}
+	$int11 = ~min(5, %varclansetting37);
+	if (cc_find($component3, $comsubid4) = ^true & .cc_find($component3, $comsubid5) = ^true) {
+		if ($int11 > 0) {
+			$string0 = "<col=ffb83f><tostring(%varclansetting37)></col>";
+		} else {
+			$string0 = "<col=808080>-</col>";
+		}
+		cc_settext($string0);
+		$int23 = parawidth($string0, 190, p11_full);
+		cc_setsize($int23, 0, ^setsize_abs, ^setsize_minus);
+		.cc_setgraphic("graphic_3523");
+		$int23 = calc($int23 + 3 + 13);
+		if (%varclansetting41 > 0 & %varclansetting40 <= 0) {
+			$int19 = calc(($width18 / 2 - $int23) / 2);
+			.cc_setposition($int19, -1, ^setpos_abs_left, ^setpos_abs_centre);
+			cc_setposition(calc($int19 + 13 + 3), 0, ^setpos_abs_left, ^setpos_abs_centre);
+			if (cc_find($component3, $comsubid6) = ^true & .cc_find($component3, $comsubid7) = ^true) {
+				$string0 = "<col=ffb83f><tostring(%varclansetting41)></col>";
+				$int23 = parawidth($string0, 190, p11_full);
+				cc_setsize($int23, 0, ^setsize_abs, ^setsize_minus);
+				cc_settext($string0);
+				.cc_setgraphic("graphic_3522");
+				$int23 = calc($int23 + 3 + 13);
+				$int19 = calc($width18 / 2 + ($width18 / 2 - $int23) / 2);
+				.cc_setposition($int19, -1, ^setpos_abs_left, ^setpos_abs_centre);
+				cc_setposition(calc($int19 + 13 + 3), 0, ^setpos_abs_left, ^setpos_abs_centre);
+			}
+		} else {
+			$int19 = calc(($width18 - $int23) / 2);
+			.cc_setposition($int19, -1, ^setpos_abs_left, ^setpos_abs_centre);
+			cc_setposition(calc($int19 + 13 + 3), 0, ^setpos_abs_left, ^setpos_abs_centre);
+			if (cc_find($component3, $comsubid6) = ^true & .cc_find($component3, $comsubid7) = ^true) {
+				cc_settext("");
+				.cc_setgraphic(null);
+			}
+		}
+	}
+	$int14, $int12 = activeclansettings_getaffinedcount, activeclansettings_getcurrentowner_slot;
+	while ($int13 < $int14) {
+		cc_create($component8, ^iftype_rectangle, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		cc_settrans(255);
+		cc_sethide(false);
+		cc_setop(1, "Details");
+		cc_setopbase("<col=ff9040><activeclansettings_getaffineddisplayname($int13)></col>");
+		if (~on_mobile = false) {
+			cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, 255)");
+		}
+		cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, 255)");
+		$int13 = calc($int13 + 1);
+	}
+	$world20 = map_world;
+	while ($int15 < $int14) {
+		$int13 = activeclansettings_getsortedaffinedslot($int15);
+		if (.cc_find($component8, $int13) = ^true) {
+			.cc_clearops;
+			if ($int13 = $int12) {
+				$int16, $int17 = 0, $int15;
+				cc_create($component8, ^iftype_graphic, $int10);
+				$int10 = calc($int10 + 1);
+				cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+				cc_setgraphic(enum(int, graphic, enum_3798, -4));
+				cc_setposition(calc((15 - 13) / 2), calc($int16 + (25 - 13) / 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int17 = -1) {
+				$int16 = calc(($int15 + 1) * 25);
+			} else {
+				$int16 = calc($int15 * 25);
+			}
+			.cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
+			$string0 = removetags(activeclansettings_getaffineddisplayname($int13));
+			if (compare(lowercase($string0), lowercase(removetags(chat_playername))) = 0) {
+				$int22 = 1;
+			} else {
+				$int22 = 0;
+			}
+			cc_create($component8, ^iftype_text, $int10);
+			$int10 = calc($int10 + 1);
+			cc_setposition(0, $int16, ^setpos_abs_right, ^setpos_abs_top);
+			cc_setsize(15, 25, ^setsize_minus, ^setsize_abs);
+			cc_settextshadow(true);
+			cc_settextfont(p12_full);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_setcolour(^white);
+			cc_settext($string0);
+			$int23 = calc((15 - 13) / 2);
+			cc_create($component8, ^iftype_text, $int10);
+			$int10 = calc($int10 + 1);
+			cc_setposition($int23, $int16, ^setpos_abs_right, ^setpos_abs_top);
+			cc_setsize($int23, 25, ^setsize_minus, ^setsize_abs);
+			cc_settextshadow(true);
+			cc_settextfont(p12_full);
+			cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+			if (activeclanchannel_find_affined(1) = true) {
+				$int19 = activeclanchannel_getuserslot($string0);
+				if ($int19 ! -1) {
+					$world21 = activeclanchannel_getuserworld($int19);
+					if ($world21 ! $world20) {
+						cc_setcolour(0xffff64);
+						if ($int22 = 0) {
+							.cc_setop(10, "Switch world");
+						}
+					} else {
+						cc_setcolour(0x0dc10d);
+					}
+					cc_settext("W<tostring($world21)>");
+				} else {
+					$world21 = -1;
+					cc_setcolour(0x808080);
+					cc_settext("---");
+				}
+			} else {
+				$world21 = -1;
+				cc_setcolour(0x808080);
+				cc_settext("---");
+			}
+			if ($int22 = 0) {
+				if (friend_count >= 0 & ignore_count >= 0) {
+					if (friend_test($string0) = true) {
+						.cc_setop(1, "Message");
+						.cc_setop(2, "Remove friend");
+					} else if (ignore_test($string0) = true) {
+						.cc_setop(3, "Remove ignore");
+					} else {
+						.cc_setop(2, "Add friend");
+						.cc_setop(3, "Add ignore");
+					}
+				}
+				.cc_setonop("script5259(event_opindex, event_com, event_comsubid, $string0, $world21)");
+			}
+			if (activeclansettings_getaffinedextrainfo($int13, 28, 28) = 1) {
+				cc_create($component8, ^iftype_graphic, $int10);
+				$int10 = calc($int10 + 1);
+				cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+				cc_setgraphic(enum(int, graphic, enum_3798, 39));
+				cc_setposition(calc(15 + parawidth($string0, 190, p12_full) + 1), calc($int16 + (25 - 13) / 2 - 1), ^setpos_abs_left, ^setpos_abs_top);
+			}
+		}
+		$int15 = calc($int15 + 1);
+	}
+	while ($int15 < $int11) {
+		cc_create($component8, ^iftype_text, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setposition(0, calc($int15 * 25), ^setpos_abs_right, ^setpos_abs_top);
+		cc_setsize(15, 25, ^setsize_minus, ^setsize_abs);
+		cc_settextshadow(true);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_setcolour(0x808080);
+		cc_settext("Vacancy");
+		$int15 = calc($int15 + 1);
+	}
+} else {
+	if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+		cc_settext("<col=808080><enum(int, string, enum_3839, %varbit13071)></col>");
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		.cc_setgraphic(null);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	}
+	if (cc_find($component3, $comsubid4) = ^true & .cc_find($component3, $comsubid5) = ^true) {
+		cc_settext("<col=808080><~script5258(%varbit13060)></col>");
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		.cc_setgraphic(null);
+	}
+	if (cc_find($component3, $comsubid6) = ^true & .cc_find($component3, $comsubid7) = ^true) {
+		cc_settext("");
+		.cc_setgraphic(null);
+	}
+	cc_create($component8, ^iftype_text, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);
+	cc_setcolour(0x808080);
+	cc_settextshadow(true);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext("Loading...");
+}

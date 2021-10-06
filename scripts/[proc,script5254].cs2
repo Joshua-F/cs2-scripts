@@ -1,0 +1,20 @@
+// 5254
+[proc,script5254](component $component0, string $string0, int $int1, boolean $boolean2)
+def_int $comsubid3 = 0;
+if ($boolean2 = false) {
+	$comsubid3 = ~v2_stone_button_out_filled($component0);
+} else {
+	$comsubid3 = ~v2_stone_button_in_filled($component0);
+}
+cc_create($component0, ^iftype_text, $comsubid3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour($int1);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+if (~on_mobile = false) {
+	if_setonmouseover("script5253($component0, $string0, $int1, true)", $component0);
+	if_setonmouseleave("script5253($component0, $string0, $int1, false)", $component0);
+}

@@ -1,6 +1,13 @@
 // 4473
-[proc,script4473](component $component0, component $component1, component $component2, component $component3)
-~side_channels_settab(0, $component0, $component0, $component1, $component2, $component3);
-~side_channels_settab(1, $component1, $component0, $component1, $component2, $component3);
-~side_channels_settab(2, $component2, $component0, $component1, $component2, $component3);
-~side_channels_settab(3, $component3, $component0, $component1, $component2, $component3);
+[proc,script4473](component $component0, component $component1, component $component2, component $component3, component $component4)
+~side_channels_settab(0, $component0, $component0, $component1, $component2, $component3, $component4);
+~side_channels_settab(1, $component1, $component0, $component1, $component2, $component3, $component4);
+~side_channels_settab(2, $component2, $component0, $component1, $component2, $component3, $component4);
+~side_channels_settab(3, $component3, $component0, $component1, $component2, $component3, $component4);
+if (%varbit1777 = 4) {
+	~side_channels_settab(4, $component4, $component0, $component1, $component2, $component3, $component4);
+} else if (%varbit1777 = 5) {
+	~side_channels_settab(5, $component4, $component0, $component1, $component2, $component3, $component4);
+} else {
+	if_sethide(true, $component4);
+}

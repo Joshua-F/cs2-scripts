@@ -1,17 +1,17 @@
 // 2094
-[proc,ironman_modebutton_init](component $component0, int $int1, string $op0, string $string1, component $component2, component $component3, component $component4, component $component5)
+[proc,ironman_modebutton_init](component $component0, int $int1, string $op0, string $string1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 cc_deleteall($component0);
-def_int $int6 = 0;
-.cc_create($component0, ^iftype_rectangle, $int6);
-def_int $int7 = $int6;
-$int6 = calc($int6 + 1);
+def_int $int8 = 0;
+.cc_create($component0, ^iftype_rectangle, $int8);
+def_int $int9 = $int8;
+$int8 = calc($int8 + 1);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setfill(true);
 .cc_setcolour(^white);
-$int6 = ~thinbox($component0, $int6);
-cc_create($component0, ^iftype_text, $int6);
-$int6 = calc($int6 + 1);
+$int8 = ~script5295($component0, $int8);
+cc_create($component0, ^iftype_text, $int8);
+$int8 = calc($int8 + 1);
 cc_setsize(30, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
@@ -23,11 +23,11 @@ if (if_getheight($component0) < 30) {
 } else {
 	cc_settext("<col=ffffff><$op0></col><br><$string1>");
 }
-cc_create($component0, ^iftype_graphic, $int6);
-def_int $int8 = $int6;
-$int6 = calc($int6 + 1);
+cc_create($component0, ^iftype_graphic, $int8);
+def_int $int10 = $int8;
+$int8 = calc($int8 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_centre);
-~ironman_modebutton_redraw($component0, $int7, $int8, $int1, $component2, $component3, $component4, $component5);
-if_setonvartransmit("ironman_modebutton_redraw($component0, $int7, $int8, $int1, $component2, $component3, $component4, $component5){var499, var281}", $component0);
+~ironman_modebutton_redraw($component0, $int9, $int10, $int1, $component2, $component3, $component4, $component5, $component6, $component7);
+if_setonvartransmit("ironman_modebutton_redraw($component0, $int9, $int10, $int1, $component2, $component3, $component4, $component5, $component6, $component7){var499, var281, var3170}", $component0);
 if_setop(1, $op0, $component0);

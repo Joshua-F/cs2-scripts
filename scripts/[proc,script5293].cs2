@@ -1,0 +1,82 @@
+// 5293
+[proc,script5293](component $component0, int $int1, int $int2, int $int3, int $int4, int $colour5, string $text0, fontmetrics $fontmetrics6, int $colour7, int $int8, graphic $graphic9, int $int10, int $int11, int $int12, int $int13, int $int14)(int)
+def_int $int15 = 4;
+def_int $int16 = 1;
+def_int $int17 = calc($int2 * ($int3 + $int4));
+def_struct $struct18 = struct_3712;
+if ($int14 = 0) {
+	$struct18 = struct_3714;
+}
+def_int $int19 = calc($int15 + 1);
+def_int $int20 = $int1;
+cc_create($component0, ^iftype_rectangle, $int20);
+cc_setposition(calc($int17 + 1), 1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int3 - 2), calc($int19 - 2), ^setsize_abs, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour($colour5);
+if ($int14 = 0) {
+	cc_setop(1, "View");
+	cc_setopbase("<col=ff9040><$text0></col>");
+	if (~on_mobile = false) {
+		cc_setonmouseover("script5294($component0, $int20, struct_3713)");
+		cc_setonmouseleave("script5294($component0, $int20, struct_3714)");
+	}
+}
+$int1 = calc($int1 + 1);
+if ($int14 = 0) {
+	$int19 = calc($int15 * 2 - $int16);
+} else {
+	$int19 = $int15;
+}
+~create_graphic($component0, $int1, struct_param($struct18, param_1391), calc($int17 + 2), $int15, ^setpos_abs_left, ^setpos_abs_top, calc($int3 - 4), $int19, ^setsize_abs, ^setsize_minus);
+$int1 = calc($int1 + 1);
+if ($int17 = 0 & $int14 = 1) {
+	$int19 = $int15;
+} else {
+	$int19 = calc(2 * $int15 - $int16);
+}
+~create_graphic($component0, $int1, struct_param($struct18, param_1390), $int17, $int15, ^setpos_abs_left, ^setpos_abs_top, $int15, $int19, ^setsize_abs, ^setsize_minus);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, struct_param($struct18, param_1388), calc($int17 + $int15), 0, ^setpos_abs_left, ^setpos_abs_top, calc($int3 - 2 * $int15), $int15, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+if (calc($int17 + $int3) = if_getwidth($component0) & $int14 = 1) {
+	$int19 = $int15;
+} else {
+	$int19 = calc(2 * $int15 - $int16);
+}
+~create_graphic($component0, $int1, struct_param($struct18, param_1392), calc($int17 + $int3 - $int15), $int15, ^setpos_abs_left, ^setpos_abs_top, $int15, $int19, ^setsize_abs, ^setsize_minus);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, struct_param($struct18, param_1387), $int17, 0, ^setpos_abs_left, ^setpos_abs_top, $int15, $int15, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, struct_param($struct18, param_1389), calc($int17 + $int3 - $int15), 0, ^setpos_abs_left, ^setpos_abs_top, $int15, $int15, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+if ($fontmetrics6 = null) {
+	$int19 = calc($int17 + $int3 / 2 - $int10 / 2 + $int13);
+} else {
+	$int19 = calc($int17 + 4 + $int12);
+}
+~create_graphic($component0, $int1, $graphic9, $int19, calc((if_getheight($component0) + $int16) / 2 - $int11 / 2 + $int13), ^setpos_abs_left, ^setpos_abs_top, $int10, $int11, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_text, $int1);
+def_int $x21 = 0;
+def_int $settextalignh22 = ^settextalign_left;
+if ($graphic9 = null) {
+	$settextalignh22 = ^settextalign_centre;
+}
+if ($fontmetrics6 = null) {
+	cc_sethide(true);
+} else {
+	$x21 = calc($int17 + 8 + $int10 + $int8);
+	cc_setposition($x21, $int15, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int3 - 8 + $int10 - $int8 - 8), calc(2 * $int15 - $int16), ^setsize_abs, ^setsize_minus);
+	cc_settextalign($settextalignh22, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settextfont($fontmetrics6);
+	cc_setcolour($colour7);
+	cc_settext($text0);
+}
+$int1 = calc($int1 + 1);
+if (cc_find($component0, $int20) = ^true) {
+	return($int1);
+}
+return(0);

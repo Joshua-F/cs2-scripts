@@ -1,0 +1,38 @@
+// 5259
+[clientscript,script5259](int $opindex0, component $component1, int $comsubid2, string $string0, int $world3)
+if (cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	cc_settrans(200);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	cc_setonop(null);
+	switch_int ($opindex0) {
+		case 1 :
+			cc_setontimer("script5260(calc(clientclock + 20), event_com, event_comsubid, $string0, $world3, false)");
+			if ($world3 ! -1) {
+				if (friend_test($string0) = true) {
+					~meslayer_mode6($string0);
+				}
+			} else {
+				mes("The player is not online at the moment.");
+			}
+		case 2 :
+			cc_setontimer("script5260(calc(clientclock + 20), event_com, event_comsubid, $string0, $world3, false)");
+			if (friend_test($string0) = true) {
+				friend_del($string0);
+			} else {
+				friend_add($string0);
+			}
+		case 3 :
+			cc_setontimer("script5260(calc(clientclock + 20), event_com, event_comsubid, $string0, $world3, false)");
+			if (ignore_test($string0) = true) {
+				ignore_del($string0);
+			} else {
+				ignore_add($string0);
+			}
+		case 10 :
+			cc_setontimer("script5260(calc(clientclock + 15), event_com, event_comsubid, $string0, $world3, true)");
+		case default :
+			cc_setontimer("script5260(calc(clientclock + 20), event_com, event_comsubid, $string0, $world3, false)");
+	}
+}

@@ -1,18 +1,25 @@
 // 4789
 [proc,ca_tasks_tier_total](int $int0)(int)
+def_enum $enum1 = enum_3981;
 switch_int ($int0) {
-	case 1 :
-		return(enum_getoutputcount(enum_3981));
 	case 2 :
-		return(enum_getoutputcount(enum_3982));
+		$enum1 = enum_3982;
 	case 3 :
-		return(enum_getoutputcount(enum_3983));
+		$enum1 = enum_3983;
 	case 4 :
-		return(enum_getoutputcount(enum_3984));
+		$enum1 = enum_3984;
 	case 5 :
-		return(enum_getoutputcount(enum_3985));
+		$enum1 = enum_3985;
 	case 6 :
-		return(enum_getoutputcount(enum_3986));
-	case default :
-		return(-1);
+		$enum1 = enum_3986;
 }
+def_int $count2 = 0;
+def_int $int3 = 0;
+def_int $count4 = enum_getoutputcount($enum1);
+while ($count2 < $count4) {
+	if (~script5243(enum(int, struct, $enum1, $count2)) = 0) {
+		$int3 = calc($int3 + 1);
+	}
+	$count2 = calc($count2 + 1);
+}
+return($int3);

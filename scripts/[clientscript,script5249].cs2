@@ -1,0 +1,11 @@
+// 5249
+[clientscript,script5249](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
+~steelborder($component0, "Choose your Gamemode", 0);
+cc_deleteall($component6);
+~scrollbar_vertical($component6, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script5251($component5, 0);
+~script5252($component2, $component3, 0);
+if_setonop("script5250($component5, $component2, $component3, 1)", $component2);
+if_setop(1, "Select", $component2);
+if_setonop("script5250($component5, $component2, $component3, 2)", $component3);
+if_setop(1, "Select", $component3);

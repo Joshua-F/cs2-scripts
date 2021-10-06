@@ -2,7 +2,10 @@
 [clientscript,clan_create_targetmode](boolean $boolean0, component $component1, string $string0, graphic $graphic2)
 if ($boolean0 = true) {
 	%varcint454 = 1;
+	sound_synth(interface_select1, 1, 0);
+	mes("You're now in Invite Target Mode. <~text_device("Left click", "Tap")> someone to invite them.");
 } else {
 	%varcint454 = 0;
+	mes("You're no longer in Invite Target Mode.");
 }
 ~clan_stonebutton_draw($boolean0, "Invite", "p12_full", $component1);

@@ -1,5 +1,5 @@
 // 90
-[proc,filtertest](int $chattype0, string $string0, string $string1, int $clock1, int $int2, string $string2, int $int3)(int)
+[proc,filtertest](int $chattype0, string $string0, string $string1, string $string2, int $clock1, int $int2, string $string3, int $int3)(int)
 if ($chattype0 = null) {
 	return(0);
 }
@@ -13,7 +13,7 @@ if (enum(int, boolean, enum_892, $chattype0) = true & $chattype0 ! ^chattype_pla
 	return(1);
 }
 def_int $chatfilter4 = null;
-def_string $string3 = "";
+def_string $string4 = "";
 def_int $int5 = -1;
 def_int $int6 = ~script4487;
 switch_int ($chattype0) {
@@ -21,7 +21,7 @@ switch_int ($chattype0) {
 		if ($clock1 < %varcint199) {
 			return(0);
 		}
-		if (compare($string2, removetags($string0)) = 0) {
+		if (compare($string3, removetags($string0)) = 0) {
 			return(1);
 		}
 		if ($int3 = 2) {
@@ -45,7 +45,7 @@ switch_int ($chattype0) {
 		if ($clock1 < %varcint199) {
 			return(0);
 		}
-		if (compare($string2, removetags($string0)) = 0) {
+		if (compare($string3, removetags($string0)) = 0) {
 			return(1);
 		}
 		if ($int3 = 2) {
@@ -108,7 +108,7 @@ switch_int ($chattype0) {
 		if ($clock1 < %varcint439) {
 			return(0);
 		}
-		if (compare($string2, removetags($string0)) = 0) {
+		if (compare($string3, removetags($string0)) = 0) {
 			return(1);
 		}
 		if ($int3 = 2) {
@@ -129,14 +129,17 @@ switch_int ($chattype0) {
 			return(1);
 		}
 		return(0);
-	case 41, 44, 43, 46, 109, 110 :
+	case 41, 44, 43, 46, 109, 110, 111, 112 :
+		if ($chattype0 = 43 & ~script5309($string2) = 1) {
+			return(1);
+		}
 		if ($clock1 < %varcint440) {
 			return(0);
 		}
 		if (%varbit931 = 1 & ($chattype0 = 41 | $chattype0 = 43)) {
 			return(0);
 		}
-		if (compare($string2, removetags($string0)) = 0) {
+		if (compare($string3, removetags($string0)) = 0) {
 			return(1);
 		}
 		if ($int3 = 2) {
@@ -163,7 +166,7 @@ switch_int ($chattype0) {
 		if ($clock1 < %varcint202) {
 			return(0);
 		}
-		$string1, $string3, $int5 = ~chat_broadcast_parseurl($string1);
+		$string1, $string4, $int5 = ~chat_broadcast_parseurl($string1);
 		if ($int5 = 4 & reboottimer > 0) {
 			return(0);
 		}

@@ -18,7 +18,7 @@ def_int $int14 = ~max($int5, 26);
 def_int $x15 = calc($int2 - ($int13 - $int4) / 2);
 def_int $y16 = calc($int3 - ($int14 - $int5) / 2);
 def_boolean $boolean17 = false;
-if ($int8 = 1) {
+if ($int8 = 1 & $component1 ! null) {
 	$boolean17 = ~on_mobile;
 	cc_create($component1, ^iftype_rectangle, $comsubid7);
 	if ($boolean17 = true) {

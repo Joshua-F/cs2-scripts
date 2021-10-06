@@ -17,7 +17,7 @@ if (compare($string1, removetags($string0)) = 0) {
 }
 cc_setopbase($string0);
 cc_setonop("script4451(event_opindex, event_opbase)");
-if (%varbit12171 = 1) {
+if (%varbit12171 = 1 | %varbit13058 = 1) {
 	cc_setop(1, "Kick");
 }
 if (friend_test($string0) = true) {

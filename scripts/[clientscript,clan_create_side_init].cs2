@@ -1,6 +1,12 @@
 // 4445
-[clientscript,clan_create_side_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8)
-if_settext("<col=ff981f>Form a clan</col>", $component1);
+[clientscript,clan_create_side_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8, string $string0)
+def_int $int9 = 0;
+if (%varbit13058 = 1 | %varbit13059 = 1) {
+	$int9 = 1;
+	if_settext("<col=ff981f>Create a <$string0></col>", $component1);
+} else {
+	if_settext("<col=ff981f>Form a <$string0></col>", $component1);
+}
 cc_deleteall($component2);
 cc_create($component2, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -9,28 +15,38 @@ cc_setcolour(0xffb83f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext("Clan founders");
+cc_settext("<$string0> members");
 cc_deleteall($component0);
-cc_create($component0, ^iftype_rectangle, enum(component, int, enum_3824, $component4));
-cc_create($component0, ^iftype_rectangle, enum(component, int, enum_3824, $component5));
-cc_create($component0, ^iftype_rectangle, enum(component, int, enum_3824, $component6));
-cc_create($component0, ^iftype_rectangle, enum(component, int, enum_3824, $component7));
-def_string $string0 = "<col=ff981f>Clan name</col>";
-if (string_length(%varcstring458) > 0) {
-	$string0 = %varcstring458;
+def_enum $enum10 = enum_3824;
+def_int $int11 = 0;
+if ($int9 = 1) {
+	$enum10 = enum_4053;
+	$int11 = 1;
 }
-if_setop(1, "Clan name", $component4);
+cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component4));
+cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component5));
+cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component6));
+cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component7));
+def_string $string1 = "<col=ff981f><$string0> name</col>";
+if (string_length(%varcstring458) > 0) {
+	$string1 = %varcstring458;
+}
+if_setop(1, "<$string0> name", $component4);
 if_setop(1, "Cancel", $component5);
 if_setop(1, "Invite", $component6);
 if_setop(1, "Confirm", $component7);
-if (%varbit12171 = 1) {
-	~clan_stonebutton_init($string0, $component4, "p12_full");
+if (%varbit13058 = 1 | %varbit12171 = 1) {
+	~clan_stonebutton_init($string1, $component4, "p12_full");
 	~clan_stonebutton_init("<col=ff0000>Cancel</col>", $component5, "p12_full");
 	~clan_stonebutton_target_init("<col=ff981f>Invite</col>", $component6, "p12_full");
 	~clan_stonebutton_init("<col=0dc10d>Confirm</col>", $component7, "p12_full");
 } else {
-	if_setonop("clan_create_member_invite", $component6);
-	~clan_stonebutton_draw(false, "<col=808080>Clan name</col>", "p12_full", $component4);
+	if ($int11 = 0) {
+		if_setonop("clan_create_member_invite", $component6);
+	} else {
+		if_setonop("script5304", $component6);
+	}
+	~clan_stonebutton_draw(false, "<col=808080><$string0> name</col>", "p12_full", $component4);
 	~clan_stonebutton_init("<col=ff0000>Cancel</col>", $component5, "p12_full");
 	~clan_stonebutton_draw(false, "<col=808080>Invite</col>", "p12_full", $component6);
 	~clan_stonebutton_draw(false, "<col=808080>Confirm</col>", "p12_full", $component7);
