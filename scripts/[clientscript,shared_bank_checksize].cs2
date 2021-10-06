@@ -1,0 +1,5 @@
+// 5271
+[clientscript,shared_bank_checksize](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5, int $int6, int $height7)
+if (if_getheight($component0) ! $height7) {
+	~shared_bank_setsize($component0, $component1, $component2, $component3, $int4, $int5, $int6);
+}

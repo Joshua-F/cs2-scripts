@@ -13,7 +13,7 @@ if (%varbit4285 = 1) {
 	$int3 = 1;
 	$string0 = " ";
 	if (%varbit12230 = 1) {
-		if (activeclansettings_find_affined(0) = true) {
+		if (activeclansettings_find_affined(^clantype_clan) = true) {
 			$string1 = activeclansettings_getclanname;
 		} else {
 			$string1 = "Your clan";

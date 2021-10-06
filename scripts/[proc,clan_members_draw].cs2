@@ -24,7 +24,7 @@ def_int $int19 = 0;
 def_int $int20 = -1;
 def_int $int21 = 0;
 def_int $index22 = 0;
-if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 	if (cc_find($component1, $comsubid2) = ^true) {
 		if (~clan_members_searching = 1) {
 			$string3 = ~bankmain_filterstring;

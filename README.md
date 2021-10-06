@@ -381,7 +381,7 @@
 [**378**](scripts/[clientscript,menu_indexed].cs2) `[clientscript,menu_indexed]`  
 [**379**](scripts/[proc,menu_createentry_indexed].cs2) `[proc,menu_createentry_indexed]`  
 [**380**](scripts/[clientscript,script380].cs2)  
-[**381**](scripts/[clientscript,script381].cs2)  
+[**381**](scripts/[clientscript,settings_side_brightness_init].cs2) `[clientscript,settings_side_brightness_init]`  
 [**382**](scripts/[clientscript,script382].cs2)  
 [**383**](scripts/[proc,pvpw_check].cs2) `[proc,pvpw_check]`  
 [**384**](scripts/[proc,wilderness_level].cs2) `[proc,wilderness_level]`  
@@ -4725,8 +4725,8 @@
 [**4722**](scripts/[clientscript,script4722].cs2)  
 [**4723**](scripts/[proc,spec_regen_timer].cs2) `[proc,spec_regen_timer]`  
 [**4724**](scripts/[clientscript,spec_regen_arc].cs2) `[clientscript,spec_regen_arc]`  
-[**4725**](scripts/[clientscript,script4725].cs2)  
-[**4726**](scripts/[proc,script4726].cs2)  
+[**4725**](scripts/[clientscript,mouseover_ops].cs2) `[clientscript,mouseover_ops]`  
+[**4726**](scripts/[proc,mouseover_ops].cs2) `[proc,mouseover_ops]`  
 [**4727**](scripts/[proc,mouseover_text].cs2) `[proc,mouseover_text]`  
 [**4728**](scripts/[proc,mouseover_tooltip].cs2) `[proc,mouseover_tooltip]`  
 [**4729**](scripts/[proc,script4729].cs2)  
@@ -5224,7 +5224,7 @@
 [**5221**](scripts/[clientscript,summary_sidepanel_timer_draw].cs2) `[clientscript,summary_sidepanel_timer_draw]`  
 [**5222**](scripts/[clientscript,script5222].cs2)  
 [**5223**](scripts/[proc,script5223].cs2)  
-[**5224**](scripts/[clientscript,script5224].cs2)  
+[**5224**](scripts/[clientscript,pvp_icons_comlevelrange].cs2) `[clientscript,pvp_icons_comlevelrange]`  
 [**5225**](scripts/[proc,script5225].cs2)  
 [**5226**](scripts/[proc,script5226].cs2)  
 [**5227**](scripts/[proc,script5227].cs2)  
@@ -5236,8 +5236,8 @@
 [**5233**](scripts/[proc,deadman_sigils_buildoffer].cs2) `[proc,deadman_sigils_buildoffer]`  
 [**5234**](scripts/[proc,deadman_sigils_buildslot].cs2) `[proc,deadman_sigils_buildslot]`  
 [**5235**](scripts/[clientscript,wornitems_deadman_sigils_init].cs2) `[clientscript,wornitems_deadman_sigils_init]`  
-[**5236**](scripts/[clientscript,script5236].cs2)  
-[**5237**](scripts/[proc,script5237].cs2)  
+[**5236**](scripts/[clientscript,wornitems_deadman_sigils_drawbutton].cs2) `[clientscript,wornitems_deadman_sigils_drawbutton]`  
+[**5237**](scripts/[proc,wornitems_deadman_sigils_drawbutton].cs2) `[proc,wornitems_deadman_sigils_drawbutton]`  
 [**5238**](scripts/[proc,settings_store_button_mobile].cs2) `[proc,settings_store_button_mobile]`  
 [**5239**](scripts/[clientscript,script5239].cs2)  
 [**5240**](scripts/[clientscript,quest_journal_reset].cs2) `[clientscript,quest_journal_reset]`  
@@ -5245,44 +5245,44 @@
 [**5242**](scripts/[proc,script5242].cs2)  
 [**5243**](scripts/[proc,script5243].cs2)  
 [**5244**](scripts/[clientscript,script5244].cs2)  
-[**5245**](scripts/[clientscript,script5245].cs2)  
-[**5246**](scripts/[clientscript,script5246].cs2)  
-[**5247**](scripts/[proc,script5247].cs2)  
-[**5248**](scripts/[clientscript,script5248].cs2)  
+[**5245**](scripts/[clientscript,ironman_tabs_init].cs2) `[clientscript,ironman_tabs_init]`  
+[**5246**](scripts/[clientscript,ironman_tabs_transmit].cs2) `[clientscript,ironman_tabs_transmit]`  
+[**5247**](scripts/[proc,ironman_tabs_create].cs2) `[proc,ironman_tabs_create]`  
+[**5248**](scripts/[clientscript,ironman_tabs_select].cs2) `[clientscript,ironman_tabs_select]`  
 [**5249**](scripts/[clientscript,script5249].cs2)  
-[**5250**](scripts/[clientscript,script5250].cs2)  
-[**5251**](scripts/[proc,script5251].cs2)  
-[**5252**](scripts/[proc,script5252].cs2)  
-[**5253**](scripts/[clientscript,script5253].cs2)  
-[**5254**](scripts/[proc,script5254].cs2)  
-[**5255**](scripts/[clientscript,script5255].cs2)  
-[**5256**](scripts/[clientscript,script5256].cs2)  
-[**5257**](scripts/[proc,script5257].cs2)  
+[**5250**](scripts/[clientscript,gim_buttons_click].cs2) `[clientscript,gim_buttons_click]`  
+[**5251**](scripts/[proc,gim_leave_text].cs2) `[proc,gim_leave_text]`  
+[**5252**](scripts/[proc,gim_buttons_init].cs2) `[proc,gim_buttons_init]`  
+[**5253**](scripts/[clientscript,gim_button_init].cs2) `[clientscript,gim_button_init]`  
+[**5254**](scripts/[proc,gim_button_init].cs2) `[proc,gim_button_init]`  
+[**5255**](scripts/[clientscript,gim_sidepanel_init].cs2) `[clientscript,gim_sidepanel_init]`  
+[**5256**](scripts/[clientscript,gim_sidepanel_draw].cs2) `[clientscript,gim_sidepanel_draw]`  
+[**5257**](scripts/[proc,gim_sidepanel_draw].cs2) `[proc,gim_sidepanel_draw]`  
 [**5258**](scripts/[proc,script5258].cs2)  
-[**5259**](scripts/[clientscript,script5259].cs2)  
-[**5260**](scripts/[clientscript,script5260].cs2)  
-[**5261**](scripts/[clientscript,script5261].cs2)  
-[**5262**](scripts/[proc,script5262].cs2)  
+[**5259**](scripts/[clientscript,gim_sidepanel_op].cs2) `[clientscript,gim_sidepanel_op]`  
+[**5260**](scripts/[clientscript,gim_sidepanel_reset].cs2) `[clientscript,gim_sidepanel_reset]`  
+[**5261**](scripts/[clientscript,gim_sidepanel_limited_init].cs2) `[clientscript,gim_sidepanel_limited_init]`  
+[**5262**](scripts/[proc,is_group_iron].cs2) `[proc,is_group_iron]`  
 [**5263**](scripts/[proc,script5263].cs2)  
-[**5264**](scripts/[clientscript,script5264].cs2)  
-[**5265**](scripts/[clientscript,script5265].cs2)  
-[**5266**](scripts/[clientscript,script5266].cs2)  
-[**5267**](scripts/[proc,script5267].cs2)  
-[**5268**](scripts/[clientscript,script5268].cs2)  
-[**5269**](scripts/[proc,script5269].cs2)  
-[**5270**](scripts/[proc,script5270].cs2)  
-[**5271**](scripts/[clientscript,script5271].cs2)  
-[**5272**](scripts/[proc,script5272].cs2)  
-[**5273**](scripts/[clientscript,script5273].cs2)  
-[**5274**](scripts/[clientscript,script5274].cs2)  
-[**5275**](scripts/[clientscript,script5275].cs2)  
-[**5276**](scripts/[proc,script5276].cs2)  
-[**5277**](scripts/[clientscript,script5277].cs2)  
-[**5278**](scripts/[clientscript,script5278].cs2)  
-[**5279**](scripts/[clientscript,script5279].cs2)  
-[**5280**](scripts/[proc,script5280].cs2)  
-[**5281**](scripts/[proc,script5281].cs2)  
-[**5282**](scripts/[clientscript,script5282].cs2)  
+[**5264**](scripts/[clientscript,shared_bank_init].cs2) `[clientscript,shared_bank_init]`  
+[**5265**](scripts/[clientscript,shared_bank_init_timer].cs2) `[clientscript,shared_bank_init_timer]`  
+[**5266**](scripts/[clientscript,shared_bank_drawcap].cs2) `[clientscript,shared_bank_drawcap]`  
+[**5267**](scripts/[proc,shared_bank_drawcap].cs2) `[proc,shared_bank_drawcap]`  
+[**5268**](scripts/[clientscript,shared_bank_update].cs2) `[clientscript,shared_bank_update]`  
+[**5269**](scripts/[proc,shared_bank_update].cs2) `[proc,shared_bank_update]`  
+[**5270**](scripts/[proc,shared_bank_setsize].cs2) `[proc,shared_bank_setsize]`  
+[**5271**](scripts/[clientscript,shared_bank_checksize].cs2) `[clientscript,shared_bank_checksize]`  
+[**5272**](scripts/[proc,shared_bank_drawitem].cs2) `[proc,shared_bank_drawitem]`  
+[**5273**](scripts/[clientscript,shared_bank_dragitem].cs2) `[clientscript,shared_bank_dragitem]`  
+[**5274**](scripts/[clientscript,shared_bank_reorder].cs2) `[clientscript,shared_bank_reorder]`  
+[**5275**](scripts/[clientscript,shared_bank_search_toggle].cs2) `[clientscript,shared_bank_search_toggle]`  
+[**5276**](scripts/[proc,shared_bank_search_setbutton].cs2) `[proc,shared_bank_search_setbutton]`  
+[**5277**](scripts/[clientscript,shared_bank_search_refresh].cs2) `[clientscript,shared_bank_search_refresh]`  
+[**5278**](scripts/[clientscript,shared_bank_side_init].cs2) `[clientscript,shared_bank_side_init]`  
+[**5279**](scripts/[clientscript,shared_bank_side_build].cs2) `[clientscript,shared_bank_side_build]`  
+[**5280**](scripts/[proc,shared_bank_side_build].cs2) `[proc,shared_bank_side_build]`  
+[**5281**](scripts/[proc,shared_bank_side_drawitem].cs2) `[proc,shared_bank_side_drawitem]`  
+[**5282**](scripts/[clientscript,shared_bank_side_reorder].cs2) `[clientscript,shared_bank_side_reorder]`  
 [**5283**](scripts/[proc,script5283].cs2)  
 [**5284**](scripts/[clientscript,script5284].cs2)  
 [**5285**](scripts/[proc,script5285].cs2)  
@@ -5296,9 +5296,9 @@
 [**5293**](scripts/[proc,script5293].cs2)  
 [**5294**](scripts/[clientscript,script5294].cs2)  
 [**5295**](scripts/[proc,script5295].cs2)  
-[**5296**](scripts/[proc,script5296].cs2)  
-[**5297**](scripts/[clientscript,script5297].cs2)  
-[**5298**](scripts/[clientscript,script5298].cs2)  
+[**5296**](scripts/[proc,options_bigbutton_init].cs2) `[proc,options_bigbutton_init]`  
+[**5297**](scripts/[clientscript,options_bigbutton_op].cs2) `[clientscript,options_bigbutton_op]`  
+[**5298**](scripts/[clientscript,options_bigbutton_reset].cs2) `[clientscript,options_bigbutton_reset]`  
 [**5299**](scripts/[clientscript,script5299].cs2)  
 [**5300**](scripts/[proc,script5300].cs2)  
 [**5301**](scripts/[clientscript,script5301].cs2)  
@@ -5307,6 +5307,6 @@
 [**5304**](scripts/[clientscript,script5304].cs2)  
 [**5305**](scripts/[proc,script5305].cs2)  
 [**5306**](scripts/[clientscript,script5306].cs2)  
-[**5307**](scripts/[clientscript,script5307].cs2)  
-[**5308**](scripts/[proc,script5308].cs2)  
-[**5309**](scripts/[proc,script5309].cs2)  
+[**5307**](scripts/[clientscript,shared_bank_closebutton].cs2) `[clientscript,shared_bank_closebutton]`  
+[**5308**](scripts/[proc,shared_bank_closebutton].cs2) `[proc,shared_bank_closebutton]`  
+[**5309**](scripts/[proc,gim_notification_message].cs2) `[proc,gim_notification_message]`  

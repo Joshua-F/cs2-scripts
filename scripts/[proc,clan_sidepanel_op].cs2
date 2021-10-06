@@ -2,15 +2,15 @@
 [proc,clan_sidepanel_op](int $int0, int $int1, string $username0, int $clanslot2)
 switch_int ($int0) {
 	case 7 :
-		if ($clanslot2 ! -1) {
+		if ($clanslot2 ! null) {
 			~chat_sendpublic("Attempting to kick player from clan chat...", 3);
 			activeclanchannel_kickuser($clanslot2);
 		} else {
 			mes("That player appears to have left the channel.");
 		}
 	case 8 :
-		if (activeclansettings_find_affined(0) = true) {
-			if ($clanslot2 ! -1) {
+		if (activeclansettings_find_affined(^clantype_clan) = true) {
+			if ($clanslot2 ! null) {
 				~chat_sendpublic("Attempting to ban player from clan chat...", 3);
 				affinedclansettings_addbanned_fromchannel($clanslot2, 0);
 			} else {

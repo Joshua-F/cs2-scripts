@@ -1,6 +1,6 @@
 // 5300
 [proc,script5300](component $component0)
-if (~script5262 = 1) {
+if (~is_group_iron = 1) {
 	~ge_offers_bigbutton($component0, "Group Storage", 0);
 } else {
 	cc_deleteall($component0);

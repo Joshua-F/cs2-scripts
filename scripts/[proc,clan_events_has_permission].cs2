@@ -1,10 +1,10 @@
 // 4412
 [proc,clan_events_has_permission](string $username0)(int)
-def_int $clanslot0 = -1;
+def_int $clanslot0 = null;
 def_int $int1 = -1;
-if (%varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+if (%varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 	$clanslot0 = activeclansettings_getaffinedslot(removetags($username0));
-	if ($clanslot0 ! -1) {
+	if ($clanslot0 ! null) {
 		$int1 = ~clan_permission_get(organise_events_2966);
 		if (activeclansettings_getaffinedrank($clanslot0) >= $int1) {
 			return(1);

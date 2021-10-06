@@ -1,0 +1,5 @@
+// 5298
+[clientscript,options_bigbutton_reset](int $clock0, component $component1, string $string0, graphic $graphic2)
+if (clientclock >= $clock0) {
+	~options_bigbutton_init($component1, $string0, $graphic2);
+}

@@ -24,7 +24,7 @@ def_string $string13 = "";
 def_string $string14 = "";
 def_int $int2 = 0;
 def_int $int3 = 0;
-def_boolean $boolean4 = activeclanchannel_find_affined(0);
+def_boolean $boolean4 = activeclanchannel_find_affined(^clantype_clan);
 if (string_length($string0) > 0) {
 	$string1, $string0 = ~script632($string0);
 	$string2 = removetags($string1);

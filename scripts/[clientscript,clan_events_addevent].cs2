@@ -35,7 +35,7 @@ def_int $int20 = 1;
 def_component $layer21 = if_getlayer(interface_703:1);
 if (string_length($string0) > 0) {
 	if (cc_find(interface_703:9, $int0) = ^true & .cc_find(interface_703:9, calc($int0 + 10)) = ^true) {
-		if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+		if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 			$string12, $graphic19 = ~script4302($int2);
 		}
 		$int15 = cc_getwidth;

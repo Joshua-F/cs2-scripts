@@ -15,6 +15,6 @@ if (%varbit12224 > 0) {
 	if_sethide(true, $component12);
 }
 def_int $comsubid13 = ~steelborder($component1, "", 0);
-if (%varbit933 = 3 & activeclansettings_find_affined(0) = true & cc_find($component1, $comsubid13) = ^true) {
+if (%varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true & cc_find($component1, $comsubid13) = ^true) {
 	cc_settext("<activeclansettings_getclanname>: Events");
 }

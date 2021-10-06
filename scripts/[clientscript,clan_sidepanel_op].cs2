@@ -5,6 +5,6 @@ if ($boolean2 = true) {
 	if (activeclanchannel_find_listened = true & $opindex0 >= 9 & compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
 		~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3);
 	}
-} else if (activeclanchannel_find_affined(0) = true & compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
+} else if (activeclanchannel_find_affined(^clantype_clan) = true & compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
 	~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3);
 }

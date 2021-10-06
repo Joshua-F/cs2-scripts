@@ -130,7 +130,7 @@ switch_int ($chattype0) {
 		}
 		return(0);
 	case 41, 44, 43, 46, 109, 110, 111, 112 :
-		if ($chattype0 = 43 & ~script5309($string2) = 1) {
+		if ($chattype0 = 43 & ~gim_notification_message($string2) = 1) {
 			return(1);
 		}
 		if ($clock1 < %varcint440) {

@@ -1,0 +1,25 @@
+// 5273
+[clientscript,shared_bank_dragitem](int $int0, int $int1, component $component2, component $component3, int $comsubid4, component $component5)
+def_int $int6 = 0;
+def_int $int7 = 0;
+if (cc_find($component3, $comsubid4) = ^true) {
+	$int0, $int6 = calc($int0 - if_getscrolly($component3)), if_getheight($component3);
+	if ($int0 < 5) {
+		$int7 = -5;
+	} else if ($int0 < 15) {
+		$int7 = -2;
+	} else if ($int0 >= calc($int6 - (5 + cc_getheight))) {
+		$int7 = 5;
+	} else if ($int0 >= calc($int6 - (15 + cc_getheight))) {
+		$int7 = 2;
+	} else {
+		return;
+	}
+	if (calc($int1 - clientclock) < 5) {
+		cc_setondrag("shared_bank_dragitem(event_mousey, calc(~max(clientclock, $int1) + 2), $component2, event_com, event_comsubid, $component5)");
+		return;
+	}
+	cc_setondrag("shared_bank_dragitem(event_mousey, calc($int1 + 1), $component2, event_com, event_comsubid, $component5)");
+	$int0 = ~min(calc(if_getscrollheight($component3) - $int6), ~max(0, calc(if_getscrolly($component3) + $int7)));
+	~scrollbar_resize($component5, $component3, $int0);
+}

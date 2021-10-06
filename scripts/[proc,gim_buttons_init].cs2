@@ -1,0 +1,14 @@
+// 5252
+[proc,gim_buttons_init](component $component0, component $component1, int $int2)
+def_int $int3 = 6749952;
+def_int $int4 = 16719904;
+if ($int2 = 1) {
+	~gim_button_init($component0, "Confirm", $int3, false);
+	~gim_button_init($component1, "Regular Account", $int4, false);
+} else if ($int2 = 2) {
+	~gim_button_init($component1, "Confirm", $int3, false);
+	~gim_button_init($component0, "GIM Account", $int4, false);
+} else {
+	~gim_button_init($component1, "Regular Account", $int4, false);
+	~gim_button_init($component0, "GIM Account", $int4, false);
+}

@@ -1,0 +1,34 @@
+// 5281
+[proc,shared_bank_side_drawitem](obj $obj0, int $num1, component $component2)
+cc_clearops;
+if ($obj0 ! null) {
+	cc_settrans(0);
+	cc_setobject($obj0, $num1);
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	cc_setop(1, "Deposit-<~script2579>");
+	if (%varbit6590 ! 0) {
+		cc_setop(2, "Deposit-1");
+	}
+	if (%varbit6590 ! 1) {
+		cc_setop(3, "Deposit-5");
+	}
+	if (%varbit6590 ! 2) {
+		cc_setop(4, "Deposit-10");
+	}
+	if (%varbit6590 ! 3 & %varbit3960 > 0) {
+		cc_setop(5, "Deposit-<tostring(%varbit3960)>");
+	}
+	cc_setop(6, "Deposit-X");
+	if (%varbit6590 ! 4) {
+		cc_setop(7, "Deposit-All");
+	}
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setondragcomplete("shared_bank_side_reorder(event_com, event_drop, event_comsubid, event_dropsubid)");
+} else {
+	cc_settrans(255);
+	cc_setobject(obj_6512, 1);
+	cc_setonop(null);
+	cc_setondragcomplete(null);
+}
+cc_setontimer(null);

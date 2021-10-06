@@ -2,7 +2,7 @@
 [proc,clan_rankpopup_updatetitle](int $int0, int $y1)
 def_string $string0 = "Loading...";
 def_graphic $graphic2 = null;
-if (%varbit12165 = 1 & activeclansettings_find_listened = true | %varbit12165 = 0 & activeclansettings_find_affined(0) = true) {
+if (%varbit12165 = 1 & activeclansettings_find_listened = true | %varbit12165 = 0 & activeclansettings_find_affined(^clantype_clan) = true) {
 	$string0, $graphic2 = ~script4302($int0);
 }
 cc_settext($string0);

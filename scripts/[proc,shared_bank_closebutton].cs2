@@ -1,0 +1,9 @@
+// 5308
+[proc,shared_bank_closebutton](component $component0)
+~script4215($component0, "Close");
+if (%varbit4602 = 1) {
+	if_setonop("opsound(event_opindex, 2)", $component0);
+	if_setopkey(1, ^key_escape, 0, $component0);
+} else {
+	if_setonop("closebutton_click", $component0);
+}

@@ -40,7 +40,7 @@ while ($mesuid0 ! -1) {
 			case 41, 44, 46, 109, 110, 111, 112 :
 				~chat_alert_enable(5);
 			case 43 :
-				if (~script5309($string2) = 1) {
+				if (~gim_notification_message($string2) = 1) {
 					~chat_alert_enable(1);
 				} else {
 					~chat_alert_enable(5);

@@ -1,0 +1,6 @@
+// 5309
+[proc,gim_notification_message](string $string0)(int)
+if (string_length($string0) > 0 & compare(substring($string0, 0, 1), "|") = 0) {
+	return(1);
+}
+return(0);

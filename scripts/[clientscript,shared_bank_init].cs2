@@ -1,0 +1,49 @@
+// 5264
+[clientscript,shared_bank_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, int $int20)
+cc_deleteall($component0);
+cc_deleteall($component6);
+def_int $comsubid21 = ~steelborder($component1, "", 1);
+def_int $size22 = inv_size(inv_659);
+cc_create($component0, ^iftype_text, 0);
+cc_setposition(36, 9, ^setpos_abs_right, ^setpos_abs_top);
+cc_setcolour(0xff891f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+cc_settextshadow(true);
+.cc_create($component0, ^iftype_graphic, 1);
+.cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+.cc_setgraphic("ge_smallicons,0");
+~shared_bank_drawcap;
+if_setonvartransmit("shared_bank_drawcap(event_com, cc_getid, .cc_getid){var261, var262}", $component0);
+if (~bankmain_searching = 1) {
+	~meslayer_close(1, 1, 1);
+} else if (%varcint5 <= 0) {
+	%varcstring359 = "";
+}
+~shared_bank_search_setbutton($component5, $component0, $component6, $component7, $size22, $component1, $comsubid21, $component2);
+if_setonop("shared_bank_search_toggle(event_opindex, $component5, $component0, $component6, $component7, $size22, $component1, $comsubid21, $component2)", $component5);
+if_settext(~tostring_spacer($size22, ","), $component3);
+def_int $size23 = 0;
+while ($size23 < $size22) {
+	cc_create($component6, ^iftype_graphic, $size23);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$size23 = calc($size23 + 1);
+}
+~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~shared_bank_update($component0, $component6, $component7, $size22, $component1, $comsubid21, $component2);
+if_setoninvtransmit("shared_bank_update($component0, event_com, $component7, $size22, $component1, $comsubid21, $component2){inv_659}", $component6);
+if_setonvartransmit("shared_bank_update($component0, event_com, $component7, $size22, $component1, $comsubid21, $component2){var1666, var304}", $component6);
+~bankmain_swapinsert($component8, $component9);
+if_setonvartransmit("bankmain_swapinsert($component8, $component9){var304}", $component8);
+~bankmain_itemnote($component10, $component11);
+if_setonvartransmit("bankmain_itemnote($component10, $component11){var115}", $component10);
+~bankmain_quantity_buttons($component13, $component14, $component15, $component16, $component17);
+if_setonvartransmit("bankmain_quantity_buttons($component13, $component14, $component15, $component16, $component17){var1666, var304}", $component12);
+~options_bigbutton_init($component18, "Save", "b12_full");
+~ge_offers_bigbutton($component4, "Back to bank", 0);
+~shared_bank_closebutton($component19);
+if_setonvartransmit("shared_bank_closebutton(event_com){var1293}", $component19);

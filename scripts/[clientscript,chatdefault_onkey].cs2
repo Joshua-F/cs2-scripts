@@ -72,7 +72,7 @@ if ($key0 = ^key_return) {
 				mes("You are not chatting as a guest in a clan channel at the moment.");
 			}
 		} else if ($int5 = 41) {
-			if (activeclanchannel_find_affined(0) = true) {
+			if (activeclanchannel_find_affined(^clantype_clan) = true) {
 				if (%varbit931 = 0) {
 					if ($length2 <= $index6) {
 						return;

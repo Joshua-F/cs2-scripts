@@ -1,6 +1,6 @@
 // 4286
 [proc,clan_info_draw](component $component0, int $comsubid1, component $component2, int $comsubid3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
-if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 	if (cc_find($component2, $comsubid3) = ^true) {
 		cc_sethide(true);
 	}

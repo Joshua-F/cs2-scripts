@@ -52,7 +52,7 @@ while ($int12 < $int7) {
 		$intarray0(calc($int10 - 1)) = $int10;
 	}
 	if ($enum0 = enum_3795) {
-		if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+		if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 			$string0, $graphic13 = ~script4302(enum(int, int, enum_3795, $int12));
 		} else {
 			$string0 = "Error";

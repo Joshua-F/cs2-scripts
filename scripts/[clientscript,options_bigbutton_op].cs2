@@ -1,0 +1,21 @@
+// 5297
+[clientscript,options_bigbutton_op](int $opindex0, component $component1, string $string0, graphic $graphic2)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+cc_deleteall($component1);
+def_int $comsubid3 = ~options_button_on($component1, 0);
+cc_create($component1, ^iftype_text, $comsubid3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x8f8f8f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Refresh");
+if_setonmouseover(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setop(1, "", $component1);
+if_setonop(null, $component1);
+if_setontimer("options_bigbutton_reset(calc(clientclock + 40), event_com, $string0, $graphic2)", $component1);

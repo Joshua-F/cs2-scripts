@@ -1,0 +1,20 @@
+// 5247
+[proc,ironman_tabs_create](component $component0, component $component1, component $component2)
+cc_deleteall($component0);
+def_int $int3 = 0;
+if_sethide(true, $component1);
+if_sethide(true, $component2);
+if (%varbit13068 = 0) {
+	$int3 = calc($int3 + ~script5293($component0, $int3, 0, 100, 5, 0x726451, "Solo Modes", b12_full, 0xff981f, 0, null, 0, 0, 0, 0, 1));
+	if_sethide(false, $component1);
+} else {
+	$int3 = calc($int3 + ~script5293($component0, $int3, 0, 100, 5, 0x726451, "Solo Modes", b12_full, 0xff981f, 0, null, 0, 0, 0, 0, 0));
+	cc_setonop("ironman_tabs_select(0, $component0, $component1, $component2)");
+}
+if (%varbit13068 = 1) {
+	$int3 = calc($int3 + ~script5293($component0, $int3, 1, 100, 5, 0x726451, "Group Modes", b12_full, 0xff981f, 0, null, 0, 0, 0, 0, 1));
+	if_sethide(false, $component2);
+} else {
+	$int3 = calc($int3 + ~script5293($component0, $int3, 1, 100, 5, 0x726451, "Group Modes", b12_full, 0xff981f, 0, null, 0, 0, 0, 0, 0));
+	cc_setonop("ironman_tabs_select(1, $component0, $component1, $component2)");
+}

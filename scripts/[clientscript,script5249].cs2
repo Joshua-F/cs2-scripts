@@ -3,9 +3,9 @@
 ~steelborder($component0, "Choose your Gamemode", 0);
 cc_deleteall($component6);
 ~scrollbar_vertical($component6, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script5251($component5, 0);
-~script5252($component2, $component3, 0);
-if_setonop("script5250($component5, $component2, $component3, 1)", $component2);
+~gim_leave_text($component5, 0);
+~gim_buttons_init($component2, $component3, 0);
+if_setonop("gim_buttons_click($component5, $component2, $component3, 1)", $component2);
 if_setop(1, "Select", $component2);
-if_setonop("script5250($component5, $component2, $component3, 2)", $component3);
+if_setonop("gim_buttons_click($component5, $component2, $component3, 2)", $component3);
 if_setop(1, "Select", $component3);

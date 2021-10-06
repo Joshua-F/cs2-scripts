@@ -1,13 +1,13 @@
 // 4271
 [proc,clan_banned_draw](component $component0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, int $int6, int $int7, component $component8, int $int9)
 def_string $string0 = "";
-def_int $clanslot10 = -1;
+def_int $clanslot10 = null;
 def_int $int11 = -1;
 def_string $text1 = "";
 def_graphic $graphic12 = null;
 def_int $int13 = -1;
 def_int $int14 = 0;
-if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 	if (cc_find($component1, $comsubid2) = ^true) {
 		if (~clan_members_searching = 1) {
 			$string0 = ~bankmain_filterstring;
@@ -21,7 +21,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 		}
 	}
 	$clanslot10 = activeclansettings_getaffinedslot(removetags(chat_playername));
-	if ($clanslot10 ! -1) {
+	if ($clanslot10 ! null) {
 		$int11 = ~clan_permission_get(ban_from_chat_2956);
 		if (activeclansettings_getaffinedrank($clanslot10) >= $int11) {
 			if_settext("<~text_device("Click", "Tap")> a name to remove it from the ban list.", $component8);

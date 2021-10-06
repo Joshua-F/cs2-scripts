@@ -1,12 +1,12 @@
 // 4343
 [proc,clan_storage_main_hint](component $component0)
-def_int $clanslot1 = -1;
+def_int $clanslot1 = null;
 def_int $int2 = -1;
 def_string $string0 = "";
 def_graphic $graphic3 = null;
-if (%varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+if (%varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 	$clanslot1 = activeclansettings_getaffinedslot(removetags(chat_playername));
-	if ($clanslot1 ! -1) {
+	if ($clanslot1 ! null) {
 		$int2 = ~clan_permission_get(withdraw_from_coffer_2964);
 		if (activeclansettings_getaffinedrank($clanslot1) >= $int2) {
 			if_settext("Withdraw from the coffer:", $component0);

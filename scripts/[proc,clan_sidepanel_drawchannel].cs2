@@ -2,7 +2,7 @@
 [proc,clan_sidepanel_drawchannel](boolean $boolean0, int $int1, component $component2, int $int3, component $component4)
 def_int $clanslot5 = activeclanchannel_getuserslot(removetags(chat_playername));
 def_int $int6 = -1;
-if ($clanslot5 ! -1) {
+if ($clanslot5 ! null) {
 	$int6 = activeclanchannel_getuserrank($clanslot5);
 }
 def_int $int7 = ~clan_permission_get(kick_from_chat_2955);

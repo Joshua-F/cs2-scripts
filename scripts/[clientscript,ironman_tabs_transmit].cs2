@@ -1,0 +1,7 @@
+// 5246
+[clientscript,ironman_tabs_transmit](component $component0, component $component1, component $component2, int $int3)
+if (%varbit13068 = $int3) {
+	return;
+}
+if_setonvartransmit("ironman_tabs_transmit($component0, $component1, $component2, %varbit13068){var1425}", $component0);
+~ironman_tabs_create($component0, $component1, $component2);

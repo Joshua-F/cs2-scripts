@@ -7,7 +7,7 @@ if (%varbit4394 = 1) {
 		mes("<chat_playername>: <col=0000ff><$mes0></col>");
 	}
 } else if ($int0 = 3 | $int0 = 4) {
-	chat_sendclan($mes0, $int0, 0);
+	chat_sendclan($mes0, $int0, ^clantype_clan);
 } else {
 	chat_sendpublic($mes0, $int0);
 }
