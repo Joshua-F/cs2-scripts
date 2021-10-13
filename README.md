@@ -4158,10 +4158,6 @@
 [**4155**](scripts/[clientscript,script4155].cs2)  
 [**4156**](scripts/[clientscript,script4156].cs2)  
 [**4157**](scripts/[proc,script4157].cs2)  
-[**4158**](scripts/[proc,getbit_range].cs2) `[proc,getbit_range]`  
-[**4159**](scripts/[proc,setbit_range].cs2) `[proc,setbit_range]`  
-[**4160**](scripts/[proc,clearbit_range].cs2) `[proc,clearbit_range]`  
-[**4161**](scripts/[proc,setbit_range_toint].cs2) `[proc,setbit_range_toint]`  
 [**4162**](scripts/[clientscript,roguetrader_init].cs2) `[clientscript,roguetrader_init]`  
 [**4163**](scripts/[proc,roguetrader_game_size].cs2) `[proc,roguetrader_game_size]`  
 [**4164**](scripts/[proc,roguetrader_draw_frames].cs2) `[proc,roguetrader_draw_frames]`  

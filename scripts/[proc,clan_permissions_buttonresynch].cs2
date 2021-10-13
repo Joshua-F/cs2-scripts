@@ -20,7 +20,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				}
 			case guest_minimum_combat_2958 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~getbit_range(%varclansetting26, 0, 6);
+					$int8 = getbit_range(%varclansetting26, 0, 6);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = tostring($int8);
 					} else {
@@ -31,7 +31,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				}
 			case guest_minimum_skill_total_2959 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~getbit_range(%varclansetting26, 7, 18);
+					$int8 = getbit_range(%varclansetting26, 7, 18);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = ~tostring_spacer($int8, ",");
 					} else {
@@ -42,7 +42,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				}
 			case guest_minimum_qp_2960 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~getbit_range(%varclansetting26, 19, 29);
+					$int8 = getbit_range(%varclansetting26, 19, 29);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = tostring($int8);
 					} else {
@@ -54,7 +54,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 			case guest_iron_status_2961 :
 				if (activeclansettings_getallowunaffined = true) {
 					if (%varclansetting26 ! -1) {
-						$text0 = enum(int, string, enum_3828, ~getbit_range(%varclansetting26, 30, 31));
+						$text0 = enum(int, string, enum_3828, getbit_range(%varclansetting26, 30, 31));
 					} else {
 						$text0 = enum(int, string, enum_3828, 0);
 					}
