@@ -46,10 +46,10 @@ if ($component1 = interface_303:3) {
 if (testbit($int2, 13) = ^true & $boolean21 = true & $layer13 ! null) {
 	~script1282;
 	$int31 = scale(%varcint381, 16384, $width11);
-	$int18 = ~max(_6220, $int31);
-	$int19 = _6221;
-	$int16 = ~min(_6222, calc($width11 - $int31));
-	$int17 = _6223;
+	$int18 = ~max(viewport_getx, $int31);
+	$int19 = viewport_gety;
+	$int16 = ~min(viewport_getwidth, calc($width11 - $int31));
+	$int17 = viewport_getheight;
 	$component38 = null;
 	if ($component0 = interface_601:19) {
 		if (.cc_find(interface_601:2, 0) = ^true) {
