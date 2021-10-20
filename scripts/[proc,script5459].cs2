@@ -5,7 +5,7 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
 while ($int1 < 10) {
-	$int2 = ~script5397($stat0, $int1);
+	$int2 = ~xptracker_get_stat_xp($stat0, $int1);
 	$int4 = calc($int4 + $int2);
 	if ($int2 > 0) {
 		$int3 = calc($int3 + 1);

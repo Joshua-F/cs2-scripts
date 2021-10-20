@@ -1,7 +1,7 @@
 // 4626
 [clientscript,script4626]
-if (_7003(_6751, _6752, 2) = true) {
-	highlight_npc_off(_6751, _6752, 2);
+if (_7003(npc_uid, _6752, 2) = true) {
+	highlight_npc_off(npc_uid, _6752, 2);
 } else {
-	highlight_npc_on(_6751, _6752, 2);
+	highlight_npc_on(npc_uid, _6752, 2);
 }

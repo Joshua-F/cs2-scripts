@@ -1,7 +1,7 @@
 // 4638
 [clientscript,script4638]
-if (_7023(_6852, _6851, 2, 1) = true) {
-	highlight_obj_off(_6852, _6851, 2, 1);
+if (_7023(obj_type, obj_coord, 2, 1) = true) {
+	highlight_obj_off(obj_type, obj_coord, 2, 1);
 } else {
-	highlight_obj_on(_6852, _6851, 2, 1);
+	highlight_obj_on(obj_type, obj_coord, 2, 1);
 }

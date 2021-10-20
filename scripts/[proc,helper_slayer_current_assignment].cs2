@@ -1,0 +1,14 @@
+// 5319
+[proc,helper_slayer_current_assignment]()(string, string)
+def_string $string0 = "Task:";
+def_string $string1 = "";
+if (%var394 <= 0) {
+	$string1 = "Need assignment";
+} else if (%var395 = 98) {
+	$string1 = enum(int, string, enum_1174, %varbit4723);
+} else if (%var395 > 0) {
+	$string1 = enum(int, string, enum_693, %var395);
+} else {
+	$string1 = "Need assignment";
+}
+return($string0, $string1);

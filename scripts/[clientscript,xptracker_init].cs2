@@ -1,0 +1,5 @@
+// 5448
+[clientscript,xptracker_init]
+if_setontimer("xptracker_resize_scrollbar", interface_729:2);
+cc_create(interface_729:3, ^iftype_rectangle, 0);
+~xptracker_reset_interface;

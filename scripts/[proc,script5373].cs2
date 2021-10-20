@@ -1,6 +1,6 @@
 // 5373
 [proc,script5373](stat $stat0)
-def_int $comsubid1 = ~script5383($stat0);
+def_int $comsubid1 = ~xptracker_get_id($stat0);
 def_int $lvl2 = stat_base($stat0);
 if (cc_find(interface_729:11, $comsubid1) = ^true) {
 	if ($lvl2 < 99) {

@@ -1,6 +1,6 @@
 // 5380
 [proc,script5380](stat $stat0)(int)
-if (~script5381($stat0) = 0) {
+if (~xptracker_iscombat($stat0) = 0) {
 	return(-1);
 }
 if (%varcint568 ! %varbit6100 & %varbit6100 ! 0) {

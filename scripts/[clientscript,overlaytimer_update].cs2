@@ -1,0 +1,22 @@
+// 5481
+[clientscript,overlaytimer_update](newvar $newvar0, int $clock1, int $clock2, int $int3)
+def_int $int4 = calc($clock2 - $clock1);
+def_int $int5 = calc($int4 - ($clock2 - clientclock));
+def_int $int6 = 0;
+def_int $int7 = ~minmax(1, 65536, scale($int5, $int4, 65536));
+if ($int3 = 1) {
+	$int7 = calc(65536 - $int7);
+}
+if (_202($newvar0) = ^true) {
+	if (clientclock > $clock2) {
+		cc_setontimer(null);
+		_104($newvar0);
+		return;
+	}
+	if (_203($newvar0, 1) = ^true) {
+		cc_setarc($int6, $int7);
+	}
+	if (_203($newvar0, 2) = ^true) {
+		cc_setarc($int6, $int7);
+	}
+}

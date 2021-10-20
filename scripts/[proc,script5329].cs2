@@ -2,6 +2,6 @@
 [proc,script5329](int $int0)(int)
 def_int $colour1 = ~settings_get_colour($int0);
 if ($colour1 = null | $colour1 < 0x000001) {
-	$colour1 = ~script5328($int0);
+	$colour1 = ~settings_get_colour_default($int0);
 }
 return($colour1);

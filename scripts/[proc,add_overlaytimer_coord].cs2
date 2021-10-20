@@ -1,0 +1,7 @@
+// 5477
+[proc,add_overlaytimer_coord](coord $coord0, int $int1, int $int2, int $colour3, int $int4)
+if (~on_enhanced = 0 | ~script5479($coord0, $int1, $int2) = 0) {
+	return;
+}
+def_newvar $newvar5 = _7204($coord0, 1, 0, 25, 25, 0);
+~add_overlaytimer_inner($int1, $newvar5, $int2, $colour3, $int4);

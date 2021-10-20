@@ -1,12 +1,12 @@
 // 4728
-[proc,mouseover_tooltip](int $int0, component $component1, string $string0, int $int2)(int)
+[proc,mouseover_tooltip](int $int0, component $component1, string $string0, int $minimenu_entry_type2)(int)
 if (%varcint1 >= clientclock | %varcint2 = 1) {
 	return($int0);
 }
-if (enum(int, boolean, enum_3903, $int2) = false) {
+if (enum(int, boolean, enum_3903, $minimenu_entry_type2) = false) {
 	return($int0);
 }
-if ($int2 = 7 & _7109 = 1 & cc_getlayer = magic_spellbook:3) {
+if ($minimenu_entry_type2 = 7 & targetmode_active = true & cc_getlayer = magic_spellbook:3) {
 	return($int0);
 }
 def_int $int3 = calc(parawidth($string0, if_getwidth($component1), p12_full) + 8);

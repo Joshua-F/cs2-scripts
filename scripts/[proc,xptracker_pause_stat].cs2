@@ -1,0 +1,14 @@
+// 5467
+[proc,xptracker_pause_stat](stat $stat0, int $int1)
+~xptracker_set_paused($stat0, $int1);
+def_int $comsubid2 = ~xptracker_get_id($stat0);
+if (cc_find(interface_729:5, $comsubid2) = ^true) {
+	if ($int1 = 1) {
+		cc_setop(10, "Unpause");
+	} else {
+		cc_setop(10, "Pause");
+	}
+}
+if (~xptracker_get_id($stat0) > 0) {
+	~script5368($stat0);
+}

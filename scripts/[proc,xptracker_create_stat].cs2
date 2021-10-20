@@ -1,0 +1,14 @@
+// 5362
+[proc,xptracker_create_stat](stat $stat0)
+def_int $int1 = ~xptracker_current_id;
+~xptracker_set_id($stat0, $int1);
+if (cc_find(interface_729:3, 0) = ^false) {
+	return;
+}
+%varcint562 = calc($int1 * (48 + 2));
+~script5364($int1);
+~xptracker_create_progressbar($int1, $stat0, 0);
+~xptracker_create_graphic($int1, $stat0);
+~xptracker_create_text($int1, $stat0);
+~xptracker_set_ops($int1, $stat0);
+~script5444($int1, $stat0);

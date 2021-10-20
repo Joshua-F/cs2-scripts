@@ -1,0 +1,38 @@
+// 5480
+[proc,add_overlaytimer_inner](int $int0, newvar $newvar1, int $int2, int $colour3, int $int4)
+$int2 = calc($int2 * 30);
+def_int $clock5 = clientclock;
+def_int $clock6 = calc($clock5 + $int2);
+def_int $int7 = 1;
+switch_int ($int4) {
+	case 1 :
+		$int7 = 65536;
+}
+if (_202($newvar1) = ^true) {
+	cc_setontimer("overlaytimer_update($newvar1, $clock5, $clock6, $int4)");
+	_103($newvar1, 10, 0);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour($colour3);
+	cc_setfill(true);
+	cc_settrans(200);
+	cc_setlinewid(1);
+	cc_setarc(0, 65536);
+	_103($newvar1, 10, 1);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour($colour3);
+	cc_setfill(true);
+	cc_settrans(128);
+	cc_setlinewid(1);
+	cc_setarc(0, $int7);
+	_103($newvar1, 10, 2);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour($colour3);
+	cc_setfill(false);
+	cc_setlinewid(1);
+	cc_setarc(0, $int7);
+} else {
+	~debug_mes("Overlay Timers: Failed to get entity overlay.");
+}

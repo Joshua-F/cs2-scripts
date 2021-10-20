@@ -22,8 +22,8 @@ while ($int0 < $count1) {
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
 		switch_struct ($struct3) {
 			case struct_3742 :
-				cc_setonstattransmit("script5451");
-				cc_setontimer("script5452(event_comsubid)");
+				cc_setonstattransmit("xptracker_stattransmit");
+				cc_setontimer("xptracker_set_xph(event_comsubid)");
 		}
 		$int2 = calc($int2 + 36);
 	}

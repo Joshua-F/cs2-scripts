@@ -1,9 +1,0 @@
-// 5382
-[clientscript,script5382]
-if (%varcint562 > if_getheight(interface_729:3)) {
-	if_setscrollsize(0, %varcint562, interface_729:3);
-} else {
-	if_setscrollsize(0, 0, interface_729:3);
-}
-if_setscrollpos(0, if_getscrolly(interface_729:3), interface_729:3);
-~scrollbar_resize(interface_729:2, interface_729:3, if_getscrolly(interface_729:3));

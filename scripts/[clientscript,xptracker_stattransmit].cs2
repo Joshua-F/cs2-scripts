@@ -1,0 +1,62 @@
+// 5451
+[clientscript,xptracker_stattransmit]
+if (%varcint565 = 0) {
+	return;
+}
+if (%varcint567 = 0) {
+	%varcint566 = 1;
+}
+if (%varcint566 = 1) {
+	~script5455(null, 1);
+	%varcint566 = 0;
+	%varcint567 = 1;
+}
+def_int $int0 = 1;
+def_int $int1 = 0;
+def_stat $stat2 = null;
+def_int $int3 = 0;
+def_int $int4 = 0;
+while ($int0 <= 23) {
+	$stat2 = enum(int, stat, enum_681, $int0);
+	$int1 = stat_xp($stat2);
+	$int3 = ~xptracker_get_lastxp($stat2);
+	if ($int1 < $int3) {
+		~xptracker_close_stat($stat2);
+		~xptracker_reset_xp_data(null, 0, $int1);
+	} else if ($int1 ! $int3) {
+		~script5458($stat2, calc($int1 - $int3));
+		~xptracker_set_lastxp(null, calc($int1 - $int3 + ~xptracker_get_lastxp(null)));
+		~xptracker_set_lastxp($stat2, $int1);
+		if (~xptracker_get_id($stat2) < 0) {
+			~xptracker_pause_stat($stat2, 0);
+			~xptracker_set_timetrained($stat2, 0);
+			~xptracker_create_stat($stat2);
+		} else {
+			~xptracker_pause_stat($stat2, 0);
+			if (~xptracker_get_timetrained($stat2) < 0) {
+				~xptracker_set_timetrained($stat2, 0);
+			}
+			~xptracker_set_updated($stat2, 1);
+			if (~xptracker_get_updated(null) = 0) {
+				~xptracker_set_updated(null, 1);
+			}
+			~script5368($stat2);
+		}
+		if (~xptracker_get_paused(null) = 1) {
+			~xptracker_pause_overall(0, 0);
+		}
+		if (~xptracker_get_timetrained(null) < 0) {
+			~xptracker_set_timetrained(null, 0);
+		}
+	} else if (%varcint569 ! %var43 & ~xptracker_iscombat($stat2) = 1) {
+		$int4 = 1;
+		~script5368($stat2);
+	}
+	$int0 = calc($int0 + 1);
+}
+if ($int4 = 1) {
+	%varcint569 = %var43;
+	$int4 = 0;
+}
+~script5369;
+%varcint562 = calc(%varcint561 * (48 + 2));

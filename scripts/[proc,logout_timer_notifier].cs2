@@ -1,0 +1,10 @@
+// 5326
+[proc,logout_timer_notifier]
+def_enum $enum0 = ~toplevel_getcomponents;
+def_component $component1 = enum(component, component, $enum0, interface_161:35);
+if (~on_enhanced = 0 | %varbit13083 = 1 | ~on_mobile = true) {
+	if_setontimer(null, $component1);
+	cc_deleteall($component1);
+	return;
+}
+if_setontimer("logout_timer_notifier", $component1);

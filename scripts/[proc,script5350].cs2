@@ -1,30 +1,30 @@
 // 5350
 [proc,script5350]
 ~script5351;
-def_int $int0 = _7100;
-if (%varbit13088 = 0 | $int0 = 1 | $int0 = 0) {
+def_int $minimenu_entry_type0 = get_active_minimenu_entry_type;
+if (%varbit13088 = 0 | $minimenu_entry_type0 = 1 | $minimenu_entry_type0 = ^minimenu_entry_type_default) {
 	return;
 }
-if ($int0 = 2 & _7102 = 1) {
-	%varcint553 = _6751;
+if ($minimenu_entry_type0 = ^minimenu_entry_type_npc & npc_find_active_minimenu_entry = true) {
+	%varcint553 = npc_uid;
 	%varcint554 = _6752;
-	highlight_npc_on(_6751, _6752, 5);
+	highlight_npc_on(npc_uid, _6752, 5);
 	return;
 }
-if ($int0 = 3 & _7103 = 1) {
-	%varcint555 = _6802;
-	%varcint556 = _6801;
-	highlight_loc_on(_6802, _6801, 5, 1);
+if ($minimenu_entry_type0 = ^minimenu_entry_type_loc & loc_find_active_minimenu_entry = true) {
+	%varcint555 = loc_type;
+	%varcint556 = loc_coord;
+	highlight_loc_on(loc_type, loc_coord, 5, 1);
 	return;
 }
-if ($int0 = 4 & _7104 = 1) {
-	%varcint557 = _6852;
-	%varcint558 = _6851;
-	highlight_obj_on(_6852, _6851, 5, 1);
+if ($minimenu_entry_type0 = ^minimenu_entry_type_obj & obj_find_active_minimenu_entry = true) {
+	%varcint557 = obj_type;
+	%varcint558 = obj_coord;
+	highlight_obj_on(obj_type, obj_coord, 5, 1);
 	return;
 }
-if ($int0 = 6 & _7105 = 1) {
-	%varcstring559 = _6900;
-	highlight_player_on(_6900, 5);
+if ($minimenu_entry_type0 = ^minimenu_entry_type_player & player_find_active_minimenu_entry = true) {
+	%varcstring559 = player_name;
+	highlight_player_on(player_name, 5);
 	return;
 }

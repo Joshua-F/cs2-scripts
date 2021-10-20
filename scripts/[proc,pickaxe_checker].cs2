@@ -1,0 +1,56 @@
+// 5324
+[proc,pickaxe_checker]()(int)
+def_int $lvl0 = stat(mining);
+def_obj $obj1 = inv_getobj(worn, 3);
+if (map_members = ^true) {
+	if ($lvl0 >= oc_param(trailblazer_pickaxe_25112, levelrequire) & ($obj1 = trailblazer_pickaxe_25112 | inv_total(inv, trailblazer_pickaxe_25112) > 0)) {
+		return(25112);
+	} else if ($lvl0 >= oc_param(crystal_pickaxe_23680, levelrequire) & ($obj1 = crystal_pickaxe_23680 | inv_total(inv, crystal_pickaxe_23680) > 0)) {
+		return(23680);
+	} else if ($lvl0 >= oc_param(infernal_pickaxe_or_25063, levelrequire) & ($obj1 = infernal_pickaxe_or_25063 | inv_total(inv, infernal_pickaxe_or_25063) > 0)) {
+		return(25063);
+	} else if ($lvl0 >= oc_param(infernal_pickaxe_13243, levelrequire) & ($obj1 = infernal_pickaxe_13243 | inv_total(inv, infernal_pickaxe_13243) > 0)) {
+		return(13243);
+	} else if ($lvl0 >= oc_param(crystal_pickaxe_inactive_23682, levelrequire) & ($obj1 = crystal_pickaxe_inactive_23682 | inv_total(inv, crystal_pickaxe_inactive_23682) > 0)) {
+		return(23682);
+	} else if ($lvl0 >= oc_param(infernal_pickaxe_uncharged_25369, levelrequire) & ($obj1 = infernal_pickaxe_uncharged_25369 | inv_total(inv, infernal_pickaxe_uncharged_25369) > 0)) {
+		return(25369);
+	} else if ($lvl0 >= oc_param(infernal_pickaxe_uncharged_13244, levelrequire) & ($obj1 = infernal_pickaxe_uncharged_13244 | inv_total(inv, infernal_pickaxe_uncharged_13244) > 0)) {
+		return(13244);
+	} else if ($lvl0 >= oc_param(3rd_age_pickaxe_20014, levelrequire) & ($obj1 = 3rd_age_pickaxe_20014 | inv_total(inv, 3rd_age_pickaxe_20014) > 0)) {
+		return(20014);
+	} else if ($lvl0 >= oc_param(dragon_pickaxe_or_25376, levelrequire) & ($obj1 = dragon_pickaxe_or_25376 | inv_total(inv, dragon_pickaxe_or_25376) > 0)) {
+		return(25376);
+	} else if ($lvl0 >= oc_param(dragon_pickaxe_12797, levelrequire) & ($obj1 = dragon_pickaxe_12797 | inv_total(inv, dragon_pickaxe_12797) > 0)) {
+		return(12797);
+	} else if ($lvl0 >= oc_param(dragon_pickaxe_or_23677, levelrequire) & ($obj1 = dragon_pickaxe_or_23677 | inv_total(inv, dragon_pickaxe_or_23677) > 0)) {
+		return(23677);
+	} else if ($lvl0 >= oc_param(dragon_pickaxe_11920, levelrequire) & ($obj1 = dragon_pickaxe_11920 | inv_total(inv, dragon_pickaxe_11920) > 0)) {
+		return(11920);
+	}
+}
+if ($lvl0 >= oc_param(rune_pickaxe_1275, levelrequire) & ($obj1 = rune_pickaxe_1275 | inv_total(inv, rune_pickaxe_1275) > 0)) {
+	return(1275);
+}
+if ($lvl0 >= oc_param(gilded_pickaxe_23276, levelrequire) & ($obj1 = gilded_pickaxe_23276 | inv_total(inv, gilded_pickaxe_23276) > 0)) {
+	return(23276);
+}
+if ($lvl0 >= oc_param(adamant_pickaxe_1271, levelrequire) & ($obj1 = adamant_pickaxe_1271 | inv_total(inv, adamant_pickaxe_1271) > 0)) {
+	return(1271);
+}
+if ($lvl0 >= oc_param(mithril_pickaxe_1273, levelrequire) & ($obj1 = mithril_pickaxe_1273 | inv_total(inv, mithril_pickaxe_1273) > 0)) {
+	return(1273);
+}
+if ($lvl0 >= oc_param(black_pickaxe_12297, levelrequire) & ($obj1 = black_pickaxe_12297 | inv_total(inv, black_pickaxe_12297) > 0)) {
+	return(12297);
+}
+if ($lvl0 >= oc_param(steel_pickaxe_1269, levelrequire) & ($obj1 = steel_pickaxe_1269 | inv_total(inv, steel_pickaxe_1269) > 0)) {
+	return(1269);
+}
+if ($lvl0 >= oc_param(iron_pickaxe_1267, levelrequire) & ($obj1 = iron_pickaxe_1267 | inv_total(inv, iron_pickaxe_1267) > 0)) {
+	return(1267);
+}
+if ($lvl0 >= oc_param(bronze_pickaxe_1265, levelrequire) & ($obj1 = bronze_pickaxe_1265 | inv_total(inv, bronze_pickaxe_1265) > 0)) {
+	return(1265);
+}
+return(-1);

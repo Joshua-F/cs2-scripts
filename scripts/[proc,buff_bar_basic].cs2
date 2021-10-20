@@ -1,0 +1,26 @@
+// 5342
+[proc,buff_bar_basic](struct $struct0, int $int1, int $int2)(int, obj, int)
+def_obj $obj3 = struct_param($struct0, param_1281);
+def_enum $enum4 = struct_param($struct0, param_1286);
+def_inv $inv5 = struct_param($struct0, param_1283);
+def_boolean $boolean6 = struct_param($struct0, param_1282);
+if ($obj3 = null & $enum4 ! null) {
+	$obj3 = enum(int, namedobj, $enum4, $int2);
+}
+if ($obj3 = null) {
+	$obj3 = ~script5195($int1);
+}
+if ($obj3 = null & $inv5 ! null) {
+	$obj3 = inv_getobj($inv5, struct_param($struct0, param_1351));
+}
+def_int $int7 = ~buff_bar_get_number($int1);
+if ($boolean6 = true) {
+	if ($obj3 = null | $inv5 = null) {
+		return(0, null, 0);
+	}
+	$int7 = inv_total($inv5, $obj3);
+	if ($int7 <= 0) {
+		return(0, null, 0);
+	}
+}
+return($int7, $obj3, 1);

@@ -1,0 +1,9 @@
+// 5360
+[proc,local_notification](string $string0, string $string1)
+if (~on_enhanced = 0) {
+	return;
+}
+if (string_length($string0) <= 0) {
+	return;
+}
+def_int $int0 = local_notification($string0, $string1, 0, 0);

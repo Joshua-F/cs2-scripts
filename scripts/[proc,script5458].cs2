@@ -2,7 +2,7 @@
 [proc,script5458](stat $stat0, int $int1)
 def_int $int2 = calc(10 - 1);
 while ($int2 > 0) {
-	~script5396($stat0, $int2, ~script5397($stat0, calc($int2 - 1)));
+	~xptracker_set_stat_xp($stat0, $int2, ~xptracker_get_stat_xp($stat0, calc($int2 - 1)));
 	$int2 = calc($int2 - 1);
 }
-~script5396($stat0, 0, $int1);
+~xptracker_set_stat_xp($stat0, 0, $int1);

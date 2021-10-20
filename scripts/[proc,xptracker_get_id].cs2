@@ -1,0 +1,54 @@
+// 5383
+[proc,xptracker_get_id](stat $stat0)(int)
+switch_stat ($stat0) {
+	case null :
+		return(%varcint570);
+	case attack :
+		return(%varcint571);
+	case strength :
+		return(%varcint572);
+	case defence :
+		return(%varcint573);
+	case ranged :
+		return(%varcint574);
+	case prayer :
+		return(%varcint575);
+	case magic :
+		return(%varcint576);
+	case runecraft :
+		return(%varcint577);
+	case construction :
+		return(%varcint578);
+	case hitpoints :
+		return(%varcint579);
+	case agility :
+		return(%varcint580);
+	case herblore :
+		return(%varcint581);
+	case thieving :
+		return(%varcint582);
+	case crafting :
+		return(%varcint583);
+	case fletching :
+		return(%varcint584);
+	case slayer :
+		return(%varcint585);
+	case hunter :
+		return(%varcint586);
+	case mining :
+		return(%varcint587);
+	case smithing :
+		return(%varcint588);
+	case fishing :
+		return(%varcint589);
+	case cooking :
+		return(%varcint590);
+	case firemaking :
+		return(%varcint591);
+	case woodcutting :
+		return(%varcint592);
+	case farming :
+		return(%varcint593);
+	case default :
+		return(0);
+}

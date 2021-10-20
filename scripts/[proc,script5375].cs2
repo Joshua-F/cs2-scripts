@@ -1,9 +1,9 @@
 // 5375
 [proc,script5375](stat $stat0)
-def_int $comsubid1 = ~script5383($stat0);
+def_int $comsubid1 = ~xptracker_get_id($stat0);
 def_int $lvl2 = stat_base($stat0);
-def_int $int3 = ~script5386($stat0);
-def_int $int4 = ~script5388($stat0);
+def_int $int3 = ~xptracker_get_startxp($stat0);
+def_int $int4 = ~xptracker_get_lastxp($stat0);
 def_string $string0 = ~script5377(calc($int4 - $int3));
 def_int $int5 = ~script5380($stat0);
 def_string $text1 = "    XP Gained: <br>    Acts->Lvl: ";

@@ -1,7 +1,7 @@
 // 4633
 [clientscript,script4633]
-if (_7013(_6802, _6801, 3, 1) = true) {
-	highlight_loc_off(_6802, _6801, 3, 1);
+if (_7013(loc_type, loc_coord, 3, 1) = true) {
+	highlight_loc_off(loc_type, loc_coord, 3, 1);
 } else {
-	highlight_loc_on(_6802, _6801, 3, 1);
+	highlight_loc_on(loc_type, loc_coord, 3, 1);
 }

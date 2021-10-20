@@ -1,0 +1,11 @@
+// 5361
+[proc,xptracker_create_overall]
+def_stat $stat0 = null;
+def_int $int1 = ~xptracker_current_id;
+~xptracker_set_id($stat0, $int1);
+%varcint562 = 0;
+~script5364($int1);
+~xptracker_create_progressbar($int1, $stat0, 1);
+~xptracker_create_graphic($int1, $stat0);
+~xptracker_create_overall_text($int1);
+~script5462($int1);

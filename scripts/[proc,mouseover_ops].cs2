@@ -16,13 +16,13 @@ if (_7108 = true) {
 def_int $int2 = 0;
 def_string $string0 = "";
 def_string $string1 = "";
-$string0, $string1 = _7101;
+$string0, $string1 = get_active_minimenu_entry;
 def_string $string2 = "<$string0> <$string1>";
-def_int $int3 = _7110;
-def_int $int4 = _7100;
+def_int $int3 = get_minimenu_length;
+def_int $minimenu_entry_type4 = get_active_minimenu_entry_type;
 if (%varbit12377 = 1) {
-	$int2 = ~mouseover_text($int2, $component1, $string2, $int4, $int3);
+	$int2 = ~mouseover_text($int2, $component1, $string2, $minimenu_entry_type4, $int3);
 }
 if (%varbit12344 = 0) {
-	$int2 = ~mouseover_tooltip($int2, $component1, $string2, $int4);
+	$int2 = ~mouseover_tooltip($int2, $component1, $string2, $minimenu_entry_type4);
 }

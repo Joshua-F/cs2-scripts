@@ -1,0 +1,50 @@
+// 5396
+[proc,xptracker_set_stat_xp](stat $stat0, int $int1, int $int2)
+switch_stat ($stat0) {
+	case attack :
+		~xptracker_set_attack_xp($int1, $int2);
+	case strength :
+		~xptracker_set_strength_xp($int1, $int2);
+	case defence :
+		~xptracker_set_defence_xp($int1, $int2);
+	case ranged :
+		~xptracker_set_ranged_xp($int1, $int2);
+	case prayer :
+		~xptracker_set_prayer_xp($int1, $int2);
+	case magic :
+		~xptracker_set_magic_xp($int1, $int2);
+	case runecraft :
+		~xptracker_set_runecraft_xp($int1, $int2);
+	case construction :
+		~xptracker_set_construction_xp($int1, $int2);
+	case hitpoints :
+		~xptracker_set_hitpoints_xp($int1, $int2);
+	case agility :
+		~xptracker_set_agility_xp($int1, $int2);
+	case herblore :
+		~xptracker_set_herblore_xp($int1, $int2);
+	case thieving :
+		~xptracker_set_thieving_xp($int1, $int2);
+	case crafting :
+		~xptracker_set_crafting_xp($int1, $int2);
+	case fletching :
+		~xptracker_set_fletching_xp($int1, $int2);
+	case slayer :
+		~xptracker_set_slayer_xp($int1, $int2);
+	case hunter :
+		~xptracker_set_hunter_xp($int1, $int2);
+	case mining :
+		~xptracker_set_mining_xp($int1, $int2);
+	case smithing :
+		~xptracker_set_smithing_xp($int1, $int2);
+	case fishing :
+		~xptracker_set_fishing_xp($int1, $int2);
+	case cooking :
+		~xptracker_set_cooking_xp($int1, $int2);
+	case firemaking :
+		~xptracker_set_firemaking_xp($int1, $int2);
+	case woodcutting :
+		~xptracker_set_woodcutting_xp($int1, $int2);
+	case farming :
+		~xptracker_set_farming_xp($int1, $int2);
+}

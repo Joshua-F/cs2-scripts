@@ -1,14 +1,14 @@
 // 5453
 [proc,script5453](stat $stat0)
-if (~script5392($stat0) >= 0 & ~script5394($stat0) = 0) {
-	~script5393($stat0, calc(~script5392($stat0) + 60));
-	if (~script5390($stat0) = 0) {
+if (~xptracker_get_timetrained($stat0) >= 0 & ~xptracker_get_paused($stat0) = 0) {
+	~xptracker_set_timetrained($stat0, calc(~xptracker_get_timetrained($stat0) + 60));
+	if (~xptracker_get_updated($stat0) = 0) {
 		if ($stat0 ! null) {
 			~script5374($stat0);
 		} else {
 			~script5376;
 		}
 	} else {
-		~script5391($stat0, 0);
+		~xptracker_set_updated($stat0, 0);
 	}
 }

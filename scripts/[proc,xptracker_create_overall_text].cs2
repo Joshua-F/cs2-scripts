@@ -1,0 +1,22 @@
+// 5367
+[proc,xptracker_create_overall_text](int $comsubid0)
+def_int $width1 = parawidth("Total XP Gained: ", 512, p11_full);
+def_int $width2 = parawidth("88.888M", 512, p11_full);
+cc_create(interface_729:14, ^iftype_text, $comsubid0);
+cc_create(interface_729:15, ^iftype_text, $comsubid0);
+cc_create(interface_729:12, ^iftype_text, $comsubid0);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
+cc_settextfont(p11_full);
+cc_setcolour(0xcccccc);
+cc_setposition(31, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width1, 48, ^setsize_abs, ^setsize_abs);
+cc_settext("Total XP/Hr: <br>Total XP Gained: ");
+cc_create(interface_729:13, ^iftype_text, $comsubid0);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_right, ^settextalign_centre, 12);
+cc_settextfont(p11_full);
+cc_setcolour(^white);
+cc_setposition(calc(31 + $width1), 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width2, 48, ^setsize_abs, ^setsize_abs);
+~script5376;
