@@ -2,7 +2,7 @@
 [clientscript,toplevel_init](component $component0, enum $enum1)
 if_setonsubchange("toplevel_subchange(event_com, $enum1)", $component0);
 if_setonresize("toplevel_resize(event_com, $enum1)", $component0);
-if_setonvartransmit("toplevel_vartransmit(event_com, $enum1){var1021, var1055, var1054, var1734, var1431, var1227, var439, var1141, var1795, var1697, var166, var168, var169, var872, var167}", $component0);
+if_setonvartransmit("toplevel_vartransmit(event_com, $enum1){var1021, var1055, var1054, var1734, var1431, var1227, var439, var1141, var1795, var1697, var166, var168, var169, var872, var167, var3154}", $component0);
 def_int $int2 = 0;
 def_component $component3 = enum(int, component, enum_1138, $int2);
 while ($component3 ! null) {
@@ -18,7 +18,7 @@ if (%varcint171 <= 0 & enum(enum, boolean, enum_1134, $enum1) = false) {
 	%varcint171 = 3;
 }
 %varcint172, %varcint173 = null, -1;
-$component3 = enum(component, component, $enum1, interface_161:35);
+$component3 = enum(component, component, $enum1, interface_161:30);
 if ($component3 ! null) {
 	cc_deleteall($component3);
 	cc_create($component3, ^iftype_text, 0);
@@ -47,9 +47,9 @@ if ($enum1 = enum_139) {
 	_3131(1);
 	~script4729(interface_601:7, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
 	~script4729(interface_601:19, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
-	~script4729(interface_601:14, null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, false);
-	~script868(interface_601:37);
-	~script957(interface_601:38);
+	~script4729(interface_601:16, null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script868(interface_601:36);
+	~script957(interface_601:37);
 } else {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
@@ -58,10 +58,10 @@ if ($enum1 = enum_139) {
 	_3131(0);
 }
 ~account_update_display;
-~notification_init(enum(component, component, $enum1, interface_161:15));
-~gravestone_hud_init(enum(component, component, $enum1, interface_161:24));
-def_component $component4 = enum(component, component, $enum1, interface_161:13);
-def_component $component5 = enum(component, component, $enum1, interface_161:14);
+~notification_init(enum(component, component, $enum1, interface_161:13));
+~gravestone_hud_init(enum(component, component, $enum1, interface_161:20));
+def_component $component4 = enum(component, component, $enum1, interface_161:11);
+def_component $component5 = enum(component, component, $enum1, interface_161:12);
 if ($component4 ! null & $component5 ! null) {
 	~helper_init($component4, $component5);
 }

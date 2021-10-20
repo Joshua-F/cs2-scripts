@@ -11,5 +11,6 @@ def_int $int1 = %var43;
 if ($int1 = 4 & %varbit2668 = 1) {
 	$int1 = 5;
 }
-$text0 = "<$text0><col=ffffff><enum(int, string, $enum0, $int1)></col>";
+def_struct $struct2 = enum(int, struct, $enum0, $int1);
+$text0 = "<$text0><col=ffffff><struct_param($struct2, param_1407)></col>";
 if_settext($text0, interface_90:53);

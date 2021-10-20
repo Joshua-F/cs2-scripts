@@ -1,0 +1,52 @@
+// 5397
+[proc,script5397](stat $stat0, int $int1)(int)
+switch_stat ($stat0) {
+	case attack :
+		return(~script5399($int1));
+	case strength :
+		return(~script5401($int1));
+	case defence :
+		return(~script5403($int1));
+	case ranged :
+		return(~script5405($int1));
+	case prayer :
+		return(~script5407($int1));
+	case magic :
+		return(~script5409($int1));
+	case runecraft :
+		return(~script5411($int1));
+	case construction :
+		return(~script5413($int1));
+	case hitpoints :
+		return(~script5415($int1));
+	case agility :
+		return(~script5417($int1));
+	case herblore :
+		return(~script5419($int1));
+	case thieving :
+		return(~script5421($int1));
+	case crafting :
+		return(~script5423($int1));
+	case fletching :
+		return(~script5425($int1));
+	case slayer :
+		return(~script5427($int1));
+	case hunter :
+		return(~script5429($int1));
+	case mining :
+		return(~script5431($int1));
+	case smithing :
+		return(~script5433($int1));
+	case fishing :
+		return(~script5435($int1));
+	case cooking :
+		return(~script5437($int1));
+	case firemaking :
+		return(~script5439($int1));
+	case woodcutting :
+		return(~script5441($int1));
+	case farming :
+		return(~script5443($int1));
+	case default :
+		return(0);
+}

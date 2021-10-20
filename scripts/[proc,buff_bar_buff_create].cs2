@@ -11,144 +11,142 @@ if (~buff_bar_buff_disabled($int5) = 1) {
 if (~buff_bar_buff_show($int5) = 0) {
 	return(0);
 }
-def_int $int7 = ~buff_bar_get_number($int5);
+def_int $int7 = 0;
 def_int $int8 = 0;
-if ($int6 = 2 | $int6 = 3 | $int6 = 4) {
-	if ($int7 <= 0) {
-		return(0);
-	}
-	$int7 = ~script4666($int6, $int7);
+def_int $int9 = 1;
+def_obj $obj10 = null;
+if ($int6 = 3 | $int6 = 4 | $int6 = 5) {
+	$int7, $obj10, $int9 = ~script5340($struct3, $int5, $int6, $int4, 0);
 	$int8 = 1;
-}
-def_obj $obj9 = null;
-def_enum $enum10 = null;
-def_inv $inv11 = null;
-def_boolean $boolean12 = false;
-if ($int6 = 5) {
-	$inv11 = struct_param($struct3, param_1283);
-	if ($inv11 = null) {
-		return(0);
-	}
-	$obj9 = inv_getobj($inv11, struct_param($struct3, param_1351));
-	if ($obj9 = null) {
-		return(0);
-	}
-	$int7 = inv_getnum($inv11, struct_param($struct3, param_1351));
-	if ($int7 <= 0) {
-		return(0);
-	} else if (struct_param($struct3, param_1352) = true & oc_stackable($obj9) = false) {
-		return(0);
-	}
+} else if ($int6 = 6) {
+	$int7, $obj10, $int9 = ~script5341($struct3);
 } else {
-	$obj9 = struct_param($struct3, param_1281);
-	$enum10 = struct_param($struct3, param_1286);
-	$inv11 = struct_param($struct3, param_1283);
-	$boolean12 = struct_param($struct3, param_1282);
-	if ($obj9 = null & $enum10 ! null) {
-		$obj9 = enum(int, namedobj, $enum10, $int4);
-	}
-	if ($obj9 = null) {
-		$obj9 = ~script5195($int5);
-	}
-	if ($boolean12 = true) {
-		if ($obj9 = null | $inv11 = null) {
-			return(0);
-		}
-		$int7 = inv_total($inv11, $obj9);
-		if ($int7 <= 0) {
-			return(0);
-		}
-	}
+	$int7, $obj10, $int9 = ~script5342($struct3, $int5, $int4);
 }
-def_int $int13 = struct_param($struct3, param_1276);
-def_int $int14 = 0;
-def_int $int15 = 0;
-def_int $trans16 = enum(int, int, enum_2653, $int13);
-$int14, $int15 = ~buff_bar_buff_position($component0, $int1);
-$int1 = calc($int1 * 8);
-if ($int14 < 0 | $int15 < 0) {
+if ($int9 = 0) {
+	return(0);
+}
+def_int $int11 = struct_param($struct3, param_1276);
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $trans14 = enum(int, int, enum_2653, $int11);
+$int12, $int13 = ~buff_bar_buff_position($component0, $int1);
+$int1 = calc($int1 * 9);
+if ($int12 < 0 | $int13 < 0) {
 	return(0);
 }
 cc_create($component0, ^iftype_rectangle, $int1);
-cc_setposition(calc($int14 + 1), calc($int15 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setposition(calc($int12 + 1), calc($int13 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setsize(calc(37 - 5), calc(37 - 5), ^setsize_abs, ^setsize_abs);
 cc_setfill(true);
-cc_setcolour($int13);
-cc_settrans($trans16);
+cc_setcolour($int11);
+cc_settrans($trans14);
 $int1 = calc($int1 + 1);
-$trans16 = enum(int, int, enum_2654, $int13);
+$trans14 = enum(int, int, enum_2654, $int11);
 cc_create($component0, ^iftype_rectangle, $int1);
 cc_setsize(1, calc(37 - 3), ^setsize_abs, ^setsize_abs);
-cc_setposition($int14, $int15, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setposition($int12, $int13, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setfill(true);
-cc_setcolour($int13);
-cc_settrans($trans16);
+cc_setcolour($int11);
+cc_settrans($trans14);
 $int1 = calc($int1 + 1);
 cc_create($component0, ^iftype_rectangle, $int1);
 cc_setsize(1, calc(37 - 3), ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int14 + (37 - 4)), $int15, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setposition(calc($int12 + (37 - 4)), $int13, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setfill(true);
-cc_setcolour($int13);
-cc_settrans($trans16);
+cc_setcolour($int11);
+cc_settrans($trans14);
 $int1 = calc($int1 + 1);
 cc_create($component0, ^iftype_rectangle, $int1);
 cc_setsize(calc(37 - 5), 1, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int14 + 1), $int15, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setposition(calc($int12 + 1), $int13, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setfill(true);
-cc_setcolour($int13);
-cc_settrans($trans16);
+cc_setcolour($int11);
+cc_settrans($trans14);
 $int1 = calc($int1 + 1);
 cc_create($component0, ^iftype_rectangle, $int1);
 cc_setsize(calc(37 - 5), 1, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int14 + 1), calc($int15 + (37 - 4)), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setposition(calc($int12 + 1), calc($int13 + (37 - 4)), ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setfill(true);
-cc_setcolour($int13);
-cc_settrans($trans16);
+cc_setcolour($int11);
+cc_settrans($trans14);
 $int1 = calc($int1 + 1);
 cc_create($component0, ^iftype_graphic, $int1);
-def_int $int17 = calc(coordx(struct_param($struct3, param_1280)) % 64);
-def_int $int18 = calc(coordz(struct_param($struct3, param_1280)) % 64);
-cc_setposition(calc($int14 + 1 + (37 - 5) / 2 - $int17 / 2 + coordx(struct_param($struct3, param_1284)) % 64), calc($int15 + 1 + (37 - 5) / 2 - $int18 / 2 + coordz(struct_param($struct3, param_1284)) % 64), ^setpos_abs_left, ^setpos_abs_bottom);
-cc_setsize($int17, $int18, ^setsize_abs, ^setsize_abs);
-def_graphic $graphic19 = struct_param($struct3, param_1278);
+def_int $int15 = calc(coordx(struct_param($struct3, param_1280)) % 64);
+def_int $int16 = calc(coordz(struct_param($struct3, param_1280)) % 64);
+cc_setposition(calc($int12 + 1 + (37 - 5) / 2 - $int15 / 2 + coordx(struct_param($struct3, param_1284)) % 64), calc($int13 + 1 + (37 - 5) / 2 - $int16 / 2 + coordz(struct_param($struct3, param_1284)) % 64), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize($int15, $int16, ^setsize_abs, ^setsize_abs);
+def_graphic $graphic17 = struct_param($struct3, param_1278);
 if (struct_param($struct3, param_1285) ! null & $int4 ! -1) {
-	$graphic19 = enum(int, graphic, struct_param($struct3, param_1285), $int4);
+	$graphic17 = enum(int, graphic, struct_param($struct3, param_1285), $int4);
 }
-if ($graphic19 ! null) {
-	cc_setgraphic($graphic19);
-} else if ($obj9 ! null) {
+if ($graphic17 ! null) {
+	cc_setgraphic($graphic17);
+} else if ($obj10 ! null) {
 	cc_setoutline(1);
-	cc_setobject_nonum(oc_uncert($obj9), 100000);
+	cc_setobject_nonum(oc_uncert($obj10), 100000);
 }
 $int1 = calc($int1 + 1);
-if (struct_param($struct3, param_1288) = true) {
-	~buff_bar_get_transmit($int5, $struct3, ~script4681($int5), $component0, $component2, $int1);
-}
 cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int12, calc($int13 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(calc(37 - 3), 12, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if ($int8 = 1) {
-	cc_setposition($int14, calc($int15 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
-	cc_setsize(calc(37 - 3), 12, ^setsize_abs, ^setsize_abs);
-	cc_setcolour(^white);
-	cc_settextfont(p11_full);
-	cc_settextshadow(true);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext(~buff_bar_time_string($int7));
 	cc_setontimer("buff_bar_buff_timer($component0, $component2, $int1, clientclock, $int7, $int5, $int6, ~script4681($int5), struct_param($struct3, param_1290), struct_param($struct3, param_1291), 0, 0)");
 } else if ($int7 ! 0) {
-	cc_setposition($int14, calc($int15 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
-	cc_setsize(calc(37 - 3), 12, ^setsize_abs, ^setsize_abs);
-	cc_setcolour(^white);
-	cc_settextfont(p11_full);
-	cc_settextshadow(true);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	if ($int7 > 999) {
 		cc_settext("999+");
 	} else {
 		cc_settext(tostring($int7));
 	}
 } else {
-	cc_sethide(true);
+	cc_settext("");
+}
+if (struct_param($struct3, param_1288) = true) {
+	~buff_bar_get_transmit($int5, $int6, $struct3, ~script4681($int5), $component0, $component2, $int1);
 }
 $int1 = calc($int1 + 1);
-~buff_bar_buff_create_tooltip($component0, $int1, $component2, struct_param($struct3, param_1279), $int14, $int15);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int12, calc($int13 + 37 - 16), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(calc(37 - 3), 12, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int5 = struct_param($struct3, param_1409);
+$int6 = struct_param($struct3, param_1410);
+$int8 = 0;
+if ($int6 = 3 | $int6 = 4 | $int6 = 5) {
+	$int7, $obj10, $int9 = ~script5340($struct3, $int5, $int6, $int4, 1);
+	$int8 = 1;
+} else if ($int6 = 6) {
+	$int7, $obj10, $int9 = ~script5341($struct3);
+} else {
+	$int7, $obj10, $int9 = ~script5342($struct3, $int5, $int4);
+}
+if (struct_param($struct3, param_1410) > 0) {
+	if ($int8 = 1) {
+		cc_settext(~buff_bar_time_string($int7));
+		cc_setontimer("buff_bar_buff_timer($component0, $component2, $int1, clientclock, $int7, $int5, $int6, ~script4681($int5), struct_param($struct3, param_1290), struct_param($struct3, param_1291), 0, 0)");
+	} else if ($int7 ! 0) {
+		if ($int7 > 999) {
+			cc_settext("999+");
+		} else {
+			cc_settext(tostring($int7));
+		}
+	} else {
+		cc_settext("");
+	}
+} else {
+	cc_settext("");
+}
+if (struct_param($struct3, param_1411) = true) {
+	~buff_bar_get_transmit($int5, $int6, $struct3, ~script4681($int5), $component0, $component2, $int1);
+}
+$int1 = calc($int1 + 1);
+~buff_bar_buff_create_tooltip($component0, $int1, $component2, struct_param($struct3, param_1279), $int12, $int13);
 return(1);

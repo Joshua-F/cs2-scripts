@@ -55,7 +55,7 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 		cc_settext($string0);
 		$int23 = parawidth($string0, 190, p11_full);
 		cc_setsize($int23, 0, ^setsize_abs, ^setsize_minus);
-		.cc_setgraphic("graphic_3523");
+		.cc_setgraphic("group_icon");
 		$int23 = calc($int23 + 3 + 13);
 		if (%varclansetting41 > 0 & %varclansetting40 <= 0) {
 			$int19 = calc(($width18 / 2 - $int23) / 2);
@@ -66,7 +66,7 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 				$int23 = parawidth($string0, 190, p11_full);
 				cc_setsize($int23, 0, ^setsize_abs, ^setsize_minus);
 				cc_settext($string0);
-				.cc_setgraphic("graphic_3522");
+				.cc_setgraphic("heart_icon");
 				$int23 = calc($int23 + 3 + 13);
 				$int19 = calc($width18 / 2 + ($width18 / 2 - $int23) / 2);
 				.cc_setposition($int19, -1, ^setpos_abs_left, ^setpos_abs_centre);

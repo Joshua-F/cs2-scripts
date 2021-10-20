@@ -44,7 +44,7 @@ if (%varbit13058 = 1 | %varbit12171 = 1) {
 	if ($int11 = 0) {
 		if_setonop("clan_create_member_invite", $component6);
 	} else {
-		if_setonop("script5304", $component6);
+		if_setonop("clan_create_member_invite_group", $component6);
 	}
 	~clan_stonebutton_draw(false, "<col=808080><$string0> name</col>", "p12_full", $component4);
 	~clan_stonebutton_init("<col=ff0000>Cancel</col>", $component5, "p12_full");

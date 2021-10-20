@@ -8,6 +8,6 @@ if (%varbit1777 = 4) {
 	~side_channels_settab(4, $component4, $component0, $component1, $component2, $component3, $component4);
 } else if (%varbit1777 = 5) {
 	~side_channels_settab(5, $component4, $component0, $component1, $component2, $component3, $component4);
-} else {
+} else if ($component4 ! null) {
 	if_sethide(true, $component4);
 }

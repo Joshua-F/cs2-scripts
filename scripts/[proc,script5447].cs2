@@ -1,0 +1,141 @@
+// 5447
+[proc,script5447](int $comsubid0, int $int1, stat $stat2)
+%varcint563 = 0;
+def_int $int3 = calc(25 + 2 + 3);
+def_int $int4 = calc(48 + 2);
+def_int $comsubid5 = calc(($int1 + $int4 / 2) / ~max(1, $int4));
+if ($comsubid5 < 1) {
+	$comsubid5 = 1;
+}
+if ($comsubid5 >= %varcint561) {
+	$comsubid5 = calc(%varcint561 - 1);
+}
+if (cc_find(interface_729:5, $comsubid5) = ^true & $comsubid5 >= 1) {
+	.cc_create(interface_729:16, ^iftype_rectangle, %varcint563);
+	.cc_setfill(true);
+	.cc_setcolour(^white);
+	.cc_settrans(160);
+	.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:4, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_rectangle, %varcint563);
+	.cc_setcolour(cc_getcolour);
+	.cc_settrans(cc_gettrans);
+	.cc_setfill(true);
+	.cc_setposition(cc_getx, $int1, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:6, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_graphic, %varcint563);
+	.cc_setposition(cc_getx, calc($int1 + 2 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setgraphic(enum(stat, graphic, enum_255, $stat2));
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:7, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_rectangle, %varcint563);
+	.cc_setcolour(cc_getcolour);
+	.cc_setfill(true);
+	.cc_setposition(calc(3 + cc_getx), calc($int3 + $int1), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:8, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_rectangle, %varcint563);
+	.cc_setcolour(cc_getcolour);
+	.cc_setfill(true);
+	.cc_setposition(calc(3 + cc_getx), calc($int3 + $int1), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:9, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_text, %varcint563);
+	.cc_settextshadow(true);
+	.cc_setcolour(cc_getcolour);
+	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	.cc_settextfont(p11_full);
+	.cc_setposition(cc_getx, calc($int3 + $int1 + 1), ^setpos_abs_centre, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_settext(cc_gettext);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:10, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_text, %varcint563);
+	.cc_settextshadow(true);
+	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	.cc_settextfont(p11_full);
+	.cc_setcolour(cc_getcolour);
+	.cc_setposition(calc(3 + cc_getx), calc($int3 + $int1 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_settext(cc_gettext);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:11, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_text, %varcint563);
+	.cc_settextshadow(true);
+	.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+	.cc_settextfont(p11_full);
+	.cc_setcolour(cc_getcolour);
+	.cc_setposition(calc(3 + cc_getx), calc($int3 + $int1 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_settext(cc_gettext);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:12, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_text, %varcint563);
+	.cc_settextshadow(true);
+	.cc_settextalign(^settextalign_left, ^settextalign_top, 12);
+	.cc_settextfont(p11_full);
+	.cc_setcolour(cc_getcolour);
+	.cc_setposition(cc_getx, calc($int1 + 2 * 2), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_settext(cc_gettext);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:13, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_text, %varcint563);
+	.cc_settextshadow(true);
+	.cc_settextalign(^settextalign_right, ^settextalign_top, 12);
+	.cc_settextfont(p11_full);
+	.cc_setcolour(cc_getcolour);
+	.cc_setposition(cc_getx, calc($int1 + 2 * 2), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_settext(cc_gettext);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:14, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_text, %varcint563);
+	.cc_settextshadow(true);
+	.cc_settextalign(^settextalign_left, ^settextalign_top, 12);
+	.cc_settextfont(p11_full);
+	.cc_setcolour(cc_getcolour);
+	.cc_setposition(cc_getx, calc($int1 + 2 * 2), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_settext(cc_gettext);
+	%varcint563 = calc(%varcint563 + 1);
+}
+if (cc_find(interface_729:15, $comsubid0) = ^true) {
+	cc_sethide(true);
+	.cc_create(interface_729:16, ^iftype_text, %varcint563);
+	.cc_settextshadow(true);
+	.cc_settextalign(^settextalign_right, ^settextalign_top, 12);
+	.cc_settextfont(p11_full);
+	.cc_setcolour(cc_getcolour);
+	.cc_setposition(cc_getx, calc($int1 + 2 * 2), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_settext(cc_gettext);
+	%varcint563 = calc(%varcint563 + 1);
+}

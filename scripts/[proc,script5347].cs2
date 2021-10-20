@@ -1,0 +1,7 @@
+// 5347
+[proc,script5347](int $int0)(int)
+def_int $int1 = calc(($int0 - 1000000) * 2 + 6);
+if ($int1 > 20) {
+	$int1 = 20;
+}
+return($int1);

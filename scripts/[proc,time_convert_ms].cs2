@@ -1,25 +1,27 @@
 // 2411
-[proc,time_convert_ms](int $int0)(string)
+[proc,time_convert_ms](int $int0, int $int1)(string)
 def_string $string0 = "";
-def_int $int1 = calc($int0 * 6);
-def_int $int2 = calc($int1 / 10);
-def_int $int3 = calc($int2 / 60);
+def_int $int2 = calc($int0 * 6);
+def_int $int3 = calc($int2 / 10);
 def_int $int4 = calc($int3 / 60);
-$int1 = calc($int1 % 10);
-$int2 = calc($int2 % 60);
+def_int $int5 = calc($int4 / 60);
+$int2 = calc($int2 % 10);
 $int3 = calc($int3 % 60);
-if ($int4 > 0) {
+if ($int1 = 0) {
+	$int4 = calc($int4 % 60);
+}
+if ($int5 > 0 & $int1 = 0) {
+	$string0 = append($string0, "<tostring($int5)>:");
+}
+if ($int4 < 10 & $int5 > 0) {
+	$string0 = append($string0, "0<tostring($int4)>:");
+} else {
 	$string0 = append($string0, "<tostring($int4)>:");
 }
-if ($int3 < 10 & $int4 > 0) {
-	$string0 = append($string0, "0<tostring($int3)>:");
+if ($int3 < 10) {
+	$string0 = append($string0, "0<tostring($int3)>.");
 } else {
-	$string0 = append($string0, "<tostring($int3)>:");
+	$string0 = append($string0, "<tostring($int3)>.");
 }
-if ($int2 < 10) {
-	$string0 = append($string0, "0<tostring($int2)>.");
-} else {
-	$string0 = append($string0, "<tostring($int2)>.");
-}
-$string0 = append($string0, "<tostring($int1)>0");
+$string0 = append($string0, "<tostring($int2)>0");
 return($string0);

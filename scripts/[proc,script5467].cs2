@@ -1,0 +1,14 @@
+// 5467
+[proc,script5467](stat $stat0, int $int1)
+~script5395($stat0, $int1);
+def_int $comsubid2 = ~script5383($stat0);
+if (cc_find(interface_729:5, $comsubid2) = ^true) {
+	if ($int1 = 1) {
+		cc_setop(10, "Unpause");
+	} else {
+		cc_setop(10, "Pause");
+	}
+}
+if (~script5383($stat0) > 0) {
+	~script5368($stat0);
+}

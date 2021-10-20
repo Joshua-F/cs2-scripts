@@ -1,0 +1,20 @@
+// 5459
+[proc,script5459](stat $stat0)(int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+while ($int1 < 10) {
+	$int2 = ~script5397($stat0, $int1);
+	$int4 = calc($int4 + $int2);
+	if ($int2 > 0) {
+		$int3 = calc($int3 + 1);
+	} else {
+		$int1 = 10;
+	}
+	$int1 = calc($int1 + 1);
+}
+if ($int3 <= 0) {
+	return(-1);
+}
+return(calc($int4 / $int3));

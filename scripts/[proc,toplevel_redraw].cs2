@@ -6,11 +6,11 @@ if (%varbit4611 = 1) {
 	if_setonkey("toplevel_keypress(event_key, $enum1, true)", $component0);
 }
 ~toplevel_resize($component0, $enum1);
-def_component $component2 = enum(component, component, $enum1, interface_161:25);
+def_component $component2 = enum(component, component, $enum1, interface_161:93);
 if ($component2 ! null) {
 	if_sethide(~int_to_bool(%varbit542), $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:35);
+$component2 = enum(component, component, $enum1, interface_161:30);
 if ($component2 ! null) {
 	if (%varbit542 = 1 | %varbit4606 ! 0) {
 		if_sethide(true, $component2);
@@ -18,7 +18,7 @@ if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}
 }
-def_component $component3 = enum(component, component, $enum1, interface_161:3);
+def_component $component3 = enum(component, component, $enum1, interface_161:1);
 def_int $int4 = 0;
 def_int $int5 = 0;
 $int5, $int4 = viewport_getfov;
@@ -113,7 +113,7 @@ if ($component7 ! null) {
 	if_setgraphic(enum(int, graphic, enum_3841, %varbit13071), $component7);
 	if_setonvartransmit("script5303($component7, $component9){var499}", $component7);
 }
-$component7 = enum(component, component, $enum1, interface_161:41);
+$component7 = enum(component, component, $enum1, interface_161:37);
 if ($component7 ! null) {
 	if (%varbit4609 = 1) {
 		if_setgraphic("tradebacking_dark", $component7);
@@ -123,7 +123,7 @@ if ($component7 ! null) {
 		if_settrans(150, $component7);
 	}
 }
-$component7 = enum(component, component, $enum1, interface_161:23);
+$component7 = enum(component, component, $enum1, interface_161:19);
 if ($component7 ! null) {
 	if ($enum1 = enum_1745) {
 		~script3506($component7);
@@ -144,20 +144,20 @@ if ($component7 ! null) {
 		if_sethide(true, $component7);
 	}
 }
-$component2 = enum(component, component, $enum1, interface_161:7);
+$component2 = enum(component, component, $enum1, interface_161:5);
 if (%varbit9528 = 0 & %varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
 %varcint384 = clientclock;
-$component2 = enum(component, component, $enum1, interface_161:16);
+$component2 = enum(component, component, $enum1, interface_161:91);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:38);
+$component2 = enum(component, component, $enum1, interface_161:94);
 if ($enum1 = enum_1745) {
 	if (%varbit542 = 1 & %varbit4606 = 3) {
 		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
@@ -184,18 +184,12 @@ if ($enum1 ! enum_1129) {
 }
 if ($enum1 = enum_1745) {
 	if (%varbit542 = 0) {
+		if_sethide(false, interface_601:36);
 		if_sethide(false, interface_601:37);
-		if_sethide(false, interface_601:38);
 	} else {
+		if_sethide(true, interface_601:36);
 		if_sethide(true, interface_601:37);
-		if_sethide(true, interface_601:38);
 	}
-}
-$component2 = enum(component, component, $enum1, interface_161:8);
-if (%varbit542 = 0) {
-	if_sethide(false, $component2);
-} else {
-	if_sethide(true, $component2);
 }
 $component2 = enum(component, component, $enum1, interface_161:6);
 if (%varbit542 = 0) {
@@ -204,6 +198,12 @@ if (%varbit542 = 0) {
 	if_sethide(true, $component2);
 }
 $component2 = enum(component, component, $enum1, interface_161:4);
+if (%varbit542 = 0) {
+	if_sethide(false, $component2);
+} else {
+	if_sethide(true, $component2);
+}
+$component2 = enum(component, component, $enum1, interface_161:2);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
@@ -226,7 +226,7 @@ if (%varbit5599 = 1) {
 }
 ~options_setfps;
 ~mouseover_ops;
-$component2 = enum(component, component, $enum1, interface_161:40);
+$component2 = enum(component, component, $enum1, interface_161:36);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
@@ -236,3 +236,5 @@ if (%varbit542 = 0) {
 ~setvolumesounds;
 ~setvolumeareasounds;
 ~setbrightness;
+~script5326;
+~script5355($enum1);

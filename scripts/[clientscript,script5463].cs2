@@ -1,0 +1,14 @@
+// 5463
+[clientscript,script5463](int $opindex0, stat $stat1)
+switch_int ($opindex0) {
+	case 6 :
+		~script5465($stat1);
+	case 7 :
+		~script5455($stat1, 0);
+	case 8 :
+		~script5466($stat1);
+	case 9 :
+		~script5455($stat1, 1);
+	case 10 :
+		~script5467($stat1, calc(1 - ~script5394($stat1)));
+}

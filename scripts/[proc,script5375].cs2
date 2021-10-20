@@ -1,0 +1,36 @@
+// 5375
+[proc,script5375](stat $stat0)
+def_int $comsubid1 = ~script5383($stat0);
+def_int $lvl2 = stat_base($stat0);
+def_int $int3 = ~script5386($stat0);
+def_int $int4 = ~script5388($stat0);
+def_string $string0 = ~script5377(calc($int4 - $int3));
+def_int $int5 = ~script5380($stat0);
+def_string $text1 = "    XP Gained: <br>    Acts->Lvl: ";
+if ($int5 >= 0) {
+	$text1 = "    XP Gained: <br>    Kills->Lvl: ";
+} else if ($int5 = -1) {
+	$text1 = "    XP Gained: <br>    Acts->Lvl: ";
+} else {
+	$text1 = "    XP Gained: <br>    Kills->Lvl: ";
+}
+if (cc_find(interface_729:14, $comsubid1) = ^true) {
+	cc_settext($text1);
+}
+def_int $int6 = ~script5379($stat0);
+def_string $string2 = "Done!";
+if ($lvl2 < 99) {
+	if ($int5 >= 0) {
+		$string2 = ~script5377($int5);
+	} else if ($int5 = -2) {
+		$string2 = "";
+	} else if ($int6 >= 0) {
+		$string2 = ~script5377($int6);
+	} else {
+		$string2 = "";
+	}
+}
+def_string $text3 = append(append($string0, "<br>"), $string2);
+if (cc_find(interface_729:15, $comsubid1) = ^true) {
+	cc_settext($text3);
+}

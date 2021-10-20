@@ -5,6 +5,6 @@ if ($lvl5 = $lvl2) {
 	return;
 }
 ~fishing_spot_indicator_create($newvar0, $struct1, $npc_uid3, $int4);
-if (_203($newvar0) = 1) {
+if (_202($newvar0) = ^true) {
 	cc_setonstattransmit("fishing_spot_indicator_stattransmit($newvar0, $struct1, $lvl5, $npc_uid3, $int4){fishing, agility, strength}");
 }

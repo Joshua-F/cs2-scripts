@@ -1,0 +1,20 @@
+// 5340
+[proc,script5340](struct $struct0, int $int1, int $int2, int $int3, int $int4)(int, namedobj, int)
+def_int $int5 = ~buff_bar_get_number($int1);
+if ($int5 <= 0) {
+	return(0, null, 0);
+}
+$int5 = ~script4666($int2, $int5);
+def_namedobj $namedobj6 = null;
+def_enum $enum7 = null;
+if ($int4 = 0) {
+	$namedobj6 = struct_param($struct0, param_1281);
+	$enum7 = struct_param($struct0, param_1286);
+	if ($namedobj6 = null & $enum7 ! null) {
+		$namedobj6 = enum(int, namedobj, $enum7, $int3);
+	}
+	if ($namedobj6 = null) {
+		$namedobj6 = ~script5195($int1);
+	}
+}
+return($int5, $namedobj6, 1);

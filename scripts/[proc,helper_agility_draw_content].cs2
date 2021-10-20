@@ -9,8 +9,8 @@ if (%varbit12633 = 2) {
 }
 def_int $int0 = 0;
 def_int $int1 = 0;
-~helper_generic_setup;
-$int0 = ~helper_generic_add_title($string0);
+~helper_generic_setup(1, 1, 1);
+$int0 = ~helper_generic_add_title($string0, 0);
 if (cc_find(interface_711:3, $int1) = ^true) {
 	cc_setonvartransmit("helper_agility_update_title($int0){var3153}");
 }

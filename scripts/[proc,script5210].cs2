@@ -2,7 +2,7 @@
 [proc,script5210]
 def_int $int0 = 2;
 def_int $int1 = 50;
-def_int $colour2 = ~script5196(%var3157, highlight_destination_tile_colour_3650);
+def_int $colour2 = ~script5329(180);
 def_int $int3 = 10;
 if (%varbit12979 = 1) {
 	if (%varbit12982 = 1) {
@@ -10,7 +10,7 @@ if (%varbit12979 = 1) {
 	}
 	_7035(4, $colour2, $int0, $int1, $int3);
 	if (_3330 ! null) {
-		highlight_tile_on(_3330, 4, 1);
+		highlight_tile_on(_3330, 4, 0);
 	}
 } else {
 	_7039(4);

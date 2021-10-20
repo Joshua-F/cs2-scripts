@@ -1,0 +1,7 @@
+// 5457
+[proc,script5457](stat $stat0)
+def_int $int1 = 0;
+while ($int1 < 10) {
+	~script5396($stat0, $int1, 0);
+	$int1 = calc($int1 + 1);
+}

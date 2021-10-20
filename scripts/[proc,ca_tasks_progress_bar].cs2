@@ -33,7 +33,7 @@ if ($width13 > $width12) {
 	$width13 = $width12;
 }
 if (cc_find($component0, 0) = ^false) {
-	if ($int2 = 1) {
+	if ($int2 = 1 & $int10 > 0) {
 		cc_create($component0, ^iftype_graphic, $int4);
 		cc_setsize(calc($width7 - 4), 27, ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
@@ -67,7 +67,11 @@ if (cc_find($component0, 0) = ^false) {
 	cc_setcolour(^white);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settext("Tasks Completed: <tostring($int11)>/<tostring($int10)>");
+	if ($int10 <= 0) {
+		cc_settext("No Tasks Available");
+	} else {
+		cc_settext("Tasks Completed: <tostring($int11)>/<tostring($int10)>");
+	}
 	$int4 = calc($int4 + 1);
 	cc_create($component0, ^iftype_rectangle, $int4);
 	cc_setsize($width7, 31, ^setsize_abs, ^setsize_abs);

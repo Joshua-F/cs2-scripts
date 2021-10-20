@@ -1,0 +1,18 @@
+// 5351
+[proc,script5351]
+if (%varcint553 ! null) {
+	highlight_npc_off(%varcint553, %varcint554, 5);
+	%varcint553 = null;
+	%varcint554 = null;
+} else if (%varcint555 ! null) {
+	highlight_loc_off(%varcint555, %varcint556, 5, 1);
+	%varcint555 = null;
+	%varcint556 = null;
+} else if (%varcint557 ! null) {
+	highlight_obj_off(%varcint557, %varcint558, 5, 1);
+	%varcint557 = null;
+	%varcint558 = null;
+} else if (string_length(%varcstring559) >= 0) {
+	highlight_player_off(%varcstring559, 5);
+	%varcstring559 = "null";
+}

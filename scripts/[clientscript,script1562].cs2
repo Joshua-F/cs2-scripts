@@ -1,6 +1,10 @@
 // 1562
-[clientscript,script1562](component $component0, string $string0, component $component1, int $int2, int $clock3)
+[clientscript,script1562](component $component0, string $string0, component $component1, int $int2, int $clock3, boolean $boolean4)
 if (clientclock < $clock3) {
 	return;
 }
-~script1558($component0, $string0, $component1, null, $int2);
+if ($boolean4 = true) {
+	~script4161($component0, $string0, $component1, null, $int2);
+} else {
+	~script1558($component0, $string0, $component1, null, $int2);
+}

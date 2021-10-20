@@ -1,6 +1,6 @@
 // 2309
 [proc,tob_hud_fade](int $int0, int $int1, int $int2, string $string0, int $int3)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:3)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:1)) = false) {
 	return;
 }
 if (cc_find(interface_28:1, 0) = ^true) {

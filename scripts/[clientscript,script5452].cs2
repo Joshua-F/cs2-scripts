@@ -1,0 +1,13 @@
+// 5452
+[clientscript,script5452](int $comsubid0)
+if (calc(clientclock % 60) ! 0) {
+	return;
+}
+def_stat $stat1 = null;
+def_int $int2 = 1;
+while ($int2 <= 23) {
+	$stat1 = enum(int, stat, enum_681, $int2);
+	~script5453($stat1);
+	$int2 = calc($int2 + 1);
+}
+~script5453(null);

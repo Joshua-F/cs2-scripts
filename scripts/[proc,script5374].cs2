@@ -1,0 +1,15 @@
+// 5374
+[proc,script5374](stat $stat0)
+def_int $comsubid1 = ~script5383($stat0);
+def_int $lvl2 = stat_base($stat0);
+def_int $xp3 = stat_xp($stat0);
+def_int $int4 = enum(int, int, enum_256, calc($lvl2 + 1));
+def_string $string0 = ~script5377(~script5378($stat0));
+def_string $string1 = "Done!";
+if ($lvl2 < 99) {
+	$string1 = ~script5377(calc($int4 - $xp3));
+}
+def_string $text2 = append(append($string0, "<br>"), $string1);
+if (cc_find(interface_729:13, $comsubid1) = ^true) {
+	cc_settext($text2);
+}

@@ -1,0 +1,16 @@
+// 5370
+[proc,script5370](stat $stat0)
+def_int $comsubid1 = ~script5383($stat0);
+def_int $lvl2 = stat_base($stat0);
+def_int $int3 = enum(int, int, enum_256, $lvl2);
+def_int $int4 = enum(int, int, enum_256, calc($lvl2 + 1));
+def_int $int5 = calc(stat_xp($stat0) - $int3);
+def_int $width6 = scale($int5, calc($int4 - $int3), 16384);
+if (cc_find(interface_729:8, $comsubid1) = ^true) {
+	if ($lvl2 < 99) {
+		cc_setsize($width6, 15, ^setsize_2, ^setsize_abs);
+	} else {
+		cc_setcolour(0x885500);
+		cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
+	}
+}

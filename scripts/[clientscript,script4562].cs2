@@ -1,5 +1,5 @@
 // 4562
-[clientscript,script4562](int $int0)
+[clientscript,script4562](int $int0, int $int1, string $string0)
 if (~on_enhanced = 0) {
 	return;
 }
@@ -11,3 +11,4 @@ if (~on_enhanced = 0) {
 ~helper_agility_highlight_course(-1);
 ~helper_agility_highlight_shortcuts;
 ~script5183;
+~script5450($int1, $string0);

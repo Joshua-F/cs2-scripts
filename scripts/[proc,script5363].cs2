@@ -1,0 +1,14 @@
+// 5363
+[proc,script5363](int $comsubid0, stat $stat1)
+def_int $y2 = calc(%varcint562 + 2 + 1);
+if ($stat1 = null) {
+	$y2 = calc(%varcint562 + (48 - 25) / 2 + 1);
+}
+cc_create(interface_729:6, ^iftype_graphic, $comsubid0);
+cc_setposition(calc(2 + 1), $y2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+if ($stat1 ! null) {
+	cc_setgraphic(enum(stat, graphic, enum_255, $stat1));
+} else {
+	cc_setgraphic("staticons2,7");
+}

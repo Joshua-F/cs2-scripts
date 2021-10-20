@@ -1,0 +1,19 @@
+// 5316
+[clientscript,script5316](component $component0, component $component1)
+if (%varbit12374 = 1 | ~on_mobile = true) {
+	return;
+}
+def_int $int2 = calc(%varcint468 - (clientclock - %varcint469) / 30);
+def_int $int3 = calc(%varcint471 - (clientclock - %varcint472) / 30);
+def_string $string0 = ~script3739(10688267, "col");
+def_string $string1 = ~script3739(416541, "col");
+def_string $string2 = "<$string0>Stats restoring</col>";
+def_string $string3 = "<$string0><~time_convert($int2, 0)></col>";
+if (%varcint551 = 1) {
+	$string2 = "<$string2>|<$string1>Boosts draining</col>";
+	$string3 = "<$string3>|<$string1><~time_convert($int3, 0)></col>";
+}
+if (calc(clientclock % 10) = 0) {
+	%varcint2 = 0;
+}
+~script5338($component0, -1, $component1, $string2, $string3, p12_full, 0);

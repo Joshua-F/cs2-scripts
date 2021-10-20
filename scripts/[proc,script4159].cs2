@@ -1,0 +1,23 @@
+// 4159
+[proc,script4159](int $int0, int $int1)(string)
+def_string $string0 = "";
+def_int $int2 = calc($int0 / 60);
+def_int $int3 = calc($int2 / 60);
+$int0 = calc($int0 % 60);
+if ($int1 = 0) {
+	$int2 = calc($int2 % 60);
+}
+if ($int3 > 0 & $int1 = 0) {
+	$string0 = append($string0, "<tostring($int3)>:");
+}
+if ($int2 < 10 & $int3 > 0) {
+	$string0 = append($string0, "0<tostring($int2)>:");
+} else {
+	$string0 = append($string0, "<tostring($int2)>:");
+}
+if ($int0 < 10) {
+	$string0 = append($string0, "0<tostring($int0)>");
+} else {
+	$string0 = append($string0, tostring($int0));
+}
+return($string0);

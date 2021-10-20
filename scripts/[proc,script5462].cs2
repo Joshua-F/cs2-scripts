@@ -1,0 +1,13 @@
+// 5462
+[proc,script5462](int $comsubid0)
+def_string $op0 = "Pause";
+if (~script5394(null) = 1) {
+	$op0 = "Unpause";
+}
+if (cc_find(interface_729:5, $comsubid0) = ^true) {
+	cc_setopbase("<col=ff9040>All Trackers</col>");
+	cc_setop(6, "Reset");
+	cc_setop(7, "Close");
+	cc_setop(8, $op0);
+	cc_setonop("script5464(event_opindex)");
+}

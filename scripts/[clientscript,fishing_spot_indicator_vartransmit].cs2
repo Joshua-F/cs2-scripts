@@ -4,6 +4,6 @@ if ($int2 = %varbit12349 & $int3 = %varbit12350 & $int4 = %varbit12351) {
 	return;
 }
 ~fishing_spot_indicator_create($newvar0, $struct1, $npc_uid5, $int6);
-if (_203($newvar0) = 1) {
+if (_202($newvar0) = ^true) {
 	cc_setonvartransmit("fishing_spot_indicator_vartransmit($newvar0, $struct1, %varbit12349, %varbit12350, %varbit12351, $npc_uid5, $int6){var2856, var3074}");
 }

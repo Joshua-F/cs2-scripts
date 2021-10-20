@@ -4,17 +4,17 @@ if (%varcint187 > clientclock) {
 	return(0);
 }
 def_enum $enum2 = ~toplevel_getcomponents;
-if (if_hassub(enum(component, component, $enum2, interface_161:21)) = true) {
+if (if_hassub(enum(component, component, $enum2, interface_161:17)) = true) {
 	if (%varcint190 = 1 & $overlayinterface1 ! overlayinterface_595) {
 		return(0);
 	} else if (%varbit9639 = 1 & %varbit9638 = 1 & $overlayinterface1 ! overlayinterface_134) {
 		return(0);
 	}
 }
-if (if_hassub(enum(component, component, $enum2, interface_161:20)) = true & %varcint435 = true & $interface0 ! interface_558) {
+if (if_hassub(enum(component, component, $enum2, interface_161:16)) = true & %varcint435 = true & $interface0 ! interface_558) {
 	return(0);
 }
-if ($enum2 = enum_1132 & if_hassub(interface_165:35) = true) {
+if ($enum2 = enum_1132 & if_hassub(interface_165:37) = true) {
 	if ($interface0 = interface_16) {
 		$enum2 = $enum2;
 	} else if ($overlayinterface1 = overlayinterface_595 & %varcint190 = 1) {

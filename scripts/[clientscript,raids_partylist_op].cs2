@@ -6,7 +6,7 @@ if ($opindex0 ! 1) {
 sound_synth(interface_select1, 1, 0);
 if (cc_find($component1, $int2) = ^true) {
 	cc_setcolour(^white);
-	cc_settrans(200);
+	cc_settrans(190);
 }
 if_clearops($component1);
 if_setonop(null, $component1);

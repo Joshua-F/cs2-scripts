@@ -22,7 +22,7 @@ if ($int12 <= 0) {
 	~buff_bar_setup($component0, $component1);
 	return;
 }
-if (calc($int12 % 25) = 0 & cc_find($component0, $comsubid2) = ^true) {
+if (calc($int12 % 5) = 0 & cc_find($component0, $comsubid2) = ^true) {
 	cc_settext(~buff_bar_time_string($int12));
 	cc_setontimer("buff_bar_buff_timer($component0, $component1, $comsubid2, $clock3, $int4, $int5, $int6, $int13, $boolean8, $int9, 0, 0)");
 }

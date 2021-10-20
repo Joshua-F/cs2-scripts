@@ -3,5 +3,5 @@
 if ($int1 >= 4000) {
 	if_settext("Max", $component0);
 } else {
-	if_settext(tostring($int1), $component0);
+	if_settext(~tostring_spacer($int1, ","), $component0);
 }

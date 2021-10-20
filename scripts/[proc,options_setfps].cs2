@@ -1,7 +1,7 @@
 // 539
 [proc,options_setfps]
 if (~on_mobile = false & ~on_enhanced = 0) {
-	mobile_setfps(0);
+	_3209(5, 0);
 	return;
 }
 def_int $int0 = 0;
@@ -12,13 +12,13 @@ if (~on_mobile = true) {
 }
 switch_int ($int0) {
 	case 1 :
-		mobile_setfps(15);
+		_3209(5, 15);
 	case 2 :
-		mobile_setfps(20);
+		_3209(5, 20);
 	case 3 :
-		mobile_setfps(30);
+		_3209(5, 30);
 	case 4 :
-		mobile_setfps(60);
+		_3209(5, 60);
 	case default :
-		mobile_setfps(0);
+		_3209(5, 0);
 }

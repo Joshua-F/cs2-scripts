@@ -12,11 +12,7 @@ def_int $int10 = 0;
 def_string $string0 = "N/A";
 if ($int8 > -1) {
 	if ($int8 > 0) {
-		if (%varbit11866 = 1) {
-			$string0 = ~time_convert_ms($int8);
-		} else {
-			$string0 = ~time_convert($int8);
-		}
+		$string0 = ~time_convert_option($int8);
 	}
 	cc_create($component0, ^iftype_text, $int2);
 	cc_setsize($width6, $int4, ^setsize_minus, ^setsize_abs);

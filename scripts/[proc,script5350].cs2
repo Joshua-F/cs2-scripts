@@ -1,0 +1,30 @@
+// 5350
+[proc,script5350]
+~script5351;
+def_int $int0 = _7100;
+if (%varbit13088 = 0 | $int0 = 1 | $int0 = 0) {
+	return;
+}
+if ($int0 = 2 & _7102 = 1) {
+	%varcint553 = _6751;
+	%varcint554 = _6752;
+	highlight_npc_on(_6751, _6752, 5);
+	return;
+}
+if ($int0 = 3 & _7103 = 1) {
+	%varcint555 = _6802;
+	%varcint556 = _6801;
+	highlight_loc_on(_6802, _6801, 5, 1);
+	return;
+}
+if ($int0 = 4 & _7104 = 1) {
+	%varcint557 = _6852;
+	%varcint558 = _6851;
+	highlight_obj_on(_6852, _6851, 5, 1);
+	return;
+}
+if ($int0 = 6 & _7105 = 1) {
+	%varcstring559 = _6900;
+	highlight_player_on(_6900, 5);
+	return;
+}

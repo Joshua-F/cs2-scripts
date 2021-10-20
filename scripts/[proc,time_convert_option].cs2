@@ -2,8 +2,8 @@
 [proc,time_convert_option](int $int0)(string)
 def_string $string0 = "";
 if (%varbit11866 = 1) {
-	$string0 = ~time_convert_ms($int0);
+	$string0 = ~time_convert_ms($int0, %varbit11890);
 } else {
-	$string0 = ~time_convert($int0);
+	$string0 = ~time_convert($int0, %varbit11890);
 }
 return($string0);

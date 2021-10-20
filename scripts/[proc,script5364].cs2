@@ -1,0 +1,10 @@
+// 5364
+[proc,script5364](int $comsubid0)
+cc_create(interface_729:5, ^iftype_rectangle, $comsubid0);
+cc_setposition(0, %varcint562, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 48, ^setsize_minus, ^setsize_abs);
+cc_create(interface_729:4, ^iftype_rectangle, $comsubid0);
+cc_setfill(true);
+cc_settrans(128);
+cc_setposition(0, %varcint562, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 48, ^setsize_minus, ^setsize_abs);

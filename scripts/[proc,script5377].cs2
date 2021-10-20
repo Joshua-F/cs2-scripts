@@ -1,0 +1,18 @@
+// 5377
+[proc,script5377](int $int0)(string)
+def_string $string0 = tostring($int0);
+def_string $string1 = "";
+if ($int0 < 0) {
+	$string1 = "0";
+} else if (string_length($string0) = 6) {
+	$string1 = append(append(append(substring($string0, 0, 3), "."), substring($string0, 3, 5)), "k");
+} else if (string_length($string0) = 7) {
+	$string1 = append(append(append(substring($string0, 0, 4), "."), substring($string0, 4, 5)), "k");
+} else if (string_length($string0) = 8) {
+	$string1 = append(append(append(substring($string0, 0, 2), "."), substring($string0, 2, 5)), "M");
+} else if (string_length($string0) > 8) {
+	$string1 = "99.999M";
+} else {
+	$string1 = $string0;
+}
+return($string1);

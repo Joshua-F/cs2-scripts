@@ -1,0 +1,6 @@
+// 4665
+[clientscript,script4665](int $width0, component $component1, string $string0, component $component2)
+if (if_getwidth($component2) ! $width0) {
+	$width0 = ~script5196($string0, $component2);
+	if_setontimer("script4665($width0, event_com, $string0, $component2)", $component1);
+}

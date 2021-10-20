@@ -23,7 +23,10 @@ while ($int0 < %varcint494) {
 		case 0 :
 			$int1 = 1;
 		case 1 :
-			~helper_generic_draw_title($int0);
+			~helper_generic_draw_title($int0, 0);
+			$int1 = 1;
+		case 5 :
+			~helper_generic_draw_title($int0, 1);
 			$int1 = 1;
 		case 2 :
 			~helper_generic_draw_text($int0);

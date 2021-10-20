@@ -8,8 +8,10 @@ if (cc_find($component0, $int1) = ^true) {
 	cc_setcolour($int2);
 	cc_settrans($int3);
 }
-if_setonmouserepeat("script1015(event_com, $int1, $int4, $int5)", $component0);
-if_setonmouseleave("script1015(event_com, $int1, $int2, $int3)", $component0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script1015(event_com, $int1, $int4, $int5)", $component0);
+	if_setonmouseleave("script1015(event_com, $int1, $int2, $int3)", $component0);
+}
 if_setonop("raids_partylist_op(event_opindex, event_com, $int1, $int2, $int3, $int4, $int5, $int6, $string0, $component8)", $component0);
 if_setop(1, "View party:", $component0);
 if_setopbase("<col=ff9040><removetags($string0)></col>", $component0);

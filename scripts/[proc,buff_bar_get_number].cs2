@@ -31,6 +31,20 @@ switch_int ($int0) {
 		}
 	case 11 :
 		return(~script4676(%varcint486, calc(%var102 * -1), 30));
+	case 43 :
+		if (%var102 > 0 & %var102 < 1000000) {
+			return(~script4676(%varcint486, 1, 30));
+		}
+	case 44 :
+		if (%var102 >= 1000000) {
+			return(~script4676(%varcint486, 1, 30));
+		}
+	case 45 :
+		if (%var102 >= 1000000) {
+			return(~script5347(%var102));
+		} else if (%var102 > 0) {
+			return(~script5346(%var102));
+		}
 	case 12 :
 		return(~script4676(%varcint487, %var272, 2));
 	case 13 :

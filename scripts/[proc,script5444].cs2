@@ -1,0 +1,6 @@
+// 5444
+[proc,script5444](int $int0, stat $stat1)
+cc_setdraggable(interface_729:3, -1);
+cc_setdraggablebehavior(1);
+cc_setondrag("script5445(event_mousey, event_comsubid, 0, $stat1)");
+cc_setondragcomplete("script5446(event_mousey, event_comsubid, $stat1)");

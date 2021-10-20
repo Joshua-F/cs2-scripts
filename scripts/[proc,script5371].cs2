@@ -1,0 +1,31 @@
+// 5371
+[proc,script5371](stat $stat0)
+def_int $comsubid1 = ~script5383($stat0);
+def_int $lvl2 = stat_base($stat0);
+def_int $int3 = enum(int, int, enum_256, $lvl2);
+def_int $int4 = enum(int, int, enum_256, calc($lvl2 + 1));
+def_int $int5 = calc(stat_xp($stat0) - $int3);
+def_int $int6 = scale($int5, calc($int4 - $int3), 10000);
+def_string $string0 = tostring($int6);
+switch_int (string_length($string0)) {
+	case 1 :
+		$string0 = append("  00", $string0);
+	case 2 :
+		$string0 = append("  0", $string0);
+	case 3 :
+		$string0 = append("  ", $string0);
+	case 4 :
+		$string0 = append(" ", $string0);
+}
+def_string $string1 = substring($string0, 0, 3);
+def_string $string2 = substring($string0, 3, 5);
+def_string $text3 = append(append(append($string1, "."), $string2), "%");
+if (cc_find(interface_729:9, $comsubid1) = ^true) {
+	if (~script5394($stat0) = 1) {
+		cc_settext("Paused.");
+	} else if ($lvl2 < 99) {
+		cc_settext($text3);
+	} else {
+		cc_settext("Maxed!");
+	}
+}

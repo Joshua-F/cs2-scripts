@@ -1,0 +1,13 @@
+// 5376
+[proc,script5376]
+def_int $comsubid0 = ~script5383(null);
+def_int $int1 = ~script5386(null);
+def_int $int2 = ~script5388(null);
+def_string $string0 = ~script5377(calc($int2 - $int1));
+def_string $string1 = ~script5377(~script5378(null));
+if (~script5394(null) = 1) {
+	$string1 = "Paused.";
+}
+if (cc_find(interface_729:13, $comsubid0) = ^true) {
+	cc_settext(append(append($string1, "<br>"), $string0));
+}

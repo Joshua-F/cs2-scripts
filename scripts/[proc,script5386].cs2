@@ -1,0 +1,54 @@
+// 5386
+[proc,script5386](stat $stat0)(int)
+switch_stat ($stat0) {
+	case null :
+		return(%varcint594);
+	case attack :
+		return(%varcint595);
+	case strength :
+		return(%varcint596);
+	case defence :
+		return(%varcint597);
+	case ranged :
+		return(%varcint598);
+	case prayer :
+		return(%varcint599);
+	case magic :
+		return(%varcint600);
+	case runecraft :
+		return(%varcint601);
+	case construction :
+		return(%varcint602);
+	case hitpoints :
+		return(%varcint603);
+	case agility :
+		return(%varcint604);
+	case herblore :
+		return(%varcint605);
+	case thieving :
+		return(%varcint606);
+	case crafting :
+		return(%varcint607);
+	case fletching :
+		return(%varcint608);
+	case slayer :
+		return(%varcint609);
+	case hunter :
+		return(%varcint610);
+	case mining :
+		return(%varcint611);
+	case smithing :
+		return(%varcint612);
+	case fishing :
+		return(%varcint613);
+	case cooking :
+		return(%varcint614);
+	case firemaking :
+		return(%varcint615);
+	case woodcutting :
+		return(%varcint616);
+	case farming :
+		return(%varcint617);
+	case default :
+		return(0);
+}

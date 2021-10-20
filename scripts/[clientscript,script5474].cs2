@@ -1,0 +1,28 @@
+// 5474
+[clientscript,script5474](coord $coord0, loc $loc1, locshape $locshape2, int $int3, int $int4, int $colour5, int $int6)
+if (~on_enhanced = 0) {
+	return;
+}
+def_newvar $newvar7 = null;
+def_int $int8 = -1;
+if (loc_find($coord0, $loc1) = true) {
+	~script5473($int3, $int4, $colour5, $int6);
+} else {
+	switch_locshape ($locshape2) {
+		case locshape_0, locshape_1, locshape_2, locshape_3, locshape_9 :
+			$int8 = 2;
+		case locshape_4, locshape_5, locshape_6, locshape_7, locshape_8 :
+			$int8 = 3;
+		case locshape_10, locshape_11 :
+			$int8 = 5;
+		case locshape_22 :
+			$int8 = 4;
+		case default :
+			~debug_mes("Overlay Timers: No locfind overlay ID specified for loc_shape. Timer ID: <tostring($int3)>");
+			return;
+	}
+	$newvar7 = _7204($coord0, $int8, 0, 1, 1, 0);
+	if (_202($newvar7) = ^true) {
+		cc_setontimer("script5475($coord0, $loc1, $int3, $int4, $colour5, $int6, clientclock, $int8)");
+	}
+}

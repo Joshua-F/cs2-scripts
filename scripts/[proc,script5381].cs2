@@ -1,0 +1,6 @@
+// 5381
+[proc,script5381](stat $stat0)(int)
+if ($stat0 = attack | $stat0 = strength | $stat0 = ranged | $stat0 = defence | $stat0 = hitpoints) {
+	return(1);
+}
+return(0);

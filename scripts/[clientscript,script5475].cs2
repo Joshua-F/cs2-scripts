@@ -1,0 +1,10 @@
+// 5475
+[clientscript,script5475](coord $coord0, loc $loc1, int $int2, int $int3, int $colour4, int $int5, int $clock6, int $int7)
+if (loc_find($coord0, $loc1) = true) {
+	$int3 = calc($int3 - (clientclock - $clock6));
+	_7214($coord0, $int7);
+	~script5473($int2, $int3, $colour4, $int5);
+} else if (clientclock > calc($clock6 + 150)) {
+	~debug_mes("Overlay Timers: Failed to find loc at <~mescoord($coord0)> for timer: <tostring($int2)>");
+	_7214($coord0, $int7);
+}

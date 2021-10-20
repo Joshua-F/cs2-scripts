@@ -1,0 +1,19 @@
+// 5455
+[proc,script5455](stat $stat0, int $int1)
+def_int $int2 = 1;
+def_stat $stat3 = null;
+def_int $int4 = 0;
+while ($int2 <= 23) {
+	$stat3 = enum(int, stat, enum_681, $int2);
+	if ($stat3 ! $stat0) {
+		~script5456($stat3, $int1, stat_xp($stat3));
+	} else if ($stat3 = $stat0 & $int1 = 1) {
+		~script5384($stat3, 1);
+	}
+	$int4 = calc($int4 + stat_xp($stat3));
+	$int2 = calc($int2 + 1);
+}
+if ($stat0 = null) {
+	~script5456(null, 0, $int4);
+}
+~script5449;

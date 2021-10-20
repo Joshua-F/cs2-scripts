@@ -1,0 +1,13 @@
+// 5378
+[proc,script5378](stat $stat0)(int)
+def_int $int1 = ~script5392($stat0);
+def_int $int2 = ~script5386($stat0);
+def_int $int3 = ~script5388($stat0);
+def_int $int4 = calc($int3 - $int2);
+if ($int1 < 0) {
+	return(0);
+}
+if ($int1 < 3000) {
+	$int1 = 3000;
+}
+return(scale($int4, $int1, 180000));

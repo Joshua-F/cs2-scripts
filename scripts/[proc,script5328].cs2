@@ -1,0 +1,54 @@
+// 5328
+[proc,script5328](int $int0)(int)
+switch_int ($int0) {
+	case 87 :
+		return(struct_param(public_chat_2896, param_1230));
+	case 88 :
+		return(struct_param(public_chat_2897, param_1230));
+	case 89 :
+		return(struct_param(private_chat_2898, param_1230));
+	case 90 :
+		return(struct_param(private_chat_2899, param_1230));
+	case 91 :
+		return(struct_param(private_chat_2900, param_1230));
+	case 92 :
+		return(struct_param(auto_chat_2901, param_1230));
+	case 93 :
+		return(struct_param(auto_chat_2902, param_1230));
+	case 94 :
+		return(struct_param(broadcast_2903, param_1230));
+	case 95 :
+		return(struct_param(broadcast_2904, param_1230));
+	case 96 :
+		return(struct_param(broadcast_2905, param_1230));
+	case 97 :
+		return(struct_param(friend_chat_2906, param_1230));
+	case 98 :
+		return(struct_param(friend_chat_2907, param_1230));
+	case 99 :
+		return(struct_param(clan_chat_2908, param_1230));
+	case 100 :
+		return(struct_param(clan_chat_2909, param_1230));
+	case 101 :
+		return(struct_param(incoming_trade_request_2910, param_1230));
+	case 102 :
+		return(struct_param(incoming_trade_request_2911, param_1230));
+	case 103 :
+		return(struct_param(incoming_challenge_request_2912, param_1230));
+	case 104 :
+		return(struct_param(incoming_challenge_request_2913, param_1230));
+	case 105 :
+		return(struct_param(guest_clan_chat_2975, param_1230));
+	case 106 :
+		return(struct_param(guest_clan_chat_2976, param_1230));
+	case 113 :
+		return(struct_param(tile_highlight_colour_3005, param_1230));
+	case 174 :
+		return(struct_param(highlight_hovered_tile_colour_3648, param_1230));
+	case 177 :
+		return(struct_param(highlight_current_tile_colour_3649, param_1230));
+	case 180 :
+		return(struct_param(highlight_destination_tile_colour_3650, param_1230));
+	case default :
+		return(null);
+}

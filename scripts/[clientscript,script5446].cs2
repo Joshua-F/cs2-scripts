@@ -1,0 +1,82 @@
+// 5446
+[clientscript,script5446](int $mousey0, int $comsubid1, stat $stat2)
+if (cc_find(interface_729:6, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:8, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:7, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:9, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:4, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:10, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:11, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:12, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:13, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:14, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_729:15, $comsubid1) = ^true) {
+	cc_sethide(false);
+}
+def_int $int3 = 0;
+while ($int3 < %varcint563) {
+	if (.cc_find(interface_729:16, $int3) = ^true) {
+		.cc_sethide(true);
+	}
+	$int3 = calc($int3 + 1);
+}
+def_int $int4 = calc(48 + 2);
+def_int $int5 = calc(($mousey0 + $int4 / 2) / ~max(1, $int4));
+if ($int5 < 1) {
+	$int5 = 1;
+}
+if ($int5 >= %varcint561) {
+	$int5 = calc(%varcint561 - 1);
+}
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_stat $stat8 = null;
+def_int $int9 = 0;
+while ($int6 <= 23) {
+	$stat8 = enum(int, stat, enum_681, $int6);
+	$int7 = ~script5383($stat8);
+	if ($int7 = $int5 & $stat8 ! null) {
+		$int9 = 1;
+	}
+	$int6 = calc($int6 + 1);
+}
+if ($int9 = 0) {
+	return;
+}
+~script5384($stat2, $int5);
+def_int $int10 = 1;
+def_int $int11 = 0;
+def_stat $stat12 = null;
+while ($int10 <= 23) {
+	$stat12 = enum(int, stat, enum_681, $int10);
+	$int11 = ~script5383($stat12);
+	if ($int5 < $comsubid1) {
+		if ($int11 >= $int5 & $int11 <= $comsubid1 & $stat12 ! $stat2) {
+			~script5384($stat12, calc($int11 + 1));
+		}
+	} else if ($comsubid1 < $int5 & $int11 <= $int5 & $int11 >= $comsubid1 & $stat12 ! $stat2) {
+		~script5384($stat12, calc($int11 - 1));
+	}
+	$int10 = calc($int10 + 1);
+}
+~script5449;
