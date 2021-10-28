@@ -1,9 +1,9 @@
 // 4140
-[proc,script4140](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5, int $int6)
+[proc,tutorial_displayname_allow_input](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5, int $int6)
 %varcint435 = $boolean5;
 if ($boolean5 = true) {
 	if_setonkey("tutorial_displayname_onkey($component0, $component1, $component2, $component3, $component4, event_key, event_keychar)", $component2);
-	if_setondialogabort("script4139($component0, $component1, $component2, $component3, $component4, false)", $component2);
+	if_setondialogabort("tutorial_displayname_allow_input($component0, $component1, $component2, $component3, $component4, false)", $component2);
 	if_sethide(false, $component3);
 	if (~on_mobile = false) {
 		if_setonmouserepeat(null, $component4);
@@ -16,13 +16,13 @@ if ($boolean5 = true) {
 	if_setondialogabort(null, $component2);
 	if_sethide(true, $component3);
 	if (~on_mobile = false) {
-		if_setonmouserepeat("script4148($component3, true)", $component4);
-		if_setonmouseleave("script4148($component3, false)", $component4);
+		if_setonmouserepeat("tutorial_displayname_input_mouseover($component3, true)", $component4);
+		if_setonmouseleave("tutorial_displayname_input_mouseover($component3, false)", $component4);
 	} else {
 		~keyboard_hide;
 	}
 }
-~script4142($component2, %varcstring436);
+~tutorial_displayname_update_input($component2, %varcstring436);
 if ($int6 = 1) {
 	~tutorial_displayname_buttons($component0, $component1, $component2, $component3, $component4);
 }

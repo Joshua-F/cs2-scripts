@@ -14,8 +14,8 @@ def_string $string0 = ~add_to_inputstring(%varcstring436, 2, $key5, $keychar6);
 if (char_isprintable($keychar6) = true & compare($string0, %varcstring436) = 0) {
 	if_setcolour(^red, $component3);
 	if_setcolour(^red, $component2);
-	if_setontimer("script4143($component3, $component2, ^white, calc(clientclock + 10))", $component3);
+	if_setontimer("tutorial_displayname_revert_colour($component3, $component2, ^white, calc(clientclock + 10))", $component3);
 }
 %varcstring436 = $string0;
-~script4142($component2, %varcstring436);
+~tutorial_displayname_update_input($component2, %varcstring436);
 ~tutorial_displayname_buttons($component0, $component1, $component2, $component3, $component4);

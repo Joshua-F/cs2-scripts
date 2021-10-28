@@ -3283,7 +3283,7 @@
 [**3280**](scripts/[proc,script3280].cs2)  
 [**3281**](scripts/[clientscript,wear_initslots].cs2) `[clientscript,wear_initslots]`  
 [**3282**](scripts/[proc,wear_initslot].cs2) `[proc,wear_initslot]`  
-[**3283**](scripts/[proc,script3283].cs2)  
+[**3283**](scripts/[proc,league_filterbutton].cs2) `[proc,league_filterbutton]`  
 [**3284**](scripts/[clientscript,league_reward_shop_select].cs2) `[clientscript,league_reward_shop_select]`  
 [**3285**](scripts/[clientscript,league_reward_shop_refuse].cs2) `[clientscript,league_reward_shop_refuse]`  
 [**3286**](scripts/[proc,script3286].cs2)  
@@ -4139,16 +4139,16 @@
 [**4136**](scripts/[proc,script4136].cs2)  
 [**4137**](scripts/[proc,script4137].cs2)  
 [**4138**](scripts/[proc,script4138].cs2)  
-[**4139**](scripts/[clientscript,script4139].cs2)  
-[**4140**](scripts/[proc,script4140].cs2)  
+[**4139**](scripts/[clientscript,tutorial_displayname_allow_input].cs2) `[clientscript,tutorial_displayname_allow_input]`  
+[**4140**](scripts/[proc,tutorial_displayname_allow_input].cs2) `[proc,tutorial_displayname_allow_input]`  
 [**4141**](scripts/[clientscript,tutorial_displayname_onkey].cs2) `[clientscript,tutorial_displayname_onkey]`  
-[**4142**](scripts/[proc,script4142].cs2)  
-[**4143**](scripts/[clientscript,script4143].cs2)  
-[**4144**](scripts/[clientscript,script4144].cs2)  
+[**4142**](scripts/[proc,tutorial_displayname_update_input].cs2) `[proc,tutorial_displayname_update_input]`  
+[**4143**](scripts/[clientscript,tutorial_displayname_revert_colour].cs2) `[clientscript,tutorial_displayname_revert_colour]`  
+[**4144**](scripts/[clientscript,tutorial_displayname_push_name].cs2) `[clientscript,tutorial_displayname_push_name]`  
 [**4145**](scripts/[clientscript,script4145].cs2)  
 [**4146**](scripts/[clientscript,script4146].cs2)  
 [**4147**](scripts/[proc,script4147].cs2)  
-[**4148**](scripts/[clientscript,script4148].cs2)  
+[**4148**](scripts/[clientscript,tutorial_displayname_input_mouseover].cs2) `[clientscript,tutorial_displayname_input_mouseover]`  
 [**4149**](scripts/[clientscript,script4149].cs2)  
 [**4150**](scripts/[clientscript,script4150].cs2)  
 [**4151**](scripts/[proc,script4151].cs2)  
