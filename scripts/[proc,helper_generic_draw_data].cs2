@@ -1,7 +1,7 @@
 // 4710
 [proc,helper_generic_draw_data](int $int0)
-def_int $width1 = parawidth(~helper_generic_get_string($int0), calc(129 / 2), p12_full);
-def_int $width2 = parawidth(~helper_generic_get_string(calc($int0 + 1)), calc(129 - $width1), p12_full);
+def_int $width1 = parawidth(~helper_generic_get_string($int0), calc(140 / 2), p12_full);
+def_int $width2 = parawidth(~helper_generic_get_string(calc($int0 + 1)), calc(140 - $width1), p12_full);
 def_int $int3 = calc(paraheight(~helper_generic_get_string($int0), $width1, p12_full) * 14);
 def_int $int4 = calc(paraheight(~helper_generic_get_string($int0 + 1), $width2, p12_full) * 14);
 def_int $int5 = ~max($int3, $int4);

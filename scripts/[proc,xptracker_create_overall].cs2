@@ -1,7 +1,7 @@
 // 5361
 [proc,xptracker_create_overall]
 def_stat $stat0 = null;
-def_int $int1 = ~xptracker_current_id;
+def_int $int1 = 0;
 ~xptracker_set_id($stat0, $int1);
 %varcint562 = 0;
 ~script5364($int1);

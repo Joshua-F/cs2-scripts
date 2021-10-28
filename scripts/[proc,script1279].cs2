@@ -12,15 +12,17 @@ if ($bool3 = ^true) {
 		return($lvl2, $lvl2, 0);
 	}
 	$int4 = 90;
-} else if (%varcint139 < 2) {
+} else if (%varcint139 = 0) {
 	return($lvl2, $lvl2, 0);
+} else if (~deadman_mode = 1) {
+	if (%varcint139 = 1) {
+		$int4 = 90;
+	}
 } else if (%varbit5667 = 1) {
-	if (%varcint139 <= 1) {
+	if (%varcint139 = 1) {
 		return($lvl2, $lvl2, 0);
 	}
-} else if (%varcint139 <= 0) {
-	return($lvl2, $lvl2, 0);
-} else if (%varcint139 <= 1) {
+} else if (%varcint139 = 1) {
 	$int4 = 75;
 }
 def_int $xp5 = stat_xp($stat1);

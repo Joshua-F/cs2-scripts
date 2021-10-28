@@ -27,7 +27,7 @@ switch_int ($int0) {
 				$text0 = "In this Deadman event, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Once you have lost <col=ffffff>all three of your lives</col>, you will also lose <col=ffffff>all</col> your items, <col=ffffff>all</col> your combat XP and <col=ffffff>10%</col> of your non-combat XP.";
 			}
 		} else {
-			$text0 = "In Deadman mode, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>You will not lose any experience in your protected and unprotected skills if you die <col=ffffff>unskulled</col>.";
+			$text0 = "In Deadman mode, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 10%</col> of your experience in any unprotected skills.";
 		}
 	case 2 :
 		if (~deadman_mode = 3) {

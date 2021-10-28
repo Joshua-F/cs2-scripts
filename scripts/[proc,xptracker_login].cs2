@@ -1,7 +1,8 @@
 // 5450
-[proc,xptracker_login](int $int0, string $string0)
-if ($int0 >= 60 | compare($string0, %varcstring564) ! 0) {
+[proc,xptracker_login](int $int0, string $string0, string $string1)
+if ($int0 >= 60 | compare($string0, %varcstring564) ! 0 | compare($string1, %varcstring944) ! 0) {
 	%varcint566 = 1;
 }
 %varcstring564 = $string0;
+%varcstring944 = $string1;
 %varcint565 = 1;

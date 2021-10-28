@@ -1,4 +1,7 @@
 // 5460
 [proc,xptracker_current_id]()(int)
+if (%varcint561 <= 0) {
+	%varcint561 = 1;
+}
 %varcint561 = calc(%varcint561 + 1);
 return(calc(%varcint561 - 1));
