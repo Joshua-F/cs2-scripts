@@ -19,7 +19,7 @@ def_int $y11 = 0;
 def_obj $obj12 = inv_getobj(inv_626, $comsubid2);
 def_obj $obj13 = inv_getobj(inv_626, $dropsubid3);
 if (cc_find($component0, $comsubid2) = ^true & .cc_find($component0, $dropsubid3) = ^true) {
-	if ($dropsubid3 = 90) {
+	if ($dropsubid3 = 92) {
 		if (~script2828($comsubid2) ! -1) {
 			cc_sethide(true);
 		} else {
@@ -36,7 +36,7 @@ if (cc_find($component0, $comsubid2) = ^true & .cc_find($component0, $dropsubid3
 	}
 }
 if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $dropsubid3) = ^true) {
-	if ($dropsubid3 = 90) {
+	if ($dropsubid3 = 92) {
 		if (~script2828($comsubid2) ! -1) {
 			cc_sethide(true);
 		} else {

@@ -5489,3 +5489,4 @@
 [**5486**](scripts/[proc,highlighting_off].cs2) `[proc,highlighting_off]`  
 [**5487**](scripts/[clientscript,highlighting_on].cs2) `[clientscript,highlighting_on]`  
 [**5488**](scripts/[proc,highlighting_on].cs2) `[proc,highlighting_on]`  
+[**5489**](scripts/[proc,script5489].cs2)  
