@@ -17,8 +17,8 @@ if ($clock4 ! %varcint384) {
 		$width8 = 91;
 		$height9 = 249;
 		$setposh12 = ^setpos_abs_right;
-		$setposv13 = ^setpos_abs_centre;
-		~script4729($component1, $component0, 12294, ^setpos_abs_right, ^setpos_abs_centre, false);
+		$setposv13 = ^setpos_abs_bottom;
+		~script4729($component1, $component0, setbit(setbit(0, 1), 15), ^setpos_abs_right, ^setpos_abs_centre, false);
 	} else if ($enum5 = enum_1130 | $enum5 = enum_1131) {
 		$x6 = 1;
 		$y7 = 1;

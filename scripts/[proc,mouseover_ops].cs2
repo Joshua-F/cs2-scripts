@@ -2,7 +2,7 @@
 [proc,mouseover_ops]
 def_enum $enum0 = ~toplevel_getcomponents;
 def_component $component1 = enum(component, component, $enum0, interface_161:36);
-if (~on_enhanced = 0 | ~on_mobile = true | %varbit12344 = 1 & %varbit12377 = 0 | $component1 = null) {
+if (~script1445 = 0 | %varbit12344 = 1 & %varbit12377 = 0 | $component1 = null) {
 	if_setontimer(null, $component1);
 	cc_deleteall($component1);
 	return;

@@ -3,8 +3,8 @@
 def_string $string0 = struct_param($struct5, param_744);
 def_int $height21 = paraheight($string0, calc(if_getwidth($component3) - 8), p12_full);
 def_int $int22 = calc($height21 * 14 + 4);
-if (~on_mobile = true & $int22 < 24) {
-	$int22 = 24;
+if (~on_mobile = true & $int22 < 22) {
+	$int22 = 22;
 }
 def_int $y23 = calc($int22 + 4 + $int2);
 def_int $int24 = calc($int22 + 8);

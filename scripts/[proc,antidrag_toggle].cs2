@@ -1,5 +1,8 @@
 // 4619
 [proc,antidrag_toggle]
+if (~script1445 = 0) {
+	return;
+}
 if (%varbit12345 = 1) {
 	setantidrag(true);
 } else {

@@ -1,6 +1,6 @@
 // 4723
 [proc,spec_regen_timer](int $int0)
-if (~on_enhanced = 0) {
+if (~script100 = 0) {
 	return;
 }
 if (%varbit4084 = 1) {
@@ -13,7 +13,7 @@ if ($int0 >= 1500) {
 	$int0 = calc($int0 % 1500);
 }
 def_component $component1 = interface_160:36;
-if (~on_mobile = true) {
+if (~on_mobile = true & %varbit6254 = 1 | ~script1445 = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
 	$component1 = interface_311:38;
 }
 cc_create($component1, 10, 0);

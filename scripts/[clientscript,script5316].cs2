@@ -1,6 +1,6 @@
 // 5316
 [clientscript,script5316](component $component0, component $component1)
-if (%varbit12374 = 1 | ~on_mobile = true) {
+if (%varbit12374 = 1 | ~script1445 = 0) {
 	return;
 }
 def_int $int2 = calc(%varcint468 - (clientclock - %varcint469) / 30);

@@ -1,0 +1,17 @@
+// 5492
+[clientscript,script5492](component $component0)
+~script5493(4, "No Ranged", interface_482:37, "Neither player is allowed to use ranged attacks.");
+~script5493(5, "No Melee", interface_482:38, "Neither player is allowed to use melee attacks.");
+~script5493(6, "No Magic", interface_482:39, "Neither player is allowed to use magic attacks.");
+~script5493(13, "No Special Attacks", interface_482:40, "Neither player is allowed to use special attacks.");
+~script5493(12, "Fun Weapons", interface_482:41, "Both players must use a 'fun weapon', such as flowers or a rubber chicken.");
+~script5493(0, "No Forfeit", interface_482:42, "Neither player is allowed to forfeit the duel.");
+~script5493(9, "No Prayer", interface_482:43, "Neither player is allowed to use prayer.");
+~script5493(7, "No Drinks", interface_482:44, "Neither player is allowed to use drinks.");
+~script5493(8, "No Food", interface_482:45, "Neither player is allowed to use food.");
+~script5493(1, "No Movement", interface_482:46, "Players stand next to each other and aren't allowed to move or use hold spells.");
+~script5493(10, "Obstacles", interface_482:47, "The duel will be in an arena with obstacles.");
+~script5493(2, "No Weapon Switch", interface_482:48, "Neither player is allowed to swap their weapons during the duel.");
+~script5493(3, "Show Inventories", interface_482:49, "Show your opponent your worn and back pack inventory, and view theirs.");
+~duel_options_radio_buttons;
+if_setonvartransmit("script5498{var286}", $component0);

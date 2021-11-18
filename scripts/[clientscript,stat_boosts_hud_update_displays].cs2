@@ -1,6 +1,6 @@
 // 4514
 [clientscript,stat_boosts_hud_update_displays](component $component0, component $component1, component $component2, component $component3)
-if (~on_enhanced = 0) {
+if (~script100 = 0) {
 	return;
 }
 cc_deleteall($component1);

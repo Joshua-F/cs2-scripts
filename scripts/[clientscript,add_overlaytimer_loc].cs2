@@ -1,6 +1,6 @@
 // 5474
 [clientscript,add_overlaytimer_loc](coord $coord0, loc $loc1, locshape $locshape2, int $int3, int $int4, int $colour5, int $int6)
-if (~on_enhanced = 0) {
+if (~script100 = 0) {
 	return;
 }
 def_newvar $newvar7 = null;

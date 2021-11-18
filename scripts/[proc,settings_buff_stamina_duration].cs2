@@ -1,6 +1,6 @@
 // 4602
 [proc,settings_buff_stamina_duration]
-if (~on_enhanced = 0) {
+if (~script100 = 0) {
 	return;
 }
 %varbit12362 = calc(1 - %varbit12362);

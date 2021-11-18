@@ -1,5 +1,8 @@
 // 4584
 [proc,settings_regen_indicator]
+if (~script100 = 0) {
+	return;
+}
 if (%varbit4084 = 1) {
 	return;
 }

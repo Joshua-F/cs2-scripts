@@ -1,6 +1,6 @@
 // 5473
 [proc,add_overlaytimer_loc](int $int0, int $int1, int $colour2, int $int3)
-if (~on_enhanced = 0 | ~script5476($int0, $int1) = 0) {
+if (~script100 = 0 | ~script5476($int0, $int1) = 0) {
 	return;
 }
 def_newvar $newvar4 = _7201(1, 0, 25, 25, 0);

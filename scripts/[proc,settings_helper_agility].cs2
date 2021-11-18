@@ -1,3 +1,6 @@
 // 5184
 [proc,settings_helper_agility]
+if (~script100 = 0) {
+	return;
+}
 %varbit12379 = calc(1 - %varbit12379);

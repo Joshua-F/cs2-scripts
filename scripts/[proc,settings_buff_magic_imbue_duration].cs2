@@ -1,6 +1,6 @@
 // 4605
 [proc,settings_buff_magic_imbue_duration]
-if (~on_enhanced = 0) {
+if (~script100 = 0) {
 	return;
 }
 %varbit12365 = calc(1 - %varbit12365);

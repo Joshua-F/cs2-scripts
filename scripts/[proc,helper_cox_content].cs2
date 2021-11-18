@@ -60,5 +60,6 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 $int4 = calc($int4 + 12);
 ~helper_cox_data($component2, calc(30 * %varbit6386));
 $int4 = calc($int4 + $int5);
+%varcint560 = 0;
 ~helper_generic_set_size(calc(if_getwidth($component2) + $int5), $int4);
 if_setonvartransmit("helper_cox_data($component2, $comsubid8, $comsubid7){var1431, var1432, var1429}", $component1);

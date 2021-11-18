@@ -1,0 +1,9 @@
+// 5499
+[proc,script5499](int $index0, component $component1)
+if (cc_find($component1, 1) = ^true) {
+	if (testbit(%var286, $index0) = ^true) {
+		cc_setgraphic("options_radio_buttons,2");
+	} else {
+		cc_setgraphic("options_radio_buttons,0");
+	}
+}

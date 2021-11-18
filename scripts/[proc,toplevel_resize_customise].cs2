@@ -21,7 +21,7 @@ switch_enum ($enum1) {
 			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:29));
 		}
 		%varcint384 = clientclock;
-		if (~on_enhanced = 1) {
+		if (~script1445 = 1) {
 			if_sethide(~int_to_bool(%varbit12986), interface_164:21);
 		}
 	case enum_1130 :
@@ -33,7 +33,7 @@ switch_enum ($enum1) {
 			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:29));
 		}
 		%varcint384 = clientclock;
-		if (~on_enhanced = 1) {
+		if (~script1445 = 1) {
 			if_sethide(~int_to_bool(%varbit12986), interface_161:21);
 		}
 	case enum_1129 :
@@ -44,32 +44,32 @@ switch_enum ($enum1) {
 		}
 	case enum_1745 :
 		if (%varbit6257 = 1 | %varbit542 = 1) {
-			if_sethide(true, interface_601:38);
+			if_sethide(true, interface_601:26);
 		} else {
-			if_sethide(false, interface_601:38);
-			_2308(true, interface_601:38);
+			if_sethide(false, interface_601:26);
+			_2308(true, interface_601:26);
 			switch_int (%varbit6255) {
 				case 2 :
-					if_setgraphic("graphic_1718", interface_601:40);
-					if_setop(1, "Toggle single-tap mode", interface_601:38);
+					if_setgraphic("graphic_1718", interface_601:45);
+					if_setop(1, "Toggle single-tap mode", interface_601:26);
 				case 1 :
-					if_setgraphic("graphic_1717", interface_601:40);
-					if_setop(1, "Toggle tap-to-drop mode", interface_601:38);
+					if_setgraphic("graphic_1717", interface_601:45);
+					if_setop(1, "Toggle tap-to-drop mode", interface_601:26);
 				case 3 :
-					if_setgraphic("graphic_1716", interface_601:40);
-					if_setop(1, "Show Keyboard", interface_601:38);
+					if_setgraphic("graphic_1716", interface_601:45);
+					if_setop(1, "Show Keyboard", interface_601:26);
 				case default :
-					if_setgraphic("graphic_1715", interface_601:40);
-					if_setop(1, "", interface_601:38);
+					if_setgraphic("graphic_1715", interface_601:45);
+					if_setop(1, "", interface_601:26);
 			}
 			if (%varbit6255 ! 3 & %varbit6256 = 0) {
-				if_settrans(155, interface_601:40);
+				if_settrans(155, interface_601:45);
 			} else {
-				if_settrans(0, interface_601:40);
+				if_settrans(0, interface_601:45);
 			}
 		}
 		~mobile_chatbox_resize;
-		if_sethide(~int_to_bool(%varbit6254), interface_601:29);
+		if_sethide(~int_to_bool(%varbit6254), interface_601:37);
 		~script2526;
 		%varcint384 = clientclock;
 }

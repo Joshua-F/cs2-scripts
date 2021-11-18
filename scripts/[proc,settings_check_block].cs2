@@ -1,19 +1,23 @@
 // 3955
 [proc,settings_check_block](struct $struct0)(int)
 def_int $int1 = 0;
-if (~on_mobile = true & struct_param($struct0, param_739) = true) {
+def_boolean $boolean2 = ~on_mobile;
+def_int $int3 = ~script100;
+def_int $int4 = ~on_mac;
+def_int $int5 = ~league_world;
+if ($boolean2 = true & struct_param($struct0, param_739) = true) {
 	$int1 = 1;
 }
-if (~on_mobile = false & ~on_enhanced = 0 & struct_param($struct0, param_1271) = true) {
+if ($boolean2 = false & $int3 = 0 & struct_param($struct0, param_1271) = true) {
 	$int1 = 1;
 }
-if (~on_mobile = false & struct_param($struct0, param_740) = true) {
+if ($boolean2 = false & struct_param($struct0, param_740) = true) {
 	$int1 = 1;
 }
-if (~on_mac = 1 & struct_param($struct0, param_1408) = true) {
+if ($int4 = 1 & struct_param($struct0, param_1408) = true) {
 	$int1 = 1;
 }
-if (~on_enhanced = 0 & struct_param($struct0, param_1157) = true) {
+if ($int3 = 0 & struct_param($struct0, param_1157) = true) {
 	$int1 = 1;
 }
 if (struct_param($struct0, param_741) = true & %varbit1777 ! 0) {
@@ -22,10 +26,10 @@ if (struct_param($struct0, param_741) = true & %varbit1777 ! 0) {
 if (struct_param($struct0, param_742) = true & %varbit1777 = 0) {
 	$int1 = 1;
 }
-if (struct_param($struct0, param_1272) = true & ~league_world = 0) {
+if (struct_param($struct0, param_1272) = true & $int5 = 0) {
 	$int1 = 1;
 }
-if (struct_param($struct0, param_1273) = true & ~on_enhanced = 0 & ~league_world = 0) {
+if (struct_param($struct0, param_1273) = true & $int3 = 0 & $int5 = 0) {
 	$int1 = 1;
 }
 return($int1);

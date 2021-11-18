@@ -1,5 +1,8 @@
 // 4760
 [proc,script4760]
+if (~script1445 = 0) {
+	return;
+}
 def_int $int0 = 0;
 if (%varbit12342 = 0) {
 	$int0 = 1;

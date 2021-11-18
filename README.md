@@ -100,7 +100,7 @@
 [**97**](scripts/[clientscript,v2_stone_button_out_filled].cs2) `[clientscript,v2_stone_button_out_filled]`  
 [**98**](scripts/[proc,create_graphic].cs2) `[proc,create_graphic]`  
 [**99**](scripts/[clientscript,duel_check_button].cs2) `[clientscript,duel_check_button]`  
-[**100**](scripts/[clientscript,duel_stake_vartrans].cs2) `[clientscript,duel_stake_vartrans]`  
+[**100**](scripts/[proc,script100].cs2)  
 [**101**](scripts/[clientscript,meslayer_close].cs2) `[clientscript,meslayer_close]`  
 [**102**](scripts/[proc,meslayer_mode1].cs2) `[proc,meslayer_mode1]`  
 [**103**](scripts/[clientscript,meslayer_mode2].cs2) `[clientscript,meslayer_mode2]`  
@@ -1445,7 +1445,7 @@
 [**1442**](scripts/[proc,duel_wait_button].cs2) `[proc,duel_wait_button]`  
 [**1443**](scripts/[clientscript,duel_accept_button].cs2) `[clientscript,duel_accept_button]`  
 [**1444**](scripts/[proc,duel_colour_variation].cs2) `[proc,duel_colour_variation]`  
-[**1445**](scripts/[clientscript,duel_options_exclamations].cs2) `[clientscript,duel_options_exclamations]`  
+[**1445**](scripts/[proc,script1445].cs2)  
 [**1446**](scripts/[proc,playermember].cs2) `[proc,playermember]`  
 [**1447**](scripts/[clientscript,script1447].cs2)  
 [**1448**](scripts/[proc,script1448].cs2)  
@@ -2357,7 +2357,6 @@
 [**2354**](scripts/[clientscript,castlewars_waitingroom_update].cs2) `[clientscript,castlewars_waitingroom_update]`  
 [**2355**](scripts/[proc,script2355].cs2)  
 [**2356**](scripts/[clientscript,steam_lock_achievements].cs2) `[clientscript,steam_lock_achievements]`  
-[**2357**](scripts/[proc,on_enhanced].cs2) `[proc,on_enhanced]`  
 [**2358**](scripts/[clientscript,settings_interface_scaling].cs2) `[clientscript,settings_interface_scaling]`  
 [**2359**](scripts/[proc,shiftclick_toggle].cs2) `[proc,shiftclick_toggle]`  
 [**2360**](scripts/[clientscript,script2360].cs2)  
@@ -2476,7 +2475,7 @@
 [**2473**](scripts/[clientscript,model_transparent_init].cs2) `[clientscript,model_transparent_init]`  
 [**2474**](scripts/[clientscript,model_transparent_dynamiczoom_init].cs2) `[clientscript,model_transparent_dynamiczoom_init]`  
 [**2475**](scripts/[clientscript,cc_outline_off].cs2) `[clientscript,cc_outline_off]`  
-[**2476**](scripts/[clientscript,duel_info].cs2) `[clientscript,duel_info]`  
+[**2476**](scripts/[proc,script2476].cs2)  
 [**2477**](scripts/[clientscript,duel_stake_inv_cash].cs2) `[clientscript,duel_stake_inv_cash]`  
 [**2478**](scripts/[clientscript,duel_stake_inv_details].cs2) `[clientscript,duel_stake_inv_details]`  
 [**2479**](scripts/[clientscript,script2479].cs2)  
@@ -5492,3 +5491,12 @@
 [**5489**](scripts/[proc,script5489].cs2)  
 [**5490**](scripts/[clientscript,script5490].cs2)  
 [**5491**](scripts/[clientscript,script5491].cs2)  
+[**5492**](scripts/[clientscript,script5492].cs2)  
+[**5493**](scripts/[proc,script5493].cs2)  
+[**5494**](scripts/[proc,script5494].cs2)  
+[**5495**](scripts/[clientscript,script5495].cs2)  
+[**5496**](scripts/[clientscript,script5496].cs2)  
+[**5497**](scripts/[clientscript,script5497].cs2)  
+[**5498**](scripts/[clientscript,script5498].cs2)  
+[**5499**](scripts/[proc,script5499].cs2)  
+[**5500**](scripts/[clientscript,script5500].cs2)  

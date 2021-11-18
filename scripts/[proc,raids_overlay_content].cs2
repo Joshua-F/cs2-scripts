@@ -2,7 +2,7 @@
 [proc,raids_overlay_content](component $component0)
 cc_deleteall($component0);
 if_setonvartransmit(null, $component0);
-if (~on_enhanced = 1 & %varbit12347 = 0) {
+if (~script100 = 1 & %varbit12347 = 0) {
 	return;
 }
 def_int $int1 = 0;

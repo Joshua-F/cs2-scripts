@@ -1,6 +1,6 @@
 // 5471
 [clientscript,add_overlaytimer_npc](npc_uid $npc_uid0, int $int1, int $int2, int $colour3, int $int4)
-if (~on_enhanced = 0) {
+if (~script100 = 0) {
 	return;
 }
 if (npc_find($npc_uid0) = true) {

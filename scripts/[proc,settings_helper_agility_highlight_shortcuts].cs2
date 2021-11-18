@@ -1,4 +1,7 @@
 // 5186
 [proc,settings_helper_agility_highlight_shortcuts]
+if (~script100 = 0) {
+	return;
+}
 %varbit12976 = calc(1 - %varbit12976);
 ~helper_agility_highlight_shortcuts;

@@ -1,3 +1,6 @@
 // 5331
 [proc,settings_helper_slayer]
+if (~script100 = 0) {
+	return;
+}
 %varbit13082 = calc(1 - %varbit13082);

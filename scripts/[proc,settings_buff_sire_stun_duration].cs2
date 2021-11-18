@@ -1,6 +1,6 @@
 // 4606
 [proc,settings_buff_sire_stun_duration]
-if (~on_enhanced = 0) {
+if (~script100 = 0) {
 	return;
 }
 %varbit12366 = calc(1 - %varbit12366);

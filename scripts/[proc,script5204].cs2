@@ -1,5 +1,8 @@
 // 5204
 [proc,script5204]
+if (~script100 = 0) {
+	return;
+}
 def_int $int0 = 2;
 def_int $int1 = 50;
 def_int $colour2 = ~script5329(177);

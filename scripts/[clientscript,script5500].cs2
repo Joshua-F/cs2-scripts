@@ -1,0 +1,27 @@
+// 5500
+[clientscript,script5500](component $component0, graphic $graphic1, string $string0, string $string1)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setcolour(^white);
+def_boolean $boolean2 = ~on_mobile;
+~script5494($component0, $string1, interface_482:107, $boolean2);
+if_setonop("script5496(event_opindex, -1, $string0, event_com, cc_getid, $string1, interface_482:107, $boolean2)", $component0);
+cc_create($component0, ^iftype_text, 1);
+cc_setsize(22, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setcolour(0xbf751d);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+if ($graphic1 ! null) {
+	cc_settext($string0);
+	cc_create($component0, ^iftype_graphic, 2);
+	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+	cc_setposition(1, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setgraphic($graphic1);
+} else {
+	cc_settext(""<$string0>"");
+}

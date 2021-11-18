@@ -1,12 +1,14 @@
 // 4130
 [clientscript,stat_boosts_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-if (~on_enhanced = 0) {
+if (~script100 = 0) {
 	return;
 }
 if (~on_mobile = false) {
+	if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
 	~script4729($component0, $component1, 30720, ^setpos_abs_left, ^setpos_abs_bottom, false);
 } else {
-	~script4729($component0, $component1, 14338, ^setpos_abs_right, ^setpos_abs_top, false);
+	if_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_bottom, $component1);
+	~script4729($component0, $component1, setbit(0, 1), ^setpos_abs_right, ^setpos_abs_bottom, false);
 }
 if_setonstattransmit("stat_boosts_hud_update_displays($component1, $component4, $component5, $component3)", $component4);
 if_setonvartransmit("stat_boosts_hud_update_displays($component1, $component4, $component5, $component3){var3074}", $component4);
@@ -28,4 +30,3 @@ cc_setcolour(0x5a5245);
 cc_setsize(1, 1, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 if_sethide(true, $component3);
-if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $component1);

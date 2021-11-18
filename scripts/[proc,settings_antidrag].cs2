@@ -1,3 +1,6 @@
 // 4583
 [proc,settings_antidrag]
+if (~script1445 = 0) {
+	return;
+}
 %varbit12345 = calc(1 - %varbit12345);

@@ -1,3 +1,6 @@
 // 4579
 [proc,settings_standard_health_overlay]
+if (~script100 = 0) {
+	return;
+}
 %varbit12390 = calc(1 - %varbit12390);
