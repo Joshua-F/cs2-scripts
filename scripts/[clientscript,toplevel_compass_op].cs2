@@ -1,7 +1,16 @@
 // 1050
 [clientscript,toplevel_compass_op](int $opindex0)
-if ($opindex0 ! 1 | %varbit542 = 1 | %varbit4606 ! 0) {
+if ($opindex0 > 4 | %varbit542 = 1 | %varbit4606 ! 0) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-cam_forceangle(calc(225 + randominc(5)), 0);
+switch_int ($opindex0) {
+	case 1 :
+		cam_forceangle(calc(225 + randominc(5)), 0);
+	case 2 :
+		cam_forceangle(calc(225 + randominc(5)), 1536);
+	case 3 :
+		cam_forceangle(calc(225 + randominc(5)), 1024);
+	case 4 :
+		cam_forceangle(calc(225 + randominc(5)), 512);
+}

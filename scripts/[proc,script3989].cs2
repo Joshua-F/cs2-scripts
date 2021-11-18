@@ -25,6 +25,10 @@ if (string_length($string0) > 0) {
 		if_sethide(false, $component2);
 		if_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top, $component2);
 		if_setsize(13, 13, ^setsize_abs, ^setsize_abs, $component2);
+		if_setonmouseover("script5490($component2, true)", $component2);
+		if_setonmouseleave("script5490($component2, false)", $component2);
+		if_setonclick("script5491", $component2);
+		if_setcolour(0xffd600, $component2);
 		$int0 = calc($int0 + if_getwidth($component2) + 8);
 	} else {
 		mes("couldn't find component");
@@ -33,6 +37,9 @@ if (string_length($string0) > 0) {
 		if_sethide(false, $component3);
 		if_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top, $component3);
 		if_setsize(13, 13, ^setsize_abs, ^setsize_abs, $component3);
+		if_setonmouseover("script5490($component3, true)", $component3);
+		if_setonmouseleave("script5490($component3, false)", $component3);
+		if_setonclick("script5491", $component3);
 		$int0 = calc($int0 + if_getwidth($component3));
 	} else {
 		mes("couldn't find component");
