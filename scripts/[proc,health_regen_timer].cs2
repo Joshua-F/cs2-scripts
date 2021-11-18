@@ -1,13 +1,13 @@
 // 4718
 [proc,health_regen_timer](int $int0)
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 if (%varbit4084 = 1) {
 	return;
 }
 def_component $component1 = interface_160:11;
-if (~on_mobile = true & %varbit6254 = 1 | ~script1445 = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
+if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
 	$component1 = interface_311:13;
 }
 def_int $int2 = 100;

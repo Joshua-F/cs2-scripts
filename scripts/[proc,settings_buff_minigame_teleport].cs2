@@ -1,6 +1,6 @@
 // 4594
 [proc,settings_buff_minigame_teleport]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12354 = calc(1 - %varbit12354);

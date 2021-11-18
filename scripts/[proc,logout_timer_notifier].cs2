@@ -2,7 +2,7 @@
 [proc,logout_timer_notifier]
 def_enum $enum0 = ~toplevel_getcomponents;
 def_component $component1 = enum(component, component, $enum0, interface_161:35);
-if (~script100 = 0 | %varbit13083 = 1) {
+if (~on_enhanced_any = 0 | %varbit13083 = 1) {
 	if_setontimer(null, $component1);
 	cc_deleteall($component1);
 	return;

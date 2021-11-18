@@ -1,6 +1,6 @@
 // 4580
 [proc,settings_attack_style]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12352 = calc(1 - %varbit12352);

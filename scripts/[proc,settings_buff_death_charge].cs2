@@ -1,6 +1,6 @@
 // 869
 [proc,settings_buff_death_charge]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12408 = calc(1 - %varbit12408);

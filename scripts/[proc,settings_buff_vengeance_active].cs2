@@ -1,6 +1,6 @@
 // 4601
 [proc,settings_buff_vengeance_active]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12361 = calc(1 - %varbit12361);

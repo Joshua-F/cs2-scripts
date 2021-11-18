@@ -1,6 +1,6 @@
 // 4610
 [proc,settings_buff_antifire_duration]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12370 = calc(1 - %varbit12370);

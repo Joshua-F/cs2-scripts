@@ -11,7 +11,7 @@ cc_setgraphic("tradebacking");
 cc_settrans(100);
 cc_settiling(true);
 def_string $string0 = "null";
-if (%varbit12374 = 0 & ~script1445 = 1) {
+if (%varbit12374 = 0 & ~on_enhanced_desktop = 1) {
 	$string0 = "<enum(stat, string, enum_680, $stat2)>: <tostring(stat($stat2))>/<tostring(stat_base($stat2))>";
 	cc_setonmouserepeat("tooltip_mouserepeat($component0, cc_getid, $component1, $string0, 0, 512)");
 	cc_setonmouseleave("deltooltip($component1)");

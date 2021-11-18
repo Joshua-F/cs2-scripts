@@ -1,5 +1,5 @@
 // 4182
-[proc,script4182](int $int0, int $int1, int $int2, int $int3, int $trans4, struct $struct5, component $component6, component $component7, component $component8)(int, int, int, int)
+[proc,settings_create_colour_input](int $int0, int $int1, int $int2, int $int3, int $trans4, struct $struct5, component $component6, component $component7, component $component8)(int, int, int, int)
 def_boolean $boolean9 = ~on_mobile;
 if ($struct5 = null) {
 	cc_create($component6, ^iftype_rectangle, $int3);

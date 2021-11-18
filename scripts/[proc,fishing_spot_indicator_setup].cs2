@@ -1,6 +1,6 @@
 // 4547
 [proc,fishing_spot_indicator_setup](struct $struct0, npc_uid $npc_uid1, int $int2)
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 if (map_members = ^false & struct_param($struct0, param_1264) = true & struct_param($struct0, param_1267) = true) {

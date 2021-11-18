@@ -94,7 +94,7 @@ switch_int ($int25) {
 	case 8 :
 		$int5, $int2, $int3 = ~text_create($struct0, $component9, $component8, $int5, $int2, $int3, $int7);
 	case 9 :
-		$int5, $int6, $int2, $int3 = ~script4182($int5, $int6, $int2, $int3, $int7, $struct0, $component8, $component9, $component23);
+		$int5, $int6, $int2, $int3 = ~settings_create_colour_input($int5, $int6, $int2, $int3, $int7, $struct0, $component8, $component9, $component23);
 	case default :
 		cc_create($component8, ^iftype_rectangle, $int3);
 		cc_sethide(true);

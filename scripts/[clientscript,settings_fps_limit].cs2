@@ -2,7 +2,7 @@
 [clientscript,settings_fps_limit](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $layer6)
 if (~on_mobile = true) {
 	if_setposition(0, 45, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-} else if (~script1445 = 1) {
+} else if (~on_enhanced_desktop = 1) {
 	if_setposition(0, 86, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 } else {
 	if_sethide(true, $component0);

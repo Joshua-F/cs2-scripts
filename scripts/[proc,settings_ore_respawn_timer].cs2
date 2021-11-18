@@ -1,0 +1,6 @@
+// 5335
+[proc,settings_ore_respawn_timer](int $count0)
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit13085 = $count0;

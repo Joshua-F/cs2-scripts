@@ -17,7 +17,7 @@ if ($enum3 = enum_1745) {
 	if_setgraphic("ring_40", $component1);
 	if_setsize(40, 40, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(32, 32, ^setsize_abs, ^setsize_abs, $component2);
-} else if (~script1445 = 1 & $enum3 ! enum_1129) {
+} else if (~on_enhanced_desktop = 1 & $enum3 ! enum_1129) {
 	if (%varbit12986 = 0) {
 		if_setposition(0, 115, ^setpos_abs_right, ^setpos_abs_top, $component0);
 	} else {
@@ -62,7 +62,7 @@ if (if_hassub(enum(component, component, $enum3, interface_161:17)) = true) {
 		} else {
 			if_setop(4, "Restore <col=ff9040>Minimap</col>", $component2);
 		}
-	} else if (~script1445 = 1 & $enum3 ! enum_1129) {
+	} else if (~on_enhanced_desktop = 1 & $enum3 ! enum_1129) {
 		~orbs_worldmap_op1($component2);
 		if_setop(2, "Floating <col=ff9040>World Map</col>", $component2);
 		if_setop(3, "Fullscreen <col=ff9040>World Map</col>", $component2);

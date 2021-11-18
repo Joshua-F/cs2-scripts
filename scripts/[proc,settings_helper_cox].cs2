@@ -1,6 +1,6 @@
 // 4585
 [proc,settings_helper_cox]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12347 = calc(1 - %varbit12347);

@@ -1,6 +1,6 @@
 // 4604
 [proc,settings_buff_overload_duration]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12364 = calc(1 - %varbit12364);

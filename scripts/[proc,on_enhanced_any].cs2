@@ -1,0 +1,9 @@
+// 100
+[proc,on_enhanced_any]()(int)
+if (~on_enhanced_desktop = 1) {
+	return(1);
+}
+if (~on_enhanced_mobile = 1) {
+	return(1);
+}
+return(0);

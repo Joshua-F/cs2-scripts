@@ -1,5 +1,5 @@
 // 2476
-[proc,script2476]()(int)
+[proc,on_enhanced_mobile]()(int)
 def_int $clienttype0 = clienttype;
 if (%varbit6352 = 1 & ($clienttype0 = ^clienttype_enhanced | $clienttype0 = 5 | $clienttype0 = 10)) {
 	return(1);

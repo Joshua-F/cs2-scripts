@@ -1,0 +1,6 @@
+// 5336
+[proc,settings_woodcutting_respawn_timer](int $count0)
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit13086 = $count0;

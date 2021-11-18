@@ -1,6 +1,6 @@
 // 5190
 [proc,settings_minimap_lock]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12983 = calc(1 - %varbit12983);

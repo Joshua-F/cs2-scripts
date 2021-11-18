@@ -1,6 +1,6 @@
 // 4597
 [proc,settings_buff_godwars_altar]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12357 = calc(1 - %varbit12357);

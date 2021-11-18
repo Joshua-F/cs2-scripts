@@ -1,0 +1,6 @@
+// 5332
+[proc,settings_buff_poison_damage]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit13084 = calc(1 - %varbit13084);

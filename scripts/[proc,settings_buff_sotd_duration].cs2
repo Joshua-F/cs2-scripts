@@ -1,6 +1,6 @@
 // 4608
 [proc,settings_buff_sotd_duration]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12368 = calc(1 - %varbit12368);

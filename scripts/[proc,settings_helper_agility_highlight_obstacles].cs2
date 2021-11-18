@@ -1,6 +1,6 @@
 // 5185
 [proc,settings_helper_agility_highlight_obstacles]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12380 = calc(1 - %varbit12380);

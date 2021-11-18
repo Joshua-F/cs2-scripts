@@ -17,7 +17,7 @@ def_int $count2 = 0;
 def_int $int3 = 0;
 def_int $count4 = enum_getoutputcount($enum1);
 while ($count2 < $count4) {
-	if (~script5243(enum(int, struct, $enum1, $count2)) = 0) {
+	if (~ca_task_is_disabled(enum(int, struct, $enum1, $count2)) = 0) {
 		$int3 = calc($int3 + 1);
 	}
 	$count2 = calc($count2 + 1);

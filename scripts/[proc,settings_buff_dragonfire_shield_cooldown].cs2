@@ -1,6 +1,6 @@
 // 4598
 [proc,settings_buff_dragonfire_shield_cooldown]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12358 = calc(1 - %varbit12358);

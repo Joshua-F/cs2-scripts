@@ -100,7 +100,7 @@
 [**97**](scripts/[clientscript,v2_stone_button_out_filled].cs2) `[clientscript,v2_stone_button_out_filled]`  
 [**98**](scripts/[proc,create_graphic].cs2) `[proc,create_graphic]`  
 [**99**](scripts/[clientscript,duel_check_button].cs2) `[clientscript,duel_check_button]`  
-[**100**](scripts/[proc,script100].cs2)  
+[**100**](scripts/[proc,on_enhanced_any].cs2) `[proc,on_enhanced_any]`  
 [**101**](scripts/[clientscript,meslayer_close].cs2) `[clientscript,meslayer_close]`  
 [**102**](scripts/[proc,meslayer_mode1].cs2) `[proc,meslayer_mode1]`  
 [**103**](scripts/[clientscript,meslayer_mode2].cs2) `[clientscript,meslayer_mode2]`  
@@ -1445,7 +1445,7 @@
 [**1442**](scripts/[proc,duel_wait_button].cs2) `[proc,duel_wait_button]`  
 [**1443**](scripts/[clientscript,duel_accept_button].cs2) `[clientscript,duel_accept_button]`  
 [**1444**](scripts/[proc,duel_colour_variation].cs2) `[proc,duel_colour_variation]`  
-[**1445**](scripts/[proc,script1445].cs2)  
+[**1445**](scripts/[proc,on_enhanced_desktop].cs2) `[proc,on_enhanced_desktop]`  
 [**1446**](scripts/[proc,playermember].cs2) `[proc,playermember]`  
 [**1447**](scripts/[clientscript,script1447].cs2)  
 [**1448**](scripts/[proc,script1448].cs2)  
@@ -2475,7 +2475,7 @@
 [**2473**](scripts/[clientscript,model_transparent_init].cs2) `[clientscript,model_transparent_init]`  
 [**2474**](scripts/[clientscript,model_transparent_dynamiczoom_init].cs2) `[clientscript,model_transparent_dynamiczoom_init]`  
 [**2475**](scripts/[clientscript,cc_outline_off].cs2) `[clientscript,cc_outline_off]`  
-[**2476**](scripts/[proc,script2476].cs2)  
+[**2476**](scripts/[proc,on_enhanced_mobile].cs2) `[proc,on_enhanced_mobile]`  
 [**2477**](scripts/[clientscript,duel_stake_inv_cash].cs2) `[clientscript,duel_stake_inv_cash]`  
 [**2478**](scripts/[clientscript,duel_stake_inv_details].cs2) `[clientscript,duel_stake_inv_details]`  
 [**2479**](scripts/[clientscript,script2479].cs2)  
@@ -4181,7 +4181,7 @@
 [**4179**](scripts/[clientscript,chat_sendabusereport].cs2) `[clientscript,chat_sendabusereport]`  
 [**4180**](scripts/[proc,settings_colour_choose_transmit].cs2) `[proc,settings_colour_choose_transmit]`  
 [**4181**](scripts/[proc,settings_get_colour].cs2) `[proc,settings_get_colour]`  
-[**4182**](scripts/[proc,script4182].cs2)  
+[**4182**](scripts/[proc,settings_create_colour_input].cs2) `[proc,settings_create_colour_input]`  
 [**4183**](scripts/[clientscript,settings_colour_input_click].cs2) `[clientscript,settings_colour_input_click]`  
 [**4184**](scripts/[clientscript,settings_colour_input_update].cs2) `[clientscript,settings_colour_input_update]`  
 [**4185**](scripts/[clientscript,script4185].cs2)  
@@ -5242,7 +5242,7 @@
 [**5240**](scripts/[clientscript,quest_journal_reset].cs2) `[clientscript,quest_journal_reset]`  
 [**5241**](scripts/[proc,script5241].cs2)  
 [**5242**](scripts/[proc,script5242].cs2)  
-[**5243**](scripts/[proc,script5243].cs2)  
+[**5243**](scripts/[proc,ca_task_is_disabled].cs2) `[proc,ca_task_is_disabled]`  
 [**5244**](scripts/[clientscript,ca_tasks_draw_list_timer].cs2) `[clientscript,ca_tasks_draw_list_timer]`  
 [**5245**](scripts/[clientscript,ironman_tabs_init].cs2) `[clientscript,ironman_tabs_init]`  
 [**5246**](scripts/[clientscript,ironman_tabs_transmit].cs2) `[clientscript,ironman_tabs_transmit]`  
@@ -5315,7 +5315,7 @@
 [**5313**](scripts/[clientscript,script5313].cs2)  
 [**5314**](scripts/[proc,axe_checker].cs2) `[proc,axe_checker]`  
 [**5315**](scripts/[proc,script5315].cs2)  
-[**5316**](scripts/[clientscript,script5316].cs2)  
+[**5316**](scripts/[clientscript,stat_boosts_hud_timertooltip].cs2) `[clientscript,stat_boosts_hud_timertooltip]`  
 [**5317**](scripts/[clientscript,helper_slayer_init].cs2) `[clientscript,helper_slayer_init]`  
 [**5318**](scripts/[proc,helper_slayer_draw_content].cs2) `[proc,helper_slayer_draw_content]`  
 [**5319**](scripts/[proc,helper_slayer_current_assignment].cs2) `[proc,helper_slayer_current_assignment]`  
@@ -5331,12 +5331,12 @@
 [**5329**](scripts/[proc,script5329].cs2)  
 [**5330**](scripts/[clientscript,settings_toggle_roof].cs2) `[clientscript,settings_toggle_roof]`  
 [**5331**](scripts/[proc,settings_helper_slayer].cs2) `[proc,settings_helper_slayer]`  
-[**5332**](scripts/[proc,script5332].cs2)  
-[**5333**](scripts/[proc,script5333].cs2)  
-[**5334**](scripts/[proc,script5334].cs2)  
-[**5335**](scripts/[proc,script5335].cs2)  
-[**5336**](scripts/[proc,script5336].cs2)  
-[**5337**](scripts/[proc,script5337].cs2)  
+[**5332**](scripts/[proc,settings_buff_poison_damage].cs2) `[proc,settings_buff_poison_damage]`  
+[**5333**](scripts/[proc,settings_popout_xptracker].cs2) `[proc,settings_popout_xptracker]`  
+[**5334**](scripts/[proc,settings_logout_notifier].cs2) `[proc,settings_logout_notifier]`  
+[**5335**](scripts/[proc,settings_ore_respawn_timer].cs2) `[proc,settings_ore_respawn_timer]`  
+[**5336**](scripts/[proc,settings_woodcutting_respawn_timer].cs2) `[proc,settings_woodcutting_respawn_timer]`  
+[**5337**](scripts/[proc,settings_bird_nest_notification].cs2) `[proc,settings_bird_nest_notification]`  
 [**5338**](scripts/[proc,script5338].cs2)  
 [**5339**](scripts/[proc,on_mac].cs2) `[proc,on_mac]`  
 [**5340**](scripts/[proc,buff_bar_timer].cs2) `[proc,buff_bar_timer]`  
@@ -5497,6 +5497,6 @@
 [**5495**](scripts/[clientscript,script5495].cs2)  
 [**5496**](scripts/[clientscript,script5496].cs2)  
 [**5497**](scripts/[clientscript,script5497].cs2)  
-[**5498**](scripts/[clientscript,script5498].cs2)  
+[**5498**](scripts/[clientscript,duel_options_radio_buttons].cs2) `[clientscript,duel_options_radio_buttons]`  
 [**5499**](scripts/[proc,script5499].cs2)  
 [**5500**](scripts/[clientscript,script5500].cs2)  

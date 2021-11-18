@@ -1,6 +1,6 @@
 // 4819
 [proc,ca_task_display](struct $struct0, int $int1, int $int2, int $int3, int $int4)(int)
-if (~script5243($struct0) = 1) {
+if (~ca_task_is_disabled($struct0) = 1) {
 	return(0);
 }
 if (%varbit12858 ! 0 & %varbit12858 ! $int1) {

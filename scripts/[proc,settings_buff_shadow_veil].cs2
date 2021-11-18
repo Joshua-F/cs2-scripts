@@ -1,6 +1,6 @@
 // 530
 [proc,settings_buff_shadow_veil]
-if (~script100 = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12407 = calc(1 - %varbit12407);

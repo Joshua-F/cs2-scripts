@@ -1,0 +1,6 @@
+// 5337
+[proc,settings_bird_nest_notification]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit13087 = calc(1 - %varbit13087);
