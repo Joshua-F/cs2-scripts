@@ -18,5 +18,5 @@ if (chat_getfilter_public ! ^chatfilter_autochat) {
 	~rebuildchatbox(~script553);
 }
 if (calc(clientclock - %varcint61) >= 150 | $boolean1 = true) {
-	~script5517(%varcstring358, 1, null, 0, -1);
+	~chat_send(%varcstring358, 1, null, 0, -1);
 }

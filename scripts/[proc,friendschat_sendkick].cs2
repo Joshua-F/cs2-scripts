@@ -4,5 +4,5 @@ if (~wildwars_world = 1) {
 	mes("You can't kick players from your team during Wilderness Wars.");
 	return;
 }
-~script5517("-Attempting to kick player from chat-channel...", 2, null, 0, -1);
+~chat_send("-Attempting to kick player from chat-channel...", 2, null, 0, -1);
 clan_kickuser($username0);

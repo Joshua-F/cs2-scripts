@@ -5515,4 +5515,4 @@
 [**5514**](scripts/[clientscript,script5514].cs2)  
 [**5515**](scripts/[clientscript,script5515].cs2)  
 [**5516**](scripts/[proc,script5516].cs2)  
-[**5517**](scripts/[proc,script5517].cs2)  
+[**5517**](scripts/[proc,chat_send].cs2) `[proc,chat_send]`  
