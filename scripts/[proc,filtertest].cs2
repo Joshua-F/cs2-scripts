@@ -134,6 +134,9 @@ switch_int ($chattype0) {
 			return(1);
 		}
 		if ($chattype0 = 41 & ~script5501($string2) = 1) {
+			if (compare($string3, removetags($string0)) = 0) {
+				return(1);
+			}
 			if (chat_getfilter_trade = ^chatfilter_off) {
 				return(0);
 			}

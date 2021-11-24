@@ -65,24 +65,40 @@ switch_int ($opindex0) {
 	case 9 :
 		if ($int1 = 5) {
 			%varcint945 = 2;
+			~redraw_chat_buttons;
+			~script223;
+		} else if ($int1 = 2) {
+			~meslayer_mode13;
 		}
-		~redraw_chat_buttons;
-		~script223;
 	case 10 :
 		switch_int ($int1) {
 			case 2 :
-				%varcint945 = 0;
+				if (string_length(%varcstring358) > 0) {
+					if (%varcint62 = 1) {
+						%varcint62 = 0;
+					} else {
+						%varcint62 = 1;
+					}
+					~chat_autotyper_updateop;
+				} else {
+					%varcint62 = 0;
+					~chat_autotyper_updateop;
+				}
 			case 4 :
 				%varcint945 = 1;
+				~redraw_chat_buttons;
+				~script223;
 			case 5 :
 				%varcint945 = 3;
+				~redraw_chat_buttons;
+				~script223;
 			case 6 :
 				if (~is_group_iron = 1) {
 					%varcint945 = 4;
 				}
+				~redraw_chat_buttons;
+				~script223;
 		}
-		~redraw_chat_buttons;
-		~script223;
 	case default :
 		if ($int1 = 2) {
 			switch_int ($opindex0) {
@@ -93,20 +109,6 @@ switch_int ($opindex0) {
 					~rebuildpmbox($mesuid2);
 				case 8 :
 					~meslayer_mode12;
-				case 9 :
-					~meslayer_mode13;
-				case 10 :
-					if (string_length(%varcstring358) > 0) {
-						if (%varcint62 = 1) {
-							%varcint62 = 0;
-						} else {
-							%varcint62 = 1;
-						}
-						~chat_autotyper_updateop;
-					} else {
-						%varcint62 = 0;
-						~chat_autotyper_updateop;
-					}
 			}
 		}
 }
