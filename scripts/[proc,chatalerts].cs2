@@ -38,7 +38,11 @@ while ($mesuid0 ! -1) {
 			case ^chattype_friendschat, ^chattype_friendschatnotification, ^chattype_chalreq_friendschat :
 				~chat_alert_enable(4);
 			case 41, 44, 46, 109, 110, 111, 112 :
-				~chat_alert_enable(5);
+				if (~script5501($string2) = 0) {
+					~chat_alert_enable(5);
+				} else {
+					~chat_alert_enable(6);
+				}
 			case 43 :
 				if (~gim_notification_message($string2) = 1) {
 					~chat_alert_enable(1);

@@ -21,6 +21,20 @@ if (%varbit8119 = 1) {
 	} else {
 		$string2 = "<enum(int, string, enum_1894, %varbit1777)><chat_playername>";
 	}
+	switch_int (%varcint945) {
+		case 1 :
+			$string2 = append($string2, " (channel)");
+		case 2 :
+			$string2 = append($string2, " (clan)");
+		case 3 :
+			$string2 = append($string2, " (guest clan)");
+		case 4 :
+			if (~is_group_iron = 1) {
+				$string2 = append($string2, " (group)");
+			} else {
+				%varcint945 = 0;
+			}
+	}
 	if ($boolean4 = true) {
 		$string2 = append($string2, "<img=19>");
 	}

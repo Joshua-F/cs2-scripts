@@ -1,0 +1,6 @@
+// 5511
+[clientscript,script5511](int $int0, int $int1, int $height2)
+def_int $height3 = if_getheight(interface_730:0);
+if ($height3 ! $height2) {
+	~script5510($int0, $int1, $height3);
+}

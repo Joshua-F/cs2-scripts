@@ -1,0 +1,40 @@
+// 5517
+[proc,script5517](string $string0, int $int0, int $clantype1, int $int2, int $int3)
+if (%varbit4394 = 1) {
+	if ($int0 = 1) {
+		mes("<chat_playername>: <col=2020ef><$string0></col>");
+	} else {
+		mes("<chat_playername>: <col=0000ff><$string0></col>");
+	}
+}
+if ($int3 ! -1 & $int3 <= 4) {
+	%varcint945 = $int3;
+}
+if ($int2 = 1) {
+	switch_int (%varcint945) {
+		case 1 :
+			$int0 = 2;
+			if (string_length($string0) > 0 & compare(substring($string0, 0, 1), "/") = 1) {
+				$string0 = append("/", $string0);
+			}
+		case 2 :
+			$int0, $clantype1 = 3, ^clantype_clan;
+		case 3 :
+			$int0, $clantype1 = 4, ^clantype_clan;
+		case 4 :
+			$int0, $clantype1 = 3, ^clantype_gim;
+	}
+}
+def_string $string1 = "";
+if ($int0 = 2 | $int0 = 3 | $int0 = 4) {
+	if (~script5501($string0) = 1) {
+		$string1, $string0 = ~script632($string0);
+	}
+	if ($clantype1 = ^clantype_gim) {
+		$string0 = append("|", $string0);
+	}
+	chat_sendclan($string0, $int0, $clantype1);
+} else {
+	chat_sendpublic($string0, $int0);
+}
+%varcint61 = clientclock;

@@ -1,6 +1,6 @@
 // 285
 [clientscript,bankmain_reorder](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, int $trans4, component $component5, component $drop6, component $component7, component $component8)
-if ($comsubid1 < 0 | $comsubid1 >= 816) {
+if ($comsubid1 < 0 | $comsubid1 >= 1200) {
 	return;
 }
 if ($drop2 = $drop6) {
@@ -8,7 +8,7 @@ if ($drop2 = $drop6) {
 	return;
 }
 def_int $int9 = ~bank_tabforslot($dropsubid3);
-if ($drop2 ! $drop0 | $dropsubid3 < 0 | $dropsubid3 >= 816 | ~bank_tabforslot($comsubid1) ! $int9) {
+if ($drop2 ! $drop0 | $dropsubid3 < 0 | $dropsubid3 >= 1200 | ~bank_tabforslot($comsubid1) ! $int9) {
 	if (cc_find($drop0, $comsubid1) = ^true) {
 		cc_settrans(200);
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans4, calc(clientclock + 10))");

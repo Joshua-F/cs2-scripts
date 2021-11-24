@@ -22,7 +22,7 @@ if_setonvartransmit("bankmain_quantity_buttons($component22, $component23, $comp
 cc_deleteall($component7);
 def_int $int35 = 0;
 def_int $int36 = 0;
-while ($int36 < 816) {
+while ($int36 < 1200) {
 	cc_create($component7, ^iftype_graphic, $int35);
 	$int35 = calc($int35 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);

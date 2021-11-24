@@ -96,7 +96,6 @@
 [**93**](scripts/[clientscript,v2_stone_button_filled].cs2) `[clientscript,v2_stone_button_filled]`  
 [**94**](scripts/[clientscript,v2_stone_button_in].cs2) `[clientscript,v2_stone_button_in]`  
 [**95**](scripts/[proc,chat_autotyper_updateop].cs2) `[proc,chat_autotyper_updateop]`  
-[**96**](scripts/[proc,chat_sendpublic].cs2) `[proc,chat_sendpublic]`  
 [**97**](scripts/[clientscript,v2_stone_button_out_filled].cs2) `[clientscript,v2_stone_button_out_filled]`  
 [**98**](scripts/[proc,create_graphic].cs2) `[proc,create_graphic]`  
 [**99**](scripts/[clientscript,duel_check_button].cs2) `[clientscript,duel_check_button]`  
@@ -2357,6 +2356,7 @@
 [**2354**](scripts/[clientscript,castlewars_waitingroom_update].cs2) `[clientscript,castlewars_waitingroom_update]`  
 [**2355**](scripts/[proc,script2355].cs2)  
 [**2356**](scripts/[clientscript,steam_lock_achievements].cs2) `[clientscript,steam_lock_achievements]`  
+[**2357**](scripts/[proc,script2357].cs2)  
 [**2358**](scripts/[clientscript,settings_interface_scaling].cs2) `[clientscript,settings_interface_scaling]`  
 [**2359**](scripts/[proc,shiftclick_toggle].cs2) `[proc,shiftclick_toggle]`  
 [**2360**](scripts/[clientscript,script2360].cs2)  
@@ -5257,7 +5257,6 @@
 [**5255**](scripts/[clientscript,gim_sidepanel_init].cs2) `[clientscript,gim_sidepanel_init]`  
 [**5256**](scripts/[clientscript,gim_sidepanel_draw].cs2) `[clientscript,gim_sidepanel_draw]`  
 [**5257**](scripts/[proc,gim_sidepanel_draw].cs2) `[proc,gim_sidepanel_draw]`  
-[**5258**](scripts/[proc,script5258].cs2)  
 [**5259**](scripts/[clientscript,gim_sidepanel_op].cs2) `[clientscript,gim_sidepanel_op]`  
 [**5260**](scripts/[clientscript,gim_sidepanel_reset].cs2) `[clientscript,gim_sidepanel_reset]`  
 [**5261**](scripts/[clientscript,gim_sidepanel_limited_init].cs2) `[clientscript,gim_sidepanel_limited_init]`  
@@ -5500,3 +5499,20 @@
 [**5498**](scripts/[clientscript,duel_options_radio_buttons].cs2) `[clientscript,duel_options_radio_buttons]`  
 [**5499**](scripts/[proc,script5499].cs2)  
 [**5500**](scripts/[clientscript,script5500].cs2)  
+[**5501**](scripts/[proc,script5501].cs2)  
+[**5502**](scripts/[clientscript,script5502].cs2)  
+[**5503**](scripts/[clientscript,script5503].cs2)  
+[**5504**](scripts/[proc,script5504].cs2)  
+[**5505**](scripts/[clientscript,script5505].cs2)  
+[**5506**](scripts/[proc,script5506].cs2)  
+[**5507**](scripts/[proc,script5507].cs2)  
+[**5508**](scripts/[clientscript,script5508].cs2)  
+[**5509**](scripts/[clientscript,script5509].cs2)  
+[**5510**](scripts/[proc,script5510].cs2)  
+[**5511**](scripts/[clientscript,script5511].cs2)  
+[**5512**](scripts/[proc,script5512].cs2)  
+[**5513**](scripts/[clientscript,script5513].cs2)  
+[**5514**](scripts/[clientscript,script5514].cs2)  
+[**5515**](scripts/[clientscript,script5515].cs2)  
+[**5516**](scripts/[proc,script5516].cs2)  
+[**5517**](scripts/[proc,script5517].cs2)  

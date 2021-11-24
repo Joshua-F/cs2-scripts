@@ -3,7 +3,7 @@
 switch_int ($int0) {
 	case 7 :
 		if ($clanslot2 ! null) {
-			~chat_sendpublic("Attempting to kick player from clan chat...", 3);
+			~script5517("Attempting to kick player from clan chat...", 3, ^clantype_clan, 0, -1);
 			activeclanchannel_kickuser($clanslot2);
 		} else {
 			mes("That player appears to have left the channel.");
@@ -11,7 +11,7 @@ switch_int ($int0) {
 	case 8 :
 		if (activeclansettings_find_affined(^clantype_clan) = true) {
 			if ($clanslot2 ! null) {
-				~chat_sendpublic("Attempting to ban player from clan chat...", 3);
+				~script5517("Attempting to ban player from clan chat...", 3, ^clantype_clan, 0, -1);
 				affinedclansettings_addbanned_fromchannel($clanslot2, 0);
 			} else {
 				mes("That player appears to have left the channel.");

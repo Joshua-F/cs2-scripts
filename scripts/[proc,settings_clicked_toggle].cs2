@@ -230,4 +230,28 @@ switch_int ($int0) {
 		~script5352;
 	case 191 :
 		~settings_popout_xptracker;
+	case 201 :
+		if (~is_group_iron = 1) {
+			%varbit13122 = calc(1 - %varbit13122);
+		} else {
+			%varbit13122 = 0;
+		}
+	case 202 :
+		if (~is_group_iron = 1) {
+			%varbit13123 = calc(1 - %varbit13123);
+		} else {
+			%varbit13123 = 0;
+		}
+	case 203 :
+		if (~is_group_iron = 1) {
+			%varbit13124 = calc(1 - %varbit13124);
+		} else {
+			%varbit13124 = 0;
+		}
+	case 204 :
+		if (~is_group_iron = 1) {
+			%varbit13125 = calc(1 - %varbit13125);
+		} else {
+			%varbit13125 = 0;
+		}
 }

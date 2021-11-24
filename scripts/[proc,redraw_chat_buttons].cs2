@@ -27,3 +27,16 @@ if (%varbit26 = 1) {
 } else {
 	if_settext(enum(int, string, enum_3844, 0), enum(int, component, enum_3843, 1));
 }
+if (~is_group_iron = 1) {
+	if_settext("Group<br> ", interface_162:29);
+	if_setop(3, "<col=ffff00>Group:</col> Show all", interface_162:27);
+	if_setop(4, "<col=ffff00>Group:</col> Show friends", interface_162:27);
+	if_setop(5, "<col=ffff00>Group:</col> Show none", interface_162:27);
+	if_setop(10, "<col=ffff00>Group:</col> Set chat mode (/@i)", interface_162:27);
+} else {
+	if_settext("Trade<br> ", interface_162:29);
+	if_setop(3, "<col=ffff00>Trade:</col> Show all", interface_162:27);
+	if_setop(4, "<col=ffff00>Trade:</col> Show friends", interface_162:27);
+	if_setop(5, "<col=ffff00>Trade:</col> Show none", interface_162:27);
+	if_setop(10, "", interface_162:27);
+}

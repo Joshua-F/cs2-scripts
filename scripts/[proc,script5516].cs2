@@ -1,0 +1,79 @@
+// 5516
+[proc,script5516](component $component0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = ~min(5, %varclansetting37);
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_string $string0 = "";
+$int2, $int3 = activeclansettings_getaffinedcount, activeclansettings_getcurrentowner_slot;
+while ($int1 < $int2) {
+	cc_create($component0, ^iftype_rectangle, $int5);
+	$int5 = calc($int5 + 1);
+	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_settrans(255);
+	cc_sethide(false);
+	cc_setop(1, "Details");
+	cc_setopbase("<col=ff9040><activeclansettings_getaffineddisplayname($int1)></col>");
+	$int1 = calc($int1 + 1);
+}
+while ($int6 < $int2) {
+	$int1 = activeclansettings_getsortedaffinedslot($int6);
+	if (.cc_find($component0, $int1) = ^true) {
+		.cc_clearops;
+		if ($int1 = $int3) {
+			$int8, $int4 = 0, $int6;
+			cc_create($component0, ^iftype_graphic, $int5);
+			$int5 = calc($int5 + 1);
+			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+			cc_setgraphic(enum(int, graphic, enum_3798, -4));
+			cc_setposition(calc((15 - 13) / 2), calc($int8 + (25 - 13) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		} else if ($int4 = -1) {
+			$int8 = calc(($int6 + 1) * 25);
+		} else {
+			$int8 = calc($int6 * 25);
+		}
+		.cc_setposition(0, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+		$string0 = removetags(activeclansettings_getaffineddisplayname($int1));
+		if (compare(lowercase($string0), lowercase(removetags(chat_playername))) = 0) {
+			$int9 = 1;
+		} else {
+			$int9 = 0;
+		}
+		cc_create($component0, ^iftype_text, $int5);
+		$int5 = calc($int5 + 1);
+		cc_setposition(0, $int8, ^setpos_abs_right, ^setpos_abs_top);
+		cc_setsize(15, 25, ^setsize_minus, ^setsize_abs);
+		cc_settextshadow(true);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_setcolour(^white);
+		cc_settext($string0);
+		if (activeclansettings_getaffinedextrainfo($int1, 28, 28) = 1) {
+			cc_create($component0, ^iftype_graphic, $int5);
+			$int5 = calc($int5 + 1);
+			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+			cc_setgraphic(enum(int, graphic, enum_3798, 39));
+			cc_setposition(calc(15 + parawidth($string0, 190, p12_full) + 1), calc($int8 + (25 - 13) / 2 - 1), ^setpos_abs_left, ^setpos_abs_top);
+		}
+	}
+	$int6 = calc($int6 + 1);
+}
+while ($int6 < $int7) {
+	cc_create($component0, ^iftype_text, $int5);
+	$int5 = calc($int5 + 1);
+	cc_setposition(0, calc($int6 * 25), ^setpos_abs_right, ^setpos_abs_top);
+	cc_setsize(15, 25, ^setsize_minus, ^setsize_abs);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setcolour(0x808080);
+	cc_settext("Vacancy");
+	$int6 = calc($int6 + 1);
+}

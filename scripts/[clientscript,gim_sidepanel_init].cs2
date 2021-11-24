@@ -1,36 +1,36 @@
 // 5255
-[clientscript,gim_sidepanel_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+[clientscript,gim_sidepanel_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
 cc_deleteall($component1);
 cc_create($component1, ^iftype_text, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-def_int $comsubid5 = cc_getid;
+def_int $comsubid6 = cc_getid;
 cc_create($component1, ^iftype_graphic, 1);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
-def_int $comsubid6 = cc_getid;
+def_int $comsubid7 = cc_getid;
 cc_deleteall($component2);
 cc_create($component2, ^iftype_text, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-def_int $comsubid7 = cc_getid;
+def_int $comsubid8 = cc_getid;
 cc_create($component2, ^iftype_graphic, 1);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
-def_int $comsubid8 = cc_getid;
+def_int $comsubid9 = cc_getid;
 cc_create($component2, ^iftype_text, 2);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-def_int $comsubid9 = cc_getid;
+def_int $comsubid10 = cc_getid;
 cc_create($component2, ^iftype_graphic, 3);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
-def_int $comsubid10 = cc_getid;
-~gim_sidepanel_draw($component1, $comsubid5, $comsubid6, $component2, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $component3, $component4);
-if_setonvartransmit("gim_sidepanel_draw($component1, $comsubid5, $comsubid6, $component2, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $component3, $component4){var3172}", $component0);
-if_setonclansettingstransmit("gim_sidepanel_draw($component1, $comsubid5, $comsubid6, $component2, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $component3, $component4)", $component0);
-if_setonclanchanneltransmit("gim_sidepanel_draw($component1, $comsubid5, $comsubid6, $component2, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $component3, $component4)", $component0);
-if_setonfriendtransmit("gim_sidepanel_draw($component1, $comsubid5, $comsubid6, $component2, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $component3, $component4)", $component0);
+def_int $comsubid11 = cc_getid;
+~gim_sidepanel_draw($component1, $comsubid6, $comsubid7, $component2, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $component3, $component4, $component5);
+if_setonvartransmit("gim_sidepanel_draw($component1, $comsubid6, $comsubid7, $component2, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $component3, $component4, $component5){var3172}", $component0);
+if_setonclansettingstransmit("gim_sidepanel_draw($component1, $comsubid6, $comsubid7, $component2, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $component3, $component4, $component5)", $component0);
+if_setonclanchanneltransmit("gim_sidepanel_draw($component1, $comsubid6, $comsubid7, $component2, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $component3, $component4, $component5)", $component0);
+if_setonfriendtransmit("gim_sidepanel_draw($component1, $comsubid6, $comsubid7, $component2, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $component3, $component4, $component5)", $component0);

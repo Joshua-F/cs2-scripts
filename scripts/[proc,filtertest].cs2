@@ -133,6 +133,18 @@ switch_int ($chattype0) {
 		if ($chattype0 = 43 & ~gim_notification_message($string2) = 1) {
 			return(1);
 		}
+		if ($chattype0 = 41 & ~script5501($string2) = 1) {
+			if (chat_getfilter_trade = ^chatfilter_off) {
+				return(0);
+			}
+			if (chat_getfilter_trade = ^chatfilter_friends & $int3 ! 1) {
+				return(0);
+			}
+			if ($int3 = 2) {
+				return(0);
+			}
+			return(1);
+		}
 		if ($clock1 < %varcint440) {
 			return(0);
 		}
@@ -141,9 +153,6 @@ switch_int ($chattype0) {
 		}
 		if (compare($string3, removetags($string0)) = 0) {
 			return(1);
-		}
-		if ($int3 = 2) {
-			return(0);
 		}
 		if (%varbit929 = ^chatfilter_on) {
 			return(1);

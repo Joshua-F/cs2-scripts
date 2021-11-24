@@ -1,0 +1,18 @@
+// 5502
+[clientscript,script5502](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+def_int $comsubid7 = ~steelborder($component1, "", 1);
+cc_deleteall($component2);
+cc_create($component2, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Loading...");
+def_int $comsubid8 = cc_getid;
+~script5504($component1, $comsubid7, $component2, $comsubid8, $component3, $component4, $component5, $component6);
+if_setonvartransmit("script5503($component1, $comsubid7, $component2, $comsubid8, $component3, $component4, $component5, $component6){var3172}", $component0);
+if_setonclansettingstransmit("script5503($component1, $comsubid7, $component2, $comsubid8, $component3, $component4, $component5, $component6)", $component0);
+if_setonop("opsound(event_opindex, 2)", $component5);
+if_setonop("opsound(event_opindex, 2)", $component6);

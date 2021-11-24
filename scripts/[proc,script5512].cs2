@@ -1,0 +1,7 @@
+// 5512
+[proc,script5512](component $component0, int $int1, int $int2, int $int3)
+if_setonop("script5514(event_opindex, event_com, $int1, $int2, $int3)", $component0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script5513(true, event_com, $int1, $int2, $int3)", $component0);
+}
+if_setonmouseleave("script5513(false, event_com, $int1, $int2, $int3)", $component0);
