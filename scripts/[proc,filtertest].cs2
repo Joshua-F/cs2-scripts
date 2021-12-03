@@ -131,9 +131,18 @@ switch_int ($chattype0) {
 		return(0);
 	case 41, 44, 43, 46, 109, 110, 111, 112 :
 		if ($chattype0 = 43 & ~gim_notification_message($string2) = 1) {
+			if ($clock1 < %varcint946) {
+				return(0);
+			}
+			if (chat_getfilter_trade = ^chatfilter_off) {
+				return(0);
+			}
 			return(1);
 		}
 		if ($chattype0 = 41 & ~script5501($string2) = 1) {
+			if ($clock1 < %varcint946) {
+				return(0);
+			}
 			if (compare($string3, removetags($string0)) = 0) {
 				return(1);
 			}

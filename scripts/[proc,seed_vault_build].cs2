@@ -38,10 +38,13 @@ while ($int8 < 92) {
 			cc_setop(2, "Withdraw-1");
 			cc_setop(3, "Withdraw-5");
 			cc_setop(4, "Withdraw-10");
-			cc_setop(5, "Withdraw-X");
-			cc_setop(6, "Withdraw-All");
+			if (%var3197 > 1) {
+				cc_setop(5, "Withdraw-<tostring(%var3197)>");
+			}
+			cc_setop(6, "Withdraw-X");
+			cc_setop(7, "Withdraw-All");
 			if (oc_stackable($obj9) = false & oc_cert($obj9) ! $obj9) {
-				cc_setop(8, "Withdraw-Notes");
+				cc_setop(9, "Withdraw-Notes");
 			}
 		}
 		.cc_setop(10, "Examine");
@@ -63,25 +66,28 @@ while ($int8 < 92) {
 			.cc_setop(2, "Withdraw-1");
 			.cc_setop(3, "Withdraw-5");
 			.cc_setop(4, "Withdraw-10");
-			.cc_setop(5, "Withdraw-X");
-			.cc_setop(6, "Withdraw-All");
+			if (%var3197 > 1) {
+				.cc_setop(5, "Withdraw-<tostring(%var3197)>");
+			}
+			.cc_setop(6, "Withdraw-X");
+			.cc_setop(7, "Withdraw-All");
 			if (oc_stackable($obj9) = false & oc_cert($obj9) ! $obj9) {
-				.cc_setop(8, "Withdraw-Notes");
+				.cc_setop(9, "Withdraw-Notes");
 			}
 		}
 		if (~seed_vault_searching = 0) {
 			if (~script2828($int8) ! -1) {
 				$intarray0(0) = calc($intarray0(0) + 1);
-				cc_setop(7, "Remove-Favourite");
-				.cc_setop(7, "Remove-Favourite");
+				cc_setop(8, "Remove-Favourite");
+				.cc_setop(8, "Remove-Favourite");
 			} else {
 				$intarray0(oc_param(oc_unplaceholder($obj9), param_709)) = calc($intarray0(oc_param(oc_unplaceholder($obj9), param_709)) + 1);
 				if (~script2831 > 0) {
-					cc_setop(7, "Favourite");
-					.cc_setop(7, "Favourite");
+					cc_setop(8, "Favourite");
+					.cc_setop(8, "Favourite");
 				} else {
-					cc_setop(7, "");
-					.cc_setop(7, "");
+					cc_setop(8, "");
+					.cc_setop(8, "");
 				}
 			}
 		}

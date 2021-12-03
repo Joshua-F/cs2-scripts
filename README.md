@@ -96,6 +96,7 @@
 [**93**](scripts/[clientscript,v2_stone_button_filled].cs2) `[clientscript,v2_stone_button_filled]`  
 [**94**](scripts/[clientscript,v2_stone_button_in].cs2) `[clientscript,v2_stone_button_in]`  
 [**95**](scripts/[proc,chat_autotyper_updateop].cs2) `[proc,chat_autotyper_updateop]`  
+[**96**](scripts/[clientscript,script96].cs2)  
 [**97**](scripts/[clientscript,v2_stone_button_out_filled].cs2) `[clientscript,v2_stone_button_out_filled]`  
 [**98**](scripts/[proc,create_graphic].cs2) `[proc,create_graphic]`  
 [**99**](scripts/[clientscript,duel_check_button].cs2) `[clientscript,duel_check_button]`  
@@ -5257,6 +5258,7 @@
 [**5255**](scripts/[clientscript,gim_sidepanel_init].cs2) `[clientscript,gim_sidepanel_init]`  
 [**5256**](scripts/[clientscript,gim_sidepanel_draw].cs2) `[clientscript,gim_sidepanel_draw]`  
 [**5257**](scripts/[proc,gim_sidepanel_draw].cs2) `[proc,gim_sidepanel_draw]`  
+[**5258**](scripts/[proc,script5258].cs2)  
 [**5259**](scripts/[clientscript,gim_sidepanel_op].cs2) `[clientscript,gim_sidepanel_op]`  
 [**5260**](scripts/[clientscript,gim_sidepanel_reset].cs2) `[clientscript,gim_sidepanel_reset]`  
 [**5261**](scripts/[clientscript,gim_sidepanel_limited_init].cs2) `[clientscript,gim_sidepanel_limited_init]`  

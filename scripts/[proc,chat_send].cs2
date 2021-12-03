@@ -7,8 +7,13 @@ if (%varbit4394 = 1) {
 		mes("<chat_playername>: <col=0000ff><$string0></col>");
 	}
 }
-if ($int3 ! -1 & $int3 <= 4) {
+if ($int3 ! -1 & $int3 <= 4 & $int3 ! %varcint945) {
 	%varcint945 = $int3;
+	if ($int3 ! 0) {
+		mes("Your chatbox mode is now set to <enum(int, string, enum_4070, $int3)> chat, to reset your mode type /@p");
+	} else {
+		mes("Your chatbox mode has been reset to <enum(int, string, enum_4070, $int3)> chat.");
+	}
 }
 if ($int2 = 1) {
 	switch_int (%varcint945) {
@@ -31,10 +36,17 @@ if ($int0 = 2 | $int0 = 3 | $int0 = 4) {
 		$string1, $string0 = ~script632($string0);
 	}
 	if ($clantype1 = ^clantype_gim) {
+		$string0 = append(uppercase(substring($string0, 0, 1)), substring($string0, 1, string_length($string0)));
 		$string0 = append("|", $string0);
+	}
+	if (string_length($string0) <= 0) {
+		return;
 	}
 	chat_sendclan($string0, $int0, $clantype1);
 } else {
+	if (string_length($string0) <= 0) {
+		return;
+	}
 	chat_sendpublic($string0, $int0);
 }
 %varcint61 = clientclock;
