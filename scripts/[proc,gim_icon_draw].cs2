@@ -1,0 +1,43 @@
+// 5506
+[proc,gim_icon_draw]
+def_graphic $graphic0 = "iron_icons,3";
+def_graphic $graphic1 = "graphic_3597";
+def_int $colour2 = 0x9d9d9d;
+def_int $colour3 = 0x31a2f2;
+if (%varclansetting41 > 0 & %varclansetting40 <= 0) {
+	$graphic0 = "iron_icons,4";
+	$colour3 = 0x5d190a;
+}
+if (%varclansetting37 = 3) {
+	$graphic1 = "graphic_3598";
+} else if (%varclansetting37 = 4) {
+	$graphic1 = "graphic_3599";
+} else if (%varclansetting37 = 5) {
+	$graphic1 = "graphic_3600";
+}
+def_component $component4 = interface_730:5;
+def_int $int5 = 0;
+cc_deleteall($component4);
+cc_create($component4, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour($colour3);
+cc_setfill(true);
+cc_create($component4, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(12, 12, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour($colour2);
+cc_setfill(true);
+$int5 = ~thinbox($component4, $int5);
+cc_create($component4, ^iftype_graphic, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setgraphic($graphic0);
+cc_create($component4, ^iftype_graphic, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 80, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setgraphic($graphic1);

@@ -1,0 +1,246 @@
+// 5729
+[proc,helper_agility_requirements](loc $loc0, coord $coord1)(boolean, string)
+def_string $string0 = "";
+def_boolean $boolean2 = true;
+switch_loc ($loc0) {
+	case stile_12982, stile_7527 :
+		if (%varbit3306 = 1) {
+			$string0 = "<col=ff0000>No penguin suit";
+			$boolean2 = false;
+		}
+	case broken_raft_17068, rocks_17043, rocks_17042, wall_17047, strong_tree_17074, wall_17049, wall_17050, crossbow_tree_17063 :
+		if (enum(obj, int, enum_4082, inv_getobj(worn, 3)) = 0) {
+			$string0 = "<col=ff0000>Crossbow";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Crossbow";
+		}
+		if (inv_total(worn, mith_grapple_9419) <= 0) {
+			$string0 = append($string0, "<br><col=ff0000>Mithril grapple");
+			$boolean2 = false;
+		} else {
+			$string0 = append($string0, "<br><col=00ff00>Mithril grapple");
+		}
+	case rocks_31758 :
+		if (%varbit6076 = 0) {
+			$string0 = "<col=ff0000>Corsair Cove resource area";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Corsair Cove resource area";
+		}
+	case door_25526, door_25527 :
+		if (%varbit5810 = 0) {
+			$string0 = "<col=ff0000>Used shortcut from below first";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Used shortcut from below first";
+		}
+	case rocks_multi_31849, rocks_multi_31852 :
+		if (%var112 < 7) {
+			$string0 = "<col=ff0000>Observatory quest";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Observatory quest";
+		}
+		if (%varbit5810 = 0) {
+			if (enum(obj, int, enum_4082, inv_getobj(worn, 3)) = 0) {
+				$string0 = append($string0, "<br><col=ff0000>Crossbow");
+				$boolean2 = false;
+			} else {
+				$string0 = append($string0, "<br><col=00ff00>Crossbow");
+			}
+			if (inv_total(worn, mith_grapple_9419) <= 0) {
+				$string0 = append($string0, "<br><col=ff0000>Mithril grapple");
+				$boolean2 = false;
+			} else {
+				$string0 = append($string0, "<br><col=00ff00>Mithril grapple");
+			}
+		}
+	case stepping_stone_19040 :
+		if (%varbit4567 = 0) {
+			$string0 = "<col=ff0000>Claimed Karamja elite diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Karamja elite diary reward";
+		}
+	case rocks_16534, rocks_16535 :
+		if (%var150 < 160) {
+			$string0 = "<col=ff0000>The Grand Tree";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>The Grand Tree";
+		}
+	case underwall_tunnel_19032, underwall_tunnel_19036 :
+		if (%varbit4536 = 0) {
+			$string0 = "<col=ff0000>Claimed Lumbridge medium diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Lumbridge medium diary reward";
+		}
+	case crevice_19043 :
+		if (%varbit4508 = 0) {
+			$string0 = "<col=ff0000>Claimed Wilderness medium diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Wilderness medium diary reward";
+		}
+	case stepping_stone_13504, ornate_railing_16552, ornate_railing_17000, rocks_16998, rocks_16999 :
+		if (%var302 < 61) {
+			$string0 = "<col=ff0000>Priest in peril";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Priest in peril";
+		}
+	case dark_tunnel_10047 :
+		if (%varbit4504 = 0) {
+			$string0 = "<col=ff0000>Claimed Falador medium diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Falador medium diary reward";
+		}
+	case stepping_stone_11768 :
+		if (%varbit4532 = 0) {
+			$string0 = "<col=ff0000>Claimed Fremennik medium diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Fremennik medium diary reward";
+		}
+	case stepping_stone_19042 :
+		if (%varbit4529 = 0) {
+			$string0 = "<col=ff0000>Claimed Morytania hard diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Morytania hard diary reward";
+		}
+	case wall_multi_39542, wall_multi_39541 :
+		if (%varbit7255 < 138) {
+			$string0 = "<col=ff0000>Sins of the Father";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Sins of the Father";
+		}
+		if (%varbit10449 = 0) {
+			if (inv_total(inv, long_rope_24790) <= 0) {
+				$string0 = append($string0, "<br><col=ff0000>Long rope");
+				$boolean2 = false;
+			} else {
+				$string0 = append($string0, "<br><col=00ff00>Long rope");
+			}
+		}
+	case stepping_stone_16513 :
+		if (%varbit4537 = 0) {
+			$string0 = "<col=ff0000>Claimed Lumbridge hard diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Lumbridge hard diary reward";
+		}
+	case crevice_9739, crevice_9740 :
+		if (%varbit4505 = 0) {
+			$string0 = "<col=ff0000>Claimed Falador hard diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Falador hard diary reward";
+		}
+	case rock_multi_26561 :
+		if (%varbit3967 = 0) {
+			if (inv_total(inv, rope_954) <= 0) {
+				$string0 = "<col=ff0000>Rope";
+				$boolean2 = false;
+			} else {
+				$string0 = "<col=00ff00>Rope";
+			}
+		}
+	case rock_multi_26562 :
+		if (%varbit3968 = 0) {
+			if (inv_total(inv, rope_954) <= 0) {
+				$string0 = "<col=ff0000>Rope";
+				$boolean2 = false;
+			} else {
+				$string0 = "<col=00ff00>Rope";
+			}
+		}
+	case big_window_33348, broken_wall_33344 :
+		if (%var273 < 110) {
+			$string0 = "<col=ff0000>Prince Ali Rescue";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Prince Ali Rescue";
+		}
+		if (%varbit4525 = 0 & %varbit4526 = 0) {
+			$string0 = append($string0, "<br><col=ff0000>Claimed Desert hard diary reward");
+			$boolean2 = false;
+		} else {
+			$string0 = append($string0, "<br><col=00ff00>Claimed Desert hard diary reward");
+		}
+	case crumbling_wall_40355, rocks_40356 :
+		if (%var212 < 13) {
+			$string0 = "<col=ff0000>Watchtower";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Watchtower";
+		}
+	case rocks_16464 :
+		if (%varbit2790 < 310) {
+			$string0 = "<col=ff0000>My Arm's Big Adventure";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>My Arm's Big Adventure";
+		}
+		if (%varbit4533 = 0) {
+			$string0 = append($string0, "<br><col=ff0000>Claimed Fremennik hard diary reward");
+			$boolean2 = false;
+		} else {
+			$string0 = append($string0, "<br><col=00ff00>Claimed Fremennik hard diary reward");
+		}
+	case stepping_stone_14918 :
+		if (%varbit4509 = 0) {
+			$string0 = "<col=ff0000>Claimed Wilderness hard diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Wilderness hard diary reward";
+		}
+	case stepping_stone_10663 :
+		if (%varbit2328 < 1 | %varbit2329 < 2) {
+			$string0 = "<col=ff0000>Use of fairy rings";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Use of fairy rings";
+		}
+	case stepping_stone_16466 :
+		if (%varbit3598 = 0) {
+			$string0 = "<col=ff0000>Claimed Karamja medium diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Karamja medium diary reward";
+		}
+	case blighted_vine_multi_26886, blighted_vine_multi_26884 :
+		if (%var139 < 50) {
+			$string0 = "<col=ff0000>Legends' Quest";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Legends' Quest";
+		}
+	case crevice_16465 :
+		if (%varbit4526 = 0) {
+			$string0 = "<col=ff0000>Claimed Desert elite diary reward";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Claimed Desert elite diary reward";
+		}
+	case rocks_multi_40960, rope_multi_40962 :
+		if (%var139 < 50) {
+			$string0 = "<col=ff0000>Legends' Quest";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Legends' Quest";
+		}
+		if (%varbit11799 = 0) {
+			if (inv_total(inv, long_rope_24790) <= 0) {
+				$string0 = append($string0, "<br><col=ff0000>Long rope");
+				$boolean2 = false;
+			} else {
+				$string0 = append($string0, "<br><col=00ff00>Long rope");
+			}
+		}
+}
+return($boolean2, $string0);

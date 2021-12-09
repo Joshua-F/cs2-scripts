@@ -1,0 +1,11 @@
+// 5531
+[proc,string_trim_left](string $string0)(string)
+def_int $length0 = 0;
+def_int $length1 = string_length($string0);
+while ($length0 < $length1) {
+	if (compare(substring($string0, $length0, calc($length0 + 1)), " ") ! 0) {
+		return(substring($string0, $length0, $length1));
+	}
+	$length0 = calc($length0 + 1);
+}
+return("");

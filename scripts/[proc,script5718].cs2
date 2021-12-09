@@ -5,15 +5,15 @@ if (~on_enhanced_any = 0) {
 }
 def_newvar $newvar0 = _7201(2, 0, 1, 25, 0);
 if (_202($newvar0) = ^true) {
-	~script5719($newvar0, loc_type, loc_coord);
+	~helper_agility_vartransmit($newvar0, loc_type, loc_coord);
 	if (map_members = ^true) {
 		if (enum(loc, int, enum_4077, loc_type) > 0) {
-			cc_setonstattransmit("script5723($newvar0, stat(ranged), stat(agility), stat(strength), loc_type, loc_coord){ranged, agility, strength}");
+			cc_setonstattransmit("helper_agility_stattransmit($newvar0, stat(ranged), stat(agility), stat(strength), loc_type, loc_coord){ranged, agility, strength}");
 		} else if (enum(loc, int, enum_4078, loc_type) = 1 & enum(coord, int, enum_4079, loc_coord) > 0) {
-			cc_setonstattransmit("script5723($newvar0, stat(ranged), stat(agility), stat(strength), loc_type, loc_coord){ranged, agility, strength}");
+			cc_setonstattransmit("helper_agility_stattransmit($newvar0, stat(ranged), stat(agility), stat(strength), loc_type, loc_coord){ranged, agility, strength}");
 		}
 		if (enum(loc, int, enum_4081, loc_type) = 1) {
-			cc_setoninvtransmit("script5722($newvar0, loc_type, loc_coord){inv, worn}");
+			cc_setoninvtransmit("helper_agility_invtransmit($newvar0, loc_type, loc_coord){inv, worn}");
 		}
 	}
 }

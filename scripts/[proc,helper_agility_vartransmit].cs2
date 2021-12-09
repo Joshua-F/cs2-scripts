@@ -1,0 +1,56 @@
+// 5719
+[proc,helper_agility_vartransmit](newvar $newvar0, loc $loc1, coord $coord2)
+switch_loc ($loc1) {
+	case stile_12982, stile_7527 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var969}");
+	case rocks_31758 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1677}");
+	case door_25526, door_25527 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var113}");
+	case rocks_multi_31849, rocks_multi_31852 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var112, var113}");
+	case stepping_stone_19040 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1200}");
+	case rocks_16534, rocks_16535 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var150}");
+	case underwall_tunnel_19032, underwall_tunnel_19036 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1191}");
+	case crevice_19043 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1190}");
+	case stepping_stone_13504, ornate_railing_16552, ornate_railing_17000, rocks_16998, rocks_16999 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var302}");
+	case dark_tunnel_10047 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1190}");
+	case stepping_stone_11768 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1191}");
+	case stepping_stone_19042 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1190}");
+	case wall_multi_39542, wall_multi_39541 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var2712}");
+	case stepping_stone_16513 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1191}");
+	case crevice_9739, crevice_9740 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1190}");
+	case rock_multi_26561, rock_multi_26562 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1048}");
+	case big_window_33348, broken_wall_33344 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var273, var1190}");
+	case crumbling_wall_40355, rocks_40356 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var212}");
+	case rocks_16464 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var905, var1191}");
+	case stepping_stone_14918 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1190}");
+	case stepping_stone_10663 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var810}");
+	case stepping_stone_16466 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1001}");
+	case blighted_vine_multi_26886, blighted_vine_multi_26884 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var139}");
+	case crevice_16465 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1190}");
+	case rocks_multi_40960, rope_multi_40962 :
+		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var139, var2647}");
+	case default :
+		cc_setonvartransmit("helper_agility_vartransmit($newvar0, %varbit13135, %varbit13136, $loc1, $coord2){var3154}");
+}

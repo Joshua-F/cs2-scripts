@@ -9,7 +9,7 @@ $int8 = calc($int8 + 1);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setfill(true);
 .cc_setcolour(^white);
-$int8 = ~script5295($component0, $int8);
+$int8 = ~thinbox_light($component0, $int8);
 cc_create($component0, ^iftype_text, $int8);
 $int8 = calc($int8 + 1);
 cc_setsize(30, 0, ^setsize_minus, ^setsize_minus);

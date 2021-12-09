@@ -1,9 +1,0 @@
-// 5720
-[clientscript,script5720](newvar $newvar0, int $int1, int $int2, loc $loc3, coord $coord4)
-if ($int1 = %varbit13135 & $int2 = %varbit13136) {
-	return;
-}
-~script5724($newvar0, $loc3, $coord4);
-if (_202($newvar0) = ^true) {
-	~script5719($newvar0, $loc3, $coord4);
-}

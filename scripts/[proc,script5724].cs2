@@ -26,7 +26,7 @@ if (enum(loc, int, enum_4078, $loc1) = 1) {
 }
 def_string $string0 = "";
 def_boolean $boolean6 = false;
-$boolean6, $string0 = ~script5729($loc1, $coord2);
+$boolean6, $string0 = ~helper_agility_requirements($loc1, $coord2);
 if (stat(agility) < $lvl3) {
 	highlight_loc_on($loc1, $coord2, 13, 1);
 } else if (stat(strength) < $lvl4) {

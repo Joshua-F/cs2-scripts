@@ -71,7 +71,7 @@ if ($int2 ! -1) {
 	}
 	cc_deleteall(interface_730:14);
 	~scrollbar_vertical(interface_730:14, interface_730:10, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	~script5510(%varcint43, %varcint49, if_getheight(interface_730:0));
+	~gim_settings_setsize(%varcint43, %varcint49, if_getheight(interface_730:0));
 } else {
 	%varcint49 = calc(%varcint49 + $int8);
 }

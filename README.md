@@ -1647,7 +1647,7 @@
 [**1644**](scripts/[clientscript,ge_history_init].cs2) `[clientscript,ge_history_init]`  
 [**1645**](scripts/[clientscript,ge_history_addline].cs2) `[clientscript,ge_history_addline]`  
 [**1646**](scripts/[clientscript,ge_history_finish].cs2) `[clientscript,ge_history_finish]`  
-[**1647**](scripts/[proc,script1647].cs2)  
+[**1647**](scripts/[proc,storage_main_init_quantitybuttons].cs2) `[proc,storage_main_init_quantitybuttons]`  
 [**1648**](scripts/[proc,script1648].cs2)  
 [**1649**](scripts/[proc,storage_main_create].cs2) `[proc,storage_main_create]`  
 [**1650**](scripts/[clientscript,storage_main_recreate].cs2) `[clientscript,storage_main_recreate]`  
@@ -5292,7 +5292,7 @@
 [**5292**](scripts/[clientscript,script5292].cs2)  
 [**5293**](scripts/[proc,script5293].cs2)  
 [**5294**](scripts/[clientscript,script5294].cs2)  
-[**5295**](scripts/[proc,script5295].cs2)  
+[**5295**](scripts/[proc,thinbox_light].cs2) `[proc,thinbox_light]`  
 [**5296**](scripts/[proc,options_bigbutton_init].cs2) `[proc,options_bigbutton_init]`  
 [**5297**](scripts/[clientscript,options_bigbutton_op].cs2) `[clientscript,options_bigbutton_op]`  
 [**5298**](scripts/[clientscript,options_bigbutton_reset].cs2) `[clientscript,options_bigbutton_reset]`  
@@ -5485,7 +5485,7 @@
 [**5486**](scripts/[proc,highlighting_off].cs2) `[proc,highlighting_off]`  
 [**5487**](scripts/[clientscript,highlighting_on].cs2) `[clientscript,highlighting_on]`  
 [**5488**](scripts/[proc,highlighting_on].cs2) `[proc,highlighting_on]`  
-[**5489**](scripts/[proc,script5489].cs2)  
+[**5489**](scripts/[proc,settings_gravestone_confirmation].cs2) `[proc,settings_gravestone_confirmation]`  
 [**5490**](scripts/[clientscript,script5490].cs2)  
 [**5491**](scripts/[clientscript,script5491].cs2)  
 [**5492**](scripts/[clientscript,script5492].cs2)  
@@ -5498,21 +5498,21 @@
 [**5499**](scripts/[proc,script5499].cs2)  
 [**5500**](scripts/[clientscript,script5500].cs2)  
 [**5501**](scripts/[proc,script5501].cs2)  
-[**5502**](scripts/[clientscript,script5502].cs2)  
-[**5503**](scripts/[clientscript,script5503].cs2)  
-[**5504**](scripts/[proc,script5504].cs2)  
+[**5502**](scripts/[clientscript,gim_settings_init].cs2) `[clientscript,gim_settings_init]`  
+[**5503**](scripts/[clientscript,gim_settings_draw].cs2) `[clientscript,gim_settings_draw]`  
+[**5504**](scripts/[proc,gim_settings_draw].cs2) `[proc,gim_settings_draw]`  
 [**5505**](scripts/[clientscript,script5505].cs2)  
-[**5506**](scripts/[proc,script5506].cs2)  
+[**5506**](scripts/[proc,gim_icon_draw].cs2) `[proc,gim_icon_draw]`  
 [**5507**](scripts/[proc,script5507].cs2)  
-[**5508**](scripts/[clientscript,script5508].cs2)  
+[**5508**](scripts/[clientscript,gim_settings_static].cs2) `[clientscript,gim_settings_static]`  
 [**5509**](scripts/[clientscript,script5509].cs2)  
-[**5510**](scripts/[proc,script5510].cs2)  
-[**5511**](scripts/[clientscript,script5511].cs2)  
+[**5510**](scripts/[proc,gim_settings_setsize].cs2) `[proc,gim_settings_setsize]`  
+[**5511**](scripts/[clientscript,gim_settings_checksize].cs2) `[clientscript,gim_settings_checksize]`  
 [**5512**](scripts/[proc,script5512].cs2)  
 [**5513**](scripts/[clientscript,script5513].cs2)  
 [**5514**](scripts/[clientscript,script5514].cs2)  
 [**5515**](scripts/[clientscript,script5515].cs2)  
-[**5516**](scripts/[proc,script5516].cs2)  
+[**5516**](scripts/[proc,gim_sidepanel_drawchannel].cs2) `[proc,gim_sidepanel_drawchannel]`  
 [**5517**](scripts/[proc,chat_send].cs2) `[proc,chat_send]`  
 [**5518**](scripts/[proc,script5518].cs2)  
 [**5519**](scripts/[proc,script5519].cs2)  
@@ -5526,10 +5526,10 @@
 [**5527**](scripts/[clientscript,script5527].cs2)  
 [**5528**](scripts/[proc,script5528].cs2)  
 [**5529**](scripts/[proc,script5529].cs2)  
-[**5530**](scripts/[proc,script5530].cs2)  
-[**5531**](scripts/[proc,script5531].cs2)  
-[**5532**](scripts/[proc,script5532].cs2)  
-[**5533**](scripts/[proc,script5533].cs2)  
+[**5530**](scripts/[proc,string_trim].cs2) `[proc,string_trim]`  
+[**5531**](scripts/[proc,string_trim_left].cs2) `[proc,string_trim_left]`  
+[**5532**](scripts/[proc,string_trim_right].cs2) `[proc,string_trim_right]`  
+[**5533**](scripts/[proc,time_convert_seconds].cs2) `[proc,time_convert_seconds]`  
 [**5534**](scripts/[proc,script5534].cs2)  
 [**5535**](scripts/[clientscript,script5535].cs2)  
 [**5536**](scripts/[proc,script5536].cs2)  
@@ -5553,179 +5553,179 @@
 [**5554**](scripts/[clientscript,script5554].cs2)  
 [**5555**](scripts/[proc,script5555].cs2)  
 [**5556**](scripts/[proc,script5556].cs2)  
-[**5557**](scripts/[clientscript,script5557].cs2)  
-[**5558**](scripts/[clientscript,script5558].cs2)  
-[**5559**](scripts/[clientscript,script5559].cs2)  
-[**5560**](scripts/[clientscript,script5560].cs2)  
-[**5561**](scripts/[clientscript,script5561].cs2)  
-[**5562**](scripts/[clientscript,script5562].cs2)  
-[**5563**](scripts/[clientscript,script5563].cs2)  
-[**5564**](scripts/[clientscript,script5564].cs2)  
-[**5565**](scripts/[clientscript,script5565].cs2)  
-[**5566**](scripts/[clientscript,script5566].cs2)  
-[**5567**](scripts/[clientscript,script5567].cs2)  
-[**5568**](scripts/[clientscript,script5568].cs2)  
-[**5569**](scripts/[clientscript,script5569].cs2)  
-[**5570**](scripts/[clientscript,script5570].cs2)  
-[**5571**](scripts/[clientscript,script5571].cs2)  
-[**5572**](scripts/[clientscript,script5572].cs2)  
-[**5573**](scripts/[clientscript,script5573].cs2)  
-[**5574**](scripts/[clientscript,script5574].cs2)  
-[**5575**](scripts/[clientscript,script5575].cs2)  
-[**5576**](scripts/[clientscript,script5576].cs2)  
-[**5577**](scripts/[clientscript,script5577].cs2)  
-[**5578**](scripts/[clientscript,script5578].cs2)  
-[**5579**](scripts/[clientscript,script5579].cs2)  
-[**5580**](scripts/[clientscript,script5580].cs2)  
-[**5581**](scripts/[clientscript,script5581].cs2)  
-[**5582**](scripts/[clientscript,script5582].cs2)  
-[**5583**](scripts/[clientscript,script5583].cs2)  
-[**5584**](scripts/[clientscript,script5584].cs2)  
-[**5585**](scripts/[clientscript,script5585].cs2)  
-[**5586**](scripts/[clientscript,script5586].cs2)  
-[**5587**](scripts/[clientscript,script5587].cs2)  
-[**5588**](scripts/[clientscript,script5588].cs2)  
-[**5589**](scripts/[clientscript,script5589].cs2)  
-[**5590**](scripts/[clientscript,script5590].cs2)  
-[**5591**](scripts/[clientscript,script5591].cs2)  
-[**5592**](scripts/[clientscript,script5592].cs2)  
-[**5593**](scripts/[clientscript,script5593].cs2)  
-[**5594**](scripts/[clientscript,script5594].cs2)  
-[**5595**](scripts/[clientscript,script5595].cs2)  
-[**5596**](scripts/[clientscript,script5596].cs2)  
-[**5597**](scripts/[clientscript,script5597].cs2)  
-[**5598**](scripts/[clientscript,script5598].cs2)  
-[**5599**](scripts/[clientscript,script5599].cs2)  
-[**5600**](scripts/[clientscript,script5600].cs2)  
-[**5601**](scripts/[clientscript,script5601].cs2)  
-[**5602**](scripts/[clientscript,script5602].cs2)  
-[**5603**](scripts/[clientscript,script5603].cs2)  
-[**5604**](scripts/[clientscript,script5604].cs2)  
-[**5605**](scripts/[clientscript,script5605].cs2)  
-[**5606**](scripts/[clientscript,script5606].cs2)  
-[**5607**](scripts/[clientscript,script5607].cs2)  
-[**5608**](scripts/[clientscript,script5608].cs2)  
-[**5609**](scripts/[clientscript,script5609].cs2)  
-[**5610**](scripts/[clientscript,script5610].cs2)  
-[**5611**](scripts/[clientscript,script5611].cs2)  
-[**5612**](scripts/[clientscript,script5612].cs2)  
-[**5613**](scripts/[clientscript,script5613].cs2)  
-[**5614**](scripts/[clientscript,script5614].cs2)  
-[**5615**](scripts/[clientscript,script5615].cs2)  
-[**5616**](scripts/[clientscript,script5616].cs2)  
-[**5617**](scripts/[clientscript,script5617].cs2)  
-[**5618**](scripts/[clientscript,script5618].cs2)  
-[**5619**](scripts/[clientscript,script5619].cs2)  
-[**5620**](scripts/[clientscript,script5620].cs2)  
-[**5621**](scripts/[clientscript,script5621].cs2)  
-[**5622**](scripts/[clientscript,script5622].cs2)  
-[**5623**](scripts/[clientscript,script5623].cs2)  
-[**5624**](scripts/[clientscript,script5624].cs2)  
-[**5625**](scripts/[clientscript,script5625].cs2)  
-[**5626**](scripts/[clientscript,script5626].cs2)  
-[**5627**](scripts/[clientscript,script5627].cs2)  
-[**5628**](scripts/[clientscript,script5628].cs2)  
-[**5629**](scripts/[clientscript,script5629].cs2)  
-[**5630**](scripts/[clientscript,script5630].cs2)  
-[**5631**](scripts/[clientscript,script5631].cs2)  
-[**5632**](scripts/[clientscript,script5632].cs2)  
-[**5633**](scripts/[clientscript,script5633].cs2)  
-[**5634**](scripts/[clientscript,script5634].cs2)  
-[**5635**](scripts/[clientscript,script5635].cs2)  
-[**5636**](scripts/[clientscript,script5636].cs2)  
-[**5637**](scripts/[clientscript,script5637].cs2)  
-[**5638**](scripts/[clientscript,script5638].cs2)  
-[**5639**](scripts/[clientscript,script5639].cs2)  
-[**5640**](scripts/[clientscript,script5640].cs2)  
-[**5641**](scripts/[clientscript,script5641].cs2)  
-[**5642**](scripts/[clientscript,script5642].cs2)  
-[**5643**](scripts/[clientscript,script5643].cs2)  
-[**5644**](scripts/[clientscript,script5644].cs2)  
-[**5645**](scripts/[clientscript,script5645].cs2)  
-[**5646**](scripts/[clientscript,script5646].cs2)  
-[**5647**](scripts/[clientscript,script5647].cs2)  
-[**5648**](scripts/[clientscript,script5648].cs2)  
-[**5649**](scripts/[clientscript,script5649].cs2)  
-[**5650**](scripts/[clientscript,script5650].cs2)  
-[**5651**](scripts/[clientscript,script5651].cs2)  
-[**5652**](scripts/[clientscript,script5652].cs2)  
-[**5653**](scripts/[clientscript,script5653].cs2)  
-[**5654**](scripts/[clientscript,script5654].cs2)  
-[**5655**](scripts/[clientscript,script5655].cs2)  
-[**5656**](scripts/[clientscript,script5656].cs2)  
-[**5657**](scripts/[clientscript,script5657].cs2)  
-[**5658**](scripts/[clientscript,script5658].cs2)  
-[**5659**](scripts/[clientscript,script5659].cs2)  
-[**5660**](scripts/[clientscript,script5660].cs2)  
-[**5661**](scripts/[clientscript,script5661].cs2)  
-[**5662**](scripts/[clientscript,script5662].cs2)  
-[**5663**](scripts/[clientscript,script5663].cs2)  
-[**5664**](scripts/[clientscript,script5664].cs2)  
-[**5665**](scripts/[clientscript,script5665].cs2)  
-[**5666**](scripts/[clientscript,script5666].cs2)  
-[**5667**](scripts/[clientscript,script5667].cs2)  
-[**5668**](scripts/[clientscript,script5668].cs2)  
-[**5669**](scripts/[clientscript,script5669].cs2)  
-[**5670**](scripts/[clientscript,script5670].cs2)  
-[**5671**](scripts/[clientscript,script5671].cs2)  
-[**5672**](scripts/[clientscript,script5672].cs2)  
-[**5673**](scripts/[clientscript,script5673].cs2)  
-[**5674**](scripts/[clientscript,script5674].cs2)  
-[**5675**](scripts/[clientscript,script5675].cs2)  
-[**5676**](scripts/[clientscript,script5676].cs2)  
-[**5677**](scripts/[clientscript,script5677].cs2)  
-[**5678**](scripts/[clientscript,script5678].cs2)  
-[**5679**](scripts/[clientscript,script5679].cs2)  
-[**5680**](scripts/[clientscript,script5680].cs2)  
-[**5681**](scripts/[clientscript,script5681].cs2)  
-[**5682**](scripts/[clientscript,script5682].cs2)  
-[**5683**](scripts/[clientscript,script5683].cs2)  
-[**5684**](scripts/[clientscript,script5684].cs2)  
-[**5685**](scripts/[clientscript,script5685].cs2)  
-[**5686**](scripts/[clientscript,script5686].cs2)  
-[**5687**](scripts/[clientscript,script5687].cs2)  
-[**5688**](scripts/[clientscript,script5688].cs2)  
-[**5689**](scripts/[clientscript,script5689].cs2)  
-[**5690**](scripts/[clientscript,script5690].cs2)  
-[**5691**](scripts/[clientscript,script5691].cs2)  
-[**5692**](scripts/[clientscript,script5692].cs2)  
-[**5693**](scripts/[clientscript,script5693].cs2)  
-[**5694**](scripts/[clientscript,script5694].cs2)  
-[**5695**](scripts/[clientscript,script5695].cs2)  
-[**5696**](scripts/[clientscript,script5696].cs2)  
-[**5697**](scripts/[clientscript,script5697].cs2)  
-[**5698**](scripts/[clientscript,script5698].cs2)  
-[**5699**](scripts/[clientscript,script5699].cs2)  
-[**5700**](scripts/[clientscript,script5700].cs2)  
-[**5701**](scripts/[clientscript,script5701].cs2)  
-[**5702**](scripts/[clientscript,script5702].cs2)  
-[**5703**](scripts/[clientscript,script5703].cs2)  
-[**5704**](scripts/[clientscript,script5704].cs2)  
-[**5705**](scripts/[clientscript,script5705].cs2)  
-[**5706**](scripts/[clientscript,script5706].cs2)  
-[**5707**](scripts/[clientscript,script5707].cs2)  
-[**5708**](scripts/[clientscript,script5708].cs2)  
-[**5709**](scripts/[clientscript,script5709].cs2)  
-[**5710**](scripts/[clientscript,script5710].cs2)  
-[**5711**](scripts/[clientscript,script5711].cs2)  
-[**5712**](scripts/[clientscript,script5712].cs2)  
-[**5713**](scripts/[clientscript,script5713].cs2)  
-[**5714**](scripts/[clientscript,script5714].cs2)  
-[**5715**](scripts/[clientscript,script5715].cs2)  
-[**5716**](scripts/[clientscript,script5716].cs2)  
-[**5717**](scripts/[clientscript,script5717].cs2)  
+[**5557**](scripts/[clientscript,helper_agility_highlight_setup].cs2) `[clientscript,helper_agility_highlight_setup]`  
+[**5558**](scripts/[loadloc,stile_12982].cs2) `[loadloc,stile_12982]`  
+[**5559**](scripts/[loadloc,stile_7527].cs2) `[loadloc,stile_7527]`  
+[**5560**](scripts/[loadloc,stepping_stone_5948].cs2) `[loadloc,stepping_stone_5948]`  
+[**5561**](scripts/[loadloc,stepping_stone_5949].cs2) `[loadloc,stepping_stone_5949]`  
+[**5562**](scripts/[loadloc,basalt_rock_4551].cs2) `[loadloc,basalt_rock_4551]`  
+[**5563**](scripts/[loadloc,basalt_rock_4552].cs2) `[loadloc,basalt_rock_4552]`  
+[**5564**](scripts/[loadloc,basalt_rock_4553].cs2) `[loadloc,basalt_rock_4553]`  
+[**5565**](scripts/[loadloc,basalt_rock_4554].cs2) `[loadloc,basalt_rock_4554]`  
+[**5566**](scripts/[loadloc,basalt_rock_4555].cs2) `[loadloc,basalt_rock_4555]`  
+[**5567**](scripts/[loadloc,basalt_rock_4556].cs2) `[loadloc,basalt_rock_4556]`  
+[**5568**](scripts/[loadloc,basalt_rock_4557].cs2) `[loadloc,basalt_rock_4557]`  
+[**5569**](scripts/[loadloc,basalt_rock_4558].cs2) `[loadloc,basalt_rock_4558]`  
+[**5570**](scripts/[loadloc,bridge_3522].cs2) `[loadloc,bridge_3522]`  
+[**5571**](scripts/[loadloc,crumbling_wall_24222].cs2) `[loadloc,crumbling_wall_24222]`  
+[**5572**](scripts/[loadloc,broken_raft_17068].cs2) `[loadloc,broken_raft_17068]`  
+[**5573**](scripts/[loadloc,rocks_31757].cs2) `[loadloc,rocks_31757]`  
+[**5574**](scripts/[loadloc,ropeswing_23568].cs2) `[loadloc,ropeswing_23568]`  
+[**5575**](scripts/[loadloc,ropeswing_23569].cs2) `[loadloc,ropeswing_23569]`  
+[**5576**](scripts/[loadloc,wall_17049].cs2) `[loadloc,wall_17049]`  
+[**5577**](scripts/[loadloc,wall_17050].cs2) `[loadloc,wall_17050]`  
+[**5578**](scripts/[loadloc,wall_17051].cs2) `[loadloc,wall_17051]`  
+[**5579**](scripts/[loadloc,wall_17052].cs2) `[loadloc,wall_17052]`  
+[**5580**](scripts/[loadloc,stepping_stone_21738].cs2) `[loadloc,stepping_stone_21738]`  
+[**5581**](scripts/[loadloc,stepping_stone_21739].cs2) `[loadloc,stepping_stone_21739]`  
+[**5582**](scripts/[loadloc,fence_16518].cs2) `[loadloc,fence_16518]`  
+[**5583**](scripts/[loadloc,tight_gap_16468].cs2) `[loadloc,tight_gap_16468]`  
+[**5584**](scripts/[loadloc,pillar_31809].cs2) `[loadloc,pillar_31809]`  
+[**5585**](scripts/[loadloc,monkeybars_23566].cs2) `[loadloc,monkeybars_23566]`  
+[**5586**](scripts/[loadloc,castle_wall_16519].cs2) `[loadloc,castle_wall_16519]`  
+[**5587**](scripts/[loadloc,hole_16520].cs2) `[loadloc,hole_16520]`  
+[**5588**](scripts/[loadloc,log_balance_23274].cs2) `[loadloc,log_balance_23274]`  
+[**5589**](scripts/[loadloc,underwall_tunnel_16529].cs2) `[loadloc,underwall_tunnel_16529]`  
+[**5590**](scripts/[loadloc,underwall_tunnel_16530].cs2) `[loadloc,underwall_tunnel_16530]`  
+[**5591**](scripts/[loadloc,pipe_21727].cs2) `[loadloc,pipe_21727]`  
+[**5592**](scripts/[loadloc,pipe_21728].cs2) `[loadloc,pipe_21728]`  
+[**5593**](scripts/[loadloc,rocks_multi_31852].cs2) `[loadloc,rocks_multi_31852]`  
+[**5594**](scripts/[loadloc,rocks_multi_31849].cs2) `[loadloc,rocks_multi_31849]`  
+[**5595**](scripts/[loadloc,rocks_19849].cs2) `[loadloc,rocks_19849]`  
+[**5596**](scripts/[loadloc,underwall_tunnel_16527].cs2) `[loadloc,underwall_tunnel_16527]`  
+[**5597**](scripts/[loadloc,underwall_tunnel_16528].cs2) `[loadloc,underwall_tunnel_16528]`  
+[**5598**](scripts/[loadloc,stone_28893].cs2) `[loadloc,stone_28893]`  
+[**5599**](scripts/[loadloc,rocks_34397].cs2) `[loadloc,rocks_34397]`  
+[**5600**](scripts/[loadloc,rocks_31758].cs2) `[loadloc,rocks_31758]`  
+[**5601**](scripts/[loadloc,rocks_31759].cs2) `[loadloc,rocks_31759]`  
+[**5602**](scripts/[loadloc,stepping_stone_19040].cs2) `[loadloc,stepping_stone_19040]`  
+[**5603**](scripts/[loadloc,stepping_stone_16533].cs2) `[loadloc,stepping_stone_16533]`  
+[**5604**](scripts/[loadloc,rocks_17042].cs2) `[loadloc,rocks_17042]`  
+[**5605**](scripts/[loadloc,rocks_2231].cs2) `[loadloc,rocks_2231]`  
+[**5606**](scripts/[loadloc,log_balance_16548].cs2) `[loadloc,log_balance_16548]`  
+[**5607**](scripts/[loadloc,log_balance_16546].cs2) `[loadloc,log_balance_16546]`  
+[**5608**](scripts/[loadloc,crossbow_tree_17062].cs2) `[loadloc,crossbow_tree_17062]`  
+[**5609**](scripts/[loadloc,crossbow_tree_17063].cs2) `[loadloc,crossbow_tree_17063]`  
+[**5610**](scripts/[loadloc,rocks_16534].cs2) `[loadloc,rocks_16534]`  
+[**5611**](scripts/[loadloc,rocks_16535].cs2) `[loadloc,rocks_16535]`  
+[**5612**](scripts/[loadloc,rocks_16549].cs2) `[loadloc,rocks_16549]`  
+[**5613**](scripts/[loadloc,rocks_16550].cs2) `[loadloc,rocks_16550]`  
+[**5614**](scripts/[loadloc,wall_17047].cs2) `[loadloc,wall_17047]`  
+[**5615**](scripts/[loadloc,wall_17048].cs2) `[loadloc,wall_17048]`  
+[**5616**](scripts/[loadloc,balancing_ledge_23548].cs2) `[loadloc,balancing_ledge_23548]`  
+[**5617**](scripts/[loadloc,stepping_stone_29729].cs2) `[loadloc,stepping_stone_29729]`  
+[**5618**](scripts/[loadloc,stepping_stone_29730].cs2) `[loadloc,stepping_stone_29730]`  
+[**5619**](scripts/[loadloc,rocks_16521].cs2) `[loadloc,rocks_16521]`  
+[**5620**](scripts/[loadloc,crevice_16543].cs2) `[loadloc,crevice_16543]`  
+[**5621**](scripts/[loadloc,underwall_tunnel_19032].cs2) `[loadloc,underwall_tunnel_19032]`  
+[**5622**](scripts/[loadloc,underwall_tunnel_19036].cs2) `[loadloc,underwall_tunnel_19036]`  
+[**5623**](scripts/[loadloc,rocks_16522].cs2) `[loadloc,rocks_16522]`  
+[**5624**](scripts/[loadloc,rocks_16523].cs2) `[loadloc,rocks_16523]`  
+[**5625**](scripts/[loadloc,stepping_stone_29728].cs2) `[loadloc,stepping_stone_29728]`  
+[**5626**](scripts/[loadloc,log_balance_3931].cs2) `[loadloc,log_balance_3931]`  
+[**5627**](scripts/[loadloc,log_balance_3932].cs2) `[loadloc,log_balance_3932]`  
+[**5628**](scripts/[loadloc,log_balance_3933].cs2) `[loadloc,log_balance_3933]`  
+[**5629**](scripts/[loadloc,jutting_wall_17002].cs2) `[loadloc,jutting_wall_17002]`  
+[**5630**](scripts/[loadloc,crevice_19043].cs2) `[loadloc,crevice_19043]`  
+[**5631**](scripts/[loadloc,rocks_16524].cs2) `[loadloc,rocks_16524]`  
+[**5632**](scripts/[loadloc,log_balance_16542].cs2) `[loadloc,log_balance_16542]`  
+[**5633**](scripts/[loadloc,log_balance_16540].cs2) `[loadloc,log_balance_16540]`  
+[**5634**](scripts/[loadloc,obstacle_pipe_23140].cs2) `[loadloc,obstacle_pipe_23140]`  
+[**5635**](scripts/[loadloc,stepping_stone_13504].cs2) `[loadloc,stepping_stone_13504]`  
+[**5636**](scripts/[loadloc,obstacle_pipe_16511].cs2) `[loadloc,obstacle_pipe_16511]`  
+[**5637**](scripts/[loadloc,rocks_27988].cs2) `[loadloc,rocks_27988]`  
+[**5638**](scripts/[loadloc,rocks_27987].cs2) `[loadloc,rocks_27987]`  
+[**5639**](scripts/[loadloc,strong_tree_17074].cs2) `[loadloc,strong_tree_17074]`  
+[**5640**](scripts/[loadloc,dark_tunnel_10047].cs2) `[loadloc,dark_tunnel_10047]`  
+[**5641**](scripts/[loadloc,stepping_stone_11768].cs2) `[loadloc,stepping_stone_11768]`  
+[**5642**](scripts/[loadloc,monkeybars_23567].cs2) `[loadloc,monkeybars_23567]`  
+[**5643**](scripts/[loadloc,broken_fence_544].cs2) `[loadloc,broken_fence_544]`  
+[**5644**](scripts/[loadloc,weathered_wall_16526].cs2) `[loadloc,weathered_wall_16526]`  
+[**5645**](scripts/[loadloc,weathered_wall_16525].cs2) `[loadloc,weathered_wall_16525]`  
+[**5646**](scripts/[loadloc,rocks_16515].cs2) `[loadloc,rocks_16515]`  
+[**5647**](scripts/[loadloc,rocks_16514].cs2) `[loadloc,rocks_16514]`  
+[**5648**](scripts/[loadloc,rocky_handholds_26405].cs2) `[loadloc,rocky_handholds_26405]`  
+[**5649**](scripts/[loadloc,little_crack_26382].cs2) `[loadloc,little_crack_26382]`  
+[**5650**](scripts/[loadloc,stepping_stone_19042].cs2) `[loadloc,stepping_stone_19042]`  
+[**5651**](scripts/[loadloc,gap_29326].cs2) `[loadloc,gap_29326]`  
+[**5652**](scripts/[loadloc,spikey_chain_16537].cs2) `[loadloc,spikey_chain_16537]`  
+[**5653**](scripts/[loadloc,spikey_chain_16538].cs2) `[loadloc,spikey_chain_16538]`  
+[**5654**](scripts/[loadloc,crevice_16539].cs2) `[loadloc,crevice_16539]`  
+[**5655**](scripts/[loadloc,rocks_34396].cs2) `[loadloc,rocks_34396]`  
+[**5656**](scripts/[loadloc,loose_railing_28849].cs2) `[loadloc,loose_railing_28849]`  
+[**5657**](scripts/[loadloc,wall_multi_39542].cs2) `[loadloc,wall_multi_39542]`  
+[**5658**](scripts/[loadloc,wall_multi_39541].cs2) `[loadloc,wall_multi_39541]`  
+[**5659**](scripts/[loadloc,rocks_16545].cs2) `[loadloc,rocks_16545]`  
+[**5660**](scripts/[loadloc,rope_anchor_30916].cs2) `[loadloc,rope_anchor_30916]`  
+[**5661**](scripts/[loadloc,rope_anchor_30917].cs2) `[loadloc,rope_anchor_30917]`  
+[**5662**](scripts/[loadloc,ornate_railing_16552].cs2) `[loadloc,ornate_railing_16552]`  
+[**5663**](scripts/[loadloc,ornate_railing_17000].cs2) `[loadloc,ornate_railing_17000]`  
+[**5664**](scripts/[loadloc,rocks_16998].cs2) `[loadloc,rocks_16998]`  
+[**5665**](scripts/[loadloc,rocks_16999].cs2) `[loadloc,rocks_16999]`  
+[**5666**](scripts/[loadloc,pillar_31561].cs2) `[loadloc,pillar_31561]`  
+[**5667**](scripts/[loadloc,stepping_stone_16513].cs2) `[loadloc,stepping_stone_16513]`  
+[**5668**](scripts/[loadloc,crevice_9739].cs2) `[loadloc,crevice_9739]`  
+[**5669**](scripts/[loadloc,crevice_9740].cs2) `[loadloc,crevice_9740]`  
+[**5670**](scripts/[loadloc,pile_of_rubble_23563].cs2) `[loadloc,pile_of_rubble_23563]`  
+[**5671**](scripts/[loadloc,pile_of_rubble_23564].cs2) `[loadloc,pile_of_rubble_23564]`  
+[**5672**](scripts/[loadloc,rocks_34741].cs2) `[loadloc,rocks_34741]`  
+[**5673**](scripts/[loadloc,obstacle_pipe_16509].cs2) `[loadloc,obstacle_pipe_16509]`  
+[**5674**](scripts/[loadloc,hole_31481].cs2) `[loadloc,hole_31481]`  
+[**5675**](scripts/[loadloc,hole_31482].cs2) `[loadloc,hole_31482]`  
+[**5676**](scripts/[loadloc,rock_multi_26561].cs2) `[loadloc,rock_multi_26561]`  
+[**5677**](scripts/[loadloc,rock_multi_26562].cs2) `[loadloc,rock_multi_26562]`  
+[**5678**](scripts/[loadloc,rope_multi_26371].cs2) `[loadloc,rope_multi_26371]`  
+[**5679**](scripts/[loadloc,rope_multi_26375].cs2) `[loadloc,rope_multi_26375]`  
+[**5680**](scripts/[loadloc,big_window_33348].cs2) `[loadloc,big_window_33348]`  
+[**5681**](scripts/[loadloc,broken_wall_33344].cs2) `[loadloc,broken_wall_33344]`  
+[**5682**](scripts/[loadloc,crumbling_wall_40355].cs2) `[loadloc,crumbling_wall_40355]`  
+[**5683**](scripts/[loadloc,rocks_40356].cs2) `[loadloc,rocks_40356]`  
+[**5684**](scripts/[loadloc,tunnel_30174].cs2) `[loadloc,tunnel_30174]`  
+[**5685**](scripts/[loadloc,tunnel_30175].cs2) `[loadloc,tunnel_30175]`  
+[**5686**](scripts/[loadloc,rocks_16464].cs2) `[loadloc,rocks_16464]`  
+[**5687**](scripts/[loadloc,rocks_27984].cs2) `[loadloc,rocks_27984]`  
+[**5688**](scripts/[loadloc,rocks_27985].cs2) `[loadloc,rocks_27985]`  
+[**5689**](scripts/[loadloc,stepping_stone_14918].cs2) `[loadloc,stepping_stone_14918]`  
+[**5690**](scripts/[loadloc,strange_floor_34834].cs2) `[loadloc,strange_floor_34834]`  
+[**5691**](scripts/[loadloc,stepping_stone_10663].cs2) `[loadloc,stepping_stone_10663]`  
+[**5692**](scripts/[loadloc,stepping_stone_16466].cs2) `[loadloc,stepping_stone_16466]`  
+[**5693**](scripts/[loadloc,tight_gap_36692].cs2) `[loadloc,tight_gap_36692]`  
+[**5694**](scripts/[loadloc,tight_gap_36693].cs2) `[loadloc,tight_gap_36693]`  
+[**5695**](scripts/[loadloc,blighted_vine_multi_26886].cs2) `[loadloc,blighted_vine_multi_26886]`  
+[**5696**](scripts/[loadloc,blighted_vine_multi_26884].cs2) `[loadloc,blighted_vine_multi_26884]`  
+[**5697**](scripts/[loadloc,strange_floor_16510].cs2) `[loadloc,strange_floor_16510]`  
+[**5698**](scripts/[loadloc,strange_floor_16544].cs2) `[loadloc,strange_floor_16544]`  
+[**5699**](scripts/[loadloc,loc_14435].cs2) `[loadloc,loc_14435]`  
+[**5700**](scripts/[loadloc,tight_gap_36694].cs2) `[loadloc,tight_gap_36694]`  
+[**5701**](scripts/[loadloc,tight_gap_36695].cs2) `[loadloc,tight_gap_36695]`  
+[**5702**](scripts/[loadloc,crevice_16465].cs2) `[loadloc,crevice_16465]`  
+[**5703**](scripts/[loadloc,vine_26880].cs2) `[loadloc,vine_26880]`  
+[**5704**](scripts/[loadloc,vine_26882].cs2) `[loadloc,vine_26882]`  
+[**5705**](scripts/[loadloc,mysterious_pipe_34655].cs2) `[loadloc,mysterious_pipe_34655]`  
+[**5706**](scripts/[loadloc,rocks_multi_40960].cs2) `[loadloc,rocks_multi_40960]`  
+[**5707**](scripts/[loadloc,rope_multi_40962].cs2) `[loadloc,rope_multi_40962]`  
+[**5708**](scripts/[loadloc,door_25526].cs2) `[loadloc,door_25526]`  
+[**5709**](scripts/[loadloc,door_25527].cs2) `[loadloc,door_25527]`  
+[**5710**](scripts/[loadloc,rocks_17043].cs2) `[loadloc,rocks_17043]`  
+[**5711**](scripts/[loadloc,boulder_27990].cs2) `[loadloc,boulder_27990]`  
+[**5712**](scripts/[loadloc,rock_16115].cs2) `[loadloc,rock_16115]`  
+[**5713**](scripts/[loadloc,rocks_3803].cs2) `[loadloc,rocks_3803]`  
+[**5714**](scripts/[loadloc,rocks_3804].cs2) `[loadloc,rocks_3804]`  
+[**5715**](scripts/[loadloc,tunnel_42506].cs2) `[loadloc,tunnel_42506]`  
+[**5716**](scripts/[loadloc,tunnel_42507].cs2) `[loadloc,tunnel_42507]`  
+[**5717**](scripts/[loadloc,crack_28892].cs2) `[loadloc,crack_28892]`  
 [**5718**](scripts/[proc,script5718].cs2)  
-[**5719**](scripts/[proc,script5719].cs2)  
-[**5720**](scripts/[clientscript,script5720].cs2)  
+[**5719**](scripts/[proc,helper_agility_vartransmit].cs2) `[proc,helper_agility_vartransmit]`  
+[**5720**](scripts/[clientscript,helper_agility_vartransmit].cs2) `[clientscript,helper_agility_vartransmit]`  
 [**5721**](scripts/[clientscript,script5721].cs2)  
-[**5722**](scripts/[clientscript,script5722].cs2)  
-[**5723**](scripts/[clientscript,script5723].cs2)  
+[**5722**](scripts/[clientscript,helper_agility_invtransmit].cs2) `[clientscript,helper_agility_invtransmit]`  
+[**5723**](scripts/[clientscript,helper_agility_stattransmit].cs2) `[clientscript,helper_agility_stattransmit]`  
 [**5724**](scripts/[proc,script5724].cs2)  
 [**5725**](scripts/[proc,script5725].cs2)  
-[**5726**](scripts/[clientscript,script5726].cs2)  
-[**5727**](scripts/[clientscript,script5727].cs2)  
+[**5726**](scripts/[clientscript,helper_agility_mouseleave].cs2) `[clientscript,helper_agility_mouseleave]`  
+[**5727**](scripts/[clientscript,helper_agility_mouseover].cs2) `[clientscript,helper_agility_mouseover]`  
 [**5728**](scripts/[proc,script5728].cs2)  
-[**5729**](scripts/[proc,script5729].cs2)  
+[**5729**](scripts/[proc,helper_agility_requirements].cs2) `[proc,helper_agility_requirements]`  
 [**5730**](scripts/[clientscript,script5730].cs2)  
 [**5731**](scripts/[proc,script5731].cs2)  
 [**5732**](scripts/[proc,script5732].cs2)  

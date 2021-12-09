@@ -146,7 +146,7 @@ while ($size16 < $size0) {
 }
 def_int $int17 = 0;
 if (%varbit13141 > 0) {
-	$int17 = ~min(3, ~script5533(%varbit13141));
+	$int17 = ~min(3, ~time_convert_seconds(%varbit13141));
 	if_settext("Check offer!<br><tostring($int17)>...", $component6);
 	if_setcolour(0x666666, $component6);
 } else {

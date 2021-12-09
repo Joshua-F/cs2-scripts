@@ -1,0 +1,36 @@
+// 5504
+[proc,gim_settings_draw](component $component0, int $comsubid1, component $component2, int $comsubid3, component $component4, component $component5, component $component6, component $component7)
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
+	if (cc_find($component2, $comsubid3) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_settext(activeclansettings_getclanname);
+	}
+	if_sethide(false, $component4);
+	if_sethide(false, $component5);
+	~gim_icon_draw;
+	if (%varbit12165 = 1) {
+		~clan_stonebutton_init("<col=0dc10d>Hiscores</col>", $component6, "p12_full");
+		~clan_stonebutton_init("<col=9f9f9f>Leave Group</col>", $component7, "p12_full");
+	} else {
+		~clan_stonebutton_init("<col=0dc10d>Hiscores</col>", $component6, "p12_full");
+		if (%varbit13126 = 1) {
+			~clan_stonebutton_init("<col=ff0000>Cancel Leave</col>", $component7, "p12_full");
+		} else {
+			~clan_stonebutton_init("<col=ff0000>Leave Group</col>", $component7, "p12_full");
+		}
+		if_setonvartransmit("script5505($component7){var3171}", $component7);
+	}
+	return;
+}
+if (cc_find($component2, $comsubid3) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settext(~script5507);
+}
+if_sethide(true, $component4);
+if_sethide(true, $component5);
+cc_deleteall($component6);
+cc_deleteall($component7);
