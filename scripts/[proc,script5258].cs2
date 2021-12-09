@@ -1,11 +1,11 @@
 // 5258
-[proc,script5258](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5)
+[proc,script5258](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
 if_setcolour(0xff981f, $component1);
 if_setcolour(0xff981f, $component2);
 if_setcolour(0xff981f, $component3);
 if_setcolour(0xff981f, $component4);
 if_setcolour(0xff981f, $component5);
-if ($int0 = 41353238 | %var2195 ! 1 & %var2195 ! 5 & %var2195 ! 10 & %var2195 ! ^max_32bit_int) {
+if ($component0 = interface_631:22 | %var2195 ! 1 & %var2195 ! 5 & %var2195 ! 10 & %var2195 ! ^max_32bit_int) {
 	if_setcolour(^white, $component4);
 	return;
 }

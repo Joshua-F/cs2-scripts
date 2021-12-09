@@ -1,7 +1,7 @@
 // 1450
-[clientscript,duel_stake_changed](component $component0, int $int1, int $int2, component $component3, component $component4, component $component5)
+[clientscript,duel_stake_changed](component $component0, namedobj $namedobj1, int $int2, component $component3, component $component4, component $component5)
 def_int $comsubid6 = 0;
-if ($int1 = 995) {
+if ($namedobj1 = coins_995) {
 	$comsubid6 = 1;
 	if_settext(~tostring_spacer($int2, ","), $component5);
 } else {
