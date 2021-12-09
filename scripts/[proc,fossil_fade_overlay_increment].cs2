@@ -4,6 +4,9 @@ if ($int7 <= 0) {
 	if_setcolour($int4, $component1);
 	if_settrans($int5, $component1);
 	if_setontimer(null, $component0);
+	if ($int5 = 255) {
+		if_sethide(true, $component1);
+	}
 	return;
 }
 def_int $int8 = 0;

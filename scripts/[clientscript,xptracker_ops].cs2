@@ -1,10 +1,6 @@
 // 5463
 [clientscript,xptracker_ops](int $opindex0, stat $stat1)
 switch_int ($opindex0) {
-	case 6 :
-		~xptracker_reset_stat($stat1);
-	case 7 :
-		~script5455($stat1, 0);
 	case 8 :
 		~xptracker_close_stat($stat1);
 	case 9 :

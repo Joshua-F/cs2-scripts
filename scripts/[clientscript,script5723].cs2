@@ -1,0 +1,12 @@
+// 5723
+[clientscript,script5723](newvar $newvar0, int $lvl1, int $lvl2, int $lvl3, loc $loc4, coord $coord5)
+def_int $lvl6 = stat(agility);
+def_int $lvl7 = stat(ranged);
+def_int $lvl8 = stat(strength);
+if ($lvl1 = $lvl6 & $lvl2 = $lvl7 & $lvl3 = $lvl8) {
+	return;
+}
+~script5724($newvar0, $loc4, $coord5);
+if (_202($newvar0) = ^true) {
+	cc_setonstattransmit("script5723($newvar0, $lvl6, $lvl7, $lvl8, $loc4, $coord5){ranged, agility, strength}");
+}

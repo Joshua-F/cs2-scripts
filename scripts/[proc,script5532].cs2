@@ -1,0 +1,10 @@
+// 5532
+[proc,script5532](string $string0)(string)
+def_int $int0 = string_length($string0);
+while ($int0 > 0) {
+	if (compare(substring($string0, calc($int0 - 1), $int0), " ") ! 0) {
+		return(substring($string0, 0, $int0));
+	}
+	$int0 = calc($int0 - 1);
+}
+return("");

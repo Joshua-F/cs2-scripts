@@ -1,0 +1,17 @@
+// 5736
+[proc,script5736](int $int0, int $height1)
+def_int $int2 = 74;
+def_int $int3 = calc(~max(220, $int0) + $int2);
+def_int $int4 = ~min(calc($height1 - 4), $int3);
+if_setsize(0, $int4, ^setsize_minus, ^setsize_abs, interface_731:1);
+def_int $int5 = calc($int4 - $int2);
+if ($int5 >= $int0) {
+	%varcint63 = 0;
+	if_setscrollpos(0, 0, interface_731:12);
+	if_setscrollsize(0, 0, interface_731:12);
+	~scrollbar_resize(interface_731:13, interface_731:12, 0);
+} else {
+	if_setscrollsize(0, $int0, interface_731:12);
+	~scrollbar_resize(interface_731:13, interface_731:12, %varcint63);
+}
+if_setontimer("script5737($int0, $height1)", interface_731:0);

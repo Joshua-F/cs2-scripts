@@ -1,19 +1,19 @@
 // 3910
 [proc,settings_side_tabs]
-if_setop(1, "Controls", interface_116:104);
-if_setop(1, "Audio", interface_116:109);
-if_setop(1, "Display", interface_116:110);
-if_setonop("settings_side_switch_tab(0)", interface_116:104);
-if_setonop("settings_side_switch_tab(1)", interface_116:109);
-if_setonop("settings_side_switch_tab(2)", interface_116:110);
+if_setop(1, "Controls", interface_116:106);
+if_setop(1, "Audio", interface_116:111);
+if_setop(1, "Display", interface_116:112);
+if_setonop("settings_side_switch_tab(0)", interface_116:106);
+if_setonop("settings_side_switch_tab(1)", interface_116:111);
+if_setonop("settings_side_switch_tab(2)", interface_116:112);
 if (~on_mobile = true) {
-	if_setgraphic("graphic_2933", interface_116:118);
+	if_setgraphic("graphic_2933", interface_116:120);
 	return;
 }
-if_setgraphic("graphic_2932", interface_116:118);
-if_setonmouserepeat("settings_side_tab_highlight(interface_116:105, interface_116:106, interface_116:107, 0)", interface_116:104);
-if_setonmouserepeat("settings_side_tab_highlight(interface_116:111, interface_116:112, interface_116:113, 1)", interface_116:109);
-if_setonmouserepeat("settings_side_tab_highlight(interface_116:115, interface_116:116, interface_116:117, 2)", interface_116:110);
-if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:105, interface_116:106, interface_116:107, 0)", interface_116:104);
-if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:111, interface_116:112, interface_116:113, 1)", interface_116:109);
-if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:115, interface_116:116, interface_116:117, 2)", interface_116:110);
+if_setgraphic("graphic_2932", interface_116:120);
+if_setonmouserepeat("settings_side_tab_highlight(interface_116:107, interface_116:108, interface_116:109, 0)", interface_116:106);
+if_setonmouserepeat("settings_side_tab_highlight(interface_116:113, interface_116:114, interface_116:115, 1)", interface_116:111);
+if_setonmouserepeat("settings_side_tab_highlight(interface_116:117, interface_116:118, interface_116:119, 2)", interface_116:112);
+if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:107, interface_116:108, interface_116:109, 0)", interface_116:106);
+if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:113, interface_116:114, interface_116:115, 1)", interface_116:111);
+if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:117, interface_116:118, interface_116:119, 2)", interface_116:112);

@@ -7,8 +7,7 @@ if (~xptracker_get_paused($stat1) = 1) {
 }
 if (cc_find(interface_729:5, $comsubid0) = ^true) {
 	cc_setopbase("<col=ff9040><$string0> Tracker</col>");
-	cc_setop(6, "Reset");
-	cc_setop(7, "Reset all but");
+	cc_setop(6, "Set Goal");
 	cc_setop(8, "Close");
 	cc_setop(9, "Close all but");
 	cc_setop(10, $op1);

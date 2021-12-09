@@ -1,7 +1,7 @@
 // 812
-[proc,script812](int $int0, int $int1, int $int2, int $int3, int $int4)
+[proc,script812](int $int0, int $int1, int $int2, int $colour3, int $int4)
 def_int $int5 = 0;
-if ($int3 = 0) {
+if ($colour3 = null) {
 	if ($int1 <= 0) {
 		$int1 = 1;
 	}
@@ -25,6 +25,6 @@ if ($int3 = 0) {
 		}
 	}
 } else {
-	cc_setcolour(0x8f0000);
+	cc_setcolour($colour3);
 	cc_setsize($int4, cc_getheight, ^setsize_abs, ^setsize_abs);
 }

@@ -2,7 +2,7 @@
 [clientscript,ge_history_finish]
 def_int $height0 = 0;
 if (%varcint43 > 0) {
-	$height0 = calc(%varcint43 * 38);
+	$height0 = calc(%varcint43 * 46);
 } else {
 	cc_deleteall(interface_383:3);
 	cc_create(interface_383:3, ^iftype_text, 0);

@@ -1,5 +1,5 @@
 // 755
-[clientscript,trade_main_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+[clientscript,trade_main_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
 %varcint12 = 0;
 %varcint13 = 0;
 %varcint14 = 0;
@@ -28,13 +28,13 @@
 %varcint37 = 0;
 %varcint38 = 0;
 %varcint39 = 0;
-def_int $size5 = inv_size(inv_90);
+def_int $size6 = inv_size(inv_90);
 cc_deleteall($component1);
 cc_deleteall($component3);
-def_int $size6 = 0;
-while ($size6 < $size5) {
-	cc_create($component1, ^iftype_graphic, $size6);
-	.cc_create($component3, ^iftype_graphic, $size6);
+def_int $size7 = 0;
+while ($size7 < $size6) {
+	cc_create($component1, ^iftype_graphic, $size7);
+	.cc_create($component3, ^iftype_graphic, $size7);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
@@ -43,14 +43,14 @@ while ($size6 < $size5) {
 	.cc_setoutline(1);
 	cc_sethide(true);
 	.cc_sethide(true);
-	$size6 = calc($size6 + 1);
+	$size7 = calc($size7 + 1);
 }
-def_int $comsubid7 = 0;
-$size6 = 0;
-while ($size6 < $size5) {
-	$comsubid7 = calc($size5 + $size6);
-	cc_create($component1, ^iftype_graphic, $comsubid7);
-	.cc_create($component3, ^iftype_graphic, $comsubid7);
+def_int $comsubid8 = 0;
+$size7 = 0;
+while ($size7 < $size6) {
+	$comsubid8 = calc($size6 + $size7);
+	cc_create($component1, ^iftype_graphic, $comsubid8);
+	.cc_create($component3, ^iftype_graphic, $comsubid8);
 	cc_setgraphic("exclamation_mark");
 	.cc_setgraphic("exclamation_mark");
 	cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
@@ -59,9 +59,9 @@ while ($size6 < $size5) {
 	.cc_sethide(false);
 	cc_settrans(255);
 	.cc_settrans(255);
-	$size6 = calc($size6 + 1);
+	$size7 = calc($size7 + 1);
 }
-def_int $int8 = calc((36 - 10) / 2);
-~trade_main_drawitems($size5, $int8, $component1, $component2, $component3, $component4);
-if_setoninvtransmit("trade_main_drawitems($size5, $int8, $component1, $component2, $component3, $component4){inv_90}", $component0);
-if_setonvartransmit("trade_main_drawitems($size5, $int8, $component1, $component2, $component3, $component4){var1042}", $component0);
+def_int $int9 = calc((36 - 10) / 2);
+~trade_main_drawitems($size6, $int9, $component1, $component2, $component3, $component4, $component5);
+if_setoninvtransmit("trade_main_drawitems($size6, $int9, $component1, $component2, $component3, $component4, $component5){inv_90}", $component0);
+if_setonvartransmit("trade_main_drawitems($size6, $int9, $component1, $component2, $component3, $component4, $component5){var1042}", $component0);

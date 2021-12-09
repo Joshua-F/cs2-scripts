@@ -1,0 +1,16 @@
+// 5537
+[proc,script5537](int $int0)(int)
+def_int $count1 = enum_getoutputcount(enum_256);
+def_int $int2 = 0;
+def_int $count3 = 1;
+while ($count3 <= $count1) {
+	$int2 = enum(int, int, enum_256, $count3);
+	if ($int0 = $int2) {
+		return($count3);
+	}
+	if ($int0 < $int2) {
+		return(~max(calc($count3 - 1), 1));
+	}
+	$count3 = calc($count3 + 1);
+}
+return($count1);

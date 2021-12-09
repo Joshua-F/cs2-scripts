@@ -1,0 +1,11 @@
+// 5526
+[clientscript,script5526](component $component0, int $int1, component $component2)
+~settings_side_op_sound;
+%varcint2 = 0;
+if ($int1 = 0) {
+	~script5528($component0, 1, $component2);
+	%varbit13131 = 1;
+} else {
+	~script5528($component0, 0, $component2);
+	%varbit13131 = 0;
+}

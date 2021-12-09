@@ -1,0 +1,17 @@
+// 5554
+[clientscript,script5554](component $component0, int $clock1, component $component2, component $component3)
+if (%varcint949 = 0) {
+	if_setontimer(null, $component2);
+	return;
+}
+def_int $clock4 = clientclock;
+if ($clock4 >= $clock1) {
+	%varcint949 = 0;
+	~deltooltip_action($component0);
+	if_setontimer(null, $component2);
+	return;
+}
+if (calc($clock4 % 10) ! 0) {
+	return;
+}
+~script5555($component3, $component0);

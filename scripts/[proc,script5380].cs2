@@ -1,55 +1,54 @@
 // 5380
-[proc,script5380](stat $stat0)(int)
+[proc,script5380](stat $stat0, int $int1)(int)
 if (~xptracker_iscombat($stat0) = 0) {
 	return(-1);
 }
 if (%varcint568 ! %varbit6100 & %varbit6100 ! 0) {
 	%varcint568 = %varbit6100;
 }
-def_enum $enum1 = enum(int, enum, enum_3908, %varbit357);
-def_int $int2 = %var43;
-if ($int2 = 4 & %varbit2668 = 1) {
-	$int2 = 5;
+def_enum $enum2 = enum(int, enum, enum_3908, %varbit357);
+def_int $int3 = %var43;
+if ($int3 = 4 & %varbit2668 = 1) {
+	$int3 = 5;
 }
-def_struct $struct3 = enum(int, struct, $enum1, $int2);
-def_int $int4 = 0;
-if (%varbit357 = 23 | %varbit357 = 28) {
-	$int4 = 1;
-}
+def_struct $struct4 = enum(int, struct, $enum2, $int3);
 def_int $int5 = 0;
+if (%varbit357 = 23 | %varbit357 = 28) {
+	$int5 = 1;
+}
 def_int $int6 = 0;
 def_int $int7 = 0;
-if (($int4 = 1 & %var43 = 3 | %varbit2668 = 1) & $stat0 = defence) {
-	$int5 = %varcint568;
-	$int6 = %varbit13094;
-	$int7 = 3;
+def_int $int8 = 0;
+if (($int5 = 1 & %var43 = 3 | %varbit2668 = 1) & $stat0 = defence) {
+	$int6 = %varcint568;
+	$int7 = %varbit13094;
+	$int8 = 3;
 } else {
 	switch_stat ($stat0) {
 		case attack :
-			$int7 = struct_param($struct3, param_1401);
-			$int6 = %varbit13092;
+			$int8 = struct_param($struct4, param_1401);
+			$int7 = %varbit13092;
 		case strength :
-			$int7 = struct_param($struct3, param_1402);
-			$int6 = %varbit13093;
+			$int8 = struct_param($struct4, param_1402);
+			$int7 = %varbit13093;
 		case ranged :
-			$int7 = struct_param($struct3, param_1405);
-			$int6 = %varbit13091;
+			$int8 = struct_param($struct4, param_1405);
+			$int7 = %varbit13091;
 		case defence :
-			$int7 = struct_param($struct3, param_1403);
-			$int6 = %varbit13094;
+			$int8 = struct_param($struct4, param_1403);
+			$int7 = %varbit13094;
 		case hitpoints :
-			$int7 = struct_param($struct3, param_1404);
-			$int6 = %varbit13095;
+			$int8 = struct_param($struct4, param_1404);
+			$int7 = %varbit13095;
 	}
 }
-if ($int7 <= 0) {
+if ($int8 <= 0) {
 	return(-2);
 }
-$int5 = scale(%varcint568, 3, ~max(3, $int7));
-if ($int5 <= 0) {
+$int6 = scale(%varcint568, 3, ~max(3, $int8));
+if ($int6 <= 0) {
 	return(-2);
 }
-$int5 = scale($int5, 100, ~max(100, $int6));
-def_int $xp8 = stat_xp($stat0);
-def_int $int9 = enum(int, int, enum_256, calc(stat_base($stat0) + 1));
-return(calc(($int9 - $xp8 - 1) / $int5 + 1));
+$int6 = scale($int6, 100, ~max(100, $int7));
+def_int $xp9 = stat_xp($stat0);
+return(calc(($int1 - $xp9 - 1) / $int6 + 1));

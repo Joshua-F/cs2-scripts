@@ -1,42 +1,42 @@
 // 1645
-[clientscript,ge_history_addline](int $int0, obj $obj1, int $int2, int $int3, int $int4)
+[clientscript,ge_history_addline](int $int0, obj $obj1, int $int2, int $int3, int $int4, int $int5)
 if (%varcint43 < $int0) {
 	return;
 }
-def_int $int5 = calc($int0 * 6);
+def_int $int6 = calc($int0 * 6);
 if ($int3 <= 0) {
 	$int3 = 1;
 }
-def_int $int6 = 0;
-def_int $int7 = calc($int0 * 38);
-cc_create(interface_383:3, ^iftype_graphic, $int5);
-cc_setposition(0, $int7, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setsize(0, 38, ^setsize_minus, ^setsize_abs);
+def_int $int7 = 0;
+def_int $int8 = calc($int0 * 46);
+cc_create(interface_383:3, ^iftype_graphic, $int6);
+cc_setposition(0, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 46, ^setsize_minus, ^setsize_abs);
 cc_setgraphic("tradebacking_light");
 cc_settiling(true);
 if (calc($int0 % 2) = 0) {
 	cc_settrans(0);
-	cc_setonmouseover("ge_history_mouseeffect(interface_383:3, $int5, 75, calc($int5 + 3), true, $obj1, $int3)");
-	cc_setonmouseleave("ge_history_mouseeffect(interface_383:3, $int5, 0, calc($int5 + 3), false, $obj1, $int3)");
+	cc_setonmouseover("ge_history_mouseeffect(interface_383:3, $int6, 75, calc($int6 + 3), true, $obj1, $int3)");
+	cc_setonmouseleave("ge_history_mouseeffect(interface_383:3, $int6, 0, calc($int6 + 3), false, $obj1, $int3)");
 } else {
 	cc_settrans(125);
-	cc_setonmouseover("ge_history_mouseeffect(interface_383:3, $int5, 200, calc($int5 + 3), true, $obj1, $int3)");
-	cc_setonmouseleave("ge_history_mouseeffect(interface_383:3, $int5, 125, calc($int5 + 3), false, $obj1, $int3)");
+	cc_setonmouseover("ge_history_mouseeffect(interface_383:3, $int6, 200, calc($int6 + 3), true, $obj1, $int3)");
+	cc_setonmouseleave("ge_history_mouseeffect(interface_383:3, $int6, 125, calc($int6 + 3), false, $obj1, $int3)");
 }
 cc_setop(1, "Buy-offer");
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
-$int5 = calc($int5 + 1);
-cc_create(interface_383:3, ^iftype_graphic, $int5);
-$int5 = calc($int5 + 1);
-cc_setposition($int6, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_top);
+$int6 = calc($int6 + 1);
+cc_create(interface_383:3, ^iftype_graphic, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition($int7, calc($int8 + (46 - 35) / 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-$int6 = calc($int6 + 35);
-.cc_create(interface_383:3, ^iftype_text, $int5);
-$int5 = calc($int5 + 1);
-.cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
-.cc_setsize(45, 38, ^setsize_abs, ^setsize_abs);
-$int6 = calc($int6 + 45);
+$int7 = calc($int7 + 35);
+.cc_create(interface_383:3, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+.cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setsize(45, 46, ^setsize_abs, ^setsize_abs);
+$int7 = calc($int7 + 45);
 .cc_setcolour(0xff981f);
 .cc_settextfont(p11_full);
 .cc_settextshadow(true);
@@ -48,11 +48,11 @@ if ($int2 = 1) {
 	cc_setgraphic("ge_icons,2");
 	.cc_settext("Bought:");
 }
-cc_create(interface_383:3, ^iftype_text, $int5);
-$int5 = calc($int5 + 1);
-cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(170, 38, ^setsize_abs, ^setsize_abs);
-$int6 = calc($int6 + 170);
+cc_create(interface_383:3, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(170, 46, ^setsize_abs, ^setsize_abs);
+$int7 = calc($int7 + 170);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -62,31 +62,46 @@ if ($int3 >= 2) {
 } else {
 	cc_settext("<col=ffb83f><oc_name($obj1)></col>");
 }
-cc_create(interface_383:3, ^iftype_graphic, $int5);
-$int5 = calc($int5 + 1);
-cc_setposition($int6, calc($int7 + 3), ^setpos_abs_left, ^setpos_abs_top);
+cc_create(interface_383:3, ^iftype_graphic, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition($int7, calc($int8 + (46 - 32) / 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-$int6 = calc($int6 + 36);
+$int7 = calc($int7 + 36);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 cc_setobject($obj1, $int3);
-cc_create(interface_383:3, ^iftype_text, $int5);
-$int5 = calc($int5 + 1);
-cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($int6, 38, ^setsize_minus, ^setsize_abs);
+cc_create(interface_383:3, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int7, 46, ^setsize_minus, ^setsize_abs);
 cc_setcolour(0xff981f);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_int $int9 = 0;
 def_string $text0 = "";
-if ($int4 = 1) {
-	$text0 = "1 coin";
+if ($int2 = 1 & $int5 > 0) {
+	$int9 = ~max(0, calc($int4 - $int5));
+	if ($int9 = 1) {
+		$text0 = "<col=ffb83f>1 coin</col><br><col=9f9f9f>(<~tostring_spacer($int4, ",")> - <~tostring_spacer($int5, ",")>)</col>";
+	} else {
+		$text0 = "<col=ffb83f><~tostring_spacer($int9, ",")> coins</col><br><col=9f9f9f>(<~tostring_spacer($int4, ",")> - <~tostring_spacer($int5, ",")>)</col>";
+	}
+	if ($int3 > 1) {
+		cc_settext("<$text0><br>= <~tostring_spacer(calc($int9 / $int3), ",")> each");
+	} else {
+		cc_settext($text0);
+	}
 } else {
-	$text0 = "<~tostring_spacer($int4, ",")> coins";
-}
-if ($int3 >= 2) {
-	cc_settext("<$text0><br><col=9f9f9f>= <~tostring_spacer(calc($int4 / $int3), ",")> each</col>");
-} else {
-	cc_settext($text0);
+	if ($int4 = 1) {
+		$text0 = "<col=ffb83f>1 coin</col>";
+	} else {
+		$text0 = "<col=ffb83f><~tostring_spacer($int4, ",")> coins</col>";
+	}
+	if ($int3 > 1) {
+		cc_settext("<$text0><br>= <~tostring_spacer(calc($int4 / $int3), ",")> each");
+	} else {
+		cc_settext($text0);
+	}
 }
 %varcint43 = calc($int0 + 1);

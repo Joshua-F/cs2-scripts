@@ -1,0 +1,28 @@
+// 5734
+[clientscript,script5734](int $int0, int $comsubid1, obj $obj2, string $string0)
+if ($int0 = 1) {
+	cc_deleteall(interface_731:12);
+	%varcint43, %varcint49, %varcint58 = 0, 0, -1;
+	cc_deleteall(interface_731:13);
+	cc_deleteall(interface_731:3);
+	if_sethide(true, interface_731:3);
+}
+if ($comsubid1 ! %varcint43 | $obj2 = null) {
+	return;
+}
+cc_create(interface_731:12, ^iftype_rectangle, $comsubid1);
+%varcint43 = calc(%varcint43 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^white);
+cc_setfill(false);
+cc_settrans(255);
+cc_setontimer("script5735(event_com, event_comsubid, $obj2, $string0, %varcint49)");
+%varcint49 = calc(%varcint49 + 40);
+if ($int0 = 2) {
+	%varcint58 = %varcint49;
+	~scrollbar_vertical(interface_731:13, interface_731:12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~script5736(%varcint49, if_getheight(interface_731:0));
+	if_sethide(false, interface_731:3);
+	~ge_offers_bigbutton(interface_731:3, "Refresh", 0);
+}

@@ -1,11 +1,11 @@
 // 5366
 [proc,xptracker_create_text](int $comsubid0, stat $stat1)
-def_int $width2 = parawidth("XP->Lvl: ", 512, p11_full);
+def_int $width2 = parawidth("XP>Goal: ", 512, p11_full);
 def_int $width3 = parawidth("88.888M", 512, p11_full);
-def_int $width4 = parawidth("    XP Gained: ", 512, p11_full);
+def_int $width4 = parawidth("  XP Gained: ", 512, p11_full);
 def_int $width5 = parawidth("88.888M", 512, p11_full);
 def_int $height6 = calc(48 - 25 + 5);
-def_int $int7 = calc(2 * 3);
+def_int $int7 = calc(2 * 2);
 def_int $y8 = calc(%varcint562 + 2 * 2);
 cc_create(interface_729:12, ^iftype_text, $comsubid0);
 cc_settextshadow(true);
@@ -14,7 +14,7 @@ cc_settextfont(p11_full);
 cc_setcolour(0xcccccc);
 cc_setposition(calc($int7 + $width5 + $width4 + $width3), $y8, ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize($width2, $height6, ^setsize_abs, ^setsize_abs);
-cc_settext("XP/Hr: <br>XP->Lvl: ");
+cc_settext("XP/Hr: <br>XP>Lvl: ");
 cc_create(interface_729:13, ^iftype_text, $comsubid0);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_right, ^settextalign_top, 12);
@@ -29,7 +29,7 @@ cc_settextfont(p11_full);
 cc_setcolour(0xcccccc);
 cc_setposition(calc($int7 + $width5), $y8, ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize($width4, $height6, ^setsize_abs, ^setsize_abs);
-cc_settext("    XP Gained: <br>    Acts->Lvl: ");
+cc_settext("  XP Gained: <br>  Acts>Lvl: ");
 cc_create(interface_729:15, ^iftype_text, $comsubid0);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_right, ^settextalign_top, 12);

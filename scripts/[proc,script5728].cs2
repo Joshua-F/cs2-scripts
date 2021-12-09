@@ -1,0 +1,107 @@
+// 5728
+[proc,script5728](newvar $newvar0, loc $loc1, coord $coord2, int $lvl3, int $lvl4, int $lvl5, string $string0, boolean $boolean6)
+_104($newvar0);
+if (%varbit13136 = 1) {
+	return;
+}
+def_int $int7 = 0;
+def_int $int8 = 4;
+_103($newvar0, ^iftype_graphic, $int7);
+$int7 = calc($int7 + 1);
+cc_setgraphic("tradebacking");
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settrans(110);
+cc_settiling(true);
+$int7 = ~script4650($newvar0, $int7);
+def_int $int9 = 0;
+if ($lvl3 > 0) {
+	_103($newvar0, ^iftype_graphic, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setposition(-15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setgraphic("staticons,7");
+	_103($newvar0, ^iftype_text, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setposition(15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	if ($lvl3 > stat(agility)) {
+		cc_setcolour(^red);
+	} else {
+		cc_setcolour(^green);
+	}
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext(tostring($lvl3));
+	$int8 = calc($int8 + 25);
+}
+if ($lvl4 > 0) {
+	_103($newvar0, ^iftype_graphic, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setposition(-15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setgraphic("staticons,1");
+	_103($newvar0, ^iftype_text, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setposition(15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	if ($lvl4 > stat(strength)) {
+		cc_setcolour(^red);
+	} else {
+		cc_setcolour(^green);
+	}
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext(tostring($lvl4));
+	$int8 = calc($int8 + 25);
+}
+if ($lvl5 > 0) {
+	_103($newvar0, ^iftype_graphic, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setposition(-15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setgraphic("staticons,3");
+	_103($newvar0, ^iftype_text, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setposition(15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	if ($lvl5 > stat(ranged)) {
+		cc_setcolour(^red);
+	} else {
+		cc_setcolour(^green);
+	}
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext(tostring($lvl5));
+	$int8 = calc($int8 + 25);
+}
+$int9 = calc($int9 + 60);
+$int8 = calc($int8 + 4);
+def_int $int10 = 0;
+if (string_length($string0) > 0) {
+	$int10 = ~min(162, parawidth($string0, 162, p12_full));
+	_103($newvar0, ^iftype_text, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setposition(0, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize($int10, calc(14 * paraheight($string0, $int10, p12_full)), ^setsize_abs, ^setsize_abs);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+	cc_settextshadow(true);
+	cc_settext($string0);
+}
+if ($int10 > $int9) {
+	$int8 = calc($int8 + 14 * paraheight($string0, $int10, p12_full));
+	$int9 = calc($int10 + 8);
+} else {
+	if ($int10 > 0) {
+		$int8 = calc($int8 + 14 * paraheight($string0, $int9, p12_full));
+	}
+	$int9 = calc($int9 + 8);
+}
+$int8 = calc($int8 + 4);
+if (_202($newvar0) = ^true) {
+	cc_setsize($int9, $int8, ^setsize_abs, ^setsize_abs);
+}

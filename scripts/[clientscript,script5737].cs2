@@ -1,0 +1,9 @@
+// 5737
+[clientscript,script5737](int $int0, int $height1)
+if (%varcint58 <= -1) {
+	return;
+}
+def_int $height2 = if_getheight(interface_731:0);
+if ($height2 ! $height1) {
+	~script5736($int0, $height2);
+}

@@ -1,0 +1,14 @@
+// 5725
+[proc,script5725](newvar $newvar0, loc $loc1, coord $coord2, int $lvl3, int $lvl4, int $lvl5, string $string0, boolean $boolean6)
+if (~on_mobile = true | %varbit13136 = 1 | enum(coord, int, enum_4080, $coord2) = 1) {
+	return;
+}
+_103($newvar0, ^iftype_graphic, 0);
+cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("staticons,7");
+if (_202($newvar0) = ^true) {
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setonmouseleave("script5726($newvar0, $loc1, $coord2)");
+	cc_setonmouseover("script5727($newvar0, $loc1, $coord2, $lvl3, $lvl4, $lvl5, $string0, $boolean6)");
+}

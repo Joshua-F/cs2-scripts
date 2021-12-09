@@ -23,6 +23,9 @@ switch_int ($int1) {
 			return(0);
 		}
 		return(1);
-	case default :
-		return(1);
+	case 206 :
+		if (~deadman_mode ! 0) {
+			return(0);
+		}
 }
+return(1);

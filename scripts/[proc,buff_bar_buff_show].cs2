@@ -37,5 +37,9 @@ switch_int ($int0) {
 		if (%var3160 = null | inv_getobj(worn, 3) ! %var3160 | %var3159 <= 0) {
 			return(0);
 		}
+	case 46 :
+		if (%varbit13137 <= 0 | inv_getobj(worn, 2) = desert_amulet_4_13136) {
+			return(0);
+		}
 }
 return(1);

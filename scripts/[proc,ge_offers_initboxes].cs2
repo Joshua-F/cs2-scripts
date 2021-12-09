@@ -111,7 +111,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 def_int $comsubid17 = -1;
 if ($boolean0 = false) {
-	$int1 = ~ge_textbox($component2, $int1, 130, 172, calc($width5 - 260));
+	$int1 = ~ge_textbox($component2, $int1, 30, 172, calc($width5 - 60));
 	cc_create($component2, ^iftype_text, $int1);
 	$comsubid17 = $int1;
 	$int1 = calc($int1 + 1);

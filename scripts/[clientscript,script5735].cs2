@@ -1,0 +1,74 @@
+// 5735
+[clientscript,script5735](component $component0, int $comsubid1, obj $obj2, string $string0, int $height3)
+if (%varcint58 <= -1) {
+	return;
+}
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_string $text1 = "";
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setontimer(null);
+	cc_setfill(true);
+	cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $height3, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+	if (calc($comsubid1 % 2) = 0) {
+		cc_settrans(255);
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+	} else {
+		cc_settrans(240);
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 240, null)");
+	}
+	cc_setop(1, "Set coffer:");
+	cc_setop(2, "Set total:");
+	cc_setopbase("<col=ff9040><oc_name($obj2)></col>");
+	cc_create(interface_731:12, ^iftype_graphic, %varcint43);
+	%varcint43 = calc(%varcint43 + 1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, calc($height3 + (40 - 32) / 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum($obj2, 1);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x333333);
+	$int4 = calc($int4 + 36 + 2);
+	$int5 = calc(if_getx(interface_731:9) - if_getx(interface_731:12));
+	cc_create(interface_731:12, ^iftype_text, %varcint43);
+	%varcint43 = calc(%varcint43 + 1);
+	cc_setsize(calc($int5 - $int4 - 2), 40, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int4, $height3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0xffb83f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_settext(oc_name($obj2));
+	$int4, $int5 = $int5, calc($int5 + if_getwidth(interface_731:9));
+	cc_create(interface_731:12, ^iftype_text, %varcint43);
+	%varcint43 = calc(%varcint43 + 1);
+	cc_setsize(calc($int5 - $int4), 40, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int4, $height3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$text1, $string0 = ~script632($string0);
+	cc_settext($text1);
+	$int4, $int5 = $int5, calc($int5 + if_getwidth(interface_731:10));
+	cc_create(interface_731:12, ^iftype_text, %varcint43);
+	%varcint43 = calc(%varcint43 + 1);
+	cc_setsize(calc($int5 - $int4), 40, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int4, $height3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$text1, $string0 = ~script632($string0);
+	cc_settext($text1);
+	cc_create(interface_731:12, ^iftype_text, %varcint43);
+	%varcint43 = calc(%varcint43 + 1);
+	cc_setsize($int5, 40, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $height3, ^setpos_abs_right, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext($string0);
+}

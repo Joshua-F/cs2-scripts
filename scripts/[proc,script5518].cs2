@@ -1,0 +1,6 @@
+// 5518
+[proc,script5518]
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+%varbit13133 = calc(1 - %varbit13133);

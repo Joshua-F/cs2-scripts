@@ -1,11 +1,23 @@
 // 5372
 [proc,script5372](stat $stat0)
 def_int $comsubid1 = ~xptracker_get_id($stat0);
-def_int $lvl2 = stat_base($stat0);
+def_string $text0 = "";
+def_int $int2 = 0;
+def_int $int3 = 0;
+$int2, $int3 = ~xpdrops_data_get($stat0);
+def_int $int4 = enum(int, int, enum_1162, $int2);
+switch_int (~script5534($stat0)) {
+	case 0, 3 :
+		$text0 = append("Lvl. ", tostring(~script5536($stat0)));
+	case 1 :
+		if ($int4 ! -1) {
+			$text0 = append("Lvl. ", tostring($int4));
+		} else {
+			$text0 = "Start";
+		}
+	case 2 :
+		$text0 = "";
+}
 if (cc_find(interface_729:10, $comsubid1) = ^true) {
-	if ($lvl2 < 99) {
-		cc_settext(append("Lvl. ", tostring($lvl2)));
-	} else {
-		cc_settext("");
-	}
+	cc_settext($text0);
 }

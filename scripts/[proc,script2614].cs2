@@ -83,7 +83,7 @@ switch_component ($component1) {
 if (~magic_spellbook_hasrunes($obj0) = 0) {
 	return(0, null);
 }
-if ($component1 = magic_spellbook:69 & (%varbit2010 = 0 | %varbit5604 >= 5)) {
+if (~script5556($obj0) = 0) {
 	if ($int2 >= 40) {
 		return(0, "graphic_3362");
 	}

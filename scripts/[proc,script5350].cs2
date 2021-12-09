@@ -18,9 +18,6 @@ if ($minimenu_entry_type0 = ^minimenu_entry_type_loc & loc_find_active_minimenu_
 	return;
 }
 if ($minimenu_entry_type0 = ^minimenu_entry_type_obj & obj_find_active_minimenu_entry = true) {
-	%varcint557 = obj_type;
-	%varcint558 = obj_coord;
-	highlight_obj_on(obj_type, obj_coord, 5, 1);
 	return;
 }
 if ($minimenu_entry_type0 = ^minimenu_entry_type_player & player_find_active_minimenu_entry = true) {

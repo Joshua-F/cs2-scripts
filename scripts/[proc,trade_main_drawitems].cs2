@@ -1,5 +1,5 @@
 // 763
-[proc,trade_main_drawitems](int $size0, int $int1, component $component2, component $component3, component $component4, component $component5)
+[proc,trade_main_drawitems](int $size0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
 if (%varbit4374 = 1) {
 	if_settext("Trade modified", $component3);
 } else {
@@ -11,16 +11,16 @@ if (%varbit4375 = 1) {
 	if_settext("", $component5);
 }
 def_int $intarray0(4);
-def_int $int6 = calc($size0 / 4);
-if ($int6 < 2) {
-	$int6 = 2;
+def_int $int7 = calc($size0 / 4);
+if ($int7 < 2) {
+	$int7 = 2;
 }
-def_int $int7 = calc((if_getheight($component2) - $int6 * 32) / ($int6 - 1));
-def_int $int8 = calc((if_getwidth($component2) - 12 - 4 * 36) / 3);
+def_int $int8 = calc((if_getheight($component2) - $int7 * 32) / ($int7 - 1));
+def_int $int9 = calc((if_getwidth($component2) - 12 - 4 * 36) / 3);
 $intarray0(0) = 6;
-$intarray0(1) = calc($intarray0(0) + $int8 + 36);
-$intarray0(2) = calc($intarray0(1) + $int8 + 36);
-$intarray0(3) = calc($intarray0(2) + $int8 + 36);
+$intarray0(1) = calc($intarray0(0) + $int9 + 36);
+$intarray0(2) = calc($intarray0(1) + $int9 + 36);
+$intarray0(3) = calc($intarray0(2) + $int9 + 36);
 def_int $intarray1($size0);
 $intarray1(0) = %varcint81;
 $intarray1(1) = %varcint82;
@@ -50,47 +50,47 @@ $intarray1(24) = %varcint106;
 $intarray1(25) = %varcint107;
 $intarray1(26) = %varcint108;
 $intarray1(27) = %varcint109;
-def_obj $obj9 = null;
-def_int $int10 = 0;
+def_obj $obj10 = null;
 def_int $int11 = 0;
-def_int $index12 = 0;
-def_int $int13 = 0;
-def_int $y14 = 0;
-def_int $size15 = 0;
-while ($size15 < $size0) {
-	if (cc_find($component2, $size15) = ^true & .cc_find($component2, calc($size0 + $size15)) = ^true) {
-		$obj9 = inv_getobj(inv_90, $size15);
-		if ($obj9 ! null) {
-			$int10 = inv_getnum(inv_90, $size15);
+def_int $int12 = 0;
+def_int $index13 = 0;
+def_int $int14 = 0;
+def_int $y15 = 0;
+def_int $size16 = 0;
+while ($size16 < $size0) {
+	if (cc_find($component2, $size16) = ^true & .cc_find($component2, calc($size0 + $size16)) = ^true) {
+		$obj10 = inv_getobj(inv_90, $size16);
+		if ($obj10 ! null) {
+			$int11 = inv_getnum(inv_90, $size16);
 			cc_sethide(false);
-			cc_setobject($obj9, $int10);
+			cc_setobject($obj10, $int11);
 			cc_setop(1, "Remove");
 			cc_setop(2, "Remove-5");
 			cc_setop(3, "Remove-10");
 			cc_setop(4, "Remove-All");
 			cc_setop(5, "Remove-X");
 			cc_setop(10, "Examine");
-			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
-			~trade_tooltip($int10, $intarray1($size15), trademain:32);
+			cc_setopbase("<col=ff9040><oc_name($obj10)></col>");
+			~trade_tooltip($int11, $intarray1($size16), trademain:32);
 		} else {
 			cc_sethide(true);
 			cc_clearops;
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-		$index12, $int11 = calc($size15 % 4), calc($size15 / 4);
-		$int13 = $intarray0($index12);
-		$y14 = calc($int11 * (32 + $int7));
-		cc_setposition($int13, $y14, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition(calc($int13 + $int1), $y14, ^setpos_abs_left, ^setpos_abs_top);
+		$index13, $int12 = calc($size16 % 4), calc($size16 / 4);
+		$int14 = $intarray0($index13);
+		$y15 = calc($int12 * (32 + $int8));
+		cc_setposition($int14, $y15, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int14 + $int1), $y15, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	$size15 = calc($size15 + 1);
+	$size16 = calc($size16 + 1);
 }
-$int8 = calc((if_getwidth($component4) - 12 - 4 * 36) / 3);
+$int9 = calc((if_getwidth($component4) - 12 - 4 * 36) / 3);
 $intarray0(0) = 6;
-$intarray0(1) = calc($intarray0(0) + $int8 + 36);
-$intarray0(2) = calc($intarray0(1) + $int8 + 36);
-$intarray0(3) = calc($intarray0(2) + $int8 + 36);
+$intarray0(1) = calc($intarray0(0) + $int9 + 36);
+$intarray0(2) = calc($intarray0(1) + $int9 + 36);
+$intarray0(3) = calc($intarray0(2) + $int9 + 36);
 $intarray1(0) = %varcint110;
 $intarray1(1) = %varcint111;
 $intarray1(2) = %varcint112;
@@ -119,28 +119,38 @@ $intarray1(24) = %varcint134;
 $intarray1(25) = %varcint135;
 $intarray1(26) = %varcint136;
 $intarray1(27) = %varcint137;
-$size15 = 0;
-while ($size15 < $size0) {
-	if (cc_find($component4, $size15) = ^true & .cc_find($component4, calc($size0 + $size15)) = ^true) {
-		$obj9 = invother_getobj(inv_90, $size15);
-		if ($obj9 ! null) {
-			$int10 = invother_getnum(inv_90, $size15);
+$size16 = 0;
+while ($size16 < $size0) {
+	if (cc_find($component4, $size16) = ^true & .cc_find($component4, calc($size0 + $size16)) = ^true) {
+		$obj10 = invother_getobj(inv_90, $size16);
+		if ($obj10 ! null) {
+			$int11 = invother_getnum(inv_90, $size16);
 			cc_sethide(false);
-			cc_setobject($obj9, $int10);
+			cc_setobject($obj10, $int11);
 			cc_setop(10, "Examine");
-			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
-			~trade_tooltip($int10, $intarray1($size15), trademain:32);
+			cc_setopbase("<col=ff9040><oc_name($obj10)></col>");
+			~trade_tooltip($int11, $intarray1($size16), trademain:32);
 		} else {
 			cc_sethide(true);
 			cc_clearops;
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-		$index12, $int11 = calc($size15 % 4), calc($size15 / 4);
-		$int13 = $intarray0($index12);
-		$y14 = calc($int11 * (32 + $int7));
-		cc_setposition($int13, $y14, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition(calc($int13 + $int1), $y14, ^setpos_abs_left, ^setpos_abs_top);
+		$index13, $int12 = calc($size16 % 4), calc($size16 / 4);
+		$int14 = $intarray0($index13);
+		$y15 = calc($int12 * (32 + $int8));
+		cc_setposition($int14, $y15, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int14 + $int1), $y15, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	$size15 = calc($size15 + 1);
+	$size16 = calc($size16 + 1);
+}
+def_int $int17 = 0;
+if (%varbit13141 > 0) {
+	$int17 = ~min(3, ~script5533(%varbit13141));
+	if_settext("Check offer!<br><tostring($int17)>...", $component6);
+	if_setcolour(0x666666, $component6);
+} else {
+	if_settext("Accept", $component6);
+	if_setcolour(0x00c000, $component6);
+	if_setonop(null, trademain:10);
 }

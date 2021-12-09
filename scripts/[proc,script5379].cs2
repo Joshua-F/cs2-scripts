@@ -1,10 +1,9 @@
 // 5379
-[proc,script5379](stat $stat0)(int)
-def_int $xp1 = stat_xp($stat0);
-def_int $int2 = enum(int, int, enum_256, calc(stat_base($stat0) + 1));
+[proc,script5379](stat $stat0, int $int1)(int)
+def_int $xp2 = stat_xp($stat0);
 def_int $int3 = ~script5459($stat0);
 def_int $int4 = -1;
 if ($int3 > 0) {
-	$int4 = calc(($int2 - $xp1 - 1) / $int3 + 1);
+	$int4 = calc(($int1 - $xp2 - 1) / $int3 + 1);
 }
 return($int4);

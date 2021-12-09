@@ -3,6 +3,7 @@
 %varcint198 = 1;
 if (%varbit5811 >= 100 | %varbit5811 = 0) {
 	if_settrans(255, $component0);
+	if_sethide(true, $component0);
 	if_setontimer(null, $component1);
 	%varcint198 = 0;
 	return;

@@ -3,14 +3,14 @@
 cc_deleteall($component0);
 def_int $int2 = 17;
 def_int $int3 = 17;
-def_int $width4 = calc(if_getwidth($component0) - $int2);
+def_int $width4 = calc(if_getwidth($component0) - $int2 - 2);
 cc_create($component0, ^iftype_text, 0);
 cc_setsize($width4, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
-cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 10);
 cc_settext("Music unlock message");
 cc_create($component0, ^iftype_graphic, 1);
 cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);

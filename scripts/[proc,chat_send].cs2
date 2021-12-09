@@ -19,7 +19,7 @@ if ($int2 = 1) {
 	switch_int (%varcint945) {
 		case 1 :
 			$int0 = 2;
-			if (string_length($string0) > 0 & compare(substring($string0, 0, 1), "/") = 1) {
+			if (string_length($string0) > 0 & compare(substring($string0, 0, 1), "/") ! 0) {
 				$string0 = append("/", $string0);
 			}
 		case 2 :

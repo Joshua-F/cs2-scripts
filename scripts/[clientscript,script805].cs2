@@ -7,12 +7,28 @@ sound_synth(interface_select1, 1, 0);
 if ($opindex0 ! 1) {
 	return;
 }
-def_inv $inv10 = enum(int, inv, enum_150, $int1);
-if ($inv10 = null) {
+def_obj $obj10 = null;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_inv $inv13 = enum(int, inv, enum_150, $int1);
+if ($inv13 = null) {
 	%varbit4439 = 0;
 } else {
-	if (stockmarket_isofferempty($int1) = true & (inv_getobj($inv10, 0) ! null | inv_getobj($inv10, 1) ! null)) {
-		return;
+	if (stockmarket_isofferempty($int1) = true) {
+		$obj10, $int11 = ~script5733($int1);
+		if ($obj10 ! null) {
+			$int2 = 1;
+		} else if (inv_getobj($inv13, 0) ! null | inv_getobj($inv13, 1) ! null) {
+			return;
+		}
+	}
+	$inv13 = enum(int, inv, enum_150, $int12);
+	while ($inv13 ! null) {
+		if (~script5732($int12) >= ^max_32bit_int) {
+			return;
+		}
+		$int12 = calc($int12 + 1);
+		$inv13 = enum(int, inv, enum_150, $int12);
 	}
 	%varbit4439 = calc($int1 + 1);
 	if ($int2 ! -1 & stockmarket_isofferempty($int1) = true) {

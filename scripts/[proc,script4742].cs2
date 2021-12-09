@@ -1,6 +1,12 @@
 // 4742
-[proc,script4742](string $string0, string $string1)(string)
-if (compare($string0, "") = 0) {
+[proc,script4742](string $string0, string $string1, string $string2)(string)
+if (chat_gettimestamps = 0 | ~script5529($string0) = 1) {
 	return($string1);
+}
+if (~script5529(~script5530($string1)) = 1) {
+	return($string1);
+}
+if (~script5529($string2) = 0) {
+	$string0 = "<$string2><$string0></col>";
 }
 return("<$string0> <$string1>");

@@ -1,0 +1,37 @@
+// 5523
+[clientscript,script5523](component $component0, component $component1)
+cc_deleteall($component0);
+def_int $int2 = 17;
+def_int $int3 = 17;
+def_int $width4 = calc(if_getwidth($component0) - $int2 - 2);
+def_int $int5 = ~deadman_mode;
+cc_create($component0, ^iftype_text, 0);
+cc_setsize($width4, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
+if ($int5 ! 0) {
+	cc_setcolour(0x9f9f9f);
+} else {
+	cc_setcolour(0xff981f);
+}
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 10);
+cc_settext("PK Skull Prevention");
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, calc(if_getheight($component0) / 2 - $int3 / 2 - 1), ^setpos_abs_left, ^setpos_abs_top);
+%varcint2 = 0;
+if ($int5 ! 0) {
+	cc_setgraphic("options_radio_buttons,1");
+} else if (%varbit13131 = 1) {
+	cc_setgraphic("options_radio_buttons,6");
+} else {
+	cc_setgraphic("options_radio_buttons,5");
+}
+if_setonmouseleave("script5525($component0, $component1, $int5)", $component0);
+if_setonmouserepeat("script5524($component0, $component1, $int5)", $component0);
+if ($int5 ! 0) {
+	return;
+}
+if_setonop("script5526($component0, %varbit13131, $component1)", $component0);
+if_setonvartransmit("script5527($component0, $component1){var3075}", $component0);

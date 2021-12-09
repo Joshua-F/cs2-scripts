@@ -12,7 +12,7 @@ def_int $int8 = 0;
 if (cc_find($component4, $int6) = ^true) {
 	$int8 = ~buff_bar_get_number($int0);
 	$int8 = ~script4666($int1, $int8);
-	cc_setontimer("buff_bar_buff_timer($component4, $component5, $int6, clientclock, $int8, $int0, $int1, $int7, struct_param($struct2, param_1290), struct_param($struct2, param_1291), 0, 0)");
+	cc_setontimer("buff_bar_buff_timer($component4, $component5, $int6, clientclock, $int8, $int0, $int1, $int7, struct_param($struct2, param_1290), ~script5548($int0, $struct2), 0, 0)");
 }
 if (cc_find($component4, $int6) = ^true) {
 	~buff_bar_get_transmit($int0, $int1, $struct2, $int7, $component4, $component5, $int6);
