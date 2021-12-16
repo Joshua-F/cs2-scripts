@@ -1,13 +1,10 @@
 // 5243
 [proc,ca_task_is_disabled](struct $struct0)(int)
-if (~is_group_iron = 1) {
-	switch_int (%varbit13049) {
-		case 2 :
-			return(enum(struct, int, enum_4049, $struct0));
-		case 3 :
-			return(enum(struct, int, enum_4050, $struct0));
-		case 4 :
-			return(enum(struct, int, enum_4051, $struct0));
-	}
+if (%varbit13049 <= 1 | %varbit13049 >= 5) {
+	return(0);
+}
+def_int $int1 = struct_param($struct0, param_1425);
+if (%varbit13049 <= $int1) {
+	return(1);
 }
 return(0);

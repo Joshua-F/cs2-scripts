@@ -1,5 +1,6 @@
 // 3965
 [proc,settings_clicked_toggle](int $int0)
+~debug_mes("$setting_id <tostring($int0)>");
 %varbit9657 = $int0;
 switch_int ($int0) {
 	case 7 :

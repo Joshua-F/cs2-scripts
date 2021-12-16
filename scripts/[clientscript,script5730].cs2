@@ -5,7 +5,12 @@ def_int $width2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
 if (string_length($string1) > 0) {
-	$string2, $width2 = "<$string0><br><br><$string1>", if_getwidth($component0);
+	$width2 = if_getwidth($component0);
+	if (paraheight($string0, $width2, p11_full) <= 2) {
+		$string2 = "<$string0><br><br><$string1>";
+	} else {
+		$string2 = "<$string0><br><$string1>";
+	}
 	$int3, $int4 = calc(if_getx($component0) + parawidth($string1, $width2, p11_full) + 5), calc(if_gety($component0) + paraheight($string2, $width2, p11_full) * 15 + 2);
 	$int3, $int4 = calc($int3 - (if_getwidth($component1) - 15) / 2), calc($int4 - (11 + if_getheight($component1) / 2));
 	if_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top, $component1);

@@ -5165,6 +5165,8 @@
 [**5162**](scripts/[worldmapelementmouseleave,mapelement_848].cs2) `[worldmapelementmouseleave,mapelement_848]`  
 [**5163**](scripts/[worldmapelementmouseleave,mapelement_849].cs2) `[worldmapelementmouseleave,mapelement_849]`  
 [**5164**](scripts/[worldmapelementmouseleave,mapelement_850].cs2) `[worldmapelementmouseleave,mapelement_850]`  
+[**5165**](scripts/[clientscript,script5165].cs2)  
+[**5166**](scripts/[proc,script5166].cs2)  
 [**5167**](scripts/[clientscript,helper_agility_highlight_course].cs2) `[clientscript,helper_agility_highlight_course]`  
 [**5168**](scripts/[proc,helper_agility_highlight_starts].cs2) `[proc,helper_agility_highlight_starts]`  
 [**5169**](scripts/[proc,helper_agility_highlight_course].cs2) `[proc,helper_agility_highlight_course]`  
