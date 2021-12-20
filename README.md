@@ -4742,7 +4742,7 @@
 [**4739**](scripts/[proc,script4739].cs2)  
 [**4740**](scripts/[proc,script4740].cs2)  
 [**4741**](scripts/[clientscript,blast_furnace_plan_init].cs2) `[clientscript,blast_furnace_plan_init]`  
-[**4742**](scripts/[proc,script4742].cs2)  
+[**4742**](scripts/[proc,affixtimestamp].cs2) `[proc,affixtimestamp]`  
 [**4743**](scripts/[proc,script4743].cs2)  
 [**4744**](scripts/[clientscript,highlight_npc_on].cs2) `[clientscript,highlight_npc_on]`  
 [**4745**](scripts/[clientscript,highlight_npc_off].cs2) `[clientscript,highlight_npc_off]`  

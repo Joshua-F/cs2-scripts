@@ -16,7 +16,7 @@ def_component $component1 = interface_160:36;
 if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
 	$component1 = interface_311:38;
 }
-cc_create($component1, 10, 0);
+cc_create($component1, ^iftype_arc, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0x03cffd);

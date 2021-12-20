@@ -129,8 +129,8 @@ switch_int ($chattype0) {
 			return(1);
 		}
 		return(0);
-	case 41, 44, 43, 46, 109, 110, 111, 112 :
-		if ($chattype0 = 43 & ~gim_notification_message($string2) = 1) {
+	case ^chattype_clanchat, ^chattype_clanguestchat, ^chattype_clanmessage, ^chattype_clanguestmessage, ^chattype_clancreationinvitation, ^chattype_chalreq_clanchat, 111, 112 :
+		if ($chattype0 = ^chattype_clanmessage & ~gim_notification_message($string2) = 1) {
 			if ($clock1 < %varcint946) {
 				return(0);
 			}
@@ -139,7 +139,7 @@ switch_int ($chattype0) {
 			}
 			return(1);
 		}
-		if ($chattype0 = 41 & ~script5501($string2) = 1) {
+		if ($chattype0 = ^chattype_clanchat & ~script5501($string2) = 1) {
 			if ($clock1 < %varcint946) {
 				return(0);
 			}
@@ -160,7 +160,7 @@ switch_int ($chattype0) {
 		if ($clock1 < %varcint440) {
 			return(0);
 		}
-		if (%varbit931 = 1 & ($chattype0 = 41 | $chattype0 = 43)) {
+		if (%varbit931 = 1 & ($chattype0 = ^chattype_clanchat | $chattype0 = ^chattype_clanmessage)) {
 			return(0);
 		}
 		if (compare($string3, removetags($string0)) = 0) {

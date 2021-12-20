@@ -56,7 +56,7 @@ if (%varcint55 >= %varcint202 & %varcint55 > calc(clientclock - 3000) & chat_get
 	if ($mesuid12 ! -1) {
 		$string0, $string4, $int16 = ~chat_broadcast_parseurl($string0);
 		if ($int16 ! 4 | reboottimer <= 0) {
-			$int7 = calc($int7 + ~script199(~script4742($string2, "<$string6><$string0></col>", "null"), $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
+			$int7 = calc($int7 + ~script199(~affixtimestamp($string2, "<$string6><$string0></col>", "null"), $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
 			if_clearops($component10);
 			if (string_length($string4) > 0 & $int16 ! -1) {
 				if_setop(6, "Open", $component10);
@@ -84,17 +84,17 @@ if (%var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0)) {
 		if (~pm_filtertest($chattype18, $string1, $int13, $int14) = 1) {
 			switch_int ($chattype18) {
 				case ^chattype_privatechat, ^chattype_modprivatechat :
-					$int7 = calc($int7 + ~script203(~script4742($string2, "<$string5>From <$string1>:</col>", $string5), "<$string5><$string0></col>", $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
+					$int7 = calc($int7 + ~script203(~affixtimestamp($string2, "<$string5>From <$string1>:</col>", $string5), "<$string5><$string0></col>", $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 				case ^chattype_privatechatout :
-					$int7 = calc($int7 + ~script203(~script4742($string2, "<$string5>To <$string1>:</col>", $string5), "<$string5><$string0></col>", $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
+					$int7 = calc($int7 + ~script203(~affixtimestamp($string2, "<$string5>To <$string1>:</col>", $string5), "<$string5><$string0></col>", $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 				case ^chattype_loginlogoutnotification :
-					$int7 = calc($int7 + ~script199(~script4742($string2, "<$string5><$string0></col>", $string5), $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
+					$int7 = calc($int7 + ~script199(~affixtimestamp($string2, "<$string5><$string0></col>", $string5), $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 					if ($int19 = 0) {
 						%varcint65 = calc($int13 + 500 + 1);
 						if_setontimer("script664(false)", interface_162:0);
 					}
 				case default :
-					$int7 = calc($int7 + ~script199(~script4742($string2, $string0, "null"), $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
+					$int7 = calc($int7 + ~script199(~affixtimestamp($string2, $string0, "null"), $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 			}
 			if_clearops($component10);
 			if ($chattype18 = ^chattype_privatechat | $chattype18 = ^chattype_privatechatout | $chattype18 = ^chattype_modprivatechat) {

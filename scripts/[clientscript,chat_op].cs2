@@ -9,7 +9,7 @@ switch_int ($opindex0) {
 	case 8 :
 		%varcstring370 = $string1;
 	case 9 :
-		if ($chattype1 = 41) {
+		if ($chattype1 = ^chattype_clanchat) {
 			if (activeclanchannel_find_affined(^clantype_clan) = true) {
 				~clan_sidepanel_op(7, -1, $string1, activeclanchannel_getuserslot($string1));
 			} else {
@@ -19,7 +19,7 @@ switch_int ($opindex0) {
 			~friendschat_sendkick($string1);
 		}
 	case 10 :
-		if ($chattype1 = 41) {
+		if ($chattype1 = ^chattype_clanchat) {
 			if (activeclanchannel_find_affined(^clantype_clan) = true) {
 				~clan_sidepanel_op(8, -1, $string1, activeclanchannel_getuserslot($string1));
 			} else {

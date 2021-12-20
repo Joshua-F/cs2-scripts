@@ -12,7 +12,7 @@ def_int $int4 = 0;
 if (if_hassub(interface_162:558) = true & %varbit11879 = 1) {
 	$chattype1, $int2, $string0, $string1, $string2, $int3, $string3, $int4 = chat_gethistoryex_byuid($mesuid0);
 	if (~meslayer_mode1_enabled($chattype1) = 1) {
-		~meslayer_mode1(~script4742($string3, $string2, "null"));
+		~meslayer_mode1(~affixtimestamp($string3, $string2, "null"));
 	}
 }
 ~rebuildchatbox($mesuid0);

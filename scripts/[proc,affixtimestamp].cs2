@@ -1,5 +1,5 @@
 // 4742
-[proc,script4742](string $string0, string $string1, string $string2)(string)
+[proc,affixtimestamp](string $string0, string $string1, string $string2)(string)
 if (~on_enhanced_any = 0 | chat_gettimestamps = 0 | ~script5529($string0) = 1) {
 	return($string1);
 }
