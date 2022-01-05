@@ -376,6 +376,9 @@ switch_int ($int0) {
 			if ($int2 = 14) {
 				return(70, karils_crossbow_4734, "Members: Karil's crossbow");
 			}
+			if ($int2 = 15) {
+				return(80, zaryte_crossbow_26374, "Members: Zaryte crossbow<br> Ammo: Bolts up to dragon");
+			}
 			return(-1, null, "");
 		}
 		if ($int1 = 3) {
@@ -513,6 +516,9 @@ switch_int ($int0) {
 			}
 			if ($int2 = 44) {
 				return(75, twisted_buckler_21000, "Members: Twisted buckler<br> (with 75 Defence)");
+			}
+			if ($int2 = 45) {
+				return(80, zaryte_vambraces_26235, "Members: Zaryte vambraces<br> (with 45 Defence)");
 			}
 			return(-1, null, "");
 		}
@@ -1171,20 +1177,22 @@ switch_int ($int0) {
 					case 46 :
 						return(84, lava_scale_shard_5_3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
 					case 47 :
-						return(86, crystal_dust_23964, "Divine bastion potion<br>Crystal dust & bastion potion");
+						return(85, nihil_dust_26368, "Ancient brew<br>Dwarf weed & nihil dust");
 					case 48 :
-						return(86, crystal_dust_23964, "Divine battlemage potion<br>Crystal dust & battlemage potion");
+						return(86, crystal_dust_23964, "Divine bastion potion<br>Crystal dust & bastion potion");
 					case 49 :
-						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
+						return(86, crystal_dust_23964, "Divine battlemage potion<br>Crystal dust & battlemage potion");
 					case 50 :
-						return(90, torstol_269, "Super combat potion<br>Super attack potion, super defence potion, super strength potion & torstol");
+						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
 					case 51 :
-						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & crushed superior dragon bones<br>(after Dragon Slayer II)");
+						return(90, torstol_269, "Super combat potion<br>Super attack potion, super defence potion, super strength potion & torstol");
 					case 52 :
-						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
+						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & crushed superior dragon bones<br>(after Dragon Slayer II)");
 					case 53 :
-						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
 					case 54 :
+						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+					case 55 :
 						return(98, lava_scale_shard_5_3256, "Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)");
 					case default :
 						return(-1, null, "");
@@ -1285,8 +1293,10 @@ switch_int ($int0) {
 					case 26 :
 						return(91, extended_antifire_mix_2_11960, "Extended antifire mix");
 					case 27 :
-						return(98, super_antifire_mix_2_21994, "Super antifire mix");
+						return(92, ancient_mix_2_26350, "Ancient mix");
 					case 28 :
+						return(98, super_antifire_mix_2_21994, "Super antifire mix");
+					case 29 :
 						return(99, extended_super_antifire_mix_2_22221, "Extended super antifire mix");
 					case default :
 						return(-1, null, "");
@@ -3037,6 +3047,9 @@ switch_int ($int0) {
 			}
 			if ($int2 = 9) {
 				return(90, dragon_platebody_21892, "Members: Dragon platebody<br>(after Dragon Slayer II)");
+			}
+			if ($int2 = 10) {
+				return(90, torva_platebody_26384, "Members: Torva armour<br>(after Desert Treasure)");
 			}
 			return(-1, null, "");
 		}
