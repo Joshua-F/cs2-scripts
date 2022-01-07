@@ -52,7 +52,7 @@ def_string $string5 = "<col=00ffff>";
 def_string $string6 = "<col=ffff00>";
 $string5, $string6 = ~script4485($string5, $string6);
 if (%varcint55 >= %varcint202 & %varcint55 > calc(clientclock - 3000) & chat_gethistorylength(^chattype_broadcast) > 0) {
-	$mesuid12, $int13, $string1, $string3, $string0, $int14, $string2, $int15 = chat_gethistoryex_bytypeandline(^chattype_broadcast, 0);
+	$mesuid12, $int13, $string1, $string3, $string0, $int14, $string2, $int15 = chat_gethistory_bytypeandline(^chattype_broadcast, 0);
 	if ($mesuid12 ! -1) {
 		$string0, $string4, $int16 = ~chat_broadcast_parseurl($string0);
 		if ($int16 ! 4 | reboottimer <= 0) {
@@ -80,7 +80,7 @@ def_int $chattype18 = ^chattype_gamemessage;
 def_int $int19 = ~script4487;
 if (%var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0)) {
 	while ($mesuid12 ! -1 & $component10 ! null & calc($int7 - $int4) < 57) {
-		$chattype18, $int13, $string1, $string3, $string0, $int14, $string2, $int15 = chat_gethistoryex_byuid($mesuid12);
+		$chattype18, $int13, $string1, $string3, $string0, $int14, $string2, $int15 = chat_gethistory_byuid($mesuid12);
 		if (~pm_filtertest($chattype18, $string1, $int13, $int14) = 1) {
 			switch_int ($chattype18) {
 				case ^chattype_privatechat, ^chattype_modprivatechat :

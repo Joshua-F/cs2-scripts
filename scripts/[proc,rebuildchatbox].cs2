@@ -93,7 +93,7 @@ def_string $string21 = "";
 def_int $int21 = 0;
 def_string $string22 = "";
 while ($mesuid10 ! -1 & $component9 ! null) {
-	$chattype11, $int12, $string16, $string17, $string18, $int15, $string21, $int21 = chat_gethistoryex_byuid($mesuid10);
+	$chattype11, $int12, $string16, $string17, $string18, $int15, $string21, $int21 = chat_gethistory_byuid($mesuid10);
 	if (~panetest($chattype11, $string16, $int15, $string18) = 1 & ~filtertest($chattype11, $string16, ~affixtimestamp($string21, $string18, "null"), $string18, $int12, $int2, $string0, $int15) = 1) {
 		switch_int ($chattype11) {
 			case ^chattype_publicchat, ^chattype_modchat :

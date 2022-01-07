@@ -19,7 +19,7 @@ def_string $string3 = "";
 def_int $int6 = 0;
 def_boolean $boolean7 = ~on_mobile;
 while ($mesuid0 ! -1) {
-	$chattype3, $clock4, $string0, $string1, $string2, $int5, $string3, $int6 = chat_gethistoryex_byuid($mesuid0);
+	$chattype3, $clock4, $string0, $string1, $string2, $int5, $string3, $int6 = chat_gethistory_byuid($mesuid0);
 	if ($clock4 <= $clock1) {
 		return;
 	}
