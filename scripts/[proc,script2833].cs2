@@ -14,7 +14,13 @@ while ($count2 < $count3) {
 	$struct4 = enum(int, struct, enum_2320, $count2);
 	$component5 = enum(int, component, enum_2321, $count2);
 	$boolean8 = struct_param($struct4, param_925);
-	if (clienttype ! ^clienttype_ios) {
+	if ($struct4 = struct_3770) {
+		if (clienttype ! ^clienttype_ios) {
+			$boolean8 = true;
+		} else if (%varcint228 = true) {
+			$boolean8 = true;
+		}
+	} else if (clienttype ! ^clienttype_ios) {
 		$boolean8 = false;
 	}
 	if ($boolean8 = false) {
