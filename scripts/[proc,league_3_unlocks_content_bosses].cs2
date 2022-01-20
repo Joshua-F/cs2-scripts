@@ -1,0 +1,77 @@
+// 5814
+[proc,league_3_unlocks_content_bosses](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+def_int $int8 = ~league_get_league_colour(3);
+def_int $height9 = if_getscrollheight($component0);
+cc_deleteall($component0);
+cc_deleteall($component1);
+if_sethide(false, $component1);
+if_sethide(false, $component2);
+if_sethide(true, $component7);
+if_sethide(false, $component6);
+if_sethide(false, $component5);
+if_setsize(if_getwidth($component4), 41, ^setsize_abs, ^setsize_abs, $component4);
+if_setposition(136, 51, ^setpos_abs_left, ^setpos_abs_top, $component0);
+if_setsize(307, 144, ^setsize_abs, ^setsize_abs, $component0);
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_struct $struct12 = enum(int, struct, enum_4130, $int11);
+def_int $int13 = 0;
+def_int $int14 = 0;
+while ($struct12 ! null) {
+	if (calc($int11 + 1) = %var3344) {
+		$int13 = 1;
+	} else {
+		$int13 = 0;
+	}
+	$int14 = ~script5831(struct_param($struct12, param_1436));
+	$int10 = ~league_3_unlocks_content_bosses_button($component0, struct_param($struct12, param_1440), struct_param($struct12, param_1437), struct_param($struct12, param_1442), $int8, $int13, $int14, $int11, $int10);
+	$int11 = calc($int11 + 1);
+	$struct12 = enum(int, struct, enum_4130, $int11);
+}
+if_setscrollsize(if_getwidth($component0), calc($int11 * 32), $component0);
+if ($height9 ! if_getscrollheight($component0) | %var3344 = 0) {
+	if_setscrollpos(0, 0, $component0);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find($component1, 1) = ^true) {
+	~scrollbar_vertical_setdragger($component1, $component0);
+}
+$struct12 = enum(int, struct, enum_4130, calc(%var3344 - 1));
+def_string $string0 = struct_param($struct12, param_1437);
+def_int $int15 = struct_param($struct12, param_1442);
+if (%var3344 ! 0) {
+	~v2_stone_button($component5);
+	~v2_stone_button($component6);
+	if (~on_mobile = false) {
+		if_setonmouseover("v2_stone_button_in($component5)", $component5);
+		if_setonmouseover("v2_stone_button_in($component6)", $component6);
+		if_setonmouseleave("v2_stone_button($component5)", $component5);
+		if_setonmouseleave("v2_stone_button($component6)", $component6);
+	}
+	if_setop(1, "View", $component5);
+	if_setopbase("<col=ff9040>Wiki</col>", $component5);
+	if_setonop("ca_boss_lookup(struct_param($struct12, param_1443), $string0)", $component5);
+	if_setop(1, "View", $component6);
+	if_setopbase("<col=ff9040>Map Location</col>", $component6);
+	if (~script5831(struct_param($struct12, param_1436)) = 1) {
+		~league_3_unlocks_buy_button($component4, 4, $int8, 0);
+		$string0 = "<struct_param($struct12, param_1437)> - Unlocked";
+	} else if ($int15 > %var3276) {
+		~league_3_unlocks_buy_button($component4, 3, $int8, $int15);
+	} else {
+		~league_3_unlocks_buy_button($component4, 1, $int8, $int15);
+	}
+	~league_3_unlocks_info_panel($component3, $string0, struct_param($struct12, param_1438), $int8);
+} else {
+	~league_3_unlocks_info_panel($component3, "Unlock a boss", "<col=cfcfcf>First, select a boss above. Once you've chosen, use the Unlock<br><col=cfcfcf>button to unlock access to your<br><col=cfcfcf>selected boss.", $int8);
+	~v2_stone_button_in($component5);
+	~v2_stone_button_in($component6);
+	if_setonmouseover(null, $component5);
+	if_setonmouseover(null, $component6);
+	if_setonmouseleave(null, $component5);
+	if_setonmouseleave(null, $component6);
+	if_setop(1, "", $component5);
+	if_setonop(null, $component5);
+	if_setop(1, "", $component6);
+	~league_3_unlocks_buy_button($component4, 0, $int8, 0);
+}

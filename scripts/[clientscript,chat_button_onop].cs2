@@ -5,7 +5,7 @@ switch_int ($int1) {
 	case 0 :
 		switch_int ($opindex0) {
 			case 1 :
-				~script2823($int1, $mesuid2);
+				~chat_button_switch($int1, $mesuid2);
 			case 2 :
 				%varcint945 = 0;
 				~redraw_chat_buttons;
@@ -32,7 +32,7 @@ switch_int ($int1) {
 	case 1 :
 		switch_int ($opindex0) {
 			case 1 :
-				~script2823($int1, $mesuid2);
+				~chat_button_switch($int1, $mesuid2);
 			case 2 :
 				if (%varbit26 = 0) {
 					%varbit26 = 1;
@@ -46,7 +46,7 @@ switch_int ($int1) {
 	case 2 :
 		switch_int ($opindex0) {
 			case 1 :
-				~script2823($int1, $mesuid2);
+				~chat_button_switch($int1, $mesuid2);
 			case 2 :
 				~chat_set_filter($int1, ^chatfilter_autochat);
 				~redraw_chat_buttons;
@@ -95,7 +95,7 @@ switch_int ($int1) {
 	case 3 :
 		switch_int ($opindex0) {
 			case 1 :
-				~script2823($int1, $mesuid2);
+				~chat_button_switch($int1, $mesuid2);
 			case 3 :
 				~chat_set_filter($int1, ^chatfilter_on);
 				~redraw_chat_buttons;
@@ -118,7 +118,7 @@ switch_int ($int1) {
 	case 4 :
 		switch_int ($opindex0) {
 			case 1 :
-				~script2823($int1, $mesuid2);
+				~chat_button_switch($int1, $mesuid2);
 			case 3 :
 				~chat_set_filter($int1, ^chatfilter_on);
 				~redraw_chat_buttons;
@@ -141,7 +141,7 @@ switch_int ($int1) {
 	case 5 :
 		switch_int ($opindex0) {
 			case 1 :
-				~script2823($int1, $mesuid2);
+				~chat_button_switch($int1, $mesuid2);
 			case 3 :
 				~chat_set_filter($int1, ^chatfilter_on);
 				~redraw_chat_buttons;
@@ -164,7 +164,7 @@ switch_int ($int1) {
 	case 6 :
 		switch_int ($opindex0) {
 			case 1 :
-				~script2823($int1, $mesuid2);
+				~chat_button_switch($int1, $mesuid2);
 			case 3 :
 				~chat_set_filter($int1, ^chatfilter_on);
 				~redraw_chat_buttons;

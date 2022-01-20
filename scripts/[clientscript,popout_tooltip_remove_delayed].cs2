@@ -1,0 +1,6 @@
+// 5545
+[clientscript,popout_tooltip_remove_delayed](int $clock0)
+if (clientclock < $clock0) {
+	return;
+}
+~popout_tooltip_clear;

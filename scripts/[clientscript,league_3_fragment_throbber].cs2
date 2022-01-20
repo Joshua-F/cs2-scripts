@@ -1,0 +1,21 @@
+// 5794
+[clientscript,league_3_fragment_throbber](component $component0, int $comsubid1, int $int2, int $int3)
+def_int $trans4 = 238;
+def_int $trans5 = 125;
+def_int $int6 = 2;
+def_int $trans7 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int2 = calc($int2 - 1);
+	if ($int2 <= 0) {
+		$trans7 = calc(cc_gettrans + $int3);
+		if ($trans7 >= $trans4) {
+			$int3 = -3;
+		}
+		if ($trans7 <= $trans5) {
+			$int3 = 3;
+		}
+		cc_settrans($trans7);
+		$int2 = $int6;
+	}
+	cc_setontimer("league_3_fragment_throbber($component0, $comsubid1, $int2, $int3)");
+}

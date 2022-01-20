@@ -15,7 +15,7 @@ if (cc_find(interface_729:7, $comsubid0) = ^true) {
 	cc_setfill(true);
 	cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
-	~script5540;
+	~popout_tooltip_hook_cc;
 	if (~on_enhanced_desktop = 1) {
 		cc_setonmouserepeat("script5535(cc_getlayer, cc_getid, $stat1)");
 	} else if (~on_enhanced_mobile = 1) {

@@ -5,8 +5,8 @@ $component1 = enum(component, component, $enum0, interface_161:34);
 def_int $int2 = -1;
 def_int $int3 = -1;
 if ($component1 ! null) {
-	~script5546;
-	if (~script5357(-1) = 1) {
+	~popout_tooltip_clear;
+	if (~popout_available(-1) = 1) {
 		if_sethide(false, interface_728:0);
 		if (if_hassub(interface_728:14) = true) {
 			$int3, $int2 = 1, 312;
@@ -31,11 +31,11 @@ if ($component1 ! null) {
 			}
 			_6230(calc(765 + $int2));
 			if ($int3 = 1) {
-				if (_3210(10) < calc(765 + $int2)) {
-					_3209(10, calc(765 + $int2));
+				if (getpreference(10) < calc(765 + $int2)) {
+					setpreference(10, calc(765 + $int2));
 				}
-			} else if (_3210(10) < calc(765 + 42) | _3210(10) = calc(765 + 312)) {
-				_3209(10, calc(765 + 42));
+			} else if (getpreference(10) < calc(765 + 42) | getpreference(10) = calc(765 + 312)) {
+				setpreference(10, calc(765 + 42));
 			}
 		}
 		~script5356;
@@ -47,8 +47,8 @@ if ($component1 ! null) {
 		}
 		if (~on_enhanced_any = 1) {
 			_6230(765);
-			if (_3210(10) = calc(765 + 42) | _3210(10) = calc(765 + 312)) {
-				_3209(10, 765);
+			if (getpreference(10) = calc(765 + 42) | getpreference(10) = calc(765 + 312)) {
+				setpreference(10, 765);
 			}
 		}
 	}
@@ -59,8 +59,8 @@ if ($component1 ! null) {
 	}
 	if (~on_enhanced_any = 1) {
 		_6230(765);
-		if (_3210(10) = calc(765 + 42) | _3210(10) = calc(765 + 312)) {
-			_3209(10, 765);
+		if (getpreference(10) = calc(765 + 42) | getpreference(10) = calc(765 + 312)) {
+			setpreference(10, 765);
 		}
 	}
 }

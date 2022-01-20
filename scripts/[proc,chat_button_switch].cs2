@@ -1,0 +1,14 @@
+// 2823
+[proc,chat_button_switch](int $int0, int $mesuid1)
+if (getwindowmode = ^windowmode_resizable & %varcint41 = $int0) {
+	%varcint41 = 1337;
+} else {
+	%varcint41 = $int0;
+}
+~script2526;
+%varcint384 = clientclock;
+~toplevel_chatbox_background;
+~chat_alert_set($int0, 0);
+~redraw_chat_buttons;
+~rebuildchatbox($mesuid1);
+~rebuildpmbox($mesuid1);

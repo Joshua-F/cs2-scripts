@@ -26,5 +26,5 @@ switch_int ($int0) {
 	case 79 :
 		~settings_interface_scaling($int1);
 	case 168 :
-		~script5193(interpolate(25, 90, 0, calc(struct_param(view_distance_3656, param_1101) - 1), $int1));
+		~settings_set_draw_distance(interpolate(25, 90, 0, calc(struct_param(view_distance_3656, param_1101) - 1), $int1));
 }

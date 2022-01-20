@@ -1,10 +1,10 @@
 // 5778
 [proc,script5778](component $component0, int $int1)(int, int)
-def_int $int2 = ~script5465(3);
+def_int $int2 = ~league_get_league_colour(3);
 def_int $int3 = 0;
 def_int $int4 = ~script5786;
 def_int $int5 = 1;
-$int1 = ~script5782($component0, $int1, "Passive Effects", "Effects gained from League Tiers.");
+$int1 = ~league_3_fragment_info_title($component0, $int1, "Passive Effects", "Effects gained from League Tiers.");
 $int3 = calc($int3 + 40);
 $int1, $int3 = ~script5779($component0, $int1, $int3, "Tier I", 0, $int5);
 $int1, $int3 = ~script5780($component0, $int1, $int3, "Unlock Fragment Slot  I.");

@@ -1,5 +1,5 @@
 // 2177
 [proc,setvolumesounds]
-if (%var169 ! _3210(8)) {
-	_3209(8, %var169);
+if (%var169 ! getpreference(^pref_volume_sounds)) {
+	setpreference(^pref_volume_sounds, %var169);
 }

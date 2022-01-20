@@ -2,10 +2,10 @@
 [proc,script5544](component $layer0, int $comsubid1, string $string0, string $string1)
 def_int $int2 = 0;
 def_fontmetrics $fontmetrics3 = p12_full;
-~script5546;
+~popout_tooltip_clear;
 if (~on_mobile = true) {
 	~script2344($layer0, $comsubid1, interface_728:16, $string0, $string1, $fontmetrics3);
-	if_setontimer("script5545(calc(clientclock + 240))", interface_728:16);
+	if_setontimer("popout_tooltip_remove_delayed(calc(clientclock + 240))", interface_728:16);
 } else {
 	~script5338($layer0, $comsubid1, interface_728:16, $string0, $string1, $fontmetrics3, $int2);
 }

@@ -1,0 +1,9 @@
+// 5357
+[proc,popout_available](int $int0)(int)
+if (~on_enhanced_any = 0) {
+	return(0);
+}
+if (~on_mobile = true & ~toplevel_getcomponents ! enum_1745) {
+	return(0);
+}
+return(~popout_available_inner($int0));

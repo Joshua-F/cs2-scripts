@@ -1,0 +1,9 @@
+// 5811
+[proc,league_3_unlocks_build_content](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+if (%var3343 = 0) {
+	~league_3_unlocks_content_skills($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7);
+} else if (%var3343 = 1) {
+	~league_3_unlocks_content_bosses($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7);
+} else if (%var3343 = 2) {
+	~league_3_unlocks_content_quests($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7);
+}

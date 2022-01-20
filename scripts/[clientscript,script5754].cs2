@@ -1,9 +1,0 @@
-// 5754
-[clientscript,script5754](component $component0, component $component1, component $component2)
-sound_synth(interface_select1, 1, 0);
-if_sethide(false, $component1);
-if_settext("Hide Filters", $component2);
-if_setonop("script5755($component0, $component1, $component2)", $component0);
-if_setop(1, "Hide", $component0);
-if_setopbase("<col=ff9040>Filters</col>", $component0);
-~script5761($component1, interface_735:27, interface_735:28, interface_735:29, interface_735:30, interface_735:3, interface_735:4, interface_735:5);

@@ -1,0 +1,19 @@
+// 5801
+[proc,league_3_side_panel_update_bar](component $component0, int $int1)
+if ($int1 = -1) {
+	$int1 = %var2615;
+}
+def_int $int2 = ~script5803(0, 0);
+def_int $int3 = ~script5803(0, 1);
+def_int $width4 = -1;
+def_int $int5 = calc($int1 - $int3);
+def_int $int6 = calc($int2 - $int3);
+if ($int2 ! -1 & $int3 ! -1 & $int2 > 0 & $int3 ! $int2) {
+	$width4 = scale($int5, $int6, 130);
+} else {
+	$width4 = 130;
+}
+if (if_find($component0) = true) {
+	cc_setsize($width4, 0, ^setsize_abs, ^setsize_minus);
+}
+~league_3_side_panel_update_text(interface_736:6, interface_736:15, interface_736:13, interface_736:17, $int1, $int2);

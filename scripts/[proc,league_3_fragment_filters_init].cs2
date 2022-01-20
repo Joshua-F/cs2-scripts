@@ -1,0 +1,11 @@
+// 5761
+[proc,league_3_fragment_filters_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+def_int $colour8 = ~league_get_league_colour(3);
+~script5771($component1, enum_4180, %varcint968, $colour8);
+if_setonop("script5762($component5, $component6, $component7, $component1, enum_4180, $colour8)", $component1);
+~script5771($component3, enum_4181, %varcint969, $colour8);
+if_setonop("script5763($component5, $component6, $component7, $component3, enum_4181, $colour8)", $component3);
+~script5771($component2, enum_4182, %varcint970, $colour8);
+if_setonop("script5764($component5, $component6, $component7, $component2, enum_4182, $colour8)", $component2);
+~script5771($component4, enum_4183, %varcint971, $colour8);
+if_setonop("script5765($component5, $component6, $component7, $component4, enum_4183, $colour8)", $component4);

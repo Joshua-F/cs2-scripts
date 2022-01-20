@@ -1,6 +1,6 @@
 // 5779
 [proc,script5779](component $component0, int $int1, int $int2, string $text0, int $int3, int $int4)(int, int)
-def_int $colour5 = ~script5465(3);
+def_int $colour5 = ~league_get_league_colour(3);
 def_int $int6 = 5;
 def_int $int7 = 15;
 cc_create($component0, ^iftype_rectangle, $int1);

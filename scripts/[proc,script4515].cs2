@@ -19,7 +19,7 @@ if (%varbit12374 = 0) {
 		cc_setonclick(null);
 		cc_setnoclickthrough(false);
 	} else {
-		cc_setonclick("script5550($component0, calc($int5 - 1), $component1, $string0, 512, $component6)");
+		cc_setonclick("stat_boosts_hud_mobile_tooltip($component0, calc($int5 - 1), $component1, $string0, 512, $component6)");
 		cc_setnoclickthrough(true);
 		cc_setonmouserepeat(null);
 		cc_setonmouseleave(null);

@@ -1,0 +1,28 @@
+// 5822
+[proc,league_3_unlocks_info_panel](component $component0, string $text0, string $text1, int $colour1)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(200);
+def_int $int2 = ~thinbox($component0, 1);
+cc_create($component0, ^iftype_text, $int2);
+cc_setposition(10, 1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(110, 25, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_setcolour($colour1);
+cc_settext($text0);
+$int2 = calc($int2 + 1);
+cc_create($component0, ^iftype_text, $int2);
+cc_setposition(10, 18, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(110, 18, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_setcolour($colour1);
+cc_settext($text1);
+$int2 = calc($int2 + 1);

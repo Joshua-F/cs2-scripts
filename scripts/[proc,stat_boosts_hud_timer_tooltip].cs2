@@ -1,0 +1,22 @@
+// 5552
+[proc,stat_boosts_hud_timer_tooltip](component $component0, component $component1, component $component2)
+if (%varbit12374 = 0) {
+	if (~on_enhanced_desktop = 1) {
+		if_setonmouserepeat("stat_boosts_hud_timertooltip($component0, $component1)", $component2);
+		if_setonmouseleave("deltooltip($component1)", $component2);
+		if_setonclick(null, $component2);
+		if_setnoclickthrough(false, $component2);
+	} else {
+		if_setonclick("script5553($component0, $component1, $component2)", $component2);
+		if_setnoclickthrough(true, $component2);
+		if_setonmouserepeat(null, $component2);
+		if_setonmouseleave(null, $component2);
+	}
+} else {
+	%varcint949 = 0;
+	~deltooltip_action($component1);
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+	if_setnoclickthrough(false, $component2);
+	if_setonclick(null, $component2);
+}

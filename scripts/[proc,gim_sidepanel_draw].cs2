@@ -57,7 +57,7 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 		cc_settext($string0);
 		$int24 = parawidth($string0, 190, p11_full);
 		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
-		.cc_setgraphic("graphic_3595");
+		.cc_setgraphic("group_icon,0");
 		$int24 = calc($int24 + 3 + 13);
 		if (%varclansetting41 > 0 & %varclansetting40 <= 0) {
 			$int20 = calc(($width19 / 2 - $int24) / 2);

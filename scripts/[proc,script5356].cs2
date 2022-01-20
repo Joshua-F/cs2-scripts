@@ -7,7 +7,7 @@ def_struct $struct3 = null;
 while ($int0 < $count1) {
 	cc_create(interface_728:15, ^iftype_graphic, $int0);
 	$int0 = calc($int0 + 1);
-	if (~script5358($int0) = 1) {
+	if (~popout_available_inner($int0) = 1) {
 		$struct3 = enum(int, struct, enum_4067, $int0);
 		cc_setopbase("<col=ff9040><struct_param($struct3, param_1413)></col>");
 		if (%varbit13090 = $int0) {

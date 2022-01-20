@@ -15,7 +15,7 @@ if (%varbit11692 ! 0) {
 		return(0);
 	}
 }
-if (%varbit13340 ! 0 & ~script5833($int4) = 0) {
+if (%varbit13340 ! 0 & ~league_3_filter_skill($int4) = 0) {
 	return(0);
 }
 if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $int1) {

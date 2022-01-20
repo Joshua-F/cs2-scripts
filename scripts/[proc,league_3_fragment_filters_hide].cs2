@@ -1,0 +1,8 @@
+// 5756
+[proc,league_3_fragment_filters_hide](component $component0, component $component1, component $component2)
+if_sethide(true, $component1);
+if_settext("Show Filters", $component2);
+if_setonop("league_3_fragment_filters_show($component0, $component1, $component2)", $component0);
+if_setop(1, "Show", $component0);
+if_setopbase("<col=ff9040>Filters</col>", $component0);
+~league_3_fragment_list_init(interface_735:17, interface_735:18);

@@ -1,0 +1,52 @@
+// 5748
+[clientscript,league_3_fragment_loadout](component $component0)
+cc_deleteall($component0);
+def_int $int1 = 0;
+def_int $comsubid2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_struct $struct5 = null;
+def_struct $struct6 = null;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+while ($int3 < 7) {
+	$int4 = ~script5791($int3);
+	if ($int4 ! 0) {
+		$int10 = 0;
+		$struct5 = enum(int, struct, enum_4136, $int4);
+		$int7 = struct_param($struct5, param_1459);
+		$struct6 = enum(int, struct, enum_4137, $int7);
+		$int8 = ~script5792($int7);
+		$int9 = struct_param($struct6, param_1468);
+		if ($int8 >= $int9) {
+			$int10 = 1;
+		}
+		if ($int10 = 0) {
+			$int7 = struct_param($struct5, param_1460);
+			$struct6 = enum(int, struct, enum_4137, $int7);
+			$int8 = ~script5792($int7);
+			$int9 = struct_param($struct6, param_1468);
+			if ($int8 >= $int9) {
+				$int10 = 1;
+			}
+		}
+		$comsubid2 = calc($int1 + 1);
+		$int1 = ~league_3_fragment_draw_fragment($component0, $int1, calc($int3 * 50 + 3), 3, struct_param($struct5, param_1461), ~league_3_fragment_get_xp($int4), $int10);
+		if (cc_find($component0, $comsubid2) = ^true) {
+			cc_setop(1, "View");
+			cc_setop(2, "Unequip");
+			cc_setopbase("<col=ff9040><struct_param($struct5, param_1448)></col>");
+			cc_setonop("league_3_fragment_info_init_sound(interface_735:32, interface_735:33, $int4, event_opindex, 1, 0)");
+		}
+	} else {
+		$int1 = ~league_3_fragment_shim($component0, $int1);
+		$int1 = ~league_3_fragment_shim($component0, $int1);
+		$int1 = ~league_3_fragment_shim($component0, $int1);
+		$int1 = ~league_3_fragment_shim($component0, $int1);
+		$int1 = ~league_3_fragment_shim($component0, $int1);
+		$int1 = ~league_3_fragment_shim($component0, $int1);
+	}
+	$int3 = calc($int3 + 1);
+}

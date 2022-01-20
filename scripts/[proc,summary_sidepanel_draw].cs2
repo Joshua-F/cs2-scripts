@@ -24,7 +24,7 @@ if (%varcint52 = 126) {
 }
 $int10 = $int4;
 if (cc_find($component0, $comsubid8) = ^true) {
-	cc_setonstattransmit("script3893(event_com, event_comsubid, $comsubid9, $int7, 0, $int11, p11_full){attack, strength, defence, hitpoints, prayer, magic, ranged}");
+	cc_setonstattransmit("account_summary_update_combatlevel(event_com, event_comsubid, $comsubid9, $int7, 0, $int11, p11_full){attack, strength, defence, hitpoints, prayer, magic, ranged}");
 }
 if ($int12 = 2277) {
 	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Total Level:", "", "account_icons,1", "<col=0dc10d><tostring($int12)></col>", $int2, $int3, 1);
@@ -32,7 +32,7 @@ if ($int12 = 2277) {
 	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Total Level:", "", "account_icons,1", "<col=0dc10d><tostring($int12)></col>", $int2, $int3, 1);
 }
 if (cc_find($component0, $comsubid8) = ^true) {
-	cc_setonstattransmit("script3946(event_com, event_comsubid, $comsubid9, $int7, $int10, $int11, p11_full)");
+	cc_setonstattransmit("account_summary_update_totallevel(event_com, event_comsubid, $comsubid9, $int7, $int10, $int11, p11_full)");
 }
 $int4 = 0;
 $int7 = 26;

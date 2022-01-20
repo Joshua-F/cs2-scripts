@@ -1,0 +1,11 @@
+// 5843
+[clientscript,if_fade](component $component0, int $trans1, int $int2)
+if ($int2 = 0) {
+	return;
+}
+if ($trans1 < 0) {
+	$trans1 = 0;
+} else if ($trans1 > 255) {
+	$trans1 = 255;
+}
+if_setontimer("if_fade_timer(event_com, $trans1, $int2)", $component0);

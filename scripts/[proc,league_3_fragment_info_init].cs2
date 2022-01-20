@@ -1,0 +1,180 @@
+// 5777
+[proc,league_3_fragment_info_init](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5)
+if ($int3 ! 1) {
+	return;
+}
+if_setonvartransmit("league_3_fragment_info_init($component0, $component1, $int2, 1, 0, 0){var3279, var3280, var3281}", $component0);
+def_int $colour6 = ~league_get_league_colour(3);
+def_string $text0 = "";
+~v2_stone_button(interface_735:12);
+~v2_stone_button(interface_735:14);
+if_setcolour($colour6, interface_735:13);
+if_setcolour($colour6, interface_735:15);
+if (~on_mobile = false) {
+	if_setonmouseover("v2_stone_button_in(event_com)", interface_735:12);
+	if_setonmouseover("v2_stone_button_in(event_com)", interface_735:14);
+	if_setonmouseleave("v2_stone_button(event_com)", interface_735:12);
+	if_setonmouseleave("v2_stone_button(event_com)", interface_735:14);
+}
+def_int $height7 = if_getscrollheight($component0);
+def_int $int8 = 5;
+def_int $height9 = 15;
+cc_deleteall($component0);
+def_int $int10 = 0;
+def_struct $struct11 = null;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $height14 = 0;
+def_int $int15 = 0;
+cc_create($component0, ^iftype_rectangle, $int10);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(200);
+$int10 = calc($int10 + 1);
+if ($int2 = -1) {
+	if_setcolour(0xcfcfcf, interface_735:13);
+	~v2_stone_button_in(interface_735:12);
+	if_setonmouseover(null, interface_735:12);
+	if_setonmouseleave(null, interface_735:12);
+	$int10, $height14 = ~script5778($component0, $int10);
+} else if ($int2 = 0) {
+	if_setcolour(0xcfcfcf, interface_735:15);
+	~v2_stone_button_in(interface_735:14);
+	if_setonmouseover(null, interface_735:14);
+	if_setonmouseleave(null, interface_735:14);
+	$int10, $height14 = ~script5781($component0, $int10);
+} else {
+	$struct11 = enum(int, struct, enum_4136, $int2);
+	$int12 = ~min(~league_3_fragment_get_xp($int2), 8000);
+	$int13 = ~league_3_fragment_get_level($int12);
+	$int10 = ~league_3_fragment_info_title($component0, $int10, struct_param($struct11, param_1448), struct_param($struct11, param_1449));
+	$int10 = ~league_3_fragment_draw_fragment($component0, $int10, calc(if_getwidth($component0) / 2 - 16), 38, struct_param($struct11, param_1461), $int12, 0);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(24, 84, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(48, 4, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(0x726451);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(23, 82, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(3, 8, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0x726451);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(24, 83, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(1, 6, ^setsize_abs, ^setsize_abs);
+	if ($int13 < 1) {
+		cc_setcolour(^black);
+	} else {
+		cc_setcolour($colour6);
+	}
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(63, 82, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(3, 8, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0x726451);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(23, 82, ^setpos_abs_right, ^setpos_abs_top);
+	cc_setsize(3, 8, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0x726451);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(24, 83, ^setpos_abs_right, ^setpos_abs_top);
+	cc_setsize(1, 6, ^setsize_abs, ^setsize_abs);
+	if ($int13 < 3) {
+		cc_setcolour(^black);
+	} else {
+		cc_setcolour($colour6);
+	}
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(25, 85, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(50, 2, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(^black);
+	cc_setfill(true);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(25, 85, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(scale($int12, 8000, calc(if_getwidth($component0) - 49)), 2, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour6);
+	cc_setfill(true);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setposition(64, 83, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(1, 6, ^setsize_abs, ^setsize_abs);
+	if ($int13 < 2) {
+		cc_setcolour(^black);
+	} else {
+		cc_setcolour($colour6);
+	}
+	$int10 = calc($int10 + 1);
+	if (~on_mobile = false) {
+		~create_graphic($component0, $int10, "graphic_4233", 14, 92, ^setpos_abs_left, ^setpos_abs_top, 20, 6, ^setsize_abs, ^setsize_abs);
+		$int10 = calc($int10 + 1);
+		~create_graphic($component0, $int10, "graphic_4234", 55, 92, ^setpos_abs_left, ^setpos_abs_top, 20, 6, ^setsize_abs, ^setsize_abs);
+		$int10 = calc($int10 + 1);
+		~create_graphic($component0, $int10, "graphic_4235", 172, 92, ^setpos_abs_left, ^setpos_abs_top, 20, 6, ^setsize_abs, ^setsize_abs);
+		$int10 = calc($int10 + 1);
+	}
+	cc_create($component0, ^iftype_text, $int10);
+	cc_setposition($int8, 70, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int8 * 2), $height9, ^setsize_minus, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settextfont(p11_full);
+	cc_setcolour(0xcfcfcf);
+	if ($int13 = 0) {
+		cc_settext("Locked");
+	} else {
+		cc_settext("<tostring($int12)>/<tostring(8000)>");
+	}
+	$int10 = calc($int10 + 1);
+	$height14 = 100;
+	$int10, $height14 = ~league_3_fragment_info_subtitle($component0, $int10, $height14, "Base Effects", $colour6);
+	if ($int13 < 1) {
+		$int15 = 0;
+	} else {
+		$int15 = 1;
+	}
+	$text0 = "Level 1:";
+	if (~on_mobile = true) {
+		$text0 = "Level 1: (1)";
+	}
+	$int10, $height14 = ~script5784($component0, $int10, $height14, $text0, struct_param($struct11, param_1450), $int15);
+	if ($int13 < 2) {
+		$int15 = 0;
+	} else {
+		$int15 = 1;
+	}
+	$text0 = "Level 2:";
+	if (~on_mobile = true) {
+		$text0 = "Level 2: (<tostring(2000)>)";
+	}
+	$int10, $height14 = ~script5784($component0, $int10, $height14, $text0, struct_param($struct11, param_1451), $int15);
+	if ($int13 < 3) {
+		$int15 = 0;
+	} else {
+		$int15 = 1;
+	}
+	$text0 = "Level 3:";
+	if (~on_mobile = true) {
+		$text0 = "Level 3: (<tostring(8000)>)";
+	}
+	$int10, $height14 = ~script5784($component0, $int10, $height14, $text0, struct_param($struct11, param_1452), $int15);
+	$int10, $height14 = ~league_3_fragment_info_subtitle($component0, $int10, $height14, "Set Effects", $colour6);
+	$int10, $height14 = ~script5785($component0, $int10, $height14, enum(int, struct, enum_4137, struct_param($struct11, param_1459)));
+	$int10, $height14 = ~script5785($component0, $int10, $height14, enum(int, struct, enum_4137, struct_param($struct11, param_1460)));
+}
+if ($height14 > if_getheight($component0)) {
+	if_setscrollsize(0, $height14, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+if ($height7 ! if_getscrollheight($component0) | $int4 = 1) {
+	if_setscrollpos(0, 0, $component0);
+	cc_deleteall($component1);
+	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~scrollbar_resize($component1, $component0, $int5);
+}

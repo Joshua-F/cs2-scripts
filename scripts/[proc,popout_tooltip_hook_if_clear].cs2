@@ -1,0 +1,7 @@
+// 5541
+[proc,popout_tooltip_hook_if_clear](component $component0)
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setnoclickthrough(false, $component0);
+if_setonclick(null, $component0);
+~popout_tooltip_clear;

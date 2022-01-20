@@ -1,5 +1,5 @@
 // 2238
 [proc,setbrightness]
-if (%var166 ! _3210(6)) {
-	_3209(6, %var166);
+if (%var166 ! getpreference(^pref_brightness)) {
+	setpreference(^pref_brightness, %var166);
 }

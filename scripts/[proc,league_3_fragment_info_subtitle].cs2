@@ -1,0 +1,20 @@
+// 5783
+[proc,league_3_fragment_info_subtitle](component $component0, int $int1, int $int2, string $text0, int $colour3)(int, int)
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(200);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition(5, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(10, 18, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($text0);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_setcolour($colour3);
+$int1 = calc($int1 + 1);
+$int2 = calc($int2 + 22);
+return($int1, $int2);

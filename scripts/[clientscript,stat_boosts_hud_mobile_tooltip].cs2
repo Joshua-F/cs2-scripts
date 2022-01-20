@@ -1,0 +1,16 @@
+// 5550
+[clientscript,stat_boosts_hud_mobile_tooltip](component $component0, int $int1, component $component2, string $string0, int $width3, component $component4)
+if (%varcint948 = $int1) {
+	~deltooltip_action($component2);
+	%varcint948 = -1;
+	if_setontimer(null, $component0);
+} else {
+	if (%varcint949 = 1) {
+		%varcint949 = 0;
+		~deltooltip_action($component2);
+		if_setontimer(null, $component4);
+	}
+	~tooltip_build($component0, $int1, $component2, $string0, $width3);
+	%varcint948 = $int1;
+	if_setontimer("stat_boosts_hud_mobile_tooltip_remove($component2, calc(clientclock + 240), $component0)", $component0);
+}

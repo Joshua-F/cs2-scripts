@@ -1,6 +1,6 @@
 // 5823
 [clientscript,script5823]
-def_int $colour0 = ~script5465(3);
+def_int $colour0 = ~league_get_league_colour(3);
 sound_synth(interface_select1, 1, 0);
 if_sethide(false, interface_733:25);
 def_struct $struct1 = enum(int, struct, enum_4131, calc(%var3344 - 1));
