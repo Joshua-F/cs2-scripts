@@ -1,6 +1,6 @@
 // 1004
 [clientscript,xpdrops_stattransmit](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10, int $xp11, int $xp12, int $xp13, int $xp14, int $xp15, int $xp16, int $xp17, int $xp18, int $xp19, int $xp20, int $xp21, int $xp22, int $xp23, int $xp24, int $xp25, int $xp26, int $xp27, int $xp28, int $xp29, int $xp30, int $xp31, int $xp32, int $xp33)
-if ($boolean0 = true & %varcint207 = null) {
+if ($boolean0 = true & %varcint953 = -1) {
 	return;
 }
 def_int $length34 = calc(23 + 1);
@@ -9,17 +9,18 @@ def_int $intarray1($length34);
 def_int $int35 = 0;
 def_int $int36 = 0;
 if ($boolean0 = true) {
-	while (%varcint207 ! null) {
-		if (%varcint207 = 1_1_1_1_1) {
+	while (%varcint953 ! -1) {
+		if (%varcint960 = -10) {
 			~xpdrops_showpanel($component1, $component3, $component8, $component9);
 		} else {
-			$statarray0($int35) = enum(int, stat, enum_681, coordx(%varcint207));
-			$intarray1($int35) = coordz(%varcint207);
+			$statarray0($int35) = enum(int, stat, enum_681, %varcint953);
+			$intarray1($int35) = %varcint960;
 			if ($statarray0($int35) ! null & $intarray1($int35) > 0) {
 				$int35 = calc($int35 + 1);
 			}
 		}
-		%varcint207, %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213 = %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213, null;
+		%varcint953, %varcint954, %varcint955, %varcint956, %varcint957, %varcint958, %varcint959 = %varcint954, %varcint955, %varcint956, %varcint957, %varcint958, %varcint959, -1;
+		%varcint960, %varcint961, %varcint962, %varcint963, %varcint964, %varcint965, %varcint966 = %varcint961, %varcint962, %varcint963, %varcint964, %varcint965, %varcint966, -1;
 	}
 } else {
 	$int36 = calc(stat_xp(fishing) - $xp25);

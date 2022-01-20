@@ -1,0 +1,65 @@
+// 5778
+[proc,script5778](component $component0, int $int1)(int, int)
+def_int $int2 = ~script5465(3);
+def_int $int3 = 0;
+def_int $int4 = ~script5786;
+def_int $int5 = 1;
+$int1 = ~script5782($component0, $int1, "Passive Effects", "Effects gained from League Tiers.");
+$int3 = calc($int3 + 40);
+$int1, $int3 = ~script5779($component0, $int1, $int3, "Tier I", 0, $int5);
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Unlock Fragment Slot  I.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Your League XP multiplier starts at 5x.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "A free Combat Fragment.");
+$int3 = calc($int3 + 5);
+if ($int4 < 2) {
+	$int5 = 0;
+}
+$int1, $int3 = ~script5779($component0, $int1, $int3, "Tier II", 10, $int5);
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Unlock Fragment Slot  II.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Your run energy will never drain whilst running.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "All un-started clues are stackable as Scroll Boxes.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "The Smooth Criminal Fragment.");
+$int3 = calc($int3 + 5);
+if ($int4 < 3) {
+	$int5 = 0;
+}
+$int1, $int3 = ~script5779($component0, $int1, $int3, "Tier III", 300, $int5);
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Unlock Fragment Slot  III.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Your League XP multiplier increases from 5x to 8x.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Kourend Favour is doubled.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "A random Combat Fragment.");
+$int3 = calc($int3 + 5);
+if ($int4 < 4) {
+	$int5 = 0;
+}
+$int1, $int3 = ~script5779($component0, $int1, $int3, "Tier IV", 1500, $int5);
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Unlock Fragment Slot IV.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Items from some sources will be 2x as common.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "A random Skilling Fragment.");
+$int3 = calc($int3 + 5);
+if ($int4 < 5) {
+	$int5 = 0;
+}
+$int1, $int3 = ~script5779($component0, $int1, $int3, "Tier V", 3000, $int5);
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Unlock Fragment Slot V.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Your League XP multiplier increases from 8x to 12x.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "A random Combat Fragment.");
+$int3 = calc($int3 + 5);
+if ($int4 < 6) {
+	$int5 = 0;
+}
+$int1, $int3 = ~script5779($component0, $int1, $int3, "Tier VI", 7500, $int5);
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Unlock Fragment Slot VI.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Items from some sources will be 3x as common.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "When getting a Slayer Task, you can choose which task to receive. The same task can be chosen repeatedly.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "A random Skilling Fragment.");
+$int3 = calc($int3 + 5);
+if ($int4 < 7) {
+	$int5 = 0;
+}
+$int1, $int3 = ~script5779($component0, $int1, $int3, "Tier VII", 15000, $int5);
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Unlock Fragment Slot VII.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "Your League XP multiplier increases from 12x to 16x.");
+$int1, $int3 = ~script5780($component0, $int1, $int3, "A random Combat Fragment.");
+$int3 = calc($int3 + 5);
+return($int1, $int3);

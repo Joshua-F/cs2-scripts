@@ -1,0 +1,78 @@
+// 5785
+[proc,script5785](component $component0, int $int1, int $int2, struct $struct3)(int, int)
+if ($struct3 = null) {
+	return($int1, $int2);
+}
+def_int $colour4 = ~script5465(3);
+def_int $int5 = 5;
+def_int $int6 = 15;
+def_int $int7 = struct_param($struct3, param_1464);
+def_int $int8 = ~script5792($int7);
+def_int $int9 = struct_param($struct3, param_1468);
+def_int $int10 = struct_param($struct3, param_1470);
+def_string $string0 = struct_param($struct3, param_1465);
+def_int $int11 = calc(paraheight($string0, if_getwidth($component0) - 2 * $int5, b12_full) * $int6);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int5, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc(2 * $int5), $int11, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+if ($int8 < $int9) {
+	cc_setcolour(0xcfcfcf);
+} else {
+	cc_setcolour($colour4);
+}
+cc_settext($string0);
+$int2 = calc($int2 + $int11);
+$int1 = calc($int1 + 1);
+def_string $string1 = struct_param($struct3, param_1466);
+$int11 = calc(paraheight($string1, if_getwidth($component0) - 2 * $int5, p12_full) * $int6);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int5, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc(2 * $int5), $int11, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_setcolour(0xcfcfcf);
+cc_settext($string1);
+$int2 = calc($int2 + $int11);
+$int1 = calc($int1 + 1);
+$int2 = calc($int2 + 3);
+$string1 = "<tostring($int9)> Fragments: <col=cfcfcf><struct_param($struct3, param_1467)>";
+$int11 = calc(paraheight($string1, if_getwidth($component0) - 2 * $int5, p12_full) * $int6);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int5, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc(2 * $int5), $int11, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+if ($int8 < $int9) {
+	cc_setcolour(0xcfcfcf);
+} else {
+	cc_setcolour($colour4);
+}
+cc_settext($string1);
+$int2 = calc($int2 + $int11);
+$int1 = calc($int1 + 1);
+if ($int10 > 0) {
+	$int2 = calc($int2 + 3);
+	$string1 = "<tostring($int10)> Fragments: <col=cfcfcf><struct_param($struct3, param_1469)>";
+	$int11 = calc(paraheight($string1, if_getwidth($component0) - 2 * $int5, p12_full) * $int6);
+	cc_create($component0, ^iftype_text, $int1);
+	cc_setposition($int5, $int2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(2 * $int5), $int11, ^setsize_minus, ^setsize_abs);
+	cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	if ($int8 < $int10) {
+		cc_setcolour(0xcfcfcf);
+	} else {
+		cc_setcolour($colour4);
+	}
+	cc_settext($string1);
+	$int2 = calc($int2 + $int11);
+	$int1 = calc($int1 + 1);
+}
+$int2 = calc($int2 + $int5 * 2);
+return($int1, $int2);

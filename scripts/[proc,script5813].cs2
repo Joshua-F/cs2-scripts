@@ -1,0 +1,58 @@
+// 5813
+[proc,script5813](component $component0, graphic $graphic1, string $string0, int $int2, int $colour3, int $int4, int $int5, int $int6, int $int7)(int)
+def_int $int8 = 62;
+def_int $int9 = 34;
+def_int $int10 = calc($int6 % 5);
+def_int $int11 = calc($int6 / 5);
+$int10 = calc($int10 * $int8 + $int10 * 4);
+$int11 = calc($int11 * $int9 + $int11 * 4);
+def_int $int12 = calc($int10 + $int8 - 9);
+def_int $int13 = calc($int11 + $int9 - 9);
+def_int $int14 = calc($int9 - 18);
+def_int $int15 = calc($int8 - 18);
+def_struct $struct16 = null;
+if ($int4 = 0) {
+	if ($int5 = 0) {
+		$struct16 = struct_3915;
+	} else {
+		$struct16 = struct_3918;
+	}
+} else if ($int5 = 0) {
+	$struct16 = struct_3917;
+} else {
+	$struct16 = struct_3920;
+}
+def_int $int17 = $int7;
+$int7 = ~script5288($component0, $int7, $int10, $int11, $int8, $int9, $struct16, struct_param($struct16, param_1473));
+if ($int4 = 0) {
+	cc_setop(1, "Select");
+	cc_setopbase("<col=ff9040><$string0></col>");
+	if (~on_mobile = false) {
+		cc_setonmouseleave("script5841($component0, $int17, $struct16, struct_param($struct16, param_1473))");
+		if ($int5 = 0) {
+			cc_setonmouseover("script5841($component0, $int17, struct_3916, struct_param(struct_3916, param_1473))");
+		} else {
+			cc_setonmouseover("script5841($component0, $int17, struct_3919, struct_param(struct_3919, param_1473))");
+		}
+	}
+}
+if ($int5 = 1) {
+	~create_graphic($component0, $int7, $graphic1, calc($int10 + $int8 / 2 - 12), calc($int11 + $int9 / 2 - 12), ^setpos_abs_left, ^setpos_abs_top, 25, 25, ^setsize_abs, ^setsize_abs);
+	$int7 = calc($int7 + 1);
+	cc_create($component0, ^iftype_rectangle, $int7);
+	cc_sethide(true);
+	$int7 = calc($int7 + 1);
+} else {
+	~create_graphic($component0, $int7, $graphic1, calc($int10 + 5), calc($int11 + 4), ^setpos_abs_left, ^setpos_abs_top, 25, 25, ^setsize_abs, ^setsize_abs);
+	$int7 = calc($int7 + 1);
+	cc_create($component0, ^iftype_text, $int7);
+	cc_setposition(calc($int10 + 32), calc($int11 + 10), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(25, 15, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settextfont(b12_full);
+	cc_setcolour($colour3);
+	cc_settext(tostring($int2));
+	$int7 = calc($int7 + 1);
+}
+return($int7);

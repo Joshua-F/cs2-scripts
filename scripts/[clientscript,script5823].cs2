@@ -1,0 +1,80 @@
+// 5823
+[clientscript,script5823]
+def_int $colour0 = ~script5465(3);
+sound_synth(interface_select1, 1, 0);
+if_sethide(false, interface_733:25);
+def_struct $struct1 = enum(int, struct, enum_4131, calc(%var3344 - 1));
+def_string $string0 = "";
+def_int $int2 = 0;
+$string0, $int2 = ~script5834($struct1);
+cc_deleteall(interface_733:26);
+def_int $int3 = 0;
+$int3 = ~steelbox(interface_733:26, $int3, 1);
+cc_create(interface_733:26, ^iftype_text, $int3);
+cc_setposition(10, 13, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(228, 20, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_setcolour($colour0);
+cc_settext("<struct_param($struct1, param_1437)> - Quest List");
+$int3 = calc($int3 + 1);
+if_settext("Full list of everything that will be <col=29ffbd>auto-completed.</col> Anything <col=9f9f9f>already completed</col> will reduce the cost.", interface_733:29);
+cc_deleteall(interface_733:35);
+$int3 = 0;
+def_int $int4 = 0;
+def_int $index5 = 0;
+def_int $int6 = 20;
+def_int $int7 = string_indexof_string($string0, "br>", $index5);
+while ($int7 ! -1) {
+	cc_create(interface_733:35, ^iftype_rectangle, $int3);
+	cc_setposition(0, calc($int4 * $int6), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(0, $int6, ^setsize_minus, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	if (calc($int4 % 2) = 0) {
+		cc_settrans(200);
+	} else {
+		cc_settrans(220);
+	}
+	$int3 = calc($int3 + 1);
+	cc_create(interface_733:35, ^iftype_text, $int3);
+	cc_setposition(5, calc($int4 * $int6), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(5, $int6, ^setsize_minus, ^setsize_abs);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, $int6);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settext(substring($string0, $index5, calc($int7 - 1)));
+	$int3 = calc($int3 + 1);
+	$int4 = calc($int4 + 1);
+	$int7 = calc($int7 + 3);
+	$index5 = $int7;
+	$int7 = string_indexof_string($string0, "br>", $index5);
+}
+cc_deleteall(interface_733:33);
+if_setscrollpos(0, 0, interface_733:35);
+if ($int2 > 8) {
+	if_setscrollsize(0, calc($int2 * $int6), interface_733:35);
+} else {
+	if_setscrollsize(0, 0, interface_733:35);
+	cc_create(interface_733:35, ^iftype_rectangle, $int3);
+	cc_setposition(0, calc($int6 * $int4), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(0, calc($int6 * $int4), ^setsize_minus, ^setsize_minus);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	if (calc($int4 % 2) = 0) {
+		cc_settrans(200);
+	} else {
+		cc_settrans(220);
+	}
+}
+~scrollbar_vertical(interface_733:33, interface_733:35, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find(interface_733:33, 1) = ^true) {
+	~scrollbar_vertical_setdragger(interface_733:33, interface_733:35);
+}
+if_settext(struct_param($struct1, param_1446), interface_733:32);
+~script5820(interface_733:36, 0, 0, 0, if_getwidth(interface_733:36), if_getheight(interface_733:36), struct_3927);
+if (~on_mobile = false) {
+	if_setonmouseover("script5821(interface_733:36, 0, struct_3929)", interface_733:36);
+	if_setonmouseleave("script5821(interface_733:36, 0, struct_3927)", interface_733:36);
+}

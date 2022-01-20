@@ -1,10 +1,17 @@
 // 3232
 [proc,league_side_panel_hudtoggle](component $component0, component $component1)
 def_string $string0 = "Disable showing your Relics in the buff bar.";
+if (%varbit10032 = 3) {
+	$string0 = "Disable showing your Fragments in the buff bar.";
+}
 if (%varbit12383 = 1) {
 	cc_setgraphic("options_radio_buttons,1");
 	if_setop(1, "Enable", $component0);
-	$string0 = "Enable showing your Relics in the buff bar..";
+	if (%varbit10032 = 3) {
+		$string0 = "Enable showing your Fragments in the buff bar.";
+	} else {
+		$string0 = "Enable showing your Relics in the buff bar.";
+	}
 } else {
 	cc_setgraphic("options_radio_buttons,2");
 	if_setop(1, "Disable", $component0);

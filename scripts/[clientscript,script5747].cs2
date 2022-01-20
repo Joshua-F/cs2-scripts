@@ -1,0 +1,91 @@
+// 5747
+[clientscript,script5747](component $component0)
+cc_deleteall($component0);
+def_int $int1 = ~script5786;
+def_int $colour2 = ~script5465(3);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $colour5 = ^black;
+def_graphic $graphic6 = null;
+def_struct $struct7 = null;
+while ($int3 < 7) {
+	if ($int3 < $int1) {
+		$colour5 = 0x726451;
+		$struct7 = struct_3712;
+	} else {
+		$colour5 = 0x2e2b22;
+		$struct7 = struct_3714;
+	}
+	$int4 = ~script5288($component0, $int4, calc($int3 * 50), 0, 38, 38, $struct7, $colour5);
+	$int3 = calc($int3 + 1);
+}
+$int3 = 0;
+while ($int3 < 7) {
+	if ($int3 < $int1) {
+		$colour5 = $colour2;
+		switch_int ($int3) {
+			case 0 :
+				$graphic6 = "graphic_3745";
+			case 1 :
+				$graphic6 = "graphic_3746";
+			case 2 :
+				$graphic6 = "graphic_3747";
+			case 3 :
+				$graphic6 = "graphic_3748";
+			case 4 :
+				$graphic6 = "graphic_3749";
+			case 5 :
+				$graphic6 = "graphic_3750";
+			case 6 :
+				$graphic6 = "graphic_3751";
+		}
+	} else {
+		$colour5 = 0x726451;
+		switch_int ($int3) {
+			case 0 :
+				$graphic6 = "graphic_3752";
+			case 1 :
+				$graphic6 = "graphic_3753";
+			case 2 :
+				$graphic6 = "graphic_3754";
+			case 3 :
+				$graphic6 = "graphic_3755";
+			case 4 :
+				$graphic6 = "graphic_3756";
+			case 5 :
+				$graphic6 = "graphic_3757";
+			case 6 :
+				$graphic6 = "graphic_3758";
+		}
+	}
+	$int4 = ~script5288($component0, $int4, calc($int3 * 50 + 9), 37, 20, 14, struct_3712, $colour5);
+	~create_graphic($component0, $int4, $graphic6, calc($int3 * 50 + 11), 40, ^setpos_abs_left, ^setpos_abs_top, 16, 8, ^setsize_abs, ^setsize_abs);
+	$int4 = calc($int4 + 1);
+	$int3 = calc($int3 + 1);
+}
+$int3 = 0;
+while ($int3 < 6) {
+	~create_graphic($component0, $int4, struct_param(struct_3714, param_1388), calc($int3 * 50 + 28), 41, ^setpos_abs_left, ^setpos_abs_top, 32, 4, ^setsize_abs, ^setsize_abs);
+	$int4 = calc($int4 + 1);
+	~create_graphic($component0, $int4, struct_param(struct_3714, param_1394), calc($int3 * 50 + 28), 43, ^setpos_abs_left, ^setpos_abs_top, 32, 4, ^setsize_abs, ^setsize_abs);
+	$int4 = calc($int4 + 1);
+	cc_create($component0, ^iftype_rectangle, $int4);
+	cc_setposition(calc($int3 * 50 + 28), 42, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(32, 4, ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(0x726451);
+	$int4 = calc($int4 + 1);
+	cc_create($component0, ^iftype_rectangle, $int4);
+	cc_setposition(calc($int3 * 50 + 28), 42, ^setpos_abs_left, ^setpos_abs_top);
+	if (calc($int1 - 1) > $int3) {
+		cc_setsize(32, 4, ^setsize_abs, ^setsize_abs);
+	} else if (calc($int1 - 1) = $int3) {
+		cc_setsize(scale(~script5787, 32), 4, ^setsize_abs, ^setsize_abs);
+	} else {
+		cc_setsize(0, 4, ^setsize_abs, ^setsize_abs);
+	}
+	cc_setfill(true);
+	cc_setcolour($colour2);
+	$int4 = calc($int4 + 1);
+	$int3 = calc($int3 + 1);
+}

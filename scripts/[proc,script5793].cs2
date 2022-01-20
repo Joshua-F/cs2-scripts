@@ -1,0 +1,60 @@
+// 5793
+[proc,script5793](component $component0, int $int1, int $x2, int $y3, int $int4, int $int5, int $int6)(int)
+if ($int4 < 20) {
+	~create_graphic($component0, $int1, enum(int, graphic, enum_4139, $int4), $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+} else if ($int4 < 40) {
+	~create_graphic($component0, $int1, enum(int, graphic, enum_4139, calc($int4 - 20)), $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+} else if ($int4 < 60) {
+	~create_graphic($component0, $int1, enum(int, graphic, enum_4139, calc($int4 - 40)), $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+}
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, enum(int, graphic, enum_4140, $int4), $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+if ($int5 = 0) {
+	cc_sethide(true);
+}
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, enum(int, graphic, enum_4142, $int4), $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+cc_settrans(calc(130 - scale($int5, 8000, 100)));
+if ($int5 = 0) {
+	cc_sethide(true);
+}
+$int1 = calc($int1 + 1);
+if ($int4 < 20) {
+	~create_graphic($component0, $int1, enum(int, graphic, enum_4141, $int4), $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+} else if ($int4 < 40) {
+	~create_graphic($component0, $int1, enum(int, graphic, enum_4141, calc($int4 - 20)), $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+} else if ($int4 < 60) {
+	~create_graphic($component0, $int1, enum(int, graphic, enum_4141, calc($int4 - 40)), $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+}
+def_int $int7 = randominc(1);
+if ($int6 = 1) {
+	cc_settrans(238);
+	cc_setontimer("script5795($component0, $int1, 2)");
+} else {
+	if ($int7 = 0) {
+		$int7 = -3;
+	} else {
+		$int7 = 3;
+	}
+	cc_settrans(calc(125 + randominc(100)));
+	if ($int5 = 0) {
+		cc_sethide(true);
+	} else {
+		cc_setontimer("script5794($component0, $int1, 2, $int7)");
+	}
+}
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, null, $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+cc_settrans(128);
+if ($int6 = 1) {
+	cc_setontimer("script5796($component0, $int1, 20, 0, 0)");
+}
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, null, $x2, $y3, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+cc_settrans(128);
+cc_setvflip(true);
+if ($int6 = 1) {
+	cc_setontimer("script5796($component0, $int1, 20, 0, 0)");
+}
+$int1 = calc($int1 + 1);
+return($int1);

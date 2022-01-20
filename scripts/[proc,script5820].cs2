@@ -1,0 +1,28 @@
+// 5820
+[proc,script5820](component $component0, int $int1, int $int2, int $int3, int $width4, int $height5, struct $struct6)(int)
+def_int $int7 = struct_param($struct6, param_1478);
+~create_graphic($component0, $int1, struct_param($struct6, param_1391), calc($int2 + $int7), calc($int3 + $int7), ^setpos_abs_left, ^setpos_abs_top, calc($width4 - 2 * $int7), calc($height5 - 2 * $int7), ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 1), struct_param($struct6, param_1388), calc($int2 + $int7), $int3, ^setpos_abs_left, ^setpos_abs_top, calc(($width4 - 3 * $int7) / 2), $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 2), struct_param($struct6, param_1388), calc($int2 + $width4 - ($width4 - 3 * $int7) / 2 - $int7), $int3, ^setpos_abs_left, ^setpos_abs_top, calc(($width4 - 3 * $int7) / 2), $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 3), struct_param($struct6, param_1474), calc($int2 + $width4 / 2 - $int7 / 2), $int3, ^setpos_abs_left, ^setpos_abs_top, $int7, $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 4), struct_param($struct6, param_1394), calc($int2 + $int7), calc($int3 + $height5 - $int7), ^setpos_abs_left, ^setpos_abs_top, calc(($width4 - 3 * $int7) / 2), $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 5), struct_param($struct6, param_1394), calc($int2 + $width4 - ($width4 - 3 * $int7) / 2 - $int7), calc($int3 + $height5 - $int7), ^setpos_abs_left, ^setpos_abs_top, calc(($width4 - 3 * $int7) / 2), $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 6), struct_param($struct6, param_1477), calc($int2 + $width4 / 2 - $int7 / 2), calc($int3 + $height5 - $int7), ^setpos_abs_left, ^setpos_abs_top, $int7, $int7, ^setsize_abs, ^setsize_abs);
+def_int $int8 = 0;
+if (calc($int7 % 2) ! calc($height5 % 2)) {
+	$int8 = 1;
+}
+~create_graphic($component0, calc($int1 + 7), struct_param($struct6, param_1390), $int2, calc($int3 + $int7), ^setpos_abs_left, ^setpos_abs_top, $int7, calc(($height5 - 3 * $int7) / 2 + $int8), ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 8), struct_param($struct6, param_1390), $int2, calc($int3 + $height5 - (($height5 - 3 * $int7) / 2 + $int8 + $int7)), ^setpos_abs_left, ^setpos_abs_top, $int7, calc(($height5 - 3 * $int7) / 2 + $int8), ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 9), struct_param($struct6, param_1475), $int2, calc($int3 + $height5 / 2 - $int7 / 2), ^setpos_abs_left, ^setpos_abs_top, $int7, $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 10), struct_param($struct6, param_1392), calc($int2 + $width4 - $int7), calc($int3 + $int7), ^setpos_abs_left, ^setpos_abs_top, $int7, calc(($height5 - 3 * $int7) / 2 + $int8), ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 11), struct_param($struct6, param_1392), calc($int2 + $width4 - $int7), calc($int3 + $height5 - (($height5 - 3 * $int7) / 2 + $int8 + $int7)), ^setpos_abs_left, ^setpos_abs_top, $int7, calc(($height5 - 3 * $int7) / 2 + $int8), ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 12), struct_param($struct6, param_1476), calc($int2 + $width4 - $int7), calc($int3 + $height5 / 2 - $int7 / 2), ^setpos_abs_left, ^setpos_abs_top, $int7, $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 13), struct_param($struct6, param_1387), $int2, $int3, ^setpos_abs_left, ^setpos_abs_top, $int7, $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 14), struct_param($struct6, param_1389), calc($int2 + $width4 - $int7), $int3, ^setpos_abs_left, ^setpos_abs_top, $int7, $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 15), struct_param($struct6, param_1393), $int2, calc($int3 + $height5 - $int7), ^setpos_abs_left, ^setpos_abs_top, $int7, $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 16), struct_param($struct6, param_1395), calc($int2 + $width4 - $int7), calc($int3 + $height5 - $int7), ^setpos_abs_left, ^setpos_abs_top, $int7, $int7, ^setsize_abs, ^setsize_abs);
+if (cc_find($component0, $int1) = ^true) {
+	return(calc($int1 + 17));
+}
+return(0);

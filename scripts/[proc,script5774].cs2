@@ -1,0 +1,11 @@
+// 5774
+[proc,script5774](component $component0, component $layer1)(int, int)
+if (if_getlayer($component0) = null | if_getlayer($component0) = $layer1) {
+	return(if_getx($component0), if_gety($component0));
+}
+def_int $int2 = 0;
+def_int $int3 = 0;
+$int2, $int3 = ~script5774(if_getlayer($component0), $layer1);
+$int2 = calc($int2 + if_getx($component0));
+$int3 = calc($int3 + if_gety($component0));
+return($int2, $int3);

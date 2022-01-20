@@ -1,0 +1,71 @@
+// 5831
+[proc,script5831](npc $npc0)(int)
+if (%varbit10032 ! 3) {
+	return(1);
+}
+def_int $int1 = 1;
+switch_npc ($npc0) {
+	case king_black_dragon_239 :
+		$int1 = %varbit13364;
+	case giant_mole_5779 :
+		$int1 = %varbit13365;
+	case kalphite_queen_963 :
+		$int1 = %varbit13366;
+	case obor_7416 :
+		$int1 = %varbit13367;
+	case bryophyta_8195 :
+		$int1 = %varbit13368;
+	case dusk_7849 :
+		$int1 = %varbit13369;
+	case dharok_the_wretched_1673 :
+		$int1 = %varbit13370;
+	case dagannoth_supreme_2265 :
+		$int1 = %varbit13371;
+	case hespori_8583 :
+		$int1 = %varbit13372;
+	case sarachnis_8713 :
+		$int1 = %varbit13373;
+	case skotizo_7286 :
+		$int1 = %varbit13374;
+	case zalcano_9049 :
+		$int1 = %varbit13375;
+	case kraken_494 :
+		$int1 = %varbit13376;
+	case crystalline_hunllef_9021 :
+		$int1 = %varbit13377;
+	case thermonuclear_smoke_devil_499 :
+		$int1 = %varbit13378;
+	case zulrah_2042 :
+		$int1 = %varbit13379;
+	case vorkath_8061 :
+		$int1 = %varbit13380;
+	case cerberus_5863 :
+		$int1 = %varbit13381;
+	case kreearra_3162 :
+		$int1 = %varbit13382;
+	case general_graardor_2215 :
+		$int1 = %varbit13383;
+	case commander_zilyana_2205 :
+		$int1 = %varbit13384;
+	case kril_tsutsaroth_3129 :
+		$int1 = %varbit13385;
+	case the_nightmare_9460 :
+		$int1 = %varbit13386;
+	case alchemical_hydra_8615 :
+		$int1 = %varbit13387;
+	case great_olm_7554 :
+		$int1 = %varbit13388;
+	case verzik_vitur_8369 :
+		$int1 = %varbit13389;
+	case tempoross_10572 :
+		$int1 = %varbit13390;
+	case pyromancer_7371 :
+		$int1 = %varbit13391;
+	case corporeal_beast_319 :
+		$int1 = %varbit13392;
+	case abyssal_sire_5888 :
+		$int1 = %varbit13393;
+	case nex_11278 :
+		$int1 = %varbit13394;
+}
+return($int1);

@@ -1,0 +1,140 @@
+// 5834
+[proc,script5834](struct $struct0)(string, int)
+def_struct $structarray0(100);
+def_struct $structarray1(7);
+def_int $int1 = 0;
+def_int $int2 = 1;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_string $string0 = "";
+def_int $int7 = 0;
+def_string $string1 = "<col=9f9f9f>";
+def_string $string2 = "<col=29ffbd>";
+$structarray0(0) = $struct0;
+while ($int4 < $int2) {
+	if (struct_param($structarray0($int4), param_648) ! null) {
+		$structarray1($int3) = struct_param($structarray0($int4), param_648);
+		$int3 = calc($int3 + 1);
+	}
+	if (struct_param($structarray0($int4), param_649) ! null) {
+		$structarray1($int3) = struct_param($structarray0($int4), param_649);
+		$int3 = calc($int3 + 1);
+	}
+	if (struct_param($structarray0($int4), param_650) ! null) {
+		$structarray1($int3) = struct_param($structarray0($int4), param_650);
+		$int3 = calc($int3 + 1);
+	}
+	if (struct_param($structarray0($int4), param_651) ! null) {
+		$structarray1($int3) = struct_param($structarray0($int4), param_651);
+		$int3 = calc($int3 + 1);
+	}
+	if (struct_param($structarray0($int4), param_652) ! null) {
+		$structarray1($int3) = struct_param($structarray0($int4), param_652);
+		$int3 = calc($int3 + 1);
+	}
+	if (struct_param($structarray0($int4), param_653) ! null) {
+		$structarray1($int3) = struct_param($structarray0($int4), param_653);
+		$int3 = calc($int3 + 1);
+	}
+	if (struct_param($structarray0($int4), param_654) ! null) {
+		$structarray1($int3) = struct_param($structarray0($int4), param_654);
+		$int3 = calc($int3 + 1);
+	}
+	while ($int5 < $int3) {
+		while ($int6 < $int2) {
+			if ($structarray0($int6) = $structarray1($int5)) {
+				$int1 = 1;
+			}
+			$int6 = calc($int6 + 1);
+		}
+		if ($int1 = 0) {
+			$structarray0($int2) = $structarray1($int5);
+			$int2 = calc($int2 + 1);
+		}
+		$structarray1($int5) = null;
+		$int1 = 0;
+		$int5 = calc($int5 + 1);
+		$int6 = 0;
+	}
+	if ($structarray0($int4) ! $struct0) {
+		if (~script4136($structarray0($int4)) = 0) {
+			$string0 = append($string0, "<$string2><struct_param($structarray0($int4), param_610)><br>");
+		} else {
+			$string0 = append($string0, "<$string1><struct_param($structarray0($int4), param_610)><br>");
+		}
+		$int7 = calc($int7 + 1);
+	}
+	$int4 = calc($int4 + 1);
+	$int3 = 0;
+	$int5 = 0;
+}
+switch_struct ($struct0) {
+	case struct_3982 :
+		if (%var685 ! 1275068466) {
+			$string0 = append($string0, "<$string2>Freeing Awowogei<br>");
+		} else {
+			$string0 = append($string0, "<$string1>Freeing Awowogei<br>");
+		}
+		$int7 = calc($int7 + 1);
+	case struct_3995 :
+		if (%varbit1895 ! 110) {
+			$string0 = append($string0, "<$string2>Freeing Pirate Pete<br>");
+		} else {
+			$string0 = append($string0, "<$string1>Freeing Pirate Pete<br>");
+		}
+		if (%varbit1904 ! 170) {
+			$string0 = append($string0, "<$string2>Freeing Skrach Uglogwee<br>");
+		} else {
+			$string0 = append($string0, "<$string1>Freeing Skrach Uglogwee<br>");
+		}
+		$int7 = calc($int7 + 2);
+	case struct_3989 :
+		if (%varbit1867 ! 40) {
+			$string0 = append($string0, "<$string2>Freeing the Goblin Generals<br>");
+		} else {
+			$string0 = append($string0, "<$string1>Freeing the Goblin Generals<br>");
+		}
+		if (%varbit1892 ! 60) {
+			$string0 = append($string0, "<$string2>Freeing the Mountain Dwarf<br>");
+		} else {
+			$string0 = append($string0, "<$string1>Freeing the Mountain Dwarf<br>");
+		}
+		$int7 = calc($int7 + 2);
+	case struct_4015 :
+		if (%varbit1910 ! 20) {
+			$string0 = append($string0, "<$string2>Freeing Sir Amik Varze<br>");
+		} else {
+			$string0 = append($string0, "<$string1>Freeing Sir Amik Varze<br>");
+		}
+		$int7 = calc($int7 + 1);
+	case struct_4008 :
+		if (%varbit4896 < 1000) {
+			$string0 = append($string0, "<$string2>100% Arceuus favour<br>");
+		} else {
+			$string0 = append($string0, "<$string1>100% Arceuus favour<br>");
+		}
+		if (%varbit4895 < 1000) {
+			$string0 = append($string0, "<$string2>100% Hosidius favour<br>");
+		} else {
+			$string0 = append($string0, "<$string1>100% Hosidius favour<br>");
+		}
+		if (%varbit4898 < 1000) {
+			$string0 = append($string0, "<$string2>100% Lovagengj favour<br>");
+		} else {
+			$string0 = append($string0, "<$string1>100% Lovagengj favour<br>");
+		}
+		if (%varbit4894 < 1000) {
+			$string0 = append($string0, "<$string2>100% Shayzien favour<br>");
+		} else {
+			$string0 = append($string0, "<$string1>100% Shayzien favour<br>");
+		}
+		if (%varbit4899 < 1000) {
+			$string0 = append($string0, "<$string2>100% Piscarilius favour<br>");
+		} else {
+			$string0 = append($string0, "<$string1>100% Piscarilius favour<br>");
+		}
+		$int7 = calc($int7 + 5);
+}
+return($string0, $int7);

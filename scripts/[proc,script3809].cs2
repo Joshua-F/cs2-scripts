@@ -35,4 +35,10 @@ switch_stat ($stat1) {
 			return(0);
 		}
 }
+if (%varbit10032 = 3 & ~league_world = 1 & ~script5830($stat1) = 0) {
+	if ($int2 = 1) {
+		mes("You haven't unlocked this skill yet.");
+	}
+	return(0);
+}
 return(1);

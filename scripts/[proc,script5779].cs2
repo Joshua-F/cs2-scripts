@@ -1,0 +1,44 @@
+// 5779
+[proc,script5779](component $component0, int $int1, int $int2, string $text0, int $int3, int $int4)(int, int)
+def_int $colour5 = ~script5465(3);
+def_int $int6 = 5;
+def_int $int7 = 15;
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setposition(0, calc($int2 - 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(200);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int6, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int6 * 2), $int7, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int7);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+if ($int4 = 1) {
+	cc_setcolour($colour5);
+} else {
+	cc_setcolour(0xcfcfcf);
+}
+cc_settext($text0);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int6, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int6 * 2), $int7, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_right, ^settextalign_top, $int7);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+if ($int4 = 1) {
+	cc_setcolour($colour5);
+} else {
+	cc_setcolour(0xcfcfcf);
+}
+if ($int3 = 0) {
+	cc_settext("Free unlock");
+} else {
+	cc_settext("Unlocked at <tostring($int3)> points");
+}
+$int1 = calc($int1 + 1);
+$int2 = calc($int2 + $int7 + 3);
+return($int1, $int2);

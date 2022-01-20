@@ -20,7 +20,9 @@ def_int $int14 = 0;
 def_int $int15 = -1;
 def_graphic $graphic16 = struct_param($struct4, param_1022);
 def_graphic $graphic17 = struct_param($struct4, param_1023);
-if ($struct11 ! null) {
+if ($struct4 = leagues_iii_shattered_relics_3771) {
+	$int12 = ~script5803($int3, 0);
+} else if ($struct11 ! null) {
 	$int12 = struct_param($struct11, param_877);
 }
 if ($int12 ! -1 & $int3 = 0) {
@@ -75,7 +77,43 @@ if (cc_find($component0, 0) = ^false) {
 			$int9 = calc($int9 + 1);
 		}
 	} else {
-		if ($struct4 ! null) {
+		if ($struct4 = leagues_iii_shattered_relics_3771) {
+			$enum5 = enum_4127;
+			if ($enum5 ! null) {
+				$int7 = enum_getoutputcount($enum5);
+				$int8 = 1;
+				while ($int8 <= $int7) {
+					cc_create($component0, ^iftype_graphic, $int9);
+					cc_setsize(10, 31, ^setsize_abs, ^setsize_abs);
+					$int14 = enum(int, int, $enum5, $int8);
+					$int15 = scale($int14, $int12, calc($int13 - 4));
+					if ($int15 <= 2) {
+						$int15 = 0;
+					} else if ($int15 >= calc($int13 - 4)) {
+						$int15 = $int13;
+					} else {
+						$int15 = calc($int15 + 2);
+					}
+					cc_setposition(calc($int15 - 4), 1, ^setpos_abs_left, ^setpos_abs_top);
+					cc_setgraphic(struct_param($struct4, param_1031));
+					if ($int14 = 1) {
+						$string0 = "Fragment Slot unlocked at <tostring($int14)> point.";
+					} else {
+						$string0 = "Fragment Slot unlocked at <tostring($int14)> points.";
+					}
+					if (~on_mobile = true) {
+						cc_setop(1, "Show Threshold");
+						cc_setonop("league_progress_bar_mobile_tooltip(event_com, event_comsubid, $component1, $string0, 512)");
+					} else {
+						cc_setop(1, "");
+						cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, $string0, 25, 512)");
+						cc_setonmouseleave("deltooltip($component1)");
+					}
+					$int8 = calc($int8 + 1);
+					$int9 = calc($int9 + 1);
+				}
+			}
+		} else if ($struct4 ! null) {
 			$enum5 = struct_param($struct4, param_870);
 			if ($enum5 ! null) {
 				$int7 = enum_getoutputcount($enum5);
@@ -140,12 +178,12 @@ if ($int3 = 0) {
 	$comsubid10 = 3;
 }
 def_int $width18 = calc($int13 - 4);
-def_int $width19 = $width18;
+def_int $width19 = calc($width18 - 2);
 if ($int12 ! -1 & $int12 > 0) {
 	$width19 = scale(%var2615, $int12, $width18);
 }
 if ($width19 > $width18) {
-	$width19 = $width18;
+	$width19 = calc($width18 - 1);
 }
 if (cc_find($component0, 2) = ^true) {
 	if ($int2 = 1) {
@@ -170,7 +208,13 @@ if ($comsubid10 ! -1 & cc_find($component0, $comsubid10) = ^true) {
 			}
 		} else {
 			$int20 = calc($int12 - %var2615);
-			if ($int20 = 1) {
+			if ($struct4 = leagues_iii_shattered_relics_3771) {
+				if ($int20 = 1) {
+					cc_settext("<tostring($int20)> league point until your next Fragment Slot.");
+				} else {
+					cc_settext("<tostring($int20)> League Points until your next Fragment Slot.");
+				}
+			} else if ($int20 = 1) {
 				cc_settext("<tostring($int20)> point until your next Relic.");
 			} else {
 				cc_settext("<tostring($int20)> points until your next Relic.");

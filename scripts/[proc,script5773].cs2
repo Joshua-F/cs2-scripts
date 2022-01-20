@@ -1,0 +1,26 @@
+// 5773
+[proc,script5773](component $component0, int $int1, int $x2, int $int3, int $width4, string $text0, int $colour5, int $int6)(int, int)
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setposition($x2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width4, $int6, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+if (~on_mobile = false) {
+	cc_setonmouseover("cc_settrans($component0, $int1, 220, null)");
+	cc_setonmouseleave("cc_settrans($component0, $int1, 255, null)");
+}
+cc_setop(1, "Select");
+cc_setopbase("<col=ff9040><$text0></col>");
+$int1 = calc($int1 + 1);
+.cc_create($component0, ^iftype_text, $int1);
+.cc_setposition($x2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setsize($width4, $int6, ^setsize_abs, ^setsize_abs);
+.cc_settextfont(p11_full);
+.cc_setcolour($colour5);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settext($text0);
+$int1 = calc($int1 + 1);
+$int3 = calc($int3 + $int6);
+return($int1, $int3);

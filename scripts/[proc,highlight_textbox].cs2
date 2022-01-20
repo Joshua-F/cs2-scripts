@@ -26,7 +26,7 @@ def_int $int10 = if_gety(interface_664:7);
 def_int $width11 = if_getwidth(interface_664:7);
 def_int $height12 = if_getheight(interface_664:7);
 if (if_gethide(interface_664:7) = false) {
-	if (calc($int10 + $int8 + 10) >= $height5) {
+	if (calc($int8 + 10) <= $int10) {
 		$int10 = calc($int10 - 10 - $int8);
 		$int9 = calc($int9 + if_getwidth(interface_664:7) / 2 - $int7 / 2);
 		if ($int9 <= 1) {
@@ -35,7 +35,7 @@ if (if_gethide(interface_664:7) = false) {
 			$int9 = calc($width6 - 2 - $int7);
 		}
 		if_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
-	} else if (calc($int10 + $height12 + $int8 + 10) < $height5) {
+	} else if (calc($int10 + $height12 + $int8 + 10) <= $height5) {
 		$int10 = calc($int10 + 10 + if_getheight(interface_664:7));
 		$int9 = calc($int9 + if_getwidth(interface_664:7) / 2 - $int7 / 2);
 		if ($int9 <= 1) {
@@ -44,7 +44,7 @@ if (if_gethide(interface_664:7) = false) {
 			$int9 = calc($width6 - 2 - $int7);
 		}
 		if_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
-	} else if (calc($int9 + $int7 + 10) >= $width6) {
+	} else if (calc($int7 + 10) <= $int9) {
 		$int9 = calc($int9 - 10 - $int7);
 		$int10 = calc($int10 + if_getheight(interface_664:7) / 2 - $int8 / 2);
 		if ($int10 <= 1) {
@@ -53,7 +53,7 @@ if (if_gethide(interface_664:7) = false) {
 			$int10 = calc($height5 - 2 - $int8);
 		}
 		if_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
-	} else if (calc($int9 + $width11 + $int7 + 10) < $width6) {
+	} else if (calc($int9 + $width11 + $int7 + 10) <= $width6) {
 		$int9 = calc($int9 + 10 + if_getwidth(interface_664:7));
 		$int10 = calc($int10 + if_getheight(interface_664:7) / 2 - $int8 / 2);
 		if ($int10 <= 1) {

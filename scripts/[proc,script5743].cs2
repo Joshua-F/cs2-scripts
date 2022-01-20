@@ -1,0 +1,33 @@
+// 5743
+[proc,script5743](component $component0, component $component1, int $int2)(int)
+def_struct $struct3 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct3 = null) {
+	return($int2);
+}
+def_enum $enum4 = struct_param($struct3, param_1433);
+if ($enum4 = null) {
+	return($int2);
+}
+def_int $count5 = 0;
+def_int $count6 = enum_getoutputcount($enum4);
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_struct $struct10 = null;
+def_struct $struct11 = null;
+while ($count5 < $count6) {
+	$struct10 = enum(int, struct, $enum4, $count5);
+	if ($struct10 ! null) {
+		$int9 = struct_param($struct10, param_1464);
+		$int7 = ~script5792($int9);
+		$int8 = struct_param($struct10, param_1468);
+		if ($int7 >= $int8) {
+			$struct11 = struct_param($struct10, param_1432);
+			if ($struct11 ! null & ~buff_bar_buff_create($component0, $int2, $component1, $struct11, -1) = 1) {
+				$int2 = calc($int2 + 1);
+			}
+		}
+	}
+	$count5 = calc($count5 + 1);
+}
+return($int2);

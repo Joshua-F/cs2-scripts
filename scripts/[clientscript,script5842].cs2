@@ -1,0 +1,5 @@
+// 5842
+[clientscript,script5842](boolean $boolean0, component $component1, int $comsubid2)
+if (~on_mobile = false & cc_find($component1, $comsubid2) = ^true) {
+	cc_sethide($boolean0);
+}

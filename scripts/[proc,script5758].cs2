@@ -1,0 +1,14 @@
+// 5758
+[proc,script5758](component $component0, component $component1)
+def_int $colour2 = ~script5465(3);
+if (%varcint968 < 1 & %varcint969 < 1 & %varcint970 < 1 & %varcint971 < 1) {
+	~v2_stone_button_in($component0);
+	if_setcolour(0xcfcfcf, $component1);
+	if_setonmouseover(null, $component0);
+	if_setonmouseleave(null, $component0);
+} else {
+	~v2_stone_button($component0);
+	if_setcolour($colour2, $component1);
+	if_setonmouseover("v2_stone_button_in($component0)", $component0);
+	if_setonmouseleave("v2_stone_button($component0)", $component0);
+}

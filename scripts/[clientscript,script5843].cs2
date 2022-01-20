@@ -1,0 +1,11 @@
+// 5843
+[clientscript,script5843](component $component0, int $trans1, int $int2)
+if ($int2 = 0) {
+	return;
+}
+if ($trans1 < 0) {
+	$trans1 = 0;
+} else if ($trans1 > 255) {
+	$trans1 = 255;
+}
+if_setontimer("script5844(event_com, $trans1, $int2)", $component0);

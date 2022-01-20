@@ -1,0 +1,19 @@
+// 5795
+[clientscript,script5795](component $component0, int $comsubid1, int $int2)
+def_int $int3 = 218;
+def_int $int4 = 125;
+def_int $int5 = 2;
+def_int $trans6 = 0;
+def_int $trans7 = calc($int4 + randominc($int3 - $int4));
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int2 = calc($int2 - 1);
+	if ($int2 <= 0) {
+		$trans6 = ~min(calc(cc_gettrans + 7), $int3);
+		if ($trans7 < $trans6 & random(3) = 1) {
+			$trans6 = $trans7;
+		}
+		cc_settrans($trans6);
+		$int2 = $int5;
+	}
+	cc_setontimer("script5795($component0, $comsubid1, $int2)");
+}

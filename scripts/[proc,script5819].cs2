@@ -1,0 +1,55 @@
+// 5819
+[proc,script5819](component $component0, int $int1, int $int2, int $int3)
+cc_deleteall($component0);
+def_int $int4 = 0;
+if ($int1 = 0 | $int1 = 3 | $int1 = 4) {
+	$int4 = ~script5820($component0, $int4, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3921);
+} else if ($int1 = 1) {
+	$int4 = ~script5820($component0, $int4, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3924);
+} else if ($int1 = 2) {
+	$int4 = ~script5820($component0, $int4, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3926);
+}
+def_string $text0 = "„ <tostring($int3)>";
+if ($int1 = 4 | $int1 = 0) {
+	$text0 = "„";
+}
+cc_create($component0, ^iftype_text, $int4);
+cc_setposition(1, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(false);
+cc_settextfont(b12_full);
+if ($int1 = 0 | $int1 = 3 | $int1 = 4) {
+	cc_setcolour(0x666666);
+} else {
+	cc_setcolour(0x90e2c8);
+}
+cc_settext($text0);
+$int4 = calc($int4 + 1);
+cc_create($component0, ^iftype_text, $int4);
+cc_setposition(0, 1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(false);
+cc_settextfont(b12_full);
+if ($int1 = 0 | $int1 = 3 | $int1 = 4) {
+	cc_setcolour(0xcfcfcf);
+} else {
+	cc_setcolour(^black);
+}
+cc_settext($text0);
+$int4 = calc($int4 + 1);
+if (~on_mobile = false & ($int1 = 1 | $int1 = 2)) {
+	if_setonmouseover("script5818($component0, 2, $int2, $int3)", $component0);
+	if_setonmouseleave("script5818($component0, 1, $int2, $int3)", $component0);
+} else {
+	if_setonmouseover(null, $component0);
+	if_setonmouseleave(null, $component0);
+}
+if ($int1 = 1 | $int1 = 2) {
+	if_setop(1, "Unlock", $component0);
+	if_setonop("script5825(event_com)", $component0);
+} else {
+	if_setop(1, "", $component0);
+	if_setonop(null, $component0);
+}

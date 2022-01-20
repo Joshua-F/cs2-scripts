@@ -42,12 +42,14 @@ def_int $int32 = -1;
 def_int $int33 = -1;
 def_int $int34 = -1;
 def_int $int35 = -1;
-def_int $int36 = 0;
+def_int $int36 = -1;
+def_int $int37 = 0;
+def_int $int38 = 0;
 if (cc_find(interface_657:2, $int16) = ^true) {
 	cc_setcolour($colour20);
 }
 if (%var2615 < %var2614) {
-	$int36 = 1;
+	$int37 = 1;
 }
 while ($int22 < $count21) {
 	$struct24 = enum(int, struct, $enum19, $int22);
@@ -56,13 +58,16 @@ while ($int22 < $count21) {
 	$text0 = struct_param($struct24, param_874);
 	$string1 = struct_param($struct24, param_875);
 	$int32 = enum(int, int, enum_2671, $int31);
+	$int32 = scale($int32, 100, struct_param($struct18, param_754));
 	$int33 = struct_param($struct24, param_1016);
 	$int34 = struct_param($struct24, param_1017);
-	if (~league_task_display($int31, $int30, $int33, $int34) = 1) {
+	$int35 = struct_param($struct24, param_1018);
+	$int38 = enum(int, int, enum_4128, $int31);
+	if (~league_task_display($int31, $int30, $int33, $int34, $int35) = 1) {
 		cc_create($component2, ^iftype_rectangle, $int17);
 		if ($int22 = $int0) {
-			$int35 = paraheight("Description: <$string1>", calc(if_getwidth($component2) - 10), p11_full);
-			cc_setsize(0, calc($int26 + (10 * $int35 + 25)), ^setsize_minus, ^setsize_abs);
+			$int36 = paraheight("Description: <$string1>", calc(if_getwidth($component2) - 10), p11_full);
+			cc_setsize(0, calc($int26 + (10 * $int36 + 25)), ^setsize_minus, ^setsize_abs);
 			$graphic28 = "open_buttons_small,3";
 			$graphic29 = "open_buttons_small,2";
 		} else {
@@ -114,15 +119,19 @@ while ($int22 < $count21) {
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_settextshadow(true);
 		if ($int30 = 1) {
-			cc_setcolour(0x0dc10d);
+			cc_setcolour($colour20);
 		} else {
 			cc_setcolour(0x9f9f9f);
 		}
 		cc_create($component4, ^iftype_text, $int17);
-		if ($int32 = 1) {
-			cc_settext("Reward: <col=ffffff><tostring(enum(int, int, enum_2671, $int31))> point</col>");
+		if (struct_param($struct18, param_1421) = true) {
+			if ($int38 = 1) {
+				cc_settext("Reward: <col=ffffff><tostring($int32)> League Points, <tostring($int38)> Sage's Renown</col>");
+			} else {
+				cc_settext("Reward: <col=ffffff><tostring($int32)> League Points, <tostring($int38)> Sage's Renown</col>");
+			}
 		} else {
-			cc_settext("Reward: <col=ffffff><tostring(enum(int, int, enum_2671, $int31))> points</col>");
+			cc_settext("Reward: <col=ffffff><tostring($int32)> League Points.</col>");
 		}
 		cc_setsize(51, 11, ^setsize_minus, ^setsize_abs);
 		cc_setposition(51, calc($height25 + $int26 / 2 + 2), ^setpos_abs_left, ^setpos_abs_top);
@@ -149,7 +158,7 @@ while ($int22 < $count21) {
 			cc_setcolour($colour20);
 			cc_create($component7, ^iftype_text, 0);
 			cc_settext("Description: <col=ffffff><$string1></col>");
-			cc_setsize(10, calc(10 * $int35), ^setsize_minus, ^setsize_abs);
+			cc_setsize(10, calc(10 * $int36), ^setsize_minus, ^setsize_abs);
 			cc_setposition(5, calc($height25 + $int26 + 19), ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);
 			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -157,7 +166,7 @@ while ($int22 < $count21) {
 			cc_setcolour($colour20);
 		}
 		if ($int22 = $int0) {
-			$height25 = calc($height25 + $int35 * 10 + $int26 + 25);
+			$height25 = calc($height25 + $int36 * 10 + $int26 + 25);
 		} else {
 			$height25 = calc($height25 + $int26);
 		}

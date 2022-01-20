@@ -1,0 +1,31 @@
+// 5784
+[proc,script5784](component $component0, int $int1, int $int2, string $text0, string $string1, int $int3)(int, int)
+def_int $colour4 = ~script5465(3);
+def_int $int5 = 5;
+def_int $int6 = 15;
+def_int $int7 = calc(paraheight($string1, if_getwidth($component0) - 2 * $int5, p12_full) * $int6);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int5, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc(2 * $int5), $int7, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+if ($int3 = 0) {
+	cc_setcolour(0xcfcfcf);
+} else {
+	cc_setcolour($colour4);
+}
+cc_settext($text0);
+$int2 = calc($int2 + $int6);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int5, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc(2 * $int5), $int7, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_setcolour(0xcfcfcf);
+cc_settext($string1);
+$int1 = calc($int1 + 1);
+$int2 = calc($int2 + $int7 + $int5 * 2);
+return($int1, $int2);

@@ -86,6 +86,10 @@ cc_setonop("league_menu_frame_click($component0, $component1, $component2)");
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 $int3 = calc($int3 + 1);
 $int10 = calc($int10 + $int9);
+def_string $text0 = "Areas";
+if (%varbit10032 = 3) {
+	$text0 = "Unlocks";
+}
 cc_create($component1, ^iftype_rectangle, $int3);
 cc_setsize(calc($int8 - 12), $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
@@ -100,7 +104,7 @@ $int3 = calc($int3 + 1);
 cc_create($component1, ^iftype_text, $int3);
 cc_setsize(calc($int8 - 12), $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
-cc_settext("Areas");
+cc_settext($text0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 if ($int4 = 3) {
@@ -113,11 +117,15 @@ if ($int4 = 3) {
 		cc_setonmouseleave("league_info_mouseleave($component1, $int3, $colour5)");
 	}
 }
-cc_setop(1, "View Areas");
+cc_setop(1, "View <$text0>");
 cc_setonop("league_menu_frame_click($component0, $component1, $component2)");
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 $int3 = calc($int3 + 1);
 $int10 = calc($int10 + $int9);
+$text0 = "Relics";
+if (%varbit10032 = 3) {
+	$text0 = "Fragments";
+}
 cc_create($component1, ^iftype_rectangle, $int3);
 cc_setsize(calc($int8 - 12), $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
@@ -132,7 +140,7 @@ $int3 = calc($int3 + 1);
 cc_create($component1, ^iftype_text, $int3);
 cc_setsize(calc($int8 - 12), $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
-cc_settext("Relics");
+cc_settext($text0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 if ($int4 = 2) {
@@ -145,6 +153,6 @@ if ($int4 = 2) {
 		cc_setonmouseleave("league_info_mouseleave($component1, $int3, $colour5)");
 	}
 }
-cc_setop(1, "View Relics");
+cc_setop(1, "View <$text0>");
 cc_setonop("league_menu_frame_click($component0, $component1, $component2)");
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

@@ -1,0 +1,70 @@
+// 5751
+[proc,script5751](component $component0, component $component1)
+def_int $height2 = if_getscrollheight($component0);
+cc_deleteall($component0);
+cc_deleteall($component1);
+def_int $int3 = 0;
+def_int $int4 = 1;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_struct $struct7 = enum(int, struct, enum_4136, $int4);
+while ($struct7 ! null) {
+	$int6 = 0;
+	if (%varcint968 > 0 & struct_param($struct7, param_1453) ! %varcint968) {
+		$int6 = 1;
+	}
+	if (%varcint969 > 0 & struct_param($struct7, param_1459) ! %varcint969 & struct_param($struct7, param_1460) ! %varcint969) {
+		$int6 = 1;
+	}
+	if (%varcint970 > 0 & ~script5789(~script5788(struct_param($struct7, param_1455))) ! %varcint970) {
+		$int6 = 1;
+	}
+	if (%varcint971 > 0) {
+		if (%varcint971 = 1 & ~script5788(struct_param($struct7, param_1455)) > 0) {
+			$int6 = 1;
+		}
+		if (%varcint971 = 2 & ~script5788(struct_param($struct7, param_1455)) < 1) {
+			$int6 = 1;
+		}
+	}
+	$int3 = ~script5752($component0, $int3, $int5, $struct7, $int6);
+	if ($int6 = 0) {
+		$int5 = calc($int5 + 1);
+	}
+	$int4 = calc($int4 + 1);
+	$struct7 = enum(int, struct, enum_4136, $int4);
+}
+def_int $height8 = calc($int5 * 42);
+if ($height8 < if_getheight($component0)) {
+	cc_create($component0, ^iftype_rectangle, $int3);
+	cc_setsize(0, calc(if_getheight($component0) - $height8), ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setcolour(^black);
+	cc_setfill(true);
+	if (calc($int5 % 2) = 0) {
+		cc_settrans(200);
+	} else {
+		cc_settrans(220);
+	}
+	$int3 = calc($int3 + 1);
+	$height8 = if_getheight($component0);
+}
+if ($int5 = 0) {
+	cc_create($component0, ^iftype_text, $int3);
+	cc_setposition(10, 20, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(20, 30, ^setsize_minus, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 18);
+	cc_settext("All Fragments filtered");
+	cc_settextshadow(true);
+	cc_settextfont(b12_full);
+	cc_setcolour(~script5465(3));
+	$int3 = calc($int3 + 1);
+}
+if_setscrollsize(if_getwidth($component0), $height8, $component0);
+if ($height2 ! if_getscrollheight($component0)) {
+	if_setscrollpos(0, 0, $component0);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find($component1, 1) = ^true) {
+	~scrollbar_vertical_setdragger($component1, $component0);
+}

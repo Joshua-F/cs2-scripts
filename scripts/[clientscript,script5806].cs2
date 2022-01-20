@@ -1,0 +1,8 @@
+// 5806
+[clientscript,script5806](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, int $int6, int $int7, int $int8, int $int9)
+~leagues_close_button($component3, false);
+def_string $text0 = "League Unlocks";
+def_int $comsubid10 = ~steelborder(interface_733:2, $text0, 1);
+if_sethide(true, interface_733:40);
+if_sethide(true, interface_733:25);
+~script5807($component0, $component1, $component2, $component4, $comsubid10);

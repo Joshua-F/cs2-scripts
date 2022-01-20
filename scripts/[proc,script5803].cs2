@@ -1,0 +1,30 @@
+// 5803
+[proc,script5803](int $int0, int $int1)(int)
+def_int $int2 = -1;
+def_int $int3 = 1;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_struct $struct6 = null;
+if (%varbit10032 = 3) {
+	$int2 = enum_getoutputcount(enum_4127);
+	if ($int0 = 1) {
+		return(enum(int, int, enum_4127, $int2));
+	}
+	while ($int3 <= $int2) {
+		$int5 = $int4;
+		$int4 = enum(int, int, enum_4127, $int3);
+		if ($int4 > %var2615) {
+			if ($int1 = 1) {
+				return($int5);
+			}
+			return($int4);
+		}
+		$int3 = calc($int3 + 1);
+	}
+	return(-1);
+}
+$struct6 = ~script3180($int0, $int1);
+if ($struct6 = null) {
+	return(-1);
+}
+return(struct_param($struct6, param_877));

@@ -1,0 +1,90 @@
+// 5781
+[proc,script5781](component $component0, int $int1)(int, int)
+def_int $colour2 = ~script5465(3);
+def_int $int3 = 5;
+def_int $int4 = 15;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_struct $struct9 = null;
+def_int $int10 = 0;
+def_string $string0 = "";
+def_int $int11 = 1;
+$int1 = ~script5782($component0, $int1, "Active Effects", "Effects gained from Fragments.");
+$int5 = 40;
+$int1, $int5 = ~script5783($component0, $int1, $int5, "Base Effects", $colour2);
+while ($int7 < 7) {
+	$int8 = ~script5791($int7);
+	if ($int8 ! 0) {
+		$struct9 = enum(int, struct, enum_4136, $int8);
+		$int10 = ~script5790($int8);
+		cc_create($component0, ^iftype_text, $int1);
+		cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(calc($int3 * 2), $int4, ^setsize_minus, ^setsize_abs);
+		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+		cc_settextshadow(true);
+		cc_settextfont(b12_full);
+		cc_setcolour($colour2);
+		cc_settext("<struct_param($struct9, param_1448)> <col=cfcfcf>(<tostring($int10)>)");
+		$int1 = calc($int1 + 1);
+		$int5 = calc($int5 + $int4 + 2);
+		if ($int10 = 3) {
+			$string0 = struct_param($struct9, param_1452);
+		} else if ($int10 = 2) {
+			$string0 = struct_param($struct9, param_1451);
+		} else {
+			$string0 = struct_param($struct9, param_1450);
+		}
+		$int6 = calc(paraheight($string0, if_getwidth($component0) - 2 * $int3, p12_full) * $int4);
+		cc_create($component0, ^iftype_text, $int1);
+		cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(calc($int3 * 2), $int6, ^setsize_minus, ^setsize_abs);
+		cc_settextalign(^settextalign_left, ^settextalign_top, $int4);
+		cc_settextshadow(true);
+		cc_settextfont(p12_full);
+		cc_setcolour(0xcfcfcf);
+		cc_settext($string0);
+		$int1 = calc($int1 + 1);
+		$int5 = calc($int5 + $int6 + 10);
+		$int11 = 0;
+	}
+	$int7 = calc($int7 + 1);
+}
+if ($int11 = 1) {
+	cc_create($component0, ^iftype_text, $int1);
+	cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int3 * 2), $int4, ^setsize_minus, ^setsize_abs);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_setcolour(0xcfcfcf);
+	cc_settext("None.");
+	$int1 = calc($int1 + 1);
+	$int5 = calc($int5 + $int4 + 10);
+}
+$int11 = 1;
+$int1, $int5 = ~script5783($component0, $int1, $int5, "Set Effects", $colour2);
+$int7 = 1;
+while ($int7 <= enum_getoutputcount(enum_4137)) {
+	$struct9 = enum(int, struct, enum_4137, $int7);
+	$int10 = ~script5792($int7);
+	if ($int10 >= struct_param($struct9, param_1468)) {
+		$int1, $int5 = ~script5785($component0, $int1, $int5, $struct9);
+		$int11 = 0;
+	}
+	$int7 = calc($int7 + 1);
+}
+if ($int11 = 1) {
+	cc_create($component0, ^iftype_text, $int1);
+	cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int3 * 2), $int4, ^setsize_minus, ^setsize_abs);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_setcolour(0xcfcfcf);
+	cc_settext("None.");
+	$int1 = calc($int1 + 1);
+	$int5 = calc($int5 + $int4 + 10);
+}
+return($int1, $int5);

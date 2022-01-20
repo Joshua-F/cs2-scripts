@@ -17,6 +17,9 @@ switch_int ($int0) {
 				if (~league_world = 1 & %varbit10032 = 1) {
 					return(-1, kourend_home_teleport_24369, "Home teleport (Kourend)");
 				}
+				if (~league_world = 1 & %varbit10032 = 3) {
+					return(-1, catherby_home_teleport_26553, "Home teleport (Catherby)");
+				}
 				return(-1, lumbridge_home_teleport_9712, "Home teleport (Lumbridge)");
 			case 2 :
 				return(1, wind_strike_3273, "Wind Strike");

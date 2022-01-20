@@ -1,0 +1,50 @@
+// 5845
+[proc,script5845](component $component0, component $component1, string $string0, fontmetrics $fontmetrics2, int $colour3, int $colour4, int $colour5, int $int6, int $int7, int $int8, int $int9, int $int10, int $comsubid11, int $int12)(int)
+def_int $int13 = calc($int8 - 9);
+def_int $int14 = calc($int9 - 9);
+def_int $width15 = calc($int8 - 18);
+def_int $height16 = calc($int9 - 18);
+~create_graphic($component0, $int10, "tradebacking", $int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $int8, $int9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc(1 + $int10), "v2_stone_button,0", $int6, $int7, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc(2 + $int10), "v2_stone_button,1", calc($int6 + $int13), $int7, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc(3 + $int10), "v2_stone_button,2", $int6, calc($int7 + $int14), ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc(4 + $int10), "v2_stone_button,3", calc($int6 + $int13), calc($int7 + $int14), ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc(5 + $int10), "v2_stone_button,4", $int6, calc($int7 + 9), ^setpos_abs_left, ^setpos_abs_top, 9, $height16, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc(6 + $int10), "v2_stone_button,5", calc($int6 + 9), $int7, ^setpos_abs_left, ^setpos_abs_top, $width15, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc(7 + $int10), "v2_stone_button,6", calc($int6 + $int13), calc($int7 + 9), ^setpos_abs_left, ^setpos_abs_top, 9, $height16, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc(8 + $int10), "v2_stone_button,7", calc($int6 + 9), calc($int7 + $int14), ^setpos_abs_left, ^setpos_abs_top, $width15, 9, ^setsize_abs, ^setsize_abs);
+def_int $int17 = ~max($int8, 26);
+def_int $int18 = ~max($int9, 26);
+def_int $x19 = calc($int6 - ($int17 - $int8) / 2);
+def_int $y20 = calc($int7 - ($int18 - $int9) / 2);
+def_boolean $boolean21 = false;
+if ($int12 = 1 & $component1 ! null) {
+	$boolean21 = ~on_mobile;
+	cc_create($component1, ^iftype_rectangle, $comsubid11);
+	if ($boolean21 = true) {
+		cc_setsize($int17, $int18, ^setsize_abs, ^setsize_abs);
+		cc_setposition($x19, $y20, ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setonmouseover("v2_stone_button_in_filled_free($component0, $int10, $colour4)");
+		cc_setonmouseleave("v2_stone_button_filled_free($component0, $int10, $colour3)");
+	}
+	cc_settrans(255);
+}
+if (string_length($string0) > 0) {
+	cc_create($component0, ^iftype_text, calc(9 + $int10));
+	cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext($string0);
+	cc_settextfont($fontmetrics2);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	if ($int12 = 1) {
+		cc_setcolour($colour3);
+	} else {
+		cc_setcolour($colour5);
+	}
+	return(calc(10 + $int10));
+}
+return(calc(9 + $int10));

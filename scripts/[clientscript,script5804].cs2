@@ -1,0 +1,10 @@
+// 5804
+[clientscript,script5804]
+if (~on_mobile = false) {
+	if_setonmouseover("v2_stone_button_in(event_com)", interface_737:6);
+	if_setonmouseleave("v2_stone_button(event_com)", interface_737:6);
+	if_setonmouseover("v2_stone_button_in(event_com)", interface_737:11);
+	if_setonmouseleave("v2_stone_button(event_com)", interface_737:11);
+	if_setonmouseover("v2_stone_button_in(event_com)", interface_737:16);
+	if_setonmouseleave("v2_stone_button(event_com)", interface_737:16);
+}

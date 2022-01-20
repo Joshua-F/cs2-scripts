@@ -1,0 +1,21 @@
+// 5746
+[proc,script5746](component $component0, component $component1, component $component2, component $component3, int $comsubid4, int $int5)
+def_int $int6 = ~script5465(3);
+cc_deleteall($component0);
+cc_deleteall($component1);
+cc_deleteall($component2);
+def_struct $struct7 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct7 = null) {
+	return;
+}
+def_int $int8 = 0;
+~leagues_menu_button($component0, $int8, $component1, $component2);
+$int8 = 0;
+~league_create_dropdown($component0, $component1, $component2, $int8, 2);
+$int8 = 0;
+def_int $colour9 = 0xff981f;
+$colour9 = struct_param($struct7, param_1027);
+if (cc_find(interface_735:6, $comsubid4) = ^true) {
+	cc_setcolour($colour9);
+}
+$int8 = 0;

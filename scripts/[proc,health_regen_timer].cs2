@@ -20,6 +20,9 @@ if (~league_relic_active(endless_endurance_725) = 1) {
 if (~league_relic_active(fluid_strikes_1729) = 1) {
 	$int2 = scale(1, 4, $int2);
 }
+if (~script5792(8) >= 3) {
+	$int2 = scale(1, 4, $int2);
+}
 $int2 = calc($int2 * 30);
 if ($int0 >= $int2) {
 	$int0 = calc($int0 % $int2);

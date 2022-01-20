@@ -1,5 +1,9 @@
 // 3217
 [clientscript,league_info_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 ~leagues_close_button($component9, false);
-def_int $comsubid10 = ~steelborder(interface_654:2, "Trailblazer Info", 1);
+def_string $text0 = "League Info";
+if (%varbit10032 = 2) {
+	$text0 = "Trailblazer Info";
+}
+def_int $comsubid10 = ~steelborder(interface_654:2, $text0, 1);
 ~league_info_draw_interface($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, 0, 0, $comsubid10);

@@ -1,0 +1,32 @@
+// 5841
+[clientscript,script5841](component $component0, int $int1, struct $struct2, int $colour3)
+if (cc_find($component0, $int1) = ^true) {
+	cc_setcolour($colour3);
+}
+if (cc_find($component0, calc($int1 + 1)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1391));
+}
+if (cc_find($component0, calc($int1 + 2)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1388));
+}
+if (cc_find($component0, calc($int1 + 3)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1394));
+}
+if (cc_find($component0, calc($int1 + 4)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1390));
+}
+if (cc_find($component0, calc($int1 + 5)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1392));
+}
+if (cc_find($component0, calc($int1 + 6)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1387));
+}
+if (cc_find($component0, calc($int1 + 7)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1389));
+}
+if (cc_find($component0, calc($int1 + 8)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1393));
+}
+if (cc_find($component0, calc($int1 + 9)) = ^true) {
+	cc_setgraphic(struct_param($struct2, param_1395));
+}

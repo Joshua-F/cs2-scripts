@@ -1,10 +1,15 @@
 // 393
 [clientscript,stats_init](component $component0, component $component1, int $int2, int $int3)
-def_string $string0 = enum(int, string, enum_108, $int2);
 def_stat $stat4 = enum(int, stat, enum_681, $int2);
-def_boolean $boolean5 = enum(stat, boolean, enum_1497, $stat4);
+def_int $int5 = 1;
+def_string $string0 = enum(int, string, enum_108, $int2);
+def_boolean $boolean6 = enum(stat, boolean, enum_1497, $stat4);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
+if (~league_world = 1 & %varbit10032 = 3) {
+	$int5 = ~script5830($stat4);
+	cc_setonvartransmit("stats_init($component0, $component1, $int2, $int3){var3278}");
+}
 cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("miscgraphics,4");
@@ -41,7 +46,10 @@ if (~on_mobile = true) {
 if_setonstattransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .cc_getid, $component1){$stat4, attack, strength, defence, ranged, magic}", $component0);
 if_setonvartransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .cc_getid, $component1){var427, var1588, var1437, var1438, var1439, var1436, var1435, var1440, var1453, var1447, var1452, var1443, var1449, var1441, var1442, var1444, var1450, var1457, var1445, var1446, var1454, var1455, var1456, var1451, var1448}", $component0);
 ~stats_setlevels($stat4, $component0, $string0, $component1);
-if ($boolean5 = false | map_members = ^true | %varcint103 = 1) {
+if (~league_world = 0 & ($boolean6 = false | map_members = ^true | %varcint103 = 1)) {
+	return;
+}
+if (%varbit10032 = 3 & $int5 = 1) {
 	return;
 }
 cc_create($component0, ^iftype_graphic, 6);

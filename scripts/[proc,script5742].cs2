@@ -1,0 +1,13 @@
+// 5742
+[proc,script5742](int $int0)(string)
+if ($int0 <= 0) {
+	return("Active league fragment.");
+}
+def_struct $struct1 = enum(int, struct, enum_4136, $int0);
+if ($struct1 = null) {
+	return("");
+}
+def_string $string0 = struct_param($struct1, param_1448);
+def_string $string1 = struct_param($struct1, param_1449);
+def_string $string2 = "<$string0><br><$string1>";
+return($string2);

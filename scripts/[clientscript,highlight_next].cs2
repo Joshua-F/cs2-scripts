@@ -1,6 +1,17 @@
 // 3420
 [clientscript,highlight_next](boolean $boolean0, component $component1, int $comsubid2)
-sound_synth(interface_select1, 1, 0);
+def_int $int3 = 1;
+if (%varbit10032 = 3) {
+	if (%varbit10037 = 9 & %varbit10308 = 6) {
+		$int3 = 0;
+	}
+	if (%varbit10037 = 11 & %varbit10308 = 7) {
+		$int3 = 0;
+	}
+}
+if ($int3 = 1) {
+	sound_synth(interface_select1, 1, 0);
+}
 if (cc_find($component1, $comsubid2) = ^true) {
 	cc_setonop(null);
 	cc_setop(1, "");

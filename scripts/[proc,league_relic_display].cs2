@@ -8,6 +8,9 @@ switch_int (%varbit10032) {
 		return(~league_relic_display_core($component0, $component1, $int2));
 	case 2 :
 		return(~league_relic_display_core($component0, $component1, $int2));
+	case 3 :
+		$int2 = ~script5739($component0, $component1, $int2);
+		return(~script5743($component0, $component1, $int2));
 	case default :
 		return($int2);
 }

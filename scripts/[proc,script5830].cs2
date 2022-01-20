@@ -1,0 +1,55 @@
+// 5830
+[proc,script5830](stat $stat0)(int)
+if (%varbit10032 ! 3) {
+	return(1);
+}
+def_int $int1 = 1;
+switch_stat ($stat0) {
+	case attack :
+		$int1 = %varbit13344;
+	case strength :
+		$int1 = %varbit13345;
+	case ranged :
+		$int1 = %varbit13346;
+	case magic :
+		$int1 = %varbit13347;
+	case defence :
+		$int1 = 1;
+	case hitpoints :
+		$int1 = %varbit13348;
+	case prayer :
+		$int1 = %varbit13349;
+	case agility :
+		$int1 = %varbit13350;
+	case herblore :
+		$int1 = %varbit13351;
+	case thieving :
+		$int1 = 1;
+	case crafting :
+		$int1 = %varbit13352;
+	case runecraft :
+		$int1 = %varbit13353;
+	case mining :
+		$int1 = %varbit13354;
+	case smithing :
+		$int1 = %varbit13355;
+	case fishing :
+		$int1 = 1;
+	case cooking :
+		$int1 = %varbit13356;
+	case firemaking :
+		$int1 = %varbit13357;
+	case woodcutting :
+		$int1 = %varbit13358;
+	case fletching :
+		$int1 = %varbit13359;
+	case slayer :
+		$int1 = %varbit13360;
+	case farming :
+		$int1 = %varbit13361;
+	case construction :
+		$int1 = %varbit13362;
+	case hunter :
+		$int1 = %varbit13363;
+}
+return($int1);

@@ -1,0 +1,24 @@
+// 5787
+[proc,script5787]()(int, int)
+if (~league_world = 0 | %varbit10032 ! 3) {
+	return(0, 0);
+}
+if (%var2614 < 10) {
+	return(%var2614, 10);
+}
+if (%var2614 < 300) {
+	return(calc(%var2614 - 10), calc(300 - 10));
+}
+if (%var2614 < 1500) {
+	return(calc(%var2614 - 300), calc(1500 - 300));
+}
+if (%var2614 < 3000) {
+	return(calc(%var2614 - 1500), calc(3000 - 1500));
+}
+if (%var2614 < 7500) {
+	return(calc(%var2614 - 3000), calc(7500 - 3000));
+}
+if (%var2614 < 15000) {
+	return(calc(%var2614 - 7500), calc(15000 - 7500));
+}
+return(0, 0);

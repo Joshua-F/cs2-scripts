@@ -31,7 +31,7 @@ def_int $int12 = 0;
 def_int $int13 = 0;
 def_int $trans14 = enum(int, int, enum_2653, $int11);
 $int12, $int13 = ~buff_bar_buff_position($component0, $int1);
-$int1 = calc($int1 * 9);
+$int1 = calc($int1 * 10);
 if ($int12 < 0 | $int13 < 0) {
 	return(0);
 }
@@ -76,7 +76,12 @@ def_int $int15 = calc(coordx(struct_param($struct3, param_1280)) % 64);
 def_int $int16 = calc(coordz(struct_param($struct3, param_1280)) % 64);
 cc_setposition(calc($int12 + 1 + (37 - 5) / 2 - $int15 / 2 + coordx(struct_param($struct3, param_1284)) % 64), calc($int13 + 1 + (37 - 5) / 2 - $int16 / 2 + coordz(struct_param($struct3, param_1284)) % 64), ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setsize($int15, $int16, ^setsize_abs, ^setsize_abs);
-def_graphic $graphic17 = struct_param($struct3, param_1278);
+def_graphic $graphic17 = null;
+if (struct_param($struct3, param_1480) = true) {
+	$graphic17 = ~script5847($int5);
+} else {
+	$graphic17 = struct_param($struct3, param_1278);
+}
 if (struct_param($struct3, param_1285) ! null & $int4 ! -1) {
 	$graphic17 = enum(int, graphic, struct_param($struct3, param_1285), $int4);
 }
@@ -85,6 +90,23 @@ if ($graphic17 ! null) {
 } else if ($obj10 ! null) {
 	cc_setoutline(1);
 	cc_setobject_nonum(oc_uncert($obj10), 100000);
+}
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_graphic, $int1);
+$int15 = calc(coordx(struct_param($struct3, param_1483)) % 64);
+$int16 = calc(coordz(struct_param($struct3, param_1483)) % 64);
+cc_setposition(calc($int12 + 1 + (37 - 5) / 2 - $int15 / 2 + coordx(struct_param($struct3, param_1484)) % 64), calc($int13 + 1 + (37 - 5) / 2 - $int16 / 2 + coordz(struct_param($struct3, param_1484)) % 64), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize($int15, $int16, ^setsize_abs, ^setsize_abs);
+$graphic17 = null;
+if (struct_param($struct3, param_1481) = true) {
+	$graphic17 = ~script5848($int5);
+} else {
+	$graphic17 = struct_param($struct3, param_1479);
+}
+if ($graphic17 ! null) {
+	cc_setgraphic($graphic17);
+} else {
+	cc_sethide(true);
 }
 $int1 = calc($int1 + 1);
 cc_create($component0, ^iftype_text, $int1);
@@ -117,6 +139,7 @@ cc_setcolour(^white);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_int $int18 = $int5;
 $int5 = struct_param($struct3, param_1409);
 $int6 = struct_param($struct3, param_1410);
 $int8 = 0;
@@ -148,5 +171,9 @@ if (struct_param($struct3, param_1411) = true) {
 	~buff_bar_get_transmit($int5, $int6, $struct3, ~script4681($int5), $component0, $component2, $int1);
 }
 $int1 = calc($int1 + 1);
-~buff_bar_buff_create_tooltip($component0, $int1, $component2, struct_param($struct3, param_1279), $int12, $int13);
+if (struct_param($struct3, param_1482) = true) {
+	~buff_bar_buff_create_tooltip($component0, $int1, $component2, ~script5846($int18), $int12, $int13);
+} else {
+	~buff_bar_buff_create_tooltip($component0, $int1, $component2, struct_param($struct3, param_1279), $int12, $int13);
+}
 return(1);
