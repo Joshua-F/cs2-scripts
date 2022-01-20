@@ -1,5 +1,5 @@
 // 4140
-[proc,tutorial_displayname_allow_input](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5, int $int6)
+[proc,tutorial_displayname_allow_input](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5, boolean $boolean6)
 %varcint435 = $boolean5;
 if ($boolean5 = true) {
 	if_setonkey("tutorial_displayname_onkey($component0, $component1, $component2, $component3, $component4, event_key, event_keychar)", $component2);
@@ -23,6 +23,6 @@ if ($boolean5 = true) {
 	}
 }
 ~tutorial_displayname_update_input($component2, %varcstring436);
-if ($int6 = 1) {
+if ($boolean6 = true) {
 	~tutorial_displayname_buttons($component0, $component1, $component2, $component3, $component4);
 }

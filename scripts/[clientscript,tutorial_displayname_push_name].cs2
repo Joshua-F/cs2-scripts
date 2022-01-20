@@ -1,6 +1,6 @@
 // 4144
 [clientscript,tutorial_displayname_push_name](component $component0, component $component1, component $component2, component $component3, component $component4, string $string0)
-~tutorial_displayname_allow_input($component0, $component1, $component2, $component3, $component4, false, 0);
+~tutorial_displayname_allow_input($component0, $component1, $component2, $component3, $component4, false, false);
 %varcstring436 = $string0;
 %varcstring437 = $string0;
 ~tutorial_displayname_update_input($component2, $string0);
