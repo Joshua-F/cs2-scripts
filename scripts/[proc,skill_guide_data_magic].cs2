@@ -165,6 +165,9 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, ancient_staff_4675, "Ancient magicks are available after<br>completing the Desert Treasure quest.");
 			case 1 :
+				if (~league_world = 1 & %varbit10032 = 3) {
+					return(-1, catherby_home_teleport_26563, "Home teleport (Catherby)");
+				}
 				return(-1, edgeville_home_teleport_11142, "Home teleport (Edgeville)");
 			case 2 :
 				return(50, smoke_rush_4629, "Smoke rush");
@@ -224,6 +227,9 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, lunar_staff_9084, "Lunar spells are available after<br>completing the Lunar Diplomacy quest.");
 			case 1 :
+				if (~league_world = 1 & %varbit10032 = 3) {
+					return(-1, catherby_home_teleport_26564, "Home teleport (Catherby)");
+				}
 				return(-1, lunar_home_teleport_11143, "Home teleport (Lunar Isle)");
 			case 2 :
 				return(65, bake_pie_9107, "Bake pie");
@@ -321,6 +327,9 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, obj_13578, "Arceuus spells are unlocked<br>in Arceuus.");
 			case 1 :
+				if (~league_world = 1 & %varbit10032 = 3) {
+					return(-1, catherby_home_teleport_26565, "Home teleport (Catherby)");
+				}
 				return(-1, arceuus_home_teleport_21835, "Home teleport (Dark Altar)");
 			case 2 :
 				return(6, arceuus_library_teleport_20409, "Arceuus Library teleport");

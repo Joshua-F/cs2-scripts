@@ -27,7 +27,11 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 			if_settext("<~text_device("Click", "Tap")> a name to remove it from the ban list.", $component8);
 		} else {
 			$text1, $graphic12 = ~script4302($int11);
-			if_settext("Only clan members with a rank of <$text1> may unban players.", $component8);
+			if (~league_world = 1) {
+				if_settext("You may not administer clans from a league world.", $component8);
+			} else {
+				if_settext("Only clan members with a rank of <$text1> may unban players.", $component8);
+			}
 		}
 		$int13 = activeclansettings_getbannedcount;
 		if ($int13 > 0) {

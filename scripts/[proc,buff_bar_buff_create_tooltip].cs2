@@ -5,7 +5,7 @@ cc_setposition($x3, $y4, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setsize(calc(37 - 3), calc(37 - 3), ^setsize_abs, ^setsize_abs);
 cc_setcolour(^black);
 cc_settrans(255);
-if (string_length($string0) <= 0 | %varbit9529 = 1 | %varbit9528 = 1) {
+if (string_length($string0) <= 0 | %varbit9529 = 1 | %varbit9528 = 1 & %varbit12383 = 1) {
 	cc_setonclick(null);
 	cc_setnoclickthrough(false);
 	cc_setonmouserepeat(null);
