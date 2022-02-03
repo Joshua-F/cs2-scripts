@@ -41,5 +41,9 @@ switch_int ($int0) {
 		if (%varbit13137 <= 0 | inv_getobj(worn, 2) = desert_amulet_4_13136) {
 			return(0);
 		}
+	case 50 :
+		if (%varbit13592 = 1) {
+			return(0);
+		}
 }
 return(1);
