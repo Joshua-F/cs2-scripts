@@ -17,7 +17,7 @@ cc_deleteall($component5);
 if_clearops($component5);
 def_int $int6 = 0;
 if (string_length($string2) > 0) {
-	if_setop(2, ~script1299($string0, "<br>", " "), $component5);
+	if_setop(2, ~string_findandreplace($string0, "<br>", " "), $component5);
 	if_setonop("bondif_redeem_package_op_disabled(removetags($string2))", $component5);
 	if_setonvartransmit(null, $component5);
 	if_setonmouserepeat(null, $component5);
@@ -41,7 +41,7 @@ if (string_length($string2) > 0) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext($string2);
 } else {
-	if_setop(1, ~script1299($string0, "<br>", " "), $component5);
+	if_setop(1, ~string_findandreplace($string0, "<br>", " "), $component5);
 	~bondif_redeem_package_draw($int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1);
 	if_setonvartransmit("bondif_redeem_package_draw($int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1){var1204}", $component5);
 	if_setonop("bondif_redeem_package_op_permitted(event_opindex, $int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1)", $component5);

@@ -41,7 +41,7 @@ switch_int (%varcint5) {
 			return;
 		}
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 3, $key0, $keychar1);
-		%varcstring359 = ~script1299(%varcstring359, " ", " ");
+		%varcstring359 = ~string_findandreplace(%varcstring359, " ", " ");
 	case 13 :
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 0, $key0, $keychar1);
 		~meslayer_mode13_setprompt;

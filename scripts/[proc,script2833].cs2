@@ -52,7 +52,7 @@ while ($count2 < $count3) {
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0xc0c0c0)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0xf7f0df)");
-		$string0 = ~script1299($string0, "<br>", " ");
+		$string0 = ~string_findandreplace($string0, "<br>", " ");
 		if_setop(1, "Open", $component5);
 		if_setopbase("<col=ff9040><$string0></col>", $component5);
 		if_setonop("opsound(event_opindex, 2)", $component5);

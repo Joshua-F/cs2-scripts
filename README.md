@@ -1299,7 +1299,7 @@
 [**1296**](scripts/[clientscript,script1296].cs2)  
 [**1297**](scripts/[clientscript,slayer_rewards_unlock_draw].cs2) `[clientscript,slayer_rewards_unlock_draw]`  
 [**1298**](scripts/[proc,slayer_rewards_unlock_desc].cs2) `[proc,slayer_rewards_unlock_desc]`  
-[**1299**](scripts/[proc,script1299].cs2)  
+[**1299**](scripts/[proc,string_findandreplace].cs2) `[proc,string_findandreplace]`  
 [**1300**](scripts/[clientscript,soulbearer_repair].cs2) `[clientscript,soulbearer_repair]`  
 [**1301**](scripts/[clientscript,soulbearer_repair_update].cs2) `[clientscript,soulbearer_repair_update]`  
 [**1302**](scripts/[proc,soulbearer_repair_update].cs2) `[proc,soulbearer_repair_update]`  

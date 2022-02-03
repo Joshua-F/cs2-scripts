@@ -21,7 +21,7 @@ if (string_length($string0) > 0) {
 				$string1 = mec_text($mapelement1);
 				$index4 = string_length($string1);
 				if ($index4 > 0) {
-					$string1 = ~script1299($string1, "<br>", " ");
+					$string1 = ~string_findandreplace($string1, "<br>", " ");
 					$index4 = string_length($string1);
 					$int5 = string_indexof_string(lowercase($string1), lowercase(%varcstring363), 0);
 					if ($int5 ! -1) {

@@ -120,7 +120,7 @@ while ($int23 < enum_getoutputcount($enum15)) {
 	$int24 = calc($int24 + 1);
 	$height26 = calc($height26 + 20);
 	$string0 = enum(int, string, $enum16, $int23);
-	$string0 = ~script1299($string0, "|", "<br><br>");
+	$string0 = ~string_findandreplace($string0, "|", "<br><br>");
 	$int28 = paraheight($string0, calc($width29 - 10), $fontmetrics22);
 	cc_create($component2, ^iftype_rectangle, $int24);
 	cc_setsize($width29, calc(15 * $int28 + 15), ^setsize_abs, ^setsize_abs);
@@ -196,7 +196,7 @@ while ($int23 < enum_getoutputcount($enum17)) {
 			$string0 = append($string0, "|There are <tostring($int20)> days left in<br><~league_get_league_name>!");
 		}
 	}
-	$string0 = ~script1299($string0, "|", "<br><br>");
+	$string0 = ~string_findandreplace($string0, "|", "<br><br>");
 	$int28 = paraheight($string0, calc($width30 - 10), $fontmetrics22);
 	cc_create($component3, ^iftype_rectangle, $int24);
 	cc_setsize($width30, calc(15 * $int28 + 15), ^setsize_abs, ^setsize_abs);

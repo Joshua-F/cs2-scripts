@@ -17,7 +17,7 @@ def_int $comsubid16 = -1;
 if (.cc_find($component8, $comsubid5) = ^true) {
 	.cc_setsize($int3, $int12, ^setsize_abs, ^setsize_abs);
 	.cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setop(1, removetags(~script1299($string0, "<br>", " ")));
+	.cc_setop(1, removetags(~string_findandreplace($string0, "<br>", " ")));
 	cc_create($component8, ^iftype_rectangle, $int0);
 	$int13 = $int0;
 	$int0 = calc($int0 + 1);

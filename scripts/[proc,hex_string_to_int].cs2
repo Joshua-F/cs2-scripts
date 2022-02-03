@@ -4,7 +4,7 @@ def_int $length0 = string_length($string0);
 def_string $string1 = "null";
 def_int $int1 = 0;
 def_int $int2 = 0;
-$string0 = ~script1299($string0, "#", "");
+$string0 = ~string_findandreplace($string0, "#", "");
 if ($length0 > 6) {
 	$string0 = substring($string0, 0, 6);
 } else if ($length0 < 6) {

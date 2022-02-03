@@ -24,7 +24,7 @@ while ($int8 < $int1) {
 			cc_settextshadow(true);
 			cc_settext("<u=ff981f><$string0></u>");
 			.cc_setop(1, "Open link");
-			$string0 = ~script1299(lowercase($string0), " ", "_");
+			$string0 = ~string_findandreplace(lowercase($string0), " ", "_");
 			if ($boolean4 = false) {
 				.cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, .cc_gettrans)");
 			}

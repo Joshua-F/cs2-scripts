@@ -96,11 +96,11 @@ switch_obj ($obj1) {
 		}
 	case confuse_3274, weaken_3278, curse_3282 :
 		if (inv_getobj(worn, 5) = tome_of_water_25574 & map_members = ^true) {
-			$string1 = ~script1299($string1, "5%", "<col=ffffff><tostring(addpercent(5, 50))>%</col>");
+			$string1 = ~string_findandreplace($string1, "5%", "<col=ffffff><tostring(addpercent(5, 50))>%</col>");
 		}
 	case vulnerability_3317, enfeeble_3320, stun_3324 :
 		if (inv_getobj(worn, 5) = tome_of_water_25574 & map_members = ^true) {
-			$string1 = ~script1299($string1, "10%", "<col=ffffff><tostring(addpercent(10, 50))>%</col>");
+			$string1 = ~string_findandreplace($string1, "10%", "<col=ffffff><tostring(addpercent(10, 50))>%</col>");
 		}
 }
 if (compare($string2, "") ! 0) {

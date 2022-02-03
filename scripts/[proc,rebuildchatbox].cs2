@@ -8,7 +8,7 @@ if (%varcint41 = 3) {
 }
 def_int $int3 = 0;
 def_boolean $boolean4 = false;
-def_int $int5 = 0;
+def_boolean $boolean5 = false;
 def_string $string1 = "<col=004f00>";
 def_string $string2 = "<col=0000ff>";
 def_string $string3 = "<col=0000ff>";
@@ -24,7 +24,7 @@ def_string $string12 = "";
 def_string $string13 = "";
 def_string $string14 = "";
 if (~toplevel_chatbox_maketransparent = 1) {
-	$int3, $boolean4, $int5 = 16777215, true, 1;
+	$int3, $boolean4, $boolean5 = 16777215, true, true;
 	$string1, $string2, $string3 = "<col=30ff30>", "<col=9070ff>", "<col=9070ff>";
 	$string4 = ~script3739(struct_param(public_chat_2897, param_1230), "col");
 	$string5 = ~script3739(struct_param(private_chat_2899, param_1230), "col");
@@ -51,7 +51,7 @@ if (~toplevel_chatbox_maketransparent = 1) {
 	$string14 = ~script3739(struct_param(iron_group_broadcasts_3749, param_1230), "col");
 }
 def_string $string15 = ~script3739($int3, "col");
-$string4, $string5, $string6, $string15, $string7, $string8, $string9, $string10, $string11, $string12, $string13, $string14 = ~script4484($string4, $string5, $string6, $string15, $string7, $string8, $string9, $string10, $string11, $string12, $string13, $string14, $int5);
+$string4, $string5, $string6, $string15, $string7, $string8, $string9, $string10, $string11, $string12, $string13, $string14 = ~script4484($string4, $string5, $string6, $string15, $string7, $string8, $string9, $string10, $string11, $string12, $string13, $string14, $boolean5);
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
