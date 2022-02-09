@@ -4,7 +4,7 @@ def_int $clienttype0 = clienttype;
 if (%varbit6352 = 1) {
 	return(0);
 }
-if ($clienttype0 = ^clienttype_enhanced | $clienttype0 = 5 | $clienttype0 = 10) {
+if ($clienttype0 = ^clienttype_enhanced | $clienttype0 = ^clienttype_mac | $clienttype0 = 10) {
 	return(1);
 }
 return(0);

@@ -1,7 +1,7 @@
 // 2476
 [proc,on_enhanced_mobile]()(int)
 def_int $clienttype0 = clienttype;
-if (%varbit6352 = 1 & ($clienttype0 = ^clienttype_enhanced | $clienttype0 = 5 | $clienttype0 = 10)) {
+if (%varbit6352 = 1 & ($clienttype0 = ^clienttype_enhanced | $clienttype0 = ^clienttype_mac | $clienttype0 = 10)) {
 	return(1);
 }
 if ($clienttype0 = 7 | $clienttype0 = 8) {
