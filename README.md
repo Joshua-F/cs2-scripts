@@ -5849,7 +5849,7 @@
 [**5846**](scripts/[proc,script5846].cs2)  
 [**5847**](scripts/[proc,script5847].cs2)  
 [**5848**](scripts/[proc,script5848].cs2)  
-[**5849**](scripts/[proc,script5849].cs2)  
+[**5849**](scripts/[proc,speedrunning_world].cs2) `[proc,speedrunning_world]`  
 [**5850**](scripts/[clientscript,script5850].cs2)  
 [**5851**](scripts/[proc,script5851].cs2)  
 [**5852**](scripts/[clientscript,script5852].cs2)  
@@ -5886,9 +5886,9 @@
 [**5883**](scripts/[proc,script5883].cs2)  
 [**5884**](scripts/[proc,script5884].cs2)  
 [**5885**](scripts/[proc,script5885].cs2)  
-[**5886**](scripts/[clientscript,script5886].cs2)  
-[**5887**](scripts/[clientscript,script5887].cs2)  
-[**5888**](scripts/[proc,script5888].cs2)  
+[**5886**](scripts/[clientscript,speedrunning_init].cs2) `[clientscript,speedrunning_init]`  
+[**5887**](scripts/[clientscript,speedrunning_stats_update].cs2) `[clientscript,speedrunning_stats_update]`  
+[**5888**](scripts/[proc,speedrunning_stats_update].cs2) `[proc,speedrunning_stats_update]`  
 [**5889**](scripts/[proc,script5889].cs2)  
 [**5890**](scripts/[proc,script5890].cs2)  
 [**5891**](scripts/[proc,script5891].cs2)  
@@ -5899,15 +5899,15 @@
 [**5896**](scripts/[proc,script5896].cs2)  
 [**5897**](scripts/[proc,script5897].cs2)  
 [**5898**](scripts/[clientscript,script5898].cs2)  
-[**5899**](scripts/[proc,script5899].cs2)  
+[**5899**](scripts/[proc,speedrunning_button_init].cs2) `[proc,speedrunning_button_init]`  
 [**5900**](scripts/[proc,script5900].cs2)  
-[**5901**](scripts/[clientscript,script5901].cs2)  
-[**5902**](scripts/[clientscript,script5902].cs2)  
-[**5903**](scripts/[clientscript,script5903].cs2)  
-[**5904**](scripts/[proc,script5904].cs2)  
+[**5901**](scripts/[clientscript,speedrunning_button_op].cs2) `[clientscript,speedrunning_button_op]`  
+[**5902**](scripts/[clientscript,speedrunning_button_reset].cs2) `[clientscript,speedrunning_button_reset]`  
+[**5903**](scripts/[clientscript,speedrunning_button_draw].cs2) `[clientscript,speedrunning_button_draw]`  
+[**5904**](scripts/[proc,speedrunning_button_draw].cs2) `[proc,speedrunning_button_draw]`  
 [**5905**](scripts/[proc,script5905].cs2)  
 [**5906**](scripts/[clientscript,script5906].cs2)  
-[**5907**](scripts/[clientscript,script5907].cs2)  
+[**5907**](scripts/[clientscript,speedrun_time_update].cs2) `[clientscript,speedrun_time_update]`  
 [**5908**](scripts/[clientscript,script5908].cs2)  
 [**5909**](scripts/[proc,script5909].cs2)  
 [**5910**](scripts/[proc,script5910].cs2)  

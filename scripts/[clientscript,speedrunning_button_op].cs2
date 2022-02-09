@@ -1,0 +1,10 @@
+// 5901
+[clientscript,speedrunning_button_op](component $component0, string $string0)
+sound_synth(interface_select1, 1, 0);
+if_setonhold(null, $component0);
+if_setonrelease(null, $component0);
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+~speedrunning_button_draw($component0, $string0, true, false);
+if_setop(1, "", $component0);
+if_setontimer("speedrunning_button_reset($component0, $string0, calc(clientclock + 40))", $component0);

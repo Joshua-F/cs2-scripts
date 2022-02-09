@@ -6,7 +6,7 @@ if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component3);
 $height7 = calc($height7 + $int8 + 8);
 $int8 = ~questlist_sectioninit("Members' Quests", $component4, enum_2099, ~quest_members_count, $component3, $component4, $component5);
 if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-if (~script5849 = 0) {
+if (~speedrunning_world = 0) {
 	$height7 = calc($height7 + $int8 + 8);
 	$int8 = ~questlist_sectioninit("Miniquests", $component5, enum_2100, ~miniquest_count, $component3, $component4, $component5);
 	if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component5);

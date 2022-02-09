@@ -3,10 +3,10 @@
 def_int $int1 = struct_param(%var3373, param_191);
 if ($int1 <= 0 | $int1 ! %varbit13627) {
 	if (%varbit13627 > 0) {
-		~script5904($component0, $string0, true, true);
+		~speedrunning_button_draw($component0, $string0, true, true);
 	} else {
-		~script5899($component0, $string0);
+		~speedrunning_button_init($component0, $string0);
 	}
 	return;
 }
-~script5899($component0, $string1);
+~speedrunning_button_init($component0, $string1);

@@ -1,11 +1,11 @@
 // 5900
 [proc,script5900](component $component0, string $string0)
-~script5904($component0, $string0, false, false);
+~speedrunning_button_draw($component0, $string0, false, false);
 if (~on_mobile = false) {
-	if_setonmouserepeat("script5903($component0, $string0, true, false)", $component0);
-	if_setonmouseleave("script5903($component0, $string0, false, false)", $component0);
+	if_setonmouserepeat("speedrunning_button_draw($component0, $string0, true, false)", $component0);
+	if_setonmouseleave("speedrunning_button_draw($component0, $string0, false, false)", $component0);
 } else {
-	if_setonhold("script5903($component0, $string0, true, false)", $component0);
-	if_setonrelease("script5903($component0, $string0, false, false)", $component0);
-	if_setonmouseleave("script5903($component0, $string0, false, false)", $component0);
+	if_setonhold("speedrunning_button_draw($component0, $string0, true, false)", $component0);
+	if_setonrelease("speedrunning_button_draw($component0, $string0, false, false)", $component0);
+	if_setonmouseleave("speedrunning_button_draw($component0, $string0, false, false)", $component0);
 }

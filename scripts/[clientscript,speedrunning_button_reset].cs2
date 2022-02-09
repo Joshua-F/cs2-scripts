@@ -1,0 +1,6 @@
+// 5902
+[clientscript,speedrunning_button_reset](component $component0, string $string0, int $clock1)
+if (clientclock < $clock1) {
+	return;
+}
+~speedrunning_button_init($component0, $string0);

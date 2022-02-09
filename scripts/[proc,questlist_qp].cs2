@@ -1,7 +1,7 @@
 // 1356
 [proc,questlist_qp](component $component0)
 def_string $string0 = ",";
-if (~script5849 = 0) {
+if (~speedrunning_world = 0) {
 	if_settext("Quest Points: <~tostring_spacer(%var101, $string0)>", $component0);
 } else {
 	if_settext("Speedrun Points: <~tostring_spacer(~min(%var3365, 800000), $string0)>", $component0);
