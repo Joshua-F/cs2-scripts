@@ -1,0 +1,14 @@
+// 5908
+[clientscript,script5908](int $int0, int $int1, int $int2)
+$int0 = calc($int0 + clientclock);
+def_int $int3 = calc($int0 / 50);
+def_int $int4 = calc($int0 / 5);
+$int3 = ~minmax(0, scale(60, 100, 600000), $int3);
+$int4 = ~minmax(0, scale(60, 10, 600000), $int4);
+def_string $text0 = "";
+if ($int1 = 0) {
+	$text0 = ~script4159($int3, $int2);
+} else {
+	$text0 = ~script4160($int4, $int2);
+}
+if_settext($text0, interface_741:25);

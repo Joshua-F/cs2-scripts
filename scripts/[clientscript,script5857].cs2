@@ -1,0 +1,9 @@
+// 5857
+[clientscript,script5857]
+if (%varbit13605 > 0) {
+	sound_synth(synth_5332, 1, 0);
+	%varbit13605 = calc(%varbit13605 - 1);
+} else {
+	sound_synth(synth_5339, 1, 0);
+}
+~script5859;

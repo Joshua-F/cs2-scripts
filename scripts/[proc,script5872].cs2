@@ -1,0 +1,52 @@
+// 5872
+[proc,script5872](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if_setsize(400, 277, ^setsize_abs, ^setsize_abs, $component0);
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+def_int $colour6 = 0xff981f;
+cc_create($component1, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour($colour6);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_settext("Welcome to Speedrunning Worlds!");
+cc_create($component2, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_setcolour($colour6);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+def_string $string0 = ~script5877;
+def_int $int7 = 0;
+if (string_length($string0) > 0) {
+	cc_settext($string0);
+	$int7 = paraheight($string0, cc_getwidth, p12_full);
+	$int7 = calc($int7 + 1);
+	if ($int7 < 12) {
+		if ($int7 < 4) {
+			$int7 = 4;
+		}
+		$int7 = calc(12 - $int7);
+		if_setsize(400, calc(277 - $int7 * 14), ^setsize_abs, ^setsize_abs, $component0);
+	}
+}
+def_string $string1 = "Exit Speedrunning";
+if (string_length($string1) > 0) {
+	~script5876($component3, $string1);
+} else {
+	if_sethide(true, $component3);
+}
+def_string $string2 = "Get Started";
+if (string_length($string2) > 0) {
+	~script5876($component4, $string2);
+} else {
+	if_sethide(true, $component4);
+}
+if_setposition(-88, 16, ^setpos_abs_centre, ^setpos_abs_bottom, $component3);
+if_setposition(88, 16, ^setpos_abs_centre, ^setpos_abs_bottom, $component4);

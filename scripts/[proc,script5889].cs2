@@ -1,0 +1,6 @@
+// 5889
+[proc,script5889](component $component0, component $component1)
+def_string $string0 = ",";
+def_string $text1 = ~tostring_spacer(~min(%var3365, 800000), $string0);
+if_settext("Speedrun Points<br><col=ffffff><$text1></col>", $component0);
+if_settext($text1, $component1);

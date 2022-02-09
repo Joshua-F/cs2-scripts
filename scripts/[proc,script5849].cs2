@@ -1,0 +1,7 @@
+// 5849
+[proc,script5849]()(int)
+def_int $flags0 = worldflags;
+if (testbit($flags0, 15) = ^true) {
+	return(1);
+}
+return(0);

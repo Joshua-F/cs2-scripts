@@ -1,0 +1,8 @@
+// 5861
+[clientscript,script5861](component $component0)
+cc_deleteall($component0);
+~v2_stone_button_filled($component0);
+if (~on_mobile = false) {
+	if_setonmouseleave("script5862($component0, 0)", $component0);
+	if_setonmouserepeat("script5862($component0, 1)", $component0);
+}

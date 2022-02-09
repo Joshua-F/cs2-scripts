@@ -23,10 +23,15 @@ while ($count9 < $count2) {
 	cc_settext($text1);
 	cc_setopbase("<col=ff9040><$text1></col>");
 	$intarray0($count9) = calc($int6 * $int7 + $count9);
-	cc_setop(1, "Read journal:");
-	cc_setop(2, "Show on map:");
-	cc_setop(3, "Open wiki guide:");
-	cc_setop(4, "Open wiki quick guide:");
+	if (~script5849 = 1) {
+		cc_setop(1, "View info:");
+	} else {
+		cc_setop(1, "");
+	}
+	cc_setop(2, "Read journal:");
+	cc_setop(3, "Show on map:");
+	cc_setop(4, "Open wiki guide:");
+	cc_setop(5, "Open wiki quick guide:");
 	$count9 = calc($count9 + 1);
 }
 if ($count2 > 1) {

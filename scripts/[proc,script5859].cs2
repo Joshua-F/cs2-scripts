@@ -1,0 +1,24 @@
+// 5859
+[proc,script5859]
+if_settext(tostring(~minmax(0, 15, %varbit13603)), interface_738:27);
+if_settext(tostring(~minmax(0, 15, %varbit13604)), interface_738:28);
+if_settext(tostring(~minmax(0, 15, %varbit13605)), interface_738:29);
+def_int $height0 = 0;
+if (%varbit13603 < 15) {
+	$height0 = scale(106, 15, ~minmax(0, 15, %varbit13603));
+} else {
+	$height0 = 106;
+}
+if_setsize(0, $height0, ^setsize_minus, ^setsize_abs, interface_738:7);
+if (%varbit13604 < 15) {
+	$height0 = scale(106, 15, ~minmax(0, 15, %varbit13604));
+} else {
+	$height0 = 106;
+}
+if_setsize(0, $height0, ^setsize_minus, ^setsize_abs, interface_738:9);
+if (%varbit13605 < 15) {
+	$height0 = scale(106, 15, ~minmax(0, 15, %varbit13605));
+} else {
+	$height0 = 106;
+}
+if_setsize(0, $height0, ^setsize_minus, ^setsize_abs, interface_738:11);

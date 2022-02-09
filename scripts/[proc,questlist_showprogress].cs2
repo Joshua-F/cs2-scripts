@@ -10,10 +10,10 @@ while ($count5 < $count6) {
 		$int3 = ~quest_f2p_index_status_get($count5);
 		if (~questlist_f2p_progress_grey($count5) = 1) {
 			$colour4 = 0x9f9f9f;
-		} else if ($int3 = 2) {
-			$colour4 = 0x0dc10d;
 		} else if ($int3 = 0) {
 			$colour4 = ^yellow;
+		} else if ($int3 = 2 & ~script5849 = 0) {
+			$colour4 = 0x0dc10d;
 		} else {
 			$colour4 = ^red;
 		}
@@ -31,10 +31,10 @@ while ($count5 < $count6) {
 		$int3 = ~quest_members_index_status_get($count5);
 		if (~questlist_members_progress_grey($count5) = 1) {
 			$colour4 = 0x9f9f9f;
-		} else if ($int3 = 2) {
-			$colour4 = 0x0dc10d;
 		} else if ($int3 = 0) {
 			$colour4 = ^yellow;
+		} else if ($int3 = 2 & ~script5849 = 0) {
+			$colour4 = 0x0dc10d;
 		} else {
 			$colour4 = ^red;
 		}
@@ -52,10 +52,10 @@ while ($count5 < $count6) {
 		$int3 = ~miniquest_index_status_get($count5);
 		if (~questlist_miniquests_progress_grey($count5) = 1) {
 			$colour4 = 0x9f9f9f;
-		} else if ($int3 = 2) {
-			$colour4 = 0x0dc10d;
 		} else if ($int3 = 0) {
 			$colour4 = ^yellow;
+		} else if ($int3 = 2 & ~script5849 = 0) {
+			$colour4 = 0x0dc10d;
 		} else {
 			$colour4 = ^red;
 		}

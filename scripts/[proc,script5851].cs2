@@ -1,0 +1,10 @@
+// 5851
+[proc,script5851]()(int)
+if (~script5349(0) = ^false) {
+	return(%varcint492);
+}
+def_enum $enum0 = ~toplevel_getcomponents;
+def_component $component1 = enum(component, component, $enum0, interface_161:12);
+def_int $int2 = if_getwidth($component1);
+$int2 = ~max(%varcint492, calc($int2 - 8));
+return($int2);

@@ -1,0 +1,23 @@
+// 5910
+[proc,script5910](component $component0, enum $enum1, enum $enum2, int $int3, int $int4)(int, int)
+if ($enum1 = null) {
+	return($int3, $int4);
+}
+def_int $count5 = 0;
+def_int $count6 = enum_getoutputcount($enum1);
+def_namedobj $namedobj7 = null;
+def_int $int8 = 0;
+def_string $string0 = ",";
+while ($count5 < $count6) {
+	$namedobj7 = enum(int, namedobj, $enum1, $count5);
+	if ($enum2 = null) {
+		$int8 = 1;
+	} else {
+		$int8 = enum(int, int, $enum2, $count5);
+	}
+	if ($namedobj7 ! null & $int8 ! -1 & $int8 > 0) {
+		$int3, $int4 = ~script5912($component0, $int3, $int4, "<oc_name($namedobj7)> x <~tostring_spacer($int8, $string0)>");
+	}
+	$count5 = calc($count5 + 1);
+}
+return($int3, $int4);

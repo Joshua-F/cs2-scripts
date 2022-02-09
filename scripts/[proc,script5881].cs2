@@ -1,0 +1,10 @@
+// 5881
+[proc,script5881](int $int0)
+$int0 = calc($int0 * 30 - clientclock);
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_string $string0 = ~script5883($int0, %varbit11866, %varbit11890);
+$int1, $int2 = ~helper_generic_add_data("Time: ", $string0);
+if (cc_find(interface_711:3, $int2) = ^true) {
+	cc_setontimer("script5882($int2, $int0, %varbit11866, %varbit11890)");
+}

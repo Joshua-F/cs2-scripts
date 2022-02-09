@@ -34,7 +34,7 @@ if (~on_mobile = false) {
 	cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, ^black)");
 }
-cc_setonop("league_3_fragment_info_init_sound(interface_735:32, interface_735:33, struct_param($struct3, param_1455), event_opindex, 1, 0)");
+cc_setonop("league_3_fragment_info_init_sound(interface_735:33, interface_735:34, struct_param($struct3, param_1455), event_opindex, 1, 0)");
 $int1 = calc($int1 + 1);
 def_int $comsubid8 = calc($int1 + 1);
 $int1 = ~league_3_fragment_draw_fragment($component0, $int1, 5, calc($int5 * $int2 + 5), struct_param($struct3, param_1461), $int7, 0);

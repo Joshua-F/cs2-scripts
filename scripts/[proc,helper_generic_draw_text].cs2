@@ -3,7 +3,7 @@
 def_int $int1 = calc(paraheight(~helper_generic_get_string($int0), %varcint492, p12_full) * 14);
 if (cc_find(interface_711:3, $int0) = ^true) {
 	cc_setsize(%varcint492, $int1, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, %varcint493, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(1, %varcint493, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);

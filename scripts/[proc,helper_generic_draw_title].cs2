@@ -1,17 +1,22 @@
 // 4708
 [proc,helper_generic_draw_title](int $int0, int $int1)
-def_int $int2 = calc(paraheight(~helper_generic_get_string($int0), %varcint492, b12_full) * 14);
+def_int $width2 = ~script5851;
+def_int $int3 = calc(paraheight(~helper_generic_get_string($int0), $width2, b12_full) * 15);
 if (cc_find(interface_711:3, $int0) = ^true) {
-	cc_setsize(%varcint492, $int2, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, %varcint493, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($width2, $int3, ^setsize_abs, ^setsize_abs);
+	if ($int1 = 1) {
+		cc_setposition(0, %varcint493, ^setpos_abs_centre, ^setpos_abs_top);
+	} else {
+		cc_setposition(1, %varcint493, ^setpos_abs_left, ^setpos_abs_top);
+	}
 	cc_setcolour(^white);
 	cc_settextfont(b12_full);
 	cc_settextshadow(true);
 	if ($int1 = 1) {
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 15);
 	} else {
-		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextalign(^settextalign_left, ^settextalign_top, 15);
 	}
 	cc_settext(~helper_generic_get_string($int0));
-	~helper_generic_set_height($int2);
+	~helper_generic_set_height(calc($int3 + 4));
 }

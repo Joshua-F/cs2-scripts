@@ -1,25 +1,33 @@
 // 2633
-[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-def_int $height6 = 3;
-def_int $int7 = ~questlist_sectioninit("Free Quests", $component3, enum_2098, ~quest_f2p_count, $component3, $component4, $component5);
-if_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top, $component3);
-$height6 = calc($height6 + $int7 + 8);
-$int7 = ~questlist_sectioninit("Members' Quests", $component4, enum_2099, ~quest_members_count, $component3, $component4, $component5);
-if_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-$height6 = calc($height6 + $int7 + 8);
-$int7 = ~questlist_sectioninit("Miniquests", $component5, enum_2100, ~miniquest_count, $component3, $component4, $component5);
-if_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top, $component5);
-$height6 = calc($height6 + $int7);
-$height6 = calc($height6 + 2);
-def_int $int8 = %varcint10;
-if ($height6 > if_getheight($component1)) {
-	if_setscrollsize(0, $height6, $component1);
+[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
+def_int $height7 = 3;
+def_int $int8 = ~questlist_sectioninit("Free Quests", $component3, enum_2098, ~quest_f2p_count, $component3, $component4, $component5);
+if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component3);
+$height7 = calc($height7 + $int8 + 8);
+$int8 = ~questlist_sectioninit("Members' Quests", $component4, enum_2099, ~quest_members_count, $component3, $component4, $component5);
+if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+if (~script5849 = 0) {
+	$height7 = calc($height7 + $int8 + 8);
+	$int8 = ~questlist_sectioninit("Miniquests", $component5, enum_2100, ~miniquest_count, $component3, $component4, $component5);
+	if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component5);
+}
+$height7 = calc($height7 + $int8 + 2);
+def_int $int9 = %varcint10;
+if ($int6 = 1) {
+	$int9 = %varcint972;
+}
+if ($height7 > if_getheight($component1)) {
+	if_setscrollsize(0, $height7, $component1);
 	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	if (cc_find($component2, 1) = ^true) {
-		~scrollbar_vertical_doscroll($component2, $component1, $int8, true);
+		~scrollbar_vertical_doscroll($component2, $component1, $int9, true);
 	}
 } else {
-	%varcint10 = 0;
+	if ($int6 = 1) {
+		%varcint972 = 0;
+	} else {
+		%varcint10 = 0;
+	}
 	if_setscrollsize(0, 0, $component1);
 	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 }

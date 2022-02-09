@@ -1,0 +1,12 @@
+// 5912
+[proc,script5912](component $component0, int $int1, int $int2, string $string0)(int, int)
+def_int $int3 = calc(paraheight($string0, if_getwidth($component0) - 6, p11_full) * 11 + 5);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(6, $int3, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, 11);
+cc_settextfont(p11_full);
+cc_settext($string0);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+return(calc($int1 + 1), calc($int2 + $int3));
