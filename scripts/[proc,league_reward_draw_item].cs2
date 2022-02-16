@@ -34,11 +34,7 @@ if (~script3292($struct22) = 0) {
 	cc_setcolour(0x9f9f9f);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
 	$mes0 = "You can't purchase that reward until the current League has ended.";
-	if ($struct22 = leagues_iii_shattered_relics_3771) {
-		cc_settext("<struct_param($struct3, param_363)><br> <col=9f9f9f>Available soon");
-	} else {
-		cc_settext("<struct_param($struct3, param_363)><br>  <col=9f9f9f><~tostring_spacer($int25, $string1)> points</col>");
-	}
+	cc_settext("<struct_param($struct3, param_363)><br>  <col=9f9f9f><~tostring_spacer($int25, $string1)> points</col>");
 	.cc_setonop("league_reward_shop_refuse($mes0, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $struct22)");
 } else if (oc_members($namedobj23) = ^true & map_members = ^false) {
 	cc_setcolour(0x9f9f9f);
