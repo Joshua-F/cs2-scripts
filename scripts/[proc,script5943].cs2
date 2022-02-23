@@ -1,0 +1,26 @@
+// 5943
+[proc,script5943](struct $struct0, int $int1)(string)
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_int $int2 = 0;
+def_int $int3 = 0;
+if (~script5944($struct0) = 1) {
+	$int2 = calc(struct_param($struct0, param_1539) * 50);
+	$int3 = calc(struct_param($struct0, param_1538) * 50);
+	$string0 = ~buff_bar_time_string($int1);
+} else {
+	$int2 = struct_param($struct0, param_1539);
+	$int3 = struct_param($struct0, param_1538);
+	if ($int1 > $int2) {
+		$string0 = "<tostring(struct_param($struct0, param_1539))>+";
+	} else {
+		$string0 = tostring($int1);
+	}
+}
+if ($int1 > $int2) {
+} else if ($int1 < $int3) {
+	$string1 = "<col=0xff0000>";
+	$string2 = "</col>";
+}
+return("<$string1><$string0><$string2>");

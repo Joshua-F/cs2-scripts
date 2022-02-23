@@ -4,7 +4,7 @@ if (~on_enhanced_any = 0) {
 	return;
 }
 if (npc_find($npc_uid0) = true) {
-	~add_overlaytimer_npc($int1, $int2, $colour3, $int4);
+	~add_overlaytimer_npc($int1, clientclock, calc($int2 * 30), $colour3, $int4);
 } else {
 	~debug_mes("Overlay Timers: Unable to find NPC for overlay timer <tostring($int1)>.");
 }

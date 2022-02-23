@@ -77,7 +77,7 @@ cc_settrans($trans13);
 highlight_npc_on($npc_uid2, $int3, 11);
 if (_202($newvar0) = ^true) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	if (%varbit12351 = 0) {
+	if (%varbit12351 = 0 & ~on_mobile = false) {
 		cc_setonmouseleave("fishing_spot_indicator_mouseleave($newvar0, $struct1, $npc_uid2, $int3)");
 		cc_setonmouseover("fishing_spot_indicator_mouseover($newvar0, $struct1)");
 	}

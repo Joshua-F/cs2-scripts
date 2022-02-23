@@ -1,0 +1,12 @@
+// 5932
+[proc,script5932](struct $struct0)
+def_int $int1 = 0;
+$int1 = ~script5923($struct0);
+cc_setcolour($int1);
+if (~script5945($struct0) = 1) {
+	cc_settext(~script5943($struct0, $int1));
+}
+~script5934($struct0);
+if (~script5944($struct0) = 1) {
+	~script5936($struct0, clientclock);
+}

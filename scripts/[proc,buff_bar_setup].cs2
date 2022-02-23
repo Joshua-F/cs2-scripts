@@ -1,5 +1,6 @@
 // 3167
 [proc,buff_bar_setup](component $component0, component $component1)
+return;
 cc_deleteall($component0);
 %varcint384 = clientclock;
 ~deltooltip_action($component1);

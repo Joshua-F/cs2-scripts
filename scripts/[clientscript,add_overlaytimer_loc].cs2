@@ -6,7 +6,7 @@ if (~on_enhanced_any = 0) {
 def_newvar $newvar7 = null;
 def_int $int8 = -1;
 if (loc_find($coord0, $loc1) = true) {
-	~add_overlaytimer_loc($int3, $int4, $colour5, $int6);
+	~add_overlaytimer_loc($loc1, $int3, clientclock, calc($int4 * 30), $colour5, $int6);
 } else {
 	switch_locshape ($locshape2) {
 		case locshape_0, locshape_1, locshape_2, locshape_3, locshape_9 :
@@ -23,6 +23,6 @@ if (loc_find($coord0, $loc1) = true) {
 	}
 	$newvar7 = _7204($coord0, $int8, 0, 1, 1, 0);
 	if (_202($newvar7) = ^true) {
-		cc_setontimer("overlaytimer_loc_find($coord0, $loc1, $int3, $int4, $colour5, $int6, clientclock, $int8)");
+		cc_setontimer("overlaytimer_loc_find($coord0, $loc1, $int3, clientclock, calc($int4 * 30), $colour5, $int6, $int8)");
 	}
 }

@@ -1,0 +1,7 @@
+// 5916
+[clientscript,script5916](int $int0)
+if (%varbit4843 ! $int0) {
+	%varbit4843 = $int0;
+	sound_synth(interface_select1, 1, 0);
+	~script5917;
+}

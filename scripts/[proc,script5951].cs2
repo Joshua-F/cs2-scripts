@@ -1,0 +1,11 @@
+// 5951
+[proc,script5951](int $int0)
+switch_int ($int0) {
+	case 5 :
+		%varcint553, %varcint554 = npc_uid, _6752;
+	case 4 :
+		%varcint973, %varcint974 = npc_uid, _6752;
+	case default :
+		return;
+}
+highlight_npc_on(npc_uid, _6752, $int0);

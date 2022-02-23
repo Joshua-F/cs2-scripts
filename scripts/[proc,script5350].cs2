@@ -1,27 +1,23 @@
 // 5350
 [proc,script5350]
-~script5351;
+~script5950(5);
 def_int $minimenu_entry_type0 = get_active_minimenu_entry_type;
 if (%varbit13088 = 0 | $minimenu_entry_type0 = 1 | $minimenu_entry_type0 = ^minimenu_entry_type_default) {
 	return;
 }
 if ($minimenu_entry_type0 = ^minimenu_entry_type_npc & npc_find_active_minimenu_entry = true) {
-	%varcint553 = npc_uid;
-	%varcint554 = _6752;
-	highlight_npc_on(npc_uid, _6752, 5);
+	~script5951(5);
 	return;
 }
 if ($minimenu_entry_type0 = ^minimenu_entry_type_loc & loc_find_active_minimenu_entry = true) {
-	%varcint555 = loc_type;
-	%varcint556 = loc_coord;
-	highlight_loc_on(loc_type, loc_coord, 5, 1);
+	~script5952(5);
 	return;
 }
 if ($minimenu_entry_type0 = ^minimenu_entry_type_obj & obj_find_active_minimenu_entry = true) {
+	~script5953(5);
 	return;
 }
 if ($minimenu_entry_type0 = ^minimenu_entry_type_player & player_find_active_minimenu_entry = true) {
-	%varcstring559 = player_name;
-	highlight_player_on(player_name, 5);
+	~script5954(5);
 	return;
 }

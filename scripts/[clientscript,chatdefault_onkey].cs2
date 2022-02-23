@@ -194,10 +194,18 @@ if ($key0 = ^key_return) {
 				if (string_indexof_string(%varcstring335, "::toggleroof", 0) = 0) {
 					if (getremoveroofs = true) {
 						setremoveroofs(false);
-						mes("Roofs will only be removed selectively.");
+						if (%varbit12378 = 0) {
+							mes("Roofs will only be removed selectively.");
+						} else {
+							mes("Roofs will only be removed selectively. This setting will not be saved.");
+						}
 					} else {
 						setremoveroofs(true);
-						mes("Roofs are now all hidden.");
+						if (%varbit12378 = 1) {
+							mes("Roofs are now all hidden.");
+						} else {
+							mes("Roofs are now all hidden. This setting will not be saved.");
+						}
 					}
 				} else if (string_indexof_string(%varcstring335, "::wiki ", 0) = 0 | compare(%varcstring335, "::wiki") = 0) {
 					~wiki_chat_search(%varcstring335);

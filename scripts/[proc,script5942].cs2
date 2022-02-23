@@ -1,0 +1,6 @@
+// 5942
+[proc,script5942](int $int0, int $int1, int $int2)(int)
+if ($int2 = 0 | $int1 <= 0) {
+	return(0);
+}
+return(calc($int1 * $int2));

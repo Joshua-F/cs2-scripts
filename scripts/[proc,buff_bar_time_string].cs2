@@ -19,14 +19,6 @@ if ($int3 = 60) {
 	$int3 = 0;
 	$int2 = calc($int2 + 1);
 }
-if ($int2 > 0 & $int3 > 0) {
-	$int3 = 0;
-	$int2 = calc($int2 + 1);
-}
-if ($int1 > 0 & $int2 > 0) {
-	$int2 = 0;
-	$int1 = calc($int1 + 1);
-}
 if ($int1 >= 48) {
 	return("48h+");
 }

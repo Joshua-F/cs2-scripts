@@ -1,0 +1,9 @@
+// 5946
+[proc,script5946](struct $struct0, int $int1)(int)
+if (~buff_bar_buff_disabled(struct_param($struct0, param_1275)) = 1) {
+	return(0);
+}
+if ($int1 <= struct_param($struct0, param_1540)) {
+	return(0);
+}
+return(1);

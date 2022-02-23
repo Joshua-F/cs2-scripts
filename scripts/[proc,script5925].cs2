@@ -1,0 +1,11 @@
+// 5925
+[proc,script5925](struct $struct0)(int)
+if ($struct0 = null) {
+	return(0);
+}
+switch_struct ($struct0) {
+	case struct_3763 :
+		return(%varbit13137);
+	case default :
+		return(struct_param($struct0, param_1541));
+}

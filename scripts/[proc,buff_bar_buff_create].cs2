@@ -3,7 +3,7 @@
 if ($struct3 = null) {
 	return(0);
 }
-def_int $int5 = struct_param($struct3, param_1289);
+def_int $int5 = struct_param($struct3, param_1275);
 def_int $int6 = struct_param($struct3, param_1277);
 if (~buff_bar_buff_disabled($int5) = 1) {
 	return(0);
@@ -118,7 +118,7 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if ($int8 = 1) {
 	cc_settext(~buff_bar_time_string($int7));
-	cc_setontimer("buff_bar_buff_timer($component0, $component2, $int1, clientclock, $int7, $int5, $int6, ~script4681($int5), struct_param($struct3, param_1290), ~script5548($int5, $struct3), 0, 0)");
+	cc_setontimer("buff_bar_buff_timer($component0, $component2, $int1, clientclock, $int7, $int5, $int6, ~script4681($int5), struct_param($struct3, param_1290), ~script5925($struct3), 0, 0)");
 } else if ($int7 ! 0) {
 	if ($int7 > 999) {
 		cc_settext("999+");
@@ -154,7 +154,7 @@ if ($int6 = 3 | $int6 = 4 | $int6 = 5) {
 if (struct_param($struct3, param_1410) > 0) {
 	if ($int8 = 1) {
 		cc_settext(~buff_bar_time_string($int7));
-		cc_setontimer("buff_bar_buff_timer($component0, $component2, $int1, clientclock, $int7, $int5, $int6, ~script4681($int5), struct_param($struct3, param_1290), ~script5548($int5, $struct3), 0, 0)");
+		cc_setontimer("buff_bar_buff_timer($component0, $component2, $int1, clientclock, $int7, $int5, $int6, ~script4681($int5), struct_param($struct3, param_1290), ~script5925($struct3), 0, 0)");
 	} else if ($int7 ! 0) {
 		if ($int7 > 999) {
 			cc_settext("999+");

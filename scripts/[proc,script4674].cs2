@@ -1,3 +1,3 @@
 // 4674
-[proc,script4674](int $int0, int $clock1)(int)
-return(calc($int0 - (clientclock - $clock1)));
+[proc,script4674](int $clock0, int $int1)(int)
+return(calc($int1 - (clientclock - $clock0)));

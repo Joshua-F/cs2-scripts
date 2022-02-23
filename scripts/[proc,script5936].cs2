@@ -1,0 +1,53 @@
+// 5936
+[proc,script5936](struct $struct0, int $clock1)
+def_component $component2 = interface_651:2;
+def_int $int3 = 0;
+def_int $int4 = calc(clientclock - $clock1);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_string $string0 = "";
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $comsubid11 = -1;
+def_int $int12 = -1;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 10;
+if (calc($int4 % $int15) = 0) {
+	$comsubid11 = struct_param($struct0, param_1275);
+	if (cc_find($component2, $comsubid11) = ^true) {
+		$int12 = struct_param($struct0, param_1277);
+		$int10 = cc_getcolour;
+		$int9 = ~script4666($int12, $int10);
+		$int5 = calc($int9 - $int4);
+		$int8 = cc_getfillcolour;
+		$int6 = cc_getscrollwidth;
+		$int7 = cc_getscrollheight;
+		if (%varbit12393 = 1 & struct_param($struct0, param_1290) = true) {
+			$int6 = calc($int6 + $int15);
+			$int14 = calc(~script5925($struct0) * 30 - $int4);
+			if ($int14 < 0) {
+				$int7 = calc($int7 + $int15);
+			}
+			if ($int7 > 0) {
+				$int5 = calc($int5 + $int7);
+			}
+		} else {
+			$int6 = 0;
+			$int7 = 0;
+		}
+		cc_setscrollsize($int6, $int7);
+		cc_setfillcolour($int5);
+		cc_settext(~script5943($struct0, $int5));
+		if ($int5 <= 0) {
+			cc_setscrollsize(0, 0);
+			cc_setcolour(struct_param($struct0, param_1540));
+			cc_setfillcolour(^black);
+			cc_settext("");
+			cc_setontimer(null);
+			~script5938;
+		}
+	}
+}

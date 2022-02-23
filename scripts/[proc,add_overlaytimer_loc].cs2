@@ -1,7 +1,11 @@
 // 5473
-[proc,add_overlaytimer_loc](int $int0, int $int1, int $colour2, int $int3)
-if (~on_enhanced_any = 0 | ~script5476($int0, $int1) = 0) {
+[proc,add_overlaytimer_loc](loc $loc0, int $int1, int $clock2, int $int3, int $colour4, int $int5)
+if (~on_enhanced_any = 0 | ~script5476($int1, $int3) = 0) {
 	return;
 }
-def_newvar $newvar4 = _7201(1, 0, 25, 25, 0);
-~add_overlaytimer_inner($int0, $newvar4, $int1, $colour2, $int3);
+def_int $int6 = 0;
+if (lc_param($loc0, param_1545) = true) {
+	$int6 = 2;
+}
+def_newvar $newvar7 = _7201(1, $int6, 25, 25, 0);
+~add_overlaytimer_inner($int1, $newvar7, $clock2, $int3, $colour4, $int5);

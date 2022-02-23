@@ -1,0 +1,112 @@
+// 5947
+[proc,script5947](struct $struct0, string $text0, int $int1)
+def_component $component2 = interface_651:4;
+def_int $int3 = struct_param($struct0, param_1275);
+def_int $int4 = struct_param($struct0, param_1276);
+def_int $trans5 = enum(int, int, enum_2653, $int4);
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = ~script5944($struct0);
+$int6, $int7 = ~buff_bar_buff_position($component2, $int1);
+$int1 = calc($int1 * 10);
+cc_create($component2, ^iftype_rectangle, $int1);
+cc_setposition(calc($int6 + 1), calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(calc(37 - 5), calc(37 - 5), ^setsize_abs, ^setsize_abs);
+cc_setcolour($int3);
+$int1 = calc($int1 + 1);
+cc_create($component2, ^iftype_rectangle, $int1);
+cc_setposition(calc($int6 + 1), calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(calc(37 - 5), calc(37 - 5), ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour($int4);
+cc_settrans($trans5);
+$int1 = calc($int1 + 1);
+$trans5 = enum(int, int, enum_2654, $int4);
+cc_create($component2, ^iftype_rectangle, $int1);
+cc_setsize(1, calc(37 - 3), ^setsize_abs, ^setsize_abs);
+cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour($int4);
+cc_settrans($trans5);
+$int1 = calc($int1 + 1);
+cc_create($component2, ^iftype_rectangle, $int1);
+cc_setsize(1, calc(37 - 3), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int6 + (37 - 4)), $int7, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour($int4);
+cc_settrans($trans5);
+$int1 = calc($int1 + 1);
+cc_create($component2, ^iftype_rectangle, $int1);
+cc_setsize(calc(37 - 5), 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int6 + 1), $int7, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour($int4);
+cc_settrans($trans5);
+$int1 = calc($int1 + 1);
+cc_create($component2, ^iftype_rectangle, $int1);
+cc_setsize(calc(37 - 5), 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int6 + 1), calc($int7 + (37 - 4)), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour($int4);
+cc_settrans($trans5);
+$int1 = calc($int1 + 1);
+cc_create($component2, ^iftype_graphic, $int1);
+def_int $int9 = calc(coordx(struct_param($struct0, param_1280)) % 64);
+def_int $int10 = calc(coordz(struct_param($struct0, param_1280)) % 64);
+cc_setposition(calc($int6 + 1 + (37 - 5) / 2 - $int9 / 2 + coordx(struct_param($struct0, param_1284)) % 64), calc($int7 + 1 + (37 - 5) / 2 - $int10 / 2 + coordz(struct_param($struct0, param_1284)) % 64), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
+def_int $int11 = 0;
+def_graphic $graphic12 = null;
+def_namedobj $namedobj13 = struct_param($struct0, param_1281);
+if (struct_param($struct0, param_1480) = true) {
+	$graphic12 = ~script5847($int3);
+} else {
+	$graphic12 = struct_param($struct0, param_1278);
+}
+if (struct_param($struct0, param_1285) ! null & $int11 ! -1) {
+	$graphic12 = enum(int, graphic, struct_param($struct0, param_1285), $int11);
+}
+if ($graphic12 ! null) {
+	cc_setgraphic($graphic12);
+} else if ($namedobj13 ! null) {
+	cc_setoutline(1);
+	cc_setobject_nonum(oc_uncert($namedobj13), 100000);
+}
+$int1 = calc($int1 + 1);
+cc_create($component2, ^iftype_graphic, $int1);
+$int9 = calc(coordx(struct_param($struct0, param_1483)) % 64);
+$int10 = calc(coordz(struct_param($struct0, param_1483)) % 64);
+cc_setposition(calc($int6 + 1 + (37 - 5) / 2 - $int9 / 2 + coordx(struct_param($struct0, param_1484)) % 64), calc($int7 + 1 + (37 - 5) / 2 - $int10 / 2 + coordz(struct_param($struct0, param_1484)) % 64), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
+$graphic12 = null;
+if (struct_param($struct0, param_1481) = true) {
+	$graphic12 = ~script5848($int3);
+} else {
+	$graphic12 = struct_param($struct0, param_1479);
+}
+if ($graphic12 ! null) {
+	cc_setgraphic($graphic12);
+} else {
+	cc_sethide(true);
+}
+$int1 = calc($int1 + 1);
+cc_create($component2, ^iftype_text, $int1);
+cc_setposition($int6, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(calc(37 - 3), 12, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if (~script5945($struct0) = 1) {
+	cc_settext($text0);
+} else {
+	cc_settext("");
+}
+$int1 = calc($int1 + 1);
+def_component $component14 = interface_651:5;
+if (struct_param($struct0, param_1482) = true) {
+	~buff_bar_buff_create_tooltip($component2, $int1, $component14, ~script5846($int3), $int6, $int7);
+} else {
+	~buff_bar_buff_create_tooltip($component2, $int1, $component14, struct_param($struct0, param_1279), $int6, $int7);
+}
+$int1 = calc($int1 + 1);

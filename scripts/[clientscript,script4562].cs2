@@ -1,5 +1,5 @@
 // 4562
-[clientscript,script4562](int $int0, int $int1, string $string0, string $string1)
+[clientscript,script4562](int $int0, int $int1, int $int2, string $string0, string $string1)
 if (~on_enhanced_any = 0) {
 	return;
 }
@@ -10,5 +10,9 @@ if (~on_enhanced_any = 0) {
 ~synch_always_on_top(%varbit12372);
 ~helper_agility_highlight_course(-1);
 ~helper_agility_highlight_setup;
-~script5183;
-~xptracker_login($int1, $string0, $string1);
+setminimaplock(~int_to_bool(calc(1 - %varbit12983)));
+~xptracker_login($int2, $string0, $string1);
+chat_settimestamps(%varbit12384);
+~rebuildchatbox(~script553);
+~settings_set_draw_distance($int1);
+_7252(4);

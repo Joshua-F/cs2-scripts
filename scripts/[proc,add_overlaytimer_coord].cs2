@@ -1,7 +1,7 @@
 // 5477
-[proc,add_overlaytimer_coord](coord $coord0, int $int1, int $int2, int $colour3, int $int4)
-if (~on_enhanced_any = 0 | ~script5479($coord0, $int1, $int2) = 0) {
+[proc,add_overlaytimer_coord](coord $coord0, int $int1, int $clock2, int $int3, int $colour4, int $int5)
+if (~on_enhanced_any = 0 | ~script5479($coord0, $int1, $int3) = 0) {
 	return;
 }
-def_newvar $newvar5 = _7204($coord0, 1, 0, 25, 25, 0);
-~add_overlaytimer_inner($int1, $newvar5, $int2, $colour3, $int4);
+def_newvar $newvar6 = _7204($coord0, 1, 0, 25, 25, 0);
+~add_overlaytimer_inner($int1, $newvar6, $clock2, $int3, $colour4, $int5);

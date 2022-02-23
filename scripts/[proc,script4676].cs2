@@ -1,8 +1,16 @@
 // 4676
-[proc,script4676](int $int0, int $int1, int $int2)(int)
-if ($int2 = 0 | $int1 <= 0) {
+[proc,script4676](int $int0)(int)
+def_struct $struct1 = enum(int, struct, enum_4137, $int0);
+if ($struct1 = null) {
 	return(0);
 }
-def_int $int3 = calc($int1 * $int2);
-def_int $int4 = calc(%var3079 - $int0);
-return(calc($int3 - $int4));
+def_int $int2 = ~script5792($int0);
+def_int $int3 = struct_param($struct1, param_1468);
+def_int $int4 = struct_param($struct1, param_1470);
+if ($int4 ! 0 & $int2 >= $int4) {
+	return(2);
+}
+if ($int3 ! 0 & $int2 >= $int3) {
+	return(1);
+}
+return(0);

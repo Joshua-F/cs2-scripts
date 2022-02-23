@@ -1,0 +1,11 @@
+// 5954
+[proc,script5954](int $int0)
+switch_int ($int0) {
+	case 5 :
+		%varcstring559 = player_name;
+	case 4 :
+		%varcstring979 = player_name;
+	case default :
+		return;
+}
+highlight_player_on(player_name, $int0);

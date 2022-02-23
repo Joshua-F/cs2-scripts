@@ -1,7 +1,7 @@
 // 5470
-[proc,add_overlaytimer_npc](int $int0, int $int1, int $colour2, int $int3)
-if (~on_enhanced_any = 0 | ~script5472($int0, $int1) = 0) {
+[proc,add_overlaytimer_npc](int $int0, int $clock1, int $int2, int $colour3, int $int4)
+if (~on_enhanced_any = 0 | ~script5472($int0, $int2) = 0) {
 	return;
 }
-def_newvar $newvar4 = _7200(1, 0, 25, 25, 0);
-~add_overlaytimer_inner($int0, $newvar4, $int1, $colour2, $int3);
+def_newvar $newvar5 = _7200(1, 0, 25, 25, 0);
+~add_overlaytimer_inner($int0, $newvar5, $clock1, $int2, $colour3, $int4);
