@@ -20,7 +20,7 @@ if ($int3 ! 0 & enum(int, int, enum_1162, $int3) = -1) {
 	$string1 = "<~tostring_spacer($int3, $string2)> XP (<$string3>)";
 }
 if ($int4 ! 0 & enum(int, int, enum_1162, $int4) = -1) {
-	if (~script5529($string0) = 0) {
+	if (~string_isnullorempty($string0) = 0) {
 		$string0 = "<$string0>|";
 		$string1 = "<$string1>|";
 	}
@@ -32,7 +32,7 @@ if ($int4 ! 0 & enum(int, int, enum_1162, $int4) = -1) {
 	$string0 = "<$string0>Goal:";
 	$string1 = "<$string1><~tostring_spacer($int4, $string2)> XP (<$string3>)";
 }
-if (~script5529($string0) = 1 | ~script5529($string1) = 1) {
+if (~string_isnullorempty($string0) = 1 | ~string_isnullorempty($string1) = 1) {
 	return;
 }
 ~script5544($layer0, $comsubid1, $string0, $string1);

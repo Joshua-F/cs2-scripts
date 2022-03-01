@@ -1,12 +1,12 @@
 // 4742
 [proc,affixtimestamp](string $string0, string $string1, string $string2)(string)
-if (~on_enhanced_any = 0 | chat_gettimestamps = 0 | ~script5529($string0) = 1) {
+if (~on_enhanced_any = 0 | chat_gettimestamps = 0 | ~string_isnullorempty($string0) = 1) {
 	return($string1);
 }
-if (~script5529(~string_trim($string1)) = 1) {
+if (~string_isnullorempty(~string_trim($string1)) = 1) {
 	return($string1);
 }
-if (~script5529($string2) = 0) {
+if (~string_isnullorempty($string2) = 0) {
 	$string0 = "<$string2><$string0></col>";
 }
 return("<$string0> <$string1>");

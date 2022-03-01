@@ -5522,7 +5522,7 @@
 [**5526**](scripts/[clientscript,script5526].cs2)  
 [**5527**](scripts/[clientscript,script5527].cs2)  
 [**5528**](scripts/[proc,script5528].cs2)  
-[**5529**](scripts/[proc,script5529].cs2)  
+[**5529**](scripts/[proc,string_isnullorempty].cs2) `[proc,string_isnullorempty]`  
 [**5530**](scripts/[proc,string_trim].cs2) `[proc,string_trim]`  
 [**5531**](scripts/[proc,string_trim_left].cs2) `[proc,string_trim_left]`  
 [**5532**](scripts/[proc,string_trim_right].cs2) `[proc,string_trim_right]`  

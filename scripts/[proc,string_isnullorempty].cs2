@@ -1,5 +1,5 @@
 // 5529
-[proc,script5529](string $string0)(int)
+[proc,string_isnullorempty](string $string0)(int)
 if (compare($string0, "null") = 0 | compare($string0, "") = 0) {
 	return(1);
 }
