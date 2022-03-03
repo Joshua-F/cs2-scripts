@@ -58,6 +58,10 @@ cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
 def_int $int11 = 0;
 def_graphic $graphic12 = null;
 def_namedobj $namedobj13 = struct_param($struct0, param_1281);
+def_namedobj $namedobj14 = ~script5928($int3);
+if ($namedobj14 ! null) {
+	$namedobj13 = $namedobj14;
+}
 if (struct_param($struct0, param_1480) = true) {
 	$graphic12 = ~script5847($int3);
 } else {
@@ -103,10 +107,10 @@ if (~script5945($struct0) = 1) {
 	cc_settext("");
 }
 $int1 = calc($int1 + 1);
-def_component $component14 = interface_651:5;
+def_component $component15 = interface_651:5;
 if (struct_param($struct0, param_1482) = true) {
-	~buff_bar_buff_create_tooltip($component2, $int1, $component14, ~script5846($int3), $int6, $int7);
+	~buff_bar_buff_create_tooltip($component2, $int1, $component15, ~script5846($int3), $int6, $int7);
 } else {
-	~buff_bar_buff_create_tooltip($component2, $int1, $component14, struct_param($struct0, param_1279), $int6, $int7);
+	~buff_bar_buff_create_tooltip($component2, $int1, $component15, struct_param($struct0, param_1279), $int6, $int7);
 }
 $int1 = calc($int1 + 1);

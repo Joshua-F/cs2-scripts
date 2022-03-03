@@ -1,0 +1,167 @@
+// 5183
+[proc,script5183](component $component0, component $component1, int $int2)
+def_component $component3 = interface_743:6;
+def_component $component4 = interface_743:15;
+def_component $component5 = interface_743:16;
+def_component $component6 = interface_743:14;
+def_component $component7 = interface_743:12;
+def_component $component8 = interface_743:7;
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+cc_deleteall($component8);
+~scrollbar_vertical($component6, $component7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $flags9 = %var261;
+def_int $flags10 = %var262;
+def_int $int11 = %var263;
+def_int $int12 = %var264;
+def_int $int13 = %var265;
+def_int $count14 = 0;
+def_int $count15 = enum_getoutputcount(enum_4216);
+def_struct $struct16 = null;
+def_string $string0 = "";
+def_int $int17 = 0;
+def_obj $obj18 = null;
+def_graphic $graphic19 = null;
+def_int $int20 = 0;
+def_int $int21 = 36;
+def_int $int22 = 32;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $height25 = 0;
+def_int $int26 = calc($int21 + 13);
+def_int $height27 = 0;
+def_int $int28 = 0;
+def_int $int29 = calc(if_getwidth($component4) - $int26 - 8);
+def_int $int30 = 0;
+def_int $int31 = calc($int22 + 6);
+def_int $int32 = 0;
+if_settext("Storage Space:<br> <tostring($int11)>/<tostring($int12)>", interface_743:9);
+if ($int11 >= $int12) {
+	if_setcolour(0x0dc10d, interface_743:9);
+} else {
+	if_setcolour(0xff981f, interface_743:9);
+}
+if ($int13 <= 0) {
+	if_settext("You are eligible to unlock group storage slots for your group", interface_743:10);
+	if_setcolour(0x0dc10d, interface_743:10);
+} else {
+	if ($int13 = 1) {
+		if_settext("You will be eligible to unlock group storage slots in 1 week<br>", interface_743:10);
+	} else {
+		if_settext("You will be eligible to unlock group storage slots in <tostring($int13)> weeks<br>", interface_743:10);
+	}
+	if_setcolour(^red, interface_743:10);
+}
+cc_create($component8, ^iftype_graphic, $int23);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 4, ^setpos_abs_left, ^setpos_abs_top);
+if_setop(1, "Toggle", $component8);
+if_setopbase("completed unlocks", $component8);
+if ($int2 = 1) {
+	cc_setgraphic("checkbox,2");
+	if_setonop("script4677($component0, $component1, 0)", $component8);
+} else {
+	cc_setgraphic("checkbox,1");
+	if_setonop("script4677($component0, $component1, 1)", $component8);
+}
+$int23 = calc($int23 + 1);
+cc_create($component8, ^iftype_text, $int23);
+cc_setsize(84, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(20, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Show Completed");
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+if_setonmouserepeat("script5330($component8, $int23)", $component8);
+if_setonmouseleave("script5351($component8, $int23)", $component8);
+$int23 = 0;
+while ($count14 < $count15) {
+	$struct16 = enum(int, struct, enum_4216, $count14);
+	if ($struct16 ! null) {
+		$string0 = struct_param($struct16, param_1546);
+		$int17 = struct_param($struct16, param_1547);
+		$obj18 = struct_param($struct16, param_1291);
+		$graphic19 = struct_param($struct16, param_1548);
+		$int20 = ~script5353($flags9, $flags10, struct_param($struct16, param_1289));
+		if ($int2 = 0 & $int20 = 0 | $int2 = 1) {
+			$height27 = $height25;
+			$int28 = ~max(calc($int22 + 20), calc(paraheight($string0, $int29 - 10, p11_full) * 15 + 8));
+			cc_create($component4, ^iftype_rectangle, $int23);
+			cc_setsize($int29, $int28, ^setsize_abs, ^setsize_abs);
+			cc_setposition($int26, $height25, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setcolour(^white);
+			cc_setfill(true);
+			if (calc($count14 % 2) = 0) {
+				cc_settrans(245);
+			} else {
+				cc_settrans(230);
+			}
+			$int23 = calc($int23 + 1);
+			cc_create($component4, ^iftype_text, $int23);
+			cc_setsize(calc($int29 - 10), calc($int28 - 4), ^setsize_abs, ^setsize_abs);
+			cc_setposition(calc($int26 + 5), calc($height25 + 2), ^setpos_abs_left, ^setpos_abs_top);
+			cc_settext($string0);
+			cc_settextfont(p11_full);
+			cc_settextshadow(true);
+			if ($int20 = 1) {
+				cc_setcolour(0x0dc10d);
+			} else {
+				cc_setcolour(0x9f9f9f);
+			}
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+			$int23 = calc($int23 + 1);
+			$height25 = calc($height25 + $int28);
+			$int30 = calc($int30 + $int28);
+			$height25 = $height27;
+			$int24 = ~thinbox_specific($component5, $int24, $int26, $height25, $int29, $int30, ^setpos_abs_left, ^setpos_abs_top);
+			$int26 = 0;
+			cc_create($component4, ^iftype_rectangle, $int23);
+			cc_setsize(calc($int21 + 14), $int28, ^setsize_abs, ^setsize_abs);
+			cc_setposition($int26, $height25, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setcolour(^white);
+			cc_setfill(true);
+			cc_settrans(230);
+			$int23 = calc($int23 + 1);
+			cc_create($component4, ^iftype_graphic, $int23);
+			if ($obj18 ! null) {
+				cc_setobject($obj18, 1);
+				cc_setsize($int21, $int22, ^setsize_abs, ^setsize_abs);
+				cc_setposition(9, calc($height25 + ($int30 - $int22 - 15) / 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else {
+				cc_setgraphic($graphic19);
+				cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+				cc_setposition(12, calc($height25 + ($int30 - 25 - 15) / 2), ^setpos_abs_left, ^setpos_abs_top);
+			}
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			$int23 = calc($int23 + 1);
+			cc_create($component4, ^iftype_text, $int23);
+			cc_setsize($int21, 14, ^setsize_abs, ^setsize_abs);
+			cc_setposition(calc($int26 + 5), calc($height25 + $int28 - 15), ^setpos_abs_left, ^setpos_abs_top);
+			cc_settext("Slots: <tostring($int17)>");
+			cc_settextfont(p11_full);
+			cc_settextshadow(true);
+			if ($int20 = 1) {
+				cc_setcolour(0x0dc10d);
+			} else {
+				cc_setcolour(0x9f9f9f);
+			}
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+			$int23 = calc($int23 + 1);
+			$int24 = ~thinbox_specific($component5, $int24, $int26, $height25, calc($int21 + 14), $int30, ^setpos_abs_left, ^setpos_abs_top);
+			$height25 = calc($height25 + $int30 - 1);
+			$int26 = calc($int21 + 13);
+			$int30 = 0;
+		}
+	}
+	$count14 = calc($count14 + 1);
+}
+$height25 = calc($height25 + 9);
+if ($height25 > if_getheight($component7)) {
+	if_setscrollsize(0, $height25, $component7);
+	~scrollbar_resize($component6, $component7, if_getscrolly($component7));
+}
+~script5194(if_getwidth(interface_743:3), $height25, interface_743:12, interface_743:14, if_getheight(interface_743:1));

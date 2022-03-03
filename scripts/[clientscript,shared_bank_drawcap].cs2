@@ -1,5 +1,5 @@
 // 5266
-[clientscript,shared_bank_drawcap](component $component0, int $comsubid1, int $comsubid2)
+[clientscript,shared_bank_drawcap](component $component0, int $comsubid1, int $comsubid2, int $int3, int $int4)
 if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
-	~shared_bank_drawcap;
+	~shared_bank_drawcap($int3, $int4);
 }

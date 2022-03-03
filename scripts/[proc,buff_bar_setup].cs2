@@ -1,9 +1,0 @@
-// 3167
-[proc,buff_bar_setup](component $component0, component $component1)
-return;
-cc_deleteall($component0);
-%varcint384 = clientclock;
-~deltooltip_action($component1);
-def_int $int2 = 0;
-$int2 = ~league_relic_display($component0, $component1, $int2);
-$int2 = ~enhanced_buffs($component0, $component1, $int2);

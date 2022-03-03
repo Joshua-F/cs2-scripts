@@ -147,7 +147,7 @@ switch_struct ($struct0) {
 		}
 	case buff_mark_of_darkness_3120 :
 		if (%varcint516 > 0) {
-			return(~script5940(%varcint516, stat_base(magic)));
+			return(~script5940(%varcint516, %varcint982));
 		}
 	case buff_shadow_veil_3122 :
 		if (%varcint518 > 0) {
@@ -181,9 +181,14 @@ switch_struct ($struct0) {
 		if (%varcint523 > 0) {
 			return(~script5942(%varcint523, %varbit12290, 17));
 		}
-	case buff_ammo_remaining_3659 :
 	case buff_ammo_remaining_3661 :
-	case buff_ammo_remaining_3660 :
+		if (%var3160 ! null) {
+			return(%var3159);
+		}
+	case buff_ammo_remaining_3659 :
+		if (%var3160 = null) {
+			return(%var3159);
+		}
 	case buff_next_poison_hit_3740 :
 		if (%var102 > 0 & %var102 <= 38) {
 			return(%var102);

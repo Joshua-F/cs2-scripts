@@ -1,0 +1,12 @@
+// 5353
+[proc,script5353](int $flags0, int $flags1, int $int2)(int)
+def_int $index3 = calc($int2 % 32);
+def_int $int4 = calc($int2 / 32);
+switch_int ($int4) {
+	case 0 :
+		return(testbit($flags0, $index3));
+	case 1 :
+		return(testbit($flags1, $index3));
+	case default :
+		return(0);
+}

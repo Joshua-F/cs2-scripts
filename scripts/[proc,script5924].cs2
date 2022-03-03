@@ -90,8 +90,9 @@ switch_struct ($struct0) {
 	case buff_resurrection_cooldown_3127 :
 		cc_setonvartransmit("script5933($struct0){var439}");
 	case buff_ammo_remaining_3659 :
+		cc_setoninvtransmit("script5933($struct0){worn}");
 	case buff_ammo_remaining_3661 :
-	case buff_ammo_remaining_3660 :
+		cc_setoninvtransmit("script5933($struct0){worn}");
 	case buff_next_poison_hit_3740 :
 		cc_setonvartransmit("script5933($struct0){var102}");
 	case buff_next_venom_hit_3741 :
@@ -110,19 +111,19 @@ switch_struct ($struct0) {
 	case buff_forinthry_surge_additional_15_accuracy_and_damage_to_the_revenants_4134 :
 		cc_setonvartransmit("script5933($struct0){var3347, var3348}");
 	case buff_weapon_specialist_3773 :
-		cc_setonvartransmit("script5933($struct0){var3279}");
+		cc_setonvartransmit("script5933($struct0){var3279, var1734}");
 	case buff_weapon_specialist_3774 :
-		cc_setonvartransmit("script5933($struct0){var3280}");
+		cc_setonvartransmit("script5933($struct0){var3280, var1734}");
 	case buff_weapon_specialist_3775 :
-		cc_setonvartransmit("script5933($struct0){var3280}");
+		cc_setonvartransmit("script5933($struct0){var3280, var1734}");
 	case buff_weapon_specialist_3776 :
-		cc_setonvartransmit("script5933($struct0){var3280}");
+		cc_setonvartransmit("script5933($struct0){var3280, var1734}");
 	case buff_weapon_specialist_3777 :
-		cc_setonvartransmit("script5933($struct0){var3280}");
+		cc_setonvartransmit("script5933($struct0){var3280, var1734}");
 	case buff_weapon_specialist_3778 :
-		cc_setonvartransmit("script5933($struct0){var3281}");
+		cc_setonvartransmit("script5933($struct0){var3281, var1734}");
 	case buff_weapon_specialist_3779 :
-		cc_setonvartransmit("script5933($struct0){var3281}");
+		cc_setonvartransmit("script5933($struct0){var3281, var1734}");
 	case buff_twin_strikes_4099 :
 		cc_setonvartransmit("script5933($struct0){var3279, var3280, var3281}");
 	case buff_double_tap_4100 :

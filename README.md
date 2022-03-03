@@ -3165,10 +3165,6 @@
 [**3162**](scripts/[clientscript,league_icon_flash].cs2) `[clientscript,league_icon_flash]`  
 [**3163**](scripts/[clientscript,league_flash_timer].cs2) `[clientscript,league_flash_timer]`  
 [**3164**](scripts/[proc,league_flashicon].cs2) `[proc,league_flashicon]`  
-[**3165**](scripts/[clientscript,buff_bar_init].cs2) `[clientscript,buff_bar_init]`  
-[**3166**](scripts/[clientscript,buff_bar_setup].cs2) `[clientscript,buff_bar_setup]`  
-[**3167**](scripts/[proc,buff_bar_setup].cs2) `[proc,buff_bar_setup]`  
-[**3168**](scripts/[proc,buff_bar_buff_create].cs2) `[proc,buff_bar_buff_create]`  
 [**3169**](scripts/[proc,buff_bar_buff_create_tooltip].cs2) `[proc,buff_bar_buff_create_tooltip]`  
 [**3170**](scripts/[clientscript,buff_bar_mobile_tooltip].cs2) `[clientscript,buff_bar_mobile_tooltip]`  
 [**3171**](scripts/[clientscript,buff_bar_mobile_tooltip_remove].cs2) `[clientscript,buff_bar_mobile_tooltip_remove]`  
@@ -3199,7 +3195,6 @@
 [**3196**](scripts/[clientscript,league_relic_back].cs2) `[clientscript,league_relic_back]`  
 [**3197**](scripts/[clientscript,league_relic_confirm].cs2) `[clientscript,league_relic_confirm]`  
 [**3198**](scripts/[clientscript,league_relic_confirm_back].cs2) `[clientscript,league_relic_confirm_back]`  
-[**3199**](scripts/[proc,league_relic_display].cs2) `[proc,league_relic_display]`  
 [**3200**](scripts/[clientscript,clock_init].cs2) `[clientscript,clock_init]`  
 [**3201**](scripts/[clientscript,script3201].cs2)  
 [**3202**](scripts/[clientscript,league_tasks_init].cs2) `[clientscript,league_tasks_init]`  
@@ -3696,7 +3691,6 @@
 [**3693**](scripts/[proc,leagues_menu_button].cs2) `[proc,leagues_menu_button]`  
 [**3694**](scripts/[proc,league_relic_hover].cs2) `[proc,league_relic_hover]`  
 [**3695**](scripts/[proc,league_relic_button_hover].cs2) `[proc,league_relic_button_hover]`  
-[**3696**](scripts/[proc,league_relic_display_core].cs2) `[proc,league_relic_display_core]`  
 [**3697**](scripts/[proc,league_relic_active].cs2) `[proc,league_relic_active]`  
 [**3698**](scripts/[clientscript,script3698].cs2)  
 [**3699**](scripts/[proc,league_task_display].cs2) `[proc,league_task_display]`  
@@ -4664,7 +4658,6 @@
 [**4661**](scripts/[proc,helper_cox_timer_convert].cs2) `[proc,helper_cox_timer_convert]`  
 [**4662**](scripts/[clientscript,raids_overlay_content_transmit].cs2) `[clientscript,raids_overlay_content_transmit]`  
 [**4663**](scripts/[proc,raids_overlay_content].cs2) `[proc,raids_overlay_content]`  
-[**4664**](scripts/[clientscript,buff_bar_buff_timer].cs2) `[clientscript,buff_bar_buff_timer]`  
 [**4665**](scripts/[clientscript,script4665].cs2)  
 [**4666**](scripts/[proc,script4666].cs2)  
 [**4667**](scripts/[proc,buff_bar_time_string].cs2) `[proc,buff_bar_time_string]`  
@@ -4673,19 +4666,12 @@
 [**4670**](scripts/[proc,buff_bar_position_init].cs2) `[proc,buff_bar_position_init]`  
 [**4671**](scripts/[clientscript,buff_bar_position_review].cs2) `[clientscript,buff_bar_position_review]`  
 [**4672**](scripts/[proc,buff_bar_position_review].cs2) `[proc,buff_bar_position_review]`  
-[**4673**](scripts/[proc,enhanced_buffs].cs2) `[proc,enhanced_buffs]`  
 [**4674**](scripts/[proc,script4674].cs2)  
 [**4675**](scripts/[proc,script4675].cs2)  
 [**4676**](scripts/[proc,script4676].cs2)  
+[**4677**](scripts/[clientscript,script4677].cs2)  
 [**4678**](scripts/[proc,script4678].cs2)  
-[**4679**](scripts/[proc,buff_bar_get_transmit].cs2) `[proc,buff_bar_get_transmit]`  
-[**4680**](scripts/[clientscript,script4680].cs2)  
-[**4681**](scripts/[proc,script4681].cs2)  
-[**4682**](scripts/[proc,buff_bar_get_number].cs2) `[proc,buff_bar_get_number]`  
-[**4683**](scripts/[proc,buff_bar_buff_show].cs2) `[proc,buff_bar_buff_show]`  
 [**4684**](scripts/[proc,buff_bar_buff_disabled].cs2) `[proc,buff_bar_buff_disabled]`  
-[**4685**](scripts/[clientscript,script4685].cs2)  
-[**4686**](scripts/[proc,script4686].cs2)  
 [**4687**](scripts/[proc,script4687].cs2)  
 [**4688**](scripts/[proc,helper_init].cs2) `[proc,helper_init]`  
 [**4689**](scripts/[clientscript,helper_setup].cs2) `[clientscript,helper_setup]`  
@@ -5182,6 +5168,7 @@
 [**5180**](scripts/[clientscript,script5180].cs2)  
 [**5181**](scripts/[clientscript,helper_agility_update_next_level].cs2) `[clientscript,helper_agility_update_next_level]`  
 [**5182**](scripts/[proc,helper_agility_draw_content].cs2) `[proc,helper_agility_draw_content]`  
+[**5183**](scripts/[proc,script5183].cs2)  
 [**5184**](scripts/[proc,settings_helper_agility].cs2) `[proc,settings_helper_agility]`  
 [**5185**](scripts/[proc,settings_helper_agility_highlight_obstacles].cs2) `[proc,settings_helper_agility_highlight_obstacles]`  
 [**5186**](scripts/[proc,script5186].cs2)  
@@ -5192,6 +5179,8 @@
 [**5191**](scripts/[clientscript,settings_minimap_lock].cs2) `[clientscript,settings_minimap_lock]`  
 [**5192**](scripts/[clientscript,script5192].cs2)  
 [**5193**](scripts/[proc,settings_set_draw_distance].cs2) `[proc,settings_set_draw_distance]`  
+[**5194**](scripts/[proc,script5194].cs2)  
+[**5195**](scripts/[clientscript,script5195].cs2)  
 [**5196**](scripts/[proc,script5196].cs2)  
 [**5197**](scripts/[trigger_48,_].cs2) `[trigger_48,_]`  
 [**5198**](scripts/[proc,script5198].cs2)  
@@ -5326,6 +5315,7 @@
 [**5327**](scripts/[clientscript,logout_timer_notifier].cs2) `[clientscript,logout_timer_notifier]`  
 [**5328**](scripts/[proc,settings_get_colour_default].cs2) `[proc,settings_get_colour_default]`  
 [**5329**](scripts/[proc,script5329].cs2)  
+[**5330**](scripts/[clientscript,script5330].cs2)  
 [**5331**](scripts/[proc,settings_helper_slayer].cs2) `[proc,settings_helper_slayer]`  
 [**5332**](scripts/[proc,settings_buff_poison_damage].cs2) `[proc,settings_buff_poison_damage]`  
 [**5333**](scripts/[proc,settings_popout_xptracker].cs2) `[proc,settings_popout_xptracker]`  
@@ -5335,18 +5325,14 @@
 [**5337**](scripts/[proc,settings_bird_nest_notification].cs2) `[proc,settings_bird_nest_notification]`  
 [**5338**](scripts/[proc,script5338].cs2)  
 [**5339**](scripts/[proc,on_mac].cs2) `[proc,on_mac]`  
-[**5340**](scripts/[proc,buff_bar_timer].cs2) `[proc,buff_bar_timer]`  
-[**5341**](scripts/[proc,buff_bar_inventory_slot].cs2) `[proc,buff_bar_inventory_slot]`  
-[**5342**](scripts/[proc,buff_bar_basic].cs2) `[proc,buff_bar_basic]`  
-[**5343**](scripts/[clientscript,script5343].cs2)  
-[**5344**](scripts/[clientscript,script5344].cs2)  
-[**5345**](scripts/[clientscript,script5345].cs2)  
 [**5346**](scripts/[proc,script5346].cs2)  
 [**5347**](scripts/[proc,script5347].cs2)  
 [**5348**](scripts/[proc,helper_generic_set_bit].cs2) `[proc,helper_generic_set_bit]`  
 [**5349**](scripts/[proc,script5349].cs2)  
 [**5350**](scripts/[proc,script5350].cs2)  
+[**5351**](scripts/[clientscript,script5351].cs2)  
 [**5352**](scripts/[proc,script5352].cs2)  
+[**5353**](scripts/[proc,script5353].cs2)  
 [**5354**](scripts/[clientscript,script5354].cs2)  
 [**5355**](scripts/[proc,script5355].cs2)  
 [**5356**](scripts/[proc,script5356].cs2)  
@@ -5731,11 +5717,9 @@
 [**5736**](scripts/[proc,script5736].cs2)  
 [**5737**](scripts/[clientscript,script5737].cs2)  
 [**5738**](scripts/[proc,league_current_league].cs2) `[proc,league_current_league]`  
-[**5739**](scripts/[proc,script5739].cs2)  
 [**5740**](scripts/[proc,script5740].cs2)  
 [**5741**](scripts/[proc,script5741].cs2)  
 [**5742**](scripts/[proc,script5742].cs2)  
-[**5743**](scripts/[proc,script5743].cs2)  
 [**5744**](scripts/[proc,script5744].cs2)  
 [**5745**](scripts/[clientscript,league_3_fragments_init].cs2) `[clientscript,league_3_fragments_init]`  
 [**5746**](scripts/[proc,league_3_fragments_draw_interface].cs2) `[proc,league_3_fragments_draw_interface]`  

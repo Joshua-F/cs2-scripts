@@ -5,8 +5,8 @@ def_int $x6 = 0;
 def_int $y7 = 0;
 def_int $width8 = 1;
 def_int $height9 = 1;
-def_int $width10 = 0;
-def_int $height11 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
 def_int $setposh12 = ^setpos_abs_left;
 def_int $setposv13 = ^setpos_abs_bottom;
 if ($clock4 ! %varcint384) {
@@ -36,12 +36,9 @@ if ($clock4 ! %varcint384) {
 		$setposv13 = ^setpos_abs_bottom;
 		~script4729($component1, $component0, 28672, ^setpos_abs_left, ^setpos_abs_bottom, false);
 	}
-	$width10 = if_getwidth($component0);
-	$height11 = if_getheight($component0);
+	$int10 = if_getwidth($component0);
+	$int11 = if_getheight($component0);
 	if_setposition($x6, $y7, $setposh12, $setposv13, $component0);
 	if_setsize($width8, $height9, ^setsize_abs, ^setsize_abs, $component0);
 	if_setontimer("buff_bar_position_review($component0, $component1, $component2, $component3, %varcint384)", $component0);
-	if ($width10 ! $width8 | $height11 ! $height9) {
-		~buff_bar_setup($component2, $component3);
-	}
 }

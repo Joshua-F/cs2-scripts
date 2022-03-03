@@ -1,0 +1,6 @@
+// 5195
+[clientscript,script5195](int $int0, int $int1, component $component2, component $component3, int $height4)
+def_int $height5 = if_getheight(interface_743:1);
+if ($height5 ! $height4) {
+	~script5194($int0, $int1, $component2, $component3, $height5);
+}

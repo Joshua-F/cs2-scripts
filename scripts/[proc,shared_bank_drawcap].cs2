@@ -1,25 +1,25 @@
 // 5267
-[proc,shared_bank_drawcap]
+[proc,shared_bank_drawcap](int $int0, int $int1)
 def_string $string0 = "";
-if (%var262 < 1) {
+if ($int1 < 1) {
 	cc_sethide(false);
 	.cc_sethide(true);
 	$string0 = "<col=ff0000>View only</col>";
-} else if (%var262 < 2) {
+} else if ($int1 < 2) {
 	cc_sethide(false);
 	.cc_sethide(true);
 	$string0 = "<col=ff0000>Deposit only</col>";
 } else {
-	if (%var261 <= -1) {
+	if ($int0 <= -1) {
 		cc_sethide(true);
 		.cc_sethide(true);
 		return;
 	}
 	cc_sethide(false);
 	.cc_sethide(false);
-	$string0 = ~tostring_spacer(%var261, ",");
+	$string0 = ~tostring_spacer($int0, ",");
 }
-def_int $width0 = parawidth($string0, 512, p11_full);
-cc_setsize($width0, .cc_getheight, ^setsize_abs, ^setsize_abs);
-.cc_setposition(calc(36 + $width0 + 2), cc_gety, ^setpos_abs_right, ^setpos_abs_top);
+def_int $width2 = parawidth($string0, 512, p11_full);
+cc_setsize($width2, .cc_getheight, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc(36 + $width2 + 2), cc_gety, ^setpos_abs_right, ^setpos_abs_top);
 cc_settext($string0);
