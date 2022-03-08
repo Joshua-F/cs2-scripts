@@ -1,9 +1,9 @@
 // 5890
 [proc,script5890](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
-~script5891($component0, struct_param(%var3373, param_1526), "graphic_3581", ~script5892(%var3373, 1));
-~script5891($component1, struct_param(%var3373, param_1527), "graphic_3582", ~script5892(%var3373, 2));
-~script5891($component2, struct_param(%var3373, param_1528), "graphic_4340", ~script5892(%var3373, 3));
-~script5891($component3, struct_param(%var3373, param_1529), "graphic_4341", ~script5892(%var3373, 4));
+~script5891($component0, struct_param(%var3373, param_1526), "speedrun_trophies,0", ~script5892(%var3373, 1));
+~script5891($component1, struct_param(%var3373, param_1527), "speedrun_trophies,1", ~script5892(%var3373, 2));
+~script5891($component2, struct_param(%var3373, param_1528), "speedrun_trophies,2", ~script5892(%var3373, 3));
+~script5891($component3, struct_param(%var3373, param_1529), "speedrun_trophies,3", ~script5892(%var3373, 4));
 def_string $string0 = ",";
 if_settext(~tostring_spacer(~script5893, $string0), $component4);
 if_settext(~tostring_spacer(~min(%varbit13632, 60000), $string0), $component5);

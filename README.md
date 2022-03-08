@@ -5297,7 +5297,7 @@
 [**5309**](scripts/[proc,gim_notification_message].cs2) `[proc,gim_notification_message]`  
 [**5310**](scripts/[proc,script5310].cs2)  
 [**5311**](scripts/[clientscript,godwars_killcount_zaros].cs2) `[clientscript,godwars_killcount_zaros]`  
-[**5312**](scripts/[clientscript,script5312].cs2)  
+[**5312**](scripts/[clientscript,nex_fadetimer].cs2) `[clientscript,nex_fadetimer]`  
 [**5313**](scripts/[clientscript,script5313].cs2)  
 [**5314**](scripts/[proc,axe_checker].cs2) `[proc,axe_checker]`  
 [**5315**](scripts/[proc,script5315].cs2)  
@@ -5876,7 +5876,7 @@
 [**5897**](scripts/[proc,script5897].cs2)  
 [**5898**](scripts/[clientscript,script5898].cs2)  
 [**5899**](scripts/[proc,speedrunning_button_init].cs2) `[proc,speedrunning_button_init]`  
-[**5900**](scripts/[proc,script5900].cs2)  
+[**5900**](scripts/[proc,speedrunning_button_init_core].cs2) `[proc,speedrunning_button_init_core]`  
 [**5901**](scripts/[clientscript,speedrunning_button_op].cs2) `[clientscript,speedrunning_button_op]`  
 [**5902**](scripts/[clientscript,speedrunning_button_reset].cs2) `[clientscript,speedrunning_button_reset]`  
 [**5903**](scripts/[clientscript,speedrunning_button_draw].cs2) `[clientscript,speedrunning_button_draw]`  
@@ -5884,7 +5884,7 @@
 [**5905**](scripts/[proc,script5905].cs2)  
 [**5906**](scripts/[clientscript,script5906].cs2)  
 [**5907**](scripts/[clientscript,speedrun_time_update].cs2) `[clientscript,speedrun_time_update]`  
-[**5908**](scripts/[clientscript,script5908].cs2)  
+[**5908**](scripts/[clientscript,speedrun_time_update_timer].cs2) `[clientscript,speedrun_time_update_timer]`  
 [**5909**](scripts/[proc,script5909].cs2)  
 [**5910**](scripts/[proc,script5910].cs2)  
 [**5911**](scripts/[proc,script5911].cs2)  

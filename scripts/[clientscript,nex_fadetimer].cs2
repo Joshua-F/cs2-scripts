@@ -1,5 +1,5 @@
 // 5312
-[clientscript,script5312]
+[clientscript,nex_fadetimer]
 if (if_gettrans(interface_406:2) > %varcint550) {
 	if_settrans(~max(50, calc(if_gettrans(interface_406:2) - 1)), interface_406:2);
 } else if (if_gettrans(interface_406:2) < %varcint550) {

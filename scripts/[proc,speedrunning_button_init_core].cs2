@@ -1,5 +1,5 @@
 // 5900
-[proc,script5900](component $component0, string $string0)
+[proc,speedrunning_button_init_core](component $component0, string $string0)
 ~speedrunning_button_draw($component0, $string0, false, false);
 if (~on_mobile = false) {
 	if_setonmouserepeat("speedrunning_button_draw($component0, $string0, true, false)", $component0);

@@ -54,14 +54,14 @@ if (%var2615 < %var2614) {
 while ($int22 < $count21) {
 	$struct24 = enum(int, struct, $enum19, $int22);
 	$int30 = ~league_task_is_completed($struct24);
-	$int31 = struct_param($struct24, param_876);
-	$text0 = struct_param($struct24, param_874);
-	$string1 = struct_param($struct24, param_875);
+	$int31 = struct_param($struct24, league_task_tier);
+	$text0 = struct_param($struct24, league_task_name);
+	$string1 = struct_param($struct24, league_task_description);
 	$int32 = enum(int, int, enum_2671, $int31);
 	$int32 = scale($int32, 100, struct_param($struct18, param_754));
-	$int33 = struct_param($struct24, param_1016);
-	$int34 = struct_param($struct24, param_1017);
-	$int35 = struct_param($struct24, param_1018);
+	$int33 = struct_param($struct24, league_task_category);
+	$int34 = struct_param($struct24, league_task_area);
+	$int35 = struct_param($struct24, league_task_skill);
 	$int38 = enum(int, int, enum_4128, $int31);
 	if (~league_task_display($int31, $int30, $int33, $int34, $int35) = 1) {
 		cc_create($component2, ^iftype_rectangle, $int17);
