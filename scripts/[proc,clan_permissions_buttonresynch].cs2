@@ -62,13 +62,65 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 					$text0 = "<col=9f9f9f>N/A</col>";
 				}
 			case loot_broadcast_value_3109 :
-				if (~clan_permission_get(loot_broadcasts_3108) ! 128) {
+				if (~clan_permission_get(loot_broadcasts_4243) ! 128) {
 					if (%varclansetting31 > 1) {
 						$text0 = "<~tostring_spacer(%varclansetting31, ",")> coins";
 					} else if (%varclansetting31 = 1) {
 						$text0 = "1 coin";
 					} else {
 						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "<col=9f9f9f>N/A</col>";
+				}
+			case pk_broadcast_value_4247 :
+				if (~clan_permission_get(pk_broadcasts_4246) ! 128) {
+					if (%varclansetting65 > 1) {
+						$text0 = "<~tostring_spacer(%varclansetting65, ",")> coins";
+					} else if (%varclansetting65 = 1) {
+						$text0 = "1 coin";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "<col=9f9f9f>N/A</col>";
+				}
+			case level_up_increments_of_10_4239 :
+				if (~clan_permission_get(level_up_broadcasts_4236) ! 128) {
+					if (%varclansetting66 > 0) {
+						$text0 = "Level <tostring(%varclansetting66)>";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "<col=9f9f9f>N/A</col>";
+				}
+			case level_up_increments_of_5_4240 :
+				if (~clan_permission_get(level_up_broadcasts_4236) ! 128) {
+					if (%varclansetting67 > 0) {
+						$text0 = "Level <tostring(%varclansetting67)>";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "<col=9f9f9f>N/A</col>";
+				}
+			case level_up_increments_of_1_4241 :
+				if (~clan_permission_get(level_up_broadcasts_4236) ! 128) {
+					if (%varclansetting68 > 0) {
+						$text0 = "Level <tostring(%varclansetting68)>";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "<col=9f9f9f>N/A</col>";
+				}
+			case post_99_xp_broadcast_intervals_4238 :
+				if (~clan_permission_get(post_99_xp_broadcasts_4237) ! 128) {
+					if (%varclansetting69 > 0) {
+						$text0 = "<tostring(%varclansetting69)> million XP";
+					} else {
+						$text0 = "No interval set";
 					}
 				} else {
 					$text0 = "<col=9f9f9f>N/A</col>";

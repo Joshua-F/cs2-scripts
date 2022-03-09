@@ -1,0 +1,9 @@
+// 5340
+[proc,script5340](component $component0, int $comsubid1)
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_settext("<activeclansettings_getclanname>: Options");
+	}
+} else if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settext(~script4287);
+}

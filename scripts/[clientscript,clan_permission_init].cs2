@@ -20,7 +20,11 @@ while ($count15 < $count13) {
 	if ($enum11 ! null) {
 		$struct12 = enum(int, struct, $enum11, -1);
 		if ($struct12 ! null) {
-			$string0 = struct_param($struct12, param_1251);
+			if (struct_param($struct12, param_1551) = true) {
+				$string0 = struct_param($struct12, param_1552);
+			} else {
+				$string0 = struct_param($struct12, param_1251);
+			}
 			$int10 = ~max($int10, calc(parawidth($string0, 512, p12_full) + 22 + 6));
 		}
 		$int14 = calc($int14 + enum_getoutputcount($enum11) - 1);
@@ -64,7 +68,7 @@ while ($count15 < $count13) {
 	if ($enum11 ! null) {
 		$struct12 = enum(int, struct, $enum11, -1);
 		if ($struct12 ! null) {
-			$int20, $int18 = ~clan_permissions_categorytitle($int20, $int23, struct_param($struct12, param_1251), $component7, $component4, $int18, $component8, $count15, $int19);
+			$int20, $int18 = ~clan_permissions_categorytitle($int20, $int23, struct_param($struct12, param_1251), $component7, $component4, $int18, $component8, $count15, $int19, struct_param($struct12, param_1551), struct_param($struct12, param_1552));
 			$int23 = calc($int23 + 25 + 6);
 		}
 		$int17, $int25 = 0, calc(enum_getoutputcount($enum11) - 1);

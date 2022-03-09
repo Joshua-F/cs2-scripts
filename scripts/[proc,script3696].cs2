@@ -1,5 +1,5 @@
-// 4460
-[proc,clan_permissions_categorytitle](int $int0, int $int1, string $op0, component $component2, component $component3, int $int4, component $component5, int $count6, int $int7, boolean $boolean8, string $text1)(int, int)
+// 3696
+[proc,script3696](int $int0, int $int1, string $op0, component $component2, component $component3, int $int4, component $component5, int $count6, int $int7, boolean $boolean8, string $text1)(int, int)
 cc_create($component2, ^iftype_graphic, $int0);
 $int0 = calc($int0 + 1);
 cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
@@ -32,7 +32,7 @@ if (~on_mobile = false) {
 	.cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
 }
 .cc_setop(1, $op0);
-.cc_setonop("clan_permissions_indexop($component2, $component5, cc_getid, $int1, 16711680, 16750623)");
+.cc_setonop("script4664($component2, $component5, cc_getid, $int1, 16711680, 16750623)");
 .cc_create($component3, ^iftype_text, $int4);
 $int4 = calc($int4 + 1);
 .cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);

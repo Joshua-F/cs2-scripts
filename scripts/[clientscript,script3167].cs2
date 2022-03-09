@@ -1,0 +1,90 @@
+// 3167
+[clientscript,script3167](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+def_int $comsubid9 = ~steelborder($component1, "", 0);
+~script5340($component1, $comsubid9);
+if_setonvartransmit("script4686($component1, $comsubid9){var3172}", $component1);
+if_setonclansettingstransmit("script4686($component1, $comsubid9)", $component1);
+def_string $string0 = "<col=ff0000>Back</col>";
+def_int $int10 = ~max(70, calc(parawidth($string0, 512, p12_full) + 20));
+if_setsize($int10, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
+~clan_stonebutton_init($string0, $component2, "p12_full");
+if_setonop("opsound(event_opindex, 2)", $component2);
+$int10 = calc($int10 + 20);
+def_enum $enum11 = null;
+def_struct $struct12 = null;
+def_int $count13 = enum_getoutputcount(enum_4223);
+def_int $int14 = 0;
+def_int $count15 = 0;
+while ($count15 < $count13) {
+	$enum11 = enum(int, enum, enum_4223, $count15);
+	if ($enum11 ! null) {
+		$struct12 = enum(int, struct, $enum11, -1);
+		if ($struct12 ! null) {
+			if (struct_param($struct12, param_1549) = true) {
+				$string0 = struct_param($struct12, param_1550);
+			} else {
+				$string0 = struct_param($struct12, param_1163);
+			}
+			$int10 = ~max($int10, calc(parawidth($string0, 512, p12_full) + 22 + 6));
+		}
+		$int14 = calc($int14 + enum_getoutputcount($enum11) - 1);
+	}
+	$count15 = calc($count15 + 1);
+}
+if_setsize($int10, 0, ^setsize_abs, ^setsize_minus, $component3);
+if_setsize(calc($int10 - 1), 0, ^setsize_minus, ^setsize_minus, $component6);
+def_int $int16 = 100;
+$int16 = calc(6 + 13 + 3 + $int16 + 3 + 13 + 6);
+cc_deleteall($component4);
+def_int $int17 = 0;
+def_int $int18 = 20;
+if (~on_mobile = true) {
+	$int18 = scale(5, 3, $int18);
+}
+cc_deleteall($component7);
+def_int $int19 = 0;
+while ($int19 <= $int14) {
+	cc_create($component7, ^iftype_graphic, $int19);
+	cc_setgraphic("tradebacking");
+	cc_settiling(true);
+	$int19 = calc($int19 + 1);
+}
+$int10 = calc(if_getwidth(if_getlayer($component3)) - ($int10 - 1 + 4 + 16));
+def_int $int20 = calc(($int10 - 8 * 3) / 2);
+def_int $int21 = calc(8 + $int20 + 8);
+def_int $int22 = 6;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $int25 = 0;
+$count15, $int14 = 0, 0;
+while ($count15 < $count13) {
+	$enum11 = enum(int, enum, enum_4223, $count15);
+	if ($enum11 ! null) {
+		$struct12 = enum(int, struct, $enum11, -1);
+		if ($struct12 ! null) {
+			$int19, $int17 = ~script3696($int19, $int22, struct_param($struct12, param_1163), $component7, $component4, $int17, $component8, $count15, $int18, struct_param($struct12, param_1549), struct_param($struct12, param_1550));
+			$int22 = calc($int22 + 25 + 6);
+		}
+		$int24, $int25 = 0, calc(enum_getoutputcount($enum11) - 1);
+		while ($int24 < $int25) {
+			$struct12 = enum(int, struct, $enum11, $int24);
+			if ($struct12 ! null) {
+				if (calc($int24 % 2) = 1) {
+					$int19, $int23 = ~script4679($int19, $int21, $int22, $int20, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int24 - 1)), $component7);
+					$int22 = calc($int22 + $int23 + 6);
+				} else if ($int24 < calc($int25 - 1)) {
+					$int19, $int23 = ~script4679($int19, 8, $int22, $int20, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int24 + 1)), $component7);
+				} else {
+					$int19, $int23 = ~script4679($int19, 8, $int22, $int20, $int16, $int14, $struct12, null, $component7);
+					$int22 = calc($int22 + $int23 + 6);
+				}
+				$int14 = calc($int14 + 1);
+			}
+			$int24 = calc($int24 + 1);
+		}
+	}
+	$count15 = calc($count15 + 1);
+}
+~scrollbar_vertical($component8, $component7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script3168($int22, $component7, $component8, calc($int18 * $count13), $component4, $component5, $component0, if_getheight(if_getlayer($component0)));

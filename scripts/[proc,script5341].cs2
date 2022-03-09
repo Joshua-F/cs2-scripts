@@ -1,0 +1,26 @@
+// 5341
+[proc,script5341](struct $struct0)(int)
+switch_struct ($struct0) {
+	case struct_4210 :
+		return(testbit(%varclansetting51, 0));
+	case struct_4213 :
+		return(testbit(%varclansetting51, 1));
+	case struct_4211 :
+		return(testbit(%varclansetting51, 2));
+	case struct_4212 :
+		return(testbit(%varclansetting51, 3));
+	case struct_4215 :
+		return(testbit(%varclansetting51, 4));
+	case struct_4219 :
+		return(testbit(%varclansetting51, 5));
+	case struct_4222 :
+		return(testbit(%varclansetting51, 6));
+	case struct_4224 :
+		return(testbit(%varclansetting51, 7));
+	case struct_4226 :
+		return(testbit(%varclansetting51, 8));
+	case struct_4228 :
+		return(testbit(%varclansetting51, 9));
+	case default :
+		return(0);
+}

@@ -1,0 +1,116 @@
+// 4681
+[proc,script4681](component $component0, int $int1, int $comsubid2, int $comsubid3, int $int4, struct $struct5)
+def_int $int6 = 0;
+def_int $int7 = -1;
+def_int $int8 = 0;
+def_string $text0 = "...";
+def_int $int9 = 0;
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
+	$int7 = activeclansettings_getaffinedslot(removetags(chat_playername));
+	if (struct_param($struct5, param_1537) = true) {
+		switch_struct ($struct5) {
+			case struct_4223 :
+				if (~script5341(struct_4222) = 1) {
+					if (%varclansetting52 > 1) {
+						$text0 = "<~tostring_spacer(%varclansetting52, ",")> coins";
+					} else if (%varclansetting52 = 1) {
+						$text0 = "1 coin";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "N/A";
+				}
+			case struct_4227 :
+				if (~script5341(struct_4226) = 1) {
+					if (%varclansetting53 > 1) {
+						$text0 = "<~tostring_spacer(%varclansetting53, ",")> coins";
+					} else if (%varclansetting53 = 1) {
+						$text0 = "1 coin";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "N/A";
+				}
+			case struct_4216 :
+				if (~script5341(struct_4215) = 1) {
+					if (%varclansetting54 > 0) {
+						$text0 = "Level <tostring(%varclansetting54)>";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "N/A";
+				}
+			case struct_4217 :
+				if (~script5341(struct_4215) = 1) {
+					if (%varclansetting55 > 0) {
+						$text0 = "Level <tostring(%varclansetting55)>";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "N/A";
+				}
+			case struct_4218 :
+				if (~script5341(struct_4215) = 1) {
+					if (%varclansetting56 > 0) {
+						$text0 = "Level <tostring(%varclansetting56)>";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "N/A";
+				}
+			case struct_4220 :
+				if (~script5341(struct_4219) = 1) {
+					if (%varclansetting57 > 0) {
+						$text0 = "<tostring(%varclansetting57)> million XP";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "N/A";
+				}
+		}
+	} else if (~script5341($struct5) = 1) {
+		$text0 = "Enabled";
+	} else {
+		$text0 = "Disabled";
+	}
+	if ($int7 ! -1) {
+		$int9 = 1;
+	}
+	if (cc_find($component0, $comsubid3) = ^true) {
+		cc_settext($text0);
+	}
+	if ($int9 = 1) {
+		if (cc_find($component0, $comsubid2) = ^true) {
+			cc_setgraphic("tradebacking");
+		}
+		if (cc_find($component0, $int1) = ^true) {
+			cc_settrans(245);
+		}
+		if (~on_mobile = false) {
+			.cc_setonmouserepeat("script4682(true, event_com, event_comsubid, $int1, 245, 225)");
+		}
+		.cc_setonmouseleave("script4682(false, event_com, event_comsubid, $int1, 245, 225)");
+		.cc_setontimer(null);
+		.cc_setonop("script4683(event_opindex, event_com, event_comsubid, $int1, 200, 245, 225)");
+		return;
+	}
+}
+if (cc_find($component0, $comsubid3) = ^true) {
+	cc_settext($text0);
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	cc_setgraphic("tradebacking_dark");
+}
+if (cc_find($component0, $int1) = ^true) {
+	cc_settrans(255);
+}
+.cc_setonmouserepeat(null);
+.cc_setonmouseleave(null);
+.cc_setontimer(null);
+.cc_setonop(null);

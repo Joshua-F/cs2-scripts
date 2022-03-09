@@ -3165,6 +3165,10 @@
 [**3162**](scripts/[clientscript,league_icon_flash].cs2) `[clientscript,league_icon_flash]`  
 [**3163**](scripts/[clientscript,league_flash_timer].cs2) `[clientscript,league_flash_timer]`  
 [**3164**](scripts/[proc,league_flashicon].cs2) `[proc,league_flashicon]`  
+[**3165**](scripts/[proc,script3165].cs2)  
+[**3166**](scripts/[clientscript,script3166].cs2)  
+[**3167**](scripts/[clientscript,script3167].cs2)  
+[**3168**](scripts/[proc,script3168].cs2)  
 [**3169**](scripts/[proc,buff_bar_buff_create_tooltip].cs2) `[proc,buff_bar_buff_create_tooltip]`  
 [**3170**](scripts/[clientscript,buff_bar_mobile_tooltip].cs2) `[clientscript,buff_bar_mobile_tooltip]`  
 [**3171**](scripts/[clientscript,buff_bar_mobile_tooltip_remove].cs2) `[clientscript,buff_bar_mobile_tooltip_remove]`  
@@ -3195,6 +3199,7 @@
 [**3196**](scripts/[clientscript,league_relic_back].cs2) `[clientscript,league_relic_back]`  
 [**3197**](scripts/[clientscript,league_relic_confirm].cs2) `[clientscript,league_relic_confirm]`  
 [**3198**](scripts/[clientscript,league_relic_confirm_back].cs2) `[clientscript,league_relic_confirm_back]`  
+[**3199**](scripts/[clientscript,script3199].cs2)  
 [**3200**](scripts/[clientscript,clock_init].cs2) `[clientscript,clock_init]`  
 [**3201**](scripts/[clientscript,script3201].cs2)  
 [**3202**](scripts/[clientscript,league_tasks_init].cs2) `[clientscript,league_tasks_init]`  
@@ -3691,6 +3696,7 @@
 [**3693**](scripts/[proc,leagues_menu_button].cs2) `[proc,leagues_menu_button]`  
 [**3694**](scripts/[proc,league_relic_hover].cs2) `[proc,league_relic_hover]`  
 [**3695**](scripts/[proc,league_relic_button_hover].cs2) `[proc,league_relic_button_hover]`  
+[**3696**](scripts/[proc,script3696].cs2)  
 [**3697**](scripts/[proc,league_relic_active].cs2) `[proc,league_relic_active]`  
 [**3698**](scripts/[clientscript,script3698].cs2)  
 [**3699**](scripts/[proc,league_task_display].cs2) `[proc,league_task_display]`  
@@ -4658,6 +4664,7 @@
 [**4661**](scripts/[proc,helper_cox_timer_convert].cs2) `[proc,helper_cox_timer_convert]`  
 [**4662**](scripts/[clientscript,raids_overlay_content_transmit].cs2) `[clientscript,raids_overlay_content_transmit]`  
 [**4663**](scripts/[proc,raids_overlay_content].cs2) `[proc,raids_overlay_content]`  
+[**4664**](scripts/[clientscript,script4664].cs2)  
 [**4665**](scripts/[clientscript,script4665].cs2)  
 [**4666**](scripts/[proc,script4666].cs2)  
 [**4667**](scripts/[proc,buff_bar_time_string].cs2) `[proc,buff_bar_time_string]`  
@@ -4666,12 +4673,20 @@
 [**4670**](scripts/[proc,buff_bar_position_init].cs2) `[proc,buff_bar_position_init]`  
 [**4671**](scripts/[clientscript,buff_bar_position_review].cs2) `[clientscript,buff_bar_position_review]`  
 [**4672**](scripts/[proc,buff_bar_position_review].cs2) `[proc,buff_bar_position_review]`  
+[**4673**](scripts/[clientscript,script4673].cs2)  
 [**4674**](scripts/[proc,script4674].cs2)  
 [**4675**](scripts/[proc,script4675].cs2)  
 [**4676**](scripts/[proc,script4676].cs2)  
 [**4677**](scripts/[clientscript,script4677].cs2)  
 [**4678**](scripts/[proc,script4678].cs2)  
+[**4679**](scripts/[proc,script4679].cs2)  
+[**4680**](scripts/[clientscript,script4680].cs2)  
+[**4681**](scripts/[proc,script4681].cs2)  
+[**4682**](scripts/[clientscript,script4682].cs2)  
+[**4683**](scripts/[clientscript,script4683].cs2)  
 [**4684**](scripts/[proc,buff_bar_buff_disabled].cs2) `[proc,buff_bar_buff_disabled]`  
+[**4685**](scripts/[clientscript,script4685].cs2)  
+[**4686**](scripts/[clientscript,script4686].cs2)  
 [**4687**](scripts/[proc,script4687].cs2)  
 [**4688**](scripts/[proc,helper_init].cs2) `[proc,helper_init]`  
 [**4689**](scripts/[clientscript,helper_setup].cs2) `[clientscript,helper_setup]`  
@@ -5325,6 +5340,8 @@
 [**5337**](scripts/[proc,settings_bird_nest_notification].cs2) `[proc,settings_bird_nest_notification]`  
 [**5338**](scripts/[proc,script5338].cs2)  
 [**5339**](scripts/[proc,on_mac].cs2) `[proc,on_mac]`  
+[**5340**](scripts/[proc,script5340].cs2)  
+[**5341**](scripts/[proc,script5341].cs2)  
 [**5346**](scripts/[proc,script5346].cs2)  
 [**5347**](scripts/[proc,script5347].cs2)  
 [**5348**](scripts/[proc,helper_generic_set_bit].cs2) `[proc,helper_generic_set_bit]`  
