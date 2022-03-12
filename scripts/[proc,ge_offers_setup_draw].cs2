@@ -50,7 +50,7 @@ if (%varbit4397 = 1) {
 	}
 	if (cc_find($component1, $comsubid7) = ^true) {
 		cc_settrans(100);
-		cc_setontimer("script811(event_com, event_comsubid, clientclock, 100, 250)");
+		cc_setontimer("ge_offers_pulsate(event_com, event_comsubid, clientclock, 100, 250)");
 	}
 	if (cc_find($component1, $comsubid13) = ^true) {
 		cc_sethide(false);

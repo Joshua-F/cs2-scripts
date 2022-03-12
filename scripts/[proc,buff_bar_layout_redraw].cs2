@@ -1,0 +1,36 @@
+// 5938
+[proc,buff_bar_layout_redraw]
+def_component $component0 = interface_651:4;
+def_component $component1 = interface_651:2;
+def_component $component2 = interface_651:5;
+def_struct $struct3 = null;
+def_int $comsubid4 = 0;
+def_string $text0 = "";
+def_int $int5 = 0;
+def_int $count6 = 0;
+def_enum $enum7 = enum_4214;
+if (~on_enhanced_any = 0) {
+	$enum7 = enum_3899;
+}
+def_int $count8 = enum_getoutputcount($enum7);
+def_int $int9 = 12;
+def_int $int10 = 0;
+cc_deleteall($component0);
+~deltooltip_action($component2);
+if (%varbit9528 = 1) {
+	return;
+}
+while ($count6 < $count8 & $int10 < $int9) {
+	$struct3 = enum(int, struct, $enum7, $count6);
+	$comsubid4 = struct_param($struct3, param_1275);
+	if (cc_find($component1, $comsubid4) = ^true) {
+		$int5 = cc_getcolour;
+		if (~script5946($struct3, $int5) = 1) {
+			$text0 = cc_gettext;
+			~script5947($struct3, $text0, $int10);
+			$int10 = calc($int10 + 1);
+		}
+	}
+	$count6 = calc($count6 + 1);
+}
+~buff_bar_position_review(interface_651:3, interface_651:1, $component0, interface_651:5, ^min_32bit_int);

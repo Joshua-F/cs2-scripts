@@ -811,7 +811,7 @@
 [**808**](scripts/[clientscript,ge_offers_priceicon].cs2) `[clientscript,ge_offers_priceicon]`  
 [**809**](scripts/[proc,ge_offers_priceicon].cs2) `[proc,ge_offers_priceicon]`  
 [**810**](scripts/[proc,ge_textbox].cs2) `[proc,ge_textbox]`  
-[**811**](scripts/[clientscript,script811].cs2)  
+[**811**](scripts/[clientscript,ge_offers_pulsate].cs2) `[clientscript,ge_offers_pulsate]`  
 [**812**](scripts/[proc,script812].cs2)  
 [**813**](scripts/[proc,ge_offers_checkavailable].cs2) `[proc,ge_offers_checkavailable]`  
 [**814**](scripts/[clientscript,confirmdestroy_init].cs2) `[clientscript,confirmdestroy_init]`  
@@ -3165,7 +3165,7 @@
 [**3162**](scripts/[clientscript,league_icon_flash].cs2) `[clientscript,league_icon_flash]`  
 [**3163**](scripts/[clientscript,league_flash_timer].cs2) `[clientscript,league_flash_timer]`  
 [**3164**](scripts/[proc,league_flashicon].cs2) `[proc,league_flashicon]`  
-[**3165**](scripts/[proc,script3165].cs2)  
+[**3165**](scripts/[proc,rebuild_makeover_feet].cs2) `[proc,rebuild_makeover_feet]`  
 [**3166**](scripts/[clientscript,script3166].cs2)  
 [**3167**](scripts/[clientscript,script3167].cs2)  
 [**3168**](scripts/[proc,script3168].cs2)  
@@ -5505,13 +5505,13 @@
 [**5506**](scripts/[proc,gim_icon_draw].cs2) `[proc,gim_icon_draw]`  
 [**5507**](scripts/[proc,script5507].cs2)  
 [**5508**](scripts/[clientscript,gim_settings_static].cs2) `[clientscript,gim_settings_static]`  
-[**5509**](scripts/[clientscript,script5509].cs2)  
+[**5509**](scripts/[clientscript,gim_settings_editable].cs2) `[clientscript,gim_settings_editable]`  
 [**5510**](scripts/[proc,gim_settings_setsize].cs2) `[proc,gim_settings_setsize]`  
 [**5511**](scripts/[clientscript,gim_settings_checksize].cs2) `[clientscript,gim_settings_checksize]`  
 [**5512**](scripts/[proc,script5512].cs2)  
-[**5513**](scripts/[clientscript,script5513].cs2)  
-[**5514**](scripts/[clientscript,script5514].cs2)  
-[**5515**](scripts/[clientscript,script5515].cs2)  
+[**5513**](scripts/[clientscript,gim_settings_editable_hover].cs2) `[clientscript,gim_settings_editable_hover]`  
+[**5514**](scripts/[clientscript,gim_settings_editable_op].cs2) `[clientscript,gim_settings_editable_op]`  
+[**5515**](scripts/[clientscript,gim_settings_editable_reset].cs2) `[clientscript,gim_settings_editable_reset]`  
 [**5516**](scripts/[proc,gim_sidepanel_drawchannel].cs2) `[proc,gim_sidepanel_drawchannel]`  
 [**5517**](scripts/[proc,chat_send].cs2) `[proc,chat_send]`  
 [**5518**](scripts/[proc,script5518].cs2)  
@@ -5548,8 +5548,8 @@
 [**5550**](scripts/[clientscript,stat_boosts_hud_mobile_tooltip].cs2) `[clientscript,stat_boosts_hud_mobile_tooltip]`  
 [**5551**](scripts/[clientscript,stat_boosts_hud_mobile_tooltip_remove].cs2) `[clientscript,stat_boosts_hud_mobile_tooltip_remove]`  
 [**5552**](scripts/[proc,stat_boosts_hud_timer_tooltip].cs2) `[proc,stat_boosts_hud_timer_tooltip]`  
-[**5553**](scripts/[clientscript,script5553].cs2)  
-[**5554**](scripts/[clientscript,script5554].cs2)  
+[**5553**](scripts/[clientscript,stat_boosts_hud_mobile_timertooltip].cs2) `[clientscript,stat_boosts_hud_mobile_timertooltip]`  
+[**5554**](scripts/[clientscript,stat_boosts_hud_mobile_timertooltip_timer].cs2) `[clientscript,stat_boosts_hud_mobile_timertooltip_timer]`  
 [**5555**](scripts/[proc,script5555].cs2)  
 [**5556**](scripts/[proc,script5556].cs2)  
 [**5557**](scripts/[clientscript,helper_agility_highlight_setup].cs2) `[clientscript,helper_agility_highlight_setup]`  
@@ -5725,7 +5725,7 @@
 [**5727**](scripts/[clientscript,helper_agility_mouseover].cs2) `[clientscript,helper_agility_mouseover]`  
 [**5728**](scripts/[proc,script5728].cs2)  
 [**5729**](scripts/[proc,helper_agility_requirements].cs2) `[proc,helper_agility_requirements]`  
-[**5730**](scripts/[clientscript,script5730].cs2)  
+[**5730**](scripts/[clientscript,ge_offers_setdesc].cs2) `[clientscript,ge_offers_setdesc]`  
 [**5731**](scripts/[proc,script5731].cs2)  
 [**5732**](scripts/[proc,script5732].cs2)  
 [**5733**](scripts/[proc,script5733].cs2)  
@@ -5839,9 +5839,9 @@
 [**5843**](scripts/[clientscript,if_fade].cs2) `[clientscript,if_fade]`  
 [**5844**](scripts/[clientscript,if_fade_timer].cs2) `[clientscript,if_fade_timer]`  
 [**5845**](scripts/[proc,script5845].cs2)  
-[**5846**](scripts/[proc,script5846].cs2)  
-[**5847**](scripts/[proc,script5847].cs2)  
-[**5848**](scripts/[proc,script5848].cs2)  
+[**5846**](scripts/[proc,buff_bar_dynamic_tooltip].cs2) `[proc,buff_bar_dynamic_tooltip]`  
+[**5847**](scripts/[proc,buff_bar_dynamic_graphic].cs2) `[proc,buff_bar_dynamic_graphic]`  
+[**5848**](scripts/[proc,buff_bar_dynamic_graphic2].cs2) `[proc,buff_bar_dynamic_graphic2]`  
 [**5849**](scripts/[proc,speedrunning_world].cs2) `[proc,speedrunning_world]`  
 [**5850**](scripts/[clientscript,script5850].cs2)  
 [**5851**](scripts/[proc,script5851].cs2)  
@@ -5861,7 +5861,7 @@
 [**5865**](scripts/[proc,script5865].cs2)  
 [**5866**](scripts/[clientscript,script5866].cs2)  
 [**5867**](scripts/[clientscript,script5867].cs2)  
-[**5868**](scripts/[proc,script5868].cs2)  
+[**5868**](scripts/[proc,speedrunning_misc_unlocks].cs2) `[proc,speedrunning_misc_unlocks]`  
 [**5869**](scripts/[proc,script5869].cs2)  
 [**5870**](scripts/[clientscript,script5870].cs2)  
 [**5871**](scripts/[clientscript,script5871].cs2)  
@@ -5872,22 +5872,22 @@
 [**5876**](scripts/[proc,script5876].cs2)  
 [**5877**](scripts/[proc,script5877].cs2)  
 [**5878**](scripts/[proc,script5878].cs2)  
-[**5879**](scripts/[clientscript,script5879].cs2)  
-[**5880**](scripts/[proc,script5880].cs2)  
-[**5881**](scripts/[proc,script5881].cs2)  
-[**5882**](scripts/[clientscript,script5882].cs2)  
+[**5879**](scripts/[clientscript,speedrunning_helper_update].cs2) `[clientscript,speedrunning_helper_update]`  
+[**5880**](scripts/[proc,speedrunning_helper_draw].cs2) `[proc,speedrunning_helper_draw]`  
+[**5881**](scripts/[proc,speedrunning_helper_update_time].cs2) `[proc,speedrunning_helper_update_time]`  
+[**5882**](scripts/[clientscript,speedrunning_helper_update_time].cs2) `[clientscript,speedrunning_helper_update_time]`  
 [**5883**](scripts/[proc,script5883].cs2)  
 [**5884**](scripts/[proc,script5884].cs2)  
 [**5885**](scripts/[proc,script5885].cs2)  
 [**5886**](scripts/[clientscript,speedrunning_init].cs2) `[clientscript,speedrunning_init]`  
 [**5887**](scripts/[clientscript,speedrunning_stats_update].cs2) `[clientscript,speedrunning_stats_update]`  
 [**5888**](scripts/[proc,speedrunning_stats_update].cs2) `[proc,speedrunning_stats_update]`  
-[**5889**](scripts/[proc,script5889].cs2)  
-[**5890**](scripts/[proc,script5890].cs2)  
-[**5891**](scripts/[proc,script5891].cs2)  
-[**5892**](scripts/[proc,script5892].cs2)  
-[**5893**](scripts/[proc,script5893].cs2)  
-[**5894**](scripts/[proc,script5894].cs2)  
+[**5889**](scripts/[proc,speedrunning_points_update].cs2) `[proc,speedrunning_points_update]`  
+[**5890**](scripts/[proc,speedrunning_trophies_update].cs2) `[proc,speedrunning_trophies_update]`  
+[**5891**](scripts/[proc,speedrunning_trophy_update].cs2) `[proc,speedrunning_trophy_update]`  
+[**5892**](scripts/[proc,speedrunning_trophy_check].cs2) `[proc,speedrunning_trophy_check]`  
+[**5893**](scripts/[proc,speedrunning_total_trophies].cs2) `[proc,speedrunning_total_trophies]`  
+[**5894**](scripts/[proc,speedrunning_quest_enabled].cs2) `[proc,speedrunning_quest_enabled]`  
 [**5895**](scripts/[proc,script5895].cs2)  
 [**5896**](scripts/[proc,script5896].cs2)  
 [**5897**](scripts/[proc,script5897].cs2)  
@@ -5915,24 +5915,24 @@
 [**5919**](scripts/[clientscript,script5919].cs2)  
 [**5920**](scripts/[clientscript,script5920].cs2)  
 [**5921**](scripts/[proc,script5921].cs2)  
-[**5922**](scripts/[proc,script5922].cs2)  
-[**5923**](scripts/[proc,script5923].cs2)  
+[**5922**](scripts/[proc,settings_buff_cannon_ammo].cs2) `[proc,settings_buff_cannon_ammo]`  
+[**5923**](scripts/[proc,buff_bar_get_value].cs2) `[proc,buff_bar_get_value]`  
 [**5924**](scripts/[proc,script5924].cs2)  
 [**5925**](scripts/[proc,script5925].cs2)  
 [**5926**](scripts/[clientscript,script5926].cs2)  
 [**5927**](scripts/[proc,script5927].cs2)  
-[**5928**](scripts/[proc,script5928].cs2)  
-[**5929**](scripts/[clientscript,script5929].cs2)  
-[**5930**](scripts/[proc,script5930].cs2)  
-[**5931**](scripts/[clientscript,script5931].cs2)  
-[**5932**](scripts/[proc,script5932].cs2)  
-[**5933**](scripts/[clientscript,script5933].cs2)  
+[**5928**](scripts/[proc,buff_bar_dynamic_obj].cs2) `[proc,buff_bar_dynamic_obj]`  
+[**5929**](scripts/[clientscript,buff_bar_2_init].cs2) `[clientscript,buff_bar_2_init]`  
+[**5930**](scripts/[proc,buff_bar_2_init].cs2) `[proc,buff_bar_2_init]`  
+[**5931**](scripts/[clientscript,buff_bar_start].cs2) `[clientscript,buff_bar_start]`  
+[**5932**](scripts/[proc,buff_bar_start].cs2) `[proc,buff_bar_start]`  
+[**5933**](scripts/[clientscript,buff_bar_transmit_value].cs2) `[clientscript,buff_bar_transmit_value]`  
 [**5934**](scripts/[proc,script5934].cs2)  
 [**5935**](scripts/[clientscript,script5935].cs2)  
 [**5936**](scripts/[proc,script5936].cs2)  
-[**5937**](scripts/[clientscript,script5937].cs2)  
-[**5938**](scripts/[proc,script5938].cs2)  
-[**5939**](scripts/[clientscript,script5939].cs2)  
+[**5937**](scripts/[clientscript,buff_bar_layout_redraw].cs2) `[clientscript,buff_bar_layout_redraw]`  
+[**5938**](scripts/[proc,buff_bar_layout_redraw].cs2) `[proc,buff_bar_layout_redraw]`  
+[**5939**](scripts/[clientscript,buff_bar_display_timer].cs2) `[clientscript,buff_bar_display_timer]`  
 [**5940**](scripts/[proc,script5940].cs2)  
 [**5941**](scripts/[proc,script5941].cs2)  
 [**5942**](scripts/[proc,script5942].cs2)  

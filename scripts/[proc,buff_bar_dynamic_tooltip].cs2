@@ -1,0 +1,20 @@
+// 5846
+[proc,buff_bar_dynamic_tooltip](int $int0)(string)
+switch_int ($int0) {
+	case 50 :
+		return(~script5742(%varbit13395));
+	case 51 :
+		return(~script5742(%varbit13396));
+	case 52 :
+		return(~script5742(%varbit13397));
+	case 53 :
+		return(~script5742(%varbit13398));
+	case 54 :
+		return(~script5742(%varbit13399));
+	case 55 :
+		return(~script5742(%varbit13401));
+	case 56 :
+		return(~script5742(%varbit13402));
+	case default :
+		return("Buff");
+}

@@ -1,0 +1,7 @@
+// 5892
+[proc,speedrunning_trophy_check](struct $struct0, int $int1)(int)
+def_int $int2 = ~script5885($struct0);
+if ($int2 >= $int1) {
+	return(1);
+}
+return(0);

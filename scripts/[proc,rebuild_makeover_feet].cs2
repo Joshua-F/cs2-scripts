@@ -1,0 +1,43 @@
+// 3165
+[proc,rebuild_makeover_feet](component $component0, component $component1, component $component2, int $comsubid3)
+def_enum $enum4 = enum(int, enum, enum_4217, %varbit4146);
+def_int $count5 = enum_getoutputcount($enum4);
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 10;
+def_int $int9 = 60;
+cc_create($component2, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x00d34c);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+cc_settext("Style: <enum(int, string, enum_4222, calc(%varbit4146 % enum_getoutputcount(enum_4222)))>");
+cc_setonvartransmit("script3166($component0, $component1, $component2, $enum4, %varbit4146){var638}");
+cc_setop(1, "Switch-style <enum(int, string, enum_4222, calc((%varbit4146 + 1) % enum_getoutputcount(enum_4222)))>");
+if (~on_mobile = false) {
+	cc_setonmouserepeat("cc_colour_swapper($component2, 0, 0xbebebe)");
+	cc_setonmouseleave("cc_colour_swapper($component2, 0, 0x00d34c)");
+}
+while ($int6 < $count5) {
+	~makeover_feet_add_option($int6, $int7, $int8, $int9, $component0, $component1, $enum4, $comsubid3);
+	if ($int6 ! 0 & calc(($int6 + 1) % 3) = 0) {
+		$int9 = 60;
+		$int8 = calc($int8 + 100);
+	} else {
+		$int9 = calc($int9 + 120);
+	}
+	$int6 = calc($int6 + 1);
+	$int7 = calc($int7 + 1);
+}
+if ($comsubid3 = -1) {
+	cc_create($component1, ^iftype_text, $count5);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	cc_settextfont(b12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+	cc_settext("Select a new pair of shoes.");
+}

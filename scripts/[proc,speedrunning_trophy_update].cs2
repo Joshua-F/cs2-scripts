@@ -1,0 +1,24 @@
+// 5891
+[proc,speedrunning_trophy_update](component $component0, int $int1, graphic $graphic2, int $int3)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setposition(0, 4, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setsize(61, 73, ^setsize_abs, ^setsize_minus);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+if ($int3 = 1) {
+	cc_setcolour(0x0dc10d);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+cc_settext(~time_convert($int1, %varbit11890));
+cc_create($component0, ^iftype_graphic, 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(61, 73, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic2);
+if ($int3 = 1) {
+	cc_settrans(0);
+} else {
+	cc_settrans(110);
+}

@@ -58,12 +58,12 @@ cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
 def_int $int11 = 0;
 def_graphic $graphic12 = null;
 def_namedobj $namedobj13 = struct_param($struct0, param_1281);
-def_namedobj $namedobj14 = ~script5928($int3);
+def_namedobj $namedobj14 = ~buff_bar_dynamic_obj($int3);
 if ($namedobj14 ! null) {
 	$namedobj13 = $namedobj14;
 }
 if (struct_param($struct0, param_1480) = true) {
-	$graphic12 = ~script5847($int3);
+	$graphic12 = ~buff_bar_dynamic_graphic($int3);
 } else {
 	$graphic12 = struct_param($struct0, param_1278);
 }
@@ -84,7 +84,7 @@ cc_setposition(calc($int6 + 1 + (37 - 5) / 2 - $int9 / 2 + coordx(struct_param($
 cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
 $graphic12 = null;
 if (struct_param($struct0, param_1481) = true) {
-	$graphic12 = ~script5848($int3);
+	$graphic12 = ~buff_bar_dynamic_graphic2($int3);
 } else {
 	$graphic12 = struct_param($struct0, param_1479);
 }
@@ -109,7 +109,7 @@ if (~script5945($struct0) = 1) {
 $int1 = calc($int1 + 1);
 def_component $component15 = interface_651:5;
 if (struct_param($struct0, param_1482) = true) {
-	~buff_bar_buff_create_tooltip($component2, $int1, $component15, ~script5846($int3), $int6, $int7);
+	~buff_bar_buff_create_tooltip($component2, $int1, $component15, ~buff_bar_dynamic_tooltip($int3), $int6, $int7);
 } else {
 	~buff_bar_buff_create_tooltip($component2, $int1, $component15, struct_param($struct0, param_1279), $int6, $int7);
 }

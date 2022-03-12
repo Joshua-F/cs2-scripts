@@ -16,7 +16,7 @@ while ($int4 < 4) {
 	if (cc_find($component1, $int4) = ^true) {
 		if ($int3 = 1) {
 			cc_settrans(240);
-			cc_setontimer("script811(event_com, event_comsubid, calc(clientclock + 3 - $int4 * 2), 240, 250)");
+			cc_setontimer("ge_offers_pulsate(event_com, event_comsubid, calc(clientclock + 3 - $int4 * 2), 240, 250)");
 			cc_sethide(false);
 		} else {
 			cc_sethide(true);

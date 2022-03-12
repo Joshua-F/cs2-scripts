@@ -1,0 +1,7 @@
+// 5922
+[proc,settings_buff_cannon_ammo]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit13667 = calc(1 - %varbit13667);
+~buff_bar_layout_redraw;

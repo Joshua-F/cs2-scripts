@@ -1,0 +1,9 @@
+// 5894
+[proc,speedrunning_quest_enabled](struct $struct0)(int)
+if (enum(struct, boolean, enum_4208, $struct0) = true) {
+	return(1);
+}
+if (enum(struct, boolean, enum_4209, $struct0) = true & ~script5895 = 1) {
+	return(1);
+}
+return(0);

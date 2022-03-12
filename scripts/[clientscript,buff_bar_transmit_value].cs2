@@ -1,0 +1,25 @@
+// 5933
+[clientscript,buff_bar_transmit_value](struct $struct0)
+def_component $component1 = interface_651:2;
+def_int $comsubid2 = struct_param($struct0, param_1275);
+def_int $int3 = 0;
+def_int $int4 = 0;
+if (cc_find($component1, $comsubid2) = ^true) {
+	$int3 = ~buff_bar_get_value($struct0);
+	$int4 = cc_getcolour;
+	cc_setcolour($int3);
+	cc_setscrollsize(0, 0);
+	if ($int3 ! $int4) {
+		if ($int3 > struct_param($struct0, param_1540)) {
+			~script5934($struct0);
+			if (~script5944($struct0) = 0 & ~script5945($struct0) = 1) {
+				cc_settext(~script5943($struct0, $int3));
+			}
+		} else if ($int4 > struct_param($struct0, param_1540)) {
+			~buff_bar_layout_redraw;
+		}
+		if ($int4 <= struct_param($struct0, param_1540)) {
+			~buff_bar_layout_redraw;
+		}
+	}
+}

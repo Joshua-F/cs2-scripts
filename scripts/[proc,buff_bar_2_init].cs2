@@ -1,0 +1,31 @@
+// 5930
+[proc,buff_bar_2_init](component $component0)
+def_int $count1 = 0;
+def_struct $struct2 = null;
+def_enum $enum3 = enum_4213;
+def_int $count4 = enum_getoutputcount($enum3);
+def_int $int5 = 0;
+def_int $int6 = 0;
+if (if_gethide($component0) = true) {
+	mes("container hidden!");
+}
+cc_deleteall($component0);
+while ($count1 < $count4) {
+	cc_create($component0, ^iftype_text, $count1);
+	$struct2 = enum(int, struct, $enum3, $count1);
+	if ($struct2 ! null) {
+		$int5 = struct_param($struct2, param_1275);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setcolour(struct_param($struct2, param_1540));
+		if (cc_find($component0, $count1) = ^true) {
+			~script5924($struct2);
+			$int6 = ~buff_bar_get_value($struct2);
+			if ($int6 ! struct_param($struct2, param_1540)) {
+				~buff_bar_start($struct2);
+			}
+		}
+	}
+	$count1 = calc($count1 + 1);
+}
+if_setontimer("buff_bar_display_timer", $component0);
+~buff_bar_layout_redraw;
