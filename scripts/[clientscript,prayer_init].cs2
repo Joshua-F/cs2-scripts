@@ -12,7 +12,6 @@ while ($int10 <= 28) {
 		$intarray0($int6) = $int10;
 		$int6 = calc($int6 + 1);
 		cc_deleteall($component7);
-		if_setopbase("<col=ff9040><enum(int, string, enum_860, $int10)></col>", $component7);
 		cc_create($component7, ^iftype_graphic, 0);
 		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

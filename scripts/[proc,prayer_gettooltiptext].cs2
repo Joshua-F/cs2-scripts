@@ -1,3 +1,12 @@
 // 2762
 [proc,prayer_gettooltiptext](int $int0)(string)
-return("Level <tostring(enum(int, int, enum_861, $int0))><br><enum(int, string, enum_860, $int0)><br><enum(int, string, enum_862, $int0)>");
+def_string $string0 = enum(int, string, enum_860, $int0);
+def_string $string1 = enum(int, string, enum_862, $int0);
+if ($int0 = 25) {
+	if (~script5344 = 2) {
+		$string0, $string1 = "Humble <$string0>", "Increases your strength by 18% and attack by 15%.";
+	}
+} else if ($int0 = 26 & ~script5345 = 2) {
+	$string0, $string1 = "Humble <$string0>", "Increases your strength by 23% and attack by 20%.";
+}
+return("Level <tostring(enum(int, int, enum_861, $int0))><br><$string0><br><$string1>");

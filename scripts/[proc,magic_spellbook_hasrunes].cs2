@@ -35,6 +35,14 @@ switch_obj ($obj0) {
 		if (~script5223 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
 			return(1);
 		}
+	case wind_wave_3313, water_wave_3315, earth_wave_3319, fire_wave_3321 :
+		if (~script5223 = 1 & inv_total(inv, blighted_wave_sack_26704) > 0) {
+			return(1);
+		}
+	case wind_surge_21876, water_surge_21877, earth_surge_21878, fire_surge_21879 :
+		if (~script5223 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
+			return(1);
+		}
 }
 def_obj $obj1 = oc_param($obj0, magic_runetype_1);
 if ($obj1 ! null & ~magic_runecount($obj1) < oc_param($obj0, magic_runecount_1)) {

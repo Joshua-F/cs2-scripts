@@ -10,6 +10,7 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_string $text0 = "0";
+def_string $text1 = "0";
 if (calc(clientclock % 10) = 0) {
 	while (cc_find($component0, $int2) = ^true) {
 		$int5 = cc_getcolour;
@@ -17,10 +18,16 @@ if (calc(clientclock % 10) = 0) {
 		$int5 = struct_param($struct4, param_1275);
 		if ($struct4 ! null & cc_find($component1, $int5) = ^true) {
 			$text0 = cc_gettext;
-			if (cc_find($component0, calc($int2 + 10 - 2)) = ^true & ~script5945($struct4) = 1) {
-				cc_settext($text0);
+			$text1 = cc_getopbase;
+			if (~script5945($struct4) = 1) {
+				if (cc_find($component0, calc($int2 + 11 - 3)) = ^true) {
+					cc_settext($text0);
+				}
+				if (struct_param($struct4, param_1553) = true & cc_find($component0, calc($int2 + 11 - 2)) = ^true) {
+					cc_settext($text1);
+				}
 			}
 		}
-		$int2 = calc($int2 + 10);
+		$int2 = calc($int2 + 11);
 	}
 }

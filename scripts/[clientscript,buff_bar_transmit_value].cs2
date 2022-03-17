@@ -4,21 +4,32 @@ def_component $component1 = interface_651:2;
 def_int $comsubid2 = struct_param($struct0, param_1275);
 def_int $int3 = 0;
 def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = struct_param($struct0, param_1540);
 if (cc_find($component1, $comsubid2) = ^true) {
 	$int3 = ~buff_bar_get_value($struct0);
 	$int4 = cc_getcolour;
 	cc_setcolour($int3);
 	cc_setscrollsize(0, 0);
+	if (struct_param($struct0, param_1553) = true) {
+		$int5 = ~script5342($struct0);
+		$int6 = cc_getmodelzoom;
+		cc_setmodelangle(0, 0, 0, 0, 0, $int5);
+		if ($int5 ! $int6) {
+			cc_setopbase(~script5343($struct0, $int5));
+		}
+	}
 	if ($int3 ! $int4) {
-		if ($int3 > struct_param($struct0, param_1540)) {
+		if ($int3 > $int7) {
 			~script5934($struct0);
 			if (~script5944($struct0) = 0 & ~script5945($struct0) = 1) {
 				cc_settext(~script5943($struct0, $int3));
 			}
-		} else if ($int4 > struct_param($struct0, param_1540)) {
+		} else if ($int4 > $int7) {
 			~buff_bar_layout_redraw;
 		}
-		if ($int4 <= struct_param($struct0, param_1540)) {
+		if ($int4 <= $int7) {
 			~buff_bar_layout_redraw;
 		}
 	}

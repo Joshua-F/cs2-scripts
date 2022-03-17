@@ -1,10 +1,15 @@
 // 5932
 [proc,buff_bar_start](struct $struct0)
 def_int $int1 = 0;
+def_int $int2 = 0;
 $int1 = ~buff_bar_get_value($struct0);
 cc_setcolour($int1);
 if (~script5945($struct0) = 1) {
 	cc_settext(~script5943($struct0, $int1));
+}
+if (struct_param($struct0, param_1553) = true) {
+	$int2 = ~script5342($struct0);
+	cc_setopbase(~script5343($struct0, $int2));
 }
 ~script5934($struct0);
 if (~script5944($struct0) = 1) {

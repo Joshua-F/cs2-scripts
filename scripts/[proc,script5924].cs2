@@ -93,11 +93,9 @@ switch_struct ($struct0) {
 		cc_setoninvtransmit("buff_bar_transmit_value($struct0){worn}");
 	case buff_ammo_remaining_3661 :
 		cc_setoninvtransmit("buff_bar_transmit_value($struct0){worn}");
-	case buff_next_poison_hit_3740 :
+	case buff_time_till_next_poison_hit_3740 :
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var102}");
-	case buff_next_venom_hit_3741 :
-		cc_setonvartransmit("buff_bar_transmit_value($struct0){var102}");
-	case buff_next_venom_hit_4157 :
+	case buff_time_till_next_venom_hit_3741 :
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var102}");
 	case buff_desert_heat_timer_3763 :
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3198}");

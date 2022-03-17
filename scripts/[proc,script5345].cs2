@@ -1,0 +1,9 @@
+// 5345
+[proc,script5345]()(int)
+if ((map_members = ^false | stat_base(defence) < 70 | %varbit3909 < 8) & %varbit5314 = 0) {
+	if (%varbit13681 = 1 & stat_base(defence) >= 40 & ~tournament_beta_world = 1) {
+		return(2);
+	}
+	return(0);
+}
+return(1);

@@ -10,26 +10,28 @@ def_int $int8 = 0;
 def_string $string0 = "";
 def_int $int9 = 0;
 def_int $int10 = 0;
-def_int $comsubid11 = -1;
-def_int $int12 = -1;
-def_int $int13 = 0;
+def_int $int11 = 0;
+def_int $comsubid12 = -1;
+def_int $int13 = -1;
 def_int $int14 = 0;
-def_int $int15 = 10;
-if (calc($int4 % $int15) = 0) {
-	$comsubid11 = struct_param($struct0, param_1275);
-	if (cc_find($component2, $comsubid11) = ^true) {
-		$int12 = struct_param($struct0, param_1277);
+def_int $int15 = 0;
+def_int $int16 = 10;
+if (calc($int4 % $int16) = 0) {
+	$comsubid12 = struct_param($struct0, param_1275);
+	if (cc_find($component2, $comsubid12) = ^true) {
+		$int13 = struct_param($struct0, param_1277);
 		$int10 = cc_getcolour;
-		$int9 = ~script4666($int12, $int10);
+		$int11 = cc_getmodelzoom;
+		$int9 = ~script4666($int13, $int10);
 		$int5 = calc($int9 - $int4);
 		$int8 = cc_getfillcolour;
 		$int6 = cc_getscrollwidth;
 		$int7 = cc_getscrollheight;
 		if (%varbit12393 = 1 & struct_param($struct0, param_1290) = true) {
-			$int6 = calc($int6 + $int15);
-			$int14 = calc(~script5925($struct0) * 30 - $int4);
-			if ($int14 < 0) {
-				$int7 = calc($int7 + $int15);
+			$int6 = calc($int6 + $int16);
+			$int15 = calc(~script5925($struct0) * 30 - $int4);
+			if ($int15 < 0) {
+				$int7 = calc($int7 + $int16);
 			}
 			if ($int7 > 0) {
 				$int5 = calc($int5 + $int7);
@@ -41,6 +43,7 @@ if (calc($int4 % $int15) = 0) {
 		cc_setscrollsize($int6, $int7);
 		cc_setfillcolour($int5);
 		cc_settext(~script5943($struct0, $int5));
+		cc_setopbase(~script5343($struct0, $int11));
 		if ($int5 <= 0) {
 			cc_setscrollsize(0, 0);
 			cc_setcolour(struct_param($struct0, param_1540));

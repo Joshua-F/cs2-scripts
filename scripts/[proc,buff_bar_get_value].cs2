@@ -189,17 +189,13 @@ switch_struct ($struct0) {
 		if (%var3160 = null) {
 			return(%var3159);
 		}
-	case buff_next_poison_hit_3740 :
-		if (%var102 > 0 & %var102 <= 38) {
-			return(%var102);
+	case buff_time_till_next_poison_hit_3740 :
+		if (%var102 > 0 & %var102 < 1000000) {
+			return(~script5940(%varcint983, struct_param($struct0, param_1541)));
 		}
-	case buff_next_venom_hit_3741 :
-		if (%var102 > 38) {
-			return(%var102);
-		}
-	case buff_next_venom_hit_4157 :
-		if (%var102 > 38) {
-			return(%var102);
+	case buff_time_till_next_venom_hit_3741 :
+		if (%var102 > 1000000) {
+			return(~script5940(%varcint983, struct_param($struct0, param_1541)));
 		}
 	case buff_desert_heat_timer_3763 :
 		if (%varcint947 > 0) {

@@ -6,6 +6,7 @@ def_component $component2 = interface_651:5;
 def_struct $struct3 = null;
 def_int $comsubid4 = 0;
 def_string $text0 = "";
+def_string $text1 = "";
 def_int $int5 = 0;
 def_int $count6 = 0;
 def_enum $enum7 = enum_4214;
@@ -14,6 +15,9 @@ if (~on_enhanced_any = 0) {
 }
 def_int $count8 = enum_getoutputcount($enum7);
 def_int $int9 = 12;
+if (getwindowmode = ^windowmode_fixed) {
+	$int9 = 8;
+}
 def_int $int10 = 0;
 cc_deleteall($component0);
 ~deltooltip_action($component2);
@@ -27,7 +31,8 @@ while ($count6 < $count8 & $int10 < $int9) {
 		$int5 = cc_getcolour;
 		if (~script5946($struct3, $int5) = 1) {
 			$text0 = cc_gettext;
-			~script5947($struct3, $text0, $int10);
+			$text1 = cc_getopbase;
+			~script5947($struct3, $text0, $text1, $int10);
 			$int10 = calc($int10 + 1);
 		}
 	}

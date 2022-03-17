@@ -1,5 +1,5 @@
 // 5947
-[proc,script5947](struct $struct0, string $text0, int $int1)
+[proc,script5947](struct $struct0, string $text0, string $text1, int $int1)
 def_component $component2 = interface_651:4;
 def_int $int3 = struct_param($struct0, param_1275);
 def_int $int4 = struct_param($struct0, param_1276);
@@ -8,7 +8,7 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = ~script5944($struct0);
 $int6, $int7 = ~buff_bar_buff_position($component2, $int1);
-$int1 = calc($int1 * 10);
+$int1 = calc($int1 * 11);
 cc_create($component2, ^iftype_rectangle, $int1);
 cc_setposition(calc($int6 + 1), calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setsize(calc(37 - 5), calc(37 - 5), ^setsize_abs, ^setsize_abs);
@@ -103,6 +103,19 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if (~script5945($struct0) = 1) {
 	cc_settext($text0);
+} else {
+	cc_settext("");
+}
+$int1 = calc($int1 + 1);
+cc_create($component2, ^iftype_text, $int1);
+cc_setposition($int6, calc($int7 + 37 - 16), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(calc(37 - 3), 12, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if (struct_param($struct0, param_1553) = true) {
+	cc_settext($text1);
 } else {
 	cc_settext("");
 }

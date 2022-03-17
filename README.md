@@ -5342,6 +5342,10 @@
 [**5339**](scripts/[proc,on_mac].cs2) `[proc,on_mac]`  
 [**5340**](scripts/[proc,script5340].cs2)  
 [**5341**](scripts/[proc,script5341].cs2)  
+[**5342**](scripts/[proc,script5342].cs2)  
+[**5343**](scripts/[proc,script5343].cs2)  
+[**5344**](scripts/[proc,script5344].cs2)  
+[**5345**](scripts/[proc,script5345].cs2)  
 [**5346**](scripts/[proc,script5346].cs2)  
 [**5347**](scripts/[proc,script5347].cs2)  
 [**5348**](scripts/[proc,helper_generic_set_bit].cs2) `[proc,helper_generic_set_bit]`  
@@ -5544,6 +5548,7 @@
 [**5545**](scripts/[clientscript,popout_tooltip_remove_delayed].cs2) `[clientscript,popout_tooltip_remove_delayed]`  
 [**5546**](scripts/[proc,popout_tooltip_clear].cs2) `[proc,popout_tooltip_clear]`  
 [**5547**](scripts/[clientscript,script5547].cs2)  
+[**5548**](scripts/[proc,script5548].cs2)  
 [**5549**](scripts/[clientscript,script5549].cs2)  
 [**5550**](scripts/[clientscript,stat_boosts_hud_mobile_tooltip].cs2) `[clientscript,stat_boosts_hud_mobile_tooltip]`  
 [**5551**](scripts/[clientscript,stat_boosts_hud_mobile_tooltip_remove].cs2) `[clientscript,stat_boosts_hud_mobile_tooltip_remove]`  
@@ -5734,6 +5739,7 @@
 [**5736**](scripts/[proc,script5736].cs2)  
 [**5737**](scripts/[clientscript,script5737].cs2)  
 [**5738**](scripts/[proc,league_current_league].cs2) `[proc,league_current_league]`  
+[**5739**](scripts/[proc,script5739].cs2)  
 [**5740**](scripts/[proc,script5740].cs2)  
 [**5741**](scripts/[proc,script5741].cs2)  
 [**5742**](scripts/[proc,script5742].cs2)  

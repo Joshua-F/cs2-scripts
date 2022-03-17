@@ -1,0 +1,13 @@
+// 5342
+[proc,script5342](struct $struct0)(int)
+switch_struct ($struct0) {
+	case buff_time_till_next_poison_hit_3740 :
+		if (%var102 > 0 & %var102 < 1000000) {
+			return(~script5346(%var102));
+		}
+	case buff_time_till_next_venom_hit_3741 :
+		if (%var102 > 1000000) {
+			return(~script5347(%var102));
+		}
+}
+return(struct_param($struct0, param_1556));

@@ -1,6 +1,21 @@
 // 471
-[proc,quickprayer_button_update](int $index0)
-if (testbit(%varbit4102, $index0) = ^true) {
+[proc,quickprayer_button_update](int $int0)
+if ($int0 = 25) {
+	if (~script5344 = 2) {
+		cc_setopbase("<col=ff9040>Humble <enum(int, string, enum_860, $int0)></col>");
+	} else {
+		cc_setopbase("<col=ff9040><enum(int, string, enum_860, $int0)></col>");
+	}
+} else if ($int0 = 26) {
+	if (~script5345 = 2) {
+		cc_setopbase("<col=ff9040>Humble <enum(int, string, enum_860, $int0)></col>");
+	} else {
+		cc_setopbase("<col=ff9040><enum(int, string, enum_860, $int0)></col>");
+	}
+} else {
+	cc_setopbase("<col=ff9040><enum(int, string, enum_860, $int0)></col>");
+}
+if (testbit(%varbit4102, $int0) = ^true) {
 	.cc_setgraphic("miscgraphics,11");
 } else {
 	.cc_setgraphic("miscgraphics,10");
