@@ -1,5 +1,5 @@
 // 1351
-[proc,script1351]()(int)
+[proc,on_ios]()(int)
 def_int $clienttype0 = clienttype;
 if ($clienttype0 = ^clienttype_ios | $clienttype0 = 8) {
 	return(1);

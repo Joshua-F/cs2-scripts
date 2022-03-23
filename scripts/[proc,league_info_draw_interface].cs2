@@ -46,7 +46,7 @@ def_int $int19 = struct_param($struct12, param_872);
 def_int $int20 = calc(1 + ($int19 - %varbit9535));
 def_fontmetrics $fontmetrics21 = p12_full;
 def_fontmetrics $fontmetrics22 = p12_full;
-def_int $int23 = ~script1351;
+def_int $int23 = ~on_ios;
 if (~on_mobile = true) {
 	$fontmetrics21, $fontmetrics22 = p12_full, p12_full;
 }

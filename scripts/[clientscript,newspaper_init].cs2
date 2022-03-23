@@ -20,7 +20,7 @@ cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic2, nu
 cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic3, null)");
 cc_setonop("closebutton_click");
 def_string $url0 = "https://osrs.game/Gazette";
-if (~script1351 = 0) {
+if (~on_ios = 0) {
 	~gazette_button(interface_659:3, false);
 	if_setonmouserepeat("gazette_button(interface_659:3, true)", interface_659:3);
 	if_setonmouseleave("gazette_button(interface_659:3, false)", interface_659:3);

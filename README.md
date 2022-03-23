@@ -1351,7 +1351,7 @@
 [**1348**](scripts/[proc,settings_buff_ward_of_arceuus].cs2) `[proc,settings_buff_ward_of_arceuus]`  
 [**1349**](scripts/[proc,settings_buff_resurrection].cs2) `[proc,settings_buff_resurrection]`  
 [**1350**](scripts/[clientscript,questlist_init].cs2) `[clientscript,questlist_init]`  
-[**1351**](scripts/[proc,script1351].cs2)  
+[**1351**](scripts/[proc,on_ios].cs2) `[proc,on_ios]`  
 [**1352**](scripts/[proc,questlist_sort].cs2) `[proc,questlist_sort]`  
 [**1353**](scripts/[proc,script1353].cs2)  
 [**1354**](scripts/[proc,script1354].cs2)  
