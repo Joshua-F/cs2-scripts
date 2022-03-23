@@ -118,6 +118,22 @@ $stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_642), struc
 if ($stat14 ! null & $int15 > 1) {
 	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
 }
+$stat14, $int15 = ~script5994(%var3373, struct_param(%var3373, param_644), struct_param(%var3373, param_645), $int12);
+if ($stat14 ! null & $int15 > 1) {
+	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
+}
+$stat14, $int15 = ~script5994(%var3373, struct_param(%var3373, param_646), struct_param(%var3373, param_647), $int12);
+if ($stat14 ! null & $int15 > 1) {
+	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
+}
+$stat14, $int15 = ~script5994(%var3373, struct_param(%var3373, param_1521), struct_param(%var3373, param_1522), $int12);
+if ($stat14 ! null & $int15 > 1) {
+	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
+}
+$stat14, $int15 = ~script5994(%var3373, struct_param(%var3373, param_1523), struct_param(%var3373, param_1524), $int12);
+if ($stat14 ! null & $int15 > 1) {
+	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
+}
 if ($int12 > 20) {
 	$int6, $int5 = ~script5912($component1, $int6, $int5, "Level <tostring($int12)> in all combat stats");
 }

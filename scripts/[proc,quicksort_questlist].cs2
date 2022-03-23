@@ -7,8 +7,16 @@ $intarray0($int2) = $int5;
 def_int $int6 = $int1;
 def_int $int7 = $int1;
 def_int $int8 = -1;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
 while ($int7 < $int2) {
-	if (compare(struct_param(enum(int, struct, $enum3, $intarray0($int7)), param_579), struct_param(enum(int, struct, $enum3, $int5), param_579)) <= 0) {
+	$string0 = tostring(~script3236(enum(int, struct, $enum3, $intarray0($int7))));
+	$string1 = tostring(~script3236(enum(int, struct, $enum3, $int5)));
+	$string2 = struct_param(enum(int, struct, $enum3, $intarray0($int7)), param_579);
+	$string3 = struct_param(enum(int, struct, $enum3, $int5), param_579);
+	if (compare("<$string0><$string2>", "<$string1><$string3>") <= 0) {
 		$int8 = $intarray0($int7);
 		$intarray0($int7) = $intarray0($int6);
 		$intarray0($int6) = $int8;

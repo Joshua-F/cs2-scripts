@@ -155,22 +155,18 @@ if ($key0 = ^key_return) {
 			}
 		} else if ($int5 = 41) {
 			if ($int8 = 0 & activeclanchannel_find_affined(^clantype_clan) = true) {
-				if (%varbit931 = 0) {
-					$int7 = activeclanchannel_getuserslot(removetags(chat_playername));
-					if ($int7 ! -1 & activeclanchannel_getuserrank($int7) >= activeclanchannel_getranktalk) {
-						~chat_send(substring(%varcstring335, $index6, $length2), 3, ^clantype_clan, 0, $int9);
-					} else {
-						mes("You do not have the required rank to talk in the clan's channel.");
-					}
+				$int7 = activeclanchannel_getuserslot(removetags(chat_playername));
+				if ($int7 ! -1 & activeclanchannel_getuserrank($int7) >= activeclanchannel_getranktalk) {
+					~chat_send(substring(%varcstring335, $index6, $length2), 3, ^clantype_clan, 0, $int9);
 				} else {
-					mes("You have muted your clan's channel. Unmute it if you wish to talk in it.");
+					mes("You do not have the required rank to talk in the clan's channel.");
 				}
 			} else if ($int8 = 1 & activeclanchannel_find_affined(^clantype_gim) = true) {
 				~chat_send(substring(%varcstring335, $index6, $length2), 3, ^clantype_gim, 0, $int9);
 			} else if ($int8 = 1) {
 				mes("You are not chatting in the channel of your Iron Group at the moment.");
 			} else {
-				mes("You are not chatting in the channel of your own Iron Group at the moment.");
+				mes("You are not chatting in the channel of your Clan at the moment.");
 			}
 		} else if ($int5 = 9) {
 			if (clan_getchatcount > 0) {

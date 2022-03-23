@@ -1,0 +1,6 @@
+// 1353
+[proc,script1353](string $string0)(int)
+if (~is_group_iron = 1 & (string_indexof_string($string0, "////", 0) = 0 | string_indexof_string(lowercase($string0), "/g ", 0) = 0 | string_indexof_string(lowercase($string0), "/@g ", 0) = 0 | %varcint945 = 4 | %varcint41 = 6)) {
+	return(1);
+}
+return(0);

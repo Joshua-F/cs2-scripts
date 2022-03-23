@@ -3,20 +3,19 @@
 if ($struct0 = null) {
 	return(1);
 }
-def_int $int1 = ~quest_status_get_exceptions($struct0);
-if ($int1 ! -1) {
-	return($int1);
-}
-def_int $int2 = struct_param($struct0, param_1161);
-def_int $int3 = struct_param($struct0, param_1162);
-def_int $int4 = ~quest_progress_get($struct0);
-if ($int2 = -1 | $int3 = -1 | $int4 = -1 | $int3 <= $int2) {
+if (struct_param($struct0, param_1602) = true) {
 	return(1);
 }
-if ($int4 >= $int3) {
+def_int $int1 = struct_param($struct0, param_1161);
+def_int $int2 = struct_param($struct0, param_1162);
+def_int $int3 = ~quest_progress_get($struct0);
+if ($int1 = -1 | $int2 = -1 | $int3 = -1 | $int2 <= $int1) {
+	return(1);
+}
+if ($int3 >= $int2) {
 	return(2);
 }
-if ($int4 <= $int2) {
+if ($int3 <= $int1) {
 	return(1);
 }
 return(0);

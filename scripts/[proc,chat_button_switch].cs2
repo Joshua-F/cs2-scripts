@@ -4,6 +4,10 @@ if (getwindowmode = ^windowmode_resizable & %varcint41 = $int0) {
 	%varcint41 = 1337;
 } else {
 	%varcint41 = $int0;
+	if (string_length(%varcstring335) >= 80 & ~script1353(%varcstring335) = 1) {
+		%varcstring335 = substring(%varcstring335, 0, 79);
+	}
+	~script223;
 }
 ~script2526;
 %varcint384 = clientclock;

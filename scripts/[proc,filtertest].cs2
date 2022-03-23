@@ -160,9 +160,6 @@ switch_int ($chattype0) {
 		if ($clock1 < %varcint440) {
 			return(0);
 		}
-		if (%varbit931 = 1 & ($chattype0 = ^chattype_clanchat | $chattype0 = ^chattype_clanmessage)) {
-			return(0);
-		}
 		if (compare($string3, removetags($string0)) = 0) {
 			return(1);
 		}

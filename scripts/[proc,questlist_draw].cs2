@@ -1,35 +1,130 @@
 // 2633
-[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
-def_int $height7 = 3;
-def_int $int8 = ~questlist_sectioninit("Free Quests", $component3, enum_2098, ~quest_f2p_count, $component3, $component4, $component5);
-if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component3);
-$height7 = calc($height7 + $int8 + 8);
-$int8 = ~questlist_sectioninit("Members' Quests", $component4, enum_2099, ~quest_members_count, $component3, $component4, $component5);
-if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-if (~speedrunning_world = 0) {
-	$height7 = calc($height7 + $int8 + 8);
-	$int8 = ~questlist_sectioninit("Miniquests", $component5, enum_2100, ~miniquest_count, $component3, $component4, $component5);
-	if_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top, $component5);
+[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5)
+def_int $height6 = -3;
+def_enum $enum7 = enum_4285;
+def_int $count8 = enum_getoutputcount($enum7);
+def_int $count9 = 0;
+def_fontmetrics $fontmetrics10 = p11_full;
+def_fontmetrics $fontmetrics11 = p11_full;
+def_int $int12 = 11;
+def_int $int13 = 5;
+if (~on_mobile = true) {
+	$int13 = 11;
 }
-$height7 = calc($height7 + $int8 + 2);
-def_int $int9 = %varcint10;
-if ($int6 = 1) {
-	$int9 = %varcint972;
+if (%varbit13780 = 1) {
+	$fontmetrics10 = p12_full;
+	$fontmetrics11 = p12_full;
+	$int12 = 13;
+	$int13 = calc($int13 + 2);
 }
-if ($height7 > if_getheight($component1)) {
-	if_setscrollsize(0, $height7, $component1);
-	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	if (cc_find($component2, 1) = ^true) {
-		~scrollbar_vertical_doscroll($component2, $component1, $int9, true);
+def_int $intarray0($count8);
+def_struct $struct14 = null;
+def_string $string0 = "";
+def_int $int15 = 0;
+def_int $int16 = pow(2, 16);
+cc_deleteall($component4);
+while ($count9 < $count8) {
+	cc_create($component4, ^iftype_text, $count9);
+	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
+	cc_settextfont($fontmetrics10);
+	if (%varbit13781 = 1) {
+		cc_settextshadow(false);
+	} else {
+		cc_settextshadow(true);
+	}
+	cc_settextalign(^settextalign_left, ^settextalign_centre, $int12);
+	$struct14 = enum(int, struct, $enum7, $count9);
+	$string0 = ~get_quest_name($struct14);
+	cc_setopbase("<col=ff9040><$string0></col>");
+	if (~script4026($struct14, %varbit13772) = 1) {
+		$string0 = "MQ: <$string0>";
+	}
+	cc_settext($string0);
+	cc_setsize(0, calc($int12 * paraheight($string0, cc_getwidth, $fontmetrics11) + $int13), ^setsize_minus, ^setsize_abs);
+	if (~speedrunning_world = 1) {
+		cc_setop(1, "View info:");
+	} else {
+		cc_setop(1, "");
+	}
+	cc_setop(2, "Read journal:");
+	cc_setop(3, "Show on map:");
+	cc_setop(4, "Open wiki guide:");
+	cc_setop(5, "Open wiki quick guide:");
+	$int15 = ~quest_status_get($struct14);
+	$intarray0($count9) = calc($int15 * $int16 + $count9);
+	cc_sethide(true);
+	$count9 = calc($count9 + 1);
+}
+if ($count8 > 1) {
+	~questlist_sort(intarray0, 0, calc($count8 - 1), $enum7, %varbit13772, $int16);
+}
+def_int $count17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 1;
+def_int $int21 = 1;
+def_string $string1 = "************";
+def_string $string2 = "************";
+while ($count17 < $count8) {
+	$int18 = calc($intarray0($count17) % $int16);
+	$int15 = calc($intarray0($count17) / $int16);
+	$struct14 = enum(int, struct, $enum7, $int18);
+	$int20 = ~script5989($struct14);
+	$int21 = ~script5990($struct14);
+	$string2 = ~script2265($struct14, $int15, %varbit13772);
+	if (~script3238($struct14, $int15, $int20, $int21) = 0) {
+		if (compare($string2, $string1) ! 0) {
+			$count9, $height6 = ~script1354($string2, $count9, $height6, $component4);
+			$string1 = $string2;
+		}
+		if (cc_find($component4, $int18) = ^true) {
+			cc_sethide(false);
+			cc_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top);
+			~script4027($struct14, $int15, $int20, $int21);
+			$int19 = calc($int19 + 1);
+			$int12 = cc_getheight;
+		}
+		$count17, $height6 = calc($count17 + 1), calc($height6 + $int12);
+	} else {
+		$count17 = calc($count17 + 1);
+	}
+}
+$height6 = calc($height6 + 2);
+if_setsize(0, $height6, ^setsize_minus, ^setsize_abs, $component4);
+cc_deleteall($component1);
+if ($int19 <= 0) {
+	if_sethide(true, $component3);
+	cc_create($component1, ^iftype_text, 0);
+	cc_setsize(40, calc(16384 / 2), ^setsize_minus, ^setsize_2);
+	cc_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+	cc_settext("There are no quests available that match your current filters.");
+} else {
+	if_sethide(false, $component3);
+}
+def_int $int22 = %varcint10;
+if ($boolean5 = true) {
+	$int22 = %varcint972;
+}
+if ($height6 > if_getheight($component2)) {
+	if_setscrollsize(0, $height6, $component2);
+	~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if (cc_find($component3, 1) = ^true) {
+		~scrollbar_vertical_doscroll($component3, $component2, $int22, true);
 	}
 } else {
-	if ($int6 = 1) {
+	if ($boolean5 = true) {
 		%varcint972 = 0;
 	} else {
 		%varcint10 = 0;
 	}
-	if_setscrollsize(0, 0, $component1);
-	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if_setscrollsize(0, 0, $component2);
+	~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if (cc_find($component3, 1) = ^true) {
+		~scrollbar_vertical_doscroll($component3, $component2, 0, true);
+	}
 }
-~questlist_showprogress($component3, $component4, $component5);
-~script4137($component0, $component3, $component4, $component5);
+~script4137($component0, $component1, $component2, $component3, $component4, $boolean5);

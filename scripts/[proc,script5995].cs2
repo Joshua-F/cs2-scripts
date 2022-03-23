@@ -1,0 +1,8 @@
+// 5995
+[proc,script5995](component $component0)
+def_string $string0 = ",";
+if (~speedrunning_world = 0) {
+	if_settext("Completed: <~tostring_spacer(%varbit6347, $string0)>/<~tostring_spacer(%varbit11877, $string0)>", $component0);
+} else {
+	if_settext("Speedrun Points: <~tostring_spacer(~min(%var3365, 800000), $string0)>", $component0);
+}

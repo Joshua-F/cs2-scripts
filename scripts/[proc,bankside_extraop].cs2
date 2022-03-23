@@ -21,8 +21,12 @@ switch_obj ($obj0) {
 		if (testbit(%var261, 3) = ^true) {
 			$string0 = "Empty";
 		}
-	case coal_bag_12019, open_coal_bag_24480 :
+	case colossal_pouch_26784, colossal_pouch_26786 :
 		if (testbit(%var261, 4) = ^true) {
+			$string0 = "Empty";
+		}
+	case coal_bag_12019, open_coal_bag_24480 :
+		if (testbit(%var261, 5) = ^true) {
 			$string0 = "Fill";
 		}
 	case default :

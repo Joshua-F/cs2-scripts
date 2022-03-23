@@ -1,0 +1,9 @@
+// 3237
+[proc,script3237](struct $struct0)(string)
+if (struct_param($struct0, param_611) = 1) {
+	return("Miniquests");
+}
+if (struct_param($struct0, param_1297) = true) {
+	return("Members' Quests");
+}
+return("Free Quests");

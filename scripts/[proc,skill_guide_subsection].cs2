@@ -309,6 +309,9 @@ switch_int ($int0) {
 		if ($int1 = 3) {
 			return("Infusing", 1);
 		}
+		if ($int1 = 4) {
+			return("Other", 1);
+		}
 		return("", -1);
 	case 20 :
 		return(~skill_guide_subsection_slayer($int1));

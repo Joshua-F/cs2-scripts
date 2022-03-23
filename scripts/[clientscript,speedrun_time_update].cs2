@@ -1,9 +1,9 @@
 // 5907
 [clientscript,speedrun_time_update](struct $struct0, int $int1)
 if ($struct0 = null | $struct0 ! %var3373 | $int1 = -1) {
-	if_setontimer(null, interface_741:25);
-	if_settext("-", interface_741:25);
+	if_setontimer(null, interface_741:24);
+	if_settext("-", interface_741:24);
 	return;
 }
 $int1 = calc($int1 * 30 - clientclock);
-if_setontimer("speedrun_time_update_timer($int1, %varbit11866, %varbit11890)", interface_741:25);
+if_setontimer("speedrun_time_update_timer($int1, %varbit11866, %varbit11890)", interface_741:24);

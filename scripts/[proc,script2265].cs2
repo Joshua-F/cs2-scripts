@@ -1,0 +1,34 @@
+// 2265
+[proc,script2265](struct $struct0, int $int1, int $int2)(string)
+switch_int ($int2) {
+	case 0 :
+		return(~script3237($struct0));
+	case 9 :
+		if (struct_param($struct0, param_1297) = true) {
+			return("Members");
+		}
+		return("Free");
+	case 10 :
+		return(enum(int, string, enum_2093, struct_param($struct0, param_611)));
+	case 2 :
+		return(enum(int, string, enum_2092, $int1));
+	case 3 :
+		return(enum(int, string, enum_2094, struct_param($struct0, param_612)));
+	case 4 :
+		return(enum(int, string, enum_2095, struct_param($struct0, param_613)));
+	case 5 :
+		return(enum(int, string, enum_2097, struct_param($struct0, param_615)));
+	case 6 :
+		return(enum(int, string, enum_2096, struct_param($struct0, param_614)));
+	case 7 :
+		return("Level <tostring(~max(struct_param($struct0, param_656), struct_param($struct0, param_657)))>");
+	case 8 :
+		if (struct_param($struct0, param_1262) < 2001) {
+			return("Unknown Year");
+		}
+		return(tostring(struct_param($struct0, param_1262)));
+	case 1 :
+		return(substring(struct_param($struct0, param_579), 0, 1));
+	case default :
+		return("");
+}

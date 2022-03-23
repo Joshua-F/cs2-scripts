@@ -10,6 +10,7 @@ def_string $string0 = "";
 def_int $int6 = 0;
 def_int $y7 = -1;
 def_boolean $boolean8 = null;
+def_int $int9 = ~script1351;
 while ($count2 < $count3) {
 	if (~league_world = 1) {
 		$struct4 = enum(int, struct, enum_4106, $count2);
@@ -19,12 +20,12 @@ while ($count2 < $count3) {
 	$component5 = enum(int, component, enum_2321, $count2);
 	$boolean8 = struct_param($struct4, param_925);
 	if ($struct4 = struct_3770) {
-		if (clienttype ! ^clienttype_ios) {
+		if ($int9 = 0) {
 			$boolean8 = true;
 		} else if (%varcint228 = true) {
 			$boolean8 = true;
 		}
-	} else if (clienttype ! ^clienttype_ios) {
+	} else if ($int9 = 0) {
 		$boolean8 = false;
 	}
 	if ($boolean8 = false) {

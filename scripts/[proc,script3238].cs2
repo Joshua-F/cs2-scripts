@@ -1,0 +1,24 @@
+// 3238
+[proc,script3238](struct $struct0, int $int1, int $int2, int $int3)(int)
+if (struct_param($struct0, param_611) = 1 & ~script4025 = 1) {
+	return(1);
+}
+if (struct_param($struct0, param_611) = 0 & %varbit13774 = 1) {
+	return(1);
+}
+if ($int1 = 0 & %varbit13775 = 1) {
+	return(1);
+}
+if ($int1 = 1 & %varbit13776 = 1) {
+	return(1);
+}
+if ($int1 = 2 & %varbit13777 = 1) {
+	return(1);
+}
+if ($int1 = 1 & %varbit13778 = 2 & $int2 = 0) {
+	return(1);
+}
+if ($int1 = 1 & %varbit13779 = 2 & $int3 = 0) {
+	return(1);
+}
+return(0);

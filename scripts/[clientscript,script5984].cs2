@@ -1,0 +1,17 @@
+// 5984
+[clientscript,script5984](model $model0, int $colour1)
+cc_deleteall(interface_745:1);
+cc_create(interface_745:1, ^iftype_model, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_sethide(false);
+cc_setmodel($model0);
+cc_setmodelangle(0, 130, 0, 0, 0, 4000);
+cc_setmodelanim(seq_7301);
+cc_create(interface_745:1, ^iftype_rectangle, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setcolour($colour1);
+cc_settrans(255);
+if_setontimer("script5986(clientclock, true)", interface_745:1);

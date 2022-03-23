@@ -1,6 +1,10 @@
 // 2496
 [proc,mobile_billing_open](int $int0, boolean $boolean1)
 if (~on_mobile = true) {
+	if (clienttype = 8 & %varbit13807 = 0) {
+		mes("Sorry, the store is not available in this beta.");
+		return;
+	}
 	if (~bonds_hide = 1 & $int0 ! 5) {
 		$int0 = 3;
 		$boolean1 = true;

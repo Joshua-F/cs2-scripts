@@ -1,0 +1,14 @@
+// 5981
+[proc,script5981](int $int0, int $int1, string $string0, component $component2, component $component3)
+def_int $width4 = 0;
+if ($int1 = 0) {
+	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component3);
+	if_settext("<$string0>: 0%", $component2);
+} else {
+	$width4 = ~max(scale($int1, $int0, 158), 1);
+	if ($width4 > 0 & if_getwidth($component3) <= 0) {
+		if_setsize(1, 0, ^setsize_abs, ^setsize_minus, $component3);
+	}
+	if_settext("<$string0>: <tostring(~max(scale($int1, $int0, 100), 1))>%", $component2);
+	if_setontimer("script5982($component3, $width4)", $component3);
+}

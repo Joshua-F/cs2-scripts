@@ -39,7 +39,11 @@ if (%varbit8119 = 1) {
 		$string2 = append($string2, "<img=19>");
 	}
 	$string2 = append($string2, ": <$string0><$string1></col>");
-	if ($length2 < 80) {
+	if (~script1353(%varcstring335) = 1) {
+		if ($length2 < 79) {
+			$string2 = append($string2, "<$string0>*</col>");
+		}
+	} else if ($length2 < 80) {
 		$string2 = append($string2, "<$string0>*</col>");
 	}
 	$width3 = parawidth($string2, ^max_32bit_int, p12_full);

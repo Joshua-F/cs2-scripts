@@ -1,6 +1,5 @@
 // 3965
 [proc,settings_clicked_toggle](int $int0)
-~debug_mes("$setting_id <tostring($int0)>");
 %varbit9657 = $int0;
 switch_int ($int0) {
 	case 7 :
@@ -267,4 +266,16 @@ switch_int ($int0) {
 		~script5522;
 	case 213 :
 		~settings_buff_cannon_ammo;
+	case 217 :
+		~script5973;
+	case 218 :
+		~script5974;
+	case 219 :
+		~script5975;
+	case 220 :
+		~script5976;
+	case 221 :
+		~script5977;
+	case 223 :
+		~script5978;
 }

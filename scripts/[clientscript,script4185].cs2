@@ -146,13 +146,25 @@ def_int $int36 = calc($int29 % $int34);
 def_int $int37 = 0;
 if ($int36 > 0) {
 	$int37 = calc($int35 + 1);
+} else {
+	$int37, $int36 = $int35, $int34;
 }
 if ($int37 > $int33) {
+	if_setsize(16, 0, ^setsize_minus, ^setsize_minus, $component15);
+	if_sethide(false, $component16);
 	~scrollbar_vertical($component16, $component15, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	$component14 = $component15;
 	$int34 = calc(if_getwidth($component14) / ($int31 + $int30));
 	$int35 = calc($int29 / $int34);
 	$int36 = calc($int29 % $int34);
+	if ($int36 > 0) {
+		$int37 = calc($int35 + 1);
+	} else {
+		$int37, $int36 = $int35, $int34;
+	}
+} else {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component15);
+	if_sethide(true, $component16);
 }
 $int17 = 0;
 def_int $int38 = 0;
@@ -215,7 +227,7 @@ if ($int37 > $int33) {
 	if_setscrollsize(0, $int43, $component14);
 	~scrollbar_resize($component16, $component14, if_getscrolly($component14));
 }
-~clan_stonebutton_init("<col=ff0000>Cancel</col>", interface_288:12, "p12_full");
+~clan_stonebutton_init("<col=ff981f>Cancel</col>", interface_288:12, "p12_full");
 if_setonop("script4208(^max_32bit_int, interface_288:1, interface_288:2, interface_288:3, $component0)", interface_288:12);
 ~clan_stonebutton_init("<col=0dc10d>Save</col>", interface_288:13, "p12_full");
 if_setonop("script4208(%varcint459, interface_288:1, interface_288:2, interface_288:3, $component0)", interface_288:13);

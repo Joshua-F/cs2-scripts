@@ -1,0 +1,61 @@
+// 2245
+[proc,script2245](struct $struct0, int $int1, int $int2)(string)
+def_int $int3 = 0;
+switch_int ($int2) {
+	case 0 :
+		return(tostring(~script3236($struct0)));
+	case 9 :
+		return(tostring(~bool_to_int(struct_param($struct0, param_1297))));
+	case 10 :
+		$int3 = struct_param($struct0, param_611);
+		if ($int3 < 0) {
+			return("**********");
+		}
+		return(tostring($int3));
+	case 2 :
+		$int3 = $int1;
+		if ($int3 < 0) {
+			return("**********");
+		}
+		return(tostring($int3));
+	case 3 :
+		$int3 = struct_param($struct0, param_612);
+		if ($int3 < 0) {
+			return("**********");
+		}
+		return(tostring($int3));
+	case 4 :
+		$int3 = struct_param($struct0, param_613);
+		if ($int3 < 0) {
+			return("**********");
+		}
+		return(tostring($int3));
+	case 5 :
+		$int3 = struct_param($struct0, param_615);
+		if ($int3 < 0) {
+			return("XXXXXXXXXXXX");
+		}
+		return(enum(int, string, enum_2097, $int3));
+	case 6 :
+		$int3 = struct_param($struct0, param_614);
+		if ($int3 < 0) {
+			return("**********");
+		}
+		return(enum(int, string, enum_2096, $int3));
+	case 7 :
+		return(tostring(calc(10000 + ~max(struct_param($struct0, param_656), struct_param($struct0, param_657)))));
+	case 8 :
+		$int3 = struct_param($struct0, param_1262);
+		if ($int3 < 2001) {
+			return("**********");
+		}
+		return(tostring($int3));
+	case 1 :
+		return(struct_param($struct0, param_579));
+	case 11 :
+		return("<tostring(struct_param($struct0, param_1159))><struct_param($struct0, param_579)>");
+	case 12 :
+		return(tostring(calc(10000 + struct_param($struct0, param_191))));
+	case default :
+		return("");
+}

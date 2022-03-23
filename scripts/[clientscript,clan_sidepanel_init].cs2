@@ -2,7 +2,7 @@
 [clientscript,clan_sidepanel_init](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 ~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~clan_sidepanel_draw($boolean0, $component2, $component3, $component4, $component5, $component6, $component7);
-if_setonvartransmit("clan_sidepanel_draw($boolean0, $component2, $component3, $component4, $component5, $component6, $component7){var3019, var1054}", $component1);
+if_setonvartransmit("clan_sidepanel_draw($boolean0, $component2, $component3, $component4, $component5, $component6, $component7){var3019, var1054, var1378}", $component1);
 if_setonclansettingstransmit("clan_sidepanel_draw($boolean0, $component2, $component3, $component4, $component5, $component6, $component7)", $component1);
 if_setonclanchanneltransmit("clan_sidepanel_draw($boolean0, $component2, $component3, $component4, $component5, $component6, $component7)", $component1);
 if_setonfriendtransmit("clan_sidepanel_draw($boolean0, $component2, $component3, $component4, $component5, $component6, $component7)", $component1);

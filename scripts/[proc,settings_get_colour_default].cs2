@@ -61,6 +61,14 @@ switch_int ($int0) {
 		return(struct_param(highlight_current_tile_colour_3649, param_1230));
 	case 180 :
 		return(struct_param(highlight_destination_tile_colour_3650, param_1230));
+	case 224 :
+		return(struct_param(unstarted_quest_text_colour_4157, param_1230));
+	case 225 :
+		return(struct_param(in_progress_quest_text_colour_4249, param_1230));
+	case 226 :
+		return(struct_param(completed_quest_text_colour_4250, param_1230));
+	case 227 :
+		return(struct_param(unavailable_quest_text_colour_4251, param_1230));
 	case default :
 		return(null);
 }

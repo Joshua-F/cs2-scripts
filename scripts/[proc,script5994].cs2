@@ -1,0 +1,54 @@
+// 5994
+[proc,script5994](struct $struct0, stat $stat1, int $int2, int $int3)(stat, int)
+if ($stat1 = null | $int2 <= 1) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_616)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_618)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_620)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_622)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_624)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_626)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_628)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_630)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_632)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_634)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_636)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_638)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_640)) {
+	return(null, 1);
+}
+if ($stat1 = struct_param($struct0, param_642)) {
+	return(null, 1);
+}
+if ($stat1 = agility & $int2 <= 50) {
+	return(null, 1);
+}
+if (($stat1 = attack | $stat1 = strength | $stat1 = defence | $stat1 = magic | $stat1 = ranged | $stat1 = hitpoints | $stat1 = prayer) & $int2 <= $int3) {
+	return(null, 1);
+}
+return($stat1, $int2);

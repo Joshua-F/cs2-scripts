@@ -1,0 +1,16 @@
+// 5980
+[clientscript,script5980](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)
+~script5981($int3, $int2, "Guardian's Power", interface_746:17, interface_746:7);
+def_string $string0 = ",";
+if_settext("Elemental<br>Energy: <~tostring_spacer($int0, $string0)>", interface_746:20);
+if_settext("Catalytic<br>Energy: <~tostring_spacer($int1, $string0)>", interface_746:23);
+if_settext("<tostring($int7)>/<tostring($int8)>", interface_746:29);
+if_setgraphic(enum(int, graphic, enum_4270, $int5), interface_746:19);
+if_setgraphic(enum(int, graphic, enum_4271, $int6), interface_746:22);
+def_string $string1 = enum(int, string, enum_4254, $int4);
+if (string_length($string1) <= 0) {
+	if_sethide(true, interface_746:25);
+} else {
+	if_sethide(false, interface_746:25);
+	if_settext($string1, interface_746:27);
+}

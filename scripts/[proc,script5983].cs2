@@ -1,0 +1,15 @@
+// 5983
+[proc,script5983](component $component0, int $width1)
+def_int $width2 = if_getwidth($component0);
+if ($width2 = $width1) {
+	if_setsize($width1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+	if_setontimer(null, $component0);
+	return;
+}
+if (if_getwidth($component0) = 0) {
+	if_setsize($width1, 0, ^setsize_abs, ^setsize_minus, $component0);
+} else if ($width2 < $width1) {
+	if_setsize(calc($width2 + 1), 0, ^setsize_abs, ^setsize_minus, $component0);
+} else if ($width2 > $width1) {
+	if_setsize(calc($width2 - 1), 0, ^setsize_abs, ^setsize_minus, $component0);
+}

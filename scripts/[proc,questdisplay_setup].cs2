@@ -1,26 +1,27 @@
 // 1412
-[proc,questdisplay_setup](int $int0, string $text0, string $string1, component $component1, int $count2, enum $enum3)(int)
-cc_deleteall($component1);
-if_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top, $component1);
-def_int $length4 = string_length($string1);
-if ($length4 < $count2) {
-	$count2 = $length4;
+[proc,questdisplay_setup](string $string0, component $component0, int $count1, enum $enum2)(int)
+def_int $int3 = 0;
+cc_deleteall($component0);
+if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+def_int $length4 = string_length($string0);
+if ($length4 < $count1) {
+	$count1 = $length4;
 }
-if ($count2 <= 0) {
-	if_setsize(0, 0, ^setsize_minus, ^setsize_abs, $component1);
-	return($int0);
+if ($count1 <= 0) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_abs, $component0);
+	return($int3);
 }
 def_int $int5 = 0;
-def_int $countarray0($count2);
+def_int $countarray0($count1);
 def_int $count6 = 0;
-while ($count6 < $count2) {
-	cc_create($component1, ^iftype_text, $count6);
+while ($count6 < $count1) {
+	cc_create($component0, ^iftype_text, $count6);
 	cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settext(~get_quest_name(enum(int, struct, $enum3, $count6)));
-	$int5 = string_indexof_string("<tostring(1)><tostring(0)><tostring(2)>", substring($string1, $count6, calc($count6 + 1)), 0);
+	cc_settext(~get_quest_name(enum(int, struct, $enum2, $count6)));
+	$int5 = string_indexof_string("<tostring(1)><tostring(0)><tostring(2)>", substring($string0, $count6, calc($count6 + 1)), 0);
 	if ($int5 = 0) {
 		cc_setcolour(^red);
 	} else if ($int5 = 1) {
@@ -31,24 +32,25 @@ while ($count6 < $count2) {
 	$countarray0($count6) = $count6;
 	$count6 = calc($count6 + 1);
 }
-if ($count2 > 1) {
-	~quicksort_questlist(countarray0, 0, calc($count2 - 1), $enum3);
+if ($count1 > 1) {
+	~quicksort_questlist(countarray0, 0, calc($count1 - 1), $enum2);
 }
-def_int $int7 = 25;
-$count6 = 0;
-while ($count6 < $count2) {
-	if (cc_find($component1, $countarray0($count6)) = ^true) {
-		cc_setposition(0, $int7, ^setpos_abs_centre, ^setpos_abs_top);
+def_int $count7 = 0;
+def_struct $struct8 = null;
+def_int $int9 = -10;
+def_int $int10 = -10;
+$int3 = -10;
+while ($count7 < $count1) {
+	$struct8 = enum(int, struct, $enum2, $countarray0($count7));
+	$int10 = ~script3236($struct8);
+	if ($int10 ! $int9) {
+		$count6, $int3 = ~script5998(~script3237($struct8), $count6, $int3, $component0);
+		$int9 = $int10;
 	}
-	$count6, $int7 = calc($count6 + 1), calc($int7 + 18);
+	if (cc_find($component0, $countarray0($count7)) = ^true) {
+		cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	$count7, $int3 = calc($count7 + 1), calc($int3 + 18);
 }
-cc_create($component1, ^iftype_text, $count6);
-cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setcolour(if_getcolour(interface_473:8));
-cc_settextfont(b12_full);
-cc_settextshadow(true);
-cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_settext($text0);
-if_setsize(0, $int7, ^setsize_minus, ^setsize_abs, $component1);
-return(calc($int0 + $int7 + 10));
+if_setsize(0, $int3, ^setsize_minus, ^setsize_abs, $component0);
+return(calc($int3 + 10));

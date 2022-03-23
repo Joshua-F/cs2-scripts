@@ -1340,7 +1340,7 @@
 [**1337**](scripts/[clientscript,light_puzzle_button_reset].cs2) `[clientscript,light_puzzle_button_reset]`  
 [**1338**](scripts/[clientscript,light_puzzle_update].cs2) `[clientscript,light_puzzle_update]`  
 [**1339**](scripts/[proc,light_puzzle_update].cs2) `[proc,light_puzzle_update]`  
-[**1340**](scripts/[proc,quest_f2p_count].cs2) `[proc,quest_f2p_count]`  
+[**1340**](scripts/[clientscript,script1340].cs2)  
 [**1341**](scripts/[proc,quicksort_componenttext].cs2) `[proc,quicksort_componenttext]`  
 [**1342**](scripts/[proc,quicksort_componentenum].cs2) `[proc,quicksort_componentenum]`  
 [**1343**](scripts/[clientscript,script1343].cs2)  
@@ -1351,10 +1351,10 @@
 [**1348**](scripts/[proc,settings_buff_ward_of_arceuus].cs2) `[proc,settings_buff_ward_of_arceuus]`  
 [**1349**](scripts/[proc,settings_buff_resurrection].cs2) `[proc,settings_buff_resurrection]`  
 [**1350**](scripts/[clientscript,questlist_init].cs2) `[clientscript,questlist_init]`  
-[**1351**](scripts/[proc,questlist_sectioninit].cs2) `[proc,questlist_sectioninit]`  
+[**1351**](scripts/[proc,script1351].cs2)  
 [**1352**](scripts/[proc,questlist_sort].cs2) `[proc,questlist_sort]`  
-[**1353**](scripts/[clientscript,questlist_showprogress].cs2) `[clientscript,questlist_showprogress]`  
-[**1354**](scripts/[proc,questlist_showprogress].cs2) `[proc,questlist_showprogress]`  
+[**1353**](scripts/[proc,script1353].cs2)  
+[**1354**](scripts/[proc,script1354].cs2)  
 [**1355**](scripts/[clientscript,questlist_qp].cs2) `[clientscript,questlist_qp]`  
 [**1356**](scripts/[proc,questlist_qp].cs2) `[proc,questlist_qp]`  
 [**1357**](scripts/[clientscript,mesoverlay_exit].cs2) `[clientscript,mesoverlay_exit]`  
@@ -1411,7 +1411,7 @@
 [**1408**](scripts/[clientscript,champions_log].cs2) `[clientscript,champions_log]`  
 [**1409**](scripts/[proc,champions_log_build].cs2) `[proc,champions_log_build]`  
 [**1410**](scripts/[proc,inputstring_televertical].cs2) `[proc,inputstring_televertical]`  
-[**1411**](scripts/[clientscript,questdisplay].cs2) `[clientscript,questdisplay]`  
+[**1411**](scripts/[proc,script1411].cs2)  
 [**1412**](scripts/[proc,questdisplay_setup].cs2) `[proc,questdisplay_setup]`  
 [**1413**](scripts/[clientscript,script1413].cs2)  
 [**1414**](scripts/[proc,hp_hud_update_bar].cs2) `[proc,hp_hud_update_bar]`  
@@ -2245,7 +2245,7 @@
 [**2242**](scripts/[proc,script2242].cs2)  
 [**2243**](scripts/[proc,logout_layout_update].cs2) `[proc,logout_layout_update]`  
 [**2244**](scripts/[clientscript,logout_button_text].cs2) `[clientscript,logout_button_text]`  
-[**2245**](scripts/[proc,quest_members_count].cs2) `[proc,quest_members_count]`  
+[**2245**](scripts/[proc,script2245].cs2)  
 [**2246**](scripts/[proc,hp_bar_reset].cs2) `[proc,hp_bar_reset]`  
 [**2247**](scripts/[proc,macro_pinball_score].cs2) `[proc,macro_pinball_score]`  
 [**2248**](scripts/[proc,deadman_mode].cs2) `[proc,deadman_mode]`  
@@ -2265,7 +2265,7 @@
 [**2262**](scripts/[clientscript,magic_spellbook_init].cs2) `[clientscript,magic_spellbook_init]`  
 [**2263**](scripts/[proc,tutorial_progressbar_set].cs2) `[proc,tutorial_progressbar_set]`  
 [**2264**](scripts/[proc,worldmap_mobile_layout].cs2) `[proc,worldmap_mobile_layout]`  
-[**2265**](scripts/[proc,miniquest_count].cs2) `[proc,miniquest_count]`  
+[**2265**](scripts/[proc,script2265].cs2)  
 [**2266**](scripts/[proc,script2266].cs2)  
 [**2267**](scripts/[proc,script2267].cs2)  
 [**2268**](scripts/[clientscript,text_device].cs2) `[clientscript,text_device]`  
@@ -2796,7 +2796,6 @@
 [**2793**](scripts/[clientscript,orbs_toggle_spec_op].cs2) `[clientscript,orbs_toggle_spec_op]`  
 [**2794**](scripts/[clientscript,orbs_blocked_spec_op].cs2) `[clientscript,orbs_blocked_spec_op]`  
 [**2795**](scripts/[clientscript,itemsets_info_init].cs2) `[clientscript,itemsets_info_init]`  
-[**2796**](scripts/[clientscript,script2796].cs2)  
 [**2797**](scripts/[clientscript,journal_list_init].cs2) `[clientscript,journal_list_init]`  
 [**2798**](scripts/[clientscript,side_journal_switchtab_onop].cs2) `[clientscript,side_journal_switchtab_onop]`  
 [**2799**](scripts/[clientscript,side_journal_switchtab_ontransmit].cs2) `[clientscript,side_journal_switchtab_ontransmit]`  
@@ -3236,10 +3235,9 @@
 [**3233**](scripts/[worldmapelementmouserepeat,mapelement_645].cs2) `[worldmapelementmouserepeat,mapelement_645]`  
 [**3234**](scripts/[worldmapelementmouseleave,mapelement_645].cs2) `[worldmapelementmouseleave,mapelement_645]`  
 [**3235**](scripts/[proc,update_diary_entry_grey].cs2) `[proc,update_diary_entry_grey]`  
-[**3236**](scripts/[proc,questlist_f2p_progress_grey].cs2) `[proc,questlist_f2p_progress_grey]`  
-[**3237**](scripts/[proc,questlist_members_progress_grey].cs2) `[proc,questlist_members_progress_grey]`  
-[**3238**](scripts/[proc,questlist_miniquests_progress_grey].cs2) `[proc,questlist_miniquests_progress_grey]`  
-[**3239**](scripts/[proc,questlist_showprogress_grey].cs2) `[proc,questlist_showprogress_grey]`  
+[**3236**](scripts/[proc,script3236].cs2)  
+[**3237**](scripts/[proc,script3237].cs2)  
+[**3238**](scripts/[proc,script3238].cs2)  
 [**3240**](scripts/[clientscript,v2_stone_button_change_out].cs2) `[clientscript,v2_stone_button_change_out]`  
 [**3241**](scripts/[proc,v2_stone_button_change_out].cs2) `[proc,v2_stone_button_change_out]`  
 [**3242**](scripts/[clientscript,v2_stone_button_change_in].cs2) `[clientscript,v2_stone_button_change_in]`  
@@ -4025,12 +4023,12 @@
 [**4022**](scripts/[clientscript,boardgames_runesquares_update_grid].cs2) `[clientscript,boardgames_runesquares_update_grid]`  
 [**4023**](scripts/[clientscript,script4023].cs2)  
 [**4024**](scripts/[proc,quest_progress_get].cs2) `[proc,quest_progress_get]`  
-[**4025**](scripts/[proc,quest_f2p_index_status_get].cs2) `[proc,quest_f2p_index_status_get]`  
-[**4026**](scripts/[proc,quest_members_index_status_get].cs2) `[proc,quest_members_index_status_get]`  
-[**4027**](scripts/[proc,miniquest_index_status_get].cs2) `[proc,miniquest_index_status_get]`  
-[**4028**](scripts/[proc,quest_index_status_get].cs2) `[proc,quest_index_status_get]`  
+[**4025**](scripts/[proc,script4025].cs2)  
+[**4026**](scripts/[proc,script4026].cs2)  
+[**4027**](scripts/[proc,script4027].cs2)  
+[**4028**](scripts/[proc,script4028].cs2)  
 [**4029**](scripts/[proc,quest_status_get].cs2) `[proc,quest_status_get]`  
-[**4030**](scripts/[proc,quest_status_get_exceptions].cs2) `[proc,quest_status_get_exceptions]`  
+[**4030**](scripts/[clientscript,script4030].cs2)  
 [**4031**](scripts/[worldmapelementmouserepeat,mapelement_680].cs2) `[worldmapelementmouserepeat,mapelement_680]`  
 [**4032**](scripts/[worldmapelementmouseleave,mapelement_680].cs2) `[worldmapelementmouseleave,mapelement_680]`  
 [**4033**](scripts/[clientscript,warguild_defence_mini_highlight].cs2) `[clientscript,warguild_defence_mini_highlight]`  
@@ -4398,7 +4396,6 @@
 [**4395**](scripts/[clientscript,clan_sidepanel_init].cs2) `[clientscript,clan_sidepanel_init]`  
 [**4396**](scripts/[clientscript,clan_sidepanel_draw].cs2) `[clientscript,clan_sidepanel_draw]`  
 [**4397**](scripts/[proc,clan_sidepanel_draw].cs2) `[proc,clan_sidepanel_draw]`  
-[**4398**](scripts/[clientscript,clan_sidepanel_chatmute].cs2) `[clientscript,clan_sidepanel_chatmute]`  
 [**4399**](scripts/[proc,clan_sidepanel_drawchannel].cs2) `[proc,clan_sidepanel_drawchannel]`  
 [**4400**](scripts/[clientscript,clan_sidepanel_op].cs2) `[clientscript,clan_sidepanel_op]`  
 [**4401**](scripts/[proc,clan_sidepanel_op].cs2) `[proc,clan_sidepanel_op]`  
@@ -5743,6 +5740,7 @@
 [**5740**](scripts/[proc,script5740].cs2)  
 [**5741**](scripts/[proc,script5741].cs2)  
 [**5742**](scripts/[proc,script5742].cs2)  
+[**5743**](scripts/[proc,script5743].cs2)  
 [**5744**](scripts/[proc,script5744].cs2)  
 [**5745**](scripts/[clientscript,league_3_fragments_init].cs2) `[clientscript,league_3_fragments_init]`  
 [**5746**](scripts/[proc,league_3_fragments_draw_interface].cs2) `[proc,league_3_fragments_draw_interface]`  
@@ -5967,3 +5965,34 @@
 [**5965**](scripts/[proc,script5965].cs2)  
 [**5966**](scripts/[proc,script5966].cs2)  
 [**5967**](scripts/[clientscript,script5967].cs2)  
+[**5968**](scripts/[clientscript,script5968].cs2)  
+[**5969**](scripts/[proc,script5969].cs2)  
+[**5970**](scripts/[proc,script5970].cs2)  
+[**5971**](scripts/[proc,script5971].cs2)  
+[**5972**](scripts/[proc,script5972].cs2)  
+[**5973**](scripts/[proc,script5973].cs2)  
+[**5974**](scripts/[proc,script5974].cs2)  
+[**5975**](scripts/[proc,script5975].cs2)  
+[**5976**](scripts/[proc,script5976].cs2)  
+[**5977**](scripts/[proc,script5977].cs2)  
+[**5978**](scripts/[proc,script5978].cs2)  
+[**5979**](scripts/[clientscript,script5979].cs2)  
+[**5980**](scripts/[clientscript,script5980].cs2)  
+[**5981**](scripts/[proc,script5981].cs2)  
+[**5982**](scripts/[clientscript,script5982].cs2)  
+[**5983**](scripts/[proc,script5983].cs2)  
+[**5984**](scripts/[clientscript,script5984].cs2)  
+[**5985**](scripts/[clientscript,script5985].cs2)  
+[**5986**](scripts/[clientscript,script5986].cs2)  
+[**5987**](scripts/[clientscript,script5987].cs2)  
+[**5988**](scripts/[clientscript,script5988].cs2)  
+[**5989**](scripts/[proc,script5989].cs2)  
+[**5990**](scripts/[proc,script5990].cs2)  
+[**5991**](scripts/[proc,script5991].cs2)  
+[**5992**](scripts/[proc,script5992].cs2)  
+[**5993**](scripts/[proc,script5993].cs2)  
+[**5994**](scripts/[proc,script5994].cs2)  
+[**5995**](scripts/[proc,script5995].cs2)  
+[**5996**](scripts/[proc,script5996].cs2)  
+[**5997**](scripts/[clientscript,questdisplay].cs2) `[clientscript,questdisplay]`  
+[**5998**](scripts/[proc,script5998].cs2)  

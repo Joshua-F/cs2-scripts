@@ -1,0 +1,12 @@
+// 1354
+[proc,script1354](string $text0, int $int0, int $int1, component $component2)(int, int)
+cc_create($component2, ^iftype_text, $int0);
+cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, calc($int1 + 7), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settext($text0);
+$int0, $int1 = calc($int0 + 1), calc($int1 + 25);
+return($int0, $int1);
