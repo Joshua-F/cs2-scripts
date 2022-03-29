@@ -21,6 +21,8 @@ switch_obj ($obj0) {
 		return(obj_9556);
 	case vodka_2015 :
 		return(obj_9557);
+	case default :
+		return(dummy_vodka_9491);
 	case lime_chunks_2122, orange_chunks_2110, pineapple_chunks_2116 :
 		return(dummy_lemon_chunks_9498);
 	case toads_legs_2152 :
@@ -39,6 +41,4 @@ switch_obj ($obj0) {
 		return(dummy_cabbage_9505);
 	case potato_1942 :
 		return(dummy_potato_9506);
-	case default :
-		return(dummy_vodka_9491);
 }

@@ -116,6 +116,9 @@ if ($boolean10 = true) {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
 } else if (%varbit6718 = 1) {
 	switch_int (%varbit4070) {
+		case default :
+			$int21, $int22, $int24, $int23 = 7, 10, 0, 0;
+			if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 		case 1 :
 			$int21, $int22, $int24, $int23 = 4, 7, 20, 4;
 			if_setposition(2, 8, ^setpos_abs_centre, ^setpos_abs_top, $component0);
@@ -125,9 +128,6 @@ if ($boolean10 = true) {
 		case 3 :
 			$int21, $int22, $int24, $int23 = 5, 9, 16, 3;
 			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-		case default :
-			$int21, $int22, $int24, $int23 = 7, 10, 0, 0;
-			if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 	}
 	$height25 = calc($int22 * $int20 + ($int22 - 1) * $int23);
 } else {

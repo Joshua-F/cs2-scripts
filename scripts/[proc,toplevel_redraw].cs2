@@ -47,6 +47,9 @@ $component7 = enum(int, component, enum_1139, 2);
 $component9, $component7 = enum(component, component, $enum1, $component9), enum(component, component, $enum1, $component7);
 if ($component9 ! null & $component7 ! null) {
 	switch_int (%varbit8168) {
+		case default :
+			if_setop(1, "Character Summary", $component9);
+			if_setgraphic("sideicons_interface,30", $component7);
 		case 1 :
 			if_setop(1, "Quest List", $component9);
 			if_setgraphic("sideicons_interface,2", $component7);
@@ -62,9 +65,6 @@ if ($component9 ! null & $component7 ! null) {
 		case 5 :
 			if_setop(1, "Leagues", $component9);
 			if_setgraphic("sideicons_interface,35", $component7);
-		case default :
-			if_setop(1, "Character Summary", $component9);
-			if_setgraphic("sideicons_interface,30", $component7);
 	}
 }
 $component7 = enum(int, component, enum_1139, 6);

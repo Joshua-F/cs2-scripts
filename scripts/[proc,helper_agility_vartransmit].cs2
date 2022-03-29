@@ -1,6 +1,8 @@
 // 5719
 [proc,helper_agility_vartransmit](newvar $newvar0, loc $loc1, coord $coord2)
 switch_loc ($loc1) {
+	case default :
+		cc_setonvartransmit("helper_agility_vartransmit($newvar0, %varbit13135, %varbit13136, $loc1, $coord2){var3154}");
 	case stile_12982, stile_7527 :
 		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var969}");
 	case rocks_31758 :
@@ -51,6 +53,4 @@ switch_loc ($loc1) {
 		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var1190}");
 	case rocks_multi_40960, rope_multi_40962 :
 		cc_setonvartransmit("script5721($newvar0, $loc1, $coord2){var3154, var139, var2647}");
-	case default :
-		cc_setonvartransmit("helper_agility_vartransmit($newvar0, %varbit13135, %varbit13136, $loc1, $coord2){var3154}");
 }

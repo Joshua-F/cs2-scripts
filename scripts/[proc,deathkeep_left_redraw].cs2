@@ -46,6 +46,8 @@ while ($int25 < 50) {
 		switch_obj ($obj24) {
 			case burnt_fish_323, burnt_fish_343 :
 				$int9, $int10, $int11 = ~deathkeep_left_keepitem($obj23, inv_getnum(inv_584, $int25), $obj24, $int1, $int2, $int3, $int9, $int11);
+			case default :
+				$int18, $int19 = ~deathkeep_left_deleteditem($obj23, inv_getnum(inv_584, $int25), $int1, $int2, $int3, $int18);
 			case burnt_fish_367, burnt_fish_369 :
 				$int12, $int13, $int21 = ~deathkeep_left_graveitem($obj23, inv_getnum(inv_584, $int25), $obj24, calc(inv_getnum(inv_468, $int25) - 1), $int20, $int1, $int2, $int3, $int12);
 				$int22 = ~min($int20, calc($int22 + ~min($int20, $int21)));
@@ -53,8 +55,6 @@ while ($int25 < 50) {
 				$int16, $int17 = ~deathkeep_left_coinsitem($obj23, inv_getnum(inv_584, $int25), calc(inv_getnum(inv_468, $int25) - 1), $int1, $int2, $int3, $int16);
 			case jug_of_bad_wine_1991 :
 				$int14, $int15 = ~script1695($obj23, inv_getnum(inv_584, $int25), $int1, $int2, $int3, $int14);
-			case default :
-				$int18, $int19 = ~deathkeep_left_deleteditem($obj23, inv_getnum(inv_584, $int25), $int1, $int2, $int3, $int18);
 		}
 	}
 	$int25 = calc($int25 + 1);

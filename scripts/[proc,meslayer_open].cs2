@@ -7,6 +7,11 @@ if (~on_mobile = true) {
 	~mobile_chatbox_resize;
 	if_sethide(false, interface_162:39);
 	switch_int ($int0) {
+		case default :
+			if_sethide(false, interface_162:38);
+			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:38);
+			if_setsize(20, 20, ^setsize_minus, ^setsize_minus, interface_162:38);
+			if_setonclick("meslayer_keyboard_show", interface_162:38);
 		case 8, 10, 20 :
 			if_sethide(false, interface_162:38);
 			if_setposition(0, if_gety(interface_162:41), ^setpos_abs_centre, ^setpos_abs_top, interface_162:38);
@@ -20,11 +25,6 @@ if (~on_mobile = true) {
 		case 1 :
 			if_sethide(true, interface_162:38);
 			if_setonclick(null, interface_162:38);
-		case default :
-			if_sethide(false, interface_162:38);
-			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:38);
-			if_setsize(20, 20, ^setsize_minus, ^setsize_minus, interface_162:38);
-			if_setonclick("meslayer_keyboard_show", interface_162:38);
 	}
 	~script2526;
 } else {

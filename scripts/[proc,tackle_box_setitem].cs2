@@ -7,6 +7,11 @@ if (oc_stackable($obj0) = true) {
 	cc_setobject($obj0, $num1);
 }
 switch_int (%varbit11896) {
+	case default :
+		cc_setop(1, "Withdraw-1");
+		cc_setop(3, "Withdraw-5");
+		cc_setop(4, "Withdraw-X");
+		cc_setop(5, "Withdraw-All");
 	case 1 :
 		cc_setop(1, "Withdraw-5");
 		cc_setop(2, "Withdraw-1");
@@ -22,11 +27,6 @@ switch_int (%varbit11896) {
 		cc_setop(2, "Withdraw-1");
 		cc_setop(3, "Withdraw-5");
 		cc_setop(4, "Withdraw-X");
-	case default :
-		cc_setop(1, "Withdraw-1");
-		cc_setop(3, "Withdraw-5");
-		cc_setop(4, "Withdraw-X");
-		cc_setop(5, "Withdraw-All");
 }
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($obj0)></col>");

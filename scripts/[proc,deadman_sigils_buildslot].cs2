@@ -17,32 +17,32 @@ if ($struct1 ! null) {
 		case 1 :
 			cc_setcolour(^red);
 			switch_int ($int8) {
+				case default :
+					$graphic7 = "deadman_sigil_skulls,3";
 				case 2 :
 					$graphic7 = "deadman_sigil_skulls,4";
 				case 3 :
 					$graphic7 = "deadman_sigil_skulls,5";
-				case default :
-					$graphic7 = "deadman_sigil_skulls,3";
 			}
 		case 2 :
 			cc_setcolour(0x0070ff);
 			switch_int ($int8) {
+				case default :
+					$graphic7 = "deadman_sigil_skulls,0";
 				case 2 :
 					$graphic7 = "deadman_sigil_skulls,1";
 				case 3 :
 					$graphic7 = "deadman_sigil_skulls,2";
-				case default :
-					$graphic7 = "deadman_sigil_skulls,0";
 			}
 		case default :
 			cc_setcolour(^yellow);
 			switch_int ($int8) {
+				case default :
+					$graphic7 = "deadman_sigil_skulls,6";
 				case 2 :
 					$graphic7 = "deadman_sigil_skulls,7";
 				case 3 :
 					$graphic7 = "deadman_sigil_skulls,8";
-				case default :
-					$graphic7 = "deadman_sigil_skulls,6";
 			}
 	}
 } else {

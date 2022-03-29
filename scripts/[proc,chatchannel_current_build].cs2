@@ -16,6 +16,8 @@ switch_int (%varcint185) {
 	case 6 :
 		_3657(true);
 		switch_int (%varcint206) {
+			case default :
+				_3646(true);
 			case 3 :
 				_3646(false);
 			case 4 :
@@ -30,12 +32,12 @@ switch_int (%varcint185) {
 				_3648(true);
 			case 9 :
 				_3648(false);
-			case default :
-				_3646(true);
 		}
 	case 7 :
 		_3657(false);
 		switch_int (%varcint206) {
+			case default :
+				_3646(true);
 			case 3 :
 				_3646(false);
 			case 4 :
@@ -50,8 +52,6 @@ switch_int (%varcint185) {
 				_3648(true);
 			case 9 :
 				_3648(false);
-			case default :
-				_3646(true);
 		}
 	case 8 :
 		_3648(true);
@@ -61,6 +61,8 @@ switch_int (%varcint185) {
 		_3652(true);
 		_3647(true);
 		switch_int (%varcint206) {
+			case default :
+				_3646(true);
 			case 3 :
 				_3646(false);
 			case 6 :
@@ -73,13 +75,13 @@ switch_int (%varcint185) {
 				_3648(true);
 			case 9 :
 				_3648(false);
-			case default :
-				_3646(true);
 		}
 	case 5 :
 		_3652(true);
 		_3647(false);
 		switch_int (%varcint206) {
+			case default :
+				_3646(true);
 			case 3 :
 				_3646(false);
 			case 6 :
@@ -92,8 +94,6 @@ switch_int (%varcint185) {
 				_3648(true);
 			case 9 :
 				_3648(false);
-			case default :
-				_3646(true);
 		}
 }
 _3655;

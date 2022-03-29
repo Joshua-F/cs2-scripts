@@ -6,6 +6,11 @@ if ($obj0 ! null) {
 	cc_setobject($obj0, $num1);
 	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 120, 0)");
 	switch_int (%varbit7792) {
+		case default :
+			cc_setop(1, "Offer 1");
+			cc_setop(3, "Offer 5");
+			cc_setop(4, "Offer X");
+			cc_setop(5, "Offer All");
 		case 1 :
 			cc_setop(1, "Offer 5");
 			cc_setop(2, "Offer 1");
@@ -21,11 +26,6 @@ if ($obj0 ! null) {
 			cc_setop(2, "Offer 1");
 			cc_setop(3, "Offer 5");
 			cc_setop(4, "Offer X");
-		case default :
-			cc_setop(1, "Offer 1");
-			cc_setop(3, "Offer 5");
-			cc_setop(4, "Offer X");
-			cc_setop(5, "Offer All");
 	}
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");

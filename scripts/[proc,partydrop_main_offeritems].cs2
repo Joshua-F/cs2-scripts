@@ -13,6 +13,11 @@ while ($int9 > 0) {
 			cc_sethide(false);
 			cc_setobject($obj8, inv_getnum(inv_92, $int9));
 			switch_int (%varbit7792) {
+				case default :
+					cc_setop(1, "Withdraw 1");
+					cc_setop(3, "Withdraw 5");
+					cc_setop(4, "Withdraw X");
+					cc_setop(5, "Withdraw All");
 				case 1 :
 					cc_setop(1, "Withdraw 5");
 					cc_setop(2, "Withdraw 1");
@@ -28,11 +33,6 @@ while ($int9 > 0) {
 					cc_setop(2, "Withdraw 1");
 					cc_setop(3, "Withdraw 5");
 					cc_setop(4, "Withdraw X");
-				case default :
-					cc_setop(1, "Withdraw 1");
-					cc_setop(3, "Withdraw 5");
-					cc_setop(4, "Withdraw X");
-					cc_setop(5, "Withdraw All");
 			}
 			cc_setop(10, "Examine");
 			cc_setopbase("<col=ff9040><oc_name($obj8)></col>");
@@ -53,6 +53,11 @@ if ($int7 = 1) {
 }
 if_setontimer(null, $component6);
 switch_int (%varbit7792) {
+	case default :
+		~partydrop_main_quantitybutton(true, null, $component2, "1");
+		~partydrop_main_quantitybutton(false, false, $component3, "5");
+		~partydrop_main_quantitybutton(false, false, $component4, "X");
+		~partydrop_main_quantitybutton(false, false, $component5, "All");
 	case 1 :
 		~partydrop_main_quantitybutton(false, false, $component2, "1");
 		~partydrop_main_quantitybutton(true, null, $component3, "5");
@@ -68,9 +73,4 @@ switch_int (%varbit7792) {
 		~partydrop_main_quantitybutton(false, false, $component3, "5");
 		~partydrop_main_quantitybutton(false, false, $component4, "X");
 		~partydrop_main_quantitybutton(true, null, $component5, "All");
-	case default :
-		~partydrop_main_quantitybutton(true, null, $component2, "1");
-		~partydrop_main_quantitybutton(false, false, $component3, "5");
-		~partydrop_main_quantitybutton(false, false, $component4, "X");
-		~partydrop_main_quantitybutton(false, false, $component5, "All");
 }

@@ -55,18 +55,18 @@ if ($obj6 ! null) {
 			if_setontimer(null, $component2);
 			~death_coffer_activebutton($component3, "X", $component5);
 			~death_coffer_activebutton($component4, "All", $component5);
-		case ^max_32bit_int :
-			~death_coffer_activebutton($component1, "1", $component5);
-			~death_coffer_activebutton($component2, "5", $component5);
-			~death_coffer_activebutton($component3, "X", $component5);
-			~death_coffer_inactivebutton($component4, "All", 1, $component5);
-			if_setontimer(null, $component4);
 		case default :
 			~death_coffer_activebutton($component1, "1", $component5);
 			~death_coffer_activebutton($component2, "5", $component5);
 			~death_coffer_inactivebutton($component3, "X", 1, $component5);
 			if_setontimer(null, $component3);
 			~death_coffer_activebutton($component4, "All", $component5);
+		case ^max_32bit_int :
+			~death_coffer_activebutton($component1, "1", $component5);
+			~death_coffer_activebutton($component2, "5", $component5);
+			~death_coffer_activebutton($component3, "X", $component5);
+			~death_coffer_inactivebutton($component4, "All", 1, $component5);
+			if_setontimer(null, $component4);
 	}
 } else {
 	cc_settext("Select an item...");

@@ -141,6 +141,8 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 			$int14 = calc($int14 + $int21);
 		}
 		switch_int (%varbit12177) {
+			case default :
+				~clan_members_showrank($component7, $int11, $int12);
 			case 1 :
 				~clan_members_showjoined($component7, $int11, $int12);
 			case 2 :
@@ -153,10 +155,10 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				~script4261($component7, $int11, $int12);
 			case 6 :
 				~script4262($component7, $int11, $int12);
-			case default :
-				~clan_members_showrank($component7, $int11, $int12);
 		}
 		switch_int (calc((%varbit12178 + 1) % enum_getoutputcount(enum_3793))) {
+			case default :
+				~clan_members_showrank($component9, $int11, $int12);
 			case 1 :
 				~clan_members_showjoined($component9, $int11, $int12);
 			case 2 :
@@ -169,8 +171,6 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				~script4261($component9, $int11, $int12);
 			case 6 :
 				~script4262($component9, $int11, $int12);
-			case default :
-				~clan_members_showrank($component9, $int11, $int12);
 		}
 	} else {
 		cc_create($component3, ^iftype_text, 0);
