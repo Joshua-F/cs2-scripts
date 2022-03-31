@@ -2796,6 +2796,7 @@
 [**2793**](scripts/[clientscript,orbs_toggle_spec_op].cs2) `[clientscript,orbs_toggle_spec_op]`  
 [**2794**](scripts/[clientscript,orbs_blocked_spec_op].cs2) `[clientscript,orbs_blocked_spec_op]`  
 [**2795**](scripts/[clientscript,itemsets_info_init].cs2) `[clientscript,itemsets_info_init]`  
+[**2796**](scripts/[clientscript,script2796].cs2)  
 [**2797**](scripts/[clientscript,journal_list_init].cs2) `[clientscript,journal_list_init]`  
 [**2798**](scripts/[clientscript,side_journal_switchtab_onop].cs2) `[clientscript,side_journal_switchtab_onop]`  
 [**2799**](scripts/[clientscript,side_journal_switchtab_ontransmit].cs2) `[clientscript,side_journal_switchtab_ontransmit]`  
@@ -3238,6 +3239,7 @@
 [**3236**](scripts/[proc,script3236].cs2)  
 [**3237**](scripts/[proc,script3237].cs2)  
 [**3238**](scripts/[proc,script3238].cs2)  
+[**3239**](scripts/[clientscript,script3239].cs2)  
 [**3240**](scripts/[clientscript,v2_stone_button_change_out].cs2) `[clientscript,v2_stone_button_change_out]`  
 [**3241**](scripts/[proc,v2_stone_button_change_out].cs2) `[proc,v2_stone_button_change_out]`  
 [**3242**](scripts/[clientscript,v2_stone_button_change_in].cs2) `[clientscript,v2_stone_button_change_in]`  

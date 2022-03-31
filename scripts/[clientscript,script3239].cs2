@@ -1,0 +1,10 @@
+// 3239
+[clientscript,script3239](int $int0, string $string0)
+$int0 = calc($int0 - clientclock);
+if ($int0 <= 0) {
+	if_setontimer(null, interface_746:26);
+	return;
+}
+def_int $int1 = calc($int0 / 50);
+$string0 = append($string0, " - <~script4159($int1, 1)>");
+if_settext($string0, interface_746:28);
