@@ -1,6 +1,6 @@
 // 3963
-[proc,settings_get_keybind](int $int0)(int)
-switch_int ($int0) {
+[proc,settings_get_keybind](int $setting0)(int)
+switch_int ($setting0) {
 	case 16 :
 		return(enum(int, int, enum_1161, %varbit4675));
 	case 17 :

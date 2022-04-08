@@ -1,9 +1,9 @@
 // 3849
-[clientscript,settings_toggle_transmit](component $component0, int $int1, boolean $boolean2, int $int3, int $trans4, struct $struct5)
+[clientscript,settings_toggle_transmit](component $component0, int $int1, boolean $boolean2, int $setting3, int $trans4, struct $struct5)
 def_int $int6 = ~script3957($struct5);
 def_int $int7 = 0;
 if (cc_find($component0, $int1) = ^true) {
-	$int7 = ~settings_get_toggle($int3);
+	$int7 = ~settings_get_toggle($setting3);
 	if ($boolean2 = true) {
 		$int7 = calc(1 - $int7);
 	}

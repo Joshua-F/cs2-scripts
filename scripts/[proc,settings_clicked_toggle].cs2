@@ -1,28 +1,28 @@
 // 3965
-[proc,settings_clicked_toggle](int $int0)
-%varbit9657 = $int0;
-switch_int ($int0) {
-	case 7 :
+[proc,settings_clicked_toggle](int $setting0)
+%varbit9657 = $setting0;
+switch_int ($setting0) {
+	case ^setting_toggle_roof :
 		~settings_toggle_roof;
-	case 33 :
+	case ^setting_music_unlock_message :
 		~settings_music_unlock_message;
-	case 5 :
+	case ^setting_hitsplat_tinting :
 		~settings_hitsplat_tinting;
-	case 9 :
+	case ^setting_wiki_lookup :
 		~settings_wiki_lookup;
-	case 8 :
+	case ^setting_data_orbs :
 		~settings_data_orbs;
-	case 2 :
+	case ^setting_resizable_transparent_side_panel :
 		~settings_resizable_transparent_side_panel;
 	case 3 :
 		~script3977;
 	case 4 :
 		~script3978;
-	case 6 :
+	case ^setting_special_attack_bar_tooltip :
 		~settings_special_attack_bar_tooltip;
-	case 10 :
+	case ^setting_boss_health_overlay :
 		~settings_boss_health_overlay;
-	case 111 :
+	case ^setting_standard_health_overlay :
 		~settings_standard_health_overlay;
 	case 11 :
 		~script3981;
@@ -30,27 +30,27 @@ switch_int ($int0) {
 		~script3982;
 	case 34 :
 		~settings_show_chat_effects;
-	case 35 :
+	case ^setting_split_private_chat :
 		~settings_split_private_chat;
-	case 36 :
+	case ^setting_hide_private_chat :
 		~settings_hide_private_chat;
-	case 37 :
+	case ^setting_profanity_filter :
 		~settings_profanity_filter;
-	case 38 :
+	case ^setting_loot_drop_notification :
 		~settings_loot_drop_notification;
-	case 40 :
+	case ^setting_untradeable_loot_notification :
 		~settings_untradeable_loot_notification;
 	case 41 :
 		~script4017;
-	case 42 :
+	case ^setting_drop_item_warnings :
 		~settings_drop_item_warnings;
 	case 46 :
 		~script3988;
-	case 47 :
+	case ^setting_store_button_mobile :
 		~settings_store_button_mobile;
-	case 181 :
+	case ^setting_store_button_desktop :
 		~settings_store_button_desktop;
-	case 49 :
+	case ^setting_mouse_camera :
 		~settings_mouse_camera;
 	case 50 :
 		~script3991;
@@ -58,67 +58,67 @@ switch_int ($int0) {
 		~script3992;
 	case 48 :
 		~script3993;
-	case 52 :
+	case ^setting_function_button :
 		~settings_function_button;
 	case 54 :
 		~script3995;
-	case 57 :
+	case ^setting_escape_closes_interface :
 		~settings_escape_closes_interface;
-	case 59 :
+	case ^setting_accept_aid :
 		~settings_accept_aid;
-	case 60 :
+	case ^setting_warning_teleport_to_target :
 		~settings_warning_teleport_to_target;
-	case 61 :
+	case ^setting_warning_dareeyak_teleport :
 		~settings_warning_dareeyak_teleport;
-	case 62 :
+	case ^setting_warning_carrallangar_teleport :
 		~settings_warning_carrallangar_teleport;
-	case 63 :
+	case ^setting_warning_annakarl_teleport :
 		~settings_warning_annakarl_teleport;
-	case 64 :
+	case ^setting_warning_ghorrock_teleport :
 		~settings_warning_ghorrock_teleport;
 	case 65 :
 		~script4009;
-	case 67 :
+	case ^setting_warning_ice_plateau_tablet :
 		~settings_warning_ice_plateau_tablet;
-	case 68 :
+	case ^setting_warning_cemetery_tablet :
 		~settings_warning_cemetery_tablet;
-	case 69 :
+	case ^setting_warning_crabs_tablet :
 		~settings_warning_crabs_tablet;
-	case 70 :
+	case ^setting_warning_dareeyak_tablet :
 		~settings_warning_dareeyak_tablet;
-	case 71 :
+	case ^setting_warning_carrallangar_tablet :
 		~settings_warning_carrallangar_tablet;
-	case 72 :
+	case ^setting_warning_annakarl_tablet :
 		~settings_warning_annakarl_tablet;
-	case 73 :
+	case ^setting_warning_ghorrock_tablet :
 		~settings_warning_ghorrock_tablet;
 	case 182 :
 		%varbit13039 = calc(1 - %varbit13039);
 	case 183 :
 		%varbit13040 = calc(1 - %varbit13040);
-	case 82 :
+	case ^setting_precise_timing :
 		~settings_precise_timing;
-	case 83 :
+	case ^setting_separate_hours :
 		~settings_separate_hours;
 	case 84 :
 		~script4036;
-	case 192 :
+	case ^setting_gravestone_confirmation :
 		~settings_gravestone_confirmation;
 	case 112 :
 		~script4760;
-	case 114 :
+	case ^setting_mouseover_tooltips :
 		~settings_mouseover_tooltips;
 	case 209 :
 		~script5518;
-	case 147 :
+	case ^setting_mouseover_text :
 		~settings_mouseover_text;
-	case 115 :
+	case ^setting_antidrag :
 		~settings_antidrag;
-	case 116 :
+	case ^setting_regen_indicator :
 		~settings_regen_indicator;
-	case 118 :
+	case ^setting_helper_cox :
 		~settings_helper_cox;
-	case 163 :
+	case ^setting_helper_agility :
 		~settings_helper_agility;
 	case 120 :
 		~script4587;
@@ -126,55 +126,55 @@ switch_int ($int0) {
 		~script4588;
 	case 122 :
 		~script4589;
-	case 123 :
+	case ^setting_attack_style :
 		~settings_attack_style;
-	case 125 :
+	case ^setting_buff_home_teleport :
 		~settings_buff_home_teleport;
-	case 126 :
+	case ^setting_buff_minigame_teleport :
 		~settings_buff_minigame_teleport;
-	case 124 :
+	case ^setting_buff_bar :
 		~settings_buff_bar;
-	case 127 :
+	case ^setting_buff_leagues :
 		~settings_buff_leagues;
-	case 128 :
+	case ^setting_buff_bar_tooltip :
 		~settings_buff_bar_tooltip;
-	case 129 :
+	case ^setting_buff_teleblock :
 		~settings_buff_teleblock;
-	case 130 :
+	case ^setting_buff_charge_spell :
 		~settings_buff_charge_spell;
-	case 131 :
+	case ^setting_buff_godwars_altar :
 		~settings_buff_godwars_altar;
-	case 132 :
+	case ^setting_buff_dragonfire_shield_cooldown :
 		~settings_buff_dragonfire_shield_cooldown;
-	case 133 :
+	case ^setting_buff_imbued_heart_cooldown :
 		~settings_buff_imbued_heart_cooldown;
-	case 134 :
+	case ^setting_buff_vengeance_cooldown :
 		~settings_buff_vengeance_cooldown;
-	case 135 :
+	case ^setting_buff_vengeance_active :
 		~settings_buff_vengeance_active;
-	case 136 :
+	case ^setting_buff_stamina_duration :
 		~settings_buff_stamina_duration;
-	case 137 :
+	case ^setting_buff_prayer_enhance_duration :
 		~settings_buff_prayer_enhance_duration;
-	case 138 :
+	case ^setting_buff_overload_duration :
 		~settings_buff_overload_duration;
-	case 139 :
+	case ^setting_buff_magic_imbue_duration :
 		~settings_buff_magic_imbue_duration;
-	case 140 :
+	case ^setting_buff_sire_stun_duration :
 		~settings_buff_sire_stun_duration;
-	case 141 :
+	case ^setting_buff_freeze_duration :
 		~settings_buff_freeze_duration;
-	case 142 :
+	case ^setting_buff_sotd_duration :
 		~settings_buff_sotd_duration;
-	case 143 :
+	case ^setting_buff_divine_potion_duration :
 		~settings_buff_divine_potion_duration;
-	case 144 :
+	case ^setting_buff_antifire_duration :
 		~settings_buff_antifire_duration;
-	case 145 :
+	case ^setting_buff_antipoison_duration :
 		~settings_buff_antipoison_duration;
 	case 208 :
 		~script5519;
-	case 146 :
+	case ^setting_always_on_top :
 		~settings_always_on_top;
 	case 148 :
 		~script4612;
@@ -182,25 +182,25 @@ switch_int ($int0) {
 		~script4613;
 	case 151 :
 		~script4614;
-	case 152 :
+	case ^setting_buff_corruption :
 		~settings_buff_corruption;
-	case 153 :
+	case ^setting_buff_mark_of_darkness :
 		~settings_buff_mark_of_darkness;
-	case 154 :
+	case ^setting_buff_shadow_veil :
 		~settings_buff_shadow_veil;
-	case 155 :
+	case ^setting_buff_death_charge :
 		~settings_buff_death_charge;
-	case 156 :
+	case ^setting_buff_ward_of_arceuus :
 		~settings_buff_ward_of_arceuus;
-	case 157 :
+	case ^setting_buff_resurrection :
 		~settings_buff_resurrection;
 	case 161 :
 		~script2390;
 	case 159 :
 		~script2509;
-	case 170 :
+	case ^setting_buff_ammo :
 		~settings_buff_ammo;
-	case 164 :
+	case ^setting_helper_agility_highlight_obstacles :
 		~settings_helper_agility_highlight_obstacles;
 	case 172 :
 		~script5200;
@@ -214,25 +214,25 @@ switch_int ($int0) {
 		~script5207;
 	case 179 :
 		~script5213;
-	case 166 :
+	case ^setting_minimap_lock :
 		~settings_minimap_lock;
 	case 85 :
 		~script5188;
 	case 171 :
 		~script5189;
-	case 184 :
+	case ^setting_helper_slayer :
 		~settings_helper_slayer;
-	case 185 :
+	case ^setting_logout_notifier :
 		~settings_logout_notifier;
-	case 186 :
+	case ^setting_buff_poison_damage :
 		~settings_buff_poison_damage;
-	case 189 :
+	case ^setting_bird_nest_notification :
 		~settings_bird_nest_notification;
 	case 190 :
 		~script5352;
 	case 212 :
 		~script5948;
-	case 191 :
+	case ^setting_popout_xptracker :
 		~settings_popout_xptracker;
 	case 201 :
 		if (~is_group_iron = 1) {
@@ -264,7 +264,7 @@ switch_int ($int0) {
 		~script5521;
 	case 205 :
 		~script5522;
-	case 213 :
+	case ^setting_buff_cannon_ammo :
 		~settings_buff_cannon_ammo;
 	case 217 :
 		~script5973;

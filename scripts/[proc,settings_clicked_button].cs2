@@ -1,7 +1,7 @@
 // 3969
-[proc,settings_clicked_button](int $int0)
-%varbit9657 = $int0;
-switch_int ($int0) {
+[proc,settings_clicked_button](int $setting0)
+%varbit9657 = $setting0;
+switch_int ($setting0) {
 	case default :
 		return;
 }

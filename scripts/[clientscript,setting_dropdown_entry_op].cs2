@@ -1,15 +1,15 @@
 // 3852
-[clientscript,setting_dropdown_entry_op](int $int0, string $text0, int $comsubid1, int $count2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, enum $enum9, int $int10, int $comsubid11, boolean $boolean12)
+[clientscript,setting_dropdown_entry_op](int $int0, string $text0, int $comsubid1, int $count2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, enum $enum9, int $setting10, int $comsubid11, boolean $boolean12)
 ~settings_op_sound(1);
 if (cc_find($component3, $comsubid1) = ^true) {
 	cc_settext($text0);
 	if ($boolean12 = false) {
 		if ($int0 = 2) {
-			~settings_set_dropdown($int10, $count2);
+			~settings_set_dropdown($setting10, $count2);
 		} else {
-			~settings_set_keybind($int10, $count2);
+			~settings_set_keybind($setting10, $count2);
 		}
-		cc_setontimer("setting_dropdown_synch(0, $comsubid1, $component3, $enum9, $int10, $int0)");
+		cc_setontimer("setting_dropdown_synch(0, $comsubid1, $component3, $enum9, $setting10, $int0)");
 	}
 }
 if (cc_find($component3, $comsubid11) = ^true) {

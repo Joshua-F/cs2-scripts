@@ -98,8 +98,8 @@ if ($int25 = 1) {
 }
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-def_int $int27 = struct_param($struct5, param_1077);
-cc_settext(enum(int, string, $enum15, ~settings_get_dropdown($int27)));
+def_int $setting27 = struct_param($struct5, param_1077);
+cc_settext(enum(int, string, $enum15, ~settings_get_dropdown($setting27)));
 cc_create($component6, ^iftype_rectangle, $int3);
 $int3 = calc($int3 + 1);
 cc_setsize($int18, 20, ^setsize_abs, ^setsize_abs);
@@ -116,7 +116,7 @@ cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
 if ($boolean24 = true) {
-	~settings_dropdown_choose_transmit(2, $struct5, calc($int2 - 1), calc($int2 - 6), $int2, $component7, $enum15, $int27, $component8, $component9, $component10, $component11, $component13);
+	~settings_dropdown_choose_transmit(2, $struct5, calc($int2 - 1), calc($int2 - 6), $int2, $component7, $enum15, $setting27, $component8, $component9, $component10, $component11, $component13);
 }
 if ($int25 = 1 & ~on_mobile = false) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");

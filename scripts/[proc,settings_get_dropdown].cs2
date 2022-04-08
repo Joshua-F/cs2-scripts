@@ -1,8 +1,8 @@
 // 3962
-[proc,settings_get_dropdown](int $int0)(int)
+[proc,settings_get_dropdown](int $setting0)(int)
 def_int $windowmode1 = 0;
-switch_int ($int0) {
-	case 1 :
+switch_int ($setting0) {
+	case ^setting_chatbox_scrollbar_pos :
 		return(%varbit6374);
 	case 55 :
 		return(%var1107);
@@ -12,7 +12,7 @@ switch_int ($int0) {
 		return(%varbit6255);
 	case 86 :
 		return(%varbit12135);
-	case 12 :
+	case ^setting_windowmode :
 		$windowmode1 = getwindowmode;
 		if ($windowmode1 = ^windowmode_fixed) {
 			return(0);
@@ -33,11 +33,11 @@ switch_int ($int0) {
 		return(~script4576);
 	case 150 :
 		return(%varbit12375);
-	case 169 :
+	case ^setting_interface_scaling_mode :
 		return(getpreference(^pref_ui_scaling_mode));
-	case 187 :
+	case ^setting_ore_respawn_timer :
 		return(%varbit13085);
-	case 188 :
+	case ^setting_woodcutting_respawn_timer :
 		return(%varbit13086);
 	case 165 :
 		return(%varbit13135);

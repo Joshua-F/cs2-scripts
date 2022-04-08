@@ -1,6 +1,6 @@
 // 4743
 [proc,script4743]
-def_int $colour0 = ~script5329(113);
+def_int $colour0 = ~script5329(^setting_tile_highlight_colour_colour);
 if (%varbit12342 = 0 & ~on_enhanced_desktop = 1) {
 	_7035(6, $colour0, 2, 50, 90);
 	_6708(1, "Mark tile", 4762);

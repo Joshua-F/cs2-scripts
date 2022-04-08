@@ -19,7 +19,7 @@ if (~on_mobile = true | $count18 = 2) {
 def_int $int21 = 0;
 def_int $trans22 = 220;
 def_string $text0 = "";
-def_int $int23 = struct_param($struct1, param_1077);
+def_int $setting23 = struct_param($struct1, param_1077);
 while ($count17 < $count18) {
 	cc_create($component11, ^iftype_rectangle, $int19);
 	cc_setsize(0, $int20, ^setsize_minus, ^setsize_abs);
@@ -49,7 +49,7 @@ while ($count17 < $count18) {
 	cc_setcolour(^black);
 	cc_settrans(255);
 	cc_setop(1, "Select");
-	cc_setonop("setting_dropdown_entry_op($int0, $text0, $comsubid3, $count17, $component2, $component9, $component10, $component11, $component12, $component14, $enum4, $int23, $comsubid15, $boolean16)");
+	cc_setonop("setting_dropdown_entry_op($int0, $text0, $comsubid3, $count17, $component2, $component9, $component10, $component11, $component12, $component14, $enum4, $setting23, $comsubid15, $boolean16)");
 	$int19 = calc($int19 + 1);
 	$int21 = calc($int21 + $int20);
 	$count17 = calc($count17 + 1);

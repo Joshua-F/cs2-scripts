@@ -1,52 +1,52 @@
 // 3881
-[proc,settings_toggle_choose_transmit](component $component0, int $int1, boolean $boolean2, int $int3, struct $struct4, int $trans5)
-switch_int ($int3) {
-	case 13, 54, 9, 11, 2, 46 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1055, var2855}");
-	case 33 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var19}");
-	case 38, 59 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var427}");
-	case 40 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1053, var427}");
-	case 42 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var284}");
-	case 57 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1224}");
-	case 36 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var287, var1055}");
+[proc,settings_toggle_choose_transmit](component $component0, int $int1, boolean $boolean2, int $setting3, struct $struct4, int $trans5)
+switch_int ($setting3) {
+	case 13, 54, ^setting_wiki_lookup, 11, ^setting_resizable_transparent_side_panel, 46 :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1055, var2855}");
+	case ^setting_music_unlock_message :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var19}");
+	case ^setting_loot_drop_notification, ^setting_accept_aid :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var427}");
+	case ^setting_untradeable_loot_notification :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1053, var427}");
+	case ^setting_drop_item_warnings :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var284}");
+	case ^setting_escape_closes_interface :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1224}");
+	case ^setting_hide_private_chat :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var287, var1055}");
 	case 48 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var170}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var170}");
 	case 51 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1055}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1055}");
 	case 65 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1348}");
-	case 60, 64, 63, 62, 61 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1429}");
-	case 67, 68, 69, 70, 71, 72, 73 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var2768}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1348}");
+	case ^setting_warning_teleport_to_target, ^setting_warning_ghorrock_teleport, ^setting_warning_annakarl_teleport, ^setting_warning_carrallangar_teleport, ^setting_warning_dareeyak_teleport :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1429}");
+	case ^setting_warning_ice_plateau_tablet, ^setting_warning_cemetery_tablet, ^setting_warning_crabs_tablet, ^setting_warning_dareeyak_tablet, ^setting_warning_carrallangar_tablet, ^setting_warning_annakarl_tablet, ^setting_warning_ghorrock_tablet :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var2768}");
 	case 84 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1795}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1795}");
 	case 112, 121, 122 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var2856}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var2856}");
 	case 209 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var2856}");
-	case 116 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1055, var2855, var2856}");
-	case 127 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1734}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var2856}");
+	case ^setting_regen_indicator :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1055, var2855, var2856}");
+	case ^setting_buff_leagues :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1734}");
 	case 182, 183 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var1734}");
-	case 7 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var3074}");
-	case 192 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var2675}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1734}");
+	case ^setting_toggle_roof :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var3074}");
+	case ^setting_gravestone_confirmation :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var2675}");
 	case 210 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var3154}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var3154}");
 	case 206 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var3075}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var3075}");
 	case 205 :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var3075}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var3075}");
 	case default :
-		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $int3, $trans5, $struct4){var2855}");
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var2855}");
 }

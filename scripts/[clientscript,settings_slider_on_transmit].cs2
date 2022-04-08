@@ -1,7 +1,7 @@
 // 3863
-[clientscript,settings_slider_on_transmit](struct $struct0, int $int1, int $int2, int $int3, int $int4, component $component5, int $comsubid6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, string $string0, int $int12, enum $enum13, boolean $boolean14)
+[clientscript,settings_slider_on_transmit](struct $struct0, int $setting1, int $int2, int $int3, int $int4, component $component5, int $comsubid6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, string $string0, int $int12, enum $enum13, boolean $boolean14)
 def_int $int15 = ~script3957($struct0);
-def_int $int16 = ~settings_get_slider($int1);
+def_int $int16 = ~settings_get_slider($setting1);
 def_string $string1 = "";
 if (cc_find($component5, $comsubid6) = ^true) {
 	if ($int16 = 0) {
@@ -23,7 +23,7 @@ if (cc_find($component5, $comsubid6) = ^true) {
 }
 if (cc_find($component10, $comsubid11) = ^true) {
 	if (struct_param($struct0, param_1158) = true) {
-		$string1 = ~script2364($int1);
+		$string1 = ~script2364($setting1);
 	}
 	cc_settext(append($string0, $string1));
 	if ($int15 = 1) {

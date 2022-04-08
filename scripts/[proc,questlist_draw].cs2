@@ -80,7 +80,7 @@ while ($count17 < $count8) {
 		if (cc_find($component4, $int18) = ^true) {
 			cc_sethide(false);
 			cc_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top);
-			~script4027($struct14, $int15, $int20, $int21);
+			~questlist_setcolour($struct14, $int15, $int20, $int21);
 			$int19 = calc($int19 + 1);
 			$int12 = cc_getheight;
 		}

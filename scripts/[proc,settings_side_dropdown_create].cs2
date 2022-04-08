@@ -8,7 +8,7 @@ def_enum $enum8 = struct_param($struct7, param_1091);
 if (~on_mobile = true & struct_param($struct7, param_1092) ! null) {
 	$enum8 = struct_param($struct7, param_1092);
 }
-def_int $int9 = struct_param($struct7, param_1077);
+def_int $setting9 = struct_param($struct7, param_1077);
 if ($enum8 = null) {
 	return;
 }
@@ -19,7 +19,7 @@ cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setgraphic("tradebacking");
 cc_settiling(true);
-cc_setonclick("settings_side_dropdown_open($component0, $component1, $component2, $component3, $component4, $component5, $layer6, $enum8, $int9)");
+cc_setonclick("settings_side_dropdown_open($component0, $component1, $component2, $component3, $component4, $component5, $layer6, $enum8, $setting9)");
 cc_create($component0, ^iftype_rectangle, $int10);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
@@ -43,7 +43,7 @@ cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-~settings_side_dropdown_update($component0, $enum8, $int9);
+~settings_side_dropdown_update($component0, $enum8, $setting9);
 cc_create($component0, ^iftype_text, $int10);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_minus);
@@ -54,13 +54,13 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settext("<$string0>:");
 ~xpdrops_setup_display_hoveroff($component0);
-switch_int ($int9) {
+switch_int ($setting9) {
 	case 45 :
-		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){var1734}", $component0);
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $setting9){var1734}", $component0);
 	case 55 :
-		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){var1107}", $component0);
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $setting9){var1107}", $component0);
 	case 56 :
-		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){var1306}", $component0);
-	case 12 :
-		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){var2855}", $component0);
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $setting9){var1306}", $component0);
+	case ^setting_windowmode :
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $setting9){var2855}", $component0);
 }

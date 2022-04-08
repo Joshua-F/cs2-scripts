@@ -17,30 +17,30 @@ def_int $count5 = 0;
 def_int $count6 = enum_getoutputcount($enum2);
 def_int $int7 = 0;
 def_int $int8 = -1;
-def_int $int9 = -1;
+def_int $setting9 = null;
 def_int $int10 = 0;
 def_int $int11 = 0;
 while ($count5 < $count6) {
 	$struct4 = enum(int, struct, $enum2, $count5);
 	if ($struct4 ! null) {
 		$int8 = struct_param($struct4, param_1078);
-		$int9 = struct_param($struct4, param_1077);
+		$setting9 = struct_param($struct4, param_1077);
 		$int11 = enum(int, int, $enum3, $count5);
 		if (struct_param($struct4, param_1080) ! null & ~script3958($struct4, 0) = 0) {
 			return(0);
 		}
 		if (struct_param($struct4, param_1082) ! null & ~script3958($struct4, 1) = 0) {
 			return(0);
-		} else if ($int9 ! 0) {
+		} else if ($setting9 ! 0) {
 			switch_int ($int8) {
 				case 0 :
-					$int7 = ~settings_get_toggle($int9);
+					$int7 = ~settings_get_toggle($setting9);
 				case 1 :
-					$int7 = ~settings_get_slider($int9);
+					$int7 = ~settings_get_slider($setting9);
 				case 2 :
-					$int7 = ~settings_get_dropdown($int9);
+					$int7 = ~settings_get_dropdown($setting9);
 				case 3 :
-					$int7 = ~settings_get_keybind($int9);
+					$int7 = ~settings_get_keybind($setting9);
 			}
 			if ($int1 = 0) {
 				if ($int11 = $int7) {

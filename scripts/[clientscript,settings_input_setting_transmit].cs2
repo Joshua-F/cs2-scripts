@@ -1,5 +1,5 @@
 // 3858
-[clientscript,settings_input_setting_transmit](struct $struct0, int $int1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5, int $comsubid6)
+[clientscript,settings_input_setting_transmit](struct $struct0, int $setting1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5, int $comsubid6)
 def_int $int7 = ~script3957($struct0);
 def_string $string0 = ",";
 def_int $int8 = 0;
@@ -9,7 +9,7 @@ if (cc_find($component5, $comsubid2) = ^true) {
 	} else {
 		cc_setcolour(0x9f9f9f);
 	}
-	$int8 = ~settings_get_number_input($int1);
+	$int8 = ~settings_get_number_input($setting1);
 	if ($int8 > 1) {
 		cc_settext("<~tostring_spacer($int8, $string0)> <struct_param($struct0, param_1112)>");
 	} else if ($int8 = 0) {
@@ -34,7 +34,7 @@ if (cc_find($component5, $comsubid3) = ^true) {
 		cc_setonmouseleave(null);
 	}
 }
-if (%varbit9647 = 1 & %varbit9657 = $int1 & cc_find($component5, $comsubid6) = ^true) {
+if (%varbit9647 = 1 & %varbit9657 = $setting1 & cc_find($component5, $comsubid6) = ^true) {
 	cc_setcolour(^white);
 	cc_setontimer("settings_input_timer($component5, $comsubid6)");
 }

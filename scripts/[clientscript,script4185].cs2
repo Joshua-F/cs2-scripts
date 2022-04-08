@@ -16,16 +16,16 @@ def_int $int5 = 0;
 def_int $int6 = enum_getoutputcount($enum3);
 def_int $int7 = 0;
 def_int $int8 = 0;
-def_int $int9 = 0;
+def_int $setting9 = 0;
 def_int $int10 = 0;
 def_string $string0 = "#";
 while ($int5 < $int6) {
 	$struct4 = enum(int, struct, $enum3, $int5);
 	if ($struct4 ! null) {
 		$int8 = struct_param($struct4, param_1078);
-		$int9 = struct_param($struct4, param_1077);
+		$setting9 = struct_param($struct4, param_1077);
 		if ($int8 = 9) {
-			if ($int9 = %varbit9657) {
+			if ($setting9 = %varbit9657) {
 				$int6 = $int5;
 			} else {
 				$int7 = calc($int7 + 1);

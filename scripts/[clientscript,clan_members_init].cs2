@@ -10,10 +10,10 @@ if (~clan_members_searching = 1) {
 } else if (%varcint5 <= 0) {
 	%varcstring359 = "";
 }
-~script4224($component13, $component15, $component0, $component1, $comsubid19, $component3, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
-~script4224($component16, $component18, $component0, $component1, $comsubid19, $component3, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~clan_members_header_init($component13, $component15, $component0, $component1, $comsubid19, $component3, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~clan_members_header_init($component16, $component18, $component0, $component1, $comsubid19, $component3, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
 if_setnoclickthrough(true, $component8);
-if_setonclick("script4227($component8, $component13, $component16)", $component8);
+if_setonclick("clan_members_header_close($component8, $component13, $component16)", $component8);
 ~clan_members_draw($component0, $component1, $comsubid19, $component6, $component7, $component12, $component13, $component14, $component16, $component17);
 if_setonvartransmit("clan_members_draw($component0, $component1, $comsubid19, $component6, $component7, $component12, $component13, $component14, $component16, $component17){var3019, var3021}", $component0);
 if_setonclansettingstransmit("clan_members_draw($component0, $component1, $comsubid19, $component6, $component7, $component12, $component13, $component14, $component16, $component17)", $component0);

@@ -1,8 +1,8 @@
 // 527
-[proc,settings_colour_input_update](component $component0, int $int1, struct $struct2, int $int3, component $component4, int $int5)
+[proc,settings_colour_input_update](component $component0, int $int1, struct $struct2, int $setting3, component $component4, int $int5)
 def_int $colour6 = struct_param($struct2, param_1230);
-if (~settings_get_colour($int3) ! null) {
-	$colour6 = ~settings_get_colour($int3);
+if (~settings_get_colour($setting3) ! null) {
+	$colour6 = ~settings_get_colour($setting3);
 }
 def_int $int7 = ~script3957($struct2);
 if (cc_find($component0, $int1) = ^true) {

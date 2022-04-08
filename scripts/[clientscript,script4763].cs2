@@ -1,10 +1,10 @@
 // 4763
-[clientscript,script4763](component $component0, int $int1, struct $struct2, int $int3, component $component4, int $int5)
+[clientscript,script4763](component $component0, int $int1, struct $struct2, int $setting3, component $component4, int $int5)
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-def_int $colour6 = ~script5329(113);
-~settings_colour_input_update($component0, $int1, $struct2, $int3, $component4, $int5);
+def_int $colour6 = ~script5329(^setting_tile_highlight_colour_colour);
+~settings_colour_input_update($component0, $int1, $struct2, $setting3, $component4, $int5);
 if (%varbit12342 = 0) {
 	_7035(6, $colour6, 2, 50, 90);
 } else {

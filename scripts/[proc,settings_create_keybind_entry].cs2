@@ -102,8 +102,8 @@ if ($int30 = 1) {
 }
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-def_int $int32 = struct_param($struct5, param_1077);
-cc_settext(enum(int, string, $enum16, ~settings_get_keybind($int32)));
+def_int $setting32 = struct_param($struct5, param_1077);
+cc_settext(enum(int, string, $enum16, ~settings_get_keybind($setting32)));
 cc_create($component6, ^iftype_rectangle, $int3);
 $int3 = calc($int3 + 1);
 cc_setsize($int25, 20, ^setsize_abs, ^setsize_abs);
@@ -125,7 +125,7 @@ cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
 if ($boolean29 = true) {
-	~settings_dropdown_choose_transmit(3, $struct5, calc($int2 - 1), calc($int2 - 6), $int2, $component7, $enum16, $int32, $component8, $component9, $component10, $component11, $component13);
+	~settings_dropdown_choose_transmit(3, $struct5, calc($int2 - 1), calc($int2 - 6), $int2, $component7, $enum16, $setting32, $component8, $component9, $component10, $component11, $component13);
 }
 if ($int30 = 1 & $boolean17 = false) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");

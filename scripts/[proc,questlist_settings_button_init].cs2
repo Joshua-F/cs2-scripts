@@ -1,5 +1,5 @@
 // 5996
-[proc,script5996](component $component0)
+[proc,questlist_settings_button_init](component $component0)
 def_int $comsubid1 = ~v2_stone_button_filled($component0);
 cc_create($component0, ^iftype_graphic, $comsubid1);
 cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);

@@ -1,5 +1,5 @@
 // 3168
-[proc,script3168](int $int0, component $component1, component $component2, int $int3, component $component4, component $component5, component $component6, int $height7)
+[proc,gim_options_setsize](int $int0, component $component1, component $component2, int $int3, component $component4, component $component5, component $component6, int $height7)
 def_int $int8 = 54;
 def_int $int9 = ~min(calc($height7 - 10), calc($int8 + $int0));
 if_setsize(if_getwidth($component6), $int9, ^setsize_abs, ^setsize_abs, $component6);
@@ -22,4 +22,4 @@ if ($int3 > $int10) {
 	if_setscrollsize(0, 0, $component4);
 	~scrollbar_resize($component5, $component4, 0);
 }
-if_setontimer("script3199($int0, $component1, $component2, $int3, $component4, $component5, $component6, $height7)", if_getlayer($component6));
+if_setontimer("gim_options_checksize($int0, $component1, $component2, $int3, $component4, $component5, $component6, $height7)", if_getlayer($component6));

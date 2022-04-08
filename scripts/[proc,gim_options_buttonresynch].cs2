@@ -1,5 +1,5 @@
 // 4681
-[proc,script4681](component $component0, int $int1, int $comsubid2, int $comsubid3, int $int4, struct $struct5)
+[proc,gim_options_buttonresynch](component $component0, int $int1, int $comsubid2, int $comsubid3, int $int4, struct $struct5)
 def_int $int6 = 0;
 def_int $int7 = -1;
 def_int $int8 = 0;
@@ -93,11 +93,11 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 			cc_settrans(245);
 		}
 		if (~on_mobile = false) {
-			.cc_setonmouserepeat("script4682(true, event_com, event_comsubid, $int1, 245, 225)");
+			.cc_setonmouserepeat("gim_options_buttonhover(true, event_com, event_comsubid, $int1, 245, 225)");
 		}
-		.cc_setonmouseleave("script4682(false, event_com, event_comsubid, $int1, 245, 225)");
+		.cc_setonmouseleave("gim_options_buttonhover(false, event_com, event_comsubid, $int1, 245, 225)");
 		.cc_setontimer(null);
-		.cc_setonop("script4683(event_opindex, event_com, event_comsubid, $int1, 200, 245, 225)");
+		.cc_setonop("gim_options_buttonop(event_opindex, event_com, event_comsubid, $int1, 200, 245, 225)");
 		return;
 	}
 }

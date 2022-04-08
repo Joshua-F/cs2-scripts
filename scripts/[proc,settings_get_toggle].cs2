@@ -1,27 +1,27 @@
 // 3960
-[proc,settings_get_toggle](int $int0)(int)
-switch_int ($int0) {
-	case 7 :
+[proc,settings_get_toggle](int $setting0)(int)
+switch_int ($setting0) {
+	case ^setting_toggle_roof :
 		return(%varbit12378);
-	case 33 :
+	case ^setting_music_unlock_message :
 		return(%varbit10078);
-	case 5 :
+	case ^setting_hitsplat_tinting :
 		return(%varbit10236);
-	case 9 :
+	case ^setting_wiki_lookup :
 		return(%varbit10113);
-	case 8 :
+	case ^setting_data_orbs :
 		return(%varbit4084);
-	case 2 :
+	case ^setting_resizable_transparent_side_panel :
 		return(%varbit4609);
 	case 3 :
 		return(%varbit4181);
 	case 4 :
 		return(%varbit5711);
-	case 6 :
+	case ^setting_special_attack_bar_tooltip :
 		return(%varbit5712);
-	case 10 :
+	case ^setting_boss_health_overlay :
 		return(%varbit12389);
-	case 111 :
+	case ^setting_standard_health_overlay :
 		return(%varbit12390);
 	case 11 :
 		return(%varbit4608);
@@ -31,27 +31,27 @@ switch_int ($int0) {
 		return(%varbit13133);
 	case 34 :
 		return(%var171);
-	case 35 :
+	case ^setting_split_private_chat :
 		return(%var287);
-	case 36 :
+	case ^setting_hide_private_chat :
 		return(%varbit4089);
-	case 37 :
+	case ^setting_profanity_filter :
 		return(%var1074);
-	case 38 :
+	case ^setting_loot_drop_notification :
 		return(%varbit5399);
-	case 40 :
+	case ^setting_untradeable_loot_notification :
 		return(%varbit5402);
 	case 41 :
 		return(%varbit4930);
-	case 42 :
+	case ^setting_drop_item_warnings :
 		return(%varbit5411);
 	case 46 :
 		return(%varbit2570);
-	case 47 :
+	case ^setting_store_button_mobile :
 		return(%varbit13036);
-	case 181 :
+	case ^setting_store_button_desktop :
 		return(%varbit13037);
-	case 49 :
+	case ^setting_mouse_camera :
 		return(%varbit4134);
 	case 50 :
 		return(%varbit5599);
@@ -59,65 +59,65 @@ switch_int ($int0) {
 		return(%varbit5542);
 	case 48 :
 		return(%var170);
-	case 52 :
+	case ^setting_function_button :
 		return(%varbit6257);
 	case 54 :
 		return(%varbit4611);
-	case 57 :
+	case ^setting_escape_closes_interface :
 		return(%varbit4681);
-	case 59 :
+	case ^setting_accept_aid :
 		return(%varbit4180);
-	case 60 :
+	case ^setting_warning_teleport_to_target :
 		return(%varbit236);
-	case 61 :
+	case ^setting_warning_dareeyak_teleport :
 		return(%varbit6284);
-	case 62 :
+	case ^setting_warning_carrallangar_teleport :
 		return(%varbit6285);
-	case 63 :
+	case ^setting_warning_annakarl_teleport :
 		return(%varbit6286);
-	case 64 :
+	case ^setting_warning_ghorrock_teleport :
 		return(%varbit6287);
 	case 65 :
 		return(%varbit6092);
-	case 67 :
+	case ^setting_warning_ice_plateau_tablet :
 		return(%varbit2323);
-	case 68 :
+	case ^setting_warning_cemetery_tablet :
 		return(%varbit2322);
-	case 69 :
+	case ^setting_warning_crabs_tablet :
 		return(%varbit3932);
-	case 70 :
+	case ^setting_warning_dareeyak_tablet :
 		return(%varbit3930);
-	case 71 :
+	case ^setting_warning_carrallangar_tablet :
 		return(%varbit2325);
-	case 72 :
+	case ^setting_warning_annakarl_tablet :
 		return(%varbit2324);
-	case 73 :
+	case ^setting_warning_ghorrock_tablet :
 		return(%varbit3931);
 	case 182 :
 		return(%varbit13039);
 	case 183 :
 		return(%varbit13040);
-	case 82 :
+	case ^setting_precise_timing :
 		return(%varbit11866);
-	case 83 :
+	case ^setting_separate_hours :
 		return(%varbit11890);
 	case 84 :
 		return(%varbit11893);
 	case 112 :
 		return(%varbit12342);
-	case 114 :
+	case ^setting_mouseover_tooltips :
 		return(%varbit12344);
-	case 147 :
+	case ^setting_mouseover_text :
 		return(%varbit12377);
-	case 115 :
+	case ^setting_antidrag :
 		return(%varbit12345);
-	case 116 :
+	case ^setting_regen_indicator :
 		return(%varbit12346);
-	case 118 :
+	case ^setting_helper_cox :
 		return(%varbit12347);
-	case 163 :
+	case ^setting_helper_agility :
 		return(%varbit12379);
-	case 164 :
+	case ^setting_helper_agility_highlight_obstacles :
 		return(%varbit12380);
 	case 120 :
 		return(%varbit12349);
@@ -125,55 +125,55 @@ switch_int ($int0) {
 		return(%varbit12350);
 	case 122 :
 		return(%varbit12351);
-	case 123 :
+	case ^setting_attack_style :
 		return(%varbit12352);
-	case 125 :
+	case ^setting_buff_home_teleport :
 		return(%varbit12353);
-	case 126 :
+	case ^setting_buff_minigame_teleport :
 		return(%varbit12354);
-	case 124 :
+	case ^setting_buff_bar :
 		return(%varbit9528);
-	case 127 :
+	case ^setting_buff_leagues :
 		return(%varbit12383);
-	case 128 :
+	case ^setting_buff_bar_tooltip :
 		return(%varbit9529);
-	case 129 :
+	case ^setting_buff_teleblock :
 		return(%varbit12355);
-	case 130 :
+	case ^setting_buff_charge_spell :
 		return(%varbit12356);
-	case 131 :
+	case ^setting_buff_godwars_altar :
 		return(%varbit12357);
-	case 132 :
+	case ^setting_buff_dragonfire_shield_cooldown :
 		return(%varbit12358);
-	case 133 :
+	case ^setting_buff_imbued_heart_cooldown :
 		return(%varbit12359);
-	case 134 :
+	case ^setting_buff_vengeance_cooldown :
 		return(%varbit12360);
-	case 135 :
+	case ^setting_buff_vengeance_active :
 		return(%varbit12361);
-	case 136 :
+	case ^setting_buff_stamina_duration :
 		return(%varbit12362);
-	case 137 :
+	case ^setting_buff_prayer_enhance_duration :
 		return(%varbit12363);
-	case 138 :
+	case ^setting_buff_overload_duration :
 		return(%varbit12364);
-	case 139 :
+	case ^setting_buff_magic_imbue_duration :
 		return(%varbit12365);
-	case 140 :
+	case ^setting_buff_sire_stun_duration :
 		return(%varbit12366);
-	case 141 :
+	case ^setting_buff_freeze_duration :
 		return(%varbit12367);
-	case 142 :
+	case ^setting_buff_sotd_duration :
 		return(%varbit12368);
-	case 143 :
+	case ^setting_buff_divine_potion_duration :
 		return(%varbit12369);
-	case 144 :
+	case ^setting_buff_antifire_duration :
 		return(%varbit12370);
-	case 145 :
+	case ^setting_buff_antipoison_duration :
 		return(%varbit12371);
 	case 208 :
 		return(%varbit13134);
-	case 146 :
+	case ^setting_always_on_top :
 		return(%varbit12372);
 	case 148 :
 		return(%varbit12373);
@@ -181,17 +181,17 @@ switch_int ($int0) {
 		return(%varbit12374);
 	case 151 :
 		return(%varbit12376);
-	case 152 :
+	case ^setting_buff_corruption :
 		return(%varbit12405);
-	case 153 :
+	case ^setting_buff_mark_of_darkness :
 		return(%varbit12406);
-	case 154 :
+	case ^setting_buff_shadow_veil :
 		return(%varbit12407);
-	case 155 :
+	case ^setting_buff_death_charge :
 		return(%varbit12408);
-	case 156 :
+	case ^setting_buff_ward_of_arceuus :
 		return(%varbit12409);
-	case 157 :
+	case ^setting_buff_resurrection :
 		return(%varbit12410);
 	case 161 :
 		return(%varbit12454);
@@ -204,7 +204,7 @@ switch_int ($int0) {
 			return(%varbit12457);
 		}
 		return(0);
-	case 170 :
+	case ^setting_buff_ammo :
 		return(%varbit12985);
 	case 85 :
 		return(testbit(%varbit11959, 0));
@@ -222,23 +222,23 @@ switch_int ($int0) {
 		return(%varbit12981);
 	case 179 :
 		return(%varbit12982);
-	case 166 :
+	case ^setting_minimap_lock :
 		return(%varbit12983);
-	case 184 :
+	case ^setting_helper_slayer :
 		return(%varbit13082);
-	case 185 :
+	case ^setting_logout_notifier :
 		return(%varbit13083);
-	case 186 :
+	case ^setting_buff_poison_damage :
 		return(%varbit13084);
-	case 189 :
+	case ^setting_bird_nest_notification :
 		return(%varbit13087);
 	case 190 :
 		return(%varbit13088);
 	case 212 :
 		return(%varbit13666);
-	case 191 :
+	case ^setting_popout_xptracker :
 		return(%varbit13089);
-	case 192 :
+	case ^setting_gravestone_confirmation :
 		return(%varbit13113);
 	case 195 :
 		return(%varbit13120);
@@ -259,7 +259,7 @@ switch_int ($int0) {
 		return(%varbit13131);
 	case 205 :
 		return(%varbit13130);
-	case 213 :
+	case ^setting_buff_cannon_ammo :
 		return(%varbit13667);
 	case 217 :
 		return(%varbit13776);

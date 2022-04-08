@@ -19,7 +19,7 @@ $int1 = calc($int1 + $int10);
 if ($boolean12 = true | $int11 = 1) {
 	$int10 = 0;
 }
-def_int $int13 = struct_param($struct5, param_1077);
+def_int $setting13 = struct_param($struct5, param_1077);
 def_boolean $boolean14 = struct_param($struct5, param_1085);
 def_int $int15 = ~script3957($struct5);
 def_boolean $boolean16 = struct_param($struct5, param_1084);
@@ -33,7 +33,7 @@ cc_setsize(10, $int18, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setfill(true);
 cc_setop(1, "Toggle");
-cc_setonop("settings_toggle_op($struct5, $int13, $component7, calc($int2 + 2), $boolean16, $boolean14)");
+cc_setonop("settings_toggle_op($struct5, $setting13, $component7, calc($int2 + 2), $boolean16, $boolean14)");
 cc_setcolour(^white);
 cc_settrans(255);
 $int3 = calc($int3 + 1);
@@ -44,7 +44,7 @@ cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans($trans4);
 if ($boolean14 = true) {
-	~settings_toggle_choose_transmit($component7, calc($int2 + 2), $boolean16, $int13, $struct5, $trans4);
+	~settings_toggle_choose_transmit($component7, calc($int2 + 2), $boolean16, $setting13, $struct5, $trans4);
 }
 if ($boolean9 = false & $int15 = 1) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 240, null)");
@@ -71,7 +71,7 @@ $int2 = calc($int2 + 1);
 cc_create($component7, ^iftype_graphic, $int2);
 cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int0 + ($int18 / 2 - 9)), ^setpos_abs_right, ^setpos_abs_top);
-def_int $int19 = ~settings_get_toggle($int13);
+def_int $int19 = ~settings_get_toggle($setting13);
 if ($boolean16 = true) {
 	$int19 = calc(1 - $int19);
 }

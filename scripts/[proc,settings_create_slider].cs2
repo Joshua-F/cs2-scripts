@@ -28,7 +28,7 @@ def_int $intarray0($int19);
 if ($enum20 ! null) {
 	$int17 = calc($int17 + 22);
 }
-def_int $int21 = struct_param($struct6, param_1077);
+def_int $setting21 = struct_param($struct6, param_1077);
 def_boolean $boolean22 = struct_param($struct6, param_1085);
 def_int $int23 = ~script3957($struct6);
 def_int $int24 = 0;
@@ -42,7 +42,7 @@ def_int $comsubid25 = $int2;
 $int2 = calc($int2 + 1);
 def_string $string2 = "";
 if (struct_param($struct6, param_1158) = true) {
-	$string2 = ~script2364($int21);
+	$string2 = ~script2364($setting21);
 }
 cc_create($component8, ^iftype_text, $int2);
 def_int $int26 = $int2;
@@ -107,7 +107,7 @@ while ($int29 < $int19) {
 	}
 	$int29 = calc($int29 + 1);
 }
-def_int $int36 = ~settings_get_slider($int21);
+def_int $int36 = ~settings_get_slider($setting21);
 def_boolean $boolean37 = struct_param($struct6, param_1108);
 cc_create($component7, ^iftype_graphic, $int3);
 $int3 = calc($int3 + 1);
@@ -130,14 +130,14 @@ if (struct_param($struct6, param_1107) = false) {
 		cc_setposition(calc($int33 + scale($int36 * 2, ($int18 - 1) * 2, $int35 - 16)), $int32, ^setpos_abs_left, ^setpos_abs_top);
 	}
 } else {
-	~script3888($int21, $component7, calc($int3 - 1), $int35, $int32, $int33);
+	~script3888($setting21, $component7, calc($int3 - 1), $int35, $int32, $int33);
 }
 if ($boolean37 = true) {
 	cc_setdraggable($component10, -1);
 	cc_setdragdeadzone(struct_param($struct6, param_1109));
 	cc_setdragdeadtime(struct_param($struct6, param_1110));
-	~settings_slider_choose_ondrag($int21, $component7, calc($int3 - 1), $int35, $int32, $int33);
-	~settings_slider_choose_ondragcomplete($int21, $component7, calc($int3 - 1), $int35, $int32, $int33);
+	~settings_slider_choose_ondrag($setting21, $component7, calc($int3 - 1), $int35, $int32, $int33);
+	~settings_slider_choose_ondragcomplete($setting21, $component7, calc($int3 - 1), $int35, $int32, $int33);
 }
 $int29 = 0;
 $int30 = $int33;
@@ -155,9 +155,9 @@ while ($int29 < $int18) {
 		$int2 = calc($int2 + 1);
 	}
 	if ($boolean40 = false) {
-		cc_setonop("settings_slider_op($struct6, $int21, $int29, $int18, $int35, $component7, calc($int3 - 1), $int32, $int33, $int34, $component8, $comsubid25, $int26, $string0, $boolean22)");
+		cc_setonop("settings_slider_op($struct6, $setting21, $int29, $int18, $int35, $component7, calc($int3 - 1), $int32, $int33, $int34, $component8, $comsubid25, $int26, $string0, $boolean22)");
 	} else {
-		~settings_slider_choose_onop($int21, $component7, calc($int3 - 1), $int35, $int32, $int33, $component10, $int26, $string0);
+		~settings_slider_choose_onop($setting21, $component7, calc($int3 - 1), $int35, $int32, $int33, $component10, $int26, $string0);
 	}
 	cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
 	if ($int18 > 1) {
@@ -192,7 +192,7 @@ if ($enum20 ! null) {
 	}
 }
 if ($boolean22 = true) {
-	~settings_slider_choose_transmit($struct6, $int21, $int18, $int19, $int35, $component7, calc($int3 - 1), $int32, $int33, $int34, $component8, $int26, $string0, $int43, $enum20, $boolean37);
+	~settings_slider_choose_transmit($struct6, $setting21, $int18, $int19, $int35, $component7, calc($int3 - 1), $int32, $int33, $int34, $component8, $int26, $string0, $int43, $enum20, $boolean37);
 }
 if ($boolean15 = false & $int14 = 0 & $int13 > 0) {
 	cc_create($component8, ^iftype_text, $int2);

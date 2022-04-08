@@ -2,9 +2,9 @@
 [clientscript,questlist_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 ~questlist_qp($component4);
 if_setonvartransmit("questlist_qp($component4){var101, var904, var3368, var3369}", $component4);
-~script5995($component5);
-if_setonvartransmit("script4030($component5){var904, var2920, var3365}", $component5);
+~questlist_completed($component5);
+if_setonvartransmit("questlist_completed($component5){var904, var2920, var3365}", $component5);
 cc_deleteall($component0);
 ~steelbox($component0, 0, 0);
 ~questlist_draw($component0, $component1, $component2, $component3, $component6, false);
-~script5996($component7);
+~questlist_settings_button_init($component7);

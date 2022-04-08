@@ -1,17 +1,17 @@
 // 3961
-[proc,settings_get_slider](int $int0)(int)
-switch_int ($int0) {
-	case 30 :
+[proc,settings_get_slider](int $setting0)(int)
+switch_int ($setting0) {
+	case ^setting_volumemusic :
 		return(calc(%var168 / 5));
-	case 31 :
+	case ^setting_volumesounds :
 		return(calc(%var169 / 5));
-	case 32 :
+	case ^setting_volumeareasounds :
 		return(calc(%var872 / 5));
-	case 15 :
+	case ^setting_brightness :
 		return(calc(%var166 / 5));
-	case 79 :
+	case ^setting_interface_scaling :
 		return(%varbit11864);
-	case 168 :
+	case ^setting_draw_distance :
 		return(interpolate(0, struct_param(view_distance_3656, param_1101), 25, 90, getpreference(^pref_draw_distance)));
 	case default :
 		return(0);

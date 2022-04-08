@@ -1,7 +1,7 @@
 // 5329
-[proc,script5329](int $int0)(int)
-def_int $colour1 = ~settings_get_colour($int0);
+[proc,script5329](int $setting0)(int)
+def_int $colour1 = ~settings_get_colour($setting0);
 if ($colour1 = null | $colour1 < ^black) {
-	$colour1 = ~settings_get_colour_default($int0);
+	$colour1 = ~settings_get_colour_default($setting0);
 }
 return($colour1);

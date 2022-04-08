@@ -1,5 +1,5 @@
 // 4568
-[clientscript,settings_side_dropdown_open](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $layer6, enum $enum7, int $int8)
+[clientscript,settings_side_dropdown_open](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $layer6, enum $enum7, int $setting8)
 sound_synth(interface_select1, 1, 0);
 if_sethide(true, $component5);
 ~deltooltip_action($component5);
@@ -32,7 +32,7 @@ while ($count11 < $count12) {
 	cc_setop(1, "Select");
 	cc_setonmouseover("settings_side_dropdown_hover(true, event_com, event_comsubid, .cc_getid)");
 	cc_setonmouseleave("settings_side_dropdown_hover(false, event_com, event_comsubid, .cc_getid)");
-	cc_setonop("settings_side_dropdown_op(event_opindex, event_com, event_comsubid, $component2, $component5, $component0, $enum7, $int8)");
+	cc_setonop("settings_side_dropdown_op(event_opindex, event_com, event_comsubid, $component2, $component5, $component0, $enum7, $setting8)");
 	$int10 = calc($int10 + 1);
 	$count11 = calc($count11 + 1);
 	$text0 = enum(int, string, $enum7, $int10);

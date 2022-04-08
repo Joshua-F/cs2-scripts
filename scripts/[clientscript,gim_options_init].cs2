@@ -1,9 +1,9 @@
 // 3167
-[clientscript,script3167](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+[clientscript,gim_options_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 def_int $comsubid9 = ~steelborder($component1, "", 0);
-~script5340($component1, $comsubid9);
-if_setonvartransmit("script4686($component1, $comsubid9){var3172}", $component1);
-if_setonclansettingstransmit("script4686($component1, $comsubid9)", $component1);
+~gim_options_settitle($component1, $comsubid9);
+if_setonvartransmit("gim_options_settitle($component1, $comsubid9){var3172}", $component1);
+if_setonclansettingstransmit("gim_options_settitle($component1, $comsubid9)", $component1);
 def_string $string0 = "<col=ff0000>Back</col>";
 def_int $int10 = ~max(70, calc(parawidth($string0, 512, p12_full) + 20));
 if_setsize($int10, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
@@ -62,7 +62,7 @@ while ($count15 < $count13) {
 	if ($enum11 ! null) {
 		$struct12 = enum(int, struct, $enum11, -1);
 		if ($struct12 ! null) {
-			$int19, $int17 = ~script3696($int19, $int22, struct_param($struct12, param_1163), $component7, $component4, $int17, $component8, $count15, $int18, struct_param($struct12, param_1549), struct_param($struct12, param_1550));
+			$int19, $int17 = ~gim_options_categorytitle($int19, $int22, struct_param($struct12, param_1163), $component7, $component4, $int17, $component8, $count15, $int18, struct_param($struct12, param_1549), struct_param($struct12, param_1550));
 			$int22 = calc($int22 + 25 + 6);
 		}
 		$int24, $int25 = 0, calc(enum_getoutputcount($enum11) - 1);
@@ -70,12 +70,12 @@ while ($count15 < $count13) {
 			$struct12 = enum(int, struct, $enum11, $int24);
 			if ($struct12 ! null) {
 				if (calc($int24 % 2) = 1) {
-					$int19, $int23 = ~script4679($int19, $int21, $int22, $int20, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int24 - 1)), $component7);
+					$int19, $int23 = ~gim_options_buttoninit($int19, $int21, $int22, $int20, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int24 - 1)), $component7);
 					$int22 = calc($int22 + $int23 + 6);
 				} else if ($int24 < calc($int25 - 1)) {
-					$int19, $int23 = ~script4679($int19, 8, $int22, $int20, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int24 + 1)), $component7);
+					$int19, $int23 = ~gim_options_buttoninit($int19, 8, $int22, $int20, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int24 + 1)), $component7);
 				} else {
-					$int19, $int23 = ~script4679($int19, 8, $int22, $int20, $int16, $int14, $struct12, null, $component7);
+					$int19, $int23 = ~gim_options_buttoninit($int19, 8, $int22, $int20, $int16, $int14, $struct12, null, $component7);
 					$int22 = calc($int22 + $int23 + 6);
 				}
 				$int14 = calc($int14 + 1);
@@ -87,4 +87,4 @@ while ($count15 < $count13) {
 }
 ~scrollbar_vertical($component8, $component7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script3168($int22, $component7, $component8, calc($int18 * $count13), $component4, $component5, $component0, if_getheight(if_getlayer($component0)));
+~gim_options_setsize($int22, $component7, $component8, calc($int18 * $count13), $component4, $component5, $component0, if_getheight(if_getlayer($component0)));

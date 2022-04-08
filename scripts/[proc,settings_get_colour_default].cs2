@@ -1,73 +1,73 @@
 // 5328
-[proc,settings_get_colour_default](int $int0)(int)
-switch_int ($int0) {
-	case 87 :
+[proc,settings_get_colour_default](int $setting0)(int)
+switch_int ($setting0) {
+	case ^setting_opaque_public_chat_colour :
 		return(struct_param(public_chat_2896, param_1230));
-	case 88 :
+	case ^setting_transparent_public_chat_colour :
 		return(struct_param(public_chat_2897, param_1230));
-	case 89 :
+	case ^setting_opaque_private_chat_colour :
 		return(struct_param(private_chat_2898, param_1230));
-	case 90 :
+	case ^setting_transparent_private_chat_colour :
 		return(struct_param(private_chat_2899, param_1230));
-	case 91 :
+	case ^setting_split_private_chat_colour :
 		return(struct_param(private_chat_2900, param_1230));
-	case 92 :
+	case ^setting_opaque_auto_chat_colour :
 		return(struct_param(auto_chat_2901, param_1230));
-	case 93 :
+	case ^setting_transparent_auto_chat_colour :
 		return(struct_param(auto_chat_2902, param_1230));
-	case 94 :
+	case ^setting_opaque_broadcast_colour :
 		return(struct_param(broadcast_2903, param_1230));
-	case 95 :
+	case ^setting_transparent_broadcast_colour :
 		return(struct_param(broadcast_2904, param_1230));
-	case 96 :
+	case ^setting_split_broadcast_colour :
 		return(struct_param(broadcast_2905, param_1230));
-	case 97 :
+	case ^setting_opaque_friend_chat_colour :
 		return(struct_param(friend_chat_2906, param_1230));
-	case 98 :
+	case ^setting_transparent_friend_chat_colour :
 		return(struct_param(friend_chat_2907, param_1230));
-	case 99 :
+	case ^setting_opaque_clan_chat_colour :
 		return(struct_param(clan_chat_2908, param_1230));
-	case 100 :
+	case ^setting_transparent_clan_chat_colour :
 		return(struct_param(clan_chat_2909, param_1230));
-	case 101 :
+	case ^setting_opaque_incoming_trade_request_colour :
 		return(struct_param(incoming_trade_request_2910, param_1230));
-	case 102 :
+	case ^setting_transparent_incoming_trade_request_colour :
 		return(struct_param(incoming_trade_request_2911, param_1230));
-	case 103 :
+	case ^setting_opaque_incoming_challenge_request :
 		return(struct_param(incoming_challenge_request_2912, param_1230));
-	case 104 :
+	case ^setting_transparent_incoming_challenge_request_colour :
 		return(struct_param(incoming_challenge_request_2913, param_1230));
-	case 105 :
+	case ^setting_opaque_guest_clan_chat_colour :
 		return(struct_param(guest_clan_chat_2975, param_1230));
-	case 106 :
+	case ^setting_transparent_guest_clan_chat_colour :
 		return(struct_param(guest_clan_chat_2976, param_1230));
-	case 193 :
+	case ^setting_opaque_iron_group_chat_colour :
 		return(struct_param(iron_group_chat_3745, param_1230));
-	case 194 :
+	case ^setting_transparent_iron_group_chat_colour :
 		return(struct_param(iron_group_chat_3746, param_1230));
-	case 196 :
+	case ^setting_opaque_clan_broadcasts_colour :
 		return(struct_param(clan_broadcasts_3747, param_1230));
-	case 197 :
+	case ^setting_transparent_clan_broadcasts_colour :
 		return(struct_param(clan_broadcasts_3748, param_1230));
-	case 198 :
+	case ^setting_opaque_iron_group_broadcasts_colour :
 		return(struct_param(iron_group_broadcasts_3749, param_1230));
-	case 199 :
+	case ^setting_transparent_iron_group_broadcasts_colour :
 		return(struct_param(iron_group_broadcasts_3750, param_1230));
-	case 113 :
+	case ^setting_tile_highlight_colour_colour :
 		return(struct_param(tile_highlight_colour_3005, param_1230));
-	case 174 :
+	case ^setting_highlight_hovered_tile_colour_colour :
 		return(struct_param(highlight_hovered_tile_colour_3648, param_1230));
-	case 177 :
+	case ^setting_highlight_current_tile_colour_colour :
 		return(struct_param(highlight_current_tile_colour_3649, param_1230));
-	case 180 :
+	case ^setting_highlight_destination_tile_colour_colour :
 		return(struct_param(highlight_destination_tile_colour_3650, param_1230));
-	case 224 :
+	case ^setting_unstarted_quest_text_colour_colour :
 		return(struct_param(unstarted_quest_text_colour_4157, param_1230));
-	case 225 :
+	case ^setting_inprogress_quest_text_colour_colour :
 		return(struct_param(in_progress_quest_text_colour_4249, param_1230));
-	case 226 :
+	case ^setting_completed_quest_text_colour_colour :
 		return(struct_param(completed_quest_text_colour_4250, param_1230));
-	case 227 :
+	case ^setting_unavailable_quest_text_colour_colour :
 		return(struct_param(unavailable_quest_text_colour_4251, param_1230));
 	case default :
 		return(null);

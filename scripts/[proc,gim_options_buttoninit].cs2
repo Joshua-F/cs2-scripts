@@ -1,5 +1,5 @@
 // 4679
-[proc,script4679](int $int0, int $int1, int $int2, int $int3, int $int4, int $comsubid5, struct $struct6, struct $struct7, component $component8)(int, int)
+[proc,gim_options_buttoninit](int $int0, int $int1, int $int2, int $int3, int $int4, int $comsubid5, struct $struct6, struct $struct7, component $component8)(int, int)
 def_int $width9 = calc($int3 - 6 * 2);
 def_string $string0 = struct_param($struct6, param_1163);
 def_int $int10 = calc(paraheight($string0, $width9, p12_full) * 12 + 5);
@@ -76,8 +76,8 @@ if (.cc_find($component8, $comsubid5) = ^true) {
 	$int0 = calc($int0 + 1);
 	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int1 + ($int3 - $int4) / 2 + 6), calc($int2 + 6 + $int10 + 3 + (21 - 13) / 2), ^setpos_abs_left, ^setpos_abs_top);
-	~script4681($component8, $int13, $comsubid14, $comsubid15, $int16, $struct6);
-	.cc_setonvartransmit("script4680(event_com, event_comsubid, $int13, $comsubid14, $comsubid15, $int16, $struct6){var3172}");
-	.cc_setonclansettingstransmit("script4680(event_com, event_comsubid, $int13, $comsubid14, $comsubid15, $int16, $struct6)");
+	~gim_options_buttonresynch($component8, $int13, $comsubid14, $comsubid15, $int16, $struct6);
+	.cc_setonvartransmit("gim_options_buttonresynch(event_com, event_comsubid, $int13, $comsubid14, $comsubid15, $int16, $struct6){var3172}");
+	.cc_setonclansettingstransmit("gim_options_buttonresynch(event_com, event_comsubid, $int13, $comsubid14, $comsubid15, $int16, $struct6)");
 }
 return($int0, $int12);

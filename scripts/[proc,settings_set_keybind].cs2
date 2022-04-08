@@ -1,7 +1,7 @@
 // 3968
-[proc,settings_set_keybind](int $int0, int $count1)
-%varbit9657 = $int0;
-switch_int ($int0) {
+[proc,settings_set_keybind](int $setting0, int $count1)
+%varbit9657 = $setting0;
+switch_int ($setting0) {
 	case default :
 		return;
 }

@@ -1,6 +1,6 @@
 // 3886
-[proc,settings_slider_choose_ondrag](int $int0, component $component1, int $comsubid2, int $int3, int $y4, int $int5)
-switch_int ($int0) {
+[proc,settings_slider_choose_ondrag](int $setting0, component $component1, int $comsubid2, int $int3, int $y4, int $int5)
+switch_int ($setting0) {
 	case 14 :
 		cc_setondrag("settings_zoom_slider_ondrag($component1, $comsubid2, $int3, event_mousex, $y4, $int5)");
 		cc_setontimer("settings_zoom_position_timer(%varcint73, %varcint74, $component1, $comsubid2, $int3, $y4, $int5)");

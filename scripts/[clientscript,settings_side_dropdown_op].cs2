@@ -1,5 +1,5 @@
 // 4569
-[clientscript,settings_side_dropdown_op](int $opindex0, component $component1, int $int2, component $component3, component $component4, component $component5, enum $enum6, int $int7)
+[clientscript,settings_side_dropdown_op](int $opindex0, component $component1, int $int2, component $component3, component $component4, component $component5, enum $enum6, int $setting7)
 if ($opindex0 ! 1) {
 	return;
 }
@@ -11,4 +11,4 @@ if (cc_find($component5, 4) = ^true) {
 	cc_settext(enum(int, string, $enum6, $int2));
 }
 ~settings_side_dropdown_close($component3, $component4, $component5, $component1);
-if_setontimer("settings_side_dropdown_timer($component5, 0, $enum6, $int7)", $component5);
+if_setontimer("settings_side_dropdown_timer($component5, 0, $enum6, $setting7)", $component5);

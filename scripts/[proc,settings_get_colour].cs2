@@ -1,73 +1,73 @@
 // 4181
-[proc,settings_get_colour](int $int0)(int)
-switch_int ($int0) {
-	case 87 :
+[proc,settings_get_colour](int $setting0)(int)
+switch_int ($setting0) {
+	case ^setting_opaque_public_chat_colour :
 		return(calc(%var2992 - 1));
-	case 88 :
+	case ^setting_transparent_public_chat_colour :
 		return(calc(%var3000 - 1));
-	case 89 :
+	case ^setting_opaque_private_chat_colour :
 		return(calc(%var2993 - 1));
-	case 90 :
+	case ^setting_transparent_private_chat_colour :
 		return(calc(%var3001 - 1));
-	case 91 :
+	case ^setting_split_private_chat_colour :
 		return(calc(%var3008 - 1));
-	case 92 :
+	case ^setting_opaque_auto_chat_colour :
 		return(calc(%var2994 - 1));
-	case 93 :
+	case ^setting_transparent_auto_chat_colour :
 		return(calc(%var3002 - 1));
-	case 94 :
+	case ^setting_opaque_broadcast_colour :
 		return(calc(%var2995 - 1));
-	case 95 :
+	case ^setting_transparent_broadcast_colour :
 		return(calc(%var3003 - 1));
-	case 96 :
+	case ^setting_split_broadcast_colour :
 		return(calc(%var3009 - 1));
-	case 97 :
+	case ^setting_opaque_friend_chat_colour :
 		return(calc(%var2996 - 1));
-	case 98 :
+	case ^setting_transparent_friend_chat_colour :
 		return(calc(%var3004 - 1));
-	case 99 :
+	case ^setting_opaque_clan_chat_colour :
 		return(calc(%var2997 - 1));
-	case 100 :
+	case ^setting_transparent_clan_chat_colour :
 		return(calc(%var3005 - 1));
-	case 101 :
+	case ^setting_opaque_incoming_trade_request_colour :
 		return(calc(%var2998 - 1));
-	case 102 :
+	case ^setting_transparent_incoming_trade_request_colour :
 		return(calc(%var3006 - 1));
-	case 103 :
+	case ^setting_opaque_incoming_challenge_request :
 		return(calc(%var2999 - 1));
-	case 104 :
+	case ^setting_transparent_incoming_challenge_request_colour :
 		return(calc(%var3007 - 1));
-	case 105 :
+	case ^setting_opaque_guest_clan_chat_colour :
 		return(calc(%var3060 - 1));
-	case 106 :
+	case ^setting_transparent_guest_clan_chat_colour :
 		return(calc(%var3061 - 1));
-	case 193 :
+	case ^setting_opaque_iron_group_chat_colour :
 		return(calc(%var3191 - 1));
-	case 194 :
+	case ^setting_transparent_iron_group_chat_colour :
 		return(calc(%var3194 - 1));
-	case 196 :
+	case ^setting_opaque_clan_broadcasts_colour :
 		return(calc(%var3192 - 1));
-	case 197 :
+	case ^setting_transparent_clan_broadcasts_colour :
 		return(calc(%var3195 - 1));
-	case 198 :
+	case ^setting_opaque_iron_group_broadcasts_colour :
 		return(calc(%var3193 - 1));
-	case 199 :
+	case ^setting_transparent_iron_group_broadcasts_colour :
 		return(calc(%var3196 - 1));
-	case 113 :
+	case ^setting_tile_highlight_colour_colour :
 		return(calc(%var3108 - 1));
-	case 174 :
+	case ^setting_highlight_hovered_tile_colour_colour :
 		return(calc(%var3155 - 1));
-	case 177 :
+	case ^setting_highlight_current_tile_colour_colour :
 		return(calc(%var3156 - 1));
-	case 180 :
+	case ^setting_highlight_destination_tile_colour_colour :
 		return(calc(%var3157 - 1));
-	case 224 :
+	case ^setting_unstarted_quest_text_colour_colour :
 		return(calc(%var3410 - 1));
-	case 225 :
+	case ^setting_inprogress_quest_text_colour_colour :
 		return(calc(%var3409 - 1));
-	case 226 :
+	case ^setting_completed_quest_text_colour_colour :
 		return(calc(%var3411 - 1));
-	case 227 :
+	case ^setting_unavailable_quest_text_colour_colour :
 		return(calc(%var3412 - 1));
 	case default :
 		return(null);
