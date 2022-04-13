@@ -48,6 +48,8 @@ if_setonvartransmit("bankmain_quantity_buttons($component14, $component15, $comp
 ~options_bigbutton_init($component19, "Save", "b12_full");
 if ($int26 = 1) {
 	~ge_offers_bigbutton($component4, "Back to bank", 0);
+} else {
+	if_clearops($component4);
 }
 ~shared_bank_closebutton($component20);
 if_setonvartransmit("shared_bank_closebutton(event_com){var1293, var1224}", $component20);
