@@ -11,7 +11,6 @@ cc_create($component0, ^iftype_graphic, 0);
 cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("options_icons,0");
-if_setonvartransmit("script382(^setting_brightness, $component2, $component1, $int4, $component3){var166}", $component2);
 if_setnoclickthrough(true, $component2);
 if_setonclick("opsound(0, 0)", $component2);
 while ($int5 <= $int4) {

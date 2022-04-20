@@ -1,0 +1,39 @@
+// 6011
+[proc,inventory_drawitem](obj $obj0, int $num1, component $component2, int $comsubid3, boolean $boolean4, boolean $boolean5)
+cc_clearops;
+cc_settargetverb("");
+cc_setopbase("");
+cc_setonmouserepeat(null);
+cc_setdragdeadtime(0);
+if ($obj0 ! null) {
+	cc_setobject($obj0, $num1);
+	if ($boolean4 = true) {
+		cc_settrans(0);
+		cc_settargetverb("Use");
+		cc_setontargetenter("script6002(event_com, event_comsubid, 2)");
+		cc_setontargetleave("script6002(event_com, event_comsubid, 1)");
+		~inventory_setophelds($obj0, $boolean5);
+		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+		cc_setondragcomplete("inventory_reorder(event_com, event_drop, event_comsubid, event_dropsubid, $comsubid3, $boolean4)");
+		cc_setonop("inventory_op(event_com, $obj0, event_comsubid, event_opindex)");
+		cc_setonmouserepeat("inventory_antidrag_update(event_com, event_comsubid)");
+	} else {
+		cc_settrans(100);
+		if (%varbit12132 = 1) {
+			cc_setop(1, "Examine");
+			cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+			cc_setondragcomplete("inventory_reorder(event_com, event_drop, event_comsubid, event_dropsubid, $comsubid3, $boolean4)");
+			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 100)");
+			cc_setonmouserepeat("inventory_antidrag_update(event_com, event_comsubid)");
+		} else {
+			cc_setonop(null);
+			cc_setondragcomplete(null);
+		}
+	}
+} else {
+	cc_settrans(255);
+	cc_setobject(obj_6512, 1);
+	cc_setonop(null);
+	cc_setondragcomplete(null);
+}
+cc_setontimer(null);

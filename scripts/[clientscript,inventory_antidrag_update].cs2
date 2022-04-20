@@ -1,0 +1,9 @@
+// 6015
+[clientscript,inventory_antidrag_update](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (~script6016 = 1) {
+		cc_setdragdeadtime(%varbit13830);
+	} else {
+		cc_setdragdeadtime(0);
+	}
+}

@@ -1,7 +1,3 @@
 // 2237
 [proc,script2237]()(int)
-def_int $flags0 = worldflags;
-if (testbit($flags0, 25) = ^false & testbit($flags0, 23) = ^false & testbit($flags0, 4) = ^false & testbit($flags0, 30) = ^false & testbit($flags0, 26) = ^true & testbit($flags0, 20) = ^true) {
-	return(2);
-}
 return(0);

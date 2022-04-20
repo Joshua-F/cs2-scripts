@@ -3,4 +3,4 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-setpreference(^pref_draw_distance, $int0);
+setdeviceoption(14, $int0);

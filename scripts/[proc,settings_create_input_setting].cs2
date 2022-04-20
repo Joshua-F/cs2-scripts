@@ -84,7 +84,7 @@ if ($int18 = 1) {
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_string $string2 = ",";
-def_int $int20 = ~settings_get_number_input($setting17);
+def_int $int20 = ~script4398($setting17);
 if ($int20 > 1) {
 	cc_settext("<~tostring_spacer($int20, $string2)> <struct_param($struct5, param_1112)>");
 } else if ($int20 = 0) {

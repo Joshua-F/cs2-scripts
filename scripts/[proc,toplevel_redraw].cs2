@@ -224,7 +224,6 @@ if (%varbit5599 = 1) {
 } else {
 	setfolloweropslowpriority(false);
 }
-~options_setfps;
 ~mouseover_ops;
 $component2 = enum(component, component, $enum1, interface_161:36);
 if (%varbit542 = 0) {
@@ -233,10 +232,9 @@ if (%varbit542 = 0) {
 	if_sethide(true, $component2);
 }
 if (%varcint967 = 0) {
-	~setvolumemusic;
-	~setvolumesounds;
-	~setvolumeareasounds;
+	~script2475;
+	~script3643;
+	~script3644;
 }
-~setbrightness;
 ~logout_timer_notifier;
 ~script5355($enum1);

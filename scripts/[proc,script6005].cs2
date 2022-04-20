@@ -1,0 +1,36 @@
+// 6005
+[proc,script6005](obj $obj0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%varbit13826 = 0 & %varbit13827 = 0) {
+	return;
+}
+if ($obj0 = null) {
+	return;
+}
+$obj0 = oc_uncert($obj0);
+def_string $string0 = "";
+if (%varbit13826 = 1 & $int3 = 1) {
+	$string0 = ~script6006($string0, "GE", $int4, $int1);
+}
+if (%varbit13827 = 1 & $int5 = 0) {
+	if ($int6 > 0) {
+		$string0 = ~script6006($string0, "HA", $int6, $int1);
+	}
+	if ($int7 > 0) {
+		$string0 = ~script6006($string0, "LA", $int7, $int1);
+	}
+}
+if (string_length($string0) <= 0) {
+	return;
+}
+if ($int2 = 1) {
+	if ($int1 > 1) {
+		mes("Price of <tostring($int1)> x <oc_name($obj0)>: <$string0>");
+	} else {
+		mes("Price of <oc_name($obj0)>: <$string0>");
+	}
+} else {
+	mes("Price: <$string0>");
+}

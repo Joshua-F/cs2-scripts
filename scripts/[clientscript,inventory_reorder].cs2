@@ -1,0 +1,29 @@
+// 6013
+[clientscript,inventory_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $comsubid4, boolean $boolean5)
+if ($comsubid2 < 0 | $comsubid2 >= $comsubid4) {
+	return;
+}
+if ($dropsubid3 < 0 | $dropsubid3 >= $comsubid4) {
+	return;
+}
+if ($drop0 ! $drop1) {
+	return;
+}
+def_boolean $boolean6 = keyheld(^key_shift_left);
+def_obj $obj7 = null;
+def_int $num8 = -1;
+def_obj $obj9 = null;
+def_int $num10 = -1;
+if (cc_find($drop0, $comsubid2) = ^true) {
+	$obj7, $num8 = cc_getinvobject, cc_getinvcount;
+}
+if ($obj7 = null) {
+	return;
+}
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	$obj9, $num10 = cc_getinvobject, cc_getinvcount;
+	~inventory_drawitem($obj7, $num8, $drop0, $comsubid4, $boolean5, $boolean6);
+}
+if (cc_find($drop0, $comsubid2) = ^true) {
+	~inventory_drawitem($obj9, $num10, $drop0, $comsubid4, $boolean5, $boolean6);
+}

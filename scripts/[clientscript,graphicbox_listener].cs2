@@ -1,12 +1,12 @@
 // 3372
-[clientscript,graphicbox_listener](boolean $boolean0, int $key1, char $char2, int $key3, string $string0, component $component4, int $comsubid5, int $comsubid6, string $text1, component $component7, int $clock8)
+[clientscript,graphicbox_listener](boolean $boolean0, int $int1, char $char2, int $int3, string $string0, component $component4, int $comsubid5, int $comsubid6, string $text1, component $component7, int $clock8)
 if (clientclock < $clock8) {
 	return;
 }
 if ($boolean0 = false) {
 	if (~keypress_permit(null, overlayinterface_162) = 0) {
 		return;
-	} else if ($key1 ! null & $key1 = $key3) {
+	} else if ($int1 ! -1 & $int1 = $int3) {
 		$boolean0 = true;
 	} else if ($char2 ! null & string_indexof_char($string0, $char2) ! -1) {
 		$boolean0 = true;
@@ -21,10 +21,10 @@ if (cc_find($component4, $comsubid5) = ^true & .cc_find($component4, $comsubid6)
 	}
 	cc_settext($string2);
 	cc_setontimer("graphicbox_reset($clock8, $component4, $comsubid5, $text1)");
-	cc_setonop("graphicbox_listener(true, null, null, $key3, $string0, event_com, $comsubid5, $comsubid6, $text1, $component7, $clock8)");
-	cc_setonkey("graphicbox_listener(false, event_key, event_keychar, $key3, $string0, event_com, $comsubid5, $comsubid6, $text1, $component7, $clock8)");
+	cc_setonop("graphicbox_listener(true, -1, null, $int3, $string0, event_com, $comsubid5, $comsubid6, $text1, $component7, $clock8)");
+	cc_setonkey("graphicbox_listener(false, event_key, event_keychar, $int3, $string0, event_com, $comsubid5, $comsubid6, $text1, $component7, $clock8)");
 	if ($component7 ! null) {
-		if_setonclick("graphicbox_listener(true, null, null, $key3, $string0, event_com, $comsubid5, $comsubid6, $text1, $component7, $clock8)", $component7);
+		if_setonclick("graphicbox_listener(true, -1, null, $int3, $string0, event_com, $comsubid5, $comsubid6, $text1, $component7, $clock8)", $component7);
 	}
 	.cc_resume_pausebutton;
 }

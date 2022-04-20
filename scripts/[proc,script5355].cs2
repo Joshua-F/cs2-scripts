@@ -31,11 +31,11 @@ if ($component1 ! null) {
 			}
 			_6230(calc(765 + $int2));
 			if ($int3 = 1) {
-				if (getpreference(10) < calc(765 + $int2)) {
-					setpreference(10, calc(765 + $int2));
+				if (getdeviceoption(10) < calc(765 + $int2)) {
+					setdeviceoption(10, calc(765 + $int2));
 				}
-			} else if (getpreference(10) < calc(765 + 42) | getpreference(10) = calc(765 + 312)) {
-				setpreference(10, calc(765 + 42));
+			} else if (getdeviceoption(10) < calc(765 + 42) | getdeviceoption(10) = calc(765 + 312)) {
+				setdeviceoption(10, calc(765 + 42));
 			}
 		}
 		~script5356;
@@ -47,8 +47,8 @@ if ($component1 ! null) {
 		}
 		if (~on_enhanced_any = 1) {
 			_6230(765);
-			if (getpreference(10) = calc(765 + 42) | getpreference(10) = calc(765 + 312)) {
-				setpreference(10, 765);
+			if (getdeviceoption(10) = calc(765 + 42) | getdeviceoption(10) = calc(765 + 312)) {
+				setdeviceoption(10, 765);
 			}
 		}
 	}
@@ -59,8 +59,8 @@ if ($component1 ! null) {
 	}
 	if (~on_enhanced_any = 1) {
 		_6230(765);
-		if (getpreference(10) = calc(765 + 42) | getpreference(10) = calc(765 + 312)) {
-			setpreference(10, 765);
+		if (getdeviceoption(10) = calc(765 + 42) | getdeviceoption(10) = calc(765 + 312)) {
+			setdeviceoption(10, 765);
 		}
 	}
 }

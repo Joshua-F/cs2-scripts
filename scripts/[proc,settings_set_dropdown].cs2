@@ -2,8 +2,10 @@
 [proc,settings_set_dropdown](int $setting0, int $count1)
 %varbit9657 = $setting0;
 switch_int ($setting0) {
+	case 45 :
+		~script3646($count1);
 	case ^setting_interface_scaling_mode :
-		setpreference(^pref_ui_scaling_mode, $count1);
+		setdeviceoption(15, $count1);
 	case ^setting_ore_respawn_timer :
 		~settings_ore_respawn_timer($count1);
 	case ^setting_woodcutting_respawn_timer :

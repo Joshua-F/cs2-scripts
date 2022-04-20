@@ -2,7 +2,7 @@
 [clientscript,magic_spellbook_targetmode](boolean $boolean0, component $component1, obj $obj2)
 if ($boolean0 = true) {
 	if_setoutline(2, $component1);
-	if (testbit(if_gettargetmask($component1), 4) = ^true) {
+	if (testbit(if_gettargetmask($component1), 5) = ^true) {
 		~toplevel_sidebutton_switch(3, ~toplevel_getcomponents);
 	}
 } else {

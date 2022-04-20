@@ -1,0 +1,13 @@
+// 4618
+[proc,script4618]
+setgameoption(1, %varbit12378);
+if (~on_enhanced_any = 0) {
+	return;
+}
+setgameoption(2, calc(1 - %varbit13831));
+setgameoption(3, calc(1 - %varbit13832));
+setgameoption(4, calc(1 - %varbit13833));
+setgameoption(5, %varbit13834);
+setgameoption(6, %varbit13835);
+~debug_mes("Long-press time: <tostring(%varbit13835)>");
+~settings_chat_timestamps;

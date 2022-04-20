@@ -60,7 +60,7 @@ while ($obj20 ! null) {
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 		cc_setopbase("<col=ff9040><oc_name($obj20)></col>");
 		cc_setop(1, "Select");
-		cc_setonop("meslayer_mode14_select($obj20, ^key_return)");
+		cc_setonop("meslayer_mode14_select($obj20, 84)");
 		cc_create(interface_162:50, ^iftype_text, $int7);
 		$int7 = calc($int7 + 1);
 		cc_setsize($width11, 32, ^setsize_abs, ^setsize_abs);

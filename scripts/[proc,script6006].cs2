@@ -1,0 +1,21 @@
+// 6006
+[proc,script6006](string $string0, string $string1, int $int0, int $int1)(string)
+def_string $string2 = $string0;
+def_string $string3 = "";
+if (string_length($string0) > 0) {
+	$string3 = "  ";
+}
+def_string $string4 = "";
+if (calc(^max_32bit_int / $int1) > $int0) {
+	$string4 = ~tostring_spacer(calc($int0 * $int1), ",");
+} else {
+	$string4 = "Lots!";
+}
+$string0 = "<$string0><$string3><$string1> <col=ef1020><$string4></col>";
+if ($int1 > 1 & $int0 > 0) {
+	$string0 = "<$string0> (<col=ef1020><~tostring_spacer($int0, ",")></col>ea)";
+}
+if (string_length(removetags($string0)) < 80) {
+	return($string0);
+}
+return($string2);

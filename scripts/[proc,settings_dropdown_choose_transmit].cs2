@@ -17,10 +17,10 @@ switch_int ($setting7) {
 		cc_setonvartransmit("setting_dropdown_transmit($int0, $struct1, $comsubid2, $comsubid3, $comsubid4, $component5, $enum6, $setting7, $component8, $component9, $component10, $component11, $component12){var1055, var3053}");
 	case 119 :
 		cc_setonvartransmit("setting_dropdown_transmit($int0, $struct1, $comsubid2, $comsubid3, $comsubid4, $component5, $enum6, $setting7, $component8, $component9, $component10, $component11, $component12){var1795}");
-	case 45 :
-		cc_setonvartransmit("setting_dropdown_transmit($int0, $struct1, $comsubid2, $comsubid3, $comsubid4, $component5, $enum6, $setting7, $component8, $component9, $component10, $component11, $component12){var3074}");
 	case ^setting_ore_respawn_timer, ^setting_woodcutting_respawn_timer, 165 :
 		cc_setonvartransmit("setting_dropdown_transmit($int0, $struct1, $comsubid2, $comsubid3, $comsubid4, $component5, $enum6, $setting7, $component8, $component9, $component10, $component11, $component12){var3154}");
+	case 237, 238 :
+		cc_setonvartransmit("setting_dropdown_transmit($int0, $struct1, $comsubid2, $comsubid3, $comsubid4, $component5, $enum6, $setting7, $component8, $component9, $component10, $component11, $component12){var3154, var2855}");
 	case default :
 		cc_setonvartransmit("setting_dropdown_transmit($int0, $struct1, $comsubid2, $comsubid3, $comsubid4, $component5, $enum6, $setting7, $component8, $component9, $component10, $component11, $component12){var2855}");
 }

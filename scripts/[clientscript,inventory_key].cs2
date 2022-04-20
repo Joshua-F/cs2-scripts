@@ -1,0 +1,5 @@
+// 6008
+[clientscript,inventory_key](component $component0, int $size1, boolean $boolean2, int $key3, boolean $boolean4)
+if ($key3 = ^key_shift_left) {
+	~inventory_build($component0, $size1, $boolean2, $boolean4);
+}

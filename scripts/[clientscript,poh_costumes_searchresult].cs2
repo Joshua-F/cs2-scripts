@@ -1,6 +1,6 @@
 // 3562
-[clientscript,poh_costumes_searchresult](obj $obj0, enum $enum1, int $key2)
-if ($key2 ! ^key_return) {
+[clientscript,poh_costumes_searchresult](obj $obj0, enum $enum1, int $int2)
+if ($int2 ! 84) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);

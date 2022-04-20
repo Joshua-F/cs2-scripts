@@ -30,11 +30,11 @@ switch_int ($setting0) {
 	case 119 :
 		return(%varbit12384);
 	case 45 :
-		return(~script4576);
+		return(~script3645);
 	case 150 :
 		return(%varbit12375);
 	case ^setting_interface_scaling_mode :
-		return(getpreference(^pref_ui_scaling_mode));
+		return(getdeviceoption(15));
 	case ^setting_ore_respawn_timer :
 		return(%varbit13085);
 	case ^setting_woodcutting_respawn_timer :
@@ -51,6 +51,10 @@ switch_int ($setting0) {
 		return(%varbit13779);
 	case 222 :
 		return(%varbit13780);
+	case 237 :
+		return(enum(int, int, enum_4302, %varbit13828));
+	case 238 :
+		return(enum(int, int, enum_4302, %varbit13829));
 	case default :
 		return(0);
 }

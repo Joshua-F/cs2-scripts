@@ -1,0 +1,8 @@
+// 4398
+[proc,script4398](int $setting0)(int)
+switch_int ($setting0) {
+	case 236 :
+		return(calc(%varbit13830 * 20));
+	case default :
+		return(~settings_get_number_input($setting0));
+}

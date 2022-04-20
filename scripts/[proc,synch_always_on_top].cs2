@@ -3,4 +3,4 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-setpreference(^pref_always_on_top, $int0);
+setdeviceoption(12, $int0);

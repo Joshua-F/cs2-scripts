@@ -12,3 +12,7 @@ if (cc_find($component5, 4) = ^true) {
 }
 ~settings_side_dropdown_close($component3, $component4, $component5, $component1);
 if_setontimer("settings_side_dropdown_timer($component5, 0, $enum6, $setting7)", $component5);
+switch_int ($setting7) {
+	case 45 :
+		~script3646($int2);
+}

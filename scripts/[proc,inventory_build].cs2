@@ -1,0 +1,17 @@
+// 6010
+[proc,inventory_build](component $component0, int $size1, boolean $boolean2, boolean $boolean3)
+if ($boolean3 = null) {
+	$boolean3 = keyheld(^key_shift_left);
+}
+def_int $int4 = calc((42 - 36) * 3 - 2);
+def_int $int5 = calc((36 - 32) * 2);
+def_obj $obj6 = null;
+def_int $int7 = $size1;
+while ($int7 > 0) {
+	$int7 = calc($int7 - 1);
+	if (cc_find($component0, $int7) = ^true) {
+		$obj6 = inv_getobj(inv, $int7);
+		~inventory_drawitem($obj6, inv_getnum(inv, $int7), $component0, $size1, $boolean2, $boolean3);
+		cc_setposition(calc($int4 + $int7 % 4 * 42), calc($int5 + $int7 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	}
+}

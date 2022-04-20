@@ -7,22 +7,21 @@ switch_int ($setting0) {
 			%varbit12426 = %var168;
 		}
 		%var168 = ~minmax(0, 100, calc($int1 * 5));
-		~setvolumemusic;
+		~script2475;
 	case ^setting_volumesounds :
 		if ($int1 = 0 & %var169 > 0) {
 			%varbit12427 = %var169;
 		}
 		%var169 = ~minmax(0, 100, calc($int1 * 5));
-		~setvolumesounds;
+		~script3643;
 	case ^setting_volumeareasounds :
 		if ($int1 = 0 & %var872 > 0) {
 			%varbit12428 = %var872;
 		}
 		%var872 = ~minmax(0, 100, calc($int1 * 5));
-		~setvolumeareasounds;
+		~script3644;
 	case ^setting_brightness :
-		%var166 = ~minmax(0, 100, calc($int1 * 5));
-		~setbrightness;
+		setdeviceoption(6, ~minmax(0, 100, calc($int1 * 5)));
 	case ^setting_interface_scaling :
 		~settings_interface_scaling($int1);
 	case ^setting_draw_distance :

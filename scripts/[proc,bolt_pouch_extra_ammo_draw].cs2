@@ -26,6 +26,7 @@ if ($obj3 = null) {
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setobject($obj3, $num2);
-	if_setop(1, "Wear <col=ff9040><oc_name($obj3)>", $component0);
+	if_setop(1, "Wear", $component0);
 	if_setonop("cc_settrans_temporarily($component0, 1, 100, 0)", $component0);
+	if_setopbase("<col=ff9040><oc_name($obj3)></col>", $component0);
 }
