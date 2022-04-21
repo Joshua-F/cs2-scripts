@@ -1,13 +1,13 @@
 // 4618
 [proc,script4618]
-setgameoption(1, %varbit12378);
+setgameoption(^gameoption_remove_roof, %varbit12378);
 if (~on_enhanced_any = 0) {
 	return;
 }
-setgameoption(2, calc(1 - %varbit13831));
-setgameoption(3, calc(1 - %varbit13832));
-setgameoption(4, calc(1 - %varbit13833));
-setgameoption(5, %varbit13834);
-setgameoption(6, %varbit13835);
+setgameoption(^gameoption_haptic_on_op, calc(1 - %varbit13831));
+setgameoption(^gameoption_haptic_on_drag, calc(1 - %varbit13832));
+setgameoption(^gameoption_haptic_on_minimenu_open, calc(1 - %varbit13833));
+setgameoption(^gameoption_haptic_on_minimenu_entry_hover, %varbit13834);
+setgameoption(^gameoption_minimenu_long_press_time, %varbit13835);
 ~debug_mes("Long-press time: <tostring(%varbit13835)>");
 ~settings_chat_timestamps;

@@ -1,9 +1,0 @@
-// 6004
-[proc,script6004](obj $obj0, int $int1, string $mes0, int $int2, int $int3, int $int4, int $int5, int $int6)
-if ($int1 >= 100000) {
-	mes("<~tostring_spacer($int1, ",")> x <oc_name($obj0)>.");
-	~script6005($obj0, $int1, 0, $int2, $int3, $int4, $int5, $int6);
-} else {
-	mes($mes0);
-	~script6005($obj0, $int1, 1, $int2, $int3, $int4, $int5, $int6);
-}

@@ -3233,7 +3233,7 @@
 [**3235**](scripts/[proc,update_diary_entry_grey].cs2) `[proc,update_diary_entry_grey]`  
 [**3236**](scripts/[proc,script3236].cs2)  
 [**3237**](scripts/[proc,script3237].cs2)  
-[**3238**](scripts/[proc,script3238].cs2)  
+[**3238**](scripts/[proc,questlist_hide_quest].cs2) `[proc,questlist_hide_quest]`  
 [**3239**](scripts/[clientscript,script3239].cs2)  
 [**3240**](scripts/[clientscript,v2_stone_button_change_out].cs2) `[clientscript,v2_stone_button_change_out]`  
 [**3241**](scripts/[proc,v2_stone_button_change_out].cs2) `[proc,v2_stone_button_change_out]`  
@@ -5996,7 +5996,7 @@
 [**6001**](scripts/[proc,script6001].cs2)  
 [**6002**](scripts/[clientscript,script6002].cs2)  
 [**6003**](scripts/[clientscript,examine_item].cs2) `[clientscript,examine_item]`  
-[**6004**](scripts/[proc,script6004].cs2)  
+[**6004**](scripts/[proc,examine_item].cs2) `[proc,examine_item]`  
 [**6005**](scripts/[proc,script6005].cs2)  
 [**6006**](scripts/[proc,script6006].cs2)  
 [**6007**](scripts/[clientscript,inventory_init].cs2) `[clientscript,inventory_init]`  
@@ -6015,7 +6015,7 @@
 [**6020**](scripts/[proc,script6020].cs2)  
 [**6021**](scripts/[clientscript,settings_set_draw_distance].cs2) `[clientscript,settings_set_draw_distance]`  
 [**6022**](scripts/[proc,script6022].cs2)  
-[**6023**](scripts/[clientscript,script6023].cs2)  
+[**6023**](scripts/[clientscript,setdeviceoption].cs2) `[clientscript,setdeviceoption]`  
 [**6024**](scripts/[clientscript,script6024].cs2)  
 [**6025**](scripts/[proc,script6025].cs2)  
 [**6026**](scripts/[clientscript,setgameoption].cs2) `[clientscript,setgameoption]`  

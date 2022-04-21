@@ -9,13 +9,13 @@ if (loc_find($coord0, $loc1) = true) {
 	~add_overlaytimer_loc($loc1, $int3, clientclock, calc($int4 * 30), $colour5, $int6);
 } else {
 	switch_locshape ($locshape2) {
-		case locshape_0, locshape_1, locshape_2, locshape_3, locshape_9 :
+		case wall_straight, wall_diagonalcorner, wall_l, wall_squarecorner, wall_diagonal :
 			$int8 = 2;
-		case locshape_4, locshape_5, locshape_6, locshape_7, locshape_8 :
+		case walldecor_straight_nooffset, walldecor_straight_offset, walldecor_diagonal_offset, walldecor_diagonal_nooffset, walldecor_diagonal_both :
 			$int8 = 3;
-		case locshape_10, locshape_11 :
+		case centrepiece_straight, centrepiece_diagonal :
 			$int8 = 5;
-		case locshape_22 :
+		case grounddecor :
 			$int8 = 4;
 		case default :
 			~debug_mes("Overlay Timers: No locfind overlay ID specified for loc_shape. Timer ID: <tostring($int3)>");

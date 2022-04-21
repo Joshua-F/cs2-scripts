@@ -72,7 +72,7 @@ while ($count17 < $count8) {
 	$int20 = ~script5989($struct14);
 	$int21 = ~script5990($struct14);
 	$string2 = ~script2265($struct14, $int15, %varbit13772);
-	if (~script3238($struct14, $int15, $int20, $int21) = 0) {
+	if (~questlist_hide_quest($struct14, $int15, $int20, $int21) = 0) {
 		if (compare($string2, $string1) ! 0) {
 			$count9, $height6 = ~script1354($string2, $count9, $height6, $component4);
 			$string1 = $string2;

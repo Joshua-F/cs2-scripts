@@ -21,7 +21,7 @@ switch_int ($setting0) {
 		%var872 = ~minmax(0, 100, calc($int1 * 5));
 		~script3644;
 	case ^setting_brightness :
-		setdeviceoption(6, ~minmax(0, 100, calc($int1 * 5)));
+		setdeviceoption(^deviceoption_brightness, ~minmax(0, 100, calc($int1 * 5)));
 	case ^setting_interface_scaling :
 		~settings_interface_scaling($int1);
 	case ^setting_draw_distance :

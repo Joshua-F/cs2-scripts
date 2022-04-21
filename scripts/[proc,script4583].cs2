@@ -1,3 +1,3 @@
 // 4583
 [proc,script4583](boolean $boolean0)
-setgameoption(1, ~bool_to_int($boolean0));
+setgameoption(^gameoption_remove_roof, ~bool_to_int($boolean0));

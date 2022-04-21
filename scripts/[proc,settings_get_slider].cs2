@@ -8,11 +8,11 @@ switch_int ($setting0) {
 	case ^setting_volumeareasounds :
 		return(calc(%var872 / 5));
 	case ^setting_brightness :
-		return(calc(getdeviceoption(6) / 5));
+		return(calc(getdeviceoption(^deviceoption_brightness) / 5));
 	case ^setting_interface_scaling :
 		return(%varbit11864);
 	case ^setting_draw_distance :
-		return(interpolate(0, struct_param(view_distance_3656, param_1101), 25, 90, getdeviceoption(14)));
+		return(interpolate(0, struct_param(view_distance_3656, param_1101), 25, 90, getdeviceoption(^deviceoption_draw_distance)));
 	case default :
 		return(0);
 }

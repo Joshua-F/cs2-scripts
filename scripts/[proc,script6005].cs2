@@ -1,5 +1,5 @@
 // 6005
-[proc,script6005](obj $obj0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
+[proc,script6005](obj $obj0, int $int1, int $int2, boolean $boolean3, int $int4, boolean $boolean5, int $int6, int $int7)
 if (~on_enhanced_any = 0) {
 	return;
 }
@@ -11,10 +11,10 @@ if ($obj0 = null) {
 }
 $obj0 = oc_uncert($obj0);
 def_string $string0 = "";
-if (%varbit13826 = 1 & $int3 = 1) {
+if (%varbit13826 = 1 & $boolean3 = true) {
 	$string0 = ~script6006($string0, "GE", $int4, $int1);
 }
-if (%varbit13827 = 1 & $int5 = 0) {
+if (%varbit13827 = 1 & $boolean5 = false) {
 	if ($int6 > 0) {
 		$string0 = ~script6006($string0, "HA", $int6, $int1);
 	}

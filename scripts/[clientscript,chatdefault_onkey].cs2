@@ -188,7 +188,7 @@ if ($key0 = ^key_return) {
 		} else if ($int4 = 1) {
 			if ($length2 > 2) {
 				if (string_indexof_string(%varcstring335, "::toggleroof", 0) = 0) {
-					if (getgameoption(1) = 1) {
+					if (getgameoption(^gameoption_remove_roof) = 1) {
 						~script4583(false);
 						mes("Roofs will only be removed selectively. This setting will not be saved.");
 					} else {

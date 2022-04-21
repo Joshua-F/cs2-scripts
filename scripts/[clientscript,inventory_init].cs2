@@ -16,5 +16,5 @@ while ($size2 < $size3) {
 ~inventory_build($component0, $size3, $boolean1, null);
 if_setoninvtransmit("inventory_build($component0, $size3, $boolean1, null){inv}", $component0);
 if_setonvartransmit("inventory_build($component0, $size3, $boolean1, null){var1432}", $component0);
-_2430("inventory_key($component0, $size3, $boolean1, event_key, true)", $component0);
-_2431("inventory_key($component0, $size3, $boolean1, event_key, false)", $component0);
+if_setonkeydown("inventory_key($component0, $size3, $boolean1, event_key, true)", $component0);
+if_setonkeyup("inventory_key($component0, $size3, $boolean1, event_key, false)", $component0);
