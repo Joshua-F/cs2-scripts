@@ -316,46 +316,7 @@ switch_int ($int0) {
 	case 20 :
 		return(~skill_guide_subsection_slayer($int1));
 	case 21 :
-		if ($int1 = 0) {
-			return("Allotments", 1);
-		}
-		if ($int1 = 1) {
-			return("Hops", 1);
-		}
-		if ($int1 = 2) {
-			return("Trees", 1);
-		}
-		if ($int1 = 3) {
-			return("Fruit Trees", 1);
-		}
-		if ($int1 = 4) {
-			return("Bushes", 1);
-		}
-		if ($int1 = 5) {
-			return("Flowers", 1);
-		}
-		if ($int1 = 6) {
-			return("Herbs", 1);
-		}
-		if ($int1 = 7) {
-			return("Special", 1);
-		}
-		if ($int1 = 8) {
-			return("Scarecrows", 1);
-		}
-		if ($int1 = 9) {
-			return("Multiple roots", 1);
-		}
-		if ($int1 = 10) {
-			return("Tithe Farm", 1);
-		}
-		if ($int1 = 11) {
-			return("Raids", 1);
-		}
-		if ($int1 = 12) {
-			return("Other", 1);
-		}
-		return("", -1);
+		return(~skill_guide_subsection_farming($int1));
 	case 22 :
 		return(~skill_guide_subsection_construction($int1));
 	case 23 :

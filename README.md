@@ -445,6 +445,7 @@
 [**442**](scripts/[proc,script442].cs2)  
 [**443**](scripts/[clientscript,castlewarstrade_init].cs2) `[clientscript,castlewarstrade_init]`  
 [**444**](scripts/[clientscript,barbassault_turret_data].cs2) `[clientscript,barbassault_turret_data]`  
+[**445**](scripts/[proc,skill_guide_subsection_farming].cs2) `[proc,skill_guide_subsection_farming]`  
 [**446**](scripts/[clientscript,orbs_update_health].cs2) `[clientscript,orbs_update_health]`  
 [**447**](scripts/[clientscript,orbs_update_runenergy].cs2) `[clientscript,orbs_update_runenergy]`  
 [**448**](scripts/[clientscript,script448].cs2)  
@@ -538,6 +539,7 @@
 [**536**](scripts/[proc,script536].cs2)  
 [**537**](scripts/[proc,script537].cs2)  
 [**538**](scripts/[proc,soul_wars_rewards_statbuttondraw].cs2) `[proc,soul_wars_rewards_statbuttondraw]`  
+[**539**](scripts/[proc,skill_guide_data_farming].cs2) `[proc,skill_guide_data_farming]`  
 [**540**](scripts/[clientscript,ge_offers_bigbutton_init].cs2) `[clientscript,ge_offers_bigbutton_init]`  
 [**541**](scripts/[proc,ge_offers_bigbutton].cs2) `[proc,ge_offers_bigbutton]`  
 [**542**](scripts/[clientscript,ge_offers_bigbutton_op].cs2) `[clientscript,ge_offers_bigbutton_op]`  

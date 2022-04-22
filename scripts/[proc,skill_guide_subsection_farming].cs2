@@ -1,0 +1,32 @@
+// 445
+[proc,skill_guide_subsection_farming](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Allotments", 1);
+	case 1 :
+		return("Hops", 1);
+	case 2 :
+		return("Trees", 1);
+	case 3 :
+		return("Fruit Trees", 1);
+	case 4 :
+		return("Bushes", 1);
+	case 5 :
+		return("Flowers", 1);
+	case 6 :
+		return("Herbs", 1);
+	case 7 :
+		return("Special", 1);
+	case 8 :
+		return("Scarecrows", 1);
+	case 9 :
+		return("Multiple roots", 1);
+	case 10 :
+		return("Tithe Farm", 1);
+	case 11 :
+		return("Raids", 1);
+	case 12 :
+		return("Other", 1);
+	case default :
+		return("", -1);
+}
