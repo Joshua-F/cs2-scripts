@@ -1,0 +1,34 @@
+// 6044
+[proc,script6044](component $component0, component $component1, component $component2, component $component3, component $component4)
+def_int $height5 = 0;
+if (%varbit13863 < 45) {
+	$height5 = scale(106, 45, ~minmax(0, 45, %varbit13863));
+} else {
+	$height5 = 106;
+}
+if_setsize(0, $height5, ^setsize_minus, ^setsize_abs, $component0);
+if (%varbit13864 < 45) {
+	$height5 = scale(106, 45, ~minmax(0, 45, %varbit13864));
+} else {
+	$height5 = 106;
+}
+if_setsize(0, $height5, ^setsize_minus, ^setsize_abs, $component1);
+if (%varbit13865 < 45) {
+	$height5 = scale(106, 45, ~minmax(0, 45, %varbit13865));
+} else {
+	$height5 = 106;
+}
+if_setsize(0, $height5, ^setsize_minus, ^setsize_abs, $component2);
+def_int $int6 = calc((%varbit13863 + %varbit13864 + %varbit13865) / 3);
+if ($int6 < 45) {
+	$height5 = scale(106, 45, ~minmax(0, 45, $int6));
+} else {
+	$height5 = 106;
+}
+if_setsize(0, $height5, ^setsize_minus, ^setsize_abs, $component3);
+if ($int6 <= 0) {
+	if_sethide(true, $component4);
+	return;
+}
+if_sethide(false, $component4);
+if_setmodelangle(1, 0, 0, 0, 0, interpolate(2400, 1200, 0, 45, $int6), $component4);

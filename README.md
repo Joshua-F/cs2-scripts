@@ -943,9 +943,6 @@
 [**940**](scripts/[clientscript,peng_observer_init].cs2) `[clientscript,peng_observer_init]`  
 [**941**](scripts/[clientscript,peng_observer_borders].cs2) `[clientscript,peng_observer_borders]`  
 [**942**](scripts/[proc,peng_observer_borders].cs2) `[proc,peng_observer_borders]`  
-[**943**](scripts/[clientscript,script943].cs2)  
-[**944**](scripts/[clientscript,script944].cs2)  
-[**945**](scripts/[proc,script945].cs2)  
 [**946**](scripts/[clientscript,zep_balloon_map_hover].cs2) `[clientscript,zep_balloon_map_hover]`  
 [**947**](scripts/[clientscript,script947].cs2)  
 [**948**](scripts/[clientscript,fade_overlay].cs2) `[clientscript,fade_overlay]`  
@@ -2177,6 +2174,8 @@
 [**2174**](scripts/[proc,tournament_beta_world].cs2) `[proc,tournament_beta_world]`  
 [**2175**](scripts/[proc,nosavegame_world].cs2) `[proc,nosavegame_world]`  
 [**2176**](scripts/[clientscript,logout_layout_update].cs2) `[clientscript,logout_layout_update]`  
+[**2177**](scripts/[proc,script2177].cs2)  
+[**2178**](scripts/[proc,script2178].cs2)  
 [**2179**](scripts/[proc,deadman_spectator_names].cs2) `[proc,deadman_spectator_names]`  
 [**2180**](scripts/[clientscript,deadman_spectator_single].cs2) `[clientscript,deadman_spectator_single]`  
 [**2181**](scripts/[clientscript,deadman_spectator_double].cs2) `[clientscript,deadman_spectator_double]`  
@@ -2236,6 +2235,7 @@
 [**2235**](scripts/[clientscript,script2235].cs2)  
 [**2236**](scripts/[clientscript,script2236].cs2)  
 [**2237**](scripts/[proc,script2237].cs2)  
+[**2238**](scripts/[clientscript,script2238].cs2)  
 [**2239**](scripts/[clientscript,keyboard_hide].cs2) `[clientscript,keyboard_hide]`  
 [**2240**](scripts/[clientscript,collection_init].cs2) `[clientscript,collection_init]`  
 [**2241**](scripts/[clientscript,script2241].cs2)  
@@ -4559,6 +4559,7 @@
 [**4559**](scripts/[clientscript,fishing_spot_indicator_tile_setup].cs2) `[clientscript,fishing_spot_indicator_tile_setup]`  
 [**4560**](scripts/[proc,fishing_spot_indicator_tile_setup].cs2) `[proc,fishing_spot_indicator_tile_setup]`  
 [**4561**](scripts/[proc,welcome_screen_toggle].cs2) `[proc,welcome_screen_toggle]`  
+[**4562**](scripts/[clientscript,script4562].cs2)  
 [**4563**](scripts/[proc,script4563].cs2)  
 [**4564**](scripts/[clientscript,settings_player_attack_options].cs2) `[clientscript,settings_player_attack_options]`  
 [**4565**](scripts/[clientscript,settings_npc_attack_options].cs2) `[clientscript,settings_npc_attack_options]`  
@@ -4572,6 +4573,7 @@
 [**4573**](scripts/[clientscript,settings_side_dropdown_transmit].cs2) `[clientscript,settings_side_dropdown_transmit]`  
 [**4574**](scripts/[proc,settings_side_dropdown_update].cs2) `[proc,settings_side_dropdown_update]`  
 [**4575**](scripts/[clientscript,settings_side_dropdown_hover].cs2) `[clientscript,settings_side_dropdown_hover]`  
+[**4576**](scripts/[proc,script4576].cs2)  
 [**4577**](scripts/[proc,settings_toggle_roof].cs2) `[proc,settings_toggle_roof]`  
 [**4578**](scripts/[proc,settings_boss_health_overlay].cs2) `[proc,settings_boss_health_overlay]`  
 [**4579**](scripts/[proc,settings_standard_health_overlay].cs2) `[proc,settings_standard_health_overlay]`  
@@ -5914,6 +5916,7 @@
 [**5916**](scripts/[clientscript,script5916].cs2)  
 [**5917**](scripts/[proc,script5917].cs2)  
 [**5918**](scripts/[clientscript,script5918].cs2)  
+[**5919**](scripts/[proc,script5919].cs2)  
 [**5920**](scripts/[clientscript,script5920].cs2)  
 [**5921**](scripts/[proc,script5921].cs2)  
 [**5922**](scripts/[proc,settings_buff_cannon_ammo].cs2) `[proc,settings_buff_cannon_ammo]`  
@@ -6022,3 +6025,23 @@
 [**6025**](scripts/[proc,script6025].cs2)  
 [**6026**](scripts/[clientscript,setgameoption].cs2) `[clientscript,setgameoption]`  
 [**6027**](scripts/[clientscript,script6027].cs2)  
+[**6028**](scripts/[proc,script6028].cs2)  
+[**6029**](scripts/[clientscript,script6029].cs2)  
+[**6030**](scripts/[proc,script6030].cs2)  
+[**6031**](scripts/[clientscript,script6031].cs2)  
+[**6032**](scripts/[proc,script6032].cs2)  
+[**6033**](scripts/[clientscript,script6033].cs2)  
+[**6034**](scripts/[proc,script6034].cs2)  
+[**6035**](scripts/[clientscript,script6035].cs2)  
+[**6036**](scripts/[clientscript,script6036].cs2)  
+[**6037**](scripts/[proc,script6037].cs2)  
+[**6038**](scripts/[clientscript,script6038].cs2)  
+[**6039**](scripts/[clientscript,script6039].cs2)  
+[**6040**](scripts/[clientscript,script6040].cs2)  
+[**6041**](scripts/[clientscript,script6041].cs2)  
+[**6042**](scripts/[proc,script6042].cs2)  
+[**6043**](scripts/[clientscript,script6043].cs2)  
+[**6044**](scripts/[proc,script6044].cs2)  
+[**6045**](scripts/[proc,script6045].cs2)  
+[**6046**](scripts/[clientscript,script6046].cs2)  
+[**6047**](scripts/[clientscript,script6047].cs2)  

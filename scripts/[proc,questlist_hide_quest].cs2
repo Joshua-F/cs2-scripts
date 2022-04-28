@@ -1,9 +1,12 @@
 // 3238
-[proc,questlist_hide_quest](struct $struct0, int $int1, int $int2, int $int3)(int)
+[proc,questlist_hide_quest](struct $struct0, int $int1, int $int2, int $int3, int $int4)(int)
 if (struct_param($struct0, param_611) = 1 & ~questlist_hide_miniquests = 1) {
 	return(1);
 }
 if (struct_param($struct0, param_611) = 0 & %varbit13774 = 1) {
+	return(1);
+}
+if ($int4 = 1 & %varbit13890 = 1) {
 	return(1);
 }
 if ($int1 = 0 & %varbit13775 = 1) {

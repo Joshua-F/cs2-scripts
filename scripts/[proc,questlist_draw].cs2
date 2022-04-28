@@ -1,6 +1,9 @@
 // 2633
 [proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5)
 def_int $height6 = -3;
+if (%varbit13889 = 1) {
+	$height6 = 2;
+}
 def_enum $enum7 = enum_4285;
 def_int $count8 = enum_getoutputcount($enum7);
 def_int $count9 = 0;
@@ -63,6 +66,7 @@ def_int $int18 = 0;
 def_int $int19 = 0;
 def_int $int20 = 1;
 def_int $int21 = 1;
+def_int $int22 = 0;
 def_string $string1 = "************";
 def_string $string2 = "************";
 while ($count17 < $count8) {
@@ -72,15 +76,16 @@ while ($count17 < $count8) {
 	$int20 = ~script5989($struct14);
 	$int21 = ~script5990($struct14);
 	$string2 = ~script2265($struct14, $int15, %varbit13772);
-	if (~questlist_hide_quest($struct14, $int15, $int20, $int21) = 0) {
-		if (compare($string2, $string1) ! 0) {
+	$int22 = ~script4028($struct14, $int15, $int20, $int21);
+	if (~questlist_hide_quest($struct14, $int15, $int20, $int21, $int22) = 0) {
+		if (compare($string2, $string1) ! 0 & %varbit13889 = 0) {
 			$count9, $height6 = ~script1354($string2, $count9, $height6, $component4);
 			$string1 = $string2;
 		}
 		if (cc_find($component4, $int18) = ^true) {
 			cc_sethide(false);
 			cc_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top);
-			~questlist_setcolour($struct14, $int15, $int20, $int21);
+			~questlist_setcolour($int15, $int22);
 			$int19 = calc($int19 + 1);
 			$int12 = cc_getheight;
 		}
@@ -105,15 +110,15 @@ if ($int19 <= 0) {
 } else {
 	if_sethide(false, $component3);
 }
-def_int $int22 = %varcint10;
+def_int $int23 = %varcint10;
 if ($boolean5 = true) {
-	$int22 = %varcint972;
+	$int23 = %varcint972;
 }
 if ($height6 > if_getheight($component2)) {
 	if_setscrollsize(0, $height6, $component2);
 	~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	if (cc_find($component3, 1) = ^true) {
-		~scrollbar_vertical_doscroll($component3, $component2, $int22, true);
+		~scrollbar_vertical_doscroll($component3, $component2, $int23, true);
 	}
 } else {
 	if ($boolean5 = true) {

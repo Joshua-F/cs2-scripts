@@ -1,0 +1,15 @@
+// 6041
+[clientscript,script6041](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, int $int6, int $int7, int $int8, boolean $boolean9)
+if (~script6045 = 1) {
+	~script6044($component0, $component1, $component2, $component3, $component4);
+	return;
+}
+if (~script6042($int8) <= 0 & $boolean9 = false | ~script6042($int8) >= 45 & $boolean9 = true) {
+	sound_synth(synth_5598, 1, 0);
+	return;
+}
+%varbit13863 = ~minmax(0, 45, calc(%varbit13863 + $int5));
+%varbit13864 = ~minmax(0, 45, calc(%varbit13864 + $int6));
+%varbit13865 = ~minmax(0, 45, calc(%varbit13865 + $int7));
+sound_synth(bunsen_burner, 1, 0);
+~script6044($component0, $component1, $component2, $component3, $component4);

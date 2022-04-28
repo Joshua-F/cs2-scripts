@@ -1,0 +1,5 @@
+// 6032
+[proc,script6032](component $component0)
+def_int $int1 = ~minmax(0, 31, %varbit13849);
+$int1 = calc($int1 * 64 + 63);
+if_setmodelangle(0, 0, 512, $int1, 0, 270, $component0);

@@ -1,13 +1,18 @@
 // 1414
-[proc,hp_hud_update_bar](component $component0, int $width1)
-def_int $width2 = if_getwidth($component0);
-if ($width2 = $width1) {
-	if_setsize($width1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
-	if_setontimer(null, $component0);
+[proc,hp_hud_update_bar](component $component0, int $width1, int $int2)
+if ($int2 ! -1 & clientclock < $int2) {
 	return;
 }
-if ($width2 < $width1) {
-	if_setsize(calc($width2 + 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
-} else if ($width2 > $width1) {
-	if_setsize(calc($width2 - 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+def_int $width3 = if_getwidth($component0);
+if ($width3 = $width1) {
+	if_setsize($width1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+	if_setontimer(null, $component0);
+	%varcint984 = 0;
+	return;
+}
+%varcint984 = 1;
+if ($width3 < $width1) {
+	if_setsize(calc($width3 + 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+} else if ($width3 > $width1) {
+	if_setsize(calc($width3 - 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
 }

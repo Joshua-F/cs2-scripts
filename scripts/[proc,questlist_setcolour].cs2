@@ -1,15 +1,15 @@
 // 4027
-[proc,questlist_setcolour](struct $struct0, int $int1, int $int2, int $int3)
-def_int $colour4 = ~script5329(^setting_unstarted_quest_text_colour_colour);
-if (~script4028($struct0, $int1, $int2, $int3) = 1) {
-	$colour4 = ~script5329(^setting_unavailable_quest_text_colour_colour);
-} else if ($int1 = 0) {
-	$colour4 = ~script5329(^setting_inprogress_quest_text_colour_colour);
-} else if ($int1 = 2 & ~speedrunning_world = 0) {
-	$colour4 = ~script5329(^setting_completed_quest_text_colour_colour);
+[proc,questlist_setcolour](int $int0, int $int1)
+def_int $colour2 = ~script5329(^setting_unstarted_quest_text_colour_colour);
+if ($int1 = 1) {
+	$colour2 = ~script5329(^setting_unavailable_quest_text_colour_colour);
+} else if ($int0 = 0) {
+	$colour2 = ~script5329(^setting_inprogress_quest_text_colour_colour);
+} else if ($int0 = 2 & ~speedrunning_world = 0) {
+	$colour2 = ~script5329(^setting_completed_quest_text_colour_colour);
 }
-cc_setcolour($colour4);
+cc_setcolour($colour2);
 if (~on_mobile = false) {
 	cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
-	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour4)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour2)");
 }

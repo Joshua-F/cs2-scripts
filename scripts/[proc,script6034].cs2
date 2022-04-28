@@ -1,0 +1,9 @@
+// 6034
+[proc,script6034](component $component0, graphic $graphic1, string $string0, boolean $boolean2)
+sound_synth(lever, 1, 0);
+~script6037($component0, $graphic1, $string0, true, 1);
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setonop(null, $component0);
+if_clearops($component0);
+if_setontimer("script6035($component0, $graphic1, $string0, calc(clientclock + 40), $boolean2)", $component0);

@@ -1,0 +1,7 @@
+// 6038
+[clientscript,script6038](component $component0)
+if (if_gettrans($component0) > %varcint985) {
+	if_settrans(~max(50, calc(if_gettrans($component0) - 1)), $component0);
+} else if (if_gettrans($component0) < %varcint985) {
+	if_settrans(~min(255, calc(if_gettrans($component0) + 1)), $component0);
+}

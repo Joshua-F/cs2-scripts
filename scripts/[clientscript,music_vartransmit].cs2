@@ -1,6 +1,6 @@
 // 313
 [clientscript,music_vartransmit](component $component0, component $component1, int $count2)
-def_int $flagsarray0(calc(21 + 1));
+def_int $flagsarray0(calc(22 + 1));
 $flagsarray0(1) = %var20;
 $flagsarray0(2) = %var21;
 $flagsarray0(3) = %var22;
@@ -22,6 +22,7 @@ $flagsarray0(18) = %var1681;
 $flagsarray0(19) = %var2065;
 $flagsarray0(20) = %var2237;
 $flagsarray0(21) = %var2950;
+$flagsarray0(22) = %var3418;
 def_int $int3 = 0;
 def_coord $coord4 = null;
 def_int $int5 = 0;
@@ -32,9 +33,6 @@ while ($count6 < $count2) {
 		$coord4 = enum(int, coord, enum_819, $int3);
 		if ($coord4 ! null) {
 			if (testbit($flagsarray0(coordx($coord4)), coordz($coord4)) = ^true) {
-				~music_setcolour(0x0dc10d);
-				$int5 = calc($int5 + 1);
-			} else if ($int3 = 331 & %varbit1028 > 35) {
 				~music_setcolour(0x0dc10d);
 				$int5 = calc($int5 + 1);
 			} else {

@@ -66,10 +66,10 @@ if (cc_find($component0, $comsubid1) = ^true) {
 					$flags8 = %var2237;
 				case 21 :
 					$flags8 = %var2950;
+				case 22 :
+					$flags8 = %var3418;
 			}
 			if (testbit($flags8, $index7) = ^true) {
-				~music_setcolour(0x0dc10d);
-			} else if ($int4 = 331 & %varbit1028 > 35) {
 				~music_setcolour(0x0dc10d);
 			} else {
 				~music_setcolour(^red);
