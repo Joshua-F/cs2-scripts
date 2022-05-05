@@ -21,6 +21,9 @@ if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 					if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
 			}
 		}
+		if (%varcint171 = 3) {
+			~inventory_build(inventory:0, inv_size(inv), true, null);
+		}
 	} else {
 		if_sethide(true, $component2);
 	}

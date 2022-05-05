@@ -2,7 +2,7 @@
 [proc,bondif_redeem_package_details](component $component0, int $int1, string $text0, int $num2, graphic $graphic3, int $int4, int $height5, string $text1)(int)
 cc_create($component0, ^iftype_text, $int1);
 $int1 = calc($int1 + 1);
-cc_setsize(80, 0, ^setsize_abs, ^setsize_minus);
+cc_setsize(82, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
 cc_settextfont(b12_full);

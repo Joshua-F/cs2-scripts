@@ -2493,7 +2493,6 @@
 [**2493**](scripts/[clientscript,script2493].cs2)  
 [**2494**](scripts/[proc,skill_guide_subsection_prayer].cs2) `[proc,skill_guide_subsection_prayer]`  
 [**2495**](scripts/[clientscript,openurl_raw_silent].cs2) `[clientscript,openurl_raw_silent]`  
-[**2496**](scripts/[proc,mobile_billing_open].cs2) `[proc,mobile_billing_open]`  
 [**2497**](scripts/[clientscript,account_init].cs2) `[clientscript,account_init]`  
 [**2498**](scripts/[clientscript,account_info_update].cs2) `[clientscript,account_info_update]`  
 [**2499**](scripts/[proc,skill_guide_data_prayer].cs2) `[proc,skill_guide_data_prayer]`  
@@ -5219,7 +5218,6 @@
 [**5219**](scripts/[proc,script5219].cs2)  
 [**5220**](scripts/[proc,script5220].cs2)  
 [**5221**](scripts/[clientscript,summary_sidepanel_timer_draw].cs2) `[clientscript,summary_sidepanel_timer_draw]`  
-[**5222**](scripts/[clientscript,script5222].cs2)  
 [**5223**](scripts/[proc,script5223].cs2)  
 [**5224**](scripts/[clientscript,pvp_icons_comlevelrange].cs2) `[clientscript,pvp_icons_comlevelrange]`  
 [**5225**](scripts/[proc,script5225].cs2)  
