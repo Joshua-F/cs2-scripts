@@ -1,5 +1,5 @@
 // 3343
-[clientscript,notification_display_init](int $colour0, string $text0, string $text1)
+[clientscript,notification_display_init](string $text0, string $text1, int $colour0)
 if ($colour0 = null) {
 	$colour0 = 0xff981f;
 }
