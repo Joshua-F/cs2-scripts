@@ -61,51 +61,51 @@ switch_int ($int0) {
 				case 27 :
 					return(70, zamorakian_spear_11824, "Members: Zamorakian spear");
 				case 28 :
-					return(70, dragon_hunter_lance_22978, "Members: Dragon hunter lance");
-				case 29 :
 					return(70, abyssal_whip_4151, "Members: Abyssal whip & dagger");
-				case 30 :
+				case 29 :
 					return(70, abyssal_bludgeon_13263, "Members: Abyssal bludgeon<br> (with 70 Strength)");
-				case 31 :
+				case 30 :
 					return(70, ahrims_staff_4710, "Members: Ahrim's staff<br> (with 70 Magic)");
-				case 32 :
+				case 31 :
 					return(70, dharoks_greataxe_4718, "Members: Dharok's greataxe<br> (with 70 Strength)");
-				case 33 :
+				case 32 :
 					return(70, torags_hammers_4747, "Members: Torag's hammers<br> (with 70 Strength)");
-				case 34 :
+				case 33 :
 					return(70, veracs_flail_4755, "Members: Verac's flail");
-				case 35 :
+				case 34 :
 					return(70, guthans_warspear_4726, "Members: Guthan's warspear");
-				case 36 :
+				case 35 :
 					return(70, avernic_defender_22322, "Members: Avernic defender<br> (with 70 Defence)");
-				case 37 :
+				case 36 :
 					return(75, arclight_19675, "Members: Arclight");
-				case 38 :
+				case 37 :
 					return(75, zamorak_godsword_11808, "Members: Godswords");
-				case 39 :
+				case 38 :
 					return(75, staff_of_the_dead_11791, "Members: Staff of the Dead<br> (with 75 Magic)");
-				case 40 :
+				case 39 :
 					return(75, staff_of_light_22296, "Members: Staff of Light<br> (with 75 Magic)");
-				case 41 :
+				case 40 :
 					return(75, staff_of_balance_24144, "Members: Staff of Balance<br> (with 75 Magic)");
-				case 42 :
+				case 41 :
 					return(75, abyssal_tentacle_12006, "Members: Abyssal tentacle");
-				case 43 :
-					return(75, ghrazi_rapier_22324, "Members: Ghrazi rapier");
-				case 44 :
-					return(75, inquisitors_mace_24417, "Members: Inquisitor's mace");
-				case 45 :
+				case 42 :
 					return(75, saras_blessed_sword_full_12808, "Members: Blessed Saradomin sword");
-				case 46 :
-					return(75, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 75 Strength)");
-				case 47 :
+				case 43 :
 					return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Strength)");
-				case 48 :
+				case 44 :
 					return(75, dinhs_bulwark_21015, "Members: Dinh's bulwark<br> (with 75 Defence)");
-				case 49 :
-					return(75, blade_of_saeldor_23995, "Members: Blade of Saeldor");
-				case 50 :
+				case 45 :
 					return(75, vestas_blighted_longsword_24617, "Members: Vesta's blighted longsword");
+				case 46 :
+					return(78, dragon_hunter_lance_22978, "Members: Dragon hunter lance");
+				case 47 :
+					return(80, ghrazi_rapier_22324, "Members: Ghrazi rapier");
+				case 48 :
+					return(80, inquisitors_mace_24417, "Members: Inquisitor's mace");
+				case 49 :
+					return(80, blade_of_saeldor_23995, "Members: Blade of Saeldor");
+				case 50 :
+					return(80, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 90 Strength)");
 				case default :
 					return(-1, null, "");
 			}
@@ -176,7 +176,7 @@ switch_int ($int0) {
 					case 23 :
 						return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Attack)");
 					case 24 :
-						return(75, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 75 Attack)");
+						return(90, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 80 Attack)");
 				}
 			case 1 :
 				switch_int ($int2) {
@@ -276,10 +276,10 @@ switch_int ($int0) {
 				return(70, crystal_bow_23983, "Members: Crystal bows (with 50 Agility)<br> Ammo: None");
 			}
 			if ($int2 = 12) {
-				return(75, bow_of_faerdhinen_25865, "Members: Bow of Faerdhinen (with 70 Agility)<br> Ammo: None");
+				return(80, bow_of_faerdhinen_25865, "Members: Bow of Faerdhinen (with 70 Agility)<br> Ammo: None");
 			}
 			if ($int2 = 13) {
-				return(75, twisted_bow_20997, "Members: Twisted bow<br> Ammo: Arrows up to dragon");
+				return(85, twisted_bow_20997, "Members: Twisted bow<br> Ammo: Arrows up to dragon");
 			}
 			return(-1, null, "");
 		}
@@ -372,7 +372,7 @@ switch_int ($int0) {
 				return(64, dragon_crossbow_21902, "Members: Dragon crossbow<br> Ammo: Bolts up to dragon");
 			}
 			if ($int2 = 12) {
-				return(65, dragon_hunter_crossbow_21012, "Members: Dragon hunter crossbow<br> Ammo: Bolts up to dragon");
+				return(70, dragon_hunter_crossbow_21012, "Members: Dragon hunter crossbow<br> Ammo: Bolts up to dragon");
 			}
 			if ($int2 = 13) {
 				return(70, armadyl_crossbow_11785, "Members: Armadyl crossbow<br> Ammo: Bolts up to dragon");

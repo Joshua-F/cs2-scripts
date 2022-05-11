@@ -1,5 +1,5 @@
 // 6016
-[proc,script6016]()(int)
+[proc,inventory_antidrag_active]()(int)
 if (~on_enhanced_desktop = 1 & %varbit12345 = 1 & (%varbit13829 <= 0 | keyheld(%varbit13829) = false) & (%varbit13828 <= 0 | keyheld(%varbit13828) = true)) {
 	return(1);
 }

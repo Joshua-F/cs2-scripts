@@ -138,10 +138,10 @@ switch_obj ($obj0) {
 			return(inv_total(inv, nature_rune_11693));
 		}
 		$int6 = inv_total(inv, nature_rune_561);
+		if ($obj4 = bryophytas_staff_22370) {
+			return(^max_32bit_int);
+		}
 		if (map_members = ^true) {
-			if ($obj4 = bryophytas_staff_22370) {
-				return(^max_32bit_int);
-			}
 			if (enum(int, namedobj, enum_982, $int1) = nature_rune_561) {
 				$int6 = ~add($int6, %varbit1624);
 			}

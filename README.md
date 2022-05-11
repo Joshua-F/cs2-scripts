@@ -6011,7 +6011,7 @@
 [**6013**](scripts/[clientscript,inventory_reorder].cs2) `[clientscript,inventory_reorder]`  
 [**6014**](scripts/[clientscript,inventory_op].cs2) `[clientscript,inventory_op]`  
 [**6015**](scripts/[clientscript,inventory_antidrag_update].cs2) `[clientscript,inventory_antidrag_update]`  
-[**6016**](scripts/[proc,script6016].cs2)  
+[**6016**](scripts/[proc,inventory_antidrag_active].cs2) `[proc,inventory_antidrag_active]`  
 [**6017**](scripts/[proc,script6017].cs2)  
 [**6018**](scripts/[proc,script6018].cs2)  
 [**6019**](scripts/[proc,script6019].cs2)  
