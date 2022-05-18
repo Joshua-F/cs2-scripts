@@ -16,6 +16,13 @@ if ($obj2 = burnt_fish_343) {
 		$mes0 = "<oc_name($obj0)>: You'll keep a downgraded version of this item.";
 	}
 	cc_setoutline(2);
+} else if ($obj2 = mudskipper_hide_7532) {
+	if ($int1 > 1) {
+		$mes0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: You'll keep a downgraded version of these items, and their ornament kit will be lost.";
+	} else {
+		$mes0 = "<oc_name($obj0)>: You'll keep a downgraded version of this item, and its ornament kit will be lost.";
+	}
+	cc_setoutline(2);
 } else {
 	if ($int1 > 1) {
 		$mes0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: You'll always keep these items.";

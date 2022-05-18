@@ -1,0 +1,33 @@
+// 945
+[proc,script945](loc $loc0, coord $coord1, int $int2, int $int3)
+if ($loc0 = null) {
+	return;
+}
+def_enum $enum4 = enum(loc, enum, enum_4320, $loc0);
+if ($enum4 = null) {
+	$enum4 = enum(coord, enum, enum_4321, $coord1);
+	if ($enum4 = null) {
+		return;
+	}
+}
+def_int $count5 = 0;
+def_int $count6 = enum_getoutputcount($enum4);
+def_loc $loc7 = null;
+def_int $int8 = lc_param($loc0, param_1612);
+while ($count5 < $count6) {
+	$loc7 = enum(int, loc, $enum4, $count5);
+	if ($loc7 ! null) {
+		if ($int8 = 1) {
+			$coord1 = ~script2496($coord1, $count5);
+		} else if ($int8 = 2) {
+			$coord1 = ~script5222($coord1, $count5);
+		}
+		if ($int3 = 1) {
+			highlight_loc_on($loc7, $coord1, $int2, 0);
+		} else {
+			highlight_loc_off($loc7, $coord1, $int2, 0);
+		}
+	}
+	$loc7 = null;
+	$count5 = calc($count5 + 1);
+}

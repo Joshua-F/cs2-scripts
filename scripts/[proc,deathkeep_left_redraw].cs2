@@ -44,7 +44,7 @@ while ($int25 < 50) {
 	if ($obj23 ! null) {
 		$obj24 = inv_getobj(inv_468, $int25);
 		switch_obj ($obj24) {
-			case burnt_fish_323, burnt_fish_343 :
+			case burnt_fish_323, burnt_fish_343, mudskipper_hide_7532 :
 				$int9, $int10, $int11 = ~deathkeep_left_keepitem($obj23, inv_getnum(inv_584, $int25), $obj24, $int1, $int2, $int3, $int9, $int11);
 			case default :
 				$int18, $int19 = ~deathkeep_left_deleteditem($obj23, inv_getnum(inv_584, $int25), $int1, $int2, $int3, $int18);

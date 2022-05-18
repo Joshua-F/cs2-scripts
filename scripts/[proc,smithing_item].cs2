@@ -10,9 +10,22 @@ if (~inzone(0_48_148_0_0, 0_48_148_63_63, coord) = 1 & $namedobj1 ! bronze_dagge
 	$int2 = 1;
 }
 def_int $width4 = if_getwidth($component0);
-cc_create($component0, ^iftype_text, 0);
+def_int $int5 = 0;
+def_int $total6 = inv_total(inv, $obj3);
+def_int $int7 = enum(obj, int, enum_845, $namedobj1);
+if (%varbit13894 = %varbit3216 & %varbit13895 = enum(component, int, enum_1101, $component0) & %varbit13895 ! 0 & $total6 >= $int7) {
+	cc_create($component0, ^iftype_rectangle, $int5);
+	$int5 = calc($int5 + 1);
+	cc_setcolour(0x9b8268);
+	cc_settrans(150);
+	cc_setfill(true);
+	cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+	if_setopkey(1, ^key_space, 0, $component0);
+}
+cc_create($component0, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
 cc_setsize($width4, 13, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, calc(32 - 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(2, calc(32 - 1), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 if ($int2 = 1 | stat(smithing) < enum(obj, int, enum_846, $namedobj1)) {
@@ -23,34 +36,35 @@ if ($int2 = 1 | stat(smithing) < enum(obj, int, enum_846, $namedobj1)) {
 	cc_settextshadow(true);
 }
 cc_settext($text0);
-def_int $int5 = enum(obj, int, enum_845, $namedobj1);
-cc_create($component0, ^iftype_text, 1);
+cc_create($component0, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
 cc_setsize($width4, 13, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, calc(32 + 11), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(2, calc(32 + 11), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextshadow(true);
-if (inv_total(inv, $obj3) < $int5) {
+if ($total6 < $int7) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(^green);
 }
-if ($int5 = 1) {
+if ($int7 = 1) {
 	cc_settext("1 bar");
 } else {
-	cc_settext("<tostring($int5)> bars");
+	cc_settext("<tostring($int7)> bars");
 }
-cc_create($component0, ^iftype_graphic, 2);
+cc_create($component0, ^iftype_graphic, $int5);
+$int5 = calc($int5 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(6, 2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 if (~inzone(0_26_195_0_0, 0_26_195_63_63, coord) = 1 & $namedobj1 = bronze_dagger_1205 & %var2686 < 350) {
 	cc_setontimer("cc_flash_component_timer(event_com, event_comsubid, 0, 1)");
 }
-def_int $num6 = enum(obj, int, enum_844, $namedobj1);
-cc_setobject($namedobj1, $num6);
-if ($num6 > 1) {
+def_int $num8 = enum(obj, int, enum_844, $namedobj1);
+cc_setobject($namedobj1, $num8);
+if ($num8 > 1) {
 	if_setop(1, "Smith set", $component0);
 } else {
 	if_setop(1, "Smith", $component0);

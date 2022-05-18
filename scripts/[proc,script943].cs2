@@ -1,0 +1,160 @@
+// 943
+[proc,script943](int $count0, int $int1, enum $enum2, enum $enum3, int $y4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, int $int11, int $count12, component $component13, component $component14)(int)
+.cc_create($component8, ^iftype_rectangle, $int11);
+$int11 = calc($int11 + 1);
+.cc_setsize($int6, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition($int5, $y4, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(^black);
+.cc_setfill(true);
+.cc_settrans(255);
+def_namedobj $namedobj15 = enum(int, namedobj, $enum2, $count0);
+def_int $num16 = enum(obj, int, enum_3652, $namedobj15);
+if ($num16 <= 1) {
+	$num16 = -1;
+}
+if ($namedobj15 = null) {
+	$namedobj15 = obj_6512;
+}
+.cc_create($component8, ^iftype_graphic, $int11);
+$int11 = calc($int11 + 1);
+.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc($int5 + (40 - 36) / 2), $y4, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setobject($namedobj15, $num16);
+.cc_setgraphicshadow(0x333333);
+.cc_setoutline(1);
+.cc_setop(1, "Select");
+if ($enum2 = enum_3553) {
+	.cc_setop(5, "Examine");
+} else {
+	.cc_setop(5, "");
+}
+.cc_setopbase("<col=ff9040><oc_name($namedobj15)></col>");
+def_int $width17 = calc($int6 - 40);
+$int5 = calc($int5 + 40);
+cc_create($component8, ^iftype_text, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize($width17, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int5, $y4, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextshadow(true);
+def_int $colour18 = 0xff981f;
+def_int $colour19 = 0xfffc00;
+def_int $int20 = enum(int, int, $enum3, $count0);
+def_string $mes0 = "";
+def_string $string1 = ",";
+if (%var2876 < $int20) {
+	cc_setcolour(0x9f9f9f);
+	$mes0 = "You need <~tostring_spacer($int20, $string1)> <~script853($int20)> to claim that reward.";
+	.cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
+} else if (string_length(~script854($namedobj15)) > 0) {
+	$mes0 = ~script854($namedobj15);
+	cc_setcolour(0x9f9f9f);
+	.cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
+} else {
+	if ($count12 = $count0) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour(0x00df00);
+	}
+	.cc_setonop("soul_wars_rewards_select($count0, 0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+}
+def_string $string2 = oc_name($namedobj15);
+if (parawidth($string2, 512, p12_full) > $width17) {
+	cc_settextfont(p11_full);
+} else {
+	cc_settextfont(p12_full);
+}
+cc_settext($string2);
+def_string $string3 = "Buy 1 (<tostring($int20)> <~script853($int20)>)";
+def_int $int21 = calc(parawidth($string3, 800, p11_full) + 12);
+cc_create($component8, ^iftype_text, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize($int21, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int5, $y4, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_setcolour(^green);
+cc_setop(1, "Select <col=ff9040><oc_name($namedobj15)></col>");
+cc_setop(5, "Examine");
+if ($int20 > 0) {
+	cc_settext($string3);
+}
+if (%var2876 < $int20) {
+	cc_setcolour(0x9f9f9f);
+	$mes0 = "You need <~tostring_spacer($int20, $string1)> <~script853($int20)> to claim that reward.";
+	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
+} else if (string_length(~script854($namedobj15)) > 0) {
+	$mes0 = ~script854($namedobj15);
+	cc_setcolour(0x9f9f9f);
+	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
+} else {
+	if ($count12 = $count0 & $int1 = 0) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour($colour18);
+	}
+	cc_setonop("soul_wars_rewards_select($count0, 0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+}
+if ($count12 = $count0 & $int1 = 0) {
+	cc_setcolour(^white);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	.cc_setonmouserepeat(null);
+	.cc_setonmouseleave(null);
+} else {
+	cc_setcolour($colour18);
+	if (%var2876 >= $int20 | string_length(~script854($namedobj15)) > 0 & ~on_mobile = false) {
+		cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour19)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour18)");
+		.cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour19)");
+		.cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour18)");
+	}
+}
+$int5 = calc($int5 + (parawidth($string3, 800, p11_full) + 12));
+def_int $int22 = calc($count0 + 1);
+cc_create($component8, ^iftype_text, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(calc($width17 - $int21), 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int5, $y4, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_setcolour(^blue);
+cc_setop(1, "Select <col=ff9040><tostring($int20)> Tokens/<oc_name($namedobj15)></col>");
+cc_setop(5, "Examine");
+cc_settext("Buy X");
+if (%var2876 < $int20) {
+	cc_setcolour(0x9f9f9f);
+	$mes0 = "You need at least <~tostring_spacer($int20, $string1)> <~script853($int20)> to claim that reward.";
+	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
+} else if (string_length(~script854($namedobj15)) > 0) {
+	$mes0 = ~script854($namedobj15);
+	cc_setcolour(0x9f9f9f);
+	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
+} else {
+	if ($count12 = $count0 & $int1 = 1) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour($colour18);
+	}
+	cc_setonop("soul_wars_rewards_select($count0, 1, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+}
+if ($count12 = $count0 & $int1 = 1) {
+	cc_setcolour(^white);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+} else {
+	cc_setcolour($colour18);
+	if (%var2876 >= $int20 | string_length(~script854($namedobj15)) > 0 & ~on_mobile = false) {
+		cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour19)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour18)");
+	}
+}
+return($int11);

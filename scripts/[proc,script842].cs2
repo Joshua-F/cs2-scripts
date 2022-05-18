@@ -1,33 +1,38 @@
 // 842
-[proc,script842](int $int0, component $component1, component $component2, component $component3, component $component4, int $y5, component $component6, component $component7)
-cc_deleteall($component1);
-def_int $int8 = 0;
-def_int $height9 = 10;
-def_int $int10 = 2;
-def_int $width11 = if_getwidth($component1);
-def_int $int12 = calc((if_getwidth($component1) - 2) / 2);
-def_int $count13 = 0;
-def_int $count14 = enum_getoutputcount(enum_3553);
-while ($count13 < $count14) {
-	$int8 = ~soul_wars_rewards_drawitem($count13, enum_3553, enum_3540, $height9, $int10, $int12, 2, $component1, $component2, $component3, $int8, $int0, $component6, $component7);
-	$count13 = calc($count13 + 1);
-	$int10 = calc($int10 + $int12);
-	if (calc($int10 + $int12) > $width11 & $count13 < $count14) {
-		$int10 = 2;
-		$height9 = calc($height9 + 32 + 10);
+[proc,script842](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, int $y6, component $component7, component $component8)
+cc_deleteall($component2);
+def_int $int9 = 0;
+def_int $height10 = 10;
+def_int $int11 = 2;
+def_int $width12 = if_getwidth($component2);
+def_int $int13 = calc((if_getwidth($component2) - 2) / 2);
+def_int $count14 = 0;
+def_int $count15 = enum_getoutputcount(enum_3553);
+while ($count14 < $count15) {
+	$int9 = ~script943($count14, $int1, enum_3553, enum_3540, $height10, $int11, $int13, 2, $component2, $component3, $component4, $int9, $int0, $component7, $component8);
+	$count14 = calc($count14 + 1);
+	$int11 = calc($int11 + $int13);
+	if (calc($int11 + $int13) > $width12 & $count14 < $count15) {
+		$int11 = 2;
+		$height10 = calc($height10 + 32 + 10);
 	}
 }
-~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-$height9 = calc($height9 + 32 + 10);
-if ($height9 >= if_getheight($component1)) {
-	if_setscrollsize(0, $height9, $component1);
+~scrollbar_vertical($component5, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+$height10 = calc($height10 + 32 + 10);
+if ($height10 >= if_getheight($component2)) {
+	if_setscrollsize(0, $height10, $component2);
 } else {
-	if_setscrollsize(0, 0, $component1);
+	if_setscrollsize(0, 0, $component2);
 }
-if_setscrollpos(0, $y5, $component1);
-~scrollbar_vertical_rebuild($component4, $component1);
-~soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3553, 2, $component6, $component7);
-if_setonvartransmit("script676(-1, $component1, $component2, $component3, $component4, $component6, $component7){var2876}", $component1);
-if_setonvartransmit(null, $component6);
+if_setscrollpos(0, $y6, $component2);
+~scrollbar_vertical_rebuild($component5, $component2);
+if ($int1 = 0) {
+	%var3426 = 1;
+} else {
+	%var3426 = 0;
+}
+~soul_wars_rewards_drawconfirm($int0, $int1, $component2, $component3, $component4, enum_3553, 2, $component7, $component8);
+if_setonvartransmit("script676($int0, $int1, $component2, $component3, $component4, $component5, $component7, $component8){var2876}", $component2);
 if_setonvartransmit(null, $component7);
-if_setonvartransmit("soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3553, 2, $component6, $component7){var2971}", $component2);
+if_setonvartransmit(null, $component8);
+if_setonvartransmit("soul_wars_rewards_drawconfirm($int0, $int1, $component2, $component3, $component4, enum_3553, 2, $component7, $component8){var2971, var3426}", $component3);

@@ -1,0 +1,11 @@
+// 944
+[proc,script944](int $int0, int $int1)(string, string)
+def_namedobj $namedobj2 = enum(int, namedobj, enum_3553, $int0);
+def_int $int3 = enum(int, int, enum_3540, $int0);
+if ($int1 = 0) {
+	return(oc_name($namedobj2), "Confirm (<tostring(calc(%var3426 * $int3))> Tokens)");
+}
+if (%var3426 <= 1) {
+	return("<tostring(%var3426)> <oc_name($namedobj2)>", "Confirm (<tostring(calc(%var3426 * $int3))> Tokens)");
+}
+return("<tostring(%var3426)> <oc_name($namedobj2)>s", "Confirm (<tostring(calc(%var3426 * $int3))> Tokens)");

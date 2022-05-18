@@ -1,34 +1,37 @@
 // 847
-[proc,soul_wars_rewards_drawconfirm](int $int0, component $component1, component $component2, component $component3, enum $enum4, int $int5, component $component6, component $component7)
-def_string $text0 = "";
-cc_deleteall($component2);
-def_int $int8 = 0;
+[proc,soul_wars_rewards_drawconfirm](int $int0, int $int1, component $component2, component $component3, component $component4, enum $enum5, int $int6, component $component7, component $component8)
+def_string $text0 = "Confirm";
+def_string $string1 = "";
+cc_deleteall($component3);
+def_int $int9 = 0;
 if ($int0 ! -1) {
-	if ($enum4 = enum_3537) {
-		$text0 = ~script4124($enum4, $int0);
+	if ($enum5 = enum_3537) {
+		$string1 = ~script4124($enum5, $int0);
+	} else if ($enum5 = enum_3553) {
+		$string1, $text0 = ~script944($int0, $int1);
 	} else {
-		$text0 = oc_name(enum(int, namedobj, $enum4, $int0));
+		$string1 = oc_name(enum(int, namedobj, $enum5, $int0));
 	}
-	~soul_wars_rewards_confirmtext(false, $text0, $component3);
-	while ($int8 < $int0) {
-		cc_create($component2, ^iftype_rectangle, $int8);
+	~soul_wars_rewards_confirmtext(false, $string1, $text0, $component4);
+	while ($int9 < $int0) {
+		cc_create($component3, ^iftype_rectangle, $int9);
 		cc_sethide(true);
-		$int8 = calc($int8 + 1);
+		$int9 = calc($int9 + 1);
 	}
-	cc_create($component2, ^iftype_rectangle, $int8);
+	cc_create($component3, ^iftype_rectangle, $int9);
 	cc_sethide(false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setop(1, "Confirm");
-	cc_setopbase("<col=ff9040><$text0></col>");
+	cc_setopbase("<col=ff9040><$string1></col>");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("script848(true, $text0, $component3)");
-		cc_setonmouseleave("script848(false, $text0, $component3)");
+		cc_setonmouserepeat("script848(true, $string1, $text0, $component4)");
+		cc_setonmouseleave("script848(false, $string1, $text0, $component4)");
 	}
-	cc_setonop("soul_wars_rewards_confirmop(event_opindex, $component1, $component2, $component3, $int5, $component6, $component7)");
+	cc_setonop("soul_wars_rewards_confirmop(event_opindex, $component2, $component3, $component4, $int6, $component7, $component8)");
 } else {
-	$int8 = ~v2_stone_button_in_filled($component3);
-	cc_create($component3, ^iftype_text, $int8);
+	$int9 = ~v2_stone_button_in_filled($component4);
+	cc_create($component4, ^iftype_text, $int9);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x7f7f7f);

@@ -2,17 +2,31 @@
 [proc,silver_crafting_miscellaneous_draw](component $component0, obj $obj1, int $lvl2, obj $obj3, string $string0)
 cc_deleteall($component0);
 def_int $int4 = 0;
+def_int $int5 = 0;
+if (inv_total(inv, $obj3) > 0) {
+	$int5 = 1;
+}
+if (%varbit13893 = enum(component, int, enum_4319, $component0) & %varbit13893 ! 0 & $int5 = 1) {
+	cc_create($component0, ^iftype_rectangle, $int4);
+	$int4 = calc($int4 + 1);
+	cc_setcolour(^white);
+	cc_settrans(200);
+	cc_setcolour(0xffffcc);
+	cc_setcolour(0x9b8268);
+	cc_settrans(150);
+	cc_setfill(true);
+	cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+	if_setopkey(1, ^key_space, 0, $component0);
+}
 cc_create($component0, ^iftype_graphic, $int4);
 $int4 = calc($int4 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setposition(2, 3, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
-def_int $int5 = 0;
-if (inv_total(inv, $obj3) > 0) {
+if ($int5 = 1) {
 	cc_setobject_nonum($obj1, 1);
 	cc_settrans(0);
-	$int5 = 1;
 } else {
 	cc_setobject_nonum($obj3, 1);
 	cc_settrans(150);
@@ -21,9 +35,9 @@ cc_create($component0, ^iftype_text, $int4);
 $int4 = calc($int4 + 1);
 .cc_create($component0, ^iftype_text, $int4);
 $int4 = calc($int4 + 1);
-cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
-.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(4, 18, ^setsize_minus, ^setsize_abs);
+.cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 def_int $width6 = if_getwidth($component0);
 if (parawidth($string0, $width6, p12_full) <= $width6 & paraheight($string0, $width6, p12_full) <= 1) {

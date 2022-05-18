@@ -23,7 +23,7 @@ if (stat_base($stat0) < 30) {
 	$string1 = "You need <~tostring_spacer($int12, $string0)> <~script853($int12)> to claim that reward.";
 	cc_setonop("soul_wars_rewards_refuse($string1, $component5, $component6, $component7, 0, event_opindex, $component10, $component11)");
 } else {
-	cc_setonop("soul_wars_rewards_select($int4, $component5, $component6, $component7, 0, event_opindex, $component10, $component11)");
+	cc_setonop("soul_wars_rewards_select($int4, -1, $component5, $component6, $component7, 0, event_opindex, $component10, $component11)");
 }
 if ($int9 = $int4) {
 	cc_setcolour(^white);

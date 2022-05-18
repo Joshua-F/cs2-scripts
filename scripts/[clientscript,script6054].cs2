@@ -1,0 +1,7 @@
+// 6054
+[clientscript,script6054](int $int0)
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varcint987 = setbit_range_toint(%varcint987, $int0, 22, 31);
+~health_regen_timer(~script6050(%var3079), ~script6051(%var3079));

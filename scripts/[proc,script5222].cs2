@@ -1,0 +1,11 @@
+// 5222
+[proc,script5222](coord $coord0, int $count1)(coord)
+if ($count1 = 0) {
+	return($coord0);
+}
+if (calc(($count1 + 1) % 2) = 1) {
+	$coord0 = movecoord($coord0, 2, -1, 2);
+} else {
+	$coord0 = movecoord($coord0, -2, 1, -2);
+}
+return($coord0);

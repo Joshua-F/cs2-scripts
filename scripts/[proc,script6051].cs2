@@ -1,0 +1,9 @@
+// 6051
+[proc,script6051](int $int0)(int, int)
+if (%varcint986 > 0) {
+	$int0 = calc($int0 - %varcint986);
+	$int0 = calc($int0 * 30);
+} else {
+	$int0 = 0;
+}
+return(getbit_range(%varcint987, 22, 31), $int0);

@@ -10,17 +10,31 @@ if (inv_total(inv, $obj3) <= 0) {
 def_int $int6 = 0;
 if_setop(1, "Craft", $component0);
 if_setopbase("<col=ff9040><$string0></col>", $component0);
+def_int $int7 = 0;
+if (inv_total(inv, $obj4) > 0 & stat(crafting) >= $lvl2 & (map_members = ^true | oc_members($obj1) = ^false)) {
+	$int7 = 1;
+}
+if (%varbit13893 = enum(component, int, enum_4319, $component0) & %varbit13893 ! 0 & $int7 = 1) {
+	cc_create($component0, ^iftype_rectangle, $int6);
+	$int6 = calc($int6 + 1);
+	cc_setcolour(^white);
+	cc_settrans(200);
+	cc_setcolour(0xffffcc);
+	cc_setcolour(0x9b8268);
+	cc_settrans(150);
+	cc_setfill(true);
+	cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+	if_setopkey(1, ^key_space, 0, $component0);
+}
 cc_create($component0, ^iftype_graphic, $int6);
 $int6 = calc($int6 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setposition(2, 3, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
-def_int $int7 = 0;
-if (inv_total(inv, $obj4) > 0 & stat(crafting) >= $lvl2 & (map_members = ^true | oc_members($obj1) = ^false)) {
+if ($int7 = 1) {
 	cc_setobject_nonum($obj1, 1);
 	cc_settrans(0);
-	$int7 = 1;
 } else {
 	cc_setobject_nonum($obj5, 1);
 	cc_settrans(150);
@@ -29,9 +43,9 @@ cc_create($component0, ^iftype_text, $int6);
 $int6 = calc($int6 + 1);
 .cc_create($component0, ^iftype_text, $int6);
 $int6 = calc($int6 + 1);
-cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
-.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(4, 18, ^setsize_minus, ^setsize_abs);
+.cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 def_int $width8 = if_getwidth($component0);
 if (parawidth($string0, $width8, p12_full) <= $width8 & paraheight($string0, $width8, p12_full) <= 1) {

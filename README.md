@@ -943,6 +943,9 @@
 [**940**](scripts/[clientscript,peng_observer_init].cs2) `[clientscript,peng_observer_init]`  
 [**941**](scripts/[clientscript,peng_observer_borders].cs2) `[clientscript,peng_observer_borders]`  
 [**942**](scripts/[proc,peng_observer_borders].cs2) `[proc,peng_observer_borders]`  
+[**943**](scripts/[proc,script943].cs2)  
+[**944**](scripts/[proc,script944].cs2)  
+[**945**](scripts/[proc,script945].cs2)  
 [**946**](scripts/[clientscript,zep_balloon_map_hover].cs2) `[clientscript,zep_balloon_map_hover]`  
 [**947**](scripts/[clientscript,script947].cs2)  
 [**948**](scripts/[clientscript,fade_overlay].cs2) `[clientscript,fade_overlay]`  
@@ -2493,6 +2496,7 @@
 [**2493**](scripts/[clientscript,script2493].cs2)  
 [**2494**](scripts/[proc,skill_guide_subsection_prayer].cs2) `[proc,skill_guide_subsection_prayer]`  
 [**2495**](scripts/[clientscript,openurl_raw_silent].cs2) `[clientscript,openurl_raw_silent]`  
+[**2496**](scripts/[proc,script2496].cs2)  
 [**2497**](scripts/[clientscript,account_init].cs2) `[clientscript,account_init]`  
 [**2498**](scripts/[clientscript,account_info_update].cs2) `[clientscript,account_info_update]`  
 [**2499**](scripts/[proc,skill_guide_data_prayer].cs2) `[proc,skill_guide_data_prayer]`  
@@ -5218,6 +5222,7 @@
 [**5219**](scripts/[proc,script5219].cs2)  
 [**5220**](scripts/[proc,script5220].cs2)  
 [**5221**](scripts/[clientscript,summary_sidepanel_timer_draw].cs2) `[clientscript,summary_sidepanel_timer_draw]`  
+[**5222**](scripts/[proc,script5222].cs2)  
 [**5223**](scripts/[proc,script5223].cs2)  
 [**5224**](scripts/[clientscript,pvp_icons_comlevelrange].cs2) `[clientscript,pvp_icons_comlevelrange]`  
 [**5225**](scripts/[proc,script5225].cs2)  
@@ -6043,3 +6048,19 @@
 [**6045**](scripts/[proc,script6045].cs2)  
 [**6046**](scripts/[clientscript,script6046].cs2)  
 [**6047**](scripts/[clientscript,script6047].cs2)  
+[**6048**](scripts/[clientscript,script6048].cs2)  
+[**6049**](scripts/[proc,script6049].cs2)  
+[**6050**](scripts/[proc,script6050].cs2)  
+[**6051**](scripts/[proc,script6051].cs2)  
+[**6052**](scripts/[clientscript,script6052].cs2)  
+[**6053**](scripts/[clientscript,script6053].cs2)  
+[**6054**](scripts/[clientscript,script6054].cs2)  
+[**6055**](scripts/[clientscript,script6055].cs2)  
+[**6056**](scripts/[clientscript,script6056].cs2)  
+[**6057**](scripts/[proc,script6057].cs2)  
+[**6058**](scripts/[proc,script6058].cs2)  
+[**6059**](scripts/[proc,script6059].cs2)  
+[**6060**](scripts/[clientscript,script6060].cs2)  
+[**6061**](scripts/[proc,script6061].cs2)  
+[**6062**](scripts/[clientscript,script6062].cs2)  
+[**6063**](scripts/[clientscript,script6063].cs2)  

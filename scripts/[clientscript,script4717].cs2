@@ -1,8 +1,6 @@
 // 4717
 [clientscript,script4717](int $int0)
-if (%varcint473 <= 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
-$int0 = calc($int0 - %varcint473);
-$int0 = calc($int0 * 30);
-~health_regen_timer($int0);
+~script6049($int0);

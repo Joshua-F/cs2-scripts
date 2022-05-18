@@ -1,8 +1,3 @@
 // 4722
 [clientscript,script4722](int $int0)
-if (%varcint474 <= 0) {
-	return;
-}
-$int0 = calc($int0 - %varcint474);
-$int0 = calc($int0 * 30);
-~spec_regen_timer($int0);
+~script6059($int0);

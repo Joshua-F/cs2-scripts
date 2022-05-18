@@ -61,7 +61,7 @@ if (%var2876 < $int19) {
 	} else {
 		cc_setcolour(0x00df00);
 	}
-	.cc_setonop("soul_wars_rewards_select($int0, $component7, $component8, $component9, $int6, event_opindex, $component12, $component13)");
+	.cc_setonop("soul_wars_rewards_select($int0, -1, $component7, $component8, $component9, $int6, event_opindex, $component12, $component13)");
 }
 def_string $string2 = oc_name($namedobj14);
 if (parawidth($string2, 512, p12_full) > $width16) {

@@ -15,8 +15,8 @@ $int6 = ~script537(hitpoints, $int7, $int8, $int8, 20, 21, 22, 23, $component1, 
 $int7 = calc($int7 + 32 + 10);
 $int6 = ~script537(prayer, $int7, 0, $int8, 24, 25, 26, 27, $component1, $component2, $component3, $int6, $int0, $component4, $component5);
 $int7 = calc($int7 + 32);
-~soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3537, 0, $component4, $component5);
+~soul_wars_rewards_drawconfirm($int0, -1, $component1, $component2, $component3, enum_3537, 0, $component4, $component5);
 if_setonvartransmit("script532(-1, $component1, $component2, $component3, $component4, $component5){var2876}", $component1);
 if_setonvartransmit(null, $component4);
 if_setonvartransmit(null, $component5);
-if_setonvartransmit("soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3537, 0, $component4, $component5){var2971}", $component2);
+if_setonvartransmit("soul_wars_rewards_drawconfirm($int0, -1, $component1, $component2, $component3, enum_3537, 0, $component4, $component5){var2971}", $component2);

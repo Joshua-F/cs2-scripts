@@ -1,4 +1,11 @@
 // 4716
 [clientscript,health_regen_timer](int $int0, int $int1)
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%varcint987 < 0) {
+	%varcint987 = 0;
+}
 %varcint473 = $int1;
-~health_regen_timer($int0);
+%varcint987 = setbit_range_toint(%varcint987, $int0, 0, 10);
+~health_regen_timer($int0, 0, ~script6051($int1));
