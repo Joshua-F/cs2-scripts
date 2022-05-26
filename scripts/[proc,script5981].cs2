@@ -11,4 +11,9 @@ if ($int1 = 0) {
 	}
 	if_settext("<$string0>: <tostring(~max(scale($int1, $int0, 100), 1))>%", $component2);
 	if_setontimer("script5982($component3, $width4)", $component3);
+	if ($int1 >= $int0) {
+		if_setcolour(0x00cce0, $component3);
+	} else {
+		if_setcolour(0xfad74a, $component3);
+	}
 }

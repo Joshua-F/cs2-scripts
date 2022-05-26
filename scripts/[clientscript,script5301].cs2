@@ -6,6 +6,8 @@
 ~side_channels_tabinit($component4, 3);
 if (%varbit1777 = 4) {
 	~side_channels_tabinit($component5, 4);
+} else if (%varbit1777 = 6) {
+	~side_channels_tabinit($component5, 6);
 } else {
 	~side_channels_tabinit($component5, 5);
 }

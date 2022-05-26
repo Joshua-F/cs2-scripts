@@ -1,0 +1,33 @@
+// 6066
+[proc,script6066](int $int0)(string)
+def_int $clienttype1 = clienttype;
+def_string $string0 = "";
+def_string $string1 = "";
+switch_int ($clienttype1) {
+	case 0 :
+		$string0 = "desktop";
+	case ^clienttype_desktop :
+		$string0 = "desktop";
+	case ^clienttype_android :
+		$string0 = "mobile";
+	case ^clienttype_ios :
+		$string0 = "mobile";
+	case ^clienttype_enhanced :
+		$string0 = "desktop";
+	case ^clienttype_mac :
+		$string0 = "desktop";
+	case 7 :
+		$string0 = "mobile";
+	case 8 :
+		$string0 = "mobile";
+	case 10 :
+		$string0 = "desktop";
+}
+switch_int ($int0) {
+	case 1 :
+		$string1 = "welcome_screen";
+	case 2 :
+		$string1 = "chatbox_memberactivity";
+}
+def_string $string2 = "https://crm-game-events.adse.jagex.com/api/osrs/campaign/user/%userid%/<$string0>/<$string1>";
+return($string2);

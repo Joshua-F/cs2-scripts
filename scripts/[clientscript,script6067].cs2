@@ -1,0 +1,11 @@
+// 6067
+[clientscript,script6067](component $component0, graphic $graphic1, component $component2, graphic $graphic3, graphic $graphic4, int $x5, int $y6, int $width7, int $height8, string $op0)
+cc_deleteall(interface_278:2);
+if (cc_find(interface_278:6, 0) = ^true) {
+	if (cc_getcrm_hasresponse = false) {
+		cc_delete;
+		~script6068($component0, $graphic1, $component2, $graphic3, $graphic4, $x5, $y6, $width7, $height8, $op0);
+	}
+} else {
+	~script6068($component0, $graphic1, $component2, $graphic3, $graphic4, $x5, $y6, $width7, $height8, $op0);
+}

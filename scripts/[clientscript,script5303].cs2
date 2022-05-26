@@ -1,9 +1,9 @@
 // 5303
 [clientscript,script5303](component $component0, component $component1)
-if (%varbit1777 ! 4 & %varbit1777 ! 5) {
+if (%varbit1777 ! 4 & %varbit1777 ! 5 & %varbit1777 ! 6) {
 	return;
 }
-if (%varbit13071 ! 4 & %varbit13071 ! 5) {
+if (%varbit13071 ! 4 & %varbit13071 ! 5 & %varbit13071 ! 6) {
 	return;
 }
 if_setgraphic(enum(int, graphic, enum_3841, %varbit1777), $component0);

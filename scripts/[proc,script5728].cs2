@@ -13,7 +13,7 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settrans(110);
 cc_settiling(true);
-$int7 = ~script4650($newvar0, $int7);
+$int7 = ~thinbox_entityoverlay($newvar0, $int7);
 def_int $int9 = 0;
 if ($lvl3 > 0) {
 	_103($newvar0, ^iftype_graphic, $int7);

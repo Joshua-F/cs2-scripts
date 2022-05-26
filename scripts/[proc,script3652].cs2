@@ -1,24 +1,24 @@
 // 3652
-[proc,script3652](component $component0)
-cc_deleteall($component0);
-def_graphic $graphic1 = "close_buttons,5";
-def_graphic $graphic2 = "close_buttons,4";
-cc_create($component0, ^iftype_graphic, 0);
-cc_setgraphic($graphic2);
+[proc,script3652]
+cc_deleteall(interface_278:4);
+def_graphic $graphic0 = "close_buttons,5";
+def_graphic $graphic1 = "close_buttons,4";
+cc_create(interface_278:4, ^iftype_graphic, 0);
+cc_setgraphic($graphic1);
 cc_setsize(26, 23, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if (~on_mobile = false) {
-	cc_setonmouserepeat("script3440(event_com, event_comsubid, $graphic1, null)");
-	cc_setonmouseleave("script3440(event_com, event_comsubid, $graphic2, null)");
+	cc_setonmouserepeat("script3440(event_com, event_comsubid, $graphic0, null)");
+	cc_setonmouseleave("script3440(event_com, event_comsubid, $graphic1, null)");
 }
-def_int $width3 = 26;
-def_int $height4 = 23;
-def_int $x5 = 5;
-def_int $y6 = 5;
+def_int $width2 = 26;
+def_int $height3 = 23;
+def_int $x4 = 5;
+def_int $y5 = 5;
 if (~on_mobile = true) {
-	$width3, $height4, $x5, $y6 = 32, 32, 2, 1;
+	$width2, $height3, $x4, $y5 = 32, 32, 2, 1;
 }
-if_setsize($width3, $height4, ^setsize_abs, ^setsize_abs, $component0);
-if_setposition($x5, $y6, ^setpos_abs_right, ^setpos_abs_top, $component0);
-if_setop(1, "Close", $component0);
-if_setonop("closebutton_click", $component0);
+if_setsize($width2, $height3, ^setsize_abs, ^setsize_abs, interface_278:4);
+if_setposition($x4, $y5, ^setpos_abs_right, ^setpos_abs_top, interface_278:4);
+if_setop(1, "Close", interface_278:4);
+if_setonop("closebutton_click", interface_278:4);

@@ -1,6 +1,6 @@
 // 5302
 [clientscript,script5302](component $component0, int $comsubid1, component $component2)
-if (%varbit1777 ! 4 & %varbit1777 ! 5) {
+if (%varbit1777 ! 4 & %varbit1777 ! 5 & %varbit1777 ! 6) {
 	return;
 }
 if (cc_find($component0, $comsubid1) = ^true) {

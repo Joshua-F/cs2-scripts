@@ -1,11 +1,24 @@
 // 5249
-[clientscript,gim_leaving_init](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
+[clientscript,gim_leaving_init](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
 ~steelborder($component0, "Choose your Gamemode", 0);
-cc_deleteall($component6);
-~scrollbar_vertical($component6, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~gim_leave_text($component5, 0);
-~gim_buttons_init($component2, $component3, 0);
-if_setonop("gim_buttons_click($component5, $component2, $component3, 1)", $component2);
+cc_deleteall($component10);
+~scrollbar_vertical($component10, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~gim_leave_text($component9, 0);
+~gim_buttons_init($component2, $component3, $component4, 0);
+if_setonop("gim_buttons_click($component9, $component2, $component3, $component4, 1)", $component2);
 if_setop(1, "Select", $component2);
-if_setonop("gim_buttons_click($component5, $component2, $component3, 2)", $component3);
-if_setop(1, "Select", $component3);
+def_int $width11 = 0;
+if (%varbit1777 = 6) {
+	if_sethide(true, $component6);
+	$width11 = calc(if_getwidth($component0) / 2);
+	if_setsize($width11, 0, ^setsize_abs, ^setsize_minus, $component5);
+	if_setsize($width11, 0, ^setsize_abs, ^setsize_minus, $component7);
+	if_setgraphic("iron_icons,3", interface_722:11);
+	if_setsize(64, 64, ^setsize_abs, ^setsize_abs, interface_722:11);
+} else {
+	if_sethide(false, $component6);
+	if_setonop("gim_buttons_click($component9, $component2, $component3, $component4, 2)", $component3);
+	if_setop(1, "Select", $component3);
+}
+if_setonop("gim_buttons_click($component9, $component2, $component3, $component4, 3)", $component4);
+if_setop(1, "Select", $component4);
