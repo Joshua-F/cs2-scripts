@@ -1,0 +1,43 @@
+// 6105
+[proc,script6105](int $int0, struct $struct1)(int)
+def_int $int2 = 0;
+switch_int ($int0) {
+	case 1 :
+		$int2 = struct_param($struct1, param_1625);
+		if ($int2 < 0) {
+			return(calc(0 - $int2));
+		}
+		return(0);
+	case 2 :
+		$int2 = struct_param($struct1, param_1626);
+		if ($int2 < 0) {
+			return(calc(0 - $int2));
+		}
+		return(0);
+	case 3 :
+		$int2 = struct_param($struct1, param_1627);
+		if ($int2 < 0) {
+			return(calc(0 - $int2));
+		}
+		return(0);
+	case 4 :
+		$int2 = struct_param($struct1, param_1625);
+		if ($int2 > 0) {
+			return($int2);
+		}
+		return(0);
+	case 5 :
+		$int2 = struct_param($struct1, param_1626);
+		if ($int2 > 0) {
+			return($int2);
+		}
+		return(0);
+	case 6 :
+		$int2 = struct_param($struct1, param_1627);
+		if ($int2 > 0) {
+			return($int2);
+		}
+		return(0);
+	case default :
+		return(0);
+}

@@ -1,0 +1,28 @@
+// 6106
+[proc,script6106]
+def_component $component0 = interface_718:7;
+def_component $component1 = interface_718:21;
+def_component $component2 = interface_718:22;
+def_component $component3 = interface_718:23;
+if (%varcint988 >= 2) {
+	if_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+} else if (%varcint988 >= 1) {
+	if_setposition(-4, 3, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+} else {
+	if_setposition(-65, 3, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+}
+if (%varbit13910 = 0) {
+	if_setgraphic("graphic_3593", $component1);
+} else {
+	if_setgraphic(struct_param(enum(int, struct, enum_4373, %varbit13910), param_1624), $component1);
+}
+if (%varbit13911 = 0) {
+	if_setgraphic("graphic_3593", $component2);
+} else {
+	if_setgraphic(struct_param(enum(int, struct, enum_4374, %varbit13911), param_1624), $component2);
+}
+if (%varbit13912 = 0) {
+	if_setgraphic("graphic_3593", $component3);
+} else {
+	if_setgraphic(struct_param(enum(int, struct, enum_4375, %varbit13912), param_1624), $component3);
+}

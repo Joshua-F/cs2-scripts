@@ -1,0 +1,11 @@
+// 6084
+[clientscript,script6084](component $component0, component $component1, component $component2, component $component3, enum $enum4, int $colour5)
+sound_synth(interface_select1, 1, 0);
+~script5772($component0, $component1, $component2, $component3, $enum4, $colour5);
+def_int $count6 = 0;
+while ($count6 < enum_getoutputcount($enum4)) {
+	if (cc_find($component1, calc(1 + $count6 * 2)) = ^true) {
+		cc_setonop("script6085($component0, $component3, $count6, $enum4, $colour5)");
+	}
+	$count6 = calc($count6 + 1);
+}

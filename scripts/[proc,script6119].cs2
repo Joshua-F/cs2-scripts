@@ -1,0 +1,18 @@
+// 6119
+[proc,script6119]()(int)
+if (%varbit13938 >= 0 & %varbit13938 < 20) {
+	return(3);
+}
+if (%varbit13938 >= 20 & %varbit13938 < 60) {
+	return(4);
+}
+if (%varbit13938 >= 60 & %varbit13938 < 90) {
+	return(5);
+}
+if (%varbit13938 >= 90 & %varbit13938 < 120) {
+	return(6);
+}
+if (%varbit13938 >= 120) {
+	return(7);
+}
+return(3);

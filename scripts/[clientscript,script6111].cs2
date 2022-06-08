@@ -1,0 +1,13 @@
+// 6111
+[clientscript,script6111]
+def_component $component0 = interface_754:49;
+def_component $component1 = interface_754:50;
+~script4729($component0, $component1, 52968, ^setpos_abs_centre, ^setpos_abs_top, false);
+if (~on_mobile = true) {
+	if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, $component1);
+} else {
+	if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top, $component1);
+}
+def_component $component2 = interface_754:48;
+if_setontimer("script6110($component2, -1)", $component2);
+if_setonresize("script6112", $component2);

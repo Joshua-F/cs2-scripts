@@ -1,0 +1,42 @@
+// 6118
+[proc,script6118](int $int0, int $int1, int $int2)(int)
+def_component $component3 = interface_754:75;
+def_int $int4 = 0;
+def_struct $struct5 = struct_4329;
+def_graphic $graphic6 = "graphic_4442";
+switch_int ($int0) {
+	case 1 :
+		$int4 = %varbit13940;
+	case 2 :
+		$int4 = %varbit13941;
+	case 3 :
+		$int4 = %varbit13942;
+	case 4 :
+		$int4 = %varbit13943;
+	case 5 :
+		$int4 = %varbit13944;
+	case 6 :
+		$int4 = %varbit13945;
+}
+switch_int ($int4) {
+	case 0 :
+		$struct5 = struct_4329;
+		$graphic6 = "graphic_4442";
+	case 1 :
+		$struct5 = struct_4331;
+		$graphic6 = "graphic_4443";
+	case 2 :
+		$struct5 = struct_4333;
+		$graphic6 = "graphic_4444";
+}
+def_int $int7 = calc(if_getwidth($component3) - 2);
+def_int $int8 = calc($int7 / $int1);
+def_int $int9 = calc($int7 % $int8);
+def_int $int10 = calc($int8 * $int0 + 1 + ~min($int9, $int0));
+if ($int0 < $int9) {
+	$int8 = calc($int8 + 1);
+}
+$int2 = ~script5288($component3, $int2, $int10, 1, $int8, calc(if_getheight($component3) - 2), $struct5, ^black);
+~create_graphic($component3, $int2, $graphic6, calc($int10 + $int8 / 2 - 8), 0, ^setpos_abs_left, ^setpos_abs_centre, 16, 16, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+return($int2);

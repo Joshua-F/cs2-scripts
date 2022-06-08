@@ -1,0 +1,85 @@
+// 6096
+[proc,script6096]
+def_component $component0 = interface_718:9;
+def_component $component1 = interface_718:11;
+cc_deleteall($component0);
+cc_deleteall($component1);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = -1;
+def_enum $enum6 = null;
+switch_int (%varbit13909) {
+	case 0 :
+		$enum6 = enum_4373;
+	case 1 :
+		$enum6 = enum_4374;
+	case 2 :
+		$enum6 = enum_4375;
+}
+def_struct $struct7 = enum(int, struct, $enum6, calc($int3 + 1));
+def_int $int8 = 0;
+while ($struct7 ! null) {
+	$int8 = 0;
+	switch_int (%varbit13909) {
+		case 0 :
+			if (%varbit13910 = calc($int3 + 1)) {
+				$int8 = 1;
+			}
+		case 1 :
+			if (%varbit13911 = calc($int3 + 1)) {
+				$int8 = 1;
+			}
+		case 2 :
+			if (%varbit13912 = calc($int3 + 1)) {
+				$int8 = 1;
+			}
+	}
+	if ($int8 = 1) {
+		$int5 = $int4;
+	}
+	$int2, $int4 = ~script6097($component0, $struct7, $int8, $int4, $int2);
+	$int3 = calc($int3 + 1);
+	$struct7 = enum(int, struct, $enum6, calc($int3 + 1));
+}
+def_int $int9 = 40;
+switch_int (%varcint988) {
+	case 1 :
+		$int9 = 42;
+	case 2 :
+		$int9 = 44;
+	case 3 :
+		$int9 = 48;
+}
+cc_create($component0, ^iftype_rectangle, $int2);
+cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour(^black);
+if (calc($int4 / $int9 % 2) = 0) {
+	cc_settrans(200);
+} else {
+	cc_settrans(220);
+}
+$int2 = calc($int2 + 1);
+if ($int5 >= 0) {
+	cc_create($component0, ^iftype_rectangle, $int2);
+	cc_setposition(1, calc($int5 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(2, calc($int9 - 2), ^setsize_minus, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0xff981f);
+	cc_settrans(200);
+	$int2 = calc($int2 + 1);
+	cc_create($component0, ^iftype_rectangle, $int2);
+	cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0xff981f);
+	$int2 = calc($int2 + 1);
+}
+if_setscrollsize(if_getwidth($component0), ~max(if_getheight($component0), $int4), $component0);
+if (if_getscrolly($component0) > ~max($int5, 0) | calc(if_getscrolly($component0) + if_getheight($component0)) < calc(~max($int5, 0) + $int9)) {
+	if_setscrollpos(0, ~min($int5, calc(if_getscrollheight($component0) - if_getheight($component0))), $component0);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical_rebuild($component1, $component0);

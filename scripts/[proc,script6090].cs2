@@ -1,0 +1,7 @@
+// 6090
+[proc,script6090](int $int0, int $int1)(string)
+def_int $int2 = calc($int0 + 1);
+if ($int1 >= 0) {
+	$int2 = calc($int2 + 3);
+}
+return(enum(int, string, enum_4372, $int2));

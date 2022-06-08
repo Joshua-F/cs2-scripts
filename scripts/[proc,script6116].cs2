@@ -1,0 +1,17 @@
+// 6116
+[proc,script6116]
+def_component $component0 = interface_754:19;
+def_component $component1 = interface_754:20;
+def_component $component2 = interface_754:21;
+def_component $component3 = interface_754:73;
+def_int $int4 = 0;
+def_int $int5 = 0;
+$int4, $int5 = ~script6121(2);
+if_setposition(scale(if_getwidth($component3), 1000, $int4), 0, ^setpos_abs_left, ^setpos_abs_centre, $component0);
+if_setsize(scale(if_getwidth($component3), 1000, $int5), 2, ^setsize_abs, ^setsize_minus, $component0);
+$int4, $int5 = ~script6121(1);
+if_setposition(scale(if_getwidth($component3), 1000, $int4), 0, ^setpos_abs_left, ^setpos_abs_centre, $component1);
+if_setsize(scale(if_getwidth($component3), 1000, $int5), 2, ^setsize_abs, ^setsize_minus, $component1);
+$int4, $int5 = ~script6121(0);
+if_setposition(scale(if_getwidth($component3), 1000, $int4), 0, ^setpos_abs_left, ^setpos_abs_centre, $component2);
+if_setsize(scale(if_getwidth($component3), 1000, $int5), 2, ^setsize_abs, ^setsize_minus, $component2);

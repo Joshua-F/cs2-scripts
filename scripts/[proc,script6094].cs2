@@ -1,0 +1,41 @@
+// 6094
+[proc,script6094]
+def_component $component0 = interface_718:1;
+def_component $component1 = interface_718:2;
+def_component $component2 = interface_718:3;
+~script6109($component0, $component2);
+~steelborder($component1, "Giants' Foundry Mould Setup", 16);
+def_component $component3 = interface_718:12;
+def_component $component4 = interface_718:8;
+cc_deleteall($component3);
+def_int $int5 = 0;
+def_fontmetrics $fontmetrics6 = p12_full;
+def_int $int7 = 38;
+def_int $int8 = 3;
+def_int $int9 = 5;
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics6 = verdana_13pt_regular;
+		$int7 = 40;
+		$int9 = 6;
+	case 2 :
+		$fontmetrics6 = verdana_13pt_regular;
+		$int7 = 40;
+		$int9 = 6;
+	case 3 :
+		$fontmetrics6 = verdana_13pt_regular;
+		$int7 = 45;
+		$int8 = 4;
+		$int9 = 7;
+}
+$int5 = ~script5291($component3, $int5, 0, $int7, $int8, 0x726451, "Forte", $fontmetrics6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(0, %varbit13909));
+cc_setonclick("script6095(0)");
+$int5 = ~script5291($component3, $int5, 1, $int7, $int8, 0x726451, "Blades", $fontmetrics6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(1, %varbit13909));
+cc_setonclick("script6095(1)");
+$int5 = ~script5291($component3, $int5, 2, $int7, $int8, 0x726451, "Tips", $fontmetrics6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(2, %varbit13909));
+cc_setonclick("script6095(2)");
+~script6096;
+~script6102;
+~script6106;
+~script6107;
+~script5288($component4, 0, 0, 0, if_getwidth($component4), if_getheight($component4), struct_3712, 0x726451);

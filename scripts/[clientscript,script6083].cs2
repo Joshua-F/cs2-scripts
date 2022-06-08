@@ -1,0 +1,34 @@
+// 6083
+[clientscript,script6083](boolean $boolean0)
+def_component $component1 = interface_753:1;
+def_component $component2 = interface_753:3;
+def_component $component3 = interface_753:4;
+def_component $component4 = interface_753:6;
+def_component $component5 = interface_753:9;
+def_component $component6 = interface_753:14;
+def_component $component7 = interface_753:15;
+def_component $component8 = interface_753:5;
+def_component $component9 = interface_753:24;
+def_component $component10 = interface_753:25;
+def_component $component11 = interface_753:26;
+~script6109($component1, $component3);
+~steelborder($component2, "Giants' Foundry Reward Shop", 16);
+def_int $int12 = 200;
+switch_int (%varcint988) {
+	case 1 :
+		$int12 = 230;
+	case 2 :
+		$int12 = 250;
+	case 3 :
+		$int12 = 270;
+}
+if_setsize(calc($int12 + 18), 38, ^setsize_minus, ^setsize_minus, $component4);
+if_setsize($int12, 112, ^setsize_abs, ^setsize_minus, $component5);
+if_setsize($int12, 44, ^setsize_abs, ^setsize_abs, $component6);
+if_setsize($int12, 44, ^setsize_abs, ^setsize_abs, $component7);
+if_setposition(calc(6 + if_getwidth($component4) / 2 - if_getwidth($component8) / 2), 6, ^setpos_abs_left, ^setpos_abs_top, $component8);
+~script6086(%var3435, $boolean0);
+~script6089(%var3435, $boolean0);
+~script6091;
+~script5771($component8, enum_4380, %varbit13915, 0xff981f);
+if_setonop("script6084($component9, $component10, $component11, $component8, enum_4380, 0xff981f)", $component8);

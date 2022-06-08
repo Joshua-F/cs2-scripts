@@ -11,8 +11,14 @@ if (if_hassub(enum(component, component, $enum2, interface_161:17)) = true) {
 		return(0);
 	}
 }
-if (if_hassub(enum(component, component, $enum2, interface_161:16)) = true & %varcint435 = true & $interface0 ! interface_558) {
-	return(0);
+if (if_hassub(enum(component, component, $enum2, interface_161:16)) = true) {
+	if (%varcint435 = true & $interface0 ! interface_558) {
+		return(0);
+	} else if (%varcint989 = 1 & $interface0 ! interface_312) {
+		return(0);
+	} else if (%varcint990 = 1 & $interface0 ! interface_446 & $interface0 ! interface_6) {
+		return(0);
+	}
 }
 if ($enum2 = enum_1132 & if_hassub(interface_165:37) = true) {
 	if ($interface0 = interface_16) {

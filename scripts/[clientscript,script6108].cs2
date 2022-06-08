@@ -1,0 +1,9 @@
+// 6108
+[clientscript,script6108]
+if (%varbit13910 ! 0 | %varbit13911 ! 0 | %varbit13912 ! 0) {
+	%varbit13910 = 0;
+	%varbit13911 = 0;
+	%varbit13912 = 0;
+	sound_synth(interface_select1, 1, 0);
+	~script6094;
+}

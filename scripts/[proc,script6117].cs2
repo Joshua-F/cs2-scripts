@@ -1,0 +1,11 @@
+// 6117
+[proc,script6117]
+def_component $component0 = interface_754:75;
+cc_deleteall($component0);
+def_int $int1 = ~script6119;
+def_int $int2 = 0;
+def_int $int3 = 0;
+while ($int2 < $int1) {
+	$int3 = ~script6118($int2, $int1, $int3);
+	$int2 = calc($int2 + 1);
+}

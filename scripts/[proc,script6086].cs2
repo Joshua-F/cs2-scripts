@@ -1,0 +1,49 @@
+// 6086
+[proc,script6086](int $int0, boolean $boolean1)
+def_component $component2 = interface_753:22;
+def_component $component3 = interface_753:23;
+cc_deleteall($component2);
+def_enum $enum4 = enum_4379;
+def_int $int5 = 1;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_struct $struct8 = enum(int, struct, $enum4, $int5);
+def_int $int9 = 0;
+def_int $int10 = 0;
+while ($struct8 ! null) {
+	if ($int5 = $int0) {
+		$int10 = 1;
+	} else {
+		$int10 = 0;
+	}
+	$int7, $int9 = ~script6087($int7, $int5, $int6, $struct8, $int10);
+	if ($int9 = 1) {
+		$int6 = calc($int6 + 1);
+	}
+	$int5 = calc($int5 + 1);
+	$struct8 = enum(int, struct, $enum4, $int5);
+}
+def_int $int11 = 3;
+def_int $int12 = 90;
+def_int $int13 = 100;
+switch_int (%varcint988) {
+	case 1 :
+		$int11 = 4;
+		$int12 = 94;
+	case 2 :
+		$int11 = 6;
+		$int13 = 120;
+		$int12 = 100;
+	case 3 :
+		$int11 = 7;
+		$int13 = 120;
+		$int12 = 110;
+}
+def_int $int14 = calc(if_getwidth($component2) / $int13);
+def_int $int15 = calc(($int6 + 1) / $int14);
+if ($boolean1 = true) {
+	if_setscrollpos(0, 0, $component2);
+}
+if_setscrollsize(if_getwidth($component2), calc($int15 * ($int12 + $int11) + $int11), $component2);
+~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical_rebuild($component3, $component2);

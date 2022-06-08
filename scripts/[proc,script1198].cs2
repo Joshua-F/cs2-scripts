@@ -88,7 +88,7 @@ if (%var264 = 1) {
 	if_setobject(farmers_boots_13644, 1, $component20);
 	if_setopbase("<col=ff9040><oc_name(farmers_boots_13644)></col>", $component18);
 }
-$int25 = 75;
+$int25 = enum(obj, int, enum_1262, farmers_strawhat_13647);
 if_settext("Buy hat: <tostring($int25)>", $component10);
 if_setop(6, "Buy", $component9);
 if_setonop("opsound(event_opindex, 2)", $component9);
@@ -97,7 +97,7 @@ if (%varbit4893 < $int25) {
 } else {
 	if_setcolour(^white, $component10);
 }
-$int25 = 150;
+$int25 = enum(obj, int, enum_1262, farmers_shirt_13643);
 if_settext("Buy jacket: <tostring($int25)>", $component13);
 if_setop(6, "Buy", $component12);
 if_setonop("opsound(event_opindex, 2)", $component12);
@@ -106,7 +106,7 @@ if (%varbit4893 < $int25) {
 } else {
 	if_setcolour(^white, $component13);
 }
-$int25 = 125;
+$int25 = enum(obj, int, enum_1262, farmers_boro_trousers_13641);
 if_settext("Buy legs: <tostring($int25)>", $component16);
 if_setop(6, "Buy", $component15);
 if_setonop("opsound(event_opindex, 2)", $component15);
@@ -115,7 +115,7 @@ if (%varbit4893 < $int25) {
 } else {
 	if_setcolour(^white, $component16);
 }
-$int25 = 50;
+$int25 = enum(obj, int, enum_1262, farmers_boots_13645);
 if_settext("Buy boots: <tostring($int25)>", $component19);
 if_setop(6, "Buy", $component18);
 if_setonop("opsound(event_opindex, 2)", $component18);

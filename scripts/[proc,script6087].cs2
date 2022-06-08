@@ -1,0 +1,127 @@
+// 6087
+[proc,script6087](int $int0, int $int1, int $int2, struct $struct3, int $int4)(int, int)
+def_component $component5 = interface_753:22;
+def_obj $obj6 = struct_param($struct3, param_1636);
+def_struct $struct7 = struct_param($struct3, param_1637);
+def_int $int8 = 0;
+def_int $int9 = 0;
+if ($struct7 ! null & ~script6099($struct7) = 1) {
+	$int9 = 1;
+}
+if (%varbit13915 = 1 & $obj6 = null) {
+	$int9 = 1;
+}
+if (%varbit13915 = 2 & $struct7 = null) {
+	$int9 = 1;
+}
+if (%varbit13915 = 3 & ($struct7 = null | struct_param($struct7, param_1628) ! enum_4373)) {
+	$int9 = 1;
+}
+if (%varbit13915 = 4 & ($struct7 = null | struct_param($struct7, param_1628) ! enum_4374)) {
+	$int9 = 1;
+}
+if (%varbit13915 = 5 & ($struct7 = null | struct_param($struct7, param_1628) ! enum_4375)) {
+	$int9 = 1;
+}
+if ($int9 = 1) {
+	while ($int8 < 13) {
+		cc_create($component5, ^iftype_rectangle, $int0);
+		cc_sethide(true);
+		$int0 = calc($int0 + 1);
+		$int8 = calc($int8 + 1);
+	}
+	return($int0, 0);
+}
+def_int $int10 = 3;
+def_int $int11 = 7;
+def_int $int12 = 90;
+def_int $int13 = 100;
+def_fontmetrics $fontmetrics14 = p12_full;
+def_fontmetrics $fontmetrics15 = b12_full;
+def_int $int16 = 0;
+switch_int (%varcint988) {
+	case 1 :
+		$int10 = 4;
+		$int12 = 94;
+		$fontmetrics14 = verdana_11pt_regular;
+		$fontmetrics15 = verdana_13pt_bold;
+		$int16 = 1;
+	case 2 :
+		$int10 = 6;
+		$int13 = 120;
+		$int12 = 100;
+		$int11 = 10;
+		$fontmetrics14 = verdana_13pt_regular;
+		$fontmetrics15 = verdana_13pt_bold;
+		$int16 = 1;
+	case 3 :
+		$int10 = 7;
+		$int13 = 120;
+		$int12 = 110;
+		$int11 = 12;
+		$fontmetrics14 = verdana_13pt_regular;
+		$fontmetrics15 = verdana_13pt_bold;
+		$int16 = 2;
+}
+def_int $int17 = calc(if_getwidth($component5) / $int13);
+def_int $int18 = calc((if_getwidth($component5) - ($int17 + 1) * $int10) / $int17);
+def_int $int19 = calc($int2 % $int17 * ($int18 + $int10) + $int10);
+def_int $int20 = calc($int2 / $int17 * ($int12 + $int10) + $int10);
+def_int $colour21 = 0x726451;
+if ($int4 = 1) {
+	$colour21 = 0xff981f;
+}
+$int0 = ~script5288($component5, $int0, $int19, $int20, $int18, $int12, struct_3712, $colour21);
+cc_setop(1, "Select");
+if ($obj6 ! null) {
+	cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
+	cc_setop(2, "Buy 1");
+	cc_setop(3, "Buy 5");
+	cc_setop(4, "Buy 10");
+} else {
+	cc_setopbase("<col=ff9040><struct_param($struct7, param_1621)></col>");
+	cc_setop(2, "Unlock");
+}
+if (~on_mobile = false & $int4 = 0) {
+	cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0xb8a182)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour21)");
+}
+if ($int4 = 0) {
+	cc_setonclick("script6088($int1)");
+} else {
+	cc_setonclick("script6088(0)");
+}
+if ($obj6 ! null) {
+	cc_create($component5, ^iftype_graphic, $int0);
+	cc_setposition(calc($int19 + $int18 / 2 - 36 / 2), calc($int20 + $int11), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj6, -1);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x333333);
+} else {
+	~create_graphic($component5, $int0, struct_param($struct7, param_1623), calc($int19 + $int18 / 2 - 20), calc($int20 + $int11), ^setpos_abs_left, ^setpos_abs_top, 40, 30, ^setsize_abs, ^setsize_abs);
+}
+$int0 = calc($int0 + 1);
+cc_create($component5, ^iftype_text, $int0);
+cc_setposition(calc($int19 + 7), calc($int20 + 27 + $int11 + $int16), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int18 - 14), 40, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics14);
+cc_setcolour(0xff981f);
+if ($obj6 ! null) {
+	cc_settext(oc_name($obj6));
+} else {
+	cc_settext(struct_param($struct7, param_1621));
+}
+$int0 = calc($int0 + 1);
+cc_create($component5, ^iftype_text, $int0);
+cc_setposition(calc($int19 + 5), calc($int20 + 60 + $int11 + $int16 * 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int18 - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics15);
+cc_setcolour(0xff981f);
+cc_settext(tostring(struct_param($struct3, param_1638)));
+$int0 = calc($int0 + 1);
+return($int0, 1);

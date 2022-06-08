@@ -1,0 +1,20 @@
+// 6103
+[proc,script6103](int $int0)(string)
+def_string $text0 = "";
+def_struct $struct1 = null;
+def_int $int2 = 0;
+switch_int (%varbit13909) {
+	case 0 :
+		$struct1 = enum(int, struct, enum_4373, %varbit13910);
+	case 1 :
+		$struct1 = enum(int, struct, enum_4374, %varbit13911);
+	case 2 :
+		$struct1 = enum(int, struct, enum_4375, %varbit13912);
+}
+$int2 = ~script6105($int0, $struct1);
+if ($int2 ! 0) {
+	$text0 = "<col=eeeeee>(+<tostring($int2)>)</col> <tostring(~script6104($int0))>";
+} else {
+	$text0 = tostring(~script6104($int0));
+}
+return($text0);
