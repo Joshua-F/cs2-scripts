@@ -40,7 +40,7 @@ switch_int (%varcint988) {
 		$int12 = 110;
 }
 def_int $int14 = calc(if_getwidth($component2) / $int13);
-def_int $int15 = calc(($int6 + 1) / $int14);
+def_int $int15 = calc(($int6 - 1) / $int14 + 1);
 if ($boolean1 = true) {
 	if_setscrollpos(0, 0, $component2);
 }

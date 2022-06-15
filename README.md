@@ -2266,7 +2266,7 @@
 [**2263**](scripts/[proc,tutorial_progressbar_set].cs2) `[proc,tutorial_progressbar_set]`  
 [**2264**](scripts/[proc,worldmap_mobile_layout].cs2) `[proc,worldmap_mobile_layout]`  
 [**2265**](scripts/[proc,script2265].cs2)  
-[**2266**](scripts/[proc,script2266].cs2)  
+[**2266**](scripts/[clientscript,script2266].cs2)  
 [**2267**](scripts/[proc,script2267].cs2)  
 [**2268**](scripts/[clientscript,text_device].cs2) `[clientscript,text_device]`  
 [**2269**](scripts/[clientscript,telenexus_init].cs2) `[clientscript,telenexus_init]`  
