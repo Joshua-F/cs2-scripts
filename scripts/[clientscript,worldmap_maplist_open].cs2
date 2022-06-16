@@ -6,18 +6,18 @@ if_sethide(false, $component1);
 def_int $y5 = ^min_32bit_int;
 def_int $y6 = ^min_32bit_int;
 def_int $int7 = 0;
-def_maparea $maparea8 = null;
+def_wma $wma8 = null;
 while ($int7 <= 41) {
-	$maparea8 = enum(int, maparea, enum_1697, $int7);
-	if ($maparea8 ! null & cc_find($component2, calc($int7 + 1)) = ^true) {
-		if (~worldmap_findcoordinmap($maparea8, %varcint188) ! null) {
+	$wma8 = enum(int, wma, enum_1697, $int7);
+	if ($wma8 ! null & cc_find($component2, calc($int7 + 1)) = ^true) {
+		if (~worldmap_findcoordinmap($wma8, %varcint188) ! null) {
 			if (~on_mobile = false) {
 				$y5 = calc(cc_gety - 1);
 			} else {
 				$y5 = calc(cc_gety + 3);
 			}
 		}
-		if (~worldmap_findcoordinmap($maparea8, %varcint401) ! null) {
+		if (~worldmap_findcoordinmap($wma8, %varcint401) ! null) {
 			if (~on_mobile = false) {
 				$y6 = calc(cc_gety - 1);
 			} else {

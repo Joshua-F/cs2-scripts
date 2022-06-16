@@ -1,8 +1,8 @@
 // 1713
-[clientscript,script1713](maparea $maparea0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+[clientscript,script1713](wma $wma0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 def_coord $coord9 = %varcint189;
 %varcint189 = null;
-if (worldmap_getcurrentmap ! $maparea0) {
+if (worldmap_getcurrentmap ! $wma0) {
 	~worldmap_maplist_close($component1, $component3);
 	if (worldmap_isloaded = false) {
 		return;
@@ -21,13 +21,13 @@ if (worldmap_isloaded = false) {
 }
 def_coord $coord10 = null;
 def_int $int11 = 0;
-def_maparea $maparea12 = enum(int, maparea, enum_1697, $int11);
-while ($maparea12 ! null) {
-	$coord10 = ~worldmap_findcoordinmap($maparea12, $coord9);
+def_wma $wma12 = enum(int, wma, enum_1697, $int11);
+while ($wma12 ! null) {
+	$coord10 = ~worldmap_findcoordinmap($wma12, $coord9);
 	if ($coord10 ! null) {
-		if (worldmap_getcurrentmap ! $maparea12) {
+		if (worldmap_getcurrentmap ! $wma12) {
 			if (cc_find($component1, $comsubid2) = ^true) {
-				~worldmap_loadmap($maparea12, $coord10, $component1, $component3, $component4, $component5, $component6, $component7, $component8);
+				~worldmap_loadmap($wma12, $coord10, $component1, $component3, $component4, $component5, $component6, $component7, $component8);
 			}
 		} else {
 			worldmap_jumptosourcecoord($coord10);
@@ -35,5 +35,5 @@ while ($maparea12 ! null) {
 		return;
 	}
 	$int11 = calc($int11 + 1);
-	$maparea12 = enum(int, maparea, enum_1697, $int11);
+	$wma12 = enum(int, wma, enum_1697, $int11);
 }

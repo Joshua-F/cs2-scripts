@@ -1,0 +1,11 @@
+// 6060
+[clientscript,spec_regen_vartransmit](component $component0, int $int1, int $int2)
+if (%varbit12346 = $int1 & $int2 = %var300) {
+	return;
+}
+if (%varbit12346 = 1 | %var300 >= 1000) {
+	~spec_regen_timer_off;
+} else if (%var300 < 1000) {
+	~script6059(%var3079);
+}
+if_setonvartransmit("spec_regen_vartransmit($component0, %varbit12346, %var300){var2856, var300}", $component0);

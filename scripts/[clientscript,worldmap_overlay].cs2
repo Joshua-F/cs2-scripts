@@ -1,7 +1,7 @@
 // 1750
 [clientscript,worldmap_overlay](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, coord $coord6)
-def_maparea $maparea7 = worldmap_getcurrentmap;
-if (worldmap_isloaded = false | $maparea7 = null | if_getwidth($component0) <= 0) {
+def_wma $wma7 = worldmap_getcurrentmap;
+if (worldmap_isloaded = false | $wma7 = null | if_getwidth($component0) <= 0) {
 	~worldmap_overlay_clear($component0, $component1);
 	return;
 }
@@ -18,7 +18,7 @@ def_int $int12 = 0;
 def_int $int13 = 0;
 def_coord $coord14 = null;
 if (%varcint188 ! $coord6 & %varcint188 ! null) {
-	$coord14 = ~worldmap_findcoordinmap($maparea7, %varcint188);
+	$coord14 = ~worldmap_findcoordinmap($wma7, %varcint188);
 	if ($coord14 ! null) {
 		$int12, $int13 = worldmap_getdisplaycoord($coord6);
 		if ($int12 >= calc($int10 - 25) & $int12 <= calc($int10 + 25) & $int13 >= calc($int11 - 25) & $int13 <= calc($int11 + 25)) {
@@ -41,10 +41,10 @@ def_int $int21 = 0;
 def_int $int22 = 0;
 def_int $int23 = 0;
 def_int $int24 = 0;
-$int24, $int22, $int23, $int21 = worldmap_getconfigbounds($maparea7);
+$int24, $int22, $int23, $int21 = worldmap_getconfigbounds($wma7);
 def_int $int25 = 0;
 def_int $int26 = 0;
-$int25, $int26 = worldmap_getconfigsize($maparea7);
+$int25, $int26 = worldmap_getconfigsize($wma7);
 $int25, $int26 = ~max($int25, 1), ~max($int26, 1);
 def_int $x27 = scale(calc($int18 - $int24), $int25, $width19);
 def_int $y28 = scale(calc($int21 - $int15), $int26, $height20);

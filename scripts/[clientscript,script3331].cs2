@@ -3,15 +3,15 @@
 if ($coord1 = null | worldmap_isloaded = false) {
 	return;
 }
-def_maparea $maparea3 = _6623($coord1);
+def_wma $wma3 = _6623($coord1);
 def_int $int4 = -1;
 def_int $int5 = -1;
 $int4, $int5 = worldmap_getdisplayposition;
-if (worldmap_coordinmap($maparea3, $coord1) = false) {
+if (worldmap_coordinmap($wma3, $coord1) = false) {
 	return;
 }
-if ($maparea3 ! worldmap_getcurrentmap) {
-	worldmap_setmap($maparea3);
+if ($wma3 ! worldmap_getcurrentmap) {
+	worldmap_setmap($wma3);
 }
 if_sethide(false, $component0);
 if_setontimer("script3332($component0, $coord1, $mapelement2, 0, $int4, $int5)", $component0);

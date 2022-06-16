@@ -8,7 +8,7 @@ if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_g
 	$component2 = interface_311:38;
 }
 cc_deleteall($component2);
-if_setonvartransmit("script6060($component2, %varbit12346, %var300){var2856, var300}", $component2);
+if_setonvartransmit("spec_regen_vartransmit($component2, %varbit12346, %var300){var2856, var300}", $component2);
 if (%varbit4084 = 1) {
 	return;
 }

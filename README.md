@@ -943,7 +943,7 @@
 [**940**](scripts/[clientscript,peng_observer_init].cs2) `[clientscript,peng_observer_init]`  
 [**941**](scripts/[clientscript,peng_observer_borders].cs2) `[clientscript,peng_observer_borders]`  
 [**942**](scripts/[proc,peng_observer_borders].cs2) `[proc,peng_observer_borders]`  
-[**943**](scripts/[proc,script943].cs2)  
+[**943**](scripts/[proc,soul_wars_rewards_drawitem_other].cs2) `[proc,soul_wars_rewards_drawitem_other]`  
 [**944**](scripts/[proc,script944].cs2)  
 [**945**](scripts/[proc,script945].cs2)  
 [**946**](scripts/[clientscript,zep_balloon_map_hover].cs2) `[clientscript,zep_balloon_map_hover]`  
@@ -2238,7 +2238,7 @@
 [**2235**](scripts/[clientscript,script2235].cs2)  
 [**2236**](scripts/[clientscript,script2236].cs2)  
 [**2237**](scripts/[proc,script2237].cs2)  
-[**2238**](scripts/[clientscript,script2238].cs2)  
+[**2238**](scripts/[clientscript,steelborder_closebutton].cs2) `[clientscript,steelborder_closebutton]`  
 [**2239**](scripts/[clientscript,keyboard_hide].cs2) `[clientscript,keyboard_hide]`  
 [**2240**](scripts/[clientscript,collection_init].cs2) `[clientscript,collection_init]`  
 [**2241**](scripts/[clientscript,script2241].cs2)  
@@ -5845,7 +5845,7 @@
 [**5842**](scripts/[clientscript,script5842].cs2)  
 [**5843**](scripts/[clientscript,if_fade].cs2) `[clientscript,if_fade]`  
 [**5844**](scripts/[clientscript,if_fade_timer].cs2) `[clientscript,if_fade_timer]`  
-[**5845**](scripts/[proc,script5845].cs2)  
+[**5845**](scripts/[proc,dynamic_stone_button_filled_main].cs2) `[proc,dynamic_stone_button_filled_main]`  
 [**5846**](scripts/[proc,buff_bar_dynamic_tooltip].cs2) `[proc,buff_bar_dynamic_tooltip]`  
 [**5847**](scripts/[proc,buff_bar_dynamic_graphic].cs2) `[proc,buff_bar_dynamic_graphic]`  
 [**5848**](scripts/[proc,buff_bar_dynamic_graphic2].cs2) `[proc,buff_bar_dynamic_graphic2]`  
@@ -5866,8 +5866,8 @@
 [**5863**](scripts/[clientscript,script5863].cs2)  
 [**5864**](scripts/[clientscript,script5864].cs2)  
 [**5865**](scripts/[proc,script5865].cs2)  
-[**5866**](scripts/[clientscript,script5866].cs2)  
-[**5867**](scripts/[clientscript,script5867].cs2)  
+[**5866**](scripts/[worldmapelementmouserepeat,mapelement_853].cs2) `[worldmapelementmouserepeat,mapelement_853]`  
+[**5867**](scripts/[worldmapelementmouseleave,mapelement_853].cs2) `[worldmapelementmouseleave,mapelement_853]`  
 [**5868**](scripts/[proc,speedrunning_misc_unlocks].cs2) `[proc,speedrunning_misc_unlocks]`  
 [**5869**](scripts/[proc,script5869].cs2)  
 [**5870**](scripts/[clientscript,script5870].cs2)  
@@ -5915,10 +5915,10 @@
 [**5912**](scripts/[proc,script5912].cs2)  
 [**5913**](scripts/[proc,script5913].cs2)  
 [**5914**](scripts/[clientscript,wildy_loot_init].cs2) `[clientscript,wildy_loot_init]`  
-[**5915**](scripts/[clientscript,script5915].cs2)  
-[**5916**](scripts/[clientscript,script5916].cs2)  
+[**5915**](scripts/[clientscript,wildy_loot_itemnote_transmit].cs2) `[clientscript,wildy_loot_itemnote_transmit]`  
+[**5916**](scripts/[clientscript,wildy_loot_itemnote_switch].cs2) `[clientscript,wildy_loot_itemnote_switch]`  
 [**5917**](scripts/[proc,script5917].cs2)  
-[**5918**](scripts/[clientscript,script5918].cs2)  
+[**5918**](scripts/[loadloc,rocks_3748].cs2) `[loadloc,rocks_3748]`  
 [**5919**](scripts/[proc,script5919].cs2)  
 [**5920**](scripts/[clientscript,script5920].cs2)  
 [**5921**](scripts/[proc,script5921].cs2)  
@@ -5956,11 +5956,11 @@
 [**5953**](scripts/[proc,script5953].cs2)  
 [**5954**](scripts/[proc,script5954].cs2)  
 [**5955**](scripts/[proc,script5955].cs2)  
-[**5956**](scripts/[clientscript,script5956].cs2)  
-[**5957**](scripts/[clientscript,script5957].cs2)  
-[**5958**](scripts/[clientscript,script5958].cs2)  
-[**5959**](scripts/[clientscript,script5959].cs2)  
-[**5960**](scripts/[clientscript,script5960].cs2)  
+[**5956**](scripts/[trigger_80,_].cs2) `[trigger_80,_]`  
+[**5957**](scripts/[trigger_78,_].cs2) `[trigger_78,_]`  
+[**5958**](scripts/[trigger_79,_].cs2) `[trigger_79,_]`  
+[**5959**](scripts/[trigger_81,_].cs2) `[trigger_81,_]`  
+[**5960**](scripts/[trigger_82,_].cs2) `[trigger_82,_]`  
 [**5961**](scripts/[proc,script5961].cs2)  
 [**5962**](scripts/[clientscript,script5962].cs2)  
 [**5963**](scripts/[proc,script5963].cs2)  
@@ -5987,8 +5987,8 @@
 [**5984**](scripts/[clientscript,script5984].cs2)  
 [**5985**](scripts/[clientscript,script5985].cs2)  
 [**5986**](scripts/[clientscript,script5986].cs2)  
-[**5987**](scripts/[clientscript,script5987].cs2)  
-[**5988**](scripts/[clientscript,script5988].cs2)  
+[**5987**](scripts/[worldmapelementmouserepeat,mapelement_854].cs2) `[worldmapelementmouserepeat,mapelement_854]`  
+[**5988**](scripts/[worldmapelementmouseleave,mapelement_854].cs2) `[worldmapelementmouseleave,mapelement_854]`  
 [**5989**](scripts/[proc,script5989].cs2)  
 [**5990**](scripts/[proc,script5990].cs2)  
 [**5991**](scripts/[proc,script5991].cs2)  
@@ -6046,8 +6046,8 @@
 [**6043**](scripts/[clientscript,script6043].cs2)  
 [**6044**](scripts/[proc,script6044].cs2)  
 [**6045**](scripts/[proc,script6045].cs2)  
-[**6046**](scripts/[clientscript,script6046].cs2)  
-[**6047**](scripts/[clientscript,script6047].cs2)  
+[**6046**](scripts/[worldmapelementmouserepeat,mapelement_857].cs2) `[worldmapelementmouserepeat,mapelement_857]`  
+[**6047**](scripts/[worldmapelementmouseleave,mapelement_857].cs2) `[worldmapelementmouseleave,mapelement_857]`  
 [**6048**](scripts/[clientscript,script6048].cs2)  
 [**6049**](scripts/[proc,script6049].cs2)  
 [**6050**](scripts/[proc,script6050].cs2)  
@@ -6058,9 +6058,9 @@
 [**6055**](scripts/[clientscript,script6055].cs2)  
 [**6056**](scripts/[clientscript,script6056].cs2)  
 [**6057**](scripts/[proc,script6057].cs2)  
-[**6058**](scripts/[proc,script6058].cs2)  
+[**6058**](scripts/[proc,spec_regen_timer_off].cs2) `[proc,spec_regen_timer_off]`  
 [**6059**](scripts/[proc,script6059].cs2)  
-[**6060**](scripts/[clientscript,script6060].cs2)  
+[**6060**](scripts/[clientscript,spec_regen_vartransmit].cs2) `[clientscript,spec_regen_vartransmit]`  
 [**6061**](scripts/[proc,script6061].cs2)  
 [**6062**](scripts/[clientscript,script6062].cs2)  
 [**6063**](scripts/[clientscript,script6063].cs2)  
@@ -6074,14 +6074,14 @@
 [**6071**](scripts/[proc,script6071].cs2)  
 [**6072**](scripts/[clientscript,script6072].cs2)  
 [**6073**](scripts/[proc,script6073].cs2)  
-[**6074**](scripts/[clientscript,script6074].cs2)  
-[**6075**](scripts/[clientscript,script6075].cs2)  
-[**6076**](scripts/[clientscript,script6076].cs2)  
-[**6077**](scripts/[clientscript,script6077].cs2)  
-[**6078**](scripts/[clientscript,script6078].cs2)  
-[**6079**](scripts/[clientscript,script6079].cs2)  
-[**6080**](scripts/[clientscript,script6080].cs2)  
-[**6081**](scripts/[clientscript,script6081].cs2)  
+[**6074**](scripts/[worldmapelementmouserepeat,mapelement_858].cs2) `[worldmapelementmouserepeat,mapelement_858]`  
+[**6075**](scripts/[worldmapelementmouserepeat,mapelement_859].cs2) `[worldmapelementmouserepeat,mapelement_859]`  
+[**6076**](scripts/[worldmapelementmouserepeat,mapelement_860].cs2) `[worldmapelementmouserepeat,mapelement_860]`  
+[**6077**](scripts/[worldmapelementmouseleave,mapelement_858].cs2) `[worldmapelementmouseleave,mapelement_858]`  
+[**6078**](scripts/[worldmapelementmouseleave,mapelement_859].cs2) `[worldmapelementmouseleave,mapelement_859]`  
+[**6079**](scripts/[worldmapelementmouseleave,mapelement_860].cs2) `[worldmapelementmouseleave,mapelement_860]`  
+[**6080**](scripts/[worldmapelementmouserepeat,mapelement_863].cs2) `[worldmapelementmouserepeat,mapelement_863]`  
+[**6081**](scripts/[worldmapelementmouseleave,mapelement_863].cs2) `[worldmapelementmouseleave,mapelement_863]`  
 [**6082**](scripts/[clientscript,script6082].cs2)  
 [**6083**](scripts/[clientscript,script6083].cs2)  
 [**6084**](scripts/[clientscript,script6084].cs2)  
