@@ -1,0 +1,9 @@
+// 6145
+[proc,script6145](component $component0, int $int1, int $int2)(int)
+while ($int2 > 0) {
+	cc_create($component0, ^iftype_rectangle, $int1);
+	$int1 = calc($int1 + 1);
+	cc_sethide(true);
+	$int2 = calc($int2 - 1);
+}
+return($int1);

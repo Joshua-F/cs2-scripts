@@ -1,0 +1,18 @@
+// 6140
+[proc,script6140](int $comsubid0, int $trans1, int $int2)
+if ($int2 = 0) {
+	~script6141;
+}
+~script6135(0, interface_148:38);
+~script6150;
+if (cc_find(interface_148:11, $comsubid0) = ^true) {
+	cc_settrans(210);
+	cc_setontimer("script6142(interface_148:11, $comsubid0, $trans1, calc(clientclock + 10))");
+}
+if (cc_find(interface_148:11, calc($comsubid0 + 1)) = ^true) {
+	cc_setoutline(1);
+	cc_settrans(210);
+}
+if (cc_find(interface_148:11, calc($comsubid0 + 2)) = ^true) {
+	cc_setcolour(0x9f9f9f);
+}

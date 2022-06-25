@@ -27,5 +27,13 @@ switch_int ($setting1) {
 		if (~deadman_mode ! 0) {
 			return(0);
 		}
+	case ^setting_popout_xptracker :
+		if (~on_enhanced_mobile = 1 & %varbit13981 = 1) {
+			return(1);
+		}
+		if (~on_enhanced_desktop = 1 & %varbit13982 = 0) {
+			return(1);
+		}
+		return(0);
 }
 return(1);

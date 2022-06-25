@@ -1,0 +1,14 @@
+// 6147
+[clientscript,script6147](int $comsubid0)
+if (cc_find(interface_148:11, $comsubid0) = ^true) {
+	if (cc_gettrans = 210) {
+		return;
+	}
+	cc_settrans(225);
+	if (.cc_find(interface_148:11, calc($comsubid0 + 1)) = ^true) {
+		.cc_setoutline(2);
+	}
+	if (.cc_find(interface_148:11, calc($comsubid0 + 2)) = ^true) {
+		.cc_setcolour(^white);
+	}
+}

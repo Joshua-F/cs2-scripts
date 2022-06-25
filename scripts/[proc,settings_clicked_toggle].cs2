@@ -76,6 +76,12 @@ switch_int ($setting0) {
 		~settings_warning_annakarl_teleport;
 	case ^setting_warning_ghorrock_teleport :
 		~settings_warning_ghorrock_teleport;
+	case 253 :
+		%varbit13985 = calc(1 - %varbit13985);
+	case 254 :
+		%varbit13986 = calc(1 - %varbit13986);
+	case 255 :
+		%varbit10532 = calc(1 - %varbit10532);
 	case 65 :
 		~script4009;
 	case ^setting_warning_ice_plateau_tablet :
@@ -236,6 +242,10 @@ switch_int ($setting0) {
 		~script5948;
 	case ^setting_popout_xptracker :
 		~settings_popout_xptracker;
+	case 251 :
+		~script201;
+	case 252 :
+		~script202;
 	case 201 :
 		if (~is_group_iron = 1) {
 			%varbit13122 = calc(1 - %varbit13122);

@@ -201,8 +201,8 @@
 [**198**](scripts/[proc,v2_stone_button_in_filled].cs2) `[proc,v2_stone_button_in_filled]`  
 [**199**](scripts/[proc,script199].cs2)  
 [**200**](scripts/[clientscript,displayname_init].cs2) `[clientscript,displayname_init]`  
-[**201**](scripts/[clientscript,pet_insurance_insured].cs2) `[clientscript,pet_insurance_insured]`  
-[**202**](scripts/[clientscript,script202].cs2)  
+[**201**](scripts/[proc,script201].cs2)  
+[**202**](scripts/[proc,script202].cs2)  
 [**203**](scripts/[proc,script203].cs2)  
 [**204**](scripts/[clientscript,displayname_draw].cs2) `[clientscript,displayname_draw]`  
 [**205**](scripts/[clientscript,duel_initworn].cs2) `[clientscript,duel_initworn]`  
@@ -533,7 +533,6 @@
 [**530**](scripts/[proc,settings_buff_shadow_veil].cs2) `[proc,settings_buff_shadow_veil]`  
 [**531**](scripts/[proc,script531].cs2)  
 [**532**](scripts/[clientscript,script532].cs2)  
-[**533**](scripts/[clientscript,script533].cs2)  
 [**534**](scripts/[clientscript,steam_set_unlocked].cs2) `[clientscript,steam_set_unlocked]`  
 [**535**](scripts/[clientscript,soul_wars_rewards_init].cs2) `[clientscript,soul_wars_rewards_init]`  
 [**536**](scripts/[proc,script536].cs2)  
@@ -636,9 +635,6 @@
 [**633**](scripts/[proc,int_to_bool].cs2) `[proc,int_to_bool]`  
 [**634**](scripts/[proc,displayname_draw].cs2) `[proc,displayname_draw]`  
 [**635**](scripts/[clientscript,displayname_lookup].cs2) `[clientscript,displayname_lookup]`  
-[**636**](scripts/[clientscript,script636].cs2)  
-[**637**](scripts/[proc,pet_insurance_drawlist].cs2) `[proc,pet_insurance_drawlist]`  
-[**638**](scripts/[clientscript,pet_insurance_op].cs2) `[clientscript,pet_insurance_op]`  
 [**639**](scripts/[clientscript,poh_menagerie_initlist].cs2) `[clientscript,poh_menagerie_initlist]`  
 [**640**](scripts/[clientscript,poh_menagerie_drawlist].cs2) `[clientscript,poh_menagerie_drawlist]`  
 [**641**](scripts/[proc,poh_menagerie_drawlist].cs2) `[proc,poh_menagerie_drawlist]`  
@@ -6126,3 +6122,28 @@
 [**6123**](scripts/[clientscript,script6123].cs2)  
 [**6124**](scripts/[clientscript,script6124].cs2)  
 [**6125**](scripts/[clientscript,script6125].cs2)  
+[**6126**](scripts/[clientscript,script6126].cs2)  
+[**6127**](scripts/[clientscript,script6127].cs2)  
+[**6128**](scripts/[proc,script6128].cs2)  
+[**6129**](scripts/[proc,script6129].cs2)  
+[**6130**](scripts/[clientscript,script6130].cs2)  
+[**6131**](scripts/[proc,script6131].cs2)  
+[**6132**](scripts/[proc,script6132].cs2)  
+[**6133**](scripts/[clientscript,script6133].cs2)  
+[**6134**](scripts/[clientscript,script6134].cs2)  
+[**6135**](scripts/[proc,script6135].cs2)  
+[**6136**](scripts/[clientscript,script6136].cs2)  
+[**6137**](scripts/[proc,script6137].cs2)  
+[**6138**](scripts/[proc,script6138].cs2)  
+[**6139**](scripts/[clientscript,script6139].cs2)  
+[**6140**](scripts/[proc,script6140].cs2)  
+[**6141**](scripts/[proc,script6141].cs2)  
+[**6142**](scripts/[clientscript,script6142].cs2)  
+[**6143**](scripts/[clientscript,script6143].cs2)  
+[**6144**](scripts/[proc,script6144].cs2)  
+[**6145**](scripts/[proc,script6145].cs2)  
+[**6146**](scripts/[proc,script6146].cs2)  
+[**6147**](scripts/[clientscript,script6147].cs2)  
+[**6148**](scripts/[clientscript,script6148].cs2)  
+[**6149**](scripts/[clientscript,script6149].cs2)  
+[**6150**](scripts/[proc,script6150].cs2)  

@@ -1,0 +1,6 @@
+// 201
+[proc,script201]
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+%varbit13982 = calc(1 - %varbit13982);

@@ -1,0 +1,94 @@
+// 6138
+[proc,script6138](int $int0, component $component1, int $int2, int $int3, int $int4, int $flags5, int $flags6, int $flags7, int $flags8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15)(int, int, int)
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_namedobj $namedobj19 = null;
+def_int $int20 = 3;
+def_int $int21 = calc(32 + $int20 * 2);
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $width24 = 233;
+def_int $int25 = 0;
+while ($int16 <= 49) {
+	$int22 = 0;
+	$int17, $int18 = ~script6144($int16, $flags5, $flags6, $flags7, $flags8);
+	if ($int0 = 1 & $int18 = 0 & $int17 = 1 | $int0 = 0 & $int18 = 1 & $int17 = 1) {
+		if ($int0 = 0) {
+			$int25 = ~script6146($int9, $int10, $int11, $int12, $int13, $int14, $int15, $int16);
+		}
+		cc_create($component1, ^iftype_rectangle, $int2);
+		$int2 = calc($int2 + 1);
+		$namedobj19 = enum(int, namedobj, enum_985, $int16);
+		cc_setposition($int22, $int3, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize($width24, $int21, ^setsize_abs, ^setsize_abs);
+		cc_setfill(true);
+		cc_setcolour(^white);
+		if (calc($int4 % 2) = 0) {
+			cc_settrans(245);
+		} else {
+			cc_settrans(235);
+		}
+		cc_setonmouserepeat("script6147(cc_getid)");
+		cc_setonmouseleave("script6148(cc_getid, $int4)");
+		cc_setopbase("<col=ff981f><oc_name($namedobj19)></col>");
+		if ($int0 = 1) {
+			cc_setop(1, "Reclaim");
+			cc_setonop("script6139(cc_getid, cc_gettrans, 1)");
+		} else {
+			cc_setop(1, "Location");
+			cc_setonop("script6143(event_opindex, oc_name($namedobj19), $int25, cc_getid, cc_gettrans)");
+		}
+		cc_setop(10, "Examine");
+		cc_create($component1, ^iftype_graphic, $int2);
+		$int2 = calc($int2 + 1);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		$int22 = calc($int20 * 4);
+		$int23 = calc($int3 + $int20);
+		cc_setposition($int22, $int23, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($namedobj19, 1);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_create($component1, ^iftype_text, $int2);
+		$int2 = calc($int2 + 1);
+		$int22 = calc($int20 * 6 + 36);
+		cc_setposition($int22, $int23, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_setcolour(0x9f9f9f);
+		cc_setsize(200, $int21, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+		cc_settextshadow(true);
+		cc_settext(oc_name($namedobj19));
+		cc_create($component1, ^iftype_text, $int2);
+		$int2 = calc($int2 + 1);
+		cc_setposition($int22, calc($int23 - 7), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p11_full);
+		cc_setsize(200, $int21, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+		cc_settextshadow(true);
+		if ($int0 = 1) {
+			cc_setcolour(^white);
+			cc_settext("Reclaimable");
+			cc_create($component1, ^iftype_rectangle, $int2);
+			cc_sethide(true);
+		} else {
+			cc_setcolour(0xff981f);
+			cc_settext("Location:");
+			cc_create($component1, ^iftype_text, $int2);
+			cc_setposition(calc($int22 + 50), calc($int23 - 7), ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextfont(p11_full);
+			cc_setcolour(^white);
+			cc_setsize(200, $int21, ^setsize_abs, ^setsize_abs);
+			cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+			cc_settextshadow(true);
+			cc_settext(enum(int, string, enum_169, $int25));
+		}
+		$int2 = calc($int2 + 1);
+		$int3 = calc($int3 + $int21);
+		$int4 = calc($int4 + 1);
+	} else {
+		$int2 = ~script6145($component1, $int2, 5);
+	}
+	$int16 = calc($int16 + 1);
+}
+return($int2, $int3, $int4);

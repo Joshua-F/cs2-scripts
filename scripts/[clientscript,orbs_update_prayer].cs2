@@ -3,7 +3,7 @@
 if ($component0 ! null) {
 	if_setnoclickthrough(true, $component5);
 	if_setonstattransmit("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6){prayer}", $component0);
-	if_setonvartransmit("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6){var375}", $component0);
+	if_setonvartransmit("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6){var375, var1377}", $component0);
 	if_setonsubchange("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
 	if_setonop("orbs_toggle_prayer(event_opindex, $component3, $component4, $component6)", $component6);
 }
@@ -19,5 +19,9 @@ if (~toplevel_check_sidepanel(5) = true) {
 	if_setonmouseleave(null, $component6);
 	if_sethide(true, $component6);
 }
-~orbs_update($component1, $component2, stat(prayer), stat_base(prayer));
+def_int $int8 = stat_base(prayer);
+if (%varbit5314 = 1) {
+	$int8 = 99;
+}
+~orbs_update($component1, $component2, stat(prayer), $int8);
 ~orbs_update_prayer($component3, $component4, $component6);

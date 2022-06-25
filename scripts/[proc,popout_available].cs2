@@ -3,7 +3,13 @@
 if (~on_enhanced_any = 0) {
 	return(0);
 }
-if (~on_mobile = true & ~toplevel_getcomponents ! enum_1745) {
+if (~on_mobile = true) {
+	if (~toplevel_getcomponents ! enum_1745) {
+		return(0);
+	} else if (%varbit13981 = 0) {
+		return(0);
+	}
+} else if (%varbit13982 = 1) {
 	return(0);
 }
 return(~popout_available_inner($int0));

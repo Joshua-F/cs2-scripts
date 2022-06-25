@@ -1,0 +1,9 @@
+// 6128
+[proc,script6128](component $component0)
+if (%varbit13978 = 0) {
+	if_settext("None", $component0);
+	if_setcolour(0x9f9f9f, $component0);
+	return;
+}
+if_settext(tostring(%varbit13978), interface_148:30);
+if_setcolour(^white, $component0);

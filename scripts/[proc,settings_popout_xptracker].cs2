@@ -3,4 +3,10 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
+if (~on_enhanced_desktop = 1 & %varbit13982 = 1) {
+	return;
+}
+if (~on_enhanced_mobile = 1 & %varbit13981 = 0) {
+	return;
+}
 %varbit13089 = calc(1 - %varbit13089);
