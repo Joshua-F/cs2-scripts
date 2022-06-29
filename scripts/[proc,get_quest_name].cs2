@@ -1,3 +1,3 @@
 // 3742
-[proc,get_quest_name](struct $struct0)(string)
-return(struct_param($struct0, param_610));
+[proc,get_quest_name](dbrow $dbrow0)(string)
+return(db_getfield($dbrow0, quest:2, 0));

@@ -148,7 +148,7 @@ if (string_length($string1) ! 0) {
 	$int16 = calc($int16 + 1);
 }
 if (~script4841($enum1, $int2) ! 0) {
-	if_setposition(calc($int20 + 10), 4, ^setpos_abs_left, ^setpos_abs_top, $component8);
+	if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_top, $component8);
 	~script4856($component8);
 	if_setop(1, "Combat Achievements", $component8);
 	if_sethide(false, $component8);

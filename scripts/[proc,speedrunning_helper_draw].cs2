@@ -1,23 +1,23 @@
 // 5880
 [proc,speedrunning_helper_draw](int $int0)
-def_struct $struct1 = %var3374;
-def_string $string0 = ~get_quest_name($struct1);
-if (enum(struct, boolean, enum_4209, $struct1) = true) {
+def_dbrow $dbrow1 = %var3449;
+def_string $string0 = ~get_quest_name($dbrow1);
+if (db_getfield($dbrow1, quest:28, 0) = 2) {
 	$string0 = "<$string0> (Beta)";
 }
 def_string $string1 = "";
 def_int $int2 = 0;
-if ($int0 < struct_param($struct1, param_1529)) {
-	$string1, $int2 = "Platinum", struct_param($struct1, param_1529);
-} else if ($int0 < struct_param($struct1, param_1528)) {
-	$string1, $int2 = "Gold", struct_param($struct1, param_1528);
-} else if ($int0 < struct_param($struct1, param_1527)) {
-	$string1, $int2 = "Silver", struct_param($struct1, param_1527);
-} else if ($int0 < struct_param($struct1, param_1526)) {
-	$string1, $int2 = "Bronze", struct_param($struct1, param_1526);
+if ($int0 < db_getfield($dbrow1, quest:32, 0)) {
+	$string1, $int2 = "Platinum", db_getfield($dbrow1, quest:32, 0);
+} else if ($int0 < db_getfield($dbrow1, quest:31, 0)) {
+	$string1, $int2 = "Gold", db_getfield($dbrow1, quest:31, 0);
+} else if ($int0 < db_getfield($dbrow1, quest:30, 0)) {
+	$string1, $int2 = "Silver", db_getfield($dbrow1, quest:30, 0);
+} else if ($int0 < db_getfield($dbrow1, quest:29, 0)) {
+	$string1, $int2 = "Bronze", db_getfield($dbrow1, quest:29, 0);
 }
 def_string $string2 = ~time_convert_option($int2);
-def_int $int3 = ~script5884($struct1);
+def_int $int3 = ~script5884($dbrow1);
 def_string $string3 = ~time_convert_option($int3);
 ~script5310;
 ~helper_generic_set_bit(0);

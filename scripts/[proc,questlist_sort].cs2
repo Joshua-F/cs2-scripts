@@ -1,37 +1,41 @@
 // 1352
-[proc,questlist_sort](intarray $intarray0, int $int1, int $int2, enum $enum3, int $int4, int $int5)
-def_int $int6 = ~script1411($int4);
-def_int $index7 = calc(($int1 + $int2) / 2);
-def_int $int8 = $intarray0($index7);
-$intarray0($index7) = $intarray0($int2);
-$intarray0($int2) = $int8;
+[proc,questlist_sort](intarray $intarray0, int $int1, int $int2, int $int3, int $int4)
+def_int $int5 = ~script1411($int3);
+def_int $index6 = calc(($int1 + $int2) / 2);
+def_int $int7 = $intarray0($index6);
+$intarray0($index6) = $intarray0($int2);
+$intarray0($int2) = $int7;
+def_int $int8 = $int1;
 def_int $int9 = $int1;
-def_int $int10 = $int1;
-def_int $int11 = -1;
+def_int $int10 = -1;
+def_dbrow $dbrow11 = null;
+def_dbrow $dbrow12 = null;
 def_string $string0 = "";
 def_string $string1 = "";
 def_string $string2 = "";
 def_string $string3 = "";
-while ($int10 < $int2) {
-	$string0 = ~script2245(enum(int, struct, $enum3, calc($intarray0($int10) % $int5)), calc($intarray0($int10) / $int5), $int4);
-	$string1 = ~script2245(enum(int, struct, $enum3, calc($int8 % $int5)), calc($int8 / $int5), $int4);
-	if ($int6 ! -1) {
-		$string2 = ~script2245(enum(int, struct, $enum3, calc($intarray0($int10) % $int5)), calc($intarray0($int10) / $int5), $int6);
-		$string3 = ~script2245(enum(int, struct, $enum3, calc($int8 % $int5)), calc($int8 / $int5), $int6);
+while ($int9 < $int2) {
+	$dbrow11 = ~script6154(calc($intarray0($int9) % $int4));
+	$string0 = ~script2245($dbrow11, calc($intarray0($int9) / $int4), $int3);
+	$dbrow12 = ~script6154(calc($int7 % $int4));
+	$string1 = ~script2245($dbrow12, calc($int7 / $int4), $int3);
+	if ($int5 ! -1) {
+		$string2 = ~script2245($dbrow11, calc($intarray0($int9) / $int4), $int5);
+		$string3 = ~script2245($dbrow12, calc($int7 / $int4), $int5);
 	}
 	if (compare("<$string0><$string2>", "<$string1><$string3>") <= 0) {
-		$int11 = $intarray0($int10);
-		$intarray0($int10) = $intarray0($int9);
-		$intarray0($int9) = $int11;
-		$int9 = calc($int9 + 1);
+		$int10 = $intarray0($int9);
+		$intarray0($int9) = $intarray0($int8);
+		$intarray0($int8) = $int10;
+		$int8 = calc($int8 + 1);
 	}
-	$int10 = calc($int10 + 1);
+	$int9 = calc($int9 + 1);
 }
-$intarray0($int2) = $intarray0($int9);
-$intarray0($int9) = $int8;
-if ($int1 < calc($int9 - 1)) {
-	~questlist_sort(intarray0, $int1, calc($int9 - 1), $enum3, $int4, $int5);
+$intarray0($int2) = $intarray0($int8);
+$intarray0($int8) = $int7;
+if ($int1 < calc($int8 - 1)) {
+	~questlist_sort(intarray0, $int1, calc($int8 - 1), $int3, $int4);
 }
-if (calc($int9 + 1) < $int2) {
-	~questlist_sort(intarray0, calc($int9 + 1), $int2, $enum3, $int4, $int5);
+if (calc($int8 + 1) < $int2) {
+	~questlist_sort(intarray0, calc($int8 + 1), $int2, $int3, $int4);
 }

@@ -56,6 +56,8 @@ if ($boolean0 = true) {
 			cc_setposition(calc(-12 - $int13 / 2), 0, ^setpos_abs_centre, ^setpos_abs_top);
 			if ($int12 = 1) {
 				cc_setgraphic("options_icons_small,12");
+			} else if (~script636 = 1) {
+				cc_setgraphic("options_icons_small,14");
 			} else {
 				cc_setgraphic("options_icons_small,11");
 			}

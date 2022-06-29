@@ -1,49 +1,18 @@
 // 5994
-[proc,script5994](struct $struct0, stat $stat1, int $int2, int $int3)(stat, int)
+[proc,script5994](dbrow $dbrow0, stat $stat1, int $int2, int $int3)(stat, int)
 if ($stat1 = null | $int2 <= 1) {
 	return(null, 1);
 }
-if ($stat1 = struct_param($struct0, param_616)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_618)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_620)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_622)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_624)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_626)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_628)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_630)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_632)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_634)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_636)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_638)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_640)) {
-	return(null, 1);
-}
-if ($stat1 = struct_param($struct0, param_642)) {
-	return(null, 1);
+def_stat $stat4 = null;
+def_int $int5 = 1;
+def_int $int6 = db_getfieldcount($dbrow0, quest:20);
+def_int $int7 = 0;
+while ($int7 < $int6) {
+	$stat4, $int5 = db_getfield($dbrow0, quest:20, $int7);
+	if ($stat4 = $stat1) {
+		return(null, 1);
+	}
+	$int7 = calc($int7 + 1);
 }
 if ($stat1 = agility & $int2 <= 50) {
 	return(null, 1);

@@ -1,7 +1,7 @@
 // 5868
-[proc,speedrunning_misc_unlocks](struct $struct0, component $component1, int $int2, int $int3)(int, int)
-switch_struct ($struct0) {
-	case dragon_slayer_i_3139 :
+[proc,speedrunning_misc_unlocks](dbrow $dbrow0, component $component1, int $int2, int $int3)(int, int)
+switch_dbrow ($dbrow0) {
+	case dbrow_31 :
 		$int2, $int3 = ~script5869($component1, $int2, $int3);
 }
 return($int2, $int3);

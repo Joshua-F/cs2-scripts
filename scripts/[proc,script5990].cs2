@@ -1,18 +1,17 @@
 // 5990
-[proc,script5990](struct $struct0)(int)
-if (~script5992(struct_param($struct0, param_644), struct_param($struct0, param_645)) = 0) {
-	return(0);
+[proc,script5990](dbrow $dbrow0)(int)
+def_stat $stat1 = null;
+def_int $int2 = -1;
+def_int $int3 = db_getfieldcount($dbrow0, quest:21);
+def_int $int4 = 0;
+while ($int4 < $int3) {
+	$stat1, $int2 = db_getfield($dbrow0, quest:21, $int4);
+	if (~script5992($stat1, $int2) = 0) {
+		return(0);
+	}
+	$int4 = calc($int4 + 1);
 }
-if (~script5992(struct_param($struct0, param_646), struct_param($struct0, param_647)) = 0) {
-	return(0);
-}
-if (~script5992(struct_param($struct0, param_1521), struct_param($struct0, param_1522)) = 0) {
-	return(0);
-}
-if (~script5992(struct_param($struct0, param_1523), struct_param($struct0, param_1524)) = 0) {
-	return(0);
-}
-if (%varcint52 < struct_param($struct0, param_657)) {
+if (%varcint52 < db_getfield($dbrow0, quest:25, 0)) {
 	return(0);
 }
 return(1);

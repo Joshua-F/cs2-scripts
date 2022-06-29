@@ -1,9 +1,11 @@
 // 5894
-[proc,speedrunning_quest_enabled](struct $struct0)(int)
-if (enum(struct, boolean, enum_4208, $struct0) = true) {
-	return(1);
-}
-if (enum(struct, boolean, enum_4209, $struct0) = true & ~script5895 = 1) {
-	return(1);
+[proc,speedrunning_quest_enabled](dbrow $dbrow0)(int)
+switch_int (db_getfield($dbrow0, quest:28, 0)) {
+	case 1 :
+		return(1);
+	case 2 :
+		if (~script5895 = 1) {
+			return(1);
+		}
 }
 return(0);

@@ -1,0 +1,6 @@
+// 4136
+[proc,quest_is_complete](dbrow $dbrow0)(int)
+if (~quest_status_get($dbrow0) = 2) {
+	return(1);
+}
+return(0);

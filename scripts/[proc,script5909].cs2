@@ -23,119 +23,38 @@ $int6 = calc($int6 + 1);
 def_int $int7 = -1;
 def_int $int8 = calc(if_getwidth($component1) - 2);
 def_int $int9 = 0;
-def_struct $struct10 = struct_param(%var3373, param_648);
-if ($struct10 ! null) {
-	$int6, $int5, $int9 = ~script5912($component1, $int6, $int5, struct_param($struct10, param_610)), 1;
+def_dbrow $dbrow10 = null;
+def_int $int11 = db_getfieldcount(%var3373, quest:22);
+def_int $int12 = 0;
+while ($int12 < $int11) {
+	$int9 = 1;
+	$dbrow10 = db_getfield(%var3373, quest:22, $int12);
+	$int6, $int5 = ~script5912($component1, $int6, $int5, db_getfield($dbrow10, quest:2, 0));
+	$int12 = calc($int12 + 1);
 }
-$struct10 = struct_param(%var3373, param_649);
-if ($struct10 ! null) {
-	$int6, $int5, $int9 = ~script5912($component1, $int6, $int5, struct_param($struct10, param_610)), 1;
-}
-$struct10 = struct_param(%var3373, param_650);
-if ($struct10 ! null) {
-	$int6, $int5, $int9 = ~script5912($component1, $int6, $int5, struct_param($struct10, param_610)), 1;
-}
-$struct10 = struct_param(%var3373, param_651);
-if ($struct10 ! null) {
-	$int6, $int5, $int9 = ~script5912($component1, $int6, $int5, struct_param($struct10, param_610)), 1;
-}
-$struct10 = struct_param(%var3373, param_652);
-if ($struct10 ! null) {
-	$int6, $int5, $int9 = ~script5912($component1, $int6, $int5, struct_param($struct10, param_610)), 1;
-}
-$struct10 = struct_param(%var3373, param_653);
-if ($struct10 ! null) {
-	$int6, $int5, $int9 = ~script5912($component1, $int6, $int5, struct_param($struct10, param_610)), 1;
-}
-$struct10 = struct_param(%var3373, param_654);
-if ($struct10 ! null) {
-	$int6, $int5, $int9 = ~script5912($component1, $int6, $int5, struct_param($struct10, param_610)), 1;
-}
-def_int $int11 = ~max(struct_param(%var3373, param_656), struct_param(%var3373, param_657));
-def_int $int12 = ~minmax(3, 99, scale(4, 5, $int11));
-def_int $int13 = calc($int12 % 5);
-if ($int13 < 3) {
-	$int12 = calc($int12 - $int13);
+def_int $int13 = ~max(db_getfield(%var3373, quest:24, 0), db_getfield(%var3373, quest:25, 0));
+def_int $int14 = ~minmax(3, 99, scale(4, 5, $int13));
+def_int $int15 = calc($int14 % 5);
+if ($int15 < 3) {
+	$int14 = calc($int14 - $int15);
 } else {
-	$int12 = calc($int12 + (5 - $int13));
+	$int14 = calc($int14 + (5 - $int15));
 }
-$int12 = ~minmax(20, 99, calc($int12 + 10));
-def_stat $stat14 = null;
-def_int $int15 = 1;
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_616), struct_param(%var3373, param_617), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
+$int14 = ~minmax(20, 99, calc($int14 + 10));
+def_stat $stat16 = null;
+def_int $int17 = 1;
+def_int $int18 = db_getfieldcount(%var3373, quest:20);
+$int12 = 0;
+while ($int12 < $int18) {
+	$stat16, $int17 = db_getfield(%var3373, quest:20, $int12);
+	$stat16, $int17 = ~script5911(%var3373, $stat16, $int17, $int14);
+	if ($stat16 ! null & $int17 > 1) {
+		$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int17)> <enum(stat, string, enum_680, $stat16)>");
+	}
+	$int12 = calc($int12 + 1);
 }
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_618), struct_param(%var3373, param_619), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_620), struct_param(%var3373, param_621), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_622), struct_param(%var3373, param_623), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_624), struct_param(%var3373, param_625), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_626), struct_param(%var3373, param_627), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_628), struct_param(%var3373, param_629), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_630), struct_param(%var3373, param_631), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_632), struct_param(%var3373, param_633), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_634), struct_param(%var3373, param_635), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_636), struct_param(%var3373, param_637), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_638), struct_param(%var3373, param_639), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_640), struct_param(%var3373, param_641), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5911(%var3373, struct_param(%var3373, param_642), struct_param(%var3373, param_643), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5994(%var3373, struct_param(%var3373, param_644), struct_param(%var3373, param_645), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5994(%var3373, struct_param(%var3373, param_646), struct_param(%var3373, param_647), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5994(%var3373, struct_param(%var3373, param_1521), struct_param(%var3373, param_1522), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-$stat14, $int15 = ~script5994(%var3373, struct_param(%var3373, param_1523), struct_param(%var3373, param_1524), $int12);
-if ($stat14 ! null & $int15 > 1) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int15)> <enum(stat, string, enum_680, $stat14)>");
-}
-if ($int12 > 20) {
-	$int6, $int5 = ~script5912($component1, $int6, $int5, "Level <tostring($int12)> in all combat stats");
+if ($int14 > 20) {
+	$int6, $int5 = ~script5912($component1, $int6, $int5, "Level <tostring($int14)> in all combat stats");
 }
 $int6, $int5 = ~speedrunning_misc_unlocks(%var3373, $component1, $int6, $int5);
 if ($int9 = 1) {
@@ -145,7 +64,7 @@ if ($int5 = 23) {
 	$int6, $int5 = ~script5912($component1, $int6, $int5, "None");
 }
 $int5 = calc($int5 + 3);
-def_int $int16 = $int5;
+def_int $int19 = $int5;
 $int5 = 0;
 $int6 = 0;
 cc_create($component3, ^iftype_text, $int6);
@@ -158,18 +77,12 @@ cc_settext("Items");
 cc_settextshadow(true);
 $int5 = 23;
 $int6 = calc($int6 + 1);
-def_enum $enum17 = struct_param(%var3373, param_1532);
-def_enum $enum18 = struct_param(%var3373, param_1533);
-$int6, $int5 = ~script5910($component3, $enum17, $enum18, $int6, $int5);
-$enum17 = struct_param(%var3373, param_1530);
-$enum18 = struct_param(%var3373, param_1531);
-$int6, $int5 = ~script5910($component3, $enum17, $enum18, $int6, $int5);
+$int6, $int5 = ~script5910($component3, %var3373, worn, $int6, $int5);
+$int6, $int5 = ~script5910($component3, %var3373, inv, $int6, $int5);
 if ($int5 = 23) {
 	$int6, $int5 = ~script5912($component3, $int6, $int5, "None");
 }
-$enum17 = struct_param(%var3373, param_1534);
-$enum18 = struct_param(%var3373, param_1535);
-if (enum_getoutputcount($enum17) > 0) {
+if (db_getfieldcount(%var3373, quest:35) > 0) {
 	$int5 = calc($int5 + 3);
 	cc_create($component3, ^iftype_text, $int6);
 	cc_setsize(6, 20, ^setsize_minus, ^setsize_abs);
@@ -181,12 +94,12 @@ if (enum_getoutputcount($enum17) > 0) {
 	cc_settextshadow(true);
 	$int5 = calc($int5 + 22);
 	$int6 = calc($int6 + 1);
-	$int6, $int5 = ~script5910($component3, $enum17, $enum18, $int6, $int5);
+	$int6, $int5 = ~script5910($component3, %var3373, bank, $int6, $int5);
 }
 $int5 = calc($int5 + 3);
-if ($int5 > $int16) {
-	$int16 = $int5;
+if ($int5 > $int19) {
+	$int19 = $int5;
 }
-if_setsize(if_getwidth($component0), $int16, ^setsize_abs, ^setsize_abs, $component0);
-if_setsize(if_getwidth($component2), $int16, ^setsize_abs, ^setsize_abs, $component2);
-if_setsize(if_getwidth($component4), calc(287 + $int16 + 7), ^setsize_abs, ^setsize_abs, $component4);
+if_setsize(if_getwidth($component0), $int19, ^setsize_abs, ^setsize_abs, $component0);
+if_setsize(if_getwidth($component2), $int19, ^setsize_abs, ^setsize_abs, $component2);
+if_setsize(if_getwidth($component4), calc(287 + $int19 + 7), ^setsize_abs, ^setsize_abs, $component4);

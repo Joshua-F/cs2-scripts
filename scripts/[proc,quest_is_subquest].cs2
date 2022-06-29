@@ -1,0 +1,6 @@
+// 6153
+[proc,quest_is_subquest](dbrow $dbrow0)(int)
+if (db_getfield($dbrow0, quest:18, 0) ! null) {
+	return(1);
+}
+return(0);

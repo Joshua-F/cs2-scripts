@@ -6,6 +6,8 @@ if (cc_find(welcome_screen:90, 0) = ^true) {
 	if (cc_getcrm_hasresponse = false) {
 		cc_delete;
 		~script6065($graphic0, $op0);
+	} else {
+		~script533;
 	}
 } else {
 	~script6065($graphic0, $op0);

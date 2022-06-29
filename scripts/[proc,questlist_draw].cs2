@@ -4,46 +4,47 @@ def_int $height6 = -3;
 if (%varbit13889 = 1) {
 	$height6 = 2;
 }
-def_enum $enum7 = enum_4285;
-def_int $count8 = enum_getoutputcount($enum7);
-def_int $count9 = 0;
+def_int $int7 = db_findall_with_count(quest);
+def_int $int8 = 1;
+def_fontmetrics $fontmetrics9 = p11_full;
 def_fontmetrics $fontmetrics10 = p11_full;
-def_fontmetrics $fontmetrics11 = p11_full;
-def_int $int12 = 11;
-def_int $int13 = 5;
+def_int $int11 = 11;
+def_int $int12 = 5;
 if (~on_mobile = true) {
-	$int13 = 11;
+	$int12 = 11;
 }
 if (%varbit13780 = 1) {
+	$fontmetrics9 = p12_full;
 	$fontmetrics10 = p12_full;
-	$fontmetrics11 = p12_full;
-	$int12 = 13;
-	$int13 = calc($int13 + 2);
+	$int11 = 13;
+	$int12 = calc($int12 + 2);
 }
-def_int $intarray0($count8);
-def_struct $struct14 = null;
+def_int $intarray0($int7);
+def_dbrow $dbrow13 = null;
 def_string $string0 = "";
-def_int $int15 = 0;
-def_int $int16 = pow(2, 16);
+def_int $int14 = 0;
+def_int $int15 = pow(2, 16);
 cc_deleteall($component4);
-while ($count9 < $count8) {
-	cc_create($component4, ^iftype_text, $count9);
-	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
-	cc_settextfont($fontmetrics10);
+cc_create($component4, ^iftype_rectangle, 0);
+cc_sethide(true);
+while ($int8 <= $int7) {
+	$dbrow13 = ~script6154($int8);
+	cc_create($component4, ^iftype_text, $int8);
+	cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+	cc_settextfont($fontmetrics9);
 	if (%varbit13781 = 1) {
 		cc_settextshadow(false);
 	} else {
 		cc_settextshadow(true);
 	}
-	cc_settextalign(^settextalign_left, ^settextalign_centre, $int12);
-	$struct14 = enum(int, struct, $enum7, $count9);
-	$string0 = ~get_quest_name($struct14);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, $int11);
+	$string0 = ~get_quest_name($dbrow13);
 	cc_setopbase("<col=ff9040><$string0></col>");
-	if (~script4026($struct14, %varbit13772) = 1) {
+	if (~script4026($dbrow13, %varbit13772) = 1) {
 		$string0 = "MQ: <$string0>";
 	}
 	cc_settext($string0);
-	cc_setsize(0, calc($int12 * paraheight($string0, cc_getwidth, $fontmetrics11) + $int13), ^setsize_minus, ^setsize_abs);
+	cc_setsize(0, calc($int11 * paraheight($string0, cc_getwidth, $fontmetrics10) + $int12), ^setsize_minus, ^setsize_abs);
 	if (~speedrunning_world = 1) {
 		cc_setop(1, "View info:");
 	} else {
@@ -53,51 +54,55 @@ while ($count9 < $count8) {
 	cc_setop(3, "Show on map:");
 	cc_setop(4, "Open wiki guide:");
 	cc_setop(5, "Open wiki quick guide:");
-	$int15 = ~quest_status_get($struct14);
-	$intarray0($count9) = calc($int15 * $int16 + $count9);
+	$int14 = ~quest_status_get($dbrow13);
+	$intarray0(calc($int8 - 1)) = calc($int14 * $int15 + $int8);
 	cc_sethide(true);
-	$count9 = calc($count9 + 1);
+	$int8 = calc($int8 + 1);
 }
-if ($count8 > 1) {
-	~questlist_sort(intarray0, 0, calc($count8 - 1), $enum7, %varbit13772, $int16);
+if ($int7 > 1) {
+	~questlist_sort(intarray0, 0, calc($int7 - 1), %varbit13772, $int15);
 }
-def_int $count17 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
 def_int $int18 = 0;
-def_int $int19 = 0;
+def_int $int19 = 1;
 def_int $int20 = 1;
-def_int $int21 = 1;
-def_int $int22 = 0;
+def_int $int21 = 0;
 def_string $string1 = "************";
 def_string $string2 = "************";
-while ($count17 < $count8) {
-	$int18 = calc($intarray0($count17) % $int16);
-	$int15 = calc($intarray0($count17) / $int16);
-	$struct14 = enum(int, struct, $enum7, $int18);
-	$int20 = ~script5989($struct14);
-	$int21 = ~script5990($struct14);
-	$string2 = ~script2265($struct14, $int15, %varbit13772);
-	$int22 = ~script4028($struct14, $int15, $int20, $int21);
-	if (~questlist_hide_quest($struct14, $int15, $int20, $int21, $int22) = 0) {
+while ($int16 < $int7) {
+	$int17 = calc($intarray0($int16) % $int15);
+	$int14 = calc($intarray0($int16) / $int15);
+	$dbrow13 = ~script6154($int17);
+	$int19 = ~quest_requirement_check($dbrow13);
+	$int20 = ~script5990($dbrow13);
+	$string2 = ~script2265($dbrow13, $int14, %varbit13772);
+	$int21 = ~script4028($dbrow13, $int14, $int19, $int20);
+	if (~questlist_hide_quest($dbrow13, $int14, $int19, $int20, $int21) = 0) {
 		if (compare($string2, $string1) ! 0 & %varbit13889 = 0) {
-			$count9, $height6 = ~script1354($string2, $count9, $height6, $component4);
+			$int8, $height6 = ~script1354($string2, $int8, $height6, $component4);
 			$string1 = $string2;
 		}
-		if (cc_find($component4, $int18) = ^true) {
-			cc_sethide(false);
-			cc_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top);
-			~questlist_setcolour($int15, $int22);
-			$int19 = calc($int19 + 1);
-			$int12 = cc_getheight;
+		if (cc_find($component4, $int17) = ^true) {
+			if (db_getfield($dbrow13, quest:18, 0) ! null) {
+				cc_sethide(true);
+			} else {
+				cc_sethide(false);
+				cc_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top);
+				~questlist_setcolour($int14, $int21);
+				$int18 = calc($int18 + 1);
+				$int11 = cc_getheight;
+			}
 		}
-		$count17, $height6 = calc($count17 + 1), calc($height6 + $int12);
+		$int16, $height6 = calc($int16 + 1), calc($height6 + $int11);
 	} else {
-		$count17 = calc($count17 + 1);
+		$int16 = calc($int16 + 1);
 	}
 }
 $height6 = calc($height6 + 2);
 if_setsize(0, $height6, ^setsize_minus, ^setsize_abs, $component4);
 cc_deleteall($component1);
-if ($int19 <= 0) {
+if ($int18 <= 0) {
 	if_sethide(true, $component3);
 	cc_create($component1, ^iftype_text, 0);
 	cc_setsize(40, calc(16384 / 2), ^setsize_minus, ^setsize_2);
@@ -110,15 +115,15 @@ if ($int19 <= 0) {
 } else {
 	if_sethide(false, $component3);
 }
-def_int $int23 = %varcint10;
+def_int $int22 = %varcint10;
 if ($boolean5 = true) {
-	$int23 = %varcint972;
+	$int22 = %varcint972;
 }
 if ($height6 > if_getheight($component2)) {
 	if_setscrollsize(0, $height6, $component2);
 	~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	if (cc_find($component3, 1) = ^true) {
-		~scrollbar_vertical_doscroll($component3, $component2, $int23, true);
+		~scrollbar_vertical_doscroll($component3, $component2, $int22, true);
 	}
 } else {
 	if ($boolean5 = true) {

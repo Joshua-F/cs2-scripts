@@ -1,0 +1,6 @@
+// 6152
+[proc,script6152](dbrow $dbrow0)(int)
+if ($dbrow0 ! null & db_getrowtable($dbrow0) = quest) {
+	return(1);
+}
+return(0);

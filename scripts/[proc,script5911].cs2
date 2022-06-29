@@ -1,16 +1,18 @@
 // 5911
-[proc,script5911](struct $struct0, stat $stat1, int $int2, int $int3)(stat, int)
+[proc,script5911](dbrow $dbrow0, stat $stat1, int $int2, int $int3)(stat, int)
 if ($stat1 = null | $int2 <= 1) {
 	return(null, 1);
 }
-if ($stat1 = struct_param($struct0, param_644) & struct_param($struct0, param_645) > $int2) {
-	$int2 = struct_param($struct0, param_645);
-} else if ($stat1 = struct_param($struct0, param_646) & struct_param($struct0, param_647) > $int2) {
-	$int2 = struct_param($struct0, param_647);
-} else if ($stat1 = struct_param($struct0, param_1521) & struct_param($struct0, param_1522) > $int2) {
-	$int2 = struct_param($struct0, param_1522);
-} else if ($stat1 = struct_param($struct0, param_1523) & struct_param($struct0, param_1524) > $int2) {
-	$int2 = struct_param($struct0, param_1524);
+def_stat $stat4 = null;
+def_int $int5 = 1;
+def_int $int6 = db_getfieldcount($dbrow0, quest:21);
+def_int $int7 = 0;
+while ($int7 < $int6) {
+	$stat4, $int5 = db_getfield($dbrow0, quest:21, $int7);
+	if ($stat4 = $stat1 & $int5 > $int2) {
+		$int2 = $int5;
+	}
+	$int7 = calc($int7 + 1);
 }
 if ($stat1 = agility & $int2 <= 50) {
 	return(null, 1);

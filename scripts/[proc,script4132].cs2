@@ -3,9 +3,9 @@
 if (~script4510($obj0) = 0) {
 	return("Members Only");
 }
-def_struct $struct1 = oc_param($obj0, param_1189);
+def_dbrow $dbrow1 = oc_param($obj0, param_1189);
 if (~script4128($obj0) = 0) {
-	return("Requires <~get_quest_name($struct1)>");
+	return("Requires <~get_quest_name($dbrow1)>");
 }
 def_int $int2 = oc_param($obj0, param_1190);
 if (~script4129($obj0) = 0) {

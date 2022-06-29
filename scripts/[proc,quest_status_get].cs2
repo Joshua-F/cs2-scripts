@@ -1,14 +1,14 @@
 // 4029
-[proc,quest_status_get](struct $struct0)(int)
-if ($struct0 = null) {
+[proc,quest_status_get](dbrow $dbrow0)(int)
+if (~script6152($dbrow0) = 0) {
 	return(1);
 }
-if (struct_param($struct0, param_1602) = true) {
+if (db_getfield($dbrow0, quest:3, 0) = true) {
 	return(1);
 }
-def_int $int1 = struct_param($struct0, param_1161);
-def_int $int2 = struct_param($struct0, param_1162);
-def_int $int3 = ~quest_progress_get($struct0);
+def_int $int1 = db_getfield($dbrow0, quest:15, 0);
+def_int $int2 = db_getfield($dbrow0, quest:16, 0);
+def_int $int3 = ~quest_progress_get($dbrow0);
 if ($int1 = -1 | $int2 = -1 | $int3 = -1 | $int2 <= $int1) {
 	return(1);
 }

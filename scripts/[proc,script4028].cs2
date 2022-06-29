@@ -1,16 +1,16 @@
 // 4028
-[proc,script4028](struct $struct0, int $int1, int $int2, int $int3)(int)
-if (struct_param($struct0, param_1602) = true) {
+[proc,script4028](dbrow $dbrow0, int $int1, int $int2, int $int3)(int)
+if (db_getfield($dbrow0, quest:3, 0) = true) {
 	return(1);
 }
 def_enum $enum4 = null;
 if (~league_world = 1) {
 	$enum4 = struct_param(enum(int, struct, enum_2670, %varbit10032), param_890);
-	if ($enum4 ! null & enum(struct, boolean, $enum4, $struct0) = false) {
+	if ($enum4 ! null & enum(dbrow, boolean, $enum4, $dbrow0) = false) {
 		return(1);
 	}
 }
-if (~speedrunning_world = 1 & ~speedrunning_quest_enabled($struct0) = 0) {
+if (~speedrunning_world = 1 & ~speedrunning_quest_enabled($dbrow0) = 0) {
 	return(1);
 }
 if ($int1 = 1 & %varbit13778 = 1 & $int2 = 0) {

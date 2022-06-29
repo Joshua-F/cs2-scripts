@@ -1,7 +1,7 @@
 // 5997
 [clientscript,questdisplay](coord $coord0, string $text0, string $string1)
 if_settext($text0, interface_473:2);
-def_int $height1 = ~questdisplay_setup($string1, interface_473:4, enum_getoutputcount(enum_4285), enum_4285);
+def_int $height1 = ~questdisplay_setup($string1, interface_473:4, db_findall_with_count(quest));
 if_setscrollpos(0, 0, interface_473:3);
 if_setscrollsize(0, $height1, interface_473:3);
 ~scrollbar_vertical(interface_473:5, interface_473:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

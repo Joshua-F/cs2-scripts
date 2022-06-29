@@ -1,34 +1,38 @@
 // 745
-[proc,quicksort_questlist](intarray $intarray0, int $int1, int $int2, enum $enum3)
-def_int $index4 = calc(($int1 + $int2) / 2);
-def_int $int5 = $intarray0($index4);
-$intarray0($index4) = $intarray0($int2);
-$intarray0($int2) = $int5;
+[proc,quicksort_questlist](intarray $intarray0, int $int1, int $int2)
+def_int $index3 = calc(($int1 + $int2) / 2);
+def_int $int4 = $intarray0($index3);
+$intarray0($index3) = $intarray0($int2);
+$intarray0($int2) = $int4;
+def_int $int5 = $int1;
 def_int $int6 = $int1;
-def_int $int7 = $int1;
-def_int $int8 = -1;
+def_int $int7 = -1;
+def_dbrow $dbrow8 = null;
+def_dbrow $dbrow9 = null;
 def_string $string0 = "";
 def_string $string1 = "";
 def_string $string2 = "";
 def_string $string3 = "";
-while ($int7 < $int2) {
-	$string0 = tostring(~script3236(enum(int, struct, $enum3, $intarray0($int7))));
-	$string1 = tostring(~script3236(enum(int, struct, $enum3, $int5)));
-	$string2 = struct_param(enum(int, struct, $enum3, $intarray0($int7)), param_579);
-	$string3 = struct_param(enum(int, struct, $enum3, $int5), param_579);
+while ($int6 < $int2) {
+	$dbrow8 = ~script6154($intarray0($int6));
+	$string0 = tostring(~script3236($dbrow8));
+	$string2 = db_getfield($dbrow8, quest:1, 0);
+	$dbrow9 = ~script6154($int4);
+	$string1 = tostring(~script3236($dbrow9));
+	$string3 = db_getfield($dbrow9, quest:1, 0);
 	if (compare("<$string0><$string2>", "<$string1><$string3>") <= 0) {
-		$int8 = $intarray0($int7);
-		$intarray0($int7) = $intarray0($int6);
-		$intarray0($int6) = $int8;
-		$int6 = calc($int6 + 1);
+		$int7 = $intarray0($int6);
+		$intarray0($int6) = $intarray0($int5);
+		$intarray0($int5) = $int7;
+		$int5 = calc($int5 + 1);
 	}
-	$int7 = calc($int7 + 1);
+	$int6 = calc($int6 + 1);
 }
-$intarray0($int2) = $intarray0($int6);
-$intarray0($int6) = $int5;
-if ($int1 < calc($int6 - 1)) {
-	~quicksort_questlist(intarray0, $int1, calc($int6 - 1), $enum3);
+$intarray0($int2) = $intarray0($int5);
+$intarray0($int5) = $int4;
+if ($int1 < calc($int5 - 1)) {
+	~quicksort_questlist(intarray0, $int1, calc($int5 - 1));
 }
-if (calc($int6 + 1) < $int2) {
-	~quicksort_questlist(intarray0, calc($int6 + 1), $int2, $enum3);
+if (calc($int5 + 1) < $int2) {
+	~quicksort_questlist(intarray0, calc($int5 + 1), $int2);
 }

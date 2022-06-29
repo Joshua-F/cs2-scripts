@@ -1,34 +1,34 @@
 // 2265
-[proc,script2265](struct $struct0, int $int1, int $int2)(string)
+[proc,script2265](dbrow $dbrow0, int $int1, int $int2)(string)
 switch_int ($int2) {
 	case 0 :
-		return(~script3237($struct0));
+		return(~script3237($dbrow0));
 	case 9 :
-		if (struct_param($struct0, param_1297) = true) {
+		if (db_getfield($dbrow0, quest:5, 0) = true) {
 			return("Members");
 		}
 		return("Free");
 	case 10 :
-		return(enum(int, string, enum_2093, struct_param($struct0, param_611)));
+		return(enum(int, string, enum_2093, db_getfield($dbrow0, quest:4, 0)));
 	case 2 :
 		return(enum(int, string, enum_2092, $int1));
 	case 3 :
-		return(enum(int, string, enum_2094, struct_param($struct0, param_612)));
+		return(enum(int, string, enum_2094, db_getfield($dbrow0, quest:6, 0)));
 	case 4 :
-		return(enum(int, string, enum_2095, struct_param($struct0, param_613)));
+		return(enum(int, string, enum_2095, db_getfield($dbrow0, quest:7, 0)));
 	case 5 :
-		return(enum(int, string, enum_2097, struct_param($struct0, param_615)));
+		return(enum(int, string, enum_2097, db_getfield($dbrow0, quest:10, 0)));
 	case 6 :
-		return(enum(int, string, enum_2096, struct_param($struct0, param_614)));
+		return(enum(int, string, enum_2096, db_getfield($dbrow0, quest:8, 0)));
 	case 7 :
-		return("Level <tostring(~max(struct_param($struct0, param_656), struct_param($struct0, param_657)))>");
+		return("Level <tostring(~max(db_getfield($dbrow0, quest:24, 0), db_getfield($dbrow0, quest:25, 0)))>");
 	case 8 :
-		if (struct_param($struct0, param_1262) < 2001) {
+		if (db_getfield($dbrow0, quest:9, 0) < 2001) {
 			return("Unknown Year");
 		}
-		return(tostring(struct_param($struct0, param_1262)));
+		return(tostring(db_getfield($dbrow0, quest:9, 0)));
 	case 1 :
-		return(substring(struct_param($struct0, param_579), 0, 1));
+		return(substring(db_getfield($dbrow0, quest:1, 0), 0, 1));
 	case default :
 		return("");
 }

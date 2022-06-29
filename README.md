@@ -533,6 +533,7 @@
 [**530**](scripts/[proc,settings_buff_shadow_veil].cs2) `[proc,settings_buff_shadow_veil]`  
 [**531**](scripts/[proc,script531].cs2)  
 [**532**](scripts/[clientscript,script532].cs2)  
+[**533**](scripts/[proc,script533].cs2)  
 [**534**](scripts/[clientscript,steam_set_unlocked].cs2) `[clientscript,steam_set_unlocked]`  
 [**535**](scripts/[clientscript,soul_wars_rewards_init].cs2) `[clientscript,soul_wars_rewards_init]`  
 [**536**](scripts/[proc,script536].cs2)  
@@ -635,6 +636,9 @@
 [**633**](scripts/[proc,int_to_bool].cs2) `[proc,int_to_bool]`  
 [**634**](scripts/[proc,displayname_draw].cs2) `[proc,displayname_draw]`  
 [**635**](scripts/[clientscript,displayname_lookup].cs2) `[clientscript,displayname_lookup]`  
+[**636**](scripts/[proc,script636].cs2)  
+[**637**](scripts/[clientscript,script637].cs2)  
+[**638**](scripts/[proc,script638].cs2)  
 [**639**](scripts/[clientscript,poh_menagerie_initlist].cs2) `[clientscript,poh_menagerie_initlist]`  
 [**640**](scripts/[clientscript,poh_menagerie_drawlist].cs2) `[clientscript,poh_menagerie_drawlist]`  
 [**641**](scripts/[proc,poh_menagerie_drawlist].cs2) `[proc,poh_menagerie_drawlist]`  
@@ -4132,7 +4136,7 @@
 [**4133**](scripts/[proc,arceuus_autocast_spellpos].cs2) `[proc,arceuus_autocast_spellpos]`  
 [**4134**](scripts/[proc,script4134].cs2)  
 [**4135**](scripts/[proc,script4135].cs2)  
-[**4136**](scripts/[proc,script4136].cs2)  
+[**4136**](scripts/[proc,quest_is_complete].cs2) `[proc,quest_is_complete]`  
 [**4137**](scripts/[proc,script4137].cs2)  
 [**4138**](scripts/[proc,script4138].cs2)  
 [**4139**](scripts/[clientscript,tutorial_displayname_allow_input].cs2) `[clientscript,tutorial_displayname_allow_input]`  
@@ -5985,7 +5989,7 @@
 [**5986**](scripts/[clientscript,script5986].cs2)  
 [**5987**](scripts/[worldmapelementmouserepeat,mapelement_854].cs2) `[worldmapelementmouserepeat,mapelement_854]`  
 [**5988**](scripts/[worldmapelementmouseleave,mapelement_854].cs2) `[worldmapelementmouseleave,mapelement_854]`  
-[**5989**](scripts/[proc,script5989].cs2)  
+[**5989**](scripts/[proc,quest_requirement_check].cs2) `[proc,quest_requirement_check]`  
 [**5990**](scripts/[proc,script5990].cs2)  
 [**5991**](scripts/[proc,script5991].cs2)  
 [**5992**](scripts/[proc,script5992].cs2)  
@@ -6147,3 +6151,8 @@
 [**6148**](scripts/[clientscript,script6148].cs2)  
 [**6149**](scripts/[clientscript,script6149].cs2)  
 [**6150**](scripts/[proc,script6150].cs2)  
+[**6151**](scripts/[clientscript,script6151].cs2)  
+[**6152**](scripts/[proc,script6152].cs2)  
+[**6153**](scripts/[proc,quest_is_subquest].cs2) `[proc,quest_is_subquest]`  
+[**6154**](scripts/[proc,script6154].cs2)  
+[**6155**](scripts/[proc,questdisplay_hide_quest].cs2) `[proc,questdisplay_hide_quest]`  
