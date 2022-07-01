@@ -33,9 +33,9 @@ if (struct_param($struct0, param_1647) ! null) {
 	$int3 = calc($int3 + 1);
 }
 while ($int5 < $int3) {
-	$int4 = db_getfieldcount($dbrowarray0($int5), quest:22);
+	$int4 = db_getfieldcount($dbrowarray0($int5), quest:questreq);
 	while ($int6 < $int4) {
-		$dbrow1 = db_getfield($dbrowarray0($int5), quest:22, $int6);
+		$dbrow1 = db_getfield($dbrowarray0($int5), quest:questreq, $int6);
 		while ($int7 < $int3) {
 			if ($dbrowarray0($int7) = $dbrow1) {
 				$int2 = 1;
@@ -53,9 +53,9 @@ while ($int5 < $int3) {
 	}
 	if (~quest_is_subquest($dbrowarray0($int5)) = 0) {
 		if (~quest_is_complete($dbrowarray0($int5)) = 0) {
-			$string0 = append($string0, "<$string2><db_getfield($dbrowarray0($int5), quest:2, 0)><br>");
+			$string0 = append($string0, "<$string2><db_getfield($dbrowarray0($int5), quest:displayname, 0)><br>");
 		} else {
-			$string0 = append($string0, "<$string1><db_getfield($dbrowarray0($int5), quest:2, 0)><br>");
+			$string0 = append($string0, "<$string1><db_getfield($dbrowarray0($int5), quest:displayname, 0)><br>");
 		}
 	}
 	$int8 = calc($int8 + 1);

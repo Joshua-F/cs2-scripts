@@ -1,9 +1,9 @@
 // 3237
 [proc,script3237](dbrow $dbrow0)(string)
-if (db_getfield($dbrow0, quest:4, 0) = 1) {
+if (db_getfield($dbrow0, quest:type, 0) = 1) {
 	return("Miniquests");
 }
-if (db_getfield($dbrow0, quest:5, 0) = true) {
+if (db_getfield($dbrow0, quest:members, 0) = true) {
 	return("Members' Quests");
 }
 return("Free Quests");

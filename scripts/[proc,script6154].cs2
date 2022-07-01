@@ -1,9 +1,9 @@
 // 6154
 [proc,script6154](int $int0)(dbrow)
-def_int $int1 = db_find_with_count(quest:0, $int0);
+def_int $int1 = db_find_with_count(quest:id, $int0);
 if ($int1 = 0) {
-	~script638("Quests", "No quest found with ID <tostring($int0)>");
+	~debug_mes_warn("Quests", "No quest found with ID <tostring($int0)>");
 } else if ($int1 > 1) {
-	~script638("Quests", "<tostring($int1)> quests found with ID <tostring($int0)>");
+	~debug_mes_warn("Quests", "<tostring($int1)> quests found with ID <tostring($int0)>");
 }
 return(db_findnext);

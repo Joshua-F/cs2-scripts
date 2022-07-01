@@ -1,31 +1,31 @@
 // 5989
 [proc,quest_requirement_check](dbrow $dbrow0)(int)
-if (db_getfield($dbrow0, quest:5, 0) = true & map_members = ^false & %varcint103 = 0) {
+if (db_getfield($dbrow0, quest:members, 0) = true & map_members = ^false & %varcint103 = 0) {
 	return(0);
 }
-def_int $int1 = db_getfieldcount($dbrow0, quest:22);
+def_int $int1 = db_getfieldcount($dbrow0, quest:questreq);
 def_int $int2 = 0;
 while ($int2 < $int1) {
-	if (~script5991(db_getfield($dbrow0, quest:22, $int2)) = 0) {
+	if (~script5991(db_getfield($dbrow0, quest:questreq, $int2)) = 0) {
 		return(0);
 	}
 	$int2 = calc($int2 + 1);
 }
 def_stat $stat3 = null;
 def_int $int4 = -1;
-$int1 = db_getfieldcount($dbrow0, quest:20);
+$int1 = db_getfieldcount($dbrow0, quest:statreq);
 $int2 = 0;
 while ($int2 < $int1) {
-	$stat3, $int4 = db_getfield($dbrow0, quest:20, $int2);
+	$stat3, $int4 = db_getfield($dbrow0, quest:statreq, $int2);
 	if (~script5992($stat3, $int4) = 0) {
 		return(0);
 	}
 	$int2 = calc($int2 + 1);
 }
-if (%var101 < db_getfield($dbrow0, quest:23, 0)) {
+if (%var101 < db_getfield($dbrow0, quest:pointsreq, 0)) {
 	return(0);
 }
-if (%varcint52 < db_getfield($dbrow0, quest:24, 0)) {
+if (%varcint52 < db_getfield($dbrow0, quest:comlevelreq, 0)) {
 	return(0);
 }
 if (~script5993($dbrow0) = 0) {

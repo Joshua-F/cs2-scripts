@@ -84,7 +84,7 @@ while ($int16 < $int7) {
 			$string1 = $string2;
 		}
 		if (cc_find($component4, $int17) = ^true) {
-			if (db_getfield($dbrow13, quest:18, 0) ! null) {
+			if (db_getfield($dbrow13, quest:mainquest, 0) ! null) {
 				cc_sethide(true);
 			} else {
 				cc_sethide(false);

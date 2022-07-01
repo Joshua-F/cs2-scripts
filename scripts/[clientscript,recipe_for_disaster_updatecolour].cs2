@@ -1,0 +1,5 @@
+// 3760
+[clientscript,recipe_for_disaster_updatecolour](component $component0, int $comsubid1, int $int2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setcolour(~recipe_for_disaster_getcolour($int2));
+}

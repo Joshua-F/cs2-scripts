@@ -1,9 +1,9 @@
 // 3238
 [proc,questlist_hide_quest](dbrow $dbrow0, int $int1, int $int2, int $int3, int $int4)(int)
-if (db_getfield($dbrow0, quest:4, 0) = 1 & ~questlist_hide_miniquests = 1) {
+if (db_getfield($dbrow0, quest:type, 0) = 1 & ~questlist_hide_miniquests = 1) {
 	return(1);
 }
-if (db_getfield($dbrow0, quest:4, 0) = 0 & %varbit13774 = 1) {
+if (db_getfield($dbrow0, quest:type, 0) = 0 & %varbit13774 = 1) {
 	return(1);
 }
 if ($int4 = 1 & %varbit13890 = 1) {

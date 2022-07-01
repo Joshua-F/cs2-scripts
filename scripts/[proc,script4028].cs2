@@ -1,6 +1,6 @@
 // 4028
 [proc,script4028](dbrow $dbrow0, int $int1, int $int2, int $int3)(int)
-if (db_getfield($dbrow0, quest:3, 0) = true) {
+if (db_getfield($dbrow0, quest:autodisable, 0) = true) {
 	return(1);
 }
 def_enum $enum4 = null;

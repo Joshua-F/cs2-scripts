@@ -1,9 +1,9 @@
 // 3236
 [proc,script3236](dbrow $dbrow0)(int)
-if (db_getfield($dbrow0, quest:4, 0) = 1) {
+if (db_getfield($dbrow0, quest:type, 0) = 1) {
 	return(2);
 }
-if (db_getfield($dbrow0, quest:5, 0) = true) {
+if (db_getfield($dbrow0, quest:members, 0) = true) {
 	return(1);
 }
 return(0);

@@ -637,8 +637,8 @@
 [**634**](scripts/[proc,displayname_draw].cs2) `[proc,displayname_draw]`  
 [**635**](scripts/[clientscript,displayname_lookup].cs2) `[clientscript,displayname_lookup]`  
 [**636**](scripts/[proc,script636].cs2)  
-[**637**](scripts/[clientscript,script637].cs2)  
-[**638**](scripts/[proc,script638].cs2)  
+[**637**](scripts/[proc,debug_mes_info].cs2) `[proc,debug_mes_info]`  
+[**638**](scripts/[proc,debug_mes_warn].cs2) `[proc,debug_mes_warn]`  
 [**639**](scripts/[clientscript,poh_menagerie_initlist].cs2) `[clientscript,poh_menagerie_initlist]`  
 [**640**](scripts/[clientscript,poh_menagerie_drawlist].cs2) `[clientscript,poh_menagerie_drawlist]`  
 [**641**](scripts/[proc,poh_menagerie_drawlist].cs2) `[proc,poh_menagerie_drawlist]`  
@@ -2479,7 +2479,7 @@
 [**2476**](scripts/[proc,on_enhanced_mobile].cs2) `[proc,on_enhanced_mobile]`  
 [**2477**](scripts/[clientscript,duel_stake_inv_cash].cs2) `[clientscript,duel_stake_inv_cash]`  
 [**2478**](scripts/[clientscript,duel_stake_inv_details].cs2) `[clientscript,duel_stake_inv_details]`  
-[**2479**](scripts/[clientscript,script2479].cs2)  
+[**2479**](scripts/[clientscript,load_stake_preset].cs2) `[clientscript,load_stake_preset]`  
 [**2480**](scripts/[clientscript,duel_stake_load_highlight].cs2) `[clientscript,duel_stake_load_highlight]`  
 [**2481**](scripts/[clientscript,duel_stake_load_mouseout].cs2) `[clientscript,duel_stake_load_mouseout]`  
 [**2482**](scripts/[clientscript,duel_switch_setup_buttons].cs2) `[clientscript,duel_switch_setup_buttons]`  
@@ -3760,8 +3760,8 @@
 [**3757**](scripts/[clientscript,script3757].cs2)  
 [**3758**](scripts/[proc,recipe_for_disaster_button].cs2) `[proc,recipe_for_disaster_button]`  
 [**3759**](scripts/[clientscript,recipe_for_disaster_animate].cs2) `[clientscript,recipe_for_disaster_animate]`  
-[**3760**](scripts/[clientscript,script3760].cs2)  
-[**3761**](scripts/[proc,script3761].cs2)  
+[**3760**](scripts/[clientscript,recipe_for_disaster_updatecolour].cs2) `[clientscript,recipe_for_disaster_updatecolour]`  
+[**3761**](scripts/[proc,recipe_for_disaster_getcolour].cs2) `[proc,recipe_for_disaster_getcolour]`  
 [**3762**](scripts/[clientscript,recipe_for_disaster_op].cs2) `[clientscript,recipe_for_disaster_op]`  
 [**3763**](scripts/[clientscript,friendschat_op].cs2) `[clientscript,friendschat_op]`  
 [**3764**](scripts/[proc,friendschat_sendkick].cs2) `[proc,friendschat_sendkick]`  
@@ -6082,7 +6082,7 @@
 [**6079**](scripts/[worldmapelementmouseleave,mapelement_860].cs2) `[worldmapelementmouseleave,mapelement_860]`  
 [**6080**](scripts/[worldmapelementmouserepeat,mapelement_863].cs2) `[worldmapelementmouserepeat,mapelement_863]`  
 [**6081**](scripts/[worldmapelementmouseleave,mapelement_863].cs2) `[worldmapelementmouseleave,mapelement_863]`  
-[**6082**](scripts/[clientscript,script6082].cs2)  
+[**6082**](scripts/[clientscript,reward_shop_init].cs2) `[clientscript,reward_shop_init]`  
 [**6083**](scripts/[clientscript,script6083].cs2)  
 [**6084**](scripts/[clientscript,script6084].cs2)  
 [**6085**](scripts/[clientscript,script6085].cs2)  
@@ -6123,9 +6123,9 @@
 [**6120**](scripts/[proc,script6120].cs2)  
 [**6121**](scripts/[proc,script6121].cs2)  
 [**6122**](scripts/[clientscript,script6122].cs2)  
-[**6123**](scripts/[clientscript,script6123].cs2)  
-[**6124**](scripts/[clientscript,script6124].cs2)  
-[**6125**](scripts/[clientscript,script6125].cs2)  
+[**6123**](scripts/[clientscript,smithing_close].cs2) `[clientscript,smithing_close]`  
+[**6124**](scripts/[clientscript,crafting_init].cs2) `[clientscript,crafting_init]`  
+[**6125**](scripts/[clientscript,crafting_close].cs2) `[clientscript,crafting_close]`  
 [**6126**](scripts/[clientscript,script6126].cs2)  
 [**6127**](scripts/[clientscript,script6127].cs2)  
 [**6128**](scripts/[proc,script6128].cs2)  
@@ -6151,7 +6151,7 @@
 [**6148**](scripts/[clientscript,script6148].cs2)  
 [**6149**](scripts/[clientscript,script6149].cs2)  
 [**6150**](scripts/[proc,script6150].cs2)  
-[**6151**](scripts/[clientscript,script6151].cs2)  
+[**6151**](scripts/[proc,debug_mes_error].cs2) `[proc,debug_mes_error]`  
 [**6152**](scripts/[proc,script6152].cs2)  
 [**6153**](scripts/[proc,quest_is_subquest].cs2) `[proc,quest_is_subquest]`  
 [**6154**](scripts/[proc,script6154].cs2)  

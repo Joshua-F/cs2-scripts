@@ -1,6 +1,6 @@
 // 5894
 [proc,speedrunning_quest_enabled](dbrow $dbrow0)(int)
-switch_int (db_getfield($dbrow0, quest:28, 0)) {
+switch_int (db_getfield($dbrow0, quest:speedrunning_mode, 0)) {
 	case 1 :
 		return(1);
 	case 2 :

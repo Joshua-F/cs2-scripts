@@ -16,10 +16,10 @@ def_string $string3 = "";
 while ($int6 < $int2) {
 	$dbrow8 = ~script6154($intarray0($int6));
 	$string0 = tostring(~script3236($dbrow8));
-	$string2 = db_getfield($dbrow8, quest:1, 0);
+	$string2 = db_getfield($dbrow8, quest:sortname, 0);
 	$dbrow9 = ~script6154($int4);
 	$string1 = tostring(~script3236($dbrow9));
-	$string3 = db_getfield($dbrow9, quest:1, 0);
+	$string3 = db_getfield($dbrow9, quest:sortname, 0);
 	if (compare("<$string0><$string2>", "<$string1><$string3>") <= 0) {
 		$int7 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);

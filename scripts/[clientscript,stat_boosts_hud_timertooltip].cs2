@@ -5,8 +5,8 @@ if (calc(clientclock % 10) ! 0) {
 }
 def_int $int2 = calc(%varcint468 - (clientclock - %varcint469) / 30);
 def_int $int3 = calc(%varcint471 - (clientclock - %varcint472) / 30);
-def_string $string0 = ~script3739(10688267, "col");
-def_string $string1 = ~script3739(416541, "col");
+def_string $string0 = ~script3739(0xa3170b, "col");
+def_string $string1 = ~script3739(0x065b1d, "col");
 def_string $string2 = "<$string0>Stats restoring</col>";
 def_string $string3 = "<$string0><~time_convert($int2, 0)></col>";
 if (%varcint551 = 1) {

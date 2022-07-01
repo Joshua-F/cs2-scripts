@@ -4,11 +4,11 @@ def_int $int5 = 0;
 def_int $int6 = 0;
 switch_inv ($inv2) {
 	case worn :
-		$int6 = db_getfieldcount($dbrow1, quest:34);
+		$int6 = db_getfieldcount($dbrow1, quest:speedrunning_worn);
 	case inv :
-		$int6 = db_getfieldcount($dbrow1, quest:33);
+		$int6 = db_getfieldcount($dbrow1, quest:speedrunning_inv);
 	case bank :
-		$int6 = db_getfieldcount($dbrow1, quest:35);
+		$int6 = db_getfieldcount($dbrow1, quest:speedrunning_bank);
 }
 if ($int6 <= 0) {
 	return($int3, $int4);
@@ -19,11 +19,11 @@ def_string $string0 = ",";
 while ($int5 < $int6) {
 	switch_inv ($inv2) {
 		case worn :
-			$namedobj7, $int8 = db_getfield($dbrow1, quest:34, $int5);
+			$namedobj7, $int8 = db_getfield($dbrow1, quest:speedrunning_worn, $int5);
 		case inv :
-			$namedobj7, $int8 = db_getfield($dbrow1, quest:33, $int5);
+			$namedobj7, $int8 = db_getfield($dbrow1, quest:speedrunning_inv, $int5);
 		case bank :
-			$namedobj7, $int8 = db_getfield($dbrow1, quest:35, $int5);
+			$namedobj7, $int8 = db_getfield($dbrow1, quest:speedrunning_bank, $int5);
 	}
 	if ($namedobj7 ! null & $int8 ! -1 & $int8 > 0) {
 		$int3, $int4 = ~script5912($component0, $int3, $int4, "<oc_name($namedobj7)> x <~tostring_spacer($int8, $string0)>");

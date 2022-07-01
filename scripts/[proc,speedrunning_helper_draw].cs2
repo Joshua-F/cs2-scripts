@@ -2,19 +2,19 @@
 [proc,speedrunning_helper_draw](int $int0)
 def_dbrow $dbrow1 = %var3449;
 def_string $string0 = ~get_quest_name($dbrow1);
-if (db_getfield($dbrow1, quest:28, 0) = 2) {
+if (db_getfield($dbrow1, quest:speedrunning_mode, 0) = 2) {
 	$string0 = "<$string0> (Beta)";
 }
 def_string $string1 = "";
 def_int $int2 = 0;
-if ($int0 < db_getfield($dbrow1, quest:32, 0)) {
-	$string1, $int2 = "Platinum", db_getfield($dbrow1, quest:32, 0);
-} else if ($int0 < db_getfield($dbrow1, quest:31, 0)) {
-	$string1, $int2 = "Gold", db_getfield($dbrow1, quest:31, 0);
-} else if ($int0 < db_getfield($dbrow1, quest:30, 0)) {
-	$string1, $int2 = "Silver", db_getfield($dbrow1, quest:30, 0);
-} else if ($int0 < db_getfield($dbrow1, quest:29, 0)) {
-	$string1, $int2 = "Bronze", db_getfield($dbrow1, quest:29, 0);
+if ($int0 < db_getfield($dbrow1, quest:speedrunning_platinum, 0)) {
+	$string1, $int2 = "Platinum", db_getfield($dbrow1, quest:speedrunning_platinum, 0);
+} else if ($int0 < db_getfield($dbrow1, quest:speedrunning_gold, 0)) {
+	$string1, $int2 = "Gold", db_getfield($dbrow1, quest:speedrunning_gold, 0);
+} else if ($int0 < db_getfield($dbrow1, quest:speedrunning_silver, 0)) {
+	$string1, $int2 = "Silver", db_getfield($dbrow1, quest:speedrunning_silver, 0);
+} else if ($int0 < db_getfield($dbrow1, quest:speedrunning_bronze, 0)) {
+	$string1, $int2 = "Bronze", db_getfield($dbrow1, quest:speedrunning_bronze, 0);
 }
 def_string $string2 = ~time_convert_option($int2);
 def_int $int3 = ~script5884($dbrow1);

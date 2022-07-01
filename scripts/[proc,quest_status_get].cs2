@@ -3,11 +3,11 @@
 if (~script6152($dbrow0) = 0) {
 	return(1);
 }
-if (db_getfield($dbrow0, quest:3, 0) = true) {
+if (db_getfield($dbrow0, quest:autodisable, 0) = true) {
 	return(1);
 }
-def_int $int1 = db_getfield($dbrow0, quest:15, 0);
-def_int $int2 = db_getfield($dbrow0, quest:16, 0);
+def_int $int1 = db_getfield($dbrow0, quest:statusprogress, 0);
+def_int $int2 = db_getfield($dbrow0, quest:statuscomplete, 0);
 def_int $int3 = ~quest_progress_get($dbrow0);
 if ($int1 = -1 | $int2 = -1 | $int3 = -1 | $int2 <= $int1) {
 	return(1);

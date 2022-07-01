@@ -5,10 +5,10 @@ if ($stat1 = null | $int2 <= 1) {
 }
 def_stat $stat4 = null;
 def_int $int5 = 1;
-def_int $int6 = db_getfieldcount($dbrow0, quest:21);
+def_int $int6 = db_getfieldcount($dbrow0, quest:statrec);
 def_int $int7 = 0;
 while ($int7 < $int6) {
-	$stat4, $int5 = db_getfield($dbrow0, quest:21, $int7);
+	$stat4, $int5 = db_getfield($dbrow0, quest:statrec, $int7);
 	if ($stat4 = $stat1 & $int5 > $int2) {
 		$int2 = $int5;
 	}

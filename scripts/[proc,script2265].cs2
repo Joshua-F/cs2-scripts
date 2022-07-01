@@ -4,31 +4,31 @@ switch_int ($int2) {
 	case 0 :
 		return(~script3237($dbrow0));
 	case 9 :
-		if (db_getfield($dbrow0, quest:5, 0) = true) {
+		if (db_getfield($dbrow0, quest:members, 0) = true) {
 			return("Members");
 		}
 		return("Free");
 	case 10 :
-		return(enum(int, string, enum_2093, db_getfield($dbrow0, quest:4, 0)));
+		return(enum(int, string, enum_2093, db_getfield($dbrow0, quest:type, 0)));
 	case 2 :
 		return(enum(int, string, enum_2092, $int1));
 	case 3 :
-		return(enum(int, string, enum_2094, db_getfield($dbrow0, quest:6, 0)));
+		return(enum(int, string, enum_2094, db_getfield($dbrow0, quest:difficulty, 0)));
 	case 4 :
-		return(enum(int, string, enum_2095, db_getfield($dbrow0, quest:7, 0)));
+		return(enum(int, string, enum_2095, db_getfield($dbrow0, quest:length, 0)));
 	case 5 :
-		return(enum(int, string, enum_2097, db_getfield($dbrow0, quest:10, 0)));
+		return(enum(int, string, enum_2097, db_getfield($dbrow0, quest:storyline, 0)));
 	case 6 :
-		return(enum(int, string, enum_2096, db_getfield($dbrow0, quest:8, 0)));
+		return(enum(int, string, enum_2096, db_getfield($dbrow0, quest:location, 0)));
 	case 7 :
-		return("Level <tostring(~max(db_getfield($dbrow0, quest:24, 0), db_getfield($dbrow0, quest:25, 0)))>");
+		return("Level <tostring(~max(db_getfield($dbrow0, quest:comlevelreq, 0), db_getfield($dbrow0, quest:comlevelrec, 0)))>");
 	case 8 :
-		if (db_getfield($dbrow0, quest:9, 0) < 2001) {
+		if (db_getfield($dbrow0, quest:year, 0) < 2001) {
 			return("Unknown Year");
 		}
-		return(tostring(db_getfield($dbrow0, quest:9, 0)));
+		return(tostring(db_getfield($dbrow0, quest:year, 0)));
 	case 1 :
-		return(substring(db_getfield($dbrow0, quest:1, 0), 0, 1));
+		return(substring(db_getfield($dbrow0, quest:sortname, 0), 0, 1));
 	case default :
 		return("");
 }

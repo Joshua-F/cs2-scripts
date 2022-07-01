@@ -1,6 +1,6 @@
 // 4026
 [proc,script4026](dbrow $dbrow0, int $int1)(int)
-if (db_getfield($dbrow0, quest:4, 0) ! 1) {
+if (db_getfield($dbrow0, quest:type, 0) ! 1) {
 	return(0);
 }
 if ($int1 = 0) {
