@@ -1,0 +1,100 @@
+// 6281
+[clientscript,script6281](int $int0, int $int1, string $string0)
+if ($int1 = 1) {
+	%varcint43 = 0;
+	%varcint49 = 2;
+}
+def_component $component2 = enum(int, component, enum_4411, $int0);
+if_sethide(true, $component2);
+cc_deleteall($component2);
+if ($component2 = null) {
+	return;
+}
+def_string $string1 = "";
+def_string $string2 = "";
+def_int $int3 = 30;
+$string1, $string0 = ~script632($string0);
+$string2, $string0 = ~script632($string0);
+def_int $int4 = 0;
+if (compare("-", $string1) = 0) {
+	if ($int0 = calc(enum_getoutputcount(enum_4411) - 1)) {
+		~script6282;
+	}
+	return;
+}
+cc_create($component2, ^iftype_rectangle, 0);
+cc_create($component2, ^iftype_rectangle, 1);
+cc_create($component2, ^iftype_rectangle, 2);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+~script6283($int0);
+def_int $int5 = 0;
+def_int $width6 = if_getwidth(interface_760:9);
+cc_create($component2, ^iftype_text, 3);
+cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width6, 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(0xffb83f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string1);
+$int5 = calc($int5 + $width6);
+def_int $int7 = ~script5548;
+.cc_create($component2, ^iftype_graphic, 4);
+.cc_setgraphic(enum(int, graphic, enum_4407, ~string_to_int($string2)));
+.cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+if ($int7 = 0) {
+	.cc_sethide(true);
+}
+$width6 = if_getwidth(interface_760:10);
+cc_create($component2, ^iftype_text, 5);
+cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width6, 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(0xffb83f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+def_string $string3 = enum(int, string, enum_4408, ~string_to_int($string2));
+if ($int7 = 1) {
+	cc_settext($string3);
+} else {
+	cc_settext($string2);
+}
+def_int $int8 = 0;
+def_int $width9 = parawidth($string3, 250, p12_full);
+if ($int7 = 1) {
+	cc_setsize($width9, 0, ^setsize_abs, ^setsize_minus);
+	$int8 = calc($width6 / 2 - $width9 / 2);
+	.cc_setposition(calc($int8 + $int5 - 10), 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setposition(calc($int8 + $int5 + 10), 0, ^setpos_abs_left, ^setpos_abs_centre);
+}
+$int5 = calc($int5 + $width6 + 10);
+cc_create($component2, ^iftype_text, 6);
+cc_sethide(true);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(append_num(~string_prependzero($string2, 3), $int0));
+$int4 = ~create_v2_stone_button_filled_free($component2, 7, 75, 22, calc($int5 + 2), 4, "Accept", ^white, 0xdfdfdf, 0, 0);
+if (.cc_find($component2, 0) = ^true) {
+	.cc_setposition(calc($int5 + 2), 4, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(75, 22, ^setsize_abs, ^setsize_abs);
+	.cc_setop(1, "Invite");
+	.cc_setopbase("<col=ff9040><$string1></col>");
+}
+$int4 = ~create_v2_stone_button_filled_free($component2, $int4, 75, 22, calc($int5 + 77), 4, "Decline", ^white, 0xdfdfdf, 0, 0);
+if (.cc_find($component2, 1) = ^true) {
+	.cc_setposition(calc($int5 + 77), 4, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setsize(75, 22, ^setsize_abs, ^setsize_abs);
+	.cc_setop(1, "Decline");
+	.cc_setopbase("<col=ff9040><$string1></col>");
+}
+if_setsize(0, $int3, ^setsize_minus, ^setsize_abs, $component2);
+if_sethide(false, $component2);
+%varcint49 = calc(%varcint49 + $int3);
+%varcint43 = calc(%varcint43 + 1);
+if ($int0 = calc(enum_getoutputcount(enum_4411) - 1)) {
+	~script6282;
+}

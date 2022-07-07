@@ -1,0 +1,30 @@
+// 6254
+[proc,script6254]
+def_int $int0 = 0;
+def_int $colour1 = ^red;
+def_int $int2 = 0;
+def_int $int3 = calc(150 * 30);
+%varcint991 = ~max(0, calc(%varcint991 - 1));
+def_int $int4 = calc(%varbit14016 * 30);
+if ($int4 > calc(%varcint991 + 90) | $int4 < calc(%varcint991 - 90)) {
+	%varcint991 = $int4;
+}
+if (%varcint991 > $int3) {
+	$int0 = calc(%varcint991 - $int3);
+	if (%varbit14019 = 1) {
+		$int2 = calc((2000 - 150) * 30);
+	} else {
+		$int2 = calc((800 - 150) * 30);
+	}
+	$colour1 = ~rgb_to_hex(255, scale($int0, $int2, 152), scale($int0, $int2, 31));
+} else {
+	$int0 = %varcint991;
+}
+def_string $string0 = "";
+def_int $int5 = calc($int0 / 50);
+if (calc($int5 % 60) >= 10) {
+	$string0 = "<tostring(calc($int5 / 60))>:<tostring(calc($int5 % 60))>";
+} else {
+	$string0 = "<tostring(calc($int5 / 60))>:0<tostring(calc($int5 % 60))>";
+}
+cc_settext("<~script3739($colour1, "col")><$string0></col>");

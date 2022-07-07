@@ -1,6 +1,8 @@
 // 114
 [clientscript,oculus_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-%varcint204 = ~max(3, ~min(15, %varcint204));
+if (%varcint204 > 15 | %varcint204 < 3) {
+	%varcint204 = 9;
+}
 _3129(%varcint204, 2);
 if_setonscrollwheel("camera_zoom(event_mousey)", $component0);
 if_setnoclickthrough(true, $component0);

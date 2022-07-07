@@ -1,0 +1,93 @@
+// 6242
+[clientscript,script6242](component $component0, component $component1, component $component2, component $component3, component $component4, component $layer5, enum $enum6, enum $enum7)
+sound_synth(interface_select1, 1, 0);
+~xpdrops_setup_display_hoverdisable($component0);
+if_sethide(false, $component2);
+cc_deleteall($component1);
+def_int $int8 = 20;
+if (~on_mobile = true) {
+	$int8 = scale(8, 5, $int8);
+}
+def_int $count9 = 0;
+def_int $int10 = 0;
+def_string $op0 = enum(int, string, $enum6, $count9);
+def_graphic $graphic11 = null;
+if ($enum7 ! null) {
+	$graphic11 = enum(int, graphic, $enum7, $count9);
+}
+def_int $count12 = enum_getoutputcount($enum6);
+while ($count9 < $count12) {
+	cc_create($component1, ^iftype_text, $int10);
+	cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc($count9 * $int8), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext($op0);
+	$int10 = calc($int10 + 1);
+	if ($graphic11 ! null) {
+		.cc_create($component1, ^iftype_graphic, $int10);
+		.cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(5, calc($count9 * $int8 + ($int8 / 2 - 6)), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setgraphic(enum(int, graphic, $enum7, $count9));
+		cc_setsize(20, $int8, ^setsize_minus, ^setsize_abs);
+		cc_setposition(20, calc($count9 * $int8), ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		cc_create($component1, ^iftype_graphic, $int10);
+		cc_sethide(true);
+	}
+	$int10 = calc($int10 + 1);
+	cc_create($component1, ^iftype_rectangle, $int10);
+	cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc($count9 * $int8), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^white);
+	cc_settrans(255);
+	cc_setop(1, $op0);
+	cc_setop(1, "Select");
+	cc_setonop("script6243(event_opindex, event_com, $count9, $component2, $component0, $enum6, $enum7)");
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 190, null)");
+		cc_setonmouseleave("cc_settrans(event_com, cc_getid, 255, null)");
+	}
+	$int10 = calc($int10 + 1);
+	$count9 = calc($count9 + 1);
+	$op0 = enum(int, string, $enum6, $count9);
+	if ($enum7 ! null) {
+		$graphic11 = enum(int, graphic, $enum7, $count9);
+	}
+}
+if_sethide(false, $component1);
+def_int $int13 = calc($count9 * $int8);
+def_int $height14 = calc($int13 + 4);
+def_int $int15 = if_getx($component0);
+def_int $int16 = if_gety($component0);
+def_int $int17 = 0;
+def_component $layer18 = if_getlayer($component0);
+while ($layer18 ! $layer5) {
+	$int15, $int16 = calc($int15 + if_getx($layer18) - if_getscrollx($layer18)), calc($int16 + if_gety($layer18) - if_getscrolly($layer18));
+	$layer18 = if_getlayer($layer18);
+}
+if (~on_mobile = true) {
+	$int17 = ~max(0, calc($int16 + 20 - $height14));
+} else {
+	$int17 = calc($int16 + if_getheight($component0) - 1);
+}
+if_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top, $component3);
+def_int $height19 = calc(if_getheight($layer5) - $int17);
+if (~on_mobile = true) {
+	$height19 = calc($int16 + 20 - $int17);
+}
+if ($height14 > $height19) {
+	if_setsize(if_getwidth($component0), $height19, ^setsize_abs, ^setsize_abs, $component3);
+	if_setscrollpos(0, 0, $component1);
+	if_setscrollsize(0, $int13, $component1);
+} else {
+	if_setsize(if_getwidth($component0), $height14, ^setsize_abs, ^setsize_abs, $component3);
+	if_setscrollpos(0, 0, $component1);
+	if_setscrollsize(0, 0, $component1);
+}
+cc_deleteall($component4);
+~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setonclick("script6244($component2, $component0, $component1)", $component2);

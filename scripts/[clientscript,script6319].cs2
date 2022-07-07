@@ -1,0 +1,18 @@
+// 6319
+[clientscript,script6319](obj $obj0, component $component1, component $component2)
+if ($obj0 = null) {
+	return;
+}
+def_int $int3 = enum_getoutputcount(enum_4390);
+while ($int3 > 0) {
+	$int3 = calc($int3 - 1);
+	if ($obj0 = enum(int, namedobj, enum_4390, $int3)) {
+		if (cc_find($component1, $int3) = ^true) {
+			~scrollbar_resize($component2, $component1, cc_gety);
+		} else {
+			mes("<oc_name($obj0)>: Unable to scroll to that item.");
+		}
+		return;
+	}
+}
+mes("<oc_name($obj0)>: That item is not in the list at present. Please try something else.");

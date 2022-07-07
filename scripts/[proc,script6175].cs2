@@ -1,0 +1,32 @@
+// 6175
+[proc,script6175]
+def_component $component0 = null;
+def_int $int1 = 0;
+while ($int1 <= 13) {
+	$component0 = enum(int, component, enum_4209, $int1);
+	if ($component0 ! null & cc_find($component0, 1) = ^true) {
+		if (testbit(%var286, $int1) = ^true) {
+			cc_setgraphic("options_radio_buttons,2");
+		} else {
+			cc_setgraphic("options_radio_buttons,0");
+		}
+	}
+	$int1 = calc($int1 + 1);
+}
+$int1 = inv_size(worn);
+while ($int1 > 0) {
+	$int1 = calc($int1 - 1);
+	$component0 = enum(int, component, enum_4285, $int1);
+	if ($component0 ! null) {
+		if (testbit(%varbit642, $int1) = ^true) {
+			if_sethide(false, $component0);
+			if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_755:99, enum(int, string, enum_4388, $int1), 25, 300)", $component0);
+			if_setonmouseleave("deltooltip(interface_755:99)", $component0);
+		} else {
+			if_sethide(true, $component0);
+			if_setonmouserepeat(null, $component0);
+			if_setonmouseleave(null, $component0);
+			~deltooltip_action(interface_755:99);
+		}
+	}
+}

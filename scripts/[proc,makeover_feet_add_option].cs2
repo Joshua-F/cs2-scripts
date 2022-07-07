@@ -16,7 +16,12 @@ cc_setcolour(0x00d34c);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
-cc_settext("Confirm (500 Coins)");
+def_int $int9 = ~script6361;
+if ($int9 > 0) {
+	cc_settext("Confirm (500 Coins)");
+} else {
+	cc_settext("Confirm");
+}
 cc_setop(1, "Confirm");
 if ($comsubid7 ! $comsubid1) {
 	cc_sethide(true);

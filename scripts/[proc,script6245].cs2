@@ -1,0 +1,8 @@
+// 6245
+[proc,script6245](component $component0, component $component1, component $component2)
+if (if_gethide($component0) = false) {
+	sound_synth(interface_select1, 1, 0);
+}
+if_sethide(true, $component0);
+if_sethide(true, $component2);
+~xpdrops_setup_display_hoveroff($component1);

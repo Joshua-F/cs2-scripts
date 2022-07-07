@@ -1,0 +1,25 @@
+// 6252
+[proc,script6252](component $component0)
+cc_deleteall($component0);
+if (%varbit14017 = 0 | %varbit14016 <= 0) {
+	return;
+}
+def_int $int1 = 0;
+cc_create($component0, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_light");
+cc_settiling(true);
+cc_settrans(120);
+$int1 = ~thinstonebox($component0, $int1);
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^red);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(quill_oblique_large);
+~script6254;
+cc_setontimer("script6253(event_com, event_comsubid)");

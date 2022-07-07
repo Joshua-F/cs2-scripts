@@ -1,0 +1,32 @@
+// 6157
+[proc,script6157](component $component0, component $component1)
+if (cc_find($component0, 4) = ^true) {
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setsize(16, 0, ^setsize_abs, ^setsize_minus);
+}
+if (cc_find($component0, 5) = ^true) {
+	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+	cc_setsize(16, 0, ^setsize_abs, ^setsize_minus);
+}
+if (cc_find($component0, 0) = ^true) {
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(32, 0, ^setsize_minus, ^setsize_minus);
+}
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $width5 = 0;
+if (cc_find($component0, 1) = ^true) {
+	$int3 = ~max(1, if_getwidth($component1));
+	$int2 = ~max($int3, if_getscrollwidth($component1));
+	$int4 = ~max(10, calc(if_getwidth($component0) - 32));
+	$width5 = ~max(10, ~min($int4, scale($int3, $int2, $int4)));
+	cc_setsize($width5, 0, ^setsize_abs, ^setsize_minus);
+	if (.cc_find($component0, 2) = ^true) {
+		.cc_setsize(5, 0, ^setsize_abs, ^setsize_minus);
+	}
+	if (.cc_find($component0, 3) = ^true) {
+		.cc_setsize(5, 0, ^setsize_abs, ^setsize_minus);
+	}
+	~script6163($component0, $component1);
+}

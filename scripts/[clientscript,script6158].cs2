@@ -1,0 +1,6 @@
+// 6158
+[clientscript,script6158](component $component0, component $component1, int $int2)
+def_int $int3 = calc(if_getscrollx($component1) + $int2);
+if (cc_find($component0, 1) = ^true) {
+	~script6162($component0, $component1, $int3, true);
+}

@@ -1,0 +1,29 @@
+// 6293
+[proc,script6293](string $string0, component $component0, component $component1, string $string1, component $component2, component $component3, string $string2, component $component4, component $component5, string $string3, component $component6, component $component7)
+def_string $text4 = "";
+def_component $component8 = null;
+def_component $component9 = null;
+switch_int (%varcint213) {
+	case 0 :
+		$text4, $component8, $component9 = $string1, $component2, $component3;
+		~script6295(1, $string2, $component4, $component5, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+		~script6295(2, $string3, $component6, $component7, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+		~script6295(-1, $string0, $component0, $component1, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+	case 1 :
+		$text4, $component8, $component9 = $string2, $component4, $component5;
+		~script6295(0, $string1, $component2, $component3, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+		~script6295(2, $string3, $component6, $component7, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+		~script6295(-1, $string0, $component0, $component1, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+	case 2 :
+		$text4, $component8, $component9 = $string3, $component6, $component7;
+		~script6295(0, $string1, $component2, $component3, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+		~script6295(1, $string2, $component4, $component5, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+		~script6295(-1, $string0, $component0, $component1, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+	case default :
+		$text4, $component8, $component9 = $string0, $component0, $component1;
+		~script6295(0, $string1, $component2, $component3, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+		~script6295(1, $string2, $component4, $component5, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+		~script6295(2, $string3, $component6, $component7, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7);
+}
+if_sethide(false, $component8);
+~script6294($component9, $text4);

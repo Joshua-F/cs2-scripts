@@ -1,10 +1,14 @@
 // 4400
-[clientscript,clan_sidepanel_op](string $opbase0, int $opindex0, int $int1, boolean $boolean2, int $clanslot3)
+[clientscript,clan_sidepanel_op](string $opbase0, int $opindex0, int $int1, boolean $boolean2, int $clanslot3, int $int4)
 def_string $string1 = removetags($opbase0);
 if ($boolean2 = true) {
 	if (activeclanchannel_find_listened = true & $opindex0 >= 9 & compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
-		~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3);
+		~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3, $int4);
 	}
-} else if (activeclanchannel_find_affined(^clantype_clan) = true & compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
-	~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3);
+} else if ($int4 = 0 & activeclanchannel_find_affined(^clantype_clan) = true) {
+	if (compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
+		~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3, $int4);
+	}
+} else if ($int4 = 2 & activeclanchannel_find_affined(2) = true & compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
+	~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3, $int4);
 }

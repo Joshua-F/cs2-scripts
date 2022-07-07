@@ -1,0 +1,67 @@
+// 6331
+[proc,script6331](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5)
+def_int $trans6 = 0;
+def_graphic $graphic7 = "options_radio_buttons,0";
+if (%varbit14025 = 1) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_settext("<col=ffb83f>Select a character build for this fight</col>");
+	}
+} else {
+	switch_int (%varbit14023) {
+		case 1001, 1002, 1005, 1006 :
+			if (cc_find($component0, $comsubid1) = ^true) {
+				cc_settext("<col=ffb83f>Character build for this fight</col>");
+			}
+			if ($component5 ! null) {
+				if_settext("Ensure your chosen equipment can be used with these stats.", $component5);
+			}
+			$trans6, $graphic7 = 125, "options_radio_buttons,1";
+		case default :
+			if (cc_find($component0, $comsubid1) = ^true) {
+				cc_settext("<col=ffb83f>View the stats for each build</col>");
+			}
+			if ($component5 ! null) {
+				if_settext("For each build, use this menu to select suitable equipment.", $component5);
+			}
+	}
+}
+if (%varbit14024 = 1) {
+	if (cc_find($component0, $comsubid2) = ^true) {
+		cc_setgraphic($graphic7);
+		cc_settrans($trans6);
+	}
+	if (cc_find($component0, $comsubid3) = ^true) {
+		cc_setgraphic("options_radio_buttons,2");
+		cc_settrans(0);
+	}
+	if (cc_find($component0, $comsubid4) = ^true) {
+		cc_setgraphic($graphic7);
+		cc_settrans($trans6);
+	}
+} else if (%varbit14024 = 2) {
+	if (cc_find($component0, $comsubid2) = ^true) {
+		cc_setgraphic($graphic7);
+		cc_settrans($trans6);
+	}
+	if (cc_find($component0, $comsubid3) = ^true) {
+		cc_setgraphic($graphic7);
+		cc_settrans($trans6);
+	}
+	if (cc_find($component0, $comsubid4) = ^true) {
+		cc_setgraphic("options_radio_buttons,2");
+		cc_settrans(0);
+	}
+} else {
+	if (cc_find($component0, $comsubid2) = ^true) {
+		cc_setgraphic("options_radio_buttons,2");
+		cc_settrans(0);
+	}
+	if (cc_find($component0, $comsubid3) = ^true) {
+		cc_setgraphic($graphic7);
+		cc_settrans($trans6);
+	}
+	if (cc_find($component0, $comsubid4) = ^true) {
+		cc_setgraphic($graphic7);
+		cc_settrans($trans6);
+	}
+}

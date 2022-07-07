@@ -1,0 +1,200 @@
+// 6302
+[clientscript,script6302](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, enum $enum12)
+cc_deleteall($component9);
+def_int $count13 = 0;
+cc_create($component9, ^iftype_graphic, $count13);
+$count13 = calc($count13 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_setonclick("script6305($int0, $component9, $component10, $component11)");
+cc_create($component9, ^iftype_rectangle, $count13);
+$count13 = calc($count13 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component9, ^iftype_rectangle, $count13);
+$count13 = calc($count13 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component9, ^iftype_graphic, $count13);
+$count13 = calc($count13 + 1);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_create($component9, ^iftype_text, $count13);
+$count13 = calc($count13 + 1);
+cc_setsize(20, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+~xpdrops_setup_display_hoveroff($component9);
+~script6304($int0);
+cc_setonvartransmit("script6303(event_com, event_comsubid, $int0){var3469, var3470, var3471}");
+cc_deleteall($component5);
+$count13 = 0;
+cc_create($component5, ^iftype_graphic, $count13);
+$count13 = calc($count13 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,0");
+cc_create($component5, ^iftype_graphic, $count13);
+$count13 = calc($count13 + 1);
+cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("bankbuttons,6");
+cc_create($component5, ^iftype_text, $count13);
+cc_setcolour(0xff981f);
+if_setonmouserepeat("cc_colour_swapper(event_com, $count13, ^white)", $component5);
+if_setonmouseleave("cc_colour_swapper(event_com, $count13, 0xff981f)", $component5);
+$count13 = calc($count13 + 1);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(38, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_string $string0 = "Drag items here to discard them.";
+cc_settext($string0);
+if_setonclick("mes($string0)", $component5);
+if (%varcint5 = 14) {
+	~meslayer_close(1, 1, 1);
+}
+~script6315(false, $component7);
+if_setop(1, "Seek", $component7);
+cc_deleteall($component8);
+$count13 = ~options_button_off($component8, 0);
+cc_create($component8, ^iftype_graphic, $count13);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("bankbuttons,6");
+cc_settrans(0);
+if_setonmouserepeat("cc_settrans(event_com, $count13, 60, null)", $component8);
+if_setonmouseleave("cc_settrans(event_com, $count13, 0, null)", $component8);
+if_setonop("script6317(event_opindex, event_com, $count13, 150, 60, 0)", $component8);
+if_setop(1, "Wipe", $component8);
+def_int $count14 = enum_getoutputcount(enum_4390);
+def_int $countarray0($count14);
+def_int $int15 = 0;
+cc_deleteall($component3);
+$count13 = 0;
+while ($count13 < $count14) {
+	if (enum(int, namedobj, enum_4390, $count13) ! null) {
+		$countarray0($int15) = $count13;
+		$int15 = calc($int15 + 1);
+	}
+	cc_create($component3, ^iftype_graphic, $count13);
+	cc_sethide(true);
+	$count13 = calc($count13 + 1);
+}
+def_int $int16 = $int15;
+if ($int16 > 1) {
+	~script6320(countarray0, 0, calc($int16 - 1));
+}
+cc_deleteall($component1);
+cc_create($component1, ^iftype_graphic, 0);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+cc_sethide(true);
+cc_settrans(125);
+def_int $comsubid17 = cc_getid;
+cc_create($component1, ^iftype_text, 1);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_sethide(true);
+def_int $comsubid18 = cc_getid;
+def_int $height19 = 0;
+def_int $int20 = calc((32 - 32) / 2);
+def_namedobj $namedobj21 = null;
+def_int $int22 = 0;
+def_string $string1 = "";
+def_int $int23 = 0;
+$int15 = 0;
+while ($int15 < $int16) {
+	if (cc_find($component3, $countarray0($int15)) = ^true) {
+		cc_sethide(false);
+		cc_settiling(true);
+		cc_setgraphic("tradebacking_light");
+		cc_settrans(255);
+		cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $height19, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setop(1, "Add");
+		cc_setop(10, "Examine");
+		cc_setdraggable($component1, -1);
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(5);
+		$namedobj21 = enum(int, namedobj, enum_4390, $countarray0($int15));
+		$string0 = oc_name($namedobj21);
+		cc_setopbase("<col=ff9040><$string0></col>");
+		.cc_create($component3, ^iftype_rectangle, $count13);
+		$count13 = calc($count13 + 1);
+		.cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
+		.cc_setposition(0, $height19, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setfill(true);
+		cc_setonmouserepeat("script1015(event_com, .cc_getid, ^white, 225)");
+		if (calc($int15 % 2) = 0) {
+			.cc_setcolour(^white);
+			.cc_settrans(255);
+			cc_setonmouseleave("script1015(event_com, .cc_getid, ^white, 255)");
+			cc_setonop("script6309($int0, event_opindex, event_com, event_comsubid, .cc_getid, ^white, 225, ^white, 255, $component1, $component2, $component5, $component6, $enum12)");
+		} else {
+			.cc_setcolour(^black);
+			.cc_settrans(225);
+			cc_setonmouseleave("script1015(event_com, .cc_getid, ^black, 225)");
+			cc_setonop("script6309($int0, event_opindex, event_com, event_comsubid, .cc_getid, ^white, 225, ^black, 225, $component1, $component2, $component5, $component6, $enum12)");
+		}
+		.cc_create($component3, ^iftype_graphic, $count13);
+		$count13 = calc($count13 + 1);
+		.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(3, calc($height19 + $int20), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setoutline(1);
+		.cc_setgraphicshadow(0x333333);
+		if (oc_stackable($namedobj21) = true) {
+			.cc_setobject($namedobj21, 5000);
+		} else {
+			.cc_setobject_nonum($namedobj21, 1);
+		}
+		.cc_create($component3, ^iftype_text, $count13);
+		$count13 = calc($count13 + 1);
+		.cc_setsize(calc(8 + 36), 32, ^setsize_minus, ^setsize_abs);
+		.cc_setposition(3, $height19, ^setpos_abs_right, ^setpos_abs_top);
+		.cc_setcolour(0xff981f);
+		.cc_settextfont(p11_full);
+		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		.cc_settextshadow(true);
+		$int23, $int22 = string_length($string0), 0;
+		if ($int23 <= 0) {
+			$string0, $int23 = "-", 1;
+		}
+		if ($int23 > 0 & parawidth($string0, 512, p11_full) > .cc_getwidth) {
+			while ($int23 > 1 & $int22 = 0) {
+				$int23 = calc($int23 - 1);
+				$string1 = append(substring($string0, 0, $int23), "...");
+				if (parawidth($string1, 512, p11_full) <= .cc_getwidth) {
+					$string0, $int22 = $string1, 1;
+				}
+			}
+		}
+		.cc_settext($string0);
+		cc_setondrag("br_loadout_menudragging(event_com, event_comsubid, $namedobj21, $string0, $component1, $comsubid17, $comsubid18, $int20, event_mousex, event_mousey)");
+		cc_setondragcomplete("script6312($int0, event_com, event_comsubid, event_drop, event_dropsubid, $countarray0($int15), $component1, $comsubid17, $comsubid18, $component2, $component5, $component6, $enum12)");
+		$height19 = calc($height19 + 32);
+	}
+	$int15 = calc($int15 + 1);
+}
+if ($height19 > if_getheight($component3)) {
+	if_setscrollsize(0, $height19, $component3);
+} else {
+	if_setscrollsize(0, 0, $component3);
+}
+if_setscrollpos(0, 0, $component3);
+~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script6311($int0, $component1, $component2, $component5, $component6, $enum12);
+if_setonvartransmit("script6310($int0, $component1, $component2, $component5, $component6, $enum12){var3464, var3469, var3470, var3471, var3472, var3473, var3474, var3475, var3476, var3477, var3478, var3479, var3480, var3481, var3482, var3483, var3484, var3485, var3486, var3487, var3488, var3489, var3490, var3491, var3492, var3493, var3494, var3495, var3496, var3497, var3498, var3499, var3500, var3501, var3502, var3503, var3504, var3505, var3506, var3507}", $component1);
+if_setontimer(null, $component1);

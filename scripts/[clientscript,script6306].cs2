@@ -1,0 +1,21 @@
+// 6306
+[clientscript,script6306](int $opindex0, int $int1, int $int2, component $component3, component $component4, component $component5)
+if ($opindex0 ! 1) {
+	return;
+}
+$int1 = calc($int1 - 1);
+if ($int1 < 0 | $int1 >= enum_getoutputcount(enum_4389)) {
+	return;
+}
+switch_int ($int2) {
+	case default :
+		%varbit14035 = $int1;
+	case 1 :
+		%varbit14039 = $int1;
+	case 2 :
+		%varbit14043 = $int1;
+}
+if (cc_find($component3, 4) = ^true) {
+	~script6304($int2);
+}
+~script6308($component3, $component4);

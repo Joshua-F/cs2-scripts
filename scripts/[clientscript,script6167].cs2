@@ -1,0 +1,12 @@
+// 6167
+[clientscript,script6167](int $opindex0, component $component1)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+~clan_stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", $component1);
+if_clearops($component1);
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);
+if_setontimer("script6168(calc(clientclock + 40), event_com)", $component1);

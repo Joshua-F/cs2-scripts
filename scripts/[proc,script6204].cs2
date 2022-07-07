@@ -1,0 +1,21 @@
+// 6204
+[proc,script6204](string $string0, component $component0, component $component1, string $string1, component $component2, component $component3, string $string2, component $component4, component $component5)
+def_string $text3 = "";
+def_component $component6 = null;
+def_component $component7 = null;
+switch_int (%varcint213) {
+	case 0 :
+		$text3, $component6, $component7 = $string1, $component2, $component3;
+		~script6205(1, $string2, $component4, $component5, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+		~script6205(-1, $string0, $component0, $component1, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+	case 1 :
+		$text3, $component6, $component7 = $string2, $component4, $component5;
+		~script6205(0, $string1, $component2, $component3, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+		~script6205(-1, $string0, $component0, $component1, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+	case default :
+		$text3, $component6, $component7 = $string0, $component0, $component1;
+		~script6205(0, $string1, $component2, $component3, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+		~script6205(1, $string2, $component4, $component5, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+}
+if_sethide(false, $component6);
+~script6294($component7, $text3);

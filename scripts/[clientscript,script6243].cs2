@@ -1,0 +1,12 @@
+// 6243
+[clientscript,script6243](int $opindex0, component $component1, int $count2, component $component3, component $component4, enum $enum5, enum $enum6)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($component4, 4) = ^true & $enum5 ! null) {
+	cc_settext(enum(int, string, $enum5, $count2));
+}
+if (cc_find($component4, 5) = ^true & $enum6 ! null) {
+	cc_setgraphic(enum(int, graphic, $enum6, $count2));
+}
+~script6245($component3, $component4, $component1);

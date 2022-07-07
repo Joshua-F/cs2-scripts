@@ -1,0 +1,31 @@
+// 6202
+[proc,script6202](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+if_sethide(false, $component0);
+def_component $component8 = null;
+def_component $component9 = null;
+def_component $component10 = null;
+def_string $string0 = "";
+if (%varbit14028 <= 1) {
+	%varcint213 = -1;
+	~script6294($component0, "Stats");
+	if_sethide(true, $component1);
+	if_sethide(true, $component2);
+	if_sethide(false, $component3);
+	if_sethide(true, $component4);
+	if_sethide(true, $component5);
+	if_sethide(true, $component6);
+} else {
+	switch_int (%varbit14024) {
+		case default :
+			$string0, $component8, $component9, $component10 = "Max/Med kit", $component4, $component5, $component6;
+		case 1 :
+			$string0, $component8, $component9, $component10 = "Zerker kit", $component5, $component6, $component4;
+		case 2 :
+			$string0, $component8, $component9, $component10 = "1 Def Pure kit", $component6, $component4, $component5;
+	}
+	if_sethide(true, $component9);
+	if_sethide(true, $component10);
+	if_sethide(false, $component1);
+	if_sethide(false, $component2);
+	~script6204("Stats", $component3, $component0, $string0, $component8, $component1, "Opponent's kit", $component7, $component2);
+}

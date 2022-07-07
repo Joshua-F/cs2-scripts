@@ -132,6 +132,33 @@ if (~pvpw_check = 1) {
 	}
 	~pvp_icons_toggletargetsystem(true);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+} else if (%varbit14022 = 1 | ~script5548 = 1) {
+	if_setsize(78, 73, ^setsize_abs, ^setsize_abs, interface_90:44);
+	$int5 = 15;
+	if_sethide(true, interface_90:49);
+	if (%varbit14017 ! 0) {
+		if (%varbit14017 = 1) {
+			if_setgraphic("pvpw_icons,0", interface_90:46);
+		} else {
+			if_setgraphic("overlay_duel", interface_90:46);
+		}
+		if_sethide(false, interface_90:1);
+		_2125(2, interface_90:1);
+		~script6247(interface_90:1);
+		if_setontimer("script6246(event_com)", interface_90:1);
+	} else {
+		if_setgraphic("overlay_duel", interface_90:46);
+		if_setontimer(null, interface_90:1);
+		if_sethide(true, interface_90:1);
+	}
+	~pvp_icons_toggletargetsystem(true);
+	if (if_gethide(interface_90:50) = false) {
+		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+	} else if (%varbit4605 = 1 | %varbit10465 > 0) {
+		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+	} else {
+		if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+	}
 } else if (~wildwars_world = 1) {
 	if_setsize(78, 73, ^setsize_abs, ^setsize_abs, interface_90:44);
 	$int5 = 13;
@@ -173,6 +200,7 @@ if (~pvpw_check = 1) {
 		if_setposition(0, 16, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:50);
 	}
 	if (~clanwars_ffa_arena(coord) = 1) {
+		if_setgraphic("pvpw_icons,0", interface_90:46);
 		if (~inzone(0_51_74_0_0, 3_52_74_63_23, coord) = 1) {
 			if_settrans(0, interface_90:47);
 		} else {

@@ -1,0 +1,59 @@
+// 6240
+[proc,script6240](component $component0, enum $enum1, enum $enum2, component $component3, component $component4, component $component5, component $component6, component $layer7, int $int8, string $string0, int $int9)
+cc_deleteall($component0);
+def_int $int10 = 0;
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_setonclick("script6242($component0, $component3, $component4, $component5, $component6, $layer7, $enum1, $enum2)");
+cc_create($component0, ^iftype_rectangle, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(2, 18, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_bottom);
+cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(20, 16, ^setsize_minus, ^setsize_abs);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext(enum(int, string, $enum1, $int8));
+if ($enum2 ! null) {
+	.cc_create($component0, ^iftype_graphic, $int10);
+	$int10 = calc($int10 + 1);
+	.cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(5, 4, ^setpos_abs_left, ^setpos_abs_bottom);
+	.cc_setgraphic(enum(int, graphic, $enum2, $int8));
+	cc_setsize(40, 16, ^setsize_minus, ^setsize_abs);
+	cc_setposition(22, 2, ^setpos_abs_left, ^setpos_abs_bottom);
+} else {
+	cc_create($component0, ^iftype_graphic, $int10);
+	$int10 = calc($int10 + 1);
+	cc_sethide(true);
+}
+cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext("<$string0>:");
+~xpdrops_setup_display_hoveroff($component0);
+if_setonvartransmit("script6241($component0, $enum1, $enum2, $int9){var3450}", $component0);

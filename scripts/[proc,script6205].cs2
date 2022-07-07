@@ -1,0 +1,36 @@
+// 6205
+[proc,script6205](int $int0, string $text0, component $component1, component $component2, string $string1, component $component3, component $component4, string $string2, component $component5, component $component6, string $string3, component $component7, component $component8)
+cc_deleteall($component2);
+if_sethide(true, $component1);
+def_graphic $graphic9 = "tabs_short,2";
+def_graphic $graphic10 = "tabs_short,3";
+def_graphic $graphic11 = "tabs_short,4";
+def_graphic $graphic12 = "tabs_short,5";
+cc_create($component2, ^iftype_graphic, 0);
+.cc_create($component2, ^iftype_graphic, 1);
+cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+.cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+.cc_sethflip(true);
+cc_setgraphic($graphic9);
+.cc_setgraphic($graphic9);
+def_int $comsubid13 = cc_getid;
+def_int $comsubid14 = .cc_getid;
+cc_create($component2, ^iftype_graphic, 2);
+cc_setsize(40, 21, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settiling(true);
+cc_setgraphic($graphic10);
+def_int $comsubid15 = cc_getid;
+cc_create($component2, ^iftype_text, 3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($text0);
+if_setonmouseover("script6296(event_com, $comsubid13, $comsubid14, $comsubid15, $graphic11, $graphic12)", $component2);
+if_setonmouseleave("script6296(event_com, $comsubid13, $comsubid14, $comsubid15, $graphic9, $graphic10)", $component2);
+if_setonclick("script6203($int0, $string1, $component3, $component4, $string2, $component5, $component6, $string3, $component7, $component8)", $component2);

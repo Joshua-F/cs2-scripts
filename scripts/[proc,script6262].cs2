@@ -1,0 +1,15 @@
+// 6262
+[proc,script6262]
+%varcint991 = ~max(0, calc(%varcint991 - 1));
+def_int $int0 = calc(%varbit14015 * 30);
+if ($int0 > calc(%varcint991 + 90) | $int0 < calc(%varcint991 - 90)) {
+	%varcint991 = $int0;
+}
+def_string $text0 = "";
+def_int $int1 = calc(%varcint991 / 50);
+if (calc($int1 % 60) >= 10) {
+	$text0 = "<tostring(calc($int1 / 60))>:<tostring(calc($int1 % 60))>";
+} else {
+	$text0 = "<tostring(calc($int1 / 60))>:0<tostring(calc($int1 % 60))>";
+}
+cc_settext($text0);

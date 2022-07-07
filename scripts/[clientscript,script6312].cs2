@@ -1,0 +1,51 @@
+// 6312
+[clientscript,script6312](int $int0, component $component1, int $comsubid2, component $drop3, int $dropsubid4, int $count5, component $component6, int $comsubid7, int $comsubid8, component $drop9, component $drop10, component $component11, enum $enum12)
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_setontimer(null);
+}
+if (cc_find($component6, $comsubid7) = ^true) {
+	cc_sethide(true);
+}
+if (cc_find($component6, $comsubid8) = ^true) {
+	cc_sethide(true);
+}
+def_namedobj $namedobj13 = enum(int, namedobj, enum_4390, $count5);
+if ($namedobj13 = null) {
+	return;
+}
+def_int $int14 = 0;
+def_int $int15 = -1;
+if ($drop3 = $drop9) {
+	if ($dropsubid4 >= 0 & $dropsubid4 < inv_size(inv)) {
+		$int15 = $dropsubid4;
+	}
+	$int14 = 1;
+}
+def_enum $enum16 = enum(int, enum, $enum12, $int0);
+def_int $int17 = inv_size(worn);
+if ($int15 = -1) {
+	while ($int17 > 0) {
+		$int17 = calc($int17 - 1);
+		if ($int15 = -1 & enum(int, component, $enum16, $int17) = $drop3) {
+			$int15, $int14 = $int17, 0;
+		}
+	}
+}
+if ($int15 = -1) {
+	return;
+}
+if ($int14 = 0) {
+	if (oc_param($namedobj13, param_1564) ! $int15) {
+		return;
+	}
+} else if (enum(int, namedobj, enum_4390, ~script6321($int0, $int15)) ! null) {
+	~script6314($int0, $count5, $namedobj13, $int15, $component6, $drop9, $drop10, $component11, $enum12);
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if ($int14 = 1) {
+	~script6323($int0, $int15, $count5);
+} else {
+	~script6324($int0, $int15, $count5);
+}
+~script6311($int0, $component6, $drop9, $drop10, $component11, $enum12);

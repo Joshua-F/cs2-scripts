@@ -1,0 +1,6 @@
+// 6358
+[clientscript,script6358](int $clock0, component $component1)
+if (clientclock >= $clock0) {
+	if_settext("", $component1);
+	if_setontimer(null, $component1);
+}

@@ -1,0 +1,24 @@
+// 6298
+[proc,script6298]
+def_string $string0 = "";
+switch_int (%varbit14023) {
+	case 1001 :
+		$string0 = "1v1 Tournament (unranked)";
+	case 1002 :
+		$string0 = "1v1 Tournament (ranked)";
+	case 1005 :
+		$string0 = "Duel (unranked)";
+	case 1006 :
+		$string0 = "Duel (ranked)";
+	case default :
+		cc_settext("PvP Arena Supplies");
+		cc_setontimer(null);
+		return;
+}
+%varcint991 = ~max(0, %varcint991);
+def_int $int0 = calc(%varbit14015 * 30);
+if ($int0 > calc(%varcint991 + 300) | $int0 < calc(%varcint991 - 300)) {
+	%varcint991 = $int0;
+}
+~script6300($string0);
+cc_setontimer("script6299(event_com, event_comsubid, $string0)");

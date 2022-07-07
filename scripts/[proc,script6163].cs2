@@ -1,0 +1,11 @@
+// 6163
+[proc,script6163](component $component0, component $component1)
+def_int $int2 = ~max(calc(if_getscrollwidth($component1) - if_getwidth($component1)), 1);
+def_int $int3 = calc(if_getwidth($component0) - 32 - cc_getwidth);
+cc_setposition(calc(16 + $int3 * if_getscrollx($component1) / $int2), 0, ^setpos_abs_left, ^setpos_abs_centre);
+if (.cc_find($component0, 2) = ^true) {
+	.cc_setposition(cc_getx, 0, ^setpos_abs_left, ^setpos_abs_centre);
+}
+if (.cc_find($component0, 3) = ^true) {
+	.cc_setposition(calc(cc_getx + cc_getwidth - 5), 0, ^setpos_abs_left, ^setpos_abs_centre);
+}

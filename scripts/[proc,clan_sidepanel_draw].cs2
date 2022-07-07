@@ -14,21 +14,31 @@ def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
 def_int $int12 = 0;
-def_string $string1 = "";
 def_int $int13 = 0;
+def_string $string1 = "";
+def_int $int14 = 0;
+def_int $int15 = 0;
 if ($boolean0 = true) {
 	$int7, $int8 = %varbit12164, 2;
 	if ($int7 = 3 & activeclansettings_find_listened = true) {
-		if (%varclansetting33 = 1) {
-			$int11 = 1;
-			if (%varclansetting41 > 0 & %varclansetting40 <= 0) {
-				$int12 = 1;
-			}
+		switch_int (%varclansetting33) {
+			case 1 :
+				$int11, $string1 = 1, activeclansettings_getclanname;
+				if (%varclansetting41 > 0 & %varclansetting40 <= 0) {
+					$int12 = 1;
+				}
+			case 1001, 1002 :
+				$int13, $string1 = 1, "1v1 Tournament";
+			case 1003, 1004 :
+				$int13, $string1 = 1, "Group Battle";
+			case 1005, 1006 :
+				$int13, $string1 = 1, "1v1 Duels";
+			case default :
+				$string1 = activeclansettings_getclanname;
 		}
-		$string1 = activeclansettings_getclanname;
-		$int13 = parawidth($string1, 150, b12_full);
+		$int14 = parawidth($string1, 150, b12_full);
 		cc_create($component1, ^iftype_text, $int10);
-		cc_setsize($int13, 20, ^setsize_abs, ^setsize_abs);
+		cc_setsize($int14, 20, ^setsize_abs, ^setsize_abs);
 		cc_setposition(-5, 0, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settext($string1);
 		cc_settextfont(b12_full);
@@ -36,24 +46,24 @@ if ($boolean0 = true) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_setcolour(0xe6981f);
 		$int10 = calc($int10 + 1);
-		cc_create($component1, ^iftype_graphic, $int10);
-		cc_setsize(13, 10, ^setsize_abs, ^setsize_abs);
-		cc_setposition(18, 20, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic("group_icon,0");
-		$int10 = calc($int10 + 1);
-		cc_create($component1, ^iftype_text, $int10);
-		cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
-		cc_setposition(29, 17, ^setpos_abs_left, ^setpos_abs_top);
-		cc_settext(tostring(activeclansettings_getaffinedcount));
-		cc_settextfont(p11_full);
-		cc_settextshadow(true);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_setcolour(0xffb83f);
-		$int10 = calc($int10 + 1);
 		if ($int11 = 1) {
 			cc_create($component1, ^iftype_graphic, $int10);
+			cc_setsize(13, 10, ^setsize_abs, ^setsize_abs);
+			cc_setposition(18, 20, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setgraphic("group_icon,0");
+			$int10 = calc($int10 + 1);
+			cc_create($component1, ^iftype_text, $int10);
+			cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
+			cc_setposition(29, 17, ^setpos_abs_left, ^setpos_abs_top);
+			cc_settext(tostring(activeclansettings_getaffinedcount));
+			cc_settextfont(p11_full);
+			cc_settextshadow(true);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_setcolour(0xffb83f);
+			$int10 = calc($int10 + 1);
+			cc_create($component1, ^iftype_graphic, $int10);
 			cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc(-12 - $int13 / 2), 0, ^setpos_abs_centre, ^setpos_abs_top);
+			cc_setposition(calc(-12 - $int14 / 2), 0, ^setpos_abs_centre, ^setpos_abs_top);
 			if ($int12 = 1) {
 				cc_setgraphic("options_icons_small,12");
 			} else if (~script636 = 1) {
@@ -64,7 +74,7 @@ if ($boolean0 = true) {
 			$int10 = calc($int10 + 1);
 			cc_create($component1, ^iftype_graphic, $int10);
 			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc($int13 / 2 + 4), 2, ^setpos_abs_centre, ^setpos_abs_top);
+			cc_setposition(calc($int14 / 2 + 4), 2, ^setpos_abs_centre, ^setpos_abs_top);
 			cc_setgraphic("clan_rank_icons,42");
 			$int10 = calc($int10 + 1);
 			if ($int12 = 1) {
@@ -83,7 +93,35 @@ if ($boolean0 = true) {
 				cc_setcolour(0xffb83f);
 				$int10 = calc($int10 + 1);
 			}
+		} else if ($int13 = 1) {
+			cc_create($component1, ^iftype_text, $int10);
+			cc_setsize(65, 20, ^setsize_minus, ^setsize_abs);
+			cc_setposition(0, 17, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setcolour(0xffb83f);
+			if (%varclansetting33 = 1001 | %varclansetting33 = 1003 | %varclansetting33 = 1005) {
+				cc_settext(activeclansettings_getclanname);
+			} else {
+				cc_settext("<img=1> Official Group");
+			}
+			cc_settextfont(p11_full);
+			cc_settextshadow(true);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			$int10 = calc($int10 + 1);
 		} else {
+			cc_create($component1, ^iftype_graphic, $int10);
+			cc_setsize(13, 10, ^setsize_abs, ^setsize_abs);
+			cc_setposition(18, 20, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setgraphic("group_icon,0");
+			$int10 = calc($int10 + 1);
+			cc_create($component1, ^iftype_text, $int10);
+			cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
+			cc_setposition(29, 17, ^setpos_abs_left, ^setpos_abs_top);
+			cc_settext(tostring(activeclansettings_getaffinedcount));
+			cc_settextfont(p11_full);
+			cc_settextshadow(true);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_setcolour(0xffb83f);
+			$int10 = calc($int10 + 1);
 			cc_create($component1, ^iftype_graphic, $int10);
 			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 			cc_setposition(75, 20, ^setpos_abs_left, ^setpos_abs_top);
@@ -116,7 +154,14 @@ if ($boolean0 = true) {
 			if_setonop("opsound(event_opindex, 2)", $component6);
 		}
 		if_sethide(false, $component3);
-		if (activeclanchannel_find_listened = true) {
+		if ($int13 = 1) {
+			~clan_stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", $component4);
+			if_setonmouserepeat(null, $component4);
+			if_setonmouseleave(null, $component4);
+			if_clearops($component4);
+			if_setonop(null, $component4);
+			$text0 = "You have currently loaded a <col=ffb93f>PvP Arena</col> group.<br><br>You can see its details via the <col=ffb93f>Grouping</col> tab.";
+		} else if (activeclanchannel_find_listened = true) {
 			if (%varbit12169 = 1) {
 				~clan_stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", $component4);
 				if_setonmouserepeat(null, $component4);
@@ -163,7 +208,9 @@ if ($boolean0 = true) {
 		cc_settextshadow(true);
 		cc_settext($text0);
 		~scrollbar_resize($component3, $component2, 0);
-		~script4394(activeclansettings_getclanname);
+		if ($int13 = 0) {
+			~script4394(activeclansettings_getclanname);
+		}
 		return;
 	}
 	if ($component6 ! null) {
@@ -174,9 +221,9 @@ if ($boolean0 = true) {
 	$int7 = %varbit933;
 	if (%varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 		$string1 = activeclansettings_getclanname;
-		$int13 = parawidth($string1, 150, b12_full);
+		$int14 = parawidth($string1, 150, b12_full);
 		cc_create($component1, ^iftype_text, $int10);
-		cc_setsize($int13, 20, ^setsize_abs, ^setsize_abs);
+		cc_setsize($int14, 20, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settext($string1);
 		cc_settextfont(b12_full);

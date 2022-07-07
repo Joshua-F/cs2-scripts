@@ -108,10 +108,15 @@ switch_int ($int0) {
 				return(45, runner_hat_10549, "Runner hat");
 		}
 	case 2 :
-		if ($int1 = 0) {
-			return(70, rigour_20827, "Rigour<br> (with 74 Prayer)");
-		} else if ($int1 = 1) {
-			return(70, augury_20830, "Augury<br> (with 77 Prayer)");
+		switch_int ($int1) {
+			case 0 :
+				return(65, chivalry_20828, "Chivalry<br> (with 60 Prayer, after King's Ransom)");
+			case 1 :
+				return(70, piety_20829, "Piety<br> (with 70 Prayer, after King's Ransom)");
+			case 2 :
+				return(70, rigour_20827, "Rigour<br> (with 74 Prayer, from Chambers of Xeric)");
+			case 3 :
+				return(70, augury_20830, "Augury<br> (with 77 Prayer, from Chambers of Xeric)");
 		}
 	case 3 :
 		switch_int ($int1) {

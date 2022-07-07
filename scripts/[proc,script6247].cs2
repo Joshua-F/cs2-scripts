@@ -1,0 +1,62 @@
+// 6247
+[proc,script6247](component $component0)
+if (%varbit14016 <= 0) {
+	%varcint991 = 0;
+	if_setcolour(0xff7733, $component0);
+	if_settrans(255, $component0);
+	_2124(255, $component0);
+	return;
+}
+%varcint991 = ~max(0, %varcint991);
+def_int $colour1 = if_getcolour($component0);
+def_int $int2 = if_gettrans($component0);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+$int6, $int7, $int8 = ~hex_to_rgb(16742195);
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+$int9, $int10, $int11 = ~hex_to_rgb(52479);
+def_int $int12 = 100;
+def_int $int13 = 255;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+$int15, $int16, $int17 = ~hex_to_rgb($colour1);
+if (%varcint991 <= calc(150 * 30)) {
+	$int3, $int4, $int5, $int14 = $int9, $int10, $int11, $int12;
+} else if (%varcint991 <= calc(200 * 30)) {
+	$int3, $int4, $int5 = $int6, $int7, $int8;
+	$int14 = ~max(0, ~min(255, calc($int12 + scale(%varcint991 - 150 * 30, (200 - 150) * 30, $int13 - $int12))));
+} else {
+	$int3, $int4, $int5, $int14 = $int15, $int16, $int17, $int13;
+}
+if ($int15 < $int3) {
+	$int15 = calc($int15 + 1);
+} else if ($int15 > $int3) {
+	$int15 = calc($int15 - 1);
+}
+if ($int16 < $int4) {
+	$int16 = calc($int16 + 1);
+} else if ($int16 > $int4) {
+	$int16 = calc($int16 - 1);
+}
+if ($int17 < $int5) {
+	$int17 = calc($int17 + 1);
+} else if ($int17 > $int5) {
+	$int17 = calc($int17 - 1);
+}
+if_setcolour(~rgb_to_hex($int15, $int16, $int17), $component0);
+if_setfillcolour(~rgb_to_hex($int15, $int16, $int17), $component0);
+if ($int2 < $int14) {
+	$int2 = calc($int2 + 1);
+} else if ($int2 > $int14) {
+	$int2 = calc($int2 - 1);
+}
+if_settrans($int2, $component0);
+_2124(255, $component0);

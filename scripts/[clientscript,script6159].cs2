@@ -1,0 +1,5 @@
+// 6159
+[clientscript,script6159](component $component0, component $component1, int $mousex2)
+if (cc_find($component0, 1) = ^true) {
+	cc_dragpickup(calc(cc_getwidth / 2), 0);
+}

@@ -53,7 +53,7 @@ if ($int17 <= 0) {
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext("There are no items in your inventory that can be imbued.<br><br>Black masks, slayer helmets,<br>salve amulets and certain rings can all be imbued.");
+	cc_settext("There are no items in your inventory that can be imbued.<br><br>Black masks, slayer helmets,<br>salve amulets and certain rings can all be imbued.<br><br>Some rewards from the PvP Arena can be imbued only with Scrolls of Imbuing.");
 }
 if ($int17 > 0) {
 	~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

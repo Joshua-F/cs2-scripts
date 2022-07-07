@@ -1,0 +1,56 @@
+// 6190
+[clientscript,script6190](obj $obj0, obj $obj1, obj $obj2, obj $obj3, obj $obj4, obj $obj5, obj $obj6, obj $obj7, obj $obj8, obj $obj9, obj $obj10, obj $obj11, obj $obj12, obj $obj13)
+def_int $int14 = inv_size(worn);
+def_obj $objarray0($int14);
+$objarray0(0) = $obj0;
+$objarray0(1) = $obj1;
+$objarray0(2) = $obj2;
+$objarray0(3) = $obj3;
+$objarray0(4) = $obj4;
+$objarray0(5) = $obj5;
+$objarray0(6) = $obj6;
+$objarray0(7) = $obj7;
+$objarray0(8) = $obj8;
+$objarray0(9) = $obj9;
+$objarray0(10) = $obj10;
+$objarray0(11) = $obj11;
+$objarray0(12) = $obj12;
+$objarray0(13) = $obj13;
+def_component $component15 = null;
+def_int $int16 = 0;
+while ($int14 > 0) {
+	$int14 = calc($int14 - 1);
+	$component15 = enum(int, component, enum_4387, $int14);
+	if ($component15 ! null) {
+		cc_deleteall($component15);
+		$int16 = 0;
+		cc_create($component15, ^iftype_graphic, $int16);
+		$int16 = calc($int16 + 1);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+		cc_setgraphic("miscgraphics,0");
+		cc_create($component15, ^iftype_graphic, $int16);
+		$int16 = calc($int16 + 1);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		if ($objarray0($int14) ! null) {
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			cc_setobject_nonum($objarray0($int14), 0);
+			if_setopbase("<col=ff9040><oc_name($objarray0($int14))>", $component15);
+			if_setop(10, "Examine", $component15);
+			if_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)", $component15);
+		} else {
+			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+			cc_setgraphic(enum(int, graphic, enum_904, $int14));
+			if_clearops($component15);
+			if_setonop(null, $component15);
+		}
+		cc_create($component15, ^iftype_graphic, $int16);
+		$int16 = calc($int16 + 1);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+		~script6192($int14, interface_756:56);
+		cc_setonvartransmit("script6191(event_com, event_comsubid, $int14, interface_756:56){var286}");
+	}
+}

@@ -1,0 +1,8 @@
+// 6329
+[clientscript,script6329](int $clock0, component $component1, int $comsubid2, int $int3, int $trans4)
+if (clientclock >= $clock0 & cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans($trans4);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 225, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+	cc_setontimer(null);
+}

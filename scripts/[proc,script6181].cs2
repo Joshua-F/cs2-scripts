@@ -1,0 +1,43 @@
+// 6181
+[proc,script6181](component $component0, component $component1, component $component2, component $component3, component $component4)
+def_graphic $graphic5 = null;
+if (testbit(%var286, 3) = ^true) {
+	if_settext("", $component4);
+	if (if_gethide($component3) = true) {
+		if_sethide(false, $component2);
+		if_sethide(true, $component3);
+		~script6184(true, "side_icons,3", 0, $component0);
+		if_setonmouserepeat(null, $component0);
+		if_setonmouseleave(null, $component0);
+		if_setonclick(null, $component0);
+		$graphic5 = "side_icons,4";
+		~script6184(false, $graphic5, 0, $component1);
+		if_setonmouserepeat("script6183(true, $graphic5, 0, event_com)", $component1);
+		if_setonmouseleave("script6183(false, $graphic5, 0, event_com)", $component1);
+		if_setonclick("script6182($component3, $component2, $component0, $component1, $component2, $component3, $component4)", $component1);
+	} else {
+		if_sethide(true, $component2);
+		if_sethide(false, $component3);
+		$graphic5 = "side_icons,3";
+		~script6184(false, $graphic5, 0, $component0);
+		if_setonmouserepeat("script6183(true, $graphic5, 0, event_com)", $component0);
+		if_setonmouseleave("script6183(false, $graphic5, 0, event_com)", $component0);
+		if_setonclick("script6182($component2, $component3, $component0, $component1, $component2, $component3, $component4)", $component0);
+		~script6184(true, "side_icons,4", 0, $component1);
+		if_setonmouserepeat(null, $component1);
+		if_setonmouseleave(null, $component1);
+		if_setonclick(null, $component1);
+	}
+} else {
+	if_settext("The <col=ffb83f>Show Inventories</col> option was not selected for this duel, so your opponent's items are not shown here.<br><br>Your opponent cannot see your items either.", $component4);
+	if_sethide(true, $component2);
+	if_sethide(true, $component3);
+	~script6184(true, "side_icons,3", 150, $component0);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setonclick(null, $component0);
+	~script6184(true, "side_icons,4", 150, $component1);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setonclick(null, $component1);
+}

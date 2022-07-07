@@ -1,0 +1,7 @@
+// 6339
+[clientscript,script6339](int $opindex0, component $component1, component $component2, component $component3, component $component4)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+~script6341(-1, $component1, $component2, $component3, $component4);

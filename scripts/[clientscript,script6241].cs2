@@ -1,0 +1,16 @@
+// 6241
+[clientscript,script6241](component $component0, enum $enum1, enum $enum2, int $int3)
+def_int $int4 = 0;
+if ($int3 = 0) {
+	$int4 = getbit_range(%var3450, 0, 2);
+} else if ($int3 = 1) {
+	$int4 = getbit_range(%var3450, 3, 5);
+} else if ($int3 = 2) {
+	$int4 = getbit_range(%var3450, 6, 7);
+}
+if (cc_find($component0, 4) = ^true & $enum1 ! null) {
+	cc_settext(enum(int, string, $enum1, $int4));
+}
+if (cc_find($component0, 5) = ^true & $enum2 ! null) {
+	cc_setgraphic(enum(int, graphic, $enum2, $int4));
+}

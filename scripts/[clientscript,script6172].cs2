@@ -1,0 +1,25 @@
+// 6172
+[clientscript,script6172](int $opindex0, int $index1, string $string0, component $component2, int $comsubid3, string $string1, component $component4, boolean $boolean5)
+if ($opindex0 = 2) {
+	if ($boolean5 = true) {
+		sound_synth(interface_select1, 1, 0);
+		mes("<$string0>: <$string1>");
+	}
+} else if ($opindex0 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	if ($index1 ! -1) {
+		if (testbit(%var286, $index1) = ^true) {
+			%var286 = clearbit(%var286, $index1);
+		} else {
+			%var286 = setbit(%var286, $index1);
+		}
+		~script6175;
+	}
+	if (cc_find($component2, $comsubid3) = ^true) {
+		cc_settrans(220);
+		if_setonmouserepeat(null, $component2);
+		if_setonmouseleave("deltooltip($component4)", $component2);
+		if_setontimer("script5497(calc(clientclock + 20), event_com, cc_getid, $string1, $component4, ~on_mobile)", $component2);
+		~deltooltip_action($component4);
+	}
+}

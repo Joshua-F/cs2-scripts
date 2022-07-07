@@ -1,0 +1,9 @@
+// 6317
+[clientscript,script6317](int $opindex0, component $component1, int $comsubid2, int $trans3, int $trans4, int $trans5)
+if ($opindex0 = 1 & cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	cc_settrans($trans3);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	cc_setontimer("script6318(calc(clientclock + 20), event_com, event_comsubid, $trans4, $trans5)");
+}

@@ -1,0 +1,28 @@
+// 6194
+[proc,script6194](int $int0, int $int1, int $width2, string $string0, string $string1)(int, int)
+def_int $int3 = 0;
+if (string_length($string0) > 0) {
+	cc_create(interface_756:53, ^iftype_text, $int0);
+	cc_setposition(0, $int1, ^setpos_abs_right, ^setpos_abs_top);
+	$int3 = calc(paraheight($string0, $width2, p12_full) * 12 + 5);
+	cc_setsize($width2, $int3, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settext($string0);
+	$int0, $int1 = calc($int0 + 1), calc($int1 + $int3);
+}
+if (string_length($string1) > 0) {
+	cc_create(interface_756:53, ^iftype_text, $int0);
+	cc_setposition(0, $int1, ^setpos_abs_right, ^setpos_abs_top);
+	$int3 = calc(paraheight($string1, $width2, p11_full) * 11 + 6);
+	cc_setsize($width2, $int3, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0x9f9f9f);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 11);
+	cc_settext($string1);
+	$int0, $int1 = calc($int0 + 1), calc($int1 + $int3);
+}
+return($int0, $int1);

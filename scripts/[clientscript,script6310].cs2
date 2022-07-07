@@ -1,0 +1,8 @@
+// 6310
+[clientscript,script6310](int $int0, component $component1, component $component2, component $drop3, component $component4, enum $enum5)
+if (clientclock > %varcint110) {
+	~script6311($int0, $component1, $component2, $drop3, $component4, $enum5);
+	if_setontimer(null, $component1);
+} else {
+	if_setontimer("script6310($int0, $component1, $component2, $drop3, $component4, $enum5)", $component1);
+}

@@ -10,9 +10,15 @@ switch_int (%varcint41) {
 	case 1 :
 		if (enum(int, boolean, enum_892, $chattype0) = true) {
 			return(1);
-		} else if ($chattype0 = ^chattype_clanmessage & ~gim_notification_message($string1) = 1) {
-			return(1);
-		} else if ($chattype0 = ^chattype_clanchat & ~gim_notification_message($string1) = 1) {
+		}
+		if ($chattype0 = ^chattype_clanmessage) {
+			if (~gim_notification_message($string1) = 1) {
+				return(1);
+			} else if (~script6264($string1) = 1) {
+				return(1);
+			}
+		}
+		if ($chattype0 = ^chattype_clanchat & ~gim_notification_message($string1) = 1) {
 			return(1);
 		}
 	case 2 :
@@ -36,6 +42,8 @@ switch_int (%varcint41) {
 			case ^chattype_clanmessage :
 				if (~gim_notification_message($string1) = 0) {
 					return(1);
+				} else if (~script6264($string1) = 0) {
+					return(1);
 				}
 		}
 	case 6 :
@@ -48,6 +56,8 @@ switch_int (%varcint41) {
 				} else if (~script5501($string1) = 1) {
 					return(1);
 				} else if (~gim_notification_message($string1) = 1) {
+					return(1);
+				} else if (~script6264($string1) = 1) {
 					return(1);
 				}
 		}

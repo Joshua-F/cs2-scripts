@@ -1,0 +1,41 @@
+// 6334
+[proc,script6334](component $component0, component $component1, int $comsubid2, int $comsubid3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9)
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+$int10, $int11, $int12, $int13, $int14, $int15, $int16, $int17 = ~script6335(%varbit14024);
+if (cc_find($component0, $comsubid2) = ^true & .cc_find($component0, $comsubid3) = ^true) {
+	cc_settext(tostring($int10));
+	.cc_settext(tostring($int11));
+	cc_setcolour(0xff981f);
+	.cc_setcolour(0xff981f);
+}
+if (cc_find($component0, $comsubid4) = ^true) {
+	cc_settext(tostring($int12));
+	cc_setcolour(0xff981f);
+}
+if (cc_find($component0, $comsubid5) = ^true) {
+	cc_settext(tostring($int13));
+	cc_setcolour(0xff981f);
+}
+if (cc_find($component1, $comsubid6) = ^true) {
+	cc_settext(tostring($int14));
+	cc_setcolour(0xff981f);
+}
+if (cc_find($component1, $comsubid7) = ^true) {
+	cc_settext(tostring($int15));
+	cc_setcolour(0xff981f);
+}
+if (cc_find($component1, $comsubid8) = ^true) {
+	cc_settext(tostring($int16));
+	cc_setcolour(0xff981f);
+}
+if (cc_find($component1, $comsubid9) = ^true) {
+	cc_settext(tostring($int17));
+	cc_setcolour(0xff981f);
+}

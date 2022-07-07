@@ -1,4 +1,8 @@
 // 3601
 [clientscript,build_makeover_feet](component $component0, component $component1, component $component2, component $component3)
-~steelborder($component0, "Yrsa's Shoe Store", 0);
+def_string $text0 = "Yrsa's Shoe Store";
+if (~script5548 = 1) {
+	$text0 = "Select a shoe style";
+}
+~steelborder($component0, $text0, 0);
 ~rebuild_makeover_feet($component1, $component2, $component3, -1);

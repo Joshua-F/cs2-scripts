@@ -1,45 +1,50 @@
 // 502
-[clientscript,makeover_hair_setup](component $component0, component $component1, component $component2)
-cc_deleteall($component0);
-cc_deleteall($component2);
+[clientscript,makeover_hair_setup](component $component0, component $component1, component $component2, component $component3)
+def_string $text0 = "Hairdresser's Salon";
+if (~script5548 = 1) {
+	$text0 = "Select a hairstyle";
+}
+~steelborder($component0, $text0, 0);
+cc_deleteall($component1);
+cc_deleteall($component3);
 if (%varbit4146 = 1) {
-	if_settext("Select hairstyle", $component1);
-	~makeover_drawmodels($component0, enum_881, enum_882, null, null, 1200, 0, 180, 1, 1);
+	if_settext("Select hairstyle", $component2);
+	~makeover_drawmodels($component1, enum_881, enum_882, null, null, 1200, 0, 180, 1, 1);
 } else if (%varbit4146 = 2) {
-	if_settext("Select facial hair", $component1);
-	~makeover_drawmodels($component0, enum_884, enum_885, enum_886, null, 1200, 0, 180, 1, 1);
+	if_settext("Select facial hair", $component2);
+	~makeover_drawmodels($component1, enum_884, enum_885, enum_886, null, 1200, 0, 180, 1, 1);
 } else if (%varbit4146 = 3) {
-	if_settext("Select hairstyle", $component1);
-	~makeover_drawmodels($component0, enum_888, enum_889, null, null, 1350, 0, 150, 1, 1);
+	if_settext("Select hairstyle", $component2);
+	~makeover_drawmodels($component1, enum_888, enum_889, null, null, 1350, 0, 150, 1, 1);
 } else {
-	if_settext("Please try again later.", $component1);
+	if_settext("Please try again later.", $component2);
 	return;
 }
-def_int $int3 = 0;
-while ($int3 < 25) {
-	cc_create($component2, ^iftype_rectangle, $int3);
+def_int $int4 = 0;
+while ($int4 < 25) {
+	cc_create($component3, ^iftype_rectangle, $int4);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	if ($int3 < 13) {
-		cc_setposition(calc($int3 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
+	if ($int4 < 13) {
+		cc_setposition(calc($int4 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc(($int3 - 13) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc(($int4 - 13) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setfill(true);
-	cc_setcolour(enum(int, int, enum_890, $int3));
-	cc_setop(1, enum(int, string, enum_891, $int3));
-	$int3 = calc($int3 + 1);
+	cc_setcolour(enum(int, int, enum_890, $int4));
+	cc_setop(1, enum(int, string, enum_891, $int4));
+	$int4 = calc($int4 + 1);
 }
-$int3 = 0;
-while ($int3 < 25) {
-	cc_create($component2, ^iftype_graphic, calc($int3 + 25));
+$int4 = 0;
+while ($int4 < 25) {
+	cc_create($component3, ^iftype_graphic, calc($int4 + 25));
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	if ($int3 < 13) {
-		cc_setposition(calc($int3 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
+	if ($int4 < 13) {
+		cc_setposition(calc($int4 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc(($int3 - 13) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc(($int4 - 13) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setgraphic("overlay_multiway");
-	~makeover_indicator($int3, 3);
-	cc_setonvartransmit("makeover_indicator(event_com, event_comsubid, $int3, 3){var263}");
-	$int3 = calc($int3 + 1);
+	~makeover_indicator($int4, 3);
+	cc_setonvartransmit("makeover_indicator(event_com, event_comsubid, $int4, 3){var263}");
+	$int4 = calc($int4 + 1);
 }

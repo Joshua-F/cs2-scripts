@@ -1,57 +1,62 @@
 // 230
-[clientscript,makeover_clothes_setup](component $component0, component $component1, component $component2, component $component3, component $component4)
-cc_deleteall($component1);
+[clientscript,makeover_clothes_setup](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+def_string $text0 = "Thessalia's Makeovers";
+if (~script5548 = 1) {
+	$text0 = "Select a clothing style";
+}
+~steelborder($component0, $text0, 0);
 cc_deleteall($component2);
 cc_deleteall($component3);
 cc_deleteall($component4);
-def_enum $enum5 = enum_789;
-def_enum $enum6 = enum_790;
+cc_deleteall($component5);
+def_enum $enum6 = enum_789;
+def_enum $enum7 = enum_790;
 if (%varbit3945 = 1) {
-	if_sethide(true, $component0);
-	if_sethide(false, $component3);
-	$enum5 = enum_791;
-	$enum6 = enum_792;
+	if_sethide(true, $component1);
+	if_sethide(false, $component4);
+	$enum6 = enum_791;
+	$enum7 = enum_792;
 	if (%varbit3944 = 1) {
-		~makeover_drawmodels($component3, enum_787, enum_788, null, null, 800, 60, 0, 1, 1);
+		~makeover_drawmodels($component4, enum_787, enum_788, null, null, 800, 60, 0, 1, 1);
 	} else {
-		~makeover_drawmodels($component3, enum_778, enum_779, null, null, 720, 60, 0, 1, 1);
+		~makeover_drawmodels($component4, enum_778, enum_779, null, null, 720, 60, 0, 1, 1);
 	}
 } else {
-	if_sethide(false, $component0);
-	if_sethide(true, $component3);
+	if_sethide(false, $component1);
+	if_sethide(true, $component4);
 	if (%varbit3944 = 1) {
-		~makeover_drawmodels($component1, enum_781, enum_782, null, female_arms_332, 600, 135, 0, 1, 0);
-		~makeover_drawmodels($component2, enum_784, enum_785, null, female_torso_456, 650, 135, 0, 2, 0);
+		~makeover_drawmodels($component2, enum_781, enum_782, null, female_arms_332, 600, 135, 0, 1, 0);
+		~makeover_drawmodels($component3, enum_784, enum_785, null, female_torso_456, 650, 135, 0, 2, 0);
 	} else {
-		~makeover_drawmodels($component1, enum_771, enum_772, enum_773, male_arms_151, 780, 135, 0, 1, 1);
-		~makeover_drawmodels($component2, enum_775, enum_776, null, male_torso_292, 780, 135, 0, 2, 1);
+		~makeover_drawmodels($component2, enum_771, enum_772, enum_773, male_arms_151, 780, 135, 0, 1, 1);
+		~makeover_drawmodels($component3, enum_775, enum_776, null, male_torso_292, 780, 135, 0, 2, 1);
 	}
 }
-def_int $int7 = 0;
-while ($int7 < 29) {
-	cc_create($component4, ^iftype_rectangle, $int7);
+def_int $int8 = 0;
+while ($int8 < 29) {
+	cc_create($component5, ^iftype_rectangle, $int8);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	if ($int7 < 15) {
-		cc_setposition(calc($int7 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
+	if ($int8 < 15) {
+		cc_setposition(calc($int8 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc(($int7 - 15) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc(($int8 - 15) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setfill(true);
-	cc_setcolour(enum(int, int, $enum5, $int7));
-	cc_setop(1, enum(int, string, $enum6, $int7));
-	$int7 = calc($int7 + 1);
+	cc_setcolour(enum(int, int, $enum6, $int8));
+	cc_setop(1, enum(int, string, $enum7, $int8));
+	$int8 = calc($int8 + 1);
 }
-$int7 = 0;
-while ($int7 < 29) {
-	cc_create($component4, ^iftype_graphic, calc($int7 + 29));
+$int8 = 0;
+while ($int8 < 29) {
+	cc_create($component5, ^iftype_graphic, calc($int8 + 29));
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	if ($int7 < 15) {
-		cc_setposition(calc($int7 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
+	if ($int8 < 15) {
+		cc_setposition(calc($int8 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc(($int7 - 15) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc(($int8 - 15) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setgraphic("overlay_multiway");
-	~makeover_indicator($int7, 3);
-	cc_setonvartransmit("makeover_indicator(event_com, event_comsubid, $int7, 3){var263}");
-	$int7 = calc($int7 + 1);
+	~makeover_indicator($int8, 3);
+	cc_setonvartransmit("makeover_indicator(event_com, event_comsubid, $int8, 3){var263}");
+	$int8 = calc($int8 + 1);
 }

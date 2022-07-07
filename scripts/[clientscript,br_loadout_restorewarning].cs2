@@ -4,6 +4,6 @@ if (clientclock < $clock0) {
 	return;
 }
 if (cc_find($component1, $comsubid2) = ^true) {
-	cc_setmodel(bank_filler_7669);
+	cc_setmodelangle(0, 0, 512, 512, 0, 1800);
 	cc_setontimer(null);
 }

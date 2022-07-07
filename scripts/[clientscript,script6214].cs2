@@ -1,0 +1,9 @@
+// 6214
+[clientscript,script6214](int $clock0, component $component1, component $component2)
+if (clientclock >= $clock0) {
+	if_settext("", $component1);
+	if_setontimer(null, $component1);
+	if_sethide(false, $component2);
+} else {
+	~script6215($clock0, $component1);
+}

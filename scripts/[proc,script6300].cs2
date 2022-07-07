@@ -1,0 +1,12 @@
+// 6300
+[proc,script6300](string $string0)
+def_string $string1 = "";
+def_int $int0 = calc(%varcint991 % 3000 / 50);
+if ($int0 >= 10) {
+	$string1 = "<tostring(calc(%varcint991 / 3000))>:<tostring($int0)>";
+} else {
+	$string1 = "<tostring(calc(%varcint991 / 3000))>:0<tostring($int0)>";
+}
+def_int $int1 = ~min(6000, %varcint991);
+def_string $string2 = ~script3739(~rgb_to_hex(255, scale($int1, 6000, 152), scale($int1, 6000, 31)), "col");
+cc_settext("<$string0> - <$string2><$string1></col>");

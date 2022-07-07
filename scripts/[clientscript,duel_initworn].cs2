@@ -1,165 +1,167 @@
 // 205
 [clientscript,duel_initworn]
-def_int $int0 = 0;
-def_int $slot1 = 0;
-cc_deleteall(interface_482:50);
-cc_deleteall(interface_482:78);
-while ($int0 < 11) {
-	cc_create(interface_482:50, ^iftype_graphic, $int0);
+def_int $slot0 = 0;
+def_obj $obj1 = null;
+cc_deleteall(interface_755:42);
+cc_deleteall(interface_755:70);
+def_int $int2 = 0;
+while ($int2 < 11) {
+	cc_create(interface_755:42, ^iftype_graphic, $int2);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	if ($int0 = 0) {
-		cc_setposition(if_getx(interface_482:67), if_gety(interface_482:67), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 0;
+	if ($int2 = 0) {
+		cc_setposition(if_getx(interface_755:59), if_gety(interface_755:59), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 0;
 	}
-	if ($int0 = 1) {
-		cc_setposition(if_getx(interface_482:68), if_gety(interface_482:68), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 1;
+	if ($int2 = 1) {
+		cc_setposition(if_getx(interface_755:60), if_gety(interface_755:60), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 1;
 	}
-	if ($int0 = 2) {
-		cc_setposition(if_getx(interface_482:69), if_gety(interface_482:69), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 2;
+	if ($int2 = 2) {
+		cc_setposition(if_getx(interface_755:61), if_gety(interface_755:61), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 2;
 	}
-	if ($int0 = 3) {
-		cc_setposition(if_getx(interface_482:77), if_gety(interface_482:77), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 13;
+	if ($int2 = 3) {
+		cc_setposition(if_getx(interface_755:69), if_gety(interface_755:69), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 13;
 	}
-	if ($int0 = 4) {
-		cc_setposition(if_getx(interface_482:70), if_gety(interface_482:70), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 3;
+	if ($int2 = 4) {
+		cc_setposition(if_getx(interface_755:62), if_gety(interface_755:62), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 3;
 	}
-	if ($int0 = 5) {
-		cc_setposition(if_getx(interface_482:71), if_gety(interface_482:71), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 4;
+	if ($int2 = 5) {
+		cc_setposition(if_getx(interface_755:63), if_gety(interface_755:63), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 4;
 	}
-	if ($int0 = 6) {
-		cc_setposition(if_getx(interface_482:72), if_gety(interface_482:72), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 5;
+	if ($int2 = 6) {
+		cc_setposition(if_getx(interface_755:64), if_gety(interface_755:64), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 5;
 	}
-	if ($int0 = 7) {
-		cc_setposition(if_getx(interface_482:73), if_gety(interface_482:73), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 7;
+	if ($int2 = 7) {
+		cc_setposition(if_getx(interface_755:65), if_gety(interface_755:65), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 7;
 	}
-	if ($int0 = 8) {
-		cc_setposition(if_getx(interface_482:74), if_gety(interface_482:74), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 9;
+	if ($int2 = 8) {
+		cc_setposition(if_getx(interface_755:66), if_gety(interface_755:66), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 9;
 	}
-	if ($int0 = 9) {
-		cc_setposition(if_getx(interface_482:75), if_gety(interface_482:75), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 10;
+	if ($int2 = 9) {
+		cc_setposition(if_getx(interface_755:67), if_gety(interface_755:67), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 10;
 	}
-	if ($int0 = 10) {
-		cc_setposition(if_getx(interface_482:76), if_gety(interface_482:76), ^setpos_abs_left, ^setpos_abs_top);
-		$slot1 = 12;
+	if ($int2 = 10) {
+		cc_setposition(if_getx(interface_755:68), if_gety(interface_755:68), ^setpos_abs_left, ^setpos_abs_top);
+		$slot0 = 12;
 	}
-	if (inv_getobj(worn, $slot1) ! null) {
-		cc_setobject(inv_getobj(worn, $slot1), inv_getnum(worn, $slot1));
-		cc_setopbase("<col=ff981f><oc_name(inv_getobj(worn, $slot1))>");
+	$obj1 = inv_getobj(worn, $slot0);
+	if ($obj1 ! null) {
+		cc_setobject($obj1, inv_getnum(worn, $slot0));
+		cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		if ($slot1 = 0) {
-			if_setgraphic(null, interface_482:67);
+		if ($slot0 = 0) {
+			if_setgraphic(null, interface_755:59);
 		}
-		if ($slot1 = 1) {
-			if_setgraphic(null, interface_482:68);
+		if ($slot0 = 1) {
+			if_setgraphic(null, interface_755:60);
 		}
-		if ($slot1 = 2) {
-			if_setgraphic(null, interface_482:69);
+		if ($slot0 = 2) {
+			if_setgraphic(null, interface_755:61);
 		}
-		if ($slot1 = 13) {
-			if_setgraphic(null, interface_482:77);
+		if ($slot0 = 13) {
+			if_setgraphic(null, interface_755:69);
 		}
-		if ($slot1 = 3) {
-			if_setgraphic(null, interface_482:70);
+		if ($slot0 = 3) {
+			if_setgraphic(null, interface_755:62);
 		}
-		if ($slot1 = 4) {
-			if_setgraphic(null, interface_482:71);
+		if ($slot0 = 4) {
+			if_setgraphic(null, interface_755:63);
 		}
-		if ($slot1 = 5) {
-			if_setgraphic(null, interface_482:72);
+		if ($slot0 = 5) {
+			if_setgraphic(null, interface_755:64);
 		}
-		if ($slot1 = 7) {
-			if_setgraphic(null, interface_482:73);
+		if ($slot0 = 7) {
+			if_setgraphic(null, interface_755:65);
 		}
-		if ($slot1 = 9) {
-			if_setgraphic(null, interface_482:74);
+		if ($slot0 = 9) {
+			if_setgraphic(null, interface_755:66);
 		}
-		if ($slot1 = 10) {
-			if_setgraphic(null, interface_482:75);
+		if ($slot0 = 10) {
+			if_setgraphic(null, interface_755:67);
 		}
-		if ($slot1 = 12) {
-			if_setgraphic(null, interface_482:76);
+		if ($slot0 = 12) {
+			if_setgraphic(null, interface_755:68);
 		}
 	} else {
-		if ($slot1 = 0) {
-			if_setgraphic("wornicons,0", interface_482:67);
+		if ($slot0 = 0) {
+			if_setgraphic("wornicons,0", interface_755:59);
 		}
-		if ($slot1 = 1) {
-			if_setgraphic("wornicons,1", interface_482:68);
+		if ($slot0 = 1) {
+			if_setgraphic("wornicons,1", interface_755:60);
 		}
-		if ($slot1 = 2) {
-			if_setgraphic("wornicons,2", interface_482:69);
+		if ($slot0 = 2) {
+			if_setgraphic("wornicons,2", interface_755:61);
 		}
-		if ($slot1 = 13) {
-			if_setgraphic("wornicons,10", interface_482:77);
+		if ($slot0 = 13) {
+			if_setgraphic("wornicons,10", interface_755:69);
 		}
-		if ($slot1 = 3) {
-			if_setgraphic("wornicons,3", interface_482:70);
+		if ($slot0 = 3) {
+			if_setgraphic("wornicons,3", interface_755:62);
 		}
-		if ($slot1 = 4) {
-			if_setgraphic("wornicons,5", interface_482:71);
+		if ($slot0 = 4) {
+			if_setgraphic("wornicons,5", interface_755:63);
 		}
-		if ($slot1 = 5) {
-			if_setgraphic("wornicons,6", interface_482:72);
+		if ($slot0 = 5) {
+			if_setgraphic("wornicons,6", interface_755:64);
 		}
-		if ($slot1 = 7) {
-			if_setgraphic("wornicons,7", interface_482:73);
+		if ($slot0 = 7) {
+			if_setgraphic("wornicons,7", interface_755:65);
 		}
-		if ($slot1 = 9) {
-			if_setgraphic("wornicons,8", interface_482:74);
+		if ($slot0 = 9) {
+			if_setgraphic("wornicons,8", interface_755:66);
 		}
-		if ($slot1 = 10) {
-			if_setgraphic("wornicons,9", interface_482:75);
+		if ($slot0 = 10) {
+			if_setgraphic("wornicons,9", interface_755:67);
 		}
-		if ($slot1 = 12) {
-			if_setgraphic("wornicons,4", interface_482:76);
+		if ($slot0 = 12) {
+			if_setgraphic("wornicons,4", interface_755:68);
 		}
 	}
-	cc_create(interface_482:78, ^iftype_graphic, $int0);
+	cc_create(interface_755:70, ^iftype_graphic, $int2);
 	cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic("exclamation_mark");
 	cc_sethide(true);
-	if ($int0 = 0) {
-		cc_setposition(calc(10 + if_getx(interface_482:67)), if_gety(interface_482:67), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 0) {
+		cc_setposition(calc(10 + if_getx(interface_755:59)), if_gety(interface_755:59), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 1) {
-		cc_setposition(calc(10 + if_getx(interface_482:68)), if_gety(interface_482:68), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 1) {
+		cc_setposition(calc(10 + if_getx(interface_755:60)), if_gety(interface_755:60), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 2) {
-		cc_setposition(calc(10 + if_getx(interface_482:69)), if_gety(interface_482:69), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 2) {
+		cc_setposition(calc(10 + if_getx(interface_755:61)), if_gety(interface_755:61), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 3) {
-		cc_setposition(calc(10 + if_getx(interface_482:77)), if_gety(interface_482:77), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 3) {
+		cc_setposition(calc(10 + if_getx(interface_755:69)), if_gety(interface_755:69), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 4) {
-		cc_setposition(calc(10 + if_getx(interface_482:70)), if_gety(interface_482:70), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 4) {
+		cc_setposition(calc(10 + if_getx(interface_755:62)), if_gety(interface_755:62), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 5) {
-		cc_setposition(calc(10 + if_getx(interface_482:71)), if_gety(interface_482:71), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 5) {
+		cc_setposition(calc(10 + if_getx(interface_755:63)), if_gety(interface_755:63), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 6) {
-		cc_setposition(calc(10 + if_getx(interface_482:72)), if_gety(interface_482:72), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 6) {
+		cc_setposition(calc(10 + if_getx(interface_755:64)), if_gety(interface_755:64), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 7) {
-		cc_setposition(calc(10 + if_getx(interface_482:73)), if_gety(interface_482:73), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 7) {
+		cc_setposition(calc(10 + if_getx(interface_755:65)), if_gety(interface_755:65), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 8) {
-		cc_setposition(calc(10 + if_getx(interface_482:74)), if_gety(interface_482:74), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 8) {
+		cc_setposition(calc(10 + if_getx(interface_755:66)), if_gety(interface_755:66), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 9) {
-		cc_setposition(calc(10 + if_getx(interface_482:75)), if_gety(interface_482:75), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 9) {
+		cc_setposition(calc(10 + if_getx(interface_755:67)), if_gety(interface_755:67), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int0 = 10) {
-		cc_setposition(calc(10 + if_getx(interface_482:76)), if_gety(interface_482:76), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int2 = 10) {
+		cc_setposition(calc(10 + if_getx(interface_755:68)), if_gety(interface_755:68), ^setpos_abs_left, ^setpos_abs_top);
 	}
-	$int0 = calc($int0 + 1);
+	$int2 = calc($int2 + 1);
 }

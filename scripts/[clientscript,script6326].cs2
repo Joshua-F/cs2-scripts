@@ -1,0 +1,33 @@
+// 6326
+[clientscript,script6326](component $component0, component $component1, component $component2, component $component3, component $component4)
+cc_deleteall($component2);
+def_int $int5 = 0;
+def_int $comsubid6 = 0;
+def_int $comsubid7 = 0;
+def_int $comsubid8 = 0;
+def_int $comsubid9 = 0;
+def_int $int10 = 0;
+$int5, $int10, $comsubid6 = ~script6332(attack, $component2, $int5, $int10);
+$int5, $int10, $comsubid7 = ~script6332(strength, $component2, $int5, $int10);
+$int5, $int10, $comsubid8 = ~script6332(ranged, $component2, $int5, $int10);
+$int5, $int10, $comsubid9 = ~script6332(magic, $component2, $int5, $int10);
+cc_deleteall($component3);
+def_int $int11 = 0;
+def_int $comsubid12 = 0;
+def_int $comsubid13 = 0;
+def_int $comsubid14 = 0;
+def_int $comsubid15 = 0;
+$int10 = 0;
+$int11, $int10, $comsubid12 = ~script6332(defence, $component3, $int11, $int10);
+$int11, $int10, $comsubid13 = ~script6332(hitpoints, $component3, $int11, $int10);
+$int11, $int10, $comsubid14 = ~script6332(prayer, $component3, $int11, $int10);
+$int11, $int10, $comsubid15 = ~script6332(agility, $component3, $int11, $int10);
+~script6334($component2, $component3, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid12, $comsubid13, $comsubid14, $comsubid15);
+if_setonvartransmit("script6333($component2, $component3, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid12, $comsubid13, $comsubid14, $comsubid15){var3465}", $component0);
+def_int $comsubid16 = 0;
+def_int $comsubid17 = 0;
+def_int $comsubid18 = 0;
+def_int $comsubid19 = 0;
+$comsubid16, $comsubid17, $comsubid18, $comsubid19 = ~script6327($component1);
+~script6331($component1, $comsubid16, $comsubid17, $comsubid18, $comsubid19, $component4);
+if_setonvartransmit("script6330($component1, $comsubid16, $comsubid17, $comsubid18, $comsubid19, $component4){var3465}", $component2);

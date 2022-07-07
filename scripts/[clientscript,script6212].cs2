@@ -1,0 +1,5 @@
+// 6212
+[clientscript,script6212](int $clock0, component $component1, component $component2)
+if (clientclock >= $clock0) {
+	~script6210($component1, $component2);
+}

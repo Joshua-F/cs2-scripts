@@ -1,0 +1,18 @@
+// 6314
+[proc,script6314](int $int0, int $comsubid1, namedobj $namedobj2, int $int3, component $component4, component $component5, component $drop6, component $component7, enum $enum8)
+if ($namedobj2 = null) {
+	return;
+}
+def_int $int9 = 0;
+def_int $size10 = 0;
+def_int $size11 = inv_size(inv);
+while ($size10 < $size11) {
+	$int9 = calc(($int3 + $size10) % $size11);
+	if (enum(int, namedobj, enum_4390, ~script6321($int0, $int9)) = null) {
+		sound_synth(interface_select1, 1, 0);
+		~script6323($int0, $int9, $comsubid1);
+		~script6311($int0, $component4, $component5, $drop6, $component7, $enum8);
+		return;
+	}
+	$size10 = calc($size10 + 1);
+}

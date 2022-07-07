@@ -1,0 +1,12 @@
+// 6325
+[proc,script6325](int $int0)(int)
+def_int $int1 = -1;
+switch_int ($int0) {
+	case default :
+		$int1 = enum(int, int, enum_4389, %varbit14035);
+	case 1 :
+		$int1 = enum(int, int, enum_4389, %varbit14039);
+	case 2 :
+		$int1 = enum(int, int, enum_4389, %varbit14043);
+}
+return($int1);

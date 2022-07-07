@@ -1,0 +1,4 @@
+// 6215
+[proc,script6215](int $int0, component $component1)
+def_int $int2 = calc(1 + ($int0 - clientclock) / 50);
+if_settext("Check opponent's changes!<br>(<tostring($int2)>)", $component1);

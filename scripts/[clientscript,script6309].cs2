@@ -1,0 +1,13 @@
+// 6309
+[clientscript,script6309](int $int0, int $opindex1, component $component2, int $comsubid3, int $comsubid4, int $colour5, int $trans6, int $colour7, int $trans8, component $component9, component $component10, component $drop11, component $component12, enum $enum13)
+if (cc_find($component2, $comsubid3) = ^true & .cc_find($component2, $comsubid4) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	.cc_setcolour($colour5);
+	.cc_settrans($trans6);
+	.cc_setontimer("br_loadout_menureset(calc(clientclock + 20), $component2, $comsubid3, $comsubid4, $colour5, $trans6, $colour7, $trans8)");
+}
+if ($opindex1 = 1) {
+	~script6314($int0, $comsubid3, enum(int, namedobj, enum_4390, $comsubid3), 0, $component9, $component10, $drop11, $component12, $enum13);
+}

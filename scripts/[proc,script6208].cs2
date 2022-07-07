@@ -1,0 +1,153 @@
+// 6208
+[proc,script6208](component $component0, component $component1, component $component2)
+def_obj $obj3 = null;
+def_component $component4 = null;
+def_int $int5 = 0;
+def_int $size6 = inv_size(worn);
+while ($int5 < $size6) {
+	$component4 = enum(int, component, enum_4401, $int5);
+	if ($component4 ! null) {
+		cc_deleteall($component4);
+		cc_create($component4, ^iftype_graphic, 0);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+		cc_setgraphic("miscgraphics,0");
+		cc_create($component4, ^iftype_graphic, 1);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		$obj3 = inv_getobj(inv_207, $int5);
+		if ($obj3 ! null) {
+			cc_settrans(0);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			cc_setobject($obj3, inv_getnum(inv_207, $int5));
+			cc_setopbase("<col=ff9040><oc_name($obj3)></col>");
+			cc_setop(10, "Examine");
+			cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
+		} else {
+			cc_settrans(255);
+			cc_clearops;
+			cc_create($component4, ^iftype_graphic, 2);
+			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+			cc_setgraphic(enum(int, graphic, enum_904, $int5));
+		}
+	}
+	$int5 = calc($int5 + 1);
+}
+cc_deleteall($component0);
+def_int $int7 = calc((if_getwidth($component0) - 6 - 4 * 36) / 3 + 36);
+def_int $int8 = calc((if_getheight($component0) - 6 - 7 * 32) / 6 + 32);
+$int5 = 0;
+def_int $int9 = $size6;
+def_int $size10 = inv_size(inv);
+while ($int5 < $size10) {
+	$obj3 = inv_getobj(inv_207, $int9);
+	cc_create($component0, ^iftype_graphic, $int5);
+	cc_setposition(calc(4 + $int7 * ($int5 % 4)), calc(3 + $int8 * ($int5 / 4)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	if ($obj3 ! null) {
+		cc_settrans(0);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_setobject($obj3, inv_getnum(inv_207, $int9));
+		cc_setopbase("<col=ff9040><oc_name($obj3)></col>");
+		cc_setop(10, "Examine");
+		cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
+	} else {
+		cc_settrans(255);
+		cc_clearops;
+	}
+	$int5, $int9 = calc($int5 + 1), calc($int9 + 1);
+}
+$int5 = ~thinbox($component0, $int5);
+cc_deleteall($component2);
+def_int $int11 = 0;
+cc_create($component2, ^iftype_graphic, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_light");
+cc_settiling(true);
+cc_create($component2, ^iftype_rectangle, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component2, ^iftype_rectangle, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component2, ^iftype_text, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settext(enum(int, string, enum_4208, %varbit14031));
+def_int $count12 = enum_getoutputcount(enum_4390);
+$int5 = $count12;
+def_int $intarray0(calc($count12 + 1));
+while ($int5 > 0) {
+	$obj3 = enum(int, namedobj, enum_4390, $int5);
+	if ($obj3 ! null) {
+		$intarray0($int5) = inv_total(inv_207, $obj3);
+	}
+	$int5 = calc($int5 - 1);
+}
+def_int $int13 = 0;
+def_int $int14 = 0;
+if (%varbit14031 ! ~script6325(%varbit14024)) {
+	$int14 = 1;
+}
+$int5 = $size6;
+while ($int5 > 0 & $int14 = 0) {
+	$int5 = calc($int5 - 1);
+	$int13 = ~script6322(%varbit14024, $int5);
+	$obj3 = enum(int, namedobj, enum_4390, $int13);
+	if ($obj3 ! null) {
+		if (oc_stackable($obj3) = true) {
+			$intarray0($int13) = calc($intarray0($int13) - 5000);
+		} else {
+			$intarray0($int13) = calc($intarray0($int13) - 1);
+		}
+		if ($intarray0($int13) < 0) {
+			$int14 = 1;
+		}
+	}
+}
+$int5 = $size10;
+while ($int5 > 0 & $int14 = 0) {
+	$int5 = calc($int5 - 1);
+	$int13 = ~script6321(%varbit14024, $int5);
+	$obj3 = enum(int, namedobj, enum_4390, $int13);
+	if ($obj3 ! null) {
+		if (oc_stackable($obj3) = true) {
+			$intarray0($int13) = calc($intarray0($int13) - 5000);
+		} else {
+			$intarray0($int13) = calc($intarray0($int13) - 1);
+		}
+		if ($intarray0($int13) < 0) {
+			$int14 = 1;
+		}
+	}
+}
+if ($int14 = 0) {
+	$int5 = $count12;
+	while ($int5 > 0 & $int14 = 0) {
+		if (enum(int, namedobj, enum_4390, $int5) ! null & $intarray0($int5) ! 0) {
+			$int14 = 1;
+		}
+		$int5 = calc($int5 - 1);
+	}
+}
+if ($int14 = 1) {
+	if_settext("Your opponent's load-out <col=ff0000>does not match</col> yours.", $component1);
+} else {
+	if_settext("You and your opponent have <col=ffb83f>the same options</col> in your load-outs.", $component1);
+}

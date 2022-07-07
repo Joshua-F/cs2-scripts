@@ -34,7 +34,7 @@ if_setsize($int5, $height9, ^setsize_abs, ^setsize_abs, poh_jewellery_box:7);
 if_setposition(calc(10 + $int5 + 5), calc(40 + $int7 + $int8 + 5 + 5), ^setpos_abs_left, ^setpos_abs_top, poh_jewellery_box:7);
 def_int $int14 = ~poh_jewellery_box_prepbox(poh_jewellery_box:2, 1, "Ring of Dueling", ring_of_dueling_8_2552, $int0);
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:2, 3);
-$int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:2, 1, "Duel Arena", $int3, $int0, $int14, $int2, 0);
+$int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:2, 1, "PvP Arena", $int3, $int0, $int14, $int2, 0);
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:2, 1, "Castle Wars", $int3, $int0, $int14, $int2, 1);
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:2, 1, "Ferox Enclave", $int3, $int0, $int14, $int2, 2);
 $int14 = ~poh_jewellery_box_prepbox(poh_jewellery_box:3, 1, "Games Necklace", games_necklace_8_3853, $int0);

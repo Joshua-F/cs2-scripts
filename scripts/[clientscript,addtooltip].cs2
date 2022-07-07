@@ -1,5 +1,5 @@
 // 38
-[clientscript,addtooltip](component $component0, component $component1, string $string0, int $int2, int $width3)
+[clientscript,addtooltip](component $component0, component $component1, int $int2, int $width3, string $string0)
 def_int $x4 = 0;
 def_int $y5 = 0;
 if (%varcint1 < calc(clientclock + $int2)) {

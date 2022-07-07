@@ -1,0 +1,28 @@
+// 6258
+[proc,script6258](component $component0)
+def_string $string0 = "While you wait for opponents to gather,<br>use the <col=ffffff>supply chests</col> to review your <col=ffffff>stats</col> & <col=ffffff>load-out</col>.<br>An option in the chests' menu lets you <col=ffffff>indicate when you're ready</col> to fight.";
+if (%varbit14014 = 1) {
+	$string0 = "While you wait for opponents to gather,<br>use the <col=ffffff>supply chests</col> to review your <col=ffffff>stats</col> & <col=ffffff>load-out</col>.<br>You have indicated that <col=ffffff>you're ready to fight</col>;<br>use the chests' menu quickly if you change your mind!";
+}
+def_int $int1 = calc(parawidth($string0, if_getwidth($component0), p12_full) + 8);
+def_int $int2 = calc(paraheight($string0, $int1, p12_full) * 15 + 7);
+cc_deleteall($component0);
+def_int $int3 = 0;
+while ($int3 < 3) {
+	cc_create($component0, ^iftype_rectangle, $int3);
+	cc_setsize(calc($int1 - $int3 * 2), calc($int2 - $int3 * 2), ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_settrans(240);
+	$int3 = calc($int3 + 1);
+}
+cc_create($component0, ^iftype_text, $int3);
+cc_setsize(calc($int1 - $int3 * 2), calc($int2 - $int3 * 2), ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+cc_settext($string0);
+$int3 = calc($int3 + 1);

@@ -1,0 +1,6 @@
+// 6213
+[clientscript,script6213](int $int0, component $component1, component $component2)
+if_sethide(true, $component2);
+def_int $int3 = calc(clientclock + $int0 * 30 - 1);
+~script6215($int3, $component1);
+if_setontimer("script6214($int3, $component1, $component2)", $component1);

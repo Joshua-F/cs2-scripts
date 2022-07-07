@@ -146,7 +146,12 @@ if ($key0 = ^key_return) {
 		if ($int5 = 44) {
 			if (activeclansettings_find_listened = true & activeclanchannel_find_listened = true) {
 				if (activeclansettings_getallowunaffined = true) {
-					~chat_send(substring(%varcstring335, $index6, $length2), 4, ^clantype_clan, 0, $int9);
+					switch_int (%varclansetting33) {
+						case 1001, 1002, 1003, 1004, 1005, 1006 :
+							mes("You are not chatting as a guest in a channel at the moment.");
+						case default :
+							~chat_send(substring(%varcstring335, $index6, $length2), 4, ^clantype_clan, 0, $int9);
+					}
 				} else {
 					mes("Guests are not invited to speak in this clan's channel.");
 				}

@@ -1,0 +1,78 @@
+// 6313
+[clientscript,script6313](int $int0, component $component1, int $comsubid2, component $drop3, int $dropsubid4, int $int5, component $component6, component $component7, component $drop8, component $component9, enum $enum10)
+def_namedobj $namedobj11 = enum(int, namedobj, enum_4390, $int5);
+if ($namedobj11 = null) {
+	return;
+}
+def_int $size12 = inv_size(inv);
+def_int $size13 = inv_size(worn);
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = -1;
+if ($component1 = $component7) {
+	if ($comsubid2 >= 0 & $comsubid2 < $size12) {
+		$int16 = $comsubid2;
+	}
+	$int14 = 1;
+}
+def_int $int17 = -1;
+if ($drop3 = $component7) {
+	if ($dropsubid4 >= 0 & $dropsubid4 < $size12) {
+		$int17 = $dropsubid4;
+	}
+	$int15 = 1;
+}
+def_enum $enum18 = enum(int, enum, $enum10, $int0);
+def_int $int19 = $size13;
+if ($int16 = -1 | $int17 = -1) {
+	while ($int19 > 0) {
+		$int19 = calc($int19 - 1);
+		if ($int16 = -1 & enum(int, component, $enum18, $int19) = $component1) {
+			$int16, $int14 = $int19, 0;
+		}
+		if ($int17 = -1 & enum(int, component, $enum18, $int19) = $drop3) {
+			$int17, $int15 = $int19, 0;
+		}
+	}
+}
+if ($int16 = -1) {
+	return;
+}
+if ($drop3 = $drop8) {
+	sound_synth(interface_select1, 1, 0);
+	if ($int14 = 1) {
+		~script6323($int0, $int16, 0);
+	} else {
+		~script6324($int0, $int16, 0);
+	}
+	~script6311($int0, $component6, $component7, $drop8, $component9, $enum10);
+	return;
+}
+if ($int17 = -1) {
+	return;
+}
+def_int $int20 = 0;
+if ($int15 = 0) {
+	if (oc_param($namedobj11, param_1564) ! $int17) {
+		return;
+	}
+	$int20 = ~script6322($int0, $int17);
+} else {
+	$int20 = ~script6321($int0, $int17);
+}
+def_namedobj $namedobj21 = enum(int, namedobj, enum_4390, $int20);
+if ($namedobj21 ! null & $int14 = 0 & oc_param($namedobj21, param_1564) ! $int16) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if ($int15 = 1) {
+	~script6323($int0, $int17, $int5);
+} else {
+	~script6324($int0, $int17, $int5);
+}
+if ($int14 = 1) {
+	~script6323($int0, $int16, $int20);
+} else {
+	~script6324($int0, $int16, $int20);
+}
+~script6311($int0, $component6, $component7, $drop8, $component9, $enum10);

@@ -1,0 +1,9 @@
+// 6174
+[clientscript,script6174](int $index0)
+sound_synth(interface_select1, 1, 0);
+if (testbit(%var286, $index0) = ^false) {
+	%var286 = setbit(%var286, $index0);
+} else {
+	%var286 = clearbit(%var286, $index0);
+}
+~script6175;

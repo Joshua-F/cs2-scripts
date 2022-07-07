@@ -1,0 +1,54 @@
+// 6284
+[proc,script6284]
+~script6285(interface_760:9, "Player name", 1, 2);
+~script6285(interface_760:10, "Rank", 0, 3);
+def_int $countarray0(enum_getoutputcount(enum_4411));
+def_int $int0 = 0;
+def_int $count1 = 0;
+while ($count1 < enum_getoutputcount(enum_4411)) {
+	if (cc_find(enum(int, component, enum_4411, $count1), 0) = ^true) {
+		$countarray0($int0) = $count1;
+		$int0 = calc($int0 + 1);
+	}
+	$count1 = calc($count1 + 1);
+}
+def_string $string0 = "";
+if ($int0 >= 2) {
+	switch_int (%varcint993) {
+		case 1, 2 :
+			~raids_partylist_sort(countarray0, 0, calc($int0 - 1), 3, enum_4411);
+		case default :
+			~raids_partylist_sort(countarray0, 0, calc($int0 - 1), 6, enum_4411);
+	}
+}
+def_int $int2 = 0;
+def_int $int3 = 2;
+def_component $component4 = null;
+def_string $string1 = "";
+switch_int (%varcint993) {
+	case 2, 3 :
+		$int2 = $int0;
+		while ($int2 > 0) {
+			$int2 = calc($int2 - 1);
+			$component4 = enum(int, component, enum_4411, $countarray0($int2));
+			if ($component4 ! null) {
+				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+				if (cc_find($component4, 2) = ^true) {
+					~script6283($int2);
+				}
+				$int3 = calc($int3 + if_getheight($component4));
+			}
+		}
+	case default :
+		while ($int2 < $int0) {
+			$component4 = enum(int, component, enum_4411, $countarray0($int2));
+			if ($component4 ! null) {
+				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+				if (cc_find($component4, 2) = ^true) {
+					~script6283($int2);
+				}
+				$int3 = calc($int3 + if_getheight($component4));
+			}
+			$int2 = calc($int2 + 1);
+		}
+}
