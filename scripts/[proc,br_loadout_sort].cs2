@@ -10,12 +10,12 @@ def_int $int7 = 0;
 def_namedobj $namedobj8 = null;
 def_int $int9 = 0;
 def_namedobj $namedobj10 = enum(int, namedobj, enum_2630, $int4);
-def_int $int11 = oc_param($namedobj10, param_1564);
+def_int $int11 = oc_param($namedobj10, loadout_iteminfo);
 def_string $string0 = oc_name($namedobj10);
 def_int $int12 = 0;
 while ($int6 < $int2) {
 	$namedobj8 = enum(int, namedobj, enum_2630, $intarray0($int6));
-	$int9 = oc_param($namedobj8, param_1564);
+	$int9 = oc_param($namedobj8, loadout_iteminfo);
 	if ($int9 < $int11 | $int9 = $int11 & compare(oc_name($namedobj8), $string0) <= 0) {
 		$int12 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);

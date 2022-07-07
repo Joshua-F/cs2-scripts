@@ -43,16 +43,16 @@ while ($int14 < $size15) {
 			cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, 1)");
 			cc_setdragdeadzone(5);
 			cc_setdragdeadtime(5);
-			if (oc_param($namedobj12, param_1564) ! 13) {
-				switch_int (oc_param($namedobj12, param_1562)) {
+			if (oc_param($namedobj12, loadout_iteminfo) ! 13) {
+				switch_int (oc_param($namedobj12, loadout_ammotype)) {
 					case 3 :
-						$int6 = ~max($int6, oc_param($namedobj12, param_1563));
+						$int6 = ~max($int6, oc_param($namedobj12, loadout_ammoreq));
 					case 5 :
-						$int7 = ~max($int7, oc_param($namedobj12, param_1563));
+						$int7 = ~max($int7, oc_param($namedobj12, loadout_ammoreq));
 					case -6 :
-						$int8 = ~max($int8, oc_param($namedobj12, param_1563));
+						$int8 = ~max($int8, oc_param($namedobj12, loadout_ammoreq));
 					case -7 :
-						$int9 = ~max($int9, oc_param($namedobj12, param_1563));
+						$int9 = ~max($int9, oc_param($namedobj12, loadout_ammoreq));
 				}
 			}
 		} else {
@@ -96,16 +96,16 @@ while ($int14 < $size18) {
 		cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, $size18)");
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);
-		if (oc_param($namedobj12, param_1564) ! 13) {
-			switch_int (oc_param($namedobj12, param_1562)) {
+		if (oc_param($namedobj12, loadout_iteminfo) ! 13) {
+			switch_int (oc_param($namedobj12, loadout_ammotype)) {
 				case 3 :
-					$int6 = ~max($int6, oc_param($namedobj12, param_1563));
+					$int6 = ~max($int6, oc_param($namedobj12, loadout_ammoreq));
 				case 5 :
-					$int7 = ~max($int7, oc_param($namedobj12, param_1563));
+					$int7 = ~max($int7, oc_param($namedobj12, loadout_ammoreq));
 				case -6 :
-					$int8 = ~max($int8, oc_param($namedobj12, param_1563));
+					$int8 = ~max($int8, oc_param($namedobj12, loadout_ammoreq));
 				case -7 :
-					$int9 = ~max($int9, oc_param($namedobj12, param_1563));
+					$int9 = ~max($int9, oc_param($namedobj12, loadout_ammoreq));
 			}
 		}
 	} else {
@@ -168,22 +168,22 @@ while ($int14 > 0) {
 			if (oc_param($namedobj12, param_434) ! null & oc_param($namedobj12, param_436) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_434))) | oc_param($namedobj12, param_435) ! null & oc_param($namedobj12, param_437) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_435))) | oc_param($namedobj12, param_191) ! null & oc_param($namedobj12, param_613) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_191))) | oc_param($namedobj12, param_579) ! null & oc_param($namedobj12, param_614) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_579))) | oc_param($namedobj12, param_610) ! null & oc_param($namedobj12, param_615) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_610))) | oc_param($namedobj12, param_611) ! null & oc_param($namedobj12, param_616) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_611))) | oc_param($namedobj12, param_612) ! null & oc_param($namedobj12, param_617) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_612)))) {
 				$int20, $int21 = 1, 1;
 			}
-			if (oc_param($namedobj12, param_1564) = 13) {
-				switch_int (oc_param($namedobj12, param_1562)) {
+			if (oc_param($namedobj12, loadout_iteminfo) = 13) {
+				switch_int (oc_param($namedobj12, loadout_ammotype)) {
 					case 3 :
-						if ($int6 < oc_param($namedobj12, param_1563)) {
+						if ($int6 < oc_param($namedobj12, loadout_ammoreq)) {
 							$int20, $int22 = 1, 1;
 						}
 					case 5 :
-						if ($int7 < oc_param($namedobj12, param_1563)) {
+						if ($int7 < oc_param($namedobj12, loadout_ammoreq)) {
 							$int20, $int22 = 1, 1;
 						}
 					case -6 :
-						if ($int8 < oc_param($namedobj12, param_1563)) {
+						if ($int8 < oc_param($namedobj12, loadout_ammoreq)) {
 							$int20, $int22 = 1, 1;
 						}
 					case -7 :
-						if ($int9 < oc_param($namedobj12, param_1563)) {
+						if ($int9 < oc_param($namedobj12, loadout_ammoreq)) {
 							$int20, $int22 = 1, 1;
 						}
 				}
@@ -214,22 +214,22 @@ while ($int14 < $size18) {
 		if (oc_param($namedobj12, param_434) ! null & oc_param($namedobj12, param_436) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_434))) | oc_param($namedobj12, param_435) ! null & oc_param($namedobj12, param_437) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_435))) | oc_param($namedobj12, param_191) ! null & oc_param($namedobj12, param_613) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_191))) | oc_param($namedobj12, param_579) ! null & oc_param($namedobj12, param_614) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_579))) | oc_param($namedobj12, param_610) ! null & oc_param($namedobj12, param_615) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_610))) | oc_param($namedobj12, param_611) ! null & oc_param($namedobj12, param_616) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_611))) | oc_param($namedobj12, param_612) ! null & oc_param($namedobj12, param_617) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_612)))) {
 			$int20, $int21 = 1, 1;
 		}
-		if (oc_param($namedobj12, param_1564) = 13) {
-			switch_int (oc_param($namedobj12, param_1562)) {
+		if (oc_param($namedobj12, loadout_iteminfo) = 13) {
+			switch_int (oc_param($namedobj12, loadout_ammotype)) {
 				case 3 :
-					if ($int6 < oc_param($namedobj12, param_1563)) {
+					if ($int6 < oc_param($namedobj12, loadout_ammoreq)) {
 						$int20, $int22 = 1, 1;
 					}
 				case 5 :
-					if ($int7 < oc_param($namedobj12, param_1563)) {
+					if ($int7 < oc_param($namedobj12, loadout_ammoreq)) {
 						$int20, $int22 = 1, 1;
 					}
 				case -6 :
-					if ($int8 < oc_param($namedobj12, param_1563)) {
+					if ($int8 < oc_param($namedobj12, loadout_ammoreq)) {
 						$int20, $int22 = 1, 1;
 					}
 				case -7 :
-					if ($int9 < oc_param($namedobj12, param_1563)) {
+					if ($int9 < oc_param($namedobj12, loadout_ammoreq)) {
 						$int20, $int22 = 1, 1;
 					}
 			}

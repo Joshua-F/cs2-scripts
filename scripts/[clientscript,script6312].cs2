@@ -35,7 +35,7 @@ if ($int15 = -1) {
 	return;
 }
 if ($int14 = 0) {
-	if (oc_param($namedobj13, param_1564) ! $int15) {
+	if (oc_param($namedobj13, loadout_iteminfo) ! $int15) {
 		return;
 	}
 } else if (enum(int, namedobj, enum_4390, ~script6321($int0, $int15)) ! null) {

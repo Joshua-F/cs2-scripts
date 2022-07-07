@@ -53,7 +53,7 @@ if ($int17 = -1) {
 }
 def_int $int20 = 0;
 if ($int15 = 0) {
-	if (oc_param($namedobj11, param_1564) ! $int17) {
+	if (oc_param($namedobj11, loadout_iteminfo) ! $int17) {
 		return;
 	}
 	$int20 = ~script6322($int0, $int17);
@@ -61,7 +61,7 @@ if ($int15 = 0) {
 	$int20 = ~script6321($int0, $int17);
 }
 def_namedobj $namedobj21 = enum(int, namedobj, enum_4390, $int20);
-if ($namedobj21 ! null & $int14 = 0 & oc_param($namedobj21, param_1564) ! $int16) {
+if ($namedobj21 ! null & $int14 = 0 & oc_param($namedobj21, loadout_iteminfo) ! $int16) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
