@@ -79,20 +79,57 @@ if_setop(1, "Wipe", $component8);
 def_int $count14 = enum_getoutputcount(enum_4390);
 def_int $countarray0($count14);
 def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+$int16, $int17, $int18, $int19, $int20, $int21, $int22, $int23 = ~script6335($int0);
+def_int $intarray1(calc(23 + 1));
+def_int $int24 = 23;
+while ($int24 > 0) {
+	switch_int ($int24) {
+		case 1 :
+			$intarray1($int24) = $int16;
+		case 2 :
+			$intarray1($int24) = $int17;
+		case 3 :
+			$intarray1($int24) = $int18;
+		case 4 :
+			$intarray1($int24) = $int19;
+		case 5 :
+			$intarray1($int24) = $int20;
+		case 6 :
+			$intarray1($int24) = $int21;
+		case 7 :
+			$intarray1($int24) = $int22;
+		case default :
+			$intarray1($int24) = $int23;
+	}
+	$int24 = calc($int24 - 1);
+}
 cc_deleteall($component3);
+def_namedobj $namedobj25 = null;
 $count13 = 0;
 while ($count13 < $count14) {
-	if (enum(int, namedobj, enum_4390, $count13) ! null) {
-		$countarray0($int15) = $count13;
-		$int15 = calc($int15 + 1);
+	$namedobj25 = enum(int, namedobj, enum_4390, $count13);
+	if ($namedobj25 ! null) {
+		if (oc_param($namedobj25, param_434) ! null & oc_param($namedobj25, param_436) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj25, param_434))) | oc_param($namedobj25, param_435) ! null & oc_param($namedobj25, param_437) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj25, param_435))) | oc_param($namedobj25, param_191) ! null & oc_param($namedobj25, param_613) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj25, param_191))) | oc_param($namedobj25, param_579) ! null & oc_param($namedobj25, param_614) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj25, param_579))) | oc_param($namedobj25, param_610) ! null & oc_param($namedobj25, param_615) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj25, param_610))) | oc_param($namedobj25, param_611) ! null & oc_param($namedobj25, param_616) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj25, param_611))) | oc_param($namedobj25, param_612) ! null & oc_param($namedobj25, param_617) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj25, param_612)))) {
+		} else {
+			$countarray0($int15) = $count13;
+			$int15 = calc($int15 + 1);
+		}
 	}
 	cc_create($component3, ^iftype_graphic, $count13);
 	cc_sethide(true);
 	$count13 = calc($count13 + 1);
 }
-def_int $int16 = $int15;
-if ($int16 > 1) {
-	~script6320(countarray0, 0, calc($int16 - 1));
+def_int $int26 = $int15;
+if ($int26 > 1) {
+	~script6320(countarray0, 0, calc($int26 - 1));
 }
 cc_deleteall($component1);
 cc_create($component1, ^iftype_graphic, 0);
@@ -101,41 +138,40 @@ cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
 cc_sethide(true);
 cc_settrans(125);
-def_int $comsubid17 = cc_getid;
+def_int $comsubid27 = cc_getid;
 cc_create($component1, ^iftype_text, 1);
 cc_setcolour(0xff981f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_sethide(true);
-def_int $comsubid18 = cc_getid;
-def_int $height19 = 0;
-def_int $int20 = calc((32 - 32) / 2);
-def_namedobj $namedobj21 = null;
-def_int $int22 = 0;
+def_int $comsubid28 = cc_getid;
+def_int $height29 = 0;
+def_int $int30 = calc((32 - 32) / 2);
+def_int $int31 = 0;
 def_string $string1 = "";
-def_int $int23 = 0;
+def_int $int32 = 0;
 $int15 = 0;
-while ($int15 < $int16) {
+while ($int15 < $int26) {
 	if (cc_find($component3, $countarray0($int15)) = ^true) {
 		cc_sethide(false);
 		cc_settiling(true);
 		cc_setgraphic("tradebacking_light");
 		cc_settrans(255);
 		cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, $height19, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, $height29, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setop(1, "Add");
 		cc_setop(10, "Examine");
 		cc_setdraggable($component1, -1);
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);
-		$namedobj21 = enum(int, namedobj, enum_4390, $countarray0($int15));
-		$string0 = oc_name($namedobj21);
+		$namedobj25 = enum(int, namedobj, enum_4390, $countarray0($int15));
+		$string0 = oc_name($namedobj25);
 		cc_setopbase("<col=ff9040><$string0></col>");
 		.cc_create($component3, ^iftype_rectangle, $count13);
 		$count13 = calc($count13 + 1);
 		.cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
-		.cc_setposition(0, $height19, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setposition(0, $height29, ^setpos_abs_centre, ^setpos_abs_top);
 		.cc_setfill(true);
 		cc_setonmouserepeat("script1015(event_com, .cc_getid, ^white, 225)");
 		if (calc($int15 % 2) = 0) {
@@ -152,44 +188,44 @@ while ($int15 < $int16) {
 		.cc_create($component3, ^iftype_graphic, $count13);
 		$count13 = calc($count13 + 1);
 		.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(3, calc($height19 + $int20), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(3, calc($height29 + $int30), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setoutline(1);
 		.cc_setgraphicshadow(0x333333);
-		if (oc_stackable($namedobj21) = true) {
-			.cc_setobject($namedobj21, 5000);
+		if (oc_stackable($namedobj25) = true) {
+			.cc_setobject($namedobj25, 5000);
 		} else {
-			.cc_setobject_nonum($namedobj21, 1);
+			.cc_setobject_nonum($namedobj25, 1);
 		}
 		.cc_create($component3, ^iftype_text, $count13);
 		$count13 = calc($count13 + 1);
 		.cc_setsize(calc(8 + 36), 32, ^setsize_minus, ^setsize_abs);
-		.cc_setposition(3, $height19, ^setpos_abs_right, ^setpos_abs_top);
+		.cc_setposition(3, $height29, ^setpos_abs_right, ^setpos_abs_top);
 		.cc_setcolour(0xff981f);
 		.cc_settextfont(p11_full);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
-		$int23, $int22 = string_length($string0), 0;
-		if ($int23 <= 0) {
-			$string0, $int23 = "-", 1;
+		$int32, $int31 = string_length($string0), 0;
+		if ($int32 <= 0) {
+			$string0, $int32 = "-", 1;
 		}
-		if ($int23 > 0 & parawidth($string0, 512, p11_full) > .cc_getwidth) {
-			while ($int23 > 1 & $int22 = 0) {
-				$int23 = calc($int23 - 1);
-				$string1 = append(substring($string0, 0, $int23), "...");
+		if ($int32 > 0 & parawidth($string0, 512, p11_full) > .cc_getwidth) {
+			while ($int32 > 1 & $int31 = 0) {
+				$int32 = calc($int32 - 1);
+				$string1 = append(substring($string0, 0, $int32), "...");
 				if (parawidth($string1, 512, p11_full) <= .cc_getwidth) {
-					$string0, $int22 = $string1, 1;
+					$string0, $int31 = $string1, 1;
 				}
 			}
 		}
 		.cc_settext($string0);
-		cc_setondrag("br_loadout_menudragging(event_com, event_comsubid, $namedobj21, $string0, $component1, $comsubid17, $comsubid18, $int20, event_mousex, event_mousey)");
-		cc_setondragcomplete("script6312($int0, event_com, event_comsubid, event_drop, event_dropsubid, $countarray0($int15), $component1, $comsubid17, $comsubid18, $component2, $component5, $component6, $enum12)");
-		$height19 = calc($height19 + 32);
+		cc_setondrag("br_loadout_menudragging(event_com, event_comsubid, $namedobj25, $string0, $component1, $comsubid27, $comsubid28, $int30, event_mousex, event_mousey)");
+		cc_setondragcomplete("script6312($int0, event_com, event_comsubid, event_drop, event_dropsubid, $countarray0($int15), $component1, $comsubid27, $comsubid28, $component2, $component5, $component6, $enum12)");
+		$height29 = calc($height29 + 32);
 	}
 	$int15 = calc($int15 + 1);
 }
-if ($height19 > if_getheight($component3)) {
-	if_setscrollsize(0, $height19, $component3);
+if ($height29 > if_getheight($component3)) {
+	if_setscrollsize(0, $height29, $component3);
 } else {
 	if_setscrollsize(0, 0, $component3);
 }

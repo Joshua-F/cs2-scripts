@@ -1,6 +1,6 @@
 // 6250
 [proc,script6250](component $component0)
-if (%varbit14018 = 0) {
+if (%varbit14018 = 0 | %varbit14017 = 1 & %varbit14016 > 0) {
 	cc_deleteall($component0);
 	if_clearops($component0);
 	if_setonmouserepeat(null, $component0);

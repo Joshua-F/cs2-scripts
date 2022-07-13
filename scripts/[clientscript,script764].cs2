@@ -1,0 +1,43 @@
+// 764
+[clientscript,script764](int $int0, int $int1, int $int2, component $component3)
+mes("$side: <tostring($int0)> $percent: <tostring($int1)> $health: <tostring($int2)>");
+switch_int ($int0) {
+	case 0 :
+		mes("left_combo: <tostring(%varcint995)> left_last_hp: <tostring(%varcint994)> left_hit_time: <tostring(%varcint996)>");
+		if (%varcint995 > $int1) {
+			if (%varcint994 <= $int2) {
+				if (calc(%varcint996 + 50) <= clientclock) {
+					%varcint995 = ~max($int1, calc(%varcint995 - 75));
+					if_setsize(%varcint995, 0, ^setsize_2, ^setsize_minus, $component3);
+				}
+			} else {
+				%varcint996 = clientclock;
+			}
+		} else {
+			%varcint995 = $int1;
+			if_setsize(%varcint995, 0, ^setsize_2, ^setsize_minus, $component3);
+		}
+		%varcint994 = $int2;
+		if (%varcint995 = $int1) {
+			if_setontimer(null, $component3);
+		}
+	case 1 :
+		mes("right_combo: <tostring(%varcint998)> right_last_hp: <tostring(%varcint997)> right_hit_time: <tostring(%varcint999)>");
+		if (%varcint998 > $int1) {
+			if (%varcint997 <= $int2) {
+				if (calc(%varcint999 + 50) <= clientclock) {
+					%varcint998 = ~max($int1, calc(%varcint998 - 75));
+					if_setsize(%varcint998, 0, ^setsize_2, ^setsize_minus, $component3);
+				}
+			} else {
+				%varcint999 = clientclock;
+			}
+		} else {
+			%varcint998 = $int1;
+			if_setsize(%varcint998, 0, ^setsize_2, ^setsize_minus, $component3);
+		}
+		%varcint997 = $int2;
+		if (%varcint998 = $int1) {
+			if_setontimer(null, $component3);
+		}
+}

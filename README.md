@@ -99,6 +99,7 @@
 [**96**](scripts/[clientscript,script96].cs2)  
 [**97**](scripts/[clientscript,v2_stone_button_out_filled].cs2) `[clientscript,v2_stone_button_out_filled]`  
 [**98**](scripts/[proc,create_graphic].cs2) `[proc,create_graphic]`  
+[**99**](scripts/[clientscript,script99].cs2)  
 [**100**](scripts/[proc,on_enhanced_any].cs2) `[proc,on_enhanced_any]`  
 [**101**](scripts/[clientscript,meslayer_close].cs2) `[clientscript,meslayer_close]`  
 [**102**](scripts/[proc,meslayer_mode1].cs2) `[proc,meslayer_mode1]`  
@@ -205,6 +206,8 @@
 [**203**](scripts/[proc,script203].cs2)  
 [**204**](scripts/[clientscript,displayname_draw].cs2) `[clientscript,displayname_draw]`  
 [**205**](scripts/[clientscript,duel_initworn].cs2) `[clientscript,duel_initworn]`  
+[**206**](scripts/[clientscript,script206].cs2)  
+[**207**](scripts/[clientscript,script207].cs2)  
 [**208**](scripts/[proc,v2_stone_button_out_filled].cs2) `[proc,v2_stone_button_out_filled]`  
 [**209**](scripts/[clientscript,trade_partner_set].cs2) `[clientscript,trade_partner_set]`  
 [**210**](scripts/[proc,trade_partner_check].cs2) `[proc,trade_partner_check]`  
@@ -633,7 +636,6 @@
 [**633**](scripts/[proc,int_to_bool].cs2) `[proc,int_to_bool]`  
 [**634**](scripts/[proc,displayname_draw].cs2) `[proc,displayname_draw]`  
 [**635**](scripts/[clientscript,displayname_lookup].cs2) `[clientscript,displayname_lookup]`  
-[**636**](scripts/[proc,script636].cs2)  
 [**637**](scripts/[proc,debug_mes_info].cs2) `[proc,debug_mes_info]`  
 [**638**](scripts/[proc,debug_mes_warn].cs2) `[proc,debug_mes_warn]`  
 [**639**](scripts/[clientscript,poh_menagerie_initlist].cs2) `[clientscript,poh_menagerie_initlist]`  
@@ -755,10 +757,13 @@
 [**755**](scripts/[clientscript,trade_main_init].cs2) `[clientscript,trade_main_init]`  
 [**756**](scripts/[clientscript,cc_flasher].cs2) `[clientscript,cc_flasher]`  
 [**757**](scripts/[clientscript,if_flasher].cs2) `[clientscript,if_flasher]`  
+[**758**](scripts/[clientscript,script758].cs2)  
+[**759**](scripts/[clientscript,script759].cs2)  
 [**760**](scripts/[proc,worldswitcher_sortbutton_draw].cs2) `[proc,worldswitcher_sortbutton_draw]`  
 [**761**](scripts/[clientscript,worldswitcher_sortbutton_op].cs2) `[clientscript,worldswitcher_sortbutton_op]`  
 [**762**](scripts/[clientscript,trade_main_drawitems].cs2) `[clientscript,trade_main_drawitems]`  
 [**763**](scripts/[proc,trade_main_drawitems].cs2) `[proc,trade_main_drawitems]`  
+[**764**](scripts/[clientscript,script764].cs2)  
 [**765**](scripts/[clientscript,trade_slot_changed].cs2) `[clientscript,trade_slot_changed]`  
 [**766**](scripts/[clientscript,trade_slot_flasher].cs2) `[clientscript,trade_slot_flasher]`  
 [**767**](scripts/[clientscript,trade_confirm_redraw].cs2) `[clientscript,trade_confirm_redraw]`  
@@ -823,6 +828,7 @@
 [**826**](scripts/[clientscript,itemsets_side_draw].cs2) `[clientscript,itemsets_side_draw]`  
 [**827**](scripts/[proc,itemsets_side_draw].cs2) `[proc,itemsets_side_draw]`  
 [**828**](scripts/[clientscript,playermember].cs2) `[clientscript,playermember]`  
+[**829**](scripts/[proc,script829].cs2)  
 [**830**](scripts/[clientscript,script830].cs2)  
 [**831**](scripts/[clientscript,zoom_init].cs2) `[clientscript,zoom_init]`  
 [**832**](scripts/[clientscript,zoom_outline].cs2) `[clientscript,zoom_outline]`  
@@ -6213,7 +6219,6 @@
 [**6252**](scripts/[proc,script6252].cs2)  
 [**6253**](scripts/[clientscript,script6253].cs2)  
 [**6254**](scripts/[proc,script6254].cs2)  
-[**6255**](scripts/[clientscript,script6255].cs2)  
 [**6256**](scripts/[clientscript,script6256].cs2)  
 [**6257**](scripts/[clientscript,script6257].cs2)  
 [**6258**](scripts/[proc,script6258].cs2)  

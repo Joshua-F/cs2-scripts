@@ -3,6 +3,9 @@
 if ($int1 <= -1) {
 	return(enum(int, graphic, enum_3798, -1));
 }
+if ($int1 = 127) {
+	return(enum(int, graphic, enum_3798, -5));
+}
 def_int $clanslot2 = activeclansettings_getaffinedslot(removetags(activeclanchannel_getuserdisplayname($clanslot0)));
 if ($clanslot2 ! null & activeclansettings_getaffinedextrainfo($clanslot2, 20, 31) ! 0) {
 	return("graphic_4521");

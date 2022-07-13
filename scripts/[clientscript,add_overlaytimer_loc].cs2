@@ -5,24 +5,20 @@ if (~on_enhanced_any = 0) {
 }
 def_newvar $newvar7 = null;
 def_int $int8 = -1;
-if (loc_find($coord0, $loc1) = true) {
-	~add_overlaytimer_loc($loc1, $int3, clientclock, calc($int4 * 30), $colour5, $int6);
-} else {
-	switch_locshape ($locshape2) {
-		case wall_straight, wall_diagonalcorner, wall_l, wall_squarecorner, wall_diagonal :
-			$int8 = 2;
-		case walldecor_straight_nooffset, walldecor_straight_offset, walldecor_diagonal_offset, walldecor_diagonal_nooffset, walldecor_diagonal_both :
-			$int8 = 3;
-		case centrepiece_straight, centrepiece_diagonal :
-			$int8 = 5;
-		case grounddecor :
-			$int8 = 4;
-		case default :
-			~debug_mes("Overlay Timers: No locfind overlay ID specified for loc_shape. Timer ID: <tostring($int3)>");
-			return;
-	}
-	$newvar7 = _7204($coord0, $int8, 0, 1, 1, 0);
-	if (_202($newvar7) = ^true) {
-		cc_setontimer("overlaytimer_loc_find($coord0, $loc1, $int3, clientclock, calc($int4 * 30), $colour5, $int6, $int8)");
-	}
+switch_locshape ($locshape2) {
+	case wall_straight, wall_diagonalcorner, wall_l, wall_squarecorner, wall_diagonal :
+		$int8 = 2;
+	case walldecor_straight_nooffset, walldecor_straight_offset, walldecor_diagonal_offset, walldecor_diagonal_nooffset, walldecor_diagonal_both :
+		$int8 = 3;
+	case centrepiece_straight, centrepiece_diagonal :
+		$int8 = 5;
+	case grounddecor :
+		$int8 = 4;
+	case default :
+		~debug_mes("Overlay Timers: No locfind overlay ID specified for loc_shape. Timer ID: <tostring($int3)>");
+		return;
+}
+$newvar7 = _7204($coord0, $int8, 0, 1, 1, 0);
+if (_202($newvar7) = ^true) {
+	cc_setontimer("overlaytimer_loc_find($coord0, $loc1, $int3, clientclock, calc($int4 * 30), $colour5, $int6, $int8)");
 }
