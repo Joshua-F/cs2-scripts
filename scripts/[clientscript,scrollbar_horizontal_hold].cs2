@@ -1,0 +1,6 @@
+// 6158
+[clientscript,scrollbar_horizontal_hold](component $component0, component $component1, int $int2)
+def_int $int3 = calc(if_getscrollx($component1) + $int2);
+if (cc_find($component0, 1) = ^true) {
+	~scrollbar_horizontal_doscroll($component0, $component1, $int3, true);
+}

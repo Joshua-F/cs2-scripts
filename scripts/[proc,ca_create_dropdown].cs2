@@ -15,7 +15,7 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("tradebacking_light");
 $int3 = calc($int3 + 1);
-$int3 = ~steelbox($component1, $int3, 0);
+$int3 = ~steelbox($component1, $int3, false);
 if_sethide(true, $component1);
 cc_create($component1, ^iftype_rectangle, $int3);
 cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);

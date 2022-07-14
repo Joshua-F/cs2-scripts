@@ -21,7 +21,7 @@ if (%var3345 = 3) {
 }
 if_sethide(false, interface_737:20);
 cc_deleteall(interface_737:22);
-$int2 = ~steelbox(interface_737:22, $int2, 1);
+$int2 = ~steelbox(interface_737:22, $int2, true);
 cc_create(interface_737:22, ^iftype_text, $int2);
 cc_setposition(16, 16, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(32, 40, ^setsize_minus, ^setsize_abs);

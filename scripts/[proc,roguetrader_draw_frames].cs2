@@ -9,7 +9,7 @@ $int4 = calc($int4 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("tradebacking_light");
-$int4 = ~steelbox($component2, $int4, 0);
+$int4 = ~steelbox($component2, $int4, false);
 $int4 = 0;
 $int4 = ~v2_stone_button($component0);
 cc_create($component0, ^iftype_text, $int4);
@@ -76,4 +76,4 @@ while ($int11 < $int13) {
 	$int11 = calc($int11 + 1);
 	$int10 = 1;
 }
-$int4 = ~steelbox($component1, $int4, 0);
+$int4 = ~steelbox($component1, $int4, false);

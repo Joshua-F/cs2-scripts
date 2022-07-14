@@ -4,7 +4,7 @@ cc_deleteall($component0);
 cc_deleteall($component5);
 cc_deleteall($component6);
 cc_deleteall($component2);
-if (%varbit13989 = 3 & activeclansettings_find_affined(2) = true) {
+if (%varbit13989 = 3 & activeclansettings_find_affined(^clantype_pvpa_group) = true) {
 	~script6269(false, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7);
 	return;
 }

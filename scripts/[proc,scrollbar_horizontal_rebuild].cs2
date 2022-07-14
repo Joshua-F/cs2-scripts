@@ -1,5 +1,5 @@
 // 6157
-[proc,script6157](component $component0, component $component1)
+[proc,scrollbar_horizontal_rebuild](component $component0, component $component1)
 if (cc_find($component0, 4) = ^true) {
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setsize(16, 0, ^setsize_abs, ^setsize_minus);
@@ -28,5 +28,5 @@ if (cc_find($component0, 1) = ^true) {
 	if (.cc_find($component0, 3) = ^true) {
 		.cc_setsize(5, 0, ^setsize_abs, ^setsize_minus);
 	}
-	~script6163($component0, $component1);
+	~scrollbar_horizontal_setdragger($component0, $component1);
 }

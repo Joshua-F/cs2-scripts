@@ -9,6 +9,6 @@ if ($boolean2 = true) {
 	if (compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
 		~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3, $int4);
 	}
-} else if ($int4 = 2 & activeclanchannel_find_affined(2) = true & compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
+} else if ($int4 = 2 & activeclanchannel_find_affined(^clantype_pvpa_group) = true & compare($string1, removetags(activeclanchannel_getuserdisplayname($clanslot3))) = 0) {
 	~clan_sidepanel_op($opindex0, $int1, $string1, $clanslot3, $int4);
 }

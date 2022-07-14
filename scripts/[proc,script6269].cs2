@@ -113,7 +113,7 @@ if ($boolean0 = true) {
 		~clan_stonebutton_init("<col=0dc10d>Switch world</col>", $component8, "p12_full");
 		if_setonop("opsound(event_opindex, 2)", $component8);
 	}
-} else if (activeclanchannel_find_affined(2) = true) {
+} else if (activeclanchannel_find_affined(^clantype_pvpa_group) = true) {
 	cc_deleteall($component8);
 	if_sethide(true, $component8);
 	$int12 = activeclanchannel_getusercount;

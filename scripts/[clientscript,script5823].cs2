@@ -9,7 +9,7 @@ def_int $int2 = 0;
 $string0, $int2 = ~script5834($struct1);
 cc_deleteall(interface_733:26);
 def_int $int3 = 0;
-$int3 = ~steelbox(interface_733:26, $int3, 1);
+$int3 = ~steelbox(interface_733:26, $int3, true);
 cc_create(interface_733:26, ^iftype_text, $int3);
 cc_setposition(10, 13, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(228, 20, ^setsize_abs, ^setsize_abs);

@@ -27,7 +27,7 @@ $int12 = scale(%varbit13948, 1000, $int11);
 if_setposition($int12, -1, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
 $int12 = scale(%varbit13949, 1000, $int11);
 if_setposition($int12, -1, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
-def_int $int13 = ~script6119;
+def_int $int13 = ~giants_foundry_section_count;
 def_int $int14 = ~script6120;
 if (%varbit13949 >= 1000) {
 	if_sethide(true, $component4);

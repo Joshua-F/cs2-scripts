@@ -1,6 +1,6 @@
 // 3092
-[clientscript,script3092](graphic $graphic0, string $op0, int $int1)
-if ($int1 = 0) {
+[clientscript,script3092](graphic $graphic0, string $op0, boolean $boolean1)
+if ($boolean1 = false) {
 	~script6065($graphic0, $op0);
 	return;
 }

@@ -1,12 +1,12 @@
 // 6156
-[proc,script6156](component $component0, component $component1, graphic $graphic2, graphic $graphic3, graphic $graphic4, graphic $graphic5, graphic $graphic6, graphic $graphic7)
+[proc,scrollbar_horizontal](component $component0, component $component1, graphic $graphic2, graphic $graphic3, graphic $graphic4, graphic $graphic5, graphic $graphic6, graphic $graphic7)
 cc_create($component0, ^iftype_graphic, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(32, 0, ^setsize_minus, ^setsize_minus);
 cc_setgraphic($graphic2);
 cc_settiling(false);
-cc_setonclick("script6159($component0, $component1, event_mousex)");
-cc_setonscrollwheel("script6161($component0, $component1, event_mousey)");
+cc_setonclick("scrollbar_horizontal_jump($component0, $component1, event_mousex)");
+cc_setonscrollwheel("scrollbar_horizontal_wheel($component0, $component1, event_mousey)");
 cc_setnoclickthrough(true);
 .cc_create($component0, ^iftype_graphic, 1);
 .cc_setposition(0, 16, ^setpos_abs_left, ^setpos_abs_centre);
@@ -25,8 +25,8 @@ $int9 = ~max(10, $int9);
 .cc_setgraphic($graphic4);
 .cc_settiling(false);
 .cc_setdraggable($component0, 0);
-.cc_setondrag("script6160($component0, $component1, event_mousex, false)");
-.cc_setondragcomplete("script6160($component0, $component1, event_mousex, true)");
+.cc_setondrag("scrollbar_horizontal_drag($component0, $component1, event_mousex, false)");
+.cc_setondragcomplete("scrollbar_horizontal_drag($component0, $component1, event_mousex, true)");
 .cc_setdraggablebehavior(1);
 cc_create($component0, ^iftype_graphic, 2);
 cc_setposition(.cc_getx, 0, ^setpos_abs_left, ^setpos_abs_centre);
@@ -43,12 +43,12 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(16, 0, ^setsize_abs, ^setsize_minus);
 cc_setgraphic($graphic6);
 cc_settiling(false);
-cc_setonhold("script6158($component0, $component1, -4)");
+cc_setonhold("scrollbar_horizontal_hold($component0, $component1, -4)");
 cc_setnoclickthrough(true);
 cc_create($component0, ^iftype_graphic, 5);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setsize(16, 0, ^setsize_abs, ^setsize_minus);
 cc_setgraphic($graphic7);
 cc_settiling(false);
-cc_setonhold("script6158($component0, $component1, 4)");
+cc_setonhold("scrollbar_horizontal_hold($component0, $component1, 4)");
 cc_setnoclickthrough(true);

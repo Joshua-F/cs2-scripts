@@ -108,7 +108,7 @@ if ($int16 > 0 | $int15 > 0) {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component6);
 }
 ~scrollbar_vertical_rebuild($component9, $component8);
-~script6157($component10, $component8);
+~scrollbar_horizontal_rebuild($component10, $component8);
 if_sethide(false, $component1);
 if_sethide(true, $component2);
 def_int $width44 = calc(%varcint207 - 6 * 2);
