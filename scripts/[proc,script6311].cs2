@@ -88,7 +88,10 @@ while ($int14 < $size18) {
 		}
 		$intarray0($int11) = ~min(calc($intarray0($int11) + 1), enum(obj, int, enum_4392, $namedobj12));
 		cc_setopbase("<col=ff9040><oc_name($namedobj12)></col>");
-		cc_setop(1, "Discard");
+		if ($namedobj12 = rune_pouch_27086) {
+			cc_setop(1, "Configure");
+		}
+		cc_setop(2, "Discard");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 		cc_setdraggable($component1, -1);
@@ -249,12 +252,7 @@ while ($int14 < $size18) {
 	$int14 = calc($int14 + 1);
 }
 $int19 = ~thinbox($component2, $int19);
-if ($int22 = 1) {
-	if_settextfont(p11_full, $component4);
-	if_setcolour(~tob_hud_nameflasher, $component4);
-	if_setontimer("tob_hud_nameflasher($component4)", $component4);
-	if_settext("You have some ammo that cannot be fired by any of your weaponry.", $component4);
-} else if ($int21 = 1) {
+if ($int21 = 1) {
 	if_settextfont(p11_full, $component4);
 	if_setcolour(~tob_hud_nameflasher, $component4);
 	if_setontimer("tob_hud_nameflasher($component4)", $component4);
@@ -264,6 +262,11 @@ if ($int22 = 1) {
 	if_setcolour(~tob_hud_nameflasher, $component4);
 	if_setontimer("tob_hud_nameflasher($component4)", $component4);
 	if_settext("Your load-out contains too many of certain items - please discard some.", $component4);
+} else if ($int22 = 1) {
+	if_settextfont(p11_full, $component4);
+	if_setcolour(~tob_hud_nameflasher, $component4);
+	if_setontimer("tob_hud_nameflasher($component4)", $component4);
+	if_settext("You have some ammo that cannot be fired by any of your weaponry.", $component4);
 } else {
 	if_settextfont(p12_full, $component4);
 	if_setcolour(0xff981f, $component4);

@@ -22,7 +22,7 @@ if ($obj19 = null) {
 	return;
 }
 def_boolean $boolean20 = false;
-if (stat(magic) >= oc_param($obj19, spell_levelreq) & ~magic_spellbook_hasrunes($obj19) = 1) {
+if (stat(magic) >= oc_param($obj19, spell_levelreq) & ~magic_spellbook_hasrunes($obj19, inv_getobj(worn, 3), inv_getobj(worn, 5)) = 1) {
 	$boolean20 = true;
 }
 if (%varbit10600 = $int0) {

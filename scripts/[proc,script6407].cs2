@@ -1,0 +1,7 @@
+// 6407
+[proc,script6407](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6)(int, int)
+cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
+def_int $int7 = ~script6406($int0, $int1, $int6, $int3);
+cc_setposition(calc(23 + $int5), $int7, ^setpos_abs_left, ^setpos_abs_top);
+$int5 = calc($int5 + $int2 + $int4);
+return($int5, calc($int7 + $int3 + 4));

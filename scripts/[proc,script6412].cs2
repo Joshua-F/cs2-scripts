@@ -1,0 +1,27 @@
+// 6412
+[proc,script6412](boolean $boolean0, boolean $boolean1, int $int2, int $comsubid3, int $comsubid4, component $component5)
+def_int $trans6 = ~script2478(4);
+if (calc($int2 % 2) = 0) {
+	$trans6 = ~script2478(10);
+}
+if ($boolean0 = true) {
+	$trans6 = ~script2478(15);
+}
+def_graphic $graphic7 = null;
+if ($boolean1 = true) {
+	$graphic7 = "open_buttons,6";
+	if ($boolean0 = true) {
+		$graphic7 = "open_buttons,7";
+	}
+} else {
+	$graphic7 = "open_buttons,4";
+	if ($boolean0 = true) {
+		$graphic7 = "open_buttons,5";
+	}
+}
+if (cc_find($component5, $comsubid3) = ^true) {
+	cc_settrans($trans6);
+}
+if (cc_find($component5, $comsubid4) = ^true) {
+	cc_setgraphic($graphic7);
+}

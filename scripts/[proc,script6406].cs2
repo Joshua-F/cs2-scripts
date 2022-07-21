@@ -1,0 +1,12 @@
+// 6406
+[proc,script6406](int $int0, int $int1, int $int2, int $int3)(int)
+def_int $int4 = calc(~script6403($int2, 0) + 12 / 2 + 5);
+def_int $int5 = calc(12 * $int1);
+if ($int1 > 1) {
+	$int5 = calc($int5 + 4 * ($int1 - 1));
+}
+def_int $int6 = calc($int4 + (12 + 4) * $int0 + $int5 / 2);
+if ($int3 = 0) {
+	return($int6);
+}
+return(calc($int6 - $int3 / 2));

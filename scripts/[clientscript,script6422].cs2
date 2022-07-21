@@ -1,0 +1,11 @@
+// 6422
+[clientscript,script6422](int $opindex0, int $int1)
+if ($opindex0 = 1 & enum(int, namedobj, enum_982, $int1) ! null) {
+	sound_synth(interface_select1, 1, 0);
+	if (testbit(%var3450, $int1) = ^true) {
+		%var3450 = clearbit(%var3450, $int1);
+	} else {
+		%var3450 = setbit(%var3450, $int1);
+	}
+	~script6424;
+}

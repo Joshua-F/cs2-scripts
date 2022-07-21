@@ -1,21 +1,21 @@
 // 6206
-[clientscript,script6206](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+[clientscript,script6206](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 cc_deleteall($component2);
-def_int $int7 = 0;
-cc_create($component2, ^iftype_graphic, $int7);
-$int7 = calc($int7 + 1);
+def_int $int8 = 0;
+cc_create($component2, ^iftype_graphic, $int8);
+$int8 = calc($int8 + 1);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("miscgraphics,0");
-cc_create($component2, ^iftype_graphic, $int7);
-$int7 = calc($int7 + 1);
+cc_create($component2, ^iftype_graphic, $int8);
+$int8 = calc($int8 + 1);
 cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("bankbuttons,6");
 cc_settrans(150);
-cc_create($component2, ^iftype_text, $int7);
+cc_create($component2, ^iftype_text, $int8);
 cc_setcolour(0x9f9f9f);
-$int7 = calc($int7 + 1);
+$int8 = calc($int8 + 1);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setsize(38, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p12_full);
@@ -23,8 +23,8 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("---");
 ~script6208($component1, $component3, $component4);
-if_setonvartransmit("script6207($component1, $component3, $component4){var3465}", $component0);
+if_setonvartransmit("script6207($component1, $component3, $component4){var3465, var3533}", $component0);
 if_setoninvtransmit("script6207($component1, $component3, $component4){inv_207}", $component0);
 if_sethide(false, $component6);
-~script6210($component5, $component6);
-if_setonvartransmit("script6209($component5, $component6){var3465}", $component5);
+~script6210($component5, $component6, $component7);
+if_setonvartransmit("script6209($component5, $component6, $component7){var3465}", $component5);

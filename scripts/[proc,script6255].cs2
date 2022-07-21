@@ -1,0 +1,35 @@
+// 6255
+[proc,script6255]
+def_component $component0 = interface_372:13;
+def_int $int1 = 0;
+cc_create($component0, ^iftype_line, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(0, 2, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_abs);
+cc_setlinewid(1);
+cc_setcolour(0x5d5848);
+cc_create($component0, ^iftype_line, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(0, 1, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_abs);
+cc_setlinewid(1);
+cc_setcolour(0x0e0e0c);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 10;
+def_int $int5 = 120;
+def_int $int6 = 1;
+%varcint1005, $int1 = ~script6362("achievement_diary_icons,0", 18, 18, "All Quests", $int5, $int2, $int6, $int1, $component0, 0, interface_372:14);
+$int2 = calc($int2 + $int5);
+%varcint1006, $int1 = ~script6362("worldswitcher_stars,0", 16, 16, "Free Quests Only", $int5, $int2, $int6, $int1, $component0, 1, interface_372:14);
+$int2 = calc($int2 + $int5 + $int4);
+~script6367;
+def_int $int7 = 5;
+def_int $int8 = $int7;
+cc_create(interface_372:15, ^iftype_graphic, 0);
+$int3 = 21;
+cc_setsize($int3, $int3, ^setsize_abs, ^setsize_abs);
+cc_setposition($int8, 0, ^setpos_abs_right, ^setpos_abs_centre);
+$int8 = calc($int8 + $int3 + $int4);
+cc_setopbase("<col=ff981f>Quest suggestions</col>");
+~script6368(0);

@@ -1,0 +1,19 @@
+// 2479
+[proc,script2479](string $string0, int $width0, fontmetrics $fontmetrics1)(string, string, string)
+def_int $int2 = string_length($string0);
+if ($int2 <= 0 | parawidth($string0, 512, $fontmetrics1) <= $width0) {
+	return($string0, $string0, "");
+}
+def_string $string1 = "";
+def_int $int3 = 0;
+while ($int2 >= 1 & $int3 = 0) {
+	$int2 = calc($int2 - 1);
+	while ($int2 >= 1 & compare(substring($string0, $int2, calc($int2 + 1)), " ") ! 0) {
+		$int2 = calc($int2 - 1);
+	}
+	$string1 = append(substring($string0, 0, $int2), "...");
+	if (parawidth($string1, 512, $fontmetrics1) <= $width0) {
+		$int3 = 1;
+	}
+}
+return($string1, substring($string0, 0, $int2), substring($string0, calc($int2 + 1), string_length($string0)));

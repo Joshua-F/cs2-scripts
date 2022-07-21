@@ -27,9 +27,9 @@ if (~show_storebutton = 1) {
 	}
 	if_setonop("opsound(event_opindex, 6)", $component1);
 	if ($enum5 = enum_1129) {
-		if_setposition(0, 83, ^setpos_abs_right, ^setpos_abs_top, interface_160:38);
+		if_setposition(0, 83, ^setpos_abs_right, ^setpos_abs_top, interface_160:42);
 	} else {
-		if_setposition(85, 143, ^setpos_abs_left, ^setpos_abs_top, interface_160:38);
+		if_setposition(85, 143, ^setpos_abs_left, ^setpos_abs_top, interface_160:42);
 	}
 } else {
 	if_sethide(true, $component1);

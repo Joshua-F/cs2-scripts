@@ -7,7 +7,7 @@ def_int $int5 = 0;
 if ($obj0 = ~script3588) {
 	$int5 = inv_total(inv, $obj0);
 } else {
-	$int5 = ~magic_runecount($obj0);
+	$int5 = ~magic_runecount($obj0, inv_getobj(worn, 3), inv_getobj(worn, 5));
 }
 cc_create($component2, ^iftype_graphic, $int3);
 $int3 = calc($int3 + 1);

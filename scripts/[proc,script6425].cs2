@@ -1,0 +1,24 @@
+// 6425
+[proc,script6425](int $flags0, obj $obj1, int $index2)(int)
+if (testbit($flags0, $index2) = ^false) {
+	return(1);
+}
+switch_obj ($obj1) {
+	case air_rune_556 :
+		if (testbit($flags0, 15) = ^false | testbit($flags0, 17) = ^false | testbit($flags0, 20) = ^false) {
+			return(1);
+		}
+	case water_rune_555 :
+		if (testbit($flags0, 15) = ^false | testbit($flags0, 16) = ^false | testbit($flags0, 19) = ^false) {
+			return(1);
+		}
+	case earth_rune_557 :
+		if (testbit($flags0, 17) = ^false | testbit($flags0, 16) = ^false | testbit($flags0, 18) = ^false) {
+			return(1);
+		}
+	case fire_rune_554 :
+		if (testbit($flags0, 20) = ^false | testbit($flags0, 19) = ^false | testbit($flags0, 18) = ^false) {
+			return(1);
+		}
+}
+return(0);

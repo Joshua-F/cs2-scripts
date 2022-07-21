@@ -1,0 +1,6 @@
+// 6366
+[clientscript,script6366](int $clock0, int $int1, component $component2, int $int3, component $component4)
+if (clientclock < calc($clock0 + 50 * 2)) {
+	return;
+}
+~script6364(0, $int1, interface_372:13, $int3, $component4);

@@ -1,0 +1,6 @@
+// 6396
+[proc,script6396](string $string0)(int)
+if (~string_isnullorempty($string0) = 1) {
+	return(0);
+}
+return(calc(string_indexof_string(%varcstring1003, "||", 0) + string_length("||")));

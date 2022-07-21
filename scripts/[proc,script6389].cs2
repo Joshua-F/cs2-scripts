@@ -1,0 +1,21 @@
+// 6389
+[proc,script6389](dbrow $dbrow0, component $component1)
+if (%varcint1007 = 0) {
+	~debug_mes_warn("CR UI", "Activate module called without UI open.");
+	return;
+}
+%varcint1008 = $dbrow0;
+~script6392($component1);
+def_int $int2 = db_findall_with_count(dbtable_2);
+def_boolean $boolean3 = true;
+def_dbrow $dbrow4 = db_findnext;
+while ($dbrow4 ! null) {
+	if ($dbrow4 = %varcint1008) {
+		$boolean3 = false;
+	} else {
+		$boolean3 = true;
+	}
+	if_sethide($boolean3, db_getfield($dbrow4, dbtable_2:3, 0));
+	$dbrow4 = db_findnext;
+}
+~script2487(%varcint1008);

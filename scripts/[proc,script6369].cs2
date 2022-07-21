@@ -1,0 +1,16 @@
+// 6369
+[proc,script6369](int $int0)
+def_int $int1 = 0;
+if (cc_find(interface_372:15, 0) = ^true) {
+	if ($int0 = 1) {
+		cc_setgraphic("menu_buttons,7");
+		cc_clearops;
+		cc_setonop(null);
+		cc_setontimer("script6371(clientclock)");
+	} else {
+		cc_setgraphic("menu_buttons,6");
+		cc_setop(1, "Refresh");
+		cc_setonop("script6370");
+		cc_setontimer(null);
+	}
+}

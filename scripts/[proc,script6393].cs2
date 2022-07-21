@@ -1,0 +1,125 @@
+// 6393
+[proc,script6393](dbrow $dbrow0, int $int1, int $int2, int $int3, component $component4)(int, int)
+def_int $int5 = 26;
+if (~on_mobile = true) {
+	$int5 = 32;
+}
+def_int $int6 = 4;
+def_int $int7 = 2;
+def_int $int8 = 0;
+if ($int3 = 1) {
+	$int7 = 0;
+	$int8 = 4;
+	$int6 = calc($int6 + 4);
+}
+def_int $int9 = calc($int2 + $int5);
+def_int $int10 = calc($int6 + 2 + 2);
+cc_create($component4, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(4, 4, ^setsize_abs, ^setsize_abs);
+cc_setposition($int6, $int2, ^setpos_abs_left, ^setpos_abs_top);
+if ($int3 = 1) {
+	cc_setgraphic("settings_tabs,0");
+} else {
+	cc_setgraphic("settings_tabs,8");
+}
+cc_create($component4, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(4, 4, ^setsize_abs, ^setsize_abs);
+cc_setposition($int6, calc($int9 - 4), ^setpos_abs_left, ^setpos_abs_top);
+if ($int3 = 1) {
+	cc_setgraphic("settings_tabs,2");
+} else {
+	cc_setgraphic("settings_tabs,10");
+}
+cc_create($component4, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(calc($int6 + 4 + $int7 + $int8), 4, ^setsize_minus, ^setsize_abs);
+cc_setposition(calc($int6 + 4), $int2, ^setpos_abs_left, ^setpos_abs_top);
+if ($int3 = 1) {
+	cc_setgraphic("settings_tabs,4");
+} else {
+	cc_setgraphic("settings_tabs,12");
+}
+cc_settiling(true);
+cc_create($component4, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(calc($int6 + 4 + $int7 + $int8), 4, ^setsize_minus, ^setsize_abs);
+cc_setposition(calc($int6 + 4), calc($int9 - 4), ^setpos_abs_left, ^setpos_abs_top);
+if ($int3 = 1) {
+	cc_setgraphic("settings_tabs,5");
+} else {
+	cc_setgraphic("settings_tabs,13");
+}
+cc_settiling(true);
+cc_create($component4, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(4, calc($int5 - 8), ^setsize_abs, ^setsize_abs);
+cc_setposition($int6, calc($int2 + 4), ^setpos_abs_left, ^setpos_abs_top);
+if ($int3 = 1) {
+	cc_setgraphic("settings_tabs,6");
+} else {
+	cc_setgraphic("settings_tabs,14");
+}
+cc_settiling(true);
+if ($int3 = 1) {
+	cc_create($component4, ^iftype_graphic, $int1);
+	$int1 = calc($int1 + 1);
+	cc_setsize(4, 4, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int7, $int2, ^setpos_abs_right, ^setpos_abs_top);
+	cc_setgraphic("graphic_4545");
+	cc_create($component4, ^iftype_graphic, $int1);
+	$int1 = calc($int1 + 1);
+	cc_setsize(4, 4, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int7, calc($int9 - 4), ^setpos_abs_right, ^setpos_abs_top);
+	cc_setgraphic("graphic_4546");
+}
+cc_create($component4, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(calc($int6 + 4 + $int7), calc($int5 - 8), ^setsize_minus, ^setsize_abs);
+cc_setposition(calc($int6 + 4), calc($int2 + 4), ^setpos_abs_left, ^setpos_abs_top);
+if ($int3 = 1) {
+	cc_setgraphic("settings_tabs,7");
+} else {
+	cc_setgraphic("settings_tabs,16");
+}
+def_graphic $graphic11 = null;
+def_int $width12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+$graphic11, $width12, $int13 = db_getfield($dbrow0, dbtable_2:1, 0);
+$int14, $int15 = db_getfield($dbrow0, dbtable_2:2, 0);
+cc_create($component4, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize($width12, $int13, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int10 + $int14), calc(~script6394($int2, $int5, $int13) + $int15), ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic11);
+$int10 = calc($int10 + 16 + 5);
+cc_create($component4, ^iftype_text, $int1);
+def_int $comsubid16 = $int1;
+$int1 = calc($int1 + 1);
+def_string $text0 = db_getfield($dbrow0, dbtable_2:0, 0);
+def_int $int17 = 16;
+cc_setsize($int10, $int17, ^setsize_minus, ^setsize_abs);
+cc_setposition($int10, ~script6394($int2, $int5, $int17), ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($text0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+if ($int3 = 0) {
+	cc_create($component4, ^iftype_rectangle, $int1);
+	$int1 = calc($int1 + 1);
+	cc_setsize(0, $int5, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_settrans(255);
+	cc_setop(1, "View <col=ff981f><$text0></col>");
+	cc_setonop("script6395($dbrow0, $component4)");
+	if (~on_mobile = false) {
+		cc_setonmouseover("cc_colour_swapper($component4, $comsubid16, ^white)");
+		cc_setonmouseleave("cc_colour_swapper($component4, $comsubid16, 0xff981f)");
+	}
+}
+return($int1, $int9);

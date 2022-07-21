@@ -1,0 +1,43 @@
+// 6410
+[proc,script6410](int $int0, string $string0, boolean $boolean1, int $int2, int $int3, int $int4, int $comsubid5, int $comsubid6, component $component7, boolean $boolean8, string $text1, int $int9, component $component10, component $component11, component $component12)(int, int, int, int, int)
+def_int $int13 = calc($int4 - $int3 + 6);
+def_int $int14 = 0;
+if ($boolean8 = true) {
+	$int14 = calc($int4 - (~script6406(0, 1, $int3, 0) - 12 / 2));
+	if ($int14 < 30) {
+		$int13 = calc($int13 + (30 - $int14));
+	}
+}
+def_int $trans15 = 0;
+if (cc_find($component7, $comsubid5) = ^true) {
+	cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
+	$trans15 = cc_gettrans;
+} else {
+	~debug_mes_error("CR UI", "Unable to find background component when resizing list entry. Did you call <col=0059de>~cr_ui_create_list_entry</col>first?");
+}
+cc_create($component7, ^iftype_rectangle, $int2);
+def_int $comsubid16 = $int2;
+$int2 = calc($int2 + 1);
+cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_settrans(255);
+cc_setopbase("<col=ff981f><$string0></col>");
+if ($boolean1 = true) {
+	cc_setop(1, "Collapse");
+} else {
+	cc_setop(1, "Expand");
+}
+if (~on_mobile = false) {
+	cc_setonmouserepeat("script6411(true, $boolean1, $int0, $comsubid5, $comsubid6, $component7)");
+	cc_setonmouseleave("script6411(false, $boolean1, $int0, $comsubid5, $comsubid6, $component7)");
+}
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+if ($boolean8 = true) {
+	$int17 = calc(if_getwidth($component7) - 80 - 4);
+	$int18 = calc($int3 + $int13 - 30 - 6);
+	$int2, $int9, $int19 = ~script6413($text1, $int17, $int18, $int2, $int9, $comsubid5, $trans15, $component7, $component10, $component7, $component11, $component12);
+}
+return($int2, $int9, $comsubid16, $int19, $int13);

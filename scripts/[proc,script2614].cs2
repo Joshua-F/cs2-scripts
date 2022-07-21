@@ -80,7 +80,7 @@ switch_component ($component1) {
 			if_settrans(0, $component1);
 		}
 }
-if (~magic_spellbook_hasrunes($obj0) = 0) {
+if (~magic_spellbook_hasrunes($obj0, inv_getobj(worn, 3), inv_getobj(worn, 5)) = 0) {
 	return(0, null);
 }
 if (~script5556($obj0) = 0) {

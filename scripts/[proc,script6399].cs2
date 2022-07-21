@@ -1,0 +1,7 @@
+// 6399
+[proc,script6399](int $int0, int $int1)(int)
+def_int $int2 = calc($int0 + 5 + 16 / 2);
+if ($int1 = 0) {
+	return($int2);
+}
+return(calc($int2 - $int1 / 2));

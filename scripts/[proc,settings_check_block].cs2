@@ -6,6 +6,9 @@ def_int $int3 = ~on_enhanced_any;
 def_int $int4 = ~on_mac;
 def_int $int5 = ~league_world;
 def_int $int6 = ~speedrunning_world;
+def_boolean $boolean7 = ~deadman_world;
+def_int $int8 = ~tournament_beta_world;
+def_int $int9 = ~script5548;
 if ($boolean2 = true & struct_param($struct0, param_739) = true) {
 	$int1 = 1;
 }
@@ -40,6 +43,21 @@ if (struct_param($struct0, param_1273) = true & $int3 = 0 & $int5 = 0) {
 	$int1 = 1;
 }
 if (struct_param($struct0, param_1414) = true & ~is_group_iron = 0) {
+	$int1 = 1;
+}
+if ($struct0 = show_activity_adviser_299 & ~script6418 = 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_619) = true & $int5 = 1) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_620) = true & $boolean7 = true) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_621) = true & $int8 = 1) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_622) = true & $int9 = 1) {
 	$int1 = 1;
 }
 return($int1);

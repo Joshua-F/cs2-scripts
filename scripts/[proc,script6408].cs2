@@ -1,0 +1,21 @@
+// 6408
+[proc,script6408](int $int0, boolean $boolean1, int $int2, int $int3, component $component4)(int, int, int, int)
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 2;
+def_int $int8 = 0;
+cc_create($component4, ^iftype_rectangle, $int2);
+def_int $comsubid9 = $int2;
+$int2 = calc($int2 + 1);
+cc_setsize(0, 1, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setoutline(0);
+cc_setcolour(^white);
+cc_create($component4, ^iftype_graphic, $int2);
+def_int $comsubid10 = $int2;
+$int2 = calc($int2 + 1);
+$int7, $int8 = ~script6400(24, 23, -5, $int7, $int3);
+cc_setposition(calc(cc_getx - 5), calc(cc_gety - 1), ^setpos_abs_left, ^setpos_abs_top);
+~script6412(false, $boolean1, $int0, $comsubid9, $comsubid10, $component4);
+return($int2, $comsubid9, $comsubid10, $int7);

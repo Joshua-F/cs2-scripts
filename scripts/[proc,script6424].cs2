@@ -1,0 +1,35 @@
+// 6424
+[proc,script6424]
+def_int $int0 = 0;
+def_int $int1 = -1;
+def_int $int2 = 0;
+while ($int2 <= 21) {
+	if (enum(int, namedobj, enum_982, $int2) ! null) {
+		if (cc_find(interface_389:6, $int2) = ^true) {
+			if (testbit(%var3450, $int2) = ^true) {
+				cc_setop(1, "Enable");
+			} else {
+				cc_setop(1, "Disable");
+			}
+		}
+		$int1 = calc(21 + 1 + $int0 * 3);
+		if (cc_find(interface_389:6, calc($int1 + 1)) = ^true) {
+			if (testbit(%var3450, $int2) = ^true) {
+				cc_setcolour(0x9f9f9f);
+			} else {
+				cc_setcolour(0xff981f);
+			}
+		}
+		if (cc_find(interface_389:6, calc($int1 + 2)) = ^true) {
+			if (testbit(%var3450, $int2) = ^true) {
+				cc_setgraphic("clickcross,5");
+				cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+			} else {
+				cc_setgraphic("tick");
+				cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+			}
+		}
+		$int0 = calc($int0 + 1);
+	}
+	$int2 = calc($int2 + 1);
+}

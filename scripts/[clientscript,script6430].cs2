@@ -1,0 +1,9 @@
+// 6430
+[clientscript,script6430](component $component0, int $comsubid1, obj $obj2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (%varcint225 = $obj2) {
+		cc_setoutline(2);
+	} else {
+		cc_setoutline(0);
+	}
+}

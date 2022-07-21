@@ -1,0 +1,70 @@
+// 6427
+[proc,script6427](boolean $boolean0, int $int1, int $int2, obj $obj3, obj $obj4)
+cc_deleteall(interface_389:8);
+def_enum $enum5 = enum(int, enum, enum_1981, $int2);
+if ($enum5 = null) {
+	return;
+}
+def_int $count6 = enum_getoutputcount($enum5);
+def_int $intarray0($count6);
+def_int $int7 = 0;
+while ($int7 < $count6) {
+	$intarray0($int7) = $int7;
+	$int7 = calc($int7 + 1);
+}
+def_int $int8 = 0;
+if ($int7 >= 2) {
+	~magic_spellbook_sort(intarray0, 0, calc($int7 - 1), $enum5);
+} else if ($int7 <= 0) {
+	cc_create(interface_389:8, ^iftype_text, $int8);
+	$int8 = calc($int8 + 1);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext("No spells are available to show at present.");
+	return;
+}
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+$int9, $int10, $int11, $int12 = ~script6419($int2);
+def_int $int13 = calc($int9 * 24 + ($int9 - 1) * $int11);
+def_int $int14 = calc($int10 * 24 + ($int10 - 1) * $int12);
+$int13 = calc(2 + (if_getwidth(interface_389:8) - 4 - $int13) / 2);
+$int14 = calc(2 + (if_getheight(interface_389:8) - 4 - $int14) / 2);
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+$int15, $int16, $int17, $int18, $int19, $int20, $int21, $int22 = ~script6335($int1);
+def_obj $obj23 = null;
+$int7 = 0;
+while ($int7 < $count6) {
+	$obj23 = enum(int, obj, $enum5, $intarray0($int7));
+	cc_create(interface_389:8, ^iftype_graphic, $int8);
+	$int8 = calc($int8 + 1);
+	cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int13 + $int7 % $int9 * (24 + $int11)), calc($int14 + $int7 / $int9 * (24 + $int12)), ^setpos_abs_left, ^setpos_abs_top);
+	if (~magic_spellbook_hasrunes($obj23, $obj3, $obj4) = 1 & $int18 >= oc_param($obj23, spell_levelreq)) {
+		cc_setgraphic(oc_param($obj23, spell_graphic1_on));
+	} else {
+		cc_setgraphic(oc_param($obj23, spell_graphic1_off));
+	}
+	if ($boolean0 = true) {
+		cc_setonclick("script6428(event_com, event_comsubid, $obj23, $obj3, $obj4)");
+		cc_setontimer("script6430(event_com, event_comsubid, $obj23)");
+	} else {
+		cc_setonmouserepeat("script6431(true, event_com, event_comsubid, $obj23, $obj3, $obj4)");
+		cc_setonmouseleave("script6431(false, event_com, event_comsubid, $obj23, $obj3, $obj4)");
+	}
+	$int7 = calc($int7 + 1);
+}
+$int8 = ~thinbox(interface_389:8, $int8);

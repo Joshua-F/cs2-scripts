@@ -1,0 +1,12 @@
+// 6420
+[clientscript,script6420](int $opindex0, component $component1, component $component2, component $component3)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+~clan_stonebutton_draw(true, "<col=9f9f9f>Copy Load-out</col>", "p12_full", $component3);
+if_clearops($component3);
+if_setonmouserepeat(null, $component3);
+if_setonmouseleave(null, $component3);
+if_setonop(null, $component3);
+if_setontimer("script6212(calc(clientclock + 30), $component1, $component2, $component3)", $component2);

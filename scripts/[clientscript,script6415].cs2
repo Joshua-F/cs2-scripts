@@ -1,0 +1,55 @@
+// 6415
+[clientscript,script6415](component $component0, component $component1, component $component2)
+~steelborder($component0, "Activity Adviser", 1);
+def_int $int3 = 0;
+def_int $int4 = 5;
+def_int $int5 = 10;
+def_int $int6 = 15;
+cc_create($component1, ^iftype_text, $int3);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(calc(2 * $int5), $int6, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settext("Welcome back to Old School RuneScape!");
+$int3 = calc($int3 + 1);
+$int4 = calc($int4 + $int6 + $int5);
+def_string $string0 = "To help you find new adventures, you can use the new <col=ffffff>Activity Adviser</col> feature. This provides personalised activity suggestions if you're ever unsure what to do next!";
+def_int $height7 = paraheight($string0, calc(if_getwidth($component1) - 2 * $int5), p12_full);
+def_int $int8 = calc($int6 * $height7);
+cc_create($component1, ^iftype_text, $int3);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(calc(2 * $int5), $int8, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settext($string0);
+$int3 = calc($int3 + 1);
+$int4 = calc($int4 + $int8 + $int5);
+if (~on_mobile = true) {
+	$string0 = "Tap the button by the <col=ffffff>Minimap</col> to find new adventures!";
+} else {
+	$string0 = "Click the button by the <col=ffffff>Minimap</col> to find new adventures!";
+}
+$height7 = paraheight($string0, calc(if_getwidth($component1) - 2 * $int5), p12_full);
+$int8 = calc($int6 * $height7);
+cc_create($component1, ^iftype_text, $int3);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(calc(2 * $int5), $int8, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int6);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settext($string0);
+$int3 = calc($int3 + 1);
+$int4 = calc($int4 + $int8 + $int5);
+cc_create($component1, ^iftype_graphic, $int3);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("side_icons,37");
+$int3 = calc($int3 + 1);
+$int4 = calc($int4 + 22);
+def_string $string1 = "Close";
+~script6417($component2, $string1);

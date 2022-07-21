@@ -1,0 +1,6 @@
+// 5496
+[clientscript,script5496]
+if (~stat_totallevel = %varbit14156) {
+	return;
+}
+if_setontimer("script5499(clientclock, interface_372:16)", interface_372:16);

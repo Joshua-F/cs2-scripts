@@ -1,0 +1,104 @@
+// 6414
+[clientscript,script6414](boolean $boolean0, boolean $boolean1, int $int2, int $comsubid3, int $comsubid4, int $trans5, component $component6, component $component7, component $component8)
+if ($boolean1 = true) {
+	if (~on_mobile = false & cc_find($component8, $comsubid4) = ^true) {
+		cc_settrans(~script2478(15));
+	}
+	if (cc_find($component7, $comsubid3) = ^true) {
+		cc_setonmouserepeat(null);
+	}
+	if (cc_find($component6, calc($int2 + 0)) = ^true) {
+		cc_setgraphic("tradebacking_dark");
+	}
+	if (cc_find($component6, calc($int2 + 1)) = ^true) {
+		cc_setgraphic("v2_stone_button_in,0");
+	}
+	if (cc_find($component6, calc($int2 + 2)) = ^true) {
+		cc_setgraphic("v2_stone_button_in,1");
+	}
+	if (cc_find($component6, calc($int2 + 3)) = ^true) {
+		cc_setgraphic("v2_stone_button_in,2");
+	}
+	if (cc_find($component6, calc($int2 + 4)) = ^true) {
+		cc_setgraphic("v2_stone_button_in,3");
+	}
+	if (cc_find($component6, calc($int2 + 5)) = ^true) {
+		cc_setgraphic("v2_stone_button_in,4");
+	}
+	if (cc_find($component6, calc($int2 + 6)) = ^true) {
+		cc_setgraphic("v2_stone_button_in,5");
+	}
+	if (cc_find($component6, calc($int2 + 7)) = ^true) {
+		cc_setgraphic("v2_stone_button_in,6");
+	}
+	if (cc_find($component6, calc($int2 + 8)) = ^true) {
+		cc_setgraphic("v2_stone_button_in,7");
+	}
+	return;
+}
+if ($boolean0 = true) {
+	if (~on_mobile = false & cc_find($component8, $comsubid4) = ^true) {
+		cc_settrans(~script2478(15));
+	}
+	if (cc_find($component6, calc($int2 + 0)) = ^true) {
+		cc_setgraphic("tradebacking_light");
+	}
+	if (cc_find($component6, calc($int2 + 1)) = ^true) {
+		cc_setgraphic("v2_stone_button_out,0");
+	}
+	if (cc_find($component6, calc($int2 + 2)) = ^true) {
+		cc_setgraphic("v2_stone_button_out,1");
+	}
+	if (cc_find($component6, calc($int2 + 3)) = ^true) {
+		cc_setgraphic("v2_stone_button_out,2");
+	}
+	if (cc_find($component6, calc($int2 + 4)) = ^true) {
+		cc_setgraphic("v2_stone_button_out,3");
+	}
+	if (cc_find($component6, calc($int2 + 5)) = ^true) {
+		cc_setgraphic("v2_stone_button_out,4");
+	}
+	if (cc_find($component6, calc($int2 + 6)) = ^true) {
+		cc_setgraphic("v2_stone_button_out,5");
+	}
+	if (cc_find($component6, calc($int2 + 7)) = ^true) {
+		cc_setgraphic("v2_stone_button_out,6");
+	}
+	if (cc_find($component6, calc($int2 + 8)) = ^true) {
+		cc_setgraphic("v2_stone_button_out,7");
+	}
+	return;
+}
+if (cc_find($component8, $comsubid4) = ^true) {
+	cc_settrans($trans5);
+}
+if (~on_mobile = false & cc_find($component7, $comsubid3) = ^true) {
+	cc_setonmouserepeat("script6414(true, false, $int2, cc_getid, $comsubid4, $trans5, $component6, $component7, $component8)");
+}
+if (cc_find($component6, calc($int2 + 0)) = ^true) {
+	cc_setgraphic("tradebacking");
+}
+if (cc_find($component6, calc($int2 + 1)) = ^true) {
+	cc_setgraphic("v2_stone_button,0");
+}
+if (cc_find($component6, calc($int2 + 2)) = ^true) {
+	cc_setgraphic("v2_stone_button,1");
+}
+if (cc_find($component6, calc($int2 + 3)) = ^true) {
+	cc_setgraphic("v2_stone_button,2");
+}
+if (cc_find($component6, calc($int2 + 4)) = ^true) {
+	cc_setgraphic("v2_stone_button,3");
+}
+if (cc_find($component6, calc($int2 + 5)) = ^true) {
+	cc_setgraphic("v2_stone_button,4");
+}
+if (cc_find($component6, calc($int2 + 6)) = ^true) {
+	cc_setgraphic("v2_stone_button,5");
+}
+if (cc_find($component6, calc($int2 + 7)) = ^true) {
+	cc_setgraphic("v2_stone_button,6");
+}
+if (cc_find($component6, calc($int2 + 8)) = ^true) {
+	cc_setgraphic("v2_stone_button,7");
+}

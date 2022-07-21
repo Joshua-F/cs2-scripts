@@ -1,7 +1,7 @@
 // 241
 [proc,autocast_tooltip_runecount](boolean $boolean0, obj $obj1, int $int2)
 cc_setobject($obj1, 1);
-def_int $int3 = ~magic_runecount($obj1);
+def_int $int3 = ~magic_runecount($obj1, inv_getobj(worn, 3), inv_getobj(worn, 5));
 if ($int3 >= $int2) {
 	.cc_setcolour(^green);
 	if ($boolean0 = true) {

@@ -1,0 +1,19 @@
+// 1452
+[proc,script1452](string $string0, int $length0, int $int1, int $length2, int $int3)(string, int, int, int)
+def_int $length4 = string_length("||");
+def_int $int5 = string_indexof_string($string0, "||", $length2);
+if ($int5 < 0) {
+	$int5 = $length0;
+}
+def_string $string1 = substring($string0, $length2, $int5);
+$length2 = calc($int5 + $length4);
+def_int $int6 = 0;
+if ($length2 >= $length0) {
+	$int6 = 1;
+	$int3 = calc($int3 + 1);
+	if ($int3 ! $int1) {
+		~debug_mes_error("Array Serialisation", "Number of serialised array values does not match the serialised array length!");
+		$int1 = $int3;
+	}
+}
+return($string1, $length2, $int1, $int6);

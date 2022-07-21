@@ -3,9 +3,9 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-def_component $component0 = interface_160:36;
+def_component $component0 = interface_160:40;
 if (~on_mobile = true) {
-	$component0 = interface_311:38;
+	$component0 = interface_311:42;
 }
 if_setontimer(null, $component0);
 cc_deleteall($component0);

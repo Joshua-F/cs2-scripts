@@ -3,9 +3,9 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-def_component $component4 = interface_160:11;
+def_component $component4 = interface_160:15;
 if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
-	$component4 = interface_311:13;
+	$component4 = interface_311:17;
 }
 cc_deleteall($component4);
 if_setonstattransmit("script6055{hitpoints}", $component4);

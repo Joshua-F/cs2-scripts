@@ -1,0 +1,19 @@
+// 2491
+[proc,script2491](dbrow $dbrow0, int $int1)(string)
+def_string $string0 = "null";
+switch_int ($int1) {
+	case 1, 7, 2 :
+		$string0 = db_getfield($dbrow0, quest:41, 0);
+		if (~string_isnullorempty($string0) = 0) {
+			return($string0);
+		}
+	case 5 :
+		return("Gain great XP.");
+	case 3 :
+		return("Continue the <enum(int, string, enum_2097, db_getfield($dbrow0, quest:storyline, 0))> storyline.");
+	case 4 :
+		return("Pick up where you left off.");
+	case 6 :
+		return("Required for other quests.");
+}
+return("Explore a new story.");

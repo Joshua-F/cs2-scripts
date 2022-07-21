@@ -4,7 +4,9 @@ def_obj $obj1 = null;
 def_int $int2 = 0;
 def_string $string0 = "";
 def_string $string1 = "";
-if (~magic_spellbook_hasrunes($obj0) = 1) {
+def_obj $obj3 = inv_getobj(worn, 3);
+def_obj $obj4 = inv_getobj(worn, 5);
+if (~magic_spellbook_hasrunes($obj0, $obj3, $obj4) = 1) {
 	$obj1 = oc_param($obj0, magic_runetype_4);
 	$int2 = oc_param($obj0, magic_runecount_4);
 	if ($obj1 ! null) {
@@ -39,7 +41,7 @@ if (~magic_spellbook_hasrunes($obj0) = 1) {
 $obj1 = oc_param($obj0, magic_runetype_4);
 if ($obj1 ! null) {
 	$int2 = oc_param($obj0, magic_runecount_4);
-	if (~magic_runecount($obj1) >= $int2) {
+	if (~magic_runecount($obj1, $obj3, $obj4) >= $int2) {
 		$string0 = append(", <tostring($int2)> x <oc_name($obj1)>", $string0);
 	} else {
 		$string0 = append(", <col=ef1020><tostring($int2)> x <oc_name($obj1)></col>", $string0);
@@ -48,7 +50,7 @@ if ($obj1 ! null) {
 $obj1 = oc_param($obj0, magic_runetype_3);
 if ($obj1 ! null) {
 	$int2 = oc_param($obj0, magic_runecount_3);
-	if (~magic_runecount($obj1) >= $int2) {
+	if (~magic_runecount($obj1, $obj3, $obj4) >= $int2) {
 		$string0 = append(", <tostring($int2)> x <oc_name($obj1)>", $string0);
 	} else {
 		$string0 = append(", <col=ef1020><tostring($int2)> x <oc_name($obj1)></col>", $string0);
@@ -57,7 +59,7 @@ if ($obj1 ! null) {
 $obj1 = oc_param($obj0, magic_runetype_2);
 if ($obj1 ! null) {
 	$int2 = oc_param($obj0, magic_runecount_2);
-	if (~magic_runecount($obj1) >= $int2) {
+	if (~magic_runecount($obj1, $obj3, $obj4) >= $int2) {
 		$string0 = append(", <tostring($int2)> x <oc_name($obj1)>", $string0);
 	} else {
 		$string0 = append(", <col=ef1020><tostring($int2)> x <oc_name($obj1)></col>", $string0);
@@ -71,7 +73,7 @@ if ($obj1 ! null) {
 	} else {
 		$string1 = oc_name($obj1);
 	}
-	if (~magic_runecount($obj1) >= $int2) {
+	if (~magic_runecount($obj1, $obj3, $obj4) >= $int2) {
 		$string0 = append("<tostring($int2)> x <$string1>", $string0);
 	} else {
 		$string0 = append("<col=ef1020><tostring($int2)> x <$string1></col>", $string0);

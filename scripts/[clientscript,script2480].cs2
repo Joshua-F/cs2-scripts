@@ -1,0 +1,49 @@
+// 2480
+[clientscript,script2480](component $component0, component $component1, component $component2, component $component3, component $component4)
+def_enum $enum5 = ~toplevel_getcomponents;
+if ($enum5 = null) {
+	return;
+}
+def_graphic $graphic6 = "ring_34,0";
+def_graphic $graphic7 = "ring_34,1";
+if ($component0 ! null) {
+	if_setnoclickthrough(true, $component2);
+	if_setnoclickthrough(true, $component1);
+	if_setonvartransmit("script2480(null, $component1, $component2, $component3, $component4){var3190, var1055, var1054}", $component0);
+}
+if (~script2481 = 1) {
+	if_sethide(false, $component1);
+	if_sethide(false, $component2);
+	if_sethide(false, $component3);
+	if_sethide(false, $component4);
+	if (%varcint1007 = 1) {
+		if_setop(1, "Close Activity Adviser", $component1);
+	} else {
+		if_setop(1, "Open Activity Adviser", $component1);
+	}
+	if (%varbit5369 = 0) {
+		if_setontimer("script2483($component2, $component1)", $component2);
+		if_setonmouserepeat(null, $component1);
+		if_setonmouseleave(null, $component1);
+	} else {
+		if_setgraphic($graphic6, $component2);
+		if_setontimer(null, $component2);
+		if_setonmouserepeat("graphic_swapper($component2, $graphic7)", $component1);
+		if_setonmouseleave("graphic_swapper($component2, $graphic6)", $component1);
+	}
+	if_setonop("opsound(event_opindex, -1)", $component1);
+	if ($enum5 = enum_1129) {
+		if_setposition(0, 50, ^setpos_abs_right, ^setpos_abs_top, interface_160:47);
+	} else if (~show_storebutton = 0) {
+		if_setposition(85, 143, ^setpos_abs_left, ^setpos_abs_top, interface_160:47);
+	} else {
+		if_setposition(55, 162, ^setpos_abs_left, ^setpos_abs_top, interface_160:47);
+	}
+} else {
+	if_sethide(true, $component1);
+	if_sethide(true, $component2);
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
+	if_clearops($component1);
+	if_setonop(null, $component1);
+}
