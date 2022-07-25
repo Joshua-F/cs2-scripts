@@ -6,11 +6,11 @@ if (cc_find(interface_372:15, 0) = ^true) {
 		cc_setgraphic("menu_buttons,7");
 		cc_clearops;
 		cc_setonop(null);
-		cc_setontimer("script6371(clientclock)");
+		cc_setontimer("cr_quests_ui_refresh_button_reset(clientclock)");
 	} else {
 		cc_setgraphic("menu_buttons,6");
 		cc_setop(1, "Refresh");
-		cc_setonop("script6370");
+		cc_setonop("cr_quests_ui_refresh_click");
 		cc_setontimer(null);
 	}
 }

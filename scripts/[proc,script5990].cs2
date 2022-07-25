@@ -6,7 +6,7 @@ def_int $int3 = db_getfieldcount($dbrow0, quest:statrec);
 def_int $int4 = 0;
 while ($int4 < $int3) {
 	$stat1, $int2 = db_getfield($dbrow0, quest:statrec, $int4);
-	if (~script5992($stat1, $int2) = 0) {
+	if (~quest_requirement_check_skill($stat1, $int2) = 0) {
 		return(0);
 	}
 	$int4 = calc($int4 + 1);

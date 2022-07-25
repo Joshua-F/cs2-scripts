@@ -1,0 +1,5 @@
+// 2609
+[clientscript,magic_spellbook_filtertoggle_reset](component $component0, int $comsubid1, int $clock2)
+if (clientclock >= $clock2 & cc_find($component0, $comsubid1) = ^true) {
+	~script2608(0);
+}

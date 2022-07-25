@@ -8,7 +8,7 @@ def_int $int4 = 0;
 %varcint492 = 0;
 %varcint493 = 1;
 while ($int0 < %varcint494) {
-	~script4701(~script4700($int0));
+	~helper_generic_set_width(~script4700($int0));
 	if (~helper_generic_get_type($int0) = 3) {
 		$int1 = 2;
 	} else {

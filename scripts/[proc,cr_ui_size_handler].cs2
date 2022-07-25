@@ -1,0 +1,23 @@
+// 6388
+[proc,cr_ui_size_handler](int $int0, int $int1, int $width2, int $int3, component $component4, component $component5, component $component6)
+def_int $width7 = if_getwidth($component4);
+def_int $int8 = calc(if_getheight($component4) - $int1);
+if ($width2 = $width7 & $int3 = $int8) {
+	return;
+}
+if (calc(if_getx($component5) + if_getwidth($component5)) >= calc($width2 - 10)) {
+	if (if_getx($component5) <= 10) {
+		%varcint1011 = calc(%varcint1011 + ($width7 - $width2));
+	} else {
+		%varcint1009 = calc(%varcint1009 + ($width7 - $width2));
+	}
+}
+if (calc(if_gety($component5) + if_getheight($component5)) >= calc($int3 - 10)) {
+	if (if_gety($component5) <= calc($int1 + 10)) {
+		%varcint1012 = calc(%varcint1012 + ($int8 - $int3));
+	} else {
+		%varcint1010 = calc(%varcint1010 + ($int8 - $int3));
+	}
+}
+~cr_ui_rebuild_window($int0, $int1, $component4, $component5, $component6);
+if_setontimer("cr_ui_size_handler($int1, $width7, $int8, $component4, $component5, $component6)", $component4);

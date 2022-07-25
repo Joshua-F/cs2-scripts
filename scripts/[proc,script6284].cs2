@@ -34,7 +34,7 @@ switch_int (%varcint993) {
 			if ($component4 ! null) {
 				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
 				if (cc_find($component4, 2) = ^true) {
-					~script6283($int2);
+					~pvpa_applicants_entry_init($int2);
 				}
 				$int3 = calc($int3 + if_getheight($component4));
 			}
@@ -45,7 +45,7 @@ switch_int (%varcint993) {
 			if ($component4 ! null) {
 				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
 				if (cc_find($component4, 2) = ^true) {
-					~script6283($int2);
+					~pvpa_applicants_entry_init($int2);
 				}
 				$int3 = calc($int3 + if_getheight($component4));
 			}

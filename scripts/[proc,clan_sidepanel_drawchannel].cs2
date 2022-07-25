@@ -87,7 +87,7 @@ while ($int21 < $int1) {
 	.cc_setposition(1, calc($height15 + $int14), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 	if ($int11 = 1) {
-		$graphic19 = ~script6270($clanslot23, $int18);
+		$graphic19 = ~pvpa_sidepanel_rankicon($clanslot23, $int18);
 	} else {
 		$string2, $graphic19 = ~script4302($int18);
 	}

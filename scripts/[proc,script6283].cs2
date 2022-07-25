@@ -1,9 +1,0 @@
-// 6283
-[proc,script6283](int $int0)
-def_int $colour1 = ^white;
-def_int $trans2 = 235;
-if (calc($int0 % 2) = 0) {
-	$colour1, $trans2 = ^white, 245;
-}
-cc_setcolour($colour1);
-cc_settrans($trans2);

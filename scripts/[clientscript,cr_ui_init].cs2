@@ -1,0 +1,60 @@
+// 6377
+[clientscript,cr_ui_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+%varcint1007 = 1;
+if (~script6391 = 0) {
+	if_sethide(true, $component4);
+	if_setsize(calc(if_getwidth($component1) - if_getwidth($component4)), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+	if_setsize(0, calc(if_getheight(if_getlayer($component5)) - if_getheight($component5)), ^setsize_minus, ^setsize_minus, $component5);
+}
+~steelborder($component2, "Activity Adviser", 3);
+~script4215($component3, "Close");
+if_setonop("opsound(event_opindex, 2)", $component3);
+if_setop(2, "", $component3);
+if_setopkey(2, ^key_escape, 0, $component3);
+cc_deleteall($component0);
+def_int $int7 = 0;
+while ($int7 < 8) {
+	cc_create($component0, ^iftype_graphic, $int7);
+	cc_settiling(true);
+	cc_settrans(255);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+	cc_setdraggable($component0, -1);
+	cc_setdragdeadzone(1);
+	cc_setdragdeadtime(5);
+	$int7 = calc($int7 + 1);
+}
+cc_deleteall($component6);
+$int7 = 0;
+while ($int7 < 4) {
+	cc_create($component6, ^iftype_rectangle, $int7);
+	cc_setsize(calc($int7 * 2), calc($int7 * 2), ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x9f9f9f);
+	cc_setfill(false);
+	cc_settrans(calc(100 + $int7 * 10));
+	$int7 = calc($int7 + 1);
+}
+def_int $int8 = 0;
+if (~on_mobile = true) {
+	$int8 = calc(165 - (23 + 30));
+}
+if (%varcint1011 < ~cr_ui_min_width) {
+	%varcint1011 = ~cr_ui_default_width;
+}
+if (%varcint1012 < ~cr_ui_min_height) {
+	%varcint1012 = ~cr_ui_default_height;
+}
+if (%varcint1009 < 0) {
+	%varcint1009 = calc((if_getwidth($component0) - %varcint1011) / 2);
+}
+if (%varcint1010 < $int8) {
+	%varcint1010 = ~max($int8, calc((if_getheight($component0) - %varcint1012) / 2));
+}
+~cr_ui_rebuild_window(1, $int8, $component0, $component1, $component6);
+~cr_ui_size_handler(1, $int8, ^min_32bit_int, ^min_32bit_int, $component0, $component1, $component6);
+if (%varcint1008 = null) {
+	%varcint1008 = enum(int, dbrow, enum_4593, 0);
+}
+~cr_ui_activate_module(%varcint1008, $component4);
+~script2482;

@@ -4,7 +4,7 @@ if ($int0 = 1) {
 	cc_settrans(210);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
-	cc_setontimer("script2609(event_com, event_comsubid, calc(clientclock + 40))");
+	cc_setontimer("magic_spellbook_filtertoggle_reset(event_com, event_comsubid, calc(clientclock + 40))");
 } else {
 	cc_settrans(255);
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 225, null)");

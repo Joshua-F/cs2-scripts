@@ -1,0 +1,8 @@
+// 6095
+[clientscript,giants_foundry_mould_setup_tab_select](int $int0)
+if ($int0 = %varbit13909) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+%varbit13909 = $int0;
+~giants_foundry_mould_setup_content;

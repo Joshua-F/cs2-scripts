@@ -1,0 +1,203 @@
+// 6373
+[proc,cr_quests_ui_create_entry](int $int0, int $int1, int $int2, int $int3, dbrow $dbrow4, int $int5, boolean $boolean6, int $int7, int $int8, component $component9, component $component10, component $component11, component $component12)(int, int)
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $width16 = ~cr_ui_list_entry_description_width($component9);
+def_int $int17 = ~cr_ui_list_entry_details_width(1, $component9);
+def_string $string0 = "null";
+def_string $string1 = ~get_quest_name($dbrow4);
+def_int $int18 = 0;
+def_int $comsubid19 = 0;
+def_int $comsubid20 = 0;
+$int7, $comsubid19, $comsubid20, $int15 = ~cr_ui_create_list_entry($int1, $boolean6, $int7, $int8, $component9);
+cc_create($component9, ^iftype_graphic, $int7);
+$int7 = calc($int7 + 1);
+cc_setgraphic("achievement_diary_icons,0");
+$int15, $int18 = ~script6400(18, 18, 3, $int15, $int8);
+cc_create($component9, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+$int13 = parawidth($string1, $width16, p12_full);
+$int15, $int18 = ~script6400($int13, 16, 3, $int15, $int8);
+cc_settext($string1);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int3 = 2) {
+	cc_setcolour(~script5329(^setting_unavailable_quest_text_colour_colour));
+} else if (~quest_status_get($dbrow4) = 0) {
+	cc_setcolour(~script5329(^setting_inprogress_quest_text_colour_colour));
+} else {
+	cc_setcolour(0xff981f);
+}
+cc_settextalign(^settextalign_left, ^settextalign_centre, 16);
+if (%varcint103 = 0 & db_getfield($dbrow4, quest:members, 0) = false) {
+	cc_create($component9, ^iftype_graphic, $int7);
+	$int7 = calc($int7 + 1);
+	$int15, $int18 = ~script6400(16, 16, 3, $int15, $int8);
+	cc_setposition(cc_getx, calc(cc_gety - 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("worldswitcher_stars,0");
+}
+$int15 = 0;
+def_int $int21 = -1;
+def_string $string2 = ~script3739(0xff981f, "col");
+def_int $int22 = -1;
+def_stat $stat23 = null;
+def_int $int24 = -1;
+def_int $int25 = -1;
+def_int $int26 = 0;
+def_int $int27 = 0;
+def_int $int28 = 0;
+def_int $int29 = 1;
+def_int $int30 = 0;
+if ($int3 = 2) {
+	$int22 = db_getfieldcount($dbrow4, quest:statreq);
+	$int26 = 0;
+	while ($int26 < $int22) {
+		$stat23, $int24 = db_getfield($dbrow4, quest:statreq, $int26);
+		$int25 = 0;
+		if ($stat23 ! null) {
+			$int25 = calc($int24 - stat_base($stat23));
+		}
+		if ($int25 > 0) {
+			$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement("Requirements: ", $int29, $int28, tostring($int24), $int25, enum(stat, graphic, enum_1505, $stat23), 13, 13, 0, $boolean6, $int21, $int30, $int8, $int7, $int15, $int18, $component9);
+			$int27 = calc($int27 + 1);
+		}
+		$int26 = calc($int26 + 1);
+	}
+	$int24 = db_getfield($dbrow4, quest:comlevelreq, 0);
+	$int25 = calc($int24 - %varbit13027);
+	if ($int25 > 0) {
+		$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement("Requirements: ", $int29, $int28, tostring($int24), $int25, "account_icons,0", 18, 18, 0, $boolean6, $int21, $int30, $int8, $int7, $int15, $int18, $component9);
+		$int27 = calc($int27 + 1);
+	}
+	$int24 = db_getfield($dbrow4, quest:pointsreq, 0);
+	$int25 = calc($int24 - %var101);
+	if ($int25 > 0) {
+		$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement("Requirements: ", $int29, $int28, "<tostring($int24)> QP", $int25, "clan_rank_icons,262", 13, 13, 0, $boolean6, $int21, $int30, $int8, $int7, $int15, $int18, $component9);
+		$int27 = calc($int27 + 1);
+	}
+	$int22 = db_getfieldcount($dbrow4, quest:questreq);
+	$int24 = 0;
+	$int25 = 0;
+	$int26 = 0;
+	while ($int26 < $int22) {
+		$int24 = calc($int24 + 1);
+		if (~quest_requirement_check_quest(db_getfield($dbrow4, quest:questreq, $int26)) = 0) {
+			$int25 = calc($int25 + 1);
+		}
+		$int26 = calc($int26 + 1);
+	}
+	if ($int25 > 0) {
+		$string0 = "Quest";
+		if ($int24 > 1) {
+			$string0 = "Quests";
+		}
+		$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement("Requirements: ", $int29, $int28, "<tostring($int24)> <$string0>", $int25, "clan_rank_icons,262", 13, 13, 0, $boolean6, $int21, $int30, $int8, $int7, $int15, $int18, $component9);
+		$int27 = calc($int27 + 1);
+	}
+	$int29 = 1;
+	$int30 = 0;
+	$int22 = db_getfieldcount($dbrow4, quest:statrec);
+	$int26 = 0;
+	while ($int26 < $int22) {
+		$stat23, $int24 = db_getfield($dbrow4, quest:statrec, $int26);
+		$int25 = 0;
+		if ($stat23 ! null) {
+			$int25 = calc($int24 - stat_base($stat23));
+		}
+		if ($int25 > 0) {
+			if ($int29 = 1 & $int27 > 0) {
+				$int30 = 1;
+			}
+			$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement("Recommended: ", $int29, $int28, tostring($int24), $int25, enum(stat, graphic, enum_1505, $stat23), 13, 13, 0, $boolean6, $int21, $int30, $int8, $int7, $int15, $int18, $component9);
+			$int27 = calc($int27 + 1);
+		}
+		$int26 = calc($int26 + 1);
+	}
+	$int24 = db_getfield($dbrow4, quest:comlevelrec, 0);
+	$int25 = calc($int24 - %varbit13027);
+	if ($int25 > 0) {
+		if ($int29 = 1 & $int27 > 0) {
+			$int30 = 1;
+		}
+		$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement("Recommended: ", $int29, $int28, tostring($int24), $int25, "account_icons,0", 18, 18, 0, $boolean6, $int21, $int30, $int8, $int7, $int15, $int18, $component9);
+		$int27 = calc($int27 + 1);
+	}
+	if (~quest_requirement_check_misc($dbrow4) = 0 | $int27 = 0) {
+		$int29 = 1;
+		$string0 = "Requirements: ";
+		if ($int27 > 0) {
+			$int30 = 1;
+			$string0 = "Other Requirements: ";
+		}
+		$string0 = "<$string2><$string0></col>View journal for details.";
+		$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement("null", $int29, $int28, $string0, -1, null, 0, 0, 1, $boolean6, $int21, $int30, $int8, $int7, $int15, $int18, $component9);
+		$int27 = calc($int27 + 1);
+	}
+	if ($int28 > 0) {
+		if (cc_find($component9, calc($int7 - 1)) = ^true) {
+			$int13 = parawidth("+<tostring($int28)> more", if_getwidth($component9), p11_full);
+			if (calc(~cr_ui_list_entry_description_width($component9) - $int15) < $int13) {
+				$int28 = calc($int28 + 1);
+				$int7 = calc($int7 - 1);
+				if (.cc_find($component9, $int7) = ^true) {
+					.cc_delete;
+				}
+				$int7 = calc($int7 - 1);
+				if (.cc_find($component9, $int7) = ^true) {
+					.cc_delete;
+				}
+				$int7 = calc($int7 - 1);
+				if (.cc_find($component9, $int7) = ^true) {
+					$int15 = ~script6402(.cc_getx);
+					.cc_delete;
+				}
+			}
+		}
+		$int7, $int15, $int21, $int18 = ~script6409("+<tostring($int28)> more", ^white, $int21, 0, $boolean6, $int7, $int15, $int18, $int8, $component9);
+	}
+	if ($int27 > 0) {
+		$int21 = calc($int21 + 1);
+	}
+	$int15 = 0;
+}
+$int7, $int15, $int21, $int18 = ~script6409(~script2491($dbrow4, $int5), ^white, $int21, 0, $boolean6, $int7, $int15, $int18, $int8, $component9);
+$int21 = calc($int21 + 1);
+$int15 = 0;
+if ($boolean6 = true) {
+	$int7, $int15, $int21, $int18 = ~script6409("<$string2>Location: </col><enum(int, string, enum_2096, db_getfield($dbrow4, quest:location, 0))>", ^white, $int21, 0, $boolean6, $int7, $int15, $int18, $int8, $component9);
+	$int21 = calc($int21 + 1);
+	$int15 = 0;
+	if (%varcint103 = 0 & db_getfield($dbrow4, quest:members, 0) = true) {
+		$string0 = ~script3739(^yellow, "col");
+		$string0 = "<$string0>Requires membership</col>";
+		$int7, $int15, $int21, $int18 = ~script6409($string0, ^white, $int21, 0, $boolean6, $int7, $int15, $int18, $int8, $component9);
+		$int21 = calc($int21 + 1);
+		$int15 = 0;
+	}
+}
+$int15 = 0;
+def_int $int31 = 0;
+def_int $comsubid32 = -1;
+def_int $int33 = db_getfield($dbrow4, quest:id, 0);
+def_int $int34 = -1;
+$int7, $int31, $comsubid32, $int33, $int34 = ~script6410($int1, $string1, $boolean6, $int7, $int8, $int18, $comsubid19, $comsubid20, $component9, $boolean6, "View journal", $int33, $component10, $component11, $component12);
+if (cc_find($component9, $comsubid32) = ^true) {
+	if ($boolean6 = true) {
+		cc_setonop("script6376($int2, $int0, false)");
+	} else {
+		cc_setonop("script6376($int2, $int0, true)");
+	}
+}
+if (cc_find($component10, $int33) = ^true) {
+	if ($boolean6 = true) {
+		cc_sethide(false);
+		cc_setop(1, "View journal <col=ff981f><~get_quest_name($dbrow4)></col>");
+		cc_setonop("script6375($dbrow4, cc_getid, $component10)");
+	} else {
+		cc_sethide(true);
+		cc_setop(1, "null");
+		cc_setonop(null);
+	}
+}
+return($int7, calc($int8 + $int34));

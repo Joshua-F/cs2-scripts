@@ -1,8 +1,0 @@
-// 6403
-[proc,script6403](int $int0, int $int1)(int)
-def_int $int2 = calc(~script6399($int0, 0) + 16 / 2 + 4);
-def_int $int3 = calc($int2 + 12 / 2);
-if ($int1 = 0) {
-	return($int3);
-}
-return(calc($int3 - $int1 / 2));

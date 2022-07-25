@@ -1,0 +1,27 @@
+// 6131
+[proc,pet_insurance_pot_button_draw](int $int0, component $component1)
+def_int $comsubid2 = 1;
+def_int $int3 = 0;
+if (%varbit13978 >= 250) {
+	$int3 = 1;
+}
+cc_deleteall($component1);
+if ($int0 = 0 & $int3 = 0) {
+	$comsubid2 = ~v2_stone_button_out_filled($component1);
+} else {
+	$comsubid2 = ~v2_stone_button_in_filled($component1);
+}
+cc_create($component1, ^iftype_text, $comsubid2);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settext("Buy Reclaims");
+if ($int0 = 0 & $int3 = 0) {
+	cc_setcolour(0xff981f);
+} else if ($int3 = 1) {
+	cc_setcolour(0x9f9f9f);
+} else {
+	cc_setcolour(^white);
+}

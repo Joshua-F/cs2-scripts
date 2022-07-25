@@ -1,0 +1,9 @@
+// 6108
+[clientscript,giants_foundry_mould_setup_reset_select]
+if (%varbit13910 ! 0 | %varbit13911 ! 0 | %varbit13912 ! 0) {
+	%varbit13910 = 0;
+	%varbit13911 = 0;
+	%varbit13912 = 0;
+	sound_synth(interface_select1, 1, 0);
+	~giants_foundry_mould_setup_content;
+}

@@ -1,0 +1,21 @@
+// 5955
+[proc,entity_highlight_minimenu](int $int0)
+def_int $int1 = ~max(_7460, 0);
+switch_int (_7451($int1)) {
+	case 2 :
+		if (_7453($int1) = true) {
+			~entity_highlight_active_npc($int0);
+		}
+	case 3 :
+		if (_7454($int1) = true) {
+			~entity_highlight_active_loc($int0);
+		}
+	case 4 :
+		if (_7455($int1) = true) {
+			~entity_highlight_active_obj($int0);
+		}
+	case 6 :
+		if (_7456($int1) = true) {
+			~entity_highlight_active_player($int0);
+		}
+}

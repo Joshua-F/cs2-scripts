@@ -1,0 +1,11 @@
+// 5953
+[proc,entity_highlight_active_obj](int $int0)
+switch_int ($int0) {
+	case 5 :
+		%varcint557, %varcint558 = obj_type, obj_coord;
+	case 4 :
+		%varcint977, %varcint978 = obj_type, obj_coord;
+	case default :
+		return;
+}
+highlight_obj_on(obj_type, obj_coord, $int0, 0);

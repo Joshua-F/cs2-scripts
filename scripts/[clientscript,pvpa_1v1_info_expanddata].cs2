@@ -1,0 +1,24 @@
+// 6356
+[clientscript,pvpa_1v1_info_expanddata](int $opindex0, component $component1, int $comsubid2, int $trans3, int $trans4, int $trans5, string $string0, string $string1, int $int6)
+sound_synth(interface_select1, 1, 0);
+if ($opindex0 = 1) {
+	switch_int ($int6) {
+		case 3 :
+			if_settext("<col=ffffff><$string0></col> beat <$string1>", interface_770:77);
+		case 4 :
+			if_settext("<col=ffffff><$string1></col> beat <$string0>", interface_770:77);
+		case 2 :
+			if_settext("<$string0> <col=8f8f8f>v</col> <$string1>", interface_770:77);
+		case 0 :
+			if_settext("Waiting: <$string0> <col=8f8f8f>v</col> <$string1>", interface_770:77);
+		case default :
+			if_settext("<$string0> <col=8f8f8f>v</col> <$string1>", interface_770:77);
+	}
+	if_setontimer("script6358(calc(clientclock + 250), event_com)", interface_770:77);
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans($trans5);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setontimer("pvpa_1v1_info_resetdata(calc(clientclock + 40), event_com, $comsubid2, $trans3, $trans4)", $component1);
+}

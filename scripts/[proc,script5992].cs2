@@ -1,9 +1,0 @@
-// 5992
-[proc,script5992](stat $stat0, int $int1)(int)
-if ($stat0 = null | $int1 = -1 | $int1 <= 1) {
-	return(1);
-}
-if (stat_base($stat0) < $int1) {
-	return(0);
-}
-return(1);

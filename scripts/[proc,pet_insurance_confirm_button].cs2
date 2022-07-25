@@ -1,0 +1,15 @@
+// 6132
+[proc,pet_insurance_confirm_button](int $int0, component $component1, component $component2)
+.cc_create($component1, ^iftype_rectangle, 0);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setcolour(^black);
+.cc_setfill(true);
+.cc_settrans(255);
+if (~on_mobile = false) {
+	.cc_setonmouserepeat("script6133(1, $component2)");
+	.cc_setonmouseleave("script6133(0, $component2)");
+}
+.cc_setop(1, "Select <col=ff9040>Confirm</col>");
+.cc_setonop("script6149");
+~pet_insurance_confirm_button_draw(0, $component2);

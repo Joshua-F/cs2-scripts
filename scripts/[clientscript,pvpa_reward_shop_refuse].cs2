@@ -1,0 +1,5 @@
+// 6344
+[clientscript,pvpa_reward_shop_refuse](int $int0, string $mes0, component $component1, component $component2, component $component3, component $component4)
+sound_synth(pillory_wrong, 1, 0);
+mes($mes0);
+~pvpa_reward_shop_draw(-1, $component1, $component2, $component3, $component4);

@@ -1,0 +1,5 @@
+// 6253
+[clientscript,pvpa_hud_writetime](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true) {
+	~pvpa_hud_writetime;
+}

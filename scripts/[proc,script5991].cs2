@@ -1,6 +1,0 @@
-// 5991
-[proc,script5991](dbrow $dbrow0)(int)
-if ($dbrow0 = null) {
-	return(1);
-}
-return(~quest_is_complete($dbrow0));

@@ -1,0 +1,22 @@
+// 6218
+[proc,pvpa_spectator_inventory_dummy](int $int0, int $int1)
+def_enum $enum2 = enum_4418;
+if ($int0 = 1) {
+	$enum2 = enum_4419;
+}
+def_component $component3 = enum(component, component, $enum2, interface_154:3);
+def_obj $obj4 = null;
+def_int $num5 = 0;
+def_int $int6 = 0;
+while ($int6 < 28) {
+	$obj4 = inv_getobj(inv_611, $int1);
+	cc_create($component3, ^iftype_graphic, $int6);
+	cc_setposition(calc(10 + $int6 % 4 * 42), calc(8 + $int6 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	$num5 = inv_getnum(inv_611, $int1);
+	cc_setobject($obj4, $num5);
+	$int6 = calc($int6 + 1);
+	$int1 = calc($int1 + 1);
+}

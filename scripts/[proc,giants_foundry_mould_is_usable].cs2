@@ -1,0 +1,9 @@
+// 6100
+[proc,giants_foundry_mould_is_usable](struct $struct0)(int)
+if (~giants_foundry_mould_is_unlocked($struct0) = 0) {
+	return(0);
+}
+if (struct_param($struct0, param_1622) > stat(smithing)) {
+	return(0);
+}
+return(1);

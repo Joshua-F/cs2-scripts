@@ -5,7 +5,7 @@ def_obj $obj6 = struct_param($struct3, param_1636);
 def_struct $struct7 = struct_param($struct3, param_1637);
 def_int $int8 = 0;
 def_int $int9 = 0;
-if ($struct7 ! null & ~script6099($struct7) = 1) {
+if ($struct7 ! null & ~giants_foundry_mould_is_unlocked($struct7) = 1) {
 	$int9 = 1;
 }
 if (%varbit13915 = 1 & $obj6 = null) {

@@ -1,7 +1,7 @@
 // 502
 [clientscript,makeover_hair_setup](component $component0, component $component1, component $component2, component $component3)
 def_string $text0 = "Hairdresser's Salon";
-if (~script5548 = 1) {
+if (~pvpa_world = 1) {
 	$text0 = "Select a hairstyle";
 }
 ~steelborder($component0, $text0, 0);

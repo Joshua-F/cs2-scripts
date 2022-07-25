@@ -3,7 +3,7 @@
 def_component $component3 = interface_754:75;
 def_int $int4 = 0;
 def_struct $struct5 = struct_4329;
-def_graphic $graphic6 = "graphic_4442";
+def_graphic $graphic6 = "giants_foundry_tool_icon,0";
 switch_int ($int0) {
 	case 1 :
 		$int4 = %varbit13940;
@@ -21,13 +21,13 @@ switch_int ($int0) {
 switch_int ($int4) {
 	case 0 :
 		$struct5 = struct_4329;
-		$graphic6 = "graphic_4442";
+		$graphic6 = "giants_foundry_tool_icon,0";
 	case 1 :
 		$struct5 = struct_4331;
-		$graphic6 = "graphic_4443";
+		$graphic6 = "giants_foundry_tool_icon,1";
 	case 2 :
 		$struct5 = struct_4333;
-		$graphic6 = "graphic_4444";
+		$graphic6 = "giants_foundry_tool_icon,2";
 }
 def_int $int7 = calc(if_getwidth($component3) - 2);
 def_int $int8 = calc($int7 / $int1);

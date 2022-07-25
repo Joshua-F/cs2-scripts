@@ -10,7 +10,7 @@ def_int $int15 = 0;
 def_string $string1 = "null";
 def_string $string2 = "null";
 if ($int1 < 0) {
-	$int12 = ~script6401($component8);
+	$int12 = ~cr_ui_list_entry_description_width($component8);
 	$fontmetrics9 = p11_full;
 	$fontmetrics10 = p11_full;
 	$int11 = 12;
@@ -19,7 +19,7 @@ if ($int1 < 0) {
 	if ($boolean3 = false) {
 		return($int4, $int5, $int1, $int6);
 	}
-	$int12 = ~script6405(1, $component8);
+	$int12 = ~cr_ui_list_entry_details_width(1, $component8);
 	$fontmetrics9 = p11_full;
 	$fontmetrics10 = p11_full;
 	$int11 = 12;

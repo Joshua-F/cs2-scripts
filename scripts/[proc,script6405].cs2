@@ -1,7 +1,0 @@
-// 6405
-[proc,script6405](int $int0, component $component1)(int)
-def_int $int2 = 0;
-if ($int0 = 1) {
-	$int2 = calc(80 + 3);
-}
-return(calc(if_getwidth($component1) - 23 - 4 - $int2));

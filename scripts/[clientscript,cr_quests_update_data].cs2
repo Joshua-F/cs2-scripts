@@ -1,0 +1,11 @@
+// 2493
+[clientscript,cr_quests_update_data](string $string0)
+%varcstring1000 = $string0;
+~script6368(0);
+if (%varcint1002 = 1) {
+	~cr_quests_ui_init;
+} else if (%varcint1001 = 1) {
+	~cr_quests_ui_update_tabs;
+	%varcstring1003 = "null";
+	~cr_quests_ui_create_list;
+}

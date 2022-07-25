@@ -1,7 +1,0 @@
-// 5457
-[proc,script5457](stat $stat0)
-def_int $int1 = 0;
-while ($int1 < 10) {
-	~xptracker_set_stat_xp($stat0, $int1, 0);
-	$int1 = calc($int1 + 1);
-}

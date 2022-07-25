@@ -1,0 +1,10 @@
+// 6274
+[clientscript,pvpa_options_op](int $opindex0, component $component1, int $comsubid2, int $trans3, int $int4, int $int5, int $comsubid6)
+if ($opindex0 = 1 & cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid6) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	cc_settrans($trans3);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setontimer("pvpa_options_reset(calc(clientclock + 20), event_com, cc_getid, 225, 255)", $component1);
+	.cc_setgraphic("options_radio_buttons,2");
+}

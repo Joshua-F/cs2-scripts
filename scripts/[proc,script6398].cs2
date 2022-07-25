@@ -2,7 +2,7 @@
 [proc,script6398](int $index0, int $int1, boolean $boolean2, string $string0)(string)
 def_int $intarray0($int1);
 if (~string_isnullorempty($string0) = 0) {
-	~script1451($string0, 0);
+	~deserialise_intarray($string0, intarray0);
 }
 $intarray0($index0) = ~bool_to_int($boolean2);
-return(~script1450(intarray0, $int1));
+return(~serialise_intarray(intarray0, $int1));

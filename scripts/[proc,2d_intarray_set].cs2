@@ -1,0 +1,7 @@
+// 1441
+[proc,2d_intarray_set](intarray $intarray0, int $int1, int $int2, int $int3)
+if (~2d_intarray_num_rows(intarray0) <= 0 | ~2d_intarray_num_cols(intarray0) <= 0) {
+	~debug_mes_error("2D Array", "Rows or columns metadata is empty, call <col=0059de>~2d_intarray_init</col> before using the array!");
+	return;
+}
+$intarray0(calc(2 + (~2d_intarray_num_cols(intarray0) * $int1 + $int2))) = $int3;

@@ -1,7 +1,0 @@
-// 6062
-[clientscript,script6062](int $int0, int $int1)
-if (~on_enhanced_desktop = 0) {
-	return;
-}
-setdeviceoption(^deviceoption_window_width, $int0);
-setdeviceoption(11, $int1);

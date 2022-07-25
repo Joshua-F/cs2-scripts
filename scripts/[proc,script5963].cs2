@@ -6,8 +6,8 @@ def_int $int3 = calc(clientclock - $int0);
 def_int $int4 = calc(17 / 2);
 if ($int3 >= 17) {
 	if_setontimer(null, $component2);
-	~script5950(4);
-	~script5949(4, 2, 0);
+	~entity_highlight_clear(4);
+	~entity_highlight_setup(4, 2, 0);
 	return;
 }
 def_int $int5 = $int3;
@@ -16,8 +16,8 @@ if ($int3 >= $int4) {
 }
 def_int $int6 = _7460;
 if (_7108 = true) {
-	~script5950(4);
-	~script5955(4);
+	~entity_highlight_clear(4);
+	~entity_highlight_minimenu(4);
 	if ($int3 >= $int4) {
 		$int0 = calc($int0 + 1);
 	}
@@ -25,4 +25,4 @@ if (_7108 = true) {
 }
 def_int $int7 = calc(128 - scale($int5, $int4, 128));
 def_int $int8 = calc(2 + scale($int5, $int4, 2));
-~script5949(4, $int8, $int7);
+~entity_highlight_setup(4, $int8, $int7);

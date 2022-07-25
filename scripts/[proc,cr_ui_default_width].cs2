@@ -1,0 +1,7 @@
+// 6381
+[proc,cr_ui_default_width]()(int)
+def_int $int0 = 400;
+if (~script6391 = 1) {
+	$int0 = calc($int0 + if_getwidth(interface_372:6));
+}
+return($int0);

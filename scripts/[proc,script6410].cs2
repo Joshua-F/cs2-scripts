@@ -3,7 +3,7 @@
 def_int $int13 = calc($int4 - $int3 + 6);
 def_int $int14 = 0;
 if ($boolean8 = true) {
-	$int14 = calc($int4 - (~script6406(0, 1, $int3, 0) - 12 / 2));
+	$int14 = calc($int4 - (~cr_ui_list_entry_details_content_y(0, 1, $int3, 0) - 12 / 2));
 	if ($int14 < 30) {
 		$int13 = calc($int13 + (30 - $int14));
 	}
@@ -29,8 +29,8 @@ if ($boolean1 = true) {
 	cc_setop(1, "Expand");
 }
 if (~on_mobile = false) {
-	cc_setonmouserepeat("script6411(true, $boolean1, $int0, $comsubid5, $comsubid6, $component7)");
-	cc_setonmouseleave("script6411(false, $boolean1, $int0, $comsubid5, $comsubid6, $component7)");
+	cc_setonmouserepeat("cr_ui_list_entry_set_hovered(true, $boolean1, $int0, $comsubid5, $comsubid6, $component7)");
+	cc_setonmouseleave("cr_ui_list_entry_set_hovered(false, $boolean1, $int0, $comsubid5, $comsubid6, $component7)");
 }
 def_int $int17 = 0;
 def_int $int18 = 0;
@@ -38,6 +38,6 @@ def_int $int19 = 0;
 if ($boolean8 = true) {
 	$int17 = calc(if_getwidth($component7) - 80 - 4);
 	$int18 = calc($int3 + $int13 - 30 - 6);
-	$int2, $int9, $int19 = ~script6413($text1, $int17, $int18, $int2, $int9, $comsubid5, $trans15, $component7, $component10, $component7, $component11, $component12);
+	$int2, $int9, $int19 = ~cr_ui_list_entry_create_button($text1, $int17, $int18, $int2, $int9, $comsubid5, $trans15, $component7, $component10, $component7, $component11, $component12);
 }
 return($int2, $int9, $comsubid16, $int19, $int13);

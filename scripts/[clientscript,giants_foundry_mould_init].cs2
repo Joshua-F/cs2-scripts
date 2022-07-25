@@ -1,0 +1,5 @@
+// 6092
+[clientscript,giants_foundry_mould_init]
+def_component $component0 = interface_718:0;
+if_setontimer("script6110($component0, -1)", $component0);
+if_setonresize("giants_foundry_mould_setup_content", $component0);

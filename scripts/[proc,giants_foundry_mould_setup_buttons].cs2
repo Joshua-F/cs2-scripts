@@ -1,0 +1,50 @@
+// 6107
+[proc,giants_foundry_mould_setup_buttons]
+def_component $component0 = interface_718:5;
+def_component $component1 = interface_718:6;
+def_component $component2 = interface_718:32;
+def_component $component3 = interface_718:34;
+def_fontmetrics $fontmetrics4 = b12_full;
+if (%varcint988 >= 1) {
+	$fontmetrics4 = verdana_13pt_bold;
+}
+if_settextfont($fontmetrics4, $component2);
+if_settextfont($fontmetrics4, $component3);
+cc_deleteall($component0);
+cc_deleteall($component1);
+if (%varbit13910 ! 0 | %varbit13911 ! 0 | %varbit13912 ! 0) {
+	~v2_stone_button($component0);
+	if_setcolour(0xff981f, $component2);
+	if (~on_mobile = false) {
+		if_setonmouseover("v2_stone_button_in(event_com)", $component0);
+		if_setonmouseleave("v2_stone_button(event_com)", $component0);
+	}
+	if_setopbase("<col=ff9040>Mould", $component0);
+	if_setop(1, "Reset", $component0);
+	if_setonclick("giants_foundry_mould_setup_reset_select", $component0);
+} else {
+	~v2_stone_button_in($component0);
+	if_setcolour(0x9f9f9f, $component2);
+	if_setonmouseover(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setopbase("", $component0);
+	if_setop(1, "", $component0);
+	if_setonclick(null, $component0);
+}
+if (%varbit13910 ! 0 & %varbit13911 ! 0 & %varbit13912 ! 0) {
+	~v2_stone_button($component1);
+	if_setcolour(0xff981f, $component3);
+	if (~on_mobile = false) {
+		if_setonmouseover("v2_stone_button_in(event_com)", $component1);
+		if_setonmouseleave("v2_stone_button(event_com)", $component1);
+	}
+	if_setopbase("<col=ff9040>Mould", $component1);
+	if_setop(1, "Set", $component1);
+} else {
+	~v2_stone_button_in($component1);
+	if_setcolour(0x9f9f9f, $component3);
+	if_setonmouseover(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setopbase("", $component1);
+	if_setop(1, "", $component1);
+}

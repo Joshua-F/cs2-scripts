@@ -1,0 +1,6 @@
+// 6371
+[clientscript,cr_quests_ui_refresh_button_reset](int $clock0)
+if (clientclock < calc($clock0 + 50 * 4)) {
+	return;
+}
+~script6369(0);

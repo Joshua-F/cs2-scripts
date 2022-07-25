@@ -3,7 +3,7 @@
 if (~on_enhanced_mobile = 0) {
 	return;
 }
-~script5949(4, 2, 128);
+~entity_highlight_setup(4, 2, 128);
 def_enum $enum0 = ~toplevel_getcomponents;
 def_component $component1 = enum(component, component, $enum0, interface_161:36);
 def_int $clock2 = clientclock;

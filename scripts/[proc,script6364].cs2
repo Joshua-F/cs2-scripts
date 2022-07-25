@@ -34,7 +34,7 @@ if (cc_find($component4, $int3) = ^true) {
 	} else {
 		cc_setontimer(null);
 		cc_setop(1, "View");
-		cc_setonop("script6365($int1, $component2, $int3, $component4)");
+		cc_setonop("cr_quests_ui_tab_click($int1, $component2, $int3, $component4)");
 		if (~on_mobile = false) {
 			cc_setonmouserepeat("script6363(2, $int1, $component2, $int3, $component4)");
 			cc_setonmouseleave("script6363(0, $int1, $component2, $int3, $component4)");

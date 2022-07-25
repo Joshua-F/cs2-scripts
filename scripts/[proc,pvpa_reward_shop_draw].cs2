@@ -1,0 +1,46 @@
+// 6341
+[proc,pvpa_reward_shop_draw](int $int0, component $component1, component $component2, component $component3, component $component4)(int)
+if_setonvartransmit("pvpa_reward_shop_draw($int0, $component1, $component2, $component3, $component4){var261, var1636, var1377, var1050}", $component1);
+if_setonstattransmit("pvpa_reward_shop_draw($int0, $component1, $component2, $component3, $component4){prayer, defence}", $component1);
+if_setoninvtransmit("pvpa_reward_shop_draw($int0, $component1, $component2, $component3, $component4){inv_798}", $component1);
+cc_deleteall($component2);
+def_int $int5 = 0;
+def_int $int6 = 2;
+def_int $width7 = calc(if_getwidth($component2) - (60 + 4));
+$int5, $int6 = ~pvpa_reward_shop_itemdraw(0, $int6, $width7, $component1, $component2, $component3, $component4, $int5, $int0);
+$int6 = calc($int6 + 2);
+$int5, $int6 = ~pvpa_reward_shop_itemdraw(1, $int6, $width7, $component1, $component2, $component3, $component4, $int5, $int0);
+$int6 = calc($int6 + 2);
+$int5, $int6 = ~pvpa_reward_shop_itemdraw(2, $int6, $width7, $component1, $component2, $component3, $component4, $int5, $int0);
+$int6 = calc($int6 + 2);
+def_string $text0 = "";
+cc_deleteall($component3);
+$int5 = 0;
+if ($int0 ! -1) {
+	$text0 = enum(int, string, enum_4232, $int0);
+	~pest_rewards_confirmdraw(false, $text0, $component4);
+	while ($int5 < $int0) {
+		cc_create($component3, ^iftype_rectangle, $int5);
+		cc_sethide(true);
+		$int5 = calc($int5 + 1);
+	}
+	cc_create($component3, ^iftype_rectangle, $int5);
+	cc_sethide(false);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setop(1, "Confirm");
+	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component4)");
+	cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component4)");
+	cc_setonop("pvpa_reward_shop_confirmop(event_opindex, $component1, $component2, $component3, $component4)");
+} else {
+	$int5 = ~v2_stone_button_in_filled($component4);
+	cc_create($component4, ^iftype_text, $int5);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x7f7f7f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(false);
+	cc_settext("Confirm");
+}
+return($int6);

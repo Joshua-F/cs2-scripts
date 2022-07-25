@@ -1,7 +1,7 @@
 // 5456
 [proc,xptracker_reset_xp_data](stat $stat0, int $int1, int $int2)
 if ($stat0 ! null) {
-	~script5457($stat0);
+	~xptracker_reset_xp_array($stat0);
 }
 ~xptracker_set_startxp($stat0, $int2);
 ~xptracker_set_lastxp($stat0, $int2);

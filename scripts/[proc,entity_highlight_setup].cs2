@@ -1,0 +1,15 @@
+// 5949
+[proc,entity_highlight_setup](int $int0, int $int1, int $int2)
+def_int $int3 = -1;
+switch_int ($int0) {
+	case 5 :
+		$int3 = 1;
+	case 4 :
+		$int3 = calc(1 + 16);
+	case default :
+		return;
+}
+_7000($int0, 0xc0c000, $int1, $int2, $int3);
+_7010($int0, 0x00c0c0, $int1, $int2, $int3);
+_7020($int0, 0xc06030, $int1, $int2, $int3);
+_7030($int0, 0xc0c0c0, $int1, $int2, $int3);

@@ -1,0 +1,6 @@
+// 5991
+[proc,quest_requirement_check_quest](dbrow $dbrow0)(int)
+if ($dbrow0 = null) {
+	return(1);
+}
+return(~quest_is_complete($dbrow0));

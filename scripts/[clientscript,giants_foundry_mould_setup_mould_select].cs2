@@ -1,0 +1,25 @@
+// 6098
+[clientscript,giants_foundry_mould_setup_mould_select](int $int0)
+def_struct $struct1 = null;
+def_int $int2 = calc($int0 / 17 + 1);
+switch_int (%varbit13909) {
+	case 0 :
+		$struct1 = enum(int, struct, enum_4373, $int2);
+	case 1 :
+		$struct1 = enum(int, struct, enum_4374, $int2);
+	case 2 :
+		$struct1 = enum(int, struct, enum_4375, $int2);
+}
+if (~giants_foundry_mould_is_usable($struct1) = 0) {
+	return;
+}
+switch_int (%varbit13909) {
+	case 0 :
+		%varbit13910 = $int2;
+	case 1 :
+		%varbit13911 = $int2;
+	case 2 :
+		%varbit13912 = $int2;
+}
+sound_synth(interface_select1, 1, 0);
+~giants_foundry_mould_setup_content;

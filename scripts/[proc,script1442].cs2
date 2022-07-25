@@ -1,7 +1,0 @@
-// 1442
-[proc,script1442](intarray $intarray0, int $int1, int $int2)(int)
-if (~script1447(intarray0) <= 0 | ~script1448(intarray0) <= 0) {
-	~debug_mes_error("2D Array", "Rows or columns metadata is empty, call <col=0059de>~2d_intarray_init</col> before using the array!");
-	return(0);
-}
-return($intarray0(calc(2 + (~script1448(intarray0) * $int1 + $int2))));

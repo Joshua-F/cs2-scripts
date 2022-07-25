@@ -1,0 +1,7 @@
+// 6386
+[clientscript,cr_ui_drag_end](int $clock0, int $int1, int $int2, int $int3, int $int4, int $int5, component $component6, component $component7, component $component8)
+if (clientclock < $clock0) {
+	return;
+}
+%varcint1011, %varcint1012, %varcint1009, %varcint1010 = $int1, $int2, $int3, $int4;
+~cr_ui_rebuild_window(0, $int5, $component6, $component7, $component8);

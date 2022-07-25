@@ -5,8 +5,8 @@ if (~rental_world = 0) {
 }
 ~debug_mes_info("CR Quests", "Received <$string0>");
 def_int $intarray0(~script2477($string0));
-~script1451($string0, 0);
-def_int $int0 = ~script1447(intarray0);
+~deserialise_intarray($string0, intarray0);
+def_int $int0 = ~2d_intarray_num_rows(intarray0);
 def_int $int1 = -1;
 def_dbrow $dbrow2 = null;
 def_int $int3 = -1;
@@ -15,7 +15,7 @@ def_int $int5 = -1;
 def_string $string1 = "null";
 def_int $int6 = 0;
 while ($int6 < $int0) {
-	$int1, $dbrow2, $int3, $int4, $int5 = ~script2492(0, $int6);
+	$int1, $dbrow2, $int3, $int4, $int5 = ~cr_quests_get_row(intarray0, $int6);
 	if ($dbrow2 ! null) {
 		$string1 = "Available";
 		if ($int1 = 2) {

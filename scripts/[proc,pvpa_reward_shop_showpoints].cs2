@@ -1,0 +1,4 @@
+// 6338
+[proc,pvpa_reward_shop_showpoints](component $component0)
+def_string $string0 = ",";
+if_settext("Points: <col=ffffff><~tostring_spacer(%var261, $string0)></col>", $component0);
