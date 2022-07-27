@@ -1,0 +1,14 @@
+// 252
+[proc,music_isunlocked](int $int0)(int)
+def_coord $coord1 = enum(int, coord, enum_819, $int0);
+if ($coord1 = null) {
+	return(1);
+}
+def_int $int2 = -1;
+def_int $index3 = -1;
+$int2, $index3 = coordx($coord1), coordz($coord1);
+def_int $int4 = ~script6699($int2, $index3);
+if ($int4 = 1) {
+	return(1);
+}
+return(0);

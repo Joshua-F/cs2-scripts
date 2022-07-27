@@ -1,0 +1,23 @@
+// 6638
+[proc,cluehelper_infobox_draw_content_skillchallenge](dbrow $dbrow0)
+def_int $int1 = 0;
+def_int $int2 = ~cluehelper_clue_difficulty($dbrow0);
+$int1 = ~helper_generic_add_title("Skill Challenge", 1);
+$int1 = ~helper_generic_add_text(db_getfield($dbrow0, dbtable_14:2, 0));
+if (%varbit14188 = 1) {
+	switch_int ($int2) {
+		case 0 :
+			$int1 = ~helper_generic_add_text("Firstly, talk to Charlie, then bring the requested item.");
+		case 4, 5 :
+			$int1 = ~helper_generic_add_text("Firstly, talk to Sherlock, then bring the requested item.");
+	}
+}
+$int1 = ~helper_generic_add_title("Requirements", 0);
+def_int $int3 = 0;
+def_dbrow $dbrow4 = null;
+def_int $int5 = db_getfieldcount($dbrow0, dbtable_14:3);
+while ($int3 < $int5) {
+	$dbrow4 = db_getfield($dbrow0, dbtable_14:3, $int3);
+	$int1 = ~helper_generic_add_text(~script6649($dbrow4));
+	$int3 = calc($int3 + 1);
+}

@@ -1,0 +1,15 @@
+// 6497
+[proc,cluehelper_overlay_npc_active]()(int)
+if (%var3547 ! %var3546) {
+	return(0);
+}
+if (npc_find(%var3548) = true) {
+	return(1);
+}
+if (npc_find(%var3549) = true) {
+	return(1);
+}
+if (npc_find(%var3550) = true) {
+	return(1);
+}
+return(0);

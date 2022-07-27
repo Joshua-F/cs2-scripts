@@ -7,7 +7,7 @@ highlight_npc_on($npc_uid1, $int2, 9);
 _103($newvar0, ^iftype_graphic, 0);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(8, 3, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setobject_nonum(enum(int, obj, enum_4616, ~script6654(%var3546)), 1);
+cc_setobject_nonum(enum(int, obj, enum_4616, ~cluehelper_clue_difficulty(%var3546)), 1);
 cc_setoutline(1);
 _103($newvar0, ^iftype_graphic, 1);
 cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);

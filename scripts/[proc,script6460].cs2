@@ -1,9 +1,0 @@
-// 6460
-[proc,script6460]
-if (~on_enhanced_any = 0) {
-	return;
-}
-if (%varbit14182 = 0) {
-	return;
-}
-%varbit14186 = calc(1 - %varbit14186);

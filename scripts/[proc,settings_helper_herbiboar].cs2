@@ -1,0 +1,6 @@
+// 6449
+[proc,settings_helper_herbiboar]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit14172 = calc(1 - %varbit14172);

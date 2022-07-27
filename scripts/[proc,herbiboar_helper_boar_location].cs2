@@ -1,0 +1,7 @@
+// 6438
+[proc,herbiboar_helper_boar_location]
+def_npc $npc0 = enum(int, npc, enum_1762, %varbit5943);
+if ($npc0 = null) {
+	return;
+}
+highlight_npctype_on($npc0, 12);

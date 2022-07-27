@@ -1,0 +1,28 @@
+// 6645
+[proc,cluehelper_get_clue_type](dbrow $dbrow0)(string)
+switch_int (db_getrowtable($dbrow0)) {
+	case dbtable_8 :
+		return("Cryptic Clue");
+	case dbtable_4 :
+		return("Anagram Clue");
+	case dbtable_5 :
+		return("Map Clue");
+	case dbtable_12 :
+		return("Hot/Cold Clue");
+	case dbtable_9 :
+		return("Emote Clue");
+	case dbtable_7 :
+		return("Coordinate Clue");
+	case dbtable_14 :
+		return("Skill Challenge");
+	case dbtable_13 :
+		return("Music Clue");
+	case dbtable_11 :
+		return("Falo the Bard task");
+	case dbtable_6 :
+		return("Cipher Clue");
+	case dbtable_10 :
+		return("Fairy Ring Clue");
+	case default :
+		return("null");
+}

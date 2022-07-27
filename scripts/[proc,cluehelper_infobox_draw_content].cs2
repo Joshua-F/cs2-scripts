@@ -1,0 +1,29 @@
+// 6633
+[proc,cluehelper_infobox_draw_content]
+def_dbrow $dbrow0 = %var3546;
+~helper_generic_setup(1, 1, 1);
+switch_int (db_getrowtable($dbrow0)) {
+	case dbtable_8 :
+		~cluehelper_infobox_draw_content_cryptic($dbrow0);
+	case dbtable_4 :
+		~cluehelper_infobox_draw_content_anagram($dbrow0);
+	case dbtable_5 :
+		~cluehelper_infobox_draw_content_map($dbrow0);
+	case dbtable_12 :
+		~cluehelper_infobox_draw_content_hotcold($dbrow0);
+	case dbtable_9 :
+		~cluehelper_infobox_draw_content_emote($dbrow0);
+	case dbtable_7 :
+		~cluehelper_infobox_draw_content_coordinate($dbrow0);
+	case dbtable_14 :
+		~cluehelper_infobox_draw_content_skillchallenge($dbrow0);
+	case dbtable_13 :
+		~cluehelper_infobox_draw_content_music($dbrow0);
+	case dbtable_11 :
+		~cluehelper_infobox_draw_content_falobard($dbrow0);
+	case dbtable_6 :
+		~cluehelper_infobox_draw_content_cipher($dbrow0);
+	case dbtable_10 :
+		~cluehelper_infobox_draw_content_fairyring($dbrow0);
+}
+~script4703;

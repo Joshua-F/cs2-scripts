@@ -1,7 +1,7 @@
 // 2344
 [proc,script2344](component $component0, int $comsubid1, component $component2, string $string0, string $string1, fontmetrics $fontmetrics3)
 if (~on_enhanced_any = 1) {
-	~script6663($string0, $string1, mouse_getx, mouse_gety);
+	~mouseover_tooltip_setup($string0, $string1, mouse_getx, mouse_gety);
 	return;
 }
 def_fontmetrics $fontmetrics4 = p12_full;

@@ -5,7 +5,7 @@ highlight_npc_off($npc_uid2, $int3, 9);
 if (%varbit14189 = 0 | $dbrow1 = null) {
 	return;
 }
-def_dbrow $dbrow4 = ~script6655($dbrow1);
+def_dbrow $dbrow4 = ~cluehelper_clue_target($dbrow1);
 def_npc $npc5 = null;
 def_int $int6 = 0;
 def_int $int7 = 0;

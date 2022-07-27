@@ -1,9 +1,0 @@
-// 6452
-[proc,script6452]
-if (~on_enhanced_any = 0) {
-	return;
-}
-if (~on_mac = 1) {
-	return;
-}
-%varbit14177 = calc(1 - %varbit14177);

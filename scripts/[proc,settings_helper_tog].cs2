@@ -1,0 +1,6 @@
+// 6446
+[proc,settings_helper_tog]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit14167 = calc(1 - %varbit14167);

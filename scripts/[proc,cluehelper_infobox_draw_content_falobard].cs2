@@ -1,0 +1,11 @@
+// 6636
+[proc,cluehelper_infobox_draw_content_falobard](dbrow $dbrow0)
+def_int $int1 = 0;
+$int1 = ~helper_generic_add_title("Falo the Bard Clue", 1);
+if (%varbit14188 = 1) {
+	$int1 = ~helper_generic_add_text(db_getfield($dbrow0, dbtable_11:2, 0));
+}
+def_int $dbfield2 = ~script6657(db_getfield($dbrow0, dbtable_11:3, 0));
+~cluehelper_infobox_target_display(db_getfield($dbrow0, dbtable_11:3, $dbfield2));
+$int1 = ~helper_generic_add_title("Item", 0);
+$int1 = ~helper_generic_add_text(~script6649(db_getfield($dbrow0, dbtable_11:4, 0)));

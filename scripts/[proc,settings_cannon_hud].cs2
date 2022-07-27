@@ -1,0 +1,6 @@
+// 6450
+[proc,settings_cannon_hud]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit14174 = calc(1 - %varbit14174);

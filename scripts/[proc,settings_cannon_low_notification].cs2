@@ -1,0 +1,9 @@
+// 6451
+[proc,settings_cannon_low_notification]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (~on_mac = 1) {
+	return;
+}
+%varbit14175 = calc(1 - %varbit14175);

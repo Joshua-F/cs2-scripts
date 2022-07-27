@@ -41,15 +41,15 @@ while ($int8 < $int7) {
 			case 5 :
 				$dbrow9 = db_getfield(dbrow_684, dbtable_3:6, $int8);
 		}
-		$coord10 = ~script6653(~script6655($dbrow9));
-		$int12 = ~script6659($coord0, $coord10);
+		$coord10 = ~script6653(~cluehelper_clue_target($dbrow9));
+		$int12 = ~coord_distance($coord0, $coord10);
 		if ($int12 > 4095) {
 			$int12 = 4095;
 		}
 		if (~script6475($int2, $int12, $int6) = 0) {
 			cc_setcolour(0x000001);
 		} else if ($coord1 ! null) {
-			$int13 = ~script6659($coord1, $coord10);
+			$int13 = ~coord_distance($coord1, $coord10);
 			if ($int13 > 4095) {
 				$int13 = 4095;
 			}
@@ -71,4 +71,4 @@ while ($int8 < $int7) {
 	}
 	$int8 = calc($int8 + 1);
 }
-~script6633;
+~cluehelper_infobox_draw_content;

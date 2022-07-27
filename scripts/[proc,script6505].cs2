@@ -11,7 +11,7 @@ if (loc_find($coord2, $loc1) = true) {
 	if (_202($newvar4) = ^true) {
 		cc_setonvartransmit("script6506($newvar4, $dbrow0, $loc1, $coord2, $obj3, %varbit14189, %var3548, %var3549, %var3550, %var3547, %varbit14184, %varbit14182){var3546, var3543, var3548, var3549, var3550, var3547}");
 	}
-	if (%varbit14182 = 0 | ~script6497 = 1) {
+	if (%varbit14182 = 0 | ~cluehelper_overlay_npc_active = 1) {
 		highlight_loc_off($loc1, $coord2, 9, 1);
 		return;
 	}

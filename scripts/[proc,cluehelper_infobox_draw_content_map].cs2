@@ -1,0 +1,21 @@
+// 6644
+[proc,cluehelper_infobox_draw_content_map](dbrow $dbrow0)
+def_int $int1 = 0;
+$int1 = ~helper_generic_add_title("Map Clue", 1);
+def_int $dbfield2 = ~script6657(db_getfield($dbrow0, dbtable_5:2, 0));
+def_dbrow $dbrow3 = db_getfield($dbrow0, dbtable_5:2, $dbfield2);
+def_int $int4 = ~cluehelper_is_dig($dbrow0, $dbrow3);
+if (%varbit14188 = 1) {
+	if ($int4 = 1) {
+		$int1 = ~helper_generic_add_text("Find the clue scroll indicator on your world map to see your destination. <br>Travel to the destination and dig at the marked location.");
+	} else {
+		$int1 = ~helper_generic_add_text("Find the clue scroll indicator on your world map to see your destination. <br>Travel to the destination and search the marked location.");
+	}
+}
+~cluehelper_infobox_target_display($dbrow3);
+if ($int4 = 1) {
+	$int1 = ~helper_generic_add_text("...");
+	if (cc_find(interface_711:4, $int1) = ^true) {
+		cc_setoninvtransmit("script6623($int1){inv}");
+	}
+}

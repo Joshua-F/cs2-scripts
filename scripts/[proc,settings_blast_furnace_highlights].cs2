@@ -1,0 +1,6 @@
+// 6454
+[proc,settings_blast_furnace_highlights]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit14181 = calc(1 - %varbit14181);

@@ -1,0 +1,10 @@
+// 6697
+[clientscript,npc_name_timer](int $int0, newvar $newvar1, npc_uid $npc_uid2, int $int3, string $string0, npc $npc4)
+if ($int0 = %varcint1079) {
+	return;
+}
+$int0 = %varcint1079;
+~npc_name_create($newvar1, $npc_uid2, $int3, $string0, $npc4);
+if (_202($newvar1) = ^true) {
+	cc_setontimer("npc_name_timer($int0, $newvar1, $npc_uid2, $int3, $string0, $npc4)");
+}

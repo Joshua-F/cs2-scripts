@@ -20,14 +20,14 @@ def_string $string1 = "";
 def_struct $struct13 = enum(int, struct, enum_4365, 1);
 ~steelborder(interface_74:4, "Group Raffle - <struct_param($struct13, param_1614)>", 1);
 if ($int10 ! $int2) {
-	$int10, $int11, $height12 = ~script6070($component0, $component1, $int10, $int11, $height12, $component3, $component4, "Info", $component5);
+	$int10, $int11, $height12 = ~raffle_tab_not_selected($component0, $component1, $int10, $int11, $height12, $component3, $component4, "Info", $component5);
 } else {
-	$int10, $int11, $height12 = ~script6071($int10, $int11, $height12, $component3, $component4, "Info", $component5);
+	$int10, $int11, $height12 = ~raffle_tab_selected($int10, $int11, $height12, $component3, $component4, "Info", $component5);
 }
 if ($int10 ! $int2) {
-	$int10, $int11, $height12 = ~script6070($component0, $component1, $int10, $int11, $height12, $component3, $component4, "Score", $component5);
+	$int10, $int11, $height12 = ~raffle_tab_not_selected($component0, $component1, $int10, $int11, $height12, $component3, $component4, "Score", $component5);
 } else {
-	$int10, $int11, $height12 = ~script6071($int10, $int11, $height12, $component3, $component4, "Score", $component5);
+	$int10, $int11, $height12 = ~raffle_tab_selected($int10, $int11, $height12, $component3, $component4, "Score", $component5);
 }
 def_int $int14 = %var261;
 def_int $int15 = %var262;

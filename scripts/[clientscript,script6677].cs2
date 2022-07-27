@@ -7,7 +7,7 @@ if (_203($newvar0, 0) = ^true) {
 	cc_settext(tostring(%var3));
 	cc_setonvartransmit("script6677($newvar0, $coord1, %var3){var3}");
 	if (%var3 <= 0) {
-		~script6676($newvar0, $coord1);
+		~cannon_overlay_create($newvar0, $coord1);
 	} else if (%var3 <= 5) {
 		cc_setcolour(^red);
 	} else if (%var3 <= 15) {

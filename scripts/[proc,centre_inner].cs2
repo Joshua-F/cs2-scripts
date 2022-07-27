@@ -1,0 +1,6 @@
+// 6661
+[proc,centre_inner](int $int0, coord $coord1)(coord)
+if ($int0 <= 2) {
+	return($coord1);
+}
+return(movecoord($coord1, calc($int0 / 2), 0, calc($int0 / 2)));

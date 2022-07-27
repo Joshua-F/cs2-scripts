@@ -11,7 +11,7 @@ if (_6951($coord1) = true) {
 	if (_202($newvar3) = ^true) {
 		cc_setonvartransmit("script6502($dbrow0, $coord1, $obj2, %varbit14189, %var3548, %var3549, %var3550, %var3547, %varbit14182, %varbit14184){var3546, var3543, var3548, var3549, var3550, var3547}");
 	}
-	if (%varbit14182 = 0 | ~script6497 = 1) {
+	if (%varbit14182 = 0 | ~cluehelper_overlay_npc_active = 1) {
 		highlight_tile_off($coord1, 9, 1);
 		return;
 	}

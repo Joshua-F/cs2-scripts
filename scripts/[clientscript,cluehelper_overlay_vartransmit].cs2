@@ -1,0 +1,27 @@
+// 6494
+[clientscript,cluehelper_overlay_vartransmit](dbrow $dbrow0, int $int1)
+if (%var3546 = $dbrow0 & $int1 = %varbit14182) {
+	return;
+}
+def_enum $enum2 = ~toplevel_getcomponents;
+if ($enum2 = null) {
+	return;
+}
+def_component $component3 = enum(component, component, $enum2, interface_161:35);
+if ($component3 = null) {
+	return;
+}
+if (cc_find($component3, 1) = ^true) {
+	cc_setonvartransmit("cluehelper_overlay_vartransmit(%var3546, %varbit14182){var3546, var3543}");
+}
+if (%varbit14182 = 0) {
+	return;
+}
+if (%var3546 = null) {
+	return;
+}
+def_dbrow $dbrow4 = ~cluehelper_clue_target(%var3546);
+if ($dbrow4 = null) {
+	return;
+}
+~cluehelper_overlay(%var3546, $dbrow4);

@@ -1,0 +1,9 @@
+// 6663
+[proc,mouseover_tooltip_setup](string $string0, string $string1, int $int0, int $int1)
+%varcstring1014 = $string0;
+%varcstring1015 = $string1;
+if (~on_mobile = true) {
+	%varcint1016 = $int0;
+	%varcint1017 = $int1;
+}
+~mouseover_ops;

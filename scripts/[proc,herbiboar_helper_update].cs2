@@ -1,0 +1,16 @@
+// 6434
+[proc,herbiboar_helper_update]
+~herbiboar_helper_highlight_enable(%varbit14172);
+~herbiboar_helper_highlight_clear;
+if (%var1617 = 0 & %var1618 = 0 & %var1619 = 0 & %var1620 = 0) {
+	~herbiboar_helper_start_locations;
+}
+if (%varbit5766 > 0) {
+	~herbiboar_helper_end_location;
+	~herbiboar_helper_footprints;
+} else if (%varbit5943 > 0) {
+	~herbiboar_helper_boar_location;
+} else {
+	~herbiboar_helper_footprints;
+	~herbiboar_helper_next_location;
+}

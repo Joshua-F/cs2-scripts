@@ -1,0 +1,9 @@
+// 6457
+[proc,settings_cluehelper_target_highlight]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%varbit14182 = 0) {
+	return;
+}
+%varbit14184 = calc(1 - %varbit14184);

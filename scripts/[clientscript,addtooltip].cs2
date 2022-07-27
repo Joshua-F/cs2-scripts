@@ -1,7 +1,7 @@
 // 38
 [clientscript,addtooltip](component $component0, component $component1, int $int2, int $width3, string $string0)
 if (~on_enhanced_any = 1) {
-	~script6663($string0, "", mouse_getx, mouse_gety);
+	~mouseover_tooltip_setup($string0, "", mouse_getx, mouse_gety);
 	return;
 }
 def_int $x4 = 0;

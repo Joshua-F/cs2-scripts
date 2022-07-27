@@ -1,0 +1,16 @@
+// 6683
+[clientscript,herbiboar_helper_transmit](component $component0, int $lvl1, int $lvl2, int $int3, int $int4, int $int5, int $int6, int $int7)
+if (%varbit14172 = 1) {
+	return;
+}
+if (~inzone(0_56_58_0_0, 3_59_60_63_63, coord) = 0) {
+	return;
+}
+if ($lvl1 = stat(hunter) & $lvl2 = stat(herblore) & %var1617 = $int3 & %var1618 = $int4 & %var1619 = $int5 & %var1620 = $int6 & %var1655 = $int7) {
+	return;
+}
+~herbiboar_helper_update;
+if (cc_find($component0, 0) = ^true) {
+	cc_setonstattransmit("herbiboar_helper_transmit($component0, stat(hunter), stat(herblore), %var1617, %var1618, %var1619, %var1620, %var1655){hunter, herblore}");
+	cc_setonvartransmit("herbiboar_helper_transmit($component0, stat(hunter), stat(herblore), %var1617, %var1618, %var1619, %var1620, %var1655){var1617, var1618, var1619, var1620, var1655}");
+}

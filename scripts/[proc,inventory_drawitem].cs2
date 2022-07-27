@@ -11,8 +11,8 @@ if ($obj0 ! null) {
 	if ($boolean4 = true) {
 		cc_settrans(0);
 		cc_settargetverb("Use");
-		cc_setontargetenter("script6002(event_com, event_comsubid, 2)");
-		cc_setontargetleave("script6002(event_com, event_comsubid, 1)");
+		cc_setontargetenter("settings_questlist_section_page(event_com, event_comsubid, 2)");
+		cc_setontargetleave("settings_questlist_section_page(event_com, event_comsubid, 1)");
 		~inventory_setophelds($obj0, $boolean5);
 		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
 		cc_setondrag("script6063(event_com, $int3)");

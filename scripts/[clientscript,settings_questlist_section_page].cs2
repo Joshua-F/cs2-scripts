@@ -1,0 +1,5 @@
+// 6002
+[clientscript,settings_questlist_section_page](component $component0, int $comsubid1, int $int2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setoutline($int2);
+}
