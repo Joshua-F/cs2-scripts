@@ -5,7 +5,7 @@ def_int $width2 = parawidth(~helper_generic_get_string(calc($int0 + 1)), calc(14
 def_int $int3 = calc(paraheight(~helper_generic_get_string($int0), $width1, p12_full) * 14);
 def_int $int4 = calc(paraheight(~helper_generic_get_string($int0 + 1), $width2, p12_full) * 14);
 def_int $int5 = ~max($int3, $int4);
-if (cc_find(interface_711:3, $int0) = ^true) {
+if (cc_find(interface_711:4, $int0) = ^true) {
 	cc_setsize($width1, $int5, ^setsize_abs, ^setsize_abs);
 	cc_setposition(1, %varcint493, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
@@ -14,7 +14,7 @@ if (cc_find(interface_711:3, $int0) = ^true) {
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settext(~helper_generic_get_string($int0));
 }
-if (cc_find(interface_711:3, calc($int0 + 1)) = ^true) {
+if (cc_find(interface_711:4, calc($int0 + 1)) = ^true) {
 	cc_setsize($width2, $int5, ^setsize_abs, ^setsize_abs);
 	cc_setposition(1, %varcint493, ^setpos_abs_right, ^setpos_abs_top);
 	cc_setcolour(^white);

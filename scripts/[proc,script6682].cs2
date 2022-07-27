@@ -1,0 +1,25 @@
+// 6682
+[proc,script6682]
+def_enum $enum0 = ~toplevel_getcomponents;
+def_component $component1 = enum(component, component, $enum0, interface_161:35);
+cc_deleteall($component1);
+if (~on_enhanced_any = 0) {
+	return;
+}
+def_int $int2 = 0;
+cc_create($component1, ^iftype_rectangle, 0);
+cc_settrans(255);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_setonstattransmit("script6683($component1, stat(hunter), stat(herblore), %var1617, %var1618, %var1619, %var1620, %var1655){hunter, herblore}");
+cc_setonvartransmit("script6683($component1, stat(hunter), stat(herblore), %var1617, %var1618, %var1619, %var1620, %var1655){var1617, var1618, var1619, var1620, var1655}");
+_1433("script6711");
+cc_create($component1, ^iftype_rectangle, 1);
+cc_settrans(255);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_setonvartransmit("script6494(%var3546, %varbit14182){var3546, var3543}");
+_1433("script6495");
+if (%var3546 ! null & %varbit14182 = 1) {
+	~script6496(%var3546, ~script6655(%var3546));
+}

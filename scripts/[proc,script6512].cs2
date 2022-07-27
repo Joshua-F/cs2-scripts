@@ -1,0 +1,36 @@
+// 6512
+[proc,script6512](newvar $newvar0, dbrow $dbrow1, npc_uid $npc_uid2, int $int3)
+_104($newvar0);
+highlight_npc_off($npc_uid2, $int3, 9);
+if (%varbit14189 = 0 | $dbrow1 = null) {
+	return;
+}
+def_dbrow $dbrow4 = ~script6655($dbrow1);
+def_npc $npc5 = null;
+def_int $int6 = 0;
+def_int $int7 = 0;
+if (db_getrowtable($dbrow4) = dbtable_15) {
+	$npc5 = db_getfield($dbrow4, dbtable_15:0, 0);
+	if (npc_type = $npc5) {
+		switch_int (db_getrowtable($dbrow1)) {
+			case dbtable_13 :
+				~script6514($newvar0, $npc_uid2, $int3);
+			case dbtable_11 :
+				~script6515($newvar0, $npc_uid2, $int3);
+			case dbtable_14 :
+				~script6516($newvar0, $npc_uid2, $int3);
+			case dbtable_4, dbtable_6, dbtable_8 :
+				~script6517($newvar0, $npc_uid2, $int3);
+		}
+	}
+} else if (db_getrowtable($dbrow4) = dbtable_20) {
+	$int7 = db_getfieldcount($dbrow4, dbtable_20:0);
+	while ($int6 < $int7) {
+		$npc5 = db_getfield($dbrow4, dbtable_20:0, $int6);
+		if (npc_type = $npc5) {
+			~script6513($newvar0, $npc_uid2, $int3);
+			return;
+		}
+		$int6 = calc($int6 + 1);
+	}
+}

@@ -1,0 +1,28 @@
+// 6639
+[proc,script6639](dbrow $dbrow0)
+def_int $int1 = 0;
+$int1 = ~helper_generic_add_title("Coordinate Clue", 1);
+if (%varbit14188 = 1) {
+	$int1 = ~helper_generic_add_text(db_getfield($dbrow0, dbtable_7:2, 0));
+	$int1 = ~helper_generic_add_text("Dig at the location below.");
+}
+def_int $dbfield2 = ~script6657(db_getfield($dbrow0, dbtable_7:3, 0));
+def_dbrow $dbrow3 = db_getfield($dbrow0, dbtable_7:3, $dbfield2);
+~script6627($dbrow3);
+def_int $int4 = 0;
+def_dbrow $dbrow5 = null;
+def_int $int6 = db_getfieldcount($dbrow0, dbtable_7:5);
+if ($int6 > 0) {
+	$int1 = ~helper_generic_add_title("Combat", 0);
+	while ($int4 < $int6) {
+		$dbrow5 = db_getfield($dbrow0, dbtable_7:5, $int4);
+		$int1 = ~helper_generic_add_text(db_getfield($dbrow5, dbtable_27:0, 0));
+		$int4 = calc($int4 + 1);
+	}
+}
+if (~script6651($dbrow0, $dbrow3) = 1) {
+	$int1 = ~helper_generic_add_text("...");
+	if (cc_find(interface_711:4, $int1) = ^true) {
+		cc_setoninvtransmit("script6623($int1){inv}");
+	}
+}

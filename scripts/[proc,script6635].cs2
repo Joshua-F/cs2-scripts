@@ -1,0 +1,11 @@
+// 6635
+[proc,script6635](dbrow $dbrow0)
+def_int $int1 = 0;
+$int1 = ~helper_generic_add_title("Cipher Clue", 1);
+if (%varbit14188 = 1) {
+	$int1 = ~helper_generic_add_text(db_getfield($dbrow0, dbtable_6:2, 0));
+}
+def_int $dbfield2 = ~script6657(db_getfield($dbrow0, dbtable_6:3, 0));
+~script6627(db_getfield($dbrow0, dbtable_6:3, $dbfield2));
+def_int $dbfield3 = ~script6656($dbrow0);
+~script6628(db_getfield($dbrow0, dbtable_6:4, $dbfield3));

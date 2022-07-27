@@ -1,0 +1,15 @@
+// 6691
+[proc,script6691](loc $loc0)(string)
+def_string $string0 = "3|";
+$string0 = append($string0, _6806($loc0, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6807($loc0, 1, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6807($loc0, 2, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6807($loc0, 3, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6807($loc0, 4, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6807($loc0, 5, 0));
+return($string0);

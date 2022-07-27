@@ -5,6 +5,9 @@ def_string $string1 = "";
 def_string $string2 = "";
 def_int $int2 = 0;
 def_int $int3 = 0;
+if ($struct0 = buff_desert_water_available_340 & $int1 = ^max_32bit_int) {
+	return("Inf");
+}
 if (~script5944($struct0) = 1) {
 	$int2 = calc(struct_param($struct0, param_1539) * 50);
 	$int3 = calc(struct_param($struct0, param_1538) * 50);

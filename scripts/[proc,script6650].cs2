@@ -1,0 +1,28 @@
+// 6650
+[proc,script6650](dbrow $dbrow0, int $int1, int $dbfield2)(obj)
+switch_int ($int1) {
+	case 0 :
+		return(db_getfield($dbrow0, dbtable_28:1, $dbfield2));
+	case 1 :
+		return(db_getfield($dbrow0, dbtable_28:2, $dbfield2));
+	case 2 :
+		return(db_getfield($dbrow0, dbtable_28:3, $dbfield2));
+	case 3 :
+		return(db_getfield($dbrow0, dbtable_28:4, $dbfield2));
+	case 4 :
+		return(db_getfield($dbrow0, dbtable_28:5, $dbfield2));
+	case 5 :
+		return(db_getfield($dbrow0, dbtable_28:6, $dbfield2));
+	case 7 :
+		return(db_getfield($dbrow0, dbtable_28:7, $dbfield2));
+	case 9 :
+		return(db_getfield($dbrow0, dbtable_28:8, $dbfield2));
+	case 10 :
+		return(db_getfield($dbrow0, dbtable_28:9, $dbfield2));
+	case 12 :
+		return(db_getfield($dbrow0, dbtable_28:10, $dbfield2));
+	case 13 :
+		return(db_getfield($dbrow0, dbtable_28:11, $dbfield2));
+	case default :
+		return(null);
+}

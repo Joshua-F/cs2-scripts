@@ -237,7 +237,11 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
-				if_setop(1, "Accept trade", $component9);
+				if (~pvpa_world = 1) {
+					if_setop(1, "Accept invitation", $component9);
+				} else {
+					if_setop(1, "Accept trade", $component9);
+				}
 				if ($int15 = 1) {
 					if_setop(6, "Message", $component9);
 				} else {

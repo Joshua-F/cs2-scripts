@@ -1,0 +1,29 @@
+// 6633
+[proc,script6633]
+def_dbrow $dbrow0 = %var3546;
+~helper_generic_setup(1, 1, 1);
+switch_int (db_getrowtable($dbrow0)) {
+	case dbtable_8 :
+		~script6643($dbrow0);
+	case dbtable_4 :
+		~script6642($dbrow0);
+	case dbtable_5 :
+		~script6644($dbrow0);
+	case dbtable_12 :
+		~script6641($dbrow0);
+	case dbtable_9 :
+		~script6640($dbrow0);
+	case dbtable_7 :
+		~script6639($dbrow0);
+	case dbtable_14 :
+		~script6638($dbrow0);
+	case dbtable_13 :
+		~script6637($dbrow0);
+	case dbtable_11 :
+		~script6636($dbrow0);
+	case dbtable_6 :
+		~script6635($dbrow0);
+	case dbtable_10 :
+		~script6634($dbrow0);
+}
+~script4703;

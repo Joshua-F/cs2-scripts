@@ -51,6 +51,10 @@ switch_int ($setting3) {
 		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var3417}");
 	case 253, 254, 255, 256 :
 		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var64, var1675}");
+	case 261, 260 :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var3416}");
+	case 270, 272, 273, 274, 275, 276, 277 :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var3543}");
 	case default :
 		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var2855}");
 }

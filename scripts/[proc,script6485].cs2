@@ -1,0 +1,93 @@
+// 6485
+[proc,script6485](dbrow $dbrow0)(int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:1);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:1, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:2);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:2, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:3);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:3, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:4);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:4, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:5);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:5, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:6);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:6, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:7);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:7, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:8);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:8, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:9);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:9, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:10);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:10, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1 = db_getfieldcount($dbrow0, dbtable_28:11);
+while ($int2 < $int1) {
+	if (inv_total(inv, db_getfield($dbrow0, dbtable_28:11, $int2)) > 0) {
+		return(1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+return(-1);

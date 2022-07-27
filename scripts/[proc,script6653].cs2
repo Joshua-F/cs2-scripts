@@ -1,0 +1,47 @@
+// 6653
+[proc,script6653](dbrow $dbrow0)(coord)
+def_coord $coord1 = null;
+def_coord $coord2 = null;
+def_coord $coord3 = null;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_obj $obj6 = null;
+switch_int (db_getrowtable($dbrow0)) {
+	case dbtable_15 :
+		return(db_getfield($dbrow0, dbtable_15:2, 0));
+	case dbtable_16 :
+		return(db_getfield($dbrow0, dbtable_16:1, 0));
+	case dbtable_18 :
+		return(db_getfield($dbrow0, dbtable_18:0, 0));
+	case dbtable_20 :
+		return(db_getfield($dbrow0, dbtable_20:1, 0));
+	case dbtable_19 :
+		$obj6 = db_getfield($dbrow0, dbtable_19:3, 0);
+		if ($obj6 ! null & inv_total(inv, $obj6) > 0) {
+			$coord3 = db_getfield($dbrow0, dbtable_19:1, 0);
+		} else {
+			$coord3 = db_getfield($dbrow0, dbtable_19:4, 0);
+		}
+		return($coord3);
+	case dbtable_17 :
+		$coord1 = db_getfield($dbrow0, dbtable_17:0, 0);
+		$coord2 = db_getfield($dbrow0, dbtable_17:1, 0);
+		if ($coord1 = null | $coord2 = null) {
+			return(null);
+		}
+		if (calc(coordx($coord1) / 64) = calc(coordx($coord2) / 64) & calc(coordz($coord1) / 64) = calc(coordz($coord2) / 64)) {
+			$int4 = calc((coordx($coord2) % 64 - coordx($coord1) % 64) / 2);
+			$int5 = calc((coordz($coord2) % 64 - coordz($coord1) % 64) / 2);
+		} else {
+			$int4 = calc(64 - coordx($coord1) % 64);
+			$int4 = calc($int4 + coordx($coord2) % 64);
+			$int4 = calc($int4 / 2);
+			$int5 = calc(64 - coordz($coord1) % 64);
+			$int5 = calc($int5 + coordz($coord2) % 64);
+			$int5 = calc($int5 / 2);
+		}
+		$coord1 = movecoord($coord1, $int4, 0, $int5);
+		return($coord1);
+	case default :
+		return(null);
+}

@@ -4,5 +4,6 @@ if (~on_enhanced_mobile = 0 | %varbit13666 = 1) {
 	return;
 }
 ~entity_highlight_clear(4);
-~script5961;
+def_newvar $newvar0 = _7200(3, 0, 1, 1, 0);
+~script5961($newvar0);
 ~entity_highlight_active_npc(4);

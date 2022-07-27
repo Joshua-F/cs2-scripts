@@ -1,0 +1,14 @@
+// 6649
+[proc,script6649](dbrow $dbrow0)(string)
+switch_int (db_getrowtable($dbrow0)) {
+	case dbtable_21 :
+		return(db_getfield($dbrow0, dbtable_21:0, 0));
+	case dbtable_24 :
+		return("<enum(stat, string, enum_680, db_getfield($dbrow0, dbtable_24:0, 0))> <tostring(db_getfield($dbrow0, dbtable_24:1, 0))>");
+	case dbtable_23 :
+		return(db_getfield($dbrow0, dbtable_23:0, 0));
+	case dbtable_22 :
+		return(db_getfield($dbrow0, dbtable_22:0, 0));
+	case default :
+		return("null");
+}

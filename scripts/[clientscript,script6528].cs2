@@ -1,0 +1,13 @@
+// 6528
+[clientscript,script6528](newvar $newvar0, npc_uid $npc_uid1, int $int2, int $int3, npc_uid $npc_uid4, dbrow $dbrow5, dbrow $dbrow6)
+if (%varbit14189 = $int3 & %var3548 = $npc_uid4 & %var3547 = $dbrow5 & %var3546 = $dbrow6) {
+	return;
+}
+if (_202($newvar0) = ^true) {
+	cc_setonvartransmit("script6528($newvar0, $npc_uid1, $int2, %varbit14189, %var3548, %var3547, %var3546){var3543, var3546, var3548, var3547}");
+}
+highlight_npc_off($npc_uid1, $int2, 9);
+_104($newvar0);
+if (npc_find($npc_uid1) = true) {
+	~script6532($newvar0, $npc_uid1, $int2);
+}

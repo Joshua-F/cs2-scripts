@@ -1,0 +1,8 @@
+// 6544
+[clientscript,script6544](newvar $newvar0, int $int1, npc_uid $npc_uid2, int $int3, dbrow $dbrow4, int $int5, npc_uid $npc_uid6, npc $npc7)
+if (%varbit14189 = $int3 & %var3546 = $dbrow4 & ~script6545($int5) = $npc_uid6) {
+	return;
+}
+if (_202($newvar0) = ^true) {
+	~script6543($newvar0, $int1, $npc_uid2, $npc7);
+}

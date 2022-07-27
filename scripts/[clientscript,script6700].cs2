@@ -1,0 +1,8 @@
+// 6700
+[clientscript,script6700](int $int0, int $int1)
+def_int $int2 = 0;
+if (~script252($int1) = 1) {
+	$int2 = 1;
+}
+def_string $string0 = ~script6625(enum(int, string, enum_812, $int1), $int2);
+~helper_generic_update_text($int0, $string0);

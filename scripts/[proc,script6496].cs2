@@ -1,0 +1,50 @@
+// 6496
+[proc,script6496](dbrow $dbrow0, dbrow $dbrow1)
+if ($dbrow0 = null) {
+	return;
+}
+if (%varbit14182 = 0) {
+	return;
+}
+if (db_getrowtable($dbrow0) = dbtable_12) {
+	return;
+}
+def_loc $loc2 = null;
+def_coord $coord3 = null;
+$loc2, $coord3 = ~script6652($dbrow0);
+def_int $int4 = -1;
+def_obj $obj5 = null;
+def_obj $obj6 = enum(int, obj, enum_4616, ~script6654($dbrow0));
+if ($loc2 ! null & $coord3 ! null & _6951($coord3) = true) {
+	~script6507($dbrow0, $dbrow1, $loc2, $coord3, $obj6);
+} else if (db_getrowtable($dbrow1) = dbtable_16) {
+	if (%varbit14184 = 1) {
+		_7010(9, ^green, 2, 30, 1);
+	}
+	$loc2 = db_getfield($dbrow1, dbtable_16:0, 0);
+	$coord3 = db_getfield($dbrow1, dbtable_16:1, 0);
+	if ($loc2 ! null & $coord3 ! null) {
+		~script6505($dbrow0, $loc2, $coord3, $obj6);
+	}
+} else if (db_getrowtable($dbrow1) = dbtable_19) {
+	if (%varbit14184 = 1) {
+		_7010(9, ^green, 2, 30, 1);
+	}
+	$loc2 = db_getfield($dbrow1, dbtable_19:0, 0);
+	$coord3 = db_getfield($dbrow1, dbtable_19:1, 0);
+	$obj5 = db_getfield($dbrow1, dbtable_19:3, 0);
+	if ($loc2 ! null & $coord3 ! null & $obj5 ! null) {
+		~script6498($dbrow0, $loc2, $obj5, $coord3, $obj6);
+	}
+}
+if (~script6651($dbrow0, $dbrow1) = 1) {
+	$coord3 = ~script6653($dbrow1);
+	if ($coord3 ! null) {
+		~script6503($dbrow0, $coord3, $obj6);
+	}
+} else if (db_getrowtable($dbrow1) = dbtable_18) {
+	$coord3 = ~script6653($dbrow1);
+	if ($coord3 ! null) {
+		~script6501($dbrow0, $coord3, $obj6);
+	}
+}

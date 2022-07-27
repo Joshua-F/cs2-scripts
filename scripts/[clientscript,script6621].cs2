@@ -1,0 +1,12 @@
+// 6621
+[clientscript,script6621](dbrow $dbrow0, dbrow $dbrow1, newvar $newvar2, int $int3, npc_uid $npc_uid4, obj $obj5, int $int6)
+if ($int6 = 0 & inv_total(inv, $obj5) > 0) {
+	$int6 = 1;
+	~script6622($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj5, $int6);
+} else if ($int6 = 1 & inv_total(inv, $obj5) <= 0) {
+	$int6 = 0;
+	~script6622($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj5, $int6);
+}
+if (_202($newvar2) = ^true) {
+	cc_setoninvtransmit("script6621($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj5, $int6){inv}");
+}

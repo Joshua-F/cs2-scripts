@@ -36,6 +36,10 @@ cc_setop(1, "Toggle");
 cc_setonop("settings_toggle_op($struct5, $setting13, $component7, calc($int2 + 2), $boolean16, $boolean14)");
 cc_setcolour(^white);
 cc_settrans(255);
+if ($boolean9 = false & $int11 = 1 & string_length($string1) > 0) {
+	cc_setonmouserepeat("tooltip_mouserepeat($component7, $int2, $component8, $string1, 25, 190)");
+	cc_setonmouseleave("deltooltip($component8)");
+}
 $int3 = calc($int3 + 1);
 cc_create($component7, ^iftype_rectangle, $int2);
 cc_setsize(10, $int18, ^setsize_minus, ^setsize_abs);
@@ -63,10 +67,6 @@ if ($int15 = 1) {
 	cc_setcolour(0x9f9f9f);
 }
 cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
-if ($boolean9 = false & $int11 = 1 & string_length($string1) > 0) {
-	cc_setonmouserepeat("tooltip_mouserepeat($component7, $int2, $component8, $string1, 25, 190)");
-	cc_setonmouseleave("deltooltip($component8)");
-}
 $int2 = calc($int2 + 1);
 cc_create($component7, ^iftype_graphic, $int2);
 cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);

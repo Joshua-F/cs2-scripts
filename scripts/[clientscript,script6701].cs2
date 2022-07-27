@@ -1,0 +1,10 @@
+// 6701
+[clientscript,script6701](component $component0, component $component1, component $component2, component $component3)
+def_string $string0 = enum(int, string, enum_4414, 0);
+def_string $string1 = enum(int, string, enum_4414, 1);
+def_string $string2 = enum(int, string, enum_4414, 2);
+if_setop(1, $string0, $component1);
+if_setop(1, $string1, $component2);
+if_setop(1, $string2, $component3);
+~script6703($string0, $component1, $string1, $component2, $string2, $component3);
+if_setonvartransmit("script6702($string0, $component1, $string1, $component2, $string2, $component3){var3465}", $component0);

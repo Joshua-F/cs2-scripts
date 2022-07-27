@@ -1,0 +1,24 @@
+// 6634
+[proc,script6634](dbrow $dbrow0)
+def_int $int1 = 0;
+$int1 = ~helper_generic_add_title("Fairy Ring Clue", 1);
+if (%varbit14188 = 1) {
+	$int1 = ~helper_generic_add_text("Travel to the fairy ring, and then walk the following amount of steps to the marked location then dig.");
+}
+def_int $dbfield2 = ~script6657(db_getfield($dbrow0, dbtable_10:5, 0));
+def_dbrow $dbrow3 = db_getfield($dbrow0, dbtable_10:5, $dbfield2);
+$int1 = ~helper_generic_add_title("Fairy Ring Code", 0);
+$int1 = ~helper_generic_add_text(enum(int, string, enum_1294, db_getfield($dbrow0, dbtable_10:3, 0)));
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+$int4, $int5, $int6, $int7 = db_getfield($dbrow0, dbtable_10:4, 0);
+$int1 = ~helper_generic_add_title("Steps from the Fairy Ring", 0);
+$int1 = ~helper_generic_add_text("<tostring($int4)>n <tostring($int5)>e <tostring($int6)>s <tostring($int7)>w");
+if (~script6651($dbrow0, $dbrow3) = 1) {
+	$int1 = ~helper_generic_add_text("...");
+	if (cc_find(interface_711:4, $int1) = ^true) {
+		cc_setoninvtransmit("script6623($int1){inv}");
+	}
+}

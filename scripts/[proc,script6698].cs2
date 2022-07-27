@@ -1,0 +1,38 @@
+// 6698
+[proc,script6698](newvar $newvar0, npc_uid $npc_uid1, int $int2, string $string0, npc $npc3)
+_104($newvar0);
+if (%varbit542 = 1) {
+	return;
+}
+def_fontmetrics $fontmetrics4 = null;
+def_fontmetrics $fontmetrics5 = null;
+def_int $colour6 = ^black;
+if (%varbit14168 = 1 & %varbit14169 > 0 & (_7043(~script6690($npc3), 6) = true | _7003($npc_uid1, $int2, 6) = true)) {
+	if (%varbit14169 = 1) {
+		$fontmetrics4, $fontmetrics5 = p12_full, p12_full;
+	} else {
+		$fontmetrics4, $fontmetrics5 = b12_full, b12_full;
+	}
+	$colour6 = ~script5329(263);
+} else if (%varbit14178 > 0) {
+	if (%varbit14178 = 1) {
+		$fontmetrics4, $fontmetrics5 = p12_full, p12_full;
+	} else {
+		$fontmetrics4, $fontmetrics5 = b12_full, b12_full;
+	}
+	$colour6 = ~script5329(266);
+} else {
+	return;
+}
+_103($newvar0, ^iftype_text, 0);
+def_int $width7 = parawidth($string0, 1000, $fontmetrics4);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize($width7, 20, ^setsize_abs, ^setsize_abs);
+cc_setcolour($colour6);
+cc_settextfont($fontmetrics5);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
+cc_settextshadow(true);
+cc_settext($string0);
+if (_202($newvar0) = ^true) {
+	cc_setsize($width7, 20, ^setsize_abs, ^setsize_abs);
+}

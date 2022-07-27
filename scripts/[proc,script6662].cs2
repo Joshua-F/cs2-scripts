@@ -1,0 +1,17 @@
+// 6662
+[proc,script6662]()(int)
+if (inv_total(worn, desert_amulet_4_13136) > 0) {
+	return(^max_32bit_int);
+}
+def_int $int0 = %varbit14191;
+def_int $count1 = 0;
+def_int $count2 = enum_getoutputcount(enum_4618);
+def_obj $obj3 = null;
+while ($count1 < $count2) {
+	$obj3 = enum(int, obj, enum_4618, $count1);
+	if ($obj3 ! null) {
+		$int0 = calc($int0 + inv_total(inv, $obj3) * enum(int, int, enum_4619, $count1));
+	}
+	$count1 = calc($count1 + 1);
+}
+return($int0);

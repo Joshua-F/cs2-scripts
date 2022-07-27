@@ -312,46 +312,53 @@ while ($wma45 ! null) {
 	}
 	$wma45 = enum(int, wma, enum_1697, $int28);
 }
-def_coord $coord46 = movecoord(0_0_0_0_0, $int25, 0, 0);
+def_int $comsubidarray1(3);
+$comsubidarray1(0) = $int25;
 cc_create($component16, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
-cc_setgraphic(struct_param(your_position_1, param_459));
-$coord46 = movecoord($coord46, 0, 0, $int25);
+cc_setgraphic(struct_param(your_position_1, param_624));
+$comsubidarray1(1) = $int25;
 cc_create($component16, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
-cc_setgraphic(struct_param(gravestone_317, param_459));
+cc_setgraphic(struct_param(clue_scroll_343, param_624));
+$comsubidarray1(2) = $int25;
+cc_create($component16, ^iftype_graphic, $int25);
+$int25 = calc($int25 + 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_sethide(true);
+cc_setgraphic(struct_param(gravestone_317, param_624));
 if ($int28 >= 3) {
 	~quicksort_cctext(intarray0, $component16, 1, 41);
 }
 $int29 = calc(3 + $int29 + 2 + 26 + 2 + 16 + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);
-def_int $int47 = calc(262 + $int29);
-~worldmap_window_set($component0, $layer2, $component24, $component3, $int47);
-~worldmap_size_handler($component0, $layer2, $component24, $component3, ^min_32bit_int, ^min_32bit_int, $component21, $component22, $int29, $int47, $component11, $int39);
+def_int $int46 = calc(262 + $int29);
+~worldmap_window_set($component0, $layer2, $component24, $component3, $int46);
+~worldmap_size_handler($component0, $layer2, $component24, $component3, ^min_32bit_int, ^min_32bit_int, $component21, $component22, $int29, $int46, $component11, $int39);
 if_setscrollpos(0, 0, $component16);
 $int26 = calc($int28 * $int27 + 2);
-def_int $int48 = 124;
+def_int $int47 = 124;
 if (~on_mobile = true) {
-	$int48 = 196;
+	$int47 = 196;
 }
-if ($int26 >= calc($int48 - 4)) {
+if ($int26 >= calc($int47 - 4)) {
 	if_setscrollsize(0, $int26, $component16);
 } else {
 	if_setscrollsize(0, 0, $component16);
-	$int48 = calc($int26 + 4);
+	$int47 = calc($int26 + 4);
 }
-if_setsize($int29, $int48, ^setsize_abs, ^setsize_abs, $component15);
+if_setsize($int29, $int47, ^setsize_abs, ^setsize_abs, $component15);
 cc_deleteall($component17);
 ~scrollbar_vertical($component17, $component16, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 $int26 = if_gety($component12);
-def_component $layer49 = if_getlayer($component12);
-while ($layer49 ! $layer2) {
-	$int26 = calc($int26 + if_gety($layer49) - if_getscrolly($layer49));
-	$layer49 = if_getlayer($layer49);
+def_component $layer48 = if_getlayer($component12);
+while ($layer48 ! $layer2) {
+	$int26 = calc($int26 + if_gety($layer48) - if_getscrolly($layer48));
+	$layer48 = if_getlayer($layer48);
 }
 if (~on_mobile = false) {
 	if_setposition(0, calc(if_getheight($layer2) - 1 - $int26), ^setpos_abs_centre, ^setpos_abs_bottom, $component15);
@@ -372,7 +379,7 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("tradebacking");
 cc_settiling(true);
-cc_setonclick("worldmap_maplist_open($component12, $component13, $component16, coordx($coord46), coordz($coord46))");
+cc_setonclick("worldmap_maplist_open($component12, $component13, $component16, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2))");
 if_setonclick("worldmap_maplist_close($component12, $component13)", $component14);
 cc_create($component12, ^iftype_rectangle, $int25);
 $int25 = calc($int25 + 1);

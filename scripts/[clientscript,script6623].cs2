@@ -1,0 +1,8 @@
+// 6623
+[clientscript,script6623](int $int0)
+def_int $int1 = 0;
+if (inv_total(inv, spade_952) > 0) {
+	$int1 = 1;
+}
+def_string $string0 = ~script6625("A spade is required!", $int1);
+~helper_generic_update_text($int0, $string0);

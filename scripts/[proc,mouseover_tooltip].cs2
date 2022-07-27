@@ -1,88 +1,222 @@
 // 4728
 [proc,mouseover_tooltip](int $int0, component $component1, string $string0, int $minimenu_entry_type2, int $int3)(int)
-if (%varcint1 >= clientclock | %varcint2 = 1) {
-	return($int0);
+def_int $int4 = 1;
+def_int $int5 = 1;
+if (%varbit12344 = 1 | enum(int, boolean, enum_3903, $minimenu_entry_type2) = false | ~on_mobile = true) {
+	$int4 = 0;
+} else if ($minimenu_entry_type2 = 7 & targetmode_active = true) {
+	switch_component (cc_getlayer) {
+		case magic_spellbook:3 :
+			$int4 = 0;
+		case interface_216:2 :
+			$int5 = 0;
+	}
+	if (cc_getlayer = magic_spellbook:3) {
+		$int4 = 0;
+	}
 }
-if (enum(int, boolean, enum_3903, $minimenu_entry_type2) = false) {
-	return($int0);
-}
-if ($minimenu_entry_type2 = 7 & targetmode_active = true & cc_getlayer = magic_spellbook:3) {
-	return($int0);
-}
-def_string $string1 = "";
-def_int $int4 = 0;
-def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
-if (%varbit13133 = 0 & $int3 > 1) {
+if ($int4 = 1) {
+	$int6 = calc(parawidth($string0, 192, p12_full) + 8);
+	$int7 = calc(paraheight($string0, 192, p12_full) * 14 + 8);
+}
+def_string $string1 = "";
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+if (%varbit13133 = 0 & $int3 > 1 & $int4 = 1) {
 	$string1 = "+<tostring(calc($int3 - 1))> option";
 	if ($int3 > 2) {
 		$string1 = "<$string1>s";
 	}
-	$int5 = 14;
-	$int4 = calc(parawidth($string1, if_getwidth($component1), p11_full) + 6);
+	$int9 = 14;
+	$int8 = calc(parawidth($string1, if_getwidth($component1), p11_full) + 6);
 }
-def_int $int8 = ~max(calc(parawidth($string0, if_getwidth($component1), p12_full) + 8), $int4);
-def_int $int9 = 24;
-def_int $int10 = ~min(calc(mouse_getx + 0), calc(if_getwidth($component1) - $int8));
-def_int $int11 = ~min(calc(mouse_gety + 24), calc(if_getheight($component1) - ($int9 + $int5)));
-cc_create($component1, ^iftype_rectangle, $int0);
-cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
-cc_setfill(false);
-cc_setcolour(0x0e0e0c);
-cc_settrans(150);
-$int0 = calc($int0 + 1);
-cc_create($component1, ^iftype_rectangle, $int0);
-cc_setposition(calc($int10 + 1), calc($int11 + 1), ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc($int8 - 2), calc($int9 - 2), ^setsize_abs, ^setsize_abs);
-cc_setfill(false);
-cc_setcolour(0x474745);
-cc_settrans(150);
-$int0 = calc($int0 + 1);
-cc_create($component1, ^iftype_graphic, $int0);
-cc_setsize(calc($int8 - 4), calc($int9 - 4), ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int10 + 2), calc($int11 + 2), ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("tradebacking");
-cc_settiling(true);
-cc_settrans(150);
-$int0 = calc($int0 + 1);
-cc_create($component1, ^iftype_text, $int0);
-cc_setsize(calc($int8 - 4), calc($int9 - 4), ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int10 + 2), calc($int11 + 2), ^setpos_abs_left, ^setpos_abs_top);
-cc_settextfont(p12_full);
-cc_settextshadow(true);
-cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_settext($string0);
-cc_setcolour(^white);
-$int0 = calc($int0 + 1);
-if (%varbit13133 = 0 & $int3 > 1) {
-	$int6 = calc($int10 + ($int8 - $int4));
-	$int7 = calc($int11 + $int9 - 1);
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_string $string5 = "";
+def_string $string6 = "";
+def_string $string7 = "";
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $trans21 = 150;
+if ($int5 = 1 & string_length(%varcstring1014) > 0) {
+	if (string_length(%varcstring1015) > 0) {
+		$string4, $string6 = ~script632(%varcstring1014);
+		$string5, $string7 = ~script632(%varcstring1015);
+		$int12 = string_length($string4);
+		$int13 = string_length($string5);
+		while ($int12 > 0 | $int13 > 0) {
+			if ($int12 > 0) {
+				$int14 = parawidth($string4, ^max_32bit_int, p12_full);
+			} else {
+				$int14 = 0;
+			}
+			if ($int13 > 0) {
+				$int15 = parawidth($string5, ^max_32bit_int, p12_full);
+			} else {
+				$int15 = 0;
+			}
+			$int17 = ~max($int17, calc($int14 + $int15 + 2));
+			if ($int16 > 0) {
+				$string2 = "<$string2><br><$string4>";
+				$string3 = "<$string3><br><$string5>";
+			} else {
+				$string2 = "<$string2><$string4>";
+				$string3 = "<$string3><$string5>";
+			}
+			$int16 = calc($int16 + 1);
+			if (string_length($string6) > 0 | string_length($string7) > 0) {
+				$string4, $string6 = ~script632($string6);
+				$string5, $string7 = ~script632($string7);
+				$int12 = string_length($string4);
+				$int13 = string_length($string5);
+			} else {
+				$int12, $int13 = 0, 0;
+			}
+		}
+		$int17 = calc($int17 + 6);
+		$int18 = calc($int16 * 16 + 6);
+	} else {
+		$string2 = %varcstring1014;
+		$int18 = calc(paraheight($string2, 194, p12_full) * 14 + 6);
+		$int17 = calc(parawidth($string2, 194, p12_full) + 6);
+	}
+	$trans21 = 64;
+}
+def_int $int22 = ~max($int6, $int17);
+$int22 = ~max($int22, $int8);
+def_int $int23 = mouse_getx;
+def_int $int24 = mouse_gety;
+if (~on_mobile = true & %varcint1016 >= 0 & %varcint1017 >= 0) {
+	$int23 = %varcint1016;
+	$int24 = %varcint1017;
+}
+$int23 = ~min(calc($int23 + 0), calc(if_getwidth($component1) - $int22));
+$int24 = ~min(calc($int24 + 24), calc(if_getheight($component1) - ($int7 + $int18 + $int9 - 2)));
+if ($int4 = 1) {
 	cc_create($component1, ^iftype_rectangle, $int0);
-	cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int23, $int24, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int22, $int7, ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0x0e0e0c);
-	cc_settrans(150);
+	cc_settrans($trans21);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_rectangle, $int0);
-	cc_setposition(calc($int6 + 1), calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($int4 - 2), calc($int5 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int23 + 1), calc($int24 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int22 - 2), calc($int7 - 2), ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0x474745);
-	cc_settrans(150);
+	cc_settrans($trans21);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_graphic, $int0);
-	cc_setposition(calc($int6 + 2), calc($int7 + 2), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($int4 - 4), calc($int5 - 4), ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int22 - 4), calc($int7 - 4), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int23 + 2), calc($int24 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("tradebacking");
 	cc_settiling(true);
-	cc_settrans(150);
+	cc_settrans($trans21);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_text, $int0);
-	cc_setposition(calc($int6 + 3), calc($int7 + 4), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($int4 - 6), calc($int5 - 6), ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int22 - 8), calc($int7 - 8), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int23 + 4), calc($int24 + 4), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_settext($string0);
+	cc_setcolour(^white);
+	$int0 = calc($int0 + 1);
+	$int24 = calc($int24 + $int7 - 1);
+}
+if (string_length($string2) > 0) {
+	cc_create($component1, ^iftype_rectangle, $int0);
+	cc_setposition($int23, $int24, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int22, $int18, ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x0e0e0c);
+	cc_settrans($trans21);
+	$int0 = calc($int0 + 1);
+	cc_create($component1, ^iftype_rectangle, $int0);
+	cc_setposition(calc($int23 + 1), calc($int24 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int22 - 2), calc($int18 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x474745);
+	cc_settrans($trans21);
+	$int0 = calc($int0 + 1);
+	cc_create($component1, ^iftype_graphic, $int0);
+	cc_setsize(calc($int22 - 4), calc($int18 - 4), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int23 + 2), calc($int24 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("tradebacking");
+	cc_settiling(true);
+	cc_settrans($trans21);
+	$int0 = calc($int0 + 1);
+	if (string_length($string3) > 0) {
+		cc_create($component1, ^iftype_text, $int0);
+		cc_setsize(calc($int22 - 6), calc($int18 - 6), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int23 + 3), calc($int24 + 3), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 16);
+		cc_settext($string2);
+		cc_setcolour(^white);
+		$int0 = calc($int0 + 1);
+		cc_create($component1, ^iftype_text, $int0);
+		cc_setsize(calc($int22 - 6), calc($int18 - 6), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int23 + 3), calc($int24 + 3), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_right, ^settextalign_centre, 16);
+		cc_settext($string3);
+		cc_setcolour(^white);
+		$int0 = calc($int0 + 1);
+	} else {
+		cc_create($component1, ^iftype_text, $int0);
+		cc_setsize(calc($int22 - 6), calc($int18 - 6), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int23 + 3), calc($int24 + 3), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settext($string2);
+		cc_setcolour(^white);
+		$int0 = calc($int0 + 1);
+	}
+	$int24 = calc($int24 + $int18 - 1);
+}
+if (%varbit13133 = 0 & $int3 > 1 & $int4 = 1) {
+	$int10 = calc($int23 + ($int22 - $int8));
+	cc_create($component1, ^iftype_rectangle, $int0);
+	cc_setposition($int10, $int24, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x0e0e0c);
+	cc_settrans($trans21);
+	$int0 = calc($int0 + 1);
+	cc_create($component1, ^iftype_rectangle, $int0);
+	cc_setposition(calc($int10 + 1), calc($int24 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int8 - 2), calc($int9 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x474745);
+	cc_settrans($trans21);
+	$int0 = calc($int0 + 1);
+	cc_create($component1, ^iftype_graphic, $int0);
+	cc_setposition(calc($int10 + 2), calc($int24 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int8 - 4), calc($int9 - 4), ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("tradebacking");
+	cc_settiling(true);
+	cc_settrans($trans21);
+	$int0 = calc($int0 + 1);
+	cc_create($component1, ^iftype_text, $int0);
+	cc_setposition(calc($int10 + 3), calc($int24 + 4), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int8 - 6), calc($int9 - 6), ^setsize_abs, ^setsize_abs);
 	cc_settextfont(p11_full);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

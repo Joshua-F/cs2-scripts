@@ -1,0 +1,9 @@
+// 6678
+[clientscript,script6678](coord $coord0)
+if (~on_enhanced_any = 0) {
+	return;
+}
+if ($coord0 = null) {
+	return;
+}
+_7214($coord0, 1);

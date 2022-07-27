@@ -1,0 +1,10 @@
+// 6626
+[proc,script6626](string $string0, int $int0)(string)
+switch_int ($int0) {
+	case default :
+		return("<col=ff0000><$string0></col>");
+	case 2 :
+		return("<col=ff7000><$string0></col>");
+	case 1 :
+		return("<col=7f7f7f><str=9f9f9f><$string0></col></str>");
+}

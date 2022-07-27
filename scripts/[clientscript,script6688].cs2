@@ -1,0 +1,11 @@
+// 6688
+[clientscript,script6688]
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+if (_7003(npc_uid, _6752, 6) = true) {
+	highlight_npc_off(npc_uid, _6752, 6);
+} else {
+	highlight_npc_on(npc_uid, _6752, 6);
+}
+~script6695(npc_uid, _6752, npc_name, npc_type);

@@ -9,6 +9,12 @@ switch_int ($setting3) {
 		cc_setonvartransmit("script5208($component0, $int1, $struct2, $setting3, $component4, $int5){var3075, var3156}");
 	case ^setting_highlight_destination_tile_colour_colour :
 		cc_setonvartransmit("script5214($component0, $int1, $struct2, $setting3, $component4, $int5){var3075, var3157}");
+	case 262 :
+		cc_setonvartransmit("settings_colour_input_update($component0, $int1, $struct2, $setting3, $component4, $int5){var3416, var3417, var3540}");
+	case 263 :
+		cc_setonvartransmit("settings_colour_input_update($component0, $int1, $struct2, $setting3, $component4, $int5){var3416, var3417, var3541}");
+	case 266 :
+		cc_setonvartransmit("settings_colour_input_update($component0, $int1, $struct2, $setting3, $component4, $int5){var3542, var3417}");
 	case default :
 		cc_setonvartransmit("settings_colour_input_update($component0, $int1, $struct2, $setting3, $component4, $int5){var1055, var287, var2992, var2993, var2994, var2995, var2996, var2997, var2998, var2999, var3060, var3191, var3192, var3193, var3000, var3001, var3002, var3003, var3004, var3005, var3006, var3007, var3061, var3194, var3195, var3196, var3008, var3009, var3108, var3409, var3410, var3411, var3412}");
 }

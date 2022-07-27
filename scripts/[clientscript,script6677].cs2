@@ -1,0 +1,18 @@
+// 6677
+[clientscript,script6677](newvar $newvar0, coord $coord1, int $int2)
+if ($int2 = %var3) {
+	return;
+}
+if (_203($newvar0, 0) = ^true) {
+	cc_settext(tostring(%var3));
+	cc_setonvartransmit("script6677($newvar0, $coord1, %var3){var3}");
+	if (%var3 <= 0) {
+		~script6676($newvar0, $coord1);
+	} else if (%var3 <= 5) {
+		cc_setcolour(^red);
+	} else if (%var3 <= 15) {
+		cc_setcolour(0xffb71e);
+	} else {
+		cc_setcolour(^green);
+	}
+}

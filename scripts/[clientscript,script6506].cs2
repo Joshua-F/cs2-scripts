@@ -1,0 +1,11 @@
+// 6506
+[clientscript,script6506](newvar $newvar0, dbrow $dbrow1, loc $loc2, coord $coord3, obj $obj4, int $int5, npc_uid $npc_uid6, npc_uid $npc_uid7, npc_uid $npc_uid8, dbrow $dbrow9, int $int10, int $int11)
+if (loc_find($coord3, $loc2) = true) {
+	if ($int5 = %varbit14189 & $dbrow1 = %var3546 & $npc_uid6 = %var3548 & $npc_uid7 = %var3549 & $npc_uid8 = %var3550 & $dbrow9 = %var3547 & %varbit14184 = $int10 & %varbit14182 = $int11) {
+		return;
+	} else if (%var3546 ! $dbrow1 | %varbit14182 = 0) {
+		_7211(6);
+		highlight_loc_off($loc2, $coord3, 9, 1);
+	}
+	~script6505($dbrow1, $loc2, $coord3, $obj4);
+}

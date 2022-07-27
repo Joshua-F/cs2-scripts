@@ -313,5 +313,17 @@ switch_struct ($struct0) {
 		if (~script4676(13) > 0) {
 			return(1);
 		}
+	case buff_desert_water_available_340 :
+		if (%varcint947 > 0) {
+			return(~script6662);
+		}
+	case buff_cannon_decay_341 :
+		if (%varcint1013 > 0 & %var2 = 4 & calc(map_world % 128) = %varbit1968 & %varbit13672 = 0) {
+			return(~script5940(%varcint1013, struct_param($struct0, param_1541)));
+		}
+	case buff_cannon_broken_342 :
+		if (%varcint1013 > 0 & %var2 = 4 & calc(map_world % 128) = %varbit1968 & %varbit13672 = 1) {
+			return(~script5940(%varcint1013, struct_param($struct0, param_1541)));
+		}
 }
 return(struct_param($struct0, param_1540));

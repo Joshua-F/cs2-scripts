@@ -1,0 +1,33 @@
+// 6705
+[clientscript,script6705](int $opindex0, component $component1, string $string0, component $component2, string $string1, component $component3, string $string2, component $component4)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+cc_deleteall($component1);
+cc_create($component1, ^iftype_graphic, 0);
+.cc_create($component1, ^iftype_graphic, 1);
+cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+.cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+.cc_sethflip(true);
+cc_setgraphic("tabs_short,4");
+.cc_setgraphic("tabs_short,4");
+cc_create($component1, ^iftype_graphic, 2);
+cc_setsize(40, 21, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settiling(true);
+cc_setgraphic("tabs_short,5");
+cc_create($component1, ^iftype_text, 3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("<col=9f9f9f>Loading...</col>");
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);
+if_setontimer("script6706(calc(clientclock + 40), $string0, $component2, $string1, $component3, $string2, $component4)", $component1);

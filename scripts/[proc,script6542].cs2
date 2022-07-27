@@ -1,0 +1,7 @@
+// 6542
+[proc,script6542]
+highlight_npc_off(npc_uid, _6752, 9);
+def_newvar $newvar0 = _7200(4, 1, calc(36 * 2), calc(32 * 2), 1);
+if (_202($newvar0) = ^true) {
+	~script6543($newvar0, _6752, npc_uid, npc_type);
+}

@@ -1,0 +1,74 @@
+// 6473
+[clientscript,script6473](coord $coord0, coord $coord1, int $int2, int $int3)
+def_dbrow $dbrow4 = %var3546;
+if ($dbrow4 = null) {
+	return;
+}
+if (db_getrowtable($dbrow4) ! dbtable_12) {
+	return;
+}
+if ($coord0 = $coord1) {
+	return;
+}
+def_component $component5 = interface_711:2;
+def_int $int6 = db_getfield($dbrow4, dbtable_12:1, 0);
+def_int $int7 = 0;
+switch_int ($int6) {
+	case 0 :
+		$int7 = db_getfieldcount(dbrow_684, dbtable_3:1);
+	case 5 :
+		$int7 = db_getfieldcount(dbrow_684, dbtable_3:6);
+}
+if (%varbit14190 = 0) {
+	~script6474($component5, $int7);
+}
+def_int $int8 = 0;
+def_dbrow $dbrow9 = null;
+def_coord $coord10 = null;
+def_int $int11 = 0;
+if ($int2 < $int3) {
+	$int11 = -1;
+} else if ($int2 > $int3) {
+	$int11 = 1;
+}
+def_int $int12 = 0;
+def_int $int13 = 0;
+while ($int8 < $int7) {
+	if (cc_find($component5, $int8) = ^true & cc_getcolour = ^black) {
+		switch_int ($int6) {
+			case 0 :
+				$dbrow9 = db_getfield(dbrow_684, dbtable_3:1, $int8);
+			case 5 :
+				$dbrow9 = db_getfield(dbrow_684, dbtable_3:6, $int8);
+		}
+		$coord10 = ~script6653(~script6655($dbrow9));
+		$int12 = ~script6659($coord0, $coord10);
+		if ($int12 > 4095) {
+			$int12 = 4095;
+		}
+		if (~script6475($int2, $int12, $int6) = 0) {
+			cc_setcolour(0x000001);
+		} else if ($coord1 ! null) {
+			$int13 = ~script6659($coord1, $coord10);
+			if ($int13 > 4095) {
+				$int13 = 4095;
+			}
+			switch_int ($int11) {
+				case -1 :
+					if ($int12 > $int13) {
+						cc_setcolour(0x000001);
+					}
+				case 0 :
+					if ($int12 ! $int13) {
+						cc_setcolour(0x000001);
+					}
+				case 1 :
+					if ($int12 < $int13) {
+						cc_setcolour(0x000001);
+					}
+			}
+		}
+	}
+	$int8 = calc($int8 + 1);
+}
+~script6633;

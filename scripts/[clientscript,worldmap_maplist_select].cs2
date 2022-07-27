@@ -10,6 +10,8 @@ if (worldmap_getcurrentmap ! $wma1 & cc_find($component2, 4) = ^true) {
 		~worldmap_loadmap($wma1, %varcint188, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
 	} else if (~worldmap_findcoordinmap($wma1, %varcint401) ! null) {
 		~worldmap_loadmap($wma1, %varcint401, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+	} else if (~worldmap_findcoordinmap($wma1, %varcint1078) ! null) {
+		~worldmap_loadmap($wma1, %varcint1078, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
 	} else {
 		~worldmap_loadmap($wma1, null, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
 	}

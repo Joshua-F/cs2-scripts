@@ -1,10 +1,10 @@
 // 5961
-[proc,script5961]
+[proc,script5961](newvar $newvar0)
 if (~on_enhanced_mobile = 0) {
 	return;
 }
 ~entity_highlight_setup(4, 2, 128);
-def_enum $enum0 = ~toplevel_getcomponents;
-def_component $component1 = enum(component, component, $enum0, interface_161:36);
-def_int $clock2 = clientclock;
-if_setontimer("script5962($clock2)", $component1);
+def_int $clock1 = clientclock;
+if (_202($newvar0) = ^true) {
+	cc_setontimer("script5962($clock1, $newvar0, %varcint973, %varcint974, %varcint975, %varcint976, %varcint977, %varcint978, %varcstring979)");
+}

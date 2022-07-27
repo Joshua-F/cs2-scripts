@@ -1,0 +1,19 @@
+// 6630
+[proc,script6630](int $int0, int $int1, obj $obj2, int $int3, int $int4, dbrow $dbrow5)
+def_int $int6 = 0;
+if ($int3 > 0) {
+	$int6 = ~helper_generic_add_text("...");
+	if (cc_find(interface_711:4, $int6) = ^true) {
+		cc_setoninvtransmit("script6482($int6, $int4, $int0){inv, worn}");
+	}
+} else if ($int1 = 1) {
+	$int6 = ~helper_generic_add_text("...");
+	if (cc_find(interface_711:4, $int6) = ^true) {
+		cc_setoninvtransmit("script6480($int6, $obj2, $int0){inv, worn}");
+	}
+} else if ($int1 > 1) {
+	$int6 = ~helper_generic_add_text("...");
+	if (cc_find(interface_711:4, $int6) = ^true) {
+		cc_setoninvtransmit("script6481($int6, $dbrow5, $int1, $int0){inv, worn}");
+	}
+}

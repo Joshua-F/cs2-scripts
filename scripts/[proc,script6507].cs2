@@ -1,0 +1,37 @@
+// 6507
+[proc,script6507](dbrow $dbrow0, dbrow $dbrow1, loc $loc2, coord $coord3, obj $obj4)
+def_newvar $newvar5 = null;
+if (loc_find($coord3, $loc2) = true) {
+	$newvar5 = _7206(6);
+	if ($newvar5 = null) {
+		$newvar5 = _7201(6, 1, 60, 60, 1);
+	} else {
+		_104($newvar5);
+	}
+	if (_202($newvar5) = ^true) {
+		cc_setonvartransmit("script6508($newvar5, $dbrow0, $dbrow1, $loc2, $coord3, $obj4, %varbit14189, %varbit14164, %varbit14184, %varbit14182){var3546, var3543, var2855}");
+	}
+	if (%varbit14182 = 0) {
+		highlight_loc_off($loc2, $coord3, 9, 1);
+		return;
+	}
+	if (%varbit14189 = 1) {
+		_103($newvar5, ^iftype_graphic, 0);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(5, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setobject_nonum($obj4, 1);
+		cc_setoutline(1);
+		_103($newvar5, ^iftype_graphic, 1);
+		cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+		cc_setposition(-5, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setgraphic("side_icons,4");
+	}
+	if (%varbit14164 = 1 & ~script6472($loc2) = 1) {
+		_7010(9, ^green, 2, 30, 1);
+	} else {
+		_7010(9, ^red, 2, 30, 1);
+	}
+	if (%varbit14184 = 1) {
+		highlight_loc_on($loc2, $coord3, 9, 1);
+	}
+}

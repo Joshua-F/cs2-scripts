@@ -1,0 +1,18 @@
+// 6482
+[clientscript,script6482](int $int0, int $int1, int $slot2)
+def_string $string0 = enum(int, string, enum_4615, $int1);
+def_int $int3 = 0;
+def_int $size4 = 0;
+def_int $size5 = inv_size(inv);
+if (oc_param(inv_getobj(worn, $slot2), param_258) = $int1) {
+	$int3 = 1;
+} else {
+	while ($size4 < $size5 & $int3 = 0) {
+		if (oc_param(inv_getobj(inv, $size4), param_258) = $int1) {
+			$int3 = 2;
+		}
+		$size4 = calc($size4 + 1);
+	}
+}
+def_string $string1 = ~script6626($string0, $int3);
+~helper_generic_update_text($int0, $string1);

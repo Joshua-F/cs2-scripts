@@ -1,0 +1,27 @@
+// 6619
+[proc,script6619](dbrow $dbrow0)
+if ($dbrow0 = null) {
+	return;
+}
+if (db_getrowtable($dbrow0) ! dbtable_8) {
+	return;
+}
+def_int $dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_8:3, 0));
+def_dbrow $dbrow2 = db_getfield($dbrow0, dbtable_8:3, $dbfield1);
+if ($dbrow2 = null | db_getrowtable($dbrow2) ! dbtable_19) {
+	return;
+}
+def_obj $obj3 = db_getfield($dbrow2, dbtable_19:3, 0);
+if ($obj3 = null) {
+	return;
+}
+def_int $int4 = 0;
+if (inv_total(inv, $obj3) > 0) {
+	$int4 = 1;
+}
+def_newvar $newvar5 = _7200(4, 1, calc(36 + 36), calc(32 + 32), 1);
+if (_202($newvar5) = ^true) {
+	cc_setonvartransmit("script6620($dbrow0, $dbrow2, $newvar5, _6752, npc_uid, %varbit14189, %varbit14184, %var3546, $obj3, $int4){var3546, var3543}");
+	cc_setoninvtransmit("script6621($dbrow0, $dbrow2, $newvar5, _6752, npc_uid, $obj3, $int4){inv}");
+}
+~script6622($dbrow0, $dbrow2, $newvar5, _6752, npc_uid, $obj3, $int4);

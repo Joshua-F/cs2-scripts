@@ -1,0 +1,10 @@
+// 6471
+[proc,script6471](int $count0)
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+if ($count0 > 2) {
+	%varbit14178 = 2;
+} else {
+	%varbit14178 = $count0;
+}

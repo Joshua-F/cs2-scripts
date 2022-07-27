@@ -1,0 +1,18 @@
+// 6624
+[clientscript,script6624](int $int0, loc $loc1)
+def_int $int2 = 0;
+def_int $int3 = ~script6472($loc1);
+def_int $int4 = %varbit14164;
+def_string $string0 = "null";
+if ($int4 = 1) {
+	$int2 = 1;
+	$string0 = "Filled";
+} else if ($int3 = 1) {
+	$int2 = 2;
+	$string0 = "Built";
+} else {
+	$int2 = 0;
+	$string0 = "Not built";
+}
+~script6626($string0, $int2);
+~helper_generic_update_text($int0, $string0);

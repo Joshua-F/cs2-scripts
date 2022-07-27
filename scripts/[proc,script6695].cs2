@@ -1,0 +1,11 @@
+// 6695
+[proc,script6695](npc_uid $npc_uid0, int $int1, string $string0, npc $npc2)
+if (~on_enhanced_any = 0) {
+	return;
+}
+def_newvar $newvar3 = _7200(2, 1, 1, 1, 1);
+if (_202($newvar3) = ^true) {
+	cc_setonvartransmit("script6696($newvar3, $npc_uid0, $int1, $string0, $npc2, %var3416, %var3417, %var3540, %var3541, %var3542, %var1021){var3416, var3417, var3540, var3541, var1021, var3542}");
+	cc_setontimer("script6697(%varcint1079, $newvar3, $npc_uid0, $int1, $string0, $npc2)");
+}
+~script6698($newvar3, $npc_uid0, $int1, $string0, $npc2);

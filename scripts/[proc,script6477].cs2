@@ -1,0 +1,72 @@
+// 6477
+[proc,script6477](int $int0)
+if (%var3546 = null | db_getrowtable(%var3546) ! dbtable_9 | %varbit14182 = 0 | %varbit14186 = 0) {
+	cc_deleteall(interface_216:3);
+	return;
+}
+def_int $int1 = db_getfieldcount(%var3546, dbtable_9:4);
+def_int $comsubid2 = -1;
+def_int $int3 = 0;
+def_int $int4 = -1;
+def_int $int5 = -1;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+if ($int1 <= 0) {
+	return;
+}
+cc_deleteall(interface_216:3);
+def_int $int11 = 0;
+while ($int3 < $int1) {
+	$comsubid2 = db_getfield(%var3546, dbtable_9:4, $int3);
+	if (cc_find(interface_216:2, $comsubid2) = ^true) {
+		$int6 = cc_gety;
+		$int7 = calc($int6 + cc_getheight);
+		if ($int6 < $int4 | $int4 = -1) {
+			$int4 = $int6;
+		}
+		if ($int7 > $int5 | $int5 = -1) {
+			$int5 = $int7;
+		}
+		$int8, $int9, $int10 = cc_getx, cc_getwidth, cc_getheight;
+		.cc_create(interface_216:3, ^iftype_rectangle, $int11);
+		.cc_setposition($int8, $int6, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
+		.cc_setfill(true);
+		.cc_setcolour(^white);
+		.cc_settrans(225);
+		$int11 = calc($int11 + 1);
+		.cc_create(interface_216:3, ^iftype_graphic, $int11);
+		.cc_setposition(calc($int8 + $int9 - 14), calc($int6 + $int10 - 14), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
+		.cc_setgraphic("graphic_4555");
+		$int11 = calc($int11 + 1);
+		if ($int1 > 1) {
+			.cc_create(interface_216:3, ^iftype_text, $int11);
+			.cc_setposition($int8, $int6, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
+			.cc_setcolour(^white);
+			.cc_settextfont(b12_full);
+			.cc_settextshadow(true);
+			.cc_settext(tostring(calc($int3 + 1)));
+			.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			$int11 = calc($int11 + 1);
+		}
+	}
+	$int3 = calc($int3 + 1);
+}
+def_int $int12 = 0;
+if ($int0 = 1) {
+	if ($int5 = -1 | $int4 = -1) {
+		return;
+	}
+	$int12 = calc(($int4 + $int5) / 2);
+	$int12 = calc($int12 - if_getheight(interface_216:1) / 2);
+	if ($int12 < 0) {
+		$int12 = 0;
+	}
+	if_setscrollpos(0, $int12, interface_216:1);
+	~scrollbar_vertical_rebuild(interface_216:4, interface_216:1);
+}

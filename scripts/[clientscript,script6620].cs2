@@ -1,0 +1,9 @@
+// 6620
+[clientscript,script6620](dbrow $dbrow0, dbrow $dbrow1, newvar $newvar2, int $int3, npc_uid $npc_uid4, int $int5, int $int6, dbrow $dbrow7, obj $obj8, int $int9)
+if (%varbit14189 = $int5 & %varbit14184 = $int6 & %var3546 = $dbrow7) {
+	return;
+}
+~script6622($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj8, $int9);
+if (_202($newvar2) = ^true) {
+	cc_setonvartransmit("script6620($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, %varbit14189, %varbit14184, %var3546, $obj8, $int9){var3546, var3543}");
+}

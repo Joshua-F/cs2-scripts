@@ -1,0 +1,25 @@
+// 6676
+[proc,script6676](newvar $newvar0, coord $coord1)
+_104($newvar0);
+if (%var3551 ! $coord1) {
+	_7214($coord1, 6);
+	return;
+}
+if (%varbit14174 = 1 | %varbit13672 = 1) {
+	return;
+}
+_103($newvar0, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+if (%var3 <= 5) {
+	cc_setcolour(^red);
+} else if (%var3 <= 15) {
+	cc_setcolour(0xffb71e);
+} else {
+	cc_setcolour(^green);
+}
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(tostring(%var3));
+cc_setonvartransmit("script6677($newvar0, $coord1, %var3){var3}");

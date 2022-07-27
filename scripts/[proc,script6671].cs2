@@ -1,0 +1,8 @@
+// 6671
+[proc,script6671]
+~script6667;
+def_newvar $newvar0 = _7201(5, 0, 1, 1, 1);
+if (_202($newvar0) = ^true) {
+	cc_setonvartransmit("script6666{var543}");
+	cc_setoninvtransmit("script6666{inv, worn}");
+}

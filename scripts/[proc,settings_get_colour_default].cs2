@@ -69,6 +69,12 @@ switch_int ($setting0) {
 		return(struct_param(completed_quest_text_colour_4250, param_1230));
 	case ^setting_unavailable_quest_text_colour_colour :
 		return(struct_param(unavailable_quest_text_colour_4251, param_1230));
+	case 262 :
+		return(struct_param(npc_highlight_highlighting_colour_318, param_1230));
+	case 263 :
+		return(struct_param(npc_highlight_text_colour_320, param_1230));
+	case 266 :
+		return(struct_param(npc_names_text_colour_324, param_1230));
 	case default :
 		return(null);
 }

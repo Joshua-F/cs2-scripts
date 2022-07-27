@@ -1,0 +1,27 @@
+// 6687
+[proc,script6687](int $int0)
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+def_int $colour1 = ~script5329(262);
+def_int $flags2 = setbit(0, 6);
+if ($int0 = 1) {
+	if (%varbit14170 = 1) {
+		$flags2 = setbit($flags2, 0);
+	}
+	if (%varbit14171 = 1) {
+		$flags2 = setbit($flags2, 1);
+	} else if (%varbit14171 = 2) {
+		$flags2 = setbit($flags2, 1);
+		$flags2 = setbit($flags2, 3);
+	}
+	_7000(6, $colour1, 2, 50, $flags2);
+	_7040(6, $colour1, 2, 50, $flags2);
+	_6700(1, "Tag", 6688);
+	_6700(2, "Tag-All", 6689);
+} else {
+	_7000(6, null, 0, 0, 75);
+	_7040(6, null, 0, 0, 75);
+	_6701(1);
+	_6701(2);
+}

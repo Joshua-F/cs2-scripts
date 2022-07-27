@@ -1,0 +1,37 @@
+// 6481
+[clientscript,script6481](int $int0, dbrow $dbrow1, int $int2, int $int3)
+def_string $string0 = "";
+def_int $int4 = 0;
+def_string $string1 = "null";
+def_obj $obj5 = ~script6650($dbrow1, $int3, 0);
+if ($obj5 = obj_6512) {
+	$string0 = "nothing (<enum(int, string, enum_4620, $int3)>)";
+} else {
+	$string0 = oc_name($obj5);
+}
+while ($int4 < $int2) {
+	$obj5 = ~script6650($dbrow1, $int3, $int4);
+	if ($obj5 = obj_6512) {
+		$obj5 = null;
+	}
+	if (inv_getobj(worn, $int3) = $obj5) {
+		$string1 = ~script6626($string0, 1);
+		~helper_generic_update_text($int0, $string1);
+		return;
+	}
+	$int4 = calc($int4 + 1);
+}
+$int4 = 0;
+if (~script6650($dbrow1, $int3, $int4) ! obj_6512) {
+	while ($int4 < $int2) {
+		$obj5 = ~script6650($dbrow1, $int3, $int4);
+		if (inv_total(inv, $obj5) > 0) {
+			$string1 = ~script6626($string0, 2);
+			~helper_generic_update_text($int0, $string1);
+			return;
+		}
+		$int4 = calc($int4 + 1);
+	}
+}
+$string1 = ~script6626($string0, 0);
+~helper_generic_update_text($int0, $string1);

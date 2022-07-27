@@ -1,0 +1,15 @@
+// 6690
+[proc,script6690](npc $npc0)(string)
+def_string $string0 = "2|";
+$string0 = append($string0, _6761($npc0, 1, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6762($npc0, 1, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6762($npc0, 2, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6762($npc0, 3, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6762($npc0, 4, 0));
+$string0 = append($string0, "|");
+$string0 = append($string0, _6762($npc0, 5, 0));
+return($string0);

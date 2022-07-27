@@ -1,0 +1,22 @@
+// 6703
+[proc,script6703](string $string0, component $component0, string $string1, component $component1, string $string2, component $component2)
+def_string $text3 = "";
+def_component $component3 = null;
+switch_int (%varbit14024) {
+	case 0 :
+		$text3, $component3 = $string0, $component0;
+		~script6704(1, $string1, $component1, $string0, $component0, $string1, $component1, $string2, $component2);
+		~script6704(2, $string2, $component2, $string0, $component0, $string1, $component1, $string2, $component2);
+	case 1 :
+		$text3, $component3 = $string1, $component1;
+		~script6704(0, $string0, $component0, $string0, $component0, $string1, $component1, $string2, $component2);
+		~script6704(2, $string2, $component2, $string0, $component0, $string1, $component1, $string2, $component2);
+	case 2 :
+		$text3, $component3 = $string2, $component2;
+		~script6704(0, $string0, $component0, $string0, $component0, $string1, $component1, $string2, $component2);
+		~script6704(1, $string1, $component1, $string0, $component0, $string1, $component1, $string2, $component2);
+}
+if_setonmouserepeat(null, $component3);
+if_setontimer(null, $component3);
+if_setonop(null, $component3);
+~script6294($component3, $text3);

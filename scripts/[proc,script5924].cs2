@@ -152,4 +152,9 @@ switch_struct ($struct0) {
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3279, var3280, var3281}");
 	case buff_trailblazer_4113 :
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3279, var3280, var3281}");
+	case buff_desert_water_available_340 :
+		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3198}");
+		cc_setoninvtransmit("buff_bar_transmit_value($struct0){inv, worn}");
+	case buff_cannon_decay_341, buff_cannon_broken_342 :
+		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3075, var2903, var2}");
 }

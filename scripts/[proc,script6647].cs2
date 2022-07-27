@@ -1,0 +1,18 @@
+// 6647
+[proc,script6647](dbrow $dbrow0)(string)
+switch_int (db_getrowtable($dbrow0)) {
+	case dbtable_15 :
+		return(db_getfield($dbrow0, dbtable_15:3, 0));
+	case dbtable_16 :
+		return(db_getfield($dbrow0, dbtable_16:2, 0));
+	case dbtable_17 :
+		return(db_getfield($dbrow0, dbtable_17:2, 0));
+	case dbtable_18 :
+		return(db_getfield($dbrow0, dbtable_18:1, 0));
+	case dbtable_19 :
+		return(db_getfield($dbrow0, dbtable_19:7, 0));
+	case dbtable_20 :
+		return(db_getfield($dbrow0, dbtable_20:2, 0));
+	case default :
+		return("null");
+}
