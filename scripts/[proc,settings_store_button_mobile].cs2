@@ -1,3 +1,6 @@
 // 5238
 [proc,settings_store_button_mobile]
+if (%varbit4084 = 1) {
+	return;
+}
 %varbit13036 = calc(1 - %varbit13036);

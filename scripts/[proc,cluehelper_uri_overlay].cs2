@@ -1,7 +1,7 @@
 // 6527
 [proc,cluehelper_uri_overlay](int $int0)
 highlight_npc_off(npc_uid, _6752, 9);
-def_newvar $newvar1 = _7200(4, 1, calc(36 * 2), calc(32 * 2), 1);
+def_newvar $newvar1 = _7200(3, 1, calc(36 * 2), calc(32 * 2), 1);
 if (_202($newvar1) = ^true) {
 	if ($int0 = 2 | $int0 = 3) {
 		cc_setonvartransmit("script6530($newvar1, npc_uid, _6752, %varbit14189, %var3548, %var3547, %var3546, %var292, $int0){var3543, var3546, var3548, var3547, var292}");

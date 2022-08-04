@@ -3,7 +3,7 @@
 sound_synth(interface_select1, 1, 0);
 ~xpdrops_setup_display_hoverdisable($component1);
 if_sethide(false, $component2);
-if_setonclick("script6307($component1, $component2)", $component2);
+if_setonrelease("script6307(calc(clientclock + 10), $component1, $component2)", $component2);
 def_boolean $boolean4 = ~on_mobile;
 def_int $int5 = 17;
 if ($boolean4 = true) {

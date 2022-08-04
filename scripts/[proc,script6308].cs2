@@ -3,5 +3,6 @@
 if (if_gethide($component1) = false) {
 	sound_synth(interface_select1, 1, 0);
 }
+if_setonrelease(null, $component1);
 if_sethide(true, $component1);
 ~xpdrops_setup_display_hoveroff($component0);

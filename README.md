@@ -6509,24 +6509,12 @@
 [**6506**](scripts/[clientscript,script6506].cs2)  
 [**6507**](scripts/[proc,script6507].cs2)  
 [**6508**](scripts/[clientscript,script6508].cs2)  
-[**6509**](scripts/[clientscript,script6509].cs2)  
 [**6510**](scripts/[proc,script6510].cs2)  
-[**6511**](scripts/[clientscript,script6511].cs2)  
-[**6512**](scripts/[proc,script6512].cs2)  
 [**6513**](scripts/[proc,script6513].cs2)  
 [**6514**](scripts/[proc,script6514].cs2)  
 [**6515**](scripts/[proc,script6515].cs2)  
 [**6516**](scripts/[proc,script6516].cs2)  
 [**6517**](scripts/[proc,script6517].cs2)  
-[**6518**](scripts/[loadnpc,uri_8638].cs2) `[loadnpc,uri_8638]`  
-[**6519**](scripts/[loadnpc,uri_1774].cs2) `[loadnpc,uri_1774]`  
-[**6520**](scripts/[loadnpc,uri_1775].cs2) `[loadnpc,uri_1775]`  
-[**6521**](scripts/[loadnpc,uri_1776].cs2) `[loadnpc,uri_1776]`  
-[**6522**](scripts/[loadnpc,uri_6584].cs2) `[loadnpc,uri_6584]`  
-[**6523**](scripts/[loadnpc,uri_7311].cs2) `[loadnpc,uri_7311]`  
-[**6524**](scripts/[loadnpc,double_agent_1777].cs2) `[loadnpc,double_agent_1777]`  
-[**6525**](scripts/[loadnpc,double_agent_1778].cs2) `[loadnpc,double_agent_1778]`  
-[**6526**](scripts/[loadnpc,double_agent_7312].cs2) `[loadnpc,double_agent_7312]`  
 [**6527**](scripts/[proc,cluehelper_uri_overlay].cs2) `[proc,cluehelper_uri_overlay]`  
 [**6528**](scripts/[clientscript,script6528].cs2)  
 [**6529**](scripts/[clientscript,script6529].cs2)  
@@ -6534,91 +6522,11 @@
 [**6531**](scripts/[clientscript,script6531].cs2)  
 [**6532**](scripts/[proc,script6532].cs2)  
 [**6533**](scripts/[proc,script6533].cs2)  
-[**6534**](scripts/[loadnpc,armadylean_guard_6587].cs2) `[loadnpc,armadylean_guard_6587]`  
-[**6535**](scripts/[loadnpc,bandosian_guard_6588].cs2) `[loadnpc,bandosian_guard_6588]`  
-[**6536**](scripts/[loadnpc,zamorak_wizard_2954].cs2) `[loadnpc,zamorak_wizard_2954]`  
-[**6537**](scripts/[loadnpc,saradomin_wizard_2955].cs2) `[loadnpc,saradomin_wizard_2955]`  
-[**6538**](scripts/[loadnpc,ancient_wizard_7309].cs2) `[loadnpc,ancient_wizard_7309]`  
-[**6539**](scripts/[loadnpc,ancient_wizard_7308].cs2) `[loadnpc,ancient_wizard_7308]`  
-[**6540**](scripts/[loadnpc,ancient_wizard_7307].cs2) `[loadnpc,ancient_wizard_7307]`  
-[**6541**](scripts/[loadnpc,brassican_mage_7310].cs2) `[loadnpc,brassican_mage_7310]`  
 [**6542**](scripts/[proc,script6542].cs2)  
 [**6543**](scripts/[proc,script6543].cs2)  
 [**6544**](scripts/[clientscript,script6544].cs2)  
 [**6545**](scripts/[proc,script6545].cs2)  
 [**6546**](scripts/[proc,script6546].cs2)  
-[**6547**](scripts/[loadnpc,king_black_dragon_239].cs2) `[loadnpc,king_black_dragon_239]`  
-[**6548**](scripts/[loadnpc,guard_5418].cs2) `[loadnpc,guard_5418]`  
-[**6549**](scripts/[loadnpc,barbarian_3055].cs2) `[loadnpc,barbarian_3055]`  
-[**6550**](scripts/[loadnpc,barbarian_3056].cs2) `[loadnpc,barbarian_3056]`  
-[**6551**](scripts/[loadnpc,barbarian_3057].cs2) `[loadnpc,barbarian_3057]`  
-[**6552**](scripts/[loadnpc,barbarian_3058].cs2) `[loadnpc,barbarian_3058]`  
-[**6553**](scripts/[loadnpc,barbarian_3059].cs2) `[loadnpc,barbarian_3059]`  
-[**6554**](scripts/[loadnpc,barbarian_3060].cs2) `[loadnpc,barbarian_3060]`  
-[**6555**](scripts/[loadnpc,barbarian_3061].cs2) `[loadnpc,barbarian_3061]`  
-[**6556**](scripts/[loadnpc,barbarian_3062].cs2) `[loadnpc,barbarian_3062]`  
-[**6557**](scripts/[loadnpc,hunding_3063].cs2) `[loadnpc,hunding_3063]`  
-[**6558**](scripts/[loadnpc,barbarian_3064].cs2) `[loadnpc,barbarian_3064]`  
-[**6559**](scripts/[loadnpc,barbarian_3065].cs2) `[loadnpc,barbarian_3065]`  
-[**6560**](scripts/[loadnpc,barbarian_3066].cs2) `[loadnpc,barbarian_3066]`  
-[**6561**](scripts/[loadnpc,barbarian_3067].cs2) `[loadnpc,barbarian_3067]`  
-[**6562**](scripts/[loadnpc,barbarian_3068].cs2) `[loadnpc,barbarian_3068]`  
-[**6563**](scripts/[loadnpc,man_3652].cs2) `[loadnpc,man_3652]`  
-[**6564**](scripts/[loadnpc,man_3014].cs2) `[loadnpc,man_3014]`  
-[**6565**](scripts/[loadnpc,hengel_3284].cs2) `[loadnpc,hengel_3284]`  
-[**6566**](scripts/[loadnpc,jeff_3282].cs2) `[loadnpc,jeff_3282]`  
-[**6567**](scripts/[loadnpc,rusty_3281].cs2) `[loadnpc,rusty_3281]`  
-[**6568**](scripts/[loadnpc,narf_3280].cs2) `[loadnpc,narf_3280]`  
-[**6569**](scripts/[loadnpc,cuffs_3279].cs2) `[loadnpc,cuffs_3279]`  
-[**6570**](scripts/[loadnpc,norman_3266].cs2) `[loadnpc,norman_3266]`  
-[**6571**](scripts/[loadnpc,man_3265].cs2) `[loadnpc,man_3265]`  
-[**6572**](scripts/[loadnpc,man_3264].cs2) `[loadnpc,man_3264]`  
-[**6573**](scripts/[loadnpc,drunken_man_3263].cs2) `[loadnpc,drunken_man_3263]`  
-[**6574**](scripts/[loadnpc,man_6818].cs2) `[loadnpc,man_6818]`  
-[**6575**](scripts/[loadnpc,man_3261].cs2) `[loadnpc,man_3261]`  
-[**6576**](scripts/[loadnpc,man_3110].cs2) `[loadnpc,man_3110]`  
-[**6577**](scripts/[loadnpc,man_3109].cs2) `[loadnpc,man_3109]`  
-[**6578**](scripts/[loadnpc,man_3108].cs2) `[loadnpc,man_3108]`  
-[**6579**](scripts/[loadnpc,man_3107].cs2) `[loadnpc,man_3107]`  
-[**6580**](scripts/[loadnpc,man_3106].cs2) `[loadnpc,man_3106]`  
-[**6581**](scripts/[loadnpc,man_6989].cs2) `[loadnpc,man_6989]`  
-[**6582**](scripts/[loadnpc,man_6988].cs2) `[loadnpc,man_6988]`  
-[**6583**](scripts/[loadnpc,man_6987].cs2) `[loadnpc,man_6987]`  
-[**6584**](scripts/[loadnpc,man_11058].cs2) `[loadnpc,man_11058]`  
-[**6585**](scripts/[loadnpc,man_11057].cs2) `[loadnpc,man_11057]`  
-[**6586**](scripts/[loadnpc,wizard_3257].cs2) `[loadnpc,wizard_3257]`  
-[**6587**](scripts/[loadnpc,guard_dog_114].cs2) `[loadnpc,guard_dog_114]`  
-[**6588**](scripts/[loadnpc,market_guard_3949].cs2) `[loadnpc,market_guard_3949]`  
-[**6589**](scripts/[loadnpc,penda_4109].cs2) `[loadnpc,penda_4109]`  
-[**6590**](scripts/[loadnpc,pirate_521].cs2) `[loadnpc,pirate_521]`  
-[**6591**](scripts/[loadnpc,pirate_522].cs2) `[loadnpc,pirate_522]`  
-[**6592**](scripts/[loadnpc,pirate_523].cs2) `[loadnpc,pirate_523]`  
-[**6593**](scripts/[loadnpc,pirate_524].cs2) `[loadnpc,pirate_524]`  
-[**6594**](scripts/[loadnpc,chicken_1173].cs2) `[loadnpc,chicken_1173]`  
-[**6595**](scripts/[loadnpc,chicken_1174].cs2) `[loadnpc,chicken_1174]`  
-[**6596**](scripts/[loadnpc,chicken_2804].cs2) `[loadnpc,chicken_2804]`  
-[**6597**](scripts/[loadnpc,chicken_2805].cs2) `[loadnpc,chicken_2805]`  
-[**6598**](scripts/[loadnpc,chicken_2806].cs2) `[loadnpc,chicken_2806]`  
-[**6599**](scripts/[loadnpc,chicken_10494].cs2) `[loadnpc,chicken_10494]`  
-[**6600**](scripts/[loadnpc,chicken_10495].cs2) `[loadnpc,chicken_10495]`  
-[**6601**](scripts/[loadnpc,chicken_10496].cs2) `[loadnpc,chicken_10496]`  
-[**6602**](scripts/[loadnpc,chicken_10497].cs2) `[loadnpc,chicken_10497]`  
-[**6603**](scripts/[loadnpc,chicken_10498].cs2) `[loadnpc,chicken_10498]`  
-[**6604**](scripts/[loadnpc,chicken_10499].cs2) `[loadnpc,chicken_10499]`  
-[**6605**](scripts/[loadnpc,chicken_3661].cs2) `[loadnpc,chicken_3661]`  
-[**6606**](scripts/[loadnpc,chicken_3662].cs2) `[loadnpc,chicken_3662]`  
-[**6607**](scripts/[loadnpc,hill_giant_7261].cs2) `[loadnpc,hill_giant_7261]`  
-[**6608**](scripts/[loadnpc,hill_giant_11195].cs2) `[loadnpc,hill_giant_11195]`  
-[**6609**](scripts/[loadnpc,hill_giant_2098].cs2) `[loadnpc,hill_giant_2098]`  
-[**6610**](scripts/[loadnpc,hill_giant_2099].cs2) `[loadnpc,hill_giant_2099]`  
-[**6611**](scripts/[loadnpc,hill_giant_2100].cs2) `[loadnpc,hill_giant_2100]`  
-[**6612**](scripts/[loadnpc,hill_giant_2101].cs2) `[loadnpc,hill_giant_2101]`  
-[**6613**](scripts/[loadnpc,hill_giant_2102].cs2) `[loadnpc,hill_giant_2102]`  
-[**6614**](scripts/[loadnpc,hill_giant_2103].cs2) `[loadnpc,hill_giant_2103]`  
-[**6615**](scripts/[loadnpc,hill_giant_10374].cs2) `[loadnpc,hill_giant_10374]`  
-[**6616**](scripts/[loadnpc,hill_giant_10375].cs2) `[loadnpc,hill_giant_10375]`  
-[**6617**](scripts/[loadnpc,hill_giant_10376].cs2) `[loadnpc,hill_giant_10376]`  
-[**6618**](scripts/[loadnpc,monk_4246].cs2) `[loadnpc,monk_4246]`  
 [**6619**](scripts/[proc,cluehelper_key_npc].cs2) `[proc,cluehelper_key_npc]`  
 [**6620**](scripts/[clientscript,cluehelper_key_npc_vartransmit].cs2) `[clientscript,cluehelper_key_npc_vartransmit]`  
 [**6621**](scripts/[clientscript,cluehelper_key_npc_invtransmit].cs2) `[clientscript,cluehelper_key_npc_invtransmit]`  
@@ -6712,3 +6620,13 @@
 [**6709**](scripts/[clientscript,script6709].cs2)  
 [**6710**](scripts/[clientscript,script6710].cs2)  
 [**6711**](scripts/[clientscript,script6711].cs2)  
+[**6712**](scripts/[clientscript,script6712].cs2)  
+[**6713**](scripts/[proc,script6713].cs2)  
+[**6714**](scripts/[proc,script6714].cs2)  
+[**6715**](scripts/[proc,script6715].cs2)  
+[**6716**](scripts/[proc,script6716].cs2)  
+[**6717**](scripts/[proc,script6717].cs2)  
+[**6718**](scripts/[proc,script6718].cs2)  
+[**6719**](scripts/[proc,script6719].cs2)  
+[**6720**](scripts/[clientscript,script6720].cs2)  
+[**6721**](scripts/[proc,script6721].cs2)  

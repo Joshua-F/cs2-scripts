@@ -1,7 +1,7 @@
 // 3881
 [proc,settings_toggle_choose_transmit](component $component0, int $int1, boolean $boolean2, int $setting3, struct $struct4, int $trans5)
 switch_int ($setting3) {
-	case 13, 54, ^setting_wiki_lookup, 11, ^setting_resizable_transparent_side_panel, 46 :
+	case 13, 54, ^setting_wiki_lookup, ^setting_store_button_desktop, ^setting_store_button_mobile, 257, 11, ^setting_resizable_transparent_side_panel, 46 :
 		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1055, var2855}");
 	case ^setting_music_unlock_message :
 		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var19}");
@@ -11,6 +11,8 @@ switch_int ($setting3) {
 		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1053, var427}");
 	case ^setting_drop_item_warnings :
 		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var284}");
+	case 278 :
+		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var3552}");
 	case ^setting_escape_closes_interface :
 		cc_setonvartransmit("settings_toggle_transmit($component0, $int1, $boolean2, $setting3, $trans5, $struct4){var1224}");
 	case ^setting_hide_private_chat :

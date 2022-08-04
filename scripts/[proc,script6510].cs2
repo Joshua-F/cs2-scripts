@@ -1,7 +1,9 @@
 // 6510
 [proc,script6510]
-def_newvar $newvar0 = _7200(4, 1, calc(36 * 2), calc(32 * 2), 1);
-if (_202($newvar0) = ^true) {
-	cc_setonvartransmit("script6511($newvar0, %var3546, npc_uid, _6752, %varbit14189){var3546, var3543}");
+if (nc_param(npc_type, param_626) ! -1) {
+	~cluehelper_uri_overlay(nc_param(npc_type, param_626));
+} else if (nc_param(npc_type, param_627) = 1) {
+	~script6542;
+} else {
+	~script6719;
 }
-~script6512($newvar0, %var3546, npc_uid, _6752);

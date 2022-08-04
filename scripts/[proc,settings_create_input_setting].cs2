@@ -84,13 +84,15 @@ if ($int18 = 1) {
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_string $string2 = ",";
+def_string $string3 = " ";
+def_string $string4 = "";
 def_int $int20 = ~script4398($setting17);
 if ($int20 > 1) {
-	cc_settext("<~tostring_spacer($int20, $string2)> <struct_param($struct5, param_1112)>");
+	cc_settext("<~tostring_spacer($int20, $string2)><text_switch(~int_to_bool(string_length(struct_param($struct5, param_1112))), $string3, $string4)><struct_param($struct5, param_1112)>");
 } else if ($int20 = 0) {
 	cc_settext(struct_param($struct5, param_1113));
 } else {
-	cc_settext("1 <struct_param($struct5, param_1111)>");
+	cc_settext("1<text_switch(~int_to_bool(string_length(struct_param($struct5, param_1111))), $string3, $string4)><struct_param($struct5, param_1111)>");
 }
 cc_create($component6, ^iftype_rectangle, $int3);
 $int3 = calc($int3 + 1);

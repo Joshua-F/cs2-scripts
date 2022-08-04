@@ -1,27 +1,18 @@
 // 6619
-[proc,cluehelper_key_npc](dbrow $dbrow0)
-if ($dbrow0 = null) {
+[proc,cluehelper_key_npc](dbrow $dbrow0, dbrow $dbrow1, newvar $newvar2, npc_uid $npc_uid3, int $int4)
+if ($dbrow0 = null | $dbrow1 = null) {
 	return;
 }
-if (db_getrowtable($dbrow0) ! dbtable_8) {
+def_obj $obj5 = db_getfield($dbrow1, dbtable_19:3, 0);
+if ($obj5 = null) {
 	return;
 }
-def_int $dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_8:3, 0));
-def_dbrow $dbrow2 = db_getfield($dbrow0, dbtable_8:3, $dbfield1);
-if ($dbrow2 = null | db_getrowtable($dbrow2) ! dbtable_19) {
-	return;
+def_int $int6 = 0;
+if (inv_total(inv, $obj5) > 0) {
+	$int6 = 1;
 }
-def_obj $obj3 = db_getfield($dbrow2, dbtable_19:3, 0);
-if ($obj3 = null) {
-	return;
+if (_202($newvar2) = ^true) {
+	cc_setonvartransmit("cluehelper_key_npc_vartransmit($dbrow0, $dbrow1, $newvar2, $int4, $npc_uid3, %varbit14189, %varbit14184, $obj5, $int6){var3546, var3543}");
+	cc_setoninvtransmit("cluehelper_key_npc_invtransmit($dbrow0, $dbrow1, $newvar2, $int4, $npc_uid3, $obj5, $int6){inv}");
 }
-def_int $int4 = 0;
-if (inv_total(inv, $obj3) > 0) {
-	$int4 = 1;
-}
-def_newvar $newvar5 = _7200(4, 1, calc(36 + 36), calc(32 + 32), 1);
-if (_202($newvar5) = ^true) {
-	cc_setonvartransmit("cluehelper_key_npc_vartransmit($dbrow0, $dbrow2, $newvar5, _6752, npc_uid, %varbit14189, %varbit14184, %var3546, $obj3, $int4){var3546, var3543}");
-	cc_setoninvtransmit("cluehelper_key_npc_invtransmit($dbrow0, $dbrow2, $newvar5, _6752, npc_uid, $obj3, $int4){inv}");
-}
-~cluehelper_key_npc_draw($dbrow0, $dbrow2, $newvar5, _6752, npc_uid, $obj3, $int4);
+~cluehelper_key_npc_draw($dbrow0, $dbrow1, $newvar2, $int4, $npc_uid3, $obj5, $int6);

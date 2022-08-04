@@ -1,5 +1,5 @@
 // 4399
-[proc,clan_sidepanel_drawchannel](boolean $boolean0, int $int1, component $component2, int $int3, component $component4)
+[proc,clan_sidepanel_drawchannel](boolean $boolean0, int $int1, component $component2, int $int3, component $component4)(int, int)
 def_int $clanslot5 = activeclanchannel_getuserslot(removetags(chat_playername));
 def_int $int6 = -1;
 if ($clanslot5 ! null) {
@@ -51,6 +51,8 @@ $int21 = 0;
 if (activeclansettings_getcurrentowner_slot = activeclansettings_getaffinedslot(removetags(chat_playername))) {
 	$int22 = 1;
 }
+def_int $int25 = 0;
+def_int $int26 = 0;
 while ($int21 < $int1) {
 	$clanslot23 = activeclanchannel_getsorteduserslot($int21);
 	$string0, $height15, $world17 = activeclanchannel_getuserdisplayname($clanslot23), calc($int21 * $int13), activeclanchannel_getuserworld($clanslot23);
@@ -92,6 +94,11 @@ while ($int21 < $int1) {
 		$string2, $graphic19 = ~script4302($int18);
 	}
 	.cc_setgraphic($graphic19);
+	if ($int18 <= -1) {
+		$int26 = calc($int26 + 1);
+	} else {
+		$int25 = calc($int25 + 1);
+	}
 	if ($comsubid20 ! -1 & .cc_find($component2, $comsubid20) = ^true) {
 		.cc_clearops;
 		if ($clanslot5 ! $clanslot23) {
@@ -167,3 +174,4 @@ if ($height15 > if_getheight($component2)) {
 	if_setscrollsize(0, 0, $component2);
 }
 ~scrollbar_resize($component4, $component2, if_getscrolly($component2));
+return($int25, $int26);

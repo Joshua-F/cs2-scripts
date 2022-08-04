@@ -4,6 +4,9 @@ if ($newvar0 = null) {
 	return;
 }
 highlight_npc_on($npc_uid1, $int2, 9);
+if (%varbit14189 = 0) {
+	return;
+}
 _103($newvar0, ^iftype_graphic, 0);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(8, 3, ^setpos_abs_centre, ^setpos_abs_centre);

@@ -1,0 +1,20 @@
+// 6713
+[proc,script6713](component $component0, int $int1, int $int2, int $int3, int $int4, graphic $graphic5, int $int6)
+def_string $op0 = "";
+if (cc_find($component0, $int1) = ^true & .cc_find($component0, calc($int1 + 1)) = ^true) {
+	if ($int6 = 0 & %varcint1080 = 0) {
+		$op0 = "View Clan Count";
+		cc_setgraphic($graphic5);
+		.cc_settext(tostring($int4));
+		cc_setop(1, $op0);
+		.cc_setop(1, $op0);
+	} else {
+		$op0 = "View Guest Count";
+		cc_setgraphic("group_icon,0");
+		.cc_settext("<tostring($int3)>/<tostring($int2)>");
+		if ($int6 = 0) {
+			cc_setop(1, $op0);
+			.cc_setop(1, $op0);
+		}
+	}
+}

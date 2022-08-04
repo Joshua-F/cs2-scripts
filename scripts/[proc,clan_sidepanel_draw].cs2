@@ -18,6 +18,12 @@ def_int $int13 = 0;
 def_string $string1 = "";
 def_int $int14 = 0;
 def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_string $string2 = "";
+def_graphic $graphic20 = null;
 if ($boolean0 = true) {
 	$int7, $int8 = %varbit12164, 2;
 	if ($int7 = 3 & activeclansettings_find_listened = true) {
@@ -47,18 +53,17 @@ if ($boolean0 = true) {
 		cc_setcolour(0xe6981f);
 		$int10 = calc($int10 + 1);
 		if ($int11 = 1) {
+			$int19 = $int10;
 			cc_create($component1, ^iftype_graphic, $int10);
-			cc_setsize(13, 10, ^setsize_abs, ^setsize_abs);
-			cc_setposition(18, 20, ^setpos_abs_left, ^setpos_abs_top);
-			cc_setgraphic("group_icon,0");
+			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+			cc_setposition(6, 20, ^setpos_abs_left, ^setpos_abs_top);
 			$int10 = calc($int10 + 1);
 			cc_create($component1, ^iftype_text, $int10);
-			cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
-			cc_setposition(29, 17, ^setpos_abs_left, ^setpos_abs_top);
-			cc_settext(tostring(activeclansettings_getaffinedcount));
+			cc_setsize(47, 20, ^setsize_abs, ^setsize_abs);
+			cc_setposition(22, 17, ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);
 			cc_settextshadow(true);
-			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 			cc_setcolour(0xffb83f);
 			$int10 = calc($int10 + 1);
 			cc_create($component1, ^iftype_graphic, $int10);
@@ -108,18 +113,17 @@ if ($boolean0 = true) {
 			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 			$int10 = calc($int10 + 1);
 		} else {
+			$int19 = $int10;
 			cc_create($component1, ^iftype_graphic, $int10);
-			cc_setsize(13, 10, ^setsize_abs, ^setsize_abs);
-			cc_setposition(18, 20, ^setpos_abs_left, ^setpos_abs_top);
-			cc_setgraphic("group_icon,0");
+			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+			cc_setposition(6, 20, ^setpos_abs_left, ^setpos_abs_top);
 			$int10 = calc($int10 + 1);
 			cc_create($component1, ^iftype_text, $int10);
-			cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
-			cc_setposition(29, 17, ^setpos_abs_left, ^setpos_abs_top);
-			cc_settext(tostring(activeclansettings_getaffinedcount));
+			cc_setsize(47, 20, ^setsize_abs, ^setsize_abs);
+			cc_setposition(22, 17, ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);
 			cc_settextshadow(true);
-			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 			cc_setcolour(0xffb83f);
 			$int10 = calc($int10 + 1);
 			cc_create($component1, ^iftype_graphic, $int10);
@@ -175,7 +179,18 @@ if ($boolean0 = true) {
 			}
 			$int9 = activeclanchannel_getusercount;
 			if ($int9 > 0) {
-				~clan_sidepanel_drawchannel($boolean0, $int9, $component2, $int10, $component3);
+				$int16, $int17 = ~clan_sidepanel_drawchannel($boolean0, $int9, $component2, $int10, $component3);
+				$string2, $graphic20 = ~script4302(-1);
+				$int18 = activeclansettings_getaffinedcount;
+				~script6713($component1, $int19, $int18, $int16, $int17, $graphic20, $int11);
+				if ($int11 = 0 & $int13 = 0) {
+					if (cc_find($component1, $int19) = ^true) {
+						cc_setonop("script6712($component1, $int19, $int18, $int16, $int17, $graphic20)");
+					}
+					if (cc_find($component1, calc($int19 + 1)) = ^true) {
+						cc_setonop("script6712($component1, $int19, $int18, $int16, $int17, $graphic20)");
+					}
+				}
 				return;
 			}
 			$text0 = "No-one is currently chatting in this clan's channel.";
@@ -231,18 +246,17 @@ if ($boolean0 = true) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_setcolour(0xe6981f);
 		$int10 = calc($int10 + 1);
+		$int19 = $int10;
 		cc_create($component1, ^iftype_graphic, $int10);
-		cc_setsize(13, 10, ^setsize_abs, ^setsize_abs);
-		cc_setposition(18, 17, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic("group_icon,0");
+		cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+		cc_setposition(6, 20, ^setpos_abs_left, ^setpos_abs_top);
 		$int10 = calc($int10 + 1);
 		cc_create($component1, ^iftype_text, $int10);
-		cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
-		cc_setposition(29, 17, ^setpos_abs_left, ^setpos_abs_top);
-		cc_settext(tostring(activeclansettings_getaffinedcount));
+		cc_setsize(47, 20, ^setsize_abs, ^setsize_abs);
+		cc_setposition(22, 17, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p11_full);
 		cc_settextshadow(true);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_setcolour(0xffb83f);
 		$int10 = calc($int10 + 1);
 		cc_create($component1, ^iftype_graphic, $int10);
@@ -279,7 +293,18 @@ if ($boolean0 = true) {
 			}
 			$int9 = activeclanchannel_getusercount;
 			if ($int9 > 0) {
-				~clan_sidepanel_drawchannel($boolean0, $int9, $component2, $int10, $component3);
+				$int16, $int17 = ~clan_sidepanel_drawchannel($boolean0, $int9, $component2, $int10, $component3);
+				$string2, $graphic20 = ~script4302(-1);
+				$int18 = activeclansettings_getaffinedcount;
+				~script6713($component1, $int19, $int18, $int16, $int17, $graphic20, $int11);
+				if ($int11 = 0 & $int13 = 0) {
+					if (cc_find($component1, $int19) = ^true) {
+						cc_setonop("script6712($component1, $int19, $int18, $int16, $int17, $graphic20)");
+					}
+					if (cc_find($component1, calc($int19 + 1)) = ^true) {
+						cc_setonop("script6712($component1, $int19, $int18, $int16, $int17, $graphic20)");
+					}
+				}
 				return;
 			}
 			$text0 = "No-one is currently chatting in this clan's channel.";

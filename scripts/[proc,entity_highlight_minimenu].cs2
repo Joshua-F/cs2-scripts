@@ -7,7 +7,7 @@ switch_int (_7451($int1)) {
 		if (_7453($int1) = true) {
 			~entity_highlight_active_npc($int0);
 			if ($int0 = 4) {
-				$newvar2 = _7200(3, 0, 1, 1, 0);
+				$newvar2 = _7203(0, 0, 1, 1, 0);
 				~script5961($newvar2);
 			}
 		}
@@ -15,7 +15,7 @@ switch_int (_7451($int1)) {
 		if (_7454($int1) = true) {
 			~entity_highlight_active_loc($int0);
 			if ($int0 = 4) {
-				$newvar2 = _7201(4, 0, 1, 1, 0);
+				$newvar2 = _7203(0, 0, 1, 1, 0);
 				~script5961($newvar2);
 			}
 		}
@@ -23,7 +23,7 @@ switch_int (_7451($int1)) {
 		if (_7455($int1) = true) {
 			~entity_highlight_active_obj($int0);
 			if ($int0 = 4) {
-				$newvar2 = _7204(obj_coord, 7, 0, 1, 1, 0);
+				$newvar2 = _7203(0, 0, 1, 1, 0);
 				~script5961($newvar2);
 			}
 		}
@@ -31,9 +31,7 @@ switch_int (_7451($int1)) {
 		if (_7456($int1) = true) {
 			~entity_highlight_active_player($int0);
 			if ($int0 = 4) {
-				if (_6901 = true) {
-					$newvar2 = _7203(0, 0, 1, 1, 0);
-				}
+				$newvar2 = _7203(0, 0, 1, 1, 0);
 				~script5961($newvar2);
 			}
 		}

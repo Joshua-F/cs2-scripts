@@ -1,3 +1,6 @@
 // 389
 [proc,settings_store_button_desktop]
+if (%varbit4084 = 1) {
+	return;
+}
 %varbit13037 = calc(1 - %varbit13037);

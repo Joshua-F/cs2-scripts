@@ -1,6 +1,9 @@
 // 6698
 [proc,npc_name_create](newvar $newvar0, npc_uid $npc_uid1, int $int2, string $string0, npc $npc3)
 _104($newvar0);
+if (_202($newvar0) = ^true) {
+	cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+}
 if (%varbit542 = 1) {
 	return;
 }

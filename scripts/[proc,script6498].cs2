@@ -2,9 +2,9 @@
 [proc,script6498](dbrow $dbrow0, loc $loc1, obj $obj2, coord $coord3, obj $obj4)
 def_newvar $newvar5 = null;
 if (loc_find($coord3, $loc1) = true) {
-	$newvar5 = _7206(6);
+	$newvar5 = _7206(5);
 	if ($newvar5 = null) {
-		$newvar5 = _7201(6, 1, 60, 60, 1);
+		$newvar5 = _7201(5, 1, 60, 60, 1);
 	} else {
 		_104($newvar5);
 	}

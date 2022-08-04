@@ -1,9 +1,18 @@
 // 6620
-[clientscript,cluehelper_key_npc_vartransmit](dbrow $dbrow0, dbrow $dbrow1, newvar $newvar2, int $int3, npc_uid $npc_uid4, int $int5, int $int6, dbrow $dbrow7, obj $obj8, int $int9)
-if (%varbit14189 = $int5 & %varbit14184 = $int6 & %var3546 = $dbrow7) {
+[clientscript,cluehelper_key_npc_vartransmit](dbrow $dbrow0, dbrow $dbrow1, newvar $newvar2, int $int3, npc_uid $npc_uid4, int $int5, int $int6, obj $obj7, int $int8)
+if (%varbit14189 = $int5 & %varbit14184 = $int6 & %var3546 = $dbrow0) {
 	return;
 }
-~cluehelper_key_npc_draw($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj8, $int9);
+if (%var3546 ! $dbrow0) {
+	if (_202($newvar2) = ^true) {
+		cc_setonvartransmit("script6720($newvar2, %var3546, $npc_uid4, $int3, %varbit14189){var3546, var3543}");
+	}
+	if (npc_find($npc_uid4) = true) {
+		~script6721($newvar2, %var3546, $npc_uid4, $int3);
+	}
+	return;
+}
+~cluehelper_key_npc_draw($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj7, $int8);
 if (_202($newvar2) = ^true) {
-	cc_setonvartransmit("cluehelper_key_npc_vartransmit($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, %varbit14189, %varbit14184, %var3546, $obj8, $int9){var3546, var3543}");
+	cc_setonvartransmit("cluehelper_key_npc_vartransmit($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, %varbit14189, %varbit14184, $obj7, $int8){var3546, var3543}");
 }

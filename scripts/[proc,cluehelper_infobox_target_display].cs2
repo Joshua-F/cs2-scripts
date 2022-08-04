@@ -2,6 +2,7 @@
 [proc,cluehelper_infobox_target_display](dbrow $dbrow0)
 def_int $int1 = 0;
 def_npc $npc2 = null;
+def_loc $loc3 = null;
 switch_int (db_getrowtable($dbrow0)) {
 	case dbtable_15 :
 		$int1 = ~helper_generic_add_title("Talk-to", 0);
@@ -14,8 +15,13 @@ switch_int (db_getrowtable($dbrow0)) {
 		$int1 = ~helper_generic_add_title("Location", 0);
 		$int1 = ~helper_generic_add_text(~script6647($dbrow0));
 	case dbtable_16 :
-		$int1 = ~helper_generic_add_title("Search", 0);
-		$int1 = ~helper_generic_add_text(lc_name(db_getfield($dbrow0, dbtable_16:0, 0)));
+		$int1 = ~helper_generic_add_title("Goal", 0);
+		$loc3 = db_getfield($dbrow0, dbtable_16:1, 0);
+		if ($loc3 ! null) {
+			$int1 = ~helper_generic_add_text(lc_name($loc3));
+		} else {
+			$int1 = ~helper_generic_add_text(lc_name(db_getfield($dbrow0, dbtable_16:0, 0)));
+		}
 		$int1 = ~helper_generic_add_title("Location", 0);
 		$int1 = ~helper_generic_add_text(~script6647($dbrow0));
 	case dbtable_17 :

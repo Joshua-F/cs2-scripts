@@ -22,7 +22,7 @@ if ($loc2 ! null & $coord3 ! null & _6951($coord3) = true) {
 		_7010(9, ^green, 2, 30, 1);
 	}
 	$loc2 = db_getfield($dbrow1, dbtable_16:0, 0);
-	$coord3 = db_getfield($dbrow1, dbtable_16:1, 0);
+	$coord3 = db_getfield($dbrow1, dbtable_16:2, 0);
 	if ($loc2 ! null & $coord3 ! null) {
 		~script6505($dbrow0, $loc2, $coord3, $obj6);
 	}

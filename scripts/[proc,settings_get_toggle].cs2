@@ -7,6 +7,8 @@ switch_int ($setting0) {
 		return(%varbit10078);
 	case ^setting_hitsplat_tinting :
 		return(%varbit10236);
+	case 279 :
+		return(%varbit14196);
 	case ^setting_wiki_lookup :
 		return(%varbit10113);
 	case ^setting_data_orbs :
@@ -45,6 +47,8 @@ switch_int ($setting0) {
 		return(%varbit4930);
 	case ^setting_drop_item_warnings :
 		return(%varbit5411);
+	case 278 :
+		return(calc(1 - %varbit14194));
 	case 46 :
 		return(%varbit2570);
 	case ^setting_store_button_mobile :
@@ -254,6 +258,12 @@ switch_int ($setting0) {
 		return(%varbit13089);
 	case ^setting_gravestone_confirmation :
 		return(%varbit13113);
+	case 281 :
+		return(calc(1 - %varbit14197));
+	case 282 :
+		return(calc(1 - %varbit4814));
+	case 283 :
+		return(calc(1 - %varbit14198));
 	case 195 :
 		return(%varbit13120);
 	case 201 :
