@@ -1,5 +1,5 @@
 // 1293
-[clientscript,br_loadout_menuop](int $opindex0, component $component1, int $comsubid2, int $comsubid3, int $colour4, int $trans5, int $colour6, int $trans7, component $component8, component $component9, component $drop10, component $component11)
+[clientscript,br_loadout_menuop](int $opindex0, component $component1, int $comsubid2, int $comsubid3, int $colour4, int $trans5, int $colour6, int $trans7, int $int8, enum $enum9, enum $enum10, component $component11, component $component12, component $drop13, component $component14)
 if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
 	sound_synth(interface_select1, 1, 0);
 	cc_setonmouserepeat(null);
@@ -9,5 +9,5 @@ if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3)
 	.cc_setontimer("br_loadout_menureset(calc(clientclock + 20), $component1, $comsubid2, $comsubid3, $colour4, $trans5, $colour6, $trans7)");
 }
 if ($opindex0 = 1) {
-	~br_loadout_additem($comsubid2, enum(int, namedobj, enum_2630, $comsubid2), 0, $component8, $component9, $drop10, $component11);
+	~br_loadout_additem($comsubid2, enum(int, namedobj, $enum9, $comsubid2), 0, $int8, $enum9, $enum10, $component11, $component12, $drop13, $component14);
 }

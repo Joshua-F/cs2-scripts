@@ -1,145 +1,145 @@
 // 3067
-[proc,br_loadout_drawloadout](component $component0, component $component1, component $drop2, component $component3)
-def_int $intarray0(calc(enum_getoutputcount(enum_2630) + 1));
-def_component $component4 = null;
-def_int $int5 = 0;
-def_namedobj $namedobj6 = null;
-def_int $int7 = 0;
-def_int $size8 = inv_size(worn);
-while ($int7 < $size8) {
-	$component4 = enum(int, component, enum_2632, $int7);
-	if ($component4 ! null) {
-		cc_deleteall($component4);
-		cc_create($component4, ^iftype_graphic, 0);
+[proc,br_loadout_drawloadout](int $int0, enum $enum1, enum $enum2, component $component3, component $component4, component $drop5, component $component6)
+def_int $intarray0(calc(enum_getoutputcount($enum1) + 1));
+def_component $component7 = null;
+def_int $int8 = 0;
+def_namedobj $namedobj9 = null;
+def_int $int10 = 0;
+def_int $size11 = inv_size(worn);
+while ($int10 < $size11) {
+	$component7 = enum(int, component, $enum2, $int10);
+	if ($component7 ! null) {
+		cc_deleteall($component7);
+		cc_create($component7, ^iftype_graphic, 0);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("miscgraphics,0");
-		cc_create($component4, ^iftype_graphic, 1);
+		cc_create($component7, ^iftype_graphic, 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		$int5 = ~br_loadout_get_worn($int7);
-		$namedobj6 = enum(int, namedobj, enum_2630, $int5);
-		if ($namedobj6 ! null) {
+		$int8 = ~br_loadout_get_worn($int0, $int10);
+		$namedobj9 = enum(int, namedobj, $enum1, $int8);
+		if ($namedobj9 ! null) {
 			cc_settrans(0);
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
-			if (oc_stackable($namedobj6) = true) {
-				cc_setobject($namedobj6, 5000);
+			if (oc_stackable($namedobj9) = true) {
+				cc_setobject($namedobj9, 5000);
 			} else {
-				cc_setobject($namedobj6, 1);
+				cc_setobject($namedobj9, 1);
 			}
-			$intarray0($int5) = ~min(calc($intarray0($int5) + 1), enum(obj, int, enum_2631, $namedobj6));
-			cc_setopbase("<col=ff9040><oc_name($namedobj6)></col>");
+			$intarray0($int8) = ~min(calc($intarray0($int8) + 1), enum(obj, int, enum_2631, $namedobj9));
+			cc_setopbase("<col=ff9040><oc_name($namedobj9)></col>");
 			cc_setop(1, "Discard");
 			cc_setop(10, "Examine");
 			cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
-			cc_setdraggable($component0, -1);
-			cc_setondragcomplete("br_loadout_rearrange(event_com, event_comsubid, event_drop, event_dropsubid, $int5, $component0, $component1, $drop2, $component3)");
+			cc_setdraggable($component3, -1);
+			cc_setondragcomplete("br_loadout_rearrange(event_com, event_comsubid, event_drop, event_dropsubid, $int8, $int0, $enum1, $enum2, $component3, $component4, $drop5, $component6)");
 			cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, 1)");
 			cc_setdragdeadzone(5);
 			cc_setdragdeadtime(5);
 		} else {
 			cc_settrans(255);
 			cc_clearops;
-			cc_create($component4, ^iftype_graphic, 2);
+			cc_create($component7, ^iftype_graphic, 2);
 			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-			cc_setgraphic(enum(int, graphic, enum_904, $int7));
+			cc_setgraphic(enum(int, graphic, enum_904, $int10));
 		}
 	}
-	$int7 = calc($int7 + 1);
+	$int10 = calc($int10 + 1);
 }
-cc_deleteall($component1);
-def_int $int9 = calc((if_getwidth($component1) - 6 - 4 * 36) / 3 + 36);
-def_int $int10 = calc((if_getheight($component1) - 6 - 7 * 32) / 6 + 32);
-$int7 = 0;
-def_int $size11 = inv_size(inv);
-while ($int7 < $size11) {
-	$int5 = ~br_loadout_get_inv($int7);
-	$namedobj6 = enum(int, namedobj, enum_2630, $int5);
-	cc_create($component1, ^iftype_graphic, $int7);
-	cc_setposition(calc(4 + $int9 * ($int7 % 4)), calc(3 + $int10 * ($int7 / 4)), ^setpos_abs_left, ^setpos_abs_top);
+cc_deleteall($component4);
+def_int $int12 = calc((if_getwidth($component4) - 6 - 4 * 36) / 3 + 36);
+def_int $int13 = calc((if_getheight($component4) - 6 - 7 * 32) / 6 + 32);
+$int10 = 0;
+def_int $size14 = inv_size(inv);
+while ($int10 < $size14) {
+	$int8 = ~br_loadout_get_inv($int0, $int10);
+	$namedobj9 = enum(int, namedobj, $enum1, $int8);
+	cc_create($component4, ^iftype_graphic, $int10);
+	cc_setposition(calc(4 + $int12 * ($int10 % 4)), calc(3 + $int13 * ($int10 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	if ($namedobj6 ! null) {
+	if ($namedobj9 ! null) {
 		cc_settrans(0);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		if (oc_stackable($namedobj6) = true) {
-			cc_setobject($namedobj6, 5000);
+		if (oc_stackable($namedobj9) = true) {
+			cc_setobject($namedobj9, 5000);
 		} else {
-			cc_setobject($namedobj6, 1);
+			cc_setobject($namedobj9, 1);
 		}
-		$intarray0($int5) = ~min(calc($intarray0($int5) + 1), enum(obj, int, enum_2631, $namedobj6));
-		cc_setopbase("<col=ff9040><oc_name($namedobj6)></col>");
+		$intarray0($int8) = ~min(calc($intarray0($int8) + 1), enum(obj, int, enum_2631, $namedobj9));
+		cc_setopbase("<col=ff9040><oc_name($namedobj9)></col>");
 		cc_setop(1, "Discard");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
-		cc_setdraggable($component0, -1);
-		cc_setondragcomplete("br_loadout_rearrange(event_com, event_comsubid, event_drop, event_dropsubid, $int5, $component0, $component1, $drop2, $component3)");
-		cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, $size11)");
+		cc_setdraggable($component3, -1);
+		cc_setondragcomplete("br_loadout_rearrange(event_com, event_comsubid, event_drop, event_dropsubid, $int8, $int0, $enum1, $enum2, $component3, $component4, $drop5, $component6)");
+		cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, $size14)");
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);
 	} else {
 		cc_settrans(255);
 		cc_clearops;
 	}
-	$int7 = calc($int7 + 1);
+	$int10 = calc($int10 + 1);
 }
-def_int $int12 = $int7;
-def_int $int13 = 0;
-$int7 = $size8;
-while ($int7 > 0) {
-	$int7 = calc($int7 - 1);
-	$component4 = enum(int, component, enum_2632, $int7);
-	if ($component4 ! null) {
-		$int5 = ~br_loadout_get_worn($int7);
-		$namedobj6 = enum(int, namedobj, enum_2630, $int5);
-		if ($namedobj6 ! null) {
-			if ($intarray0($int5) > 0) {
-				$intarray0($int5) = calc($intarray0($int5) - 1);
+def_int $int15 = $int10;
+def_int $int16 = 0;
+$int10 = $size11;
+while ($int10 > 0) {
+	$int10 = calc($int10 - 1);
+	$component7 = enum(int, component, $enum2, $int10);
+	if ($component7 ! null) {
+		$int8 = ~br_loadout_get_worn($int0, $int10);
+		$namedobj9 = enum(int, namedobj, $enum1, $int8);
+		if ($namedobj9 ! null) {
+			if ($intarray0($int8) > 0) {
+				$intarray0($int8) = calc($intarray0($int8) - 1);
 			} else {
-				cc_create($component4, ^iftype_model, 2);
+				cc_create($component7, ^iftype_model, 2);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 				cc_setposition(1, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 				cc_setmodel(bank_filler_7669);
 				cc_setmodelangle(0, 0, 512, 512, 0, 1800);
-				$int13 = 1;
+				$int16 = 1;
 			}
 		}
 	}
 }
-$int7 = 0;
-while ($int7 < $size11) {
-	cc_create($component1, ^iftype_model, $int12);
-	$int12 = calc($int12 + 1);
-	$int5 = ~br_loadout_get_inv($int7);
-	$namedobj6 = enum(int, namedobj, enum_2630, $int5);
-	if ($namedobj6 ! null) {
-		if ($intarray0($int5) > 0) {
-			$intarray0($int5) = calc($intarray0($int5) - 1);
+$int10 = 0;
+while ($int10 < $size14) {
+	cc_create($component4, ^iftype_model, $int15);
+	$int15 = calc($int15 + 1);
+	$int8 = ~br_loadout_get_inv($int0, $int10);
+	$namedobj9 = enum(int, namedobj, $enum1, $int8);
+	if ($namedobj9 ! null) {
+		if ($intarray0($int8) > 0) {
+			$intarray0($int8) = calc($intarray0($int8) - 1);
 			cc_sethide(true);
 		} else {
 			cc_sethide(false);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc(4 + $int9 * ($int7 % 4)), calc(3 + $int10 * ($int7 / 4)), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc(4 + $int12 * ($int10 % 4)), calc(3 + $int13 * ($int10 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setmodel(bank_filler_7669);
 			cc_setmodelangle(0, 0, 512, 512, 0, 1800);
-			$int13 = 1;
+			$int16 = 1;
 		}
 	} else {
 		cc_sethide(true);
 	}
-	$int7 = calc($int7 + 1);
+	$int10 = calc($int10 + 1);
 }
-$int12 = ~thinbox($component1, $int12);
-if ($int13 = 1) {
-	if_settextfont(p11_full, $component3);
-	if_setcolour(~tob_hud_nameflasher, $component3);
-	if_setontimer("tob_hud_nameflasher($component3)", $component3);
-	if_settext("Your loadout contains too many of the <img=11> items - please discard some.", $component3);
+$int15 = ~thinbox($component4, $int15);
+if ($int16 = 1) {
+	if_settextfont(p11_full, $component6);
+	if_setcolour(~tob_hud_nameflasher, $component6);
+	if_setontimer("tob_hud_nameflasher($component6)", $component6);
+	if_settext("Your load-out contains too many of the <img=11> items - please discard some.", $component6);
 } else {
-	if_settextfont(p12_full, $component3);
-	if_setcolour(0xff981f, $component3);
-	if_setontimer(null, $component3);
-	if_settext("You will receive these items when a game begins.", $component3);
+	if_settextfont(p12_full, $component6);
+	if_setcolour(0xff981f, $component6);
+	if_setontimer(null, $component6);
+	if_settext("You will receive these items when a game begins.", $component6);
 }

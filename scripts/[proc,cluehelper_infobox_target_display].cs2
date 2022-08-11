@@ -13,7 +13,7 @@ switch_int (db_getrowtable($dbrow0)) {
 			$int1 = ~helper_generic_add_text(nc_name(db_getfield($dbrow0, dbtable_15:0, 0)));
 		}
 		$int1 = ~helper_generic_add_title("Location", 0);
-		$int1 = ~helper_generic_add_text(~script6647($dbrow0));
+		$int1 = ~helper_generic_add_text(~cluehelper_get_target_description($dbrow0));
 	case dbtable_16 :
 		$int1 = ~helper_generic_add_title("Goal", 0);
 		$loc3 = db_getfield($dbrow0, dbtable_16:1, 0);
@@ -23,15 +23,15 @@ switch_int (db_getrowtable($dbrow0)) {
 			$int1 = ~helper_generic_add_text(lc_name(db_getfield($dbrow0, dbtable_16:0, 0)));
 		}
 		$int1 = ~helper_generic_add_title("Location", 0);
-		$int1 = ~helper_generic_add_text(~script6647($dbrow0));
+		$int1 = ~helper_generic_add_text(~cluehelper_get_target_description($dbrow0));
 	case dbtable_17 :
 		$int1 = ~helper_generic_add_title("Location", 0);
-		$int1 = ~helper_generic_add_text(~script6647($dbrow0));
+		$int1 = ~helper_generic_add_text(~cluehelper_get_target_description($dbrow0));
 	case dbtable_18 :
 		$int1 = ~helper_generic_add_title("Location ", 0);
-		$int1 = ~helper_generic_add_text(~script6647($dbrow0));
+		$int1 = ~helper_generic_add_text(~cluehelper_get_target_description($dbrow0));
 	case dbtable_19 :
-		$int1 = ~helper_generic_add_text(~script6647($dbrow0));
+		$int1 = ~helper_generic_add_text(~cluehelper_get_target_description($dbrow0));
 		$int1 = ~helper_generic_add_title("Kill", 0);
 		$int1 = ~helper_generic_add_text(nc_name(db_getfield($dbrow0, dbtable_19:2, 0)));
 		$int1 = ~helper_generic_add_title("Key", 0);
@@ -40,5 +40,5 @@ switch_int (db_getrowtable($dbrow0)) {
 		$int1 = ~helper_generic_add_text(lc_name(db_getfield($dbrow0, dbtable_19:0, 0)));
 	case dbtable_20 :
 		$int1 = ~helper_generic_add_title("Kill", 0);
-		$int1 = ~helper_generic_add_text(~script6647($dbrow0));
+		$int1 = ~helper_generic_add_text(~cluehelper_get_target_description($dbrow0));
 }

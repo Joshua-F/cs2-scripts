@@ -1,0 +1,43 @@
+// 6541
+[clientscript,script6541](string $string0)
+def_enum $enum0 = ~toplevel_getcomponents;
+if ($enum0 = null) {
+	return;
+}
+def_component $component1 = enum(component, component, $enum0, interface_161:1);
+if ($component1 = null) {
+	return;
+}
+cc_deleteall($component1);
+def_int $y2 = scale(35, 100, 16384);
+cc_create($component1, ^iftype_graphic, 0);
+cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $y2, ^setpos_abs_centre, ^setpos_3);
+cc_settiling(true);
+cc_setgraphic("tradebacking");
+cc_create($component1, ^iftype_text, 1);
+cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $y2, ^setpos_abs_centre, ^setpos_3);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settextfont(quill_oblique_large);
+cc_settextshadow(true);
+cc_settext("Mode: <col=ffffff><$string0></col>");
+cc_create($component1, ^iftype_graphic, 2);
+cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $y2, ^setpos_abs_centre, ^setpos_3);
+cc_settiling(true);
+cc_setgraphic("tradebacking");
+cc_create($component1, ^iftype_model, 3);
+.cc_create($component1, ^iftype_model, 4);
+cc_setsize(40, 40, ^setsize_abs, ^setsize_abs);
+.cc_setsize(40, 40, ^setsize_abs, ^setsize_abs);
+cc_setmodel(general_khazard_149);
+.cc_setmodel(general_khazard_149);
+cc_setmodelanim(seq_579);
+.cc_setmodelanim(seq_579);
+cc_setmodelangle(0, 5, 2030, 0, 0, 1900);
+.cc_setmodelangle(0, 5, 2030, 0, 0, 1900);
+def_int $int3 = calc(clientclock + 20);
+if_setontimer("script6547($int3, event_com, $y2)", $component1);
+~script6548($int3, $component1, $y2);

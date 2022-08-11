@@ -40,7 +40,7 @@ if ($loc2 ! null & $coord3 ! null & _6951($coord3) = true) {
 if (~cluehelper_is_dig($dbrow0, $dbrow1) = 1) {
 	$coord3 = ~script6653($dbrow1);
 	if ($coord3 ! null) {
-		~script6503($dbrow0, $coord3, $obj6);
+		~cluehelper_overlay_dig_draw($dbrow0, $coord3, $obj6);
 	}
 } else if (db_getrowtable($dbrow1) = dbtable_18) {
 	$coord3 = ~script6653($dbrow1);

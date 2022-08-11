@@ -1,8 +1,8 @@
 // 1363
-[clientscript,br_loadout_drawloadout_request](component $component0, component $component1, component $component2, component $drop3, component $component4)
+[clientscript,br_loadout_drawloadout_request](int $int0, enum $enum1, enum $enum2, component $component3, component $component4, component $drop5, component $component6)
 if (clientclock > %varcint110) {
-	~br_loadout_drawloadout($component1, $component2, $drop3, $component4);
-	if_setontimer(null, $component0);
+	~br_loadout_drawloadout($int0, $enum1, $enum2, $component3, $component4, $drop5, $component6);
+	if_setontimer(null, $component3);
 } else {
-	if_setontimer("br_loadout_drawloadout_request($component0, $component1, $component2, $drop3, $component4)", $component0);
+	if_setontimer("br_loadout_drawloadout_request($int0, $enum1, $enum2, $component3, $component4, $drop5, $component6)", $component3);
 }

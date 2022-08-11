@@ -1,34 +1,34 @@
 // 3073
-[proc,br_loadout_sort](intarray $intarray0, int $int1, int $int2)
-def_int $index3 = calc(($int1 + $int2) / 2);
-def_int $int4 = $intarray0($index3);
-$intarray0($index3) = $intarray0($int2);
-$intarray0($int2) = $int4;
-def_int $int5 = $int1;
-def_int $int6 = $int1;
-def_int $int7 = 0;
-def_namedobj $namedobj8 = null;
-def_int $int9 = 0;
-def_namedobj $namedobj10 = enum(int, namedobj, enum_2630, $int4);
-def_int $int11 = oc_param($namedobj10, loadout_iteminfo);
-def_string $string0 = oc_name($namedobj10);
-def_int $int12 = 0;
-while ($int6 < $int2) {
-	$namedobj8 = enum(int, namedobj, enum_2630, $intarray0($int6));
-	$int9 = oc_param($namedobj8, loadout_iteminfo);
-	if ($int9 < $int11 | $int9 = $int11 & compare(oc_name($namedobj8), $string0) <= 0) {
-		$int12 = $intarray0($int6);
-		$intarray0($int6) = $intarray0($int5);
-		$intarray0($int5) = $int12;
-		$int5 = calc($int5 + 1);
+[proc,br_loadout_sort](intarray $intarray0, enum $enum1, int $int2, int $int3)
+def_int $index4 = calc(($int2 + $int3) / 2);
+def_int $int5 = $intarray0($index4);
+$intarray0($index4) = $intarray0($int3);
+$intarray0($int3) = $int5;
+def_int $int6 = $int2;
+def_int $int7 = $int2;
+def_int $int8 = 0;
+def_namedobj $namedobj9 = null;
+def_int $int10 = 0;
+def_namedobj $namedobj11 = enum(int, namedobj, $enum1, $int5);
+def_int $int12 = oc_param($namedobj11, loadout_iteminfo);
+def_string $string0 = oc_name($namedobj11);
+def_int $int13 = 0;
+while ($int7 < $int3) {
+	$namedobj9 = enum(int, namedobj, $enum1, $intarray0($int7));
+	$int10 = oc_param($namedobj9, loadout_iteminfo);
+	if ($int10 < $int12 | $int10 = $int12 & compare(oc_name($namedobj9), $string0) <= 0) {
+		$int13 = $intarray0($int7);
+		$intarray0($int7) = $intarray0($int6);
+		$intarray0($int6) = $int13;
+		$int6 = calc($int6 + 1);
 	}
-	$int6 = calc($int6 + 1);
+	$int7 = calc($int7 + 1);
 }
-$intarray0($int2) = $intarray0($int5);
-$intarray0($int5) = $int4;
-if ($int1 < calc($int5 - 1)) {
-	~br_loadout_sort(intarray0, $int1, calc($int5 - 1));
+$intarray0($int3) = $intarray0($int6);
+$intarray0($int6) = $int5;
+if ($int2 < calc($int6 - 1)) {
+	~br_loadout_sort(intarray0, $enum1, $int2, calc($int6 - 1));
 }
-if (calc($int5 + 1) < $int2) {
-	~br_loadout_sort(intarray0, calc($int5 + 1), $int2);
+if (calc($int6 + 1) < $int3) {
+	~br_loadout_sort(intarray0, $enum1, calc($int6 + 1), $int3);
 }

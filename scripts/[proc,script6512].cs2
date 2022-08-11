@@ -1,0 +1,36 @@
+// 6512
+[proc,script6512](string $text0, component $component0, component $component1, string $string1, component $component2, component $component3, string $string2, component $component4, component $component5, string $string3, component $component6, component $component7)
+cc_deleteall($component0);
+if_sethide(true, $component1);
+def_graphic $graphic8 = "tabs_short,2";
+def_graphic $graphic9 = "tabs_short,3";
+def_graphic $graphic10 = "tabs_short,4";
+def_graphic $graphic11 = "tabs_short,5";
+cc_create($component0, ^iftype_graphic, 0);
+.cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+.cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+.cc_sethflip(true);
+cc_setgraphic($graphic8);
+.cc_setgraphic($graphic8);
+def_int $comsubid12 = cc_getid;
+def_int $comsubid13 = .cc_getid;
+cc_create($component0, ^iftype_graphic, 2);
+cc_setsize(40, 21, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settiling(true);
+cc_setgraphic($graphic9);
+def_int $comsubid14 = cc_getid;
+cc_create($component0, ^iftype_text, 3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($text0);
+if_setonmouseover("script6518(event_com, $comsubid12, $comsubid13, $comsubid14, $graphic10, $graphic11)", $component0);
+if_setonmouseleave("script6518(event_com, $comsubid12, $comsubid13, $comsubid14, $graphic8, $graphic9)", $component0);
+if_setonclick("script6509($component1, $string1, $component2, $component3, $string2, $component4, $component5, $string3, $component6, $component7)", $component0);

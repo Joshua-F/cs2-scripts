@@ -1,62 +1,182 @@
 // 3074
-[proc,br_loadout_get_inv](int $int0)(int)
+[proc,br_loadout_get_inv](int $int0, int $int1)(int)
 switch_int ($int0) {
-	case 0 :
-		return(%varbit9408);
-	case 1 :
-		return(%varbit9409);
-	case 2 :
-		return(%varbit9410);
-	case 3 :
-		return(%varbit9411);
-	case 4 :
-		return(%varbit9412);
-	case 5 :
-		return(%varbit9413);
-	case 6 :
-		return(%varbit9414);
-	case 7 :
-		return(%varbit9415);
-	case 8 :
-		return(%varbit9416);
-	case 9 :
-		return(%varbit9417);
-	case 10 :
-		return(%varbit9418);
-	case 11 :
-		return(%varbit9419);
-	case 12 :
-		return(%varbit9420);
-	case 13 :
-		return(%varbit9421);
-	case 14 :
-		return(%varbit9422);
-	case 15 :
-		return(%varbit9423);
-	case 16 :
-		return(%varbit9424);
-	case 17 :
-		return(%varbit9425);
-	case 18 :
-		return(%varbit9426);
-	case 19 :
-		return(%varbit9427);
-	case 20 :
-		return(%varbit9428);
-	case 21 :
-		return(%varbit9429);
-	case 22 :
-		return(%varbit9430);
-	case 23 :
-		return(%varbit9431);
-	case 24 :
-		return(%varbit9432);
-	case 25 :
-		return(%varbit9433);
-	case 26 :
-		return(%varbit9434);
-	case 27 :
-		return(%varbit9435);
 	case default :
-		return(0);
+		switch_int ($int1) {
+			case 0 :
+				return(%varbit9408);
+			case 1 :
+				return(%varbit9409);
+			case 2 :
+				return(%varbit9410);
+			case 3 :
+				return(%varbit9411);
+			case 4 :
+				return(%varbit9412);
+			case 5 :
+				return(%varbit9413);
+			case 6 :
+				return(%varbit9414);
+			case 7 :
+				return(%varbit9415);
+			case 8 :
+				return(%varbit9416);
+			case 9 :
+				return(%varbit9417);
+			case 10 :
+				return(%varbit9418);
+			case 11 :
+				return(%varbit9419);
+			case 12 :
+				return(%varbit9420);
+			case 13 :
+				return(%varbit9421);
+			case 14 :
+				return(%varbit9422);
+			case 15 :
+				return(%varbit9423);
+			case 16 :
+				return(%varbit9424);
+			case 17 :
+				return(%varbit9425);
+			case 18 :
+				return(%varbit9426);
+			case 19 :
+				return(%varbit9427);
+			case 20 :
+				return(%varbit9428);
+			case 21 :
+				return(%varbit9429);
+			case 22 :
+				return(%varbit9430);
+			case 23 :
+				return(%varbit9431);
+			case 24 :
+				return(%varbit9432);
+			case 25 :
+				return(%varbit9433);
+			case 26 :
+				return(%varbit9434);
+			case 27 :
+				return(%varbit9435);
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(%varbit14201);
+			case 1 :
+				return(%varbit14202);
+			case 2 :
+				return(%varbit14203);
+			case 3 :
+				return(%varbit14204);
+			case 4 :
+				return(%varbit14205);
+			case 5 :
+				return(%varbit14206);
+			case 6 :
+				return(%varbit14207);
+			case 7 :
+				return(%varbit14208);
+			case 8 :
+				return(%varbit14209);
+			case 9 :
+				return(%varbit14210);
+			case 10 :
+				return(%varbit14211);
+			case 11 :
+				return(%varbit14212);
+			case 12 :
+				return(%varbit14213);
+			case 13 :
+				return(%varbit14214);
+			case 14 :
+				return(%varbit14215);
+			case 15 :
+				return(%varbit14216);
+			case 16 :
+				return(%varbit14217);
+			case 17 :
+				return(%varbit14218);
+			case 18 :
+				return(%varbit14219);
+			case 19 :
+				return(%varbit14220);
+			case 20 :
+				return(%varbit14221);
+			case 21 :
+				return(%varbit14222);
+			case 22 :
+				return(%varbit14223);
+			case 23 :
+				return(%varbit14224);
+			case 24 :
+				return(%varbit14225);
+			case 25 :
+				return(%varbit14226);
+			case 26 :
+				return(%varbit14227);
+			case 27 :
+				return(%varbit14228);
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(%varbit14240);
+			case 1 :
+				return(%varbit14241);
+			case 2 :
+				return(%varbit14242);
+			case 3 :
+				return(%varbit14243);
+			case 4 :
+				return(%varbit14244);
+			case 5 :
+				return(%varbit14245);
+			case 6 :
+				return(%varbit14246);
+			case 7 :
+				return(%varbit14247);
+			case 8 :
+				return(%varbit14248);
+			case 9 :
+				return(%varbit14249);
+			case 10 :
+				return(%varbit14250);
+			case 11 :
+				return(%varbit14251);
+			case 12 :
+				return(%varbit14252);
+			case 13 :
+				return(%varbit14253);
+			case 14 :
+				return(%varbit14254);
+			case 15 :
+				return(%varbit14255);
+			case 16 :
+				return(%varbit14256);
+			case 17 :
+				return(%varbit14257);
+			case 18 :
+				return(%varbit14258);
+			case 19 :
+				return(%varbit14259);
+			case 20 :
+				return(%varbit14260);
+			case 21 :
+				return(%varbit14261);
+			case 22 :
+				return(%varbit14262);
+			case 23 :
+				return(%varbit14263);
+			case 24 :
+				return(%varbit14264);
+			case 25 :
+				return(%varbit14265);
+			case 26 :
+				return(%varbit14266);
+			case 27 :
+				return(%varbit14267);
+		}
 }
+return(0);

@@ -1,77 +1,77 @@
 // 3069
-[clientscript,br_loadout_rearrange](component $component0, int $comsubid1, component $drop2, int $dropsubid3, int $int4, component $component5, component $component6, component $drop7, component $component8)
-def_namedobj $namedobj9 = enum(int, namedobj, enum_2630, $int4);
-if ($namedobj9 = null) {
+[clientscript,br_loadout_rearrange](component $component0, int $comsubid1, component $drop2, int $dropsubid3, int $int4, int $int5, enum $enum6, enum $enum7, component $component8, component $component9, component $drop10, component $component11)
+def_namedobj $namedobj12 = enum(int, namedobj, $enum6, $int4);
+if ($namedobj12 = null) {
 	return;
 }
-def_int $size10 = inv_size(inv);
-def_int $size11 = inv_size(worn);
-def_int $int12 = 0;
-def_int $int13 = 0;
-def_int $int14 = -1;
-if ($component0 = $component6) {
-	if ($comsubid1 >= 0 & $comsubid1 < $size10) {
-		$int14 = $comsubid1;
+def_int $size13 = inv_size(inv);
+def_int $size14 = inv_size(worn);
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = -1;
+if ($component0 = $component9) {
+	if ($comsubid1 >= 0 & $comsubid1 < $size13) {
+		$int17 = $comsubid1;
 	}
-	$int12 = 1;
+	$int15 = 1;
 }
-def_int $int15 = -1;
-if ($drop2 = $component6) {
-	if ($dropsubid3 >= 0 & $dropsubid3 < $size10) {
-		$int15 = $dropsubid3;
+def_int $int18 = -1;
+if ($drop2 = $component9) {
+	if ($dropsubid3 >= 0 & $dropsubid3 < $size13) {
+		$int18 = $dropsubid3;
 	}
-	$int13 = 1;
+	$int16 = 1;
 }
-def_int $int16 = $size11;
-if ($int14 = -1 | $int15 = -1) {
-	while ($int16 > 0) {
-		$int16 = calc($int16 - 1);
-		if ($int14 = -1 & enum(int, component, enum_2632, $int16) = $component0) {
-			$int14, $int12 = $int16, 0;
+def_int $int19 = $size14;
+if ($int17 = -1 | $int18 = -1) {
+	while ($int19 > 0) {
+		$int19 = calc($int19 - 1);
+		if ($int17 = -1 & enum(int, component, $enum7, $int19) = $component0) {
+			$int17, $int15 = $int19, 0;
 		}
-		if ($int15 = -1 & enum(int, component, enum_2632, $int16) = $drop2) {
-			$int15, $int13 = $int16, 0;
+		if ($int18 = -1 & enum(int, component, $enum7, $int19) = $drop2) {
+			$int18, $int16 = $int19, 0;
 		}
 	}
 }
-if ($int14 = -1) {
+if ($int17 = -1) {
 	return;
 }
-if ($drop2 = $drop7) {
+if ($drop2 = $drop10) {
 	sound_synth(interface_select1, 1, 0);
-	if ($int12 = 1) {
-		~br_loadout_set_inv($int14, 0);
+	if ($int15 = 1) {
+		~br_loadout_set_inv($int5, $int17, 0);
 	} else {
-		~br_loadout_set_worn($int14, 0);
+		~br_loadout_set_worn($int5, $int17, 0);
 	}
-	~br_loadout_drawloadout($component5, $component6, $drop7, $component8);
+	~br_loadout_drawloadout($int5, $enum6, $enum7, $component8, $component9, $drop10, $component11);
 	return;
 }
-if ($int15 = -1) {
+if ($int18 = -1) {
 	return;
 }
-def_int $int17 = 0;
-if ($int13 = 0) {
-	if (oc_param($namedobj9, loadout_iteminfo) ! $int15) {
+def_int $int20 = 0;
+if ($int16 = 0) {
+	if (oc_param($namedobj12, loadout_iteminfo) ! $int18) {
 		return;
 	}
-	$int17 = ~br_loadout_get_worn($int15);
+	$int20 = ~br_loadout_get_worn($int5, $int18);
 } else {
-	$int17 = ~br_loadout_get_inv($int15);
+	$int20 = ~br_loadout_get_inv($int5, $int18);
 }
-def_namedobj $namedobj18 = enum(int, namedobj, enum_2630, $int17);
-if ($namedobj18 ! null & $int12 = 0 & oc_param($namedobj18, loadout_iteminfo) ! $int14) {
+def_namedobj $namedobj21 = enum(int, namedobj, $enum6, $int20);
+if ($namedobj21 ! null & $int15 = 0 & oc_param($namedobj21, loadout_iteminfo) ! $int17) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if ($int13 = 1) {
-	~br_loadout_set_inv($int15, $int4);
+if ($int16 = 1) {
+	~br_loadout_set_inv($int5, $int18, $int4);
 } else {
-	~br_loadout_set_worn($int15, $int4);
+	~br_loadout_set_worn($int5, $int18, $int4);
 }
-if ($int12 = 1) {
-	~br_loadout_set_inv($int14, $int17);
+if ($int15 = 1) {
+	~br_loadout_set_inv($int5, $int17, $int20);
 } else {
-	~br_loadout_set_worn($int14, $int17);
+	~br_loadout_set_worn($int5, $int17, $int20);
 }
-~br_loadout_drawloadout($component5, $component6, $drop7, $component8);
+~br_loadout_drawloadout($int5, $enum6, $enum7, $component8, $component9, $drop10, $component11);

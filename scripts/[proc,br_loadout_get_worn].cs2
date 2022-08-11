@@ -1,28 +1,80 @@
 // 3075
-[proc,br_loadout_get_worn](int $int0)(int)
+[proc,br_loadout_get_worn](int $int0, int $int1)(int)
 switch_int ($int0) {
-	case 0 :
-		return(%varbit9436);
-	case 1 :
-		return(%varbit9437);
-	case 2 :
-		return(%varbit9438);
-	case 3 :
-		return(%varbit9439);
-	case 4 :
-		return(%varbit9403);
-	case 5 :
-		return(%varbit9404);
-	case 7 :
-		return(%varbit9405);
-	case 9 :
-		return(%varbit9373);
-	case 10 :
-		return(%varbit9440);
-	case 12 :
-		return(%varbit9441);
-	case 13 :
-		return(%varbit9406);
 	case default :
-		return(0);
+		switch_int ($int1) {
+			case 0 :
+				return(%varbit9436);
+			case 1 :
+				return(%varbit9437);
+			case 2 :
+				return(%varbit9438);
+			case 3 :
+				return(%varbit9439);
+			case 4 :
+				return(%varbit9403);
+			case 5 :
+				return(%varbit9404);
+			case 7 :
+				return(%varbit9405);
+			case 9 :
+				return(%varbit9373);
+			case 10 :
+				return(%varbit9440);
+			case 12 :
+				return(%varbit9441);
+			case 13 :
+				return(%varbit9406);
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(%varbit14229);
+			case 1 :
+				return(%varbit14230);
+			case 2 :
+				return(%varbit14231);
+			case 3 :
+				return(%varbit14232);
+			case 4 :
+				return(%varbit14233);
+			case 5 :
+				return(%varbit14234);
+			case 7 :
+				return(%varbit14235);
+			case 9 :
+				return(%varbit14236);
+			case 10 :
+				return(%varbit14237);
+			case 12 :
+				return(%varbit14238);
+			case 13 :
+				return(%varbit14239);
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(%varbit14268);
+			case 1 :
+				return(%varbit14269);
+			case 2 :
+				return(%varbit14270);
+			case 3 :
+				return(%varbit14271);
+			case 4 :
+				return(%varbit14272);
+			case 5 :
+				return(%varbit14273);
+			case 7 :
+				return(%varbit14274);
+			case 9 :
+				return(%varbit14275);
+			case 10 :
+				return(%varbit14276);
+			case 12 :
+				return(%varbit14277);
+			case 13 :
+				return(%varbit14278);
+		}
 }
+return(0);

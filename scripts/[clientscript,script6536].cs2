@@ -1,0 +1,90 @@
+// 6536
+[clientscript,script6536](component $component0, component $component1, component $component2, component $component3)
+cc_deleteall($component3);
+def_int $int4 = 0;
+def_int $int5 = 0;
+while ($int5 < 3) {
+	cc_create($component3, ^iftype_rectangle, $int4);
+	$int4 = calc($int4 + 1);
+	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc(25 + 25 * $int5), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	if (calc($int5 % 2) = 0) {
+		cc_settrans(240);
+		cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 240, null)");
+	} else {
+		cc_settrans(255);
+		cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+	}
+	$int5 = calc($int5 + 1);
+}
+def_string $string0 = "";
+def_int $int6 = 4;
+def_int $comsubidarray0(3);
+while ($int5 > 0) {
+	$int5 = calc($int5 - 1);
+	cc_create($component3, ^iftype_graphic, $int4);
+	$comsubidarray0($int5) = $int4;
+	$int4 = calc($int4 + 1);
+	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, calc(25 + 25 * $int5 + $int6), ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($component3, ^iftype_text, $int4);
+	$int4 = calc($int4 + 1);
+	cc_setsize(22, 17, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc(25 + 25 * $int5 + $int6), ^setpos_abs_right, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	$string0 = enum(int, string, enum_4414, $int5);
+	cc_settext($string0);
+	if (.cc_find($component3, $int5) = ^true) {
+		.cc_setop(1, $string0);
+	}
+}
+def_int $int7 = 120;
+$int4, $int7 = ~script6537($int4, $int7, $component3, 1, attack, 99, 75, 75);
+$int4, $int7 = ~script6537($int4, $int7, $component3, 0, strength, 99, 99, 99);
+$int4, $int7 = ~script6537($int4, $int7, $component3, 1, defence, 75, 45, 1);
+$int4, $int7 = ~script6537($int4, $int7, $component3, 0, magic, 99, 99, 99);
+$int4, $int7 = ~script6537($int4, $int7, $component3, 1, ranged, 99, 99, 99);
+$int4, $int7 = ~script6537($int4, $int7, $component3, 0, hitpoints, 99, 99, 99);
+def_int $int8 = calc(25 * (3 + 1) + 4);
+if_setsize(calc($int7 + 4), $int8, ^setsize_abs, ^setsize_abs, $component2);
+~script6539($component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2));
+if (cc_find($component3, 0) = ^true) {
+	cc_setonop("script6540(event_opindex, 0, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
+}
+if (cc_find($component3, 1) = ^true) {
+	cc_setonop("script6540(event_opindex, 1, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
+}
+if (cc_find($component3, 2) = ^true) {
+	cc_setonop("script6540(event_opindex, 2, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
+}
+if_setonvartransmit("script6538($component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2)){var1373}", $component3);
+cc_deleteall($component1);
+$string0 = "Last Man Standing may be played on <col=ffb83f>different builds</col>, with different <col=ffb83f>stats and items</col> available for each. A build will be chosen at the <col=ffb83f>start of each game</col>, influenced by the participants' preferences.<br>Choose your favourite:";
+def_int $int9 = calc(14 * paraheight($string0, if_getwidth($component1), p12_full) + 2);
+cc_create($component1, ^iftype_text, 0);
+cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+cc_settext($string0);
+if_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top, $component2);
+$string0 = "Don't forget to visit the <col=ffb83f>supply chest</col> to customise your load-outs for each build.";
+def_int $int10 = calc(14 * paraheight($string0, if_getwidth($component1), p12_full) + 2);
+cc_create($component1, ^iftype_text, 1);
+cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+cc_settext($string0);
+if_setsize(if_getwidth($component0), calc(50 + $int9 + $int8 + $int10), ^setsize_abs, ^setsize_abs, $component0);

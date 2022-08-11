@@ -1,3 +1,7 @@
 // 2539
-[clientscript,br_lobbyoverlay_init](component $component0, component $component1)
+[clientscript,br_lobbyoverlay_init](component $component0, component $component1, component $component2)
 ~script4729($component0, $component1, 36582, ^setpos_abs_right, ^setpos_abs_top, false);
+~script6534(false, $component2);
+if_setonmouserepeat("script6526(true, event_com)", $component2);
+if_setonmouseleave("script6526(false, event_com)", $component2);
+if_setonop("opsound(event_opindex, 2)", $component2);

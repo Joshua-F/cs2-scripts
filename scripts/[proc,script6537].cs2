@@ -1,0 +1,44 @@
+// 6537
+[proc,script6537](int $int0, int $int1, component $component2, int $int3, stat $stat4, int $int5, int $int6, int $int7)(int, int)
+if ($int3 = 1) {
+	cc_create($component2, ^iftype_rectangle, $int0);
+	$int0 = calc($int0 + 1);
+	cc_setsize(25, 0, ^setsize_abs, ^setsize_minus);
+	cc_setposition($int1, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setcolour(^white);
+	cc_settrans(240);
+	cc_setfill(true);
+}
+cc_create($component2, ^iftype_graphic, $int0);
+$int0 = calc($int0 + 1);
+cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+cc_setposition($int1, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(enum(stat, graphic, enum_255, $stat4));
+cc_create($component2, ^iftype_text, $int0);
+$int0 = calc($int0 + 1);
+cc_setsize(25, 25, ^setsize_abs, ^setsize_minus);
+cc_setposition($int1, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setcolour(0xff981f);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 25);
+def_string $string0 = "";
+if ($int5 < 99) {
+	$string0 = append($string0, "<col=ffff00><tostring($int5)></col>");
+} else {
+	$string0 = append($string0, tostring($int5));
+}
+$string0 = append($string0, "<br>");
+if ($int6 < 99) {
+	$string0 = append($string0, "<col=ffff00><tostring($int6)></col>");
+} else {
+	$string0 = append($string0, tostring($int6));
+}
+$string0 = append($string0, "<br>");
+if ($int7 < 99) {
+	$string0 = append($string0, "<col=ffff00><tostring($int7)></col>");
+} else {
+	$string0 = append($string0, tostring($int7));
+}
+cc_settext($string0);
+return($int0, calc($int1 + 25));

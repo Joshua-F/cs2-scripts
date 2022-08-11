@@ -1,0 +1,14 @@
+// 6523
+[clientscript,script6523](int $opindex0, int $int1, int $int2, component $component3, component $component4, component $component5)
+if ($opindex0 ! 1) {
+	return;
+}
+$int1 = calc($int1 - 1);
+if ($int1 < 0 | $int1 >= enum_getoutputcount(enum_4389)) {
+	return;
+}
+~script6525($int2, $int1);
+if (cc_find($component3, 4) = ^true) {
+	~script6521($int2);
+}
+~script6308($component3, $component4);

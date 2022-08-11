@@ -6503,18 +6503,30 @@
 [**6500**](scripts/[clientscript,script6500].cs2)  
 [**6501**](scripts/[proc,script6501].cs2)  
 [**6502**](scripts/[clientscript,script6502].cs2)  
-[**6503**](scripts/[proc,script6503].cs2)  
-[**6504**](scripts/[clientscript,script6504].cs2)  
+[**6503**](scripts/[proc,cluehelper_overlay_dig_draw].cs2) `[proc,cluehelper_overlay_dig_draw]`  
+[**6504**](scripts/[clientscript,cluehelper_overlay_dig_transmit].cs2) `[clientscript,cluehelper_overlay_dig_transmit]`  
 [**6505**](scripts/[proc,script6505].cs2)  
 [**6506**](scripts/[clientscript,script6506].cs2)  
 [**6507**](scripts/[proc,script6507].cs2)  
 [**6508**](scripts/[clientscript,script6508].cs2)  
+[**6509**](scripts/[clientscript,script6509].cs2)  
 [**6510**](scripts/[proc,script6510].cs2)  
+[**6511**](scripts/[proc,script6511].cs2)  
+[**6512**](scripts/[proc,script6512].cs2)  
 [**6513**](scripts/[proc,script6513].cs2)  
 [**6514**](scripts/[proc,script6514].cs2)  
 [**6515**](scripts/[proc,script6515].cs2)  
 [**6516**](scripts/[proc,script6516].cs2)  
 [**6517**](scripts/[proc,script6517].cs2)  
+[**6518**](scripts/[clientscript,script6518].cs2)  
+[**6519**](scripts/[clientscript,script6519].cs2)  
+[**6520**](scripts/[clientscript,script6520].cs2)  
+[**6521**](scripts/[proc,script6521].cs2)  
+[**6522**](scripts/[clientscript,script6522].cs2)  
+[**6523**](scripts/[clientscript,script6523].cs2)  
+[**6524**](scripts/[proc,script6524].cs2)  
+[**6525**](scripts/[proc,script6525].cs2)  
+[**6526**](scripts/[clientscript,script6526].cs2)  
 [**6527**](scripts/[proc,cluehelper_uri_overlay].cs2) `[proc,cluehelper_uri_overlay]`  
 [**6528**](scripts/[clientscript,script6528].cs2)  
 [**6529**](scripts/[clientscript,script6529].cs2)  
@@ -6522,11 +6534,21 @@
 [**6531**](scripts/[clientscript,script6531].cs2)  
 [**6532**](scripts/[proc,script6532].cs2)  
 [**6533**](scripts/[proc,script6533].cs2)  
+[**6534**](scripts/[proc,script6534].cs2)  
+[**6535**](scripts/[clientscript,script6535].cs2)  
+[**6536**](scripts/[clientscript,script6536].cs2)  
+[**6537**](scripts/[proc,script6537].cs2)  
+[**6538**](scripts/[clientscript,script6538].cs2)  
+[**6539**](scripts/[proc,script6539].cs2)  
+[**6540**](scripts/[clientscript,script6540].cs2)  
+[**6541**](scripts/[clientscript,script6541].cs2)  
 [**6542**](scripts/[proc,script6542].cs2)  
 [**6543**](scripts/[proc,script6543].cs2)  
 [**6544**](scripts/[clientscript,script6544].cs2)  
 [**6545**](scripts/[proc,script6545].cs2)  
 [**6546**](scripts/[proc,script6546].cs2)  
+[**6547**](scripts/[clientscript,script6547].cs2)  
+[**6548**](scripts/[proc,script6548].cs2)  
 [**6619**](scripts/[proc,cluehelper_key_npc].cs2) `[proc,cluehelper_key_npc]`  
 [**6620**](scripts/[clientscript,cluehelper_key_npc_vartransmit].cs2) `[clientscript,cluehelper_key_npc_vartransmit]`  
 [**6621**](scripts/[clientscript,cluehelper_key_npc_invtransmit].cs2) `[clientscript,cluehelper_key_npc_invtransmit]`  
@@ -6555,7 +6577,7 @@
 [**6644**](scripts/[proc,cluehelper_infobox_draw_content_map].cs2) `[proc,cluehelper_infobox_draw_content_map]`  
 [**6645**](scripts/[proc,cluehelper_get_clue_type].cs2) `[proc,cluehelper_get_clue_type]`  
 [**6646**](scripts/[proc,cluehelper_get_clue_text].cs2) `[proc,cluehelper_get_clue_text]`  
-[**6647**](scripts/[proc,script6647].cs2)  
+[**6647**](scripts/[proc,cluehelper_get_target_description].cs2) `[proc,cluehelper_get_target_description]`  
 [**6648**](scripts/[proc,script6648].cs2)  
 [**6649**](scripts/[proc,script6649].cs2)  
 [**6650**](scripts/[proc,script6650].cs2)  
@@ -6602,7 +6624,7 @@
 [**6691**](scripts/[proc,script6691].cs2)  
 [**6692**](scripts/[proc,script6692].cs2)  
 [**6693**](scripts/[loadnpc,_].cs2) `[loadnpc,_]`  
-[**6694**](scripts/[proc,script6694].cs2)  
+[**6694**](scripts/[proc,loadnpc_default].cs2) `[proc,loadnpc_default]`  
 [**6695**](scripts/[proc,npc_name_setup].cs2) `[proc,npc_name_setup]`  
 [**6696**](scripts/[clientscript,npc_name_vartransmit].cs2) `[clientscript,npc_name_vartransmit]`  
 [**6697**](scripts/[clientscript,npc_name_timer].cs2) `[clientscript,npc_name_timer]`  
