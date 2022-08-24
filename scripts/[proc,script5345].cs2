@@ -1,6 +1,16 @@
 // 5345
 [proc,script5345]()(int)
-if ((map_members = ^false | stat_base(defence) < 70 | %varbit3909 < 8) & %varbit5314 = 0) {
+def_int $int0 = stat_base(prayer);
+def_int $int1 = stat_base(defence);
+def_int $int2 = %varbit5451;
+def_int $int3 = %varbit5452;
+def_boolean $boolean4 = ~int_to_bool(calc(%varbit3909 - 7));
+def_int $int5 = map_members;
+def_int $int6 = 0;
+if (%varbit5314 = 1) {
+	$int0, $int1, $int2, $int3, $boolean4, $int5, $int6 = ~script1934;
+}
+if ($int5 = 0 | $int1 < 70 | $boolean4 = false) {
 	return(0);
 }
 return(1);

@@ -1,0 +1,13 @@
+// 6589
+[proc,script6589](int $int0)
+if ($int0 = 0) {
+	if_sethide(true, interface_482:24);
+	if_sethide(false, interface_482:8);
+	~script6574(interface_482:35, 0, "Paths");
+	~script6574(interface_482:36, 1, "Bosses");
+} else if ($int0 = 1) {
+	if_sethide(false, interface_482:24);
+	if_sethide(true, interface_482:8);
+	~script6574(interface_482:35, 1, "Paths");
+	~script6574(interface_482:36, 0, "Bosses");
+}

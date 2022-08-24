@@ -1,0 +1,31 @@
+// 6784
+[proc,script6784](inv $inv0)
+cc_deleteall(interface_778:5);
+def_int $size1 = inv_size($inv0);
+def_obj $obj2 = null;
+def_int $num3 = 0;
+def_int $int4 = 0;
+def_string $string0 = "Invalid item.";
+def_int $size5 = 0;
+while ($size5 < $size1) {
+	cc_create(interface_778:5, ^iftype_graphic, $size5);
+	$obj2 = inv_getobj($inv0, $size5);
+	if ($obj2 ! null) {
+		$num3, $int4 = inv_getnum($inv0, $size5), calc($int4 + 1);
+		cc_sethide(false);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($size5 % 4 * (36 + 8)), calc($size5 / 4 * 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setoutline(1);
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(5);
+		cc_setgraphicshadow(0x333333);
+		cc_setobject($obj2, $num3);
+		cc_setop(1, "Withdraw-1");
+		cc_setop(2, "Withdraw-5");
+		cc_setop(3, "Withdraw-All");
+		cc_setop(9, "Examine");
+		cc_setopbase("<col=ff9040><oc_name($obj2)>");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	}
+	$size5 = calc($size5 + 1);
+}

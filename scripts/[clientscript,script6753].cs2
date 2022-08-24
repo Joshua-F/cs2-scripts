@@ -1,0 +1,15 @@
+// 6753
+[clientscript,script6753](struct $struct0, boolean $boolean1, int $int2, int $comsubid3, int $comsubid4, component $component5, component $component6, int $clock7)
+if (clientclock = $clock7) {
+	return;
+}
+if ($int2 = 2 & cc_find($component5, $comsubid3) = ^true & .cc_find($component5, $comsubid4) = ^true) {
+	if ($boolean1 = true) {
+		cc_setgraphic(struct_param($struct0, param_1297));
+		.cc_setcolour(0xd39f34);
+	} else {
+		cc_setgraphic(struct_param($struct0, param_1298));
+		.cc_setcolour(0x9f9f9f);
+	}
+}
+~deltooltip_action($component6);

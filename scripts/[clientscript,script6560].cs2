@@ -1,14 +1,14 @@
-// 6064
-[clientscript,script6064](graphic $graphic0, string $op0)
+// 6560
+[clientscript,script6560]
 cc_deleteall(welcome_screen:93);
 if_sethide(true, welcome_screen:91);
 if (cc_find(welcome_screen:90, 0) = ^true) {
 	if (cc_getcrm_hasresponse = false) {
 		cc_delete;
-		~script6065($graphic0, $op0);
+		~script6562(null, "");
 	} else {
 		~script533;
 	}
 } else {
-	~script6065($graphic0, $op0);
+	~script6562(null, "");
 }

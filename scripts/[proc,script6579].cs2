@@ -1,0 +1,74 @@
+// 6579
+[proc,script6579](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29)
+def_int $int30 = 0;
+$int30 = calc($int30 + ~script6583(0, %varbit14346, %varbit14362, %varcstring1099, $component12, $component13, $component28));
+$int30 = calc($int30 + ~script6583(1, %varbit14347, %varbit14363, %varcstring1100, $component14, $component15, $component28));
+$int30 = calc($int30 + ~script6583(2, %varbit14348, %varbit14364, %varcstring1101, $component16, $component17, $component28));
+$int30 = calc($int30 + ~script6583(3, %varbit14349, %varbit14365, %varcstring1102, $component18, $component19, $component28));
+$int30 = calc($int30 + ~script6583(4, %varbit14350, %varbit14366, %varcstring1103, $component20, $component21, $component28));
+$int30 = calc($int30 + ~script6583(5, %varbit14351, %varbit14367, %varcstring1104, $component22, $component23, $component28));
+$int30 = calc($int30 + ~script6583(6, %varbit14352, %varbit14368, %varcstring1105, $component24, $component25, $component28));
+$int30 = calc($int30 + ~script6583(7, %varbit14353, %varbit14369, %varcstring1106, $component26, $component27, $component28));
+if (%varbit14355 = 1) {
+	if_sethide(true, $component1);
+	if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component1);
+} else {
+	if_sethide(false, $component1);
+	$int30 = ~max(calc(($int30 * 10 / 2 + 5) / 10), 1);
+	if_setsize(69, calc($int30 * 34 + ($int30 - 1)), ^setsize_abs, ^setsize_abs, $component1);
+}
+if (%varbit14380 >= 300) {
+	if_setgraphic("graphic_4662", $component4);
+} else if (%varbit14380 >= 150) {
+	if_setgraphic("graphic_4661", $component4);
+} else {
+	if_setgraphic("graphic_4660", $component4);
+}
+if_settext("Raid lvl: <tostring(%varbit14380)>", $component5);
+def_int $int31 = 0;
+switch_int (%varbit14381) {
+	case 0 :
+		if_sethide(true, $component2);
+		if_sethide(false, $component3);
+		if_setposition(40, 15, ^setpos_abs_left, ^setpos_abs_top, $component5);
+		if_settext(tostring(%varbit14377), $component8);
+		if_settext(tostring(%varbit14378), $component9);
+		if_settext(tostring(%varbit14379), $component10);
+		if_settext(tostring(%varbit14376), $component11);
+		$int31 = 1;
+	case 1 :
+		if_sethide(false, $component2);
+		if_sethide(true, $component3);
+		if_setposition(40, 4, ^setpos_abs_left, ^setpos_abs_top, $component5);
+		if_setgraphic("graphic_4635", $component6);
+		if_settext("Level: <tostring(%varbit14377)>", $component7);
+	case 2 :
+		if_sethide(false, $component2);
+		if_sethide(true, $component3);
+		if_setposition(40, 4, ^setpos_abs_left, ^setpos_abs_top, $component5);
+		if_setgraphic("graphic_4636", $component6);
+		if_settext("Level: <tostring(%varbit14378)>", $component7);
+	case 3 :
+		if_sethide(false, $component2);
+		if_sethide(true, $component3);
+		if_setposition(40, 4, ^setpos_abs_left, ^setpos_abs_top, $component5);
+		if_setgraphic("graphic_4637", $component6);
+		if_settext("Level: <tostring(%varbit14379)>", $component7);
+	case 4 :
+		if_sethide(false, $component2);
+		if_sethide(true, $component3);
+		if_setposition(40, 4, ^setpos_abs_left, ^setpos_abs_top, $component5);
+		if_setgraphic("graphic_4638", $component6);
+		if_settext("Level: <tostring(%varbit14376)>", $component7);
+	case 5, 6 :
+		if_sethide(true, $component2);
+		if_sethide(true, $component3);
+		if_setposition(40, 15, ^setpos_abs_left, ^setpos_abs_top, $component5);
+}
+if ($int31 = 0) {
+	if_setsize(120, 65, ^setsize_abs, ^setsize_abs, $component29);
+} else {
+	if_setsize(120, 130, ^setsize_abs, ^setsize_abs, $component29);
+}
+if_setposition(if_getx($component1), calc(4 + if_getheight($component29)), ^setpos_abs_left, ^setpos_abs_top, $component1);
+if_setsize(calc(~max(if_getwidth($component1), if_getwidth($component29)) + 2), calc(if_getheight($component1) + if_getheight($component29) + 6), ^setsize_abs, ^setsize_abs, $component0);

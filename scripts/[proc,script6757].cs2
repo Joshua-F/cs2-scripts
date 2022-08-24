@@ -1,0 +1,185 @@
+// 6757
+[proc,script6757](int $flags0, int $flags1, int $flags2)(string, string)
+def_int $count3 = 0;
+def_struct $struct4 = null;
+def_boolean $boolean5 = false;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $count8 = enum_getoutputcount(enum_4664);
+def_int $int9 = -1;
+def_int $int10 = -1;
+def_int $int11 = -1;
+def_int $int12 = -1;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_string $string0 = "Mid-Raid Path Level Ups:";
+def_string $string1 = "Food:";
+def_string $string2 = "Healing Potions:";
+def_string $string3 = "Special Attacks:";
+def_int $int23 = 0;
+while ($count3 < $count8) {
+	$struct4 = enum(int, struct, enum_4664, $count3);
+	$boolean5 = ~script6755($struct4, $flags0, $flags1, $flags2);
+	$int6 = struct_param($struct4, param_1161);
+	$int7 = struct_param($struct4, param_1299);
+	if ($boolean5 = true) {
+		switch_int ($int6) {
+			case 3 :
+				$int9 = ~max($int9, $int7);
+			case 4 :
+				$int10 = ~max($int10, $int7);
+			case 5 :
+				$int11 = ~max($int11, $int7);
+			case 6 :
+				$int12 = ~max($int12, $int7);
+			case 9 :
+				$string0 = "<$string0> Enabled";
+			case 7 :
+				$int17 = calc($int17 + $int7);
+			case 8 :
+				if ($struct4 = struct_434) {
+					$string1 = "<$string1> Disabled";
+				} else if ($struct4 = struct_435) {
+					$string2 = "<$string2> Disabled";
+				} else if ($struct4 = struct_436) {
+					$string3 = "<$string3> Use 100% of your energy.";
+				}
+			case 10 :
+				$int18 = calc($int18 + 1);
+			case 11 :
+				$int19 = calc($int19 + 1);
+			case 12 :
+				$int20 = calc($int20 + 1);
+			case 13 :
+				$int21 = calc($int21 + 1);
+			case 14 :
+				$int22 = calc($int22 + 1);
+		}
+		$int23 = calc($int23 + struct_param($struct4, param_1162));
+	} else {
+		switch_int ($int6) {
+			case 9 :
+				$string0 = "<$string0> Disabled";
+			case 8 :
+				if ($struct4 = struct_434) {
+					$string1 = "<$string1> Enabled";
+				} else if ($struct4 = struct_435) {
+					$string2 = "<$string2> Enabled";
+				} else if ($struct4 = struct_436) {
+					$string3 = "<$string3> Normal Cost";
+				}
+		}
+	}
+	$count3 = calc($count3 + 1);
+}
+$int13 = ~script6758($int23, 500);
+$int14 = ~script6758($int23, 500);
+$int15 = ~script6758($int23, 500);
+$int16 = ~script6758($int23, 150);
+def_string $string4 = "Attempts Allowed:";
+if ($int9 > 0) {
+	$string4 = "<$string4> <tostring($int9)>";
+} else {
+	$string4 = "<$string4> Unlimited";
+}
+def_string $string5 = "Time Limit:";
+if ($int10 > 0) {
+	$string5 = "<$string5> <~time_convert_option($int10)>";
+} else {
+	$string5 = "<$string5> None";
+}
+def_string $string6 = "Mid-Raid Supplies:";
+if ($int11 > 0) {
+	$string6 = "<$string6> <tostring($int11)>% Available";
+} else if ($int11 = 0) {
+	$string6 = "<$string6> Not Available";
+} else {
+	$string6 = "<$string6> Fully Available";
+}
+def_string $string7 = "Initial Path Level Ups:";
+if ($int12 > 1) {
+	$string7 = "<$string7> <tostring($int12)> Paths";
+} else if ($int12 = 1) {
+	$string7 = "<$string7> <tostring($int12)> Path";
+} else {
+	$string7 = "<$string7> No Paths";
+}
+def_string $string8 = "Enemy Hitpoints:";
+if ($int13 > 0) {
+	$string8 = "<$string8> +<tostring($int13)>%";
+} else if ($int13 < 0) {
+	$string8 = "<$string8> -<tostring($int13)>%";
+} else {
+	$string8 = "<$string8> Default";
+}
+def_string $string9 = "Enemy Defence:";
+if ($int14 > 0) {
+	$string9 = "<$string9> +<tostring($int14)>%";
+} else if ($int14 < 0) {
+	$string9 = "<$string9> -<tostring($int14)>%";
+} else {
+	$string9 = "<$string9> Default";
+}
+def_string $string10 = "Enemy Accuracy:";
+if ($int15 > 0) {
+	$string10 = "<$string10> +<tostring($int15)>%";
+} else if ($int15 < 0) {
+	$string10 = "<$string10> -<tostring($int15)>%";
+} else {
+	$string10 = "<$string10> Default";
+}
+def_string $string11 = "Enemy Damage:";
+if ($int16 > 0) {
+	$string11 = "<$string11> +<tostring($int16)>%";
+} else if ($int16 < 0) {
+	$string11 = "<$string11> -<tostring($int16)>%";
+} else {
+	$string11 = "<$string11> Default";
+}
+$int17 = calc(100 - $int17);
+def_string $string12 = "Prayer Effectiveness: <tostring($int17)>%";
+def_string $string13 = "Akkha:";
+if ($int18 = 1) {
+	$string13 = "<$string13> <tostring($int18)> Modifier";
+} else {
+	$string13 = "<$string13> <tostring($int18)> Modifiers";
+}
+def_string $string14 = "Kephri:";
+if ($int19 = 1) {
+	$string14 = "<$string14> <tostring($int19)> Modifier";
+} else {
+	$string14 = "<$string14> <tostring($int19)> Modifiers";
+}
+def_string $string15 = "Zebak:";
+if ($int20 = 1) {
+	$string15 = "<$string15> <tostring($int20)> Modifier";
+} else {
+	$string15 = "<$string15> <tostring($int20)> Modifiers";
+}
+def_string $string16 = "Ba-Ba:";
+if ($int21 = 1) {
+	$string16 = "<$string16> <tostring($int21)> Modifier";
+} else {
+	$string16 = "<$string16> <tostring($int21)> Modifiers";
+}
+def_string $string17 = "The Wardens:";
+if ($int22 = 1) {
+	$string17 = "<$string17> <tostring($int22)> Modifier";
+} else {
+	$string17 = "<$string17> <tostring($int22)> Modifiers";
+}
+def_string $string18 = "<col=ffffff>Raid Modifiers:</col><br><br><$string4><br><$string5><br><$string6><br><$string7><br><$string0>";
+def_string $string19 = "<col=ffffff>Stat Modifiers:</col><br><br><$string8><br><$string9><br><$string10><br><$string11><br><$string12>";
+def_string $string20 = "<col=ffffff>Combat Restrictions:</col><br><br><$string1><br><$string2><br><$string3>";
+def_string $string21 = "<col=ffffff>Room Modifiers:</col><br><br><$string13><br><$string14><br><$string15><br><$string16><br><$string17>";
+def_string $string22 = "<$string18><br><br><$string21>";
+def_string $string23 = "<$string19><br><br><$string20>";
+return($string22, $string23);

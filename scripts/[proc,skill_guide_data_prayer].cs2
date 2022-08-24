@@ -116,17 +116,22 @@ switch_int ($int0) {
 				return(70, bonecrusher_necklace_22986, "Bonecrusher necklace");
 			case 23 :
 				return(75, elysian_spirit_shield_12817, "Elysian spirit shield<br>(with 75 Defence)");
+			case 24 :
+				return(80, elidinis_ward_25985, "Elidinis' Ward<br>(with 80 Magic and 80 Defence)");
 			case default :
 				return(-1, null, "");
 		}
 	case 2 :
-		if ($int1 = 0) {
-			return(54, hallowed_token_24719, "Hallowed Sepulchre - Portal sacrifice");
+		switch_int ($int1) {
+			case 0 :
+				return(54, hallowed_token_24719, "Hallowed Sepulchre - Portal sacrifice");
+			case 1 :
+				return(70, superior_dragon_bones_22124, "Use superior dragon bones");
+			case 2 :
+				return(90, elidinis_ward_f_27251, "Fortify Elidinis' Ward (with 90 Smithing)");
+			case default :
+				return(-1, null, "");
 		}
-		if ($int1 = 1) {
-			return(70, superior_dragon_bones_22124, "Use superior dragon bones");
-		}
-		return(-1, null, "");
 	case default :
 		return(-1, null, "");
 }

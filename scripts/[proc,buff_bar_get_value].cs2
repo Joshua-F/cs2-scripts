@@ -225,6 +225,10 @@ switch_struct ($struct0) {
 		if (%var3347 > 0) {
 			return(calc(%var3347 - %var3078));
 		}
+	case buff_stat_renewal_4367 :
+		if (%varbit14448 > 0) {
+			return(~script5942(%varcint1088, %varbit14448, 25));
+		}
 	case buff_weapon_specialist_3773 :
 		if (~script4675(0) = 1) {
 			return(1);
@@ -324,6 +328,42 @@ switch_struct ($struct0) {
 	case buff_cannon_broken_342 :
 		if (%varcint1013 > 0 & %var2 = 4 & calc(map_world % 128) = %varbit1968 & %varbit13672 = 1) {
 			return(~script5940(%varcint1013, struct_param($struct0, param_1541)));
+		}
+	case buff_apmekens_sight_4368 :
+		if (%varcint1090 > 0) {
+			return(~script4678(%varcint1090));
+		}
+	case buff_burning_damage_4369 :
+		if (%varcint1091 > 0) {
+			return(~script4678(%varcint1091));
+		}
+	case buff_darkness_damage_4370 :
+		if (%varcint1092 > 0) {
+			return(~script4678(%varcint1092));
+		}
+	case buff_frozen_4371 :
+		if (%varcint1093 > 0) {
+			return(~script4678(%varcint1093));
+		}
+	case buff_bleeding_4372 :
+		if (%varcint1094 > 0) {
+			return(~script4678(%varcint1094));
+		}
+	case buff_healing_over_time_4373 :
+		if (%varcint1095 > 0) {
+			return(~script4678(%varcint1095));
+		}
+	case buff_prayer_over_time_4374 :
+		if (%varcint1096 > 0) {
+			return(~script4678(%varcint1096));
+		}
+	case buff_special_attack_energy_boost_4375 :
+		if (%varcint1097 > 0) {
+			return(~script4678(%varcint1097));
+		}
+	case buff_stat_boost_4376 :
+		if (%varbit14344 > 0) {
+			return(~script5942(%varcint1089, %varbit14344, 25));
 		}
 }
 return(struct_param($struct0, param_1540));

@@ -1,0 +1,12 @@
+// 6549
+[proc,script6549](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Weapons", 0);
+	case 1 :
+		return("Armour", 1);
+	case 2 :
+		return("Salamanders", 1);
+	case default :
+		return("", -1);
+}

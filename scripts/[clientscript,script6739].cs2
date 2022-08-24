@@ -1,0 +1,6 @@
+// 6739
+[clientscript,script6739](component $component0, string $string0, string $string1, component $component1, int $int2, int $clock3)
+if (clientclock < $clock3) {
+	return;
+}
+~script6736($component0, 0, $string0, $string1, $component1, null, $int2);

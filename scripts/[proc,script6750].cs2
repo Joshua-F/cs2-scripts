@@ -1,0 +1,42 @@
+// 6750
+[proc,script6750](int $count0, int $int1, int $height2, struct $struct3, boolean $boolean4, int $int5, component $component6, component $component7)
+def_int $int8 = calc($count0 * 3);
+def_int $comsubid9 = calc($int8 + 1);
+def_int $comsubid10 = calc($int8 + 2);
+def_int $int11 = 33;
+def_int $int12 = 1;
+def_int $width13 = 97;
+def_int $height14 = 63;
+if (%varcint1086 ! 1) {
+	$int11 = 24;
+	$int12 = -7;
+	$width13 = 82;
+}
+cc_create($component6, ^iftype_rectangle, $int8);
+cc_setposition(calc($int1 + 1), calc($height2 + 4), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width13, $height14, ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(255);
+~script6751($struct3, $boolean4, $int5, $int8, $comsubid9, $comsubid10, $component6, $component7);
+cc_create($component6, ^iftype_graphic, $comsubid9);
+cc_setposition(calc($int1 + $int11), calc($height2 + 10), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+if ($boolean4 = true) {
+	cc_setgraphic(struct_param($struct3, param_1297));
+} else {
+	cc_setgraphic(struct_param($struct3, param_1298));
+}
+cc_settrans(55);
+cc_create($component6, ^iftype_text, $comsubid10);
+cc_setposition(calc($int1 + $int12), calc($height2 + 47), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(97, 20, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+if ($boolean4 = true) {
+	cc_setcolour(0xd39f34);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+cc_settext(struct_param($struct3, param_1160));

@@ -40,13 +40,15 @@ while ($int8 <= 14) {
 	if_setsize($int5, $int5, ^setsize_abs, ^setsize_abs, $component9);
 	$namedobj17 = enum(int, namedobj, enum_982, $int8);
 	$int18 = inv_total(inv, $namedobj17);
-	if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0) {
+	if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0 | inv_total(inv, divine_rune_pouch_27281) > 0) {
 		if (%varbit29 = $int8) {
 			$int18 = calc($int18 + %varbit1624);
 		} else if (%varbit1622 = $int8) {
 			$int18 = calc($int18 + %varbit1625);
 		} else if (%varbit1623 = $int8) {
 			$int18 = calc($int18 + %varbit1626);
+		} else if (inv_total(inv, divine_rune_pouch_27281) > 0 & %varbit14285 = $int8) {
+			$int18 = calc($int18 + %varbit14286);
 		}
 	}
 	if ($int18 >= 20 | $boolean2 = false) {

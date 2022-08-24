@@ -1,0 +1,15 @@
+// 6616
+[proc,script6616](component $component0, int $height1, component $component2, component $component3, component $component4, component $component5)
+def_component $layer6 = if_getlayer($component0);
+if ($layer6 = null) {
+	return;
+}
+def_int $height7 = if_getheight($layer6);
+if ($height7 = $height1) {
+	return;
+}
+def_int $height8 = ~script6618($component0);
+if_setsize(484, $height8, ^setsize_abs, ^setsize_abs, $component0);
+~scrollbar_vertical_rebuild($component3, $component2);
+~scrollbar_vertical_rebuild($component5, $component4);
+if_setontimer("script6617($component0, $height7, $component2, $component3, $component4, $component5)", $component0);

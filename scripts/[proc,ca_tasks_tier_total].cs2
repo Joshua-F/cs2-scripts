@@ -13,9 +13,8 @@ switch_int ($int0) {
 	case 6 :
 		$enum1 = enum_3986;
 }
-def_int $int2 = 0;
-def_int $int3 = enum_getoutputcount($enum1);
+def_int $int2 = enum_getoutputcount($enum1);
 if (~is_group_iron = 1) {
-	$int3 = calc($int3 - ~script5242($int0));
+	$int2 = calc($int2 - ~script5242($int0));
 }
-return($int3);
+return($int2);

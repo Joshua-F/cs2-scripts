@@ -1,7 +1,0 @@
-// 3091
-[proc,welcome_screen_banner]
-if (~on_mobile = false) {
-	if_setonmouserepeat("comp_sethide(false, welcome_screen:94)", welcome_screen:86);
-	if_setonmouseleave("comp_sethide(true, welcome_screen:94)", welcome_screen:86);
-}
-if_sethide(true, welcome_screen:94);

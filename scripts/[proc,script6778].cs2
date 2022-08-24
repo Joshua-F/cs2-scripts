@@ -1,0 +1,32 @@
+// 6778
+[proc,script6778](component $component0, inv $inv1)
+def_int $width2 = if_getwidth($component0);
+def_int $int3 = 5;
+def_int $int4 = 40;
+def_int $size5 = 0;
+def_int $int6 = 15;
+def_obj $obj7 = null;
+def_int $int8 = 0;
+$int8 = ~thinbox($component0, $int8);
+while ($size5 < inv_size($inv1)) {
+	$obj7 = inv_getobj($inv1, $size5);
+	if ($obj7 ! null) {
+		cc_create($component0, ^iftype_graphic, $int8);
+		$int8 = calc($int8 + 1);
+		cc_setposition(calc($int3 + $int6), $int4, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($obj7, inv_total($inv1, $obj7));
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_sethide(false);
+		cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
+		cc_setop(1, "Examine");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+		$int3 = calc($int3 + (36 + 8));
+		if ($int3 >= calc($width2 - (36 + $int6))) {
+			$int4 = calc($int4 + 8 + 32);
+			$int3 = 5;
+		}
+	}
+	$size5 = calc($size5 + 1);
+}

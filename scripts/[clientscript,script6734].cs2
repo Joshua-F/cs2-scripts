@@ -1,0 +1,10 @@
+// 6734
+[clientscript,script6734](component $component0, int $clock1, int $int2, string $string0)
+if (clientclock < $clock1) {
+	return;
+}
+if ($int2 = 1) {
+	~script4161($component0, $string0, null, null, -1);
+} else {
+	~script1558($component0, $string0, null, null, -1);
+}

@@ -1,0 +1,11 @@
+// 6763
+[clientscript,script6763](component $component0, int $comsubid1, int $comsubid2, int $trans3, component $component4)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans($trans3);
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	cc_settrans(0);
+}
+if ($component4 ! null) {
+	~deltooltip_action($component4);
+}

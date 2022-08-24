@@ -1,0 +1,98 @@
+// 6590
+[clientscript,script6590](int $int0, int $int1, int $int2, struct $struct3, int $int4, int $int5, int $int6, int $int7, string $text0)
+def_int $height8 = if_getheight(interface_482:50);
+def_int $width9 = if_getwidth(interface_482:50);
+def_string $string1 = "null";
+def_component $component10 = interface_482:3;
+def_int $int11 = calc(176 / $int6);
+if (~on_mobile = true) {
+	$string1 = "Damage taken";
+	if_setop(1, "Damage taken", interface_482:40);
+	if_setonop("script6593(event_com, -1, $component10, $string1, 512)", interface_482:40);
+	$string1 = "Damage dealt";
+	if_setop(1, "Damage dealt", interface_482:41);
+	if_setonop("script6593(event_com, -1, $component10, $string1, 512)", interface_482:41);
+	$string1 = "Deaths";
+	if_setop(1, "Deaths", interface_482:39);
+	if_setonop("script6593(event_com, -1, $component10, $string1, 512)", interface_482:39);
+} else {
+	$string1 = "Damage taken";
+	if_setonmouserepeat("script6591(event_com, -1, $component10, $string1)", interface_482:40);
+	if_setonmouseleave("script6592(event_com, -1, $component10)", interface_482:40);
+	$string1 = "Damage dealt";
+	if_setonmouserepeat("script6591(event_com, -1, $component10, $string1)", interface_482:41);
+	if_setonmouseleave("script6592(event_com, -1, $component10)", interface_482:41);
+	$string1 = "Deaths";
+	if_setonmouserepeat("script6591(event_com, -1, $component10, $string1)", interface_482:39);
+	if_setonmouseleave("script6592(event_com, -1, $component10)", interface_482:39);
+}
+if_setsize($width9, calc($height8 + $int11), ^setsize_abs, ^setsize_abs, interface_482:50);
+if ($int7 = 1) {
+	cc_create(interface_482:45, ^iftype_graphic, 0);
+	cc_setposition(3, calc($height8 + 5 + $int11 / 2 - 13), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("clan_rank_icons,42");
+	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+	cc_settrans(0);
+}
+cc_create(interface_482:50, ^iftype_text, $int5);
+cc_setposition(2, $height8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($text0);
+cc_create(interface_482:49, ^iftype_text, $int5);
+cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(tostring($int0));
+cc_create(interface_482:48, ^iftype_text, $int5);
+cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(tostring($int1));
+cc_create(interface_482:47, ^iftype_text, $int5);
+cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(tostring($int2));
+cc_create(interface_482:46, ^iftype_text, $int5);
+cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+cc_settext("'<struct_param($struct3, param_1525)>'");
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+if ($struct3 = null) {
+	cc_settext("-");
+} else {
+	$string1 = struct_param($struct3, param_1526);
+	if (~on_mobile = true) {
+		cc_setop(1, "Show Description");
+		cc_setonop("script6593(event_com, event_comsubid, $component10, $string1, 512)");
+	} else {
+		cc_setonmouserepeat("script6591(event_com, event_comsubid, $component10, $string1)");
+		cc_setonmouseleave("script6592(event_com, event_comsubid, $component10)");
+	}
+}
+cc_create(interface_482:44, ^iftype_rectangle, $int5);
+cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^white);
+cc_setfill(true);
+if (calc($int5 % 2) = 0) {
+	cc_settrans(245);
+} else {
+	cc_settrans(230);
+}

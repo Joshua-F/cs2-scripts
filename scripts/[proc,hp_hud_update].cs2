@@ -57,6 +57,10 @@ if ($int13 = 0 & %varbit6099 > 0) {
 if ($int13 = if_getwidth($component2) & %varbit6099 < %varbit6100) {
 	$int13 = calc($int13 - 1);
 }
+if (nc_param(%var1683, param_1398) = true & if_getwidth($component4) = 0 & $int13 > 0) {
+	if_setsize(1, if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
+	if_setsize(1, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
+}
 if ($boolean11 = true | if_getwidth($component4) = 0) {
 	if_setsize($int13, if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
 	if_setsize($int13, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);

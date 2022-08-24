@@ -1,0 +1,82 @@
+// 6729
+[clientscript,script6729](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:16)) = false) {
+	return;
+}
+if_settext("Raid Level: <tostring($int3)> <col=ffffff>(<tostring($int2)>)</col>", interface_774:73);
+if ($int3 >= 300) {
+	if_settext("Mode: <col=ffffff>Expert</col>", interface_774:74);
+} else if ($int3 >= 150) {
+	if_settext("Mode: <col=ffffff>Normal</col>", interface_774:74);
+} else {
+	if_settext("Mode: <col=ffffff>Entry</col>", interface_774:74);
+}
+cc_deleteall(interface_774:16);
+if_sethide(false, interface_774:19);
+if_sethide(false, interface_774:35);
+~script6768;
+def_int $int8 = calc(%varcint178 - 8);
+switch_int (%varcint181) {
+	case 0, 1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 6, 7 :
+	case default :
+		%varcint181 = 0;
+}
+~script6759($int0, $int8);
+if ($int8 <= 0) {
+	cc_create(interface_774:48, ^iftype_text, 0);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext("No current applicants.");
+}
+if_sethide(false, interface_774:6);
+if_sethide(false, interface_774:7);
+if_sethide(false, interface_774:8);
+if_sethide(false, interface_774:9);
+if_sethide(true, interface_774:57);
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+if ($int4 = 0) {
+	$int9 = 1;
+	if_sethide(false, interface_774:17);
+} else if ($int4 = 1) {
+	$int10 = 1;
+	if_sethide(false, interface_774:33);
+} else if ($int4 = 2) {
+	$int11 = 1;
+	if_sethide(false, interface_774:49);
+	if (%varcint1086 ! 1) {
+		~script6733(1);
+	} else {
+		~script6733(0);
+	}
+} else {
+	$int12 = 1;
+	if_sethide(false, interface_774:53);
+}
+def_string $string0 = "";
+if (%varcint1087 > 0) {
+	$string0 = " (<tostring(%varcint1087)>)";
+}
+def_string $string1 = "";
+if ($int8 > 0) {
+	$string1 = " (<tostring($int8)>)";
+}
+~script6736(interface_774:6, $int9, "Members", $string0, interface_774:1, enum_4792, -1);
+~script6736(interface_774:7, $int10, "Applicants", $string1, interface_774:1, enum_4792, -1);
+~script6736(interface_774:8, $int11, "Invocations", "", interface_774:1, enum_4792, -1);
+~script6736(interface_774:9, $int12, "Summary", "", interface_774:1, enum_4792, -1);
+if_sethide(false, interface_774:4);
+~script6765(interface_774:4, "Back", interface_774:1, enum_4792, -1);
+~script6749(interface_774:52, interface_774:51, $int5, $int6, $int7, $int0, interface_774:68);
+~script6756(interface_774:56, interface_774:55, $int5, $int6, $int7, $int3);
+~script6730($int4, $int0, $int1, $int5, $int6, $int7);
+if ($int4 = 0 | $int4 = 1) {
+	if_setontimer("script6748(interface_774:0, interface_774:1, interface_774:62, clientclock)", interface_774:0);
+}
+~script6770(interface_774:82, interface_774:84, interface_774:80, interface_774:83, $int3, $int2);

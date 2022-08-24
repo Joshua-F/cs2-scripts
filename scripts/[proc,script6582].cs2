@@ -1,0 +1,14 @@
+// 6582
+[proc,script6582](component $component0, int $int1, int $int2, int $int3)
+$int1 = calc($int1 + clientclock);
+def_int $int4 = calc($int1 / 50);
+def_int $int5 = calc($int1 / 5);
+$int4 = ~minmax(0, scale(60, 100, 600000), $int4);
+$int5 = ~minmax(0, scale(60, 10, 600000), $int5);
+def_string $text0 = "";
+if ($int2 = 0) {
+	$text0 = ~script4159($int4, $int3);
+} else {
+	$text0 = ~script4160($int5, $int3);
+}
+if_settext($text0, $component0);

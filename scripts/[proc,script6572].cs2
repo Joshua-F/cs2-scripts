@@ -1,0 +1,7 @@
+// 6572
+[proc,script6572]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit14296 = calc(1 - %varbit14296);
+~buff_bar_layout_redraw;

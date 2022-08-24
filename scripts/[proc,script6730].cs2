@@ -1,0 +1,150 @@
+// 6730
+[proc,script6730](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5)
+def_component $component6 = null;
+def_component $component7 = null;
+def_component $component8 = null;
+def_component $component9 = null;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_int $int10 = 0;
+def_int $int11 = 0;
+if ($int0 = 2) {
+	if ($int1 = 2) {
+		$component6 = interface_774:62;
+		$string0 = "Refresh";
+		$component7 = interface_774:69;
+		$string1 = "Clear All";
+		$component8 = interface_774:71;
+		$string2 = "Preset";
+		$component9 = interface_774:70;
+		$string3 = "Rewards";
+		$int10 = 4;
+	} else {
+		$component6 = interface_774:62;
+		$string0 = "Refresh";
+		$component7 = interface_774:70;
+		$string1 = "Rewards";
+		$component8, $string2 = null, "";
+		$component9, $string3 = null, "";
+		$int10 = 2;
+	}
+} else {
+	switch_int ($int1) {
+		case 2 :
+			$string4 = "Disband";
+		case 1 :
+			$string4 = "Leave";
+		case 3 :
+			$string4 = "Withdraw";
+		case 4 :
+			$string4 = "<col=7f7f7f><str=9f9f9f>Apply</str></col>";
+		case default :
+			$string4 = "Apply";
+	}
+	if ($int1 = 2) {
+		$component6 = interface_774:62;
+		$string0 = "Refresh";
+		$component7 = interface_774:63;
+		$string1 = $string4;
+		$component8 = interface_774:64;
+		$string2 = "Unblock";
+		$component9 = interface_774:72;
+		$string3 = "Completions";
+		$int11 = 1;
+		$int10 = 4;
+	} else {
+		$component6 = interface_774:62;
+		$string0 = "Refresh";
+		$component7 = interface_774:63;
+		$string1 = $string4;
+		$component8 = interface_774:72;
+		$string2 = "Completions";
+		$int11 = 1;
+		$component9 = null;
+		$int10 = 3;
+	}
+}
+if_sethide(true, interface_774:64);
+if_sethide(true, interface_774:72);
+if_sethide(true, interface_774:63);
+if_sethide(true, interface_774:69);
+if_sethide(true, interface_774:71);
+if_sethide(true, interface_774:70);
+if_sethide(true, interface_774:62);
+def_int $int12 = 4;
+def_int $int13 = 0;
+def_int $int14 = calc((318 - $int10 * $int12) / $int10);
+if ($int11 = 1) {
+	$int13 = calc(120 - $int14);
+	$int14 = calc((318 - $int13 - $int10 * $int12) / $int10);
+}
+def_int $height15 = 32;
+def_int $int16 = 0;
+def_int $y17 = 2;
+if ($component6 ! null) {
+	if ($component6 = interface_774:72) {
+		$int14 = calc($int14 + $int13);
+	}
+	if_setsize($int14, $height15, ^setsize_abs, ^setsize_abs, $component6);
+	if_setposition($int16, $y17, ^setpos_abs_left, ^setpos_abs_top, $component6);
+	if_sethide(false, $component6);
+	if ($component6 = interface_774:72) {
+		~script6740($component6, $string0, $int2, $int1);
+	} else if ($component6 = interface_774:70) {
+		~script6731($component6, $string0, $int3, $int4, $int5, $int1);
+	} else {
+		~script1558($component6, $string0, interface_774:1, enum_4792, -1);
+	}
+	$int16 = calc($int16 + $int14 + $int12);
+}
+if ($component7 ! null) {
+	if ($component7 = interface_774:72) {
+		$int14 = calc($int14 + $int13);
+	}
+	if_setsize($int14, $height15, ^setsize_abs, ^setsize_abs, $component7);
+	if_setposition($int16, $y17, ^setpos_abs_left, ^setpos_abs_top, $component7);
+	if_sethide(false, $component7);
+	if ($component7 = interface_774:72) {
+		~script6740($component7, $string1, $int2, $int1);
+	} else if ($component7 = interface_774:70) {
+		~script6731($component7, $string1, $int3, $int4, $int5, $int1);
+	} else {
+		~script1558($component7, $string1, interface_774:1, enum_4792, -1);
+	}
+	$int16 = calc($int16 + $int14 + $int12);
+}
+if ($component8 ! null) {
+	if ($component8 = interface_774:72) {
+		$int14 = calc($int14 + $int13);
+	}
+	if_setsize($int14, $height15, ^setsize_abs, ^setsize_abs, $component8);
+	if_setposition($int16, $y17, ^setpos_abs_left, ^setpos_abs_top, $component8);
+	if_sethide(false, $component8);
+	if ($component8 = interface_774:72) {
+		~script6740($component8, $string2, $int2, $int1);
+	} else if ($component8 = interface_774:70) {
+		~script6731($component8, $string2, $int3, $int4, $int5, $int1);
+	} else {
+		~script1558($component8, $string2, interface_774:1, enum_4792, -1);
+	}
+	$int16 = calc($int16 + $int14 + $int12);
+}
+if ($component9 ! null) {
+	if ($component9 = interface_774:72) {
+		$int14 = calc($int14 + $int13);
+	}
+	if_setsize($int14, $height15, ^setsize_abs, ^setsize_abs, $component9);
+	if_setposition($int16, $y17, ^setpos_abs_left, ^setpos_abs_top, $component9);
+	if_sethide(false, $component9);
+	if ($component9 = interface_774:72) {
+		~script6740($component9, $string3, $int2, $int1);
+	} else if ($component9 = interface_774:70) {
+		~script6731($component9, $string3, $int3, $int4, $int5, $int1);
+	} else {
+		~script1558($component9, $string3, interface_774:1, enum_4792, -1);
+	}
+	$int16 = calc($int16 + $int14 + $int12);
+}

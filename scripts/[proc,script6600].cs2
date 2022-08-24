@@ -1,0 +1,7 @@
+// 6600
+[proc,script6600]
+if (%varbit14318 = 0) {
+	~script1558(interface_772:65, "Friends/Clan Only", interface_772:1, enum_4794, -1);
+} else {
+	~script4161(interface_772:65, "Friends/Clan Only", interface_772:1, enum_4794, -1);
+}

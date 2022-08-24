@@ -108,6 +108,8 @@ switch_struct ($struct0) {
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3, var2, var259, var2903}");
 	case buff_forinthry_surge_additional_15_accuracy_and_damage_to_the_revenants_4134 :
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3347, var3348}");
+	case buff_stat_renewal_4367 :
+		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3639}");
 	case buff_weapon_specialist_3773 :
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3279, var1734}");
 	case buff_weapon_specialist_3774 :
@@ -157,4 +159,14 @@ switch_struct ($struct0) {
 		cc_setoninvtransmit("buff_bar_transmit_value($struct0){inv, worn}");
 	case buff_cannon_decay_341, buff_cannon_broken_342 :
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3075, var2903, var2}");
+	case buff_apmekens_sight_4368 :
+	case buff_burning_damage_4369 :
+	case buff_darkness_damage_4370 :
+	case buff_frozen_4371 :
+	case buff_bleeding_4372 :
+	case buff_healing_over_time_4373 :
+	case buff_prayer_over_time_4374 :
+	case buff_special_attack_energy_boost_4375 :
+	case buff_stat_boost_4376 :
+		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3587}");
 }

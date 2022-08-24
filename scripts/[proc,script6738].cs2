@@ -1,0 +1,15 @@
+// 6738
+[proc,script6738](component $component0, string $string0, string $string1, component $component1, int $int2)
+sound_synth(interface_select1, 1, 0);
+~script6735;
+~script3723($component0, 1, "<$string0><$string1>");
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setonop(null, $component0);
+if_setop(1, "", $component0);
+if_setopbase("", $component0);
+if_clearops($component0);
+if_setontimer("script6739($component0, $string0, $string1, $component1, $int2, calc(clientclock + 80))", $component0);
+if (cc_find($component1, $int2) = ^true) {
+	cc_resume_pausebutton;
+}

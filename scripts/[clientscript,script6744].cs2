@@ -1,0 +1,10 @@
+// 6744
+[clientscript,script6744](component $component0, int $int1, string $string0, int $int2, int $clock3, int $int4)
+if (clientclock < $clock3) {
+	return;
+}
+if (cc_find($component0, $int1) = ^true) {
+	cc_setcolour(0xff981f);
+	~script6741($string0, $int2, $int4);
+}
+~script6742($component0, $int1, $string0, $int2, $int4);

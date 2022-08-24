@@ -1,0 +1,37 @@
+// 6749
+[proc,script6749](component $component0, component $component1, int $flags2, int $flags3, int $flags4, int $int5, component $component6)
+def_int $count7 = 0;
+def_int $int8 = 0;
+def_int $height9 = 0;
+def_struct $struct10 = null;
+def_boolean $boolean11 = false;
+def_int $count12 = enum_getoutputcount(enum_4664);
+def_int $int13 = 4;
+def_int $int14 = 111;
+def_int $int15 = 6;
+if (%varcint1086 ! 1) {
+	$int13 = 3;
+	$int14 = 96;
+	$int15 = 5;
+}
+cc_deleteall($component0);
+while ($count7 < $count12) {
+	$struct10 = enum(int, struct, enum_4664, $count7);
+	$boolean11 = ~script6755($struct10, $flags2, $flags3, $flags4);
+	if (calc($count7 % $int13) = 0) {
+		$int8 = $int15;
+	} else {
+		$int8 = calc($int8 + $int14);
+	}
+	$height9 = calc($count7 / $int13 * 74);
+	~script6750($count7, $int8, $height9, $struct10, $boolean11, $int5, $component0, $component6);
+	$count7 = calc($count7 + 1);
+}
+$height9 = calc($height9 + 73);
+if ($height9 > if_getheight($component0)) {
+	if_setscrollsize(0, $height9, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+	%varcint1083 = 0;
+}
+~scrollbar_resize($component1, $component0, %varcint1083);

@@ -1,0 +1,9 @@
+// 6762
+[clientscript,script6762](component $component0, int $comsubid1, int $comsubid2, int $trans3, component $component4, string $string0)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans($trans3);
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	cc_settrans(120);
+}
+~tooltip_mouserepeat($component0, -1, $component4, $string0, 25, 256);

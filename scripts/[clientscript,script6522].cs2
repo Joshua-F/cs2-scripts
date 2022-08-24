@@ -17,25 +17,32 @@ cc_deleteall($component3);
 .cc_settrans(200);
 .cc_sethide(true);
 def_int $count6 = enum_getoutputcount(enum_4389);
-def_int $int7 = -1;
-def_int $count8 = 0;
-while ($count8 < $count6) {
-	cc_create($component3, ^iftype_text, calc($count8 + 1));
-	$int7 = enum(int, int, enum_4389, $count8);
-	cc_setsize(0, $int5, ^setsize_minus, ^setsize_abs);
-	cc_setcolour(0xff981f);
-	cc_settextshadow(true);
-	cc_settextfont(p12_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_setop(1, "Select");
-	if ($boolean4 = false) {
-		cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff981f)");
-		cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
+def_int $int7 = 0;
+def_int $int8 = -1;
+def_int $count9 = 0;
+while ($count9 < $count6) {
+	cc_create($component3, ^iftype_text, calc($count9 + 1));
+	$int8 = enum(int, int, enum_4389, $count9);
+	if ($int0 = 2 & $int8 = 2) {
+		cc_sethide(true);
+	} else {
+		cc_sethide(false);
+		cc_setsize(0, $int5, ^setsize_minus, ^setsize_abs);
+		cc_setcolour(0xff981f);
+		cc_settextshadow(true);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_setop(1, "Select");
+		if ($boolean4 = false) {
+			cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff981f)");
+			cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
+		}
+		cc_setonop("script6523(event_opindex, event_comsubid, $int0, $component1, $component2, $component3)");
+		cc_setposition(0, calc($int7 * $int5 + 2), ^setpos_abs_centre, ^setpos_abs_top);
+		cc_settext(enum(int, string, enum_4208, $int8));
+		$int7 = calc($int7 + 1);
 	}
-	cc_setonop("script6523(event_opindex, event_comsubid, $int0, $component1, $component2, $component3)");
-	cc_setposition(0, calc($count8 * $int5 + 2), ^setpos_abs_centre, ^setpos_abs_top);
-	cc_settext(enum(int, string, enum_4208, $int7));
-	$count8 = calc($count8 + 1);
+	$count9 = calc($count9 + 1);
 }
-~thinstonebox($component3, calc($count8 + 1));
-if_setsize(if_getwidth($component3), calc($count6 * $int5 + 2 + 4), ^setsize_abs, ^setsize_abs, $component3);
+~thinstonebox($component3, calc($count9 + 1));
+if_setsize(if_getwidth($component3), calc($int7 * $int5 + 2 + 4), ^setsize_abs, ^setsize_abs, $component3);

@@ -4,7 +4,7 @@ cc_deleteall($component1);
 if_setscrollpos(0, 0, $component2);
 def_int $count8 = enum_getoutputcount(enum_818);
 if_setontimer("music_init_counter(event_com, $count8)", $component4);
-if_setonvartransmit("music_vartransmit(event_com, $component4, $count8){var568, var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065, var2237, var2950, var3418}", $component1);
+if_setonvartransmit("music_vartransmit(event_com, $component4, $count8){var568, var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065, var2237, var2950, var3418, var3575}", $component1);
 def_int $countarray0($count8);
 def_int $count9 = 0;
 while ($count9 < $count8) {
@@ -94,6 +94,8 @@ while ($count9 < $count8) {
 						$flags16 = %var2950;
 					case 22 :
 						$flags16 = %var3418;
+					case 23 :
+						$flags16 = %var3575;
 				}
 				if (testbit($flags16, $index15) = ^true) {
 					~music_setcolour(0x0dc10d);

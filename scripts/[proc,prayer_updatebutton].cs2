@@ -3,19 +3,19 @@
 switch_int ($int1) {
 	case 25 :
 		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer, defence}", $component2);
-		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var1050, var284, var1636}", $component2);
+		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var2900, var1050, var284, var1636}", $component2);
 		if_setopbase("<col=ff9040><enum(int, string, enum_860, $int1)></col>", $component2);
 	case 26 :
 		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer, defence}", $component2);
-		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var1050, var284, var1636}", $component2);
+		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var2900, var1050, var284, var1636}", $component2);
 		if_setopbase("<col=ff9040><enum(int, string, enum_860, $int1)></col>", $component2);
 	case 24, 27, 28 :
 		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer, defence}", $component2);
-		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var1429, var284}", $component2);
+		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var2900, var1429, var284}", $component2);
 		if_setopbase("<col=ff9040><enum(int, string, enum_860, $int1)></col>", $component2);
 	case default :
 		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer}", $component2);
-		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var284}", $component2);
+		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var2900, var284}", $component2);
 		if_setopbase("<col=ff9040><enum(int, string, enum_860, $int1)></col>", $component2);
 }
 if_setonop("prayer_op(event_opindex, $boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4)", $component2);

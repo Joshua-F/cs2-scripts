@@ -10,6 +10,4 @@ switch_npc ($npc3) {
 	case ancient_wizard_7309 :
 		cc_setonvartransmit("script6544($newvar0, $int1, $npc_uid2, %varbit14189, %var3546, 3, ~script6545(3), $npc3){var3543, var3546, var3547, var3550}");
 		~script6546($newvar0, $npc_uid2, $int1, 3);
-	case default :
-		~debug_mes("Loading a cluescroll kill npc overlay but passed in a wrong npc_type or it is missing.");
 }

@@ -1,0 +1,12 @@
+// 6769
+[proc,script6769](component $component0, string $string0, graphic $graphic1)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(19, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic($graphic1);
+cc_settrans(0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_774:68, $string0, 25, 256)", $component0);
+	if_setonmouseleave("deltooltip(interface_774:68)", $component0);
+}

@@ -1,0 +1,166 @@
+// 6770
+[proc,script6770](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5)
+if_settext(tostring($int4), interface_774:77);
+if_settext(tostring($int5), interface_774:79);
+if_setop(1, "", $component0);
+if_setopbase("", $component0);
+def_int $int6 = 0;
+def_int $width7 = if_getwidth($component0);
+def_int $width8 = calc($width7 - 4);
+def_int $int9 = -1;
+def_graphic $graphic10 = "graphic_4655";
+def_graphic $graphic11 = "graphic_4660";
+if ($int4 >= 300) {
+	$graphic10 = "graphic_4657";
+	$graphic11 = "graphic_4662";
+} else if ($int4 >= 150) {
+	$graphic10 = "graphic_4656";
+	$graphic11 = "graphic_4661";
+}
+if_setgraphic($graphic11, $component2);
+if (cc_find($component0, 0) = ^false) {
+	cc_create($component0, ^iftype_rectangle, $int6);
+	cc_setsize(calc($width7 - 2), 16, ^setsize_abs, ^setsize_abs);
+	cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(false);
+	cc_setcolour(0x0e0e0c);
+	$int6 = calc($int6 + 1);
+	cc_create($component0, ^iftype_rectangle, $int6);
+	cc_setsize(calc($width7 - 4), 14, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(false);
+	cc_setcolour(0x474745);
+	$int6 = calc($int6 + 1);
+	cc_create($component0, ^iftype_graphic, $int6);
+	cc_setsize(calc($width7 - 4), 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_4658");
+	cc_settiling(true);
+	$int6 = calc($int6 + 1);
+	cc_create($component0, ^iftype_graphic, $int6);
+	cc_setsize(1, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic10);
+	cc_settiling(true);
+	$int6 = calc($int6 + 1);
+	cc_create($component0, ^iftype_graphic, $int6);
+	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
+	cc_setposition(-5, 1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_4659");
+	$int6 = calc($int6 + 1);
+	cc_create($component0, ^iftype_graphic, $int6);
+	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
+	$int9 = scale(150, 600, $width8);
+	cc_setposition(calc($int9 - 2), 1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_4659");
+	$int6 = calc($int6 + 1);
+	cc_create($component0, ^iftype_graphic, $int6);
+	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
+	$int9 = scale(300, 600, $width8);
+	cc_setposition(calc($int9 - 2), 1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_4659");
+	$int6 = calc($int6 + 1);
+	cc_create($component0, ^iftype_graphic, $int6);
+	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($width8 - 1), 1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_4659");
+	$int6 = calc($int6 + 1);
+}
+def_int $width12 = scale($int4, 600, $width8);
+if ($width12 > $width8) {
+	$width12 = calc($width8 - 1);
+}
+if (cc_find($component0, 3) = ^true) {
+	cc_setsize($width12, cc_getheight, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic10);
+}
+if_setonmouserepeat("cc_settrans(event_com, cc_getid, 0, null)", $component3);
+if_setonmouseleave("cc_settrans(event_com, cc_getid, 50, null)", $component3);
+if_setonop("opsound(event_opindex, 2)", $component3);
+if_setop(1, "Rewards Info", $component3);
+def_int $int13 = 1;
+def_int $int14 = 10;
+def_int $int15 = 4;
+def_int $count16 = 0;
+def_int $count17 = enum_getoutputcount(enum_4683);
+def_namedobj $namedobj18 = null;
+def_int $colour19 = ^black;
+def_int $colour20 = 0x212121;
+def_int $trans21 = 128;
+$int6 = 0;
+while ($count16 < $count17) {
+	$namedobj18 = enum(int, namedobj, enum_4683, $count16);
+	if ($int4 >= enum(namedobj, int, enum_4677, $namedobj18)) {
+		$colour19 = 0xfebf38;
+		$colour20 = 0x985101;
+		$trans21 = 0;
+	} else if (enum(namedobj, boolean, enum_4678, $namedobj18) = true) {
+		$colour19 = 0xa6180b;
+		$colour20 = 0x500b03;
+		$trans21 = 192;
+	} else {
+		$colour19 = ^black;
+		$colour20 = 0x212121;
+		$trans21 = 128;
+	}
+	cc_create($component1, ^iftype_rectangle, $int6);
+	cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour19);
+	$int6 = calc($int6 + 1);
+	cc_create($component1, ^iftype_rectangle, $int6);
+	cc_setposition(calc($int13 + 1), calc($int14 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(36 - 2), calc(32 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour20);
+	$int6 = calc($int6 + 1);
+	cc_create($component1, ^iftype_rectangle, $int6);
+	cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(3, 3, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour20);
+	$int6 = calc($int6 + 1);
+	cc_create($component1, ^iftype_rectangle, $int6);
+	cc_setposition($int13, calc($int14 + 32 - 3), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(3, 3, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour20);
+	$int6 = calc($int6 + 1);
+	cc_create($component1, ^iftype_rectangle, $int6);
+	cc_setposition(calc($int13 + 36 - 3), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(3, 3, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour20);
+	$int6 = calc($int6 + 1);
+	cc_create($component1, ^iftype_rectangle, $int6);
+	cc_setposition(calc($int13 + 36 - 3), calc($int14 + 32 - 3), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(3, 3, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour20);
+	$int6 = calc($int6 + 1);
+	cc_create($component1, ^iftype_rectangle, $int6);
+	cc_setposition(calc($int13 + 2), calc($int14 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(36 - 4), calc(32 - 4), ^setsize_abs, ^setsize_abs);
+	cc_setcolour(^black);
+	cc_setfill(true);
+	cc_settrans(180);
+	$int6 = calc($int6 + 1);
+	cc_create($component1, ^iftype_graphic, $int6);
+	cc_setposition(calc($int13 + 1), calc($int14 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject_nonum($namedobj18, 1);
+	cc_setgraphicshadow(0x333333);
+	cc_settrans($trans21);
+	$int6 = calc($int6 + 1);
+	$count16 = calc($count16 + 1);
+	if (calc($count16 % $int15) = 0) {
+		$int14 = calc($int14 + 32 + 2);
+		switch_int (calc($count17 - $count16)) {
+			case 1 :
+				$int13 = calc(36 * 3 / 2);
+			case 2 :
+				$int13 = calc(36 + 2);
+			case 3 :
+				$int13 = calc(36 / 2);
+			case default :
+				$int13 = 1;
+		}
+	} else {
+		$int13 = calc($int13 + 36 + 2);
+	}
+}

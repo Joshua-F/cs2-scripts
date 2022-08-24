@@ -1,0 +1,11 @@
+// 6733
+[proc,script6733](int $int0)
+if ($int0 = 1) {
+	if_sethide(false, interface_774:57);
+	if_setsize(307, 2, ^setsize_abs, ^setsize_minus, interface_774:49);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, interface_774:49);
+} else {
+	if_sethide(true, interface_774:57);
+	if_setsize(464, 2, ^setsize_abs, ^setsize_minus, interface_774:49);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, interface_774:49);
+}

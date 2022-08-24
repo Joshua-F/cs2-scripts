@@ -1,7 +1,6 @@
 // 4707
 [proc,helper_generic_add_data](string $string0, string $string1)(int, int)
 if (%varcint494 >= calc(45 - 1)) {
-	~debug_mes("Trying to add title to generic helper with too many components used.");
 	return(0, 0);
 }
 cc_create(interface_711:4, ^iftype_text, %varcint494);

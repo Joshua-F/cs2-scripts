@@ -1,0 +1,10 @@
+// 6742
+[proc,script6742](component $component0, int $int1, string $string0, int $int2, int $int3)
+if_setontimer(null, $component0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("cc_colour_swapper(event_com, $int1, 0xffb35b)", $component0);
+	if_setonmouseleave("cc_colour_swapper(event_com, $int1, 0xff981f)", $component0);
+}
+if_setop(1, "Set", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);
+if_setonop("script6743(event_opindex, $component0, $int1, $string0, $int2, $int3)", $component0);

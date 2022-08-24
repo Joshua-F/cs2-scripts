@@ -1,9 +1,5 @@
-// 3092
-[clientscript,script3092](graphic $graphic0, string $op0, boolean $boolean1)
-if ($boolean1 = false) {
-	~script6065($graphic0, $op0);
-	return;
-}
+// 6558
+[proc,script6558]
 if_setop(1, "", welcome_screen:86);
 if_setgraphic(null, welcome_screen:89);
 cc_deleteall(welcome_screen:93);
@@ -12,9 +8,10 @@ if_sethide(false, welcome_screen:91);
 cc_create(welcome_screen:90, ^iftype_crmview, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-def_int $int2 = 1;
-def_string $string1 = ~script6066($int2);
-cc_setcrm_url($string1);
+def_int $int0 = 1;
+def_string $string0 = ~script6066($int0);
+cc_setcrm_url($string0);
 cc_setcrm_textfont(0, b12_full);
 cc_setcrm_textfont(1, p11_full);
-cc_setoncrmviewload("script6064($graphic0, $op0)");
+~script6559;
+cc_setoncrmviewload("script6560");

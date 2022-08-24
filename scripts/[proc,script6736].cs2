@@ -1,0 +1,17 @@
+// 6736
+[proc,script6736](component $component0, int $int1, string $string0, string $string1, component $component2, enum $enum3, int $int4)
+~script3723($component0, $int1, "<$string0><$string1>");
+if_setontimer(null, $component0);
+if ($int1 = 1) {
+	if_setonop(null, $component0);
+	if_setop(1, "", $component0);
+	if_setopbase("", $component0);
+	if_clearops($component0);
+	return;
+}
+if ($int4 = -1 & $enum3 ! null) {
+	$int4 = enum(component, int, $enum3, $component0);
+}
+if_setonop("script6737(event_opindex, $component0, $string0, $string1, $component2, $int4)", $component0);
+if_setop(1, "View", $component0);
+if_setopbase("<col=ff9040><removetags($string0)></col>", $component0);

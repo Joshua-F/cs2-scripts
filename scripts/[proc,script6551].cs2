@@ -1,0 +1,16 @@
+// 6551
+[proc,script6551](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Courses", 1);
+	case 1 :
+		return("Areas", 1);
+	case 2 :
+		return("Shortcuts", 1);
+	case 3 :
+		return("Barbarian", 1);
+	case 4 :
+		return("Other", 1);
+	case default :
+		return("", -1);
+}

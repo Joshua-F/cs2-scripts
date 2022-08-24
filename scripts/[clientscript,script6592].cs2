@@ -1,0 +1,6 @@
+// 6592
+[clientscript,script6592](component $component0, int $comsubid1, component $component2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setcolour(^white);
+}
+~deltooltip_action($component2);

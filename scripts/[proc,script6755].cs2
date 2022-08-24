@@ -1,0 +1,13 @@
+// 6755
+[proc,script6755](struct $struct0, int $flags1, int $flags2, int $flags3)(boolean)
+def_int $int4 = struct_param($struct0, param_1159);
+def_int $flags5 = $flags1;
+if ($int4 > 61) {
+	$int4, $flags5 = calc($int4 - 62), $flags3;
+} else if ($int4 > 30) {
+	$int4, $flags5 = calc($int4 - 31), $flags2;
+}
+if (testbit($flags5, $int4) = ^true) {
+	return(true);
+}
+return(false);

@@ -1,0 +1,16 @@
+// 6618
+[proc,script6618](component $component0)(int)
+def_component $layer1 = if_getlayer($component0);
+def_int $int2 = 0;
+if ($layer1 ! null) {
+	$int2 = if_getheight($layer1);
+}
+def_int $int3 = ~minmax(304, 496, calc($int2 - 3));
+def_int $int4 = calc($int3 % 8);
+if ($int4 <= 3) {
+	$int3 = calc($int3 - $int4);
+} else {
+	$int3 = calc($int3 + 8 - $int4);
+}
+$int3 = ~minmax(304, 496, $int3);
+return($int3);
