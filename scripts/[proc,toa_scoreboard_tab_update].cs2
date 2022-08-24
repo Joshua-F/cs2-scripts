@@ -1,0 +1,13 @@
+// 6773
+[proc,toa_scoreboard_tab_update](component $component0, component $component1, component $component2)
+~script3723($component1, 0, "Normal");
+~script3723($component0, 0, "Entry");
+~script3723($component2, 0, "Expert");
+switch_int (%varbit14320) {
+	case 1 :
+		~script3723($component0, 1, "Entry");
+	case 2 :
+		~script3723($component2, 1, "Expert");
+	case default :
+		~script3723($component1, 1, "Normal");
+}

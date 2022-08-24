@@ -1,7 +1,0 @@
-// 6748
-[clientscript,script6748](component $component0, component $component1, component $component2, int $clock3)
-def_int $int4 = calc(clientclock - $clock3);
-if ($int4 >= 500) {
-	if_setontimer(null, $component0);
-	~script6785($component1, enum(component, int, enum_4792, $component2));
-}

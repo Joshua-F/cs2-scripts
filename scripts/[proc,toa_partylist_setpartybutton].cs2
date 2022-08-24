@@ -1,0 +1,7 @@
+// 6598
+[proc,toa_partylist_setpartybutton]
+def_string $string0 = "Make Party";
+if (%var3603 ! -1) {
+	$string0 = "My Party";
+}
+~script1558(interface_772:64, $string0, interface_772:1, enum_4794, -1);

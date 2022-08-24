@@ -1,0 +1,10 @@
+// 6771
+[clientscript,toa_scoreboard_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+if_setonvartransmit("toa_scoreboard_tab_update($component4, $component5, $component6){var3585}", $component0);
+if_setonop("toa_scoreboard_tab_select($component4, $component5, $component6, 0)", $component5);
+if_setonop("toa_scoreboard_tab_select($component4, $component5, $component6, 1)", $component4);
+if_setonop("toa_scoreboard_tab_select($component4, $component5, $component6, 2)", $component6);
+~toa_scoreboard_tab_update($component4, $component5, $component6);
+if_setscrollsize(0, if_getheight($component3), $component2);
+if_setscrollpos(0, 0, $component2);
+~scrollbar_vertical($component1, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

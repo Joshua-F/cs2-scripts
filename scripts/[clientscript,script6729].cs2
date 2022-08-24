@@ -21,7 +21,7 @@ switch_int (%varcint181) {
 	case default :
 		%varcint181 = 0;
 }
-~script6759($int0, $int8);
+~toa_partydetails_setsort($int0, $int8);
 if ($int8 <= 0) {
 	cc_create(interface_774:48, ^iftype_text, 0);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -72,11 +72,11 @@ if ($int8 > 0) {
 ~script6736(interface_774:8, $int11, "Invocations", "", interface_774:1, enum_4792, -1);
 ~script6736(interface_774:9, $int12, "Summary", "", interface_774:1, enum_4792, -1);
 if_sethide(false, interface_774:4);
-~script6765(interface_774:4, "Back", interface_774:1, enum_4792, -1);
+~toa_partydetails_back_button(interface_774:4, "Back", interface_774:1, enum_4792, -1);
 ~script6749(interface_774:52, interface_774:51, $int5, $int6, $int7, $int0, interface_774:68);
-~script6756(interface_774:56, interface_774:55, $int5, $int6, $int7, $int3);
+~toa_partydetails_summary(interface_774:56, interface_774:55, $int5, $int6, $int7, $int3);
 ~script6730($int4, $int0, $int1, $int5, $int6, $int7);
 if ($int4 = 0 | $int4 = 1) {
-	if_setontimer("script6748(interface_774:0, interface_774:1, interface_774:62, clientclock)", interface_774:0);
+	if_setontimer("toa_partydetails_autorefresh(interface_774:0, interface_774:1, interface_774:62, clientclock)", interface_774:0);
 }
 ~script6770(interface_774:82, interface_774:84, interface_774:80, interface_774:83, $int3, $int2);

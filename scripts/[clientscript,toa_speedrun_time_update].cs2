@@ -1,0 +1,14 @@
+// 6580
+[clientscript,toa_speedrun_time_update](int $int0, int $int1)
+if ($int0 = -1) {
+	if_setontimer(null, interface_481:46);
+	if_settext("-", interface_481:46);
+} else {
+	$int0 = calc($int0 * 30 - clientclock);
+	if ($int1 = 1) {
+		~toa_time_update_timer(interface_481:46, $int0, %varbit11866, %varbit11890);
+		if_setontimer(null, interface_481:46);
+	} else {
+		if_setontimer("toa_time_update_timer(interface_481:46, $int0, %varbit11866, %varbit11890)", interface_481:46);
+	}
+}

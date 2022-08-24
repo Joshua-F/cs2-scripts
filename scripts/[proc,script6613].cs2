@@ -3,7 +3,7 @@
 if (%varbit14345 = 2) {
 	if_settext("Step Inside Now!", $component0);
 	if_setcolour(~tob_hud_nameflasher, $component0);
-	if_setontimer("script6614($component0)", $component0);
+	if_setontimer("toa_hud_nameflasher($component0)", $component0);
 } else if (%varbit14345 = 0) {
 	if_settext("No Party", $component0);
 	if_setcolour(0xff981f, $component0);
