@@ -7,7 +7,7 @@ if ($coord1 = null) {
 def_int $int2 = -1;
 def_int $index3 = -1;
 $int2, $index3 = coordx($coord1), coordz($coord1);
-def_int $int4 = ~script6699($int2, $index3);
+def_int $int4 = ~music_isunlocked_core($int2, $index3);
 if ($int4 = 1) {
 	return(1);
 }

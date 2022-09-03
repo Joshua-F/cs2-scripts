@@ -3091,6 +3091,7 @@
 [**3088**](scripts/[proc,br_reward_shop_itemdraw].cs2) `[proc,br_reward_shop_itemdraw]`  
 [**3089**](scripts/[clientscript,br_reward_shop_select].cs2) `[clientscript,br_reward_shop_select]`  
 [**3090**](scripts/[clientscript,br_reward_shop_refuse].cs2) `[clientscript,br_reward_shop_refuse]`  
+[**3091**](scripts/[clientscript,script3091].cs2)  
 [**3093**](scripts/[clientscript,canoe_init].cs2) `[clientscript,canoe_init]`  
 [**3094**](scripts/[clientscript,canoe_remake].cs2) `[clientscript,canoe_remake]`  
 [**3095**](scripts/[proc,canoe_setup].cs2) `[proc,canoe_setup]`  
@@ -6278,7 +6279,7 @@
 [**6279**](scripts/[clientscript,script6279].cs2)  
 [**6280**](scripts/[clientscript,pvpa_applicants_clicksort].cs2) `[clientscript,pvpa_applicants_clicksort]`  
 [**6281**](scripts/[clientscript,pvpa_applicants_addline].cs2) `[clientscript,pvpa_applicants_addline]`  
-[**6282**](scripts/[proc,script6282].cs2)  
+[**6282**](scripts/[proc,pvpa_applicants_finished].cs2) `[proc,pvpa_applicants_finished]`  
 [**6283**](scripts/[proc,pvpa_applicants_entry_init].cs2) `[proc,pvpa_applicants_entry_init]`  
 [**6284**](scripts/[proc,pvpa_applicants_setsort].cs2) `[proc,pvpa_applicants_setsort]`  
 [**6285**](scripts/[proc,script6285].cs2)  
@@ -6545,12 +6546,12 @@
 [**6546**](scripts/[proc,script6546].cs2)  
 [**6547**](scripts/[clientscript,script6547].cs2)  
 [**6548**](scripts/[proc,script6548].cs2)  
-[**6549**](scripts/[proc,script6549].cs2)  
-[**6550**](scripts/[proc,script6550].cs2)  
-[**6551**](scripts/[proc,script6551].cs2)  
-[**6552**](scripts/[proc,script6552].cs2)  
-[**6553**](scripts/[proc,script6553].cs2)  
-[**6554**](scripts/[proc,script6554].cs2)  
+[**6549**](scripts/[proc,skill_guide_subsection_attack].cs2) `[proc,skill_guide_subsection_attack]`  
+[**6550**](scripts/[proc,skill_guide_data_attack].cs2) `[proc,skill_guide_data_attack]`  
+[**6551**](scripts/[proc,skill_guide_subsection_agility].cs2) `[proc,skill_guide_subsection_agility]`  
+[**6552**](scripts/[proc,skill_guide_data_agility].cs2) `[proc,skill_guide_data_agility]`  
+[**6553**](scripts/[proc,skill_guide_subsection_smithing].cs2) `[proc,skill_guide_subsection_smithing]`  
+[**6554**](scripts/[proc,skill_guide_data_smithing].cs2) `[proc,skill_guide_data_smithing]`  
 [**6555**](scripts/[clientscript,script6555].cs2)  
 [**6556**](scripts/[proc,script6556].cs2)  
 [**6557**](scripts/[clientscript,script6557].cs2)  
@@ -6671,7 +6672,7 @@
 [**6672**](scripts/[loadloc,dwarf_multicannon_6].cs2) `[loadloc,dwarf_multicannon_6]`  
 [**6673**](scripts/[loadloc,dwarf_multicannon_43027].cs2) `[loadloc,dwarf_multicannon_43027]`  
 [**6674**](scripts/[proc,cannon_overlay].cs2) `[proc,cannon_overlay]`  
-[**6675**](scripts/[clientscript,script6675].cs2)  
+[**6675**](scripts/[clientscript,cannon_overlay_transmit].cs2) `[clientscript,cannon_overlay_transmit]`  
 [**6676**](scripts/[proc,cannon_overlay_create].cs2) `[proc,cannon_overlay_create]`  
 [**6677**](scripts/[clientscript,script6677].cs2)  
 [**6678**](scripts/[clientscript,script6678].cs2)  
@@ -6695,7 +6696,7 @@
 [**6696**](scripts/[clientscript,npc_name_vartransmit].cs2) `[clientscript,npc_name_vartransmit]`  
 [**6697**](scripts/[clientscript,npc_name_timer].cs2) `[clientscript,npc_name_timer]`  
 [**6698**](scripts/[proc,npc_name_create].cs2) `[proc,npc_name_create]`  
-[**6699**](scripts/[proc,script6699].cs2)  
+[**6699**](scripts/[proc,music_isunlocked_core].cs2) `[proc,music_isunlocked_core]`  
 [**6700**](scripts/[clientscript,script6700].cs2)  
 [**6701**](scripts/[clientscript,script6701].cs2)  
 [**6702**](scripts/[clientscript,script6702].cs2)  
@@ -6711,7 +6712,7 @@
 [**6712**](scripts/[clientscript,script6712].cs2)  
 [**6713**](scripts/[proc,script6713].cs2)  
 [**6714**](scripts/[proc,script6714].cs2)  
-[**6715**](scripts/[proc,script6715].cs2)  
+[**6715**](scripts/[proc,settings_hitsplat_maxhit].cs2) `[proc,settings_hitsplat_maxhit]`  
 [**6716**](scripts/[proc,script6716].cs2)  
 [**6717**](scripts/[proc,script6717].cs2)  
 [**6718**](scripts/[proc,script6718].cs2)  

@@ -8,7 +8,7 @@
 ~toa_partylist_sortbutton_draw(interface_772:13, 22, 23, "Sort by mode", "graphic_4579");
 ~toa_partylist_sortbutton_draw(interface_772:14, 12, 13, "Sort by age", "graphic_4570");
 def_int $count0 = enum_getoutputcount(enum_4793);
-def_int $intarray0($count0);
+def_int $countarray0($count0);
 def_int $int1 = 0;
 def_int $count2 = 0;
 def_int $int3 = 20;
@@ -17,7 +17,7 @@ if (~on_mobile = true) {
 }
 while ($count2 < $count0) {
 	if (cc_find(enum(int, component, enum_4793, $count2), 0) = ^true) {
-		$intarray0($int1) = $int1;
+		$countarray0($int1) = $count2;
 		$int1 = calc($int1 + 1);
 	}
 	$count2 = calc($count2 + 1);
@@ -26,19 +26,19 @@ def_string $string0 = "";
 if ($int1 >= 2) {
 	switch_int (%varcint180) {
 		case 4, 5 :
-			~raids_partylist_sort(intarray0, 0, calc($int1 - 1), 2, enum_4793);
+			~raids_partylist_sort(countarray0, 0, calc($int1 - 1), 2, enum_4793);
 		case 16, 17 :
-			~raids_partylist_sort(intarray0, 0, calc($int1 - 1), 9, enum_4793);
+			~raids_partylist_sort(countarray0, 0, calc($int1 - 1), 9, enum_4793);
 		case 18, 19 :
-			~raids_partylist_sort(intarray0, 0, calc($int1 - 1), 10, enum_4793);
+			~raids_partylist_sort(countarray0, 0, calc($int1 - 1), 10, enum_4793);
 		case 20, 21 :
-			~raids_partylist_sort(intarray0, 0, calc($int1 - 1), 11, enum_4793);
+			~raids_partylist_sort(countarray0, 0, calc($int1 - 1), 11, enum_4793);
 		case 22, 23 :
-			~raids_partylist_sort(intarray0, 0, calc($int1 - 1), 6, enum_4793);
+			~raids_partylist_sort(countarray0, 0, calc($int1 - 1), 6, enum_4793);
 		case 12, 13 :
-			~raids_partylist_sort(intarray0, 0, calc($int1 - 1), 12, enum_4793);
+			~raids_partylist_sort(countarray0, 0, calc($int1 - 1), 12, enum_4793);
 		case default :
-			~raids_partylist_sort(intarray0, 0, calc($int1 - 1), 8, enum_4793);
+			~raids_partylist_sort(countarray0, 0, calc($int1 - 1), 8, enum_4793);
 	}
 }
 def_int $int4 = 0;
@@ -50,22 +50,22 @@ switch_int (%varcint180) {
 		$int4 = $int1;
 		while ($int4 > 0) {
 			$int4 = calc($int4 - 1);
-			$component6 = enum(int, component, enum_4793, $intarray0($int4));
+			$component6 = enum(int, component, enum_4793, $countarray0($int4));
 			if ($component6 ! null) {
 				if_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top, $component6);
 				if (cc_find($component6, 0) = ^true & .cc_find($component6, 3) = ^true) {
-					~toa_partylist_entry_init($int4, $component6, $intarray0($int4), .cc_gettext, interface_772:16);
+					~toa_partylist_entry_init($int4, $component6, $countarray0($int4), .cc_gettext, interface_772:16);
 				}
 			}
 			$int5 = calc($int5 + $int3);
 		}
 	case default :
 		while ($int4 < $int1) {
-			$component6 = enum(int, component, enum_4793, $intarray0($int4));
+			$component6 = enum(int, component, enum_4793, $countarray0($int4));
 			if ($component6 ! null) {
 				if_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top, $component6);
 				if (cc_find($component6, 0) = ^true & .cc_find($component6, 3) = ^true) {
-					~toa_partylist_entry_init($int4, $component6, $intarray0($int4), .cc_gettext, interface_772:16);
+					~toa_partylist_entry_init($int4, $component6, $countarray0($int4), .cc_gettext, interface_772:16);
 				}
 			}
 			$int5, $int4 = calc($int5 + $int3), calc($int4 + 1);

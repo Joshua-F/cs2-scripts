@@ -1,9 +1,33 @@
 // 6663
-[proc,mouseover_tooltip_setup](string $string0, string $string1, int $int0, int $int1)
+[proc,mouseover_tooltip_setup](string $string0, string $string1, int $int0, int $int1, component $component2, component $component3, int $int4, int $int5)
+if (string_length($string0) > 0) {
+	%varcint1 = clientclock;
+} else if ($component2 ! %varcint1109) {
+	return;
+}
+if (~on_mobile = true) {
+	if ($component3 ! %varcint1107 | $int4 ! %varcint1108) {
+		%varcint1016 = $int0;
+		%varcint1017 = $int1;
+		%varcint1107 = $component3;
+		%varcint1108 = $int4;
+		if ($component3 = null) {
+			%varcint1109 = null;
+		} else {
+			%varcint1109 = $component2;
+		}
+	}
+	if ($component2 ! null) {
+		if ($int0 ! -1 & $int1 ! -1) {
+			if_setontimer("script3091($string0, $string1, $int0, $int1, $component2, $component3, $int4)", $component2);
+			%varcint2 = 1;
+		} else {
+			if_setontimer(null, $component2);
+		}
+	}
+}
 %varcstring1014 = $string0;
 %varcstring1015 = $string1;
-if (~on_mobile = true) {
-	%varcint1016 = $int0;
-	%varcint1017 = $int1;
+if ($int5 = 1) {
+	~mouseover_ops;
 }
-~mouseover_ops;

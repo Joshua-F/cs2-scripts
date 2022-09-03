@@ -24,13 +24,12 @@ if (%varbit14380 >= 300) {
 } else {
 	if_setgraphic("graphic_4660", $component4);
 }
-if_settext("Raid lvl: <tostring(%varbit14380)>", $component5);
+if_settext("Level: <tostring(%varbit14380)>", $component5);
 def_int $int31 = 0;
 switch_int (%varbit14381) {
 	case 0 :
 		if_sethide(true, $component2);
 		if_sethide(false, $component3);
-		if_setposition(40, 15, ^setpos_abs_left, ^setpos_abs_top, $component5);
 		if_settext(tostring(%varbit14377), $component8);
 		if_settext(tostring(%varbit14378), $component9);
 		if_settext(tostring(%varbit14379), $component10);
@@ -39,36 +38,31 @@ switch_int (%varbit14381) {
 	case 1 :
 		if_sethide(false, $component2);
 		if_sethide(true, $component3);
-		if_setposition(40, 4, ^setpos_abs_left, ^setpos_abs_top, $component5);
 		if_setgraphic("graphic_4635", $component6);
-		if_settext("Level: <tostring(%varbit14377)>", $component7);
+		if_settext(tostring(%varbit14377), $component7);
 	case 2 :
 		if_sethide(false, $component2);
 		if_sethide(true, $component3);
-		if_setposition(40, 4, ^setpos_abs_left, ^setpos_abs_top, $component5);
 		if_setgraphic("graphic_4636", $component6);
-		if_settext("Level: <tostring(%varbit14378)>", $component7);
+		if_settext(tostring(%varbit14378), $component7);
 	case 3 :
 		if_sethide(false, $component2);
 		if_sethide(true, $component3);
-		if_setposition(40, 4, ^setpos_abs_left, ^setpos_abs_top, $component5);
 		if_setgraphic("graphic_4637", $component6);
-		if_settext("Level: <tostring(%varbit14379)>", $component7);
+		if_settext(tostring(%varbit14379), $component7);
 	case 4 :
 		if_sethide(false, $component2);
 		if_sethide(true, $component3);
-		if_setposition(40, 4, ^setpos_abs_left, ^setpos_abs_top, $component5);
 		if_setgraphic("graphic_4638", $component6);
-		if_settext("Level: <tostring(%varbit14376)>", $component7);
+		if_settext(tostring(%varbit14376), $component7);
 	case 5, 6 :
 		if_sethide(true, $component2);
 		if_sethide(true, $component3);
-		if_setposition(40, 15, ^setpos_abs_left, ^setpos_abs_top, $component5);
 }
 if ($int31 = 0) {
-	if_setsize(120, 65, ^setsize_abs, ^setsize_abs, $component29);
+	if_setsize(120, 70, ^setsize_abs, ^setsize_abs, $component29);
 } else {
-	if_setsize(120, 130, ^setsize_abs, ^setsize_abs, $component29);
+	if_setsize(120, 95, ^setsize_abs, ^setsize_abs, $component29);
 }
-if_setposition(if_getx($component1), calc(4 + if_getheight($component29)), ^setpos_abs_left, ^setpos_abs_top, $component1);
+if_setposition(if_getx($component1), calc(3 + if_getheight($component29)), ^setpos_abs_left, ^setpos_abs_top, $component1);
 if_setsize(calc(~max(if_getwidth($component1), if_getwidth($component29)) + 2), calc(if_getheight($component1) + if_getheight($component29) + 6), ^setsize_abs, ^setsize_abs, $component0);

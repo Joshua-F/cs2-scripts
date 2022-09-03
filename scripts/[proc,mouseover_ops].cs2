@@ -5,7 +5,7 @@ def_int $int1 = ~on_enhanced_desktop;
 if ($int0 = 0 & $int1 = 0) {
 	return;
 }
-if (mouse_getx = -1 & mouse_gety = -1) {
+if (mouse_getx = -1 & mouse_gety = -1 & $int1 = 1) {
 	return;
 }
 def_enum $enum2 = ~toplevel_getcomponents;

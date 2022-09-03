@@ -49,7 +49,11 @@ cc_setcolour(^white);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext(tostring($int0));
+if ($int0 < 65535) {
+	cc_settext(tostring($int0));
+} else {
+	cc_settext("Lots!");
+}
 cc_create(interface_482:48, ^iftype_text, $int5);
 cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
@@ -57,7 +61,11 @@ cc_setcolour(^white);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext(tostring($int1));
+if ($int1 < 65535) {
+	cc_settext(tostring($int1));
+} else {
+	cc_settext("Lots!");
+}
 cc_create(interface_482:47, ^iftype_text, $int5);
 cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
@@ -65,7 +73,11 @@ cc_setcolour(^white);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext(tostring($int2));
+if ($int2 < 12) {
+	cc_settext(tostring($int2));
+} else {
+	cc_settext("Lots!");
+}
 cc_create(interface_482:46, ^iftype_text, $int5);
 cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);

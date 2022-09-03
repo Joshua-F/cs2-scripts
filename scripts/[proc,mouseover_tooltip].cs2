@@ -34,12 +34,14 @@ if (%varbit13133 = 0 & $int3 > 1 & $int5 = 1) {
 	$int10 = 14;
 	$int9 = calc(parawidth($string1, if_getwidth($component1), p11_full) + 6);
 }
-def_string $string2 = "";
-def_string $string3 = "";
+def_string $string2 = %varcstring1014;
+def_string $string3 = %varcstring1015;
 def_string $string4 = "";
 def_string $string5 = "";
 def_string $string6 = "";
 def_string $string7 = "";
+def_string $string8 = "";
+def_string $string9 = "";
 def_int $int13 = 0;
 def_int $int14 = 0;
 def_int $int15 = 0;
@@ -49,38 +51,41 @@ def_int $int18 = 0;
 def_int $int19 = 0;
 def_int $int20 = 0;
 def_int $int21 = 0;
+if (clientclock > %varcint1) {
+	$string2, $string3 = "", "";
+}
 def_int $trans22 = 150;
 if ($int6 = 1 & string_length(%varcstring1014) > 0) {
 	if (string_length(%varcstring1015) > 0) {
-		$string4, $string6 = ~script632(%varcstring1014);
-		$string5, $string7 = ~script632(%varcstring1015);
-		$int13 = string_length($string4);
-		$int14 = string_length($string5);
+		$string6, $string8 = ~script632($string2);
+		$string7, $string9 = ~script632($string3);
+		$int13 = string_length($string6);
+		$int14 = string_length($string7);
 		while ($int13 > 0 | $int14 > 0) {
 			if ($int13 > 0) {
-				$int15 = parawidth($string4, ^max_32bit_int, p12_full);
+				$int15 = parawidth($string6, ^max_32bit_int, p12_full);
 			} else {
 				$int15 = 0;
 			}
 			if ($int14 > 0) {
-				$int16 = parawidth($string5, ^max_32bit_int, p12_full);
+				$int16 = parawidth($string7, ^max_32bit_int, p12_full);
 			} else {
 				$int16 = 0;
 			}
 			$int18 = ~max($int18, calc($int15 + $int16 + 2));
 			if ($int17 > 0) {
-				$string2 = "<$string2><br><$string4>";
-				$string3 = "<$string3><br><$string5>";
+				$string4 = "<$string4><br><$string6>";
+				$string5 = "<$string5><br><$string7>";
 			} else {
-				$string2 = "<$string2><$string4>";
-				$string3 = "<$string3><$string5>";
+				$string4 = "<$string4><$string6>";
+				$string5 = "<$string5><$string7>";
 			}
 			$int17 = calc($int17 + 1);
-			if (string_length($string6) > 0 | string_length($string7) > 0) {
-				$string4, $string6 = ~script632($string6);
-				$string5, $string7 = ~script632($string7);
-				$int13 = string_length($string4);
-				$int14 = string_length($string5);
+			if (string_length($string8) > 0 | string_length($string9) > 0) {
+				$string6, $string8 = ~script632($string8);
+				$string7, $string9 = ~script632($string9);
+				$int13 = string_length($string6);
+				$int14 = string_length($string7);
 			} else {
 				$int13, $int14 = 0, 0;
 			}
@@ -88,9 +93,9 @@ if ($int6 = 1 & string_length(%varcstring1014) > 0) {
 		$int18 = calc($int18 + 6);
 		$int19 = calc($int17 * 16 + 6);
 	} else {
-		$string2 = %varcstring1014;
-		$int19 = calc(paraheight($string2, 194, p12_full) * 14 + 6);
-		$int18 = calc(parawidth($string2, 194, p12_full) + 6);
+		$string4 = $string2;
+		$int19 = calc(paraheight($string4, 194, p12_full) * 14 + 6);
+		$int18 = calc(parawidth($string4, 194, p12_full) + 6);
 	}
 	$trans22 = 64;
 }
@@ -141,7 +146,7 @@ if ($int5 = 1) {
 	$int0 = calc($int0 + 1);
 	$int25 = calc($int25 + $int8 - 1);
 }
-if (string_length($string2) > 0) {
+if (string_length($string4) > 0) {
 	cc_create($component1, ^iftype_rectangle, $int0);
 	cc_setposition($int24, $int25, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int23, $int19, ^setsize_abs, ^setsize_abs);
@@ -163,14 +168,14 @@ if (string_length($string2) > 0) {
 	cc_settiling(true);
 	cc_settrans($trans22);
 	$int0 = calc($int0 + 1);
-	if (string_length($string3) > 0) {
+	if (string_length($string5) > 0) {
 		cc_create($component1, ^iftype_text, $int0);
 		cc_setsize(calc($int23 - 6), calc($int19 - 6), ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int24 + 3), calc($int25 + 3), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 16);
-		cc_settext($string2);
+		cc_settext($string4);
 		cc_setcolour(^white);
 		$int0 = calc($int0 + 1);
 		cc_create($component1, ^iftype_text, $int0);
@@ -179,7 +184,7 @@ if (string_length($string2) > 0) {
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_right, ^settextalign_centre, 16);
-		cc_settext($string3);
+		cc_settext($string5);
 		cc_setcolour(^white);
 		$int0 = calc($int0 + 1);
 	} else {
@@ -189,7 +194,7 @@ if (string_length($string2) > 0) {
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-		cc_settext($string2);
+		cc_settext($string4);
 		cc_setcolour(^white);
 		$int0 = calc($int0 + 1);
 	}

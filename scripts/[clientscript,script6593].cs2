@@ -1,9 +1,9 @@
 // 6593
-[clientscript,script6593](component $component0, int $comsubid1, component $component2, string $string0, int $int3)
+[clientscript,script6593](component $component0, int $int1, component $component2, string $string0, int $int3)
 if (%varcint1085 = 1) {
 	~deltooltip_action($component2);
 	%varcint1085 = 0;
 	return;
 }
-~tooltip_build($component0, $comsubid1, $component2, $string0, 512);
+~tooltip_build($component0, $int1, $component2, $string0, 512);
 %varcint1085 = 1;

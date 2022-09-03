@@ -2,7 +2,7 @@
 [proc,skill_guide_data](int $int0, int $int1, int $int2)(int, namedobj, string)
 switch_int ($int0) {
 	case 1 :
-		return(~script6550($int1, $int2));
+		return(~skill_guide_data_attack($int1, $int2));
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
@@ -671,7 +671,7 @@ switch_int ($int0) {
 		}
 		return(-1, null, "");
 	case 8 :
-		return(~script6552($int1, $int2));
+		return(~skill_guide_data_agility($int1, $int2));
 	case 9 :
 		switch_int ($int1) {
 			case 0 :
@@ -1924,7 +1924,7 @@ switch_int ($int0) {
 		}
 		return(-1, null, "");
 	case 14 :
-		return(~script6554($int1, $int2));
+		return(~skill_guide_data_smithing($int1, $int2));
 	case 15 :
 		if ($int1 = 0) {
 			if ($int2 = 0) {

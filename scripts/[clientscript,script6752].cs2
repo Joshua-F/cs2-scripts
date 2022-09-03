@@ -1,9 +1,9 @@
 // 6752
-[clientscript,script6752](struct $struct0, boolean $boolean1, int $int2, int $comsubid3, int $comsubid4, component $component5, component $component6, int $clock7)
+[clientscript,script6752](struct $struct0, boolean $boolean1, int $int2, int $comsubid3, int $int4, component $component5, component $component6, int $clock7)
 if (clientclock = $clock7) {
 	return;
 }
-if ($int2 = 2 & cc_find($component5, $comsubid3) = ^true & .cc_find($component5, $comsubid4) = ^true) {
+if ($int2 = 2 & cc_find($component5, $comsubid3) = ^true & .cc_find($component5, $int4) = ^true) {
 	cc_settrans(0);
 	cc_setgraphic(struct_param($struct0, param_1297));
 	.cc_setcolour(^white);
@@ -22,4 +22,4 @@ if ($int8 < 0) {
 } else if ($int8 > 0) {
 	$string0 = "<$string0> Increases Raid Level by <tostring($int8)>.";
 }
-~tooltip_mouserepeat($component5, $comsubid4, $component6, $string0, 25, 256);
+~tooltip_mouserepeat($component5, $int4, $component6, $string0, 25, 256);

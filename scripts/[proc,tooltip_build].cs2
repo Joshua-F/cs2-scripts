@@ -1,7 +1,7 @@
 // 2701
-[proc,tooltip_build](component $component0, int $comsubid1, component $component2, string $string0, int $width3)
+[proc,tooltip_build](component $component0, int $int1, component $component2, string $string0, int $width3)
 if (~on_enhanced_any = 1) {
-	~mouseover_tooltip_setup($string0, "", mouse_getx, mouse_gety);
+	~mouseover_tooltip_setup($string0, "", mouse_getx, mouse_gety, $component2, $component0, $int1, 1);
 	return;
 }
 def_component $layer4 = if_getlayer($component2);
@@ -13,7 +13,7 @@ if_setsize(calc(4 + parawidth($string0, $width3, p12_full)), calc(7 + 12 * parah
 def_int $int5 = if_getx($component0);
 def_int $int6 = if_gety($component0);
 def_int $int7 = 0;
-if ($comsubid1 ! -1 & cc_find($component0, $comsubid1) = ^true) {
+if ($int1 ! -1 & cc_find($component0, $int1) = ^true) {
 	$int5, $int6, $int7 = calc($int5 + cc_getx - if_getscrollx($component0)), calc($int6 + cc_gety - if_getscrolly($component0)), cc_getheight;
 } else {
 	$int7 = if_getheight($component0);

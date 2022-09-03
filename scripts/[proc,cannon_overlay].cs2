@@ -8,6 +8,6 @@ if (%var3551 ! $coord0) {
 }
 def_newvar $newvar1 = _7204(~centre_inner(3, $coord0), 6, 1, calc(36 * 2 + 6), calc(32 + 10), 0);
 if (_202($newvar1) = ^true) {
-	cc_setonvartransmit("script6675($newvar1, %varbit14174, %varbit13672, %var3551, $coord0){var3417, var2903, var3551}");
+	cc_setonvartransmit("cannon_overlay_transmit($newvar1, %varbit14174, %varbit13672, %var3551, $coord0){var3417, var2903, var3551}");
 }
 ~cannon_overlay_create($newvar1, $coord0);

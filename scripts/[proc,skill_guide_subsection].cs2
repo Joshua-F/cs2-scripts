@@ -2,7 +2,7 @@
 [proc,skill_guide_subsection](int $int0, int $int1)(string, int)
 switch_int ($int0) {
 	case 1 :
-		return(~script6549($int1));
+		return(~skill_guide_subsection_attack($int1));
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
@@ -59,7 +59,7 @@ switch_int ($int0) {
 		}
 		return("", -1);
 	case 8 :
-		return(~script6551($int1));
+		return(~skill_guide_subsection_agility($int1));
 	case 9 :
 		if ($int1 = 0) {
 			return("Potions", 1);
@@ -149,7 +149,7 @@ switch_int ($int0) {
 		}
 		return("", -1);
 	case 14 :
-		return(~script6553($int1));
+		return(~skill_guide_subsection_smithing($int1));
 	case 15 :
 		if ($int1 = 0) {
 			return("Small Net", 0);
