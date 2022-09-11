@@ -6606,7 +6606,7 @@
 [**6606**](scripts/[proc,toa_partylist_setsort].cs2) `[proc,toa_partylist_setsort]`  
 [**6607**](scripts/[proc,toa_partylist_sortbutton_draw].cs2) `[proc,toa_partylist_sortbutton_draw]`  
 [**6608**](scripts/[clientscript,toa_partylist_clicksort].cs2) `[clientscript,toa_partylist_clicksort]`  
-[**6609**](scripts/[clientscript,script6609].cs2)  
+[**6609**](scripts/[clientscript,toa_invocations_init].cs2) `[clientscript,toa_invocations_init]`  
 [**6610**](scripts/[proc,script6610].cs2)  
 [**6611**](scripts/[clientscript,script6611].cs2)  
 [**6612**](scripts/[clientscript,script6612].cs2)  
@@ -6730,7 +6730,7 @@
 [**6730**](scripts/[proc,script6730].cs2)  
 [**6731**](scripts/[proc,script6731].cs2)  
 [**6732**](scripts/[clientscript,script6732].cs2)  
-[**6733**](scripts/[proc,script6733].cs2)  
+[**6733**](scripts/[proc,toa_invocations_layout_setup].cs2) `[proc,toa_invocations_layout_setup]`  
 [**6734**](scripts/[clientscript,script6734].cs2)  
 [**6735**](scripts/[proc,toa_partydetails_cleartabs].cs2) `[proc,toa_partydetails_cleartabs]`  
 [**6736**](scripts/[proc,script6736].cs2)  
