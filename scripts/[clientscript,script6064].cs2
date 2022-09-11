@@ -1,0 +1,6 @@
+// 6064
+[clientscript,script6064](component $component0, int $clock1)
+if (clientclock = $clock1) {
+	return;
+}
+~deltooltip_action($component0);

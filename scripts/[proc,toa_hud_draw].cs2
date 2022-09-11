@@ -59,7 +59,9 @@ switch_int (%varbit14381) {
 		if_sethide(true, $component2);
 		if_sethide(true, $component3);
 }
-if ($int31 = 0) {
+if (%varbit14381 = 5 | %varbit14381 = 6) {
+	if_setsize(120, 43, ^setsize_abs, ^setsize_abs, $component29);
+} else if ($int31 = 0) {
 	if_setsize(120, 70, ^setsize_abs, ^setsize_abs, $component29);
 } else {
 	if_setsize(120, 95, ^setsize_abs, ^setsize_abs, $component29);

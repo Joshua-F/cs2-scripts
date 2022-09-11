@@ -1,0 +1,6 @@
+// 3092
+[clientscript,script3092](string $string0, int $int0, component $component1, component $component2, int $clock3)
+if (clientclock = $clock3) {
+	return;
+}
+~tooltip_mouserepeat($component1, $int0, $component2, $string0, 25, 256);

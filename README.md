@@ -3092,6 +3092,7 @@
 [**3089**](scripts/[clientscript,br_reward_shop_select].cs2) `[clientscript,br_reward_shop_select]`  
 [**3090**](scripts/[clientscript,br_reward_shop_refuse].cs2) `[clientscript,br_reward_shop_refuse]`  
 [**3091**](scripts/[clientscript,script3091].cs2)  
+[**3092**](scripts/[clientscript,script3092].cs2)  
 [**3093**](scripts/[clientscript,canoe_init].cs2) `[clientscript,canoe_init]`  
 [**3094**](scripts/[clientscript,canoe_remake].cs2) `[clientscript,canoe_remake]`  
 [**3095**](scripts/[proc,canoe_setup].cs2) `[proc,canoe_setup]`  
@@ -6063,6 +6064,7 @@
 [**6061**](scripts/[proc,script6061].cs2)  
 [**6062**](scripts/[clientscript,setscreensize].cs2) `[clientscript,setscreensize]`  
 [**6063**](scripts/[clientscript,script6063].cs2)  
+[**6064**](scripts/[clientscript,script6064].cs2)  
 [**6066**](scripts/[proc,script6066].cs2)  
 [**6067**](scripts/[clientscript,script6067].cs2)  
 [**6068**](scripts/[proc,script6068].cs2)  
