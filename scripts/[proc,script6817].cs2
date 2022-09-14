@@ -1,0 +1,9 @@
+// 6817
+[proc,script6817](component $component0)
+def_string $string0 = ~tostring_spacer(%var101, ",");
+if (~speedrunning_world = 1) {
+	$string0 = ~tostring_spacer(~min(%var3365, 800000), ",");
+	if_settext("Speedrun Points: <$string0>", $component0);
+} else {
+	if_settext("Total Quest Points: <$string0>", $component0);
+}

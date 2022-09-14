@@ -1,0 +1,8 @@
+// 6818
+[proc,script6818](component $component0)
+def_string $string0 = ~tostring_spacer(~speedrunning_total_trophies, ",");
+if (~speedrunning_world = 1) {
+	if_settext("Speedrun Trophies: <$string0>", $component0);
+} else {
+	if_settext("", $component0);
+}

@@ -20,4 +20,6 @@ if ($int2 = 1) {
 	if_setop(8, "", interface_711:4);
 }
 if_setonvartransmit(null, interface_711:4);
-_2433(null, interface_711:4);
+if (~on_enhanced_any = 1) {
+	_2433(null, interface_711:4);
+}

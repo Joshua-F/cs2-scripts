@@ -1,11 +1,20 @@
 // 6733
-[proc,toa_invocations_layout_setup](int $int0)
+[proc,toa_invocations_layout_setup](int $int0, int $int1)
 if ($int0 = 1) {
 	if_sethide(false, interface_774:57);
-	if_setsize(307, 2, ^setsize_abs, ^setsize_minus, interface_774:49);
+	if ($int1 = 1) {
+		if_sethide(true, interface_774:75);
+		if_sethide(false, interface_774:76);
+	} else {
+		if_sethide(false, interface_774:75);
+		if_sethide(true, interface_774:76);
+	}
+	if_setsize(306, 2, ^setsize_abs, ^setsize_minus, interface_774:49);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, interface_774:49);
 } else {
 	if_sethide(true, interface_774:57);
+	if_sethide(true, interface_774:75);
+	if_sethide(true, interface_774:76);
 	if_setsize(464, 2, ^setsize_abs, ^setsize_minus, interface_774:49);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, interface_774:49);
 }

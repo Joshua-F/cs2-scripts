@@ -1,0 +1,249 @@
+// 6822
+[proc,script6822](dbrow $dbrow0, string $string0, component $component1, component $component2, component $component3, int $int4)
+%varcint52 = $int4;
+cc_deleteall($component1);
+def_string $string1 = "quest";
+if (db_getfield($dbrow0, quest:type, 0) = 1) {
+	$string1 = "miniquest";
+}
+def_int $int5 = ~quest_status_get($dbrow0);
+def_string $string2 = "I can start this <$string1> by ";
+if ($int5 ! 1) {
+	$string2 = "I started this <$string1> by ";
+}
+$string2 = "<$string2><$string0>";
+def_string $text3 = enum(int, string, enum_2094, db_getfield($dbrow0, quest:difficulty, 0));
+def_string $text4 = enum(int, string, enum_2095, db_getfield($dbrow0, quest:length, 0));
+def_string $text5 = enum(int, string, enum_2097, db_getfield($dbrow0, quest:storyline, 0));
+def_boolean $boolean6 = false;
+def_string $string6 = "";
+$boolean6, $string6 = db_getfield($dbrow0, quest:12, 0);
+if (db_getfield($dbrow0, quest:storyline, 0) >= 0) {
+	if ($boolean6 = true) {
+		if (string_length($string6) > 0) {
+			$text5 = "<$text5> #<$string6>";
+		}
+	} else {
+		$text5 = "<$text5> #<tostring(db_getfield($dbrow0, quest:storyindex, 0))>";
+	}
+}
+def_string $text7 = "Unknown Year";
+if (db_getfield($dbrow0, quest:year, 0) >= 2001) {
+	$text7 = tostring(db_getfield($dbrow0, quest:year, 0));
+}
+def_string $string8 = "";
+def_string $string9 = "";
+$string8, $string9 = ~script6825($dbrow0, $component1);
+def_string $string10 = ~script6828($dbrow0);
+def_int $int7 = 0;
+def_int $height8 = 0;
+def_int $int9 = 0;
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+$int9 = calc(paraheight($string2, if_getwidth($component1) - 10, p12_full) * 20);
+cc_setsize(10, $int9, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0x000080);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext($string2);
+$height8 = calc($height8 + $int9);
+def_string $string11 = "";
+def_coord $coord10 = db_getfield($dbrow0, quest:mapcoord, 0);
+if ($coord10 ! null & $coord10 ! 0_0_0_0_0) {
+	cc_create($component1, ^iftype_text, $int7);
+	$int7 = calc($int7 + 1);
+	$height8 = calc($height8 - 4);
+	cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+	$int9 = 25;
+	cc_setsize(122, $int9, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0x0000c8);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
+	cc_settextfont(p12_full);
+	cc_settextshadow(false);
+	$string11 = "Show on Map";
+	cc_settext($string11);
+	cc_setop(1, $string11);
+	cc_setonop("script6823(event_com, event_comsubid, event_opindex, 4145151, 200, $string11)");
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, 0x3f3fff)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x0000c8)");
+	}
+	$height8 = calc($height8 + $int9 + 4);
+} else {
+	$height8 = calc($height8 + 5);
+}
+cc_create($component1, ^iftype_line, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(2, 0, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0x33281a);
+$height8 = calc($height8 + 10);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(3, $height8, ^setpos_abs_left, ^setpos_abs_top);
+$int9 = 20;
+cc_setsize(calc(if_getwidth($component1) / 2), $int9, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x000080);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext("Difficulty:");
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(3, $height8, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(calc(if_getwidth($component1) / 2), $int9, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x000080);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext("Length:");
+$height8 = calc($height8 + $int9);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(3, $height8, ^setpos_abs_left, ^setpos_abs_top);
+$int9 = 20;
+cc_setsize(calc(if_getwidth($component1) / 2), $int9, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x800000);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext($text3);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(3, $height8, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(calc(if_getwidth($component1) / 2), $int9, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x800000);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext($text4);
+$height8 = calc($height8 + $int9 + 6);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(3, $height8, ^setpos_abs_left, ^setpos_abs_top);
+$int9 = 20;
+cc_setsize(calc(if_getwidth($component1) / 2), $int9, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x000080);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext("Storyline:");
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(3, $height8, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(calc(if_getwidth($component1) / 2), $int9, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x000080);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext("Release Year:");
+$height8 = calc($height8 + $int9);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(3, $height8, ^setpos_abs_left, ^setpos_abs_top);
+$int9 = 20;
+cc_setsize(calc(if_getwidth($component1) / 2), $int9, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x800000);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext($text5);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(3, $height8, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(calc(if_getwidth($component1) / 2), $int9, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x800000);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext($text7);
+$height8 = calc($height8 + $int9 + 5);
+cc_create($component1, ^iftype_line, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(2, 0, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0x33281a);
+$height8 = calc($height8 + 10);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+$int9 = 20;
+cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0x000080);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+if (string_length($string9) <= 0) {
+	cc_settext("Requirements:");
+} else {
+	cc_settext("Quest Requirements:");
+}
+$height8 = calc($height8 + $int9);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+$int9 = calc(paraheight($string8, if_getwidth($component1), p12_full) * 20);
+cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^black);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext($string8);
+$height8 = calc($height8 + $int9 + 6);
+if (string_length($string9) > 0) {
+	cc_create($component1, ^iftype_text, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+	$int9 = 20;
+	cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(0x000080);
+	cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+	cc_settextfont(p12_full);
+	cc_settextshadow(false);
+	cc_settext("Skill Requirements:");
+	$height8 = calc($height8 + $int9);
+	cc_create($component1, ^iftype_text, $int7);
+	$int7 = calc($int7 + 1);
+	cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+	$int9 = calc(paraheight($string9, if_getwidth($component1), p12_full) * 20);
+	cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(^black);
+	cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+	cc_settextfont(p12_full);
+	cc_settextshadow(false);
+	cc_settext($string9);
+	$height8 = calc($height8 + $int9 + 6);
+}
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+$int9 = 20;
+cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0x000080);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext("Recommendations:");
+$height8 = calc($height8 + $int9);
+cc_create($component1, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+$int9 = calc(paraheight($string10, if_getwidth($component1), p12_full) * 20);
+cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^black);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext($string10);
+$height8 = calc($height8 + $int9);
+if_setsize(10, $height8, ^setsize_minus, ^setsize_abs, $component1);
+def_int $height11 = if_getheight($component2);
+if_setscrollpos(0, 0, $component2);
+if ($height8 <= $height11) {
+	if_setscrollsize(0, 0, $component2);
+} else {
+	if_setscrollsize(0, $height8, $component2);
+}
+~scrollbar_vertical($component3, $component2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

@@ -1,15 +1,20 @@
 // 6732
-[clientscript,script6732](int $opindex0, component $component1, string $string0, int $int2, int $int3, int $int4, int $int5)
+[clientscript,script6732](int $opindex0, component $component1, string $string0, component $component2, string $string1, int $int3, int $int4, int $int5, int $int6)
 sound_synth(interface_select1, 1, 0);
-if (%varcint1086 ! 1) {
-	%varcint1086 = 1;
+if (%varcint1086 = 0) {
+	%varcint1086 = 2;
 } else {
 	%varcint1086 = 0;
 }
-if (%varcint1086 ! 1) {
-	~toa_invocations_layout_setup(1);
+if (%varcint1086 = 0) {
+	~toa_invocations_layout_setup(1, 0);
+} else if (%varcint1086 = 1) {
+	~toa_invocations_layout_setup(1, 0);
 } else {
-	~toa_invocations_layout_setup(0);
+	~toa_invocations_layout_setup(0, 0);
 }
-~script6749(interface_774:52, interface_774:51, $int2, $int3, $int4, $int5, interface_774:68);
-~script6731($component1, $string0, $int2, $int3, $int4, $int5);
+~script6749(interface_774:52, interface_774:51, $int3, $int4, $int5, $int6, interface_774:68);
+~script6731($component1, $string0, $component2, $string1, $int3, $int4, $int5, $int6);
+if ($component2 ! null) {
+	~script350($component2, $string1, $component1, $string0, $int3, $int4, $int5, $int6);
+}

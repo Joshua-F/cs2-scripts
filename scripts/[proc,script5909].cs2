@@ -32,15 +32,30 @@ while ($int12 < $int11) {
 	$int6, $int5 = ~script5912($component1, $int6, $int5, db_getfield($dbrow10, quest:displayname, 0));
 	$int12 = calc($int12 + 1);
 }
-def_int $int13 = ~max(db_getfield(%var3373, quest:comlevelreq, 0), db_getfield(%var3373, quest:comlevelrec, 0));
-def_int $int14 = ~minmax(3, 99, scale(4, 5, $int13));
-def_int $int15 = calc($int14 % 5);
-if ($int15 < 3) {
-	$int14 = calc($int14 - $int15);
-} else {
-	$int14 = calc($int14 + (5 - $int15));
+$int11 = db_getfieldcount(%var3373, quest:speedrunning_quest);
+$int12 = 0;
+while ($int12 < $int11) {
+	$int9 = 1;
+	$dbrow10 = db_getfield(%var3373, quest:speedrunning_quest, $int12);
+	$int6, $int5 = ~script5912($component1, $int6, $int5, db_getfield($dbrow10, quest:displayname, 0));
+	$int12 = calc($int12 + 1);
 }
-$int14 = ~minmax(20, 99, calc($int14 + 10));
+def_int $int13 = ~max(db_getfield(%var3373, quest:comlevelreq, 0), db_getfield(%var3373, quest:comlevelrec, 0));
+def_int $int14 = ~minmax(3, 99, calc(scale(4, 5, $int13) + 15));
+if (db_getfield(%var3373, quest:34, 0) > 1) {
+	$int14 = db_getfield(%var3373, quest:34, 0);
+}
+def_int $int15 = calc($int14 % 5);
+if ($int13 > 3 | db_getfield(%var3373, quest:34, 0) > 1) {
+	if ($int15 < 3) {
+		$int14 = calc($int14 - $int15);
+	} else {
+		$int14 = calc($int14 + (5 - $int15));
+	}
+	$int14 = ~minmax(1, 99, $int14);
+} else {
+	$int14 = 1;
+}
 def_stat $stat16 = null;
 def_int $int17 = 1;
 def_int $int18 = db_getfieldcount(%var3373, quest:statreq);
@@ -53,8 +68,31 @@ while ($int12 < $int18) {
 	}
 	$int12 = calc($int12 + 1);
 }
-if ($int14 > 20) {
+$int18 = db_getfieldcount(%var3373, quest:statrec);
+$int12 = 0;
+while ($int12 < $int18) {
+	$stat16, $int17 = db_getfield(%var3373, quest:statrec, $int12);
+	$stat16, $int17 = ~script5994(%var3373, $stat16, $int17, $int14);
+	if ($stat16 ! null & $int17 > 1) {
+		$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int17)> <enum(stat, string, enum_680, $stat16)>");
+	}
+	$int12 = calc($int12 + 1);
+}
+$int18 = db_getfieldcount(%var3373, quest:speedrunning_stat);
+$int12 = 0;
+while ($int12 < $int18) {
+	$stat16, $int17 = db_getfield(%var3373, quest:speedrunning_stat, $int12);
+	$stat16, $int17 = ~script6809(%var3373, $stat16, $int17, $int14);
+	if ($stat16 ! null & $int17 > 1) {
+		$int6, $int5 = ~script5912($component1, $int6, $int5, "<tostring($int17)> <enum(stat, string, enum_680, $stat16)>");
+	}
+	$int12 = calc($int12 + 1);
+}
+if ($int14 > 1) {
 	$int6, $int5 = ~script5912($component1, $int6, $int5, "Level <tostring($int14)> in all combat stats");
+}
+if (db_getfield(%var3373, quest:35, 0) > 0) {
+	$int6, $int5 = ~script5912($component1, $int6, $int5, "<enum(int, string, enum_252, db_getfield(%var3373, quest:35, 0))> Player Owned House");
 }
 $int6, $int5 = ~speedrunning_misc_unlocks(%var3373, $component1, $int6, $int5);
 if ($int9 = 1) {
@@ -82,7 +120,7 @@ $int6, $int5 = ~script5910($component3, %var3373, inv, $int6, $int5);
 if ($int5 = 23) {
 	$int6, $int5 = ~script5912($component3, $int6, $int5, "None");
 }
-if (db_getfieldcount(%var3373, quest:speedrunning_bank) > 0) {
+if (~script6808(%var3373, bank) > 0) {
 	$int5 = calc($int5 + 3);
 	cc_create($component3, ^iftype_text, $int6);
 	cc_setsize(6, 20, ^setsize_minus, ^setsize_abs);

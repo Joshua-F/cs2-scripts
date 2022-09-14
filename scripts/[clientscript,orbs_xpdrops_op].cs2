@@ -3,9 +3,6 @@
 if ($opindex0 ! 1) {
 	return;
 }
-if (~speedrunning_world = 1) {
-	return;
-}
 sound_synth(interface_select1, 1, 0);
 %varbit4702 = $int2;
 ~orbs_xpdrops_update($component1);

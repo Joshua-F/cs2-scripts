@@ -9,10 +9,10 @@ def_int $count12 = enum_getoutputcount(enum_4664);
 def_int $int13 = 4;
 def_int $int14 = 111;
 def_int $int15 = 6;
-if (%varcint1086 ! 1) {
+if (%varcint1086 = 0 | %varcint1086 = 1) {
 	$int13 = 3;
 	$int14 = 96;
-	$int15 = 5;
+	$int15 = 4;
 }
 cc_deleteall($component0);
 while ($count7 < $count12) {

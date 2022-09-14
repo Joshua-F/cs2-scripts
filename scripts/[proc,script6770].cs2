@@ -1,7 +1,7 @@
 // 6770
 [proc,script6770](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5, component $component6)
-if_settext(tostring($int4), interface_774:77);
-if_settext(tostring($int5), interface_774:79);
+if_settext(tostring($int4), interface_774:90);
+if_settext(tostring($int5), interface_774:92);
 if_setop(1, "", $component0);
 if_setopbase("", $component0);
 def_int $int7 = 0;
@@ -79,7 +79,7 @@ if_setonmouseleave("cc_settrans(event_com, cc_getid, 50, null)", $component3);
 if_setonop("opsound(event_opindex, 2)", $component3);
 if_setop(1, "Rewards Info", $component3);
 def_int $int14 = 1;
-def_int $int15 = 0;
+def_int $int15 = 2;
 def_int $int16 = 4;
 def_int $count17 = 0;
 def_int $count18 = enum_getoutputcount(enum_4683);

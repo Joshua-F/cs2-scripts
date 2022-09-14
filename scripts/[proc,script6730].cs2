@@ -11,6 +11,10 @@ def_string $string3 = "";
 def_string $string4 = "";
 def_int $int10 = 0;
 def_int $int11 = 0;
+def_component $component12 = null;
+def_string $string5 = "";
+def_component $component13 = null;
+def_string $string6 = "";
 if ($int0 = 2) {
 	if ($int1 = 2) {
 		$component6 = interface_774:62;
@@ -18,15 +22,18 @@ if ($int0 = 2) {
 		$component7 = interface_774:69;
 		$string1 = "Clear All";
 		$component8 = interface_774:71;
-		$string2 = "Preset";
+		$string2 = "Presets";
+		$component12, $string5 = $component8, $string2;
 		$component9 = interface_774:70;
 		$string3 = "Rewards";
+		$component13, $string6 = $component9, $string3;
 		$int10 = 4;
 	} else {
 		$component6 = interface_774:62;
 		$string0 = "Refresh";
 		$component7 = interface_774:70;
 		$string1 = "Rewards";
+		$component13, $string6 = $component7, $string1;
 		$component8, $string2 = null, "";
 		$component9, $string3 = null, "";
 		$int10 = 2;
@@ -74,77 +81,85 @@ if_sethide(true, interface_774:69);
 if_sethide(true, interface_774:71);
 if_sethide(true, interface_774:70);
 if_sethide(true, interface_774:62);
-def_int $int12 = 4;
-def_int $int13 = 0;
-def_int $int14 = calc((318 - $int10 * $int12) / $int10);
+def_int $int14 = 4;
+def_int $int15 = 0;
+def_int $int16 = calc((318 - $int10 * $int14) / $int10);
 if ($int11 = 1) {
-	$int13 = calc(120 - $int14);
-	$int14 = calc((318 - $int13 - $int10 * $int12) / $int10);
+	$int15 = calc(120 - $int16);
+	$int16 = calc((318 - $int15 - $int10 * $int14) / $int10);
 }
-def_int $height15 = 32;
-def_int $int16 = 0;
-def_int $y17 = 2;
+def_int $height17 = 32;
+def_int $int18 = 0;
+def_int $y19 = 2;
 if ($component6 ! null) {
 	if ($component6 = interface_774:72) {
-		$int14 = calc($int14 + $int13);
+		$int16 = calc($int16 + $int15);
 	}
-	if_setsize($int14, $height15, ^setsize_abs, ^setsize_abs, $component6);
-	if_setposition($int16, $y17, ^setpos_abs_left, ^setpos_abs_top, $component6);
+	if_setsize($int16, $height17, ^setsize_abs, ^setsize_abs, $component6);
+	if_setposition($int18, $y19, ^setpos_abs_left, ^setpos_abs_top, $component6);
 	if_sethide(false, $component6);
 	if ($component6 = interface_774:72) {
 		~script6740($component6, $string0, $int2, $int1);
 	} else if ($component6 = interface_774:70) {
-		~script6731($component6, $string0, $int3, $int4, $int5, $int1);
+		~script6731($component6, $string0, $component12, $string5, $int3, $int4, $int5, $int1);
+	} else if ($component6 = interface_774:71) {
+		~script350($component6, $string0, $component13, $string6, $int3, $int4, $int5, $int1);
 	} else {
 		~script1558($component6, $string0, interface_774:1, enum_4792, -1);
 	}
-	$int16 = calc($int16 + $int14 + $int12);
+	$int18 = calc($int18 + $int16 + $int14);
 }
 if ($component7 ! null) {
 	if ($component7 = interface_774:72) {
-		$int14 = calc($int14 + $int13);
+		$int16 = calc($int16 + $int15);
 	}
-	if_setsize($int14, $height15, ^setsize_abs, ^setsize_abs, $component7);
-	if_setposition($int16, $y17, ^setpos_abs_left, ^setpos_abs_top, $component7);
+	if_setsize($int16, $height17, ^setsize_abs, ^setsize_abs, $component7);
+	if_setposition($int18, $y19, ^setpos_abs_left, ^setpos_abs_top, $component7);
 	if_sethide(false, $component7);
 	if ($component7 = interface_774:72) {
 		~script6740($component7, $string1, $int2, $int1);
 	} else if ($component7 = interface_774:70) {
-		~script6731($component7, $string1, $int3, $int4, $int5, $int1);
+		~script6731($component7, $string1, $component12, $string5, $int3, $int4, $int5, $int1);
+	} else if ($component7 = interface_774:71) {
+		~script350($component7, $string1, $component13, $string6, $int3, $int4, $int5, $int1);
 	} else {
 		~script1558($component7, $string1, interface_774:1, enum_4792, -1);
 	}
-	$int16 = calc($int16 + $int14 + $int12);
+	$int18 = calc($int18 + $int16 + $int14);
 }
 if ($component8 ! null) {
 	if ($component8 = interface_774:72) {
-		$int14 = calc($int14 + $int13);
+		$int16 = calc($int16 + $int15);
 	}
-	if_setsize($int14, $height15, ^setsize_abs, ^setsize_abs, $component8);
-	if_setposition($int16, $y17, ^setpos_abs_left, ^setpos_abs_top, $component8);
+	if_setsize($int16, $height17, ^setsize_abs, ^setsize_abs, $component8);
+	if_setposition($int18, $y19, ^setpos_abs_left, ^setpos_abs_top, $component8);
 	if_sethide(false, $component8);
 	if ($component8 = interface_774:72) {
 		~script6740($component8, $string2, $int2, $int1);
 	} else if ($component8 = interface_774:70) {
-		~script6731($component8, $string2, $int3, $int4, $int5, $int1);
+		~script6731($component8, $string2, $component12, $string5, $int3, $int4, $int5, $int1);
+	} else if ($component8 = interface_774:71) {
+		~script350($component8, $string2, $component13, $string6, $int3, $int4, $int5, $int1);
 	} else {
 		~script1558($component8, $string2, interface_774:1, enum_4792, -1);
 	}
-	$int16 = calc($int16 + $int14 + $int12);
+	$int18 = calc($int18 + $int16 + $int14);
 }
 if ($component9 ! null) {
 	if ($component9 = interface_774:72) {
-		$int14 = calc($int14 + $int13);
+		$int16 = calc($int16 + $int15);
 	}
-	if_setsize($int14, $height15, ^setsize_abs, ^setsize_abs, $component9);
-	if_setposition($int16, $y17, ^setpos_abs_left, ^setpos_abs_top, $component9);
+	if_setsize($int16, $height17, ^setsize_abs, ^setsize_abs, $component9);
+	if_setposition($int18, $y19, ^setpos_abs_left, ^setpos_abs_top, $component9);
 	if_sethide(false, $component9);
 	if ($component9 = interface_774:72) {
 		~script6740($component9, $string3, $int2, $int1);
 	} else if ($component9 = interface_774:70) {
-		~script6731($component9, $string3, $int3, $int4, $int5, $int1);
+		~script6731($component9, $string3, $component12, $string5, $int3, $int4, $int5, $int1);
+	} else if ($component9 = interface_774:71) {
+		~script350($component9, $string3, $component13, $string6, $int3, $int4, $int5, $int1);
 	} else {
 		~script1558($component9, $string3, interface_774:1, enum_4792, -1);
 	}
-	$int16 = calc($int16 + $int14 + $int12);
+	$int18 = calc($int18 + $int16 + $int14);
 }

@@ -1,0 +1,7 @@
+// 6832
+[proc,script6832](dbrow $dbrow0)(string)
+def_string $string0 = ~get_quest_name($dbrow0);
+if (~quest_is_complete($dbrow0) = 1) {
+	return("<str><$string0>");
+}
+return("<col=800000><$string0>");

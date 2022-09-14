@@ -1,0 +1,19 @@
+// 6804
+[proc,script6804](dbrow $dbrow0, int $int1)(string, int)
+def_int $int2 = ~script6805($dbrow0, 4);
+if ($int1 < $int2 & $int2 > 0) {
+	return("Platinum", $int2);
+}
+$int2 = ~script6805($dbrow0, 3);
+if ($int1 < $int2 & $int2 > 0) {
+	return("Gold", $int2);
+}
+$int2 = ~script6805($dbrow0, 2);
+if ($int1 < $int2 & $int2 > 0) {
+	return("Silver", $int2);
+}
+$int2 = ~script6805($dbrow0, 1);
+if ($int1 < $int2 & $int2 > 0) {
+	return("Bronze", $int2);
+}
+return("", 0);

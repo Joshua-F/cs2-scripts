@@ -1,32 +1,22 @@
 // 5910
 [proc,script5910](component $component0, dbrow $dbrow1, inv $inv2, int $int3, int $int4)(int, int)
 def_int $int5 = 0;
-def_int $int6 = 0;
-switch_inv ($inv2) {
-	case worn :
-		$int6 = db_getfieldcount($dbrow1, quest:speedrunning_worn);
-	case inv :
-		$int6 = db_getfieldcount($dbrow1, quest:speedrunning_inv);
-	case bank :
-		$int6 = db_getfieldcount($dbrow1, quest:speedrunning_bank);
-}
-if ($int6 <= 0) {
+def_int $int6 = db_getfieldcount($dbrow1, quest:speedrunning_obj);
+if ($inv2 = null | $int6 <= 0) {
 	return($int3, $int4);
 }
 def_namedobj $namedobj7 = null;
 def_int $int8 = 0;
+def_inv $inv9 = null;
 def_string $string0 = ",";
 while ($int5 < $int6) {
-	switch_inv ($inv2) {
-		case worn :
-			$namedobj7, $int8 = db_getfield($dbrow1, quest:speedrunning_worn, $int5);
-		case inv :
-			$namedobj7, $int8 = db_getfield($dbrow1, quest:speedrunning_inv, $int5);
-		case bank :
-			$namedobj7, $int8 = db_getfield($dbrow1, quest:speedrunning_bank, $int5);
-	}
-	if ($namedobj7 ! null & $int8 ! -1 & $int8 > 0) {
-		$int3, $int4 = ~script5912($component0, $int3, $int4, "<oc_name($namedobj7)> x <~tostring_spacer($int8, $string0)>");
+	$inv9, $namedobj7, $int8 = db_getfield($dbrow1, quest:speedrunning_obj, $int5);
+	if ($inv9 ! null & $inv9 = $inv2 & $namedobj7 ! null & $int8 ! -1 & $int8 > 0) {
+		if ($int8 = 1) {
+			$int3, $int4 = ~script5912($component0, $int3, $int4, oc_name($namedobj7));
+		} else {
+			$int3, $int4 = ~script5912($component0, $int3, $int4, "<oc_name($namedobj7)> x <~tostring_spacer($int8, $string0)>");
+		}
 	}
 	$int5 = calc($int5 + 1);
 }

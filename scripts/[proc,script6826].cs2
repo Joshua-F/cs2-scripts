@@ -1,0 +1,18 @@
+// 6826
+[proc,script6826](string $string0, dbrow $dbrow0)(string)
+$string0 = ~script6837($string0, $dbrow0, 1);
+def_dbrow $dbrow1 = null;
+def_int $int2 = db_getfieldcount($dbrow0, quest:questreq);
+def_int $int3 = 0;
+while ($int3 < $int2) {
+	$dbrow1 = db_getfield($dbrow0, quest:questreq, $int3);
+	if ($dbrow1 ! null) {
+		$string0 = "<$string0><~script6832($dbrow1)><br>";
+	}
+	$int3 = calc($int3 + 1);
+}
+$string0 = ~script6837($string0, $dbrow0, 0);
+if (db_getfield($dbrow0, quest:pointsreq, 0) > 0) {
+	$string0 = "<$string0><~script6835(db_getfield($dbrow0, quest:pointsreq, 0))><br>";
+}
+return($string0);

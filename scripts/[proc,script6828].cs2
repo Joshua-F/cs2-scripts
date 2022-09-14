@@ -1,0 +1,21 @@
+// 6828
+[proc,script6828](dbrow $dbrow0)(string)
+def_string $string0 = "";
+if (db_getfield($dbrow0, quest:comlevelrec, 0) > 3) {
+	$string0 = "<$string0><~script6834(db_getfield($dbrow0, quest:comlevelrec, 0))><br>";
+}
+def_stat $stat1 = null;
+def_int $lvl2 = -1;
+def_int $int3 = db_getfieldcount($dbrow0, quest:statrec);
+def_int $int4 = 0;
+while ($int4 < $int3) {
+	$stat1, $lvl2 = db_getfield($dbrow0, quest:statrec, $int4);
+	if ($stat1 ! null & $lvl2 > 1) {
+		$string0 = "<$string0><~script6833($stat1, $lvl2)><br>";
+	}
+	$int4 = calc($int4 + 1);
+}
+if (string_length($string0) <= 0) {
+	$string0 = "<col=800000>None";
+}
+return($string0);

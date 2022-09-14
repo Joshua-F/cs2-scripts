@@ -1,0 +1,15 @@
+// 350
+[proc,script350](component $component0, string $string0, component $component1, string $string1, int $int2, int $int3, int $int4, int $int5)
+if (%varcint1086 = 1) {
+	~script1560($component0, $string0, true, 0);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+} else {
+	~script1560($component0, $string0, false, 0);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script1559(event_com, $string0, true)", $component0);
+	}
+	if_setonmouseleave("script1559(event_com, $string0, false)", $component0);
+}
+if_setonop("script5895(event_opindex, $component0, $string0, $component1, $string1, $int2, $int3, $int4, $int5)", $component0);
+if_setop(1, removetags($string0), $component0);

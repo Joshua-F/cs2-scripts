@@ -1,9 +1,9 @@
 // 5890
 [proc,speedrunning_trophies_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
-~speedrunning_trophy_update($component0, db_getfield(%var3373, quest:speedrunning_bronze, 0), "speedrun_trophies,0", ~speedrunning_trophy_check(%var3373, 1));
-~speedrunning_trophy_update($component1, db_getfield(%var3373, quest:speedrunning_silver, 0), "speedrun_trophies,1", ~speedrunning_trophy_check(%var3373, 2));
-~speedrunning_trophy_update($component2, db_getfield(%var3373, quest:speedrunning_gold, 0), "speedrun_trophies,2", ~speedrunning_trophy_check(%var3373, 3));
-~speedrunning_trophy_update($component3, db_getfield(%var3373, quest:speedrunning_platinum, 0), "speedrun_trophies,3", ~speedrunning_trophy_check(%var3373, 4));
+~speedrunning_trophy_update($component0, ~script6805(%var3373, 1), "speedrun_trophies,0", ~speedrunning_trophy_check(%var3373, 1));
+~speedrunning_trophy_update($component1, ~script6805(%var3373, 2), "speedrun_trophies,1", ~speedrunning_trophy_check(%var3373, 2));
+~speedrunning_trophy_update($component2, ~script6805(%var3373, 3), "speedrun_trophies,2", ~speedrunning_trophy_check(%var3373, 3));
+~speedrunning_trophy_update($component3, ~script6805(%var3373, 4), "speedrun_trophies,3", ~speedrunning_trophy_check(%var3373, 4));
 def_string $string0 = ",";
 if_settext(~tostring_spacer(~speedrunning_total_trophies, $string0), $component4);
 if_settext(~tostring_spacer(~min(%varbit13632, 60000), $string0), $component5);

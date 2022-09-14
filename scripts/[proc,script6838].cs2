@@ -1,0 +1,29 @@
+// 6838
+[proc,script6838](string $string0, dbrow $dbrow0)(string)
+switch_dbrow ($dbrow0) {
+	case dbrow_143 :
+		$string0 = "<$string0><~script6836(%varbit4894, 200, "20% Shayzien Favour")><br>";
+	case dbrow_3 :
+		$string0 = "<$string0><~script6836(%varbit4896, 200, "20% Arceuus Favour")><br>";
+	case dbrow_54 :
+		$string0 = "<$string0><~script6836(%varbit4898, 200, "20% Lovakengj Favour")><br>";
+	case dbrow_113 :
+		$string0 = "<$string0><~script6836(%varbit4899, 200, "20% Piscarilius Favour")><br>";
+	case dbrow_26 :
+		$string0 = "<$string0><~script6836(%varbit4895, 200, "20% Hosidius Favour")><br>";
+	case dbrow_11 :
+		$string0 = "<$string0><~script6836(%varbit3637, 100, "100 Museum Kudos")><br>";
+	case dbrow_102 :
+		$string0 = "<$string0><~script6836(%varbit888, 1, "Tai Bwo Wannai Cleanup Started")><br>";
+	case dbrow_2 :
+		$string0 = "<$string0><~script6836(%varbit4894, 1000, "100% Shayzien Favour")><br>";
+		$string0 = "<$string0><~script6836(%varbit4896, 1000, "100% Arceuus Favour")><br>";
+		$string0 = "<$string0><~script6836(%varbit4898, 1000, "100% Lovakengj Favour")><br>";
+		$string0 = "<$string0><~script6836(%varbit4899, 1000, "100% Piscarilius Favour")><br>";
+		$string0 = "<$string0><~script6836(%varbit4895, 1000, "100% Hosidius Favour")><br>";
+	case dbrow_90 :
+		$string0 = "<$string0><~script6836(%var269, 1000, "Claws of Guthix Unlocked")><br>";
+		$string0 = "<$string0><~script6836(%var268, 1000, "Saradomin Strike Unlocked")><br>";
+		$string0 = "<$string0><~script6836(%var270, 1000, "Flames of Zamorak Unlocked")><br>";
+}
+return($string0);

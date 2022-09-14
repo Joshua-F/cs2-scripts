@@ -35,6 +35,10 @@ switch_dbrow ($dbrow0) {
 		if (%varbit12149 = 1 & ~quest_is_complete(dbrow_162) = 0) {
 			return(0);
 		}
+	case dbrow_81 :
+		if (%varbit12149 <= 0 & ~quest_is_complete(dbrow_162) = 0) {
+			return(0);
+		}
 	case dbrow_11 :
 		if (%varbit3637 < 100) {
 			return(0);
@@ -43,6 +47,10 @@ switch_dbrow ($dbrow0) {
 		if (%varbit2870 < 1) {
 			return(0);
 		} else if (%varbit1914 < 50) {
+			return(0);
+		}
+	case dbrow_102 :
+		if (%varbit888 < 1) {
 			return(0);
 		}
 	case dbrow_67 :

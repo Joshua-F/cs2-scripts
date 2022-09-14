@@ -1,0 +1,106 @@
+// 6839
+[proc,script6839]
+def_component $component0 = interface_774:77;
+def_component $component1 = interface_774:80;
+def_component $component2 = interface_774:81;
+def_component $component3 = interface_774:97;
+def_component $component4 = interface_774:99;
+def_component $component5 = interface_774:82;
+def_component $component6 = interface_774:98;
+def_component $component7 = interface_774:100;
+def_component $component8 = interface_774:83;
+def_component $component9 = interface_774:84;
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+cc_deleteall($component7);
+def_int $int10 = 0;
+def_int $colour11 = 0xff981f;
+def_int $int12 = 5;
+def_int $int13 = 0;
+def_int $int14 = 5;
+def_int $int15 = 10;
+def_int $int16 = 25;
+def_int $int17 = 5;
+def_int $int18 = 5;
+def_int $int19 = 114;
+def_int $int20 = 0;
+def_string $text0 = "";
+def_int $flags21 = 0;
+def_int $flags22 = 0;
+def_int $flags23 = 0;
+def_int $int24 = 0;
+def_int $int25 = 0;
+while ($int13 < $int12) {
+	cc_create($component7, ^iftype_rectangle, $int13);
+	cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	$int13 = calc($int13 + 1);
+}
+$int13 = 0;
+def_int $int26 = 0;
+while ($int13 < $int12) {
+	switch_int ($int13) {
+		case 0 :
+			$flags21, $flags22, $flags23 = %var3680, %var3681, %var3682;
+		case 1 :
+			$flags21, $flags22, $flags23 = %var3683, %var3684, %var3685;
+		case 2 :
+			$flags21, $flags22, $flags23 = %var3686, %var3687, %var3688;
+		case 3 :
+			$flags21, $flags22, $flags23 = %var3689, %var3690, %var3691;
+		case 4 :
+			$flags21, $flags22, $flags23 = %var3692, %var3693, %var3694;
+	}
+	$int24 = ~script6842($flags21, $flags22, $flags23);
+	if ($int24 = 0) {
+		$text0 = "Empty";
+	} else if ($int24 < 150) {
+		$text0 = "Entry - <tostring($int24)>";
+	} else if ($int24 < 300) {
+		$text0 = "Normal - <tostring($int24)>";
+	} else {
+		$text0 = "Expert - <tostring($int24)>";
+	}
+	if (%varbit14541 = calc($int10 + 1)) {
+		$int26 = 1;
+		$colour11 = ^white;
+	}
+	if ($int10 > 0) {
+		$int14 = calc($int14 + $int16 + $int17);
+	}
+	cc_create($component3, ^iftype_rectangle, $int10);
+	cc_setsize($int19, $int16, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int15, $int14, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(^black);
+	cc_setfill(false);
+	cc_settrans(255);
+	cc_setopbase("<col=ff981f><$text0></col>");
+	cc_create($component4, ^iftype_text, $int10);
+	cc_setsize(calc($int19 - 6), 24, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int15 + 3), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext($text0);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_setcolour($colour11);
+	if ($int26 = 1) {
+		$int20 = ~dynamic_stone_button_filled($component5, $component6, "", $int15, $int14, $int19, $int16, $int20, $int10, 1, 1);
+	} else {
+		$int20 = ~dynamic_stone_button_filled($component5, $component6, "", $int15, $int14, $int19, $int16, $int20, $int10, 1, 0);
+	}
+	if (cc_find($component6, $int10) = ^true) {
+		cc_setop(1, "Select");
+		cc_setop(2, "Clear");
+		cc_setopbase("<col=ff9040><$text0></col>");
+		cc_setonop("script6843");
+	}
+	$int10 = calc($int10 + 1);
+	$int13 = calc($int13 + 1);
+	$int26 = 0;
+	$colour11 = 0xff981f;
+}
+$int14 = calc($int14 + $int16 + $int17);
+~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script6841($int14, if_getlayer($component0), $component0, $component1, $component2, $component8, $component9);

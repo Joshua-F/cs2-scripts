@@ -1,0 +1,19 @@
+// 6808
+[proc,script6808](dbrow $dbrow0, inv $inv1)(int)
+def_int $int2 = db_getfieldcount($dbrow0, quest:speedrunning_obj);
+if ($inv1 = null | $int2 <= 0) {
+	return(0);
+}
+def_int $int3 = 0;
+def_namedobj $namedobj4 = null;
+def_int $int5 = 0;
+def_inv $inv6 = null;
+def_int $int7 = 0;
+while ($int3 < $int2) {
+	$inv6, $namedobj4, $int5 = db_getfield($dbrow0, quest:speedrunning_obj, $int3);
+	if ($inv6 ! null & $inv6 = $inv1) {
+		$int7 = calc($int7 + 1);
+	}
+	$int3 = calc($int3 + 1);
+}
+return($int7);

@@ -1,0 +1,9 @@
+// 6803
+[proc,script6803](struct $struct0)(int)
+if (struct_param($struct0, param_1729) = false) {
+	return(0);
+}
+if (testbit(%var3657, struct_param($struct0, param_1723)) = ^true) {
+	return(1);
+}
+return(0);

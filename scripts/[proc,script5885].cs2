@@ -1,10 +1,40 @@
 // 5885
 [proc,script5885](dbrow $dbrow0)(int)
 switch_dbrow ($dbrow0) {
+	case dbrow_6 :
+		return(%varbit14512);
+	case dbrow_10 :
+		return(%varbit14513);
 	case dbrow_17 :
 		return(%varbit13625);
+	case dbrow_25 :
+		return(%varbit14514);
 	case dbrow_31 :
 		return(%varbit13626);
+	case dbrow_32 :
+		return(%varbit14515);
+	case dbrow_44 :
+		return(%varbit14516);
+	case dbrow_81 :
+		return(%varbit14517);
+	case dbrow_83 :
+		return(%varbit14518);
+	case dbrow_112 :
+		return(%varbit14519);
+	case dbrow_134 :
+		return(%varbit14520);
+	case dbrow_137 :
+		return(%varbit14521);
+	case dbrow_144 :
+		return(%varbit14522);
+	case dbrow_155 :
+		return(%varbit14523);
+	case dbrow_162 :
+		return(%varbit14524);
+	case dbrow_167 :
+		return(%varbit14525);
+	case dbrow_168 :
+		return(%varbit14526);
 	case default :
 		return(0);
 }

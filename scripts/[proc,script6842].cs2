@@ -1,0 +1,23 @@
+// 6842
+[proc,script6842](int $flags0, int $flags1, int $flags2)(int)
+def_int $count3 = 0;
+def_struct $struct4 = null;
+def_int $int5 = 0;
+def_int $count6 = enum_getoutputcount(enum_4664);
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $flags9 = $flags0;
+while ($count3 < $count6) {
+	$struct4 = enum(int, struct, enum_4664, $count3);
+	$int8 = struct_param($struct4, param_1159);
+	if ($int8 > 61) {
+		$int8, $flags9 = calc($int8 - 62), $flags2;
+	} else if ($int8 > 30) {
+		$int8, $flags9 = calc($int8 - 31), $flags1;
+	}
+	if (testbit($flags9, $int8) = ^true) {
+		$int7 = calc($int7 + struct_param($struct4, param_1162));
+	}
+	$count3 = calc($count3 + 1);
+}
+return($int7);

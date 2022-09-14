@@ -1,0 +1,20 @@
+// 5895
+[clientscript,script5895](int $opindex0, component $component1, string $string0, component $component2, string $string1, int $int3, int $int4, int $int5, int $int6)
+sound_synth(interface_select1, 1, 0);
+if (%varcint1086 = 1) {
+	%varcint1086 = 2;
+} else {
+	%varcint1086 = 1;
+}
+if (%varcint1086 = 0) {
+	~toa_invocations_layout_setup(1, 0);
+} else if (%varcint1086 = 1) {
+	~toa_invocations_layout_setup(1, 1);
+} else {
+	~toa_invocations_layout_setup(0, 0);
+}
+~script6749(interface_774:52, interface_774:51, $int3, $int4, $int5, $int6, interface_774:68);
+~script350($component1, $string0, $component2, $string1, $int3, $int4, $int5, $int6);
+if ($component2 ! null) {
+	~script6731($component2, $string1, $component1, $string0, $int3, $int4, $int5, $int6);
+}

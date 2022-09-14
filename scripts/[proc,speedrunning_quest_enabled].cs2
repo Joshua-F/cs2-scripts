@@ -3,8 +3,10 @@
 switch_int (db_getfield($dbrow0, quest:speedrunning_mode, 0)) {
 	case 1 :
 		return(1);
+	case 3 :
+		return(1);
 	case 2 :
-		if (~script5895 = 1) {
+		if (~script6806 = 1) {
 			return(1);
 		}
 }

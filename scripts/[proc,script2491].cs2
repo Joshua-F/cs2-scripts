@@ -3,7 +3,7 @@
 def_string $string0 = "null";
 switch_int ($int1) {
 	case 1, 7, 2 :
-		$string0 = db_getfield($dbrow0, quest:41, 0);
+		$string0 = db_getfield($dbrow0, quest:cr_desc, 0);
 		if (~string_isnullorempty($string0) = 0) {
 			return($string0);
 		}

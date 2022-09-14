@@ -1,0 +1,6 @@
+// 6810
+[proc,script6810](int $flags0)(int)
+if (testbit($flags0, 8) = ^true) {
+	return(1);
+}
+return(0);

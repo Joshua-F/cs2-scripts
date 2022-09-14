@@ -1,0 +1,9 @@
+// 6065
+[proc,script6065]()(int)
+if (calc(clientclock - %varcint76) <= 10) {
+	return(0);
+}
+if (~speedrunning_world = 1 & %varbit13627 <= 0) {
+	return(0);
+}
+return(1);

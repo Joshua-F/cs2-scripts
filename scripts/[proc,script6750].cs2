@@ -7,7 +7,7 @@ def_int $int11 = 33;
 def_int $int12 = 1;
 def_int $width13 = 97;
 def_int $height14 = 63;
-if (%varcint1086 ! 1) {
+if (%varcint1086 = 0 | %varcint1086 = 1) {
 	$int11 = 24;
 	$int12 = -7;
 	$width13 = 82;

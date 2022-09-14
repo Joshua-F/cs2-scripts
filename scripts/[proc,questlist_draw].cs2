@@ -43,6 +43,9 @@ while ($int8 <= $int7) {
 	if (~script4026($dbrow13, %varbit13772) = 1) {
 		$string0 = "MQ: <$string0>";
 	}
+	if (~speedrunning_world = 1 & ~script6807($dbrow13) = 1) {
+		$string0 = "<$string0> (Beta)";
+	}
 	cc_settext($string0);
 	cc_setsize(0, calc($int11 * paraheight($string0, cc_getwidth, $fontmetrics10) + $int12), ^setsize_minus, ^setsize_abs);
 	if (~speedrunning_world = 1) {
@@ -51,7 +54,11 @@ while ($int8 <= $int7) {
 		cc_setop(1, "");
 	}
 	cc_setop(2, "Read journal:");
-	cc_setop(3, "Show on map:");
+	if (db_getfield($dbrow13, quest:mapcoord, 0) ! null & db_getfield($dbrow13, quest:mapcoord, 0) ! 0_0_0_0_0) {
+		cc_setop(3, "Show on map:");
+	} else {
+		cc_setop(3, "");
+	}
 	cc_setop(4, "Open wiki guide:");
 	cc_setop(5, "Open wiki quick guide:");
 	$int14 = ~quest_status_get($dbrow13);
