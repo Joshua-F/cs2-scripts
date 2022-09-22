@@ -8,22 +8,22 @@ def_int $int11 = calc(176 / $int6);
 if (~on_mobile = true) {
 	$string1 = "Damage taken";
 	if_setop(1, "Damage taken", interface_482:40);
-	if_setonop("script6593(event_com, -1, $component10, $string1, 512)", interface_482:40);
+	if_setonop("toa_raid_summary_mobile_tooltip(event_com, -1, $component10, $string1, 512)", interface_482:40);
 	$string1 = "Damage dealt";
 	if_setop(1, "Damage dealt", interface_482:41);
-	if_setonop("script6593(event_com, -1, $component10, $string1, 512)", interface_482:41);
+	if_setonop("toa_raid_summary_mobile_tooltip(event_com, -1, $component10, $string1, 512)", interface_482:41);
 	$string1 = "Deaths";
 	if_setop(1, "Deaths", interface_482:39);
-	if_setonop("script6593(event_com, -1, $component10, $string1, 512)", interface_482:39);
+	if_setonop("toa_raid_summary_mobile_tooltip(event_com, -1, $component10, $string1, 512)", interface_482:39);
 } else {
 	$string1 = "Damage taken";
-	if_setonmouserepeat("script6591(event_com, -1, $component10, $string1)", interface_482:40);
+	if_setonmouserepeat("toa_raid_summary_selectedborder(event_com, -1, $component10, $string1)", interface_482:40);
 	if_setonmouseleave("script6592(event_com, -1, $component10)", interface_482:40);
 	$string1 = "Damage dealt";
-	if_setonmouserepeat("script6591(event_com, -1, $component10, $string1)", interface_482:41);
+	if_setonmouserepeat("toa_raid_summary_selectedborder(event_com, -1, $component10, $string1)", interface_482:41);
 	if_setonmouseleave("script6592(event_com, -1, $component10)", interface_482:41);
 	$string1 = "Deaths";
-	if_setonmouserepeat("script6591(event_com, -1, $component10, $string1)", interface_482:39);
+	if_setonmouserepeat("toa_raid_summary_selectedborder(event_com, -1, $component10, $string1)", interface_482:39);
 	if_setonmouseleave("script6592(event_com, -1, $component10)", interface_482:39);
 }
 if_setsize($width9, calc($height8 + $int11), ^setsize_abs, ^setsize_abs, interface_482:50);
@@ -92,9 +92,9 @@ if ($struct3 = null) {
 	$string1 = struct_param($struct3, param_1526);
 	if (~on_mobile = true) {
 		cc_setop(1, "Show Description");
-		cc_setonop("script6593(event_com, event_comsubid, $component10, $string1, 512)");
+		cc_setonop("toa_raid_summary_mobile_tooltip(event_com, event_comsubid, $component10, $string1, 512)");
 	} else {
-		cc_setonmouserepeat("script6591(event_com, event_comsubid, $component10, $string1)");
+		cc_setonmouserepeat("toa_raid_summary_selectedborder(event_com, event_comsubid, $component10, $string1)");
 		cc_setonmouseleave("script6592(event_com, event_comsubid, $component10)");
 	}
 }

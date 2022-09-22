@@ -6586,14 +6586,14 @@
 [**6583**](scripts/[proc,toa_hud_statusrefresh].cs2) `[proc,toa_hud_statusrefresh]`  
 [**6584**](scripts/[proc,script6584].cs2)  
 [**6585**](scripts/[clientscript,toa_hud_statusnames].cs2) `[clientscript,toa_hud_statusnames]`  
-[**6586**](scripts/[clientscript,script6586].cs2)  
-[**6587**](scripts/[proc,script6587].cs2)  
-[**6588**](scripts/[clientscript,script6588].cs2)  
-[**6589**](scripts/[proc,script6589].cs2)  
+[**6586**](scripts/[clientscript,toa_raid_summary_init].cs2) `[clientscript,toa_raid_summary_init]`  
+[**6587**](scripts/[proc,toa_raid_summary_init].cs2) `[proc,toa_raid_summary_init]`  
+[**6588**](scripts/[clientscript,toa_raid_summary_timetab].cs2) `[clientscript,toa_raid_summary_timetab]`  
+[**6589**](scripts/[proc,toa_raid_summary_timetab].cs2) `[proc,toa_raid_summary_timetab]`  
 [**6590**](scripts/[clientscript,script6590].cs2)  
-[**6591**](scripts/[clientscript,script6591].cs2)  
+[**6591**](scripts/[clientscript,toa_raid_summary_selectedborder].cs2) `[clientscript,toa_raid_summary_selectedborder]`  
 [**6592**](scripts/[clientscript,script6592].cs2)  
-[**6593**](scripts/[clientscript,script6593].cs2)  
+[**6593**](scripts/[clientscript,toa_raid_summary_mobile_tooltip].cs2) `[clientscript,toa_raid_summary_mobile_tooltip]`  
 [**6594**](scripts/[clientscript,toa_partylist_init].cs2) `[clientscript,toa_partylist_init]`  
 [**6595**](scripts/[proc,toa_partylist_setsize].cs2) `[proc,toa_partylist_setsize]`  
 [**6596**](scripts/[clientscript,toa_partylist_setsize].cs2) `[clientscript,toa_partylist_setsize]`  
@@ -6611,7 +6611,7 @@
 [**6608**](scripts/[clientscript,toa_partylist_clicksort].cs2) `[clientscript,toa_partylist_clicksort]`  
 [**6609**](scripts/[clientscript,toa_invocations_init].cs2) `[clientscript,toa_invocations_init]`  
 [**6610**](scripts/[proc,script6610].cs2)  
-[**6611**](scripts/[clientscript,script6611].cs2)  
+[**6611**](scripts/[clientscript,toa_lobby_hud_init].cs2) `[clientscript,toa_lobby_hud_init]`  
 [**6612**](scripts/[clientscript,script6612].cs2)  
 [**6613**](scripts/[proc,script6613].cs2)  
 [**6614**](scripts/[clientscript,toa_hud_nameflasher].cs2) `[clientscript,toa_hud_nameflasher]`  
