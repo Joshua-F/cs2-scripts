@@ -1,17 +1,13 @@
 // 5316
 [clientscript,stat_boosts_hud_timertooltip](component $component0, component $component1)
-if (calc(clientclock % 10) ! 0) {
-	return;
-}
 def_int $int2 = calc(%varcint468 - (clientclock - %varcint469) / 30);
 def_int $int3 = calc(%varcint471 - (clientclock - %varcint472) / 30);
-def_string $string0 = ~script3739(0xa3170b, "col");
-def_string $string1 = ~script3739(0x065b1d, "col");
+def_string $string0 = ~script3739(~script6851(0xa3170b, 0xef1020), "col");
+def_string $string1 = ~script3739(~script6851(0x065b1d, 0x0dc10d), "col");
 def_string $string2 = "<$string0>Stats restoring</col>";
 def_string $string3 = "<$string0><~time_convert($int2, 0)></col>";
 if (%varcint551 = 1) {
 	$string2 = "<$string2>|<$string1>Boosts draining</col>";
 	$string3 = "<$string3>|<$string1><~time_convert($int3, 0)></col>";
 }
-%varcint2 = 0;
-~script5338($component0, -1, $component1, $string2, $string3, p12_full, 0);
+~script2344($component0, -1, $component1, $string2, $string3, p12_full);

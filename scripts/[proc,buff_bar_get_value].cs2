@@ -194,7 +194,7 @@ switch_struct ($struct0) {
 			return(~script5940(%varcint983, struct_param($struct0, param_1541)));
 		}
 	case buff_time_till_next_venom_hit_3741 :
-		if (%var102 > 1000000) {
+		if (%var102 >= 1000000) {
 			return(~script5940(%varcint983, struct_param($struct0, param_1541)));
 		}
 	case buff_desert_heat_timer_3763 :

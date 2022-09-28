@@ -28,8 +28,8 @@ if (~deadman_world = true) {
 	if ($int7 ! -1) {
 		$int7 = calc($int7 / 10);
 		if ($int7 > $xp5) {
-			$string2 = append($string2, "|<col=7c0808>XP to regain:</col>");
-			$string3 = append($string3, "|<col=7c0808><~tostring_spacer(calc($int7 - $xp5), $string1)></col>");
+			$string2 = append($string2, "|<~script6850("<col=7c0808>", "<col=ef1020>")>XP to regain:</col>");
+			$string3 = append($string3, "|<~script6850("<col=7c0808>", "<col=ef1020>")><~tostring_spacer(calc($int7 - $xp5), $string1)></col>");
 			$int8 = 1;
 		}
 	}
@@ -38,32 +38,32 @@ if (~deadman_world = true) {
 			case attack, strength, magic :
 				$int10 = ~script2031(20);
 				if ($int10 > 0) {
-					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
-					$string3 = append($string3, "|<col=7c0808><~tostring_spacer($int10, $string1)></col>");
+					$string2 = append($string2, "|<~script6850("<col=7c0808>", "<col=ef1020>")>XP permitted:</col>");
+					$string3 = append($string3, "|<~script6850("<col=7c0808>", "<col=ef1020>")><~tostring_spacer($int10, $string1)></col>");
 				} else {
 					$int9 = 1;
-					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
-					$string3 = append($string3, "|<col=7c0808>NONE</col>");
+					$string2 = append($string2, "|<~script6850("<col=7c0808>", "<col=ef1020>")>XP permitted:</col>");
+					$string3 = append($string3, "|<~script6850("<col=7c0808>", "<col=ef1020>")>NONE</col>");
 				}
 			case ranged :
 				$int10 = ~script2031(30);
 				if ($int10 > 0) {
-					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
-					$string3 = append($string3, "|<col=7c0808><~tostring_spacer($int10, $string1)></col>");
+					$string2 = append($string2, "|<~script6850("<col=7c0808>", "<col=ef1020>")>XP permitted:</col>");
+					$string3 = append($string3, "|<~script6850("<col=7c0808>", "<col=ef1020>")><~tostring_spacer($int10, $string1)></col>");
 				} else {
 					$int9 = 1;
-					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
-					$string3 = append($string3, "|<col=7c0808>NONE</col>");
+					$string2 = append($string2, "|<~script6850("<col=7c0808>", "<col=ef1020>")>XP permitted:</col>");
+					$string3 = append($string3, "|<~script6850("<col=7c0808>", "<col=ef1020>")>NONE</col>");
 				}
 			case defence :
 				$int10 = ~script2031(40);
 				if ($int10 > 0) {
-					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
-					$string3 = append($string3, "|<col=7c0808><~tostring_spacer($int10, $string1)></col>");
+					$string2 = append($string2, "|<~script6850("<col=7c0808>", "<col=ef1020>")>XP permitted:</col>");
+					$string3 = append($string3, "|<~script6850("<col=7c0808>", "<col=ef1020>")><~tostring_spacer($int10, $string1)></col>");
 				} else {
 					$int9 = 1;
-					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
-					$string3 = append($string3, "|<col=7c0808>NONE</col>");
+					$string2 = append($string2, "|<~script6850("<col=7c0808>", "<col=ef1020>")>XP permitted:</col>");
+					$string3 = append($string3, "|<~script6850("<col=7c0808>", "<col=ef1020>")>NONE</col>");
 				}
 		}
 	}

@@ -25,7 +25,9 @@ if ($lvl3 > 0) {
 	$int7 = calc($int7 + 1);
 	cc_setposition(15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	if ($lvl3 > stat(agility)) {
+	if (enum(loc, int, enum_4817, $loc1) = 0 & $lvl3 > stat(agility)) {
+		cc_setcolour(^red);
+	} else if (enum(loc, int, enum_4817, $loc1) = 1 & $lvl3 > stat_base(agility)) {
 		cc_setcolour(^red);
 	} else {
 		cc_setcolour(^green);

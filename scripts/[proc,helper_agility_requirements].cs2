@@ -242,5 +242,12 @@ switch_loc ($loc0) {
 				$string0 = append($string0, "<br><col=00ff00>Long rope");
 			}
 		}
+	case stepping_stone_43989, stepping_stone_43990 :
+		if (%varbit13841 < 12) {
+			$string0 = "<col=ff0000>Beneath Cursed Sands: Investigating the Excavation";
+			$boolean2 = false;
+		} else {
+			$string0 = "<col=00ff00>Beneath Cursed Sands: Investigating the Excavation";
+		}
 }
 return($boolean2, $string0);

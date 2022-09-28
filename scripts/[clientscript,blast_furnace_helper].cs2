@@ -5,7 +5,7 @@ def_int $int2 = 0;
 ~helper_generic_setup(0, 1, 1);
 ~helper_generic_set_bit(0);
 $comsubid1 = ~helper_generic_add_title("Blast Furnace Info", 0);
-if (cc_find(interface_711:4, $comsubid1) = ^true) {
+if (cc_find(interface_711:5, $comsubid1) = ^true) {
 	cc_setonvartransmit("blast_furnace_helper($boolean0){var543, var795, var545, var546, var547, var548, var549}");
 	cc_setoninvtransmit("blast_furnace_helper($boolean0){worn}");
 }

@@ -10,14 +10,17 @@ if (db_getrowtable($dbrow4) ! dbtable_12) {
 if ($coord0 = $coord1) {
 	return;
 }
-def_component $component5 = interface_711:2;
+def_component $component5 = interface_711:3;
 def_int $int6 = db_getfield($dbrow4, dbtable_12:1, 0);
 def_int $int7 = 0;
 switch_int ($int6) {
 	case 0 :
-		$int7 = db_getfieldcount(dbrow_684, dbtable_3:1);
+		$int7 = db_getfieldcount(dbrow_684, dbtable_3:2);
 	case 5 :
-		$int7 = db_getfieldcount(dbrow_684, dbtable_3:6);
+		$int7 = db_getfieldcount(dbrow_684, dbtable_3:7);
+}
+if ($dbrow4 = dbrow_2297) {
+	$int7 = enum_getoutputcount(enum_4816);
 }
 if (%varbit14190 = 0) {
 	~script6474($component5, $int7);
@@ -37,9 +40,12 @@ while ($int8 < $int7) {
 	if (cc_find($component5, $int8) = ^true & cc_getcolour = ^black) {
 		switch_int ($int6) {
 			case 0 :
-				$dbrow9 = db_getfield(dbrow_684, dbtable_3:1, $int8);
+				$dbrow9 = db_getfield(dbrow_684, dbtable_3:2, $int8);
 			case 5 :
-				$dbrow9 = db_getfield(dbrow_684, dbtable_3:6, $int8);
+				$dbrow9 = db_getfield(dbrow_684, dbtable_3:7, $int8);
+		}
+		if ($dbrow4 = dbrow_2297) {
+			$dbrow9 = enum(int, dbrow, enum_4816, $int8);
 		}
 		$coord10 = ~script6653(~cluehelper_clue_target($dbrow9));
 		$int12 = ~coord_distance($coord0, $coord10);

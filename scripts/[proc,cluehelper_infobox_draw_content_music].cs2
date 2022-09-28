@@ -10,6 +10,6 @@ def_int $dbfield2 = ~script6657(db_getfield($dbrow0, dbtable_13:4, 0));
 $int1 = ~helper_generic_add_title("Song", 0);
 def_int $int3 = db_getfield($dbrow0, dbtable_13:2, 0);
 $int1 = ~helper_generic_add_text("...");
-if (cc_find(interface_711:4, $int1) = ^true) {
+if (cc_find(interface_711:5, $int1) = ^true) {
 	cc_setonvartransmit("script6700($int1, $int3){var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065, var2237, var2950, var3418}");
 }

@@ -17,7 +17,7 @@ def_loc $loc6 = db_getfield($dbrow0, dbtable_8:8, 0);
 if ($loc6 ! null) {
 	$int1 = ~helper_generic_add_title("S.T.A.S.H", 0);
 	$int1 = ~helper_generic_add_text("...");
-	if (cc_find(interface_711:4, $int1) = ^true) {
+	if (cc_find(interface_711:5, $int1) = ^true) {
 		cc_setonvartransmit("script6624($int1, $loc6){var2855, var1365, var1366, var1367, var1368, var1369, var2202}");
 	}
 }
@@ -34,7 +34,7 @@ if ($dbrow7 ! null) {
 	$string0 = db_getfield($dbrow0, dbtable_8:6, 0);
 	if (string_length($string0) > 0) {
 		$int1 = ~helper_generic_add_text("...");
-		if (cc_find(interface_711:4, $int1) = ^true) {
+		if (cc_find(interface_711:5, $int1) = ^true) {
 			cc_setoninvtransmit("script6483($int1, $dbrow0){inv, worn}");
 		}
 	} else {
@@ -43,7 +43,7 @@ if ($dbrow7 ! null) {
 }
 if (~cluehelper_is_dig($dbrow0, $dbrow3) = 1) {
 	$int1 = ~helper_generic_add_text("...");
-	if (cc_find(interface_711:4, $int1) = ^true) {
+	if (cc_find(interface_711:5, $int1) = ^true) {
 		cc_setoninvtransmit("script6623($int1){inv}");
 	}
 }

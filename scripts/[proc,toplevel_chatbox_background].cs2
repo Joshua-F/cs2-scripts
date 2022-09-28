@@ -42,7 +42,7 @@ if (~toplevel_chatbox_maketransparent = 0) {
 		cc_setcolour(0x807660);
 		cc_setfill(true);
 	}
-	~scrollbar_vertical_repaint(interface_162:557, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1", 0);
+	~scrollbar_vertical_repaint(interface_162:557, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1", 0, 0, 0);
 	if (~toplevel_chatbox_controls_maketransparent = 1) {
 		if_settrans(255, interface_162:3);
 	} else {
@@ -116,7 +116,13 @@ if ($int1 = 0) {
 		.cc_settrans(130);
 	}
 }
-~scrollbar_vertical_repaint(interface_162:557, "scrollbar_trans_dragger,3", "scrollbar_trans_dragger,0", "scrollbar_trans_dragger,1", "scrollbar_trans_dragger,2", "scrollbar_trans_arrows,0", "scrollbar_trans_arrows,1", 1);
+def_int $trans14 = 235;
+def_int $trans15 = 180;
+if (~on_mobile = true) {
+	$trans14 = 200;
+	$trans15 = 130;
+}
+~scrollbar_vertical_repaint(interface_162:557, "scrollbar_trans_dragger,3", "scrollbar_trans_dragger,0", "scrollbar_trans_dragger,1", "scrollbar_trans_dragger,2", "scrollbar_trans_arrows,0", "scrollbar_trans_arrows,1", 1, $trans14, $trans15);
 if ($boolean0 = true) {
 	if_settrans(255, interface_162:3);
 } else if (~on_mobile = false) {

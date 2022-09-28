@@ -476,198 +476,135 @@ switch_int ($int0) {
 					return(-1, obj_7620, "Orange hit splats are disease damage. (Members)");
 				case 6 :
 					return(-1, obj_7620, "Dark purple hit splats are corruption damage. (Members)");
-				case default :
-					return(-1, null, "");
 			}
-		}
-		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(-1, purple_sweets_10476, "Purple Sweets: Restores 1-3 Hitpoints<br>(Members)");
+		} else if ($int1 = 1) {
+			switch_int ($int2) {
+				case 0 :
+					return(-1, purple_sweets_10476, "Purple Sweets: Restores 1-3 Hitpoints<br>(Members)");
+				case 1 :
+					return(-1, anchovies_319, "Anchovies: Restores 1 Hitpoint");
+				case 2 :
+					return(-1, shrimps_315, "Shrimp: Restores 3 Hitpoints");
+				case 3 :
+					return(-1, cooked_chicken_2140, "Cooked chicken: Restores 3 Hitpoints");
+				case 4 :
+					return(-1, sardine_325, "Sardine: Restores 3 Hitpoints");
+				case 5 :
+					return(-1, cooked_meat_2142, "Cooked meat: Restores 3 Hitpoints");
+				case 6 :
+					return(-1, cooked_mystery_meat_24785, "Cooked mystery meat: Restores 5 Hitpoints");
+				case 7 :
+					return(-1, bread_2309, "Bread: Restores 5 Hitpoints");
+				case 8 :
+					return(-1, herring_347, "Herring: Restores 5 Hitpoints");
+				case 9 :
+					return(-1, cooked_rabbit_3228, "Cooked Rabbit: Restores 5 Hitpoints<br>(Members)");
+				case 10 :
+					return(-1, steak_sandwich_25631, "Steak Sandwich: Restores 6 Hitpoints");
+				case 11 :
+					return(-1, mackerel_355, "Mackerel: Restores 6 Hitpoints<br>(Members)");
+				case 12 :
+					return(-1, botanical_pie_19662, "Botanical Pie: Restores 6 Hitpoints<br>(Members)");
+				case 13 :
+					return(-1, cooked_slimy_eel_3381, "Slimy Eel: Restores 6-10 Hitpoints<br>(Members)");
+				case 14 :
+					return(-1, trout_333, "Trout: Restores 7 Hitpoints");
+				case 15 :
+					return(-1, cod_339, "Cod: Restores 7 Hitpoints<br>(Members)");
+				case 16 :
+					return(-1, roast_rabbit_7223, "Roast Rabbit: Restores 7 Hitpoints<br>(Members)");
+				case 17 :
+					return(-1, cave_eel_5003, "Cave Eel: Restores 7-11 Hitpoints<br>(Members)");
+				case 18 :
+					return(-1, pike_351, "Pike: Restores 8 Hitpoints");
+				case 19 :
+					return(-1, salmon_329, "Salmon: Restores 9 Hitpoints");
+				case 20 :
+					return(-1, redberry_pie_2325, "Redberry pie: Restores 9 Hitpoints");
+				case 21 :
+					return(-1, tuna_361, "Tuna: Restores 10 Hitpoints");
+				case 22 :
+					return(-1, crab_meat_7518, "Crab meat: Restores 10 Hitpoints<br>(Members)");
+				case 23 :
+					return(-1, cooked_fishcake_7530, "Cooked fishcake: Restores 11 Hitpoints<br>(Members)");
+				case 24 :
+					return(-1, jug_of_wine_1993, "Jug of wine: Restores 11 Hitpoints");
+				case 25 :
+					return(-1, meat_pie_2327, "Meat pie: Restores 11 Hitpoints");
+				case 26 :
+					return(-1, lava_eel_2149, "Lava Eel: Restores 11 Hitpoints<br>(Members)");
+				case 27 :
+					return(-1, garden_pie_7178, "Garden pie: Restores 12 Hitpoints<br>(Members)");
+				case 28 :
+					return(-1, fish_pie_7188, "Fish pie: Restores 12 Hitpoints<br>(Members)");
+				case 29 :
+					return(-1, cake_1891, "Cake: Restores 12 Hitpoints");
+				case 30 :
+					return(-1, lobster_379, "Lobster: Restores 12 Hitpoints");
+				case 31 :
+					return(-1, bass_365, "Bass: Restores 13 Hitpoints<br>(Members)");
+				case 32 :
+					return(-1, swordfish_373, "Swordfish: Restores 14 Hitpoints");
+				case 33 :
+					return(-1, plain_pizza_2289, "Plain pizza: Restores 14 Hitpoints");
+				case 34 :
+					return(-1, apple_pie_2323, "Apple pie: Restores 14 Hitpoints");
+				case 35 :
+					return(-1, potato_with_butter_6703, "Potato with butter: Restores 14 Hitpoints<br>(Members)");
+				case 36 :
+					return(-1, chilli_potato_7054, "Chilli Potato: Restores 14 Hitpoints<br>(Members)");
+				case 37 :
+					return(-1, chocolate_cake_1897, "Chocolate Cake: Restores 15 Hitpoints");
+				case 38 :
+					return(-1, monkfish_7946, "Monkfish: Restores 16 Hitpoints<br>(Members)");
+				case 39 :
+					return(-1, admiral_pie_7198, "Admiral pie: Restores 16 Hitpoints<br>(Members)");
+				case 40 :
+					return(-1, meat_pizza_2293, "Meat pizza: Restores 16 Hitpoints");
+				case 41 :
+					return(-1, potato_with_cheese_6705, "Potato with cheese: Restores 16 Hitpoints<br>(Members)");
+				case 42 :
+					return(-1, egg_potato_7056, "Egg Potato: Restores 16 Hitpoints<br>(Members)");
+				case 43 :
+					return(-1, cooked_karambwan_3144, "Cooked karambwan: Restores 18 Hitpoints<br>(Members)");
+				case 44 :
+					return(-1, anchovy_pizza_2297, "Anchovy pizza: Restores 18 Hitpoints");
+				case 45 :
+					return(-1, ugthanki_kebab_1885, "Ugthanki kebab: Restores 19 Hitpoints<br>(Members)");
+				case 46 :
+					return(-1, shark_385, "Shark: Restores 20 Hitpoints<br>(Members)");
+				case 47 :
+					return(-1, mushroom_potato_7058, "Mushroom Potato: Restores 20 Hitpoints<br>(Members)");
+				case 48 :
+					return(-1, sea_turtle_397, "Sea Turtle: Restores 21 Hitpoints<br>(Members)");
+				case 49 :
+					return(-1, manta_ray_391, "Manta Ray: Restores 22 Hitpoints<br>(Members)");
+				case 50 :
+					return(-1, dark_crab_11936, "Dark Crab: Restores 22 Hitpoints<br>(Members)");
+				case 51 :
+					return(-1, tuna_potato_7060, "Tuna Potato: Restores 22 Hitpoints<br>(Members)");
+				case 52 :
+					return(-1, wild_pie_7208, "Wild pie: Restores 22 Hitpoints<br>(Members)");
+				case 53 :
+					return(-1, summer_pie_7218, "Summer pie: Restores 22 Hitpoints<br>(Members)");
+				case 54 :
+					return(-1, pineapple_pizza_2301, "Pineapple pizza: Restores 22 Hitpoints<br>(Members)");
+				case 55 :
+					return(-1, anglerfish_13441, "Anglerfish: Restores Hitpoints based on your Hitpoints level up to a maximum of 22 - can boost beyond your level<br>(Members)");
+				case 56 :
+					return(-1, saradomin_brew_3_6687, "Saradomin brew: Restores 15% of your Hitpoints level plus 2 - can boost beyond your level<br>(Members)");
 			}
-			if ($int2 = 1) {
-				return(-1, anchovies_319, "Anchovies: Restores 1 Hitpoint");
+		} else if ($int1 = 2) {
+			switch_int ($int2) {
+				case 0 :
+					return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				case 1 :
+					return(50, nightmare_staff_24422, "Nightmare Staff (without orb)<br> (with <tostring(72)> Magic)");
+				case 2 :
+					return(50, harmonised_nightmare_staff_24423, "Nightmare Staff (with orb)<br> (with <tostring(82)> Magic)");
+				case 3 :
+					return(75, ring_of_suffering_19550, "Enchanted zenyte jewellery");
 			}
-			if ($int2 = 2) {
-				return(-1, shrimps_315, "Shrimp: Restores 3 Hitpoints");
-			}
-			if ($int2 = 3) {
-				return(-1, cooked_chicken_2140, "Cooked chicken: Restores 3 Hitpoints");
-			}
-			if ($int2 = 4) {
-				return(-1, sardine_325, "Sardine: Restores 3 Hitpoints");
-			}
-			if ($int2 = 5) {
-				return(-1, cooked_meat_2142, "Cooked meat: Restores 3 Hitpoints");
-			}
-			if ($int2 = 6) {
-				return(-1, cooked_mystery_meat_24785, "Cooked mystery meat: Restores 5 Hitpoints");
-			}
-			if ($int2 = 7) {
-				return(-1, bread_2309, "Bread: Restores 5 Hitpoints");
-			}
-			if ($int2 = 8) {
-				return(-1, herring_347, "Herring: Restores 5 Hitpoints");
-			}
-			if ($int2 = 9) {
-				return(-1, cooked_rabbit_3228, "Cooked Rabbit: Restores 5 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 10) {
-				return(-1, steak_sandwich_25631, "Steak Sandwich: Restores 6 Hitpoints");
-			}
-			if ($int2 = 11) {
-				return(-1, mackerel_355, "Mackerel: Restores 6 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 12) {
-				return(-1, botanical_pie_19662, "Botanical Pie: Restores 6 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 13) {
-				return(-1, cooked_slimy_eel_3381, "Slimy Eel: Restores 6-10 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 14) {
-				return(-1, trout_333, "Trout: Restores 7 Hitpoints");
-			}
-			if ($int2 = 15) {
-				return(-1, cod_339, "Cod: Restores 7 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 16) {
-				return(-1, roast_rabbit_7223, "Roast Rabbit: Restores 7 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 17) {
-				return(-1, cave_eel_5003, "Cave Eel: Restores 7-11 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 18) {
-				return(-1, pike_351, "Pike: Restores 8 Hitpoints");
-			}
-			if ($int2 = 19) {
-				return(-1, salmon_329, "Salmon: Restores 9 Hitpoints");
-			}
-			if ($int2 = 20) {
-				return(-1, redberry_pie_2325, "Redberry pie: Restores 9 Hitpoints");
-			}
-			if ($int2 = 21) {
-				return(-1, tuna_361, "Tuna: Restores 10 Hitpoints");
-			}
-			if ($int2 = 22) {
-				return(-1, crab_meat_7518, "Crab meat: Restores 10 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 23) {
-				return(-1, cooked_fishcake_7530, "Cooked fishcake: Restores 11 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 24) {
-				return(-1, jug_of_wine_1993, "Jug of wine: Restores 11 Hitpoints");
-			}
-			if ($int2 = 25) {
-				return(-1, meat_pie_2327, "Meat pie: Restores 11 Hitpoints");
-			}
-			if ($int2 = 26) {
-				return(-1, lava_eel_2149, "Lava Eel: Restores 11 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 27) {
-				return(-1, garden_pie_7178, "Garden pie: Restores 12 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 28) {
-				return(-1, fish_pie_7188, "Fish pie: Restores 12 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 29) {
-				return(-1, cake_1891, "Cake: Restores 12 Hitpoints");
-			}
-			if ($int2 = 30) {
-				return(-1, lobster_379, "Lobster: Restores 12 Hitpoints");
-			}
-			if ($int2 = 31) {
-				return(-1, bass_365, "Bass: Restores 13 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 32) {
-				return(-1, swordfish_373, "Swordfish: Restores 14 Hitpoints");
-			}
-			if ($int2 = 33) {
-				return(-1, plain_pizza_2289, "Plain pizza: Restores 14 Hitpoints");
-			}
-			if ($int2 = 34) {
-				return(-1, apple_pie_2323, "Apple pie: Restores 14 Hitpoints");
-			}
-			if ($int2 = 35) {
-				return(-1, potato_with_butter_6703, "Potato with butter: Restores 14 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 36) {
-				return(-1, chilli_potato_7054, "Chilli Potato: Restores 14 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 37) {
-				return(-1, chocolate_cake_1897, "Chocolate Cake: Restores 15 Hitpoints");
-			}
-			if ($int2 = 38) {
-				return(-1, monkfish_7946, "Monkfish: Restores 16 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 39) {
-				return(-1, admiral_pie_7198, "Admiral pie: Restores 16 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 40) {
-				return(-1, meat_pizza_2293, "Meat pizza: Restores 16 Hitpoints");
-			}
-			if ($int2 = 41) {
-				return(-1, potato_with_cheese_6705, "Potato with cheese: Restores 16 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 42) {
-				return(-1, egg_potato_7056, "Egg Potato: Restores 16 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 43) {
-				return(-1, cooked_karambwan_3144, "Cooked karambwan: Restores 18 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 44) {
-				return(-1, anchovy_pizza_2297, "Anchovy pizza: Restores 18 Hitpoints");
-			}
-			if ($int2 = 45) {
-				return(-1, ugthanki_kebab_1885, "Ugthanki kebab: Restores 19 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 46) {
-				return(-1, shark_385, "Shark: Restores 20 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 47) {
-				return(-1, mushroom_potato_7058, "Mushroom Potato: Restores 20 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 48) {
-				return(-1, sea_turtle_397, "Sea Turtle: Restores 21 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 49) {
-				return(-1, manta_ray_391, "Manta Ray: Restores 22 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 50) {
-				return(-1, dark_crab_11936, "Dark Crab: Restores 22 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 51) {
-				return(-1, tuna_potato_7060, "Tuna Potato: Restores 22 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 52) {
-				return(-1, wild_pie_7208, "Wild pie: Restores 22 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 53) {
-				return(-1, summer_pie_7218, "Summer pie: Restores 22 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 54) {
-				return(-1, pineapple_pizza_2301, "Pineapple pizza: Restores 22 Hitpoints<br>(Members)");
-			}
-			if ($int2 = 55) {
-				return(-1, anglerfish_13441, "Anglerfish: Restores Hitpoints based on your Hitpoints level up to a maximum of 22 - can boost beyond your level<br>(Members)");
-			}
-			if ($int2 = 56) {
-				return(-1, saradomin_brew_3_6687, "Saradomin brew: Restores 15% of your Hitpoints level plus 2 - can boost beyond your level<br>(Members)");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
-			}
-			if ($int2 = 1) {
-				return(50, nightmare_staff_24422, "Nightmare Staff (without orb)<br> (with 65 Magic)");
-			}
-			if ($int2 = 2) {
-				return(50, harmonised_nightmare_staff_24423, "Nightmare Staff (with orb)<br> (with 75 Magic)");
-			}
-			if ($int2 = 3) {
-				return(75, ring_of_suffering_19550, "Enchanted zenyte jewellery");
-			}
-			return(-1, null, "");
 		}
 		return(-1, null, "");
 	case 8 :

@@ -6,7 +6,7 @@ if ($obj5 ! obj_8245) {
 	if ($int3 > 0) {
 		$string0 = append($string0, ", <~string_findandreplace(oc_name($obj5), " ", " ")>");
 	} else {
-		$string0 = append($string0, "<br><col=4f4f4f><~string_findandreplace(oc_name($obj5), " ", " ")>");
+		$string0 = append($string0, "<br><~script6850("<col=7f7f7f>", "<col=adadad>")><~string_findandreplace(oc_name($obj5), " ", " ")>");
 	}
 	$int3 = calc($int3 + 1);
 }

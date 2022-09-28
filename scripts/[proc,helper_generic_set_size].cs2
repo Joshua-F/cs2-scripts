@@ -2,12 +2,41 @@
 [proc,helper_generic_set_size](int $width0, int $height1)
 def_enum $enum2 = ~toplevel_getcomponents;
 def_component $component3 = enum(component, component, $enum2, interface_161:12);
-if ($component3 ! null) {
-	if (~script5349(0) = ^true) {
-		$width0 = if_getwidth($component3);
+def_component $component4 = interface_711:2;
+def_component $component5 = interface_711:5;
+if (~script5349(0) = ^true & $width0 < if_getwidth($component3)) {
+	$width0 = if_getwidth($component3);
+}
+if (~script5349(1) = ^true & $height1 < if_getheight($component3)) {
+	$height1 = if_getheight($component3);
+}
+if ($height1 > 300) {
+	if_setsize(calc($width0 + 14), 300, ^setsize_abs, ^setsize_abs, $component3);
+	if_setposition(4, 4, ^setpos_abs_right, ^setpos_abs_top, $component5);
+	if_setsize(24, 8, ^setsize_minus, ^setsize_minus, $component5);
+	if_sethide(false, $component4);
+	if_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top, $component4);
+	if_setsize(14, 8, ^setsize_abs, ^setsize_minus, $component4);
+	if (cc_find($component4, 0) = ^true) {
+		if_setscrollsize($width0, $height1, $component5);
+		~scrollbar_resize($component4, $component5, if_getscrolly($component5));
+	} else {
+		~scrollbar_vertical($component4, $component5, "scrollbar_trans_dragger,3", "scrollbar_trans_dragger,0", "scrollbar_trans_dragger,1", "scrollbar_trans_dragger,2", "scrollbar_trans_arrows,0", "scrollbar_trans_arrows,1");
+		~scrollbar_vertical_repaint($component4, "scrollbar_trans_dragger,3", "scrollbar_trans_dragger,0", "scrollbar_trans_dragger,1", "scrollbar_trans_dragger,2", "scrollbar_trans_arrows,0", "scrollbar_trans_arrows,1", 1, 150, 70);
+		if (cc_find($component4, 1) = ^true) {
+			~scrollbar_vertical_setdragger($component4, $component5);
+		}
+		if_setscrollsize($width0, $height1, $component5);
+		if_setscrollpos(0, 0, $component5);
 	}
-	if (~script5349(1) = ^true) {
-		$height1 = if_getheight($component3);
-	}
+} else {
 	if_setsize($width0, $height1, ^setsize_abs, ^setsize_abs, $component3);
+	if_setposition(4, 4, ^setpos_abs_right, ^setpos_abs_top, $component5);
+	if_setsize(8, 8, ^setsize_minus, ^setsize_minus, $component5);
+	if_sethide(true, $component4);
+	if_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top, $component4);
+	if_setsize(0, 8, ^setsize_abs, ^setsize_minus, $component4);
+	cc_deleteall($component4);
+	if_setscrollsize($width0, $height1, $component5);
+	if_setscrollpos(0, if_getscrolly($component5), $component5);
 }

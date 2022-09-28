@@ -1,5 +1,5 @@
 // 687
-[clientscript,ironman_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+[clientscript,ironman_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
 ~steelborder($component2, "<text_gender("Iron Man", "Iron Woman")> Setup", 0);
 ~ironman_modebutton_init($component3, 0, "None", "No <text_gender("Iron Man", "Iron Woman")> restrictions will apply to this account.", $component3, $component4, $component5, $component6, $component7, $component8);
 ~ironman_modebutton_init($component4, 1, "Standard <text_gender("Iron Man", "Iron Woman")>", "An <text_gender("Iron Man", "Iron Woman")> cannot trade, stake, receive PK loot, scavenge dropped items, nor play certain multiplayer minigames.", $component3, $component4, $component5, $component6, $component7, $component8);
@@ -12,21 +12,21 @@ if (~is_group_iron = 1 | ~inzone(0_48_48_48_4, 0_49_48_8_26, coord) = 1) {
 }
 ~ironman_modebutton_init($component8, 5, "Hardcore Group <text_gender("Iron Man", "Iron Woman")>", "In addition to the standard Group <text_gender("Iron Men", "Iron Women")> rules, Hardcore Group <text_gender("Iron Men", "Iron Women")> have a set number of lives. A dangerous death will result in losing one of your lives. Upon reaching 0 lives left, you will all be downgraded to regular Group <text_gender("Iron Men", "Iron Women")>.", $component3, $component4, $component5, $component6, $component7, $component8);
 cc_deleteall($component9);
-def_int $int16 = 0;
-.cc_create($component9, ^iftype_rectangle, $int16);
-$int16 = calc($int16 + 1);
+def_int $int18 = 0;
+.cc_create($component9, ^iftype_rectangle, $int18);
+$int18 = calc($int18 + 1);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setfill(true);
 .cc_setcolour(^white);
-$int16 = ~thinbox($component9, $int16);
-cc_create($component9, ^iftype_graphic, $int16);
-$int16 = calc($int16 + 1);
+$int18 = ~thinbox($component9, $int18);
+cc_create($component9, ^iftype_graphic, $int18);
+$int18 = calc($int18 + 1);
 cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setgraphic("bankbuttons,7");
-cc_create($component9, ^iftype_text, $int16);
-$int16 = calc($int16 + 1);
+cc_create($component9, ^iftype_text, $int18);
+$int18 = calc($int18 + 1);
 cc_setsize(33, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(3, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
@@ -34,8 +34,16 @@ cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settext("<col=ffffff>Deactivation settings</col><br>Avoid accidentally downgrading your <text_gender("Iron Man", "Iron Woman")> status.");
-~ironman_miscellaneous_redraw($component1, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-if_setonvartransmit("ironman_miscellaneous_redraw($component1, $component9, .cc_getid, $component10, $component11, $component12, $component13, $component14, $component15){var499, var281}", $component0);
-~script2116($component13, 1, "PIN", $component13, $component14);
-~script2116($component14, 0, "Permanent", $component13, $component14);
+if (%varbit1776 = 2) {
+	if (if_find($component12) = true) {
+		cc_setsize(400, 220, ^setsize_abs, ^setsize_abs);
+	}
+} else {
+	$component16 = null;
+}
+~ironman_miscellaneous_redraw($component1, $component9, $component10, $component11, $component13, $component14, $component15, $component16, $component17);
+if_setonvartransmit("ironman_miscellaneous_redraw($component1, $component9, .cc_getid, $component10, $component11, $component13, $component14, $component15, $component16, $component17){var499, var281}", $component0);
+~script2116($component14, 1, "PIN", $component14, $component15, $component16);
+~script2116($component15, 0, "Permanent", $component14, $component15, $component16);
+~script2116($component16, 2, "Limited", $component14, $component15, $component16);
 if_sethide(true, $component11);

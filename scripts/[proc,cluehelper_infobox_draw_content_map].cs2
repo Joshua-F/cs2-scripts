@@ -15,7 +15,7 @@ if (%varbit14188 = 1) {
 ~cluehelper_infobox_target_display($dbrow3);
 if ($int4 = 1) {
 	$int1 = ~helper_generic_add_text("...");
-	if (cc_find(interface_711:4, $int1) = ^true) {
+	if (cc_find(interface_711:5, $int1) = ^true) {
 		cc_setoninvtransmit("script6623($int1){inv}");
 	}
 }

@@ -6,7 +6,7 @@ switch_struct ($struct0) {
 			return(~script5346(%var102));
 		}
 	case buff_time_till_next_venom_hit_3741 :
-		if (%var102 > 1000000) {
+		if (%var102 >= 1000000) {
 			return(~script5347(%var102));
 		}
 }

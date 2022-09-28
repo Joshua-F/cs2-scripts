@@ -14,34 +14,47 @@ def_dbrow $dbrow7 = null;
 def_int $int8 = 0;
 def_int $int9 = 10;
 $int1 = ~helper_generic_add_title("Locations", 0);
-switch_int ($int2) {
-	case 0 :
-		$int3 = db_getfieldcount(dbrow_684, dbtable_3:1);
-		while ($int4 < $int3 & $int8 < $int9) {
-			if (cc_find(interface_711:2, $int4) = ^true & cc_getcolour = ^black) {
-				$dbrow5 = db_getfield(dbrow_684, dbtable_3:1, $int4);
-				$dbrow7 = ~cluehelper_clue_target($dbrow5);
-				$int1 = ~helper_generic_add_text(~script6648($dbrow7));
-				$int8 = calc($int8 + 1);
-			}
-			$int4 = calc($int4 + 1);
+if ($dbrow0 = dbrow_2297) {
+	$int3 = enum_getoutputcount(enum_4816);
+	while ($int4 < $int3 & $int8 < $int9) {
+		if (cc_find(interface_711:3, $int4) = ^true & cc_getcolour = ^black) {
+			$dbrow5 = enum(int, dbrow, enum_4816, $int4);
+			$dbrow7 = ~cluehelper_clue_target($dbrow5);
+			$int1 = ~helper_generic_add_text(~script6648($dbrow7));
+			$int8 = calc($int8 + 1);
 		}
-	case 5 :
-		$int3 = db_getfieldcount(dbrow_684, dbtable_3:6);
-		while ($int4 < $int3 & $int8 < $int9) {
-			if (cc_find(interface_711:2, $int4) = ^true & cc_getcolour = ^black) {
-				$dbrow5 = db_getfield(dbrow_684, dbtable_3:6, $int4);
-				$dbrow7 = ~cluehelper_clue_target($dbrow5);
-				$int1 = ~helper_generic_add_text(~script6648($dbrow7));
-				$int8 = calc($int8 + 1);
+		$int4 = calc($int4 + 1);
+	}
+} else {
+	switch_int ($int2) {
+		case 0 :
+			$int3 = db_getfieldcount(dbrow_684, dbtable_3:2);
+			while ($int4 < $int3 & $int8 < $int9) {
+				if (cc_find(interface_711:3, $int4) = ^true & cc_getcolour = ^black) {
+					$dbrow5 = db_getfield(dbrow_684, dbtable_3:2, $int4);
+					$dbrow7 = ~cluehelper_clue_target($dbrow5);
+					$int1 = ~helper_generic_add_text(~script6648($dbrow7));
+					$int8 = calc($int8 + 1);
+				}
+				$int4 = calc($int4 + 1);
 			}
-			$int4 = calc($int4 + 1);
-		}
+		case 5 :
+			$int3 = db_getfieldcount(dbrow_684, dbtable_3:7);
+			while ($int4 < $int3 & $int8 < $int9) {
+				if (cc_find(interface_711:3, $int4) = ^true & cc_getcolour = ^black) {
+					$dbrow5 = db_getfield(dbrow_684, dbtable_3:7, $int4);
+					$dbrow7 = ~cluehelper_clue_target($dbrow5);
+					$int1 = ~helper_generic_add_text(~script6648($dbrow7));
+					$int8 = calc($int8 + 1);
+				}
+				$int4 = calc($int4 + 1);
+			}
+	}
 }
 if ($int8 >= $int9) {
 	$int4 = 0;
 	while ($int4 < $int3) {
-		if (cc_find(interface_711:2, $int4) = ^true & cc_getcolour = ^black) {
+		if (cc_find(interface_711:3, $int4) = ^true & cc_getcolour = ^black) {
 			$int6 = calc($int6 + 1);
 		}
 		$int4 = calc($int4 + 1);
@@ -53,7 +66,7 @@ if ($int8 >= $int9) {
 }
 if (~cluehelper_is_dig($dbrow0, $dbrow7) = 1) {
 	$int1 = ~helper_generic_add_text("...");
-	if (cc_find(interface_711:4, $int1) = ^true) {
+	if (cc_find(interface_711:5, $int1) = ^true) {
 		cc_setoninvtransmit("script6623($int1){inv}");
 	}
 }

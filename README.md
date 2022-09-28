@@ -2886,7 +2886,6 @@
 [**2883**](scripts/[clientscript,script2883].cs2)  
 [**2884**](scripts/[clientscript,cc_flash_component].cs2) `[clientscript,cc_flash_component]`  
 [**2885**](scripts/[clientscript,cc_flash_component_timer].cs2) `[clientscript,cc_flash_component_timer]`  
-[**2886**](scripts/[clientscript,hp_hud_fade_in_check].cs2) `[clientscript,hp_hud_fade_in_check]`  
 [**2887**](scripts/[clientscript,hp_hud_fade_in].cs2) `[clientscript,hp_hud_fade_in]`  
 [**2888**](scripts/[proc,hp_hud_fade_in].cs2) `[proc,hp_hud_fade_in]`  
 [**2889**](scripts/[clientscript,hp_hud_fade_out].cs2) `[clientscript,hp_hud_fade_out]`  
@@ -6443,7 +6442,6 @@
 [**6440**](scripts/[proc,herbiboar_helper_highlight_disable].cs2) `[proc,herbiboar_helper_highlight_disable]`  
 [**6441**](scripts/[clientscript,herbiboar_helper_highlight_clear].cs2) `[clientscript,herbiboar_helper_highlight_clear]`  
 [**6442**](scripts/[proc,herbiboar_helper_highlight_clear].cs2) `[proc,herbiboar_helper_highlight_clear]`  
-[**6443**](scripts/[clientscript,herbiboar_helper_highlight_enable].cs2) `[clientscript,herbiboar_helper_highlight_enable]`  
 [**6444**](scripts/[proc,herbiboar_helper_highlight_enable].cs2) `[proc,herbiboar_helper_highlight_enable]`  
 [**6445**](scripts/[proc,settings_buff_cannon_decay].cs2) `[proc,settings_buff_cannon_decay]`  
 [**6446**](scripts/[proc,settings_helper_tog].cs2) `[proc,settings_helper_tog]`  
@@ -6683,7 +6681,6 @@
 [**6680**](scripts/[proc,script6680].cs2)  
 [**6681**](scripts/[proc,script6681].cs2)  
 [**6682**](scripts/[proc,script6682].cs2)  
-[**6683**](scripts/[clientscript,herbiboar_helper_transmit].cs2) `[clientscript,herbiboar_helper_transmit]`  
 [**6684**](scripts/[proc,script6684].cs2)  
 [**6685**](scripts/[clientscript,script6685].cs2)  
 [**6686**](scripts/[clientscript,script6686].cs2)  
@@ -6711,7 +6708,6 @@
 [**6708**](scripts/[proc,script6708].cs2)  
 [**6709**](scripts/[clientscript,script6709].cs2)  
 [**6710**](scripts/[clientscript,script6710].cs2)  
-[**6711**](scripts/[clientscript,script6711].cs2)  
 [**6712**](scripts/[clientscript,script6712].cs2)  
 [**6713**](scripts/[proc,script6713].cs2)  
 [**6714**](scripts/[proc,script6714].cs2)  
@@ -6846,3 +6842,11 @@
 [**6843**](scripts/[clientscript,script6843].cs2)  
 [**6844**](scripts/[clientscript,script6844].cs2)  
 [**6845**](scripts/[clientscript,script6845].cs2)  
+[**6846**](scripts/[clientscript,script6846].cs2)  
+[**6847**](scripts/[clientscript,script6847].cs2)  
+[**6848**](scripts/[clientscript,script6848].cs2)  
+[**6849**](scripts/[clientscript,script6849].cs2)  
+[**6850**](scripts/[proc,script6850].cs2)  
+[**6851**](scripts/[proc,script6851].cs2)  
+[**6852**](scripts/[clientscript,script6852].cs2)  
+[**6853**](scripts/[clientscript,script6853].cs2)  

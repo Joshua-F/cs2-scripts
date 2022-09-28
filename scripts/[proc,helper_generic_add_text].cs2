@@ -3,7 +3,7 @@
 if (%varcint494 >= 45) {
 	return(0);
 }
-cc_create(interface_711:4, ^iftype_text, %varcint494);
+cc_create(interface_711:5, ^iftype_text, %varcint494);
 ~helper_generic_set_type(%varcint494, 2);
 ~helper_generic_set_string(%varcint494, $string0);
 %varcint494 = calc(%varcint494 + 1);

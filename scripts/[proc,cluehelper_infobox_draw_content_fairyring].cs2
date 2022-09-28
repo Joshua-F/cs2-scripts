@@ -18,7 +18,7 @@ $int1 = ~helper_generic_add_title("Steps from the Fairy Ring", 0);
 $int1 = ~helper_generic_add_text("<tostring($int4)>n <tostring($int5)>e <tostring($int6)>s <tostring($int7)>w");
 if (~cluehelper_is_dig($dbrow0, $dbrow3) = 1) {
 	$int1 = ~helper_generic_add_text("...");
-	if (cc_find(interface_711:4, $int1) = ^true) {
+	if (cc_find(interface_711:5, $int1) = ^true) {
 		cc_setoninvtransmit("script6623($int1){inv}");
 	}
 }

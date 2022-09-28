@@ -6,7 +6,7 @@ def_int $int1 = 0;
 ~helper_generic_set_bit(0);
 $int0 = ~helper_generic_add_title("Slayer Info", 0);
 $int0, $int1 = ~helper_generic_add_data(~helper_slayer_current_assignment);
-if (cc_find(interface_711:4, $int0) = ^true) {
+if (cc_find(interface_711:5, $int0) = ^true) {
 	cc_setonvartransmit("helper_slayer_update_info($int0){var394, var395, var2096, var1077}");
 }
 $int0, $int1 = ~helper_generic_add_data(~helper_slayer_current_amount);

@@ -25,6 +25,8 @@ if ($component3 ! null & $component4 ! null) {
 		if_sethide(false, $component3);
 		~toplevel_sidebutton_highlight($component4);
 		switch_int ($int0) {
+			case 3 :
+				~inventory_build(inventory:0, inv_size(inv), true, null);
 			case 13 :
 				~script6479(1);
 			case 12 :
