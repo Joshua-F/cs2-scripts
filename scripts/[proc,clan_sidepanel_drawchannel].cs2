@@ -35,9 +35,10 @@ def_graphic $graphic19 = null;
 def_int $comsubid20 = 0;
 def_int $int21 = 0;
 def_int $int22 = 0;
-def_int $clanslot23 = 0;
-def_int $int24 = activeclansettings_getaffinedcount;
-while ($int21 < $int24) {
+def_int $int23 = 0;
+def_int $clanslot24 = 0;
+def_int $int25 = activeclansettings_getaffinedcount;
+while ($int21 < $int25) {
 	cc_create($component2, ^iftype_rectangle, $int3);
 	$int3 = calc($int3 + 1);
 	cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
@@ -51,12 +52,15 @@ $int21 = 0;
 if (activeclansettings_getcurrentowner_slot = activeclansettings_getaffinedslot(removetags(chat_playername))) {
 	$int22 = 1;
 }
-def_int $int25 = 0;
 def_int $int26 = 0;
+def_int $int27 = 0;
 while ($int21 < $int1) {
-	$clanslot23 = activeclanchannel_getsorteduserslot($int21);
-	$string0, $height15, $world17 = activeclanchannel_getuserdisplayname($clanslot23), calc($int21 * $int13), activeclanchannel_getuserworld($clanslot23);
-	$int18, $username1 = activeclanchannel_getuserrank($clanslot23), removetags($string0);
+	$clanslot24 = activeclanchannel_getsorteduserslot($int21);
+	$string0, $height15, $world17 = activeclanchannel_getuserdisplayname($clanslot24), calc($int21 * $int13), activeclanchannel_getuserworld($clanslot24);
+	if (compare($string0, chat_playername) = 0) {
+		$int23 = 1;
+	}
+	$int18, $username1 = activeclanchannel_getuserrank($clanslot24), removetags($string0);
 	$comsubid20 = activeclansettings_getaffinedslot(removetags($string0));
 	cc_create($component2, ^iftype_text, $int3);
 	$int3 = calc($int3 + 1);
@@ -89,19 +93,19 @@ while ($int21 < $int1) {
 	.cc_setposition(1, calc($height15 + $int14), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 	if ($int11 = 1) {
-		$graphic19 = ~pvpa_sidepanel_rankicon($clanslot23, $int18);
+		$graphic19 = ~pvpa_sidepanel_rankicon($clanslot24, $int18, $int23);
 	} else {
 		$string2, $graphic19 = ~script4302($int18);
 	}
 	.cc_setgraphic($graphic19);
 	if ($int18 <= -1) {
-		$int26 = calc($int26 + 1);
+		$int27 = calc($int27 + 1);
 	} else {
-		$int25 = calc($int25 + 1);
+		$int26 = calc($int26 + 1);
 	}
 	if ($comsubid20 ! -1 & .cc_find($component2, $comsubid20) = ^true) {
 		.cc_clearops;
-		if ($clanslot5 ! $clanslot23) {
+		if ($clanslot5 ! $clanslot24) {
 			.cc_setposition(0, $height15, ^setpos_abs_centre, ^setpos_abs_top);
 			.cc_sethide(false);
 			if (friend_test($username1) = true) {
@@ -127,9 +131,9 @@ while ($int21 < $int1) {
 				}
 			}
 			.cc_setopbase("<col=ff9040><$string0></col>");
-			.cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot23, $int9)");
+			.cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot24, $int9)");
 		}
-	} else if ($clanslot5 ! $clanslot23) {
+	} else if ($clanslot5 ! $clanslot24) {
 		if (friend_test($username1) = true) {
 			.cc_setop(9, "Remove friend");
 			cc_setop(9, "Remove friend");
@@ -162,8 +166,8 @@ while ($int21 < $int1) {
 		}
 		.cc_setopbase("<col=ff9040><$string0></col>");
 		cc_setopbase("<col=ff9040><$string0></col>");
-		.cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot23, $int9)");
-		cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot23, $int9)");
+		.cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot24, $int9)");
+		cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot24, $int9)");
 	}
 	$int21 = calc($int21 + 1);
 }
@@ -174,4 +178,4 @@ if ($height15 > if_getheight($component2)) {
 	if_setscrollsize(0, 0, $component2);
 }
 ~scrollbar_resize($component4, $component2, if_getscrolly($component2));
-return($int25, $int26);
+return($int26, $int27);
