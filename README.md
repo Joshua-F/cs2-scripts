@@ -5869,7 +5869,6 @@
 [**5866**](scripts/[worldmapelementmouserepeat,mapelement_853].cs2) `[worldmapelementmouserepeat,mapelement_853]`  
 [**5867**](scripts/[worldmapelementmouseleave,mapelement_853].cs2) `[worldmapelementmouseleave,mapelement_853]`  
 [**5868**](scripts/[proc,speedrunning_misc_unlocks].cs2) `[proc,speedrunning_misc_unlocks]`  
-[**5869**](scripts/[proc,script5869].cs2)  
 [**5870**](scripts/[clientscript,script5870].cs2)  
 [**5871**](scripts/[clientscript,script5871].cs2)  
 [**5872**](scripts/[proc,script5872].cs2)  
@@ -6789,8 +6788,6 @@
 [**6786**](scripts/[worldmapelementmouserepeat,mapelement_91].cs2) `[worldmapelementmouserepeat,mapelement_91]`  
 [**6787**](scripts/[worldmapelementmouseleave,mapelement_91].cs2) `[worldmapelementmouseleave,mapelement_91]`  
 [**6788**](scripts/[proc,script6788].cs2)  
-[**6789**](scripts/[proc,script6789].cs2)  
-[**6790**](scripts/[proc,script6790].cs2)  
 [**6791**](scripts/[clientscript,speedrunning_rewards_init].cs2) `[clientscript,speedrunning_rewards_init]`  
 [**6792**](scripts/[proc,script6792].cs2)  
 [**6793**](scripts/[proc,script6793].cs2)  
@@ -6854,3 +6851,4 @@
 [**6851**](scripts/[proc,script6851].cs2)  
 [**6852**](scripts/[clientscript,script6852].cs2)  
 [**6853**](scripts/[clientscript,script6853].cs2)  
+[**6854**](scripts/[proc,script6854].cs2)  

@@ -121,7 +121,7 @@ if ($int18 = 0) {
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext(tostring($int8));
+cc_settext(tostring(~max($int8, 0)));
 def_int $int20 = 0;
 def_string $string1 = "";
 def_int $int21 = string_length($string0);

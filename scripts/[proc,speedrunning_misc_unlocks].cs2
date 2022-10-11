@@ -1,13 +1,7 @@
 // 5868
 [proc,speedrunning_misc_unlocks](dbrow $dbrow0, component $component1, int $int2, int $int3)(int, int)
 switch_dbrow ($dbrow0) {
-	case dbrow_31 :
-		$int2, $int3 = ~script5869($component1, $int2, $int3);
 	case dbrow_32 :
 		$int2, $int3 = ~script6788($component1, $int2, $int3);
-	case dbrow_10 :
-		$int2, $int3 = ~script6789($component1, $int2, $int3);
-	case dbrow_6 :
-		$int2, $int3 = ~script6790($component1, $int2, $int3);
 }
 return($int2, $int3);
