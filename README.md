@@ -6791,7 +6791,7 @@
 [**6788**](scripts/[proc,script6788].cs2)  
 [**6789**](scripts/[proc,script6789].cs2)  
 [**6790**](scripts/[proc,script6790].cs2)  
-[**6791**](scripts/[clientscript,script6791].cs2)  
+[**6791**](scripts/[clientscript,speedrunning_rewards_init].cs2) `[clientscript,speedrunning_rewards_init]`  
 [**6792**](scripts/[proc,script6792].cs2)  
 [**6793**](scripts/[proc,script6793].cs2)  
 [**6794**](scripts/[proc,script6794].cs2)  
@@ -6819,7 +6819,7 @@
 [**6816**](scripts/[proc,script6816].cs2)  
 [**6817**](scripts/[proc,script6817].cs2)  
 [**6818**](scripts/[proc,script6818].cs2)  
-[**6819**](scripts/[clientscript,script6819].cs2)  
+[**6819**](scripts/[clientscript,questjournal_init].cs2) `[clientscript,questjournal_init]`  
 [**6820**](scripts/[clientscript,script6820].cs2)  
 [**6821**](scripts/[clientscript,script6821].cs2)  
 [**6822**](scripts/[proc,script6822].cs2)  
