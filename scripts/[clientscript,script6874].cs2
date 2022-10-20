@@ -1,0 +1,11 @@
+// 6874
+[clientscript,script6874](component $component0, int $comsubid1, int $colour2)
+if (cc_find($component0, calc($comsubid1 + 1)) = ^true) {
+	if (cc_getcolour = 0xe6dbca) {
+		return;
+	}
+	cc_setcolour($colour2);
+}
+if (cc_find($component0, calc($comsubid1 + 12)) = ^true) {
+	cc_setcolour($colour2);
+}

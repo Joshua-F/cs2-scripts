@@ -1,0 +1,31 @@
+// 6864
+[proc,script6864](int $int0, int $int1, string $string0, string $string1)
+if_setonresize("script6863($int0, $int1, $string0, $string1)", interface_786:0);
+~script6897(interface_786:1, interface_786:6);
+def_component $component2 = interface_786:5;
+def_component $component3 = interface_786:6;
+def_component $component4 = interface_786:7;
+def_int $width5 = calc(if_getwidth($component2) - 40);
+if_setposition(0, 45, ^setpos_4, ^setpos_abs_top, $component3);
+if_setsize($width5, 95, ^setsize_abs, ^setsize_minus, $component3);
+~script5288($component2, 0, 0, 0, if_getwidth($component2), if_getheight($component2), struct_3712, 0xb69362);
+def_int $int6 = 0;
+$int6 = ~script5288($component4, $int6, 0, 0, if_getwidth($component4), if_getheight($component4), struct_3712, 0xb69362);
+cc_create($component4, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(235);
+~script6873(interface_786:19, "Select", "Close", 0xef1020, 0, 0);
+~script6873(interface_786:20, "Select", "Back", ^yellow, 4, 1);
+~script6873(interface_786:21, "Select", "Back", ^yellow, 4, 0);
+~script6873(interface_786:15, "Select", "Opt Out", ^yellow, 5, 0);
+~script6873(interface_786:14, "Select", "Cancel Opt Out", ^yellow, 6, 0);
+~script6873(interface_786:27, "Select", "Confirm Opt Out", ^yellow, 0, 0);
+~script6873(interface_786:31, "Select", "Confirm Cancel", ^yellow, 0, 0);
+~script6867($int0, $int1, $string1);
+~script6866;
+~script6865($string1);
+~script6868(true, true, false, false, true, 0);

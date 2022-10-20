@@ -1,0 +1,6 @@
+// 6903
+[clientscript,script6903](int $comsubid0)
+if (cc_find(interface_788:28, calc($comsubid0 + 1)) = ^true) {
+	cc_setcolour(0xff981f);
+}
+if_setcolour(^white, interface_788:29);

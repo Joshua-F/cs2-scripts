@@ -1,0 +1,52 @@
+// 6906
+[proc,script6906](int $int0, int $int1, int $int2, int $int3, int $int4, boolean $boolean5, string $string0)
+if ($int0 > 0) {
+	if_sethide(false, interface_788:4);
+	def_int $x6 = calc(if_getwidth(interface_788:4) / 2 - if_getwidth(interface_788:9) / 2);
+	def_int $y7 = calc(if_getheight(interface_788:4) / 2 - if_getheight(interface_788:9) / 2);
+	if_setposition($x6, $y7, ^setpos_abs_left, ^setpos_abs_top, interface_788:9);
+	~script5288(interface_788:9, 0, 0, 0, if_getwidth(interface_788:9), if_getheight(interface_788:9), struct_3712, 0xb69362);
+	if ($int1 > 0) {
+		if ($int1 = 1) {
+			if_settext("Finding a suitable <col=ff981f>Fresh Start World</col>...", interface_788:10);
+		}
+		if ($int1 = 2) {
+			if_settext("Finding a suitable world...", interface_788:10);
+		}
+		if_settext("", interface_788:11);
+		if_settext("", interface_788:12);
+		if_settext("", interface_788:13);
+		if_settext("", interface_788:14);
+		cc_deleteall(interface_788:4);
+		cc_deleteall(interface_788:15);
+		cc_deleteall(interface_788:16);
+		return;
+	}
+	~script6909(51642372, interface_788:15, $int0, $boolean5, 0, $string0);
+	~script6909(51642372, interface_788:16, $int0, $boolean5, 1, $string0);
+	def_string $string1 = "Fresh Start Worlds";
+	if ($int0 = 2) {
+		$string1 = "Old School Main";
+	}
+	def_string $text2 = "";
+	def_string $text3 = "";
+	def_string $text4 = "";
+	if_settext("You are selecting <col=ff981f><$string1></col>.", interface_788:11);
+	if ($int0 = 1 & $boolean5 = false) {
+		$text2 = ~script6907($int0);
+		$text3 = "<col=ff981f>You will be hopped to a Fresh Start World on confirmation.</col>";
+	} else if ($int0 = 2 & $boolean5 = true) {
+		$text2 = ~script6907($int0);
+		$text3 = "<col=ff981f>You will be hopped to a Main World on confirmation.</col>";
+	} else {
+		$text4 = ~script6907($int0);
+	}
+	if_settext($text2, interface_788:12);
+	if_settext($text3, interface_788:13);
+	if_settext($text4, interface_788:14);
+	if_setcolour(0xe6dbca, interface_788:12);
+	if_setcolour(0xe6dbca, interface_788:13);
+	if_setcolour(0xe6dbca, interface_788:14);
+	return;
+}
+if_sethide(true, interface_788:4);

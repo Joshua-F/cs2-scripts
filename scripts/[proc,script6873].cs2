@@ -1,0 +1,56 @@
+// 6873
+[proc,script6873](component $component0, string $string0, string $text1, int $colour1, int $int2, int $int3)
+def_int $colour4 = 0x777777;
+def_int $int5 = 0;
+.cc_create($component0, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setfill(true);
+.cc_setcolour(^white);
+.cc_settrans(255);
+if ($int3 = 0) {
+	.cc_setonmouserepeat("script6874($component0, .cc_getid, $colour1)");
+	.cc_setonmouseleave("script6875($component0, .cc_getid)");
+	switch_int ($int2) {
+		case 1 :
+			.cc_setonop("script6892($component0, .cc_getid)");
+		case 2 :
+			.cc_setonop("script6893($component0, .cc_getid)");
+		case 3 :
+			.cc_setonop("script6894($component0, .cc_getid)");
+		case 4 :
+			.cc_setonop("script6871");
+		case 5 :
+			.cc_setonop("script6869");
+		case 6 :
+			.cc_setonop("script6870");
+		case default :
+			.cc_setonop("script6876($component0, .cc_getid)");
+	}
+	.cc_setop(1, "<$string0> <col=ff981f><$text1></col>");
+}
+if ($int3 = 0) {
+	$int5 = ~script5288($component0, $int5, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3712, 0xff981f);
+} else {
+	$int5 = ~script5288($component0, $int5, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3712, $colour4);
+}
+cc_create($component0, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(235);
+cc_create($component0, ^iftype_text, $int5);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p11_full);
+if ($int3 = 0) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour($colour4);
+}
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($text1);

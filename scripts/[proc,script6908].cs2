@@ -1,0 +1,38 @@
+// 6908
+[proc,script6908](component $component0, string $text0, int $int1, int $int2, int $int3, boolean $boolean4, string $string1)
+def_int $int5 = 0;
+def_int $width6 = if_getwidth($component0);
+def_int $height7 = if_getheight($component0);
+.cc_create($component0, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setfill(true);
+.cc_setcolour(^white);
+.cc_settrans(255);
+$int5 = ~script5288($component0, $int5, 0, 0, $width6, $height7, struct_3714, 0xff981f);
+cc_create($component0, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, 4, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(verdana_13pt_regular);
+cc_setcolour(0xff981f);
+cc_setsize($width6, $height7, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+cc_settext("Select");
+cc_create($component0, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, 23, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(verdana_13pt_bold);
+cc_setcolour(^white);
+cc_setsize($width6, $height7, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+cc_settext($text0);
+if ($int1 = 0 & $int3 = 0) {
+	.cc_setonmouserepeat("script6912($component0, .cc_getid, 0x0dc10d)");
+	.cc_setonmouseleave("script6913($component0, .cc_getid, 0xff981f, ^white)");
+	.cc_setonop("script6914($int2, $boolean4, $string1)");
+	.cc_setopbase("<col=ff981f><$text0></col>");
+	.cc_setop(1, "Select");
+}

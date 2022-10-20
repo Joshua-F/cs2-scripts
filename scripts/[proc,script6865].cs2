@@ -1,0 +1,64 @@
+// 6865
+[proc,script6865](string $string0)
+def_component $component0 = interface_786:28;
+def_component $component1 = interface_786:30;
+def_component $component2 = interface_786:29;
+def_int $int3 = 0;
+def_int $y4 = 25;
+def_string $text1 = "<col=e6dbca>Cancelling your opt out will mean you <col=ff981f>remain on Fresh Start Worlds<col=e6dbca>.<br><br><col=e6dbca>You will have access and be <col=ff981f>able to use the Grand Exchange<col=e6dbca> again.<br><br><col=e6dbca>If you decide to opt out again, you will start with a new three day cooldown.";
+def_fontmetrics $fontmetrics5 = p11_full;
+def_int $int6 = 20;
+def_int $int7 = 13;
+def_int $int8 = 19;
+def_int $int9 = 55;
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics5 = verdana_13pt_regular;
+		$int7 = 16;
+		$int6 = 30;
+		$int8 = 25;
+		$int9 = 55;
+		$y4 = 35;
+	case 2, 3 :
+		$fontmetrics5 = verdana_15pt_regular;
+		$y4 = 60;
+		$int7 = 17;
+		$int6 = 40;
+		$int8 = 30;
+		$int9 = 55;
+}
+def_int $y10 = calc(if_getheight($component2) * $int8 / 100);
+def_int $y11 = calc(if_getheight($component2) * $int9 / 100);
+if_setsize(calc($int6 * 2), 7372, ^setsize_minus, ^setsize_2, $component0);
+if_setposition(0, $int6, ^setpos_4, ^setpos_abs_bottom, $component0);
+if_setsize(calc($int6 * 2), 5734, ^setsize_minus, ^setsize_2, $component2);
+if_setposition(0, $int6, ^setpos_4, ^setpos_abs_top, $component2);
+if_setposition(0, $y11, ^setpos_4, ^setpos_abs_top, interface_786:31);
+cc_create($component0, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setposition(0, $y4, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont($fontmetrics5);
+cc_setcolour(0xe6dbca);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_top, $int7);
+cc_settextshadow(true);
+cc_settext($text1);
+def_int $int12 = 0;
+$int12 = ~script5288($component1, $int12, 0, 0, if_getwidth($component1), if_getheight($component1), struct_3712, 0xb69362);
+cc_create($component1, ^iftype_rectangle, $int12);
+$int12 = calc($int12 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(235);
+def_int $int13 = 0;
+cc_create($component2, ^iftype_text, $int13);
+$int13 = calc($int13 + 1);
+cc_setposition(0, $y10, ^setpos_4, ^setpos_abs_top);
+cc_settextfont(verdana_15pt_regular);
+cc_setcolour(0xff981f);
+cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 12);
+cc_settextshadow(true);
+cc_settext("<col=ff981f>Confirm to cancel Opt Out");

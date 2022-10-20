@@ -1,0 +1,64 @@
+// 6917
+[proc,script6917](int $int0, int $int1, int $flags2, int $int3)(int)
+if ($int3 ! $int1) {
+	return(0);
+}
+def_int $bool4 = testbit($flags2, 27);
+if ($int0 = 1 & $bool4 = ^false) {
+	return(0);
+}
+if ($int0 = 2 & $bool4 = ^true) {
+	return(0);
+}
+if (testbit($flags2, 2) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 4) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 5) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 6) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 7) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 10) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 14) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 15) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 17) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 20) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 21) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 23) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 25) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 26) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 29) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 30) = ^true) {
+	return(0);
+}
+if (testbit($flags2, 31) = ^true) {
+	return(0);
+}
+return(1);

@@ -1,0 +1,9 @@
+// 6899
+[proc,script6899](component $component0, int $colour1, int $int2)
+def_int $comsubid3 = ~script5288($component0, 0, 0, 0, if_getwidth($component0), calc(if_getheight($component0) + $int2), struct_3712, 0xb69362);
+cc_create($component0, ^iftype_rectangle, $comsubid3);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, calc($int2 * -1), ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour($colour1);
+cc_settrans(235);

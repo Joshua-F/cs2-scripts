@@ -1,0 +1,14 @@
+// 6878
+[clientscript,script6878](component $component0, int $comsubid1, int $clock2)
+if (clientclock < $clock2) {
+	return;
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setontimer(null);
+}
+if (cc_find($component0, calc($comsubid1 + 1)) = ^true) {
+	cc_setcolour(0xff981f);
+}
+if (cc_find($component0, calc($comsubid1 + 12)) = ^true) {
+	cc_setcolour(^white);
+}

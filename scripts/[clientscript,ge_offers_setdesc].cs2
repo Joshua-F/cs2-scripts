@@ -1,30 +1,37 @@
 // 5730
 [clientscript,ge_offers_setdesc](component $component0, component $component1, string $string0, string $string1)
+def_int $int2 = ~script6811;
 def_string $string2 = "";
-def_int $width2 = 0;
-def_int $int3 = 0;
+def_int $width3 = 0;
 def_int $int4 = 0;
+def_int $int5 = 0;
 if (string_length($string1) > 0) {
-	$width2 = if_getwidth($component0);
-	if (paraheight($string0, $width2, p11_full) <= 2) {
+	$width3 = if_getwidth($component0);
+	if ($int2 = 1) {
+		$string2 = $string0;
+	} else if (paraheight($string0, $width3, p11_full) <= 2) {
 		$string2 = "<$string0><br><br><$string1>";
 	} else {
 		$string2 = "<$string0><br><$string1>";
 	}
-	$int3, $int4 = calc(if_getx($component0) + parawidth($string1, $width2, p11_full) + 5), calc(if_gety($component0) + paraheight($string2, $width2, p11_full) * 15 + 2);
-	$int3, $int4 = calc($int3 - (if_getwidth($component1) - 15) / 2), calc($int4 - (11 + if_getheight($component1) / 2));
-	if_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top, $component1);
-	if_sethide(false, $component1);
-	cc_deleteall($component1);
-	cc_create($component1, ^iftype_graphic, 0);
-	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setgraphic("mapfunction_infoicon");
-	cc_settrans(50);
-	if_setonmouserepeat("cc_settrans(event_com, cc_getid, 0, null)", $component1);
-	if_setonmouseleave("cc_settrans(event_com, cc_getid, 50, null)", $component1);
-	if_setonop("opsound(event_opindex, 2)", $component1);
-	if_setop(1, "Info", $component1);
+	$int4, $int5 = calc(if_getx($component0) + parawidth($string1, $width3, p11_full) + 5), calc(if_gety($component0) + paraheight($string2, $width3, p11_full) * 15 + 2);
+	$int4, $int5 = calc($int4 - (if_getwidth($component1) - 15) / 2), calc($int5 - (11 + if_getheight($component1) / 2));
+	if_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	if ($int2 = 1) {
+		if_sethide(true, $component1);
+	} else {
+		if_sethide(false, $component1);
+		cc_deleteall($component1);
+		cc_create($component1, ^iftype_graphic, 0);
+		cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setgraphic("mapfunction_infoicon");
+		cc_settrans(50);
+		if_setonmouserepeat("cc_settrans(event_com, cc_getid, 0, null)", $component1);
+		if_setonmouseleave("cc_settrans(event_com, cc_getid, 50, null)", $component1);
+		if_setonop("opsound(event_opindex, 2)", $component1);
+		if_setop(1, "Info", $component1);
+	}
 } else {
 	$string2 = $string0;
 	if_sethide(true, $component1);

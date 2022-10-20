@@ -1,0 +1,69 @@
+// 6882
+[proc,script6882]
+if_setonresize("script6881", interface_785:0);
+~script6897(interface_785:1, interface_785:6);
+def_component $component0 = interface_785:5;
+~script5288($component0, 0, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3712, 0xb69362);
+def_component $component1 = interface_785:6;
+def_int $width2 = calc(if_getwidth($component0) - 40);
+if_setposition(0, 45, ^setpos_4, ^setpos_abs_top, $component1);
+if_setsize($width2, 95, ^setsize_abs, ^setsize_minus, $component1);
+def_int $int3 = 0;
+$int3 = ~script5288($component1, $int3, 0, 0, if_getwidth($component1), if_getheight($component1), struct_3712, 0xb69362);
+cc_create($component1, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(235);
+~script6873(interface_785:9, "Select", "Close", 0xef1020, 0, 0);
+def_int $int4 = 10;
+def_int $int5 = 10;
+def_int $int6 = 11;
+def_int $int7 = 0;
+def_fontmetrics $fontmetrics8 = verdana_11pt_regular;
+def_fontmetrics $fontmetrics9 = verdana_11pt_regular;
+def_int $int10 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_int $int11 = 7;
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics8 = verdana_13pt_regular;
+		$fontmetrics9 = verdana_13pt_regular;
+		$int4 = 15;
+		$int6 = 15;
+		$int5 = 17;
+		$int11 = 18;
+	case 2, 3 :
+		$fontmetrics8 = verdana_15pt_regular;
+		$fontmetrics9 = verdana_15pt_regular;
+		$int4 = 20;
+		$int6 = 17;
+		$int5 = 21;
+		$int11 = 25;
+}
+def_int $width12 = calc(if_getwidth($component1) - $int4 * 2);
+def_int $int13 = 0;
+def_int $int14 = db_getfieldcount(dbrow_170, dbtable_30:0);
+while ($int13 < $int14) {
+	$string0, $string1, $string2 = db_getfield(dbrow_170, dbtable_30:0, $int13);
+	$int10 = calc(paraheight($string2, $width12, $fontmetrics9) * $int6);
+	cc_create($component1, ^iftype_text, $int3);
+	$int3 = calc($int3 + 1);
+	cc_setposition($int4, $int11, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont($fontmetrics8);
+	if (calc($int13 % 2) = 0) {
+		cc_setcolour(0xe6dbca);
+	} else {
+		cc_setcolour(0xccb794);
+	}
+	cc_setsize($width12, $int10, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_top, $int6);
+	cc_settextshadow(true);
+	cc_settext($string2);
+	$int11 = calc($int11 + $int10 + $int5);
+	$int13 = calc($int13 + 1);
+}

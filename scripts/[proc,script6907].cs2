@@ -1,0 +1,9 @@
+// 6907
+[proc,script6907](int $int0)(string)
+def_string $text0 = "Please confirm your choice.";
+if ($int0 = 2) {
+	$text0 = "<$text0> This choice cannot be changed.";
+} else {
+	$text0 = "<$text0> You can opt-out at any time.";
+}
+return($text0);

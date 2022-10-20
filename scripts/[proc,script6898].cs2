@@ -1,0 +1,83 @@
+// 6898
+[proc,script6898](int $int0, int $int1, int $int2, boolean $boolean3, string $string0)
+if_setonresize("script6896($int0, $int1, $int2, $boolean3, $string0)", interface_788:0);
+cc_deleteall(interface_788:1);
+cc_deleteall(interface_788:25);
+cc_deleteall(interface_788:39);
+~script6897(interface_788:1, interface_788:3);
+def_int $flags4 = 16;
+if ($int0 > 0 | $int2 = 1) {
+	$flags4 = 17;
+}
+~steelborder(interface_788:2, "Choose your beginning", $flags4);
+def_int $int5 = 10;
+def_int $int6 = 220;
+def_int $int7 = 220;
+def_int $int8 = 110;
+def_int $int9 = 10;
+def_int $height10 = 70;
+def_int $height11 = 100;
+def_int $y12 = 90;
+def_fontmetrics $fontmetrics13 = verdana_11pt_regular;
+switch_int (%varcint988) {
+	case 1 :
+		$int6 = 340;
+		$int8 = 185;
+	case 2, 3 :
+		$int6 = 440;
+		$y12 = 120;
+		$int8 = 220;
+		$int5 = 15;
+		$fontmetrics13 = verdana_13pt_regular;
+}
+def_int $int14 = calc($int6 - 20);
+def_int $int15 = calc($int7 - 20);
+def_int $int16 = calc($int8 - $int9 * 2);
+def_int $int17 = 0;
+def_int $int18 = 3;
+def_int $int19 = calc($int18 * 2);
+if_setsize($int6, calc($int5 * 2), ^setsize_abs, ^setsize_minus, interface_788:6);
+def_int $height20 = if_getheight(interface_788:6);
+def_int $int21 = -10;
+~script6899(interface_788:17, ^white, -10);
+if_setposition($int5, $int5, ^setpos_abs_left, ^setpos_abs_top, interface_788:6);
+if_setsize($int14, $int8, ^setsize_abs, ^setsize_abs, interface_788:23);
+if_settextfont($fontmetrics13, interface_788:22);
+if_setposition(calc($int6 / 2 - if_getwidth(interface_788:26) / 2), 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_788:26);
+if_setposition(calc($int6 / 2 - if_getwidth(interface_788:27) / 2 - $int9), 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_788:27);
+if_setsize($int7, calc($int5 * 2), ^setsize_abs, ^setsize_minus, interface_788:7);
+~script6899(interface_788:31, ^white, -10);
+if_setposition($int5, $int5, ^setpos_abs_right, ^setpos_abs_top, interface_788:7);
+if_setsize($int15, $int8, ^setsize_abs, ^setsize_abs, interface_788:37);
+if_settextfont($fontmetrics13, interface_788:36);
+if (%varcint988 >= 2) {
+	if_setsize($int14, $height11, ^setsize_abs, ^setsize_abs, interface_788:19);
+	if_setsize($int15, $height11, ^setsize_abs, ^setsize_abs, interface_788:33);
+	if_setposition(if_getx(interface_788:23), $y12, ^setpos_abs_left, ^setpos_abs_top, interface_788:23);
+	if_setposition(if_getx(interface_788:37), $y12, ^setpos_abs_left, ^setpos_abs_top, interface_788:37);
+} else {
+	if_setsize($int14, $height10, ^setsize_abs, ^setsize_abs, interface_788:19);
+	if_setsize($int15, $height10, ^setsize_abs, ^setsize_abs, interface_788:33);
+	if_setposition(if_getx(interface_788:23), $y12, ^setpos_abs_left, ^setpos_abs_top, interface_788:23);
+	if_setposition(if_getx(interface_788:37), $y12, ^setpos_abs_left, ^setpos_abs_top, interface_788:37);
+}
+switch_int (%varcint988) {
+	case 1 :
+		if_setgraphic("graphic_4673", interface_788:21);
+		if_setgraphic("graphic_4676", interface_788:35);
+	case 2, 3 :
+		if_setgraphic("graphic_4672", interface_788:21);
+		if_setgraphic("graphic_4675", interface_788:35);
+	case default :
+		if_setgraphic("graphic_4674", interface_788:21);
+		if_setgraphic("graphic_4677", interface_788:35);
+}
+~script6899(interface_788:24, ^black, 0);
+~script6899(interface_788:38, ^black, 0);
+~script6900(interface_788:25, $int14, $int16);
+~script6900(interface_788:39, $int15, $int16);
+~script6901($int0, $int2, $boolean3, $string0);
+~script6908(interface_788:26, "Fresh Start Worlds", $int0, 1, $int2, $boolean3, $string0);
+~script6908(interface_788:40, "Old School Main", $int0, 2, $int2, $boolean3, $string0);
+~script6906($int0, $int1, 51642372, 51642383, 51642384, $boolean3, $string0);
+~script6905($int2, $boolean3, $string0);

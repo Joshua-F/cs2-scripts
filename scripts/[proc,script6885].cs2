@@ -1,0 +1,14 @@
+// 6885
+[proc,script6885]
+if_setonresize("script6884", interface_784:0);
+~script6897(interface_784:1, interface_784:6);
+~script5288(interface_784:5, 0, 0, 0, if_getwidth(interface_784:5), if_getheight(interface_784:5), struct_3712, 0xb69362);
+~script6873(interface_784:27, "View", "About", ^yellow, 2, 0);
+~script6873(interface_784:29, "View", "Boss Points", ^yellow, 3, 0);
+~script6873(interface_784:28, "View", "General", ^yellow, 1, 0);
+~script6873(interface_784:30, "View", "General", ^yellow, 1, 0);
+~script6873(interface_784:31, "Select", "Close", 0xef1020, 0, 0);
+~script6886;
+~script6888;
+~script6889;
+~script6891("General", true, false, true, true, false, true, false, 0);

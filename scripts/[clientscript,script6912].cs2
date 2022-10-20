@@ -1,0 +1,11 @@
+// 6912
+[clientscript,script6912](component $component0, int $comsubid1, int $colour2)
+if (cc_find($component0, calc($comsubid1 + 1)) = ^true) {
+	cc_setcolour($colour2);
+}
+if (cc_find($component0, calc($comsubid1 + 11)) = ^true) {
+	cc_setcolour($colour2);
+}
+if (cc_find($component0, calc($comsubid1 + 12)) = ^true) {
+	cc_setcolour($colour2);
+}

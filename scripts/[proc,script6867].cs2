@@ -1,0 +1,155 @@
+// 6867
+[proc,script6867](int $int0, int $int1, string $string0)
+if_settext("<col=ffffff>Opt Out from <col=ff981f>Fresh Start Worlds</col>", interface_786:16);
+def_component $component2 = interface_786:11;
+def_component $component3 = interface_786:13;
+def_component $component4 = interface_786:12;
+def_int $int5 = 0;
+def_int $y6 = 50;
+def_string $text1 = "<col=e6dbca>Opting out will move your account to the main game. There will be a <col=ff981f>three day countdown<col=e6dbca> before you're transfered, during which you can change your mind. After the countdown ends you will be transfered to the main game.";
+def_string $text2 = "You will <col=ff981f>no longer be able to join Fresh Start Worlds<col=e6dbca> and will <col=ff981f>no longer gain Achievement Points or be able to earn World Firsts<col=e6dbca>. You <col=ff981f>cannot change your mind<col=e6dbca> once you've opted out.";
+def_fontmetrics $fontmetrics7 = p11_full;
+def_fontmetrics $fontmetrics8 = p11_full;
+def_int $int9 = 20;
+def_int $int10 = 13;
+def_int $int11 = 19;
+def_int $int12 = 55;
+def_int $int13 = 22;
+def_int $int14 = 14;
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics7 = p12_full;
+		$int10 = 16;
+		$int9 = 30;
+		$y6 = 65;
+		$int11 = 25;
+		$int12 = 55;
+		$int13 = 21;
+		$fontmetrics8 = verdana_11pt_regular;
+	case 2, 3 :
+		$fontmetrics7 = verdana_15pt_regular;
+		$fontmetrics8 = verdana_13pt_regular;
+		$int14 = 15;
+		$int10 = 17;
+		$int9 = 40;
+		$y6 = 80;
+		$int11 = 30;
+		$int12 = 55;
+		$int13 = 20;
+}
+def_int $y15 = calc(if_getheight($component4) * $int11 / 100);
+def_int $y16 = calc(if_getheight($component4) * $int12 / 100);
+def_int $y17 = calc(if_getheight($component4) * $int13 / 100);
+if_setsize(calc($int9 * 2), 7372, ^setsize_minus, ^setsize_2, $component2);
+if_setposition(0, $int9, ^setpos_4, ^setpos_abs_top, $component2);
+if_setsize(calc($int9 * 2), 5734, ^setsize_minus, ^setsize_2, $component4);
+if_setposition(0, $int9, ^setpos_4, ^setpos_abs_bottom, $component4);
+if_setposition(0, $y16, ^setpos_4, ^setpos_abs_top, interface_786:15);
+if_setposition(0, $y16, ^setpos_4, ^setpos_abs_top, interface_786:14);
+if (%varbit14580 = 1) {
+	if_sethide(true, interface_786:15);
+	if_sethide(false, interface_786:14);
+} else {
+	if_sethide(false, interface_786:15);
+	if_sethide(true, interface_786:14);
+	if ($int0 ! 0) {
+		if_sethide(true, interface_786:15);
+	} else {
+		if_sethide(false, interface_786:15);
+	}
+}
+cc_create($component2, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont($fontmetrics7);
+cc_setcolour(0xe6dbca);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_top, $int10);
+cc_settextshadow(true);
+cc_settext($text1);
+cc_create($component2, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, $y6, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont($fontmetrics7);
+cc_setcolour(0xe6dbca);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_top, $int10);
+cc_settextshadow(true);
+cc_settext($text2);
+def_int $int18 = 0;
+$int18 = ~script5288($component3, $int18, 0, 0, if_getwidth($component3), if_getheight($component3), struct_3712, 0xb69362);
+cc_create($component3, ^iftype_rectangle, $int18);
+$int18 = calc($int18 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(235);
+def_string $text3 = "";
+def_int $int19 = 0;
+if (%varbit14580 = 0) {
+	if ($int0 = 0) {
+		cc_create($component4, ^iftype_text, $int19);
+		$int19 = calc($int19 + 1);
+		cc_setposition(0, $y15, ^setpos_4, ^setpos_abs_top);
+		cc_settextfont(verdana_15pt_regular);
+		cc_setcolour(0xff981f);
+		cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 12);
+		cc_settextshadow(true);
+		cc_settext("<col=0dc10d>You are able to opt out");
+	} else {
+		cc_create($component4, ^iftype_text, $int19);
+		$int19 = calc($int19 + 1);
+		cc_setposition(0, $y15, ^setpos_4, ^setpos_abs_top);
+		cc_settextfont(verdana_15pt_regular);
+		cc_setcolour(0xff981f);
+		cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 12);
+		cc_settextshadow(true);
+		cc_settext("<col=db3e32>You are currently unable to opt out");
+		cc_create($component4, ^iftype_text, $int19);
+		$int19 = calc($int19 + 1);
+		cc_setposition(0, $y17, ^setpos_4, ^setpos_abs_top);
+		cc_settextfont($fontmetrics8);
+		cc_setsize(30, 10, ^setsize_minus, ^setsize_minus);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, $int14);
+		cc_settextshadow(true);
+		switch_int ($int0) {
+			case 4 :
+				$text3 = "<col=ffffff>There is not enough time left before the<br><col=ffffff>end of Fresh Start Worlds to opt out.";
+			case default :
+				$text3 = "<col=ffffff>You have <col=db3e32>pending transactions<col=ffffff> in the Grand Exchange.";
+		}
+		if ($int0 ! 4) {
+			$text3 = "<$text3> <col=ffffff>You cannot have pending offers or collections in the Grand Exchange when opting out.";
+		}
+		cc_settext($text3);
+	}
+} else {
+	cc_create($component4, ^iftype_text, $int19);
+	$int19 = calc($int19 + 1);
+	cc_setcolour(0xff981f);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_settextshadow(true);
+	if ($int1 = 0) {
+		if (%varcint988 < 2) {
+			cc_settextfont(verdana_13pt_regular);
+		} else {
+			cc_settextfont(verdana_15pt_regular);
+		}
+		cc_settext("<col=ffff00>You have <$string0> remaining before opt out");
+		cc_setposition(0, $y15, ^setpos_4, ^setpos_abs_top);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 12);
+	} else {
+		if (%varcint988 < 1) {
+			cc_settextfont(verdana_13pt_regular);
+		} else {
+			cc_settextfont(verdana_15pt_regular);
+		}
+		cc_settext("<col=ffff00>You have opted out<br><br><col=ffff00>Please relog to complete the transfer");
+		cc_setposition(0, 0, ^setpos_4, ^setpos_abs_top);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
+		if_sethide(true, interface_786:14);
+	}
+}

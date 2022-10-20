@@ -1,0 +1,12 @@
+// 6902
+[clientscript,script6902](int $comsubid0, int $colour1)
+if (cc_find(interface_788:28, calc($comsubid0 + 1)) = ^true) {
+	cc_setcolour($colour1);
+}
+if (cc_find(interface_788:28, calc($comsubid0 + 11)) = ^true) {
+	cc_setcolour($colour1);
+}
+if (cc_find(interface_788:28, calc($comsubid0 + 12)) = ^true) {
+	cc_setcolour($colour1);
+}
+if_setcolour($colour1, interface_788:29);

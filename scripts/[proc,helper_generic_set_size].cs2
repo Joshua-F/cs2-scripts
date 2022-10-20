@@ -37,6 +37,6 @@ if ($height1 > 300) {
 	if_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top, $component4);
 	if_setsize(0, 8, ^setsize_abs, ^setsize_minus, $component4);
 	cc_deleteall($component4);
-	if_setscrollsize($width0, $height1, $component5);
-	if_setscrollpos(0, if_getscrolly($component5), $component5);
+	if_setscrollsize(0, 0, $component5);
+	if_setscrollpos(0, 0, $component5);
 }

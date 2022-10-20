@@ -3,4 +3,7 @@
 if ($world0 <= 0 | testbit($flags1, 21) = ^true) {
 	return(0);
 }
+if (~script5869($flags1) = 0) {
+	return(0);
+}
 return(1);

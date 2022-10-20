@@ -1,0 +1,12 @@
+// 6877
+[proc,script6877](component $component0, int $comsubid1)
+~script6879;
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setontimer("script6878($component0, $comsubid1, calc(clientclock + 10))");
+}
+if (cc_find($component0, calc($comsubid1 + 1)) = ^true) {
+	cc_setcolour(0xe6dbca);
+}
+if (cc_find($component0, calc($comsubid1 + 12)) = ^true) {
+	cc_setcolour(0xe6dbca);
+}

@@ -103,7 +103,8 @@ def_int $int23 = ~max($int7, $int18);
 $int23 = ~max($int23, $int9);
 def_int $int24 = mouse_getx;
 def_int $int25 = mouse_gety;
-if (~on_mobile = true & %varcint1016 >= 0 & %varcint1017 >= 0) {
+def_boolean $boolean26 = ~on_mobile;
+if ($boolean26 = true & %varcint1016 >= 0 & %varcint1017 >= 0) {
 	$int24 = %varcint1016;
 	$int25 = %varcint1017;
 }
@@ -111,7 +112,11 @@ if ($enum4 = enum_1745) {
 	$int24 = calc($int24 - if_getx(interface_601:19));
 	$int25 = calc($int25 - if_gety(interface_601:19));
 }
-$int24 = ~min(calc($int24 + 0), calc(if_getwidth($component1) - $int23));
+if ($boolean26 = true) {
+	$int24 = ~max(calc($int24 - 0 - $int23), 0);
+} else {
+	$int24 = ~min(calc($int24 + 0), calc(if_getwidth($component1) + $int23));
+}
 $int25 = ~min(calc($int25 + 24), calc(if_getheight($component1) - ($int8 + $int19 + $int10 - 2)));
 if ($int5 = 1) {
 	cc_create($component1, ^iftype_rectangle, $int0);

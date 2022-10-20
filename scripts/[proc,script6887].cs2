@@ -1,0 +1,33 @@
+// 6887
+[proc,script6887](int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, fontmetrics $fontmetrics8)(int)
+def_int $int9 = calc($int2 + ($int4 / 2 - $int6 / 2));
+def_int $int10 = calc($int3 + ($int5 / 2 - $int7 / 2));
+.cc_create($component1, ^iftype_rectangle, $int0);
+$int0 = calc($int0 + 1);
+.cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
+.cc_setfill(true);
+.cc_setcolour(^white);
+.cc_settrans(255);
+.cc_setonmouserepeat("script6874($component1, .cc_getid, ^yellow)");
+.cc_setonmouseleave("script6875($component1, .cc_getid)");
+.cc_setonop("script6894($component1, .cc_getid)");
+.cc_setop(1, "View Boss Points");
+$int0 = ~script5288($component1, $int0, $int9, $int10, $int6, $int7, struct_3712, 0xff981f);
+cc_create($component1, ^iftype_rectangle, $int0);
+$int0 = calc($int0 + 1);
+cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(235);
+cc_create($component1, ^iftype_text, $int0);
+$int0 = calc($int0 + 1);
+cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont($fontmetrics8);
+cc_setcolour(^white);
+cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, $int7);
+cc_settextshadow(true);
+cc_settext("Boss Points");
+return($int0);

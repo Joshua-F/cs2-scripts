@@ -1,0 +1,25 @@
+// 5869
+[proc,script5869](int $flags0)(int)
+def_int $bool1 = testbit($flags0, 27);
+if (~script6790 = 0) {
+	if ($bool1 = ^true) {
+		return(0);
+	}
+	return(1);
+}
+if (testbit($flags0, 15) = ^true) {
+	return(1);
+}
+if (testbit($flags0, 29) = ^true) {
+	return(1);
+}
+if (testbit($flags0, 30) = ^true) {
+	return(1);
+}
+if (testbit($flags0, 6) = ^true) {
+	return(1);
+}
+if ($bool1 = ^false) {
+	return(0);
+}
+return(1);

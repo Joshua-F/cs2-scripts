@@ -1,0 +1,10 @@
+// 6918
+[clientscript,script6918](int $world0)
+def_int $world1 = 0;
+def_int $int2 = 0;
+def_string $string0 = "";
+def_int $int3 = -1;
+def_int $int4 = 0;
+def_string $string1 = "";
+$world1, $int2, $string0, $int3, $int4, $string1 = worldlist_specific($world0);
+resume_countdialog(tostring($int2));
