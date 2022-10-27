@@ -1,0 +1,9 @@
+// 6921
+[clientscript,script6921](component $component0)
+~v2_stone_button_filled($component0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script6922(true, false, $component0)", $component0);
+}
+if_setonmouseleave("script6922(false, false, $component0)", $component0);
+if_setonhold("script6922(false, true, $component0)", $component0);
+if_setonrelease("script6922(true, false, $component0)", $component0);

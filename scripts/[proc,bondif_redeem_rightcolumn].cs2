@@ -4,7 +4,7 @@ cc_deleteall($component1);
 def_int $comsubid2 = 0;
 def_int $int3 = 0;
 def_component $component4 = enum(int, component, enum_1913, %var1204);
-if ($component4 ! null & %varbit10149 = 1) {
+if ($component4 ! null) {
 	if_settext("The required Old School Bonds will be taken from your account.<br>Select <col=ffffff>Confirm</col> to continue.", $component0);
 	$comsubid2, $int3 = ~v2_stone_button_fadable($component1, $int3);
 	if_setonmouserepeat("bondif_redeem_hover(true, $component1, $comsubid2)", $component1);
@@ -19,11 +19,7 @@ if ($component4 ! null & %varbit10149 = 1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext("Confirm");
 } else {
-	if ($component4 = null) {
-		if_settext("Select a membership package from the listed options.", $component0);
-	} else {
-		if_settext("You cannot redeem Old School Bonds for membership while your subscription is active.", $component0);
-	}
+	if_settext("Select a membership package from the listed options.", $component0);
 	$int3 = ~v2_stone_button_in_filled($component1);
 	cc_create($component1, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);

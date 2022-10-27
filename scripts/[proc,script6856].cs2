@@ -1,0 +1,5 @@
+// 6856
+[proc,script6856](int $int0, int $int1)(dbrow)
+db_find(dbtable_34:0, $int0);
+def_int $int2 = db_find_filter_with_count(dbtable_34:1, $int1);
+return(db_findnext);

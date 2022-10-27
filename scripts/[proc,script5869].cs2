@@ -1,25 +1,16 @@
 // 5869
 [proc,script5869](int $flags0)(int)
-def_int $bool1 = testbit($flags0, 27);
+def_int $int1 = ~script6812($flags0);
 if (~script6790 = 0) {
-	if ($bool1 = ^true) {
+	if ($int1 = 1) {
 		return(0);
 	}
 	return(1);
 }
-if (testbit($flags0, 15) = ^true) {
+if (~script207($flags0) = 1) {
 	return(1);
 }
-if (testbit($flags0, 29) = ^true) {
-	return(1);
-}
-if (testbit($flags0, 30) = ^true) {
-	return(1);
-}
-if (testbit($flags0, 6) = ^true) {
-	return(1);
-}
-if ($bool1 = ^false) {
+if ($int1 = 0) {
 	return(0);
 }
 return(1);

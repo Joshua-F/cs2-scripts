@@ -1,0 +1,16 @@
+// 6854
+[proc,script6854](dbrow $dbrow0)(int)
+switch_dbrow ($dbrow0) {
+	case dbrow_2320 :
+		return(1);
+	case dbrow_2321 :
+		return(~script6924(1));
+	case dbrow_2322 :
+		return(~script6924(2));
+	case dbrow_2323 :
+		return(~script6924(3));
+	case dbrow_2324 :
+		return(~script6924(4));
+	case default :
+		return(1);
+}

@@ -1,0 +1,11 @@
+// 6922
+[clientscript,script6922](boolean $boolean0, boolean $boolean1, component $component2)
+if ($boolean1 = true) {
+	~v2_stone_button_change_in($component2, 0);
+	return;
+}
+if ($boolean0 = true) {
+	~v2_stone_button_out_filled($component2);
+	return;
+}
+~v2_stone_button_filled($component2);

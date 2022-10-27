@@ -1,0 +1,26 @@
+// 6858
+[clientscript,script6858](int $opindex0, dbrow $dbrow1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5, component $component6)
+if ($opindex0 ! 1 & $opindex0 ! 10) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+def_string $string0 = "null";
+switch_int ($opindex0) {
+	case 10 :
+		$string0 = db_getfield($dbrow1, dbtable_34:4, 0);
+		if (~string_isnullorempty($string0) = 1) {
+			$string0 = oc_name(db_getfield($dbrow1, dbtable_34:2, 0));
+		}
+		mes($string0);
+	case 1 :
+		%varcint1110 = db_getfield($dbrow1, dbtable_34:1, 0);
+		~script6789($component5, $comsubid2, 0x9f9f9f);
+		if (cc_find($component5, $comsubid3) = ^true) {
+			cc_setcolour(0x9f9f9f);
+		}
+		if (cc_find($component5, $comsubid4) = ^true) {
+			cc_setoutline(1);
+			cc_settrans(210);
+			cc_setontimer("script6859(calc(clientclock + 100), $comsubid2, $comsubid3, $comsubid4, $component5)");
+		}
+}

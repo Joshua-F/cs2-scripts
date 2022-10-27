@@ -1,0 +1,131 @@
+// 6857
+[clientscript,script6857](int $int0, obj $obj1)
+~steelborder(interface_789:2, enum(int, string, enum_885, $int0), 0);
+%varcint1110 = -1;
+db_find(dbtable_34:0, $int0);
+def_int $int2 = db_find_filter_with_count(dbtable_34:2, $obj1);
+def_dbrow $dbrow3 = db_findnext;
+if ($dbrow3 = null) {
+	~debug_mes_error("Item Transmog", "Failed to find config for <oc_name($obj1)> in group <tostring($int0)>");
+}
+def_int $int4 = db_getfield($dbrow3, dbtable_34:1, 0);
+def_int $int5 = 1;
+def_string $string0 = "null";
+def_string $string1 = "null";
+def_string $string2 = "null";
+def_component $component6 = interface_789:1;
+def_component $component7 = interface_789:5;
+def_component $component8 = interface_789:6;
+def_component $component9 = interface_789:7;
+def_component $component10 = interface_789:8;
+cc_deleteall($component9);
+cc_deleteall($component10);
+def_int $int11 = 3;
+def_int $int12 = 110;
+def_int $int13 = 70;
+def_int $int14 = calc((if_getwidth($component9) - $int12 * $int11) / ($int11 + 1));
+def_int $int15 = $int14;
+def_int $int16 = $int14;
+def_int $int17 = $int16;
+def_int $int18 = 0;
+def_int $colour19 = null;
+def_int $int20 = 0;
+def_int $comsubid21 = 0;
+def_int $comsubid22 = 0;
+def_int $comsubid23 = 0;
+def_int $int24 = db_find_with_count(dbtable_34:0, $int0);
+def_int $int25 = 0;
+def_int $int26 = 0;
+def_dbrow $dbrow27 = null;
+while ($int25 < $int24) {
+	$dbrow27 = ~script6856($int0, $int25);
+	$int5 = ~script6854($dbrow27);
+	$string0 = db_getfield($dbrow27, dbtable_34:3, 0);
+	if (~string_isnullorempty($string0) = 1) {
+		$string0 = tostring(calc($int25 + 1));
+	}
+	$string1 = db_getfield($dbrow27, dbtable_34:4, 0);
+	$string2 = db_getfield($dbrow27, dbtable_34:5, 0);
+	if (~string_isnullorempty($string2) = 1) {
+		$string2 = "<oc_name(db_getfield($dbrow27, dbtable_34:2, 0))> <tostring(calc($int25 + 1))>";
+	}
+	.cc_create($component10, ^iftype_rectangle, $int25);
+	if ($int5 = 1) {
+		.cc_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setsize($int12, $int13, ^setsize_abs, ^setsize_abs);
+		.cc_settrans(255);
+		cc_create($component9, ^iftype_rectangle, $int20);
+		$int20 = calc($int20 + 1);
+		cc_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize($int12, $int13, ^setsize_abs, ^setsize_abs);
+		cc_setfill(true);
+		cc_setcolour(^white);
+		cc_settrans(235);
+		$colour19 = 0x726451;
+		if ($int25 = $int4) {
+			$colour19 = 0x5a4f3f;
+		}
+		$comsubid21 = $int20;
+		$int20 = ~script5288($component9, $int20, $int15, $int17, $int12, $int13, struct_3712, $colour19);
+		$int17 = calc($int17 + 5);
+		cc_create($component9, ^iftype_text, $int20);
+		$comsubid22 = $int20;
+		$int20 = calc($int20 + 1);
+		cc_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(verdana_13pt_regular);
+		$colour19 = 0xff981f;
+		if ($int25 = $int4) {
+			$colour19 = 0x726451;
+		}
+		cc_setcolour($colour19);
+		cc_setsize($int12, $int13, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+		cc_settextshadow(true);
+		cc_settext($string0);
+		$int15 = calc($int15 + ($int12 / 2 - 36 / 2));
+		$int17 = calc($int17 + 25);
+		cc_create($component9, ^iftype_graphic, $int20);
+		$comsubid23 = $int20;
+		$int20 = calc($int20 + 1);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject(db_getfield($dbrow27, dbtable_34:2, 0), 1);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		if ($int25 = $int4) {
+			cc_settrans(150);
+		}
+		.cc_setopbase("<col=ff981f><$string2></col>");
+		if (~string_isnullorempty($string1) = 0) {
+			.cc_setop(10, "Examine");
+		}
+		.cc_setonop("script6858(event_opindex, $dbrow27, $comsubid21, $comsubid22, $comsubid23, $component9, $component10)");
+		if ($int25 ! $int4) {
+			.cc_setonmouserepeat("script6860(true, $int25, $int4, $comsubid21, $comsubid22, $comsubid23, $component9)");
+			.cc_setonmouseleave("script6860(false, $int25, $int4, $comsubid21, $comsubid22, $comsubid23, $component9)");
+			.cc_setop(1, "Select");
+		}
+		$int18 = calc($int16 + $int13);
+		$int26 = calc($int26 + 1);
+		$int15 = calc($int14 + $int26 % $int11 * ($int12 + $int14));
+		$int16 = calc($int14 + $int26 / $int11 * ($int13 + $int14));
+		$int17 = $int16;
+	} else {
+		.cc_sethide(true);
+	}
+	$int25 = calc($int25 + 1);
+}
+$int18 = calc($int18 + $int14);
+def_int $int28 = calc($int18 - if_getheight($component7));
+def_int $height29 = $int18;
+def_int $y30 = if_getscrolly($component7);
+if ($int28 <= 0) {
+	if_setsize(if_getwidth($component6), calc(if_getheight($component6) + $int28), ^setsize_abs, ^setsize_abs, $component6);
+	$height29 = 0;
+	$y30 = 0;
+}
+cc_deleteall($component8);
+~scrollbar_vertical($component8, $component7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, $height29, $component7);
+if_setscrollpos(0, $y30, $component7);
+~scrollbar_resize($component8, $component7, if_getscrolly($component7));

@@ -1,0 +1,15 @@
+// 6859
+[clientscript,script6859](int $clock0, int $comsubid1, int $comsubid2, int $comsubid3, component $component4)
+if (clientclock < $clock0) {
+	return;
+}
+%varcint1110 = -1;
+~script6789($component4, $comsubid1, 0x726451);
+if (cc_find($component4, $comsubid2) = ^true) {
+	cc_setcolour(0xff981f);
+}
+if (cc_find($component4, $comsubid3) = ^true) {
+	cc_setoutline(1);
+	cc_settrans(0);
+	cc_setontimer(null);
+}

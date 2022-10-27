@@ -1,0 +1,27 @@
+// 6860
+[clientscript,script6860](boolean $boolean0, int $int1, int $int2, int $comsubid3, int $comsubid4, int $comsubid5, component $component6)
+if ($int1 = $int2) {
+	return;
+}
+if (%varcint1110 ! -1) {
+	return;
+}
+def_int $colour7 = 0x726451;
+if ($boolean0 = true) {
+	$colour7 = ^white;
+}
+~script6789($component6, $comsubid3, $colour7);
+if (cc_find($component6, $comsubid4) = ^true) {
+	if ($boolean0 = true) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour(0xff981f);
+	}
+}
+if (cc_find($component6, $comsubid5) = ^true) {
+	if ($boolean0 = true) {
+		cc_setoutline(2);
+	} else {
+		cc_setoutline(1);
+	}
+}

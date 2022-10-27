@@ -48,7 +48,7 @@ switch_int (%varcint41) {
 		}
 	case 6 :
 		switch_int ($chattype0) {
-			case ^chattype_tradereq, ^chattype_chalreq_trade, ^chattype_trade :
+			case ^chattype_tradereq, ^chattype_chalreq_trade, ^chattype_trade, 113 :
 				return(1);
 			case ^chattype_clanchat, ^chattype_clanmessage, 111, 112 :
 				if (~is_group_iron = 0) {

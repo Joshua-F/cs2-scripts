@@ -75,7 +75,7 @@ switch_int ($chattype0) {
 			return(1);
 		}
 		return(0);
-	case ^chattype_tradereq, ^chattype_chalreq_trade :
+	case ^chattype_tradereq, ^chattype_chalreq_trade, 113 :
 		if ($int3 = 2) {
 			return(0);
 		}

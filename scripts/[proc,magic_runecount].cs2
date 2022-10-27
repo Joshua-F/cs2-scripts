@@ -11,7 +11,7 @@ if (%varbit14161 > 0 & if_hassub($component7) = true) {
 	if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0) {
 		$int3, $int4, $int5 = %varbit29, %varbit1622, %varbit1623;
 	}
-	if (inv_total(inv, divine_rune_pouch_27281) > 0) {
+	if (inv_total(inv, divine_rune_pouch_27281) > 0 | inv_total(inv, divine_rune_pouch_l_27509) > 0) {
 		$int3, $int4, $int5, $int6 = %varbit29, %varbit1622, %varbit1623, %varbit14285;
 	}
 } else {

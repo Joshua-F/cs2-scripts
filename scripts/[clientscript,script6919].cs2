@@ -1,0 +1,15 @@
+// 6919
+[clientscript,script6919](int $int0, string $string0)
+if ($int0 = 1) {
+	if_sethide(true, interface_790:1);
+	if_sethide(false, interface_790:2);
+	~steelborder(interface_790:3, "Trick-or-Treat!", 1);
+	if_settext("<col=ffffff><$string0></col> looks at you, trying to decide whether to trick or treat.", interface_790:8);
+	if_setontimer("script6920(clientclock, event_com)", interface_790:5);
+} else {
+	if_sethide(false, interface_790:1);
+	if_sethide(true, interface_790:2);
+	~steelborder(interface_790:12, "Trick-or-Treat!", 1);
+	if_settext("<col=ffffff><$string0></col> has Trick-or-Treated you!<br>What will you give them?", interface_790:23);
+	if_setontimer("script6920(clientclock, event_com)", interface_790:14);
+}
