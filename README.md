@@ -6921,5 +6921,5 @@
 [**6920**](scripts/[clientscript,script6920].cs2)  
 [**6921**](scripts/[clientscript,script6921].cs2)  
 [**6922**](scripts/[clientscript,script6922].cs2)  
-[**6923**](scripts/[clientscript,script6923].cs2)  
+[**6923**](scripts/[clientscript,hw22_communitygoal_current_state_transmit].cs2) `[clientscript,hw22_communitygoal_current_state_transmit]`  
 [**6924**](scripts/[proc,script6924].cs2)  
