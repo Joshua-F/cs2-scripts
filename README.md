@@ -758,6 +758,8 @@
 [**755**](scripts/[clientscript,trade_main_init].cs2) `[clientscript,trade_main_init]`  
 [**756**](scripts/[clientscript,cc_flasher].cs2) `[clientscript,cc_flasher]`  
 [**757**](scripts/[clientscript,if_flasher].cs2) `[clientscript,if_flasher]`  
+[**758**](scripts/[proc,script758].cs2)  
+[**759**](scripts/[proc,script759].cs2)  
 [**760**](scripts/[proc,worldswitcher_sortbutton_draw].cs2) `[proc,worldswitcher_sortbutton_draw]`  
 [**761**](scripts/[clientscript,worldswitcher_sortbutton_op].cs2) `[clientscript,worldswitcher_sortbutton_op]`  
 [**762**](scripts/[clientscript,trade_main_drawitems].cs2) `[clientscript,trade_main_drawitems]`  
@@ -6923,3 +6925,4 @@
 [**6922**](scripts/[clientscript,script6922].cs2)  
 [**6923**](scripts/[clientscript,hw22_communitygoal_current_state_transmit].cs2) `[clientscript,hw22_communitygoal_current_state_transmit]`  
 [**6924**](scripts/[proc,script6924].cs2)  
+[**6925**](scripts/[proc,script6925].cs2)  

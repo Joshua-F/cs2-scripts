@@ -1,233 +1,204 @@
 // 601
 [proc,poll_storequestion](int $int0, string $string0)
-if ($int0 < 50) {
-	if ($int0 < 25) {
-		if ($int0 < 13) {
-			if ($int0 < 6) {
-				if ($int0 <= 0) {
-					%varcstring230 = $string0;
-				} else if ($int0 = 1) {
-					%varcstring231 = $string0;
-				} else if ($int0 = 2) {
-					%varcstring232 = $string0;
-				} else if ($int0 = 3) {
-					%varcstring233 = $string0;
-				} else if ($int0 = 4) {
-					%varcstring234 = $string0;
-				} else {
-					%varcstring235 = $string0;
-				}
-			} else if ($int0 = 6) {
-				%varcstring236 = $string0;
-			} else if ($int0 = 7) {
-				%varcstring237 = $string0;
-			} else if ($int0 = 8) {
-				%varcstring238 = $string0;
-			} else if ($int0 = 9) {
-				%varcstring239 = $string0;
-			} else if ($int0 = 10) {
-				%varcstring240 = $string0;
-			} else if ($int0 = 11) {
-				%varcstring241 = $string0;
-			} else {
-				%varcstring242 = $string0;
-			}
-		} else if ($int0 < 19) {
-			if ($int0 = 13) {
-				%varcstring243 = $string0;
-			} else if ($int0 = 14) {
-				%varcstring244 = $string0;
-			} else if ($int0 = 15) {
-				%varcstring245 = $string0;
-			} else if ($int0 = 16) {
-				%varcstring246 = $string0;
-			} else if ($int0 = 17) {
-				%varcstring247 = $string0;
-			} else {
-				%varcstring248 = $string0;
-			}
-		} else if ($int0 = 19) {
-			%varcstring249 = $string0;
-		} else if ($int0 = 20) {
-			%varcstring250 = $string0;
-		} else if ($int0 = 21) {
-			%varcstring251 = $string0;
-		} else if ($int0 = 22) {
-			%varcstring252 = $string0;
-		} else if ($int0 = 23) {
-			%varcstring253 = $string0;
-		} else {
-			%varcstring254 = $string0;
-		}
-	} else if ($int0 < 38) {
-		if ($int0 < 32) {
-			if ($int0 = 25) {
-				%varcstring255 = $string0;
-			} else if ($int0 = 26) {
-				%varcstring256 = $string0;
-			} else if ($int0 = 27) {
-				%varcstring257 = $string0;
-			} else if ($int0 = 28) {
-				%varcstring258 = $string0;
-			} else if ($int0 = 29) {
-				%varcstring259 = $string0;
-			} else if ($int0 = 30) {
-				%varcstring260 = $string0;
-			} else {
-				%varcstring261 = $string0;
-			}
-		} else if ($int0 = 32) {
-			%varcstring262 = $string0;
-		} else if ($int0 = 33) {
-			%varcstring263 = $string0;
-		} else if ($int0 = 34) {
-			%varcstring264 = $string0;
-		} else if ($int0 = 35) {
-			%varcstring265 = $string0;
-		} else if ($int0 = 36) {
-			%varcstring266 = $string0;
-		} else {
-			%varcstring267 = $string0;
-		}
-	} else if ($int0 < 44) {
-		if ($int0 = 38) {
-			%varcstring268 = $string0;
-		} else if ($int0 = 39) {
-			%varcstring269 = $string0;
-		} else if ($int0 = 40) {
-			%varcstring270 = $string0;
-		} else if ($int0 = 41) {
-			%varcstring271 = $string0;
-		} else if ($int0 = 42) {
-			%varcstring272 = $string0;
-		} else {
-			%varcstring273 = $string0;
-		}
-	} else if ($int0 = 44) {
+switch_int ($int0) {
+	case 0 :
+		%varcstring230 = $string0;
+	case 1 :
+		%varcstring231 = $string0;
+	case 2 :
+		%varcstring232 = $string0;
+	case 3 :
+		%varcstring233 = $string0;
+	case 4 :
+		%varcstring234 = $string0;
+	case 5 :
+		%varcstring235 = $string0;
+	case 6 :
+		%varcstring236 = $string0;
+	case 7 :
+		%varcstring237 = $string0;
+	case 8 :
+		%varcstring238 = $string0;
+	case 9 :
+		%varcstring239 = $string0;
+	case 10 :
+		%varcstring240 = $string0;
+	case 11 :
+		%varcstring241 = $string0;
+	case 12 :
+		%varcstring242 = $string0;
+	case 13 :
+		%varcstring243 = $string0;
+	case 14 :
+		%varcstring244 = $string0;
+	case 15 :
+		%varcstring245 = $string0;
+	case 16 :
+		%varcstring246 = $string0;
+	case 17 :
+		%varcstring247 = $string0;
+	case 18 :
+		%varcstring248 = $string0;
+	case 19 :
+		%varcstring249 = $string0;
+	case 20 :
+		%varcstring250 = $string0;
+	case 21 :
+		%varcstring251 = $string0;
+	case 22 :
+		%varcstring252 = $string0;
+	case 23 :
+		%varcstring253 = $string0;
+	case 24 :
+		%varcstring254 = $string0;
+	case 25 :
+		%varcstring255 = $string0;
+	case 26 :
+		%varcstring256 = $string0;
+	case 27 :
+		%varcstring257 = $string0;
+	case 28 :
+		%varcstring258 = $string0;
+	case 29 :
+		%varcstring259 = $string0;
+	case 30 :
+		%varcstring260 = $string0;
+	case 31 :
+		%varcstring261 = $string0;
+	case 32 :
+		%varcstring262 = $string0;
+	case 33 :
+		%varcstring263 = $string0;
+	case 34 :
+		%varcstring264 = $string0;
+	case 35 :
+		%varcstring265 = $string0;
+	case 36 :
+		%varcstring266 = $string0;
+	case 37 :
+		%varcstring267 = $string0;
+	case 38 :
+		%varcstring268 = $string0;
+	case 39 :
+		%varcstring269 = $string0;
+	case 40 :
+		%varcstring270 = $string0;
+	case 41 :
+		%varcstring271 = $string0;
+	case 42 :
+		%varcstring272 = $string0;
+	case 43 :
+		%varcstring273 = $string0;
+	case 44 :
 		%varcstring274 = $string0;
-	} else if ($int0 = 45) {
+	case 45 :
 		%varcstring275 = $string0;
-	} else if ($int0 = 46) {
+	case 46 :
 		%varcstring276 = $string0;
-	} else if ($int0 = 47) {
+	case 47 :
 		%varcstring277 = $string0;
-	} else if ($int0 = 48) {
+	case 48 :
 		%varcstring278 = $string0;
-	} else {
+	case 49 :
 		%varcstring279 = $string0;
-	}
-} else if ($int0 < 75) {
-	if ($int0 < 63) {
-		if ($int0 < 56) {
-			if ($int0 = 50) {
-				%varcstring280 = $string0;
-			} else if ($int0 = 51) {
-				%varcstring281 = $string0;
-			} else if ($int0 = 52) {
-				%varcstring282 = $string0;
-			} else if ($int0 = 53) {
-				%varcstring283 = $string0;
-			} else if ($int0 = 54) {
-				%varcstring284 = $string0;
-			} else {
-				%varcstring285 = $string0;
-			}
-		} else if ($int0 = 56) {
-			%varcstring286 = $string0;
-		} else if ($int0 = 57) {
-			%varcstring287 = $string0;
-		} else if ($int0 = 58) {
-			%varcstring288 = $string0;
-		} else if ($int0 = 59) {
-			%varcstring289 = $string0;
-		} else if ($int0 = 60) {
-			%varcstring290 = $string0;
-		} else if ($int0 = 61) {
-			%varcstring291 = $string0;
-		} else {
-			%varcstring292 = $string0;
-		}
-	} else if ($int0 < 69) {
-		if ($int0 = 63) {
-			%varcstring293 = $string0;
-		} else if ($int0 = 64) {
-			%varcstring294 = $string0;
-		} else if ($int0 = 65) {
-			%varcstring295 = $string0;
-		} else if ($int0 = 66) {
-			%varcstring296 = $string0;
-		} else if ($int0 = 67) {
-			%varcstring297 = $string0;
-		} else {
-			%varcstring298 = $string0;
-		}
-	} else if ($int0 = 69) {
+	case 50 :
+		%varcstring280 = $string0;
+	case 51 :
+		%varcstring281 = $string0;
+	case 52 :
+		%varcstring282 = $string0;
+	case 53 :
+		%varcstring283 = $string0;
+	case 54 :
+		%varcstring284 = $string0;
+	case 55 :
+		%varcstring285 = $string0;
+	case 56 :
+		%varcstring286 = $string0;
+	case 57 :
+		%varcstring287 = $string0;
+	case 58 :
+		%varcstring288 = $string0;
+	case 59 :
+		%varcstring289 = $string0;
+	case 60 :
+		%varcstring290 = $string0;
+	case 61 :
+		%varcstring291 = $string0;
+	case 62 :
+		%varcstring292 = $string0;
+	case 63 :
+		%varcstring293 = $string0;
+	case 64 :
+		%varcstring294 = $string0;
+	case 65 :
+		%varcstring295 = $string0;
+	case 66 :
+		%varcstring296 = $string0;
+	case 67 :
+		%varcstring297 = $string0;
+	case 68 :
+		%varcstring298 = $string0;
+	case 69 :
 		%varcstring299 = $string0;
-	} else if ($int0 = 70) {
+	case 70 :
 		%varcstring300 = $string0;
-	} else if ($int0 = 71) {
+	case 71 :
 		%varcstring301 = $string0;
-	} else if ($int0 = 72) {
+	case 72 :
 		%varcstring302 = $string0;
-	} else if ($int0 = 73) {
+	case 73 :
 		%varcstring303 = $string0;
-	} else {
+	case 74 :
 		%varcstring304 = $string0;
-	}
-} else if ($int0 < 88) {
-	if ($int0 < 82) {
-		if ($int0 = 75) {
-			%varcstring305 = $string0;
-		} else if ($int0 = 76) {
-			%varcstring306 = $string0;
-		} else if ($int0 = 77) {
-			%varcstring307 = $string0;
-		} else if ($int0 = 78) {
-			%varcstring308 = $string0;
-		} else if ($int0 = 79) {
-			%varcstring309 = $string0;
-		} else if ($int0 = 80) {
-			%varcstring310 = $string0;
-		} else {
-			%varcstring311 = $string0;
-		}
-	} else if ($int0 = 82) {
+	case 75 :
+		%varcstring305 = $string0;
+	case 76 :
+		%varcstring306 = $string0;
+	case 77 :
+		%varcstring307 = $string0;
+	case 78 :
+		%varcstring308 = $string0;
+	case 79 :
+		%varcstring309 = $string0;
+	case 80 :
+		%varcstring310 = $string0;
+	case 81 :
+		%varcstring311 = $string0;
+	case 82 :
 		%varcstring312 = $string0;
-	} else if ($int0 = 83) {
+	case 83 :
 		%varcstring313 = $string0;
-	} else if ($int0 = 84) {
+	case 84 :
 		%varcstring314 = $string0;
-	} else if ($int0 = 85) {
+	case 85 :
 		%varcstring315 = $string0;
-	} else if ($int0 = 86) {
+	case 86 :
 		%varcstring316 = $string0;
-	} else {
+	case 87 :
 		%varcstring317 = $string0;
-	}
-} else if ($int0 < 94) {
-	if ($int0 = 88) {
+	case 88 :
 		%varcstring318 = $string0;
-	} else if ($int0 = 89) {
+	case 89 :
 		%varcstring319 = $string0;
-	} else if ($int0 = 90) {
+	case 90 :
 		%varcstring320 = $string0;
-	} else if ($int0 = 91) {
+	case 91 :
 		%varcstring321 = $string0;
-	} else if ($int0 = 92) {
+	case 92 :
 		%varcstring322 = $string0;
-	} else {
+	case 93 :
 		%varcstring323 = $string0;
-	}
-} else if ($int0 = 94) {
-	%varcstring324 = $string0;
-} else if ($int0 = 95) {
-	%varcstring325 = $string0;
-} else if ($int0 = 96) {
-	%varcstring326 = $string0;
-} else if ($int0 = 97) {
-	%varcstring327 = $string0;
-} else if ($int0 = 98) {
-	%varcstring328 = $string0;
-} else if ($int0 = 99) {
-	%varcstring329 = $string0;
+	case 94 :
+		%varcstring324 = $string0;
+	case 95 :
+		%varcstring325 = $string0;
+	case 96 :
+		%varcstring326 = $string0;
+	case 97 :
+		%varcstring327 = $string0;
+	case 98 :
+		%varcstring328 = $string0;
+	case 99 :
+		%varcstring329 = $string0;
 }

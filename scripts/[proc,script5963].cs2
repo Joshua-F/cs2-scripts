@@ -13,7 +13,7 @@ if (_202($newvar1) = ^true) {
 	if ($int8 >= 17) {
 		cc_setontimer(null);
 		~entity_highlight_clear(4);
-		~entity_highlight_setup(4, 2, 0);
+		~entity_highlight_setup(4, 2, 0, ~script758);
 		return;
 	}
 	$int10 = $int8;
@@ -31,5 +31,5 @@ if (_202($newvar1) = ^true) {
 	}
 	$int12 = calc(128 - scale($int10, $int9, 128));
 	$int13 = calc(2 + scale($int10, $int9, 2));
-	~entity_highlight_setup(4, $int13, $int12);
+	~entity_highlight_setup(4, $int13, $int12, ~script758);
 }

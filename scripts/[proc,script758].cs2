@@ -1,0 +1,19 @@
+// 758
+[proc,script758]()(boolean, boolean, boolean, boolean)
+def_boolean $boolean0 = false;
+if (%varcint973 ! null) {
+	$boolean0 = true;
+}
+def_boolean $boolean1 = false;
+if (%varcint975 ! null) {
+	$boolean1 = true;
+}
+def_boolean $boolean2 = false;
+if (%varcint977 ! null) {
+	$boolean2 = true;
+}
+def_boolean $boolean3 = false;
+if (string_length(%varcstring979) > 0) {
+	$boolean3 = true;
+}
+return($boolean0, $boolean1, $boolean2, $boolean3);
