@@ -2,7 +2,7 @@
 [proc,cluehelper_infobox_draw_content]
 def_dbrow $dbrow0 = %var3546;
 ~helper_generic_setup(1, 1, 1);
-switch_int (db_getrowtable($dbrow0)) {
+switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_8 :
 		~cluehelper_infobox_draw_content_cryptic($dbrow0);
 	case dbtable_4 :

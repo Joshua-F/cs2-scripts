@@ -1,6 +1,6 @@
 // 6649
 [proc,script6649](dbrow $dbrow0)(string)
-switch_int (db_getrowtable($dbrow0)) {
+switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_21 :
 		return(db_getfield($dbrow0, dbtable_21:0, 0));
 	case dbtable_24 :

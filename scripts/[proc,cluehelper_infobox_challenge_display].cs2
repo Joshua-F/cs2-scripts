@@ -5,7 +5,7 @@ def_int $int1 = 0;
 def_int $int2 = 0;
 if ($dbrow0 ! null) {
 	$int2 = ~helper_generic_add_title("Challenge", 0);
-	switch_int (db_getrowtable($dbrow0)) {
+	switch_dbtable (db_getrowtable($dbrow0)) {
 		case dbtable_25 :
 			$string0, $int1 = db_getfield($dbrow0, dbtable_25:0, ~script6656($dbrow0));
 			$int2 = ~helper_generic_add_text("Answer = <tostring($int1)>");

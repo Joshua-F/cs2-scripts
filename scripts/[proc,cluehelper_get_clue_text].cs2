@@ -1,6 +1,6 @@
 // 6646
 [proc,cluehelper_get_clue_text](dbrow $dbrow0)(string)
-switch_int (db_getrowtable($dbrow0)) {
+switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_8 :
 		return(db_getfield($dbrow0, dbtable_8:2, 0));
 	case dbtable_4 :

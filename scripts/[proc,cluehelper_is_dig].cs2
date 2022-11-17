@@ -1,6 +1,6 @@
 // 6651
 [proc,cluehelper_is_dig](dbrow $dbrow0, dbrow $dbrow1)(int)
-switch_int (db_getrowtable($dbrow0)) {
+switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_10 :
 		return(1);
 	case dbtable_7 :

@@ -3,7 +3,7 @@
 def_int $int1 = 0;
 def_npc $npc2 = null;
 def_loc $loc3 = null;
-switch_int (db_getrowtable($dbrow0)) {
+switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_15 :
 		$int1 = ~helper_generic_add_title("Talk-to", 0);
 		$npc2 = db_getfield($dbrow0, dbtable_15:1, 0);

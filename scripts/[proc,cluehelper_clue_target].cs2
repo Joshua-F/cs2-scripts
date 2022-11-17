@@ -1,7 +1,7 @@
 // 6655
 [proc,cluehelper_clue_target](dbrow $dbrow0)(dbrow)
 def_int $dbfield1 = 0;
-switch_int (db_getrowtable($dbrow0)) {
+switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_8 :
 		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_8:3, 0));
 		return(db_getfield($dbrow0, dbtable_8:3, $dbfield1));

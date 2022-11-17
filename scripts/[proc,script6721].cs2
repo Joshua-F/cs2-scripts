@@ -12,7 +12,7 @@ def_int $int7 = 0;
 if (db_getrowtable($dbrow4) = dbtable_15) {
 	$npc5 = db_getfield($dbrow4, dbtable_15:0, 0);
 	if (npc_type = $npc5) {
-		switch_int (db_getrowtable($dbrow1)) {
+		switch_dbtable (db_getrowtable($dbrow1)) {
 			case dbtable_13 :
 				~script6514($newvar0, $npc_uid2, $int3);
 			case dbtable_11 :

@@ -2,7 +2,7 @@
 [clientscript,script6483](int $int0, dbrow $dbrow1)
 def_string $string0 = "null";
 def_int $int2 = 0;
-switch_int (db_getrowtable($dbrow1)) {
+switch_dbtable (db_getrowtable($dbrow1)) {
 	case dbtable_9 :
 		$string0 = db_getfield($dbrow1, dbtable_9:5, 0);
 		$int2 = ~script6486($dbrow1);

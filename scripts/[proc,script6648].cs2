@@ -1,7 +1,7 @@
 // 6648
 [proc,script6648](dbrow $dbrow0)(string)
 def_string $string0 = "null";
-switch_int (db_getrowtable($dbrow0)) {
+switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_18 :
 		$string0 = db_getfield($dbrow0, dbtable_18:2, 0);
 }

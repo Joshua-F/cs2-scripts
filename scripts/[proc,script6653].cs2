@@ -6,7 +6,7 @@ def_coord $coord3 = null;
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_obj $obj6 = null;
-switch_int (db_getrowtable($dbrow0)) {
+switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_15 :
 		return(db_getfield($dbrow0, dbtable_15:2, 0));
 	case dbtable_16 :
