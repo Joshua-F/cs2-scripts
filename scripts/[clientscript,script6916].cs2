@@ -1,41 +1,41 @@
 // 6916
-[clientscript,script6916](int $int0, boolean $boolean1)
+[clientscript,script6916](int $int0)
 if (worldlist_fetch = false) {
 	return;
 }
 if_setontimer(null, interface_788:1);
 worldlist_sort(8, false, 0, false);
-def_int $int2 = 0;
+def_int $int1 = 0;
 if (map_members = ^true) {
-	$int2 = 1;
+	$int1 = 1;
 }
-def_int $int3 = 0;
-def_int $world4 = -1;
-def_int $flags5 = 0;
+def_int $int2 = 0;
+def_int $world3 = -1;
+def_int $flags4 = 0;
 def_string $string0 = "";
-def_int $int6 = -1;
-def_int $int7 = 0;
+def_int $int5 = -1;
+def_int $int6 = 0;
 def_string $string1 = "";
-$world4, $flags5, $string0, $int6, $int7, $string1 = worldlist_start;
-def_int $world8 = -1;
+$world3, $flags4, $string0, $int5, $int6, $string1 = worldlist_start;
+def_int $world7 = -1;
+def_int $int8 = 0;
 def_int $int9 = 0;
-def_int $int10 = 0;
-while ($int9 = 0 & $world4 > 0) {
-	$int10 = testbit($flags5, 0);
-	if (~script6917($int0, $int2, $flags5, $int10) = 1) {
-		if ($int10 = 0 & $int7 > 950 | $int10 = 1 & $int7 > 1950) {
-			if ($world8 = -1) {
-				$world8 = $world4;
+while ($int8 = 0 & $world3 > 0) {
+	$int9 = testbit($flags4, 0);
+	if (~script6917($int0, $int1, $flags4, $int9) = 1) {
+		if ($int9 = 0 & $int6 > 950 | $int9 = 1 & $int6 > 1950) {
+			if ($world7 = -1) {
+				$world7 = $world3;
 			}
 		} else {
-			$int9 = 1;
+			$int8 = 1;
 		}
 	}
-	if ($int9 = 0) {
-		$world4, $flags5, $string0, $int6, $int7, $string1 = worldlist_next;
+	if ($int8 = 0) {
+		$world3, $flags4, $string0, $int5, $int6, $string1 = worldlist_next;
 	}
 }
-if ($int9 = 0) {
-	$world4 = $world8;
+if ($int8 = 0) {
+	$world3 = $world7;
 }
-resume_countdialog(tostring($world4));
+resume_countdialog(tostring($world3));

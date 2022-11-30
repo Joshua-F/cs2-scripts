@@ -1,7 +1,3 @@
 // 6811
 [proc,script6811]()(int)
-def_int $flags0 = worldflags;
-if (testbit($flags0, 27) = ^true) {
-	return(1);
-}
-return(0);
+return(~script6812(%var3717));

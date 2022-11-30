@@ -1,7 +1,7 @@
 // 5235
 [clientscript,wornitems_deadman_sigils_init](component $component0)
 cc_deleteall($component0);
-if (~deadman_mode ! 3) {
+if (~deadman_world ! 3) {
 	if_clearops($component0);
 	return;
 }

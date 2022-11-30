@@ -297,7 +297,7 @@ switch_int ($setting0) {
 	case 210 :
 		return(%varbit13136);
 	case 206 :
-		if (~deadman_mode ! 0) {
+		if (~deadman_world ! 0) {
 			return(0);
 		}
 		return(%varbit13131);
@@ -377,6 +377,10 @@ switch_int ($setting0) {
 		return(%varbit14187);
 	case 276 :
 		return(%varbit14188);
+	case 294 :
+		return(%varbit75);
+	case 295 :
+		return(%varbit98);
 	case default :
 		return(0);
 }

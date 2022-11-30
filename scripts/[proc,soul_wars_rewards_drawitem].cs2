@@ -43,6 +43,9 @@ cc_settextshadow(true);
 def_int $colour17 = 0xff981f;
 def_int $colour18 = 0xfffc00;
 def_int $int19 = enum(int, int, $enum2, $int0);
+if ($enum1 = enum_3544 & ~script6931(3) = 1) {
+	$int19 = calc($int19 / 2);
+}
 def_string $mes0 = "";
 def_string $string1 = ",";
 if (%var2876 < $int19) {

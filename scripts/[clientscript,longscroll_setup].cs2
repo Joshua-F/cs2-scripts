@@ -9,6 +9,13 @@ if (string_length($string0) = 0) {
 	$int4 = 1;
 }
 def_int $height5 = calc(paraheight($string1, if_getwidth($component1), q8_full) * 15 + 10);
+if ($int4 = 1) {
+	if ($height5 < 266) {
+		$height5 = 266;
+	}
+} else if ($height5 < 244) {
+	$height5 = 244;
+}
 if_settext($string1, $component1);
 if_setscrollsize(0, $height5, $component2);
 if_setsize(if_getwidth($component1), $height5, ^setsize_abs, ^setsize_abs, $component1);

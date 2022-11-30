@@ -1,0 +1,10 @@
+// 6927
+[clientscript,script6927](component $component0, component $component1, int $int2)
+%varbit14670 = $int2;
+if (%varbit14670 = 1) {
+	if_setgraphic("options_radio_buttons,2", $component0);
+	if_setgraphic("options_radio_buttons,0", $component1);
+} else {
+	if_setgraphic("options_radio_buttons,0", $component0);
+	if_setgraphic("options_radio_buttons,2", $component1);
+}

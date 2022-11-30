@@ -43,7 +43,7 @@ def_obj $obj35 = struct_param($struct8, param_1338);
 def_int $int36 = $int11;
 while ($count23 < $count27) {
 	$string0 = enum(int, string, $enum26, $count23);
-	$int21 = paraheight($string0, calc(if_getwidth($component5) - 10), p12_full);
+	$int21 = paraheight($string0, calc(if_getwidth($component5) - 48), p12_full);
 	$int21 = calc(13 * $int21 + 8);
 	cc_create($component5, ^iftype_rectangle, $int16);
 	cc_setsize($int25, $int21, ^setsize_abs, ^setsize_abs);

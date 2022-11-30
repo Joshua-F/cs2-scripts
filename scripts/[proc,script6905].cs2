@@ -1,54 +1,54 @@
 // 6905
-[proc,script6905](int $int0, boolean $boolean1, string $string0)
+[proc,script6905](int $int0, string $string0)
 if ($int0 = 1) {
 	if_sethide(false, interface_788:5);
 	if_settext("What is a <col=ff981f>Fresh Start World</col>?", interface_788:50);
 	~script5288(interface_788:48, 0, 0, 0, if_getwidth(interface_788:48), if_getheight(interface_788:48), struct_3712, 0xb69362);
-	~script6909(51642373, interface_788:51, 0, $boolean1, 2, $string0);
-	def_int $int2 = 10;
-	def_int $int3 = 6;
-	def_int $int4 = 13;
+	~script6909(51642373, interface_788:51, 0, 2, $string0);
+	def_int $int1 = 10;
+	def_int $int2 = 6;
+	def_int $int3 = 13;
+	def_fontmetrics $fontmetrics4 = p12_full;
 	def_fontmetrics $fontmetrics5 = p12_full;
-	def_fontmetrics $fontmetrics6 = p12_full;
-	def_int $int7 = 0;
-	def_int $width8 = calc(460 - $int2 * 2);
-	def_int $int9 = 0;
-	def_int $int10 = calc($int2 + 30);
+	def_int $int6 = 0;
+	def_int $width7 = calc(460 - $int1 * 2);
+	def_int $int8 = 0;
+	def_int $int9 = calc($int1 + 30);
 	def_string $string1 = "";
 	def_string $string2 = "";
 	def_string $string3 = "";
 	def_string $string4 = "";
-	def_int $int11 = 0;
-	def_int $int12 = db_getfieldcount(dbrow_170, dbtable_30:0);
-	while ($int7 < $int12) {
-		$string1, $string2, $string3 = db_getfield(dbrow_170, dbtable_30:0, $int7);
+	def_int $int10 = 0;
+	def_int $int11 = db_getfieldcount(dbrow_170, dbtable_30:0);
+	while ($int6 < $int11) {
+		$string1, $string2, $string3 = db_getfield(dbrow_170, dbtable_30:0, $int6);
 		$string4 = $string3;
-		$int9 = calc(paraheight($string4, $width8, $fontmetrics6) * $int4);
-		cc_create(interface_788:49, ^iftype_text, $int11);
-		$int11 = calc($int11 + 1);
-		cc_setposition($int2, $int10, ^setpos_abs_left, ^setpos_abs_top);
-		cc_settextfont($fontmetrics5);
-		if (calc($int7 % 2) = 0) {
+		$int8 = calc(paraheight($string4, $width7, $fontmetrics5) * $int3);
+		cc_create(interface_788:49, ^iftype_text, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setposition($int1, $int9, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont($fontmetrics4);
+		if (calc($int6 % 2) = 0) {
 			cc_setcolour(0xff981f);
 		} else {
 			cc_setcolour(0xe6dbca);
 		}
-		cc_setsize($width8, $int9, ^setsize_abs, ^setsize_abs);
-		cc_settextalign(^settextalign_centre, ^settextalign_top, $int4);
+		cc_setsize($width7, $int8, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, $int3);
 		cc_settextshadow(true);
 		cc_settext($string4);
-		$int10 = calc($int10 + $int9 + $int3);
-		$int7 = calc($int7 + 1);
+		$int9 = calc($int9 + $int8 + $int2);
+		$int6 = calc($int6 + 1);
 	}
-	cc_create(interface_788:49, ^iftype_text, $int11);
-	$int11 = calc($int11 + 1);
-	cc_setposition($int2, calc($int10 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_create(interface_788:49, ^iftype_text, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setposition($int1, calc($int9 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	$string4 = "There are <$string0> remaining before Fresh Start Worlds ends.";
-	$int9 = calc(paraheight($string4, $width8, $fontmetrics6) * $int4);
+	$int8 = calc(paraheight($string4, $width7, $fontmetrics5) * $int3);
 	cc_settextfont(p11_full);
 	cc_setcolour(^yellow);
-	cc_setsize($width8, $int9, ^setsize_abs, ^setsize_abs);
-	cc_settextalign(^settextalign_centre, ^settextalign_top, $int4);
+	cc_setsize($width7, $int8, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_top, $int3);
 	cc_settextshadow(true);
 	cc_settext($string4);
 	return;

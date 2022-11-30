@@ -24,7 +24,7 @@ switch_int ($setting1) {
 		}
 		return(1);
 	case 206 :
-		if (~deadman_mode ! 0) {
+		if (~deadman_world ! 0) {
 			return(0);
 		}
 	case ^setting_popout_xptracker :

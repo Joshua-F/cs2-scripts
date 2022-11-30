@@ -3,7 +3,7 @@
 def_int $int1 = $int0;
 def_int $int2 = 3;
 def_int $int3 = 126;
-if (~deadman_world = true) {
+if (~deadman_world ! 0) {
 	if (%varbit4965 > 0) {
 		if_sethide(true, interface_90:49);
 		return;
@@ -12,11 +12,11 @@ if (~deadman_world = true) {
 		if_settext("", interface_90:49);
 		return;
 	}
-	if (~deadman_mode = 3) {
+	if (~deadman_world = 3) {
 		$int2, $int3 = ~script5227;
 	}
 } else {
-	if (~pvpw_check = 1) {
+	if (~script6941 = 1) {
 		$int1 = calc(15 + $int0);
 	}
 	$int2 = calc(%varbit13027 - $int1);

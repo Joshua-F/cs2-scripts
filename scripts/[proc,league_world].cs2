@@ -1,7 +1,3 @@
 // 3160
 [proc,league_world]()(int)
-def_int $flags0 = worldflags;
-if (testbit($flags0, 29) = ^false & testbit(worldflags, 30) = ^true) {
-	return(1);
-}
-return(0);
+return(~script206(%var3717));

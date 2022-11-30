@@ -1,6 +1,6 @@
 // 5225
 [proc,script5225]
-if (~deadman_mode = 3) {
+if (~deadman_world = 3) {
 	if_settext("Combat: N/A", interface_226:46);
 	if_settext("Other: N/A", interface_226:47);
 	return;

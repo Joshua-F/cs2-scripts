@@ -7,32 +7,31 @@ if ($component4 ! null) {
 	cc_deleteall($component4);
 }
 ~clanwars_setup_scrollbox_drawframe($component2, $component3, enum(int, string, $enum0, -1));
-def_int $int7 = ~tournament_world;
-def_int $height8 = 0;
-def_int $int9 = 0;
-def_string $string0 = enum(int, string, $enum0, $int9);
+def_int $height7 = 0;
+def_int $int8 = 0;
+def_string $string0 = enum(int, string, $enum0, $int8);
 while (string_length($string0) > 0) {
-	cc_create($component3, ^iftype_rectangle, calc($int9 * 3));
-	cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_create($component3, ^iftype_rectangle, calc($int8 * 3));
+	cc_setposition(0, $height7, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, 17, ^setsize_minus, ^setsize_abs);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(255);
 	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 220, null)");
-	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component5, enum(int, string, $enum6, $int9), 25, 512)");
+	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component5, enum(int, string, $enum6, $int8), 25, 512)");
 	cc_setonmouseleave("clanwars_setup_mouseleave(event_com, event_comsubid, $component5)");
 	cc_setop(1, $string0);
-	cc_create($component3, ^iftype_graphic, calc($int9 * 3 + 1));
-	cc_setposition(0, $height8, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($component3, ^iftype_graphic, calc($int8 * 3 + 1));
+	cc_setposition(0, $height7, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-	cc_create($component3, ^iftype_text, calc($int9 * 3 + 2));
-	cc_setposition(0, calc($height8 + 1), ^setpos_abs_right, ^setpos_abs_top);
+	cc_create($component3, ^iftype_text, calc($int8 * 3 + 2));
+	cc_setposition(0, calc($height7 + 1), ^setpos_abs_right, ^setpos_abs_top);
 	cc_setsize(17, 16, ^setsize_minus, ^setsize_abs);
 	cc_settextshadow(true);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	if ($enum0 = enum_929 & map_members = ^false) {
-		if (enum(int, boolean, enum_935, $int9) = true) {
+		if (enum(int, boolean, enum_935, $int8) = true) {
 			cc_settext("<str><$string0></str>");
 		} else {
 			cc_settext($string0);
@@ -40,17 +39,17 @@ while (string_length($string0) > 0) {
 	} else {
 		cc_settext($string0);
 	}
-	$int9, $height8 = calc($int9 + 1), calc($height8 + 17);
-	$string0 = enum(int, string, $enum0, $int9);
+	$int8, $height7 = calc($int8 + 1), calc($height7 + 17);
+	$string0 = enum(int, string, $enum0, $int8);
 }
 if_setscrollpos(0, 0, $component3);
 if ($component4 ! null) {
-	if ($height8 > if_getheight($component3)) {
-		if_setscrollsize(0, $height8, $component3);
+	if ($height7 > if_getheight($component3)) {
+		if_setscrollsize(0, $height7, $component3);
 	} else {
 		if_setscrollsize(0, 0, $component3);
 	}
 	~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 }
-~script581($enum0, $component1, $component3, $component4, $int9);
-if_setonvartransmit("script580($enum0, $component1, $component3, $component4, $int9){var92}", $component1);
+~script581($enum0, $component1, $component3, $component4, $int8);
+if_setonvartransmit("script580($enum0, $component1, $component3, $component4, $int8){var92}", $component1);

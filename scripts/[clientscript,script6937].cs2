@@ -1,0 +1,11 @@
+// 6937
+[clientscript,script6937](int $int0, string $string0)
+sound_synth(interface_select1, 1, 0);
+def_int $int1 = 0;
+if ($int0 = 1 & ~script6811 = 0) {
+	$int1 = 1;
+}
+if ($int0 = 2 & ~script6811 = 1) {
+	$int1 = 2;
+}
+~script6898($int0, $int1, 0, $string0);

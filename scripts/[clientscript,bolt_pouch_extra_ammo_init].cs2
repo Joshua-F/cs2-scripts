@@ -3,7 +3,7 @@
 if_sethide(true, $component0);
 if_sethide(true, $component1);
 if_setop(1, "", $component0);
-if (~deadman_mode ! 0 | map_members = ^false) {
+if (~deadman_world ! 0 | map_members = ^false) {
 	return;
 }
 if_sethide(false, $component0);

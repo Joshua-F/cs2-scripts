@@ -1,9 +1,0 @@
-// 99
-[proc,script99](int $flags0)(int)
-if (testbit($flags0, 29) = ^true) {
-	if (testbit($flags0, 30) = ^true | testbit($flags0, 26) = ^true) {
-		return(3);
-	}
-	return(1);
-}
-return(0);

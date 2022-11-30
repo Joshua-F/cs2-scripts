@@ -1,0 +1,8 @@
+// 6946
+[clientscript,script6946](component $component0, string $op0)
+~script6948(false, $op0, $component0);
+if_setop(1, $op0, $component0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script6947(true, $op0, $component0)", $component0);
+	if_setonmouseleave("script6947(false, $op0, $component0)", $component0);
+}

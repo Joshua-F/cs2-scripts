@@ -12,12 +12,14 @@ if (%varbit14188 = 1) {
 			$int1 = ~helper_generic_add_text("Firstly, talk to Sherlock, then bring the requested item.");
 	}
 }
-$int1 = ~helper_generic_add_title("Requirements", 0);
-def_int $int3 = 0;
-def_dbrow $dbrow4 = null;
-def_int $int5 = db_getfieldcount($dbrow0, dbtable_14:3);
-while ($int3 < $int5) {
-	$dbrow4 = db_getfield($dbrow0, dbtable_14:3, $int3);
-	$int1 = ~helper_generic_add_text(~script6649($dbrow4));
-	$int3 = calc($int3 + 1);
+def_int $int3 = db_getfieldcount($dbrow0, dbtable_14:3);
+if ($int3 > 0) {
+	$int1 = ~helper_generic_add_title("Requirements", 0);
+}
+def_int $int4 = 0;
+def_dbrow $dbrow5 = null;
+while ($int4 < $int3) {
+	$dbrow5 = db_getfield($dbrow0, dbtable_14:3, $int4);
+	$int1 = ~helper_generic_add_text(~script6649($dbrow5));
+	$int4 = calc($int4 + 1);
 }

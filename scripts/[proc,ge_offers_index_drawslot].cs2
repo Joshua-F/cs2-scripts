@@ -16,7 +16,7 @@ def_int $int38 = 0;
 def_int $int39 = 0;
 def_int $int40 = 0;
 def_int $int41 = 0;
-if (~deadman_world = true) {
+if (~deadman_world ! 0) {
 	if ($int9 < 8) {
 		$int40 = 1;
 	}

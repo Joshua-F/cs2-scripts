@@ -1,7 +1,3 @@
 // 5849
 [proc,speedrunning_world]()(int)
-def_int $flags0 = worldflags;
-if (testbit($flags0, 8) = ^true) {
-	return(1);
-}
-return(0);
+return(~script6810(%var3717));

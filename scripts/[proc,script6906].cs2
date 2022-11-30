@@ -1,10 +1,10 @@
 // 6906
-[proc,script6906](int $int0, int $int1, int $int2, int $int3, int $int4, boolean $boolean5, string $string0)
+[proc,script6906](int $int0, int $int1, int $int2, int $int3, int $int4, string $string0)
 if ($int0 > 0) {
 	if_sethide(false, interface_788:4);
-	def_int $x6 = calc(if_getwidth(interface_788:4) / 2 - if_getwidth(interface_788:9) / 2);
-	def_int $y7 = calc(if_getheight(interface_788:4) / 2 - if_getheight(interface_788:9) / 2);
-	if_setposition($x6, $y7, ^setpos_abs_left, ^setpos_abs_top, interface_788:9);
+	def_int $x5 = calc(if_getwidth(interface_788:4) / 2 - if_getwidth(interface_788:9) / 2);
+	def_int $y6 = calc(if_getheight(interface_788:4) / 2 - if_getheight(interface_788:9) / 2);
+	if_setposition($x5, $y6, ^setpos_abs_left, ^setpos_abs_top, interface_788:9);
 	~script5288(interface_788:9, 0, 0, 0, if_getwidth(interface_788:9), if_getheight(interface_788:9), struct_3712, 0xb69362);
 	if ($int1 > 0) {
 		if ($int1 = 1) {
@@ -22,8 +22,8 @@ if ($int0 > 0) {
 		cc_deleteall(interface_788:16);
 		return;
 	}
-	~script6909(51642372, interface_788:15, $int0, $boolean5, 0, $string0);
-	~script6909(51642372, interface_788:16, $int0, $boolean5, 1, $string0);
+	~script6909(51642372, interface_788:15, $int0, 0, $string0);
+	~script6909(51642372, interface_788:16, $int0, 1, $string0);
 	def_string $string1 = "Fresh Start Worlds";
 	if ($int0 = 2) {
 		$string1 = "Old School Main";
@@ -32,10 +32,10 @@ if ($int0 > 0) {
 	def_string $text3 = "";
 	def_string $text4 = "";
 	if_settext("You are selecting <col=ff981f><$string1></col>.", interface_788:11);
-	if ($int0 = 1 & $boolean5 = false) {
+	if ($int0 = 1 & ~script6811 = 0) {
 		$text2 = ~script6907($int0);
 		$text3 = "<col=ff981f>You will be hopped to a Fresh Start World on confirmation.</col>";
-	} else if ($int0 = 2 & $boolean5 = true) {
+	} else if ($int0 = 2 & ~script6811 = 1) {
 		$text2 = ~script6907($int0);
 		$text3 = "<col=ff981f>You will be hopped to a Main World on confirmation.</col>";
 	} else {

@@ -1,7 +1,6 @@
 // 2174
 [proc,tournament_beta_world]()(int)
-def_int $flags0 = worldflags;
-if (testbit($flags0, 25) = ^true & testbit($flags0, 23) = ^true & testbit($flags0, 4) = ^false) {
+if (testbit(%var3717, 25) = ^true & testbit(%var3717, 23) = ^true & testbit(%var3717, 4) = ^false) {
 	return(1);
 }
 return(0);

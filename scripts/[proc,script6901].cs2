@@ -1,20 +1,20 @@
 // 6901
-[proc,script6901](int $int0, int $int1, boolean $boolean2, string $string0)
-def_int $int3 = 0;
-.cc_create(interface_788:28, ^iftype_rectangle, $int3);
-$int3 = calc($int3 + 1);
+[proc,script6901](int $int0, int $int1, string $string0)
+def_int $int2 = 0;
+.cc_create(interface_788:28, ^iftype_rectangle, $int2);
+$int2 = calc($int2 + 1);
 .cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setfill(true);
 .cc_setcolour(^white);
 .cc_settrans(255);
 if ($int0 = 0 & $int1 = 0) {
-	.cc_setonmouserepeat("script6902(.cc_getid, ^yellow)");
-	.cc_setonmouseleave("script6903(.cc_getid)");
-	.cc_setonop("script6904($boolean2, $string0)");
+	.cc_setonmouserepeat("script6933(.cc_getid, ^yellow)");
+	.cc_setonmouseleave("script6934(.cc_getid)");
+	.cc_setonop("script6935($string0)");
 	.cc_setopbase("<col=ff981f>Find out more</col>");
 	.cc_setop(1, "Select");
 } else {
 	if_setcolour(^white, interface_788:29);
 }
-~script5288(interface_788:28, $int3, 0, 0, if_getwidth(interface_788:28), if_getheight(interface_788:28), struct_3712, 0xff981f);
+~script5288(interface_788:28, $int2, 0, 0, if_getwidth(interface_788:28), if_getheight(interface_788:28), struct_3712, 0xff981f);

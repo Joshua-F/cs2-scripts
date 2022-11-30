@@ -1,0 +1,29 @@
+// 6931
+[proc,script6931](int $int0)(int)
+switch_int ($int0) {
+	case 1 :
+		if (%varbit12863 = 2) {
+			return(1);
+		}
+	case 2 :
+		if (%varbit12864 = 2 & ~script6930(2) = 1) {
+			return(1);
+		}
+	case 3 :
+		if (%varbit12865 = 2 & ~script6930(3) = 1) {
+			return(1);
+		}
+	case 4 :
+		if (%varbit12866 = 2 & ~script6930(4) = 1) {
+			return(1);
+		}
+	case 5 :
+		if (%varbit12867 = 2 & ~script6930(5) = 1) {
+			return(1);
+		}
+	case 6 :
+		if (%varbit12868 = 2 & ~script6930(6) = 1) {
+			return(1);
+		}
+}
+return(0);

@@ -1,5 +1,5 @@
-// 6913
-[clientscript,script6913](component $component0, int $comsubid1, int $colour2, int $colour3)
+// 6938
+[clientscript,script6938](component $component0, int $comsubid1, int $colour2)
 if (cc_find($component0, calc($comsubid1 + 1)) = ^true) {
 	cc_setcolour($colour2);
 }
@@ -7,5 +7,5 @@ if (cc_find($component0, calc($comsubid1 + 11)) = ^true) {
 	cc_setcolour($colour2);
 }
 if (cc_find($component0, calc($comsubid1 + 12)) = ^true) {
-	cc_setcolour($colour3);
+	cc_setcolour($colour2);
 }

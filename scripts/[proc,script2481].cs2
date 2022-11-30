@@ -1,7 +1,7 @@
 // 2481
 [proc,script2481]()(int)
 def_int $int0 = 1;
-if (~speedrunning_world = 1 | ~deadman_world = true | ~pvpa_world = 1 | ~tournament_beta_world = 1) {
+if (~speedrunning_world = 1 | ~deadman_world ! 0 | ~pvpa_world = 1 | ~tournament_beta_world = 1) {
 	$int0 = 0;
 }
 def_int $int1 = 0;

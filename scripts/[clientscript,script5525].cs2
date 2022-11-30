@@ -1,7 +1,7 @@
 // 5525
 [clientscript,script5525](component $component0, component $component1, int $int2)
 if (~on_mobile = false & cc_find($component0, 0) = ^true) {
-	if ($int2 = 0) {
+	if (~deadman_world = 0) {
 		cc_setcolour(0xff981f);
 	} else {
 		cc_setcolour(0x9f9f9f);
