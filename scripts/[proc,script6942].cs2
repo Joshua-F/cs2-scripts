@@ -1,5 +1,9 @@
 // 6942
 [proc,script6942](int $flags0)(int)
+def_int $int1 = ~script2237;
+if ($int1 = 1 | $int1 = 4) {
+	return(3);
+}
 if (testbit($flags0, 29) = ^true) {
 	if (testbit($flags0, 30) = ^true | testbit($flags0, 26) = ^true) {
 		return(3);

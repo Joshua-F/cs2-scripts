@@ -1,5 +1,11 @@
 // 84
 [proc,rebuildchatbox](int $mesuid0)
+if (%varcint1112 = clientclock) {
+	%varcint65 = calc(clientclock + 1);
+	if_setontimer("script664(false)", interface_162:0);
+	return;
+}
+%varcint1112 = clientclock;
 def_int $width1 = if_getwidth(interface_162:56);
 def_string $string0 = removetags(chat_playername);
 def_int $int2 = 0;
