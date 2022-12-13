@@ -53,7 +53,7 @@ while ($int13 < $int12) {
 		case 4 :
 			$flags21, $flags22, $flags23 = %var3692, %var3693, %var3694;
 	}
-	$int24 = ~script6842($flags21, $flags22, $flags23);
+	$int24 = ~toa_raid_level($flags21, $flags22, $flags23);
 	if ($int24 = 0) {
 		$text0 = "Empty";
 	} else if ($int24 < 150) {

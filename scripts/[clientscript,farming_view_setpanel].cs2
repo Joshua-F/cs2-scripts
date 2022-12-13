@@ -89,11 +89,11 @@ if ($int7 > 0) {
 	if (testbit($flags3, 1) = ^true) {
 		cc_setcolour(^red);
 		.cc_setcolour(^red);
-		$string0 = append($string0, "<br>The patch is <~script6850("<col=7f0000>", "<col=ef1020>")>dead</col>.");
+		$string0 = append($string0, "<br>The patch is <~text_client("<col=7f0000>", "<col=ef1020>")>dead</col>.");
 	} else if (testbit($flags3, 0) = ^true) {
 		cc_setcolour(0xff981f);
 		.cc_setcolour(0xff981f);
-		$string0 = append($string0, "<br>The patch is <~script6850("<col=003f00>", "<col=ef1020>")>diseased</col>.");
+		$string0 = append($string0, "<br>The patch is <~text_client("<col=003f00>", "<col=ef1020>")>diseased</col>.");
 	} else {
 		cc_setcolour(0x00cf00);
 		.cc_setcolour(0x00cf00);

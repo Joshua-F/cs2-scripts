@@ -232,7 +232,7 @@ $string0, $int21 = ~poh_viewer_roomtooltip($string0, $int19, enum_3560, $enum1, 
 if ($int21 > 0) {
 	$string0 = append($string0, "</col>");
 } else {
-	$string0 = append($string0, " <~script6850("<col=7f7f7f>", "<col=adadad>")>(empty)</col>");
+	$string0 = append($string0, " <~text_client("<col=7f7f7f>", "<col=adadad>")>(empty)</col>");
 }
 cc_create($component5, ^iftype_graphic, 2);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);

@@ -6839,7 +6839,7 @@
 [**6839**](scripts/[proc,script6839].cs2)  
 [**6840**](scripts/[clientscript,script6840].cs2)  
 [**6841**](scripts/[proc,script6841].cs2)  
-[**6842**](scripts/[proc,script6842].cs2)  
+[**6842**](scripts/[proc,toa_raid_level].cs2) `[proc,toa_raid_level]`  
 [**6843**](scripts/[clientscript,script6843].cs2)  
 [**6844**](scripts/[clientscript,script6844].cs2)  
 [**6845**](scripts/[clientscript,script6845].cs2)  
@@ -6847,8 +6847,8 @@
 [**6847**](scripts/[loadloc,stepping_stone_43990].cs2) `[loadloc,stepping_stone_43990]`  
 [**6848**](scripts/[loadloc,rubble_43724].cs2) `[loadloc,rubble_43724]`  
 [**6849**](scripts/[loadloc,rubble_43726].cs2) `[loadloc,rubble_43726]`  
-[**6850**](scripts/[proc,script6850].cs2)  
-[**6851**](scripts/[proc,script6851].cs2)  
+[**6850**](scripts/[proc,text_client].cs2) `[proc,text_client]`  
+[**6851**](scripts/[proc,int_client].cs2) `[proc,int_client]`  
 [**6852**](scripts/[clientscript,script6852].cs2)  
 [**6853**](scripts/[clientscript,script6853].cs2)  
 [**6854**](scripts/[proc,script6854].cs2)  
@@ -6929,7 +6929,7 @@
 [**6938**](scripts/[clientscript,script6938].cs2)  
 [**6939**](scripts/[clientscript,script6939].cs2)  
 [**6940**](scripts/[clientscript,script6940].cs2)  
-[**6941**](scripts/[proc,script6941].cs2)  
+[**6941**](scripts/[proc,pvp_world].cs2) `[proc,pvp_world]`  
 [**6942**](scripts/[proc,script6942].cs2)  
 [**6943**](scripts/[proc,script6943].cs2)  
 [**6944**](scripts/[proc,script6944].cs2)  

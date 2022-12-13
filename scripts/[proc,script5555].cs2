@@ -2,8 +2,8 @@
 [proc,script5555](component $component0, component $component1)
 def_int $int2 = calc(%varcint468 - (clientclock - %varcint469) / 30);
 def_int $int3 = calc(%varcint471 - (clientclock - %varcint472) / 30);
-def_string $string0 = ~script3739(~script6851(0xa3170b, 0xef1020), "col");
-def_string $string1 = ~script3739(~script6851(0x065b1d, 0x0dc10d), "col");
+def_string $string0 = ~script3739(~int_client(0xa3170b, 0xef1020), "col");
+def_string $string1 = ~script3739(~int_client(0x065b1d, 0x0dc10d), "col");
 def_string $string2 = "<$string0>Stats restoring</col>";
 def_string $string3 = "<$string0><~time_convert($int2, 0)></col>";
 if (%varcint551 = 1) {
