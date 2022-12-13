@@ -1,23 +1,23 @@
 // 777
-[clientscript,ge_offers_setup_changequantity](boolean $boolean0, int $int1, int $opindex2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $component16, int $comsubid17)
+[clientscript,ge_offers_setup_changequantity](boolean $boolean0, int $int1, int $opindex2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $component16, int $comsubid17, int $comsubid18)
 if ($opindex2 ! 1 | %var1151 = null) {
 	return;
 }
-def_int $int18 = ^max_32bit_int;
+def_int $int19 = ^max_32bit_int;
 if (%var1151 = old_school_bond_13190) {
 	%varbit4396 = 1;
 	sound_synth(interface_select1, 1, 0);
 } else if (%varbit4397 = 1) {
-	$int18 = ~ge_offers_checkavailable;
+	$int19 = ~ge_offers_checkavailable;
 	if ($int1 >= ^max_32bit_int) {
-		%varbit4396 = $int18;
+		%varbit4396 = $int19;
 		sound_synth(ge_up_amount, 1, 0);
 	} else if ($int1 > 0) {
 		if ($int1 > 1 & %varbit4396 = 1) {
 			$int1 = calc($int1 - 1);
 		}
-		if (calc($int18 - $int1) < %varbit4396) {
-			%varbit4396 = $int18;
+		if (calc($int19 - $int1) < %varbit4396) {
+			%varbit4396 = $int19;
 		} else {
 			%varbit4396 = calc(%varbit4396 + $int1);
 		}
@@ -53,4 +53,4 @@ if (%var1151 = old_school_bond_13190) {
 		sound_synth(ge_down_amount, 1, 0);
 	}
 }
-~ge_offers_setup_draw($boolean0, $component3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $comsubid15, $component16, $comsubid17);
+~ge_offers_setup_draw($boolean0, $component3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $comsubid15, $component16, $comsubid17, $comsubid18);

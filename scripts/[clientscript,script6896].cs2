@@ -1,0 +1,8 @@
+// 6896
+[clientscript,script6896]
+if_settext("<tostring(%varbit14694)>%", interface_805:13);
+if_setplayerhead_self(interface_805:14);
+if_setsize(scale(%varbit14694, 100, 62), if_getheight(interface_805:12), ^setsize_abs, ^setsize_abs, interface_805:12);
+if_settext("<tostring(%varbit14695)>%", interface_805:9);
+if_setsize(scale(%varbit14695, 100, 62), if_getheight(interface_805:7), ^setsize_abs, ^setsize_abs, interface_805:7);
+if_setmodel(guss_mistletoad_46924, interface_805:8);

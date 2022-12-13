@@ -1,0 +1,18 @@
+// 6910
+[clientscript,script6910](boolean $boolean0, int $int1, int $opindex2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $component16, int $comsubid17, int $comsubid18)
+if ($opindex2 ! 2) {
+	return;
+}
+def_int $total19 = inv_total(inv, coins_995);
+if (%varbit4397 = 0 & %varbit4398 > 0) {
+	if ($total19 <= 0) {
+		%varbit4396 = 1;
+	} else {
+		%varbit4396 = calc($total19 / %varbit4398);
+		if (%varbit4396 < 1) {
+			%varbit4396 = 1;
+		}
+	}
+	sound_synth(ge_up_amount, 1, 0);
+}
+~ge_offers_setup_draw($boolean0, $component3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $comsubid15, $component16, $comsubid17, $comsubid18);

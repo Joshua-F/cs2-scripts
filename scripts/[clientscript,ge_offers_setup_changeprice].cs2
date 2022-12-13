@@ -1,9 +1,9 @@
 // 778
-[clientscript,ge_offers_setup_changeprice](boolean $boolean0, int $int1, int $opindex2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $component16, int $comsubid17)
+[clientscript,ge_offers_setup_changeprice](boolean $boolean0, int $int1, int $opindex2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $component16, int $comsubid17, int $comsubid18)
 if ($opindex2 ! 1 | %var1151 = null) {
 	return;
 }
-def_int $int18 = 0;
+def_int $int19 = 0;
 if ($int1 = 1) {
 	if (%varbit4398 < ^max_32bit_int) {
 		%varbit4398 = calc(%varbit4398 + 1);
@@ -15,26 +15,26 @@ if ($int1 = 1) {
 	}
 	sound_synth(ge_down_amount, 1, 0);
 } else if ($int1 = 5) {
-	$int18 = calc(%varbit4398 / 20);
-	if ($int18 <= 0) {
-		$int18 = 1;
+	$int19 = calc(%varbit4398 / 20);
+	if ($int19 <= 0) {
+		$int19 = 1;
 	}
-	if (calc(^max_32bit_int - $int18) < %varbit4398) {
+	if (calc(^max_32bit_int - $int19) < %varbit4398) {
 		%varbit4398 = ^max_32bit_int;
 	} else {
-		%varbit4398 = calc(%varbit4398 + $int18);
+		%varbit4398 = calc(%varbit4398 + $int19);
 	}
 	sound_synth(ge_up_amount, 1, 0);
 } else if ($int1 = -5) {
-	$int18 = calc(%varbit4398 / 20);
-	if ($int18 <= 0) {
-		$int18 = 1;
+	$int19 = calc(%varbit4398 / 20);
+	if ($int19 <= 0) {
+		$int19 = 1;
 	}
-	if ($int18 >= %varbit4398) {
+	if ($int19 >= %varbit4398) {
 		%varbit4398 = 1;
 	} else {
-		%varbit4398 = calc(%varbit4398 - $int18);
+		%varbit4398 = calc(%varbit4398 - $int19);
 	}
 	sound_synth(ge_down_amount, 1, 0);
 }
-~ge_offers_setup_draw($boolean0, $component3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $comsubid15, $component16, $comsubid17);
+~ge_offers_setup_draw($boolean0, $component3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $comsubid15, $component16, $comsubid17, $comsubid18);

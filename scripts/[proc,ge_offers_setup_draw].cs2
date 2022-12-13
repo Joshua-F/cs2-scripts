@@ -1,5 +1,5 @@
 // 779
-[proc,ge_offers_setup_draw](boolean $boolean0, component $component1, int $comsubid2, int $comsubid3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, component $component14, int $comsubid15)
+[proc,ge_offers_setup_draw](boolean $boolean0, component $component1, int $comsubid2, int $comsubid3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, component $component14, int $comsubid15, int $comsubid16)
 if (%varbit4397 = 1) {
 	if (cc_find($component1, $comsubid2) = ^true) {
 		cc_sethide(true);
@@ -22,6 +22,9 @@ if (%varbit4397 = 1) {
 		.cc_sethide(false);
 		cc_setop(1, "All");
 		.cc_settext("All");
+	}
+	if (cc_find($component1, $comsubid16) = ^true) {
+		cc_setop(2, "");
 	}
 } else if ($boolean0 = true) {
 	if (cc_find($component1, $comsubid2) = ^true) {
@@ -67,11 +70,14 @@ if (%varbit4397 = 1) {
 		cc_setop(1, "+1K");
 		.cc_settext("+1K");
 	}
+	if (cc_find($component1, $comsubid16) = ^true) {
+		cc_setop(2, "All");
+	}
 }
 def_string $string0 = ",";
-def_int $int16 = 0;
 def_int $int17 = 0;
 def_int $int18 = 0;
+def_int $int19 = 0;
 if (%var1151 ! null) {
 	if (cc_find($component1, $comsubid8) = ^true) {
 		cc_setobject_nonum(%var1151, %varbit4396);
@@ -96,45 +102,45 @@ if (%var1151 ! null) {
 		}
 		~ge_offers_setup_draw_disableconfirm($component1, $comsubid15, $component14);
 	} else {
-		$int16 = calc(%varbit4396 * %varbit4398);
+		$int17 = calc(%varbit4396 * %varbit4398);
 		if (cc_find($component1, $comsubid12) = ^true) {
 			if (%varbit4397 = 1 & %varbit13139 > 0) {
-				$int17 = ~min(5000000, scale(%varbit13139, 1000, %varbit4398));
-				if ($int17 > 0) {
-					$int18 = calc($int16 - %varbit4396 * $int17);
-					if ($int17 < 5000000) {
+				$int18 = ~min(5000000, scale(%varbit13139, 1000, %varbit4398));
+				if ($int18 > 0) {
+					$int19 = calc($int17 - %varbit4396 * $int18);
+					if ($int18 < 5000000) {
 						cc_settextfont(b12_full);
-						if ($int18 = 1) {
-							cc_settext("1 coin <col=9f9f9f>(<~tostring_spacer($int16, $string0)> - <~script5731>)</col>");
+						if ($int19 = 1) {
+							cc_settext("1 coin <col=9f9f9f>(<~tostring_spacer($int17, $string0)> - <~script5731>)</col>");
 						} else {
-							cc_settext("<~tostring_spacer($int18, $string0)> coins <col=9f9f9f>(<~tostring_spacer($int16, $string0)> - <~script5731>)</col>");
+							cc_settext("<~tostring_spacer($int19, $string0)> coins <col=9f9f9f>(<~tostring_spacer($int17, $string0)> - <~script5731>)</col>");
 						}
 					} else {
 						cc_settextfont(p12_full);
-						if ($int18 = 1) {
-							cc_settext("1 coin <col=9f9f9f>(<~tostring_spacer($int16, $string0)> - <~tostring_spacer(5000000, $string0)> per item)</col>");
+						if ($int19 = 1) {
+							cc_settext("1 coin <col=9f9f9f>(<~tostring_spacer($int17, $string0)> - <~tostring_spacer(5000000, $string0)> per item)</col>");
 						} else {
-							cc_settext("<~tostring_spacer($int18, $string0)> coins <col=9f9f9f>(<~tostring_spacer($int16, $string0)> - <~tostring_spacer(5000000, $string0)> per item)</col>");
+							cc_settext("<~tostring_spacer($int19, $string0)> coins <col=9f9f9f>(<~tostring_spacer($int17, $string0)> - <~tostring_spacer(5000000, $string0)> per item)</col>");
 						}
 					}
 				} else {
 					cc_settextfont(b12_full);
-					if ($int16 = 1) {
+					if ($int17 = 1) {
 						cc_settext("1 coin <col=9f9f9f>(no fee expected)</col>");
 					} else {
-						cc_settext("<~tostring_spacer($int16, $string0)> coins <col=9f9f9f>(no fee expected)</col>");
+						cc_settext("<~tostring_spacer($int17, $string0)> coins <col=9f9f9f>(no fee expected)</col>");
 					}
 				}
 			} else {
 				cc_settextfont(b12_full);
-				if ($int16 = 1) {
+				if ($int17 = 1) {
 					cc_settext("1 coin");
 				} else {
-					cc_settext("<~tostring_spacer($int16, $string0)> coins");
+					cc_settext("<~tostring_spacer($int17, $string0)> coins");
 				}
 			}
 		}
-		if ($int16 > 0) {
+		if ($int17 > 0) {
 			~v2_stone_button_out_filled($component14);
 			if_setonmouserepeat("v2_stone_button_in_filled(event_com)", $component14);
 			if_setonmouseleave("v2_stone_button_out_filled(event_com)", $component14);

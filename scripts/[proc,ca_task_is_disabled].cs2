@@ -1,6 +1,6 @@
 // 5243
 [proc,ca_task_is_disabled](struct $struct0)(int)
-if (%varbit13049 <= 1 | %varbit13049 >= 5) {
+if (%varbit13049 <= 1 | %varbit13049 > 5) {
 	return(0);
 }
 def_int $int1 = struct_param($struct0, param_1425);

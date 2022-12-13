@@ -383,6 +383,7 @@
 [**380**](scripts/[clientscript,script380].cs2)  
 [**381**](scripts/[clientscript,settings_side_brightness_init].cs2) `[clientscript,settings_side_brightness_init]`  
 [**382**](scripts/[clientscript,script382].cs2)  
+[**383**](scripts/[clientscript,script383].cs2)  
 [**384**](scripts/[proc,wilderness_level].cs2) `[proc,wilderness_level]`  
 [**385**](scripts/[clientscript,pvp_icons_layout].cs2) `[clientscript,pvp_icons_layout]`  
 [**386**](scripts/[proc,pvp_icons_layout].cs2) `[proc,pvp_icons_layout]`  
@@ -2247,6 +2248,7 @@
 [**2245**](scripts/[proc,script2245].cs2)  
 [**2246**](scripts/[proc,hp_bar_reset].cs2) `[proc,hp_bar_reset]`  
 [**2247**](scripts/[proc,macro_pinball_score].cs2) `[proc,macro_pinball_score]`  
+[**2248**](scripts/[clientscript,script2248].cs2)  
 [**2249**](scripts/[clientscript,cc_deleteall].cs2) `[clientscript,cc_deleteall]`  
 [**2250**](scripts/[proc,script2250].cs2)  
 [**2251**](scripts/[clientscript,chatbox_open_input].cs2) `[clientscript,chatbox_open_input]`  
@@ -3719,6 +3721,7 @@
 [**3718**](scripts/[proc,league_tutorial_interface_update_graphic].cs2) `[proc,league_tutorial_interface_update_graphic]`  
 [**3719**](scripts/[proc,in_league_tutorial].cs2) `[proc,in_league_tutorial]`  
 [**3720**](scripts/[proc,rental_world].cs2) `[proc,rental_world]`  
+[**3721**](scripts/[clientscript,script3721].cs2)  
 [**3722**](scripts/[clientscript,script3722].cs2)  
 [**3723**](scripts/[proc,script3723].cs2)  
 [**3724**](scripts/[clientscript,script3724].cs2)  
@@ -6893,16 +6896,21 @@
 [**6893**](scripts/[clientscript,script6893].cs2)  
 [**6894**](scripts/[clientscript,script6894].cs2)  
 [**6895**](scripts/[clientscript,script6895].cs2)  
+[**6896**](scripts/[clientscript,script6896].cs2)  
 [**6897**](scripts/[proc,script6897].cs2)  
 [**6898**](scripts/[proc,script6898].cs2)  
 [**6899**](scripts/[proc,script6899].cs2)  
 [**6900**](scripts/[proc,script6900].cs2)  
 [**6901**](scripts/[proc,script6901].cs2)  
+[**6902**](scripts/[clientscript,script6902].cs2)  
+[**6903**](scripts/[clientscript,script6903].cs2)  
+[**6904**](scripts/[proc,script6904].cs2)  
 [**6905**](scripts/[proc,script6905].cs2)  
 [**6906**](scripts/[proc,script6906].cs2)  
 [**6907**](scripts/[proc,script6907].cs2)  
 [**6908**](scripts/[proc,script6908].cs2)  
 [**6909**](scripts/[proc,script6909].cs2)  
+[**6910**](scripts/[clientscript,script6910].cs2)  
 [**6915**](scripts/[clientscript,script6915].cs2)  
 [**6916**](scripts/[clientscript,script6916].cs2)  
 [**6917**](scripts/[proc,script6917].cs2)  
