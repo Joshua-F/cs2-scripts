@@ -1,0 +1,14 @@
+// 6960
+[proc,script6960](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9)(int)
+def_int $int10 = 0;
+$int10 = calc($int10 + ~minmax(0, 3, $int0) * pow(4, 9));
+$int10 = calc($int10 + ~minmax(0, 3, $int1) * pow(4, 8));
+$int10 = calc($int10 + ~minmax(0, 3, $int2) * pow(4, 7));
+$int10 = calc($int10 + ~minmax(0, 3, $int3) * pow(4, 6));
+$int10 = calc($int10 + ~minmax(0, 3, $int4) * pow(4, 5));
+$int10 = calc($int10 + ~minmax(0, 3, $int5) * pow(4, 4));
+$int10 = calc($int10 + ~minmax(0, 3, $int6) * pow(4, 3));
+$int10 = calc($int10 + ~minmax(0, 3, $int7) * pow(4, 2));
+$int10 = calc($int10 + ~minmax(0, 3, $int8) * 4);
+$int10 = calc($int10 + ~minmax(0, 3, $int9));
+return($int10);

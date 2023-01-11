@@ -1,0 +1,9 @@
+// 6979
+[proc,script6979](component $component0, graphic $graphic1, string $string0)
+~script6981($component0, $graphic1, $string0, false, 0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script6980(event_com, $graphic1, $string0, true)", $component0);
+}
+if_setonmouseleave("script6980(event_com, $graphic1, $string0, false)", $component0);
+if_setop(1, removetags($string0), $component0);
+if_setontimer(null, $component0);

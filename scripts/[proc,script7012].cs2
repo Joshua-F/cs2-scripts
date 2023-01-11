@@ -1,0 +1,35 @@
+// 7012
+[proc,script7012](int $int0, int $int1, int $int2, component $component3, component $component4, int $int5, int $int6, int $int7, int $int8)(int)
+def_int $int9 = calc($int1 * 18);
+def_int $int10 = calc($int2 * 18);
+cc_create($component3, ^iftype_rectangle, $int0);
+cc_setposition($int10, $int9, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(19, 19, ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x474745);
+$int0 = calc($int0 + 1);
+if ($int1 < $int6) {
+	if ($int8 ! 0) {
+		cc_create($component3, ^iftype_rectangle, $int0);
+		cc_setposition(calc($int10 + 1), calc($int9 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+		cc_setfill(true);
+		cc_settrans(140);
+		if ($int8 = 2) {
+			cc_setcolour(0x0cb70c);
+		} else {
+			cc_setcolour(0x0a6b99);
+		}
+		$int0 = calc($int0 + 1);
+	}
+	cc_create($component3, ^iftype_text, $int0);
+	cc_setposition($int10, $int9, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setsize(19, 18, ^setsize_abs, ^setsize_abs);
+	cc_settext(tostring(calc($int7 + 1)));
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xeaeaea);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$int0 = calc($int0 + 1);
+}
+return($int0);

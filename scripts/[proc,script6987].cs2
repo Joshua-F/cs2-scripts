@@ -1,0 +1,14 @@
+// 6987
+[proc,script6987](component $component0, string $string0)
+if (%varcint1120 <= 0) {
+	sound_synth(synth_6651, 1, 0);
+	return;
+}
+sound_synth(synth_6652, 1, 0);
+~script6981($component0, null, $string0, true, 1);
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setonop(null, $component0);
+if_clearops($component0);
+resume_countdialog(tostring(calc(%varcint1119 * 10 + %varcint1120)));
+if_setontimer("script6988($component0, $string0, calc(clientclock + 40), false)", $component0);

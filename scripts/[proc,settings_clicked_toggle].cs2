@@ -54,6 +54,10 @@ switch_int ($setting0) {
 		~script6717;
 	case 283 :
 		~script6718;
+	case 305 :
+		%varbit5697 = calc(1 - %varbit5697);
+	case 306 :
+		%varbit5698 = calc(1 - %varbit5698);
 	case 46 :
 		~script3988;
 	case ^setting_store_button_mobile :
@@ -392,4 +396,10 @@ switch_int ($setting0) {
 		%varbit14700 = calc(1 - %varbit14700);
 	case 298 :
 		%varbit14701 = calc(1 - %varbit14701);
+	case 302 :
+		~script6911;
+	case 303 :
+		~script6912;
+	case 304 :
+		~script6913;
 }

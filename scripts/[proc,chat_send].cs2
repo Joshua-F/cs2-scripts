@@ -14,7 +14,7 @@ if (~is_group_iron = 0 & $int3 = 4) {
 if ($int3 ! -1 & $int3 <= 4 & $int3 ! %varcint945) {
 	%varcint945 = $int3;
 	if ($int3 ! 0) {
-		mes("Your chatbox mode is now set to <enum(int, string, enum_4070, $int3)> chat, to reset your mode type /@p");
+		mes("Your chatbox mode is now set to <enum(int, string, enum_4070, $int3)> chat. To reset your mode, type <col=ef1020>/@p</col>.");
 	} else {
 		mes("Your chatbox mode has been reset to <enum(int, string, enum_4070, $int3)> chat.");
 	}
@@ -23,9 +23,6 @@ if ($int2 = 1) {
 	switch_int (%varcint945) {
 		case 1 :
 			$int0 = 2;
-			if (string_length($string0) > 0 & compare(substring($string0, 0, 1), "/") ! 0) {
-				$string0 = append("/", $string0);
-			}
 		case 2 :
 			$int0, $clantype1 = 3, ^clantype_clan;
 		case 3 :
@@ -35,25 +32,29 @@ if ($int2 = 1) {
 	}
 }
 def_string $string1 = "";
-if ($int0 = 2 | $int0 = 3 | $int0 = 4) {
-	if (~script5501($string0) = 1) {
-		$string1, $string0 = ~script632($string0);
-	}
-	if ($clantype1 = ^clantype_gim) {
-		$string0 = append(uppercase(substring($string0, 0, 1)), substring($string0, 1, string_length($string0)));
-		$string0 = append("|", $string0);
-		if (string_length($string0) > 80) {
-			$string0 = substring($string0, 0, 80);
+switch_int ($int0) {
+	case 3, 4 :
+		if (~script5501($string0) = 1) {
+			$string1, $string0 = ~script632($string0);
 		}
-	}
-	if (string_length($string0) <= 0) {
-		return;
-	}
-	chat_sendclan($string0, $int0, $clantype1);
-} else {
-	if (string_length($string0) <= 0) {
-		return;
-	}
-	chat_sendpublic($string0, $int0);
+		if ($clantype1 = ^clantype_gim) {
+			$string0 = append(uppercase(substring($string0, 0, 1)), substring($string0, 1, string_length($string0)));
+			$string0 = append("|", $string0);
+			if (string_length($string0) > 80) {
+				$string0 = substring($string0, 0, 80);
+			}
+		}
+		if (string_length($string0) <= 0) {
+			return;
+		}
+		chat_sendclan($string0, $int0, $clantype1);
+	case default :
+		if ($int0 = 2 & string_length($string0) > 0 & compare(substring($string0, 0, 1), "/") ! 0) {
+			$string0 = append("/", $string0);
+		}
+		if (string_length($string0) <= 0) {
+			return;
+		}
+		chat_sendpublic($string0, $int0);
 }
 %varcint61 = clientclock;

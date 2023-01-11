@@ -9,15 +9,16 @@ if (string_length($string0) <= 0) {
 		$string0 = "Play";
 	}
 }
-cc_deleteall(welcome_screen:93);
-if_sethide(true, welcome_screen:91);
-if (cc_find(welcome_screen:90, 0) = ^true) {
+if_sethide(true, welcome_screen:94);
+cc_deleteall(welcome_screen:92);
+if_sethide(true, welcome_screen:90);
+if (cc_find(welcome_screen:89, 0) = ^true) {
 	cc_delete;
 }
-if_setgraphic($graphic0, welcome_screen:89);
-if_setop(1, $string0, welcome_screen:86);
+if_setgraphic($graphic0, welcome_screen:88);
+if_setop(1, $string0, welcome_screen:85);
 if (~on_mobile = false) {
-	if_setonmouserepeat("comp_sethide(false, welcome_screen:94)", welcome_screen:86);
-	if_setonmouseleave("comp_sethide(true, welcome_screen:94)", welcome_screen:86);
+	if_setonmouserepeat("comp_sethide(false, welcome_screen:93)", welcome_screen:85);
+	if_setonmouseleave("comp_sethide(true, welcome_screen:93)", welcome_screen:85);
 }
-if_sethide(true, welcome_screen:94);
+if_sethide(true, welcome_screen:93);

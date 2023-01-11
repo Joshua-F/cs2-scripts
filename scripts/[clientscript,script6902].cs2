@@ -1,9 +1,0 @@
-// 6902
-[clientscript,script6902](component $component0, component $component1)
-def_graphic $graphic2 = "close_buttons,4";
-def_graphic $graphic3 = "close_buttons,5";
-if (~on_mobile = false) {
-	if_setonmouseover("graphic_swapper($component1, $graphic3)", $component0);
-	if_setonmouseleave("graphic_swapper($component1, $graphic2)", $component0);
-}
-if_setonop("closebutton_click", $component0);

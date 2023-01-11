@@ -1,0 +1,5 @@
+// 7004
+[proc,script7004](component $component0)
+if_setonop(null, $component0);
+resume_countdialog(tostring(^max_32bit_int));
+if_setontimer("script7005($component0, calc(clientclock + 40))", $component0);

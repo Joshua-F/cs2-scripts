@@ -1,0 +1,28 @@
+// 6992
+[proc,script6992](component $component0)
+cc_deleteall($component0);
+def_int $int1 = %varcint1120;
+def_int $int2 = %varcint1119;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_graphic $graphic5 = null;
+if_setsize(calc($int1 * 17 + 3), 0, ^setsize_abs, ^setsize_minus, $component0);
+while ($int4 < $int1) {
+	$int3 = calc($int2 % 4);
+	$int2 = calc($int2 / 4);
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int4 * 17 + 2), 0, ^setpos_abs_left, ^setpos_abs_centre);
+	switch_int ($int3) {
+		case 0 :
+			$graphic5 = "graphic_4734";
+		case 1 :
+			$graphic5 = "graphic_4735";
+		case 2 :
+			$graphic5 = "graphic_4736";
+		case 3 :
+			$graphic5 = "graphic_4737";
+	}
+	cc_setgraphic($graphic5);
+	$int4 = calc($int4 + 1);
+}

@@ -1,0 +1,15 @@
+// 7009
+[proc,script7009](component $component0, component $component1, int $int2)
+cc_deleteall($component0);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+while ($int4 < $int2) {
+	while ($int5 < 6) {
+		$int3 = ~script7010($int3, $int4, $int5, $component0, $component1, $int2);
+		$int5 = calc($int5 + 1);
+	}
+	$int5 = 0;
+	$int4 = calc($int4 + 1);
+}
+if_setsize(calc(27 * $int2 + 3), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);

@@ -1,12 +1,28 @@
 // 6560
 [clientscript,script6560]
-cc_deleteall(welcome_screen:93);
-if_sethide(true, welcome_screen:91);
-if (cc_find(welcome_screen:90, 0) = ^true) {
+cc_deleteall(welcome_screen:92);
+if_sethide(true, welcome_screen:90);
+def_string $string0 = "";
+def_string $string1 = "";
+if (cc_find(welcome_screen:89, 0) = ^true) {
 	if (cc_getcrm_hasresponse = false) {
 		cc_delete;
 		~script6562(null, "");
 	} else {
+		$string0 = cc_getcrm_string("op_text");
+		$string1 = cc_getcrm_string("op_text_ios");
+		if (string_length($string0) <= 0) {
+			$string0 = "Select";
+		}
+		if (string_length($string1) <= 0) {
+			$string1 = $string0;
+		}
+		if_sethide(false, welcome_screen:94);
+		if (~on_ios = 1) {
+			if_setop(1, $string1, welcome_screen:94);
+		} else {
+			if_setop(1, $string0, welcome_screen:94);
+		}
 		~script533;
 	}
 } else {

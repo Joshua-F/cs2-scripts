@@ -23,6 +23,10 @@ switch_int ($setting0) {
 		return(%varbit5712);
 	case ^setting_boss_health_overlay :
 		return(%varbit12389);
+	case 299 :
+		return(%varbit14706);
+	case 300 :
+		return(%varbit14707);
 	case ^setting_standard_health_overlay :
 		return(%varbit12390);
 	case 11 :
@@ -284,6 +288,10 @@ switch_int ($setting0) {
 		return(calc(1 - %varbit4814));
 	case 283 :
 		return(calc(1 - %varbit14198));
+	case 305 :
+		return(%varbit5697);
+	case 306 :
+		return(%varbit5698);
 	case 195 :
 		return(%varbit13120);
 	case 201 :
@@ -387,6 +395,12 @@ switch_int ($setting0) {
 		return(%varbit14700);
 	case 298 :
 		return(%varbit14701);
+	case 302 :
+		return(%varbit14711);
+	case 303 :
+		return(%varbit14709);
+	case 304 :
+		return(%varbit14710);
 	case default :
 		return(0);
 }

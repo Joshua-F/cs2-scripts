@@ -1,0 +1,6 @@
+// 6991
+[clientscript,script6991](component $component0, int $clock1)
+if (clientclock < $clock1) {
+	return;
+}
+if_setonop("script6989($component0)", $component0);

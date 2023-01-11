@@ -29,5 +29,11 @@ switch_int ($int0) {
 	case 2 :
 		$string1 = "chatbox_memberactivity";
 }
+if (string_length($string0) <= 0) {
+	~debug_mes_error("Braze", "No valid platform given when determining endpoint.");
+}
+if (string_length($string1) <= 0) {
+	~debug_mes_error("Braze", "No valid placement given when determining endpoint.");
+}
 def_string $string2 = "https://crm-game-events.adse.jagex.com/api/osrs/campaign/user/%userid%/<$string0>/<$string1>";
 return($string2);

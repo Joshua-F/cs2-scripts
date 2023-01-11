@@ -1,0 +1,25 @@
+// 7007
+[proc,script7007](component $component0)
+cc_deleteall($component0);
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $x3 = 0;
+while ($int2 < 6) {
+	$x3 = calc($int2 * 18);
+	cc_create($component0, ^iftype_rectangle, $int1);
+	cc_setposition($x3, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setsize(19, 24, ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x474745);
+	$int1 = calc($int1 + 1);
+	cc_create($component0, ^iftype_text, $int1);
+	cc_setposition($x3, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setsize(19, 24, ^setsize_abs, ^setsize_abs);
+	cc_settext(~script7008($int2));
+	cc_settextfont(b12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$int1 = calc($int1 + 1);
+	$int2 = calc($int2 + 1);
+}

@@ -1,0 +1,18 @@
+// 6969
+[clientscript,script6969](component $component0, string $string0)
+sound_synth(synth_6652, 1, 0);
+~script6981($component0, null, $string0, true, 1);
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setonop(null, $component0);
+if_clearops($component0);
+def_int $int1 = 0;
+def_int $int2 = ~script6966($int1);
+$int1 = calc($int1 + 1);
+while ($int1 < 6) {
+	$int2 = calc($int2 * 10);
+	$int2 = calc($int2 + ~script6966($int1));
+	$int1 = calc($int1 + 1);
+}
+resume_countdialog(tostring($int2));
+if_setontimer("script6970($component0, $string0, calc(clientclock + 40), false)", $component0);

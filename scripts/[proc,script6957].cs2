@@ -1,0 +1,22 @@
+// 6957
+[proc,script6957](int $int0)(int)
+switch_int ($int0) {
+	case 0 :
+		return(0);
+	case 1 :
+		return(2048);
+	case 2 :
+		return(4096);
+	case 3 :
+		return(6144);
+	case 4 :
+		return(8192);
+	case 5 :
+		return(10240);
+	case 6 :
+		return(12288);
+	case 7 :
+		return(14336);
+	case default :
+		return(0);
+}

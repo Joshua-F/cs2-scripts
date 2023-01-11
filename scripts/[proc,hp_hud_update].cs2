@@ -12,73 +12,81 @@ if (%var1683 ! null) {
 } else {
 	$string0 = if_gettext($component6);
 }
-if (compare($string0, "") = 0) {
+def_int $height12 = 0;
+if (compare($string0, "") = 0 | %varbit14706 = 1) {
+	$height12 = 27;
 	if_sethide(true, $component5);
-	if_setsize(if_getwidth($component0), 27, ^setsize_abs, ^setsize_abs, $component0);
+	if_setsize(if_getwidth($component0), $height12, ^setsize_abs, ^setsize_abs, $component0);
 } else {
+	$height12 = 42;
 	if_sethide(false, $component5);
-	if_setsize(if_getwidth($component0), 42, ^setsize_abs, ^setsize_abs, $component0);
+	if_setsize(if_getwidth($component0), $height12, ^setsize_abs, ^setsize_abs, $component0);
 	if_settext($string0, $component6);
 }
 def_string $text1 = "<tostring(%varbit6099)> / <tostring(%varbit6100)>";
+def_int $int13 = 0;
+if (%varbit14708 = 1) {
+	$int13 = ~minmax(0, 100, scale(%varbit6099, %varbit6100, 100));
+	$text1 = "<tostring($int13)>%";
+}
 if_settext($text1, $component1);
-def_int $width12 = if_getwidth($component2);
-def_int $int13 = $width12;
-def_int $int14 = calc(%varbit6100 + 1);
+def_int $width14 = if_getwidth($component2);
+def_int $int15 = $width14;
+def_int $int16 = calc(%varbit6100 + 1);
 %varbit6100 = ~max(%varbit6100, 1);
-$int13 = scale(%varbit6099, %varbit6100, $int13);
-if (%varbit10338 > 0 & %varbit10338 <= $int14) {
+$int15 = scale(%varbit6099, %varbit6100, $int15);
+if (%varbit10338 > 0 & %varbit10338 <= $int16) {
 	if_sethide(false, $component7);
-	if_setposition(scale(calc(%varbit10338 - 1), %varbit6100, $width12), 0, ^setpos_abs_left, ^setpos_abs_centre, $component7);
+	if_setposition(scale(calc(%varbit10338 - 1), %varbit6100, $width14), 0, ^setpos_abs_left, ^setpos_abs_centre, $component7);
 } else {
 	if_sethide(true, $component7);
 }
-if (%varbit10339 > 0 & %varbit10339 <= $int14) {
+if (%varbit10339 > 0 & %varbit10339 <= $int16) {
 	if_sethide(false, $component8);
-	if_setposition(calc($width12 - scale(%varbit10339 - 1, %varbit6100, $width12)), 0, ^setpos_abs_right, ^setpos_abs_centre, $component8);
+	if_setposition(calc($width14 - scale(%varbit10339 - 1, %varbit6100, $width14)), 0, ^setpos_abs_right, ^setpos_abs_centre, $component8);
 } else {
 	if_sethide(true, $component8);
 }
-if (%varbit10340 > 0 & %varbit10340 <= $int14) {
+if (%varbit10340 > 0 & %varbit10340 <= $int16) {
 	if_sethide(false, $component9);
-	if_setposition(scale(calc(%varbit10340 - 1), %varbit6100, $width12), 0, ^setpos_abs_left, ^setpos_abs_centre, $component9);
+	if_setposition(scale(calc(%varbit10340 - 1), %varbit6100, $width14), 0, ^setpos_abs_left, ^setpos_abs_centre, $component9);
 } else {
 	if_sethide(true, $component9);
 }
-if (%varbit10341 > 0 & %varbit10341 <= $int14) {
+if (%varbit10341 > 0 & %varbit10341 <= $int16) {
 	if_sethide(false, $component10);
-	if_setposition(scale(calc(%varbit10341 - 1), %varbit6100, $width12), 0, ^setpos_abs_left, ^setpos_abs_centre, $component10);
+	if_setposition(scale(calc(%varbit10341 - 1), %varbit6100, $width14), 0, ^setpos_abs_left, ^setpos_abs_centre, $component10);
 } else {
 	if_sethide(true, $component10);
 }
-if ($int13 = 0 & %varbit6099 > 0) {
-	$int13 = 1;
+if ($int15 = 0 & %varbit6099 > 0) {
+	$int15 = 1;
 }
-if ($int13 = if_getwidth($component2) & %varbit6099 < %varbit6100) {
-	$int13 = calc($int13 - 1);
+if ($int15 = if_getwidth($component2) & %varbit6099 < %varbit6100) {
+	$int15 = calc($int15 - 1);
 }
-if (nc_param(%var1683, param_1398) = true & if_getwidth($component4) = 0 & $int13 > 0) {
+if (nc_param(%var1683, param_1398) = true & if_getwidth($component4) = 0 & $int15 > 0) {
 	if_setsize(1, if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
 	if_setsize(1, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
 }
 if ($boolean11 = true | if_getwidth($component4) = 0) {
-	if_setsize($int13, if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
-	if_setsize($int13, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
+	if_setsize($int15, if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
+	if_setsize($int15, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
 	if_setontimer(null, $component3);
 	return;
 }
-def_int $width15 = if_getwidth($component4);
-if ($int13 < $width15) {
-	if_setsize($int13, if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
-	if (if_getwidth($component3) < $width15) {
-		if_setsize($width15, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
+def_int $width17 = if_getwidth($component4);
+if ($int15 < $width17) {
+	if_setsize($int15, if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
+	if (if_getwidth($component3) < $width17) {
+		if_setsize($width17, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
 	}
 	if_setontimer(null, $component4);
 	if (%varcint984 = 0) {
-		if_setontimer("hp_hud_update_bar($component3, $int13, calc(clientclock + 20))", $component3);
+		if_setontimer("hp_hud_update_bar($component3, $int15, calc(clientclock + 20))", $component3);
 	} else {
-		if_setontimer("hp_hud_update_bar($component3, $int13, clientclock)", $component3);
+		if_setontimer("hp_hud_update_bar($component3, $int15, clientclock)", $component3);
 	}
 } else {
-	if_setontimer("hp_hud_update_bar($component4, $int13, -1)", $component4);
+	if_setontimer("hp_hud_update_bar($component4, $int15, -1)", $component4);
 }

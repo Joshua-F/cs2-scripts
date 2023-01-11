@@ -1,0 +1,33 @@
+// 6983
+[proc,script6983](int $int0, component $component1)
+if (%varcint1120 >= 9) {
+	sound_synth(synth_6651, 1, 0);
+	return;
+}
+sound_synth(synth_6649, 1, 0);
+%varcint1120 = calc(%varcint1120 + 1);
+def_int $int2 = 0;
+switch_int (%varcint1120) {
+	case 1 :
+		$int2 = ~script6960(0, 0, 0, 0, 0, 0, 0, 0, 0, $int0);
+	case 2 :
+		$int2 = ~script6960(0, 0, 0, 0, 0, 0, 0, 0, $int0, 0);
+	case 3 :
+		$int2 = ~script6960(0, 0, 0, 0, 0, 0, 0, $int0, 0, 0);
+	case 4 :
+		$int2 = ~script6960(0, 0, 0, 0, 0, 0, $int0, 0, 0, 0);
+	case 5 :
+		$int2 = ~script6960(0, 0, 0, 0, 0, $int0, 0, 0, 0, 0);
+	case 6 :
+		$int2 = ~script6960(0, 0, 0, 0, $int0, 0, 0, 0, 0, 0);
+	case 7 :
+		$int2 = ~script6960(0, 0, 0, $int0, 0, 0, 0, 0, 0, 0);
+	case 8 :
+		$int2 = ~script6960(0, 0, $int0, 0, 0, 0, 0, 0, 0, 0);
+	case 9 :
+		$int2 = ~script6960(0, $int0, 0, 0, 0, 0, 0, 0, 0, 0);
+	case 10 :
+		$int2 = ~script6960($int0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+%varcint1119 = calc(%varcint1119 + $int2);
+~script6992($component1);

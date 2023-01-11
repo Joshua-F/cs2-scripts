@@ -48,14 +48,16 @@ switch_int ($int0) {
 					case 19 :
 						return(60, dragon_warhammer_13576, "Members: Dragon warhammer");
 					case 20 :
-						return(70, dharoks_greataxe_4718, "Members: Dharok's greataxe<br> (with 70 Attack)");
+						return(60, ancient_sceptre_27624, "Members: Ancient sceptre<br> (requires Secrets of the North, 50 Attack and 70 Magic)");
 					case 21 :
-						return(70, torags_hammers_4747, "Members: Torag's hammers<br> (with 70 Attack)");
+						return(70, dharoks_greataxe_4718, "Members: Dharok's greataxe<br> (with 70 Attack)");
 					case 22 :
-						return(70, abyssal_bludgeon_13263, "Members: Abyssal bludgeon<br> (with 70 Attack)");
+						return(70, torags_hammers_4747, "Members: Torag's hammers<br> (with 70 Attack)");
 					case 23 :
-						return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Attack)");
+						return(70, abyssal_bludgeon_13263, "Members: Abyssal bludgeon<br> (with 70 Attack)");
 					case 24 :
+						return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Attack)");
+					case 25 :
 						return(90, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 80 Attack)");
 				}
 			case 1 :
@@ -159,6 +161,9 @@ switch_int ($int0) {
 				return(80, bow_of_faerdhinen_25865, "Members: Bow of Faerdhinen (with 70 Agility)<br> Ammo: None");
 			}
 			if ($int2 = 13) {
+				return(80, venator_bow_27610, "Members: Venator bow<br> Ammo: Arrows up to dragon");
+			}
+			if ($int2 = 14) {
 				return(85, twisted_bow_20997, "Members: Twisted bow<br> Ammo: Arrows up to dragon");
 			}
 			return(-1, null, "");
@@ -720,12 +725,14 @@ switch_int ($int0) {
 					case 52 :
 						return(90, torstol_269, "Super combat potion<br>Super attack potion, super defence potion, super strength potion & torstol");
 					case 53 :
-						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & crushed superior dragon bones<br>(after Dragon Slayer II)");
+						return(91, ancient_essence_27616, "Forgotten brew<br>Ancient brew & ancient essence");
 					case 54 :
-						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
+						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & crushed superior dragon bones<br>(after Dragon Slayer II)");
 					case 55 :
-						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
 					case 56 :
+						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+					case 57 :
 						return(98, lava_scale_shard_5_3256, "Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)");
 					case default :
 						return(-1, null, "");
@@ -1782,8 +1789,10 @@ switch_int ($int0) {
 				case 30 :
 					return(72, basalt_22603, "Members: Basalt");
 				case 31 :
-					return(85, runite_ore_451, "Runite ore");
+					return(75, ancient_essence_50_27619, "Members: Ancient essence<br>(after Secrets of the North)");
 				case 32 :
+					return(85, runite_ore_451, "Runite ore");
+				case 33 :
 					return(92, amethyst_21347, "Members: Amethyst");
 				case default :
 					return(-1, null, "");

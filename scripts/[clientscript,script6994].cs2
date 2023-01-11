@@ -1,0 +1,10 @@
+// 6994
+[clientscript,script6994](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, int $int8, int $int9)
+if ($int7 <= 0) {
+	~script7018;
+}
+~script7017(calc($int7 - 1), $int8, $int9);
+~script7009($component1, $component2, $int6);
+~script7011($component3, $component4, $component5, $int6, $int7);
+if_setsize(calc(82 + 45 * $int6), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+~script6995($component5, "Confirm");

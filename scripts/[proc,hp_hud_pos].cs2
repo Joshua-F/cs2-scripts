@@ -4,17 +4,20 @@ def_int $width18 = if_getwidth($component1);
 def_boolean $boolean19 = false;
 def_int $int20 = 150;
 def_int $setposh21 = ^setpos_abs_left;
+def_int $height22 = if_getheight($component2);
 if (%varbit12401 = 1 & ~on_mobile = false) {
-	$int20 = scale(1, 4, $width18);
-	$int20 = ~max($int20, 200);
-	$int20 = ~min($int20, 600);
+	if (%varbit14707 = 1) {
+		$int20 = ~minmax(120, 300, scale(1, 7, $width18));
+	} else {
+		$int20 = ~minmax(200, 600, scale(1, 4, $width18));
+	}
 	$setposh21 = ^setpos_abs_centre;
 }
-if ($int0 = $int20) {
+if ($int0 = $int20 & if_getheight($component2) = $height22) {
 	return;
 }
-if ($int20 ! if_getwidth($component2)) {
-	if_setsize($int20, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
+if ($int20 ! if_getwidth($component2) | $height22 ! if_getheight($component2)) {
+	if_setsize($int20, $height22, ^setsize_abs, ^setsize_abs, $component2);
 	$boolean19 = true;
 }
 if ($int14 ! %varbit12401) {

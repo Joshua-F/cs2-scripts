@@ -1,0 +1,7 @@
+// 7020
+[clientscript,script7020]
+if (if_gettrans(interface_818:2) > %varcint1143) {
+	if_settrans(~max(50, calc(if_gettrans(interface_818:2) - 1)), interface_818:2);
+} else if (if_gettrans(interface_818:2) < %varcint1143) {
+	if_settrans(~min(255, calc(if_gettrans(interface_818:2) + 1)), interface_818:2);
+}

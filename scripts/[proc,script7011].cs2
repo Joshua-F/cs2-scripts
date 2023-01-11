@@ -1,0 +1,25 @@
+// 7011
+[proc,script7011](component $component0, component $component1, component $component2, int $int3, int $int4)
+cc_deleteall($component0);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+while ($int6 < 9) {
+	$int8, $int9 = ~script7016($int6);
+	while ($int7 < $int3) {
+		$int10 = calc($int8 % 6);
+		$int8 = calc($int8 / 6);
+		$int11 = calc($int9 % 3);
+		$int9 = calc($int9 / 3);
+		$int5 = ~script7012($int5, $int6, $int7, $component0, $component1, $int3, $int4, $int10, $int11);
+		$int7 = calc($int7 + 1);
+	}
+	$int7 = 0;
+	$int6 = calc($int6 + 1);
+}
+if_setsize(calc(18 * $int3 + 3), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+if_setsize(calc(18 * $int3 + 3), if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);

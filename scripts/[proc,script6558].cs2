@@ -1,11 +1,12 @@
 // 6558
 [proc,script6558]
-if_setop(1, "", welcome_screen:86);
-if_setgraphic(null, welcome_screen:89);
-cc_deleteall(welcome_screen:93);
-if_sethide(false, welcome_screen:91);
-~loading_icon_init(welcome_screen:93, null, enum_3787, 10, 1000, 3000, 512, 1024, 0, 3, "");
-cc_create(welcome_screen:90, ^iftype_crmview, 0);
+if_setop(1, "", welcome_screen:85);
+if_sethide(true, welcome_screen:94);
+if_setgraphic(null, welcome_screen:88);
+cc_deleteall(welcome_screen:92);
+if_sethide(false, welcome_screen:90);
+~loading_icon_init(welcome_screen:92, null, enum_3787, 10, 1000, 3000, 512, 1024, 0, 3, "");
+cc_create(welcome_screen:89, ^iftype_crmview, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 def_int $int0 = 1;
