@@ -1,7 +1,7 @@
 // 6664
 [proc,script6664](npc_uid $npc_uid0, int $int1, loc $loc2, coord $coord3, obj $obj4, coord $coord5, string $string0)(int)
 if ($npc_uid0 ! %varcint973 | $int1 ! %varcint974) {
-	if (npc_find($npc_uid0) = true) {
+	if (npc_finduid($npc_uid0) = true) {
 		_7213(0);
 	}
 	return(0);

@@ -7,7 +7,7 @@ if (%var3546 ! $dbrow0) {
 	if (_202($newvar2) = ^true) {
 		cc_setonvartransmit("script6720($newvar2, %var3546, $npc_uid4, $int3, %varbit14189){var3546, var3543}");
 	}
-	if (npc_find($npc_uid4) = true) {
+	if (npc_finduid($npc_uid4) = true) {
 		~script6721($newvar2, %var3546, $npc_uid4, $int3);
 	}
 	return;

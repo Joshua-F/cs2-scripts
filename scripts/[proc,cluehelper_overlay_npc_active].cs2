@@ -3,13 +3,13 @@
 if (%var3547 ! %var3546) {
 	return(0);
 }
-if (npc_find(%var3548) = true) {
+if (npc_finduid(%var3548) = true) {
 	return(1);
 }
-if (npc_find(%var3549) = true) {
+if (npc_finduid(%var3549) = true) {
 	return(1);
 }
-if (npc_find(%var3550) = true) {
+if (npc_finduid(%var3550) = true) {
 	return(1);
 }
 return(0);
