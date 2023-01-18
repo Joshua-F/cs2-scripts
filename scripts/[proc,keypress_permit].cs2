@@ -14,10 +14,12 @@ if (if_hassub(enum(component, component, $enum2, interface_161:17)) = true) {
 if (if_hassub(enum(component, component, $enum2, interface_161:16)) = true) {
 	if (%varcint435 = true & $interface0 ! interface_558) {
 		return(0);
-	} else if (%varcint989 = 1 & $interface0 ! interface_312 & $interface0 ! interface_698) {
-		return(0);
-	} else if (%varcint990 = 1 & $interface0 ! interface_446 & $interface0 ! interface_6) {
-		return(0);
+	} else if (if_hassub(interface_162:559) = false & if_hassub(interface_162:558) = false & if_gethide(interface_162:37) = true) {
+		if (%varcint989 = 1 & $interface0 ! interface_312 & $interface0 ! interface_698) {
+			return(0);
+		} else if (%varcint990 = 1 & $interface0 ! interface_446 & $interface0 ! interface_6) {
+			return(0);
+		}
 	}
 }
 if ($enum2 = enum_1132 & if_hassub(interface_165:37) = true) {
