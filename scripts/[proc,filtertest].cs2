@@ -12,11 +12,11 @@ if (enum(int, boolean, enum_892, $chattype0) = true & $chattype0 ! ^chattype_pla
 			if (%varbit26 = 1) {
 				return(0);
 			}
-		case 114 :
+		case ^chattype_dialogue :
 			if (%varbit14709 = 0) {
 				return(0);
 			}
-		case 115 :
+		case ^chattype_mesbox :
 			if (%varbit14710 = 0) {
 				return(0);
 			}

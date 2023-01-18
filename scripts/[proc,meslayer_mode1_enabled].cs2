@@ -6,10 +6,10 @@ if (enum(int, boolean, enum_892, $chattype0) = false) {
 if ($chattype0 = 108) {
 	return(0);
 }
-if ($chattype0 = 114) {
+if ($chattype0 = ^chattype_dialogue) {
 	return(0);
 }
-if ($chattype0 = 115) {
+if ($chattype0 = ^chattype_mesbox) {
 	return(0);
 }
 if (~in_league_tutorial = 1) {
