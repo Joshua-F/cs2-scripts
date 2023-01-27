@@ -365,5 +365,12 @@ switch_struct ($struct0) {
 		if (%varbit14344 > 0) {
 			return(~script5942(%varcint1089, %varbit14344, 25));
 		}
+	case buff_time_till_next_decay_hit_4457 :
+		if (%varcint1144 > 0) {
+			if (%varbit14692 < 5) {
+				return(~script5940(%varcint1144, calc(10 * (5 - %varbit14692))));
+			}
+			return(~script5940(%varcint1144, 10));
+		}
 }
 return(struct_param($struct0, param_1540));

@@ -1,5 +1,6 @@
 // 1435
-[clientscript,cws_init](component $component0, component $component1, component $component2, component $component3, int $int4, string $op0, string $op1)
+[clientscript,cws_init](component $component0, component $component1, component $component2, component $component3, string $op0, string $op1)
+def_int $int4 = %varbit14801;
 cc_deleteall($component0);
 cc_create($component0, ^iftype_rectangle, 0);
 .cc_create($component0, ^iftype_rectangle, 1);
@@ -29,4 +30,4 @@ if_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, ^white)", $componen
 if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $component3);
 if_setsize(calc(parawidth($string2, if_getwidth($component0), p12_full) + 26), if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
 ~cws_set_toggle($component3, $int4, $comsubid5, ~cws_cc_getvar($int4));
-if_setonvartransmit("cws_set_toggle($component3, cc_getid, $int4, $comsubid5){var1045, var1046, var1047}", $component3);
+if_setonvartransmit("cws_set_toggle($component3, cc_getid, $int4, $comsubid5){var1045, var1046, var1047, var2768}", $component3);

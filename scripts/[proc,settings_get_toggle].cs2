@@ -91,8 +91,12 @@ switch_int ($setting0) {
 		return(%varbit13986);
 	case 255 :
 		return(%varbit10532);
+	case 308 :
+		return(%varbit14803);
 	case 256 :
 		return(%varbit13988);
+	case 309 :
+		return(%varbit14804);
 	case 65 :
 		return(%varbit6092);
 	case ^setting_warning_ice_plateau_tablet :
@@ -401,6 +405,8 @@ switch_int ($setting0) {
 		return(%varbit14709);
 	case 304 :
 		return(%varbit14710);
+	case 307 :
+		return(%varbit14691);
 	case default :
 		return(0);
 }

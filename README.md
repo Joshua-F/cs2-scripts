@@ -383,6 +383,7 @@
 [**380**](scripts/[clientscript,script380].cs2)  
 [**381**](scripts/[clientscript,settings_side_brightness_init].cs2) `[clientscript,settings_side_brightness_init]`  
 [**382**](scripts/[clientscript,script382].cs2)  
+[**383**](scripts/[proc,script383].cs2)  
 [**384**](scripts/[proc,wilderness_level].cs2) `[proc,wilderness_level]`  
 [**385**](scripts/[clientscript,pvp_icons_layout].cs2) `[clientscript,pvp_icons_layout]`  
 [**386**](scripts/[proc,pvp_icons_layout].cs2) `[proc,pvp_icons_layout]`  
@@ -634,6 +635,7 @@
 [**632**](scripts/[proc,script632].cs2)  
 [**633**](scripts/[proc,int_to_bool].cs2) `[proc,int_to_bool]`  
 [**634**](scripts/[proc,displayname_draw].cs2) `[proc,displayname_draw]`  
+[**635**](scripts/[clientscript,script635].cs2)  
 [**636**](scripts/[proc,script636].cs2)  
 [**637**](scripts/[proc,debug_mes_info].cs2) `[proc,debug_mes_info]`  
 [**638**](scripts/[proc,debug_mes_warn].cs2) `[proc,debug_mes_warn]`  

@@ -96,8 +96,12 @@ switch_int ($setting0) {
 		%varbit13986 = calc(1 - %varbit13986);
 	case 255 :
 		%varbit10532 = calc(1 - %varbit10532);
+	case 308 :
+		%varbit14803 = calc(1 - %varbit14803);
 	case 256 :
 		%varbit13988 = calc(1 - %varbit13988);
+	case 309 :
+		%varbit14804 = calc(1 - %varbit14804);
 	case 65 :
 		~script4009;
 	case ^setting_warning_ice_plateau_tablet :
@@ -402,4 +406,6 @@ switch_int ($setting0) {
 		~script6912;
 	case 304 :
 		~script6913;
+	case 307 :
+		~script383;
 }

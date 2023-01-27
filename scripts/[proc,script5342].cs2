@@ -1,5 +1,6 @@
 // 5342
 [proc,script5342](struct $struct0)(int)
+def_int $int1 = 0;
 switch_struct ($struct0) {
 	case buff_time_till_next_poison_hit_3740 :
 		if (%var102 > 0 & %var102 < 1000000) {
@@ -9,5 +10,17 @@ switch_struct ($struct0) {
 		if (%var102 >= 1000000) {
 			return(~script5347(%var102));
 		}
+	case buff_time_till_next_decay_hit_4457 :
+		if (%varbit14692 = 50) {
+			return(calc(1 + (%varbit14692 - 5) / 5));
+		}
+		if (%varbit14692 < 5) {
+			return(1);
+		}
+		$int1 = calc(1 + (%varbit14692 - 5) / 5);
+		if (calc(%varbit14692 % 5) = calc(5 - 1)) {
+			return(calc($int1 + 1));
+		}
+		return($int1);
 }
 return(struct_param($struct0, param_1556));

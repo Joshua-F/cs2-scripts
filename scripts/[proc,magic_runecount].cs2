@@ -182,8 +182,13 @@ switch_obj ($obj0) {
 				return(0);
 		}
 	case zamorak_staff_2417 :
+		if (oc_param($obj1, param_1737) = true) {
+			return(1);
+		}
 		switch_obj ($obj1) {
-			case zamorak_staff_2417, staff_of_the_dead_11791, toxic_staff_uncharged_12902, toxic_staff_of_the_dead_12904 :
+			case zamorak_staff_2417 :
+				return(1);
+			case accursed_sceptre_27665 :
 				return(1);
 			case default :
 				return(0);

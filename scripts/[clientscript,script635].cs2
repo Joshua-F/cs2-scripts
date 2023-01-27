@@ -1,0 +1,9 @@
+// 635
+[clientscript,script635](struct $struct0, int $int1)
+def_component $component2 = interface_651:2;
+def_int $comsubid3 = struct_param($struct0, param_1275);
+~script5927($struct0, $int1);
+if (cc_find($component2, $comsubid3) = ^true) {
+	~buff_bar_start($struct0);
+	~buff_bar_layout_redraw;
+}

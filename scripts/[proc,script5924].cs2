@@ -169,4 +169,6 @@ switch_struct ($struct0) {
 	case buff_special_attack_energy_boost_4375 :
 	case buff_stat_boost_4376 :
 		cc_setonvartransmit("buff_bar_transmit_value($struct0){var3587}");
+	case buff_time_till_next_decay_hit_4457 :
+		cc_setonvartransmit("buff_bar_transmit_value($struct0){var2804}");
 }
