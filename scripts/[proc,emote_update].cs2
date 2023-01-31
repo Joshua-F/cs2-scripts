@@ -11,7 +11,7 @@ while ($int2 <= 50) {
 		cc_clearops;
 		~emote_op1_configure($int2);
 		~emote_op2_configure($int2);
-		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, ~script5186($int2), 25, 120)");
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, ~emote_get_name($int2), 25, 120)");
 	}
 	$int2 = calc($int2 + 1);
 }

@@ -12,7 +12,7 @@ while ($int7 <= 50) {
 		cc_setsize(42, 48, ^setsize_abs, ^setsize_abs);
 		$height6 = calc($int5 / 4 * 49 + 6);
 		cc_setposition(calc($int5 % 4 * 43), $height6, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component4, ~script5186($int7), 25, 120)");
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component4, ~emote_get_name($int7), 25, 120)");
 		cc_setonmouseleave("deltooltip($component4)");
 		$int5 = calc($int5 + 1);
 	} else {

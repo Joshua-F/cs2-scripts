@@ -1,0 +1,54 @@
+// 6511
+[proc,br_loadout_settabs](string $string0, component $component0, component $component1, string $string1, component $component2, component $component3, string $string2, component $component4, component $component5)
+def_string $text3 = "";
+def_component $component6 = null;
+def_component $component7 = null;
+if (if_gethide($component3) = false) {
+	$text3, $component6, $component7 = $string1, $component2, $component3;
+	~script6512($string0, $component0, $component1, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+	~script6512($string2, $component4, $component5, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+} else if (if_gethide($component5) = false) {
+	$text3, $component6, $component7 = $string2, $component4, $component5;
+	~script6512($string0, $component0, $component1, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+	~script6512($string1, $component2, $component3, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+} else {
+	$text3, $component6, $component7 = $string0, $component0, $component1;
+	~script6512($string1, $component2, $component3, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+	~script6512($string2, $component4, $component5, $string0, $component0, $component1, $string1, $component2, $component3, $string2, $component4, $component5);
+}
+cc_deleteall($component6);
+if_sethide(false, $component7);
+if ($component7 ! $component1) {
+	if_sethide(true, $component1);
+}
+if ($component7 ! $component3) {
+	if_sethide(true, $component3);
+}
+if ($component7 ! $component5) {
+	if_sethide(true, $component5);
+}
+cc_create($component6, ^iftype_graphic, 0);
+.cc_create($component6, ^iftype_graphic, 1);
+cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+.cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+.cc_sethflip(true);
+cc_setgraphic("tabs_short,0");
+.cc_setgraphic("tabs_short,0");
+cc_create($component6, ^iftype_graphic, 2);
+cc_setsize(40, 21, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settiling(true);
+cc_setgraphic("tabs_short,1");
+cc_create($component6, ^iftype_text, 3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($text3);
+if_setonmouseover(null, $component6);
+if_setonmouseleave(null, $component6);
+if_setonclick(null, $component6);

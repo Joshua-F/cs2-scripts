@@ -1,0 +1,184 @@
+// 6519
+[clientscript,br_loadout_displayinit](component $component0, int $int1, enum $enum2, enum $enum3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+cc_deleteall($component8);
+def_int $count12 = 0;
+cc_create($component8, ^iftype_graphic, $count12);
+$count12 = calc($count12 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_setonclick("script6522($int1, $component8, $component9, $component10)");
+cc_create($component8, ^iftype_rectangle, $count12);
+$count12 = calc($count12 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component8, ^iftype_rectangle, $count12);
+$count12 = calc($count12 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component8, ^iftype_graphic, $count12);
+$count12 = calc($count12 + 1);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_create($component8, ^iftype_text, $count12);
+$count12 = calc($count12 + 1);
+cc_setsize(20, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+~xpdrops_setup_display_hoveroff($component8);
+~script6521($int1);
+cc_setonvartransmit("script6520(event_com, event_comsubid, $int1){var3572}");
+cc_deleteall($component7);
+$count12 = 0;
+cc_create($component7, ^iftype_graphic, $count12);
+$count12 = calc($count12 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,0");
+cc_create($component7, ^iftype_graphic, $count12);
+$count12 = calc($count12 + 1);
+cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("bankbuttons,6");
+cc_create($component7, ^iftype_text, $count12);
+cc_setcolour(0xff981f);
+if_setonmouserepeat("cc_colour_swapper(event_com, $count12, ^white)", $component7);
+if_setonmouseleave("cc_colour_swapper(event_com, $count12, 0xff981f)", $component7);
+def_string $string0 = "Drag items here to discard them.";
+if_setonclick("mes($string0)", $component7);
+$count12 = calc($count12 + 1);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(38, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Drag items here to discard them.");
+def_int $count13 = enum_getoutputcount($enum2);
+def_int $countarray0($count13);
+def_int $int14 = 0;
+cc_deleteall($component5);
+$count12 = 0;
+while ($count12 < $count13) {
+	if (enum(int, namedobj, $enum2, $count12) ! null) {
+		$countarray0($int14) = $count12;
+		$int14 = calc($int14 + 1);
+	}
+	cc_create($component5, ^iftype_graphic, $count12);
+	cc_sethide(true);
+	$count12 = calc($count12 + 1);
+}
+def_int $int15 = $int14;
+if ($int15 > 1) {
+	~br_loadout_sort(countarray0, $enum2, 0, calc($int15 - 1));
+}
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+cc_sethide(true);
+cc_settrans(125);
+def_int $comsubid16 = cc_getid;
+cc_create($component0, ^iftype_text, 1);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_sethide(true);
+def_int $comsubid17 = cc_getid;
+def_int $height18 = 0;
+def_int $int19 = calc((34 - 32) / 2);
+def_namedobj $namedobj20 = null;
+def_int $int21 = 0;
+def_string $string1 = "";
+def_int $int22 = 0;
+$int14 = 0;
+while ($int14 < $int15) {
+	if (cc_find($component5, $countarray0($int14)) = ^true) {
+		cc_sethide(false);
+		cc_settiling(true);
+		cc_setgraphic("tradebacking_light");
+		cc_settrans(255);
+		cc_setsize(0, 34, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $height18, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setop(1, "Add");
+		cc_setop(10, "Examine");
+		cc_setdraggable($component0, -1);
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(5);
+		$namedobj20 = enum(int, namedobj, $enum2, $countarray0($int14));
+		$string0 = oc_name($namedobj20);
+		cc_setopbase("<col=ff9040><$string0></col>");
+		.cc_create($component5, ^iftype_rectangle, $count12);
+		$count12 = calc($count12 + 1);
+		.cc_setsize(0, 34, ^setsize_minus, ^setsize_abs);
+		.cc_setposition(0, $height18, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setfill(true);
+		cc_setonmouserepeat("script1015(event_com, .cc_getid, ^white, 225)");
+		if (calc($int14 % 2) = 0) {
+			.cc_setcolour(^white);
+			.cc_settrans(255);
+			cc_setonmouseleave("script1015(event_com, .cc_getid, ^white, 255)");
+			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comsubid, .cc_getid, ^white, 225, ^white, 255, $int1, $enum2, $enum3, $component0, $component4, $component7, $component11)");
+		} else {
+			.cc_setcolour(^black);
+			.cc_settrans(225);
+			cc_setonmouseleave("script1015(event_com, .cc_getid, ^black, 225)");
+			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comsubid, .cc_getid, ^white, 225, ^black, 225, $int1, $enum2, $enum3, $component0, $component4, $component7, $component11)");
+		}
+		.cc_create($component5, ^iftype_graphic, $count12);
+		$count12 = calc($count12 + 1);
+		.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(3, calc($height18 + $int19), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setoutline(1);
+		.cc_setgraphicshadow(0x333333);
+		if (oc_stackable($namedobj20) = true) {
+			.cc_setobject($namedobj20, 5000);
+		} else {
+			.cc_setobject_nonum($namedobj20, 1);
+		}
+		.cc_create($component5, ^iftype_text, $count12);
+		$count12 = calc($count12 + 1);
+		.cc_setsize(calc(8 + 36), 34, ^setsize_minus, ^setsize_abs);
+		.cc_setposition(3, $height18, ^setpos_abs_right, ^setpos_abs_top);
+		.cc_setcolour(0xff981f);
+		.cc_settextfont(p12_full);
+		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		.cc_settextshadow(true);
+		$int22, $int21 = string_length($string0), 0;
+		if ($int22 <= 0) {
+			$string0, $int22 = "-", 1;
+		}
+		if ($int22 > 0 & parawidth($string0, 512, p12_full) > .cc_getwidth) {
+			while ($int22 > 1 & $int21 = 0) {
+				$int22 = calc($int22 - 1);
+				$string1 = append(substring($string0, 0, $int22), "...");
+				if (parawidth($string1, 512, p12_full) <= .cc_getwidth) {
+					$string0, $int21 = $string1, 1;
+				}
+			}
+		}
+		.cc_settext($string0);
+		cc_setondrag("br_loadout_menudragging(event_com, event_comsubid, $namedobj20, $string0, $component0, $comsubid16, $comsubid17, $int19, event_mousex, event_mousey)");
+		cc_setondragcomplete("br_loadout_insert(event_com, event_comsubid, event_drop, event_dropsubid, $countarray0($int14), $int1, $enum2, $enum3, $component0, $comsubid16, $comsubid17, $component4, $component7, $component11)");
+		$height18 = calc($height18 + 34);
+	}
+	$int14 = calc($int14 + 1);
+}
+if ($height18 > if_getheight($component5)) {
+	if_setscrollsize(0, $height18, $component5);
+} else {
+	if_setscrollsize(0, 0, $component5);
+}
+if_setscrollpos(0, 0, $component5);
+~scrollbar_vertical($component6, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~br_loadout_drawloadout($int1, $enum2, $enum3, $component0, $component4, $component7, $component11);
+if_setonvartransmit("br_loadout_drawloadout_request($int1, $enum2, $enum3, $component0, $component4, $component7, $component11){var2382, var2383, var2384, var2385, var2386, var2387, var2388, var2389, var3553, var3554, var3555, var3556, var3557, var3558, var3559, var3560, var3561, var3562, var3563, var3564, var3565, var3566, var3567, var3568, var3569, var3570, var3571, var3572, var1373, var1573, var1704, var1666, var309}", $component0);
+if_setontimer(null, $component0);

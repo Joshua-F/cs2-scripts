@@ -12,6 +12,6 @@ if (npc_finduid($npc_uid1) = true) {
 	if (%varbit5190 = 0) {
 		~script6533($newvar0, $npc_uid1, $int2);
 	} else {
-		~script6532($newvar0, $npc_uid1, $int2);
+		~loadnpc_cluehelper_uri_overlay($newvar0, $npc_uid1, $int2);
 	}
 }

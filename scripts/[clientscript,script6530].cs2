@@ -10,7 +10,7 @@ highlight_npc_off($npc_uid1, $int2, 9);
 _104($newvar0);
 if (testbit(%var292, 6) = ^false) {
 	if (npc_finduid($npc_uid1) = true) {
-		~script6532($newvar0, $npc_uid1, $int2);
+		~loadnpc_cluehelper_uri_overlay($newvar0, $npc_uid1, $int2);
 	}
 } else if ($int8 = 3 & npc_finduid($npc_uid1) = true) {
 	~script6533($newvar0, $npc_uid1, $int2);

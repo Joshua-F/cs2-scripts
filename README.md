@@ -4132,7 +4132,7 @@
 [**4131**](scripts/[proc,magic_spellbook_unlocked].cs2) `[proc,magic_spellbook_unlocked]`  
 [**4132**](scripts/[proc,script4132].cs2)  
 [**4133**](scripts/[proc,arceuus_autocast_spellpos].cs2) `[proc,arceuus_autocast_spellpos]`  
-[**4134**](scripts/[proc,script4134].cs2)  
+[**4134**](scripts/[proc,diary_reward_get].cs2) `[proc,diary_reward_get]`  
 [**4135**](scripts/[proc,script4135].cs2)  
 [**4136**](scripts/[proc,quest_is_complete].cs2) `[proc,quest_is_complete]`  
 [**4137**](scripts/[proc,script4137].cs2)  
@@ -4741,7 +4741,7 @@
 [**4740**](scripts/[proc,script4740].cs2)  
 [**4741**](scripts/[clientscript,blast_furnace_plan_init].cs2) `[clientscript,blast_furnace_plan_init]`  
 [**4742**](scripts/[proc,affixtimestamp].cs2) `[proc,affixtimestamp]`  
-[**4743**](scripts/[proc,script4743].cs2)  
+[**4743**](scripts/[proc,highlighting_channel_setup].cs2) `[proc,highlighting_channel_setup]`  
 [**4744**](scripts/[clientscript,highlight_npc_on].cs2) `[clientscript,highlight_npc_on]`  
 [**4745**](scripts/[clientscript,highlight_npc_off].cs2) `[clientscript,highlight_npc_off]`  
 [**4746**](scripts/[clientscript,highlight_npctype_on].cs2) `[clientscript,highlight_npctype_on]`  
@@ -5184,7 +5184,7 @@
 [**5183**](scripts/[proc,script5183].cs2)  
 [**5184**](scripts/[proc,settings_helper_agility].cs2) `[proc,settings_helper_agility]`  
 [**5185**](scripts/[proc,settings_helper_agility_highlight_obstacles].cs2) `[proc,settings_helper_agility_highlight_obstacles]`  
-[**5186**](scripts/[proc,script5186].cs2)  
+[**5186**](scripts/[proc,emote_get_name].cs2) `[proc,emote_get_name]`  
 [**5187**](scripts/[proc,settings_buff_ammo].cs2) `[proc,settings_buff_ammo]`  
 [**5188**](scripts/[proc,script5188].cs2)  
 [**5189**](scripts/[proc,script5189].cs2)  
@@ -5218,7 +5218,7 @@
 [**5217**](scripts/[proc,script5217].cs2)  
 [**5218**](scripts/[clientscript,script5218].cs2)  
 [**5219**](scripts/[proc,script5219].cs2)  
-[**5220**](scripts/[proc,script5220].cs2)  
+[**5220**](scripts/[proc,tob_partylist_fillline].cs2) `[proc,tob_partylist_fillline]`  
 [**5221**](scripts/[clientscript,summary_sidepanel_timer_draw].cs2) `[clientscript,summary_sidepanel_timer_draw]`  
 [**5222**](scripts/[proc,script5222].cs2)  
 [**5223**](scripts/[proc,script5223].cs2)  
@@ -6214,7 +6214,7 @@
 [**6213**](scripts/[clientscript,script6213].cs2)  
 [**6214**](scripts/[clientscript,script6214].cs2)  
 [**6215**](scripts/[proc,script6215].cs2)  
-[**6216**](scripts/[clientscript,script6216].cs2)  
+[**6216**](scripts/[clientscript,pvpa_spectator_double].cs2) `[clientscript,pvpa_spectator_double]`  
 [**6217**](scripts/[proc,pvpa_spectator_stats].cs2) `[proc,pvpa_spectator_stats]`  
 [**6218**](scripts/[proc,pvpa_spectator_inventory_dummy].cs2) `[proc,pvpa_spectator_inventory_dummy]`  
 [**6219**](scripts/[clientscript,pvpa_board_init].cs2) `[clientscript,pvpa_board_init]`  
@@ -6441,7 +6441,7 @@
 [**6440**](scripts/[proc,herbiboar_helper_highlight_disable].cs2) `[proc,herbiboar_helper_highlight_disable]`  
 [**6441**](scripts/[clientscript,herbiboar_helper_highlight_clear].cs2) `[clientscript,herbiboar_helper_highlight_clear]`  
 [**6442**](scripts/[proc,herbiboar_helper_highlight_clear].cs2) `[proc,herbiboar_helper_highlight_clear]`  
-[**6443**](scripts/[clientscript,script6443].cs2)  
+[**6443**](scripts/[clientscript,clan_hall_partydrop_main_chestitems].cs2) `[clientscript,clan_hall_partydrop_main_chestitems]`  
 [**6444**](scripts/[proc,herbiboar_helper_highlight_enable].cs2) `[proc,herbiboar_helper_highlight_enable]`  
 [**6445**](scripts/[proc,settings_buff_cannon_decay].cs2) `[proc,settings_buff_cannon_decay]`  
 [**6446**](scripts/[proc,settings_helper_tog].cs2) `[proc,settings_helper_tog]`  
@@ -6465,10 +6465,10 @@
 [**6464**](scripts/[clientscript,script6464].cs2)  
 [**6465**](scripts/[proc,script6465].cs2)  
 [**6466**](scripts/[proc,settings_npc_indicators].cs2) `[proc,settings_npc_indicators]`  
-[**6467**](scripts/[proc,script6467].cs2)  
-[**6468**](scripts/[proc,script6468].cs2)  
-[**6469**](scripts/[proc,script6469].cs2)  
-[**6470**](scripts/[proc,script6470].cs2)  
+[**6467**](scripts/[proc,settings_npc_indicators_outline].cs2) `[proc,settings_npc_indicators_outline]`  
+[**6468**](scripts/[proc,settings_npc_indicators_name].cs2) `[proc,settings_npc_indicators_name]`  
+[**6469**](scripts/[proc,settings_npc_indicators_tile].cs2) `[proc,settings_npc_indicators_tile]`  
+[**6470**](scripts/[proc,settings_npc_indicators_check].cs2) `[proc,settings_npc_indicators_check]`  
 [**6471**](scripts/[proc,script6471].cs2)  
 [**6472**](scripts/[proc,script6472].cs2)  
 [**6473**](scripts/[clientscript,script6473].cs2)  
@@ -6507,38 +6507,38 @@
 [**6506**](scripts/[clientscript,script6506].cs2)  
 [**6507**](scripts/[proc,script6507].cs2)  
 [**6508**](scripts/[clientscript,script6508].cs2)  
-[**6509**](scripts/[clientscript,script6509].cs2)  
+[**6509**](scripts/[clientscript,br_loadout_settabs].cs2) `[clientscript,br_loadout_settabs]`  
 [**6510**](scripts/[proc,script6510].cs2)  
-[**6511**](scripts/[proc,script6511].cs2)  
+[**6511**](scripts/[proc,br_loadout_settabs].cs2) `[proc,br_loadout_settabs]`  
 [**6512**](scripts/[proc,script6512].cs2)  
 [**6513**](scripts/[proc,script6513].cs2)  
 [**6514**](scripts/[proc,script6514].cs2)  
 [**6515**](scripts/[proc,script6515].cs2)  
 [**6516**](scripts/[proc,script6516].cs2)  
 [**6517**](scripts/[proc,script6517].cs2)  
-[**6518**](scripts/[clientscript,script6518].cs2)  
-[**6519**](scripts/[clientscript,script6519].cs2)  
+[**6518**](scripts/[clientscript,br_loadout_drawtab].cs2) `[clientscript,br_loadout_drawtab]`  
+[**6519**](scripts/[clientscript,br_loadout_displayinit].cs2) `[clientscript,br_loadout_displayinit]`  
 [**6520**](scripts/[clientscript,script6520].cs2)  
 [**6521**](scripts/[proc,script6521].cs2)  
 [**6522**](scripts/[clientscript,script6522].cs2)  
 [**6523**](scripts/[clientscript,script6523].cs2)  
-[**6524**](scripts/[proc,script6524].cs2)  
-[**6525**](scripts/[proc,script6525].cs2)  
-[**6526**](scripts/[clientscript,script6526].cs2)  
+[**6524**](scripts/[proc,br_loadout_get_spellbook].cs2) `[proc,br_loadout_get_spellbook]`  
+[**6525**](scripts/[proc,br_loadout_set_spellbook].cs2) `[proc,br_loadout_set_spellbook]`  
+[**6526**](scripts/[clientscript,br_lobbyoverlay_drawsettings].cs2) `[clientscript,br_lobbyoverlay_drawsettings]`  
 [**6527**](scripts/[proc,cluehelper_uri_overlay].cs2) `[proc,cluehelper_uri_overlay]`  
-[**6528**](scripts/[clientscript,script6528].cs2)  
+[**6528**](scripts/[clientscript,loadnpc_cluehelper_uri_transmit].cs2) `[clientscript,loadnpc_cluehelper_uri_transmit]`  
 [**6529**](scripts/[clientscript,script6529].cs2)  
 [**6530**](scripts/[clientscript,script6530].cs2)  
 [**6531**](scripts/[clientscript,script6531].cs2)  
-[**6532**](scripts/[proc,script6532].cs2)  
+[**6532**](scripts/[proc,loadnpc_cluehelper_uri_overlay].cs2) `[proc,loadnpc_cluehelper_uri_overlay]`  
 [**6533**](scripts/[proc,script6533].cs2)  
-[**6534**](scripts/[proc,script6534].cs2)  
+[**6534**](scripts/[proc,br_lobbyoverlay_drawsettings].cs2) `[proc,br_lobbyoverlay_drawsettings]`  
 [**6535**](scripts/[clientscript,script6535].cs2)  
-[**6536**](scripts/[clientscript,script6536].cs2)  
+[**6536**](scripts/[clientscript,br_settings_init].cs2) `[clientscript,br_settings_init]`  
 [**6537**](scripts/[proc,script6537].cs2)  
-[**6538**](scripts/[clientscript,script6538].cs2)  
-[**6539**](scripts/[proc,script6539].cs2)  
-[**6540**](scripts/[clientscript,script6540].cs2)  
+[**6538**](scripts/[clientscript,br_settings_indicators].cs2) `[clientscript,br_settings_indicators]`  
+[**6539**](scripts/[proc,br_settings_indicators].cs2) `[proc,br_settings_indicators]`  
+[**6540**](scripts/[clientscript,br_settings_op].cs2) `[clientscript,br_settings_op]`  
 [**6541**](scripts/[clientscript,script6541].cs2)  
 [**6542**](scripts/[proc,script6542].cs2)  
 [**6543**](scripts/[proc,script6543].cs2)  
@@ -6571,9 +6571,9 @@
 [**6570**](scripts/[proc,script6570].cs2)  
 [**6571**](scripts/[proc,script6571].cs2)  
 [**6572**](scripts/[proc,script6572].cs2)  
-[**6573**](scripts/[clientscript,script6573].cs2)  
-[**6574**](scripts/[proc,script6574].cs2)  
-[**6575**](scripts/[proc,script6575].cs2)  
+[**6573**](scripts/[clientscript,thinbox_tab_draw].cs2) `[clientscript,thinbox_tab_draw]`  
+[**6574**](scripts/[proc,thinbox_tab_draw].cs2) `[proc,thinbox_tab_draw]`  
+[**6575**](scripts/[proc,thinbox_tab_draw_core].cs2) `[proc,thinbox_tab_draw_core]`  
 [**6576**](scripts/[clientscript,toa_hud_init].cs2) `[clientscript,toa_hud_init]`  
 [**6577**](scripts/[proc,toa_hud_status_init].cs2) `[proc,toa_hud_status_init]`  
 [**6578**](scripts/[clientscript,toa_hud_draw].cs2) `[clientscript,toa_hud_draw]`  
@@ -6610,8 +6610,8 @@
 [**6609**](scripts/[clientscript,toa_invocations_init].cs2) `[clientscript,toa_invocations_init]`  
 [**6610**](scripts/[proc,script6610].cs2)  
 [**6611**](scripts/[clientscript,toa_lobby_hud_init].cs2) `[clientscript,toa_lobby_hud_init]`  
-[**6612**](scripts/[clientscript,script6612].cs2)  
-[**6613**](scripts/[proc,script6613].cs2)  
+[**6612**](scripts/[clientscript,toa_lobby_update_header].cs2) `[clientscript,toa_lobby_update_header]`  
+[**6613**](scripts/[proc,toa_lobby_update_header].cs2) `[proc,toa_lobby_update_header]`  
 [**6614**](scripts/[clientscript,toa_hud_nameflasher].cs2) `[clientscript,toa_hud_nameflasher]`  
 [**6615**](scripts/[clientscript,toa_partydetails_init].cs2) `[clientscript,toa_partydetails_init]`  
 [**6616**](scripts/[proc,toa_partydetails_setsize].cs2) `[proc,toa_partydetails_setsize]`  
@@ -6719,7 +6719,7 @@
 [**6718**](scripts/[proc,script6718].cs2)  
 [**6719**](scripts/[proc,script6719].cs2)  
 [**6720**](scripts/[clientscript,script6720].cs2)  
-[**6721**](scripts/[proc,script6721].cs2)  
+[**6721**](scripts/[proc,loadnpc_cluehelper_generic].cs2) `[proc,loadnpc_cluehelper_generic]`  
 [**6722**](scripts/[clientscript,toa_partydetails_addmember].cs2) `[clientscript,toa_partydetails_addmember]`  
 [**6723**](scripts/[proc,script6723].cs2)  
 [**6724**](scripts/[proc,script6724].cs2)  
@@ -6768,7 +6768,7 @@
 [**6767**](scripts/[proc,script6767].cs2)  
 [**6768**](scripts/[proc,script6768].cs2)  
 [**6769**](scripts/[proc,script6769].cs2)  
-[**6770**](scripts/[proc,script6770].cs2)  
+[**6770**](scripts/[proc,toa_invocations_side_panel_update].cs2) `[proc,toa_invocations_side_panel_update]`  
 [**6771**](scripts/[clientscript,toa_scoreboard_init].cs2) `[clientscript,toa_scoreboard_init]`  
 [**6772**](scripts/[clientscript,toa_scoreboard_tab_update].cs2) `[clientscript,toa_scoreboard_tab_update]`  
 [**6773**](scripts/[proc,toa_scoreboard_tab_update].cs2) `[proc,toa_scoreboard_tab_update]`  
@@ -6790,17 +6790,17 @@
 [**6789**](scripts/[proc,script6789].cs2)  
 [**6790**](scripts/[proc,script6790].cs2)  
 [**6791**](scripts/[clientscript,speedrunning_rewards_init].cs2) `[clientscript,speedrunning_rewards_init]`  
-[**6792**](scripts/[proc,script6792].cs2)  
-[**6793**](scripts/[proc,script6793].cs2)  
-[**6794**](scripts/[proc,script6794].cs2)  
-[**6795**](scripts/[clientscript,script6795].cs2)  
-[**6796**](scripts/[clientscript,script6796].cs2)  
+[**6792**](scripts/[proc,speedrunning_rewards_draw].cs2) `[proc,speedrunning_rewards_draw]`  
+[**6793**](scripts/[proc,speedrunning_reward_draw_item].cs2) `[proc,speedrunning_reward_draw_item]`  
+[**6794**](scripts/[proc,speedrunning_filterbutton].cs2) `[proc,speedrunning_filterbutton]`  
+[**6795**](scripts/[clientscript,speedrunning_reward_shop_select].cs2) `[clientscript,speedrunning_reward_shop_select]`  
+[**6796**](scripts/[clientscript,speedrunning_reward_shop_refuse].cs2) `[clientscript,speedrunning_reward_shop_refuse]`  
 [**6797**](scripts/[proc,script6797].cs2)  
-[**6798**](scripts/[clientscript,script6798].cs2)  
-[**6799**](scripts/[clientscript,script6799].cs2)  
-[**6800**](scripts/[clientscript,script6800].cs2)  
-[**6801**](scripts/[proc,script6801].cs2)  
-[**6802**](scripts/[clientscript,script6802].cs2)  
+[**6798**](scripts/[clientscript,speedrunning_reward_shop_confirmop].cs2) `[clientscript,speedrunning_reward_shop_confirmop]`  
+[**6799**](scripts/[clientscript,speedrunning_reward_shop_buy].cs2) `[clientscript,speedrunning_reward_shop_buy]`  
+[**6800**](scripts/[clientscript,speedrunning_reward_confirm_back].cs2) `[clientscript,speedrunning_reward_confirm_back]`  
+[**6801**](scripts/[proc,speedrunning_reward_shop_showpoints].cs2) `[proc,speedrunning_reward_shop_showpoints]`  
+[**6802**](scripts/[clientscript,speedrunning_reward_shop_showpoints].cs2) `[clientscript,speedrunning_reward_shop_showpoints]`  
 [**6803**](scripts/[proc,script6803].cs2)  
 [**6804**](scripts/[proc,script6804].cs2)  
 [**6805**](scripts/[proc,script6805].cs2)  
@@ -6947,10 +6947,10 @@
 [**6948**](scripts/[proc,script6948].cs2)  
 [**6949**](scripts/[worldmapelementmouserepeat,mapelement_263].cs2) `[worldmapelementmouserepeat,mapelement_263]`  
 [**6950**](scripts/[worldmapelementmouseleave,mapelement_263].cs2) `[worldmapelementmouseleave,mapelement_263]`  
-[**6951**](scripts/[proc,script6951].cs2)  
-[**6952**](scripts/[proc,script6952].cs2)  
-[**6953**](scripts/[proc,script6953].cs2)  
-[**6954**](scripts/[proc,script6954].cs2)  
+[**6951**](scripts/[proc,percentage_string].cs2) `[proc,percentage_string]`  
+[**6952**](scripts/[proc,divide_up].cs2) `[proc,divide_up]`  
+[**6953**](scripts/[proc,divide_round].cs2) `[proc,divide_round]`  
+[**6954**](scripts/[proc,max_int].cs2) `[proc,max_int]`  
 [**6955**](scripts/[proc,script6955].cs2)  
 [**6956**](scripts/[proc,script6956].cs2)  
 [**6957**](scripts/[proc,script6957].cs2)  

@@ -1,0 +1,14 @@
+// 6525
+[proc,br_loadout_set_spellbook](int $int0, int $int1)
+$int1 = ~max(0, ~min($int1, calc(enum_getoutputcount(enum_4389) - 1)));
+switch_int ($int0) {
+	case 1 :
+		%varbit14280 = $int1;
+	case 2 :
+		if (enum(int, int, enum_4389, $int1) = 2) {
+			$int1 = 1;
+		}
+		%varbit14281 = $int1;
+	case default :
+		%varbit14279 = $int1;
+}

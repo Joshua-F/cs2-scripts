@@ -1,0 +1,4 @@
+// 6954
+[proc,max_int](int $int0)(int)
+$int0 = ~min(~max($int0, 1), 31);
+return(calc(pow(2, $int0) - 1));

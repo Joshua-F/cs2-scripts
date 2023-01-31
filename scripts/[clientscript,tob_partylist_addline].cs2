@@ -38,17 +38,17 @@ if (string_length($string0) > 0) {
 	$text12, $string0 = ~script632($string0);
 	$string14, $string0 = ~script632($string0);
 	if (%varbit12988 = 0 | compare($string2, chat_playername) = 0) {
-		~script5220($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
+		~tob_partylist_fillline($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
 	} else if (~script5217($string2) = 1) {
-		~script5220($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
+		~tob_partylist_fillline($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
 	} else if (~script5217($string3) = 1) {
-		~script5220($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
+		~tob_partylist_fillline($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
 	} else if (~script5217($string4) = 1) {
-		~script5220($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
+		~tob_partylist_fillline($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
 	} else if (~script5217($string5) = 1) {
-		~script5220($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
+		~tob_partylist_fillline($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
 	} else if (~script5217($string6) = 1) {
-		~script5220($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
+		~tob_partylist_fillline($component1, $int0, $string1, $string7, $string8, $string11, $text12, $string14);
 	} else {
 		if_setsize(0, 0, ^setsize_minus, ^setsize_abs, $component1);
 		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component1);

@@ -8,7 +8,7 @@ if (%var3546 ! $dbrow0) {
 		cc_setonvartransmit("script6720($newvar2, %var3546, $npc_uid4, $int3, %varbit14189){var3546, var3543}");
 	}
 	if (npc_finduid($npc_uid4) = true) {
-		~script6721($newvar2, %var3546, $npc_uid4, $int3);
+		~loadnpc_cluehelper_generic($newvar2, %var3546, $npc_uid4, $int3);
 	}
 	return;
 }

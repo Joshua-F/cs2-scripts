@@ -1,0 +1,87 @@
+// 6793
+[proc,speedrunning_reward_draw_item](int $int0, int $y1, int $int2, struct $struct3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21)(int, int)
+.cc_create($component11, ^iftype_rectangle, $int7);
+.cc_setsize($int2, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(0x3e3428);
+.cc_setfill(true);
+.cc_settrans(255);
+.cc_setop(1, "Select <col=ff891f><struct_param($struct3, param_1726)>");
+$int7 = calc($int7 + 1);
+def_namedobj $namedobj22 = struct_param($struct3, param_1724);
+if ($namedobj22 = null) {
+	return($int6, $int7);
+}
+cc_create($component12, ^iftype_graphic, $int6);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int0 + (40 - 36) / 2), $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject_nonum($namedobj22, 1);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+def_int $width23 = calc($int2 - 40);
+$int0 = calc($int0 + 40);
+$int6 = calc($int6 + 1);
+cc_create($component12, ^iftype_text, $int6);
+cc_setsize($width23, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+def_int $int24 = struct_param($struct3, param_1725);
+def_int $int25 = ~script6803($struct3);
+def_string $mes0 = "";
+def_string $string1 = ",";
+if (oc_members($namedobj22) = ^true & map_members = ^false) {
+	cc_setcolour(0x9f9f9f);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+	if ($int25 = 1) {
+		$mes0 = "You must be on a members' world to reclaim that reward.";
+	} else {
+		$mes0 = "You must be on a members' world to purchase that reward.";
+	}
+	if ($int25 = 1) {
+		cc_settext("<struct_param($struct3, param_1726)><br>  <col=9f9f9f>Free to reclaim</col>");
+	} else if ($int24 = 1) {
+		cc_settext("<struct_param($struct3, param_1726)><br>  <col=9f9f9f><~tostring_spacer($int24, $string1)> point</col>");
+	} else {
+		cc_settext("<struct_param($struct3, param_1726)><br>  <col=9f9f9f><~tostring_spacer($int24, $string1)> points</col>");
+	}
+	.cc_setonop("speedrunning_reward_shop_refuse($mes0, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)");
+} else if ($int25 = 0 & %var3660 < $int24) {
+	cc_setcolour(0x9f9f9f);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+	if ($int24 = 1) {
+		$mes0 = "You need <~tostring_spacer($int24, $string1)> Speedrun Point to purchase that reward.";
+		cc_settext("<struct_param($struct3, param_1726)><br>  <col=9f9f9f><~tostring_spacer($int24, $string1)> point</col>");
+	} else {
+		$mes0 = "You need <~tostring_spacer($int24, $string1)> Speedrun Points to purchase that reward.";
+		cc_settext("<struct_param($struct3, param_1726)><br>  <col=9f9f9f><~tostring_spacer($int24, $string1)> points</col>");
+	}
+	.cc_setonop("speedrunning_reward_shop_refuse($mes0, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)");
+} else {
+	if ($int5 = $int4) {
+		cc_setcolour(^white);
+		if ($int25 = 1) {
+			cc_settext("<struct_param($struct3, param_1726)><br>  Free to reclaim");
+		} else if ($int24 = 1) {
+			cc_settext("<struct_param($struct3, param_1726)><br>  <~tostring_spacer($int24, $string1)> point");
+		} else {
+			cc_settext("<struct_param($struct3, param_1726)><br>  <~tostring_spacer($int24, $string1)> points");
+		}
+		.cc_setonmouserepeat(null);
+		.cc_setonmouseleave(null);
+	} else {
+		cc_setcolour(0x0dc10d);
+		if ($int25 = 1) {
+			cc_settext("<struct_param($struct3, param_1726)><br>  <col=ff891f>Free to reclaim</col>");
+		} else if ($int24 = 1) {
+			cc_settext("<struct_param($struct3, param_1726)><br>  <col=ff891f><~tostring_spacer($int24, $string1)> point</col>");
+		} else {
+			cc_settext("<struct_param($struct3, param_1726)><br>  <col=ff891f><~tostring_spacer($int24, $string1)> points</col>");
+		}
+	}
+	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+	.cc_setonop("speedrunning_reward_shop_select($int4, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)");
+}
+$int6 = calc($int6 + 1);
+return($int6, $int7);

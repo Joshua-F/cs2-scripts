@@ -30,7 +30,7 @@ if ($int13 > if_getheight($component5)) {
 ~scrollbar_vertical($component6, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if ($component0 = interface_783:0) {
 	~script6683($int10, $component5, $component9);
-	if_setoninvtransmit("script6443($int10, $component5, $component9){inv_582}", $component5);
+	if_setoninvtransmit("clan_hall_partydrop_main_chestitems($int10, $component5, $component9){inv_582}", $component5);
 } else {
 	~partydrop_main_chestitems($int10, $component5, $component9);
 	if_setoninvtransmit("partydrop_main_chestitems($int10, $component5, $component9){inv_91}", $component5);

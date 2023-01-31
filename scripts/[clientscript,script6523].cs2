@@ -7,7 +7,7 @@ $int1 = calc($int1 - 1);
 if ($int1 < 0 | $int1 >= enum_getoutputcount(enum_4389)) {
 	return;
 }
-~script6525($int2, $int1);
+~br_loadout_set_spellbook($int2, $int1);
 if (cc_find($component3, 4) = ^true) {
 	~script6521($int2);
 }

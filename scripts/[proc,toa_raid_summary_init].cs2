@@ -1,7 +1,7 @@
 // 6587
 [proc,toa_raid_summary_init](int $int0, int $int1, int $int2, int $int3, int $int4)
-~script6574(interface_482:35, 0, "Paths");
-~script6574(interface_482:36, 0, "Bosses");
+~thinbox_tab_draw(interface_482:35, 0, "Paths");
+~thinbox_tab_draw(interface_482:36, 0, "Bosses");
 if_setonop("toa_raid_summary_timetab(0)", interface_482:36);
 if_setonop("toa_raid_summary_timetab(1)", interface_482:35);
 ~toa_raid_summary_timetab(0);

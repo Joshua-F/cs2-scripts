@@ -1,0 +1,12 @@
+// 6470
+[proc,settings_npc_indicators_check]
+if (%varbit14170 ! 0) {
+	return;
+}
+if (%varbit14171 ! 0) {
+	return;
+}
+if (%varbit14169 ! 0) {
+	return;
+}
+%varbit14168 = 0;

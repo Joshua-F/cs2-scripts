@@ -1,0 +1,13 @@
+// 6524
+[proc,br_loadout_get_spellbook](int $int0)(int)
+switch_int ($int0) {
+	case 1 :
+		return(%varbit14280);
+	case 2 :
+		if (enum(int, int, enum_4389, %varbit14281) = 2) {
+			~br_loadout_set_spellbook($int0, %varbit14281);
+		}
+		return(%varbit14281);
+	case default :
+		return(%varbit14279);
+}

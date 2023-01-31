@@ -1,0 +1,14 @@
+// 6468
+[proc,settings_npc_indicators_name](int $count0)
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+if (%varbit14168 = 0) {
+	return;
+}
+if ($count0 > 2) {
+	%varbit14169 = 2;
+} else {
+	%varbit14169 = $count0;
+}
+~settings_npc_indicators_check;

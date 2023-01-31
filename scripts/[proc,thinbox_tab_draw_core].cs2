@@ -1,0 +1,41 @@
+// 6575
+[proc,thinbox_tab_draw_core](component $component0, int $int1, string $string0)(int)
+cc_deleteall($component0);
+def_int $int2 = 0;
+$int2 = ~thinbox($component0, $int2);
+cc_create($component0, ^iftype_rectangle, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+if ($int1 = 2) {
+	cc_setcolour(0x544f42);
+} else if ($int1 = 1) {
+	cc_setcolour(0x483e33);
+} else {
+	cc_setcolour(0x332b24);
+}
+if ($int1 = 1) {
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+} else if (~on_mobile = false) {
+	if_setonmouserepeat("thinbox_tab_draw($component0, 2, $string0)", $component0);
+	if_setonmouseleave("thinbox_tab_draw($component0, 0, $string0)", $component0);
+}
+if (string_length($string0) > 0) {
+	cc_create($component0, ^iftype_text, $int2);
+	$int2 = calc($int2 + 1);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext($string0);
+	if ($int1 = 2) {
+		cc_setcolour(0xffa82f);
+	} else {
+		cc_setcolour(0xff981f);
+	}
+	return($int2);
+}
+return($int2);

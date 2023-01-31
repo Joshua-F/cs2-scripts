@@ -1,0 +1,6 @@
+// 6953
+[proc,divide_round](int $int0, int $int1)(int)
+if (calc($int0 % $int1) > calc($int1 / 2)) {
+	return(calc($int0 / $int1 + 1));
+}
+return(calc($int0 / $int1));

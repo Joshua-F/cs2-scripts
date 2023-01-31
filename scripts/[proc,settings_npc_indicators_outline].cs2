@@ -1,0 +1,10 @@
+// 6467
+[proc,settings_npc_indicators_outline]
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+if (%varbit14168 = 0) {
+	return;
+}
+%varbit14170 = calc(1 - %varbit14170);
+~settings_npc_indicators_check;
