@@ -29,11 +29,8 @@ if ($component3 ! null) {
 	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setnoclickthrough(true);
 	cc_setonclick("opsound(0, 0)");
-	.cc_setop(1, "Look North");
-	.cc_setop(2, "Look East");
-	.cc_setop(3, "Look South");
-	.cc_setop(4, "Look West");
-	.cc_setonop("toplevel_compass_op(event_opindex)");
+	~script7045;
+	.cc_setonvartransmit("script7044(event_com, event_comsubid){var1021}");
 }
 ~script1044;
 if ($enum1 = enum_139) {

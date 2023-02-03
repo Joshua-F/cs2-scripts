@@ -1,0 +1,28 @@
+// 7050
+[clientscript,script7050](int $int0)
+switch_int ($int0) {
+	case 24182856 :
+		%varbit14807 = calc(%varbit14807 + 1);
+		if (%varbit14807 = 27) {
+			%varbit14807 = 1;
+		}
+		if_settext(enum(int, string, enum_4948, %varbit14807), tribal_door:12);
+	case 24182858 :
+		%varbit14808 = calc(%varbit14808 + 1);
+		if (%varbit14808 = 27) {
+			%varbit14808 = 1;
+		}
+		if_settext(enum(int, string, enum_4948, %varbit14808), tribal_door:13);
+	case 24182860 :
+		%varbit14809 = calc(%varbit14809 + 1);
+		if (%varbit14809 = 27) {
+			%varbit14809 = 1;
+		}
+		if_settext(enum(int, string, enum_4948, %varbit14809), tribal_door:14);
+	case 24182862 :
+		%varbit14810 = calc(%varbit14810 + 1);
+		if (%varbit14810 = 27) {
+			%varbit14810 = 1;
+		}
+		if_settext(enum(int, string, enum_4948, %varbit14810), tribal_door:15);
+}

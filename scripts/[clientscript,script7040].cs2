@@ -1,0 +1,9 @@
+// 7040
+[clientscript,script7040](int $key0)
+if (~keypress_permit(null, null) = 0) {
+	return;
+}
+if ($key0 ! ^key_space) {
+	return;
+}
+if_close;

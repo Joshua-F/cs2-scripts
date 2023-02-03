@@ -2,6 +2,9 @@
 [proc,settings_clicked_button](int $setting0)
 %varbit9657 = $setting0;
 switch_int ($setting0) {
+	case 167 :
+		~script7028;
+		return;
 	case default :
 		return;
 }

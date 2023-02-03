@@ -1,12 +1,13 @@
 // 6682
-[proc,script6682]
-def_enum $enum0 = ~toplevel_getcomponents;
+[proc,script6682](enum $enum0)
 def_component $component1 = enum(component, component, $enum0, interface_161:35);
+def_int $int2 = -1;
 cc_deleteall($component1);
 if (~on_enhanced_any = 0) {
 	return;
 }
-def_int $int2 = 0;
+def_boolean $boolean3 = ~on_mobile;
+def_int $int4 = 0;
 cc_create($component1, ^iftype_rectangle, 0);
 cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -20,4 +21,21 @@ cc_setonvartransmit("cluehelper_overlay_vartransmit(%var3546, %varbit14182){var3
 _1433("script6495");
 if (%var3546 ! null & %varbit14182 = 1) {
 	~cluehelper_overlay(%var3546, ~cluehelper_clue_target(%var3546));
+}
+cc_create($component1, ^iftype_rectangle, 2);
+cc_settrans(255);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	if (%varcint1145 < 2) {
+		%varcint1145 = 4;
+	}
+	minimap_setzoom(~minmax(2, 8, %varcint1145));
+	cc_setontimer("script7052($component1, %varcint1145, $boolean3)");
+} else {
+	if (%varcint1146 < 2) {
+		%varcint1146 = 4;
+	}
+	minimap_setzoom(~minmax(2, 8, %varcint1146));
+	cc_setontimer("script7052($component1, %varcint1146, $boolean3)");
 }

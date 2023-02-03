@@ -27,7 +27,33 @@ switch_int ($int0) {
 	case 1 :
 		$string1 = "welcome_screen";
 	case 2 :
-		$string1 = "chatbox_memberactivity";
+		$string1 = "chatbox_memberactivity_leagues";
+	case 3 :
+		$string1 = "chatbox_memberactivity_skill";
+	case 4 :
+		$string1 = "chatbox_memberactivity_dragonslayer";
+	case 5 :
+		$string1 = "chatbox_memberactivity_area";
+	case 6 :
+		$string1 = "chatbox_memberactivity_quest";
+	case 7 :
+		$string1 = "chatbox_memberactivity_boss";
+	case 8 :
+		$string1 = "chatbox_memberactivity_diary";
+	case 9 :
+		$string1 = "chatbox_memberactivity_minigame";
+	case 10 :
+		$string1 = "chatbox_memberactivity_transport";
+	case 11 :
+		$string1 = "chatbox_memberactivity_skill_content";
+	case 12 :
+		$string1 = "chatbox_memberactivity_worn";
+	case 13 :
+		$string1 = "chatbox_memberactivity_other";
+	case 14 :
+		$string1 = "chatbox_memberactivity_kourend";
+	case 15 :
+		$string1 = "chatbox_memberactivity_clue_scrolls";
 }
 if (string_length($string0) <= 0) {
 	~debug_mes_error("Braze", "No valid platform given when determining endpoint.");

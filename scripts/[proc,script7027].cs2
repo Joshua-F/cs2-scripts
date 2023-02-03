@@ -1,0 +1,6 @@
+// 7027
+[proc,script7027]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit14806 = calc(1 - %varbit14806);

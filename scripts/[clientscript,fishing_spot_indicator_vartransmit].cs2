@@ -1,9 +1,9 @@
 // 4548
-[clientscript,fishing_spot_indicator_vartransmit](newvar $newvar0, struct $struct1, int $int2, int $int3, int $int4, npc_uid $npc_uid5, int $int6)
+[clientscript,fishing_spot_indicator_vartransmit](newvar $newvar0, struct $struct1, int $int2, int $int3, int $int4, npc_uid $npc_uid5, int $int6, loc $loc7, coord $coord8)
 if ($int2 = %varbit12349 & $int3 = %varbit12350 & $int4 = %varbit12351) {
 	return;
 }
-~fishing_spot_indicator_create($newvar0, $struct1, $npc_uid5, $int6);
+~fishing_spot_indicator_create($newvar0, $struct1, $npc_uid5, $int6, $loc7, $coord8);
 if (_202($newvar0) = ^true) {
-	cc_setonvartransmit("fishing_spot_indicator_vartransmit($newvar0, $struct1, %varbit12349, %varbit12350, %varbit12351, $npc_uid5, $int6){var2856, var3074}");
+	cc_setonvartransmit("fishing_spot_indicator_vartransmit($newvar0, $struct1, %varbit12349, %varbit12350, %varbit12351, $npc_uid5, $int6, $loc7, $coord8){var2856, var3074}");
 }

@@ -1,4 +1,8 @@
 // 2684
 [clientscript,bond_prompt_init](component $component0, component $component1)
-~membership_benefits_prompt_button_init($component0, "Open Store");
-~membership_benefits_prompt_button_init($component1, "Bond Pouch");
+if ($component0 ! null) {
+	~membership_benefits_prompt_button_init($component0, "Open Store");
+}
+if ($component1 ! null) {
+	~membership_benefits_prompt_button_init($component1, "Bond Pouch");
+}

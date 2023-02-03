@@ -2,6 +2,8 @@
 [proc,fishing_spot_indicator_tile_setup]
 if (%varbit12349 = 1) {
 	_7000(11, null, 0, 0, 0);
+	_7010(15, null, 0, 0, 0);
 } else {
 	_7000(11, ^cyan, 2, 50, 10);
+	_7010(15, ^cyan, 2, 50, 10);
 }

@@ -7,6 +7,9 @@ switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_15 :
 		$int1 = ~helper_generic_add_title("Talk-to", 0);
 		$npc2 = db_getfield($dbrow0, dbtable_15:1, 0);
+		if ($npc2 = ismail_the_kebab_seller_11876 & %varbit334 < 28) {
+			$npc2 = null;
+		}
 		if ($npc2 ! null) {
 			$int1 = ~helper_generic_add_text(nc_name($npc2));
 		} else {

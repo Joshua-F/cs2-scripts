@@ -1,0 +1,24 @@
+// 7043
+[proc,script7043]()(int)
+if (testbit(%var3717, 25) = ^true) {
+	return(-1);
+}
+if (testbit(%var3717, 26) = ^true) {
+	return(2);
+}
+if (testbit(%var3717, 30) = ^true) {
+	return(3);
+}
+if (testbit(%var3717, 29) = ^true) {
+	return(1);
+}
+if (testbit(%var3717, 27) = ^true) {
+	return(6);
+}
+if (testbit(%var3717, 8) = ^true) {
+	return(5);
+}
+if (testbit(%var3717, 6) = ^true) {
+	return(4);
+}
+return(0);

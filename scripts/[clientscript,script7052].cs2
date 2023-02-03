@@ -1,0 +1,15 @@
+// 7052
+[clientscript,script7052](component $component0, int $int1, boolean $boolean2)
+def_int $int3 = minimap_zoom;
+if ($int3 = $int1) {
+	return;
+}
+if (cc_find($component0, 2) = ^true) {
+	if ($boolean2 = true) {
+		%varcint1145 = $int3;
+		cc_setontimer("script7052($component0, %varcint1145, $boolean2)");
+	} else {
+		%varcint1146 = $int3;
+		cc_setontimer("script7052($component0, %varcint1146, $boolean2)");
+	}
+}

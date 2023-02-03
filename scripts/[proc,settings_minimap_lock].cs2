@@ -4,4 +4,4 @@ if (~on_enhanced_any = 0) {
 	return;
 }
 %varbit12983 = calc(1 - %varbit12983);
-setminimaplock(~int_to_bool(%varbit12983));
+minimap_lock(~int_to_bool(%varbit12983));

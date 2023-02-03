@@ -1,8 +1,10 @@
 // 3888
-[proc,script3888](int $setting0, component $component1, int $comsubid2, int $int3, int $y4, int $int5)
+[proc,script3888](int $setting0, component $component1, int $comsubid2, int $int3, int $y4, int $int5, int $int6, int $int7)
 switch_int ($setting0) {
 	case 14 :
 		~settings_zoom_position_slider($component1, $comsubid2, $int3, $y4, $int5);
 	case 53 :
 		~script3889($component1, $comsubid2, $int3, $y4, $int5);
+	case 310 :
+		~script7024(calc(minimap_zoom - 2), $int7, $int3, $component1, $comsubid2, $y4, $int5, $int6);
 }

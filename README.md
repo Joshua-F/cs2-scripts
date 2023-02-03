@@ -2248,6 +2248,7 @@
 [**2245**](scripts/[proc,script2245].cs2)  
 [**2246**](scripts/[proc,hp_bar_reset].cs2) `[proc,hp_bar_reset]`  
 [**2247**](scripts/[proc,macro_pinball_score].cs2) `[proc,macro_pinball_score]`  
+[**2248**](scripts/[loadloc,_category_1001].cs2) `[loadloc,_category_1001]`  
 [**2249**](scripts/[clientscript,cc_deleteall].cs2) `[clientscript,cc_deleteall]`  
 [**2250**](scripts/[proc,script2250].cs2)  
 [**2251**](scripts/[clientscript,chatbox_open_input].cs2) `[clientscript,chatbox_open_input]`  
@@ -2565,9 +2566,6 @@
 [**2563**](scripts/[clientscript,membership_benefits_view].cs2) `[clientscript,membership_benefits_view]`  
 [**2564**](scripts/[clientscript,membership_benefits_close_benefit_hover].cs2) `[clientscript,membership_benefits_close_benefit_hover]`  
 [**2565**](scripts/[clientscript,membership_benefits_close_benefit].cs2) `[clientscript,membership_benefits_close_benefit]`  
-[**2566**](scripts/[clientscript,membership_benefits_prompt_init].cs2) `[clientscript,membership_benefits_prompt_init]`  
-[**2567**](scripts/[clientscript,membership_benefits_prompt_hide_bonds].cs2) `[clientscript,membership_benefits_prompt_hide_bonds]`  
-[**2568**](scripts/[proc,membership_benefits_prompt_hide_bonds].cs2) `[proc,membership_benefits_prompt_hide_bonds]`  
 [**2569**](scripts/[proc,membership_benefits_prompt_button_init].cs2) `[proc,membership_benefits_prompt_button_init]`  
 [**2570**](scripts/[clientscript,membership_benefits_prompt_button_draw].cs2) `[clientscript,membership_benefits_prompt_button_draw]`  
 [**2571**](scripts/[proc,membership_benefits_prompt_button_draw].cs2) `[proc,membership_benefits_prompt_button_draw]`  
@@ -3152,12 +3150,6 @@
 [**3150**](scripts/[proc,script3150].cs2)  
 [**3151**](scripts/[clientscript,boardgames_draughts_options_update_selections].cs2) `[clientscript,boardgames_draughts_options_update_selections]`  
 [**3152**](scripts/[proc,boardgames_draughts_options_update_selections].cs2) `[proc,boardgames_draughts_options_update_selections]`  
-[**3153**](scripts/[clientscript,offer_banner_init].cs2) `[clientscript,offer_banner_init]`  
-[**3154**](scripts/[proc,offer_banner_close].cs2) `[proc,offer_banner_close]`  
-[**3155**](scripts/[clientscript,offer_banner].cs2) `[clientscript,offer_banner]`  
-[**3156**](scripts/[proc,offer_banner].cs2) `[proc,offer_banner]`  
-[**3157**](scripts/[clientscript,offer_button].cs2) `[clientscript,offer_button]`  
-[**3158**](scripts/[proc,offer_button].cs2) `[proc,offer_button]`  
 [**3159**](scripts/[proc,script3159].cs2)  
 [**3160**](scripts/[proc,league_world].cs2) `[proc,league_world]`  
 [**3161**](scripts/[clientscript,clear_chat_all].cs2) `[clientscript,clear_chat_all]`  
@@ -3651,11 +3643,7 @@
 [**3649**](scripts/[clientscript,script3649].cs2)  
 [**3650**](scripts/[clientscript,bondif_init].cs2) `[clientscript,bondif_init]`  
 [**3651**](scripts/[clientscript,script3651].cs2)  
-[**3652**](scripts/[proc,script3652].cs2)  
-[**3653**](scripts/[clientscript,script3653].cs2)  
-[**3654**](scripts/[proc,script3654].cs2)  
 [**3655**](scripts/[clientscript,script3655].cs2)  
-[**3656**](scripts/[proc,script3656].cs2)  
 [**3657**](scripts/[clientscript,trailblazer_areas_init].cs2) `[clientscript,trailblazer_areas_init]`  
 [**3658**](scripts/[proc,league_areas_draw_interface].cs2) `[proc,league_areas_draw_interface]`  
 [**3659**](scripts/[proc,script3659].cs2)  
@@ -3720,6 +3708,7 @@
 [**3718**](scripts/[proc,league_tutorial_interface_update_graphic].cs2) `[proc,league_tutorial_interface_update_graphic]`  
 [**3719**](scripts/[proc,in_league_tutorial].cs2) `[proc,in_league_tutorial]`  
 [**3720**](scripts/[proc,rental_world].cs2) `[proc,rental_world]`  
+[**3721**](scripts/[proc,script3721].cs2)  
 [**3722**](scripts/[clientscript,script3722].cs2)  
 [**3723**](scripts/[proc,script3723].cs2)  
 [**3724**](scripts/[clientscript,script3724].cs2)  
@@ -4545,7 +4534,6 @@
 [**4544**](scripts/[loadnpc,_category_1513].cs2) `[loadnpc,_category_1513]`  
 [**4545**](scripts/[loadnpc,_category_1514].cs2) `[loadnpc,_category_1514]`  
 [**4546**](scripts/[loadnpc,_category_1533].cs2) `[loadnpc,_category_1533]`  
-[**4547**](scripts/[proc,fishing_spot_indicator_setup].cs2) `[proc,fishing_spot_indicator_setup]`  
 [**4548**](scripts/[clientscript,fishing_spot_indicator_vartransmit].cs2) `[clientscript,fishing_spot_indicator_vartransmit]`  
 [**4549**](scripts/[clientscript,fishing_spot_indicator_invtransmit].cs2) `[clientscript,fishing_spot_indicator_invtransmit]`  
 [**4550**](scripts/[clientscript,fishing_spot_indicator_stattransmit].cs2) `[clientscript,fishing_spot_indicator_stattransmit]`  
@@ -5190,7 +5178,6 @@
 [**5189**](scripts/[proc,script5189].cs2)  
 [**5190**](scripts/[proc,settings_minimap_lock].cs2) `[proc,settings_minimap_lock]`  
 [**5191**](scripts/[clientscript,settings_minimap_lock].cs2) `[clientscript,settings_minimap_lock]`  
-[**5192**](scripts/[clientscript,script5192].cs2)  
 [**5193**](scripts/[proc,settings_set_draw_distance].cs2) `[proc,settings_set_draw_distance]`  
 [**5194**](scripts/[proc,script5194].cs2)  
 [**5195**](scripts/[clientscript,script5195].cs2)  
@@ -6065,8 +6052,6 @@
 [**6064**](scripts/[clientscript,script6064].cs2)  
 [**6065**](scripts/[proc,script6065].cs2)  
 [**6066**](scripts/[proc,script6066].cs2)  
-[**6067**](scripts/[clientscript,script6067].cs2)  
-[**6068**](scripts/[proc,script6068].cs2)  
 [**6069**](scripts/[proc,script6069].cs2)  
 [**6070**](scripts/[proc,raffle_tab_not_selected].cs2) `[proc,raffle_tab_not_selected]`  
 [**6071**](scripts/[proc,raffle_tab_selected].cs2) `[proc,raffle_tab_selected]`  
@@ -6894,11 +6879,13 @@
 [**6893**](scripts/[clientscript,script6893].cs2)  
 [**6894**](scripts/[clientscript,script6894].cs2)  
 [**6895**](scripts/[clientscript,script6895].cs2)  
+[**6896**](scripts/[proc,script6896].cs2)  
 [**6897**](scripts/[proc,script6897].cs2)  
 [**6898**](scripts/[proc,script6898].cs2)  
 [**6899**](scripts/[proc,script6899].cs2)  
 [**6900**](scripts/[proc,script6900].cs2)  
 [**6901**](scripts/[proc,script6901].cs2)  
+[**6902**](scripts/[proc,script6902].cs2)  
 [**6903**](scripts/[clientscript,script6903].cs2)  
 [**6904**](scripts/[proc,script6904].cs2)  
 [**6905**](scripts/[proc,script6905].cs2)  
@@ -7020,3 +7007,32 @@
 [**7021**](scripts/[clientscript,script7021].cs2)  
 [**7022**](scripts/[worldmapelementmouserepeat,mapelement_871].cs2) `[worldmapelementmouserepeat,mapelement_871]`  
 [**7023**](scripts/[worldmapelementmouseleave,mapelement_871].cs2) `[worldmapelementmouseleave,mapelement_871]`  
+[**7024**](scripts/[proc,script7024].cs2)  
+[**7025**](scripts/[clientscript,script7025].cs2)  
+[**7026**](scripts/[clientscript,script7026].cs2)  
+[**7027**](scripts/[proc,script7027].cs2)  
+[**7028**](scripts/[proc,script7028].cs2)  
+[**7029**](scripts/[clientscript,script7029].cs2)  
+[**7030**](scripts/[proc,script7030].cs2)  
+[**7031**](scripts/[clientscript,script7031].cs2)  
+[**7032**](scripts/[proc,script7032].cs2)  
+[**7033**](scripts/[clientscript,script7033].cs2)  
+[**7034**](scripts/[proc,script7034].cs2)  
+[**7035**](scripts/[proc,script7035].cs2)  
+[**7036**](scripts/[proc,script7036].cs2)  
+[**7037**](scripts/[proc,script7037].cs2)  
+[**7038**](scripts/[proc,script7038].cs2)  
+[**7039**](scripts/[clientscript,script7039].cs2)  
+[**7040**](scripts/[clientscript,script7040].cs2)  
+[**7041**](scripts/[clientscript,script7041].cs2)  
+[**7042**](scripts/[clientscript,script7042].cs2)  
+[**7043**](scripts/[proc,script7043].cs2)  
+[**7044**](scripts/[clientscript,script7044].cs2)  
+[**7045**](scripts/[proc,script7045].cs2)  
+[**7046**](scripts/[clientscript,script7046].cs2)  
+[**7047**](scripts/[clientscript,script7047].cs2)  
+[**7048**](scripts/[proc,script7048].cs2)  
+[**7049**](scripts/[clientscript,script7049].cs2)  
+[**7050**](scripts/[clientscript,script7050].cs2)  
+[**7051**](scripts/[clientscript,script7051].cs2)  
+[**7052**](scripts/[clientscript,script7052].cs2)  

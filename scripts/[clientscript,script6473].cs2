@@ -7,7 +7,7 @@ if ($dbrow4 = null) {
 if (db_getrowtable($dbrow4) ! dbtable_12) {
 	return;
 }
-if ($coord0 = $coord1) {
+if ($coord0 = $coord1 & %varbit14190 = 1) {
 	return;
 }
 def_component $component5 = interface_711:3;

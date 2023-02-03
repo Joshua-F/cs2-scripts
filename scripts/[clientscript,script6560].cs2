@@ -5,7 +5,10 @@ if_sethide(true, welcome_screen:90);
 def_string $string0 = "";
 def_string $string1 = "";
 if (cc_find(welcome_screen:89, 0) = ^true) {
-	if (cc_getcrm_hasresponse = true) {
+	if (cc_getcrm_hasresponse = true & (cc_getcrm_int("main_save_only") ! 1 | ~script7043 = 0)) {
+		if (cc_getcrm_int("target_is_url") ! 1) {
+			~script6559;
+		}
 		$string0 = cc_getcrm_string("op_text");
 		$string1 = cc_getcrm_string("op_text_ios");
 		if (string_length($string0) <= 0) {
@@ -21,10 +24,10 @@ if (cc_find(welcome_screen:89, 0) = ^true) {
 			if_setop(1, $string0, welcome_screen:94);
 		}
 		~script533;
-	} else {
-		cc_delete;
-		~script6562(null, "");
+		return;
 	}
-} else {
+	cc_delete;
 	~script6562(null, "");
+	return;
 }
+~script6562(null, "");

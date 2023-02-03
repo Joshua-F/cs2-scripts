@@ -1,0 +1,13 @@
+// 7045
+[proc,script7045]
+switch_int (%varbit6719) {
+	case 3, 4, 5 :
+		.cc_clearops;
+		.cc_setonop(null);
+	case default :
+		.cc_setop(1, "Look North");
+		.cc_setop(2, "Look East");
+		.cc_setop(3, "Look South");
+		.cc_setop(4, "Look West");
+		.cc_setonop("toplevel_compass_op(event_opindex)");
+}
