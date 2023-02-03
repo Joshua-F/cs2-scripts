@@ -37,14 +37,14 @@ if ($enum1 = enum_139) {
 	setshowmouseovertext(false);
 	setshowmousecross(false);
 	setshowloadingmessages(false);
-	_3130(299, -1);
-	_3131(0);
+	_3130("cross", -1);
+	_3131(false);
 } else if ($enum1 = enum_1745) {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
 	setshowloadingmessages(true);
 	~script5965;
-	_3131(1);
+	_3131(true);
 	~script4729(interface_601:7, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
 	~script4729(interface_601:19, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
 	~script4729(interface_601:16, null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, false);
@@ -54,8 +54,8 @@ if ($enum1 = enum_139) {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
 	setshowloadingmessages(true);
-	_3130(299, -1);
-	_3131(0);
+	_3130("cross", -1);
+	_3131(false);
 }
 ~account_update_display;
 ~notification_init(enum(component, component, $enum1, interface_161:13));
