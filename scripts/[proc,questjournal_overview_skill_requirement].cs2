@@ -1,5 +1,5 @@
 // 6833
-[proc,script6833](stat $stat0, int $lvl1)(string)
+[proc,questjournal_overview_skill_requirement](stat $stat0, int $lvl1)(string)
 def_string $string0 = enum(stat, string, enum_680, $stat0);
 if (stat_base($stat0) >= $lvl1) {
 	return("<str>Level <tostring($lvl1)> <$string0>");

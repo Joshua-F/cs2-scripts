@@ -1,7 +1,7 @@
 // 6827
 [proc,script6827](string $string0, dbrow $dbrow0)(string)
 if (db_getfield($dbrow0, quest:comlevelreq, 0) > 3) {
-	$string0 = "<$string0><~script6834(db_getfield($dbrow0, quest:comlevelreq, 0))><br>";
+	$string0 = "<$string0><~questjournal_overview_combat_requirement(db_getfield($dbrow0, quest:comlevelreq, 0))><br>";
 }
 def_stat $stat1 = null;
 def_int $lvl2 = -1;
@@ -10,7 +10,7 @@ def_int $int4 = 0;
 while ($int4 < $int3) {
 	$stat1, $lvl2 = db_getfield($dbrow0, quest:statreq, $int4);
 	if ($stat1 ! null & $lvl2 > 1) {
-		$string0 = "<$string0><~script6833($stat1, $lvl2)><br>";
+		$string0 = "<$string0><~questjournal_overview_skill_requirement($stat1, $lvl2)><br>";
 	}
 	$int4 = calc($int4 + 1);
 }

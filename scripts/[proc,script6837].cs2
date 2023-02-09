@@ -3,42 +3,42 @@
 switch_dbrow ($dbrow0) {
 	case dbrow_143 :
 		if (%varbit12149 = 2 & $int1 = 0) {
-			$string0 = "<$string0><~script6832(dbrow_162)><br>";
+			$string0 = "<$string0><~questjournal_overview_quest_requirement(dbrow_162)><br>";
 		}
 	case dbrow_3 :
 		if (%varbit12149 = 2 & $int1 = 0) {
-			$string0 = "<$string0><~script6832(dbrow_162)><br>";
+			$string0 = "<$string0><~questjournal_overview_quest_requirement(dbrow_162)><br>";
 		}
 	case dbrow_54 :
 		if (%varbit12149 = 2 & $int1 = 0) {
-			$string0 = "<$string0><~script6832(dbrow_162)><br>";
+			$string0 = "<$string0><~questjournal_overview_quest_requirement(dbrow_162)><br>";
 		}
 	case dbrow_113 :
 		if (%varbit12149 = 2 & $int1 = 0) {
-			$string0 = "<$string0><~script6832(dbrow_162)><br>";
+			$string0 = "<$string0><~questjournal_overview_quest_requirement(dbrow_162)><br>";
 		}
 	case dbrow_26 :
 		if (%varbit12149 = 2 & $int1 = 0) {
-			$string0 = "<$string0><~script6832(dbrow_162)><br>";
+			$string0 = "<$string0><~questjournal_overview_quest_requirement(dbrow_162)><br>";
 		}
 	case dbrow_13 :
 		if (%varbit12149 = 1 & $int1 = 0) {
-			$string0 = "<$string0><~script6832(dbrow_162)><br>";
+			$string0 = "<$string0><~questjournal_overview_quest_requirement(dbrow_162)><br>";
 		}
 	case dbrow_81 :
 		if (%varbit12149 <= 0 & $int1 = 0) {
-			$string0 = "<$string0><~script6832(dbrow_162)><br>";
+			$string0 = "<$string0><~questjournal_overview_quest_requirement(dbrow_162)><br>";
 		}
 	case dbrow_96 :
 		if ($int1 = 1) {
-			$string0 = "<$string0><~script6836(%varbit1914, 50, "Recipe for Disaster - Freeing King Awowogei")><br>";
+			$string0 = "<$string0><~questjournal_overview_misc_requirement(%varbit1914, 50, "Recipe for Disaster - Freeing King Awowogei")><br>";
 		}
 		if ($int1 = 0) {
-			$string0 = "<$string0><~script6836(%varbit2870, 1, "Gnome Stronghold Balloon Route Unlocked")><br>";
+			$string0 = "<$string0><~questjournal_overview_misc_requirement(%varbit2870, 1, "Gnome Stronghold Balloon Route Unlocked")><br>";
 		}
 	case dbrow_67 :
 		if ($int1 = 0) {
-			$string0 = "<$string0><~script6836(%varbit1895, 110, "Recipe for Disaster - Freeing Pirate Pete")><br>";
+			$string0 = "<$string0><~questjournal_overview_misc_requirement(%varbit1895, 110, "Recipe for Disaster - Freeing Pirate Pete")><br>";
 		}
 }
 return($string0);

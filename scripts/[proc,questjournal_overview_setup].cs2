@@ -1,5 +1,5 @@
 // 6822
-[proc,script6822](dbrow $dbrow0, string $string0, component $component1, component $component2, component $component3, int $int4)
+[proc,questjournal_overview_setup](dbrow $dbrow0, string $string0, component $component1, component $component2, component $component3, int $int4)
 %varcint52 = $int4;
 cc_deleteall($component1);
 def_string $string1 = "quest";
@@ -65,7 +65,7 @@ if ($coord10 ! null & $coord10 ! 0_0_0_0_0) {
 	$string11 = "Show on Map";
 	cc_settext($string11);
 	cc_setop(1, $string11);
-	cc_setonop("script6823(event_com, event_comsubid, event_opindex, 4145151, 200, $string11)");
+	cc_setonop("questjournal_overview_button_op(event_com, event_comsubid, event_opindex, 4145151, 200, $string11)");
 	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, 0x3f3fff)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x0000c8)");
