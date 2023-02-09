@@ -1,5 +1,5 @@
 // 4341
-[clientscript,clan_storage_main_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+[clientscript,clan_storage_main_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 ~clan_interfacetitle($component1, "Coffer");
 cc_deleteall($component2);
 cc_create($component2, ^iftype_text, 0);
@@ -28,9 +28,11 @@ if_setonclansettingstransmit("clan_storage_main_hint(event_com)", $component3);
 if_setop(1, "Withdraw", $component4);
 ~clan_storage_button_reset("1k", $component5);
 if_setop(1, "Withdraw", $component5);
-~clan_storage_button_reset("100k", $component6);
+~clan_storage_button_reset("1m", $component6);
 if_setop(1, "Withdraw", $component6);
-~clan_storage_button_reset("X", $component7);
+~clan_storage_button_reset("10m", $component7);
 if_setop(1, "Withdraw", $component7);
-~clan_storage_button_reset("All", $component8);
+~clan_storage_button_reset("X", $component8);
 if_setop(1, "Withdraw", $component8);
+~clan_storage_button_reset("All", $component9);
+if_setop(1, "Withdraw", $component9);

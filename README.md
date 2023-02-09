@@ -3298,9 +3298,6 @@
 [**3304**](scripts/[clientscript,wiki_icon_init].cs2) `[clientscript,wiki_icon_init]`  
 [**3305**](scripts/[clientscript,wiki_icon_update].cs2) `[clientscript,wiki_icon_update]`  
 [**3306**](scripts/[proc,wiki_icon_update].cs2) `[proc,wiki_icon_update]`  
-[**3307**](scripts/[clientscript,welcome_type_setup_transmit].cs2) `[clientscript,welcome_type_setup_transmit]`  
-[**3308**](scripts/[clientscript,welcome_type_setup_op].cs2) `[clientscript,welcome_type_setup_op]`  
-[**3309**](scripts/[proc,welcome_type_setup].cs2) `[proc,welcome_type_setup]`  
 [**3310**](scripts/[proc,summary_sidepanel_draw].cs2) `[proc,summary_sidepanel_draw]`  
 [**3311**](scripts/[clientscript,nightmare_totems_init].cs2) `[clientscript,nightmare_totems_init]`  
 [**3312**](scripts/[clientscript,nightmare_totem_hud_fade_in].cs2) `[clientscript,nightmare_totem_hud_fade_in]`  
@@ -4547,7 +4544,6 @@
 [**4558**](scripts/[proc,script4558].cs2)  
 [**4559**](scripts/[clientscript,fishing_spot_indicator_tile_setup].cs2) `[clientscript,fishing_spot_indicator_tile_setup]`  
 [**4560**](scripts/[proc,fishing_spot_indicator_tile_setup].cs2) `[proc,fishing_spot_indicator_tile_setup]`  
-[**4561**](scripts/[proc,welcome_screen_toggle].cs2) `[proc,welcome_screen_toggle]`  
 [**4562**](scripts/[clientscript,script4562].cs2)  
 [**4563**](scripts/[proc,script4563].cs2)  
 [**4564**](scripts/[clientscript,settings_player_attack_options].cs2) `[clientscript,settings_player_attack_options]`  

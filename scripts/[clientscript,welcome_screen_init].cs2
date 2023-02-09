@@ -1,18 +1,14 @@
 // 312
-[clientscript,welcome_screen_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+[clientscript,welcome_screen_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9)
 ~script4729($component1, $component0, setbit(setbit(0, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);
-~welcome_screen_toggle($component11);
-~welcome_type_setup(%varbit10116, $component3, $component4, $component5, $component6, $component12);
-if_setonvartransmit("welcome_type_setup_transmit($component3, $component4, $component5, $component6, $component12){var1226}", $component11);
-if_setonop("welcome_type_setup_op($component3, $component4, $component5, $component6, $component12, $component7, $component8, $component9, $component10)", $component11);
 ~welcome_screen_lastlogin($component2);
 if_setonvartransmit("welcome_screen_lastlogin($component2){var261}", $component2);
-~welcome_screen_messages($component6, $component7, $component8, %varbit10116);
-if_setonvartransmit("welcome_screen_messages($component6, $component7, $component8){var1781, var1226}", $component7);
-~welcome_screen_credit($component5, $component9, $component10, %varbit10116);
-if_setonvartransmit("welcome_screen_credit($component5, $component9, $component10){var1780, var1226}", $component9);
+~welcome_screen_messages($component4, $component5, $component6);
+if_setonvartransmit("welcome_screen_messages($component4, $component5, $component6){var1781, var1226}", $component5);
+~welcome_screen_credit($component3, $component7, $component8);
+if_setonvartransmit("welcome_screen_credit($component3, $component7, $component8){var1780, var1226}", $component7);
 ~script2218;
 if_setonvartransmit("script2217{var264}", $component0);
-~welcome_screen_continue_text(welcome_screen:86);
+~welcome_screen_continue_text(welcome_screen:77);
 ~script6556;
 if_setopkey(1, ^key_escape, 0, welcome_screen:3);

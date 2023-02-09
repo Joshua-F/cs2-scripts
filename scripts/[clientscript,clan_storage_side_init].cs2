@@ -1,5 +1,5 @@
 // 4347
-[clientscript,clan_storage_side_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+[clientscript,clan_storage_side_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 cc_deleteall($component1);
 cc_create($component1, ^iftype_graphic, 0);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -17,9 +17,11 @@ if_settext("Deposit into the coffer:", $component2);
 if_setop(1, "Deposit", $component3);
 ~clan_storage_button_reset("1k", $component4);
 if_setop(1, "Deposit", $component4);
-~clan_storage_button_reset("100k", $component5);
+~clan_storage_button_reset("1m", $component5);
 if_setop(1, "Deposit", $component5);
-~clan_storage_button_reset("X", $component6);
+~clan_storage_button_reset("10m", $component6);
 if_setop(1, "Deposit", $component6);
-~clan_storage_button_reset("All", $component7);
+~clan_storage_button_reset("X", $component7);
 if_setop(1, "Deposit", $component7);
+~clan_storage_button_reset("All", $component8);
+if_setop(1, "Deposit", $component8);
