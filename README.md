@@ -2566,6 +2566,7 @@
 [**2563**](scripts/[clientscript,membership_benefits_view].cs2) `[clientscript,membership_benefits_view]`  
 [**2564**](scripts/[clientscript,membership_benefits_close_benefit_hover].cs2) `[clientscript,membership_benefits_close_benefit_hover]`  
 [**2565**](scripts/[clientscript,membership_benefits_close_benefit].cs2) `[clientscript,membership_benefits_close_benefit]`  
+[**2566**](scripts/[clientscript,script2566].cs2)  
 [**2569**](scripts/[proc,membership_benefits_prompt_button_init].cs2) `[proc,membership_benefits_prompt_button_init]`  
 [**2570**](scripts/[clientscript,membership_benefits_prompt_button_draw].cs2) `[clientscript,membership_benefits_prompt_button_draw]`  
 [**2571**](scripts/[proc,membership_benefits_prompt_button_draw].cs2) `[proc,membership_benefits_prompt_button_draw]`  

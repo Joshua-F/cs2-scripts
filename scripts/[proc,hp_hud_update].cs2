@@ -25,6 +25,7 @@ if (compare($string0, "") = 0 | %varbit14706 = 1) {
 }
 def_string $text1 = "<tostring(%varbit6099)> / <tostring(%varbit6100)>";
 def_int $int13 = 0;
+%varbit6100 = ~max(%varbit6100, 1);
 if (%varbit14708 = 1) {
 	$int13 = ~minmax(0, 100, scale(%varbit6099, %varbit6100, 100));
 	$text1 = "<tostring($int13)>%";
@@ -33,7 +34,6 @@ if_settext($text1, $component1);
 def_int $width14 = if_getwidth($component2);
 def_int $int15 = $width14;
 def_int $int16 = calc(%varbit6100 + 1);
-%varbit6100 = ~max(%varbit6100, 1);
 $int15 = scale(%varbit6099, %varbit6100, $int15);
 if (%varbit10338 > 0 & %varbit10338 <= $int16) {
 	if_sethide(false, $component7);

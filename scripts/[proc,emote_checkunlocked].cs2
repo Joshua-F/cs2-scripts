@@ -91,6 +91,8 @@ switch_int ($int0) {
 			case default :
 				return(false);
 		}
+	case 51 :
+		return(~int_to_bool(%varbit6550));
 	case default :
 		return(true);
 }

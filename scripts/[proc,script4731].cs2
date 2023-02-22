@@ -218,7 +218,7 @@ if (testbit($int2, 5) = ^true & testbit($int2, 16) = ^false & $component40 ! nul
 	}
 }
 $component40 = enum(component, component, $enum25, interface_161:12);
-if ($int24 = 1 & testbit($int2, 6) = ^true & testbit($int2, 16) = ^false & $component40 ! null & if_hassub($component40) = true) {
+if (testbit($int2, 6) = ^true & testbit($int2, 16) = ^false & $component40 ! null & if_hassub($component40) = true) {
 	$flags41 = setbit($flags41, 6);
 	if (~script4732(1) = 0) {
 		if ($setposh27 = ^setpos_abs_left) {
