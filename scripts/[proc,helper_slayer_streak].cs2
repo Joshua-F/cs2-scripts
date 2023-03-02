@@ -1,3 +1,12 @@
 // 5322
 [proc,helper_slayer_streak]()(string, string)
-return("Streak: ", tostring(%varbit4069));
+def_int $int0 = 0;
+if (%varbit4067 = 7) {
+	$int0 = %varbit5617;
+} else {
+	$int0 = %varbit4069;
+}
+if ($int0 >= 16000) {
+	return("Streak: ", "Lots!");
+}
+return("Streak: ", tostring($int0));

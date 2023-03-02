@@ -11,5 +11,6 @@ $string0, $string1 = ~helper_slayer_current_amount;
 $string0, $string1 = ~helper_slayer_area;
 ~helper_generic_update_text(calc($int0 + 4), $string0);
 ~helper_generic_update_text(calc($int0 + 5), $string1);
-~helper_generic_update_text(calc($int0 + 7), tostring(%varbit4069));
+$string0, $string1 = ~helper_slayer_streak;
+~helper_generic_update_text(calc($int0 + 7), $string1);
 ~script4703;
