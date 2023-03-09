@@ -1,12 +1,12 @@
 // 6857
-[clientscript,script6857](int $int0, obj $obj1)
+[clientscript,script6857](int $int0, namedobj $namedobj1)
 ~steelborder(interface_789:2, enum(int, string, enum_885, $int0), 0);
 %varcint1110 = -1;
 db_find(dbtable_34:0, $int0);
-def_int $int2 = db_find_filter_with_count(dbtable_34:2, $obj1);
+def_int $int2 = db_find_filter_with_count(dbtable_34:2, $namedobj1);
 def_dbrow $dbrow3 = db_findnext;
 if ($dbrow3 = null) {
-	~debug_mes_error("Item Transmog", "Failed to find config for <oc_name($obj1)> in group <tostring($int0)>");
+	~debug_mes_error("Item Transmog", "Failed to find config for <oc_name($namedobj1)> in group <tostring($int0)>");
 }
 def_int $int4 = db_getfield($dbrow3, dbtable_34:1, 0);
 def_int $int5 = 1;
