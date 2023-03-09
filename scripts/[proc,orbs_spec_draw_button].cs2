@@ -11,15 +11,6 @@ if (map_members = ^false & %varbit5314 = 0 | ~script3648(inv_getobj(worn, 3)) <=
 	if_setgraphic($graphic7, $component4);
 	if_setgraphic("orb_filler,5", $component3);
 	if_settrans(50, $component3);
-} else if (%varbit8121 = 1 & ~script359 = 0) {
-	if_sethide(false, $component5);
-	if_setonmouserepeat(null, $component5);
-	if_setonmouseleave(null, $component5);
-	if_setop(2, "Use", $component5);
-	if_setonop("orbs_blocked_spec_op(event_opindex)", $component5);
-	if_setgraphic($graphic7, $component4);
-	if_setgraphic("orb_filler,5", $component3);
-	if_settrans(50, $component3);
 } else {
 	if_sethide(false, $component5);
 	if_setonmouserepeat("graphic_swapper($component4, $graphic6)", $component5);

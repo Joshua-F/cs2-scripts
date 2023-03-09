@@ -1,0 +1,21 @@
+// 2758
+[proc,script2758](component $component0, int $int1, int $int2, int $int3)
+if ($int2 = 0) {
+	if (cc_find($component0, calc($int1 * 2 + 4 + 1)) = ^true) {
+		cc_setgraphic("options_radio_buttons,2");
+	}
+	if (cc_find($component0, calc($int1 * 2 + 4 + 2)) = ^true) {
+		cc_setcolour(0x9f9f9f);
+	}
+} else {
+	if (cc_find($component0, calc($int1 * 2 + 4 + 1)) = ^true) {
+		if ($int3 = 1) {
+			cc_setgraphic("options_radio_buttons,5");
+		} else {
+			cc_setgraphic("options_radio_buttons,6");
+		}
+	}
+	if (cc_find($component0, calc($int1 * 2 + 4 + 2)) = ^true) {
+		cc_setcolour(0xff981f);
+	}
+}

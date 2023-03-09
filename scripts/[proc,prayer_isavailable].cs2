@@ -1,50 +1,17 @@
 // 464
-[proc,prayer_isavailable](int $int0)(int)
-def_int $int1 = stat_base(prayer);
-def_int $int2 = stat_base(defence);
-def_int $int3 = %varbit5451;
-def_int $int4 = %varbit5452;
-def_boolean $boolean5 = ~int_to_bool(calc(%varbit3909 - 7));
-def_int $int6 = map_members;
+[proc,prayer_isavailable](obj $obj0)(int)
+def_int $int1 = 1;
+def_int $int2 = 1;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_boolean $boolean5 = false;
+def_int $int6 = 0;
 def_int $int7 = 0;
-if (%varbit5314 = 1) {
-	$int1, $int2, $int3, $int4, $boolean5, $int6, $int7 = ~script1934;
-}
-if ($int1 < enum(int, int, enum_861, $int0)) {
+$int1, $int2, $int3, $int4, $boolean5, $int6, $int7 = ~script3656;
+if (~script4547($obj0, $int1) = 0) {
 	return(0);
 }
-switch_int ($int0) {
-	case 25 :
-		if (~script5344 = 0) {
-			return(0);
-		}
-	case 26 :
-		if (~script5345 = 0) {
-			return(0);
-		}
-	case 15, 16, 17 :
-		if ($int6 = 0) {
-			return(0);
-		}
-	case 24 :
-		if ($int6 = 0 | $int2 < 70 | $int3 = 0) {
-			return(0);
-		}
-	case 27 :
-		if ($int6 = 0 | $int2 < 70 | $int4 = 0) {
-			return(0);
-		}
-	case 28 :
-		if ($int6 = 0 | %varbit5453 = 0 | $int7 = 1) {
-			return(0);
-		}
-	case 7, 6 :
-		if ($int7 = 1) {
-			return(0);
-		}
-	case 8 :
-		if (~high_risk_world = 1 | ~deadman_world ! 0 | $int7 = 1) {
-			return(0);
-		}
+if (~script4561($obj0, $int6, $int2, $boolean5, $int3, $int4, $int7) = 0) {
+	return(0);
 }
 return(1);

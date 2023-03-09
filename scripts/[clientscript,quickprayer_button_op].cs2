@@ -1,16 +1,17 @@
 // 469
-[clientscript,quickprayer_button_op](int $opindex0, int $int1, component $component2, int $comsubid3, int $comsubid4)
+[clientscript,quickprayer_button_op](int $opindex0, obj $obj1, component $component2, int $comsubid3, int $comsubid4)
+def_int $index5 = oc_param($obj1, param_630);
 if ($opindex0 = 1 & .cc_find($component2, $comsubid4) = ^true) {
-	if (testbit(%varbit4102, $int1) = ^true) {
-		%varbit4102 = clearbit(%varbit4102, $int1);
+	if (testbit(%varbit4102, $index5) = ^true) {
+		%varbit4102 = clearbit(%varbit4102, $index5);
 	} else {
-		if (~prayer_isavailable($int1) = 0) {
+		if (~prayer_isavailable($obj1) = 0) {
 			return;
 		}
-		%varbit4102 = setbit(%varbit4102, $int1);
+		%varbit4102 = setbit(%varbit4102, $index5);
 	}
 	sound_synth(interface_select1, 1, 0);
 	if (cc_find($component2, $comsubid3) = ^true) {
-		~quickprayer_button_update($int1);
+		~quickprayer_button_update($obj1);
 	}
 }

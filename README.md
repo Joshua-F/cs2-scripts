@@ -359,7 +359,7 @@
 [**356**](scripts/[proc,stonepanel_blue].cs2) `[proc,stonepanel_blue]`  
 [**357**](scripts/[clientscript,stonepanel_red].cs2) `[clientscript,stonepanel_red]`  
 [**358**](scripts/[proc,stonepanel_red].cs2) `[proc,stonepanel_red]`  
-[**359**](scripts/[proc,script359].cs2)  
+[**359**](scripts/[clientscript,script359].cs2)  
 [**360**](scripts/[clientscript,script360].cs2)  
 [**361**](scripts/[clientscript,soul_wars_game_hud_init].cs2) `[clientscript,soul_wars_game_hud_init]`  
 [**362**](scripts/[clientscript,soul_wars_game_hud_update].cs2) `[clientscript,soul_wars_game_hud_update]`  
@@ -547,7 +547,7 @@
 [**544**](scripts/[proc,league_reward_draw_item].cs2) `[proc,league_reward_draw_item]`  
 [**545**](scripts/[clientscript,wear_updateslot].cs2) `[clientscript,wear_updateslot]`  
 [**546**](scripts/[proc,wear_updateslot].cs2) `[proc,wear_updateslot]`  
-[**547**](scripts/[clientscript,runweight_visible].cs2) `[clientscript,runweight_visible]`  
+[**547**](scripts/[proc,script547].cs2)  
 [**548**](scripts/[proc,meslayer_mode12].cs2) `[proc,meslayer_mode12]`  
 [**549**](scripts/[proc,meslayer_mode12_setprompt].cs2) `[proc,meslayer_mode12_setprompt]`  
 [**550**](scripts/[proc,meslayer_mode13].cs2) `[proc,meslayer_mode13]`  
@@ -2567,6 +2567,8 @@
 [**2564**](scripts/[clientscript,membership_benefits_close_benefit_hover].cs2) `[clientscript,membership_benefits_close_benefit_hover]`  
 [**2565**](scripts/[clientscript,membership_benefits_close_benefit].cs2) `[clientscript,membership_benefits_close_benefit]`  
 [**2566**](scripts/[clientscript,script2566].cs2)  
+[**2567**](scripts/[clientscript,script2567].cs2)  
+[**2568**](scripts/[clientscript,script2568].cs2)  
 [**2569**](scripts/[proc,membership_benefits_prompt_button_init].cs2) `[proc,membership_benefits_prompt_button_init]`  
 [**2570**](scripts/[clientscript,membership_benefits_prompt_button_draw].cs2) `[clientscript,membership_benefits_prompt_button_draw]`  
 [**2571**](scripts/[proc,membership_benefits_prompt_button_draw].cs2) `[proc,membership_benefits_prompt_button_draw]`  
@@ -2756,8 +2758,7 @@
 [**2755**](scripts/[proc,wint_timer_resynch].cs2) `[proc,wint_timer_resynch]`  
 [**2756**](scripts/[clientscript,wint_timer_countdown].cs2) `[clientscript,wint_timer_countdown]`  
 [**2757**](scripts/[proc,wint_timer_countdown].cs2) `[proc,wint_timer_countdown]`  
-[**2758**](scripts/[proc,prayer_infobutton].cs2) `[proc,prayer_infobutton]`  
-[**2759**](scripts/[clientscript,prayer_infomode].cs2) `[clientscript,prayer_infomode]`  
+[**2758**](scripts/[proc,script2758].cs2)  
 [**2760**](scripts/[clientscript,prayer_levelupdate].cs2) `[clientscript,prayer_levelupdate]`  
 [**2761**](scripts/[proc,prayer_levelupdate].cs2) `[proc,prayer_levelupdate]`  
 [**2762**](scripts/[proc,prayer_gettooltiptext].cs2) `[proc,prayer_gettooltiptext]`  
@@ -2792,7 +2793,7 @@
 [**2791**](scripts/[proc,skill_guide_data_magic].cs2) `[proc,skill_guide_data_magic]`  
 [**2792**](scripts/[proc,orbs_spec_draw_button].cs2) `[proc,orbs_spec_draw_button]`  
 [**2793**](scripts/[clientscript,orbs_toggle_spec_op].cs2) `[clientscript,orbs_toggle_spec_op]`  
-[**2794**](scripts/[clientscript,orbs_blocked_spec_op].cs2) `[clientscript,orbs_blocked_spec_op]`  
+[**2794**](scripts/[clientscript,script2794].cs2)  
 [**2795**](scripts/[clientscript,itemsets_info_init].cs2) `[clientscript,itemsets_info_init]`  
 [**2796**](scripts/[clientscript,script2796].cs2)  
 [**2797**](scripts/[clientscript,journal_list_init].cs2) `[clientscript,journal_list_init]`  
@@ -3151,6 +3152,12 @@
 [**3150**](scripts/[proc,script3150].cs2)  
 [**3151**](scripts/[clientscript,boardgames_draughts_options_update_selections].cs2) `[clientscript,boardgames_draughts_options_update_selections]`  
 [**3152**](scripts/[proc,boardgames_draughts_options_update_selections].cs2) `[proc,boardgames_draughts_options_update_selections]`  
+[**3153**](scripts/[proc,script3153].cs2)  
+[**3154**](scripts/[proc,script3154].cs2)  
+[**3155**](scripts/[clientscript,script3155].cs2)  
+[**3156**](scripts/[proc,script3156].cs2)  
+[**3157**](scripts/[clientscript,script3157].cs2)  
+[**3158**](scripts/[proc,script3158].cs2)  
 [**3159**](scripts/[proc,script3159].cs2)  
 [**3160**](scripts/[proc,league_world].cs2) `[proc,league_world]`  
 [**3161**](scripts/[clientscript,clear_chat_all].cs2) `[clientscript,clear_chat_all]`  
@@ -3299,6 +3306,9 @@
 [**3304**](scripts/[clientscript,wiki_icon_init].cs2) `[clientscript,wiki_icon_init]`  
 [**3305**](scripts/[clientscript,wiki_icon_update].cs2) `[clientscript,wiki_icon_update]`  
 [**3306**](scripts/[proc,wiki_icon_update].cs2) `[proc,wiki_icon_update]`  
+[**3307**](scripts/[clientscript,script3307].cs2)  
+[**3308**](scripts/[proc,script3308].cs2)  
+[**3309**](scripts/[proc,script3309].cs2)  
 [**3310**](scripts/[proc,summary_sidepanel_draw].cs2) `[proc,summary_sidepanel_draw]`  
 [**3311**](scripts/[clientscript,nightmare_totems_init].cs2) `[clientscript,nightmare_totems_init]`  
 [**3312**](scripts/[clientscript,nightmare_totem_hud_fade_in].cs2) `[clientscript,nightmare_totem_hud_fade_in]`  
@@ -3641,7 +3651,11 @@
 [**3649**](scripts/[clientscript,script3649].cs2)  
 [**3650**](scripts/[clientscript,bondif_init].cs2) `[clientscript,bondif_init]`  
 [**3651**](scripts/[clientscript,script3651].cs2)  
+[**3652**](scripts/[proc,script3652].cs2)  
+[**3653**](scripts/[clientscript,script3653].cs2)  
+[**3654**](scripts/[proc,script3654].cs2)  
 [**3655**](scripts/[clientscript,script3655].cs2)  
+[**3656**](scripts/[proc,script3656].cs2)  
 [**3657**](scripts/[clientscript,trailblazer_areas_init].cs2) `[clientscript,trailblazer_areas_init]`  
 [**3658**](scripts/[proc,league_areas_draw_interface].cs2) `[proc,league_areas_draw_interface]`  
 [**3659**](scripts/[proc,script3659].cs2)  
@@ -4532,6 +4546,7 @@
 [**4544**](scripts/[loadnpc,_category_1513].cs2) `[loadnpc,_category_1513]`  
 [**4545**](scripts/[loadnpc,_category_1514].cs2) `[loadnpc,_category_1514]`  
 [**4546**](scripts/[loadnpc,_category_1533].cs2) `[loadnpc,_category_1533]`  
+[**4547**](scripts/[proc,script4547].cs2)  
 [**4548**](scripts/[clientscript,fishing_spot_indicator_vartransmit].cs2) `[clientscript,fishing_spot_indicator_vartransmit]`  
 [**4549**](scripts/[clientscript,fishing_spot_indicator_invtransmit].cs2) `[clientscript,fishing_spot_indicator_invtransmit]`  
 [**4550**](scripts/[clientscript,fishing_spot_indicator_stattransmit].cs2) `[clientscript,fishing_spot_indicator_stattransmit]`  
@@ -4545,6 +4560,7 @@
 [**4558**](scripts/[proc,script4558].cs2)  
 [**4559**](scripts/[clientscript,fishing_spot_indicator_tile_setup].cs2) `[clientscript,fishing_spot_indicator_tile_setup]`  
 [**4560**](scripts/[proc,fishing_spot_indicator_tile_setup].cs2) `[proc,fishing_spot_indicator_tile_setup]`  
+[**4561**](scripts/[proc,script4561].cs2)  
 [**4562**](scripts/[clientscript,script4562].cs2)  
 [**4563**](scripts/[proc,script4563].cs2)  
 [**4564**](scripts/[clientscript,settings_player_attack_options].cs2) `[clientscript,settings_player_attack_options]`  
@@ -5175,6 +5191,7 @@
 [**5189**](scripts/[proc,script5189].cs2)  
 [**5190**](scripts/[proc,settings_minimap_lock].cs2) `[proc,settings_minimap_lock]`  
 [**5191**](scripts/[clientscript,settings_minimap_lock].cs2) `[clientscript,settings_minimap_lock]`  
+[**5192**](scripts/[clientscript,script5192].cs2)  
 [**5193**](scripts/[proc,settings_set_draw_distance].cs2) `[proc,settings_set_draw_distance]`  
 [**5194**](scripts/[proc,script5194].cs2)  
 [**5195**](scripts/[clientscript,script5195].cs2)  
@@ -5326,8 +5343,6 @@
 [**5341**](scripts/[proc,script5341].cs2)  
 [**5342**](scripts/[proc,script5342].cs2)  
 [**5343**](scripts/[proc,script5343].cs2)  
-[**5344**](scripts/[proc,script5344].cs2)  
-[**5345**](scripts/[proc,script5345].cs2)  
 [**5346**](scripts/[proc,script5346].cs2)  
 [**5347**](scripts/[proc,script5347].cs2)  
 [**5348**](scripts/[proc,helper_generic_set_bit].cs2) `[proc,helper_generic_set_bit]`  
@@ -6049,6 +6064,7 @@
 [**6064**](scripts/[clientscript,script6064].cs2)  
 [**6065**](scripts/[proc,script6065].cs2)  
 [**6066**](scripts/[proc,script6066].cs2)  
+[**6067**](scripts/[proc,script6067].cs2)  
 [**6069**](scripts/[proc,script6069].cs2)  
 [**6070**](scripts/[proc,raffle_tab_not_selected].cs2) `[proc,raffle_tab_not_selected]`  
 [**6071**](scripts/[proc,raffle_tab_selected].cs2) `[proc,raffle_tab_selected]`  

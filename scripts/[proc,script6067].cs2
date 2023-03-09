@@ -1,0 +1,28 @@
+// 6067
+[proc,script6067](int $int0, component $component1, int $int2)(int)
+~create_graphic($component1, $int2, "v2_borders_slim,0", 16, -13, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_minus, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,2", 16, -12, ^setpos_abs_left, ^setpos_abs_bottom, 32, 32, ^setsize_minus, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,1", -14, 16, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_minus);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,3", -12, 16, ^setpos_abs_right, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_minus);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,4", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,5", 0, 0, ^setpos_abs_right, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,6", 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,7", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+if ($int0 < 6) {
+	return($int2);
+}
+~create_graphic($component1, $int2, "v2_borders_slim,8", 0, calc($int0 - 20), ^setpos_abs_left, ^setpos_abs_top, 0, 32, ^setsize_minus, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,9", 0, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,10", 0, calc($int0 - 18), ^setpos_abs_right, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+return($int2);

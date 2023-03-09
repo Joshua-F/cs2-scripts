@@ -1,0 +1,90 @@
+// 3156
+[proc,script3156](component $component0, boolean $boolean1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, string $string0, string $string1)
+~deltooltip_action($component8);
+%varcint218 = null;
+cc_deleteall($component7);
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_component $component11 = null;
+def_obj $obj12 = null;
+def_int $int13 = 0;
+if ($component0 = $component2) {
+	if_sethide(false, $component2);
+	if_setonclick("script3155(null, $boolean1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $string0, $string1)", $component2);
+	if_sethide(true, $component3);
+	if_setonclick(null, $component3);
+	if_sethide(false, $component4);
+	if_sethide(false, $component5);
+	if_sethide(true, $component6);
+	while ($int10 <= 28) {
+		$obj12 = enum(int, obj, enum_4956, $int10);
+		$component11 = oc_param($obj12, param_1751);
+		if ($component11 ! null & cc_find($component11, 0) = ^true & .cc_find($component11, 1) = ^true) {
+			~prayer_updatebutton(true, $obj12, $component11, $component4, $component8);
+		}
+		$int10 = calc($int10 + 1);
+	}
+	$int10 = 0;
+	while ($int9 = 0) {
+		if (cc_find($component5, $int10) = ^true) {
+			cc_settrans(220);
+		} else {
+			$int9 = 1;
+		}
+		$int10 = calc($int10 + 1);
+	}
+} else if ($component0 = $component3) {
+	if_sethide(true, $component2);
+	if_setonclick(null, $component2);
+	if_sethide(false, $component3);
+	if_setonclick("script3155(null, $boolean1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $string0, $string1)", $component3);
+	if_sethide(true, $component4);
+	if_sethide(true, $component5);
+	if_sethide(false, $component6);
+	$int10 = 0;
+	while ($int10 <= 4) {
+		cc_create($component7, ^iftype_rectangle, $int10);
+		cc_setfill(true);
+		cc_setcolour(^white);
+		~script3652(0);
+		cc_setop(1, "Change");
+		cc_setonop("script3157(event_opindex, event_com, event_comsubid)");
+		$int10 = calc($int10 + 1);
+	}
+	$int10, $int13 = ~script3158(0, "Show lower tiers of tiered prayers", $component7, $int10, $int13);
+	$int10, $int13 = ~script3158(1, "Show tiered prayers even if multi-skill prayers are available", $component7, $int10, $int13);
+	$int10, $int13 = ~script3158(2, "Show <col=ffffff>Rapid Healing</col> prayers", $component7, $int10, $int13);
+	$int10, $int13 = ~script3158(3, "Show prayers you lack the Prayer level to activate", $component7, $int10, $int13);
+	$int10, $int13 = ~script3158(4, "Show prayers you lack the requirements to activate", $component7, $int10, $int13);
+	if_setsize(180, calc(28 + $int13), ^setsize_abs, ^setsize_abs, $component6);
+} else {
+	if ($boolean1 = true) {
+		if_sethide(false, $component2);
+		if_setonclick("script3155($component2, $boolean1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $string0, $string1)", $component2);
+	} else {
+		if_sethide(true, $component2);
+		if_setonclick(null, $component2);
+	}
+	if (%varbit6579 = 0) {
+		if_sethide(false, $component3);
+	}
+	if_setonclick("script3155($component3, $boolean1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $string0, $string1)", $component3);
+	if_sethide(false, $component4);
+	if_sethide(true, $component5);
+	if_sethide(true, $component6);
+	$int10 = 0;
+	while ($int10 <= 28) {
+		$obj12 = enum(int, obj, enum_4956, $int10);
+		$component11 = oc_param($obj12, param_1751);
+		if ($component11 ! null & cc_find($component11, 0) = ^true & .cc_find($component11, 1) = ^true) {
+			~prayer_updatebutton(false, $obj12, $component11, $component4, $component8);
+		}
+		$int10 = calc($int10 + 1);
+	}
+}
+if ($boolean1 = true & ($component0 = null | $component0 = $component2)) {
+	~script3654($component0, $component2, $string0);
+}
+if ($component0 = null | $component0 = $component3) {
+	~script3654($component0, $component3, $string1);
+}

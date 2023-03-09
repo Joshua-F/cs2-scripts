@@ -22,7 +22,7 @@ def_int $colour13 = 0x604e32;
 def_graphic $graphic14 = null;
 def_int $int15 = enum(obj, int, enum_496, $namedobj1);
 if ($int15 ! -1) {
-	$graphic14, $width8, $int9, $int10, $int11, $int12, $colour13 = enum(int, graphic, enum_865, $int15), 30, 30, 3, 0, 0, ^black;
+	$graphic14, $width8, $int9, $int10, $int11, $int12, $colour13 = oc_param($namedobj1, param_1757), 30, 30, 3, 0, 0, ^black;
 } else if (%varbit4371 = 4) {
 	$graphic14 = oc_param($namedobj1, spell_graphic1_on);
 	if ($graphic14 ! null) {

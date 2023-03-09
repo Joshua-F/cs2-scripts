@@ -1,0 +1,24 @@
+// 3309
+[proc,script3309](obj $obj0)(int)
+def_int $int1 = 1;
+def_int $int2 = 1;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_boolean $boolean5 = false;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_obj $obj8 = oc_param($obj0, param_1760);
+$int1, $int2, $int3, $int4, $boolean5, $int6, $int7 = ~script3656;
+if (%varbit6577 = 1 & ~script4547($obj0, $int1) = 0) {
+	return(0);
+}
+if (%varbit6578 = 1 & ~script4561($obj0, $int6, $int2, $boolean5, $int3, $int4, $int7) = 0) {
+	return(0);
+}
+if (%varbit6576 = 1 & oc_param($obj0, param_1758) = 1) {
+	return(0);
+}
+if ($obj8 ! null & %varbit6574 = 1 & (%varbit6575 = 1 | oc_param($obj8, param_1759) = oc_param($obj0, param_1759)) & ~script4547($obj8, $int1) = 1 & ~script4561($obj8, $int6, $int2, $boolean5, $int3, $int4, $int7) = 1) {
+	return(0);
+}
+return(1);

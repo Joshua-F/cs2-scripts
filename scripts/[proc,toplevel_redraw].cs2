@@ -72,6 +72,17 @@ if ($component9 ! null & $component7 ! null) {
 			if_setgraphic("sideicons_interface,38", $component7);
 	}
 }
+$component9 = enum(int, component, enum_1138, 5);
+$component9 = enum(component, component, $enum1, $component9);
+if ($component9 ! null) {
+	if (~on_mobile = true) {
+		if_setop(2, "", $component9);
+	} else if (%varbit6579 = 1) {
+		if_setop(2, "Enable prayer filtering", $component9);
+	} else {
+		if_setop(2, "Disable prayer filtering", $component9);
+	}
+}
 $component7 = enum(int, component, enum_1139, 6);
 $component7 = enum(component, component, $enum1, $component7);
 if ($component7 ! null) {

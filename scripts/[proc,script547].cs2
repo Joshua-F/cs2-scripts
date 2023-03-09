@@ -1,0 +1,57 @@
+// 547
+[proc,script547](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, string $string0, string $string1)
+def_int $intarray0(calc(28 + 1));
+def_int $int9 = 0;
+def_component $component10 = null;
+def_int $int11 = 0;
+def_obj $obj12 = null;
+~script3154($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $string0, $string1);
+while ($int11 <= 28) {
+	$obj12 = enum(int, obj, enum_4956, $int11);
+	$component10 = oc_param($obj12, param_1751);
+	if ($component10 ! null) {
+		$intarray0($int9) = $int11;
+		$int9 = calc($int9 + 1);
+		cc_deleteall($component10);
+		cc_create($component10, ^iftype_graphic, 0);
+		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setgraphic("prayerglow");
+		.cc_create($component10, ^iftype_graphic, 1);
+		.cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		~prayer_updatebutton(false, $obj12, $component10, $component2, $component8);
+	}
+	$int11 = calc($int11 + 1);
+}
+if ($int9 > 0) {
+	~prayer_quicksort(intarray0, 0, calc($int9 - 1));
+}
+def_int $width13 = if_getwidth(oc_param($obj12, param_1751));
+def_int $int14 = calc((if_getwidth($component2) - 5 * $width13) / 4 + $width13);
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+if ($boolean0 = false & %varbit6579 = 1) {
+	while ($int16 < $int9) {
+		$obj12 = enum(int, obj, enum_4956, $intarray0($int16));
+		$int15 = calc($int16 / 5 * $int14);
+		if_setposition(calc($int16 % 5 * $int14), $int15, ^setpos_abs_left, ^setpos_abs_top, oc_param($obj12, param_1751));
+		if_sethide(false, oc_param($obj12, param_1751));
+		$int16 = calc($int16 + 1);
+	}
+} else {
+	while ($int16 < $int9) {
+		$obj12 = enum(int, obj, enum_4956, $intarray0($int16));
+		if (~script3309($obj12) = 1) {
+			if_sethide(false, oc_param($obj12, param_1751));
+			$int15 = calc($int17 / 5 * $int14);
+			if_setposition(calc($int17 % 5 * $int14), $int15, ^setpos_abs_left, ^setpos_abs_top, oc_param($obj12, param_1751));
+			$int17 = calc($int17 + 1);
+		} else {
+			if_sethide(true, oc_param($obj12, param_1751));
+		}
+		$int16 = calc($int16 + 1);
+	}
+}
+if_setsize(0, calc(4 + $int15 + 34 + 4), ^setsize_minus, ^setsize_abs, $component4);

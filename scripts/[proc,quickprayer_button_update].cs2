@@ -1,7 +1,7 @@
 // 471
-[proc,quickprayer_button_update](int $int0)
-cc_setopbase("<col=ff9040><enum(int, string, enum_860, $int0)></col>");
-if (testbit(%varbit4102, $int0) = ^true) {
+[proc,quickprayer_button_update](obj $obj0)
+cc_setopbase("<col=ff9040><oc_param($obj0, param_1752)></col>");
+if (testbit(%varbit4102, oc_param($obj0, param_630)) = ^true) {
 	.cc_setgraphic("miscgraphics,11");
 } else {
 	.cc_setgraphic("miscgraphics,10");

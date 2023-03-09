@@ -1,21 +1,9 @@
 // 1934
-[proc,script1934]()(int, int, int, int, boolean, int, int)
-def_int $int0 = 1;
-def_int $int1 = 1;
-def_int $int2 = 0;
-def_int $int3 = 0;
-def_boolean $boolean4 = false;
-def_int $int5 = 0;
-def_int $int6 = 0;
-if (~instance_check(coord) = 1) {
-	$int0, $int2, $int3, $boolean4, $int5, $int6 = 99, 1, 1, true, 1, 1;
-	switch_int (%varbit13005) {
-		case default :
-			$int1 = 75;
-		case 1 :
-			$int1 = 45;
-		case 2 :
-			$int1 = 1;
-	}
+[proc,script1934]()(int)
+def_int $int0 = stat(magic);
+if (~script6931(6) = 1) {
+	$int0 = calc($int0 * 2);
+} else if (~script6931(5) = 1) {
+	$int0 = scale(150, 100, $int0);
 }
-return($int0, $int1, $int2, $int3, $boolean4, $int5, $int6);
+return($int0);

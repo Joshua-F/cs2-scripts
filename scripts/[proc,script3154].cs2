@@ -1,0 +1,41 @@
+// 3154
+[proc,script3154](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, string $string0, string $string1)
+def_boolean $boolean8 = ~on_mobile;
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setgraphic("options_icons_small,2");
+.cc_create($component0, ^iftype_text, 1);
+.cc_setsize(24, 0, ^setsize_minus, ^setsize_minus);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+.cc_setcolour(0xff981f);
+.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+.cc_settextshadow(true);
+.cc_settextfont(p12_full);
+~prayer_levelupdate;
+if_setonstattransmit("prayer_levelupdate(event_com, .cc_getid){prayer}", $component0);
+def_int $int9 = 0;
+def_int $int10 = calc(24 + parawidth("99 / 99", 190, p12_full));
+if_setsize($int10, 0, ^setsize_abs, ^setsize_minus, $component0);
+if ($boolean8 = true) {
+	$int9 = calc(~max(parawidth($string0, 190, p11_full), parawidth($string1, 190, p11_full)) + 14);
+	if_setsize($int9, 18, ^setsize_abs, ^setsize_abs, $component2);
+	if_setsize($int9, 18, ^setsize_abs, ^setsize_abs, $component6);
+	$int9 = calc((190 - $int9 * 2 - $int10) / 4);
+	if_setposition(calc($int9 / 2), 0, ^setpos_abs_left, ^setpos_abs_centre, $component2);
+	if_setposition(calc($int9 / 2), 0, ^setpos_abs_right, ^setpos_abs_centre, $component6);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
+	if_sethide(false, $component6);
+} else if (%varbit6579 = 1) {
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
+	if_sethide(true, $component6);
+	~script3156(null, $boolean8, $component2, $component6, $component1, $component3, $component4, $component5, $component7, $string0, $string1);
+} else {
+	$int9 = calc(parawidth($string1, 190, p11_full) + 14);
+	if_setsize($int9, 18, ^setsize_abs, ^setsize_abs, $component6);
+	$int9 = calc((190 - $int9 - $int10) / 3);
+	if_setposition($int9, 0, ^setpos_abs_left, ^setpos_abs_centre, $component0);
+	if_setposition($int9, 0, ^setpos_abs_right, ^setpos_abs_centre, $component6);
+	if_sethide(false, $component6);
+}

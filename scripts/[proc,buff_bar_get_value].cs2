@@ -175,7 +175,7 @@ switch_struct ($struct0) {
 		}
 	case buff_resurrection_3128 :
 		if (%varcint524 > 0) {
-			return(~script5940(%varcint524, calc(stat(magic) - 3)));
+			return(~script5940(%varcint524, calc(%varcint1147 - 3)));
 		}
 	case buff_resurrection_cooldown_3127 :
 		if (%varcint523 > 0) {
