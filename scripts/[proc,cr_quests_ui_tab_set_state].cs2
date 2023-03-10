@@ -1,0 +1,43 @@
+// 6364
+[proc,cr_quests_ui_tab_set_state](int $int0, int $int1, component $component2, int $int3, component $component4)
+def_int $colour5 = 0xff981f;
+def_graphic $graphic6 = "graphic_2564";
+def_graphic $graphic7 = "graphic_2565";
+if ($int0 = 1) {
+	$colour5 = 0xffa82f;
+} else if ($int0 = 0) {
+	$graphic6, $graphic7 = "graphic_2566", "graphic_2567";
+} else if ($int0 = 2) {
+	$graphic6, $graphic7 = "graphic_2568", "graphic_2569";
+}
+if (cc_find($component2, $int1) = ^true) {
+	cc_setgraphic($graphic6);
+}
+if (cc_find($component2, calc($int1 + 1)) = ^true) {
+	cc_setgraphic($graphic7);
+}
+if (cc_find($component2, calc($int1 + 2)) = ^true) {
+	cc_setgraphic($graphic6);
+}
+if (cc_find($component2, calc($int1 + 4)) = ^true) {
+	cc_setcolour($colour5);
+}
+if (cc_find($component4, $int3) = ^true) {
+	if ($int0 = 1 | $int0 = 3) {
+		cc_clearops;
+		cc_setonmouserepeat(null);
+		cc_setonmouseleave(null);
+		cc_setontimer(null);
+		if ($int0 = 3) {
+			cc_setontimer("script6366(clientclock, $int1, $component2, $int3, $component4)");
+		}
+	} else {
+		cc_setontimer(null);
+		cc_setop(1, "View");
+		cc_setonop("cr_quests_ui_tab_click($int1, $component2, $int3, $component4)");
+		if (~on_mobile = false) {
+			cc_setonmouserepeat("cr_quests_ui_tab_set_state(2, $int1, $component2, $int3, $component4)");
+			cc_setonmouseleave("cr_quests_ui_tab_set_state(0, $int1, $component2, $int3, $component4)");
+		}
+	}
+}

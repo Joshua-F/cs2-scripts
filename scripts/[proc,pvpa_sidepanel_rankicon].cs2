@@ -13,36 +13,36 @@ if ($clanslot3 ! null & activeclansettings_getaffinedextrainfo($clanslot3, 20, 3
 			case 26 :
 				return(enum(int, graphic, enum_3798, -4));
 			case 6 :
-				return("graphic_4520");
+				return("pvpa_rankicons,6");
 			case 5 :
-				return("graphic_4519");
+				return("pvpa_rankicons,5");
 			case 4 :
-				return("graphic_4518");
+				return("pvpa_rankicons,4");
 			case 3 :
-				return("graphic_4517");
+				return("pvpa_rankicons,3");
 			case 2 :
-				return("graphic_1411");
+				return("pvpa_rankicons,2");
 			case 1 :
-				return("graphic_1410");
+				return("pvpa_rankicons,1");
 		}
 	}
-	return("graphic_4521");
+	return("pvpa_rankicons,7");
 }
 switch_int (calc($int1 - 100)) {
 	case 26 :
 		return(enum(int, graphic, enum_3798, -4));
 	case 6 :
-		return("graphic_4520");
+		return("pvpa_rankicons,6");
 	case 5 :
-		return("graphic_4519");
+		return("pvpa_rankicons,5");
 	case 4 :
-		return("graphic_4518");
+		return("pvpa_rankicons,4");
 	case 3 :
-		return("graphic_4517");
+		return("pvpa_rankicons,3");
 	case 2 :
-		return("graphic_1411");
+		return("pvpa_rankicons,2");
 	case 1 :
-		return("graphic_1410");
+		return("pvpa_rankicons,1");
 	case default :
-		return("graphic_1409");
+		return("pvpa_rankicons,0");
 }

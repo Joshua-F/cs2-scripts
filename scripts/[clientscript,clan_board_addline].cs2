@@ -1,6 +1,6 @@
 // 4357
 [clientscript,clan_board_addline](int $int0, string $string0, int $flags1)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:16)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:16)) = false) {
 	return;
 }
 def_component $component2 = enum(int, component, enum_3803, $int0);

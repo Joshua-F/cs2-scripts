@@ -49,48 +49,48 @@ if (testbit($int2, 13) = ^true & $boolean23 = true & $layer13 ! null) {
 	$int16 = ~min(viewport_getwidth, calc($width11 - $int33));
 	$int17 = viewport_getheight;
 	$component40 = null;
-	if ($component0 = interface_601:19) {
-		if (.cc_find(interface_601:2, 0) = ^true) {
+	if ($component0 = toplevel_osm:19) {
+		if (.cc_find(toplevel_osm:2, 0) = ^true) {
 			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 			.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
 		} else {
-			.cc_create(interface_601:2, ^iftype_text, 0);
+			.cc_create(toplevel_osm:2, ^iftype_text, 0);
 			.cc_setnoclickthrough(true);
 			.cc_setonclick("opsound(0, 0)");
 			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 			.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
 		}
-		if (.cc_find(interface_601:2, 1) = ^true) {
+		if (.cc_find(toplevel_osm:2, 1) = ^true) {
 			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 			.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
 		} else {
-			.cc_create(interface_601:2, ^iftype_text, 1);
+			.cc_create(toplevel_osm:2, ^iftype_text, 1);
 			.cc_setnoclickthrough(true);
 			.cc_setonclick("opsound(0, 0)");
 			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 			.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
 		}
-		if (.cc_find(interface_601:2, 2) = ^true) {
+		if (.cc_find(toplevel_osm:2, 2) = ^true) {
 			.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 			.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
 		} else {
-			.cc_create(interface_601:2, ^iftype_text, 2);
+			.cc_create(toplevel_osm:2, ^iftype_text, 2);
 			.cc_setnoclickthrough(true);
 			.cc_setonclick("opsound(0, 0)");
 			.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 			.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
 		}
-		if (.cc_find(interface_601:2, 3) = ^true) {
+		if (.cc_find(toplevel_osm:2, 3) = ^true) {
 			.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 			.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
 		} else {
-			.cc_create(interface_601:2, ^iftype_text, 3);
+			.cc_create(toplevel_osm:2, ^iftype_text, 3);
 			.cc_setnoclickthrough(true);
 			.cc_setonclick("opsound(0, 0)");
 			.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 			.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
 		}
-		$component40 = enum(component, component, enum_1745, interface_161:19);
+		$component40 = enum(component, component, enum_1745, toplevel_osrs_stretch:19);
 		if ($component40 ! null) {
 			~script3506($component40);
 		}
@@ -143,12 +143,12 @@ if ($boolean23 = true & $enum25 = enum_1745) {
 		$int31 = 0;
 	}
 	if ($int28 = 1 & (testbit($int2, 4) = ^false | ~chatbox_open = 1)) {
-		$int15 = calc($int15 + if_getwidth(enum(component, component, $enum25, interface_164:94)));
+		$int15 = calc($int15 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:94)));
 	}
 	if ($int29 = 1) {
-		$int37 = calc($int37 + if_getwidth(enum(component, component, $enum25, interface_164:94)));
+		$int37 = calc($int37 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:94)));
 	} else if ($boolean5 = true & ~script2519 = 1) {
-		$int38 = calc($int38 + if_getwidth(enum(component, component, $enum25, interface_164:94)));
+		$int38 = calc($int38 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:94)));
 	}
 	if ($int30 = 1) {
 		if (%varbit6254 = 0) {
@@ -188,7 +188,7 @@ if (testbit($int2, 16) = ^true & $component1 ! null) {
 	%varcint490 = $component1;
 	%varcint525 = $setposh27;
 }
-$component40 = enum(component, component, ~toplevel_getcomponents, interface_161:3);
+$component40 = enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:3);
 if (testbit($int2, 18) = ^true & getwindowmode = ^windowmode_fixed & %varbit12352 = 1 & $int24 = 1 & $component1 ! null & $component40 ! null & if_hassub($component40) = true) {
 	$int37 = calc(if_getheight(interface_90:44) + if_gety(interface_90:44));
 	$int37 = calc(if_getheight($component1) + if_gety($component1) - $int37);
@@ -200,7 +200,7 @@ if (testbit($int2, 18) = ^true & getwindowmode = ^windowmode_fixed & %varbit1235
 		$int21 = calc($int21 + 80 - $int37);
 	}
 }
-$component40 = enum(component, component, $enum25, interface_161:2);
+$component40 = enum(component, component, $enum25, toplevel_osrs_stretch:2);
 if (testbit($int2, 5) = ^true & testbit($int2, 16) = ^false & $component40 ! null & if_hassub($component40) = true & if_gethide(interface_303:5) = false) {
 	if ($int24 = 1 & %varbit12390 = 0 & %varbit12401 = 0) {
 		$flags41 = setbit($flags41, 5);
@@ -217,7 +217,7 @@ if (testbit($int2, 5) = ^true & testbit($int2, 16) = ^false & $component40 ! nul
 		$int14 = calc($int14 + if_getheight(interface_303:5) + 2);
 	}
 }
-$component40 = enum(component, component, $enum25, interface_161:12);
+$component40 = enum(component, component, $enum25, toplevel_osrs_stretch:12);
 if (testbit($int2, 6) = ^true & testbit($int2, 16) = ^false & $component40 ! null & if_hassub($component40) = true) {
 	$flags41 = setbit($flags41, 6);
 	if (~script4732(1) = 0) {
@@ -297,7 +297,7 @@ if (testbit($int2, 14) = ^true) {
 		$int21 = calc($int21 + $int37);
 	}
 }
-$component40 = enum(component, component, $enum25, interface_161:5);
+$component40 = enum(component, component, $enum25, toplevel_osrs_stretch:5);
 $int32 = 0;
 if (testbit($int2, 15) = ^true & $int24 = 1 & $component40 ! null & if_hassub($component40) = true & if_gethide(interface_708:2) = false & ~script6263 = 1) {
 	if ($boolean23 = false & $setposh27 = ^setpos_abs_left | $boolean23 = true & $setposh27 = ^setpos_abs_right) {
@@ -317,7 +317,7 @@ if (testbit($int2, 15) = ^true & $int24 = 1 & $component40 ! null & if_hassub($c
 	}
 }
 $int32 = 0;
-$component40 = enum(component, component, $enum25, interface_161:6);
+$component40 = enum(component, component, $enum25, toplevel_osrs_stretch:6);
 if (testbit($int2, 11) = ^true & $component40 ! null & if_hassub($component40) = true & if_gethide($component40) = false & $component1 ! null) {
 	$int37, $int38 = ~buff_bar_max_buffs;
 	if ($int37 > 0 & $int38 > 0) {

@@ -3,7 +3,7 @@
 ~steelborder(interface_789:2, enum(int, string, enum_885, $int0), 0);
 %varcint1110 = -1;
 db_find(dbtable_34:0, $int0);
-def_int $int2 = db_find_filter_with_count(dbtable_34:2, $namedobj1);
+def_int $int2 = db_find_refine_with_count(dbtable_34:2, $namedobj1);
 def_dbrow $dbrow3 = db_findnext;
 if ($dbrow3 = null) {
 	~debug_mes_error("Item Transmog", "Failed to find config for <oc_name($namedobj1)> in group <tostring($int0)>");

@@ -1,9 +1,9 @@
 // 2084
 [proc,deadman_finallocation](component $component0)
 def_string $text0 = "North of Falador";
-if (~script2237 = 4) {
+if (~private_event_world = 4) {
 	$text0 = "Falador Castle Courtyard";
-} else if (~script2237 = 1) {
+} else if (~private_event_world = 1) {
 	$text0 = "Fountain of Rune";
 } else if (%varbit1497 = 2) {
 	$text0 = "Demonic Ruins (Annakarl)";

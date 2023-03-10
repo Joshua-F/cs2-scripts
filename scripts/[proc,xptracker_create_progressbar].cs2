@@ -26,7 +26,7 @@ if (cc_find(interface_729:8, $comsubid0) = ^true) {
 	cc_setcolour(0x006600);
 	cc_setfill(true);
 	cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
-	~script5370($stat1);
+	~xptracker_update_progress_bar($stat1);
 }
 if (cc_find(interface_729:9, $comsubid0) = ^true) {
 	cc_setcolour(^white);

@@ -7,7 +7,7 @@ if (~wildwars_world = 1) {
 	} else {
 		$text0 = "<col=ffa71f>When the timer hits 0:00 you'll </col><col=ff0000>DIE</col><col=ffa71f> - Get to safety</col>";
 	}
-} else if (~script2237 = 1 | ~script2237 = 4) {
+} else if (~private_event_world = 1 | ~private_event_world = 4) {
 	if (%varbit4991 = 2) {
 		$text0 = "<col=ff812c>You'll </col><col=ff0000>DIE</col><col=ff812c> if you stay in this area - Get to safety</col>";
 	} else if (%varbit4991 = 1) {

@@ -8,8 +8,8 @@ if (~on_mobile = true) {
 	if_setonvartransmit(null, $component0);
 } else {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component1);
-	~script6347($component1);
-	if_setonvartransmit("script6346($component1){var3464, var1055, var1227}", $component0);
+	~pvpa_1v1_info_dodger($component1);
+	if_setonvartransmit("pvpa_1v1_info_dodger($component1){var3464, var1055, var1227}", $component0);
 }
 ~steelborder($component3, "1v1 Tournament", 11);
 if_setnoclickthrough(true, $component3);

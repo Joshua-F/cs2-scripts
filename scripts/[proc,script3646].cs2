@@ -6,13 +6,13 @@ if (~on_mobile = false & ~on_enhanced_desktop = 0) {
 $int0 = calc($int0 + 1);
 switch_int ($int0) {
 	case 1 :
-		setdeviceoption(^deviceoption_fps_limit, 15);
+		deviceoption_set(^deviceoption_fps_limit, 15);
 	case 2 :
-		setdeviceoption(^deviceoption_fps_limit, 20);
+		deviceoption_set(^deviceoption_fps_limit, 20);
 	case 3 :
-		setdeviceoption(^deviceoption_fps_limit, 30);
+		deviceoption_set(^deviceoption_fps_limit, 30);
 	case 4 :
-		setdeviceoption(^deviceoption_fps_limit, 60);
+		deviceoption_set(^deviceoption_fps_limit, 60);
 	case default :
-		setdeviceoption(^deviceoption_fps_limit, 0);
+		deviceoption_set(^deviceoption_fps_limit, 0);
 }

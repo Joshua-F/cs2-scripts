@@ -1,9 +1,0 @@
-// 7026
-[clientscript,script7026](int $int0, component $component1, int $comsubid2, int $int3, int $y4, int $int5, int $int6, int $int7)
-if (minimap_zoom = $int0) {
-	return;
-}
-~script7024(calc(minimap_zoom - 2), $int7, $int3, $component1, $comsubid2, $y4, $int5, $int6);
-if (cc_find($component1, $comsubid2) = ^true) {
-	cc_setontimer("script7026(minimap_zoom, $component1, $comsubid2, $int3, $y4, $int5, $int6, $int7)");
-}

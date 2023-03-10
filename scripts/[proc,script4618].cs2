@@ -1,12 +1,12 @@
 // 4618
 [proc,script4618]
-setgameoption(^gameoption_remove_roof, %varbit12378);
+gameoption_set(^gameoption_remove_roof, %varbit12378);
 if (~on_enhanced_any = 0) {
 	return;
 }
-setgameoption(^gameoption_haptic_on_op, calc(1 - %varbit13831));
-setgameoption(^gameoption_haptic_on_drag, calc(1 - %varbit13832));
-setgameoption(^gameoption_haptic_on_minimenu_open, calc(1 - %varbit13833));
-setgameoption(^gameoption_haptic_on_minimenu_entry_hover, %varbit13834);
-setgameoption(^gameoption_minimenu_long_press_time, %varbit13835);
+gameoption_set(^gameoption_haptic_on_op, calc(1 - %varbit13831));
+gameoption_set(^gameoption_haptic_on_drag, calc(1 - %varbit13832));
+gameoption_set(^gameoption_haptic_on_minimenu_open, calc(1 - %varbit13833));
+gameoption_set(^gameoption_haptic_on_minimenu_entry_hover, %varbit13834);
+gameoption_set(^gameoption_minimenu_long_press_time, %varbit13835);
 ~settings_chat_timestamps;

@@ -8,4 +8,4 @@ if (%varcint987 < 0) {
 }
 %varcint986 = $int1;
 %varcint987 = setbit_range_toint(%varcint987, $int0, 22, 31);
-~health_regen_timer(~script6050($int1), $int0, 0);
+~health_regen_timer(~health_regen_values($int1), $int0, 0);

@@ -7,11 +7,11 @@ def_int $int4 = 0;
 def_boolean $boolean5 = false;
 def_int $int6 = 0;
 def_int $int7 = 0;
-$int1, $int2, $int3, $int4, $boolean5, $int6, $int7 = ~script3656;
+$int1, $int2, $int3, $int4, $boolean5, $int6, $int7 = ~prayer_overrides;
 if (~script4547($obj0, $int1) = 0) {
 	return(0);
 }
-if (~script4561($obj0, $int6, $int2, $boolean5, $int3, $int4, $int7) = 0) {
+if (~prayer_isavailable_req($obj0, $int6, $int2, $boolean5, $int3, $int4, $int7) = 0) {
 	return(0);
 }
 return(1);

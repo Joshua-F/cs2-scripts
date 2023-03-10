@@ -20,7 +20,7 @@ if ($dbrow0 = dbrow_2297) {
 		if (cc_find(interface_711:3, $int4) = ^true & cc_getcolour = ^black) {
 			$dbrow5 = enum(int, dbrow, enum_4816, $int4);
 			$dbrow7 = ~cluehelper_clue_target($dbrow5);
-			$int1 = ~helper_generic_add_text(~script6648($dbrow7));
+			$int1 = ~helper_generic_add_text(~cluehelper_get_target_description_short($dbrow7));
 			$int8 = calc($int8 + 1);
 		}
 		$int4 = calc($int4 + 1);
@@ -33,7 +33,7 @@ if ($dbrow0 = dbrow_2297) {
 				if (cc_find(interface_711:3, $int4) = ^true & cc_getcolour = ^black) {
 					$dbrow5 = db_getfield(dbrow_684, dbtable_3:2, $int4);
 					$dbrow7 = ~cluehelper_clue_target($dbrow5);
-					$int1 = ~helper_generic_add_text(~script6648($dbrow7));
+					$int1 = ~helper_generic_add_text(~cluehelper_get_target_description_short($dbrow7));
 					$int8 = calc($int8 + 1);
 				}
 				$int4 = calc($int4 + 1);
@@ -44,7 +44,7 @@ if ($dbrow0 = dbrow_2297) {
 				if (cc_find(interface_711:3, $int4) = ^true & cc_getcolour = ^black) {
 					$dbrow5 = db_getfield(dbrow_684, dbtable_3:7, $int4);
 					$dbrow7 = ~cluehelper_clue_target($dbrow5);
-					$int1 = ~helper_generic_add_text(~script6648($dbrow7));
+					$int1 = ~helper_generic_add_text(~cluehelper_get_target_description_short($dbrow7));
 					$int8 = calc($int8 + 1);
 				}
 				$int4 = calc($int4 + 1);

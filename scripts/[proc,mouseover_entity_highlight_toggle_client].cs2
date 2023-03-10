@@ -1,0 +1,6 @@
+// 5352
+[proc,mouseover_entity_highlight_toggle_client]
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+%varbit13088 = calc(1 - %varbit13088);

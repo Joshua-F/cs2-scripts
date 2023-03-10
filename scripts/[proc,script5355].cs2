@@ -1,7 +1,7 @@
 // 5355
 [proc,script5355](enum $enum0)
-def_component $component1 = enum(component, component, $enum0, interface_161:33);
-$component1 = enum(component, component, $enum0, interface_161:34);
+def_component $component1 = enum(component, component, $enum0, toplevel_osrs_stretch:33);
+$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:34);
 def_int $int2 = -1;
 def_int $int3 = -1;
 if ($component1 ! null) {
@@ -13,11 +13,11 @@ if ($component1 ! null) {
 		} else {
 			$int3, $int2 = 0, 42;
 		}
-		$component1 = enum(component, component, $enum0, interface_161:34);
+		$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:34);
 		if ($component1 ! null) {
 			if_setsize($int2, 0, ^setsize_abs, ^setsize_minus, $component1);
 		}
-		$component1 = enum(component, component, $enum0, interface_161:33);
+		$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:33);
 		if (~on_mobile = true) {
 			~script1282;
 			$int2 = ~min(viewport_getwidth, calc(if_getwidth($component1) - scale(%varcint381, 16384, if_getwidth($component1))));
@@ -41,7 +41,7 @@ if ($component1 ! null) {
 		~script5356;
 	} else {
 		if_sethide(true, interface_728:0);
-		$component1 = enum(component, component, $enum0, interface_161:33);
+		$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:33);
 		if ($component1 ! null) {
 			if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component1);
 		}
@@ -51,7 +51,7 @@ if ($component1 ! null) {
 		}
 	}
 } else {
-	$component1 = enum(component, component, $enum0, interface_161:33);
+	$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:33);
 	if ($component1 ! null) {
 		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component1);
 	}

@@ -1,6 +1,6 @@
 // 4029
 [proc,quest_status_get](dbrow $dbrow0)(int)
-if (~script6152($dbrow0) = 0) {
+if (~quest_is_valid($dbrow0) = 0) {
 	return(1);
 }
 if (db_getfield($dbrow0, quest:autodisable, 0) = true) {

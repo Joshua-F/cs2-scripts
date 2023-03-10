@@ -5,6 +5,6 @@ if_setsize($int3, 16, ^setsize_abs, ^setsize_abs, $component6);
 def_int $int7 = calc($int3 - 16);
 ~script4563($component0, $comsubid1, ~min($int7, $mousex2), $int3, $y4, $int5);
 if (~toplevel_getcomponents = enum_1745) {
-	~toplevel_resize(interface_601:0, enum_1745);
+	~toplevel_resize(toplevel_osm:0, enum_1745);
 	~script5355(~toplevel_getcomponents);
 }

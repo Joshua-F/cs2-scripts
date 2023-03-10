@@ -1,0 +1,8 @@
+// 6965
+[proc,combination_lock_offset_index](int $int0, dbrow $dbrow1, int $int2)(int)
+def_int $int3 = db_getfieldcount($dbrow1, dbtable_36:0);
+def_int $int4 = calc(($int0 + $int2) % $int3);
+if ($int4 < 0) {
+	$int4 = calc($int4 + $int3);
+}
+return($int4);

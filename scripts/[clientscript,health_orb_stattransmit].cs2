@@ -1,0 +1,7 @@
+// 6055
+[clientscript,health_orb_stattransmit]
+if (stat(hitpoints) = stat_base(hitpoints)) {
+	~script6057;
+	return;
+}
+~script6049(%var3079);

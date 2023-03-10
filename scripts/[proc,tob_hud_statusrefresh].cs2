@@ -32,8 +32,8 @@ if ($int1 ! 0 & cc_find($component2, 0) = ^true) {
 		} else {
 			cc_setcolour(^white);
 			if ($int5 = 1) {
-				~script2300($component3);
-				if_setonstattransmit("script2299($component3){hitpoints}", $component2);
+				~tob_hud_statusmyself($component3);
+				if_setonstattransmit("tob_hud_statusmyself($component3){hitpoints}", $component2);
 			} else {
 				if_setsize(26, ~min(26, calc($int1 - 1)), ^setsize_abs, ^setsize_abs, $component3);
 				if_setonstattransmit(null, $component2);

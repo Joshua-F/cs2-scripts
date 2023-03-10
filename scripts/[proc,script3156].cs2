@@ -48,7 +48,7 @@ if ($component0 = $component2) {
 		cc_setcolour(^white);
 		~script3652(0);
 		cc_setop(1, "Change");
-		cc_setonop("script3157(event_opindex, event_com, event_comsubid)");
+		cc_setonop("prayer_filtertoggle_op(event_opindex, event_com, event_comsubid)");
 		$int10 = calc($int10 + 1);
 	}
 	$int10, $int13 = ~script3158(0, "Show lower tiers of tiered prayers", $component7, $int10, $int13);
@@ -83,8 +83,8 @@ if ($component0 = $component2) {
 	}
 }
 if ($boolean1 = true & ($component0 = null | $component0 = $component2)) {
-	~script3654($component0, $component2, $string0);
+	~button_setup($component0, $component2, $string0);
 }
 if ($component0 = null | $component0 = $component3) {
-	~script3654($component0, $component3, $string1);
+	~button_setup($component0, $component3, $string1);
 }

@@ -1,7 +1,0 @@
-// 6719
-[proc,script6719]
-def_newvar $newvar0 = _7200(3, 1, calc(36 * 2), calc(32 * 2), 1);
-if (_202($newvar0) = ^true) {
-	cc_setonvartransmit("script6720($newvar0, %var3546, npc_uid, _6752, %varbit14189){var3546, var3543}");
-}
-~loadnpc_cluehelper_generic($newvar0, %var3546, npc_uid, _6752);

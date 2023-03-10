@@ -6,11 +6,11 @@ if (%varbit4611 = 1) {
 	if_setonkey("toplevel_keypress(event_key, $enum1, true)", $component0);
 }
 ~toplevel_resize($component0, $enum1);
-def_component $component2 = enum(component, component, $enum1, interface_161:93);
+def_component $component2 = enum(component, component, $enum1, toplevel_osrs_stretch:93);
 if ($component2 ! null) {
 	if_sethide(~int_to_bool(%varbit542), $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:30);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:30);
 if ($component2 ! null) {
 	if (%varbit542 = 1 | %varbit4606 ! 0) {
 		if_sethide(true, $component2);
@@ -18,7 +18,7 @@ if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}
 }
-def_component $component3 = enum(component, component, $enum1, interface_161:1);
+def_component $component3 = enum(component, component, $enum1, toplevel_osrs_stretch:1);
 def_int $int4 = 0;
 def_int $int5 = 0;
 $int5, $int4 = viewport_getfov;
@@ -129,7 +129,7 @@ if ($component7 ! null) {
 	if_setgraphic(enum(int, graphic, enum_3841, %varbit13071), $component7);
 	if_setonvartransmit("script5303($component7, $component9){var499}", $component7);
 }
-$component7 = enum(component, component, $enum1, interface_161:37);
+$component7 = enum(component, component, $enum1, toplevel_osrs_stretch:37);
 if ($component7 ! null) {
 	if (%varbit4609 = 1) {
 		if_setgraphic("tradebacking_dark", $component7);
@@ -139,7 +139,7 @@ if ($component7 ! null) {
 		if_settrans(150, $component7);
 	}
 }
-$component7 = enum(component, component, $enum1, interface_161:19);
+$component7 = enum(component, component, $enum1, toplevel_osrs_stretch:19);
 if ($component7 ! null) {
 	if ($enum1 = enum_1745) {
 		~script3506($component7);
@@ -160,20 +160,20 @@ if ($component7 ! null) {
 		if_sethide(true, $component7);
 	}
 }
-$component2 = enum(component, component, $enum1, interface_161:6);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:6);
 if ((%varbit9528 = 0 | %varbit12383 = 0) & %varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
 %varcint384 = clientclock;
-$component2 = enum(component, component, $enum1, interface_161:91);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:91);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:94);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:94);
 if ($enum1 = enum_1745) {
 	if (%varbit542 = 1 & %varbit4606 = 3) {
 		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
@@ -200,26 +200,26 @@ if ($enum1 ! enum_1129) {
 }
 if ($enum1 = enum_1745) {
 	if (%varbit542 = 0) {
-		if_sethide(false, interface_601:24);
-		if_sethide(false, interface_601:25);
+		if_sethide(false, toplevel_osm:24);
+		if_sethide(false, toplevel_osm:25);
 	} else {
-		if_sethide(true, interface_601:24);
-		if_sethide(true, interface_601:25);
+		if_sethide(true, toplevel_osm:24);
+		if_sethide(true, toplevel_osm:25);
 	}
 }
-$component2 = enum(component, component, $enum1, interface_161:5);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:5);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:4);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:4);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:2);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:2);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
@@ -241,7 +241,7 @@ if (%varbit5599 = 1) {
 	setfolloweropslowpriority(false);
 }
 ~mouseover_ops;
-$component2 = enum(component, component, $enum1, interface_161:36);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:36);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {

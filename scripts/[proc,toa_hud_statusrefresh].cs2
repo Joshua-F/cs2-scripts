@@ -37,7 +37,7 @@ if ($int1 ! 0 & cc_find($component3, 0) = ^true) {
 		} else {
 			cc_setcolour(^white);
 			if ($int6 = 1) {
-				~script6584($component4);
+				~toa_hud_statusmyself($component4);
 			} else {
 				if_setsize(26, ~min(26, calc($int1 - 1)), ^setsize_abs, ^setsize_abs, $component4);
 			}

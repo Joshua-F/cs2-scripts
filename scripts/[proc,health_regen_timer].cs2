@@ -8,8 +8,8 @@ if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_g
 	$component4 = interface_311:17;
 }
 cc_deleteall($component4);
-if_setonstattransmit("script6055{hitpoints}", $component4);
-if_setonvartransmit("script6052($component4, %varbit12346){var2856, var83}", $component4);
+if_setonstattransmit("health_orb_stattransmit{hitpoints}", $component4);
+if_setonvartransmit("health_orb_vartransmit($component4, %varbit12346){var2856, var83}", $component4);
 if (%varbit4084 = 1) {
 	return;
 }

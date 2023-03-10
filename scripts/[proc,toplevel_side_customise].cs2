@@ -6,13 +6,13 @@ if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 	if (%varcint171 ! -1) {
 		$component1 = enum(int, component, enum_1137, %varcint171);
 	}
-	$component2 = enum(component, component, $enum0, interface_164:94);
-	if ((if_hassub(enum(component, component, $enum0, interface_161:73)) = true | $component1 ! null & if_hassub(enum(component, component, $enum0, $component1)) = true) & ~script4138 = 0) {
+	$component2 = enum(component, component, $enum0, toplevel_pre_eoc:94);
+	if ((if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:73)) = true | $component1 ! null & if_hassub(enum(component, component, $enum0, $component1)) = true) & ~script4138 = 0) {
 		if_sethide(false, $component2);
 		if ($enum0 = enum_1745) {
 			switch_component ($component1) {
-				case interface_161:75, interface_161:80, interface_161:81, interface_161:87, interface_161:83, interface_161:84, interface_161:82 :
-					if (if_hassub(enum(component, component, $enum0, interface_161:73)) = true & if_hassub(enum(component, component, $enum0, interface_161:16)) = true) {
+				case toplevel_osrs_stretch:75, toplevel_osrs_stretch:80, toplevel_osrs_stretch:81, toplevel_osrs_stretch:87, toplevel_osrs_stretch:83, toplevel_osrs_stretch:84, toplevel_osrs_stretch:82 :
+					if (if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:73)) = true & if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:16)) = true) {
 						if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
 					} else {
 						if_setposition(37, 87, ^setpos_abs_left, ^setpos_abs_centre, $component2);
@@ -27,11 +27,11 @@ if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 	~script2526;
 	%varcint384 = clientclock;
 	~script2386;
-	if (if_gethide(enum(component, component, $enum0, interface_161:57)) = true) {
-		if_sethide(true, enum(component, component, $enum0, interface_161:45));
-		if_sethide(true, enum(component, component, $enum0, interface_161:52));
+	if (if_gethide(enum(component, component, $enum0, toplevel_osrs_stretch:57)) = true) {
+		if_sethide(true, enum(component, component, $enum0, toplevel_osrs_stretch:45));
+		if_sethide(true, enum(component, component, $enum0, toplevel_osrs_stretch:52));
 	} else {
-		if_sethide(false, enum(component, component, $enum0, interface_161:45));
-		if_sethide(false, enum(component, component, $enum0, interface_161:52));
+		if_sethide(false, enum(component, component, $enum0, toplevel_osrs_stretch:45));
+		if_sethide(false, enum(component, component, $enum0, toplevel_osrs_stretch:52));
 	}
 }

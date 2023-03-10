@@ -12,6 +12,6 @@ if ($int2 ! db_getfield($dbrow1, quest:37, 0)) {
 if ($int3 ! db_getfield($dbrow1, quest:38, 0)) {
 	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite indirect differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:38, 0))></col>  Actual: <col=0059de><tostring($int3)></col>");
 }
-if ($int0 = db_findall_with_count(quest)) {
+if ($int0 = db_listall_with_count(quest)) {
 	~debug_mes_info("Quest", "All quests verified, check above for any warnings.");
 }

@@ -1,6 +1,6 @@
 // 6682
 [proc,script6682](enum $enum0)
-def_component $component1 = enum(component, component, $enum0, interface_161:35);
+def_component $component1 = enum(component, component, $enum0, toplevel_osrs_stretch:35);
 def_int $int2 = -1;
 cc_deleteall($component1);
 if (~on_enhanced_any = 0) {
@@ -12,7 +12,7 @@ cc_create($component1, ^iftype_rectangle, 0);
 cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
-cc_setonstattransmit("script6853($component1, stat(hunter), stat(herblore)){hunter, herblore}");
+cc_setonstattransmit("herbiboar_helper_stattransmit($component1, stat(hunter), stat(herblore)){hunter, herblore}");
 cc_create($component1, ^iftype_rectangle, 1);
 cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);

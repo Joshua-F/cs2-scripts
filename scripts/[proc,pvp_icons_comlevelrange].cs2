@@ -12,7 +12,7 @@ if (~deadman_world ! 0) {
 		if_settext("", interface_90:49);
 		return;
 	}
-	if (~deadman_world = 3 & ~script2237 = 0) {
+	if (~deadman_world = 3 & ~private_event_world = 0) {
 		$int2, $int3 = ~script5227;
 	}
 } else {

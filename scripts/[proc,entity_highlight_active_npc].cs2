@@ -2,10 +2,10 @@
 [proc,entity_highlight_active_npc](int $int0)
 switch_int ($int0) {
 	case 5 :
-		%varcint553, %varcint554 = npc_uid, _6752;
+		%varcint553, %varcint554 = npc_uid, npc_spawncycle;
 	case 4 :
-		%varcint973, %varcint974 = npc_uid, _6752;
+		%varcint973, %varcint974 = npc_uid, npc_spawncycle;
 	case default :
 		return;
 }
-highlight_npc_on(npc_uid, _6752, $int0);
+highlight_npc_on(npc_uid, npc_spawncycle, $int0);

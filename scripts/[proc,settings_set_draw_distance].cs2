@@ -3,4 +3,4 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-setdeviceoption(^deviceoption_draw_distance, $int0);
+deviceoption_set(^deviceoption_draw_distance, $int0);

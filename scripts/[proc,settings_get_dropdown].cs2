@@ -34,7 +34,7 @@ switch_int ($setting0) {
 	case 150 :
 		return(%varbit12375);
 	case ^setting_interface_scaling_mode :
-		return(getdeviceoption(^deviceoption_ui_quality));
+		return(deviceoption_get(^deviceoption_ui_quality));
 	case ^setting_ore_respawn_timer :
 		return(%varbit13085);
 	case ^setting_woodcutting_respawn_timer :

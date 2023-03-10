@@ -3,8 +3,8 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-def_int $int0 = calc(1 - getdeviceoption(^deviceoption_full_screen));
-setdeviceoption(^deviceoption_full_screen, $int0);
+def_int $int0 = calc(1 - deviceoption_get(^deviceoption_full_screen));
+deviceoption_set(^deviceoption_full_screen, $int0);
 if ($int0 = 1 & getwindowmode = ^windowmode_fixed & %varbit11864 = 0) {
 	mes("You might like to enable interface scaling, or change your client layout, to get more out of full screen mode.");
 }

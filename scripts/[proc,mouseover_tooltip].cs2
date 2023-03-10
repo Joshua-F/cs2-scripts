@@ -109,8 +109,8 @@ if ($boolean26 = true & %varcint1016 >= 0 & %varcint1017 >= 0) {
 	$int25 = %varcint1017;
 }
 if ($enum4 = enum_1745) {
-	$int24 = calc($int24 - if_getx(interface_601:19));
-	$int25 = calc($int25 - if_gety(interface_601:19));
+	$int24 = calc($int24 - if_getx(toplevel_osm:19));
+	$int25 = calc($int25 - if_gety(toplevel_osm:19));
 }
 if ($boolean26 = true) {
 	$int24 = ~max(calc($int24 - 0 - $int23), 0);

@@ -1,6 +1,6 @@
 // 6222
 [clientscript,pvpa_board_addline](int $int0, int $int1, string $string0)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:16)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:16)) = false) {
 	return;
 }
 def_component $component2 = enum(int, component, enum_4403, $int0);

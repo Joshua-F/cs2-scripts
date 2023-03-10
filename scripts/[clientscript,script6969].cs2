@@ -7,11 +7,11 @@ if_setonmouseleave(null, $component0);
 if_setonop(null, $component0);
 if_clearops($component0);
 def_int $int1 = 0;
-def_int $int2 = ~script6966($int1);
+def_int $int2 = ~combination_lock_getvar($int1);
 $int1 = calc($int1 + 1);
 while ($int1 < 6) {
 	$int2 = calc($int2 * 10);
-	$int2 = calc($int2 + ~script6966($int1));
+	$int2 = calc($int2 + ~combination_lock_getvar($int1));
 	$int1 = calc($int1 + 1);
 }
 resume_countdialog(tostring($int2));

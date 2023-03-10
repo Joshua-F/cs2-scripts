@@ -3,5 +3,5 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-setdeviceoption(^deviceoption_window_width, $int0);
-setdeviceoption(11, $int1);
+deviceoption_set(^deviceoption_window_width, $int0);
+deviceoption_set(11, $int1);

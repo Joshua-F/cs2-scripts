@@ -3,4 +3,4 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-setdeviceoption(^deviceoption_window_topmost, $int0);
+deviceoption_set(^deviceoption_window_topmost, $int0);

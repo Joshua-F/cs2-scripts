@@ -1,0 +1,11 @@
+// 6648
+[proc,cluehelper_get_target_description_short](dbrow $dbrow0)(string)
+def_string $string0 = "null";
+switch_dbtable (db_getrowtable($dbrow0)) {
+	case dbtable_18 :
+		$string0 = db_getfield($dbrow0, dbtable_18:2, 0);
+}
+if (string_length($string0) = 0) {
+	$string0 = ~cluehelper_get_target_description($dbrow0);
+}
+return($string0);

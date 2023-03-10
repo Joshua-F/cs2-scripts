@@ -2,13 +2,13 @@
 [proc,script1506]
 def_int $int0 = mobile_batterylevel;
 if ($int0 > 75) {
-	cc_setgraphic("graphic_1640");
+	cc_setgraphic("osm_status_icons,0");
 } else if ($int0 > 50) {
-	cc_setgraphic("graphic_1641");
+	cc_setgraphic("osm_status_icons,1");
 } else if ($int0 > 25) {
-	cc_setgraphic("graphic_1642");
+	cc_setgraphic("osm_status_icons,2");
 } else {
-	cc_setgraphic("graphic_1643");
+	cc_setgraphic("osm_status_icons,3");
 }
 if (mobile_batterycharging = true) {
 	.cc_sethide(false);

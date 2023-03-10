@@ -1,0 +1,11 @@
+// 6052
+[clientscript,health_orb_vartransmit](component $component0, int $int1)
+if (%varbit12346 = $int1) {
+	return;
+}
+if (%varbit12346 = 1) {
+	~script6057;
+} else {
+	~script6049(%var3079);
+}
+if_setonvartransmit("health_orb_vartransmit($component0, %varbit12346){var2856, var83}", $component0);

@@ -1,0 +1,66 @@
+// 6115
+[proc,giants_foundry_hud_update_pointers]
+def_component $component0 = interface_754:7;
+def_component $component1 = interface_754:74;
+def_component $component2 = interface_754:78;
+def_component $component3 = interface_754:77;
+def_component $component4 = interface_754:76;
+def_component $component5 = interface_754:6;
+def_component $component6 = interface_754:46;
+def_component $component7 = interface_754:45;
+def_component $component8 = interface_754:31;
+def_component $component9 = interface_754:61;
+def_component $component10 = interface_754:71;
+def_int $int11 = calc(if_getwidth($component5) - 2);
+def_int $int12 = 0;
+$int12 = scale(%varbit13939, 205, $int11);
+if_setposition($int12, -1, ^setpos_abs_left, ^setpos_abs_bottom, $component0);
+if_setsize(calc($int12 + 1), 2, ^setsize_abs, ^setsize_minus, $component6);
+$int12 = scale(%varbit13950, 205, $int11);
+if_setsize(calc($int12 + 1), 2, ^setsize_abs, ^setsize_minus, $component7);
+if (%varbit13939 = 0) {
+	if_sethide(true, $component6);
+} else {
+	if_sethide(false, $component6);
+}
+$int12 = scale(%varbit13948, 1000, $int11);
+if_setposition($int12, -1, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
+$int12 = scale(%varbit13949, 1000, $int11);
+if_setposition($int12, -1, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
+def_int $int13 = ~giants_foundry_section_count;
+def_int $int14 = ~script6120;
+if (%varbit13949 >= 1000) {
+	if_sethide(true, $component4);
+	if_sethide(false, $component3);
+} else {
+	if_sethide(false, $component4);
+	if_sethide(true, $component3);
+}
+def_int $int15 = calc($int11 / $int13);
+def_int $int16 = calc($int11 % $int15);
+$int12 = calc($int15 * $int14 + 7 + ~min($int16, $int14));
+if ($int14 < $int16) {
+	$int15 = calc($int15 + 1);
+}
+if_setposition($int12, 1, ^setpos_abs_left, ^setpos_abs_top, $component4);
+if_setsize($int15, 2, ^setsize_abs, ^setsize_minus, $component4);
+def_int $int17 = 0;
+def_int $int18 = 0;
+$int17, $int18 = ~script6121(0);
+if (%varbit13948 >= $int17 & %varbit13948 <= calc($int17 + $int18)) {
+	if_sethide(false, $component8);
+} else {
+	if_sethide(true, $component8);
+}
+$int17, $int18 = ~script6121(1);
+if (%varbit13948 >= $int17 & %varbit13948 <= calc($int17 + $int18)) {
+	if_sethide(false, $component9);
+} else {
+	if_sethide(true, $component9);
+}
+$int17, $int18 = ~script6121(2);
+if (%varbit13948 >= $int17 & %varbit13948 <= calc($int17 + $int18)) {
+	if_sethide(false, $component10);
+} else {
+	if_sethide(true, $component10);
+}

@@ -1,7 +1,7 @@
 // 6284
 [proc,pvpa_applicants_setsort]
-~script6285(interface_760:9, "Player name", 1, 2);
-~script6285(interface_760:10, "Rank", 0, 3);
+~pvpa_applicants_sortbutton_draw(interface_760:9, "Player name", 1, 2);
+~pvpa_applicants_sortbutton_draw(interface_760:10, "Rank", 0, 3);
 def_int $countarray0(enum_getoutputcount(enum_4411));
 def_int $int0 = 0;
 def_int $count1 = 0;

@@ -216,7 +216,7 @@ switch_int ($setting0) {
 	case ^setting_always_on_top :
 		return(%varbit12372);
 	case 241 :
-		return(getdeviceoption(^deviceoption_full_screen));
+		return(deviceoption_get(^deviceoption_full_screen));
 	case 148 :
 		return(%varbit12373);
 	case 149 :

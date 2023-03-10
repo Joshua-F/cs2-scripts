@@ -41,7 +41,7 @@ while ($int3 < $int1) {
 		.cc_create(interface_216:3, ^iftype_graphic, $int11);
 		.cc_setposition(calc($int8 + $int9 - 14), calc($int6 + $int10 - 14), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
-		.cc_setgraphic("graphic_4555");
+		.cc_setgraphic("worldmap_marker_mini,2");
 		$int11 = calc($int11 + 1);
 		if ($int1 > 1) {
 			.cc_create(interface_216:3, ^iftype_text, $int11);

@@ -4,4 +4,4 @@ if (~on_enhanced_any = 0) {
 	return;
 }
 %varcint987 = setbit_range_toint(%varcint987, 0, 22, 31);
-~health_regen_timer(~script6050(%var3079), 0, 0);
+~health_regen_timer(~health_regen_values(%var3079), 0, 0);

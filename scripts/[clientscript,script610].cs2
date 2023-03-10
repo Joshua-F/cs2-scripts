@@ -1,6 +1,6 @@
 // 610
 [clientscript,script610](string $string0, string $string1, component $component0)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:16)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:16)) = false) {
 	return;
 }
 ~poll_addlink($string0, $string1, $component0, if_getwidth($component0), 0, p12_full, p12_full, 12, 5);

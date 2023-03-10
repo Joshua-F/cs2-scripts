@@ -1,0 +1,43 @@
+// 2520
+[proc,settings_custom_dependency](struct $struct0)(int)
+def_int $setting1 = struct_param($struct0, param_1077);
+switch_int ($setting1) {
+	case ^setting_opaque_public_chat_colour, ^setting_opaque_private_chat_colour, ^setting_opaque_auto_chat_colour, ^setting_opaque_broadcast_colour, ^setting_opaque_friend_chat_colour, ^setting_opaque_clan_chat_colour, ^setting_opaque_incoming_trade_request_colour, ^setting_opaque_incoming_challenge_request, ^setting_opaque_guest_clan_chat_colour, 107, ^setting_opaque_clan_broadcasts_colour :
+		if (getwindowmode ! ^windowmode_fixed & %varbit4608 = 1) {
+			return(0);
+		}
+		return(1);
+	case ^setting_opaque_iron_group_chat_colour, ^setting_opaque_iron_group_broadcasts_colour :
+		if (~is_group_iron = 0) {
+			return(0);
+		}
+		if (getwindowmode ! ^windowmode_fixed & %varbit4608 = 1) {
+			return(0);
+		}
+		return(1);
+	case ^setting_transparent_iron_group_chat_colour, ^setting_transparent_iron_group_broadcasts_colour :
+		if (~is_group_iron = 0) {
+			return(0);
+		}
+		if (getwindowmode = ^windowmode_fixed | %varbit4608 = 0) {
+			return(0);
+		}
+		return(1);
+	case 206 :
+		if (~deadman_world ! 0) {
+			return(0);
+		}
+	case ^setting_popout_xptracker :
+		if (~on_enhanced_mobile = 1 & %varbit13981 = 1) {
+			return(1);
+		}
+		if (~on_enhanced_desktop = 1 & %varbit13982 = 0) {
+			return(1);
+		}
+		return(0);
+	case 296 :
+		if (%varbit4470 = 0) {
+			return(0);
+		}
+}
+return(1);

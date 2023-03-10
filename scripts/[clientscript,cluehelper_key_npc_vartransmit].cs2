@@ -5,7 +5,7 @@ if (%varbit14189 = $int5 & %varbit14184 = $int6 & %var3546 = $dbrow0) {
 }
 if (%var3546 ! $dbrow0) {
 	if (_202($newvar2) = ^true) {
-		cc_setonvartransmit("script6720($newvar2, %var3546, $npc_uid4, $int3, %varbit14189){var3546, var3543}");
+		cc_setonvartransmit("loadnpc_cluehelper_generic_transmit($newvar2, %var3546, $npc_uid4, $int3, %varbit14189){var3546, var3543}");
 	}
 	if (npc_finduid($npc_uid4) = true) {
 		~loadnpc_cluehelper_generic($newvar2, %var3546, $npc_uid4, $int3);

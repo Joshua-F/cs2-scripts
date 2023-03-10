@@ -33,7 +33,7 @@ if (cc_find(interface_239:5, $comsubid5) = ^true) {
 	.cc_create(interface_239:4, ^iftype_graphic, 1);
 	.cc_setposition(0, calc($int1 + cc_getheight / 2 - 7), ^setpos_abs_right, ^setpos_abs_top);
 	.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
-	.cc_setgraphic("graphic_4555");
+	.cc_setgraphic("worldmap_marker_mini,2");
 }
 def_int $int7 = 0;
 if ($int0 = 1) {
