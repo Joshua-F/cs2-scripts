@@ -1,17 +1,17 @@
 // 6531
-[clientscript,script6531](newvar $newvar0, npc_uid $npc_uid1, int $int2, int $int3, npc_uid $npc_uid4, dbrow $dbrow5, dbrow $dbrow6, int $int7)
+[clientscript,script6531](entityoverlay $entityoverlay0, npc_uid $npc_uid1, int $int2, int $int3, npc_uid $npc_uid4, dbrow $dbrow5, dbrow $dbrow6, int $int7)
 if (%varbit5190 = $int7 & %varbit14189 = $int3 & %var3548 = $npc_uid4 & %var3547 = $dbrow5 & %var3546 = $dbrow6) {
 	return;
 }
-if (_202($newvar0) = ^true) {
-	cc_setonvartransmit("script6531($newvar0, $npc_uid1, $int2, %varbit14189, %var3548, %var3547, %var3546, %varbit5190){var3543, var3546, var3548, var3547, var1353}");
+if (_202($entityoverlay0) = ^true) {
+	cc_setonvartransmit("script6531($entityoverlay0, $npc_uid1, $int2, %varbit14189, %var3548, %var3547, %var3546, %varbit5190){var3543, var3546, var3548, var3547, var1353}");
 }
 highlight_npc_off($npc_uid1, $int2, 9);
-_104($newvar0);
+_104($entityoverlay0);
 if (npc_finduid($npc_uid1) = true) {
 	if (%varbit5190 = 0) {
-		~script6533($newvar0, $npc_uid1, $int2);
+		~script6533($entityoverlay0, $npc_uid1, $int2);
 	} else {
-		~loadnpc_cluehelper_uri_overlay($newvar0, $npc_uid1, $int2);
+		~loadnpc_cluehelper_uri_overlay($entityoverlay0, $npc_uid1, $int2);
 	}
 }

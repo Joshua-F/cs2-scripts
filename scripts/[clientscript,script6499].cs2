@@ -1,5 +1,5 @@
 // 6499
-[clientscript,script6499](newvar $newvar0, dbrow $dbrow1, loc $loc2, obj $obj3, coord $coord4, obj $obj5, int $int6, int $int7, int $int8)
+[clientscript,script6499](entityoverlay $entityoverlay0, dbrow $dbrow1, loc $loc2, obj $obj3, coord $coord4, obj $obj5, int $int6, int $int7, int $int8)
 if (loc_find($coord4, $loc2) = true) {
 	if ($int6 = %varbit14189 & $dbrow1 = %var3546 & %varbit14184 = $int7 & %varbit14182 = $int8) {
 		return;

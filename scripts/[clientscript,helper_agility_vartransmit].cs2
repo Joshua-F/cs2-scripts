@@ -1,9 +1,9 @@
 // 5720
-[clientscript,helper_agility_vartransmit](newvar $newvar0, int $int1, int $int2, loc $loc3, coord $coord4)
+[clientscript,helper_agility_vartransmit](entityoverlay $entityoverlay0, int $int1, int $int2, loc $loc3, coord $coord4)
 if ($int1 = %varbit13135 & $int2 = %varbit13136) {
 	return;
 }
-~script5724($newvar0, $loc3, $coord4);
-if (_202($newvar0) = ^true) {
-	~helper_agility_vartransmit($newvar0, $loc3, $coord4);
+~script5724($entityoverlay0, $loc3, $coord4);
+if (_202($entityoverlay0) = ^true) {
+	~helper_agility_vartransmit($entityoverlay0, $loc3, $coord4);
 }

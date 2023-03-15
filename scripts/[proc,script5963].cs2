@@ -1,5 +1,5 @@
 // 5963
-[proc,script5963](int $int0, newvar $newvar1, npc_uid $npc_uid2, int $int3, loc $loc4, coord $coord5, obj $obj6, coord $coord7, string $string0)
+[proc,script5963](int $int0, entityoverlay $entityoverlay1, npc_uid $npc_uid2, int $int3, loc $loc4, coord $coord5, obj $obj6, coord $coord7, string $string0)
 if (~script6664($npc_uid2, $int3, $loc4, $coord5, $obj6, $coord7, $string0) = 0) {
 	return;
 }
@@ -9,7 +9,7 @@ def_int $int10 = -1;
 def_int $int11 = -1;
 def_int $int12 = -1;
 def_int $int13 = -1;
-if (_202($newvar1) = ^true) {
+if (_202($entityoverlay1) = ^true) {
 	if ($int8 >= 17) {
 		cc_setontimer(null);
 		~entity_highlight_clear(4);
@@ -27,7 +27,7 @@ if (_202($newvar1) = ^true) {
 		if ($int8 >= $int9) {
 			$int0 = calc($int0 + 1);
 		}
-		cc_setontimer("script5962($int0, $newvar1, %varcint973, %varcint974, %varcint975, %varcint976, %varcint977, %varcint978, %varcstring979)");
+		cc_setontimer("script5962($int0, $entityoverlay1, %varcint973, %varcint974, %varcint975, %varcint976, %varcint977, %varcint978, %varcstring979)");
 	}
 	$int12 = calc(128 - scale($int10, $int9, 128));
 	$int13 = calc(2 + scale($int10, $int9, 2));

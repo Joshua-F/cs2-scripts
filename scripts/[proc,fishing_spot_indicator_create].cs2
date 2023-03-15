@@ -1,7 +1,7 @@
 // 4553
-[proc,fishing_spot_indicator_create](newvar $newvar0, struct $struct1, npc_uid $npc_uid2, int $int3, loc $loc4, coord $coord5)
-_104($newvar0);
-if (_202($newvar0) = ^true) {
+[proc,fishing_spot_indicator_create](entityoverlay $entityoverlay0, struct $struct1, npc_uid $npc_uid2, int $int3, loc $loc4, coord $coord5)
+_104($entityoverlay0);
+if (_202($entityoverlay0) = ^true) {
 	cc_setonmouseleave(null);
 	cc_setonmouseover(null);
 }
@@ -93,7 +93,7 @@ if ($namedobj14 = null) {
 	}
 	return;
 }
-_103($newvar0, ^iftype_graphic, 0);
+_103($entityoverlay0, ^iftype_graphic, 0);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setobject_nonum($namedobj14, 1);
@@ -105,10 +105,10 @@ if ($npc_uid2 ! null & $int3 ! -1) {
 if ($loc4 ! null & $coord5 ! null) {
 	highlight_loc_on($loc4, $coord5, 15, 1);
 }
-if (_202($newvar0) = ^true) {
+if (_202($entityoverlay0) = ^true) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	if (%varbit12351 = 0 & ~on_mobile = false) {
-		cc_setonmouseleave("fishing_spot_indicator_mouseleave($newvar0, $struct1, $npc_uid2, $int3, $loc4, $coord5)");
-		cc_setonmouseover("fishing_spot_indicator_mouseover($newvar0, $struct1)");
+		cc_setonmouseleave("fishing_spot_indicator_mouseleave($entityoverlay0, $struct1, $npc_uid2, $int3, $loc4, $coord5)");
+		cc_setonmouseover("fishing_spot_indicator_mouseover($entityoverlay0, $struct1)");
 	}
 }

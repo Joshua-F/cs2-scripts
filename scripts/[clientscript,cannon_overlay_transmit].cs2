@@ -1,9 +1,9 @@
 // 6675
-[clientscript,cannon_overlay_transmit](newvar $newvar0, int $int1, int $int2, coord $coord3, coord $coord4)
+[clientscript,cannon_overlay_transmit](entityoverlay $entityoverlay0, int $int1, int $int2, coord $coord3, coord $coord4)
 if (%varbit14174 = $int1 & %varbit13672 = $int2 & %var3551 = $coord3) {
 	return;
 }
-if (_202($newvar0) = ^true) {
-	cc_setonvartransmit("cannon_overlay_transmit($newvar0, %varbit14174, %varbit13672, %var3551, $coord4){var3417}");
+if (_202($entityoverlay0) = ^true) {
+	cc_setonvartransmit("cannon_overlay_transmit($entityoverlay0, %varbit14174, %varbit13672, %var3551, $coord4){var3417}");
 }
-~cannon_overlay_create($newvar0, $coord4);
+~cannon_overlay_create($entityoverlay0, $coord4);

@@ -1,13 +1,13 @@
 // 6543
-[proc,script6543](newvar $newvar0, int $int1, npc_uid $npc_uid2, npc $npc3)
+[proc,script6543](entityoverlay $entityoverlay0, int $int1, npc_uid $npc_uid2, npc $npc3)
 switch_npc ($npc3) {
 	case armadylean_guard_6587, bandosian_guard_6588, zamorak_wizard_2954, saradomin_wizard_2955, ancient_wizard_7307, brassican_mage_7310 :
-		cc_setonvartransmit("script6544($newvar0, $int1, $npc_uid2, %varbit14189, %var3546, 1, ~script6545(1), $npc3){var3543, var3546, var3547, var3548}");
-		~script6546($newvar0, $npc_uid2, $int1, 1);
+		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %varbit14189, %var3546, 1, ~script6545(1), $npc3){var3543, var3546, var3547, var3548}");
+		~script6546($entityoverlay0, $npc_uid2, $int1, 1);
 	case ancient_wizard_7308 :
-		cc_setonvartransmit("script6544($newvar0, $int1, $npc_uid2, %varbit14189, %var3546, 2, ~script6545(2), $npc3){var3543, var3546, var3547, var3549}");
-		~script6546($newvar0, $npc_uid2, $int1, 2);
+		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %varbit14189, %var3546, 2, ~script6545(2), $npc3){var3543, var3546, var3547, var3549}");
+		~script6546($entityoverlay0, $npc_uid2, $int1, 2);
 	case ancient_wizard_7309 :
-		cc_setonvartransmit("script6544($newvar0, $int1, $npc_uid2, %varbit14189, %var3546, 3, ~script6545(3), $npc3){var3543, var3546, var3547, var3550}");
-		~script6546($newvar0, $npc_uid2, $int1, 3);
+		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %varbit14189, %var3546, 3, ~script6545(3), $npc3){var3543, var3546, var3547, var3550}");
+		~script6546($entityoverlay0, $npc_uid2, $int1, 3);
 }

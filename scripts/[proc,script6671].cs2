@@ -1,8 +1,8 @@
 // 6671
 [proc,script6671]
 ~blast_furnace_highlights;
-def_newvar $newvar0 = _7201(4, 0, 1, 1, 1);
-if (_202($newvar0) = ^true) {
+def_entityoverlay $entityoverlay0 = _7201(4, 0, 1, 1, 1);
+if (_202($entityoverlay0) = ^true) {
 	cc_setonvartransmit("blast_furnace_highlights{var543}");
 	cc_setoninvtransmit("blast_furnace_highlights{inv, worn}");
 }

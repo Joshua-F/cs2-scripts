@@ -1,6 +1,6 @@
 // 5721
-[clientscript,script5721](newvar $newvar0, loc $loc1, coord $coord2)
-~script5724($newvar0, $loc1, $coord2);
-if (_202($newvar0) = ^true) {
-	~helper_agility_vartransmit($newvar0, $loc1, $coord2);
+[clientscript,script5721](entityoverlay $entityoverlay0, loc $loc1, coord $coord2)
+~script5724($entityoverlay0, $loc1, $coord2);
+if (_202($entityoverlay0) = ^true) {
+	~helper_agility_vartransmit($entityoverlay0, $loc1, $coord2);
 }

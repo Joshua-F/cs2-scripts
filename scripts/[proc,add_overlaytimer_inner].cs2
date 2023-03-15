@@ -1,5 +1,5 @@
 // 5480
-[proc,add_overlaytimer_inner](int $int0, newvar $newvar1, int $clock2, int $int3, int $colour4, int $int5)
+[proc,add_overlaytimer_inner](int $int0, entityoverlay $entityoverlay1, int $clock2, int $int3, int $colour4, int $int5)
 def_int $int6 = calc($clock2 + $int3);
 def_int $int7 = calc(clientclock - $clock2);
 def_int $int8 = ~minmax(1, 65536, scale($int7, $int3, 65536));
@@ -7,9 +7,9 @@ switch_int ($int5) {
 	case 1 :
 		$int8 = calc(65536 - $int8);
 }
-if (_202($newvar1) = ^true) {
-	cc_setontimer("overlaytimer_update($newvar1, $clock2, $int3, $int5)");
-	_103($newvar1, ^iftype_arc, 0);
+if (_202($entityoverlay1) = ^true) {
+	cc_setontimer("overlaytimer_update($entityoverlay1, $clock2, $int3, $int5)");
+	_103($entityoverlay1, ^iftype_arc, 0);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour($colour4);
@@ -17,7 +17,7 @@ if (_202($newvar1) = ^true) {
 	cc_settrans(200);
 	cc_setlinewid(1);
 	cc_setarc(0, 65536);
-	_103($newvar1, ^iftype_arc, 1);
+	_103($entityoverlay1, ^iftype_arc, 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour($colour4);
@@ -25,7 +25,7 @@ if (_202($newvar1) = ^true) {
 	cc_settrans(128);
 	cc_setlinewid(1);
 	cc_setarc(0, $int8);
-	_103($newvar1, ^iftype_arc, 2);
+	_103($entityoverlay1, ^iftype_arc, 2);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour($colour4);

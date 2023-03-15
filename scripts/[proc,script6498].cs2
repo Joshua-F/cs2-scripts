@@ -1,15 +1,15 @@
 // 6498
 [proc,script6498](dbrow $dbrow0, loc $loc1, obj $obj2, coord $coord3, obj $obj4)
-def_newvar $newvar5 = null;
+def_entityoverlay $entityoverlay5 = null;
 if (loc_find($coord3, $loc1) = true) {
-	$newvar5 = _7206(5);
-	if ($newvar5 = null) {
-		$newvar5 = _7201(5, 1, 60, 60, 1);
+	$entityoverlay5 = _7206(5);
+	if ($entityoverlay5 = null) {
+		$entityoverlay5 = _7201(5, 1, 60, 60, 1);
 	} else {
-		_104($newvar5);
+		_104($entityoverlay5);
 	}
-	if (_202($newvar5) = ^true) {
-		cc_setonvartransmit("script6499($newvar5, $dbrow0, $loc1, $obj2, $coord3, $obj4, %varbit14189, %varbit14184, %varbit14182){var3546, var3543}");
+	if (_202($entityoverlay5) = ^true) {
+		cc_setonvartransmit("script6499($entityoverlay5, $dbrow0, $loc1, $obj2, $coord3, $obj4, %varbit14189, %varbit14184, %varbit14182){var3546, var3543}");
 	}
 	if (%varbit14182 = 0) {
 		highlight_loc_off($loc1, $coord3, 9, 1);
@@ -17,12 +17,12 @@ if (loc_find($coord3, $loc1) = true) {
 	}
 	if (inv_total(inv, $obj2) > 0) {
 		if (%varbit14189 = 1) {
-			_103($newvar5, ^iftype_graphic, 0);
+			_103($entityoverlay5, ^iftype_graphic, 0);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(4, 4, ^setpos_abs_centre, ^setpos_abs_centre);
 			cc_setobject_nonum($obj4, 1);
 			cc_setoutline(1);
-			_103($newvar5, ^iftype_graphic, 1);
+			_103($entityoverlay5, ^iftype_graphic, 1);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(-4, -4, ^setpos_abs_centre, ^setpos_abs_centre);
 			cc_setobject_nonum(key_medium_7297, 1);
@@ -31,12 +31,12 @@ if (loc_find($coord3, $loc1) = true) {
 		if (%varbit14184 = 1) {
 			highlight_loc_on($loc1, $coord3, 9, 1);
 		}
-		if (_202($newvar5) = ^true) {
+		if (_202($entityoverlay5) = ^true) {
 			cc_setoninvtransmit("script6500($dbrow0, $loc1, $obj2, $coord3, $obj4, 1){inv}");
 		}
 	} else {
 		highlight_loc_off($loc1, $coord3, 9, 1);
-		if (_202($newvar5) = ^true) {
+		if (_202($entityoverlay5) = ^true) {
 			cc_setoninvtransmit("script6500($dbrow0, $loc1, $obj2, $coord3, $obj4, 0){inv}");
 		}
 	}

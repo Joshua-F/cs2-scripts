@@ -1,14 +1,14 @@
 // 6501
 [proc,script6501](dbrow $dbrow0, coord $coord1, obj $obj2)
-def_newvar $newvar3 = null;
+def_entityoverlay $entityoverlay3 = null;
 if (_6951($coord1) = true) {
-	$newvar3 = _7209($coord1, 7);
-	if ($newvar3 = null) {
-		$newvar3 = _7204($coord1, 7, 1, 60, 60, 1);
+	$entityoverlay3 = _7209($coord1, 7);
+	if ($entityoverlay3 = null) {
+		$entityoverlay3 = _7204($coord1, 7, 1, 60, 60, 1);
 	} else {
-		_104($newvar3);
+		_104($entityoverlay3);
 	}
-	if (_202($newvar3) = ^true) {
+	if (_202($entityoverlay3) = ^true) {
 		cc_setonvartransmit("script6502($dbrow0, $coord1, $obj2, %varbit14189, %var3548, %var3549, %var3550, %var3547, %varbit14182, %varbit14184){var3546, var3543, var3548, var3549, var3550, var3547}");
 	}
 	if (%varbit14182 = 0 | ~cluehelper_overlay_npc_active = 1) {
@@ -16,12 +16,12 @@ if (_6951($coord1) = true) {
 		return;
 	}
 	if (%varbit14189 = 1) {
-		_103($newvar3, ^iftype_graphic, 0);
+		_103($entityoverlay3, ^iftype_graphic, 0);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(8, 3, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setobject_nonum($obj2, 1);
 		cc_setoutline(1);
-		_103($newvar3, ^iftype_graphic, 1);
+		_103($entityoverlay3, ^iftype_graphic, 1);
 		cc_setsize(48, 48, ^setsize_abs, ^setsize_abs);
 		cc_setposition(-8, -3, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setgraphic("emotes,44");

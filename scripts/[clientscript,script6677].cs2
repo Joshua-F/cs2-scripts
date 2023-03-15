@@ -1,13 +1,13 @@
 // 6677
-[clientscript,script6677](newvar $newvar0, coord $coord1, int $int2)
+[clientscript,script6677](entityoverlay $entityoverlay0, coord $coord1, int $int2)
 if ($int2 = %var3) {
 	return;
 }
-if (_203($newvar0, 0) = ^true) {
+if (_203($entityoverlay0, 0) = ^true) {
 	cc_settext(tostring(%var3));
-	cc_setonvartransmit("script6677($newvar0, $coord1, %var3){var3}");
+	cc_setonvartransmit("script6677($entityoverlay0, $coord1, %var3){var3}");
 	if (%var3 <= 0) {
-		~cannon_overlay_create($newvar0, $coord1);
+		~cannon_overlay_create($entityoverlay0, $coord1);
 	} else if (%var3 <= 5) {
 		cc_setcolour(^red);
 	} else if (%var3 <= 15) {

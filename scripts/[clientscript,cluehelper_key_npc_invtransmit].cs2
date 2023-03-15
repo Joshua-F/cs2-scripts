@@ -1,12 +1,12 @@
 // 6621
-[clientscript,cluehelper_key_npc_invtransmit](dbrow $dbrow0, dbrow $dbrow1, newvar $newvar2, int $int3, npc_uid $npc_uid4, obj $obj5, int $int6)
+[clientscript,cluehelper_key_npc_invtransmit](dbrow $dbrow0, dbrow $dbrow1, entityoverlay $entityoverlay2, int $int3, npc_uid $npc_uid4, obj $obj5, int $int6)
 if ($int6 = 0 & inv_total(inv, $obj5) > 0) {
 	$int6 = 1;
-	~cluehelper_key_npc_draw($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj5, $int6);
+	~cluehelper_key_npc_draw($dbrow0, $dbrow1, $entityoverlay2, $int3, $npc_uid4, $obj5, $int6);
 } else if ($int6 = 1 & inv_total(inv, $obj5) <= 0) {
 	$int6 = 0;
-	~cluehelper_key_npc_draw($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj5, $int6);
+	~cluehelper_key_npc_draw($dbrow0, $dbrow1, $entityoverlay2, $int3, $npc_uid4, $obj5, $int6);
 }
-if (_202($newvar2) = ^true) {
-	cc_setoninvtransmit("cluehelper_key_npc_invtransmit($dbrow0, $dbrow1, $newvar2, $int3, $npc_uid4, $obj5, $int6){inv}");
+if (_202($entityoverlay2) = ^true) {
+	cc_setoninvtransmit("cluehelper_key_npc_invtransmit($dbrow0, $dbrow1, $entityoverlay2, $int3, $npc_uid4, $obj5, $int6){inv}");
 }

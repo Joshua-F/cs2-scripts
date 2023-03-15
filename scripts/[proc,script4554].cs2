@@ -1,6 +1,6 @@
 // 4554
-[proc,script4554](newvar $newvar0, struct $struct1)
-_104($newvar0);
+[proc,script4554](entityoverlay $entityoverlay0, struct $struct1)
+_104($entityoverlay0);
 if (%varbit12349 = 1) {
 	return;
 }
@@ -14,7 +14,7 @@ def_int $int5 = 5;
 def_int $int6 = 0;
 def_int $int7 = 5;
 def_int $bool8 = map_members;
-_103($newvar0, ^iftype_graphic, $int4);
+_103($entityoverlay0, ^iftype_graphic, $int4);
 $int4 = calc($int4 + 1);
 cc_setgraphic("tradebacking");
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -26,17 +26,17 @@ def_namedobj $namedobj10 = struct_param($struct1, param_1265);
 if ($bool8 = ^false & struct_param($struct1, param_1264) = true) {
 	$int9 = 0;
 } else {
-	$int4, $int5, $int7, $int6 = ~script4555($int4, $int5, $int7, $int6, $newvar0, $enum2, $namedobj10);
+	$int4, $int5, $int7, $int6 = ~script4555($int4, $int5, $int7, $int6, $entityoverlay0, $enum2, $namedobj10);
 }
 $namedobj10 = struct_param($struct1, param_1268);
 if ($bool8 = ^false & struct_param($struct1, param_1267) = true) {
 	$int9 = 0;
 } else {
-	$int4, $int5, $int7, $int6 = ~script4555($int4, $int5, $int7, $int6, $newvar0, $enum3, $namedobj10);
+	$int4, $int5, $int7, $int6 = ~script4555($int4, $int5, $int7, $int6, $entityoverlay0, $enum3, $namedobj10);
 }
 $int5 = calc($int5 + 5);
 $int7 = calc($int7 + 5);
-$int4 = ~thinbox_entityoverlay($newvar0, $int4);
-if (_202($newvar0) = ^true) {
+$int4 = ~thinbox_entityoverlay($entityoverlay0, $int4);
+if (_202($entityoverlay0) = ^true) {
 	cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
 }

@@ -1,38 +1,38 @@
 // 5955
 [proc,entity_highlight_minimenu](int $int0)
 def_int $int1 = ~max(_7460, 0);
-def_newvar $newvar2 = null;
+def_entityoverlay $entityoverlay2 = null;
 switch_int (_7451($int1)) {
 	case 2 :
 		if (_7453($int1) = true) {
 			~entity_highlight_active_npc($int0);
 			if ($int0 = 4) {
-				$newvar2 = _7203(0, 0, 1, 1, 0);
-				~script5961($newvar2);
+				$entityoverlay2 = _7203(0, 0, 1, 1, 0);
+				~script5961($entityoverlay2);
 			}
 		}
 	case 3 :
 		if (_7454($int1) = true) {
 			~entity_highlight_active_loc($int0);
 			if ($int0 = 4) {
-				$newvar2 = _7203(0, 0, 1, 1, 0);
-				~script5961($newvar2);
+				$entityoverlay2 = _7203(0, 0, 1, 1, 0);
+				~script5961($entityoverlay2);
 			}
 		}
 	case 4 :
 		if (_7455($int1) = true) {
 			~entity_highlight_active_obj($int0);
 			if ($int0 = 4) {
-				$newvar2 = _7203(0, 0, 1, 1, 0);
-				~script5961($newvar2);
+				$entityoverlay2 = _7203(0, 0, 1, 1, 0);
+				~script5961($entityoverlay2);
 			}
 		}
 	case 6 :
 		if (_7456($int1) = true) {
 			~entity_highlight_active_player($int0);
 			if ($int0 = 4) {
-				$newvar2 = _7203(0, 0, 1, 1, 0);
-				~script5961($newvar2);
+				$entityoverlay2 = _7203(0, 0, 1, 1, 0);
+				~script5961($entityoverlay2);
 			}
 		}
 }

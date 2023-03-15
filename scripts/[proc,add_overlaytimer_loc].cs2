@@ -7,5 +7,5 @@ def_int $int6 = 0;
 if (lc_param($loc0, param_1545) = true) {
 	$int6 = 2;
 }
-def_newvar $newvar7 = _7201(1, $int6, 25, 25, 0);
-~add_overlaytimer_inner($int1, $newvar7, $clock2, $int3, $colour4, $int5);
+def_entityoverlay $entityoverlay7 = _7201(1, $int6, 25, 25, 0);
+~add_overlaytimer_inner($int1, $entityoverlay7, $clock2, $int3, $colour4, $int5);

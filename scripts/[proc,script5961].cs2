@@ -1,10 +1,10 @@
 // 5961
-[proc,script5961](newvar $newvar0)
+[proc,script5961](entityoverlay $entityoverlay0)
 if (~on_enhanced_mobile = 0) {
 	return;
 }
 ~entity_highlight_setup(4, 2, 128, ~script758);
 def_int $clock1 = clientclock;
-if (_202($newvar0) = ^true) {
-	cc_setontimer("script5962($clock1, $newvar0, %varcint973, %varcint974, %varcint975, %varcint976, %varcint977, %varcint978, %varcstring979)");
+if (_202($entityoverlay0) = ^true) {
+	cc_setontimer("script5962($clock1, $entityoverlay0, %varcint973, %varcint974, %varcint975, %varcint976, %varcint977, %varcint978, %varcstring979)");
 }

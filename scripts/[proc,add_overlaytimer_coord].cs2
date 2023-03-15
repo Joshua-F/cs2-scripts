@@ -3,5 +3,5 @@
 if (~on_enhanced_any = 0 | ~script5479($coord0, $int1, $int3) = 0) {
 	return;
 }
-def_newvar $newvar6 = _7204($coord0, 1, 0, 25, 25, 0);
-~add_overlaytimer_inner($int1, $newvar6, $clock2, $int3, $colour4, $int5);
+def_entityoverlay $entityoverlay6 = _7204($coord0, 1, 0, 25, 25, 0);
+~add_overlaytimer_inner($int1, $entityoverlay6, $clock2, $int3, $colour4, $int5);

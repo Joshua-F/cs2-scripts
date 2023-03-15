@@ -1,10 +1,10 @@
 // 4550
-[clientscript,fishing_spot_indicator_stattransmit](newvar $newvar0, struct $struct1, int $lvl2, npc_uid $npc_uid3, int $int4, loc $loc5, coord $coord6)
+[clientscript,fishing_spot_indicator_stattransmit](entityoverlay $entityoverlay0, struct $struct1, int $lvl2, npc_uid $npc_uid3, int $int4, loc $loc5, coord $coord6)
 def_int $lvl7 = stat(fishing);
 if ($lvl7 = $lvl2) {
 	return;
 }
-~fishing_spot_indicator_create($newvar0, $struct1, $npc_uid3, $int4, $loc5, $coord6);
-if (_202($newvar0) = ^true) {
-	cc_setonstattransmit("fishing_spot_indicator_stattransmit($newvar0, $struct1, $lvl7, $npc_uid3, $int4, $loc5, $coord6){fishing, agility, strength}");
+~fishing_spot_indicator_create($entityoverlay0, $struct1, $npc_uid3, $int4, $loc5, $coord6);
+if (_202($entityoverlay0) = ^true) {
+	cc_setonstattransmit("fishing_spot_indicator_stattransmit($entityoverlay0, $struct1, $lvl7, $npc_uid3, $int4, $loc5, $coord6){fishing, agility, strength}");
 }

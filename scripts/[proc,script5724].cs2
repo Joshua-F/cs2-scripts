@@ -1,7 +1,7 @@
 // 5724
-[proc,script5724](newvar $newvar0, loc $loc1, coord $coord2)
-_104($newvar0);
-if (_202($newvar0) = ^true) {
+[proc,script5724](entityoverlay $entityoverlay0, loc $loc1, coord $coord2)
+_104($entityoverlay0);
+if (_202($entityoverlay0) = ^true) {
 	cc_setonmouseleave(null);
 	cc_setonmouseover(null);
 }
@@ -41,4 +41,4 @@ if (enum(loc, int, enum_4817, $loc1) = 0 & stat(agility) < $lvl3) {
 	highlight_loc_on($loc1, $coord2, 12, 1);
 	return;
 }
-~script5725($newvar0, $loc1, $coord2, $lvl3, $lvl4, $lvl5, $string0, $boolean6);
+~script5725($entityoverlay0, $loc1, $coord2, $lvl3, $lvl4, $lvl5, $string0, $boolean6);

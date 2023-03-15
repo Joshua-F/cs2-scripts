@@ -1,6 +1,6 @@
 // 6721
-[proc,loadnpc_cluehelper_generic](newvar $newvar0, dbrow $dbrow1, npc_uid $npc_uid2, int $int3)
-_104($newvar0);
+[proc,loadnpc_cluehelper_generic](entityoverlay $entityoverlay0, dbrow $dbrow1, npc_uid $npc_uid2, int $int3)
+_104($entityoverlay0);
 highlight_npc_off($npc_uid2, $int3, 9);
 if ($dbrow1 = null) {
 	return;
@@ -14,13 +14,13 @@ if (db_getrowtable($dbrow4) = dbtable_15) {
 	if (npc_type = $npc5) {
 		switch_dbtable (db_getrowtable($dbrow1)) {
 			case dbtable_13 :
-				~script6514($newvar0, $npc_uid2, $int3);
+				~script6514($entityoverlay0, $npc_uid2, $int3);
 			case dbtable_11 :
-				~script6515($newvar0, $npc_uid2, $int3);
+				~script6515($entityoverlay0, $npc_uid2, $int3);
 			case dbtable_14 :
-				~script6516($newvar0, $npc_uid2, $int3);
+				~script6516($entityoverlay0, $npc_uid2, $int3);
 			case dbtable_4, dbtable_6, dbtable_8 :
-				~script6517($newvar0, $npc_uid2, $int3);
+				~script6517($entityoverlay0, $npc_uid2, $int3);
 		}
 	}
 } else if (db_getrowtable($dbrow4) = dbtable_20) {
@@ -28,7 +28,7 @@ if (db_getrowtable($dbrow4) = dbtable_15) {
 	while ($int6 < $int7) {
 		$npc5 = db_getfield($dbrow4, dbtable_20:0, $int6);
 		if (npc_type = $npc5) {
-			~script6513($newvar0, $npc_uid2, $int3);
+			~script6513($entityoverlay0, $npc_uid2, $int3);
 			return;
 		}
 		$int6 = calc($int6 + 1);
@@ -38,7 +38,7 @@ if (db_getrowtable($dbrow4) = dbtable_15) {
 	while ($int6 < $int7) {
 		$npc5 = db_getfield($dbrow4, dbtable_19:2, $int6);
 		if (npc_type = $npc5) {
-			~cluehelper_key_npc($dbrow1, $dbrow4, $newvar0, $npc_uid2, $int3);
+			~cluehelper_key_npc($dbrow1, $dbrow4, $entityoverlay0, $npc_uid2, $int3);
 			return;
 		}
 		$int6 = calc($int6 + 1);

@@ -1,11 +1,11 @@
 // 6902
-[proc,script6902](newvar $newvar0, struct $struct1, npc_uid $npc_uid2, int $int3, loc $loc4, coord $coord5)
+[proc,script6902](entityoverlay $entityoverlay0, struct $struct1, npc_uid $npc_uid2, int $int3, loc $loc4, coord $coord5)
 if (~on_enhanced_any = 0) {
 	return;
 }
-if (_202($newvar0) = ^true) {
-	cc_setonvartransmit("fishing_spot_indicator_vartransmit($newvar0, $struct1, %varbit12349, %varbit12350, %varbit12351, $npc_uid2, $int3, $loc4, $coord5){var2856, var3074}");
-	cc_setoninvtransmit("fishing_spot_indicator_invtransmit($newvar0, $struct1, $npc_uid2, $int3, $loc4, $coord5){inv, worn}");
-	cc_setonstattransmit("fishing_spot_indicator_stattransmit($newvar0, $struct1, stat(fishing), $npc_uid2, $int3, $loc4, $coord5){fishing, agility, strength}");
+if (_202($entityoverlay0) = ^true) {
+	cc_setonvartransmit("fishing_spot_indicator_vartransmit($entityoverlay0, $struct1, %varbit12349, %varbit12350, %varbit12351, $npc_uid2, $int3, $loc4, $coord5){var2856, var3074}");
+	cc_setoninvtransmit("fishing_spot_indicator_invtransmit($entityoverlay0, $struct1, $npc_uid2, $int3, $loc4, $coord5){inv, worn}");
+	cc_setonstattransmit("fishing_spot_indicator_stattransmit($entityoverlay0, $struct1, stat(fishing), $npc_uid2, $int3, $loc4, $coord5){fishing, agility, strength}");
 }
-~fishing_spot_indicator_create($newvar0, $struct1, $npc_uid2, $int3, $loc4, $coord5);
+~fishing_spot_indicator_create($entityoverlay0, $struct1, $npc_uid2, $int3, $loc4, $coord5);

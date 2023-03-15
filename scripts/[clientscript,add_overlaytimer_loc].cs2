@@ -3,7 +3,7 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-def_newvar $newvar7 = null;
+def_entityoverlay $entityoverlay7 = null;
 def_int $int8 = -1;
 switch_locshape ($locshape2) {
 	case wall_straight, wall_diagonalcorner, wall_l, wall_squarecorner, wall_diagonal :
@@ -18,7 +18,7 @@ switch_locshape ($locshape2) {
 		~debug_mes("Overlay Timers: No locfind overlay ID specified for loc_shape. Timer ID: <tostring($int3)>");
 		return;
 }
-$newvar7 = _7204($coord0, $int8, 0, 1, 1, 0);
-if (_202($newvar7) = ^true) {
+$entityoverlay7 = _7204($coord0, $int8, 0, 1, 1, 0);
+if (_202($entityoverlay7) = ^true) {
 	cc_setontimer("overlaytimer_loc_find($coord0, $loc1, $int3, clientclock, calc($int4 * 30), $colour5, $int6, $int8)");
 }

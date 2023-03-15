@@ -1,9 +1,9 @@
 // 6696
-[clientscript,npc_name_vartransmit](newvar $newvar0, npc_uid $npc_uid1, int $int2, string $string0, npc $npc3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9)
+[clientscript,npc_name_vartransmit](entityoverlay $entityoverlay0, npc_uid $npc_uid1, int $int2, string $string0, npc $npc3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9)
 if ($int4 = %var3416 & $int5 = %var3417 & %var3540 = $int6 & %var3541 = $int7 & %var3542 = $int8 & $int9 = %var1021) {
 	return;
 }
-~npc_name_create($newvar0, $npc_uid1, $int2, $string0, $npc3);
-if (_202($newvar0) = ^true) {
-	cc_setonvartransmit("npc_name_vartransmit($newvar0, $npc_uid1, $int2, $string0, $npc3, %var3416, %var3417, %var3540, %var3541, %var3542, %var1021){var3416, var3417, var3540, var3541, var1021, var3542}");
+~npc_name_create($entityoverlay0, $npc_uid1, $int2, $string0, $npc3);
+if (_202($entityoverlay0) = ^true) {
+	cc_setonvartransmit("npc_name_vartransmit($entityoverlay0, $npc_uid1, $int2, $string0, $npc3, %var3416, %var3417, %var3540, %var3541, %var3542, %var1021){var3416, var3417, var3540, var3541, var1021, var3542}");
 }
