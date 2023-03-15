@@ -227,6 +227,9 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
+				if ($chattype11 ! ^chattype_clanchat & ~script2759($string18) = 1) {
+					if_setop(10, "Crown Info", $component9);
+				}
 				if (compare($string0, removetags($string18)) ! 0) {
 					if ($int15 = 1) {
 						if_setop(6, "Message", $component9);
@@ -289,7 +292,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 				}
 				if_setop(9, "Clear history", $component9);
 				if_setopbase("<col=ff9040>Notification</col>", $component9);
-				if_setonop("chat_broadcast_op(event_opindex, $string21, $int13)", $component9);
+				if_setonop("chat_broadcast_op(event_opindex, 9, $string21, $int13)", $component9);
 			case ^chattype_clancreationinvitation :
 				if_setopbase("<col=0xffffff><$string18></col>", $component9);
 				if_setop(2, "Form clan", $component9);

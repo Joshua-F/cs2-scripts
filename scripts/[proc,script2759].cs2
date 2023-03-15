@@ -1,0 +1,6 @@
+// 2759
+[proc,script2759](string $string0)(int)
+if (string_indexof_string($string0, "<img=1>", 0) = 0 | string_indexof_string($string0, "<img=0>", 0) = 0) {
+	return(1);
+}
+return(0);

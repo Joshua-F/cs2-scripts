@@ -25,6 +25,8 @@ switch_int ($opindex0) {
 			} else {
 				mes("The game cannot process your Ban request now. Please reconnect to the clan's channel.");
 			}
+		} else {
+			~script5344;
 		}
 	case default :
 		if (friend_test($string1) = true) {
