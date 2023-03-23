@@ -1,6 +1,6 @@
 // 5888
-[proc,speedrunning_stats_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
-~speedrunning_points_update($component0, $component6);
-~speedrunning_trophies_update($component1, $component2, $component3, $component4, $component7, $component8, $component9, $component10, $component11);
+[proc,speedrunning_stats_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
+~speedrunning_points_update($component0, $component7);
+~speedrunning_trophies_update($component1, $component2, $component3, $component4, $component5, $component8, $component9, $component10, $component11, $component12, $component13);
 def_string $string0 = ",";
-if_settext(~tostring_spacer(~min(%var3367, 2000000000), $string0), $component5);
+if_settext(~tostring_spacer(~min(%var3367, 2000000000), $string0), $component6);

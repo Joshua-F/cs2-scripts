@@ -63,7 +63,7 @@ if_setscrollsize(0, 0, $component14);
 if_setscrollpos(0, 0, $component14);
 ~scrollbar_vertical($component15, $component14, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 def_int $int30 = enum_getoutputcount(enum_4792);
-def_int $int31 = 8;
+def_int $int31 = 24;
 while ($int31 > 0) {
 	cc_create($component1, ^iftype_rectangle, $int30);
 	cc_sethide(true);

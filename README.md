@@ -5345,6 +5345,7 @@
 [**5342**](scripts/[proc,script5342].cs2)  
 [**5343**](scripts/[proc,script5343].cs2)  
 [**5344**](scripts/[proc,script5344].cs2)  
+[**5345**](scripts/[clientscript,script5345].cs2)  
 [**5346**](scripts/[proc,script5346].cs2)  
 [**5347**](scripts/[proc,script5347].cs2)  
 [**5348**](scripts/[proc,helper_generic_set_bit].cs2) `[proc,helper_generic_set_bit]`  
@@ -5490,7 +5491,6 @@
 [**5488**](scripts/[proc,highlighting_on].cs2) `[proc,highlighting_on]`  
 [**5489**](scripts/[proc,settings_gravestone_confirmation].cs2) `[proc,settings_gravestone_confirmation]`  
 [**5490**](scripts/[clientscript,script5490].cs2)  
-[**5491**](scripts/[clientscript,script5491].cs2)  
 [**5492**](scripts/[proc,script5492].cs2)  
 [**5493**](scripts/[proc,script5493].cs2)  
 [**5494**](scripts/[proc,cr_quests_ui_resize_scrollbar].cs2) `[proc,cr_quests_ui_resize_scrollbar]`  
@@ -6721,7 +6721,6 @@
 [**6720**](scripts/[clientscript,loadnpc_cluehelper_generic_transmit].cs2) `[clientscript,loadnpc_cluehelper_generic_transmit]`  
 [**6721**](scripts/[proc,loadnpc_cluehelper_generic].cs2) `[proc,loadnpc_cluehelper_generic]`  
 [**6722**](scripts/[clientscript,toa_partydetails_addmember].cs2) `[clientscript,toa_partydetails_addmember]`  
-[**6723**](scripts/[proc,script6723].cs2)  
 [**6724**](scripts/[proc,script6724].cs2)  
 [**6725**](scripts/[clientscript,toa_partydetails_kickmember].cs2) `[clientscript,toa_partydetails_kickmember]`  
 [**6726**](scripts/[clientscript,toa_partydetails_timeout_kickmember].cs2) `[clientscript,toa_partydetails_timeout_kickmember]`  

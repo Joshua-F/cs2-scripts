@@ -2,9 +2,9 @@
 [clientscript,script6746](int $opindex0, int $int1, component $component2, int $comsubid3, string $string0, int $int4)
 def_int $comsubid5 = -1;
 if ($opindex0 = 1) {
-	$comsubid5 = calc(enum_getoutputcount(enum_4792) + 8 + $int1);
+	$comsubid5 = calc(enum_getoutputcount(enum_4792) + 24 + $int1);
 } else if ($opindex0 = 10) {
-	$comsubid5 = calc(enum_getoutputcount(enum_4792) + 8 + 8 + $int1);
+	$comsubid5 = calc(enum_getoutputcount(enum_4792) + 24 + 8 + $int1);
 } else {
 	return;
 }

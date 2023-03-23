@@ -3,7 +3,7 @@
 if ($opindex0 ! 1) {
 	return;
 }
-def_int $comsubid9 = calc(enum_getoutputcount(enum_4792) + 8 + 2 * 8 + $int4 / 3);
+def_int $comsubid9 = calc(enum_getoutputcount(enum_4792) + 24 + 2 * 8 + $int4 / 3);
 if (cc_find($component7, $comsubid5) = ^true & .cc_find(interface_774:1, $comsubid9) = ^true) {
 	sound_synth(interface_select1, 1, 0);
 	cc_settrans(0);

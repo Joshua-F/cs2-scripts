@@ -3,7 +3,7 @@
 if (%var3373 = null) {
 	if_sethide(true, $component0);
 	if_sethide(true, $component2);
-	if_setsize(0, 287, ^setsize_minus, ^setsize_abs, $component4);
+	if_setsize(0, 377, ^setsize_minus, ^setsize_abs, $component4);
 	return;
 }
 if_sethide(false, $component0);
@@ -140,4 +140,4 @@ if ($int5 > $int19) {
 }
 if_setsize(if_getwidth($component0), $int19, ^setsize_abs, ^setsize_abs, $component0);
 if_setsize(if_getwidth($component2), $int19, ^setsize_abs, ^setsize_abs, $component2);
-if_setsize(if_getwidth($component4), calc(287 + $int19 + 7), ^setsize_abs, ^setsize_abs, $component4);
+if_setsize(if_getwidth($component4), calc(377 + $int19 + 7), ^setsize_abs, ^setsize_abs, $component4);

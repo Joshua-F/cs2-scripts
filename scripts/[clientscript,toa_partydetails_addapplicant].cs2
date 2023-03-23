@@ -5,7 +5,7 @@ if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_
 }
 def_int $int0 = ~max(0, calc(%varcint178 - 8));
 def_int $int1 = calc($int0 * 20);
-def_int $int2 = ~script6723;
+def_int $int2 = 22;
 cc_create(interface_774:48, ^iftype_rectangle, $int1);
 cc_setsize(0, $int2, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, calc(-1 * $int2), ^setpos_abs_centre, ^setpos_abs_top);

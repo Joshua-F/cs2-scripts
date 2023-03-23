@@ -1,5 +1,5 @@
 // 5886
-[clientscript,speedrunning_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29, component $component30, component $component31, component $component32, component $component33, component $component34, component $component35)
+[clientscript,speedrunning_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29, component $component30, component $component31, component $component32, component $component33, component $component34, component $component35, component $component36, component $component37)
 ~questlist_draw($component0, $component1, $component2, $component3, $component4, true);
 if (%var3373 ! null) {
 	if (~script6807(%var3373) = 1) {
@@ -8,25 +8,25 @@ if (%var3373 ! null) {
 		if_settext(~get_quest_name(%var3373), $component9);
 	}
 }
-~speedrunning_stats_update($component10, $component14, $component15, $component16, $component17, $component29, $component30, $component31, $component32, $component33, $component34, $component35);
-if_setonvartransmit("speedrunning_stats_update($component10, $component14, $component15, $component16, $component17, $component29, $component30, $component31, $component32, $component33, $component34, $component35){var3365, var3366, var3367, var3368, var3369}", $component10);
-~script5909($component18, $component19, $component20, $component21, $component13);
-if_sethide(true, $component22);
-if_sethide(true, $component27);
+~speedrunning_stats_update($component10, $component14, $component15, $component16, $component17, $component18, $component30, $component31, $component32, $component33, $component34, $component35, $component36, $component37);
+if_setonvartransmit("speedrunning_stats_update($component10, $component14, $component15, $component16, $component17, $component18, $component30, $component31, $component32, $component33, $component34, $component35, $component36, $component37){var3365, var3366, var3367, var3368, var3369, var3766}", $component10);
+~script5909($component19, $component20, $component21, $component22, $component13);
+if_sethide(true, $component23);
+if_sethide(true, $component28);
 def_string $string0 = ~script5913;
-if_settext($string0, $component26);
-def_int $int36 = paraheight($string0, if_getwidth($component26), p12_full);
-$int36 = calc($int36 * 14 + 9);
-if_setsize(12, $int36, ^setsize_minus, ^setsize_abs, $component26);
+if_settext($string0, $component27);
+def_int $int38 = paraheight($string0, if_getwidth($component27), p12_full);
+$int38 = calc($int38 * 14 + 9);
+if_setsize(12, $int38, ^setsize_minus, ^setsize_abs, $component27);
 if_setscrollsize(0, if_getheight($component13), $component12);
 if_setscrollpos(0, 0, $component12);
 ~scrollbar_vertical($component11, $component12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_setscrollsize(0, $int36, $component25);
-if_setscrollpos(0, 0, $component25);
-~scrollbar_vertical($component24, $component25, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, $int38, $component26);
+if_setscrollpos(0, 0, $component26);
+~scrollbar_vertical($component25, $component26, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~script5896($component5, "Set Up Speedrun", "Abandon Speedrun");
 ~speedrunning_button_init($component6, "Quest Journal");
-~script5897($component7, "Info", $component22);
-~script5897($component8, "Stats", $component27);
-~script5905($component23, $component22);
-~script5905($component28, $component27);
+~script5897($component7, "Info", $component23);
+~script5897($component8, "Stats", $component28);
+~script5905($component24, $component23);
+~script5905($component29, $component28);
