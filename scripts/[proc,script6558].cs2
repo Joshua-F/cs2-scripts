@@ -1,5 +1,5 @@
 // 6558
-[proc,script6558]
+[proc,script6558](int $int0)
 if_setop(1, "", welcome_screen:76);
 if_sethide(true, welcome_screen:85);
 if_setgraphic(null, welcome_screen:79);
@@ -9,7 +9,6 @@ if_sethide(false, welcome_screen:81);
 cc_create(welcome_screen:80, ^iftype_crmview, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-def_int $int0 = 1;
 def_string $string0 = ~script6066($int0);
 cc_setcrm_url($string0);
 cc_setcrm_textfont(0, b12_full);

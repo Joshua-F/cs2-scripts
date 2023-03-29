@@ -1,13 +1,10 @@
 // 6562
 [proc,script6562](graphic $graphic0, string $string0)
 if ($graphic0 = null) {
-	$graphic0 = "graphic_2245";
+	$graphic0 = "graphic_1104";
 }
 if (string_length($string0) <= 0) {
-	$string0 = "View News";
-	if (~on_ios = 1) {
-		$string0 = "Play";
-	}
+	$string0 = "Play";
 }
 if_sethide(true, welcome_screen:85);
 cc_deleteall(welcome_screen:83);

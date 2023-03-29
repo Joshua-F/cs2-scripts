@@ -17,11 +17,13 @@ if (cc_find(welcome_screen:80, 0) = ^true) {
 		if (string_length($string1) <= 0) {
 			$string1 = $string0;
 		}
-		if_sethide(false, welcome_screen:85);
-		if (~on_ios = 1) {
-			if_setop(1, $string1, welcome_screen:85);
-		} else {
-			if_setop(1, $string0, welcome_screen:85);
+		if (~on_mobile = false) {
+			if_sethide(false, welcome_screen:85);
+			if (~on_ios = 1) {
+				if_setop(1, $string1, welcome_screen:85);
+			} else {
+				if_setop(1, $string0, welcome_screen:85);
+			}
 		}
 		~script533;
 		return;

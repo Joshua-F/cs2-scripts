@@ -5491,6 +5491,7 @@
 [**5488**](scripts/[proc,highlighting_on].cs2) `[proc,highlighting_on]`  
 [**5489**](scripts/[proc,settings_gravestone_confirmation].cs2) `[proc,settings_gravestone_confirmation]`  
 [**5490**](scripts/[clientscript,script5490].cs2)  
+[**5491**](scripts/[clientscript,script5491].cs2)  
 [**5492**](scripts/[proc,script5492].cs2)  
 [**5493**](scripts/[proc,script5493].cs2)  
 [**5494**](scripts/[proc,cr_quests_ui_resize_scrollbar].cs2) `[proc,cr_quests_ui_resize_scrollbar]`  
