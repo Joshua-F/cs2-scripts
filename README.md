@@ -6417,7 +6417,6 @@
 [**6415**](scripts/[clientscript,cr_tutorial_init].cs2) `[clientscript,cr_tutorial_init]`  
 [**6416**](scripts/[clientscript,cr_tutorial_button_hover].cs2) `[clientscript,cr_tutorial_button_hover]`  
 [**6417**](scripts/[proc,cr_tutorial_button_draw].cs2) `[proc,cr_tutorial_button_draw]`  
-[**6418**](scripts/[proc,script6418].cs2)  
 [**6419**](scripts/[proc,script6419].cs2)  
 [**6420**](scripts/[clientscript,script6420].cs2)  
 [**6421**](scripts/[clientscript,script6421].cs2)  

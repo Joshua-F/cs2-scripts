@@ -266,6 +266,8 @@ switch_int ($setting0) {
 		~script5213;
 	case ^setting_minimap_lock :
 		~settings_minimap_lock;
+	case 317 :
+		%varbit6254 = calc(1 - %varbit6254);
 	case 85 :
 		~script5188;
 	case 171 :
@@ -414,4 +416,6 @@ switch_int ($setting0) {
 		~script7027;
 	case 315 :
 		%varbit9452 = calc(1 - %varbit9452);
+	case 316 :
+		%varbit14819 = calc(1 - %varbit14819);
 }

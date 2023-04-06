@@ -268,6 +268,8 @@ switch_int ($setting0) {
 		return(%varbit12982);
 	case ^setting_minimap_lock :
 		return(%varbit12983);
+	case 317 :
+		return(%varbit6254);
 	case ^setting_helper_slayer :
 		return(%varbit13082);
 	case ^setting_logout_notifier :
@@ -417,6 +419,8 @@ switch_int ($setting0) {
 		return(%varbit14806);
 	case 315 :
 		return(%varbit9452);
+	case 316 :
+		return(%varbit14819);
 	case default :
 		return(0);
 }

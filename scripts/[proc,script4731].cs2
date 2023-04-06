@@ -96,7 +96,7 @@ if (testbit($int2, 13) = ^true & $boolean23 = true & $layer13 ! null) {
 		}
 		if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component0);
 		if_setsize(calc($width11 - ($int16 - $int18)), calc($height12 - ($int17 - $int19)), ^setsize_minus, ^setsize_minus, $component0);
-		if_setonvartransmit("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384){var287, var3074, var1055, var1227}", $component0);
+		if_setonvartransmit("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384){var287, var3074, var1055, var1054, var1227}", $component0);
 		if_setonsubchange("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
 		if_setontimer("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
 		if_setonresize("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
@@ -387,7 +387,7 @@ if ($boolean5 = true & $component1 ! null & $setposh27 ! ^setpos_abs_right) {
 	if_setposition($int15, $int14, ^setpos_abs_left, ^setpos_abs_top, $component0);
 	if_setsize(calc($int15 + $int16), calc($int14 + $int17), ^setsize_minus, ^setsize_minus, $component0);
 }
-if_setonvartransmit("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384){var287, var3074, var1055, var1227}", $component0);
+if_setonvartransmit("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384){var287, var3074, var1055, var1054, var1227}", $component0);
 if_setonsubchange("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
 if_setontimer("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
 if_setonresize("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
