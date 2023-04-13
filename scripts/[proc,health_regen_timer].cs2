@@ -9,7 +9,7 @@ if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_g
 }
 cc_deleteall($component4);
 if_setonstattransmit("health_orb_stattransmit{hitpoints}", $component4);
-if_setonvartransmit("health_orb_vartransmit($component4, %varbit12346){var2856, var83}", $component4);
+if_setonvartransmit("health_orb_vartransmit($component4, %varbit12346){var2856, var83, var3780}", $component4);
 if (%varbit4084 = 1) {
 	return;
 }
@@ -54,6 +54,6 @@ if ($int0 > 0) {
 	cc_setarc(0, 0);
 }
 if_setontimer("script4719($component4, $int0, $int1, $int2, $int3)", $component4);
-if (%varbit4111 = 1 | $int2 <= 0) {
+if (~script7056($int2) = 1) {
 	.cc_sethide(true);
 }

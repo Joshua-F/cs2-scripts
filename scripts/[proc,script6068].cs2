@@ -1,0 +1,10 @@
+// 6068
+[proc,script6068](int $int0, int $int1, string $string0, component $component2, component $component3, component $component4, component $component5, component $component6)
+if ($int0 = 1) {
+	cc_setgraphic("options_radio_buttons,5");
+	.cc_setop(1, "Enable");
+} else {
+	cc_setgraphic("options_radio_buttons,6");
+	.cc_setop(1, "Disable");
+}
+.cc_setonop("slayer_rewards_unlock_confirm(false, $int1, $string0, $component2, $component3, $component4, $component5, $component6, -1)");

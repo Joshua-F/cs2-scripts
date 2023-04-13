@@ -1,57 +1,66 @@
 // 547
 [proc,prayer_redraw](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, string $string0, string $string1)
-def_int $intarray0(calc(28 + 1));
-def_int $int9 = 0;
-def_component $component10 = null;
+def_int $count9 = 0;
+while ($count9 < enum_getoutputcount(enum_864)) {
+	if_sethide(true, enum(int, component, enum_864, $count9));
+	$count9 = calc($count9 + 1);
+}
+def_enum $enum10 = enum_4956;
+if (%varbit14826 = 1) {
+	$enum10 = enum_4959;
+}
+def_int $countarray0(enum_getoutputcount($enum10));
 def_int $int11 = 0;
-def_obj $obj12 = null;
+def_component $component12 = null;
+def_int $count13 = 0;
+def_obj $obj14 = null;
 ~script3154($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $string0, $string1);
-while ($int11 <= 28) {
-	$obj12 = enum(int, obj, enum_4956, $int11);
-	$component10 = oc_param($obj12, param_1751);
-	if ($component10 ! null) {
-		$intarray0($int9) = $int11;
-		$int9 = calc($int9 + 1);
-		cc_deleteall($component10);
-		cc_create($component10, ^iftype_graphic, 0);
+while ($count13 < enum_getoutputcount($enum10)) {
+	$obj14 = enum(int, obj, $enum10, $count13);
+	$component12 = oc_param($obj14, param_1751);
+	if ($component12 ! null) {
+		$countarray0($int11) = $count13;
+		$int11 = calc($int11 + 1);
+		cc_deleteall($component12);
+		cc_create($component12, ^iftype_graphic, 0);
 		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setgraphic("prayerglow");
-		.cc_create($component10, ^iftype_graphic, 1);
+		.cc_create($component12, ^iftype_graphic, 1);
 		.cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		~prayer_updatebutton(false, $obj12, $component10, $component2, $component8);
+		~prayer_updatebutton(false, $obj14, $component12, $component2, $component8);
 	}
-	$int11 = calc($int11 + 1);
+	$count13 = calc($count13 + 1);
 }
-if ($int9 > 0) {
-	~prayer_quicksort(intarray0, 0, calc($int9 - 1));
+if ($int11 > 0) {
+	~prayer_quicksort(countarray0, 0, calc($int11 - 1));
 }
-def_int $width13 = if_getwidth(oc_param($obj12, param_1751));
-def_int $int14 = calc((if_getwidth($component2) - 5 * $width13) / 4 + $width13);
-def_int $int15 = 0;
-def_int $int16 = 0;
+def_int $width15 = if_getwidth(oc_param($obj14, param_1751));
+def_int $int16 = calc((if_getwidth($component2) - 5 * $width15) / 4 + $width15);
 def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
 if ($boolean0 = false & %varbit6579 = 1) {
-	while ($int16 < $int9) {
-		$obj12 = enum(int, obj, enum_4956, $intarray0($int16));
-		$int15 = calc($int16 / 5 * $int14);
-		if_setposition(calc($int16 % 5 * $int14), $int15, ^setpos_abs_left, ^setpos_abs_top, oc_param($obj12, param_1751));
-		if_sethide(false, oc_param($obj12, param_1751));
-		$int16 = calc($int16 + 1);
+	while ($int18 < $int11) {
+		$obj14 = enum(int, obj, $enum10, $countarray0($int18));
+		$int17 = calc($int18 / 5 * $int16);
+		if_setposition(calc($int18 % 5 * $int16), $int17, ^setpos_abs_left, ^setpos_abs_top, oc_param($obj14, param_1751));
+		if_sethide(false, oc_param($obj14, param_1751));
+		$int18 = calc($int18 + 1);
 	}
 } else {
-	while ($int16 < $int9) {
-		$obj12 = enum(int, obj, enum_4956, $intarray0($int16));
-		if (~prayer_passfilter($obj12) = 1) {
-			if_sethide(false, oc_param($obj12, param_1751));
-			$int15 = calc($int17 / 5 * $int14);
-			if_setposition(calc($int17 % 5 * $int14), $int15, ^setpos_abs_left, ^setpos_abs_top, oc_param($obj12, param_1751));
-			$int17 = calc($int17 + 1);
+	while ($int18 < $int11) {
+		$obj14 = enum(int, obj, $enum10, $countarray0($int18));
+		if (~prayer_passfilter($obj14) = 1) {
+			if_sethide(false, oc_param($obj14, param_1751));
+			$int17 = calc($int19 / 5 * $int16);
+			if_setposition(calc($int19 % 5 * $int16), $int17, ^setpos_abs_left, ^setpos_abs_top, oc_param($obj14, param_1751));
+			$int19 = calc($int19 + 1);
 		} else {
-			if_sethide(true, oc_param($obj12, param_1751));
+			if_sethide(true, oc_param($obj14, param_1751));
 		}
-		$int16 = calc($int16 + 1);
+		$int18 = calc($int18 + 1);
 	}
 }
-if_setsize(0, calc(4 + $int15 + 34 + 4), ^setsize_minus, ^setsize_abs, $component4);
+if_setsize(0, calc(4 + $int17 + 34 + 4), ^setsize_minus, ^setsize_abs, $component4);

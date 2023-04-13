@@ -49,8 +49,4 @@ if ((%var102 > 0 | %var456 > 0 | %varbit10151 > 0) & ~toplevel_check_sidepanel(3
 	if_setonmouseleave(null, $component8);
 	if_sethide(true, $component8);
 }
-if (stat(hitpoints) <= scale(40, 100, $int10) & %varbit13006 = 1) {
-	if_setgraphic("orb_icon,10", $component9);
-} else {
-	if_setgraphic("orb_icon,0", $component9);
-}
+if_setgraphic("orb_icon,0", $component9);

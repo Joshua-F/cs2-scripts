@@ -59,11 +59,6 @@ if (%varbit9161 > 0 & %varbit9161 < 6) {
 		$string0 = append($string0, "Crystal Legs:  +5%<br>");
 	}
 }
-if (%varbit13006 = 1) {
-	$int2 = 0;
-	$string0 = append($string0, "<br><col=ffffff>Low Life:</col><br><br>");
-	$string0 = append($string0, "You have a Low Life item equipped. You will gain additional stat bonuses when you are below <tostring(40)>% of your base Hitpoints.");
-}
 if (%varbit13081 = 1) {
 	$int2 = 0;
 	$string0 = append($string0, "<br><col=ffffff>Zaryte Crossbow:</col><br><br>");
@@ -89,7 +84,7 @@ if (%varbit13800 > 0 & %varbit13800 < 4) {
 	if (%varbit13804 = 1) {
 		$string0 = append($string0, "Boots of the Eye: +10%<br>");
 	}
-	$string0 = append($string0, "<br>This bonus stacks additively not multiplicatively with other similar effects.");
+	$string0 = append($string0, "<br>This bonus stacks additively not multiplicatively with other similar effects.<br>");
 }
 if (%varbit13967 > 0 & %varbit13967 < 8) {
 	$int2 = 0;
@@ -106,6 +101,11 @@ if (%varbit13967 > 0 & %varbit13967 < 8) {
 	if (%varbit13971 = 1) {
 		$string0 = append($string0, "Smiths Gloves: +20%<br>");
 	}
+}
+if (%varbit14864 = 1) {
+	$int2 = 0;
+	$string0 = append($string0, "<br><col=ffffff>Virtus Outfit:</col><br><br>");
+	$string0 = append($string0, "Ice spells have a 10% increased chance to freeze a non-frozen target.<br><br>Smoke spells also reduce the targets healing for 30 cycles.<br><br>Shadow spells now reduce every non-prayer combat stat.<br><br>Blood spells can overheal you by 20% of your maximum hitpoints.");
 }
 if ($int2 = 1 & %varbit10535 = 0) {
 	$string0 = "When wearing gear that gives a set bonus, you'll be able to view it here.<br>";

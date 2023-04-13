@@ -1,0 +1,8 @@
+// 7062
+[proc,script7062](int $int0, int $int1, int $int2, int $int3, component $component4)
+if ($int3 <= 0) {
+	if_settrans($int1, $component4);
+	if_setontimer(null, $component4);
+	return;
+}
+if_settrans(calc($int1 - interpolate(0, $int3, 0, $int2, $int1 - $int0)), $component4);

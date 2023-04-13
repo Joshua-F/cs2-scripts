@@ -11,6 +11,9 @@ def_string $string2 = "I can start this <$string1> by ";
 if ($int5 ! 1) {
 	$string2 = "I started this <$string1> by ";
 }
+if (db_getfield($dbrow0, quest:autodisable, 0) = true) {
+	$string2 = "This <$string1> is coming soon...<br>When it releases, I can start it by ";
+}
 $string2 = "<$string2><$string0>";
 def_string $text3 = enum(int, string, enum_2094, db_getfield($dbrow0, quest:difficulty, 0));
 def_string $text4 = enum(int, string, enum_2095, db_getfield($dbrow0, quest:length, 0));

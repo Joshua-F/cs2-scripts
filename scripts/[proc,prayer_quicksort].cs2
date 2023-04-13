@@ -7,8 +7,12 @@ $intarray0($int2) = $int4;
 def_int $int5 = $int1;
 def_int $int6 = $int1;
 def_int $int7 = -1;
+def_enum $enum8 = enum_4956;
+if (%varbit14826 = 1) {
+	$enum8 = enum_4959;
+}
 while ($int6 < $int2) {
-	if (oc_param(enum(int, obj, enum_4956, $intarray0($int6)), param_1753) <= oc_param(enum(int, obj, enum_4956, $int4), param_1753)) {
+	if (oc_param(enum(int, obj, $enum8, $intarray0($int6)), param_1753) <= oc_param(enum(int, obj, $enum8, $int4), param_1753)) {
 		$int7 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);
 		$intarray0($int5) = $int7;

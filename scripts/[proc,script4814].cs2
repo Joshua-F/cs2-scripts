@@ -1,6 +1,7 @@
 // 4814
 [proc,script4814](mapelement $mapelement0)(string)
-def_dbrow $dbrow1 = enum(mapelement, dbrow, enum_4385, $mapelement0);
+db_find(quest:mapicon, $mapelement0);
+def_dbrow $dbrow1 = db_findnext;
 if ($dbrow1 = null) {
 	return(enum(category, string, enum_1713, mec_category($mapelement0)));
 }

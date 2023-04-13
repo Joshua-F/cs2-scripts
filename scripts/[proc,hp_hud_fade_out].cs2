@@ -5,10 +5,6 @@ if (%varcint394 = 1) {
 } else if ($int14 ! if_gettrans($component2)) {
 	return;
 }
-if ($int14 <= 0) {
-	if_sethide(true, $component4);
-	if_sethide(true, $component9);
-}
 $int14 = ~min(255, calc($int14 + 3));
 %varcint394 = 2;
 if_settrans($int14, $component2);
@@ -21,6 +17,8 @@ if_settrans($int14, $component10);
 if_settrans($int14, $component11);
 if_settrans($int14, $component12);
 if_settrans($int14, $component13);
+if_settrans($int14, $component4);
+if_settrans($int14, $component9);
 if ($int14 >= 255) {
 	if_setontimer(null, $component2);
 	%varcint394 = 0;

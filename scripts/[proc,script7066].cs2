@@ -1,0 +1,4 @@
+// 7066
+[proc,script7066](component $component0, component $component1, string $string0)
+if_setonmouserepeat("tooltip_mouserepeat($component1, -1, $component0, $string0, 25, 250)", $component1);
+if_setonmouseleave("deltooltip($component0)", $component1);

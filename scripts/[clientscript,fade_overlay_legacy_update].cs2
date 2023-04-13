@@ -10,5 +10,5 @@ if ($int1 < 50) {
 	$int1 = calc($int1 - 800);
 	if_settrans(interpolate(0, $int1, 0, 50, 255), interface_174:1);
 } else {
-	if_setontimer(null, interface_174:0);
+	if_setontimer(null, interface_174:1);
 }

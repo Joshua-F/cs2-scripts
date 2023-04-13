@@ -1,0 +1,6 @@
+// 6418
+[proc,script6418](int $int0, string $string0, string $string1)(string, string)
+if ($int0 = 1) {
+	return("Enable", "<u=ff981f><$string0></u><br><br><$string1><br><br><col=00ff00>Really enable it? It will </col><col=ffffff>not cost you any points</col><col=00ff00> as you have unlocked this previously.</col>");
+}
+return("Disable", "<u=ff981f><$string0></u><br><br><$string1><br><br><col=00ff00>Really disable it? This feature can be toggled freely for </col><col=ffffff>no future cost</col><col=00ff00>.</col>");

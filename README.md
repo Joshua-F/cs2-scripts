@@ -6068,6 +6068,7 @@
 [**6065**](scripts/[proc,script6065].cs2)  
 [**6066**](scripts/[proc,script6066].cs2)  
 [**6067**](scripts/[proc,stonepanel_resizable].cs2) `[proc,stonepanel_resizable]`  
+[**6068**](scripts/[proc,script6068].cs2)  
 [**6069**](scripts/[proc,script6069].cs2)  
 [**6070**](scripts/[proc,raffle_tab_not_selected].cs2) `[proc,raffle_tab_not_selected]`  
 [**6071**](scripts/[proc,raffle_tab_selected].cs2) `[proc,raffle_tab_selected]`  
@@ -6417,6 +6418,7 @@
 [**6415**](scripts/[clientscript,cr_tutorial_init].cs2) `[clientscript,cr_tutorial_init]`  
 [**6416**](scripts/[clientscript,cr_tutorial_button_hover].cs2) `[clientscript,cr_tutorial_button_hover]`  
 [**6417**](scripts/[proc,cr_tutorial_button_draw].cs2) `[proc,cr_tutorial_button_draw]`  
+[**6418**](scripts/[proc,script6418].cs2)  
 [**6419**](scripts/[proc,script6419].cs2)  
 [**6420**](scripts/[clientscript,script6420].cs2)  
 [**6421**](scripts/[clientscript,script6421].cs2)  
@@ -6721,6 +6723,7 @@
 [**6720**](scripts/[clientscript,loadnpc_cluehelper_generic_transmit].cs2) `[clientscript,loadnpc_cluehelper_generic_transmit]`  
 [**6721**](scripts/[proc,loadnpc_cluehelper_generic].cs2) `[proc,loadnpc_cluehelper_generic]`  
 [**6722**](scripts/[clientscript,toa_partydetails_addmember].cs2) `[clientscript,toa_partydetails_addmember]`  
+[**6723**](scripts/[proc,script6723].cs2)  
 [**6724**](scripts/[proc,script6724].cs2)  
 [**6725**](scripts/[clientscript,toa_partydetails_kickmember].cs2) `[clientscript,toa_partydetails_kickmember]`  
 [**6726**](scripts/[clientscript,toa_partydetails_timeout_kickmember].cs2) `[clientscript,toa_partydetails_timeout_kickmember]`  
@@ -6772,8 +6775,6 @@
 [**6772**](scripts/[clientscript,toa_scoreboard_tab_update].cs2) `[clientscript,toa_scoreboard_tab_update]`  
 [**6773**](scripts/[proc,toa_scoreboard_tab_update].cs2) `[proc,toa_scoreboard_tab_update]`  
 [**6774**](scripts/[clientscript,toa_scoreboard_tab_select].cs2) `[clientscript,toa_scoreboard_tab_select]`  
-[**6775**](scripts/[clientscript,script6775].cs2)  
-[**6776**](scripts/[proc,script6776].cs2)  
 [**6777**](scripts/[clientscript,script6777].cs2)  
 [**6778**](scripts/[proc,script6778].cs2)  
 [**6779**](scripts/[proc,script6779].cs2)  
@@ -7050,3 +7051,18 @@
 [**7050**](scripts/[clientscript,script7050].cs2)  
 [**7051**](scripts/[clientscript,script7051].cs2)  
 [**7052**](scripts/[clientscript,script7052].cs2)  
+[**7053**](scripts/[proc,script7053].cs2)  
+[**7054**](scripts/[proc,script7054].cs2)  
+[**7055**](scripts/[proc,script7055].cs2)  
+[**7056**](scripts/[proc,script7056].cs2)  
+[**7057**](scripts/[clientscript,script7057].cs2)  
+[**7058**](scripts/[proc,script7058].cs2)  
+[**7059**](scripts/[clientscript,script7059].cs2)  
+[**7060**](scripts/[proc,script7060].cs2)  
+[**7061**](scripts/[clientscript,script7061].cs2)  
+[**7062**](scripts/[proc,script7062].cs2)  
+[**7063**](scripts/[worldmapelementmouserepeat,mapelement_239].cs2) `[worldmapelementmouserepeat,mapelement_239]`  
+[**7064**](scripts/[worldmapelementmouseleave,mapelement_239].cs2) `[worldmapelementmouseleave,mapelement_239]`  
+[**7065**](scripts/[clientscript,script7065].cs2)  
+[**7066**](scripts/[proc,script7066].cs2)  
+[**7067**](scripts/[clientscript,script7067].cs2)  
