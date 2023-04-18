@@ -502,7 +502,7 @@
 [**499**](scripts/[proc,makeover_drawmodels].cs2) `[proc,makeover_drawmodels]`  
 [**500**](scripts/[clientscript,makeover_indicator].cs2) `[clientscript,makeover_indicator]`  
 [**501**](scripts/[proc,makeover_indicator].cs2) `[proc,makeover_indicator]`  
-[**502**](scripts/[clientscript,makeover_hair_setup].cs2) `[clientscript,makeover_hair_setup]`  
+[**502**](scripts/[clientscript,script502].cs2)  
 [**503**](scripts/[proc,league_rewards_draw].cs2) `[proc,league_rewards_draw]`  
 [**504**](scripts/[clientscript,bankmain_switchtab].cs2) `[clientscript,bankmain_switchtab]`  
 [**505**](scripts/[proc,bankmain_finishbuilding].cs2) `[proc,bankmain_finishbuilding]`  
@@ -6775,6 +6775,7 @@
 [**6772**](scripts/[clientscript,toa_scoreboard_tab_update].cs2) `[clientscript,toa_scoreboard_tab_update]`  
 [**6773**](scripts/[proc,toa_scoreboard_tab_update].cs2) `[proc,toa_scoreboard_tab_update]`  
 [**6774**](scripts/[clientscript,toa_scoreboard_tab_select].cs2) `[clientscript,toa_scoreboard_tab_select]`  
+[**6776**](scripts/[clientscript,script6776].cs2)  
 [**6777**](scripts/[clientscript,script6777].cs2)  
 [**6778**](scripts/[proc,script6778].cs2)  
 [**6779**](scripts/[proc,script6779].cs2)  
@@ -7066,3 +7067,27 @@
 [**7065**](scripts/[clientscript,script7065].cs2)  
 [**7066**](scripts/[proc,script7066].cs2)  
 [**7067**](scripts/[clientscript,script7067].cs2)  
+[**7068**](scripts/[proc,script7068].cs2)  
+[**7069**](scripts/[clientscript,script7069].cs2)  
+[**7070**](scripts/[proc,script7070].cs2)  
+[**7071**](scripts/[proc,script7071].cs2)  
+[**7072**](scripts/[proc,script7072].cs2)  
+[**7073**](scripts/[proc,script7073].cs2)  
+[**7074**](scripts/[proc,script7074].cs2)  
+[**7075**](scripts/[clientscript,script7075].cs2)  
+[**7076**](scripts/[clientscript,script7076].cs2)  
+[**7077**](scripts/[proc,script7077].cs2)  
+[**7078**](scripts/[clientscript,script7078].cs2)  
+[**7079**](scripts/[clientscript,script7079].cs2)  
+[**7080**](scripts/[clientscript,script7080].cs2)  
+[**7081**](scripts/[clientscript,script7081].cs2)  
+[**7082**](scripts/[clientscript,script7082].cs2)  
+[**7083**](scripts/[proc,script7083].cs2)  
+[**7084**](scripts/[proc,script7084].cs2)  
+[**7085**](scripts/[proc,script7085].cs2)  
+[**7086**](scripts/[clientscript,script7086].cs2)  
+[**7087**](scripts/[clientscript,script7087].cs2)  
+[**7088**](scripts/[clientscript,script7088].cs2)  
+[**7089**](scripts/[clientscript,script7089].cs2)  
+[**7090**](scripts/[clientscript,script7090].cs2)  
+[**7091**](scripts/[proc,script7091].cs2)  

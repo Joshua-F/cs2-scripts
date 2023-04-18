@@ -1,0 +1,11 @@
+// 7079
+[clientscript,script7079](component $component0, int $comsubid1, boolean $boolean2)
+if (cc_find($component0, $comsubid1) = ^true & cc_find($component0, calc($comsubid1 + 1)) = ^true) {
+	if ($boolean2 = true) {
+		cc_setcolour(^white);
+	} else if (%varcint1149 = $comsubid1) {
+		cc_setcolour(0xff981f);
+	} else {
+		cc_setcolour(0x0e0e0c);
+	}
+}

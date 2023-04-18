@@ -25,7 +25,11 @@ while ($count13 < enum_getoutputcount($enum10)) {
 		cc_create($component12, ^iftype_graphic, 0);
 		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setgraphic("prayerglow");
+		if (%varbit14826 = 1) {
+			cc_setgraphic("graphic_4893");
+		} else {
+			cc_setgraphic("graphic_4892");
+		}
 		.cc_create($component12, ^iftype_graphic, 1);
 		.cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

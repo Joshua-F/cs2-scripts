@@ -1,0 +1,27 @@
+// 7075
+[clientscript,script7075](component $component0, int $comsubid1)
+def_int $int2 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (%varcint1151 = 0) {
+		if (%varcint1152 = 0) {
+			$int2 = calc((cc_getmodelangle_y - 5 + 2047) % 2047);
+			if ($int2 <= 1535 & $int2 > 1023) {
+				%varcint1150 = 1535;
+				%varcint1152 = 1;
+			} else {
+				%varcint1150 = $int2;
+			}
+		} else {
+			$int2 = calc((cc_getmodelangle_y + 5) % 2047);
+			if ($int2 >= 511 & $int2 < 1023) {
+				%varcint1150 = 511;
+				%varcint1152 = 0;
+			} else {
+				%varcint1150 = $int2;
+			}
+		}
+		cc_setmodelangle(0, 0, 0, %varcint1150, 0, 1000);
+	} else {
+		cc_setmodelangle(0, 0, 0, %varcint1150, 0, 1000);
+	}
+}

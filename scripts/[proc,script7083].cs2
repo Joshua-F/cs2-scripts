@@ -1,0 +1,6 @@
+// 7083
+[proc,script7083](component $component0, component $component1, component $component2, int $int3)
+cc_deleteall($component0);
+cc_deleteall($component1);
+~script7085($component0, 0, $component1, $component2);
+~script7084($component0, $component1, $component2, 0, $int3);
