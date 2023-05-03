@@ -31,22 +31,25 @@ while ($namedobj18 ! null) {
 	.cc_settextshadow(true);
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	.cc_settext(~tostring_spacer(enum(obj, int, enum_842, $namedobj18), ","));
-	if ($namedobj18 = herb_sack_13226 | $namedobj18 = rune_pouch_12791) {
-		cc_setop(2, "Buy 1");
-	} else if ($num16 = 1) {
-		cc_setop(2, "Buy 1");
-		cc_setop(3, "Buy 5");
-		cc_setop(4, "Buy 10");
-		if (~kots_world = 0) {
-			cc_setop(5, "Buy 50");
-		}
-	} else {
-		cc_setop(2, "Buy 1 set");
-		cc_setop(3, "Buy 5 sets");
-		cc_setop(4, "Buy 10 sets");
-		if (~kots_world = 0) {
-			cc_setop(5, "Buy 50 sets");
-		}
+	switch_namedobj ($namedobj18) {
+		case herb_sack_13226, rune_pouch_12791, looting_bag_11941 :
+			cc_setop(2, "Buy 1");
+		case default :
+			if ($num16 = 1) {
+				cc_setop(2, "Buy 1");
+				cc_setop(3, "Buy 5");
+				cc_setop(4, "Buy 10");
+				if (~kots_world = 0) {
+					cc_setop(5, "Buy 50");
+				}
+			} else {
+				cc_setop(2, "Buy 1 set");
+				cc_setop(3, "Buy 5 sets");
+				cc_setop(4, "Buy 10 sets");
+				if (~kots_world = 0) {
+					cc_setop(5, "Buy 50 sets");
+				}
+			}
 	}
 	cc_setop(1, "Info");
 	cc_setop(10, "Examine");

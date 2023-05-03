@@ -45,6 +45,7 @@ def_string $string1 = "null";
 def_int $int30 = -1;
 def_int $int31 = -1;
 def_int $int32 = -1;
+def_int $int33 = 0;
 if (cc_find($component2, $int13) = ^true) {
 	cc_setcolour($colour16);
 }
@@ -126,7 +127,12 @@ while ($int18 < $length17) {
 		cc_setcolour($colour16);
 		if ($int18 = $int0) {
 			cc_create($component7, ^iftype_text, 0);
-			cc_settext("Type: <col=ffffff><enum(int, string, enum_3969, $int30)></col>");
+			$int33 = enum(int, int, enum_4846, $int29);
+			if ($int33 > 1) {
+				cc_settext("Type: <col=ffffff><enum(int, string, enum_3969, $int30)></col> <col=dfdfdf>(+<tostring($int33)> points)</col>");
+			} else {
+				cc_settext("Type: <col=ffffff><enum(int, string, enum_3969, $int30)></col> <col=dfdfdf>(+<tostring($int33)> point)</col>");
+			}
 			cc_setsize(55, 11, ^setsize_minus, ^setsize_abs);
 			cc_setposition(5, calc($int23 + $int24), ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);

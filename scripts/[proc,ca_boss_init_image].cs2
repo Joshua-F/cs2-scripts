@@ -14,3 +14,4 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setmodel($model2);
 cc_setmodelanim($seq3);
 cc_setmodelangle($int4, $int5, $int6, $int7, $int8, $int9);
+cc_setontimer("spinmodel($int4, $int5, 0, -2, 0, event_com, event_comsubid)");

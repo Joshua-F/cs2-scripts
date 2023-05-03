@@ -1,82 +1,162 @@
 // 4782
-[proc,ca_tasks_progress_bar](component $component0, int $int1, int $int2)
+[proc,ca_tasks_progress_bar](component $component0, component $component1, int $int2)
+def_int $int3 = 0;
+def_int $intarray0(7);
+$intarray0(0) = 0;
+$intarray0(1) = %varbit4132;
+$intarray0(2) = %varbit10660;
+$intarray0(3) = %varbit10661;
+$intarray0(4) = %varbit14812;
+$intarray0(5) = %varbit14813;
+$intarray0(6) = %varbit14814;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+while ($int4 < 6 & $int5 = 0) {
+	if (%varbit14815 < $intarray0(calc(1 + $int4))) {
+		$int6 = calc($intarray0(1 + $int4) - %varbit14815);
+		$int5 = 1;
+	} else {
+		$int3 = calc($int3 + 1);
+	}
+	$int4 = calc($int4 + 1);
+}
+$int4 = 0;
+$int5 = 0;
+def_int $int7 = 0;
+while ($int4 < 6) {
+	if (~ca_tier_status($int4) = 1) {
+		$int5 = 1;
+		$int7 = 1;
+	}
+	$int4 = calc($int4 + 1);
+}
+def_int $int8 = ~max(1, $intarray0(6));
 if_setop(1, "", $component0);
 if_setopbase("", $component0);
-def_int $int3 = 0;
-def_int $int4 = 0;
-def_int $int5 = -1;
-def_int $int6 = -1;
-def_int $width7 = if_getwidth($component0);
-def_string $string0 = "";
-def_int $int8 = -1;
-def_int $int9 = 901389;
+def_int $int9 = 0;
 def_int $int10 = 0;
-def_int $int11 = 0;
-if ($int2 = 0) {
-	$int10 = ~ca_tasks_total;
-	$int11 = ~script4779;
+def_int $int11 = -1;
+def_int $int12 = -1;
+def_int $width13 = if_getwidth($component0);
+def_int $int14 = calc($width13 - 4);
+def_int $width15 = 0;
+def_string $string0 = "";
+def_int $int16 = -1;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_string $text1 = "";
+def_fontmetrics $fontmetrics23 = p12_full;
+if ($int7 = 1) {
+	$fontmetrics23 = b12_full;
+	$text1 = "You have rewards to collect from Ghommal!";
+} else if ($int3 >= 6) {
+	$text1 = "Total Points: <tostring(%varbit14815)>";
 } else {
-	$int10 = ~ca_tasks_boss_total(%varbit12862);
-	$int11 = ~ca_specific_taskcount(%varbit12862);
+	$text1 = "Total Points: <tostring(%varbit14815)> - Next unlock in <tostring($int6)> points";
 }
-if ($int11 > $int10) {
-	$int11 = $int10;
+if ($int2 = 2) {
+	$width15 = scale(~min(%varbit14815, $int8), $int8, $int14);
+} else if ($int2 = 1) {
+	$int17 = ~ca_tasks_boss_total(%varbit12862);
+	$int18 = ~ca_specific_taskcount(%varbit12862);
+	if ($int18 > $int17) {
+		$int18 = $int17;
+	}
+	$width15 = scale($int18, ~max($int17, 1), $int14);
+	if ($int17 <= 0) {
+		$text1 = "No Tasks Available";
+	} else {
+		$text1 = "Tasks Completed: <tostring($int18)>/<tostring($int17)>";
+	}
+} else if ($int7 = 1 | $int3 >= 6) {
+	$width15 = $int14;
+} else {
+	$int21 = $intarray0($int3);
+	$int22 = $intarray0(calc(1 + $int3));
+	$width15 = scale(~max(0, calc(%varbit14815 - $int21)), ~max(1, calc($int22 - $int21)), $int14);
 }
-if ($int10 = $int11) {
-	$int9 = 901389;
-} else if ($int11 > 0) {
-	$int9 = 16776960;
-}
-def_int $width12 = calc($width7 - 4);
-def_int $width13 = scale($int11, ~max($int10, 1), $width12);
-if ($width13 > $width12) {
-	$width13 = $width12;
+if ($width15 > $int14) {
+	$width15 = $int14;
 }
 if (cc_find($component0, 0) = ^false) {
-	if ($int2 = 1 & $int10 > 0) {
-		cc_create($component0, ^iftype_graphic, $int4);
-		cc_setsize(calc($width7 - 4), 27, ^setsize_abs, ^setsize_abs);
+	if ($int2 = 1 & $int17 > 0) {
+		cc_create($component0, ^iftype_graphic, $int10);
+		cc_setsize(calc($width13 - 4), 27, ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setop(1, "View Tasks");
 		cc_setonop("button_select_sound");
 		cc_settrans(250);
-		$int4 = calc($int4 + 1);
+		$int10 = calc($int10 + 1);
 	}
-	cc_create($component0, ^iftype_rectangle, $int4);
-	cc_setsize(calc($width7 - 2), 29, ^setsize_abs, ^setsize_abs);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setsize(calc($width13 - 2), 29, ^setsize_abs, ^setsize_abs);
 	cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(false);
 	cc_setcolour(0x474745);
-	$int4 = calc($int4 + 1);
-	cc_create($component0, ^iftype_graphic, $int4);
-	cc_setsize(calc($width7 - 4), 27, ^setsize_abs, ^setsize_abs);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_graphic, $int10);
+	cc_setsize(calc($width13 - 4), 27, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("ca_progress_bar,1");
 	cc_settiling(true);
-	$int4 = calc($int4 + 1);
-	cc_create($component0, ^iftype_graphic, $int4);
-	cc_setsize($width13, 27, ^setsize_abs, ^setsize_abs);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_graphic, $int10);
+	cc_setsize($width15, 27, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("ca_progress_bar,0");
 	cc_settiling(true);
-	$int4 = calc($int4 + 1);
-	cc_create($component0, ^iftype_text, $int4);
-	cc_setsize($width7, 0, ^setsize_abs, ^setsize_minus);
+	$int19 = $int10;
+	$int10 = calc($int10 + 1);
+	if ($int2 = 2) {
+		while ($int9 < 6) {
+			cc_create($component0, ^iftype_graphic, $int10);
+			cc_setsize(10, 31, ^setsize_abs, ^setsize_abs);
+			$int20 = $intarray0(calc(1 + $int9));
+			$int16 = scale($int20, $int8, $int14);
+			if ($int16 <= 2) {
+				$int16 = 0;
+			} else if ($int16 >= $int14) {
+				$int16 = calc(3 + $int14);
+			} else {
+				$int16 = calc($int16 + 2);
+			}
+			cc_setposition(calc($int16 - 4), 0, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setgraphic("league_progress_bar_indicator");
+			if ($int20 = 1) {
+				$string0 = "<enum(int, string, enum_3967, calc($int9 + 1))> Tier rewards unlocked at one point.";
+			} else {
+				$string0 = "<enum(int, string, enum_3967, calc($int9 + 1))> Tier rewards unlocked at <tostring($int20)> points.";
+			}
+			if (~on_mobile = true) {
+				cc_setop(1, "Show Threshold");
+				cc_setonop("league_progress_bar_mobile_tooltip(event_com, event_comsubid, $component1, $string0, 512)");
+			} else {
+				cc_setop(1, "");
+				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, $string0, 25, 512)");
+				cc_setonmouseleave("deltooltip($component1)");
+			}
+			$int9 = calc($int9 + 1);
+			$int10 = calc($int10 + 1);
+		}
+	}
+	cc_create($component0, ^iftype_text, $int10);
+	cc_setsize($width13, 0, ^setsize_abs, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont(p12_full);
+	cc_settextfont($fontmetrics23);
 	cc_setcolour(^white);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	if ($int10 <= 0) {
-		cc_settext("No Tasks Available");
-	} else {
-		cc_settext("Tasks Completed: <tostring($int11)>/<tostring($int10)>");
-	}
-	$int4 = calc($int4 + 1);
-	cc_create($component0, ^iftype_rectangle, $int4);
-	cc_setsize($width7, 31, ^setsize_abs, ^setsize_abs);
+	cc_settext($text1);
+	$int10 = calc($int10 + 1);
+	cc_create($component0, ^iftype_rectangle, $int10);
+	cc_setsize($width13, 31, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(false);
 	cc_setcolour(0x0e0e0c);
-	$int4 = calc($int4 + 1);
+	$int10 = calc($int10 + 1);
 }

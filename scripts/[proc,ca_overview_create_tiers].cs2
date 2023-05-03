@@ -18,13 +18,13 @@ def_int $int19 = 90;
 def_int $int20 = calc(if_getheight($component0) / ($count8 / 2) - 3);
 def_int $int21 = 0;
 def_int $int22 = 0;
-def_int $int23 = 32;
+def_int $int23 = 24;
 def_int $colour24 = ^yellow;
 def_int $int25 = 16750899;
 while ($int9 < $count8) {
 	$struct14 = enum(int, struct, $enum6, $int9);
 	$text0 = struct_param($struct14, param_1330);
-	$graphic15 = struct_param($struct14, param_1331);
+	$graphic15 = struct_param($struct14, param_1332);
 	$int16 = ~ca_tasks_completed_tier(calc($int9 + 1));
 	$int17 = ~ca_tasks_tier_total(calc($int9 + 1));
 	if ($int16 > $int17) {
@@ -65,7 +65,7 @@ while ($int9 < $count8) {
 		cc_setop(1, "<$text0> Tasks");
 		cc_setonop("button_select_sound");
 	}
-	$int22 = ~ca_setup_progress_bar($component5, $int17, $int16, $int22, calc($int10 + 9), calc($int11 + 49), calc($int19 - 18), ^settextalign_centre, $colour24, 2);
+	$int22 = ~ca_setup_progress_bar($component5, $int17, $int16, $int22, calc($int10 + 9), calc($int11 + 41), calc($int19 - 18), ^settextalign_centre, $colour24, 2);
 	$int12 = calc($int12 + 1);
 	$int9 = calc($int9 + 1);
 }

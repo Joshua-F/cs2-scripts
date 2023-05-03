@@ -502,7 +502,6 @@
 [**499**](scripts/[proc,makeover_drawmodels].cs2) `[proc,makeover_drawmodels]`  
 [**500**](scripts/[clientscript,makeover_indicator].cs2) `[clientscript,makeover_indicator]`  
 [**501**](scripts/[proc,makeover_indicator].cs2) `[proc,makeover_indicator]`  
-[**502**](scripts/[clientscript,script502].cs2)  
 [**503**](scripts/[proc,league_rewards_draw].cs2) `[proc,league_rewards_draw]`  
 [**504**](scripts/[clientscript,bankmain_switchtab].cs2) `[clientscript,bankmain_switchtab]`  
 [**505**](scripts/[proc,bankmain_finishbuilding].cs2) `[proc,bankmain_finishbuilding]`  
