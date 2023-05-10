@@ -1,0 +1,35 @@
+// 7094
+[proc,script7094](component $component0, int $int1, struct $struct2, int $setting3, component $component4, int $int5)
+def_string $text0 = struct_param($struct2, param_1360);
+if (~script7107($setting3) = 1) {
+	$text0 = ~script7108($setting3, 30);
+}
+def_int $int6 = ~script3957($struct2);
+def_boolean $boolean7 = ~on_mobile;
+def_int $int8 = 4;
+if ($boolean7 = true) {
+	$int8 = calc($int8 - 1);
+}
+if (cc_find($component0, $int1) = ^true) {
+	if (.cc_find($component0, calc($int1 + $int8)) = ^true) {
+		.cc_settext($text0);
+	}
+	if ($int6 = 1) {
+		if ($boolean7 = false & .cc_find($component0, calc($int1 + 1)) = ^true) {
+			.cc_setonmouserepeat("cc_settrans_temporarily(event_com, calc($int1 + 1), 220, 250)");
+			.cc_setonmouseleave("cc_settrans(event_com, calc($int1 + 1), 250, null)");
+		}
+		if (.cc_find($component0, calc($int1 - 1)) = ^true) {
+			.cc_setcolour(0xff981f);
+		}
+	} else {
+		if ($boolean7 = false & .cc_find($component0, calc($int1 + 1)) = ^true) {
+			.cc_settrans(250);
+			.cc_setonmouserepeat(null);
+			.cc_setonmouseleave(null);
+		}
+		if (.cc_find($component0, calc($int1 - 1)) = ^true) {
+			.cc_setcolour(0x9f9f9f);
+		}
+	}
+}

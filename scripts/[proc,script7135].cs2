@@ -1,0 +1,47 @@
+// 7135
+[proc,script7135](int $height0)
+def_component $component1 = interface_650:21;
+def_component $component2 = interface_650:23;
+def_component $component3 = interface_650:22;
+def_component $component4 = interface_650:20;
+if ($height0 > if_getheight($component1)) {
+	if_setsize(22, 4, ^setsize_minus, ^setsize_minus, $component1);
+	if_setsize(0, $height0, ^setsize_minus, ^setsize_abs, $component2);
+	if_sethide(false, $component4);
+	if_setscrollsize(0, $height0, $component3);
+	if (cc_find($component4, 0) = ^true) {
+		~scrollbar_resize($component4, $component3, if_getscrolly($component3));
+	} else {
+		~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+		if (cc_find($component4, 1) = ^true) {
+			~scrollbar_vertical_setdragger($component4, $component3);
+		}
+	}
+} else {
+	if_setsize(4, 4, ^setsize_minus, ^setsize_minus, $component1);
+	if_setsize(0, $height0, ^setsize_minus, ^setsize_abs, $component2);
+	cc_deleteall($component4);
+	if_sethide(true, $component4);
+	if_setscrollsize(0, 0, $component3);
+	if_setscrollpos(0, 0, $component3);
+}
+def_component $component5 = null;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = calc((if_getwidth($component1) - 212) / 4);
+while ($int6 < 10) {
+	$component5 = ~script7167($int6);
+	$int7 = 0;
+	$int8 = 5;
+	while (cc_find($component5, $int8) = ^true) {
+		$int8 = calc($int8 + 1);
+		if (.cc_find($component5, $int8) = ^true & .cc_getinvobject ! null) {
+			cc_setposition(calc(6 + 40 * $int7 + ($int9 * $int7 - 1)), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(calc(cc_getx + 2), .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+		}
+		$int8 = calc($int8 + 1);
+		$int7 = calc(($int7 + 1) % 5);
+	}
+	$int6 = calc($int6 + 1);
+}

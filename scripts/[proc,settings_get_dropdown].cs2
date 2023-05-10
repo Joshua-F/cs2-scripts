@@ -63,6 +63,16 @@ switch_int ($setting0) {
 		return(%varbit14178);
 	case 301 :
 		return(%varbit14708);
+	case 318 :
+		return(deviceoption_get(20));
+	case 334 :
+		return(%varbit14873);
+	case 336 :
+		return(%varbit14875);
+	case 338 :
+		return(%varbit14871);
+	case 340 :
+		return(enum(int, int, enum_4975, %varbit14877));
 	case default :
 		return(0);
 }

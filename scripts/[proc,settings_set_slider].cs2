@@ -2,6 +2,15 @@
 [proc,settings_set_slider](int $setting0, int $int1)
 %varbit9657 = $setting0;
 switch_int ($setting0) {
+	case 319 :
+		if (~on_enhanced_any = 0) {
+			return;
+		}
+		if ($int1 = 0 & %var3796 > 0) {
+			%varbit14817 = %var3796;
+		}
+		%var3796 = ~minmax(0, 100, calc($int1 * 5));
+		~script7109;
 	case ^setting_volumemusic :
 		if ($int1 = 0 & %var168 > 0) {
 			%varbit12426 = %var168;

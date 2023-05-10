@@ -1,0 +1,32 @@
+// 7203
+[proc,script7203](string $string0)
+def_string $string1 = "null";
+def_int $index0 = 0;
+_7621;
+_7409(stringvector_2);
+$string0 = lowercase($string0);
+$string0 = ~script7123($string0);
+def_int $index1 = string_indexof_string($string0, ",", 0);
+def_int $int2 = 0;
+while ($index1 ! -1 & $int2 < 50) {
+	$string1 = substring($string0, $index0, $index1);
+	$string1 = ~string_trim($string1);
+	if (string_length($string1) > 0) {
+		_7616($string1);
+		_7401(stringvector_2, $string1, 0);
+	}
+	$index0 = calc($index1 + 1);
+	$index1 = string_indexof_string($string0, ",", $index0);
+	$int2 = calc($int2 + 1);
+}
+$string1 = substring($string0, $index0, string_length($string0));
+$string1 = ~string_trim($string1);
+if (string_length($string1) > 0) {
+	_7616($string1);
+	_7401(stringvector_2, $string1, 0);
+}
+if (_7407(stringvector_2) > 0) {
+	%varbit14882 = 1;
+} else {
+	%varbit14882 = 0;
+}

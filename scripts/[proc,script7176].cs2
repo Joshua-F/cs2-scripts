@@ -1,0 +1,14 @@
+// 7176
+[proc,script7176](string $string0)(int)
+def_int $int0 = 0;
+def_component $component1 = null;
+def_string $string1 = "null";
+while ($int0 < 10) {
+	$component1 = ~script7168($int0);
+	$string1 = if_gettext($component1);
+	if (string_length($string1) = string_length($string0) & string_indexof_string($string1, $string0, 0) = 0) {
+		return($int0);
+	}
+	$int0 = calc($int0 + 1);
+}
+return(-1);

@@ -1,0 +1,38 @@
+// 7179
+[clientscript,script7179](int $opindex0, int $int1)
+def_component $component2 = ~script7168($int1);
+def_int $intarray0(10);
+def_int $int3 = -1;
+def_component $component4 = null;
+switch_int ($opindex0) {
+	case 1 :
+		if_setfillcolour(calc(1 - if_getfillcolour($component2)), $component2);
+		~script7133;
+	case 2 :
+		$int3 = 0;
+		while ($int3 < 10) {
+			if ($int3 >= $int1) {
+				$component4 = ~script7168(calc($int3 + 1));
+			} else {
+				$component4 = ~script7168($int3);
+			}
+			if ($component4 = null) {
+				$intarray0($int3) = 1;
+			} else {
+				$intarray0($int3) = if_getfillcolour($component4);
+			}
+			$int3 = calc($int3 + 1);
+		}
+		_7614(if_gettext($component2));
+		~script7166;
+		$int3 = 0;
+		while ($int3 < 10) {
+			$component4 = ~script7168($int3);
+			if ($intarray0($int3) = -1) {
+				$intarray0($int3) = 0;
+			}
+			if_setfillcolour($intarray0($int3), $component4);
+			$int3 = calc($int3 + 1);
+		}
+		~script7133;
+}

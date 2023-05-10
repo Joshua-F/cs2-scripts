@@ -1,0 +1,13 @@
+// 7240
+[proc,script7240](obj $obj0)(int)
+if (%varbit1777 = 0) {
+	return(1);
+}
+def_int $int1 = obj_owner;
+if ($int1 = 0 | $int1 = 1) {
+	return(1);
+}
+if (~is_group_iron = 1 & $int1 = 3) {
+	return(1);
+}
+return(0);

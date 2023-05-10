@@ -1,27 +1,34 @@
 // 3934
-[clientscript,script3934](component $component0, component $component1, component $component2, component $component3)
+[clientscript,script3934](component $component0, component $component1, component $component2, component $component3, component $component4)
 cc_deleteall($component1);
-def_int $int4 = struct_param(sound_effect_volume_2754, param_1101);
-def_int $int5 = 0;
-def_int $width6 = if_getwidth($component1);
-def_graphic $graphic7 = "options_icons,2";
-def_int $int8 = ~settings_get_slider(^setting_volumesounds);
-~settings_set_slider(^setting_volumesounds, $int8);
+if (~on_enhanced_any = 0) {
+	if_setposition(0, 48, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+} else {
+	if_setposition(0, 42, ^setpos_abs_centre, ^setpos_abs_bottom, $component4);
+	if_setonvartransmit("script7100($component2){var3796}", $component1);
+	~script7101($component2);
+}
+def_int $int5 = struct_param(sound_effect_volume_2754, param_1101);
+def_int $int6 = 0;
+def_int $width7 = if_getwidth($component1);
+def_graphic $graphic8 = "options_icons,2";
+def_int $int9 = ~settings_get_slider(^setting_volumesounds);
+~settings_set_slider(^setting_volumesounds, $int9);
 def_string $string0 = "Mute Sound Effects";
 def_string $string1 = "Unmute Sound Effects";
-~settings_create_icon($int8, ^setting_volumesounds, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3);
-if_setonvartransmit("script3939(^setting_volumesounds, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3){var169}", $component2);
+~settings_create_icon($int9, ^setting_volumesounds, $component2, $component1, $int5, $graphic8, $component0, $string0, $string1, $component3);
+if_setonvartransmit("script3939(^setting_volumesounds, $component2, $component1, $int5, $graphic8, $component0, $string0, $string1, $component3){var169}", $component2);
 if_setnoclickthrough(true, $component2);
 if_setonclick("opsound(0, 0)", $component2);
-while ($int5 <= $int4) {
-	cc_create($component1, ^iftype_rectangle, $int5);
+while ($int6 <= $int5) {
+	cc_create($component1, ^iftype_rectangle, $int6);
 	cc_setop(1, "Adjust Sound Effect Volume");
-	cc_setposition(scale($int5, $int4, $width6), 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc(scale(1 + $int5, $int4, $width6) - scale($int5, $int4, $width6)), 0, ^setsize_abs, ^setsize_minus);
+	cc_setposition(scale($int6, $int5, $width7), 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(scale(1 + $int6, $int5, $width7) - scale($int6, $int5, $width7)), 0, ^setsize_abs, ^setsize_minus);
 	cc_setfill(true);
 	cc_setcolour(^white);
 	cc_settrans(255);
-	cc_setonop("script3940(^setting_volumesounds, $int5, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3)");
-	$int5 = calc($int5 + 1);
+	cc_setonop("script3940(^setting_volumesounds, $int6, $component2, $component1, $int5, $graphic8, $component0, $string0, $string1, $component3)");
+	$int6 = calc($int6 + 1);
 }
-~script3941($int8, $component2, $component1, $int4);
+~script3941($int9, $component2, $component1, $int5);

@@ -4,6 +4,11 @@
 def_int $int7 = ~settings_get_slider($setting0);
 if ($int7 > 0) {
 	switch_int ($setting0) {
+		case 319 :
+			if (~on_enhanced_any = 0) {
+				return;
+			}
+			%varbit14817 = calc($int7 * 5);
 		case ^setting_volumemusic :
 			%varbit12426 = calc($int7 * 5);
 		case ^setting_volumesounds :
@@ -14,6 +19,14 @@ if ($int7 > 0) {
 	~settings_set_slider($setting0, 0);
 } else {
 	switch_int ($setting0) {
+		case 319 :
+			if (~on_enhanced_any = 0) {
+				return;
+			}
+			if (%varbit14817 <= 0) {
+				%varbit14817 = 25;
+			}
+			~settings_set_slider($setting0, calc(%varbit14817 / 5));
 		case ^setting_volumemusic :
 			if (%varbit12426 <= 0) {
 				%varbit12426 = 25;

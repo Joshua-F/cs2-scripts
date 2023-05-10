@@ -1,0 +1,6 @@
+// 7237
+[clientscript,script7237]
+def_int $int0 = 0;
+def_int $int1 = 0;
+$int0, $int1 = stockmarket_getvalue(cabbage_1965);
+mes("Status: <tostring($int0)>, Value: <tostring($int1)>.");

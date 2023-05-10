@@ -1,0 +1,12 @@
+// 7161
+[proc,script7161](int $int0)
+def_component $component1 = ~script7168($int0);
+def_component $component2 = interface_650:13;
+~script7171($component1, $component2);
+def_int $int3 = $int0;
+while ($int3 > 0) {
+	~script7171(~script7168(calc($int3 - 1)), ~script7168($int3));
+	$int3 = calc($int3 - 1);
+}
+~script7171($component2, ~script7168(0));
+~script7133;

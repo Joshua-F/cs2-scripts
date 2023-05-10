@@ -6,6 +6,13 @@ if (%varbit14188 = 1) {
 	$int1 = ~helper_generic_add_text(db_getfield($dbrow0, dbtable_6:2, 0));
 }
 def_int $dbfield2 = ~script6657(db_getfield($dbrow0, dbtable_6:3, 0));
-~cluehelper_infobox_target_display(db_getfield($dbrow0, dbtable_6:3, $dbfield2));
-def_int $dbfield3 = ~script6656($dbrow0);
-~cluehelper_infobox_challenge_display(db_getfield($dbrow0, dbtable_6:4, $dbfield3));
+def_dbrow $dbrow3 = db_getfield($dbrow0, dbtable_6:3, $dbfield2);
+~cluehelper_infobox_target_display($dbrow3);
+def_int $dbfield4 = ~script6656($dbrow0);
+~cluehelper_infobox_challenge_display(db_getfield($dbrow0, dbtable_6:4, $dbfield4));
+if (~cluehelper_is_dig($dbrow0, $dbrow3) = 1) {
+	$int1 = ~helper_generic_add_text("...");
+	if (cc_find(interface_711:5, $int1) = ^true) {
+		cc_setoninvtransmit("script6623($int1){inv}");
+	}
+}

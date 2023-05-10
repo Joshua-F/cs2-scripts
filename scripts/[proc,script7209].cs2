@@ -1,0 +1,9 @@
+// 7209
+[proc,script7209](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (%varbit14869 = 1) {
+		cc_setgraphic("toggle_box,1");
+	} else {
+		cc_setgraphic("toggle_box,0");
+	}
+}

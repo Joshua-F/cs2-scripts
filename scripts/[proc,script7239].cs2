@@ -1,0 +1,7 @@
+// 7239
+[proc,script7239](obj $obj0)(boolean)
+def_string $string0 = removetags(oc_name($obj0));
+if (_7408(stringvector_3, $string0, 1, 0) = 1) {
+	return(false);
+}
+return(true);

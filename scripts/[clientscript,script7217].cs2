@@ -1,0 +1,6 @@
+// 7217
+[clientscript,script7217](component $component0, int $comsubid1, string $text0)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settext($text0);
+	cc_setontimer(null);
+}

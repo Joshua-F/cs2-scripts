@@ -1,0 +1,10 @@
+// 7111
+[proc,script7111](int $int0)
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (~on_enhanced_mobile = 1) {
+	return;
+}
+$int0 = ~minmax(0, 4, $int0);
+deviceoption_set(20, $int0);

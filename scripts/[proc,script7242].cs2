@@ -1,0 +1,16 @@
+// 7242
+[proc,script7242]()(boolean)
+def_int $int0 = %varbit14873;
+if (~on_mobile = true) {
+	$int0 = %varbit14874;
+}
+if ($int0 = 0) {
+	return(false);
+}
+if ($int0 = 1) {
+	return(true);
+}
+if (_3501(%varbit14877) = true | keyheld(%varbit14877) = true) {
+	return(true);
+}
+return(false);

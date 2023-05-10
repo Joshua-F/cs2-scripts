@@ -1,0 +1,12 @@
+// 7110
+[proc,script7110]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (~on_enhanced_desktop = 1 & %varbit13982 = 1) {
+	return;
+}
+if (~on_enhanced_mobile = 1 & %varbit13981 = 0) {
+	return;
+}
+%varbit14865 = calc(1 - %varbit14865);

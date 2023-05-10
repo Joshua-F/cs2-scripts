@@ -36,5 +36,5 @@ if (cc_find($component5, $comsubid3) = ^true) {
 }
 if (%varbit9647 = 1 & %varbit9657 = $setting1 & cc_find($component5, $comsubid6) = ^true) {
 	cc_setcolour(^white);
-	cc_setontimer("settings_input_timer($component5, $comsubid6)");
+	cc_setontimer("settings_input_timer($component5, $comsubid6, $setting1)");
 }

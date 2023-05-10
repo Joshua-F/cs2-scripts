@@ -1,0 +1,13 @@
+// 7132
+[proc,script7132]
+if_sethide(true, interface_650:19);
+if_sethide(true, interface_650:43);
+switch_int (%varbit14883) {
+	case 0 :
+		if_sethide(false, interface_650:19);
+		~script7135(if_getheight(interface_650:23));
+	case 1 :
+		if_sethide(false, interface_650:43);
+	case default :
+		return;
+}

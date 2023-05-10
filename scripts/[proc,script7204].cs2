@@ -1,0 +1,6 @@
+// 7204
+[proc,script7204](string $string0, int $length0)(string)
+if (string_length($string0) > $length0) {
+	return("<substring($string0, 0, calc($length0 - 3))>...");
+}
+return($string0);

@@ -1,6 +1,10 @@
 // 3927
 [clientscript,script3927](component $component0, component $component1)
 cc_deleteall($component0);
+if (~on_enhanced_any = 1) {
+	if_sethide(true, $component0);
+	return;
+}
 def_int $int2 = 17;
 def_int $int3 = 17;
 def_int $width4 = calc(if_getwidth($component0) - $int2 - 2);

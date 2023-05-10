@@ -1,6 +1,8 @@
 // 3959
 [proc,settings_custom_check](int $setting0)(int)
 def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
 switch_int ($setting0) {
 	case 53 :
 		$int1 = scale(600, 16384, if_getwidth(if_getlayer(toplevel_osm:19)));

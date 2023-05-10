@@ -1,0 +1,13 @@
+// 7128
+[clientscript,script7128]
+~script7166;
+~script7133;
+~script7132;
+if_setonresize("script7131", interface_650:0);
+~questlist_settings_button_init(interface_650:17);
+def_component $component0 = interface_650:57;
+def_component $component1 = interface_650:58;
+def_component $component2 = interface_650:59;
+def_component $component3 = interface_650:16;
+~script5771($component3, enum_4980, %varbit14883, 0xff981f);
+if_setonop("script7129($component0, $component1, $component2, $component3, enum_4980, 0xff981f)", $component3);

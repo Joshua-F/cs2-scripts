@@ -111,15 +111,15 @@ def_int $int36 = ~settings_get_slider($setting21);
 def_boolean $boolean37 = struct_param($struct6, param_1108);
 cc_create($component7, ^iftype_graphic, $int3);
 $int3 = calc($int3 + 1);
+def_graphic $graphic38 = "settings_slider,7";
 if ($int23 = 1) {
 	if ($boolean37 = true) {
-		cc_setgraphic("settings_slider,8");
+		$graphic38 = "settings_slider,8";
 	} else {
-		cc_setgraphic("settings_slider,6");
+		$graphic38 = "settings_slider,6";
 	}
-} else {
-	cc_setgraphic("settings_slider,7");
 }
+~script7097($setting21, calc($int3 - 1), $component7, $graphic38);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 if (struct_param($struct6, param_1107) = false) {
 	if ($int36 = 0) {
@@ -141,48 +141,48 @@ if ($boolean37 = true) {
 }
 $int29 = 0;
 $int30 = $int33;
-def_int $int38 = 0;
+def_int $int39 = 0;
 def_string $op3 = struct_param($struct6, param_1104);
-def_boolean $boolean39 = struct_param($struct6, param_1105);
-def_boolean $boolean40 = struct_param($struct6, param_1106);
-def_int $int41 = 0;
+def_boolean $boolean40 = struct_param($struct6, param_1105);
+def_boolean $boolean41 = struct_param($struct6, param_1106);
+def_int $int42 = 0;
 while ($int29 < $int18) {
-	if ($boolean39 = true) {
+	if ($boolean40 = true) {
 		cc_create($component9, ^iftype_rectangle, $int4);
 		$int4 = calc($int4 + 1);
 	} else {
 		cc_create($component8, ^iftype_rectangle, $int2);
 		$int2 = calc($int2 + 1);
 	}
-	if ($boolean40 = false) {
+	if ($boolean41 = false) {
 		cc_setonop("settings_slider_op($struct6, $setting21, $int29, $int18, $int35, $component7, calc($int3 - 1), $int32, $int33, $int34, $component8, $comsubid25, $int26, $string0, $boolean22)");
 	} else {
 		~settings_slider_choose_onop($setting21, $component7, calc($int3 - 1), $int35, $int32, $int33, $int34, $component10, $int26, $string0, $int18, $int29);
 	}
 	cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
 	if ($int18 > 1) {
-		$int38 = calc(scale(1 + $int41, $int18, $int35) - scale($int41, $int18, $int35));
-		$int41 = calc($int41 + 1);
+		$int39 = calc(scale(1 + $int42, $int18, $int35) - scale($int42, $int18, $int35));
+		$int42 = calc($int42 + 1);
 	} else {
-		$int38 = $int35;
+		$int39 = $int35;
 	}
-	cc_setsize($int38, 16, ^setsize_abs, ^setsize_abs);
+	cc_setsize($int39, 16, ^setsize_abs, ^setsize_abs);
 	cc_setfill(true);
 	cc_setcolour(^black);
 	cc_settrans(255);
 	cc_setop(1, $op3);
-	$int30 = calc($int30 + $int38);
+	$int30 = calc($int30 + $int39);
 	$int29 = calc($int29 + 1);
 }
-def_int $y42 = calc($int32 + 16 + 6);
-def_int $int43 = $int2;
+def_int $y43 = calc($int32 + 16 + 6);
+def_int $int44 = $int2;
 if ($enum20 ! null) {
 	$int29 = 0;
 	while ($int29 < $int19) {
 		cc_create($component8, ^iftype_text, $int2);
 		$int2 = calc($int2 + 1);
 		cc_setsize(30, 16, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($intarray0($int29) + 16 / 2 - 15), $y42, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($intarray0($int29) + 16 / 2 - 15), $y43, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext(enum(int, string, $enum20, $int29));
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextfont(p12_full);
@@ -192,7 +192,7 @@ if ($enum20 ! null) {
 	}
 }
 if ($boolean22 = true) {
-	~settings_slider_choose_transmit($struct6, $setting21, $int18, $int19, $int35, $component7, calc($int3 - 1), $int32, $int33, $int34, $component8, $int26, $string0, $int43, $enum20, $boolean37);
+	~settings_slider_choose_transmit($struct6, $setting21, $int18, $int19, $int35, $component7, calc($int3 - 1), $int32, $int33, $int34, $component8, $int26, $string0, $int44, $enum20, $boolean37);
 }
 if ($boolean15 = false & $int14 = 0 & $int13 > 0) {
 	cc_create($component8, ^iftype_text, $int2);

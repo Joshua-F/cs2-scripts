@@ -1,0 +1,6 @@
+// 7244
+[proc,script7244](int $int0, int $colour1)(int)
+if ($int0 > calc(3000 / 2)) {
+	return($colour1);
+}
+return(~scale_colour(13905408, 13676544, $int0, calc(3000 / 2)));

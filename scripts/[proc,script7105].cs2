@@ -1,0 +1,11 @@
+// 7105
+[proc,script7105](struct $struct0)(string)
+def_string $string0 = "";
+switch_int (%varbit9657) {
+	case 345 :
+		$string0 = ~script7202(0);
+		if_settext("Add to the ignore list by typing item names below. Include exact spaces within names and separate items with commas ( , ). Use stars ( * ) as a wildcard to match many items, e.g. *bone* matches Bones and Long Bone. Text can be pasted from the clipboard into the box.", interface_82:6);
+	case default :
+		$string0 = struct_param($struct0, param_1360);
+}
+return($string0);

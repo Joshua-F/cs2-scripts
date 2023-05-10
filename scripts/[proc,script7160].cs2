@@ -1,0 +1,19 @@
+// 7160
+[proc,script7160](string $string0)
+def_int $width0 = _7603($string0);
+if ($width0 <= 0) {
+	return;
+}
+def_int $height1 = _7604($string0);
+if ($height1 <= 0) {
+	return;
+}
+def_component $component2 = interface_650:13;
+~script7172($component2, $string0, $width0, $height1);
+def_int $int3 = calc(10 - 1);
+while ($int3 > 0) {
+	~script7171(~script7168(calc($int3 - 1)), ~script7168($int3));
+	$int3 = calc($int3 - 1);
+}
+~script7171($component2, ~script7168(0));
+~script7133;

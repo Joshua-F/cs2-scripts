@@ -1,0 +1,6 @@
+// 7225
+[proc,script7225](stringvector $stringvector0, obj $obj1, int $int2)(int)
+if (_7408($stringvector0, removetags(oc_name($obj1)), $int2, 0) = 1) {
+	return(1);
+}
+return(0);

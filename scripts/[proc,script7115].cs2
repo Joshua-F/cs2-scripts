@@ -1,0 +1,10 @@
+// 7115
+[proc,script7115](int $int0)
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (~on_mobile = true) {
+	%varbit14876 = ~minmax(0, 1, $int0);
+} else {
+	%varbit14875 = ~minmax(0, 2, $int0);
+}

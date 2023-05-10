@@ -1,0 +1,14 @@
+// 7188
+[proc,script7188]
+def_graphic $graphic0 = null;
+def_string $string0 = "";
+switch_int (%varbit14881) {
+	case 0 :
+		$graphic0, $string0 = "graphic_4912", "High Alchemy value";
+	case 1 :
+		$graphic0, $string0 = "graphic_4911", "Grand Exchange value";
+	case default :
+		$graphic0, $string0 = "graphic_4911", "Grand Exchange value";
+}
+if_setopbase("<col=ff9040><$string0></col>", interface_650:28);
+if_setgraphic($graphic0, interface_650:28);

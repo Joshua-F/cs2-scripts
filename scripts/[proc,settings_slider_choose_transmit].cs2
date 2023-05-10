@@ -1,14 +1,16 @@
 // 3884
-[proc,settings_slider_choose_transmit](struct $struct0, int $setting1, int $int2, int $int3, int $int4, component $component5, int $comsubid6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, string $string0, int $int12, enum $enum13, boolean $boolean14)
+[proc,settings_slider_choose_transmit](struct $struct0, int $setting1, int $int2, int $int3, int $int4, component $component5, int $int6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, string $string0, int $int12, enum $enum13, boolean $boolean14)
 switch_int ($setting1) {
+	case 319 :
+		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $int6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var3796}");
 	case ^setting_volumemusic :
-		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $comsubid6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var168}");
+		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $int6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var168}");
 	case ^setting_volumesounds :
-		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $comsubid6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var169}");
+		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $int6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var169}");
 	case ^setting_volumeareasounds :
-		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $comsubid6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var872}");
+		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $int6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var872}");
 	case ^setting_interface_scaling :
-		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $comsubid6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var2856}");
+		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $int6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var2856}");
 	case default :
-		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $comsubid6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var2855}");
+		.cc_setonvartransmit("settings_slider_on_transmit($struct0, $setting1, $int2, $int3, $int4, $component5, $int6, $y7, $int8, $int9, $component10, $comsubid11, $string0, $int12, $enum13, $boolean14){var2855}");
 }

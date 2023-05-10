@@ -1,8 +1,8 @@
 // 833
 [clientscript,zoom_slider_ondrag](component $component0, component $component1, int $mousex2)
-if ($component0 ! interface_116:101) {
+if ($component0 ! interface_116:58) {
 	return;
 }
 ~zoom_slider_specific_pos($component0, $component1, $mousex2);
-if_setontimer(null, interface_116:101);
+if_setontimer(null, interface_116:58);
 if_setontimer("settings_zoom_trans_timer(0)", interface_134:3);

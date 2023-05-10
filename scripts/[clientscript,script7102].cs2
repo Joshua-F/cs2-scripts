@@ -1,0 +1,73 @@
+// 7102
+[clientscript,script7102](component $component0)
+def_struct $struct1 = enum(int, struct, enum_423, %varbit9656);
+if ($struct1 = null) {
+	return;
+}
+def_enum $enum2 = struct_param($struct1, param_745);
+if ($enum2 = null) {
+	return;
+}
+def_struct $struct3 = null;
+def_struct $struct4 = null;
+def_int $int5 = 0;
+def_int $setting6 = 0;
+def_int $int7 = 0;
+def_int $int8 = enum_getoutputcount($enum2);
+while ($int7 < $int8) {
+	$struct4 = enum(int, struct, $enum2, $int7);
+	if ($struct4 ! null) {
+		$int5 = struct_param($struct4, param_1078);
+		$setting6 = struct_param($struct4, param_1077);
+		if ($int5 = 10 & $setting6 = %varbit9657) {
+			$struct3 = $struct4;
+			$int8 = $int7;
+		}
+	}
+	$int7 = calc($int7 + 1);
+}
+if ($struct3 = null) {
+	return;
+}
+~script4206(interface_82:1, interface_82:2, interface_82:3, ^max_32bit_int, $component0);
+~steelborder(interface_82:4, "Text Input - <struct_param($struct3, param_1086)>", 1);
+def_component $component9 = interface_82:7;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $setsize12 = ^setsize_minus;
+def_int $setsize13 = ^setsize_minus;
+def_int $x14 = 0;
+def_int $y15 = 0;
+def_int $setposh16 = ^setpos_abs_centre;
+def_int $setposv17 = ^setpos_abs_centre;
+def_int $int18 = 0;
+cc_deleteall($component9);
+cc_create($component9, ^iftype_rectangle, $int18);
+$int18 = calc($int18 + 1);
+cc_setsize($int10, $int11, $setsize12, $setsize13);
+cc_setposition($x14, $y15, $setposh16, $setposv17);
+cc_setfill(true);
+cc_setcolour(0x372e22);
+cc_create($component9, 12, $int18);
+def_int $comsubid19 = $int18;
+$int18 = calc($int18 + 1);
+cc_setsize(calc($int10 + 10), calc($int11 + 10), $setsize12, $setsize13);
+cc_setposition($x14, $y15, $setposh16, $setposv17);
+cc_setinput_width(cc_getwidth);
+cc_settextfont(p12_full);
+cc_setcolour(^white);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_setinput_submitmode(0);
+cc_setinput_wrapmode(1);
+cc_setinput_selectcolour(^black);
+cc_setinput_selectbgcolour(^white);
+cc_setinput_acceptmode(0);
+def_string $string0 = ~script7105($struct3);
+cc_settext($string0);
+cc_setinput_focus(true);
+cc_setinput_caret(string_length($string0));
+~clan_stonebutton_init("<col=ff981f>Cancel</col>", interface_82:9, "p12_full");
+if_setonop("script4208(0, interface_82:1, interface_82:2, interface_82:3, $component0)", interface_82:9);
+~clan_stonebutton_init("<col=0dc10d>Save</col>", interface_82:10, "p12_full");
+if_setonop("script7104($component0, $component9, $comsubid19)", interface_82:10);

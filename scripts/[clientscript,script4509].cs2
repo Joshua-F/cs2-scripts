@@ -1,3 +1,6 @@
 // 4509
 [clientscript,script4509]
+if (%varbit9647 = 1 | %varbit12284 = 1 | %varbit14816 = 1) {
+	return;
+}
 resume_countdialog(tostring(^max_32bit_int));

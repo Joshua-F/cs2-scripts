@@ -27,7 +27,7 @@ switch_int ($setting1) {
 		if (~deadman_world ! 0) {
 			return(0);
 		}
-	case ^setting_popout_xptracker :
+	case ^setting_popout_xptracker, 320 :
 		if (~on_enhanced_mobile = 1 & %varbit13981 = 1) {
 			return(1);
 		}

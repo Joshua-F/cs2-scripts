@@ -1,0 +1,12 @@
+// 7104
+[clientscript,script7104](component $component0, component $component1, int $comsubid2)
+def_string $string0 = "null";
+if (cc_find($component1, $comsubid2) = ^true) {
+	$string0 = removetags(cc_gettext);
+}
+switch_int (%varbit9657) {
+	case 345 :
+		~script7203($string0);
+		~script7133;
+}
+~script4209(1, interface_82:1, interface_82:2, interface_82:3, $component0);

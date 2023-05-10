@@ -1,0 +1,17 @@
+// 7125
+[proc,script7125](string $string0, string $string1)(string)
+def_int $length0 = 0;
+def_int $length1 = string_length($string0);
+def_int $length2 = string_length($string1);
+def_string $string2 = "";
+def_string $string3 = "";
+while ($length0 < $length1) {
+	$string3 = substring($string0, $length0, calc($length0 + $length2));
+	if (compare($string3, $string1) = 0) {
+		$length0 = calc($length0 + $length2);
+	} else {
+		$string2 = "<$string2><substring($string0, $length0, calc($length0 + 1))>";
+		$length0 = calc($length0 + 1);
+	}
+}
+return($string2);
