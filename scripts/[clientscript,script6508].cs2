@@ -4,7 +4,7 @@ if (loc_find($coord4, $loc3) = true) {
 	if ($int6 = %varbit14189 & $int7 = %varbit14164 & $dbrow1 = %var3546 & %varbit14182 = $int9 & %varbit14184 = $int8) {
 		return;
 	} else if (%var3546 ! $dbrow1 | %varbit14182 = 0) {
-		_7211(5);
+		entityoverlay_delete_loc(5);
 		highlight_loc_off($loc3, $coord4, 9, 1);
 	}
 	~script6507($dbrow1, $dbrow2, $loc3, $coord4, $obj5);

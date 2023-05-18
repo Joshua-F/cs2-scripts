@@ -13,7 +13,7 @@ if ($int4 = 0) {
 }
 def_int $int6 = 0;
 def_int $int7 = 0;
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setontimer(null);
 	if ($int3 ! -1) {
 		$int6, $int7 = stockmarket_getvalue(cabbage_1965);
@@ -22,5 +22,5 @@ if (_202($entityoverlay0) = ^true) {
 			return;
 		}
 	}
-	~script7227($coord1);
+	~ground_items_setup($coord1);
 }

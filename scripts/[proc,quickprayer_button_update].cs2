@@ -1,7 +1,7 @@
 // 471
 [proc,quickprayer_button_update](obj $obj0)
 cc_setopbase("<col=ff9040><oc_param($obj0, param_1752)></col>");
-if (testbit(~script7054, oc_param($obj0, param_630)) = ^true) {
+if (testbit(~quickprayer_selected_get, oc_param($obj0, param_630)) = ^true) {
 	.cc_setgraphic("miscgraphics,11");
 } else {
 	.cc_setgraphic("miscgraphics,10");

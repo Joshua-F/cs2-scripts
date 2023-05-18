@@ -18,7 +18,7 @@ cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
 cc_setonvartransmit("cluehelper_overlay_vartransmit(%var3546, %varbit14182){var3546, var3543}");
-_1433("script6495");
+cc_setonmappost("cluehelper_overlay_mappost");
 if (%var3546 ! null & %varbit14182 = 1) {
 	~cluehelper_overlay(%var3546, ~cluehelper_clue_target(%var3546));
 }

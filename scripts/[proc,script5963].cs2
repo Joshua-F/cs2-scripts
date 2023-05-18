@@ -9,7 +9,7 @@ def_int $int10 = -1;
 def_int $int11 = -1;
 def_int $int12 = -1;
 def_int $int13 = -1;
-if (_202($entityoverlay1) = ^true) {
+if (if_find_entityoverlay($entityoverlay1) = ^true) {
 	if ($int8 >= 17) {
 		cc_setontimer(null);
 		~entity_highlight_clear(4);
@@ -21,7 +21,7 @@ if (_202($entityoverlay1) = ^true) {
 		$int10 = calc(17 - $int8);
 	}
 	$int11 = _7460;
-	if (_7108 = true) {
+	if (component_find_active_minimenu_entry = true) {
 		~entity_highlight_clear(4);
 		~entity_highlight_minimenu(4);
 		if ($int8 >= $int9) {

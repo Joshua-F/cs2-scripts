@@ -1,0 +1,10 @@
+// 7080
+[clientscript,makeover_op_item](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans(125);
+	cc_setontimer("cc_settrans_temporarily_end($component0, $comsubid1, 0, calc(clientclock + 10))");
+	sound_synth(interface_select1, 1, 0);
+	if (%varcint1148 ! $comsubid1) {
+		%varcint1148 = $comsubid1;
+	}
+}

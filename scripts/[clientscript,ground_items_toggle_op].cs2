@@ -1,0 +1,4 @@
+// 7207
+[clientscript,ground_items_toggle_op](component $component0, int $comsubid1)
+%varbit14869 = calc(1 - %varbit14869);
+~ground_items_toggle_synch($component0, $comsubid1);

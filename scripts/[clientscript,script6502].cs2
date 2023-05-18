@@ -1,10 +1,10 @@
 // 6502
 [clientscript,script6502](dbrow $dbrow0, coord $coord1, obj $obj2, int $int3, npc_uid $npc_uid4, npc_uid $npc_uid5, npc_uid $npc_uid6, dbrow $dbrow7, int $int8, int $int9)
-if (_6951($coord1) = true) {
+if (tile_find($coord1) = true) {
 	if ($int3 = %varbit14189 & $dbrow0 = %var3546 & $npc_uid4 = %var3548 & $npc_uid5 = %var3549 & $npc_uid6 = %var3550 & $dbrow7 = %var3547 & %varbit14182 = $int8 & %varbit14184 = $int9) {
 		return;
 	} else if (%var3546 ! $dbrow0 | %varbit14182 = 0) {
-		_7214($coord1, 7);
+		entityoverlay_delete_coord($coord1, 7);
 		highlight_tile_off($coord1, 9, 1);
 	}
 	~script6501($dbrow0, $coord1, $obj2);

@@ -4,7 +4,7 @@ if ($entityoverlay0 = null) {
 	return;
 }
 highlight_npc_off($npc_uid1, $int2, 9);
-_104($entityoverlay0);
+cc_deleteall_entityoverlay($entityoverlay0);
 if (~script6545($int3) ! $npc_uid1) {
 	return;
 }

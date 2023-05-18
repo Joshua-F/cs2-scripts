@@ -6,5 +6,5 @@ if (~on_enhanced_desktop = 0) {
 if (%varbit12977 = 0) {
 	return;
 }
-_7039(5);
-highlight_tile_on(_6950, 5, 0);
+highlight_tile_clear(5);
+highlight_tile_on(tile_coord, 5, 0);

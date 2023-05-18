@@ -6,7 +6,7 @@ def_int $int3 = 0;
 switch_int ($setting0) {
 	case 53 :
 		$int1 = scale(600, 16384, if_getwidth(if_getlayer(toplevel_osm:19)));
-		if ($int1 <= viewport_getx & $int1 <= viewport_getwidth) {
+		if ($int1 <= safearea_getminx & $int1 <= safearea_getmaxx) {
 			return(0);
 		}
 		return(1);

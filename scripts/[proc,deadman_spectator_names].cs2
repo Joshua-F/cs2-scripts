@@ -1,8 +1,8 @@
 // 2179
 [proc,deadman_spectator_names](int $int0)
-_3124;
+resetdrawplayernames;
 if ($int0 = 1) {
-	_3120(true);
+	setdrawplayernames_friends(true);
 } else if ($int0 = 2) {
-	_3122(true);
+	setdrawplayernames_others(true);
 }

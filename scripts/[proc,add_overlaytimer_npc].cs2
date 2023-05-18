@@ -3,5 +3,5 @@
 if (~on_enhanced_any = 0 | ~script5472($int0, $int2) = 0) {
 	return;
 }
-def_entityoverlay $entityoverlay5 = _7200(1, 0, 25, 25, 0);
+def_entityoverlay $entityoverlay5 = entityoverlay_create_npc(1, 0, 25, 25, 0);
 ~add_overlaytimer_inner($int0, $entityoverlay5, $clock1, $int2, $colour3, $int4);

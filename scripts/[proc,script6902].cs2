@@ -3,7 +3,7 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonvartransmit("fishing_spot_indicator_vartransmit($entityoverlay0, $struct1, %varbit12349, %varbit12350, %varbit12351, $npc_uid2, $int3, $loc4, $coord5){var2856, var3074}");
 	cc_setoninvtransmit("fishing_spot_indicator_invtransmit($entityoverlay0, $struct1, $npc_uid2, $int3, $loc4, $coord5){inv, worn}");
 	cc_setonstattransmit("fishing_spot_indicator_stattransmit($entityoverlay0, $struct1, stat(fishing), $npc_uid2, $int3, $loc4, $coord5){fishing, agility, strength}");

@@ -3,11 +3,11 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-if (%varbit12979 = 0 | _7038(_6950, 4, 0) = true) {
+if (%varbit12979 = 0 | highlight_tile_get(tile_coord, 4, 0) = true) {
 	return;
 }
-_7039(4);
-if (_6902 > 0 & _6950 = _6903(0) | _6950 = coord) {
+highlight_tile_clear(4);
+if (player_route_length > 0 & tile_coord = player_route_get(0) | tile_coord = coord) {
 	return;
 }
-highlight_tile_on(_6950, 4, 0);
+highlight_tile_on(tile_coord, 4, 0);

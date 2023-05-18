@@ -10,14 +10,14 @@ switch_int ($int0) {
 		return;
 }
 if ($boolean3 = true) {
-	_7000($int0, 0xc0c000, $int1, $int2, $int7);
+	highlight_npc_setup($int0, 0xc0c000, $int1, $int2, $int7);
 }
 if ($boolean4 = true) {
-	_7010($int0, 0x00c0c0, $int1, $int2, $int7);
+	highlight_loc_setup($int0, 0x00c0c0, $int1, $int2, $int7);
 }
 if ($boolean5 = true) {
-	_7020($int0, 0xc06030, $int1, $int2, $int7);
+	highlight_obj_setup($int0, 0xc06030, $int1, $int2, $int7);
 }
 if ($boolean6 = true) {
-	_7030($int0, 0xc0c0c0, $int1, $int2, $int7);
+	highlight_player_setup($int0, 0xc0c0c0, $int1, $int2, $int7);
 }

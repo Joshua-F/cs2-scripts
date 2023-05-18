@@ -13,9 +13,9 @@ def_int $int7 = -1;
 def_int $int8 = -1;
 def_loc $loc9 = null;
 def_npc $npc10 = null;
-_7019(11);
-_7009(11);
-_7039(10);
+highlight_loctype_clear(11);
+highlight_npctype_clear(11);
+highlight_tile_clear(10);
 ~helper_agility_highlight_starts;
 if ($int0 = -1) {
 	return;

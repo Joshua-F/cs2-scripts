@@ -4,7 +4,7 @@ def_int $int1 = 0;
 def_int $int2 = 0;
 switch_int ($setting0) {
 	case 318 :
-		$int1, $int2 = _3217(20);
+		$int1, $int2 = deviceoption_getrange(20);
 		switch_int ($int2) {
 			case 0 :
 				return(null);

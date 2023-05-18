@@ -1,0 +1,9 @@
+// 7054
+[proc,quickprayer_selected_get]()(int)
+if (%varbit14826 = 0) {
+	return(%varbit4102);
+}
+if (%varbit14826 = 1) {
+	return(%varbit14828);
+}
+return(0);

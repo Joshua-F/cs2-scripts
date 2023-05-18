@@ -1,0 +1,40 @@
+// 7206
+[proc,ground_items_build]
+~script7213(interface_650:49, stringvector_4);
+~script7213(interface_650:52, stringvector_3);
+def_boolean $boolean0 = ~on_mobile;
+def_string $text0 = struct_param(ground_items_overlay_4510, param_1086);
+def_int $int1 = 20;
+def_int $int2 = 0;
+def_int $int3 = 0;
+cc_create(interface_650:45, ^iftype_rectangle, $int3);
+cc_setsize(0, $int1, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_setop(1, "Toggle");
+cc_setcolour(^white);
+cc_settrans(255);
+$int3 = calc($int3 + 1);
+.cc_create(interface_650:45, ^iftype_text, $int3);
+.cc_setsize(25, $int1, ^setsize_minus, ^setsize_abs);
+.cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_settext($text0);
+.cc_settextfont(b12_full);
+.cc_settextshadow(true);
+.cc_setcolour(0xff981f);
+.cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+$int3 = calc($int3 + 1);
+.cc_create(interface_650:45, ^iftype_graphic, $int3);
+.cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, calc($int2 + ($int1 / 2 - 9)), ^setpos_abs_right, ^setpos_abs_top);
+if (%varbit14869 = 1) {
+	.cc_setgraphic("toggle_box,1");
+} else {
+	.cc_setgraphic("toggle_box,0");
+}
+cc_setonop("ground_items_toggle_op(event_com, .cc_getid)");
+cc_setonvartransmit("ground_items_toggle_transmit(event_com, .cc_getid){var3539}");
+$int3 = calc($int3 + 1);
+$int2 = calc($int2 + $int1);
+if_setsize(0, $int2, ^setsize_minus, ^setsize_abs, interface_650:45);
+if_setsize(0, calc($int2 + 98), ^setsize_minus, ^setsize_minus, interface_650:46);

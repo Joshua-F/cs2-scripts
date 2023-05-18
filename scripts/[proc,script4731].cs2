@@ -44,10 +44,10 @@ if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
 if (testbit($int2, 13) = ^true & $boolean23 = true & $layer13 ! null) {
 	~script1282;
 	$int33 = scale(%varcint381, 16384, $width11);
-	$int18 = ~max(viewport_getx, $int33);
-	$int19 = viewport_gety;
-	$int16 = ~min(viewport_getwidth, calc($width11 - $int33));
-	$int17 = viewport_getheight;
+	$int18 = ~max(safearea_getminx, $int33);
+	$int19 = safearea_getminy;
+	$int16 = ~min(safearea_getmaxx, calc($width11 - $int33));
+	$int17 = safearea_getmaxy;
 	$component40 = null;
 	if ($component0 = toplevel_osm:19) {
 		if (.cc_find(toplevel_osm:2, 0) = ^true) {

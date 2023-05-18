@@ -4,6 +4,6 @@ if ($int1 = %varbit13135 & $int2 = %varbit13136) {
 	return;
 }
 ~script5724($entityoverlay0, $loc3, $coord4);
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	~helper_agility_vartransmit($entityoverlay0, $loc3, $coord4);
 }

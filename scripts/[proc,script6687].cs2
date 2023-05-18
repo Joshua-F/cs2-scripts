@@ -15,13 +15,13 @@ if ($int0 = 1) {
 		$flags2 = setbit($flags2, 1);
 		$flags2 = setbit($flags2, 3);
 	}
-	_7000(6, $colour1, 2, 50, $flags2);
-	_7040(6, $colour1, 2, 50, $flags2);
-	_6700(1, "Tag", 6688);
-	_6700(2, "Tag-All", 6689);
+	highlight_npc_setup(6, $colour1, 2, 50, $flags2);
+	highlight_group_setup(6, $colour1, 2, 50, $flags2);
+	shiftop_npc_set(1, "Tag", 6688);
+	shiftop_npc_set(2, "Tag-All", 6689);
 } else {
-	_7000(6, null, 0, 0, 75);
-	_7040(6, null, 0, 0, 75);
-	_6701(1);
-	_6701(2);
+	highlight_npc_setup(6, null, 0, 0, 75);
+	highlight_group_setup(6, null, 0, 0, 75);
+	shiftop_npc_del(1);
+	shiftop_npc_del(2);
 }

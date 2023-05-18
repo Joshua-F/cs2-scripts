@@ -1,0 +1,6 @@
+// 7112
+[proc,settings_ground_items]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit14869 = calc(1 - %varbit14869);

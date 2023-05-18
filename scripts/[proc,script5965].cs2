@@ -1,7 +1,7 @@
 // 5965
 [proc,script5965]
 if (~on_enhanced_mobile = 1 & %varbit13666 = 0) {
-	_3130("graphic_4351", 1);
+	setclickgraphic("graphic_4351", true);
 } else {
-	_3130("clickcircle_filled", 1);
+	setclickgraphic("clickcircle_filled", true);
 }

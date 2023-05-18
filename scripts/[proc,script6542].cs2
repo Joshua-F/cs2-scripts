@@ -1,7 +1,7 @@
 // 6542
 [proc,script6542]
 highlight_npc_off(npc_uid, npc_spawncycle, 9);
-def_entityoverlay $entityoverlay0 = _7200(3, 1, calc(36 * 2), calc(32 * 2), 1);
-if (_202($entityoverlay0) = ^true) {
+def_entityoverlay $entityoverlay0 = entityoverlay_create_npc(3, 1, calc(36 * 2), calc(32 * 2), 1);
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	~script6543($entityoverlay0, npc_spawncycle, npc_uid, npc_type);
 }

@@ -2,7 +2,7 @@
 [proc,mouseover_entity_highlight]
 ~entity_highlight_clear(5);
 def_int $minimenu_entry_type0 = get_active_minimenu_entry_type;
-if (%varbit13088 = 0 | $minimenu_entry_type0 = 1 | $minimenu_entry_type0 = ^minimenu_entry_type_default) {
+if (%varbit13088 = 0 | $minimenu_entry_type0 = ^minimenu_entry_type_tile | $minimenu_entry_type0 = ^minimenu_entry_type_none) {
 	return;
 }
 if ($minimenu_entry_type0 = ^minimenu_entry_type_npc & npc_find_active_minimenu_entry = true) {

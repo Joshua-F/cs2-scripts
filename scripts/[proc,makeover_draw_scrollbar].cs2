@@ -1,0 +1,26 @@
+// 7071
+[proc,makeover_draw_scrollbar](component $component0, component $component1)
+cc_deleteall($component1);
+def_int $height2 = if_getheight($component0);
+def_int $int3 = -1;
+def_int $int4 = 0;
+if (%varbit4130 = 0 | %varbit4130 = 1) {
+	$int4 = enum_getoutputcount(enum_496);
+} else {
+	$int4 = enum_getoutputcount(enum_2630);
+}
+def_int $int5 = ~max(1, calc($int4 / 3));
+if (calc($int4 % 3) ! 0) {
+	$int5 = calc($int5 + 1);
+}
+def_int $height6 = calc(10 + $int5 * 90);
+def_int $height7 = if_getheight(if_getlayer($component0));
+if ($height6 > $height7) {
+	$height2 = $height6;
+} else {
+	$height2 = 0;
+}
+if_setscrollsize(0, $height2, $component0);
+if_setscrollpos(0, %varcint1153, $component0);
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component1, $component0, %varcint1153);

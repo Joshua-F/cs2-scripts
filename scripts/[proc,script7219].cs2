@@ -2,5 +2,5 @@
 [proc,script7219](int $int0, stringvector $stringvector1)
 mes("You are trying to add too many entries to this list. Please consider cutting your list down if you would like to add any more to it.");
 if ($int0 = 1 & $stringvector1 ! null) {
-	mes("Any entries after <_7406($stringvector1, calc(_7407($stringvector1) - 1))> will be ignored.");
+	mes("Any entries after <stringvector_get($stringvector1, calc(stringvector_size($stringvector1) - 1))> will be ignored.");
 }

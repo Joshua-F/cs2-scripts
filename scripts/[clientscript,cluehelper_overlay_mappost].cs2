@@ -1,0 +1,6 @@
+// 6495
+[clientscript,cluehelper_overlay_mappost]
+if (%varbit14182 = 0) {
+	return;
+}
+~cluehelper_overlay(%var3546, ~cluehelper_clue_target(%var3546));

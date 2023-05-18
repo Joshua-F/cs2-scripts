@@ -11,7 +11,7 @@ def_int $int6 = 0;
 if (inv_total(inv, $obj5) > 0) {
 	$int6 = 1;
 }
-if (_202($entityoverlay2) = ^true) {
+if (if_find_entityoverlay($entityoverlay2) = ^true) {
 	cc_setonvartransmit("cluehelper_key_npc_vartransmit($dbrow0, $dbrow1, $entityoverlay2, $int4, $npc_uid3, %varbit14189, %varbit14184, $obj5, $int6){var3546, var3543}");
 	cc_setoninvtransmit("cluehelper_key_npc_invtransmit($dbrow0, $dbrow1, $entityoverlay2, $int4, $npc_uid3, $obj5, $int6){inv}");
 }

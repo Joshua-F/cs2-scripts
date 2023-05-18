@@ -1,8 +1,8 @@
 // 6527
 [proc,cluehelper_uri_overlay](int $int0)
 highlight_npc_off(npc_uid, npc_spawncycle, 9);
-def_entityoverlay $entityoverlay1 = _7200(3, 1, calc(36 * 2), calc(32 * 2), 1);
-if (_202($entityoverlay1) = ^true) {
+def_entityoverlay $entityoverlay1 = entityoverlay_create_npc(3, 1, calc(36 * 2), calc(32 * 2), 1);
+if (if_find_entityoverlay($entityoverlay1) = ^true) {
 	if ($int0 = 2 | $int0 = 3) {
 		cc_setonvartransmit("script6530($entityoverlay1, npc_uid, npc_spawncycle, %varbit14189, %var3548, %var3547, %var3546, %var292, $int0){var3543, var3546, var3548, var3547, var292}");
 	} else if ($int0 = 4) {

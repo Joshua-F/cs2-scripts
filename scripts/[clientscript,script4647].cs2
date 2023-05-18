@@ -1,7 +1,7 @@
 // 4647
 [clientscript,script4647]
-if (_7038(_6950, 2, 1) = true) {
-	highlight_tile_off(_6950, 2, 1);
+if (highlight_tile_get(tile_coord, 2, 1) = true) {
+	highlight_tile_off(tile_coord, 2, 1);
 } else {
-	highlight_tile_on(_6950, 2, 1);
+	highlight_tile_on(tile_coord, 2, 1);
 }

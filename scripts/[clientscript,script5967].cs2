@@ -5,5 +5,5 @@ if (~on_mobile = false) {
 }
 ~script5966;
 ~debug_mes("Sending event: <$string0>");
-_3180($string0);
-_3178($string0);
+marketing_sendattributionevent($string0);
+marketing_sendanalyticsevent($string0);

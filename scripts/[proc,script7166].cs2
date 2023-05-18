@@ -1,19 +1,19 @@
 // 7166
 [proc,script7166]
-def_int $int0 = _7601;
+def_int $int0 = loottracker_sourcenamecount;
 def_component $component1 = null;
 def_int $int2 = 0;
 def_int $int3 = -1;
 def_string $string0 = "null";
 def_int $height4 = 0;
 ~script7170;
-def_int $int5 = _7605(0, ~min($int0, 10), 1);
+def_int $int5 = loottracker_sourcequery_new(0, ~min($int0, 10), 1);
 $int2 = 0;
 while ($int2 < $int5) {
 	$component1 = ~script7168($int2);
-	$int3 = _7606($int2);
-	$string0 = _7602($int3);
-	$height4 = _7604($string0);
+	$int3 = loottracker_sourcequery_get($int2);
+	$string0 = loottracker_sourcename($int3);
+	$height4 = loottracker_sourcecount($string0);
 	if ($height4 > 0) {
 		~script7172($component1, $string0, $int3, $height4);
 	}

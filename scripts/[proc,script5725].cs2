@@ -3,11 +3,11 @@
 if (~on_mobile = true | %varbit13136 = 1 | enum(coord, int, enum_4080, $coord2) = 1) {
 	return;
 }
-_103($entityoverlay0, ^iftype_graphic, 0);
+cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, 0);
 cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("staticons,7");
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 	cc_setonmouseleave("helper_agility_mouseleave($entityoverlay0, $loc1, $coord2)");
 	cc_setonmouseover("helper_agility_mouseover($entityoverlay0, $loc1, $coord2, $lvl3, $lvl4, $lvl5, $string0, $boolean6)");

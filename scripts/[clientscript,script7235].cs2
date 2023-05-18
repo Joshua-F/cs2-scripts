@@ -20,14 +20,14 @@ if (calc($int11 % 10) = 0) {
 	if ($int12 <= 0) {
 		if ($boolean7 = true) {
 			return;
-		} else if (_203($entityoverlay0, $comsubid1) = ^true & _203($entityoverlay0, $comsubid8) = ^true) {
+		} else if (cc_find_entityoverlay($entityoverlay0, $comsubid1) = ^true & cc_find_entityoverlay($entityoverlay0, $comsubid8) = ^true) {
 			.cc_setgraphic($graphic13);
 			.cc_setposition(calc(0 - $width9 / 2 - 10), $y10, ^setpos_abs_centre, ^setpos_abs_bottom);
 			cc_settext("");
 			cc_setontimer(null);
 			return;
 		}
-	} else if (_203($entityoverlay0, $comsubid1) = ^true & _203($entityoverlay0, $comsubid8) = ^true) {
+	} else if (cc_find_entityoverlay($entityoverlay0, $comsubid1) = ^true & cc_find_entityoverlay($entityoverlay0, $comsubid8) = ^true) {
 		cc_settext("[<~buff_bar_time_string($int12)>]");
 		cc_setcolour(~script7244($int12, $colour5));
 		.cc_setgraphic($graphic13);

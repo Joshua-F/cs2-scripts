@@ -11,8 +11,8 @@ if (%varbit12977 = 1) {
 	if (%varbit12980 = 1) {
 		$int3 = calc($int3 + 16);
 	}
-	_7035(5, $colour2, $int0, $int1, $int3);
+	highlight_tile_setup(5, $colour2, $int0, $int1, $int3);
 } else {
-	_7039(5);
-	_7035(5, null, 0, 0, 0);
+	highlight_tile_clear(5);
+	highlight_tile_setup(5, null, 0, 0, 0);
 }

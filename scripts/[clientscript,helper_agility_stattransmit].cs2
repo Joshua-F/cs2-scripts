@@ -7,6 +7,6 @@ if ($lvl1 = $lvl6 & $lvl2 = $lvl7 & $lvl3 = $lvl8) {
 	return;
 }
 ~script5724($entityoverlay0, $loc4, $coord5);
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonstattransmit("helper_agility_stattransmit($entityoverlay0, $lvl6, $lvl7, $lvl8, $loc4, $coord5){ranged, agility, strength}");
 }

@@ -4,7 +4,7 @@ cc_deleteall($component1);
 if_settext(if_gettext($component0), $component1);
 if_setscrollsize(if_getscrollwidth($component0), if_getscrollheight($component0), $component1);
 if_setcolour(if_getcolour($component0), $component1);
-if_setfillcolour(if_getfillcolour($component0), $component1);
+if_setgradientcolour(if_getfillcolour($component0), $component1);
 def_int $int2 = 0;
 def_obj $obj3 = null;
 def_int $num4 = 0;
@@ -18,6 +18,6 @@ while (cc_find($component0, $int2) = ^true) {
 	cc_create($component1, ^iftype_rectangle, $int2);
 	cc_setobject($obj3, $num4);
 	cc_setcolour($colour5);
-	cc_setfillcolour($colour6);
+	cc_setgradientcolour($colour6);
 	$int2 = calc($int2 + 1);
 }

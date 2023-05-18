@@ -3,8 +3,8 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-def_entityoverlay $entityoverlay0 = _7201(2, 0, 1, 25, 0);
-if (_202($entityoverlay0) = ^true) {
+def_entityoverlay $entityoverlay0 = entityoverlay_create_loc(2, 0, 1, 25, 0);
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	~helper_agility_vartransmit($entityoverlay0, loc_type, loc_coord);
 	if (map_members = ^true) {
 		if (enum(loc, int, enum_4077, loc_type) > 0) {

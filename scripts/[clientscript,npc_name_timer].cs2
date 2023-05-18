@@ -5,6 +5,6 @@ if ($int0 = %varcint1079) {
 }
 $int0 = %varcint1079;
 ~npc_name_create($entityoverlay1, $npc_uid2, $int3, $string0, $npc4);
-if (_202($entityoverlay1) = ^true) {
+if (if_find_entityoverlay($entityoverlay1) = ^true) {
 	cc_setontimer("npc_name_timer($int0, $entityoverlay1, $npc_uid2, $int3, $string0, $npc4)");
 }

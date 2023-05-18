@@ -4,9 +4,9 @@ if (~on_enhanced_desktop = 0) {
 	return;
 }
 def_string $string0 = ~script6690(npc_type);
-if (_7043($string0, 6) = true) {
-	_7042($string0, 6);
+if (highlight_group_get($string0, 6) = true) {
+	highlight_group_off($string0, 6);
 } else {
-	_7041($string0, 6);
+	highlight_group_on($string0, 6);
 }
 %varcint1079 = calc(clientclock + 10);

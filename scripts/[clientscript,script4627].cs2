@@ -1,6 +1,6 @@
 // 4627
 [clientscript,script4627]
-if (_7003(npc_uid, npc_spawncycle, 3) = true) {
+if (highlight_npc_get(npc_uid, npc_spawncycle, 3) = true) {
 	highlight_npc_off(npc_uid, npc_spawncycle, 3);
 } else {
 	highlight_npc_on(npc_uid, npc_spawncycle, 3);

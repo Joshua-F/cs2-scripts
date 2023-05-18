@@ -15,9 +15,9 @@ if ($int0 = 400) {
 }
 if ($int0 = 500) {
 	mes("Zooming Ui in 2x");
-	_6210(200);
+	uizoom_set(200);
 }
 if ($int0 = 501) {
 	mes("Resetting Ui Zoom");
-	_6212;
+	uizoom_reset;
 }

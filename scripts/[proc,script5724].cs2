@@ -1,7 +1,7 @@
 // 5724
 [proc,script5724](entityoverlay $entityoverlay0, loc $loc1, coord $coord2)
-_104($entityoverlay0);
-if (_202($entityoverlay0) = ^true) {
+cc_deleteall_entityoverlay($entityoverlay0);
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonmouseleave(null);
 	cc_setonmouseover(null);
 }

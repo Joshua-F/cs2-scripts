@@ -1,15 +1,15 @@
 // 6692
 [proc,script6692](obj $obj0)(string)
 def_string $string0 = "4|";
-$string0 = append($string0, _6857($obj0, 0));
+$string0 = append($string0, oc_minimenuname($obj0, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, _6858($obj0, 1, 0));
+$string0 = append($string0, oc_minimenuop($obj0, 1, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, _6858($obj0, 2, 0));
+$string0 = append($string0, oc_minimenuop($obj0, 2, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, _6858($obj0, 3, 0));
+$string0 = append($string0, oc_minimenuop($obj0, 3, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, _6858($obj0, 4, 0));
+$string0 = append($string0, oc_minimenuop($obj0, 4, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, _6858($obj0, 5, 0));
+$string0 = append($string0, oc_minimenuop($obj0, 5, false));
 return($string0);

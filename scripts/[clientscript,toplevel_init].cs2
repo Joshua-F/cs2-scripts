@@ -37,7 +37,7 @@ if ($enum1 = enum_139) {
 	setshowmouseovertext(false);
 	setshowmousecross(false);
 	setshowloadingmessages(false);
-	_3130("cross", -1);
+	setclickgraphic("cross", null);
 	_3131(false);
 } else if ($enum1 = enum_1745) {
 	setshowmouseovertext(true);
@@ -54,7 +54,7 @@ if ($enum1 = enum_139) {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
 	setshowloadingmessages(true);
-	_3130("cross", -1);
+	setclickgraphic("cross", null);
 	_3131(false);
 }
 ~account_update_display;

@@ -6,6 +6,6 @@ switch_int ($setting0) {
 	case 53 :
 		cc_setonclick("script3890($component1, $comsubid2, event_mousex, $int3, $y4, $int5, $component7)");
 	case 310 :
-		cc_setonclick("script7025($component1, $comsubid2, $int10, $int3, $y4, $int5, $int6, $component7, $int9)");
+		cc_setonclick("settings_minimap_zoom_op($component1, $comsubid2, $int10, $int3, $y4, $int5, $int6, $component7, $int9)");
 		cc_setontimer("settings_minimap_zoom_position_timer(minimap_zoom, $component1, $comsubid2, $int3, $y4, $int5, $int6, $int9)");
 }

@@ -8,21 +8,21 @@ def_int $num7 = 0;
 def_int $colour8 = ^black;
 def_int $colour9 = ^black;
 def_int $int10 = 0;
-def_int $int11 = _7619;
+def_int $int11 = loottracker_ignorelootcount;
 def_string $string1 = "null";
 cc_deleteall($component0);
 if_settext($string0, $component0);
 if_setscrollsize($width1, $height2, $component0);
-$colour4 = _7609($string0);
+$colour4 = loottracker_lootcount_byname($string0);
 if_setcolour($colour4, $component0);
-if_setfillcolour(0x000001, $component0);
+if_setgradientcolour(0x000001, $component0);
 while ($colour5 <= $colour4) {
-	$obj6, $num7 = _7611($string0, calc($colour5 + 1));
-	$colour8, $colour9, $int10 = ~script7178($obj6);
+	$obj6, $num7 = loottracker_lootget_byname($string0, calc($colour5 + 1));
+	$colour8, $colour9, $int10 = ~loottracker_value_item($obj6);
 	cc_create($component0, ^iftype_rectangle, $int3);
 	$int3 = calc($int3 + 1);
 	cc_setobject($obj6, $num7);
 	cc_setcolour($colour8);
-	cc_setfillcolour($colour9);
+	cc_setgradientcolour($colour9);
 	$colour5 = calc($colour5 + 1);
 }

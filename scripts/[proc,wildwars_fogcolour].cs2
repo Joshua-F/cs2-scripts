@@ -9,7 +9,7 @@ if (%varbit5701 < 1) {
 	if ($int1 ! 255) {
 		if_settrans(255, interface_90:1);
 	}
-	_2124(255, interface_90:1);
+	if_setgradienttrans(255, interface_90:1);
 	return;
 }
 def_int $int2 = 0;
@@ -81,4 +81,4 @@ if ($int1 < $int19) {
 	$int1 = calc($int1 - 1);
 }
 if_settrans($int1, interface_90:1);
-_2124(255, interface_90:1);
+if_setgradienttrans(255, interface_90:1);

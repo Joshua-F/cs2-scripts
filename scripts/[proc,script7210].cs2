@@ -19,7 +19,7 @@ if ($setsize5 = ^setsize_abs) {
 	$int3 = calc($int3 + 4);
 }
 cc_setsize($int2, $int3, $setsize4, $setsize5);
-cc_setinput_width(calc(cc_getwidth - 2));
+cc_input_setwidth(calc(cc_getwidth - 2));
 if ($setposh8 ! ^setpos_abs_centre & $setposh8 < ^setpos_3) {
 	$int6 = calc($int6 + 5);
 }
@@ -31,8 +31,8 @@ cc_settextfont(p12_full);
 cc_setcolour(^white);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-cc_setinput_submitmode(1);
-cc_setinput_wrapmode(1);
-cc_setinput_selectcolour(^black);
-cc_setinput_selectbgcolour(^white);
+cc_input_setsubmitmode(1);
+cc_input_setwrapmode(1);
+cc_input_setselectcolour(^black);
+cc_input_setselectbgcolour(^white);
 return($int1);

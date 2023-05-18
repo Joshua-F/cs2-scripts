@@ -1,0 +1,10 @@
+// 7215
+[clientscript,ground_items_focus_changed](component $component0, int $comsubid1, stringvector $stringvector2)
+if ($comsubid1 ! -1) {
+	if (cc_find($component0, $comsubid1) = ^true & cc_input_getfocus = true) {
+		return;
+	}
+} else if (if_input_getfocus($component0) = true) {
+	return;
+}
+~script7216($component0, $comsubid1, $stringvector2);

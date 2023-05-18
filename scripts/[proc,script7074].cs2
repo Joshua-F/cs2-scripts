@@ -12,7 +12,7 @@ cc_setmodelanim(seq_10057);
 cc_setmodelangle(0, 0, 0, %varcint1150, 0, 1000);
 cc_setsize(5, 5, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 15, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setontimer("script7075(event_com, event_comsubid)");
+cc_setontimer("makeover_spin(event_com, event_comsubid)");
 cc_setop(1, "Toggle");
 cc_setopbase("<col=ff9040>Spin");
 cc_setonop("script7076");

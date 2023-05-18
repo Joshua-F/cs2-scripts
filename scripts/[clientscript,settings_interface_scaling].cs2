@@ -6,4 +6,4 @@ if (~on_enhanced_desktop = 0) {
 ~settings_interface_scaling($int0);
 def_int $int1 = calc(100 + $int0 * 10);
 $int1 = ~max(100, ~min(400, $int1));
-_6210($int1);
+uizoom_set($int1);

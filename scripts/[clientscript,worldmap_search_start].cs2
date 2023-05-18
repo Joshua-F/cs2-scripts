@@ -10,5 +10,5 @@ if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2)
 	%varcstring363 = "";
 	~worldmap_search_update("", $component0);
 	~keyboard_show(0, 25);
-	_3140;
+	setkeyinputmode_activecomponent;
 }

@@ -1,11 +1,11 @@
 // 5475
 [clientscript,overlaytimer_loc_find](coord $coord0, loc $loc1, int $int2, int $clock3, int $int4, int $colour5, int $int6, int $int7)
 if (loc_find($coord0, $loc1) = true) {
-	_7214($coord0, $int7);
+	entityoverlay_delete_coord($coord0, $int7);
 	if (clientclock < calc($clock3 + $int4)) {
 		~add_overlaytimer_loc($loc1, $int2, $clock3, $int4, $colour5, $int6);
 	}
 } else if (clientclock > calc($clock3 + 150)) {
 	~debug_mes("Overlay Timers: Failed to find loc at <~mescoord($coord0)> for timer: <tostring($int2)>");
-	_7214($coord0, $int7);
+	entityoverlay_delete_coord($coord0, $int7);
 }

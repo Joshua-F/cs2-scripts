@@ -3,7 +3,7 @@
 if (calc(clientclock % 50) ! 0) {
 	return;
 }
-def_int $int0 = _3328;
+def_int $int0 = idletimer_get;
 if ($int0 < 30000) {
 	if (%varcint552 = 1) {
 		return;

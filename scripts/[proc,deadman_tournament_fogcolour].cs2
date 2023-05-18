@@ -9,7 +9,7 @@ if (enum(int, boolean, enum_1904, %var1676) = false) {
 	if ($int1 ! 255) {
 		if_settrans(255, interface_90:1);
 	}
-	_2124(255, interface_90:1);
+	if_setgradienttrans(255, interface_90:1);
 	return;
 }
 def_int $int2 = 0;
@@ -53,11 +53,11 @@ if ($int16 < $int4) {
 	$int16 = calc($int16 - 1);
 }
 if_setcolour(~rgb_to_hex($int14, $int15, $int16), interface_90:1);
-if_setfillcolour(~rgb_to_hex($int14, $int15, $int16), interface_90:1);
+if_setgradientcolour(~rgb_to_hex($int14, $int15, $int16), interface_90:1);
 if ($int1 < $int13) {
 	$int1 = calc($int1 + 1);
 } else if ($int1 > $int13) {
 	$int1 = calc($int1 - 1);
 }
 if_settrans($int1, interface_90:1);
-_2124(255, interface_90:1);
+if_setgradienttrans(255, interface_90:1);

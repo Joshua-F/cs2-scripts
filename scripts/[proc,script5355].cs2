@@ -20,7 +20,7 @@ if ($component1 ! null) {
 		$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:33);
 		if (~on_mobile = true) {
 			~script1282;
-			$int2 = ~min(viewport_getwidth, calc(if_getwidth($component1) - scale(%varcint381, 16384, if_getwidth($component1))));
+			$int2 = ~min(safearea_getmaxx, calc(if_getwidth($component1) - scale(%varcint381, 16384, if_getwidth($component1))));
 			$int2 = calc(if_getwidth($component1) - $int2 + 42);
 			if ($component1 ! null) {
 				if_setsize($int2, 0, ^setsize_minus, ^setsize_minus, $component1);
@@ -30,11 +30,11 @@ if ($component1 ! null) {
 				if_setsize($int2, 0, ^setsize_minus, ^setsize_minus, $component1);
 			}
 			if (~on_enhanced_desktop = 1) {
-				_6231(0, 42);
+				sidebar_setwidth(0, 42);
 				if ($int3 = 1) {
-					_6231(1, 270);
+					sidebar_setwidth(1, 270);
 				} else {
-					_6232(1);
+					sidebar_clearwidth(true);
 				}
 			}
 		}
@@ -46,8 +46,8 @@ if ($component1 ! null) {
 			if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component1);
 		}
 		if (~on_enhanced_desktop = 1) {
-			_6232(0);
-			_6232(1);
+			sidebar_clearwidth(false);
+			sidebar_clearwidth(true);
 		}
 	}
 } else {
@@ -56,7 +56,7 @@ if ($component1 ! null) {
 		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component1);
 	}
 	if (~on_enhanced_desktop = 1) {
-		_6232(0);
-		_6232(1);
+		sidebar_clearwidth(false);
+		sidebar_clearwidth(true);
 	}
 }

@@ -10,7 +10,7 @@ if ($int0 = 0) {
 if ($int0 = 1) {
 	return(1);
 }
-if (_3501(%varbit14877) = true | keyheld(%varbit14877) = true) {
+if (keypressed(%varbit14877) = true | keyheld(%varbit14877) = true) {
 	return(1);
 }
 return(0);

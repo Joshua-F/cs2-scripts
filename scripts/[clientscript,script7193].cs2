@@ -1,8 +1,8 @@
 // 7193
-[clientscript,script7193](loc $loc0, int $int1, obj $obj2, int $int3)
+[clientscript,script7193](loc $loc0, int $int1, int $int2, int $int3)
 def_string $string0 = removetags(lc_name($loc0));
 if (string_length($string0) = 0) {
 	return;
 }
-_7600($string0, $obj2, $int3, $int1);
+loottracker_sourceadd($string0, $int2, $int3, $int1);
 ~script7159($string0, 1);

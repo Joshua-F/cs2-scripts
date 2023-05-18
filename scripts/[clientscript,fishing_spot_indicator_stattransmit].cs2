@@ -5,6 +5,6 @@ if ($lvl7 = $lvl2) {
 	return;
 }
 ~fishing_spot_indicator_create($entityoverlay0, $struct1, $npc_uid3, $int4, $loc5, $coord6);
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonstattransmit("fishing_spot_indicator_stattransmit($entityoverlay0, $struct1, $lvl7, $npc_uid3, $int4, $loc5, $coord6){fishing, agility, strength}");
 }

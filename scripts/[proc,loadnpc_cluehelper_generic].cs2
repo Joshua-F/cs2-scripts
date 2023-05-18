@@ -1,6 +1,6 @@
 // 6721
 [proc,loadnpc_cluehelper_generic](entityoverlay $entityoverlay0, dbrow $dbrow1, npc_uid $npc_uid2, int $int3)
-_104($entityoverlay0);
+cc_deleteall_entityoverlay($entityoverlay0);
 highlight_npc_off($npc_uid2, $int3, 9);
 if ($dbrow1 = null) {
 	return;

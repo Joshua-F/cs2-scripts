@@ -8,16 +8,16 @@ switch_int ($int3) {
 	case 1 :
 		$int7 = ~max(1, calc(65536 - $int7));
 }
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	if (clientclock > $clock4) {
 		cc_setontimer(null);
-		_104($entityoverlay0);
+		cc_deleteall_entityoverlay($entityoverlay0);
 		return;
 	}
-	if (_203($entityoverlay0, 1) = ^true) {
+	if (cc_find_entityoverlay($entityoverlay0, 1) = ^true) {
 		cc_setarc($int6, $int7);
 	}
-	if (_203($entityoverlay0, 2) = ^true) {
+	if (cc_find_entityoverlay($entityoverlay0, 2) = ^true) {
 		cc_setarc($int6, $int7);
 	}
 }

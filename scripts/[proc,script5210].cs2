@@ -11,11 +11,11 @@ if (%varbit12979 = 1) {
 	if (%varbit12982 = 1) {
 		$int3 = calc($int3 + 16);
 	}
-	_7035(4, $colour2, $int0, $int1, $int3);
-	if (_3330 ! null) {
-		highlight_tile_on(_3330, 4, 0);
+	highlight_tile_setup(4, $colour2, $int0, $int1, $int3);
+	if (destinationcoord ! null) {
+		highlight_tile_on(destinationcoord, 4, 0);
 	}
 } else {
-	_7039(4);
-	_7035(4, null, 0, 0, 0);
+	highlight_tile_clear(4);
+	highlight_tile_setup(4, null, 0, 0, 0);
 }

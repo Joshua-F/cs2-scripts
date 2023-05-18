@@ -3,7 +3,7 @@
 if (%varbit14174 = $int1 & %varbit13672 = $int2 & %var3551 = $coord3) {
 	return;
 }
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonvartransmit("cannon_overlay_transmit($entityoverlay0, %varbit14174, %varbit13672, %var3551, $coord4){var3417}");
 }
 ~cannon_overlay_create($entityoverlay0, $coord4);

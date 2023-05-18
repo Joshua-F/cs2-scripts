@@ -1,9 +1,9 @@
 // 5325
 [proc,helper_agility_highlight_setup]
 if (%varbit13135 > 0) {
-	_7010(12, ^green, 1, 30, 5);
-	_7010(13, ^red, 1, 30, 5);
+	highlight_loc_setup(12, ^green, 1, 30, 5);
+	highlight_loc_setup(13, ^red, 1, 30, 5);
 } else {
-	_7010(12, ^green, 2, 0, 0);
-	_7010(13, ^red, 2, 0, 0);
+	highlight_loc_setup(12, ^green, 2, 0, 0);
+	highlight_loc_setup(13, ^red, 2, 0, 0);
 }

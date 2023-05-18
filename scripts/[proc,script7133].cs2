@@ -94,7 +94,7 @@ while ($int7 < 10) {
 			while ($int8 < $int12) {
 				if (cc_find($component0, $int8) = ^true) {
 					$obj15, $int16, $int17, $int19, $int18, $int20 = ~script7173($component0, $int8);
-					$int22 = _7408(stringvector_2, oc_name($obj15), 1, 0);
+					$int22 = stringvector_contains(stringvector_2, oc_name($obj15), true, false);
 					if ($int22 = 0 | %varbit14880 = 1) {
 						if ($int13 = 1) {
 							if ($int26 = 0 & $int25 ! 0) {

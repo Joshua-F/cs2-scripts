@@ -6,7 +6,7 @@ def_int $int3 = -1;
 def_component $component4 = null;
 switch_int ($opindex0) {
 	case 1 :
-		if_setfillcolour(calc(1 - if_getfillcolour($component2)), $component2);
+		if_setgradientcolour(calc(1 - if_getfillcolour($component2)), $component2);
 		~script7133;
 	case 2 :
 		$int3 = 0;
@@ -23,7 +23,7 @@ switch_int ($opindex0) {
 			}
 			$int3 = calc($int3 + 1);
 		}
-		_7614(if_gettext($component2));
+		loottracker_lootdel_byname(if_gettext($component2));
 		~script7166;
 		$int3 = 0;
 		while ($int3 < 10) {
@@ -31,7 +31,7 @@ switch_int ($opindex0) {
 			if ($intarray0($int3) = -1) {
 				$intarray0($int3) = 0;
 			}
-			if_setfillcolour($intarray0($int3), $component4);
+			if_setgradientcolour($intarray0($int3), $component4);
 			$int3 = calc($int3 + 1);
 		}
 		~script7133;

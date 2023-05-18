@@ -4,7 +4,7 @@ if (%varbit14016 <= 0) {
 	%varcint991 = 0;
 	if_setcolour(0xff7733, $component0);
 	if_settrans(255, $component0);
-	_2124(255, $component0);
+	if_setgradienttrans(255, $component0);
 	return;
 }
 %varcint991 = ~max(0, %varcint991);
@@ -52,11 +52,11 @@ if ($int17 < $int5) {
 	$int17 = calc($int17 - 1);
 }
 if_setcolour(~rgb_to_hex($int15, $int16, $int17), $component0);
-if_setfillcolour(~rgb_to_hex($int15, $int16, $int17), $component0);
+if_setgradientcolour(~rgb_to_hex($int15, $int16, $int17), $component0);
 if ($int2 < $int14) {
 	$int2 = calc($int2 + 1);
 } else if ($int2 > $int14) {
 	$int2 = calc($int2 - 1);
 }
 if_settrans($int2, $component0);
-_2124(255, $component0);
+if_setgradienttrans(255, $component0);

@@ -1,6 +1,6 @@
 // 4554
 [proc,script4554](entityoverlay $entityoverlay0, struct $struct1)
-_104($entityoverlay0);
+cc_deleteall_entityoverlay($entityoverlay0);
 if (%varbit12349 = 1) {
 	return;
 }
@@ -14,7 +14,7 @@ def_int $int5 = 5;
 def_int $int6 = 0;
 def_int $int7 = 5;
 def_int $bool8 = map_members;
-_103($entityoverlay0, ^iftype_graphic, $int4);
+cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int4);
 $int4 = calc($int4 + 1);
 cc_setgraphic("tradebacking");
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -37,6 +37,6 @@ if ($bool8 = ^false & struct_param($struct1, param_1267) = true) {
 $int5 = calc($int5 + 5);
 $int7 = calc($int7 + 5);
 $int4 = ~thinbox_entityoverlay($entityoverlay0, $int4);
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
 }

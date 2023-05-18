@@ -32,7 +32,7 @@ if (~pvp_world = 1) {
 	if_setsize(78, 73, ^setsize_abs, ^setsize_abs, interface_90:44);
 	if (%varbit5320 > 0 & %varbit5316 > 0) {
 		if_sethide(false, interface_328:1);
-		_2125(2, interface_328:1);
+		if_setgradientmode(2, interface_328:1);
 		if_setontimer("br_fogcolour", interface_328:1);
 		~br_fogcolour;
 	} else {
@@ -75,7 +75,7 @@ if (~pvp_world = 1) {
 			if_sethide(false, interface_90:38);
 		}
 		if_sethide(false, interface_90:1);
-		_2125(2, interface_90:1);
+		if_setgradientmode(2, interface_90:1);
 		if_setontimer("deadman_tournament_fogcolour", interface_90:1);
 		~deadman_tournament_fogcolour;
 	} else {
@@ -146,7 +146,7 @@ if (~pvp_world = 1) {
 			if_setgraphic("overlay_duel", interface_90:46);
 		}
 		if_sethide(false, interface_90:1);
-		_2125(2, interface_90:1);
+		if_setgradientmode(2, interface_90:1);
 		~script6247(interface_90:1);
 		if_setontimer("script6246(event_com)", interface_90:1);
 	} else {
@@ -178,7 +178,7 @@ if (~pvp_world = 1) {
 			if_sethide(false, interface_90:38);
 		}
 		if_sethide(false, interface_90:1);
-		_2125(2, interface_90:1);
+		if_setgradientmode(2, interface_90:1);
 		if_setontimer("wildwars_fogcolour", interface_90:1);
 		~wildwars_fogcolour;
 	} else {

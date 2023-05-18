@@ -4,6 +4,6 @@ if ($int4 = %var3416 & $int5 = %var3417 & %var3540 = $int6 & %var3541 = $int7 & 
 	return;
 }
 ~npc_name_create($entityoverlay0, $npc_uid1, $int2, $string0, $npc3);
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonvartransmit("npc_name_vartransmit($entityoverlay0, $npc_uid1, $int2, $string0, $npc3, %var3416, %var3417, %var3540, %var3541, %var3542, %var1021){var3416, var3417, var3540, var3541, var1021, var3542}");
 }

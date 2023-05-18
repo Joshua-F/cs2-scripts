@@ -1,10 +1,10 @@
 // 1905
-[clientscript,bugreport_textinput](int $int0)
+[clientscript,bugreport_textinput](component $component0)
 def_string $string0 = "";
 if (~on_mobile = true) {
-	if ($int0 = 10223631) {
+	if ($component0 = interface_156:15) {
 		$string0 = %varcstring372;
-	} else if ($int0 = 10223637) {
+	} else if ($component0 = interface_156:21) {
 		$string0 = %varcstring373;
 	}
 	~keyboard_show_string(0, 500, $string0);

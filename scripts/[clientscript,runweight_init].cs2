@@ -1,0 +1,5 @@
+// 2567
+[clientscript,runweight_init](component $component0)
+~runweight_update($component0);
+if_setonmisctransmit("script2568(event_com)", $component0);
+if_setoninvtransmit("script2568(event_com){inv, worn}", $component0);

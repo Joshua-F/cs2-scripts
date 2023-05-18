@@ -1,6 +1,6 @@
 // 4629
 [clientscript,script4629]
-if (_7008(npc_type, 2) = true) {
+if (highlight_npctype_get(npc_type, 2) = true) {
 	highlight_npctype_off(npc_type, 2);
 } else {
 	highlight_npctype_on(npc_type, 2);

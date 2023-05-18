@@ -1,6 +1,6 @@
 // 4633
 [clientscript,script4633]
-if (_7013(loc_type, loc_coord, 3, 1) = true) {
+if (highlight_loc_get(loc_type, loc_coord, 3, 1) = true) {
 	highlight_loc_off(loc_type, loc_coord, 3, 1);
 } else {
 	highlight_loc_on(loc_type, loc_coord, 3, 1);

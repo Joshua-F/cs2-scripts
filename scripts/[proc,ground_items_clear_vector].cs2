@@ -1,0 +1,7 @@
+// 7220
+[proc,ground_items_clear_vector](stringvector $stringvector0, int $int1)
+stringvector_clear($stringvector0);
+%varcint1154 = calc(clientclock + 1);
+if ($int1 = 1) {
+	~ground_items_build;
+}

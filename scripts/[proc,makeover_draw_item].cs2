@@ -1,0 +1,50 @@
+// 7073
+[proc,makeover_draw_item](component $component0, dbrow $dbrow1, int $int2, int $int3, int $int4)(int)
+if (%varcint1148 = $int2) {
+	~create_graphic($component0, $int2, "tradebacking_light", $int3, $int4, ^setpos_abs_centre, ^setpos_abs_top, 85, 80, ^setsize_abs, ^setsize_abs);
+} else {
+	~create_graphic($component0, $int2, "tradebacking_dark", $int3, $int4, ^setpos_abs_centre, ^setpos_abs_top, 85, 80, ^setsize_abs, ^setsize_abs);
+}
+if (~on_mobile = false) {
+	cc_setonmouserepeat("makeover_hover_item(event_com, event_comsubid, true)");
+	cc_setonmouseleave("makeover_hover_item(event_com, event_comsubid, false)");
+}
+cc_setop(1, "Preview");
+cc_setopbase("<col=ff9040>Hair-style");
+cc_setonop("makeover_op_item(event_com, event_comsubid)");
+$int2 = calc($int2 + 1);
+cc_create($component0, ^iftype_rectangle, $int2);
+cc_setsize(85, 80, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(false);
+if (%varcint1148 = calc($int2 - 1)) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x0e0e0c);
+}
+$int2 = calc($int2 + 1);
+cc_create($component0, ^iftype_model, $int2);
+cc_setsize(60, 60, ^setsize_abs, ^setsize_abs);
+if (%varbit4130 = 0 | %varbit4130 = 1) {
+	cc_setmodel(db_getfield($dbrow1, dbtable_37:3, 0));
+	cc_setmodelangle(0, 0, 0, 200, 0, 400);
+	cc_setposition(calc($int3 + 2), calc($int4 + 40), ^setpos_abs_centre, ^setpos_abs_top);
+} else {
+	cc_setmodel(db_getfield($dbrow1, dbtable_38:3, 0));
+	cc_setmodelangle(0, 0, 0, 200, 0, 400);
+	cc_setposition(calc($int3 + 2), calc($int4 + 40), ^setpos_abs_centre, ^setpos_abs_top);
+}
+$int2 = calc($int2 + 1);
+cc_create($component0, ^iftype_text, $int2);
+cc_setsize(60, 30, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, calc($int4 + 2), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
+if (%varbit4130 = 0 | %varbit4130 = 1) {
+	cc_settext(db_getfield($dbrow1, dbtable_37:0, 0));
+} else {
+	cc_settext(db_getfield($dbrow1, dbtable_38:0, 0));
+}
+return(calc($int2 + 1));

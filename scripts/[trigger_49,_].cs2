@@ -7,9 +7,9 @@ if (%varbit12978 = 0) {
 	return;
 }
 if (uid = self_player_uid) {
-	_7039(3);
-	if (_6902 > 0) {
-		highlight_tile_on(_6903(0), 3, 0);
+	highlight_tile_clear(3);
+	if (player_route_length > 0) {
+		highlight_tile_on(player_route_get(0), 3, 0);
 	} else {
 		highlight_tile_on(coord, 3, 0);
 	}

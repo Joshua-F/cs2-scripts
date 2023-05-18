@@ -1,7 +1,0 @@
-// 7120
-[proc,script7120](component $component0)(int)
-def_int $int1 = 0;
-while (cc_find($component0, $int1) = ^true) {
-	$int1 = calc($int1 + 1);
-}
-return($int1);

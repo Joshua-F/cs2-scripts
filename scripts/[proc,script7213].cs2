@@ -4,5 +4,5 @@ cc_deleteall($component0);
 def_int $int2 = ~thinbox($component0, $int2);
 ~script7210($component0, $int2, 4, 4, ^setsize_minus, ^setsize_minus, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settext(~script7212($stringvector1));
-cc_setoninputsubmit("script7214");
-cc_setoninputfocus("script7215(event_com, event_comsubid, $stringvector1)");
+cc_input_setonsubmit("ground_items_confirm");
+cc_input_setonfocuschange("ground_items_focus_changed(event_com, event_comsubid, $stringvector1)");

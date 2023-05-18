@@ -3,6 +3,6 @@
 if (%varbit14189 = $int3 & %var3546 = $dbrow4 & ~script6545($int5) = $npc_uid6) {
 	return;
 }
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	~script6543($entityoverlay0, $int1, $npc_uid2, $npc7);
 }

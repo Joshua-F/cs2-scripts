@@ -3,11 +3,11 @@
 if (%varbit5190 = $int7 & %varbit14189 = $int3 & %var3548 = $npc_uid4 & %var3547 = $dbrow5 & %var3546 = $dbrow6) {
 	return;
 }
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonvartransmit("script6531($entityoverlay0, $npc_uid1, $int2, %varbit14189, %var3548, %var3547, %var3546, %varbit5190){var3543, var3546, var3548, var3547, var1353}");
 }
 highlight_npc_off($npc_uid1, $int2, 9);
-_104($entityoverlay0);
+cc_deleteall_entityoverlay($entityoverlay0);
 if (npc_finduid($npc_uid1) = true) {
 	if (%varbit5190 = 0) {
 		~script6533($entityoverlay0, $npc_uid1, $int2);

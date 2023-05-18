@@ -78,8 +78,8 @@ if ($int6 = 1) {
 	.cc_setop(1, "Move down");
 	cc_setopbase("<col=ff9040><$string1></col>");
 	.cc_setopbase("<col=ff9040><$string1></col>");
-	cc_setonop("script5345(%varcint178, true)");
-	.cc_setonop("script5345(%varcint178, false)");
+	cc_setonop("toa_partydetails_sortmember(%varcint178, true)");
+	.cc_setonop("toa_partydetails_sortmember(%varcint178, false)");
 } else {
 	cc_sethide(true);
 	.cc_sethide(true);

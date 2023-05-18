@@ -1,10 +1,10 @@
 // 7212
 [proc,script7212](stringvector $stringvector0)(string)
 def_int $int1 = 0;
-def_int $int2 = _7407($stringvector0);
+def_int $int2 = stringvector_size($stringvector0);
 def_string $string0 = "";
 while ($int1 < $int2) {
-	$string0 = "<$string0><_7406($stringvector0, $int1)>,";
+	$string0 = "<$string0><stringvector_get($stringvector0, $int1)>,";
 	$int1 = calc($int1 + 1);
 }
 if ($int2 > 0) {

@@ -1,6 +1,6 @@
 // 7225
-[proc,script7225](stringvector $stringvector0, obj $obj1, int $int2)(int)
-if (_7408($stringvector0, removetags(oc_name($obj1)), $int2, 0) = 1) {
+[proc,script7225](stringvector $stringvector0, obj $obj1, boolean $boolean2)(int)
+if (stringvector_contains($stringvector0, removetags(oc_name($obj1)), $boolean2, false) = 1) {
 	return(1);
 }
 return(0);

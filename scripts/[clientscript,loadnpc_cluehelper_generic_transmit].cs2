@@ -3,7 +3,7 @@
 if (%varbit14189 = $int4 & $dbrow1 = %var3546) {
 	return;
 }
-if (_202($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonvartransmit("loadnpc_cluehelper_generic_transmit($entityoverlay0, %var3546, $npc_uid2, $int3, %varbit14189){var3546, var3543}");
 }
 if (npc_finduid($npc_uid2) = true) {

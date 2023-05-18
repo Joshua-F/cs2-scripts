@@ -1,10 +1,10 @@
 // 7160
 [proc,script7160](string $string0)
-def_int $width0 = _7603($string0);
+def_int $width0 = loottracker_sourceid($string0);
 if ($width0 <= 0) {
 	return;
 }
-def_int $height1 = _7604($string0);
+def_int $height1 = loottracker_sourcecount($string0);
 if ($height1 <= 0) {
 	return;
 }

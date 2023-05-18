@@ -41,13 +41,13 @@ if (calc($int4 % $int16) = 0) {
 			$int7 = 0;
 		}
 		cc_setscrollsize($int6, $int7);
-		cc_setfillcolour($int5);
+		cc_setgradientcolour($int5);
 		cc_settext(~script5943($struct0, $int5));
 		cc_setopbase(~script5343($struct0, $int11));
 		if ($int5 <= 0) {
 			cc_setscrollsize(0, 0);
 			cc_setcolour(struct_param($struct0, param_1540));
-			cc_setfillcolour(^black);
+			cc_setgradientcolour(^black);
 			cc_settext("");
 			cc_setontimer(null);
 			~buff_bar_layout_redraw;

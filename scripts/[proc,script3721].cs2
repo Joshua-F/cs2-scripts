@@ -6,6 +6,6 @@ if (~on_enhanced_any = 0) {
 if (map_members = ^false & struct_param($struct0, param_1264) = true & struct_param($struct0, param_1267) = true) {
 	return;
 }
-def_entityoverlay $entityoverlay3 = _7200(0, 1, 1, 1, 1);
+def_entityoverlay $entityoverlay3 = entityoverlay_create_npc(0, 1, 1, 1, 1);
 ~script6902($entityoverlay3, $struct0, $npc_uid1, $int2, null, null);
 ~loadnpc_default;

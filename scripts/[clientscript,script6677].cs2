@@ -3,7 +3,7 @@
 if ($int2 = %var3) {
 	return;
 }
-if (_203($entityoverlay0, 0) = ^true) {
+if (cc_find_entityoverlay($entityoverlay0, 0) = ^true) {
 	cc_settext(tostring(%var3));
 	cc_setonvartransmit("script6677($entityoverlay0, $coord1, %var3){var3}");
 	if (%var3 <= 0) {

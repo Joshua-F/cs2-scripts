@@ -1,7 +1,7 @@
 // 7232
 [proc,script7232](entityoverlay $entityoverlay0, coord $coord1, int $int2, int $int3, int $int4, obj $obj5, int $int6, int $int7, int $colour8, int $int9, int $int10, boolean $boolean11, boolean $boolean12)(int)
 def_int $y13 = calc(($int4 - $int2 - 1) * 17);
-_103($entityoverlay0, ^iftype_text, $int3);
+cc_create_entityoverlay($entityoverlay0, ^iftype_text, $int3);
 $int3 = calc($int3 + 1);
 cc_setsize(108, 17, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
@@ -26,11 +26,11 @@ def_int $width14 = parawidth($string0, 300, p12_full);
 def_graphic $graphic15 = null;
 def_graphic $graphic16 = null;
 if ($int10 = 1) {
-	_103($entityoverlay0, ^iftype_graphic, $int3);
+	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
-	_103($entityoverlay0, ^iftype_graphic, $int3);
+	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
-	if (~script7225(stringvector_4, $obj5, 1) = 1) {
+	if (~script7225(stringvector_4, $obj5, true) = 1) {
 		$graphic15 = "graphic_4905";
 		$graphic16 = "graphic_4906";
 		$string0 = "Unhighlight <col=ff981f><removetags(oc_name($obj5))>";
@@ -42,12 +42,12 @@ if ($int10 = 1) {
 	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	.cc_setgraphic($graphic15);
 	.cc_setposition(calc($width14 / 2 + 27), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
-	.cc_setonmouserepeat("script7121($entityoverlay0, calc($int3 - 2), $graphic16, null)");
-	.cc_setonmouseleave("script7121($entityoverlay0, calc($int3 - 2), $graphic15, null)");
+	.cc_setonmouserepeat("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 2), $graphic16, null)");
+	.cc_setonmouseleave("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 2), $graphic15, null)");
 	.cc_setnoclickthrough(true);
 	.cc_setop(1, $string0);
-	.cc_setonop("script7233($obj5)");
-	if (~script7225(stringvector_3, $obj5, 1) = 1) {
+	.cc_setonop("ground_items_highlight($obj5)");
+	if (~script7225(stringvector_3, $obj5, true) = 1) {
 		$graphic15 = "graphic_4907";
 		$graphic16 = "graphic_4908";
 		$string0 = "Unignore <col=ff981f><removetags(oc_name($obj5))>";
@@ -59,16 +59,16 @@ if ($int10 = 1) {
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic($graphic15);
 	cc_setposition(calc($width14 / 2 + 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
-	cc_setonmouserepeat("script7121($entityoverlay0, calc($int3 - 1), $graphic16, null)");
-	cc_setonmouseleave("script7121($entityoverlay0, calc($int3 - 1), $graphic15, null)");
+	cc_setonmouserepeat("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 1), $graphic16, null)");
+	cc_setonmouseleave("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 1), $graphic15, null)");
 	cc_setnoclickthrough(true);
 	cc_setop(1, $string0);
-	cc_setonop("script7234($obj5)");
+	cc_setonop("ground_items_filter($obj5)");
 }
 def_int $int17 = 0;
 def_int $int18 = 0;
 def_int $int19 = 0;
-if (_6859($coord1, $int9) = true) {
+if (obj_findbyindex($coord1, $int9) = true) {
 	if ($boolean11 = true) {
 		$int17 = calc(30 * obj_despawntime);
 	}
@@ -76,7 +76,7 @@ if (_6859($coord1, $int9) = true) {
 		$int18 = calc(30 * obj_revealtime);
 	}
 	if ($int17 > 0 | $int18 > 0 | $boolean12 = true) {
-		_103($entityoverlay0, ^iftype_text, $int3);
+		cc_create_entityoverlay($entityoverlay0, ^iftype_text, $int3);
 		cc_setsize(34, 17, ^setsize_abs, ^setsize_abs);
 		$int19 = calc(0 - $width14 / 2 - 34 / 2);
 		cc_setposition($int19, $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
@@ -84,7 +84,7 @@ if (_6859($coord1, $int9) = true) {
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		$int3 = calc($int3 + 1);
-		_103($entityoverlay0, ^iftype_graphic, $int3);
+		cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc($int19 - 34 / 2 - 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
 		$int3 = calc($int3 + 1);
