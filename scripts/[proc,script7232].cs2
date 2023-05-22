@@ -12,14 +12,16 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_string $string0 = removetags(oc_name($obj5));
 def_string $string1 = "Lots!";
 def_string $string2 = ",";
-if ($int7 < ^max_32bit_int) {
-	$string1 = "<~magic_spacer_tostring($int7, $string2)> gp";
-}
 if ($int6 > 1) {
 	$string0 = "<$string0> x <~magic_spacer_tostring($int6, $string2)>";
 }
-if ($obj5 ! coins_995) {
-	$string0 = "<$string0> (<$string1>)";
+if (%varbit14885 = 0) {
+	if ($int7 < ^max_32bit_int) {
+		$string1 = "<~magic_spacer_tostring($int7, $string2)> gp";
+	}
+	if ($obj5 ! coins_995) {
+		$string0 = "<$string0> (<$string1>)";
+	}
 }
 cc_settext($string0);
 def_int $width14 = parawidth($string0, 300, p12_full);
