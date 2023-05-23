@@ -28,7 +28,7 @@ def_int $width14 = parawidth($string0, 300, p12_full);
 def_graphic $graphic15 = null;
 def_graphic $graphic16 = null;
 if ($int10 = 1) {
-	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
+	.cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
 	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
@@ -86,7 +86,7 @@ if (obj_findbyindex($coord1, $int9) = true) {
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		$int3 = calc($int3 + 1);
-		cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
+		.cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc($int19 - 34 / 2 - 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
 		$int3 = calc($int3 + 1);
