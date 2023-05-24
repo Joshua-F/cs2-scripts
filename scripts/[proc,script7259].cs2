@@ -1,0 +1,58 @@
+// 7259
+[proc,script7259](dbrow $dbrow0, inv $inv1, int $int2, int $dbfield3, int $int4)(dbrow, int)
+def_int $int5 = 0;
+def_dbrow $dbrow6 = null;
+def_obj $obj7 = null;
+def_dbrow $dbrow8 = null;
+def_int $int9 = 0;
+def_int $int10 = db_getfield($dbrow0, dbtable_39:8, 0);
+def_int $int11 = db_getfield($dbrow0, dbtable_39:6, 0);
+def_int $int12 = db_getfield($dbrow0, dbtable_39:7, 0);
+def_int $int13 = 0;
+def_int $int14 = 0;
+if (db_getfieldcount($dbrow0, dbtable_39:5) > 0) {
+	$dbrow6 = db_getfield($dbrow0, dbtable_39:5, $int2);
+	if ($int4 = 0 & db_getfield($dbrow6, dbtable_40:13, 0) = false) {
+		return(null, 0);
+	}
+	if ($int4 = 1 & db_getfield($dbrow6, dbtable_40:12, 0) = false) {
+		return(null, 0);
+	}
+	if (db_getfieldcount($dbrow6, dbtable_40:5) > 0) {
+		if ($dbfield3 < db_getfieldcount($dbrow6, dbtable_40:5)) {
+			$dbrow8, $int9 = db_getfield($dbrow6, dbtable_40:5, $dbfield3);
+			$int13 = db_getfield($dbrow6, dbtable_40:8, 0);
+			if ($int13 ! ^min_32bit_int) {
+				$int10 = $int13;
+			}
+			if ($int4 = 1) {
+				$int13 = db_getfield($dbrow6, dbtable_40:6, 0);
+				if ($int13 ! ^min_32bit_int) {
+					$int11 = $int13;
+				}
+				$int9 = ~script7261($int9, $int10, $int11, $int14);
+			} else {
+				$int13 = db_getfield($dbrow6, dbtable_40:7, 0);
+				if ($int13 ! ^min_32bit_int) {
+					$int12 = $int13;
+				}
+				$int9 = ~script7262($int9, $int10, $int12, $int14);
+			}
+			return($dbrow8, $int9);
+		}
+		return(null, 0);
+	}
+	$obj7 = db_getfield($dbrow6, dbtable_40:0, 0);
+} else {
+	$obj7 = inv_getobj($inv1, $int2);
+}
+if ($dbfield3 = 0) {
+	$dbrow8, $int9 = db_getfield($dbrow0, dbtable_39:9, 0), ~script7260($inv1, $obj7);
+	if ($int4 = 1) {
+		$int9 = ~script7261($int9, $int10, $int11, $int14);
+	} else {
+		$int9 = ~script7262($int9, $int10, $int12, $int14);
+	}
+	return($dbrow8, $int9);
+}
+return(null, 0);

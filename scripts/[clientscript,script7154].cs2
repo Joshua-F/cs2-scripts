@@ -1,0 +1,13 @@
+// 7154
+[clientscript,script7154](dbrow $dbrow0, inv $inv1, int $opindex2)
+def_component $component3 = interface_819:5;
+def_component $component4 = interface_819:8;
+if ($opindex2 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	~script7143($dbrow0, $inv1, -1, 0);
+	~script7147($dbrow0, $inv1, -1, 0, 0, 0, null, "", true);
+	if_sethide(false, $component3);
+	if (cc_find($component4, 0) = ^true) {
+		cc_setgraphic("menu_buttons,2");
+	}
+}

@@ -1,0 +1,15 @@
+// 7249
+[proc,script7249](obj $obj0, int $num1, string $string0, dbrow $dbrow2)
+def_int $trans3 = 0;
+def_int $trans4 = 120;
+cc_settrans($trans3);
+cc_setobject($obj0, $num1);
+cc_setop(1, "Select");
+cc_setop(2, "<$string0>-1");
+cc_setop(3, "<$string0>-5");
+cc_setop(4, "<$string0>-10");
+cc_setop(5, "<$string0>-50");
+cc_setop(10, "Examine");
+cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+cc_setonop("script7251(event_opindex, event_com, event_comsubid, $trans4, $trans3, $dbrow2)");
+cc_setondragcomplete("script7252(event_com, event_comsubid, event_drop, event_dropsubid, $string0, $dbrow2)");

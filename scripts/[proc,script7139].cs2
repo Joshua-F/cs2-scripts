@@ -1,0 +1,38 @@
+// 7139
+[proc,script7139](component $component0, string $string0, boolean $boolean1, boolean $boolean2)
+def_int $int3 = 0;
+def_fontmetrics $fontmetrics4 = p11_full;
+cc_deleteall($component0);
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics4 = verdana_13pt_regular;
+	case 2 :
+		$fontmetrics4 = verdana_13pt_regular;
+	case 3 :
+		$fontmetrics4 = verdana_13pt_bold;
+}
+if ($boolean1 = true & $boolean2 = false) {
+	$int3 = ~v2_stone_button($component0);
+} else {
+	$int3 = ~v2_stone_button_in_filled($component0);
+}
+cc_create($component0, ^iftype_text, $int3);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont($fontmetrics4);
+cc_settextshadow(true);
+if ($boolean1 = true) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+$int3 = calc($int3 + 1);
+if (~on_mobile = false & $boolean1 = true) {
+	if_setonmouseover("script7138($component0, $string0, $boolean1, true)", $component0);
+	if_setonmouseleave("script7138($component0, $string0, $boolean1, false)", $component0);
+} else {
+	if_setonmouseover(null, $component0);
+	if_setonmouseleave(null, $component0);
+}

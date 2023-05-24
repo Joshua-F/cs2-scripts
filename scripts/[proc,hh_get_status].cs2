@@ -38,7 +38,19 @@ if ($coord8 ! null) {
 		if (testbit($flags3, 0) = ^true) {
 			return(1, 1);
 		}
-	} else if ($loc0 = inconspicuous_bush_master_multi_29060 & testbit($flags3, 11) = ^true) {
+	} else if ($loc0 = inconspicuous_bush_master_multi_29060) {
+		if (testbit($flags3, 11) = ^true) {
+			return(1, 1);
+		}
+	} else if ($loc0 = inconspicuous_crate_elite_multi_29024) {
+		if (testbit($flags2, 27) = ^true) {
+			return(1, 1);
+		}
+	} else if ($loc0 = inconspicuous_rocks_elite_multi_29035) {
+		if (testbit($flags3, 1) = ^true) {
+			return(1, 1);
+		}
+	} else if ($loc0 = inconspicuous_hole_master_multi_29040 & testbit($flags3, 2) = ^true) {
 		return(1, 1);
 	}
 	return(1, 0);

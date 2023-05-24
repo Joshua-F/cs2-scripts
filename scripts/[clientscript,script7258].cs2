@@ -1,0 +1,10 @@
+// 7258
+[clientscript,script7258](int $int0, int $int1)
+switch_int ($int0) {
+	case 2486 :
+		%var3436 = $int1;
+	case 2466 :
+		%var3814 = $int1;
+	case default :
+		~debug_mes("Error: omnishop_var_setter called with unknown ID");
+}

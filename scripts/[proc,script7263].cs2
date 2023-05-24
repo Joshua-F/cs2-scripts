@@ -1,0 +1,39 @@
+// 7263
+[proc,script7263](dbrow $dbrow0, inv $inv1, int $int2)(obj, namedobj, int)
+def_int $int3 = 1;
+def_dbrow $dbrow4 = null;
+if (db_getfieldcount($dbrow0, dbtable_39:5) = 0) {
+	$int3 = 0;
+} else {
+	$dbrow4 = db_getfield($dbrow0, dbtable_39:5, $int2);
+}
+def_obj $obj5 = null;
+def_namedobj $namedobj6 = null;
+def_int $int7 = -1;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_inv $inv10 = db_getfield($dbrow0, dbtable_39:1, 0);
+if ($int3 = 1) {
+	$namedobj6 = db_getfield($dbrow4, dbtable_40:0, 0);
+	if ($inv10 ! null) {
+		$int7 = inv_total($inv10, $namedobj6);
+	}
+	$int8 = db_getfield($dbrow4, dbtable_40:10, 0);
+	$int9 = db_getfield($dbrow4, dbtable_40:11, 0);
+	if ($int8 ! 0 | $int9 ! 0) {
+		if ($int8 = 0) {
+			$int8 = $int9;
+		} else if ($int9 ! 0 & $int9 < $int8) {
+			$int8 = $int9;
+		}
+		if ($int7 = -1) {
+			$int7 = $int8;
+		} else {
+			$int7 = min($int7, $int8);
+		}
+	}
+} else {
+	$obj5 = inv_getobj($inv1, $int2);
+	$int7 = inv_getnum($inv1, $int2);
+}
+return($obj5, $namedobj6, $int7);

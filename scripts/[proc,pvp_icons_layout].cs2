@@ -223,7 +223,7 @@ if (~pvp_world = 1) {
 			if_setonop(null, interface_90:46);
 			%varbit10531 = 0;
 		}
-		if (~target_world = 1 & (%varbit877 > 0 | %varbit5963 = 1)) {
+		if (~target_world = 1 & %varbit14887 = 1) {
 			~pvp_icons_toggletargetsystem(false);
 		} else {
 			~pvp_icons_toggletargetsystem(true);

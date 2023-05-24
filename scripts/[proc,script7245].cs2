@@ -1,0 +1,70 @@
+// 7245
+[proc,script7245](int $int0, string $text0)
+def_component $component1 = interface_819:24;
+def_component $component2 = interface_819:25;
+def_component $component3 = interface_819:26;
+def_component $component4 = interface_819:27;
+def_component $component5 = interface_819:19;
+def_fontmetrics $fontmetrics6 = p11_full;
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics6 = verdana_11pt_regular;
+	case 2 :
+		$fontmetrics6 = verdana_11pt_regular;
+	case 3 :
+		$fontmetrics6 = verdana_13pt_regular;
+}
+cc_create($component5, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics6);
+cc_setcolour(0xff981f);
+cc_settext($text0);
+def_int $int7 = calc((if_getwidth($component5) - 18) / 4);
+if_setsize($int7, 18, ^setsize_abs, ^setsize_minus, $component1);
+if_setsize($int7, 18, ^setsize_abs, ^setsize_minus, $component2);
+if_setsize($int7, 18, ^setsize_abs, ^setsize_minus, $component3);
+if_setsize($int7, 18, ^setsize_abs, ^setsize_minus, $component4);
+if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
+if_setposition(calc(-3 - $int7 / 2), 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
+if_setposition(calc(3 + $int7 / 2), 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component3);
+if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, $component4);
+def_boolean $boolean8 = true;
+if ($int0 < 1 & $int0 ! -1) {
+	$boolean8 = false;
+}
+~script7139($component1, "1", $boolean8, false);
+if ($boolean8 = true) {
+	if_setop(1, "<$text0>-1", $component1);
+} else {
+	if_clearops($component1);
+}
+if ($int0 < 5 & $int0 ! -1) {
+	$boolean8 = false;
+}
+~script7139($component2, "5", $boolean8, false);
+if ($boolean8 = true) {
+	if_setop(1, "<$text0>-5", $component2);
+} else {
+	if_clearops($component2);
+}
+if ($int0 < 10 & $int0 ! -1) {
+	$boolean8 = false;
+}
+~script7139($component3, "10", $boolean8, false);
+if ($boolean8 = true) {
+	if_setop(1, "<$text0>-10", $component3);
+} else {
+	if_clearops($component3);
+}
+if ($int0 < 50 & $int0 ! -1) {
+	$boolean8 = false;
+}
+~script7139($component4, "50", $boolean8, false);
+if ($boolean8 = true) {
+	if_setop(1, "<$text0>-50", $component4);
+} else {
+	if_clearops($component4);
+}

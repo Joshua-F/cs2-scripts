@@ -1,0 +1,17 @@
+// 7246
+[clientscript,script7246](dbrow $dbrow0)
+def_component $component1 = interface_806:0;
+cc_deleteall($component1);
+def_int $size2 = inv_size(inv);
+def_int $size3 = 0;
+while ($size3 < $size2) {
+	cc_create($component1, ^iftype_graphic, $size3);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$size3 = calc($size3 + 1);
+}
+~script7248($dbrow0);
+if_setoninvtransmit("script7247($dbrow0){inv}", $component1);

@@ -1,0 +1,11 @@
+// 7257
+[proc,script7257](dbrow $dbrow0)(int)
+switch_dbrow ($dbrow0) {
+	case dbrow_2486 :
+		return(%var3436);
+	case dbrow_2466 :
+		return(%var3814);
+	case default :
+		~debug_mes("Error: omnishop_var_getter called with unknown ID");
+		return(-1);
+}

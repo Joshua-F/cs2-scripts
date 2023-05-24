@@ -1,0 +1,34 @@
+// 7143
+[proc,script7143](dbrow $dbrow0, inv $inv1, int $int2, int $int3)
+def_component $component4 = interface_819:32;
+def_component $component5 = interface_819:33;
+cc_deleteall($component4);
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $height10 = 0;
+def_int $height11 = 0;
+def_int $int12 = db_getfieldcount($dbrow0, dbtable_39:5);
+if ($int12 = 0) {
+	$int12 = inv_size($inv1);
+}
+while ($int6 < $int12) {
+	if ($int6 = $int2 & %var3871 = 0) {
+		$int9 = 1;
+	} else {
+		$int9 = 0;
+	}
+	$int8, $height10 = ~script7144($int6, $int7, $dbrow0, $inv1, $int9);
+	if ($int8 = 1) {
+		$int7 = calc($int7 + 1);
+		$height11 = $height10;
+	}
+	$int6 = calc($int6 + 1);
+}
+if ($int3 = 1) {
+	if_setscrollpos(0, 0, $component4);
+}
+if_setscrollsize(if_getwidth($component4), $height11, $component4);
+~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical_rebuild($component5, $component4);

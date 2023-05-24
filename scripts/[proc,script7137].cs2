@@ -1,0 +1,33 @@
+// 7137
+[proc,script7137](component $component0, component $component1, enum $enum2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, string $text0, int $int10, int $int11)
+if ($component1 ! null) {
+	if_settext($text0, $component1);
+}
+def_int $count12 = enum_getoutputcount($enum2);
+if ($count12 = 0) {
+	return;
+}
+def_int $int13 = ~min(if_getwidth($component0), if_getheight($component0));
+def_int $int14 = calc($int13 / 4);
+def_int $int15 = calc(360 / $count12);
+def_int $int16 = calc(360 % $count12);
+def_int $int17 = calc((if_getwidth($component0) - $int14) / 2 + $int10);
+def_int $int18 = calc((if_getheight($component0) - $int14) / 2 + $int11);
+def_int $x19 = 0;
+def_int $y20 = 0;
+def_int $count21 = 0;
+def_obj $obj22 = null;
+def_int $int23 = 0;
+def_int $int24 = calc(($int5 - $int4) / $count12);
+while ($count21 < $count12) {
+	if ($int16 > 0) {
+		$int23 = calc($int23 + 1);
+		$int16 = calc($int16 - 1);
+	}
+	$obj22 = enum(int, obj, $enum2, $count21);
+	$x19 = calc($int17 + scale(~cos_deg($int23), 100000, $int9));
+	$y20 = calc($int18 + scale(~sin_deg($int23), 100000, $int9));
+	~loading_icon_draw($x19, $y20, $count21, $component0, $obj22, $int14, $int3, $int4, $int5, $int6, $int7, $int8, $int24);
+	$int23 = calc($int23 + $int15);
+	$count21 = calc($count21 + 1);
+}

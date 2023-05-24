@@ -1,0 +1,6 @@
+// 7264
+[proc,script7264](dbrow $dbrow0, inv $inv1, int $int2)(obj)
+if (db_getfieldcount($dbrow0, dbtable_39:5) > 0) {
+	return(db_getfield(db_getfield($dbrow0, dbtable_39:5, $int2), dbtable_40:0, 0));
+}
+return(inv_getobj($inv1, $int2));

@@ -1,0 +1,10 @@
+// 7155
+[clientscript,script7155](dbrow $dbrow0, inv $inv1)
+if (%var3871 = 1) {
+	%var3871 = 0;
+} else {
+	%var3871 = 1;
+}
+%var3869 = -1;
+~script7147($dbrow0, $inv1, -1, 0, 0, 0, null, "", true);
+~script7142($dbrow0, $inv1, true);

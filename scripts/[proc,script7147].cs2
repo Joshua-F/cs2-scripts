@@ -1,0 +1,188 @@
+// 7147
+[proc,script7147](dbrow $dbrow0, inv $inv1, int $int2, int $int3, int $int4, int $int5, dbrow $dbrow6, string $string0, boolean $boolean7)
+def_component $component8 = interface_819:29;
+def_component $component9 = interface_819:30;
+def_int $int10 = 53673989;
+def_component $component11 = interface_819:16;
+def_component $component12 = interface_819:14;
+if_setonresize("script7146($dbrow0, $inv1, $int2, $int3, $int4, $int5, $dbrow6, $string0, $boolean7)", $component8);
+cc_deleteall($component8);
+cc_deleteall($component11);
+if (%var3871 = 1) {
+	if ($int2 = -1) {
+		~steelborder($component11, "Help", 16);
+	} else {
+		~steelborder($component11, "Item Info", 16);
+	}
+	if (cc_find($component11, 11) = ^true) {
+		cc_setonop("script7148");
+		cc_setonkey("script7149(event_key)");
+		if_setonop("script7148", $component12);
+	}
+}
+def_fontmetrics $fontmetrics13 = b12_full;
+def_fontmetrics $fontmetrics14 = b12_full;
+def_fontmetrics $fontmetrics15 = p12_full;
+def_fontmetrics $fontmetrics16 = p12_full;
+def_int $int17 = 10;
+def_int $int18 = 10;
+def_int $int19 = 16;
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics13 = verdana_13pt_bold;
+		$fontmetrics14 = verdana_13pt_bold;
+		$fontmetrics15 = verdana_13pt_regular;
+		$fontmetrics16 = verdana_13pt_regular;
+		$int17 = 12;
+		$int18 = 12;
+	case 2 :
+		$fontmetrics13 = verdana_13pt_bold;
+		$fontmetrics14 = verdana_13pt_bold;
+		$fontmetrics15 = verdana_13pt_regular;
+		$fontmetrics16 = verdana_13pt_regular;
+		$int17 = 16;
+		$int18 = 14;
+		$int19 = 17;
+	case 3 :
+		$fontmetrics13 = verdana_13pt_bold;
+		$fontmetrics14 = verdana_13pt_bold;
+		$fontmetrics15 = verdana_13pt_regular;
+		$fontmetrics16 = verdana_13pt_regular;
+		$int17 = 22;
+		$int18 = 16;
+		$int19 = 18;
+}
+def_obj $obj20 = null;
+if ($int2 ! -1) {
+	$obj20 = ~script7264($dbrow0, $inv1, $int2);
+}
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $width23 = if_getwidth($component8);
+if ($int2 ! -1 & string_length($string0) = 0) {
+	~script7137($component8, null, enum_3787, 10, 1000, 3000, 512, 1024, 0, 3, "", 0, 30);
+	$int21 = enum_getoutputcount(enum_3787);
+}
+def_string $string1 = db_getfield($dbrow0, dbtable_39:10, 0);
+def_int $int24 = 1;
+if ($int2 ! -1) {
+	$string1 = oc_param($obj20, param_1733);
+	if (string_length($string1) = 0) {
+		$string1 = oc_name($obj20);
+	}
+	$int24 = db_getfield(db_getfield($dbrow0, dbtable_39:5, $int2), dbtable_40:9, 0);
+	if ($int24 > 1) {
+		$string1 = "<$string1> (x<tostring($int24)>)";
+	}
+}
+def_int $int25 = calc(paraheight($string1, $width23 - $int17 * 2, $fontmetrics14) * $int19);
+cc_create($component8, ^iftype_text, $int21);
+cc_setposition($int17, $int17, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($width23 - $int17 * 2), $int25, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, $int19);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics13);
+cc_setcolour(0xff981f);
+cc_settext($string1);
+$int21 = calc($int21 + 1);
+$int22 = calc($int22 + $int17 + $int25 + $int18);
+if ($int2 ! -1) {
+	cc_create($component8, ^iftype_graphic, $int21);
+	cc_setposition(calc($width23 / 2 - 36 / 2), $int22, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj20, -1);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x333333);
+	$int22 = calc($int22 + 32 + $int18 / 2);
+	$int21 = calc($int21 + 1);
+}
+def_string $text2 = "<tostring($int3)> in stock";
+def_dbrow $dbrow26 = null;
+def_int $int27 = 0;
+def_int $int28 = 0;
+def_string $text3 = "";
+def_string $string4 = ",";
+if (string_length($string0) > 0) {
+	if ($int3 = -1) {
+		$text2 = "Unlimited stock";
+	}
+	cc_create($component8, ^iftype_text, $int21);
+	cc_setposition(0, $int22, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settextfont($fontmetrics15);
+	cc_setcolour(0xff981f);
+	cc_settext($text2);
+	$int21 = calc($int21 + 1);
+	$int22 = calc($int22 + 22);
+	cc_create($component8, ^iftype_text, $int21);
+	cc_setposition(0, $int22, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settextfont($fontmetrics13);
+	cc_setcolour(0xefefef);
+	cc_settext("Cost");
+	$int21 = calc($int21 + 1);
+	$int22 = calc($int22 + 20);
+	$dbrow26, $int5 = ~script7259($dbrow0, $inv1, $int2, $int28, 1);
+	while ($dbrow26 ! null) {
+		$text3 = ~tostring_spacer($int5, $string4);
+		if ($int5 = 1) {
+			$text3 = "<$text3> <db_getfield($dbrow26, dbtable_41:1, 0)>";
+		} else {
+			$text3 = "<$text3> <db_getfield($dbrow26, dbtable_41:2, 0)>";
+		}
+		cc_create($component8, ^iftype_text, $int21);
+		cc_setposition(0, $int22, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_settextfont($fontmetrics13);
+		cc_setcolour(0xefefef);
+		cc_settext($text3);
+		$int21 = calc($int21 + 1);
+		$int22 = calc($int22 + 20);
+		$int28 = calc($int28 + 1);
+		$dbrow26, $int5 = ~script7259($dbrow0, $inv1, $int2, $int28, 1);
+	}
+	$int22 = calc($int22 + $int17 / 2);
+}
+$string1 = "";
+def_string $string5 = "";
+if ($int2 = -1) {
+	$string1 = db_getfield($dbrow0, dbtable_39:11, 0);
+	$string5 = db_getfield($dbrow0, dbtable_39:12, 0);
+	if (string_length($string5) > 0) {
+		$string1 = "<$string1><br><br><$string5>";
+	} else {
+		$string1 = "<$string1><br><br>";
+		$string1 = "<$string1>This panel will show further information about an item when selected from the left-hand menu.";
+		$string1 = "<$string1><br><br>";
+		$string1 = "<$string1>Once selected, you may then choose to purchase the item using the buttons below.";
+		$string1 = "<$string1><br><br>";
+		$string1 = "<$string1>You may also use the options menu to purchase multiples of an item.";
+	}
+} else if (string_length($string0) > 0) {
+	$string1 = $string0;
+}
+$int25 = calc(paraheight($string1, $width23 - $int17 * 2, $fontmetrics16) * $int19);
+cc_create($component8, ^iftype_text, $int21);
+cc_setposition($int17, $int22, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($width23 - $int17 * 2), $int25, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int19);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics15);
+cc_setcolour(0xff981f);
+cc_settext($string1);
+$int21 = calc($int21 + 1);
+$int22 = calc($int22 + $int25 + $int18);
+if ($boolean7 = true) {
+	if_setscrollpos(0, 0, $component8);
+}
+if_setscrollsize(if_getwidth($component8), $int22, $component8);
+~scrollbar_vertical($component9, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical_rebuild($component9, $component8);
+def_string $text6 = db_getfield($dbrow0, dbtable_39:13, 0);
+~script7245($int3, $text6);

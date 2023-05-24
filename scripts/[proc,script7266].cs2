@@ -1,0 +1,6 @@
+// 7266
+[proc,script7266](int $flags0)(int)
+if (testbit($flags0, 16) = ^true) {
+	return(1);
+}
+return(0);

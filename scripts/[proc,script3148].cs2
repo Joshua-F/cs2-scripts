@@ -1,11 +1,17 @@
 // 3148
 [proc,script3148](component $component0, component $component1, component $component2)
-def_int $int3 = scale(60, 100, calc((%varbit10543 - 2) * 2));
-~script3150($int3, $component1);
+def_int $int3 = calc(200 - %varbit14890);
+$int3 = interpolate(0, 60, 0, 100, $int3);
+def_int $int4 = 1;
+if (%varbit9495 = 0 | %varbit14888 = 0) {
+	$int3 = scale(60, 100, calc((%varbit10543 - 2) * 2));
+	$int4 = 0;
+}
+~script3150($int3, $component1, $component2, $int4);
 if ($int3 > -2) {
 	if_sethide(false, $component2);
 	if_sethide(false, $component1);
-	if_setontimer("script3149(calc(clientclock + 50), calc($int3 - 1), $component0, $component1, $component2)", $component0);
+	if_setontimer("script3149(calc(clientclock + 50), calc($int3 - 1), $component0, $component1, $component2, $int4)", $component0);
 } else {
 	if_sethide(true, $component2);
 	if_sethide(true, $component1);

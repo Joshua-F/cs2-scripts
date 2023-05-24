@@ -1,0 +1,157 @@
+// 7254
+[proc,script7254](int $slot0, dbrow $dbrow1, int $int2, int $int3, int $int4, int $int5, string $string0)
+def_component $component6 = interface_806:0;
+def_component $component7 = interface_806:1;
+def_component $component8 = interface_806:7;
+if ($slot0 = -1) {
+	if_sethide(false, $component6);
+	if_sethide(true, $component7);
+	return;
+}
+if_sethide(true, $component6);
+if_sethide(false, $component7);
+def_component $component9 = interface_806:6;
+cc_deleteall($component9);
+def_obj $obj10 = inv_getobj(inv, $slot0);
+def_fontmetrics $fontmetrics11 = b12_full;
+def_fontmetrics $fontmetrics12 = b12_full;
+def_fontmetrics $fontmetrics13 = p12_full;
+def_fontmetrics $fontmetrics14 = p12_full;
+def_int $int15 = 10;
+def_int $int16 = 10;
+def_int $int17 = 16;
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics11 = verdana_13pt_bold;
+		$fontmetrics12 = verdana_13pt_bold;
+		$fontmetrics13 = verdana_13pt_regular;
+		$fontmetrics14 = verdana_13pt_regular;
+	case 2 :
+		$fontmetrics11 = verdana_13pt_bold;
+		$fontmetrics12 = verdana_13pt_bold;
+		$fontmetrics13 = verdana_13pt_regular;
+		$fontmetrics14 = verdana_13pt_regular;
+	case 3 :
+		$fontmetrics11 = verdana_13pt_bold;
+		$fontmetrics12 = verdana_13pt_bold;
+		$fontmetrics13 = verdana_13pt_regular;
+		$fontmetrics14 = verdana_13pt_regular;
+}
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $width20 = if_getwidth($component9);
+if (string_length($string0) = 0) {
+	~script7137($component9, null, enum_3787, 10, 1000, 3000, 512, 1024, 0, 3, "", 0, 30);
+	$int18 = enum_getoutputcount(enum_3787);
+}
+def_string $string1 = oc_param($obj10, param_1733);
+if (string_length($string1) = 0) {
+	$string1 = oc_name($obj10);
+}
+def_int $int21 = calc(paraheight($string1, $width20 - $int15 * 2, $fontmetrics12) * $int17);
+cc_create($component9, ^iftype_text, $int18);
+cc_setposition($int15, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($width20 - $int15 * 2), $int21, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, $int17);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics11);
+cc_setcolour(0xff981f);
+cc_settext($string1);
+$int18 = calc($int18 + 1);
+$int19 = calc($int19 + $int21 + 6);
+cc_create($component9, ^iftype_graphic, $int18);
+cc_setposition(calc($width20 / 2 - 36 / 2), $int19, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setobject($obj10, -1);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+$int19 = calc($int19 + 32 + $int16 / 2);
+$int18 = calc($int18 + 1);
+def_string $text2 = "<tostring($int2)> Owned";
+if (string_length($string0) > 0) {
+	cc_create($component9, ^iftype_text, $int18);
+	cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settextfont($fontmetrics13);
+	cc_setcolour(0xff981f);
+	cc_settext($text2);
+	$int18 = calc($int18 + 1);
+	$int19 = calc($int19 + 22);
+}
+def_int $int22 = 0;
+def_int $int23 = 1;
+def_inv $inv24 = db_getfield($dbrow1, dbtable_39:1, 0);
+def_dbrow $dbrow25 = null;
+if (string_length($string0) > 0) {
+	cc_create($component9, ^iftype_text, $int18);
+	cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(50, 16, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settextfont($fontmetrics11);
+	cc_setcolour(0xefefef);
+	cc_settext("Value");
+	$int18 = calc($int18 + 1);
+	$int19 = calc($int19 + 20);
+	if ($int5 ! -1) {
+		$dbrow25, $int4 = ~script7259($dbrow1, $inv24, $int5, $int22, 0);
+	}
+	while ($int4 > 0) {
+		if ($int4 = 1) {
+			$string1 = "<tostring($int4)> <db_getfield($dbrow25, dbtable_41:1, 0)>";
+		} else {
+			$string1 = "<tostring($int4)> <db_getfield($dbrow25, dbtable_41:2, 0)>";
+		}
+		cc_create($component9, ^iftype_text, $int18);
+		cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_settextfont($fontmetrics11);
+		cc_setcolour(0xefefef);
+		cc_settext($string1);
+		$int18 = calc($int18 + 1);
+		$int19 = calc($int19 + 20);
+		$int22 = calc($int22 + 1);
+		$dbrow25, $int4 = ~script7259($dbrow1, $inv24, $int5, $int22, 0);
+	}
+	if ($int22 = 0) {
+		cc_create($component9, ^iftype_text, $int18);
+		cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_settextfont($fontmetrics11);
+		cc_setcolour(0xefefef);
+		cc_settext("No shop offer");
+		$int23 = 0;
+		$int18 = calc($int18 + 1);
+		$int19 = calc($int19 + 20);
+	}
+	$int19 = calc($int19 + 6);
+}
+if (string_length($string0) > 0) {
+	$int21 = calc(paraheight($string0, $width20 - $int15 * 2, $fontmetrics14) * $int17);
+	cc_create($component9, ^iftype_text, $int18);
+	cc_setposition($int15, $int19, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($width20 - $int15 * 2), $int21, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_left, ^settextalign_top, $int17);
+	cc_settextshadow(true);
+	cc_settextfont($fontmetrics13);
+	cc_setcolour(0xff981f);
+	cc_settext($string0);
+	$int18 = calc($int18 + 1);
+	$int19 = calc($int19 + $int21 + $int16);
+}
+if_setscrollpos(0, 0, $component9);
+if_setscrollsize(if_getwidth($component9), $int19, $component9);
+~scrollbar_vertical($component8, $component9, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical_rebuild($component8, $component9);
+def_string $text3 = db_getfield($dbrow1, dbtable_39:14, 0);
+if ($int23 = 0) {
+	~script7255(0, $text3);
+} else {
+	~script7255($int2, $text3);
+}

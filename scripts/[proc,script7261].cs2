@@ -1,0 +1,11 @@
+// 7261
+[proc,script7261](int $int0, int $int1, int $int2, int $int3)(int)
+def_int $int4 = 0;
+def_int $int5 = min(1000, max(-5000, calc($int3 * $int1)));
+$int5 = max(100, calc($int2 - $int5));
+$int4 = scale($int5, 1000, $int0);
+if ($int4 < 0) {
+	$int4 = 2000000000;
+	~debug_mes("Cost overflowed with base_cost=<tostring($int0)> at <~mescoord(coord)>, for %shopbuy=<tostring($int2)> and %shophaggle=<tostring($int1)>. Corrected to 2 billion.");
+}
+return($int4);

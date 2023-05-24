@@ -1,0 +1,11 @@
+// 7260
+[proc,script7260](inv $inv0, obj $obj1)(int)
+def_int $int2 = -1;
+def_enum $enum3 = oc_param($obj1, param_983);
+if ($enum3 ! null) {
+	$int2 = enum(inv, int, $enum3, $inv0);
+}
+if ($int2 = -1) {
+	$int2 = oc_cost($obj1);
+}
+return($int2);

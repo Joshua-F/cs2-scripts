@@ -1,0 +1,14 @@
+// 7140
+[clientscript,script7140](dbrow $dbrow0, inv $inv1)
+if (%var3874 ! $dbrow0) {
+	%var3869 = -1;
+	%var3870 = -1;
+	%var3872 = 0;
+}
+def_component $component2 = interface_819:0;
+if_setontimer("script6110($component2, -1)", $component2);
+if_setonresize("script7141($dbrow0, $inv1, true)", $component2);
+if ($inv1 ! null) {
+	if_setoninvtransmit("script7141($dbrow0, $inv1, true){$inv1}", $component2);
+}
+~script7147($dbrow0, $inv1, %var3869, 0, 0, 0, null, "", true);

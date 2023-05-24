@@ -1,0 +1,30 @@
+// 7153
+[proc,script7153](dbrow $dbrow0, inv $inv1)
+def_component $component2 = interface_819:7;
+def_component $component3 = interface_819:8;
+def_component $component4 = interface_819:9;
+def_component $component5 = interface_819:34;
+def_component $component6 = interface_819:35;
+def_component $component7 = interface_819:36;
+def_graphic $graphic8 = "graphic_4735";
+if (%var3871 = 1) {
+	$graphic8 = "graphic_4737";
+}
+~create_graphic($component2, 0, $graphic8, 2, 2, ^setpos_abs_left, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
+if_setonclick("script7155($dbrow0, $inv1)", $component2);
+~create_graphic($component3, 0, "menu_buttons,2", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 21, 21, ^setsize_abs, ^setsize_abs);
+def_graphic $graphic9 = null;
+if (~on_mobile = false) {
+	$graphic9 = "menu_buttons,3";
+	if_setonmouseover("cc_graphic_swapper(event_com, 0, $graphic9, null)", $component3);
+	$graphic9 = "menu_buttons,2";
+	if_setonmouseleave("cc_graphic_swapper(event_com, 0, $graphic9, null)", $component3);
+}
+if_setonop("script7154($dbrow0, $inv1, event_opindex)", $component3);
+def_enum $enum10 = db_getfield($dbrow0, dbtable_39:3, 0);
+if ($enum10 ! null) {
+	~script5771($component4, $enum10, %var3872, 0xff981f);
+	if_setonop("script7156($component5, $component6, $component7, $component4, $enum10, 0xff981f)", $component4);
+} else {
+	~script5771($component4, enum_4988, 0, 0x9f9f9f);
+}

@@ -1,0 +1,93 @@
+// 7142
+[proc,script7142](dbrow $dbrow0, inv $inv1, boolean $boolean2)
+def_component $component3 = interface_819:1;
+def_component $component4 = interface_819:3;
+def_component $component5 = interface_819:4;
+~script6109($component3, $component5);
+def_string $text0 = db_getfield($dbrow0, dbtable_39:0, 0);
+~steelborder($component4, $text0, 16);
+def_component $component6 = interface_819:6;
+def_component $component7 = interface_819:11;
+def_component $component8 = interface_819:5;
+def_component $component9 = interface_819:15;
+def_component $component10 = interface_819:16;
+def_component $component11 = interface_819:14;
+def_component $component12 = interface_819:18;
+def_component $component13 = interface_819:17;
+def_component $component14 = interface_819:19;
+def_component $component15 = interface_819:29;
+def_int $int16 = 53674014;
+def_component $component17 = interface_819:10;
+def_component $component18 = interface_819:9;
+def_component $component19 = interface_819:8;
+def_int $int20 = 200;
+def_int $int21 = 44;
+def_int $int22 = 44;
+switch_int (%varcint988) {
+	case 1 :
+		$int20 = 230;
+		$int21 = 52;
+	case 2 :
+		$int20 = 250;
+		$int21 = 62;
+	case 3 :
+		$int20 = 270;
+		$int21 = 64;
+}
+def_int $int23 = $int20;
+if (%var3871 = 1) {
+	$int23 = -6;
+}
+def_int $int24 = ~script7152($dbrow0);
+if_setsize(calc($int23 + 18), 20, ^setsize_minus, ^setsize_abs, $component6);
+~script7153($dbrow0, $inv1);
+if (%var3871 = 1 & $int24 = 1) {
+	if_sethide(false, $component17);
+	if_setsize(200, 20, ^setsize_abs, ^setsize_abs, $component18);
+} else {
+	if_sethide(true, $component17);
+	if (%var3871 = 1) {
+		if_setsize(52, 20, ^setsize_minus, ^setsize_abs, $component18);
+	} else {
+		if_setsize(26, 20, ^setsize_minus, ^setsize_abs, $component18);
+	}
+}
+if_setsize(calc($int23 + 18), 38, ^setsize_minus, ^setsize_minus, $component7);
+~script7143($dbrow0, $inv1, %var3869, 1);
+def_int $int25 = 0;
+def_int $int26 = 0;
+cc_deleteall($component10);
+if (%var3871 = 0) {
+	if_sethide(false, $component8);
+	if_setposition(calc(if_getwidth($component3) - 12 - $int20), calc(if_gety($component5) + 6), ^setpos_abs_left, ^setpos_abs_top, $component8);
+	if_setsize($int20, calc(if_gety($component5) + 18), ^setsize_abs, ^setsize_minus, $component8);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component9);
+	if_sethide(true, $component11);
+	if_sethide(true, $component19);
+} else {
+	if (%var3869 = -1) {
+		if_sethide(true, $component8);
+	} else {
+		if_sethide(false, $component8);
+	}
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component8);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component8);
+	if_setsize(calc($int20 + 24), 18, ^setsize_abs, ^setsize_minus, $component9);
+	if_sethide(false, $component11);
+	if_sethide(false, $component19);
+	$int25 = 12;
+	$int26 = calc(if_gety($component5) - 6);
+}
+if ($int24 = 0) {
+	$int22 = -6;
+	if_sethide(true, $component12);
+} else {
+	if_setsize(calc(2 * $int25), $int22, ^setsize_minus, ^setsize_abs, $component12);
+	if_setposition(0, calc($int21 + 6 + $int25), ^setpos_abs_centre, ^setpos_abs_bottom, $component12);
+	if_sethide(false, $component12);
+}
+if_setsize(calc(2 * $int25), calc($int21 + $int22 + 12 + 2 * $int25 + $int26), ^setsize_minus, ^setsize_minus, $component13);
+if_setposition(0, calc($int25 + $int26), ^setpos_abs_centre, ^setpos_abs_top, $component13);
+if_setsize(calc(2 * $int25), $int21, ^setsize_minus, ^setsize_abs, $component14);
+if_setposition(0, $int25, ^setpos_abs_centre, ^setpos_abs_bottom, $component14);
+if_callonresize($component15);
