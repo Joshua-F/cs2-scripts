@@ -1,5 +1,5 @@
 // 4719
-[clientscript,script4719](component $component0, int $int1, int $int2, int $int3, int $int4)
+[clientscript,health_orb_arc](component $component0, int $int1, int $int2, int $int3, int $int4)
 $int2 = calc($int2 + 1);
 $int4 = calc($int4 + 1);
 if (cc_find($component0, 0) = ^true) {
@@ -22,4 +22,4 @@ if ($int4 >= $int3) {
 if ($int2 >= $int1) {
 	$int2 = 0;
 }
-if_setontimer("script4719($component0, $int1, $int2, $int3, $int4)", $component0);
+if_setontimer("health_orb_arc($component0, $int1, $int2, $int3, $int4)", $component0);

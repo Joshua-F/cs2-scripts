@@ -1,5 +1,5 @@
 // 7142
-[proc,script7142](dbrow $dbrow0, inv $inv1, boolean $boolean2)
+[proc,omnishop_main_setup](dbrow $dbrow0, inv $inv1, boolean $boolean2)
 def_component $component3 = interface_819:1;
 def_component $component4 = interface_819:3;
 def_component $component5 = interface_819:4;
@@ -53,7 +53,7 @@ if (%var3871 = 1 & $int24 = 1) {
 	}
 }
 if_setsize(calc($int23 + 18), 38, ^setsize_minus, ^setsize_minus, $component7);
-~script7143($dbrow0, $inv1, %var3869, 1);
+~omnishop_main_list_setup($dbrow0, $inv1, %var3869, 1);
 def_int $int25 = 0;
 def_int $int26 = 0;
 cc_deleteall($component10);

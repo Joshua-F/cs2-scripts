@@ -1,11 +1,11 @@
 // 7147
-[proc,script7147](dbrow $dbrow0, inv $inv1, int $int2, int $int3, int $int4, int $int5, dbrow $dbrow6, string $string0, boolean $boolean7)
+[proc,omnishop_main_info_setup](dbrow $dbrow0, inv $inv1, int $int2, int $int3, int $int4, int $int5, dbrow $dbrow6, string $string0, boolean $boolean7)
 def_component $component8 = interface_819:29;
 def_component $component9 = interface_819:30;
 def_int $int10 = 53673989;
 def_component $component11 = interface_819:16;
 def_component $component12 = interface_819:14;
-if_setonresize("script7146($dbrow0, $inv1, $int2, $int3, $int4, $int5, $dbrow6, $string0, $boolean7)", $component8);
+if_setonresize("omnishop_main_info_setup($dbrow0, $inv1, $int2, $int3, $int4, $int5, $dbrow6, $string0, $boolean7)", $component8);
 cc_deleteall($component8);
 cc_deleteall($component11);
 if (%var3871 = 1) {
@@ -54,7 +54,7 @@ switch_int (%varcint988) {
 }
 def_obj $obj20 = null;
 if ($int2 ! -1) {
-	$obj20 = ~script7264($dbrow0, $inv1, $int2);
+	$obj20 = ~omnishop_get_obj($dbrow0, $inv1, $int2);
 }
 def_int $int21 = 0;
 def_int $int22 = 0;
@@ -126,7 +126,7 @@ if (string_length($string0) > 0) {
 	cc_settext("Cost");
 	$int21 = calc($int21 + 1);
 	$int22 = calc($int22 + 20);
-	$dbrow26, $int5 = ~script7259($dbrow0, $inv1, $int2, $int28, 1);
+	$dbrow26, $int5 = ~omnishop_cost($dbrow0, $inv1, $int2, $int28, 1);
 	while ($dbrow26 ! null) {
 		$text3 = ~tostring_spacer($int5, $string4);
 		if ($int5 = 1) {
@@ -145,7 +145,7 @@ if (string_length($string0) > 0) {
 		$int21 = calc($int21 + 1);
 		$int22 = calc($int22 + 20);
 		$int28 = calc($int28 + 1);
-		$dbrow26, $int5 = ~script7259($dbrow0, $inv1, $int2, $int28, 1);
+		$dbrow26, $int5 = ~omnishop_cost($dbrow0, $inv1, $int2, $int28, 1);
 	}
 	$int22 = calc($int22 + $int17 / 2);
 }
@@ -185,4 +185,4 @@ if_setscrollsize(if_getwidth($component8), $int22, $component8);
 ~scrollbar_vertical($component9, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~scrollbar_vertical_rebuild($component9, $component8);
 def_string $text6 = db_getfield($dbrow0, dbtable_39:13, 0);
-~script7245($int3, $text6);
+~omnishop_main_buttons_setup($int3, $text6);

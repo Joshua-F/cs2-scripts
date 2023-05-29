@@ -12,7 +12,7 @@ if ($dbrow1 = null) {
 }
 if_sethide(false, $component2);
 def_string $text0 = db_getfield($dbrow1, dbtable_41:2, 0);
-def_int $int7 = ~script7257($dbrow1);
+def_int $int7 = ~omnishop_var_getter($dbrow1);
 def_fontmetrics $fontmetrics8 = b12_full;
 def_fontmetrics $fontmetrics9 = q8_full;
 switch_int (%varcint988) {

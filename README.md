@@ -2568,7 +2568,7 @@
 [**2565**](scripts/[clientscript,membership_benefits_close_benefit].cs2) `[clientscript,membership_benefits_close_benefit]`  
 [**2566**](scripts/[clientscript,script2566].cs2)  
 [**2567**](scripts/[clientscript,runweight_init].cs2) `[clientscript,runweight_init]`  
-[**2568**](scripts/[clientscript,script2568].cs2)  
+[**2568**](scripts/[clientscript,runweight_update].cs2) `[clientscript,runweight_update]`  
 [**2569**](scripts/[proc,membership_benefits_prompt_button_init].cs2) `[proc,membership_benefits_prompt_button_init]`  
 [**2570**](scripts/[clientscript,membership_benefits_prompt_button_draw].cs2) `[clientscript,membership_benefits_prompt_button_draw]`  
 [**2571**](scripts/[proc,membership_benefits_prompt_button_draw].cs2) `[proc,membership_benefits_prompt_button_draw]`  
@@ -4719,7 +4719,7 @@
 [**4716**](scripts/[clientscript,health_regen_timer].cs2) `[clientscript,health_regen_timer]`  
 [**4717**](scripts/[clientscript,script4717].cs2)  
 [**4718**](scripts/[proc,health_regen_timer].cs2) `[proc,health_regen_timer]`  
-[**4719**](scripts/[clientscript,script4719].cs2)  
+[**4719**](scripts/[clientscript,health_orb_arc].cs2) `[clientscript,health_orb_arc]`  
 [**4720**](scripts/[clientscript,spec_regen_timer_off].cs2) `[clientscript,spec_regen_timer_off]`  
 [**4721**](scripts/[clientscript,spec_regen_timer].cs2) `[clientscript,spec_regen_timer]`  
 [**4722**](scripts/[clientscript,script4722].cs2)  
@@ -5216,7 +5216,7 @@
 [**5213**](scripts/[proc,script5213].cs2)  
 [**5214**](scripts/[clientscript,script5214].cs2)  
 [**5215**](scripts/[proc,script5215].cs2)  
-[**5216**](scripts/[proc,script5216].cs2)  
+[**5216**](scripts/[proc,activeclanchannel_test].cs2) `[proc,activeclanchannel_test]`  
 [**5217**](scripts/[proc,script5217].cs2)  
 [**5218**](scripts/[clientscript,script5218].cs2)  
 [**5219**](scripts/[proc,script5219].cs2)  
@@ -7139,21 +7139,21 @@
 [**7137**](scripts/[proc,script7137].cs2)  
 [**7138**](scripts/[clientscript,script7138].cs2)  
 [**7139**](scripts/[proc,script7139].cs2)  
-[**7140**](scripts/[clientscript,script7140].cs2)  
-[**7141**](scripts/[clientscript,script7141].cs2)  
-[**7142**](scripts/[proc,script7142].cs2)  
-[**7143**](scripts/[proc,script7143].cs2)  
+[**7140**](scripts/[clientscript,omnishop_main_init].cs2) `[clientscript,omnishop_main_init]`  
+[**7141**](scripts/[clientscript,omnishop_main_setup].cs2) `[clientscript,omnishop_main_setup]`  
+[**7142**](scripts/[proc,omnishop_main_setup].cs2) `[proc,omnishop_main_setup]`  
+[**7143**](scripts/[proc,omnishop_main_list_setup].cs2) `[proc,omnishop_main_list_setup]`  
 [**7144**](scripts/[proc,script7144].cs2)  
 [**7145**](scripts/[clientscript,script7145].cs2)  
-[**7146**](scripts/[clientscript,script7146].cs2)  
-[**7147**](scripts/[proc,script7147].cs2)  
+[**7146**](scripts/[clientscript,omnishop_main_info_setup].cs2) `[clientscript,omnishop_main_info_setup]`  
+[**7147**](scripts/[proc,omnishop_main_info_setup].cs2) `[proc,omnishop_main_info_setup]`  
 [**7148**](scripts/[clientscript,script7148].cs2)  
 [**7149**](scripts/[clientscript,script7149].cs2)  
 [**7150**](scripts/[proc,script7150].cs2)  
 [**7151**](scripts/[clientscript,script7151].cs2)  
 [**7152**](scripts/[proc,script7152].cs2)  
 [**7153**](scripts/[proc,script7153].cs2)  
-[**7154**](scripts/[clientscript,script7154].cs2)  
+[**7154**](scripts/[clientscript,omnishop_main_help].cs2) `[clientscript,omnishop_main_help]`  
 [**7155**](scripts/[clientscript,script7155].cs2)  
 [**7156**](scripts/[clientscript,script7156].cs2)  
 [**7157**](scripts/[clientscript,script7157].cs2)  
@@ -7244,25 +7244,25 @@
 [**7242**](scripts/[proc,script7242].cs2)  
 [**7243**](scripts/[proc,script7243].cs2)  
 [**7244**](scripts/[proc,script7244].cs2)  
-[**7245**](scripts/[proc,script7245].cs2)  
-[**7246**](scripts/[clientscript,script7246].cs2)  
-[**7247**](scripts/[clientscript,script7247].cs2)  
-[**7248**](scripts/[proc,script7248].cs2)  
+[**7245**](scripts/[proc,omnishop_main_buttons_setup].cs2) `[proc,omnishop_main_buttons_setup]`  
+[**7246**](scripts/[clientscript,omnishop_side_init].cs2) `[clientscript,omnishop_side_init]`  
+[**7247**](scripts/[clientscript,omnishop_side_draw].cs2) `[clientscript,omnishop_side_draw]`  
+[**7248**](scripts/[proc,omnishop_side_draw].cs2) `[proc,omnishop_side_draw]`  
 [**7249**](scripts/[proc,script7249].cs2)  
-[**7250**](scripts/[proc,script7250].cs2)  
-[**7251**](scripts/[clientscript,script7251].cs2)  
-[**7252**](scripts/[clientscript,script7252].cs2)  
-[**7253**](scripts/[clientscript,script7253].cs2)  
-[**7254**](scripts/[proc,script7254].cs2)  
-[**7255**](scripts/[proc,script7255].cs2)  
-[**7256**](scripts/[clientscript,script7256].cs2)  
-[**7257**](scripts/[proc,script7257].cs2)  
-[**7258**](scripts/[clientscript,script7258].cs2)  
-[**7259**](scripts/[proc,script7259].cs2)  
-[**7260**](scripts/[proc,script7260].cs2)  
+[**7250**](scripts/[proc,omnishop_setblank].cs2) `[proc,omnishop_setblank]`  
+[**7251**](scripts/[clientscript,omnishop_opitem].cs2) `[clientscript,omnishop_opitem]`  
+[**7252**](scripts/[clientscript,omnishop_swapsideitem].cs2) `[clientscript,omnishop_swapsideitem]`  
+[**7253**](scripts/[clientscript,omnishop_side_info_setup].cs2) `[clientscript,omnishop_side_info_setup]`  
+[**7254**](scripts/[proc,omnishop_side_info_setup].cs2) `[proc,omnishop_side_info_setup]`  
+[**7255**](scripts/[proc,omnishop_side_buttons_setup].cs2) `[proc,omnishop_side_buttons_setup]`  
+[**7256**](scripts/[clientscript,omnishop_side_info_close].cs2) `[clientscript,omnishop_side_info_close]`  
+[**7257**](scripts/[proc,omnishop_var_getter].cs2) `[proc,omnishop_var_getter]`  
+[**7258**](scripts/[proc,omnishop_var_setter].cs2) `[proc,omnishop_var_setter]`  
+[**7259**](scripts/[proc,omnishop_cost].cs2) `[proc,omnishop_cost]`  
+[**7260**](scripts/[proc,shop_cost].cs2) `[proc,shop_cost]`  
 [**7261**](scripts/[proc,script7261].cs2)  
 [**7262**](scripts/[proc,script7262].cs2)  
 [**7263**](scripts/[proc,script7263].cs2)  
-[**7264**](scripts/[proc,script7264].cs2)  
+[**7264**](scripts/[proc,omnishop_get_obj].cs2) `[proc,omnishop_get_obj]`  
 [**7265**](scripts/[proc,script7265].cs2)  
 [**7266**](scripts/[proc,script7266].cs2)  

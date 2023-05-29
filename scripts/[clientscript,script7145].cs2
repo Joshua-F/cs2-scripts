@@ -4,12 +4,12 @@ def_component $component4 = interface_819:5;
 def_int $int5 = 53674013;
 if ($opindex3 = 1) {
 	sound_synth(interface_select1, 1, 0);
-	~script7143($dbrow0, $inv1, $int2, 0);
+	~omnishop_main_list_setup($dbrow0, $inv1, $int2, 0);
 	if (%var3871 = 0) {
-		~script7147($dbrow0, $inv1, $int2, 0, 0, 0, null, "", true);
+		~omnishop_main_info_setup($dbrow0, $inv1, $int2, 0, 0, 0, null, "", true);
 	} else {
 		if ($int2 ! %var3869) {
-			~script7147($dbrow0, $inv1, $int2, 0, 0, 0, null, "", true);
+			~omnishop_main_info_setup($dbrow0, $inv1, $int2, 0, 0, 0, null, "", true);
 		}
 		if_sethide(false, $component4);
 	}

@@ -1,5 +1,5 @@
 // 7259
-[proc,script7259](dbrow $dbrow0, inv $inv1, int $int2, int $dbfield3, int $int4)(dbrow, int)
+[proc,omnishop_cost](dbrow $dbrow0, inv $inv1, int $int2, int $dbfield3, int $int4)(dbrow, int)
 def_int $int5 = 0;
 def_dbrow $dbrow6 = null;
 def_obj $obj7 = null;
@@ -47,7 +47,7 @@ if (db_getfieldcount($dbrow0, dbtable_39:5) > 0) {
 	$obj7 = inv_getobj($inv1, $int2);
 }
 if ($dbfield3 = 0) {
-	$dbrow8, $int9 = db_getfield($dbrow0, dbtable_39:9, 0), ~script7260($inv1, $obj7);
+	$dbrow8, $int9 = db_getfield($dbrow0, dbtable_39:9, 0), ~shop_cost($inv1, $obj7);
 	if ($int4 = 1) {
 		$int9 = ~script7261($int9, $int10, $int11, $int14);
 	} else {

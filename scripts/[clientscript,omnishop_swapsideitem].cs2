@@ -1,5 +1,5 @@
 // 7252
-[clientscript,script7252](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, string $string0, dbrow $dbrow4)
+[clientscript,omnishop_swapsideitem](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, string $string0, dbrow $dbrow4)
 def_int $size5 = inv_size(inv);
 if ($comsubid1 < 0 | $comsubid1 >= $size5) {
 	return;
@@ -22,6 +22,6 @@ if (cc_find($drop0, $comsubid1) = ^true) {
 	if ($obj7 ! null) {
 		~script7249($obj7, inv_getnum(inv, $dropsubid3), $string0, $dbrow4);
 	} else {
-		~script7250;
+		~omnishop_setblank;
 	}
 }
