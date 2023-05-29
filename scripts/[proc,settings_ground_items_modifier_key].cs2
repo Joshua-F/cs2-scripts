@@ -1,0 +1,6 @@
+// 7117
+[proc,settings_ground_items_modifier_key](int $count0)
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+%varbit14877 = enum(int, int, enum_4974, $count0);

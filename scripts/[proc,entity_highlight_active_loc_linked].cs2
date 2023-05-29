@@ -18,9 +18,9 @@ while ($count5 < $count6) {
 	$loc7 = enum(int, loc, $enum4, $count5);
 	if ($loc7 ! null) {
 		if ($int8 = 1) {
-			$coord1 = ~script2496($coord1, $count5);
+			$coord1 = ~entity_highlight_active_loc_linked_fairy_ring($coord1, $count5);
 		} else if ($int8 = 2) {
-			$coord1 = ~script5222($coord1, $count5);
+			$coord1 = ~entity_highlight_active_loc_linked_tree($coord1, $count5);
 		}
 		if ($int3 = 1) {
 			highlight_loc_on($loc7, $coord1, $int2, 0);

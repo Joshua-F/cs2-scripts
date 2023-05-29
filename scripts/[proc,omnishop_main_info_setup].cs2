@@ -15,9 +15,9 @@ if (%var3871 = 1) {
 		~steelborder($component11, "Item Info", 16);
 	}
 	if (cc_find($component11, 11) = ^true) {
-		cc_setonop("script7148");
-		cc_setonkey("script7149(event_key)");
-		if_setonop("script7148", $component12);
+		cc_setonop("omnishop_main_info_closebutton_click");
+		cc_setonkey("omnishop_main_info_closebutton_key(event_key)");
+		if_setonop("omnishop_main_info_closebutton_click", $component12);
 	}
 }
 def_fontmetrics $fontmetrics13 = b12_full;

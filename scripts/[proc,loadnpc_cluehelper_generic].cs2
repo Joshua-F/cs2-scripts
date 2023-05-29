@@ -14,13 +14,13 @@ if (db_getrowtable($dbrow4) = dbtable_15) {
 	if (npc_type = $npc5) {
 		switch_dbtable (db_getrowtable($dbrow1)) {
 			case dbtable_13 :
-				~script6514($entityoverlay0, $npc_uid2, $int3);
+				~loadnpc_cluehelper_music_overlay($entityoverlay0, $npc_uid2, $int3);
 			case dbtable_11 :
-				~script6515($entityoverlay0, $npc_uid2, $int3);
+				~loadnpc_cluehelper_bard_overlay($entityoverlay0, $npc_uid2, $int3);
 			case dbtable_14 :
-				~script6516($entityoverlay0, $npc_uid2, $int3);
+				~loadnpc_cluehelper_skill_challenge_overlay($entityoverlay0, $npc_uid2, $int3);
 			case dbtable_4, dbtable_6, dbtable_8 :
-				~script6517($entityoverlay0, $npc_uid2, $int3);
+				~loadnpc_cluehelper_talkto_overlay($entityoverlay0, $npc_uid2, $int3);
 		}
 	}
 } else if (db_getrowtable($dbrow4) = dbtable_20) {
@@ -28,7 +28,7 @@ if (db_getrowtable($dbrow4) = dbtable_15) {
 	while ($int6 < $int7) {
 		$npc5 = db_getfield($dbrow4, dbtable_20:0, $int6);
 		if (npc_type = $npc5) {
-			~script6513($entityoverlay0, $npc_uid2, $int3);
+			~loadnpc_cluehelper_kill_target_overlay($entityoverlay0, $npc_uid2, $int3);
 			return;
 		}
 		$int6 = calc($int6 + 1);

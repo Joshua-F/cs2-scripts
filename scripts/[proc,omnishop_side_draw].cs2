@@ -12,7 +12,7 @@ while ($size3 < $size4) {
 		cc_setposition(calc($size3 % 4 * 42), calc($size3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
 		$obj2 = inv_getobj(inv, $size3);
 		if ($obj2 ! null) {
-			~script7249($obj2, inv_getnum(inv, $size3), $string0, $dbrow0);
+			~omnishop_setsideitem($obj2, inv_getnum(inv, $size3), $string0, $dbrow0);
 		} else {
 			~omnishop_setblank;
 		}

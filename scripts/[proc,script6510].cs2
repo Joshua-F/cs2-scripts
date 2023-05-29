@@ -1,9 +1,0 @@
-// 6510
-[proc,script6510]
-if (nc_param(npc_type, param_626) ! -1) {
-	~cluehelper_uri_overlay(nc_param(npc_type, param_626));
-} else if (nc_param(npc_type, param_627) = 1) {
-	~script6542;
-} else {
-	~loadnpc_cluehelper_generic_setup;
-}

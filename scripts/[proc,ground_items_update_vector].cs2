@@ -1,0 +1,6 @@
+// 7216
+[proc,ground_items_update_vector](component $component0, int $comsubid1, stringvector $stringvector2)
+def_string $string0 = "";
+if (cc_find($component0, $comsubid1) = ^true) {
+	~script7218(removetags(cc_gettext), $stringvector2);
+}

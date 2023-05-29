@@ -1,0 +1,35 @@
+// 7235
+[clientscript,ground_items_update_time_remaining](entityoverlay $entityoverlay0, int $comsubid1, int $clock2, int $int3, int $int4, int $colour5, boolean $boolean6, boolean $boolean7, int $comsubid8, int $width9, int $y10)
+def_int $int11 = calc(clientclock - $clock2);
+def_int $int12 = 0;
+def_graphic $graphic13 = null;
+if (calc($int11 % 10) = 0) {
+	$int4 = calc($int4 - $int11);
+	$int3 = calc($int3 - $int11);
+	if ($boolean6 = true) {
+		if ($int4 > 0) {
+			$int12 = $int4;
+			$graphic13 = "ground_items_visibility,1";
+		} else {
+			$graphic13 = "ground_items_visibility,0";
+		}
+	}
+	if ($int12 <= 0 & $boolean7 = true) {
+		$int12 = $int3;
+	}
+	if ($int12 <= 0) {
+		if ($boolean7 = true) {
+			return;
+		} else if (cc_find_entityoverlay($entityoverlay0, $comsubid1) = ^true & .cc_find_entityoverlay($entityoverlay0, $comsubid8) = ^true) {
+			.cc_setgraphic($graphic13);
+			.cc_setposition(calc(0 - $width9 / 2 - 10), $y10, ^setpos_abs_centre, ^setpos_abs_bottom);
+			cc_settext("");
+			cc_setontimer(null);
+			return;
+		}
+	} else if (cc_find_entityoverlay($entityoverlay0, $comsubid1) = ^true & .cc_find_entityoverlay($entityoverlay0, $comsubid8) = ^true) {
+		cc_settext("[<~buff_bar_time_string($int12)>]");
+		cc_setcolour(~script7244($int12, $colour5));
+		.cc_setgraphic($graphic13);
+	}
+}

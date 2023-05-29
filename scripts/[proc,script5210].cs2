@@ -5,7 +5,7 @@ if (~on_enhanced_any = 0) {
 }
 def_int $int0 = 2;
 def_int $int1 = 50;
-def_int $colour2 = ~script5329(^setting_highlight_destination_tile_colour_colour);
+def_int $colour2 = ~settings_get_colour_or_default(^setting_highlight_destination_tile_colour_colour);
 def_int $int3 = 10;
 if (%varbit12979 = 1) {
 	if (%varbit12982 = 1) {

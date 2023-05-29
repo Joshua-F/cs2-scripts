@@ -8,7 +8,7 @@ switch_int (minimenu_type($int1)) {
 			~entity_highlight_active_npc($int0);
 			if ($int0 = 4) {
 				$entityoverlay2 = entityoverlay_create_player(0, 0, 1, 1, 0);
-				~script5961($entityoverlay2);
+				~interact_entity_highlight_pulse_start($entityoverlay2);
 			}
 		}
 	case ^minimenu_entry_type_loc :
@@ -16,7 +16,7 @@ switch_int (minimenu_type($int1)) {
 			~entity_highlight_active_loc($int0);
 			if ($int0 = 4) {
 				$entityoverlay2 = entityoverlay_create_player(0, 0, 1, 1, 0);
-				~script5961($entityoverlay2);
+				~interact_entity_highlight_pulse_start($entityoverlay2);
 			}
 		}
 	case ^minimenu_entry_type_obj :
@@ -24,7 +24,7 @@ switch_int (minimenu_type($int1)) {
 			~entity_highlight_active_obj($int0);
 			if ($int0 = 4) {
 				$entityoverlay2 = entityoverlay_create_player(0, 0, 1, 1, 0);
-				~script5961($entityoverlay2);
+				~interact_entity_highlight_pulse_start($entityoverlay2);
 			}
 		}
 	case ^minimenu_entry_type_player :
@@ -32,7 +32,7 @@ switch_int (minimenu_type($int1)) {
 			~entity_highlight_active_player($int0);
 			if ($int0 = 4) {
 				$entityoverlay2 = entityoverlay_create_player(0, 0, 1, 1, 0);
-				~script5961($entityoverlay2);
+				~interact_entity_highlight_pulse_start($entityoverlay2);
 			}
 		}
 }

@@ -287,7 +287,7 @@ switch_int ($setting0) {
 	case 190 :
 		~mouseover_entity_highlight_toggle_client;
 	case 212 :
-		~script5948;
+		~interact_entity_highlight_toggle_client;
 	case ^setting_popout_xptracker :
 		~settings_popout_xptracker;
 	case 251 :
@@ -423,19 +423,19 @@ switch_int ($setting0) {
 	case 316 :
 		%varbit14819 = calc(1 - %varbit14819);
 	case 320 :
-		~script7110;
+		~settings_popout_loottools;
 	case 321 :
 		~settings_ground_items;
 	case 333 :
 		~script7113;
 	case 346 :
-		~script7136;
+		~settings_ground_items_show_price;
 	case 335 :
 		~script7114(calc(1 - %varbit14874));
 	case 337 :
 		~script7115(calc(1 - %varbit14876));
 	case 339 :
-		~script7116(calc(1 - %varbit14872));
+		~settings_ground_items_edit_mode(calc(1 - %varbit14872));
 	case 343 :
 		~script7118;
 	case 344 :

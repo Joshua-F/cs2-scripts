@@ -16,14 +16,14 @@ if (%varbit14168 = 1 & %varbit14169 > 0 & (highlight_group_get(~script6690($npc3
 	} else {
 		$fontmetrics4, $fontmetrics5 = b12_full, b12_full;
 	}
-	$colour6 = ~script5329(263);
+	$colour6 = ~settings_get_colour_or_default(263);
 } else if (%varbit14178 > 0) {
 	if (%varbit14178 = 1) {
 		$fontmetrics4, $fontmetrics5 = p12_full, p12_full;
 	} else {
 		$fontmetrics4, $fontmetrics5 = b12_full, b12_full;
 	}
-	$colour6 = ~script5329(266);
+	$colour6 = ~settings_get_colour_or_default(266);
 } else {
 	return;
 }

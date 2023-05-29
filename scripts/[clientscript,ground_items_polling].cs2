@@ -1,0 +1,26 @@
+// 7231
+[clientscript,ground_items_polling](entityoverlay $entityoverlay0, coord $coord1, int $int2, int $int3)
+def_int $int4 = 0;
+def_int $clock5 = clientclock;
+if (%varcint1154 >= $clock5) {
+	$int4, $int3 = 1, -1;
+}
+if ($int3 ! -1 & $clock5 >= calc($int2 + $int3)) {
+	$int4, $int3 = 1, ~min(calc($int3 * 2), 512);
+}
+if ($int4 = 0) {
+	return;
+}
+def_int $int6 = 0;
+def_int $int7 = 0;
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
+	cc_setontimer(null);
+	if ($int3 ! -1) {
+		$int6, $int7 = stockmarket_getvalue(cabbage_1965);
+		if ($int6 ! 2) {
+			cc_setontimer("ground_items_polling($entityoverlay0, $coord1, $clock5, $int3)");
+			return;
+		}
+	}
+	~ground_items_setup($coord1);
+}

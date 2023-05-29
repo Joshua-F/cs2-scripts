@@ -49,4 +49,4 @@ if (string_length($string0) > 0) {
 	cc_setonkey("worldmap_search_input(event_key, event_keychar, $component0, cc_getid, .cc_getid, $coord6)");
 	%varcint190 = 1;
 }
-~script1739(if_getwidth($component0));
+~worldmap_search_setalignment(if_getwidth($component0));

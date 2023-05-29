@@ -1,0 +1,6 @@
+// 5948
+[proc,interact_entity_highlight_toggle_client]
+if (~on_enhanced_mobile = 0) {
+	return;
+}
+%varbit13666 = calc(1 - %varbit13666);

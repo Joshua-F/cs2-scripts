@@ -3,7 +3,7 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-def_int $colour6 = ~script5329(^setting_tile_highlight_colour_colour);
+def_int $colour6 = ~settings_get_colour_or_default(^setting_tile_highlight_colour_colour);
 ~settings_colour_input_update($component0, $int1, $struct2, $setting3, $component4, $int5);
 if (%varbit12342 = 0) {
 	highlight_tile_setup(6, $colour6, 2, 50, 90);

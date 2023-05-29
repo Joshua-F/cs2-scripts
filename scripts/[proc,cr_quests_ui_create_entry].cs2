@@ -23,9 +23,9 @@ cc_settext($string1);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 if ($int3 = 2) {
-	cc_setcolour(~script5329(^setting_unavailable_quest_text_colour_colour));
+	cc_setcolour(~settings_get_colour_or_default(^setting_unavailable_quest_text_colour_colour));
 } else if (~quest_status_get($dbrow4) = 0) {
-	cc_setcolour(~script5329(^setting_inprogress_quest_text_colour_colour));
+	cc_setcolour(~settings_get_colour_or_default(^setting_inprogress_quest_text_colour_colour));
 } else {
 	cc_setcolour(0xff981f);
 }

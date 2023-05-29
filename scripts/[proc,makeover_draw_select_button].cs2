@@ -17,7 +17,7 @@ cc_setopbase("<col=ff9040>Style");
 if ($int1 = 0) {
 	cc_setcolour(0xff981f);
 	cc_setop(1, "Select");
-	cc_setonop("script7082($component0)");
+	cc_setonop("makeover_select_style($component0)");
 	if (~on_mobile = false) {
 		if_setonmouserepeat("v2_stone_button_change_in(event_com, 0)", $component0);
 		if_setonmouseleave("v2_stone_button_change_out(event_com, 0)", $component0);

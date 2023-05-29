@@ -26,7 +26,7 @@ while (cc_find($component0, $int12) = ^true) {
 	$int12 = calc($int12 + 1);
 }
 if (cc_find($component1, 4) = ^true) {
-	cc_settext("<~script7122($int13, ".", 1)> gp");
+	cc_settext("<~magic_spacer_tostring_extended($int13, ".", 1)> gp");
 }
 def_int $width14 = if_getscrollwidth(interface_650:2);
 def_int $int15 = if_getscrollheight(interface_650:2);
@@ -36,4 +36,4 @@ if (%varbit14881 = 0) {
 	$int15 = calc($int15 + $int6);
 }
 if_setscrollsize($width14, $int15, interface_650:2);
-if_settext("<tostring($width14)><br><~script7122($int15, ".", 1)> gp", interface_650:31);
+if_settext("<tostring($width14)><br><~magic_spacer_tostring_extended($int15, ".", 1)> gp", interface_650:31);

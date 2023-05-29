@@ -1,12 +1,12 @@
 // 6606
 [proc,toa_partylist_setsort]
-~toa_partylist_sortbutton_draw(interface_772:8, 0, 1, "Sort by members", "graphic_4565");
-~toa_partylist_sortbutton_draw(interface_772:9, 4, 5, "Sort by leader name", "graphic_4566");
-~toa_partylist_sortbutton_draw(interface_772:10, 16, 17, "Sort by preferred completions", "graphic_4567");
-~toa_partylist_sortbutton_draw(interface_772:11, 18, 19, "Sort by invocations", "graphic_4568");
-~toa_partylist_sortbutton_draw(interface_772:12, 20, 21, "Sort by raid level", "graphic_4569");
-~toa_partylist_sortbutton_draw(interface_772:13, 22, 23, "Sort by mode", "graphic_4579");
-~toa_partylist_sortbutton_draw(interface_772:14, 12, 13, "Sort by age", "graphic_4570");
+~toa_partylist_sortbutton_draw(interface_772:8, 0, 1, "Sort by members", "toa_grouping_icons,0");
+~toa_partylist_sortbutton_draw(interface_772:9, 4, 5, "Sort by leader name", "toa_grouping_icons,1");
+~toa_partylist_sortbutton_draw(interface_772:10, 16, 17, "Sort by preferred completions", "toa_grouping_icons,2");
+~toa_partylist_sortbutton_draw(interface_772:11, 18, 19, "Sort by invocations", "toa_grouping_icons,3");
+~toa_partylist_sortbutton_draw(interface_772:12, 20, 21, "Sort by raid level", "toa_grouping_icons,4");
+~toa_partylist_sortbutton_draw(interface_772:13, 22, 23, "Sort by mode", "toa_grouping_icons,14");
+~toa_partylist_sortbutton_draw(interface_772:14, 12, 13, "Sort by age", "toa_grouping_icons,5");
 def_int $count0 = enum_getoutputcount(enum_4793);
 def_int $countarray0($count0);
 def_int $int1 = 0;

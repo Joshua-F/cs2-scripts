@@ -1,0 +1,23 @@
+// 2496
+[proc,entity_highlight_active_loc_linked_fairy_ring](coord $coord0, int $count1)(coord)
+switch_int ($count1) {
+	case 0 :
+		$coord0 = movecoord($coord0, -1, 0, 1);
+	case 1 :
+		$coord0 = movecoord($coord0, 1, 0, 0);
+	case 2 :
+		$coord0 = movecoord($coord0, 1, 0, 0);
+	case 3 :
+		$coord0 = movecoord($coord0, -2, 0, -1);
+	case 4 :
+		$coord0 = movecoord($coord0, 1, 0, 0);
+	case 5 :
+		$coord0 = movecoord($coord0, 1, 0, 0);
+	case 6 :
+		$coord0 = movecoord($coord0, -2, 0, -1);
+	case 7 :
+		$coord0 = movecoord($coord0, 1, 0, 0);
+	case 8 :
+		$coord0 = movecoord($coord0, 1, 0, 0);
+}
+return($coord0);

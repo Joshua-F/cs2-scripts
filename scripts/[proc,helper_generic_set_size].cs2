@@ -4,10 +4,10 @@ def_enum $enum2 = ~toplevel_getcomponents;
 def_component $component3 = enum(component, component, $enum2, toplevel_osrs_stretch:12);
 def_component $component4 = interface_711:2;
 def_component $component5 = interface_711:5;
-if (~script5349(0) = ^true & $width0 < if_getwidth($component3)) {
+if (~helper_generic_test_bit(0) = ^true & $width0 < if_getwidth($component3)) {
 	$width0 = if_getwidth($component3);
 }
-if (~script5349(1) = ^true & $height1 < if_getheight($component3)) {
+if (~helper_generic_test_bit(1) = ^true & $height1 < if_getheight($component3)) {
 	$height1 = if_getheight($component3);
 }
 if ($height1 > 300) {

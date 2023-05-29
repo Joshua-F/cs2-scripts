@@ -13,5 +13,5 @@ if (testbit(%var292, 6) = ^false) {
 		~loadnpc_cluehelper_uri_overlay($entityoverlay0, $npc_uid1, $int2);
 	}
 } else if ($int8 = 3 & npc_finduid($npc_uid1) = true) {
-	~script6533($entityoverlay0, $npc_uid1, $int2);
+	~loadnpc_cluehelper_double_agent_overlay($entityoverlay0, $npc_uid1, $int2);
 }

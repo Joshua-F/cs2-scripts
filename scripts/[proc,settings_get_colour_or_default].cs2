@@ -1,0 +1,7 @@
+// 5329
+[proc,settings_get_colour_or_default](int $setting0)(int)
+def_int $colour1 = ~settings_get_colour($setting0);
+if ($colour1 = null | $colour1 < ^black) {
+	$colour1 = ~settings_get_colour_default($setting0);
+}
+return($colour1);

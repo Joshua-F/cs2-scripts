@@ -172,7 +172,7 @@ while ($int7 < 10) {
 		}
 		$int23 = calc($int23 + 33 + $int21 + 2);
 		if (cc_find($component1, 4) = ^true) {
-			cc_settext("<~script7122($int14, ".", 1)> gp");
+			cc_settext("<~magic_spacer_tostring_extended($int14, ".", 1)> gp");
 		}
 	}
 	$int5 = calc($int5 + $int11);
@@ -180,5 +180,5 @@ while ($int7 < 10) {
 	$int7 = calc($int7 + 1);
 }
 if_setscrollsize($int5, $int6, interface_650:2);
-if_settext("<tostring($int5)><br><~script7122($int6, ".", 1)> gp", interface_650:31);
+if_settext("<tostring($int5)><br><~magic_spacer_tostring_extended($int6, ".", 1)> gp", interface_650:31);
 ~script7135($int23);

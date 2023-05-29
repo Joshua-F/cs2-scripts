@@ -1,6 +1,6 @@
 // 7227
 [proc,ground_items_setup](coord $coord0)
-def_int $int1 = ~script7241;
+def_int $int1 = ~ground_items_edit_mode;
 def_boolean $boolean2 = ~script7242;
 def_boolean $boolean3 = ~script7243;
 def_int $int4 = objstack_size($coord0);
@@ -96,17 +96,17 @@ if (%varbit14869 = 1) {
 		$int10 = 0;
 		switch_int ($int23) {
 			case 6 :
-				$colour24, $int25 = ~script5329(327), -1;
+				$colour24, $int25 = ~settings_get_colour_or_default(327), -1;
 			case 5 :
-				$colour24, $int25 = ~script5329(322), %var3800;
+				$colour24, $int25 = ~settings_get_colour_or_default(322), %var3800;
 			case 4 :
-				$colour24, $int25 = ~script5329(323), %var3801;
+				$colour24, $int25 = ~settings_get_colour_or_default(323), %var3801;
 			case 3 :
-				$colour24, $int25 = ~script5329(324), %var3802;
+				$colour24, $int25 = ~settings_get_colour_or_default(324), %var3802;
 			case 2 :
-				$colour24, $int25 = ~script5329(325), %var3803;
+				$colour24, $int25 = ~settings_get_colour_or_default(325), %var3803;
 			case 1 :
-				$colour24, $int25 = ~script5329(326), %var3804;
+				$colour24, $int25 = ~settings_get_colour_or_default(326), %var3804;
 			case 0 :
 				$colour24, $int25 = ^white, 0;
 		}
@@ -138,9 +138,9 @@ if (%varbit14869 = 1) {
 }
 if (if_find_entityoverlay($entityoverlay7) = ^true) {
 	if ($int19 = 1) {
-		cc_setontimer("script7231($entityoverlay7, $coord0, clientclock, 1)");
+		cc_setontimer("ground_items_polling($entityoverlay7, $coord0, clientclock, 1)");
 	} else {
-		cc_setontimer("script7231($entityoverlay7, $coord0, -1, -1)");
+		cc_setontimer("ground_items_polling($entityoverlay7, $coord0, -1, -1)");
 	}
 	cc_setonkeydown("ground_items_key(event_key, $coord0)");
 	cc_setonkeyup("ground_items_key(event_key, $coord0)");

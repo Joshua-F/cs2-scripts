@@ -1,15 +1,15 @@
 // 6759
 [proc,toa_partydetails_setsort](int $int0, int $int1)
-~toa_partydetails_sortbutton_draw(interface_774:37, 0, 1, "Sort by player name", $int0, $int1, "graphic_4566");
-~toa_partydetails_sortbutton_draw(interface_774:38, 2, 3, "Sort by Combat level", $int0, $int1, "graphic_4571");
-~toa_partydetails_sortbutton_draw(interface_774:39, 8, 9, "Sort by Attack level", $int0, $int1, "graphic_4572");
-~toa_partydetails_sortbutton_draw(interface_774:40, 10, 11, "Sort by Strength level", $int0, $int1, "graphic_4573");
-~toa_partydetails_sortbutton_draw(interface_774:41, 12, 13, "Sort by Ranged level", $int0, $int1, "graphic_4574");
-~toa_partydetails_sortbutton_draw(interface_774:42, 14, 15, "Sort by Magic level", $int0, $int1, "graphic_4575");
-~toa_partydetails_sortbutton_draw(interface_774:43, 16, 17, "Sort by Defence level", $int0, $int1, "graphic_4576");
-~toa_partydetails_sortbutton_draw(interface_774:44, 18, 19, "Sort by Hitpoints level", $int0, $int1, "graphic_4577");
-~toa_partydetails_sortbutton_draw(interface_774:45, 20, 21, "Sort by Prayer level", $int0, $int1, "graphic_4578");
-~toa_partydetails_sortbutton_draw(interface_774:46, 6, 7, "Sort by total completions", $int0, $int1, "graphic_4567");
+~toa_partydetails_sortbutton_draw(interface_774:37, 0, 1, "Sort by player name", $int0, $int1, "toa_grouping_icons,1");
+~toa_partydetails_sortbutton_draw(interface_774:38, 2, 3, "Sort by Combat level", $int0, $int1, "toa_grouping_icons,6");
+~toa_partydetails_sortbutton_draw(interface_774:39, 8, 9, "Sort by Attack level", $int0, $int1, "toa_grouping_icons,7");
+~toa_partydetails_sortbutton_draw(interface_774:40, 10, 11, "Sort by Strength level", $int0, $int1, "toa_grouping_icons,8");
+~toa_partydetails_sortbutton_draw(interface_774:41, 12, 13, "Sort by Ranged level", $int0, $int1, "toa_grouping_icons,9");
+~toa_partydetails_sortbutton_draw(interface_774:42, 14, 15, "Sort by Magic level", $int0, $int1, "toa_grouping_icons,10");
+~toa_partydetails_sortbutton_draw(interface_774:43, 16, 17, "Sort by Defence level", $int0, $int1, "toa_grouping_icons,11");
+~toa_partydetails_sortbutton_draw(interface_774:44, 18, 19, "Sort by Hitpoints level", $int0, $int1, "toa_grouping_icons,12");
+~toa_partydetails_sortbutton_draw(interface_774:45, 20, 21, "Sort by Prayer level", $int0, $int1, "toa_grouping_icons,13");
+~toa_partydetails_sortbutton_draw(interface_774:46, 6, 7, "Sort by total completions", $int0, $int1, "toa_grouping_icons,2");
 def_int $intarray0($int1);
 def_int $int2 = 0;
 def_int $int3 = 0;

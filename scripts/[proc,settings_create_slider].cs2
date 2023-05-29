@@ -119,7 +119,7 @@ if ($int23 = 1) {
 		$graphic38 = "settings_slider,6";
 	}
 }
-~script7097($setting21, calc($int3 - 1), $component7, $graphic38);
+~settings_slider_choose_bobble($setting21, calc($int3 - 1), $component7, $graphic38);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 if (struct_param($struct6, param_1107) = false) {
 	if ($int36 = 0) {

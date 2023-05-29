@@ -7,4 +7,4 @@ if (~on_enhanced_mobile = 0 | %varbit13666 = 1) {
 def_entityoverlay $entityoverlay0 = null;
 $entityoverlay0 = entityoverlay_create_player(0, 0, 1, 1, 0);
 ~entity_highlight_active_obj(4);
-~script5961($entityoverlay0);
+~interact_entity_highlight_pulse_start($entityoverlay0);

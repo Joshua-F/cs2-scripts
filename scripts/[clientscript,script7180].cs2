@@ -13,14 +13,14 @@ $obj4, $int5, $int6, $int7, $int8, $int9 = ~script7173($component3, $int2);
 switch_int ($opindex0) {
 	case 1 :
 		if (stockmarket_istradeable($obj4) = true | $obj4 = coins_995) {
-			$string1 = "<~script7122($int9, ".", 1)> (<~script7122($int7, ".", 2)> ea)";
+			$string1 = "<~magic_spacer_tostring_extended($int9, ".", 1)> (<~magic_spacer_tostring_extended($int7, ".", 2)> ea)";
 		} else {
 			$string1 = "N/A";
 		}
 		if ($int6 = 0) {
 			$string0 = "N/A";
 		} else {
-			$string0 = "<~script7122($int8, ".", 2)> (<~script7122($int6, ".", 2)> ea)";
+			$string0 = "<~magic_spacer_tostring_extended($int8, ".", 2)> (<~magic_spacer_tostring_extended($int6, ".", 2)> ea)";
 		}
 		mes("<oc_name($obj4)> x <tostring($int5)> <br>GE: <$string1> <br>HA: <$string0>");
 	case 2 :

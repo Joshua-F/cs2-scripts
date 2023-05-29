@@ -16,11 +16,11 @@ if ($obj6 = null) {
 }
 def_obj $obj7 = inv_getobj(inv, $dropsubid3);
 if (cc_find($drop0, $dropsubid3) = ^true) {
-	~script7249($obj6, inv_getnum(inv, $comsubid1), $string0, $dbrow4);
+	~omnishop_setsideitem($obj6, inv_getnum(inv, $comsubid1), $string0, $dbrow4);
 }
 if (cc_find($drop0, $comsubid1) = ^true) {
 	if ($obj7 ! null) {
-		~script7249($obj7, inv_getnum(inv, $dropsubid3), $string0, $dbrow4);
+		~omnishop_setsideitem($obj7, inv_getnum(inv, $dropsubid3), $string0, $dbrow4);
 	} else {
 		~omnishop_setblank;
 	}

@@ -3,7 +3,7 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-def_int $colour1 = ~script5329(262);
+def_int $colour1 = ~settings_get_colour_or_default(262);
 def_int $flags2 = setbit(0, 6);
 if ($int0 = 1) {
 	if (%varbit14170 = 1) {

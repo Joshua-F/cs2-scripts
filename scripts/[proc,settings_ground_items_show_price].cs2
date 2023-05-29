@@ -1,0 +1,6 @@
+// 7136
+[proc,settings_ground_items_show_price]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit14885 = calc(1 - %varbit14885);

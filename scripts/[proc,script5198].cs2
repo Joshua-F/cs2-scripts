@@ -5,7 +5,7 @@ if (~on_enhanced_desktop = 0) {
 }
 def_int $int0 = 0;
 def_int $int1 = 70;
-def_int $colour2 = ~script5329(^setting_highlight_hovered_tile_colour_colour);
+def_int $colour2 = ~settings_get_colour_or_default(^setting_highlight_hovered_tile_colour_colour);
 def_int $int3 = 10;
 if (%varbit12977 = 1) {
 	if (%varbit12980 = 1) {
