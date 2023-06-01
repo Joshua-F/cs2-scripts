@@ -11,101 +11,107 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_string $string0 = removetags(oc_name($obj5));
 def_string $string1 = "Lots!";
+def_int $int14 = 0;
 def_string $string2 = ",";
 if ($int6 > 1) {
 	$string0 = "<$string0> x <~magic_spacer_tostring($int6, $string2)>";
 }
 if (%varbit14885 = 0) {
-	if ($int7 < ^max_32bit_int) {
-		$string1 = "<~magic_spacer_tostring($int7, $string2)> gp";
+	if (calc(^max_32bit_int / $int6) < $int7) {
+		$int14 = ^max_32bit_int;
+	} else {
+		$int14 = calc($int7 * $int6);
+	}
+	if ($int14 < ^max_32bit_int) {
+		$string1 = "<~magic_spacer_tostring($int14, $string2)> gp";
 	}
 	if ($obj5 ! coins_995) {
 		$string0 = "<$string0> (<$string1>)";
 	}
 }
 cc_settext($string0);
-def_int $width14 = parawidth($string0, 300, p12_full);
-def_graphic $graphic15 = null;
+def_int $width15 = parawidth($string0, 300, p12_full);
 def_graphic $graphic16 = null;
+def_graphic $graphic17 = null;
 if ($int10 = 1) {
 	.cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
 	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
 	if (~script7225(stringvector_4, $obj5, true) = 1) {
-		$graphic15 = "graphic_4905";
-		$graphic16 = "graphic_4906";
+		$graphic16 = "graphic_4905";
+		$graphic17 = "graphic_4906";
 		$string0 = "Unhighlight <col=ff981f><removetags(oc_name($obj5))>";
 	} else {
-		$graphic15 = "graphic_4901";
-		$graphic16 = "graphic_4902";
+		$graphic16 = "graphic_4901";
+		$graphic17 = "graphic_4902";
 		$string0 = "Highlight <col=ff981f><removetags(oc_name($obj5))>";
 	}
 	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-	.cc_setgraphic($graphic15);
-	.cc_setposition(calc($width14 / 2 + 27), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
-	.cc_setonmouserepeat("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 2), $graphic16, null)");
-	.cc_setonmouseleave("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 2), $graphic15, null)");
+	.cc_setgraphic($graphic16);
+	.cc_setposition(calc($width15 / 2 + 27), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+	.cc_setonmouserepeat("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 2), $graphic17, null)");
+	.cc_setonmouseleave("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 2), $graphic16, null)");
 	.cc_setnoclickthrough(true);
 	.cc_setop(1, $string0);
 	.cc_setonop("ground_items_highlight($obj5)");
 	if (~script7225(stringvector_3, $obj5, true) = 1) {
-		$graphic15 = "graphic_4907";
-		$graphic16 = "graphic_4908";
+		$graphic16 = "graphic_4907";
+		$graphic17 = "graphic_4908";
 		$string0 = "Unignore <col=ff981f><removetags(oc_name($obj5))>";
 	} else {
-		$graphic15 = "graphic_4903";
-		$graphic16 = "graphic_4904";
+		$graphic16 = "graphic_4903";
+		$graphic17 = "graphic_4904";
 		$string0 = "Ignore <col=ff981f><removetags(oc_name($obj5))>";
 	}
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic($graphic15);
-	cc_setposition(calc($width14 / 2 + 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
-	cc_setonmouserepeat("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 1), $graphic16, null)");
-	cc_setonmouseleave("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 1), $graphic15, null)");
+	cc_setgraphic($graphic16);
+	cc_setposition(calc($width15 / 2 + 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setonmouserepeat("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 1), $graphic17, null)");
+	cc_setonmouseleave("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 1), $graphic16, null)");
 	cc_setnoclickthrough(true);
 	cc_setop(1, $string0);
 	cc_setonop("ground_items_filter($obj5)");
 }
-def_int $int17 = 0;
 def_int $int18 = 0;
 def_int $int19 = 0;
+def_int $int20 = 0;
 if (obj_findbyindex($coord1, $int9) = true) {
 	if ($boolean11 = true) {
-		$int17 = calc(30 * obj_despawntime);
+		$int18 = calc(30 * obj_despawntime);
 	}
 	if ($boolean12 = true) {
-		$int18 = calc(30 * obj_revealtime);
+		$int19 = calc(30 * obj_revealtime);
 	}
-	if ($int17 > 0 | $int18 > 0 | $boolean12 = true) {
+	if ($int18 > 0 | $int19 > 0 | $boolean12 = true) {
 		cc_create_entityoverlay($entityoverlay0, ^iftype_text, $int3);
 		cc_setsize(34, 17, ^setsize_abs, ^setsize_abs);
-		$int19 = calc(0 - $width14 / 2 - 34 / 2);
-		cc_setposition($int19, $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+		$int20 = calc(0 - $width15 / 2 - 34 / 2);
+		cc_setposition($int20, $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		$int3 = calc($int3 + 1);
 		.cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(calc($int19 - 34 / 2 - 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+		.cc_setposition(calc($int20 - 34 / 2 - 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
 		$int3 = calc($int3 + 1);
-		if ($int18 > 0) {
-			cc_settext("[<~buff_bar_time_string($int18)>]");
-			cc_setcolour(~script7244($int18, $colour8));
+		if ($int19 > 0) {
+			cc_settext("[<~buff_bar_time_string($int19)>]");
+			cc_setcolour(~script7244($int19, $colour8));
 			.cc_setgraphic("ground_items_visibility,1");
 		} else {
-			if ($int17 > 0) {
-				cc_settext("[<~buff_bar_time_string($int17)>]");
-				cc_setcolour(~script7244($int17, $colour8));
+			if ($int18 > 0) {
+				cc_settext("[<~buff_bar_time_string($int18)>]");
+				cc_setcolour(~script7244($int18, $colour8));
 			} else {
-				.cc_setposition(calc(0 - $width14 / 2 - 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+				.cc_setposition(calc(0 - $width15 / 2 - 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
 			}
 			if ($boolean12 = true) {
 				.cc_setgraphic("ground_items_visibility,0");
 			}
 		}
-		cc_setontimer("ground_items_update_time_remaining($entityoverlay0, calc($int3 - 2), clientclock, $int17, $int18, $colour8, $boolean12, $boolean11, calc($int3 - 1), $width14, $y13)");
+		cc_setontimer("ground_items_update_time_remaining($entityoverlay0, calc($int3 - 2), clientclock, $int18, $int19, $colour8, $boolean12, $boolean11, calc($int3 - 1), $width15, $y13)");
 	}
 }
 return($int3);

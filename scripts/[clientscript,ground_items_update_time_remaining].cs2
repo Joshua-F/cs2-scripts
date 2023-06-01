@@ -3,7 +3,7 @@
 def_int $int11 = calc(clientclock - $clock2);
 def_int $int12 = 0;
 def_graphic $graphic13 = null;
-if (calc($int11 % 10) = 0) {
+if (calc($int11 % 25) = 0) {
 	$int4 = calc($int4 - $int11);
 	$int3 = calc($int3 - $int11);
 	if ($boolean6 = true) {
