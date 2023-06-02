@@ -2,5 +2,5 @@
 [clientscript,cabbage_lookup]
 def_int $int0 = 0;
 def_int $int1 = 0;
-$int0, $int1 = stockmarket_getvalue(cabbage_1965);
+$int0, $int1 = oc_stockmarketvalue(cabbage_1965);
 mes("Status: <tostring($int0)>, Value: <tostring($int1)>.");

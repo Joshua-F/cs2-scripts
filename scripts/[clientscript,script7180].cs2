@@ -12,7 +12,7 @@ def_string $string1 = "null";
 $obj4, $int5, $int6, $int7, $int8, $int9 = ~script7173($component3, $int2);
 switch_int ($opindex0) {
 	case 1 :
-		if (stockmarket_istradeable($obj4) = true | $obj4 = coins_995) {
+		if (oc_stockmarket($obj4) = true | $obj4 = coins_995) {
 			$string1 = "<~magic_spacer_tostring_extended($int9, ".", 1)> (<~magic_spacer_tostring_extended($int7, ".", 2)> ea)";
 		} else {
 			$string1 = "N/A";

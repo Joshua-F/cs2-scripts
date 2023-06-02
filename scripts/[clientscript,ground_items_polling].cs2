@@ -16,7 +16,7 @@ def_int $int7 = 0;
 if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setontimer(null);
 	if ($int3 ! -1) {
-		$int6, $int7 = stockmarket_getvalue(cabbage_1965);
+		$int6, $int7 = oc_stockmarketvalue(cabbage_1965);
 		if ($int6 ! 2) {
 			cc_setontimer("ground_items_polling($entityoverlay0, $coord1, $clock5, $int3)");
 			return;

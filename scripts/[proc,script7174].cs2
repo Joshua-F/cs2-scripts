@@ -1,7 +1,7 @@
 // 7174
 [proc,script7174](obj $obj0, int $int1, int $int2, int $int3, int $int4, int $int5)(string)
 def_string $string0 = "null";
-if (stockmarket_istradeable($obj0) = true | $obj0 = coins_995) {
+if (oc_stockmarket($obj0) = true | $obj0 = coins_995) {
 	$string0 = "<~magic_spacer_tostring_extended($int5, ".", 1)> (<~magic_spacer_tostring_extended($int3, ".", 2)> ea)";
 } else {
 	$string0 = "N/A";

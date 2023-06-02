@@ -7,8 +7,8 @@ $obj0 = oc_uncert($obj0);
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 1;
-if (%varbit14870 = 0 & stockmarket_istradeable($obj0) = true) {
-	$int2, $int1 = stockmarket_getvalue($obj0);
+if (%varbit14870 = 0 & oc_stockmarket($obj0) = true) {
+	$int2, $int1 = oc_stockmarketvalue($obj0);
 	if ($int2 = 2) {
 		return($int1, 1);
 	}
