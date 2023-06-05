@@ -1,0 +1,7 @@
+// 7296
+[proc,script7296](obj $obj0)(int)
+def_int $int1 = inv_total(inv, $obj0);
+if (~script7295 = 1) {
+	$int1 = calc($int1 + inv_total(inv_814, $obj0));
+}
+return($int1);

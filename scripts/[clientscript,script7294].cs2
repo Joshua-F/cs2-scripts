@@ -1,0 +1,9 @@
+// 7294
+[clientscript,script7294](int $int0)
+if (calc($int0 + 1) = %varbit15001) {
+	return;
+}
+%varbit15001 = calc($int0 + 1);
+def_component $component1 = interface_821:17;
+if_setonresize("script7290($int0)", $component1);
+~script7288($int0, false);

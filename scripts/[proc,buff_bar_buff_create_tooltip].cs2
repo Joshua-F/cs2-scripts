@@ -1,30 +1,39 @@
 // 3169
-[proc,buff_bar_buff_create_tooltip](component $component0, int $int1, component $component2, string $string0, int $x3, int $y4)
-cc_create($component0, ^iftype_rectangle, $int1);
-cc_setposition($x3, $y4, ^setpos_abs_left, ^setpos_abs_bottom);
+[proc,buff_bar_buff_create_tooltip](struct $struct0, component $component1, int $int2, component $component3, int $x4, int $y5)
+cc_create($component1, ^iftype_rectangle, $int2);
+cc_setposition($x4, $y5, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setsize(calc(37 - 3), calc(37 - 3), ^setsize_abs, ^setsize_abs);
 cc_setcolour(^black);
 cc_settrans(255);
-if (string_length($string0) <= 0 | %varbit9529 = 1 | %varbit9528 = 1 & %varbit12383 = 1) {
+def_boolean $boolean6 = struct_param($struct0, param_1482);
+if ($boolean6 = false & string_length(struct_param($struct0, param_1279)) <= 0 | %varbit9529 = 1 | %varbit9528 = 1 & %varbit12383 = 1) {
 	cc_setonclick(null);
 	cc_setnoclickthrough(false);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
-	if_setontimer(null, $component0);
-	~deltooltip_action($component2);
+	if_setontimer(null, $component1);
+	~deltooltip_action($component3);
 	%varcint382 = -1;
 	return;
 }
 if (~on_mobile = true) {
-	cc_setonclick("buff_bar_mobile_tooltip($component0, $int1, $component2, $string0, 512)");
+	if ($boolean6 = true) {
+		cc_setonclick("script7318($struct0, $component1, $int2, $component3, 512)");
+	} else {
+		cc_setonclick("buff_bar_mobile_tooltip($component1, $int2, $component3, struct_param($struct0, param_1279), 512)");
+	}
 	cc_setnoclickthrough(true);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
 } else {
 	cc_setonclick(null);
 	cc_setnoclickthrough(false);
-	cc_setonmouserepeat("tooltip_mouserepeat($component0, $int1, $component2, $string0, 0, 512)");
-	cc_setonmouseleave("deltooltip($component2)");
-	if_setontimer(null, $component0);
+	if ($boolean6 = true) {
+		cc_setonmouserepeat("script7318($struct0, $component1, $int2, $component3, 512)");
+	} else {
+		cc_setonmouserepeat("tooltip_mouserepeat($component1, $int2, $component3, struct_param($struct0, param_1279), 0, 512)");
+	}
+	cc_setonmouseleave("deltooltip($component3)");
+	if_setontimer(null, $component1);
 	%varcint2 = 0;
 }

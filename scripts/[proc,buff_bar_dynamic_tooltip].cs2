@@ -1,5 +1,6 @@
 // 5846
 [proc,buff_bar_dynamic_tooltip](int $int0)(string)
+def_string $string0 = "";
 switch_int ($int0) {
 	case 49 :
 		return(~script5742(%varbit13395));
@@ -15,6 +16,23 @@ switch_int ($int0) {
 		return(~script5742(%varbit13401));
 	case 55 :
 		return(~script5742(%varbit13402));
+	case 96 :
+		$string0 = "Forestry - Stat boost.";
+		if (%varbit14949 > 0) {
+			$string0 = "<$string0><br>Production: +<tostring(%varbit14949)>";
+		}
+		if (%varbit14950 > 0) {
+			$string0 = "<$string0><br>Gathering: +<tostring(%varbit14950)>";
+		}
+		return($string0);
+	case 97 :
+		return("Forestry - <enum(int, string, enum_4993, 1)>.<br>Power: <tostring(%varbit14951)>");
+	case 98 :
+		return("Forestry - <enum(int, string, enum_4993, 2)>.<br>Power: <tostring(%varbit14951)>");
+	case 99 :
+		return("Forestry - <enum(int, string, enum_4993, 3)>.<br>Power: <tostring(%varbit14951)>");
+	case 100 :
+		return("Forestry - <enum(int, string, enum_4993, 4)>.<br>Power: <tostring(%varbit14951)>");
 	case default :
 		return("Buff");
 }

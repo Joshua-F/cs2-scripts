@@ -5,6 +5,6 @@ if ($index0 < 0) {
 	~debug_mes_error("Array Serialisation", "ERROR: Attempted to get array length from an invalid serialised array: <$string0>");
 	return(0, $string0);
 }
-def_int $int1 = ~string_to_int(substring($string0, 0, $index0));
+def_int $int1 = parseint(substring($string0, 0, $index0));
 def_string $string1 = substring($string0, calc($index0 + string_length("||")), string_length($string0));
 return($int1, $string1);

@@ -1,0 +1,13 @@
+// 7267
+[proc,script7267](int $int0, inv $inv1)(int)
+def_int $int2 = 0;
+def_obj $obj3 = null;
+def_int $slot4 = 0;
+def_int $size5 = inv_size($inv1);
+while ($slot4 < $size5) {
+	$obj3 = inv_getobj($inv1, $slot4);
+	if (oc_param($obj3, param_1787) = $int0) {
+		$int2 = calc($int2 + inv_getnum($inv1, $slot4));
+	}
+}
+return($int2);

@@ -1,0 +1,11 @@
+// 7270
+[proc,script7270](int $int0, int $int1, int $int2)(int)
+def_int $int3 = calc($int0 / $int1);
+def_int $int4 = calc($int0 % $int1);
+if ($int4 > 0 & $int2 = 1) {
+	~script7315(%varbit14961, "Forestry Buffs Crafting", "Rolling remainder for extra buff value. Base boost: <tostring($int3)>, Points: <tostring($int0)>, Remainder: <tostring($int4)>/<tostring($int1)>");
+	if (random($int1) < $int4) {
+		$int3 = calc($int3 + 1);
+	}
+}
+return($int3);

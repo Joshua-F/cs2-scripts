@@ -10,6 +10,9 @@ if (~wildwars_world = 1) {
 	$enum11 = enum_1735;
 }
 def_int $int12 = ~tournament_beta_world;
+if (~beta_world = 1) {
+	$int12 = 1;
+}
 def_namedobj $namedobj13 = enum(int, namedobj, $enum11, $int10);
 while ($namedobj13 ! null) {
 	cc_create($component3, ^iftype_graphic, $int10);

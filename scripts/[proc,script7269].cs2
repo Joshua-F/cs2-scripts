@@ -1,0 +1,14 @@
+// 7269
+[proc,script7269](inv $inv0, intarray $intarray0, int $int2)(int, int, int, int, int, int)
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+$int3, $int4, $int5, $int6, $int7, $int8 = ~script7268($inv0, intarray0);
+def_int $int9 = min(6, ~script7270($int3, 8, $int2));
+def_int $int10 = min(6, ~script7270($int4, 8, $int2));
+def_int $int11 = min(15, ~script7270($int5, 4, $int2));
+def_int $int12 = min(8100, calc($int6 * 50 + 200));
+return($int9, $int10, $int11, $int12, $int7, $int8);

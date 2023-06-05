@@ -1,0 +1,180 @@
+// 7288
+[proc,script7288](int $int0, boolean $boolean1)
+~script6109(interface_821:1, interface_821:3);
+~steelborder(interface_821:2, "Tend Campfire", 16);
+def_int $int2 = 44;
+def_int $int3 = 44;
+def_int $int4 = 3;
+def_int $int5 = 6;
+def_int $int6 = 6;
+def_int $int7 = 32;
+def_int $int8 = 496;
+def_int $int9 = 496;
+def_fontmetrics $fontmetrics10 = p12_full;
+def_int $int11 = 495;
+def_int $int12 = 16;
+def_int $int13 = 68;
+def_int $int14 = 3;
+def_int $int15 = 4;
+def_int $int16 = 1000;
+switch_int (%varcint988) {
+	case 1 :
+		$int2 = 50;
+		$int3 = 50;
+		$int7 = 36;
+		$int6 = 8;
+		$int8 = 1446;
+		$int9 = 1446;
+		$fontmetrics10 = verdana_13pt_regular;
+		$int11 = 1445;
+		$int13 = 76;
+		$int16 = 950;
+	case 2 :
+		$int2 = 60;
+		$int3 = 60;
+		$int7 = 38;
+		$int12 = 18;
+		$int6 = 10;
+		$int8 = 1446;
+		$int9 = 1446;
+		$fontmetrics10 = verdana_13pt_regular;
+		$int11 = 1445;
+		$int13 = 84;
+		$int14 = 4;
+		$int15 = 5;
+		$int16 = 950;
+	case 3 :
+		$int2 = 74;
+		$int3 = 74;
+		$int7 = 40;
+		$int12 = 20;
+		$int6 = 12;
+		$int5 = 8;
+		$int8 = 1446;
+		$int9 = 1446;
+		$fontmetrics10 = verdana_13pt_regular;
+		$int11 = 1445;
+		$int13 = 90;
+		$int14 = 4;
+		$int15 = 6;
+		$int16 = 800;
+}
+def_int $int17 = calc($int2 * $int14 + $int4 * ($int14 + 1) + 15 + 4);
+def_component $component18 = interface_821:10;
+if_setsize($int17, calc($int12 + $int5 * 3), ^setsize_abs, ^setsize_minus, $component18);
+if_setposition($int5, $int5, ^setpos_abs_left, ^setpos_abs_bottom, $component18);
+$component18 = interface_821:5;
+if_setsize(calc($int17 + $int5 * 3), $int7, ^setsize_minus, ^setsize_abs, $component18);
+if_setposition($int5, $int5, ^setpos_abs_right, ^setpos_abs_bottom, $component18);
+$component18 = interface_821:9;
+if_setsize(calc($int17 + $int5 * 3), calc($int7 + $int5 * 3), ^setsize_minus, ^setsize_minus, $component18);
+if_setposition($int5, $int5, ^setpos_abs_right, ^setpos_abs_top, $component18);
+$component18 = interface_821:4;
+if_setsize($int17, $int12, ^setsize_abs, ^setsize_abs, $component18);
+if_setposition($int5, $int5, ^setpos_abs_left, ^setpos_abs_top, $component18);
+if_settextfont($fontmetrics10, $component18);
+def_obj $obj19 = enum(int, obj, enum_5001, $int0);
+def_int $num20 = ~script7296($obj19);
+def_int $int21 = 0;
+def_boolean $boolean22 = true;
+if ($int0 >= 0) {
+	$boolean22 = true;
+} else {
+	$boolean22 = false;
+}
+$component18 = interface_821:6;
+if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component18);
+if_setposition(calc($int13 * 2 + $int5 * 2), 0, ^setpos_abs_right, ^setpos_abs_top, $component18);
+~script7139($component18, "Add 1", $boolean22, false);
+if ($int0 >= 0 & $num20 >= 5) {
+	$boolean22 = true;
+} else {
+	$boolean22 = false;
+}
+$component18 = interface_821:7;
+if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component18);
+if_setposition(calc($int13 + $int5), 0, ^setpos_abs_right, ^setpos_abs_top, $component18);
+~script7139($component18, "Add 5", $boolean22, false);
+if ($int0 >= 0 & $num20 >= 10) {
+	$boolean22 = true;
+} else {
+	$boolean22 = false;
+}
+$component18 = interface_821:8;
+if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component18);
+if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, $component18);
+~script7139($component18, "Add 10", $boolean22, false);
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $int25 = 0;
+def_int $height26 = 0;
+def_int $colour27 = ^black;
+def_int $int28 = 0;
+def_int $int29 = 0;
+$int21 = 0;
+$component18 = interface_821:13;
+def_component $component30 = interface_821:14;
+cc_deleteall($component18);
+$obj19 = enum(int, obj, enum_5001, $int21);
+$num20 = ~script7296($obj19);
+while ($obj19 ! null) {
+	if ($num20 < 1) {
+		$int24 = 0;
+		while ($int24 < 11) {
+			cc_create($component18, ^iftype_rectangle, $int25);
+			cc_sethide(true);
+			$int25 = calc($int25 + 1);
+			$int24 = calc($int24 + 1);
+		}
+	} else {
+		if ($int0 = $int21) {
+			$boolean22 = true;
+		} else {
+			$boolean22 = false;
+		}
+		if ($boolean22 = true) {
+			$colour27 = 0xff981f;
+		} else {
+			$colour27 = 0x726451;
+		}
+		$int28 = calc($int23 % $int14 * ($int2 + $int4) + $int4);
+		$int29 = calc($int23 / $int14 * ($int3 + $int4) + $int4);
+		$int25 = ~script5288($component18, $int25, $int28, $int29, $int2, $int3, struct_3712, $colour27);
+		cc_setop(1, "Select");
+		cc_setopbase(oc_name($obj19));
+		if ($boolean22 = false) {
+			cc_setonop("script7294($int21)");
+		} else {
+			cc_setonop("script7294(-1)");
+		}
+		cc_create($component18, ^iftype_graphic, $int25);
+		cc_setposition(calc($int28 + ($int2 - 36) / 2 + 2), calc($int29 + ($int3 - 32) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj19, $num20);
+		cc_setoutline(1);
+		cc_setgraphicshadow(0x333333);
+		$int25 = calc($int25 + 1);
+		$int23 = calc($int23 + 1);
+	}
+	$int21 = calc($int21 + 1);
+	$obj19 = enum(int, obj, enum_5001, $int21);
+	$num20 = ~script7296($obj19);
+	$height26 = calc($int29 + $int3 + $int4);
+}
+if ($boolean1 = true) {
+	if_setscrollpos(0, 0, $component18);
+}
+if_setscrollsize(if_getwidth($component18), $height26, $component18);
+~scrollbar_vertical($component30, $component18, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical_rebuild($component30, $component18);
+if ($int0 < 0) {
+	if_sethide(true, interface_821:19);
+} else {
+	if_sethide(false, interface_821:19);
+}
+if_setposition($int6, $int6, ^setpos_abs_left, ^setpos_abs_top, interface_821:19);
+$int21 = 0;
+$int25 = 0;
+$height26 = 0;
+$component18 = interface_821:17;
+if_callonresize($component18);

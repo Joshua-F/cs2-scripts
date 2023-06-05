@@ -1,0 +1,30 @@
+// 7272
+[clientscript,script7272](boolean $boolean0)
+def_component $component1 = interface_822:1;
+def_component $component2 = interface_822:2;
+def_component $component3 = interface_822:3;
+~script6109($component1, $component3);
+~steelborder($component2, "Forestry kit", 16);
+def_int $int4 = 200;
+def_int $int5 = 59;
+switch_int (%varcint988) {
+	case 1 :
+		$int4 = 230;
+		$int5 = 62;
+	case 2 :
+		$int4 = 250;
+		$int5 = 62;
+	case 3 :
+		$int4 = 270;
+		$int5 = 64;
+}
+def_component $component6 = interface_822:4;
+def_component $component7 = interface_822:6;
+def_component $component8 = interface_822:8;
+def_component $component9 = interface_822:9;
+if_setsize(calc($int4 + 18), 62, ^setsize_minus, ^setsize_minus, $component6);
+if_setsize(calc($int4 + 18), 44, ^setsize_minus, ^setsize_abs, $component8);
+if_setsize($int4, calc($int5 + 17), ^setsize_abs, ^setsize_minus, $component7);
+if_setsize($int4, $int5, ^setsize_abs, ^setsize_abs, $component9);
+~script7273(%varbit14963, 1);
+~script7276(%varbit14963, 1);

@@ -376,5 +376,29 @@ switch_struct ($struct0) {
 			}
 			return(~script5940(%varcint1144, 10));
 		}
+	case buff_feeling_the_warmth_of_a_foresters_campfire_4544 :
+		if (%var3892 = 1) {
+			return(1);
+		}
+	case struct_4539 :
+		if (%varbit14948 > 0 & (%varbit14949 > 0 | %varbit14950 > 0)) {
+			return(%varbit14948);
+		}
+	case struct_4540 :
+		if (%varbit14948 > 0 & %varbit14952 ! 0) {
+			return(%varbit14948);
+		}
+	case struct_4541 :
+		if (%varbit14948 > 0 & %varbit14953 ! 0) {
+			return(%varbit14948);
+		}
+	case struct_4542 :
+		if (%varbit14948 > 0 & %varbit14954 ! 0) {
+			return(%varbit14948);
+		}
+	case struct_4543 :
+		if (%varbit14948 > 0 & %varbit14955 ! 0) {
+			return(%varbit14948);
+		}
 }
 return(struct_param($struct0, param_1540));

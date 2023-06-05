@@ -1,0 +1,48 @@
+// 7293
+[proc,script7293](component $component0, int $int1, string $string0, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, fontmetrics $fontmetrics8)(int, int)
+def_int $width9 = if_getwidth($component0);
+def_int $int10 = calc($width9 / 10);
+def_int $int11 = calc($width9 - $int10 * 2);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int5, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int5 / 2), $int6, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, $int6);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics8);
+cc_setcolour(0xff981f);
+cc_settext("<$string0> (+<tostring(~min(calc($int2 / $int4), $int3))>)");
+$int1 = calc($int1 + 1);
+$int7 = calc($int7 + $int6 + $int5);
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setposition($int10, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int11, $int6, ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(^black);
+$int1 = calc($int1 + 1);
+def_int $int12 = calc(($int11 - 2 - $int3) / 100);
+def_int $int13 = calc($int10 + 1);
+def_int $int14 = $int3;
+while ($int2 > 0 & $int14 > 0) {
+	if ($int2 >= $int4) {
+		cc_create($component0, ^iftype_rectangle, $int1);
+		cc_setposition($int13, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize($int12, calc($int6 - 2), ^setsize_abs, ^setsize_abs);
+		cc_setfill(true);
+		cc_setcolour(0x11ee11);
+		$int1 = calc($int1 + 1);
+	}
+	$int13 = calc($int13 + $int12 + 1);
+	$int2 = calc($int2 - $int4);
+	$int14 = calc($int14 - 1);
+}
+$int11 = calc($int11 - 2 - $int3 * ($int12 + 1));
+if ($int2 > 0) {
+	cc_create($component0, ^iftype_rectangle, $int1);
+	cc_setposition($int13, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(scale($int11, calc(100 - $int4 * $int3), $int2), calc($int6 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(0x11ee11);
+	$int1 = calc($int1 + 1);
+}
+$int7 = calc($int7 + $int6 + $int5);
+return($int1, $int7);

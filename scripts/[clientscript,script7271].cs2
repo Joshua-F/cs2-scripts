@@ -1,0 +1,6 @@
+// 7271
+[clientscript,script7271]
+def_component $component0 = interface_822:0;
+if_setontimer("script6110($component0, -1)", $component0);
+if_setonresize("script7272(true)", $component0);
+if_setoninvtransmit("script7272(true){inv_814}", $component0);

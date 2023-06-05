@@ -1,0 +1,8 @@
+// 7297
+[proc,script7297]()(int)
+def_int $int0 = min(calc(stat(herblore) + stat(woodcutting)), 200);
+if ($int0 < 24) {
+	return(3);
+}
+def_int $int1 = calc(($int0 - 24) / 16 + 1);
+return(calc(3 + $int1));

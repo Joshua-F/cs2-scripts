@@ -1,0 +1,8 @@
+// 7306
+[clientscript,script7306](int $int0, int $int1)
+if (calc($int0 + 1) = %varbit15011 & $int1 = %varbit15010) {
+	return;
+}
+%varbit15011 = calc($int0 + 1);
+%varbit15010 = $int1;
+~script7304(calc(%varbit15011 - 1), %varbit15010, false);

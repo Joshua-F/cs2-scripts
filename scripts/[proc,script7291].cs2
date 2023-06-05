@@ -1,0 +1,105 @@
+// 7291
+[proc,script7291](int $int0)
+def_int $length1 = ~script2477(%varcstring1161);
+def_int $intarray0($length1);
+~deserialise_intarray(%varcstring1161, intarray0);
+def_obj $obj2 = enum(int, obj, enum_5001, $int0);
+def_int $int3 = 3;
+def_int $int4 = 6;
+def_int $int5 = 6;
+def_fontmetrics $fontmetrics6 = b12_full;
+def_fontmetrics $fontmetrics7 = b12_full;
+def_fontmetrics $fontmetrics8 = p12_full;
+def_int $int9 = 495;
+def_int $int10 = 16;
+switch_int (%varcint988) {
+	case 1 :
+		$int5 = 8;
+		$fontmetrics6 = verdana_13pt_bold;
+		$fontmetrics7 = verdana_13pt_bold;
+		$fontmetrics8 = verdana_13pt_regular;
+		$int9 = 1445;
+	case 2 :
+		$int10 = 18;
+		$int5 = 10;
+		$fontmetrics6 = verdana_13pt_bold;
+		$fontmetrics7 = verdana_13pt_bold;
+		$fontmetrics8 = verdana_13pt_regular;
+		$int9 = 1445;
+	case 3 :
+		$int10 = 20;
+		$int5 = 12;
+		$int4 = 8;
+		$fontmetrics6 = verdana_13pt_bold;
+		$fontmetrics7 = verdana_13pt_bold;
+		$fontmetrics8 = verdana_13pt_regular;
+		$int9 = 1445;
+}
+def_int $length11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_component $component15 = interface_821:17;
+def_component $component16 = interface_821:18;
+cc_deleteall($component15);
+def_int $width17 = if_getwidth($component15);
+def_string $string0 = "Current Effects";
+if ($obj2 ! null) {
+	$string0 = oc_name($obj2);
+}
+def_int $int18 = calc(paraheight($string0, $width17 - $int5 * 2, $fontmetrics7) * $int10);
+cc_create($component15, ^iftype_text, $int12);
+cc_setposition($int5, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($width17 - $int5 * 2), $int18, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, $int10);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics6);
+cc_setcolour(0xff981f);
+cc_settext($string0);
+$int12 = calc($int12 + 1);
+$int13 = calc($int13 + $int5 + $int18 + $int5);
+if ($obj2 ! null) {
+	cc_create($component15, ^iftype_graphic, $int12);
+	cc_setposition(calc($width17 / 2 - 36 / 2), $int13, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj2, -1);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x333333);
+	$int13 = calc($int13 + 32 + $int5);
+	$int12 = calc($int12 + 1);
+	$int12, $int13 = ~script7305(interface_821:17, $int12, "Production", oc_param($obj2, param_1788), $int5, $int10, $int13, $fontmetrics8);
+	$int12, $int13 = ~script7305(interface_821:17, $int12, "Gathering", oc_param($obj2, param_1789), $int5, $int10, $int13, $fontmetrics8);
+	$int12, $int13 = ~script7305(interface_821:17, $int12, "Duration", oc_param($obj2, param_1791), $int5, $int10, $int13, $fontmetrics8);
+	$int12, $int13 = ~script7305(interface_821:17, $int12, "Tertiary", oc_param($obj2, param_1790), $int5, $int10, $int13, $fontmetrics8);
+	$string0 = enum(int, string, enum_4993, oc_param($obj2, param_1792));
+	$int18 = calc(paraheight($string0, $width17 - $int5 * 2, $fontmetrics7) * $int10);
+	cc_create($component15, ^iftype_text, $int12);
+	cc_setposition($int5, $int13, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($width17 - $int5 * 2), $int18, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, $int10);
+	cc_settextshadow(true);
+	cc_settextfont($fontmetrics6);
+	cc_setcolour(0xff981f);
+	cc_settext($string0);
+	$int12 = calc($int12 + 1);
+	$int13 = calc($int13 + $int18 + $int5);
+} else {
+	$int12, $int13 = ~script7292(interface_821:17, $int12, "Duration <~script7313(%varcint1159)>", %varcint1159, calc(100 * 5), $int5, $int10, $int13, $fontmetrics8);
+	$int12, $int13 = ~script7293(interface_821:17, $int12, "Production <tostring(%varcint1157)>", %varcint1157, 6, calc(8 * 1), $int5, $int10, $int13, $fontmetrics8);
+	$int12, $int13 = ~script7293(interface_821:17, $int12, "Gathering <tostring(%varcint1158)>", %varcint1158, 6, calc(8 * 1), $int5, $int10, $int13, $fontmetrics8);
+	$int12, $int13 = ~script7293(interface_821:17, $int12, "Tertiary <tostring(%varcint1160)>", %varcint1160, 15, calc(4 * 1), $int5, $int10, $int13, $fontmetrics8);
+	$length11 = 0;
+	while ($length11 < $length1) {
+		$int14 = $intarray0($length11);
+		if ($int14 > 0) {
+			$string0 = enum(int, string, enum_4993, $length11);
+			$int12, $int13 = ~script7292(interface_821:17, $int12, $string0, $int14, 1000, $int5, $int10, $int13, $fontmetrics8);
+		}
+		$length11 = calc($length11 + 1);
+	}
+}
+if_setscrollpos(0, 0, $component15);
+if_setscrollsize(if_getwidth($component15), $int13, $component15);
+~scrollbar_vertical($component16, $component15, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical_rebuild($component16, $component15);
+if_setonresize("script7290($int0)", $component15);

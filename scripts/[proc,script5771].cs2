@@ -1,19 +1,24 @@
 // 5771
 [proc,script5771](component $component0, enum $enum1, int $int2, int $colour3)
 def_string $text0 = enum(int, string, $enum1, $int2);
+def_int $count4 = enum_getoutputcount($enum1);
 cc_deleteall($component0);
-def_int $int4 = 0;
-~create_graphic($component0, $int4, "tradebacking", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 0, 0, ^setsize_minus, ^setsize_minus);
-$int4 = calc($int4 + 1);
-$int4 = ~thinbox($component0, $int4);
-~create_graphic($component0, $int4, "scrollbar_v2,1", calc((if_getheight($component0) - 16) / 2), calc((if_getheight($component0) - 16) / 2), ^setpos_abs_right, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
-if (~on_mobile = false) {
-	if_setonmouseover("cc_settrans($component0, $int4, 125, null)", $component0);
-	if_setonmouseleave("cc_settrans($component0, $int4, 0, null)", $component0);
+def_int $int5 = 0;
+~create_graphic($component0, $int5, "tradebacking", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 0, 0, ^setsize_minus, ^setsize_minus);
+$int5 = calc($int5 + 1);
+$int5 = ~thinbox($component0, $int5);
+~create_graphic($component0, $int5, "scrollbar_v2,1", calc((if_getheight($component0) - 16) / 2), calc((if_getheight($component0) - 16) / 2), ^setpos_abs_right, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
+if ($count4 > 0) {
+	if (~on_mobile = false) {
+		if_setonmouseover("cc_settrans($component0, $int5, 125, null)", $component0);
+		if_setonmouseleave("cc_settrans($component0, $int5, 0, null)", $component0);
+	}
+	if_setop(1, "Expand", $component0);
+} else {
+	cc_settrans(125);
 }
-if_setop(1, "Expand", $component0);
-$int4 = calc($int4 + 1);
-cc_create($component0, ^iftype_text, $int4);
+$int5 = calc($int5 + 1);
+cc_create($component0, ^iftype_text, $int5);
 cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setsize(if_getheight($component0), 4, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p11_full);

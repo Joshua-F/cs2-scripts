@@ -1,0 +1,23 @@
+// 7305
+[proc,script7305](component $component0, int $int1, string $text0, int $int2, int $int3, int $int4, int $int5, fontmetrics $fontmetrics6)(int, int)
+def_int $width7 = if_getwidth($component0);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($width7 / 2 - $int3 - $int3 / 2), $int4, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_right, ^settextalign_centre, $int4);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics6);
+cc_setcolour(0xff981f);
+cc_settext($text0);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($int3, $int5, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(calc($width7 / 2 - $int3 - $int3 / 2), $int4, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_centre, $int4);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics6);
+cc_setcolour(0xefefef);
+cc_settext(tostring($int2));
+$int1 = calc($int1 + 1);
+$int5 = calc($int5 + $int4 + $int4 / 2);
+return($int1, $int5);

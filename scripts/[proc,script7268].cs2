@@ -1,0 +1,51 @@
+// 7268
+[proc,script7268](inv $inv0, intarray $intarray0)(int, int, int, int, int, int)
+def_int $size2 = 0;
+def_int $size3 = 0;
+def_int $size4 = inv_size($inv0);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_obj $obj11 = null;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+while ($size3 < $size4) {
+	$obj11 = inv_getobj($inv0, $size3);
+	if ($obj11 = null) {
+		$size2 = calc($size2 + 1);
+	} else if (oc_param($obj11, param_1787) ! 2) {
+		$int15 = 1;
+		$size3 = $size4;
+	}
+	$size3 = calc($size3 + 1);
+}
+if ($size2 = inv_size(inv_815)) {
+	return(0, 0, 0, 0, 0, 0);
+}
+$size3 = 0;
+while ($size3 < $size4) {
+	$obj11 = inv_getobj($inv0, $size3);
+	if ($obj11 ! null) {
+		$int12 = oc_param($obj11, param_1787);
+		if ($int12 ! 2 | $int15 = 1) {
+			$int13 = inv_getnum($inv0, $size3);
+			$int10 = calc($int10 + $int13);
+			$int5 = calc($int5 + oc_param($obj11, param_1788) * $int13);
+			$int6 = calc($int6 + oc_param($obj11, param_1789) * $int13);
+			$int7 = calc($int7 + oc_param($obj11, param_1790) * $int13);
+			$int8 = calc($int8 + oc_param($obj11, param_1791) * $int13);
+			$int14 = oc_param($obj11, param_1792);
+			if ($int14 > 0) {
+				$intarray0($int9) = $int14;
+				$int9 = calc($int9 + 1);
+			}
+		}
+	}
+	$size3 = calc($size3 + 1);
+}
+return($int5, $int6, $int7, $int8, $int9, $int10);
