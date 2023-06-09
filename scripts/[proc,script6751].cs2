@@ -14,7 +14,7 @@ if ($int2 = 2) {
 		cc_setop(1, "Deactivate");
 	}
 	cc_setopbase("<col=ff9040><struct_param($struct0, param_1160)></col>");
-	cc_setonop("script6754(event_opindex, $struct0, $boolean1, $int2, $int3, $comsubid4, $int5, $component6, $component7)");
+	cc_setonop("script6754(event_op, $struct0, $boolean1, $int2, $int3, $comsubid4, $int5, $component6, $component7)");
 } else {
 	cc_clearops;
 	cc_setonop(null);

@@ -78,7 +78,7 @@ while ($int10 <= 265) {
 				}
 				cc_setonmouseleave("cc_settrans(event_com, $int8, 225, null)");
 				cc_setondrag("clan_ranktitle_dragtitle(event_mousex, event_mousey, 0, event_com, event_comsubid, calc($int8 + 1), calc($int8 + 2), $int10, $component1, $component2, $component3)");
-				cc_setondragcomplete("clan_ranktitle_dragcomplete(event_com, event_comsubid, event_drop, event_dropsubid, $int10, $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
+				cc_setondragcomplete("clan_ranktitle_dragcomplete(event_com, event_comsubid, event_com2, event_comsubid2, $int10, $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
 			} else {
 				cc_setonmouserepeat(null);
 				cc_setonmouseleave(null);
@@ -127,9 +127,9 @@ while ($int10 < $int0) {
 					}
 					cc_setonmouseleave("cc_settrans(event_com, $int8, 225, null)");
 					cc_setop(10, "Wipe title");
-					cc_setonop("clan_ranktitle_wipe(event_opindex, $int10, $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
+					cc_setonop("clan_ranktitle_wipe(event_op, $int10, $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
 					cc_setondrag("clan_ranktitle_dragtitle(event_mousex, event_mousey, 0, event_com, event_comsubid, calc($int8 + 1), calc($int8 + 2), $intarray0($int11), $component1, $component2, $component3)");
-					cc_setondragcomplete("clan_ranktitle_dragcomplete(event_com, event_comsubid, event_drop, event_dropsubid, $intarray0($int11), $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
+					cc_setondragcomplete("clan_ranktitle_dragcomplete(event_com, event_comsubid, event_com2, event_comsubid2, $intarray0($int11), $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
 				} else {
 					cc_setonmouserepeat(null);
 					cc_setonmouseleave(null);
@@ -162,7 +162,7 @@ while ($int10 < $int0) {
 }
 if (%varbit12200 = 1) {
 	~clan_stonebutton_init("<col=0dc10d>Save</col>", $component6, "p12_full");
-	if_setonop("opsound(event_opindex, 2)", $component6);
+	if_setonop("opsound(event_op, 2)", $component6);
 } else {
 	~clan_stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", $component6);
 	if_setonmouserepeat(null, $component6);
@@ -171,4 +171,4 @@ if (%varbit12200 = 1) {
 	if_setonop(null, $component6);
 }
 ~clan_stonebutton_init("<col=ff0000>Back</col>", $component5, "p12_full");
-if_setonop("opsound(event_opindex, 2)", $component5);
+if_setonop("opsound(event_op, 2)", $component5);

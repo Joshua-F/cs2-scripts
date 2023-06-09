@@ -6,6 +6,6 @@ if (clientclock < $clock3) {
 if (cc_find($layer1, $comsubid2) = ^true & .cc_find(poh_jewellery_box:0, $comsubid0) = ^true) {
 	.cc_setontimer(null);
 	cc_settext($string0);
-	cc_setonop("poh_jewellery_box_op(event_opindex, $comsubid0, $layer1, $comsubid2, $string0, $string1, $string2)");
+	cc_setonop("poh_jewellery_box_op(event_op, $comsubid0, $layer1, $comsubid2, $string0, $string1, $string2)");
 	.cc_setonkey("poh_jewellery_box_keypress(event_keychar, $comsubid0, $layer1, $comsubid2, $string0, $string1, $string2)");
 }

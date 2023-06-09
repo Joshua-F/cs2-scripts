@@ -54,7 +54,7 @@ while ($namedobj18 ! null) {
 	cc_setop(1, "Info");
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($namedobj18)></col>");
-	cc_setonop("slayer_rewards_buy_op(event_opindex, event_com, event_comsubid, $component4, $component5, $component6, $component7, $component8)");
+	cc_setonop("slayer_rewards_buy_op(event_op, event_com, event_comsubid, $component4, $component5, $component6, $component7, $component8)");
 	$int17 = calc($int17 + 1);
 	$namedobj18 = enum(int, namedobj, enum_840, $int17);
 }

@@ -38,11 +38,11 @@ if ($int18 = 0) {
 	if ($comsubid4 ! -1 & .cc_find($component3, $comsubid4) = ^true) {
 		.cc_setonmouseover("cc_settrans($component0, cc_getid, 200, null)");
 		.cc_setonmouseleave("cc_settrans($component0, cc_getid, 255, $component17)");
-		.cc_setonop("logout_op(event_opindex, 6, $world5)");
+		.cc_setonop("logout_op(event_op, 6, $world5)");
 	} else {
 		if_setonmouseover("cc_settrans(event_com, cc_getid, 200, null)", $component3);
 		if_setonmouseleave("cc_settrans(event_com, cc_getid, 255, $component17)", $component3);
-		if_setonop("logout_op(event_opindex, 6, $world5)", $component3);
+		if_setonop("logout_op(event_op, 6, $world5)", $component3);
 	}
 } else {
 	if (map_world = $world5) {

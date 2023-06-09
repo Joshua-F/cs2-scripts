@@ -9,7 +9,7 @@ if (%varbit5398 = 1) {
 	if_setgraphic("magicoff,10", $component0);
 	if_setonmouserepeat("settrans(event_com, 120)", $component0);
 	if_setonmouseleave("settrans(event_com, 0)", $component0);
-	if_setonop("opsound(event_opindex, 2)", $component0);
+	if_setonop("opsound(event_op, 2)", $component0);
 	if_setgraphic("magicon,26", $component1);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);
@@ -23,7 +23,7 @@ if (%varbit5398 = 1) {
 	if_setgraphic("magicoff,26", $component1);
 	if_setonmouserepeat("settrans(event_com, 120)", $component1);
 	if_setonmouseleave("settrans(event_com, 0)", $component1);
-	if_setonop("opsound(event_opindex, 2)", $component1);
+	if_setonop("opsound(event_op, 2)", $component1);
 }
 if_settext("Charges: <tostring(calc(30 - %varbit4554))>", $component4);
 if (%varbit4554 < 30) {

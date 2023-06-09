@@ -114,9 +114,9 @@ while ($count9 < $count8) {
 }
 ~music_optionbuttons($component5, $component6, $component7);
 if_setonvartransmit("music_optionbuttons_resynch($component5, $component6, $component7){var18, var19}", $component0);
-if_setonop("music_optionbuttons_setmode(event_opindex, 1, $component5, $component6, $component7)", $component5);
-if_setonop("music_optionbuttons_setmode(event_opindex, 0, $component5, $component6, $component7)", $component6);
-if_setonop("music_optionbuttons_setloop(event_opindex, $component5, $component6, $component7)", $component7);
+if_setonop("music_optionbuttons_setmode(event_op, 1, $component5, $component6, $component7)", $component5);
+if_setonop("music_optionbuttons_setmode(event_op, 0, $component5, $component6, $component7)", $component6);
+if_setonop("music_optionbuttons_setloop(event_op, $component5, $component6, $component7)", $component7);
 cc_deleteall($component3);
 %varcint75 = ~max(0, ~min(calc($int11 - if_getheight($component2)), %varcint75));
 ~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

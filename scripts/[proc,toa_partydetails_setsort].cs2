@@ -72,7 +72,7 @@ switch_int (%varcint181) {
 					cc_setop(1, "Accept");
 					cc_setop(10, "Reject");
 					cc_setopbase("<col=ff9040><.cc_gettext></col>");
-					cc_setonop("script6746(event_opindex, $intarray0($int4), event_com, event_comsubid, .cc_gettext, $int7)");
+					cc_setonop("script6746(event_op, $intarray0($int4), event_com, event_comsubid, .cc_gettext, $int7)");
 				}
 			}
 			if (cc_find(interface_774:48, calc($intarray0($int4) * 20 + 2)) = ^true) {
@@ -123,7 +123,7 @@ switch_int (%varcint181) {
 					cc_setop(1, "Accept");
 					cc_setop(10, "Reject");
 					cc_setopbase("<col=ff9040><.cc_gettext></col>");
-					cc_setonop("script6746(event_opindex, $intarray0($int4), event_com, event_comsubid, .cc_gettext, $int7)");
+					cc_setonop("script6746(event_op, $intarray0($int4), event_com, event_comsubid, .cc_gettext, $int7)");
 				}
 			}
 			if (cc_find(interface_774:48, calc($intarray0($int4) * 20 + 2)) = ^true) {

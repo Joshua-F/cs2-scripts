@@ -23,7 +23,7 @@ cc_setfill(true);
 ~raids_partydetails_entry_init(%varcint178, %varcint178, -1, false);
 def_string $string5 = removetags($string1);
 cc_setopbase("<col=ff9040><$string5></col>");
-cc_setonop("raids_partydetails_entry_op(event_opindex, %varcint178, $string5, $string0)");
+cc_setonop("raids_partydetails_entry_op(event_op, %varcint178, $string5, $string0)");
 def_int $width2 = if_getwidth(interface_507:7);
 cc_create(interface_507:11, ^iftype_text, calc(%varcint178 * 8 + 1));
 cc_setsize($width2, 14, ^setsize_abs, ^setsize_abs);

@@ -49,13 +49,13 @@ while ($int14 < $int10) {
 	$int14 = calc($int14 + 1);
 }
 if_setop(1, "1", $component1);
-if_setonop("partydrop_quantity_op(event_opindex, 0, $int10, $component7, $component1, $component2, $component3, $component4, $component8)", $component1);
+if_setonop("partydrop_quantity_op(event_op, 0, $int10, $component7, $component1, $component2, $component3, $component4, $component8)", $component1);
 if_setop(1, "5", $component2);
-if_setonop("partydrop_quantity_op(event_opindex, 1, $int10, $component7, $component1, $component2, $component3, $component4, $component8)", $component2);
+if_setonop("partydrop_quantity_op(event_op, 1, $int10, $component7, $component1, $component2, $component3, $component4, $component8)", $component2);
 if_setop(1, "X", $component3);
-if_setonop("partydrop_quantity_op(event_opindex, 3, $int10, $component7, $component1, $component2, $component3, $component4, $component8)", $component3);
+if_setonop("partydrop_quantity_op(event_op, 3, $int10, $component7, $component1, $component2, $component3, $component4, $component8)", $component3);
 if_setop(1, "All", $component4);
-if_setonop("partydrop_quantity_op(event_opindex, 2, $int10, $component7, $component1, $component2, $component3, $component4, $component8)", $component4);
+if_setonop("partydrop_quantity_op(event_op, 2, $int10, $component7, $component1, $component2, $component3, $component4, $component8)", $component4);
 ~partydrop_main_offeritems($int10, $component7, $component1, $component2, $component3, $component4, $component8);
 if_setonvartransmit("partydrop_main_offeritems($int10, $component7, $component1, $component2, $component3, $component4, $component8){var675}", $component0);
 if_setoninvtransmit("partydrop_main_offeritems($int10, $component7, $component1, $component2, $component3, $component4, $component8){inv_92}", $component0);

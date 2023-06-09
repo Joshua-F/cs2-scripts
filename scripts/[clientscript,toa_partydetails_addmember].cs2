@@ -43,7 +43,7 @@ if ($int0 = 2 & string_length($string1) > 0) {
 	} else {
 		cc_setop(10, "Quit Party");
 	}
-	cc_setonop("toa_partydetails_kickmember(event_opindex, %varcint178, event_com, event_comsubid, $string1, $int5)");
+	cc_setonop("toa_partydetails_kickmember(event_op, %varcint178, event_com, event_comsubid, $string1, $int5)");
 }
 def_int $int7 = 0;
 $string0, $int7 = ~script6724(1, interface_774:21, $string0, $int2, $int7, $int4, $colour1);

@@ -16,5 +16,5 @@ if (%varbit13071 = $int0) {
 	if_setonmouseleave("side_channels_drawtab($component1, $graphic7, $graphic8)", $component1);
 	$graphic7, $graphic8 = "tabs_short,4", "tabs_short,5";
 	if_setonmouserepeat("side_channels_drawtab($component1, $graphic7, $graphic8)", $component1);
-	if_setonop("side_channels_optab(event_opindex, $int0, $component2, $component3, $component4, $component5, $component6)", $component1);
+	if_setonop("side_channels_optab(event_op, $int0, $component2, $component3, $component4, $component5, $component6)", $component1);
 }

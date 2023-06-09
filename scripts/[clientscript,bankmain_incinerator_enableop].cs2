@@ -14,5 +14,5 @@ if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3)
 	} else {
 		cc_setop(1, "Destroy");
 	}
-	cc_setonop("bankmain_incinerator_close(event_opindex, $component1)");
+	cc_setonop("bankmain_incinerator_close(event_op, $component1)");
 }

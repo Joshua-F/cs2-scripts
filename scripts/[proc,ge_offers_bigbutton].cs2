@@ -25,5 +25,5 @@ if ($int1 = 1) {
 	cc_setcolour(0xff981f);
 	if_setonmouserepeat("cc_colour_swapper(event_com, $comsubid2, ^white)", $component0);
 	if_setonmouseleave("cc_colour_swapper(event_com, $comsubid2, 0xff981f)", $component0);
-	if_setonop("ge_offers_bigbutton_op(event_opindex, $component0, $string0)", $component0);
+	if_setonop("ge_offers_bigbutton_op(event_op, $component0, $string0)", $component0);
 }

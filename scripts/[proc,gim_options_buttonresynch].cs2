@@ -97,7 +97,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 		}
 		.cc_setonmouseleave("gim_options_buttonhover(false, event_com, event_comsubid, $int1, 245, 225)");
 		.cc_setontimer(null);
-		.cc_setonop("gim_options_buttonop(event_opindex, event_com, event_comsubid, $int1, 200, 245, 225)");
+		.cc_setonop("gim_options_buttonop(event_op, event_com, event_comsubid, $int1, 200, 245, 225)");
 		return;
 	}
 }

@@ -12,7 +12,7 @@ if ($obj1 ! null) {
 	cc_setop(6, "Pack-X");
 	cc_setop(7, "Examine");
 	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
-	cc_setondragcomplete("script2856(event_com, event_comsubid, event_dropsubid)");
+	cc_setondragcomplete("script2856(event_com, event_comsubid, event_comsubid2)");
 } else {
 	cc_settrans(255);
 	cc_setobject(obj_6512, 1);

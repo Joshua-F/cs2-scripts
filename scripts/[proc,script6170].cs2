@@ -14,7 +14,7 @@ def_boolean $boolean2 = ~on_mobile;
 if ($index0 = 13 & map_members = ^false) {
 	$string0 = "<col=999999><$string0></col>";
 } else {
-	if_setonop("script6172(event_opindex, $index0, $string0, event_com, cc_getid, $string1, interface_755:99, $boolean2)", $component1);
+	if_setonop("script6172(event_op, $index0, $string0, event_com, cc_getid, $string1, interface_755:99, $boolean2)", $component1);
 }
 cc_create($component1, ^iftype_graphic, 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);

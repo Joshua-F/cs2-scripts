@@ -131,7 +131,7 @@ while ($int21 < $int1) {
 				}
 			}
 			.cc_setopbase("<col=ff9040><$string0></col>");
-			.cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot24, $int9)");
+			.cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $boolean0, $clanslot24, $int9)");
 		}
 	} else if ($clanslot5 ! $clanslot24) {
 		if (friend_test($username1) = true) {
@@ -166,8 +166,8 @@ while ($int21 < $int1) {
 		}
 		.cc_setopbase("<col=ff9040><$string0></col>");
 		cc_setopbase("<col=ff9040><$string0></col>");
-		.cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot24, $int9)");
-		cc_setonop("clan_sidepanel_op(event_opbase, event_opindex, $int16, $boolean0, $clanslot24, $int9)");
+		.cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $boolean0, $clanslot24, $int9)");
+		cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $boolean0, $clanslot24, $int9)");
 	}
 	$int21 = calc($int21 + 1);
 }

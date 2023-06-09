@@ -44,7 +44,7 @@ while ($int13 < $int10) {
 	cc_setop(1, "Select");
 	cc_setonmouserepeat("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff891f)");
 	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff891f)");
-	cc_setonop("clanwars_setup_smallbox_close(event_opindex, $int13, $enum0, $component2, $comsubid3, $component4, $component6)");
+	cc_setonop("clanwars_setup_smallbox_close(event_op, $int13, $enum0, $component2, $comsubid3, $component4, $component6)");
 	cc_settext(enum(int, string, $enum0, $int13));
 	$int13, $int12 = calc($int13 + 1), calc($int12 + 1);
 }

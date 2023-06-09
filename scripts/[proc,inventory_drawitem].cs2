@@ -16,8 +16,8 @@ if ($obj0 ! null) {
 		~inventory_setophelds($obj0, $boolean5);
 		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
 		cc_setondrag("inventory_startdrag(event_com, $int3)");
-		cc_setondragcomplete("inventory_reorder(event_com, event_drop, event_comsubid, event_dropsubid, $int3, $boolean4)");
-		cc_setonop("inventory_op(event_com, $obj0, event_comsubid, event_opindex)");
+		cc_setondragcomplete("inventory_reorder(event_com, event_com2, event_comsubid, event_comsubid2, $int3, $boolean4)");
+		cc_setonop("inventory_op(event_com, $obj0, event_comsubid, event_op)");
 		cc_setonmouserepeat("inventory_antidrag_update(event_com, event_comsubid)");
 	} else {
 		cc_settrans(100);
@@ -25,7 +25,7 @@ if ($obj0 ! null) {
 			cc_setop(1, "Examine");
 			cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
 			cc_setondrag("inventory_startdrag(event_com, $int3)");
-			cc_setondragcomplete("inventory_reorder(event_com, event_drop, event_comsubid, event_dropsubid, $int3, $boolean4)");
+			cc_setondragcomplete("inventory_reorder(event_com, event_com2, event_comsubid, event_comsubid2, $int3, $boolean4)");
 			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 100)");
 			cc_setonmouserepeat("inventory_antidrag_update(event_com, event_comsubid)");
 		} else {

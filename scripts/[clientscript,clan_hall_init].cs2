@@ -4,12 +4,12 @@ def_int $comsubid9 = ~steelborder($component0, "Clan hall settings", 0);
 cc_deleteall($component1);
 if (%varbit12200 = 1) {
 	~clan_stonebutton_init("<col=0dc10d>Save</col>", $component7, "p12_full");
-	if_setonop("opsound(event_opindex, 2)", $component7);
+	if_setonop("opsound(event_op, 2)", $component7);
 } else {
 	~clan_stonebutton_init("<col=808080>Save</col>", $component7, "p12_full");
 }
 ~clan_stonebutton_init("<col=ff0000>Back</col>", $component8, "p12_full");
-if_setonop("opsound(event_opindex, 2)", $component8);
+if_setonop("opsound(event_op, 2)", $component8);
 def_int $int10 = 0;
 def_int $count11 = 0;
 def_int $height12 = 0;

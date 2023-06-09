@@ -17,5 +17,5 @@ if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic4, null)");
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic5, null)");
 }
-if_setonop("script7086(event_opindex, $component0, $component2, $comsubid1, $component3)", $component0);
+if_setonop("script7086(event_op, $component0, $component2, $comsubid1, $component3)", $component0);
 if_setop(1, "Show Menu", $component0);

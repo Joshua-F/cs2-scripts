@@ -140,7 +140,7 @@ if (if_find_entityoverlay($entityoverlay7) = ^true) {
 	} else {
 		cc_setontimer("ground_items_polling($entityoverlay7, $coord0, -1, -1)");
 	}
-	cc_setonkeydown("ground_items_key(event_key, $coord0)");
-	cc_setonkeyup("ground_items_key(event_key, $coord0)");
+	cc_setonkeydown("ground_items_key(event_keycode, $coord0)");
+	cc_setonkeyup("ground_items_key(event_keycode, $coord0)");
 	cc_setonvartransmit("ground_items_transmit($coord0){var3539, var3795, var3800, var3801, var3802, var3803, var3804, var3805, var3806, var3807, var3808, var3809, var3810}");
 }

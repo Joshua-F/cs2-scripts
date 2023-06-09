@@ -144,7 +144,7 @@ if (%var1151 ! null) {
 			~v2_stone_button_out_filled($component14);
 			if_setonmouserepeat("v2_stone_button_in_filled(event_com)", $component14);
 			if_setonmouseleave("v2_stone_button_out_filled(event_com)", $component14);
-			if_setonop("opsound(event_opindex, 2)", $component14);
+			if_setonop("opsound(event_op, 2)", $component14);
 			if (cc_find($component1, $comsubid15) = ^true) {
 				cc_settext("<col=ffffff>Confirm</col>");
 			}

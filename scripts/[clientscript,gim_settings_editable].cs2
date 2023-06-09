@@ -63,7 +63,7 @@ if ($int2 ! -1) {
 	%varcint49 = calc(%varcint49 + $int8 - 3);
 	if ($int2 = 1) {
 		~script4215(interface_730:3, "Back to Recruitment Board");
-		if_setonop("opsound(event_opindex, 2)", interface_730:3);
+		if_setonop("opsound(event_op, 2)", interface_730:3);
 		if_setopkey(1, ^key_escape, 0, interface_730:3);
 	} else {
 		~script4215(interface_730:3, "Close");

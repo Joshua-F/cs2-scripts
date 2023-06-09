@@ -28,5 +28,5 @@ if ($int6 < 9) {
 	.cc_setonkey("poh_jewellery_box_keypress(event_keychar, event_comsubid, $component0, $int4, $string0, $string1, $string2)");
 }
 cc_settext($string0);
-cc_setonop("poh_jewellery_box_op(event_opindex, $int6, $component0, $int4, $string0, $string1, $string2)");
+cc_setonop("poh_jewellery_box_op(event_op, $int6, $component0, $int4, $string0, $string1, $string2)");
 return(calc($int4 + 1), calc($int5 + $int2));

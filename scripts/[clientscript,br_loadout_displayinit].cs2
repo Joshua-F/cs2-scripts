@@ -126,12 +126,12 @@ while ($int14 < $int15) {
 			.cc_setcolour(^white);
 			.cc_settrans(255);
 			cc_setonmouseleave("script1015(event_com, .cc_getid, ^white, 255)");
-			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comsubid, .cc_getid, ^white, 225, ^white, 255, $int1, $enum2, $enum3, $component0, $component4, $component7, $component11)");
+			cc_setonop("br_loadout_menuop(event_op, event_com, event_comsubid, .cc_getid, ^white, 225, ^white, 255, $int1, $enum2, $enum3, $component0, $component4, $component7, $component11)");
 		} else {
 			.cc_setcolour(^black);
 			.cc_settrans(225);
 			cc_setonmouseleave("script1015(event_com, .cc_getid, ^black, 225)");
-			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comsubid, .cc_getid, ^white, 225, ^black, 225, $int1, $enum2, $enum3, $component0, $component4, $component7, $component11)");
+			cc_setonop("br_loadout_menuop(event_op, event_com, event_comsubid, .cc_getid, ^white, 225, ^black, 225, $int1, $enum2, $enum3, $component0, $component4, $component7, $component11)");
 		}
 		.cc_create($component5, ^iftype_graphic, $count12);
 		$count12 = calc($count12 + 1);
@@ -167,7 +167,7 @@ while ($int14 < $int15) {
 		}
 		.cc_settext($string0);
 		cc_setondrag("br_loadout_menudragging(event_com, event_comsubid, $namedobj20, $string0, $component0, $comsubid16, $comsubid17, $int19, event_mousex, event_mousey)");
-		cc_setondragcomplete("br_loadout_insert(event_com, event_comsubid, event_drop, event_dropsubid, $countarray0($int14), $int1, $enum2, $enum3, $component0, $comsubid16, $comsubid17, $component4, $component7, $component11)");
+		cc_setondragcomplete("br_loadout_insert(event_com, event_comsubid, event_com2, event_comsubid2, $countarray0($int14), $int1, $enum2, $enum3, $component0, $comsubid16, $comsubid17, $component4, $component7, $component11)");
 		$height18 = calc($height18 + 34);
 	}
 	$int14 = calc($int14 + 1);

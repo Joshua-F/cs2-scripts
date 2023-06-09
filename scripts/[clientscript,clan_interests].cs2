@@ -61,7 +61,7 @@ while ($int12 <= 15) {
 		cc_setop(1, "Change");
 		$text3 = enum(int, string, enum_3792, $int12);
 		cc_setopbase("<col=ff9040><$text3></col>");
-		cc_setonop("clan_interests_op(event_opindex, event_com, event_comsubid, $int12, $int2, calc($int2 + 1))");
+		cc_setonop("clan_interests_op(event_op, event_com, event_comsubid, $int12, $int2, calc($int2 + 1))");
 		cc_setonvartransmit("clan_interests_synch(event_com, $int12, $int2, calc($int2 + 1)){var3023}");
 		cc_create(interface_691:7, ^iftype_graphic, $int2);
 		$int2 = calc($int2 + 1);

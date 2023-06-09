@@ -32,7 +32,7 @@ while ($count8 < $count6) {
 		cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff981f)");
 		cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
 	}
-	cc_setonop("script6306(event_opindex, event_comsubid, $int0, $component1, $component2, $component3)");
+	cc_setonop("script6306(event_op, event_comsubid, $int0, $component1, $component2, $component3)");
 	cc_setposition(0, calc($count8 * $int5 + 2), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settext(enum(int, string, enum_4208, $int7));
 	$count8 = calc($count8 + 1);

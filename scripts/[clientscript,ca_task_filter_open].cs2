@@ -47,7 +47,7 @@ while ($int17 < $int12) {
 		cc_setonmouserepeat("ca_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int6)");
 		cc_setonmouseleave("ca_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int6)");
 	}
-	cc_setonop("ca_task_filter_close(event_opindex, $int17, $enum0, $component2, $comsubid3, $component4, $int6)");
+	cc_setonop("ca_task_filter_close(event_op, $int17, $enum0, $component2, $comsubid3, $component4, $int6)");
 	cc_settext(~script4783(enum(int, string, $enum0, $int17), calc(if_getwidth($component1) - 8), p11_full));
 	$int17, $int16 = calc($int17 + 1), calc($int16 + 1);
 }

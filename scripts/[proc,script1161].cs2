@@ -11,7 +11,7 @@ if ($obj0 ! null) {
 	cc_setop(5, "Deposit-All");
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-	cc_setondragcomplete("script1162(event_com, event_comsubid, event_dropsubid)");
+	cc_setondragcomplete("script1162(event_com, event_comsubid, event_comsubid2)");
 } else {
 	cc_settrans(255);
 	cc_setobject(obj_6512, 1);

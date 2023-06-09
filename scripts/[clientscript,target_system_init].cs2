@@ -21,7 +21,7 @@ cc_setvflip(false);
 cc_sethflip(true);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if_setop(1, "Expand", $component1);
-if_setonop("target_system_hideop(event_opindex, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10)", $component1);
+if_setonop("target_system_hideop(event_op, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10)", $component1);
 cc_deleteall($component10);
 $comsubid13 = 0;
 if_setonmouseover("cc_graphic_swapper(event_com, $comsubid13, $graphic12, null)", $component10);
@@ -33,7 +33,7 @@ cc_setvflip(false);
 cc_sethflip(false);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 if_setop(1, "Minimise", $component10);
-if_setonop("target_system_hideop(event_opindex, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10)", $component10);
+if_setonop("target_system_hideop(event_op, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10)", $component10);
 if (~on_mobile = true) {
 	if_setop(2, "", $component10);
 	if_setop(3, "", $component10);

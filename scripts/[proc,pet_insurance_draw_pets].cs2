@@ -37,7 +37,7 @@ while ($int16 <= 51) {
 			cc_setonop("script6139(cc_getid, cc_gettrans, 1)");
 		} else {
 			cc_setop(1, "Location");
-			cc_setonop("script6143(event_opindex, oc_name($namedobj19), $int25, cc_getid, cc_gettrans)");
+			cc_setonop("script6143(event_op, oc_name($namedobj19), $int25, cc_getid, cc_gettrans)");
 		}
 		cc_setop(10, "Examine");
 		cc_create($component1, ^iftype_graphic, $int2);

@@ -1,6 +1,6 @@
 // 5512
 [proc,script5512](component $component0, int $int1, int $int2, int $int3)
-if_setonop("gim_settings_editable_op(event_opindex, event_com, $int1, $int2, $int3)", $component0);
+if_setonop("gim_settings_editable_op(event_op, event_com, $int1, $int2, $int3)", $component0);
 if (~on_mobile = false) {
 	if_setonmouserepeat("gim_settings_editable_hover(true, event_com, $int1, $int2, $int3)", $component0);
 }

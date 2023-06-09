@@ -12,7 +12,7 @@ if ($num4 > 0 & $obj3 ! null) {
 	cc_setdraggable($component5, -1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
-	cc_setondragcomplete("bolt_pouch_drag_complete($component5, event_com, event_drop)");
+	cc_setondragcomplete("bolt_pouch_drag_complete($component5, event_com, event_com2)");
 	if (~on_mobile = false) {
 		if_setonmouserepeat("cc_settrans($component1, 0, 150, null)", $component1);
 		if_setonmouseleave("cc_settrans($component1, 0, 0, null)", $component1);

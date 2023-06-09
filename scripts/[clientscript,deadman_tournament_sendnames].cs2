@@ -30,7 +30,7 @@ while ($int2 < 11) {
 		cc_setopbase("<col=ff9040><$string1></col>");
 		$string2, $string0 = ~script632($string0);
 		.cc_create(interface_130:3, ^iftype_text, $int3);
-		cc_setonop("deadman_tournament_op(event_opindex, $string1, event_com, $int3)");
+		cc_setonop("deadman_tournament_op(event_op, $string1, event_com, $int3)");
 		$int3 = calc($int3 + 1);
 		.cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
 		.cc_setposition(0, calc($int2 * 15), ^setpos_abs_centre, ^setpos_abs_top);

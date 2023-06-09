@@ -51,7 +51,7 @@ while ($int16 < 500) {
 					cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, cc_gettrans)");
 				}
 				cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, cc_gettrans)");
-				cc_setonop("clan_banned_op(event_opindex, event_com, event_comsubid, cc_gettrans, $string0, $component3, $int4, $int5)");
+				cc_setonop("clan_banned_op(event_op, event_com, event_comsubid, cc_gettrans, $string0, $component3, $int4, $int5)");
 				cc_setontimer(null);
 				$int8 = calc($int8 + 1);
 			} else {

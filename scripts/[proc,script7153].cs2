@@ -20,7 +20,7 @@ if (~on_mobile = false) {
 	$graphic9 = "menu_buttons,2";
 	if_setonmouseleave("cc_graphic_swapper(event_com, 0, $graphic9, null)", $component3);
 }
-if_setonop("omnishop_main_help($dbrow0, $inv1, event_opindex)", $component3);
+if_setonop("omnishop_main_help($dbrow0, $inv1, event_op)", $component3);
 def_enum $enum10 = db_getfield($dbrow0, dbtable_39:3, 0);
 if ($enum10 ! null) {
 	~script5771($component4, $enum10, %var3872, 0xff981f);

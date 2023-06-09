@@ -12,5 +12,5 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("Refresh");
 if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component0);
 if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff891f)", $component0);
-if_setonop("script3450(event_opindex, event_com)", $component0);
+if_setonop("script3450(event_op, event_com)", $component0);
 if_setontimer(null, $component0);

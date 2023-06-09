@@ -51,12 +51,12 @@ if ($int10 = 1) {
 	if ($boolean0 = true) {
 		$text2 = "<col=ffb83f>Sign up</col> to be invited to fights.";
 		~clan_stonebutton_init("<col=0dc10d>Sign up</col>", $component6, "p12_full");
-		if_setonop("opsound(event_opindex, 2)", $component6);
+		if_setonop("opsound(event_op, 2)", $component6);
 		~clan_stonebutton_init("<col=ff0000>Discard</col>", $component7, "p12_full");
 	} else {
 		$text2 = "Waiting for players to match...";
 		~clan_stonebutton_init("Options", $component6, "p12_full");
-		if_setonop("opsound(event_opindex, 2)", $component6);
+		if_setonop("opsound(event_op, 2)", $component6);
 		~clan_stonebutton_init("<col=ff0000>Leave</col>", $component7, "p12_full");
 	}
 } else if ($int11 = 1 & $boolean0 = false) {
@@ -64,12 +64,12 @@ if ($int10 = 1) {
 	if_settext($text1, $component2);
 	$text2 = ~text_device("<$string3> - Click <col=ffb83f>Start</col> when ready.", "<$string3> - Tap <col=ffb83f>Start</col> when ready.");
 	~clan_stonebutton_init("<col=0dc10d>Start</col>", $component6, "p12_full");
-	if_setonop("opsound(event_opindex, 2)", $component6);
+	if_setonop("opsound(event_op, 2)", $component6);
 	~clan_stonebutton_init("<col=ff981f>Options</col>", $component7, "p12_full");
 } else if ($boolean0 = true) {
 	$text2 = "<col=ffb83f>Sign up</col> to be invited to the fight.";
 	~clan_stonebutton_init("<col=0dc10d>Sign up</col>", $component6, "p12_full");
-	if_setonop("opsound(event_opindex, 2)", $component6);
+	if_setonop("opsound(event_op, 2)", $component6);
 	~clan_stonebutton_init("<col=ff0000>Discard</col>", $component7, "p12_full");
 } else {
 	$text2 = "<$string3> - Waiting for group leader.";
@@ -81,7 +81,7 @@ if ($int10 = 1) {
 	if_setontimer(null, $component6);
 	~clan_stonebutton_init("<col=ff0000>Leave</col>", $component7, "p12_full");
 }
-if_setonop("opsound(event_opindex, 2)", $component7);
+if_setonop("opsound(event_op, 2)", $component7);
 if_sethide(false, $component4);
 def_int $int12 = 0;
 def_string $text4 = "";
@@ -105,13 +105,13 @@ if ($boolean0 = true) {
 		$text2 = "A fight has been found for you!";
 		if_sethide(false, $component8);
 		~clan_stonebutton_init("<col=0dc10d>Join fight</col>", $component8, "p12_full");
-		if_setonop("opsound(event_opindex, 2)", $component8);
+		if_setonop("opsound(event_op, 2)", $component8);
 	} else {
 		$text4 = "Waiting for you<br>on world <tostring(%varbit14013)>...";
 		$text2 = "A fight has been found for you!";
 		if_sethide(false, $component8);
 		~clan_stonebutton_init("<col=0dc10d>Switch world</col>", $component8, "p12_full");
-		if_setonop("opsound(event_opindex, 2)", $component8);
+		if_setonop("opsound(event_op, 2)", $component8);
 	}
 } else if (activeclanchannel_find_affined(^clantype_pvpa_group) = true) {
 	cc_deleteall($component8);

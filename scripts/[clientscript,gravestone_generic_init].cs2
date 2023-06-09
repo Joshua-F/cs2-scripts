@@ -9,7 +9,7 @@ if (~on_mobile = true) {
 	$int19 = calc(165 - (23 + 30));
 }
 ~script4215($component2, "Close");
-if_setonop("opsound(event_opindex, 2)", $component2);
+if_setonop("opsound(event_op, 2)", $component2);
 if_setopkey(1, ^key_escape, 0, $component2);
 if_setop(1, "Take-All", $component8);
 ~gravestone_generic_resetbutton($component8, $component9);

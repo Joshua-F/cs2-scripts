@@ -224,7 +224,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 		switch_int ($chattype11) {
 			case ^chattype_modchat, ^chattype_publicchat, ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat, ^chattype_friendschat, ^chattype_autotyper, ^chattype_modautotyper, ^chattype_playerrelated, ^chattype_clanchat, ^chattype_clanguestchat :
 				if_setopbase("<col=ffffff><$string18></col>", $component9);
-				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
+				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
 				if ($chattype11 ! ^chattype_clanchat & ~script2759($string18) = 1) {
@@ -254,7 +254,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 				}
 			case ^chattype_tradereq :
 				if_setopbase("<col=ffffff><$string18></col>", $component9);
-				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
+				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
 				if (~pvpa_world = 1) {
@@ -270,7 +270,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 				}
 			case ^chattype_chalreq_trade, ^chattype_chalreq_friendschat, ^chattype_chalreq_clanchat :
 				if_setopbase("<col=ffffff><$string18></col>", $component9);
-				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
+				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
 				if_setop(2, "Accept challenge", $component9);
@@ -292,11 +292,11 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 				}
 				if_setop(9, "Clear history", $component9);
 				if_setopbase("<col=ff9040>Notification</col>", $component9);
-				if_setonop("chat_broadcast_op(event_opindex, 9, $string21, $int13)", $component9);
+				if_setonop("chat_broadcast_op(event_op, 9, $string21, $int13)", $component9);
 			case ^chattype_clancreationinvitation :
 				if_setopbase("<col=0xffffff><$string18></col>", $component9);
 				if_setop(2, "Form clan", $component9);
-				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
+				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
 				if ($int15 = 1) {
@@ -308,7 +308,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 			case 111 :
 				if_setopbase("<col=0xffffff><$string18></col>", $component9);
 				if_setop(2, "Form group", $component9);
-				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
+				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
 				if ($int15 = 1) {
@@ -320,7 +320,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 			case 112 :
 				if_setopbase("<col=0xffffff><$string18></col>", $component9);
 				if_setop(2, "Group with", $component9);
-				if_setonop("chat_op(event_opindex, event_opbase, $chattype11)", $component9);
+				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
 				if ($int15 = 1) {

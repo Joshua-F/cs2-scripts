@@ -53,7 +53,7 @@ while ($count14 <= $count9) {
 		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int5)");
 		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int5)");
 	}
-	cc_setonop("script1108(event_opindex, $count14, $component1, $int2, $component3, $int5)");
+	cc_setonop("script1108(event_op, $count14, $component1, $int2, $component3, $int5)");
 	cc_settext(struct_param(enum(int, struct, enum_2670, $count14), param_858));
 	$count14, $int13 = calc($count14 + 1), calc($int13 + 1);
 }

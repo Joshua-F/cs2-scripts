@@ -12,7 +12,7 @@ if ($namedobj0 ! null & $num1 > 0) {
 	cc_setop(4, "Withdraw-X");
 	cc_setop(10, "Examine");
 	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
-	cc_setondragcomplete("rune_pouch_pouchreorder(event_com, event_drop, event_comsubid, event_dropsubid)");
+	cc_setondragcomplete("rune_pouch_pouchreorder(event_com, event_com2, event_comsubid, event_comsubid2)");
 } else {
 	cc_settrans(0);
 	cc_setobject(obj_6512, 1);

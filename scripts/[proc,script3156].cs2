@@ -52,7 +52,7 @@ if ($component0 = $component2) {
 		cc_setcolour(^white);
 		~script3652(0);
 		cc_setop(1, "Change");
-		cc_setonop("prayer_filtertoggle_op(event_opindex, event_com, event_comsubid)");
+		cc_setonop("prayer_filtertoggle_op(event_op, event_com, event_comsubid)");
 		$int10 = calc($int10 + 1);
 	}
 	$int10, $int13 = ~script3158(0, "Show lower tiers of tiered prayers", $component7, $int10, $int13);

@@ -78,7 +78,7 @@ if (%varbit8119 = 1) {
 	if_setopbase("<col=ff9040>Display name</col>", interface_162:55);
 	if_setonmouserepeat("text_colour_swapper(event_com, $colour1)", interface_162:55);
 	if_setonmouseleave("text_colour_swapper(event_com, $colour0)", interface_162:55);
-	if_setonop("opsound(event_opindex, 1024)", interface_162:55);
+	if_setonop("opsound(event_op, 1024)", interface_162:55);
 }
 if_settext($string2, interface_162:55);
 if_setsize(3, 16, ^setsize_minus, ^setsize_abs, interface_162:55);

@@ -9,7 +9,7 @@ def_obj $obj7 = %var2674;
 if (($enum1 = null | enum(obj, boolean, $enum1, %var2674) = true) & ($boolean0 = false | ~deadman_restricted_item($obj7) = 0)) {
 	cc_create(interface_162:50, ^iftype_rectangle, $int6);
 	$int6 = calc($int6 + 1);
-	cc_setonkey("meslayer_mode14_select($obj7, event_key)");
+	cc_setonkey("meslayer_mode14_select($obj7, event_keycode)");
 	cc_setsize($int4, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);

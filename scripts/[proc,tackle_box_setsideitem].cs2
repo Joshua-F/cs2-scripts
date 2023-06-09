@@ -38,5 +38,5 @@ switch_int (%varbit11896) {
 }
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-cc_setonop("tackle_box_opitem(event_opindex, event_com, event_comsubid, $trans4, $trans3)");
-cc_setondragcomplete("tackle_box_swapsideitem(event_com, event_comsubid, event_drop, event_dropsubid, $comsubid2)");
+cc_setonop("tackle_box_opitem(event_op, event_com, event_comsubid, $trans4, $trans3)");
+cc_setondragcomplete("tackle_box_swapsideitem(event_com, event_comsubid, event_com2, event_comsubid2, $comsubid2)");

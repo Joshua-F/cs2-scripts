@@ -35,7 +35,7 @@ while ($size6 < $size1) {
 				cc_setop(5, "Donate-X");
 				cc_setop(10, "Examine");
 				cc_settrans(0);
-				cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comsubid)");
+				cc_setonop("raids_storage_items_op(event_op, event_com, event_comsubid)");
 			} else {
 				cc_setop(10, "Donate");
 				cc_settrans(150);

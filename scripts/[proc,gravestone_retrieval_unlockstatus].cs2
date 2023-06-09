@@ -36,12 +36,12 @@ if ($namedobj6 ! null & $int7 > 0) {
 	}
 	if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $component3, $component4, $component5)", $component2);
 	if_setonmouseleave("gravestone_retrieval_buttonhover(false, $component3, $component4, $component5)", $component2);
-	if_setonop("gravestone_retrieval_buttonop(event_opindex, $component2, $component3, $component4, $component5)", $component2);
+	if_setonop("gravestone_retrieval_buttonop(event_op, $component2, $component3, $component4, $component5)", $component2);
 } else {
 	if_setgraphic("bankbuttons,4", $component3);
 	if_setop(1, "Take-All", $component2);
 	if_settext("", $component5);
 	if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $component3, null, null)", $component2);
 	if_setonmouseleave("gravestone_retrieval_buttonhover(false, $component3, null, null)", $component2);
-	if_setonop("gravestone_retrieval_buttonop(event_opindex, $component2, $component3, null, null)", $component2);
+	if_setonop("gravestone_retrieval_buttonop(event_op, $component2, $component3, null, null)", $component2);
 }

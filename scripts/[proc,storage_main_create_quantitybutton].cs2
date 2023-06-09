@@ -15,7 +15,7 @@ if (~get_selected_quantity($enum0) = $int7) {
 	if_setonmouseleave("storage_main_create_quantitybutton($enum0, $component1, $component2, $component3, $component4, $component5, $string0, false, $int7)", $component5);
 	if_setopbase("<col=ff9040><$string0></col>", $component5);
 	if_setop(1, "Default Quantity:", $component5);
-	if_setonop("script2005($enum0, $component1, $component2, $component3, $component4, event_opindex, $int7)", $component5);
+	if_setonop("script2005($enum0, $component1, $component2, $component3, $component4, event_op, $int7)", $component5);
 }
 cc_create($component5, ^iftype_text, $int8);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

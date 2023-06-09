@@ -15,4 +15,4 @@ cc_setgraphic("bankbuttons,2");
 cc_settrans(0);
 if_setonmouserepeat("cc_settrans(event_com, $comsubid2, 60, null)", $component1);
 if_setonmouseleave("cc_settrans(event_com, $comsubid2, 0, null)", $component1);
-if_setonop("script6317(event_opindex, event_com, $comsubid2, 150, 60, 0)", $component1);
+if_setonop("script6317(event_op, event_com, $comsubid2, 150, 60, 0)", $component1);

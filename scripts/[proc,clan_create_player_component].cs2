@@ -16,7 +16,7 @@ if (compare($string1, removetags($string0)) = 0) {
 	return;
 }
 cc_setopbase($string0);
-cc_setonop("script4451(event_opindex, event_opbase)");
+cc_setonop("script4451(event_op, event_opbase)");
 if (%varbit12171 = 1 | %varbit13058 = 1) {
 	cc_setop(1, "Kick");
 }

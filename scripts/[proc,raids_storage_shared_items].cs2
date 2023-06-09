@@ -24,7 +24,7 @@ while ($obj7 ! null) {
 		cc_setop(5, "Withdraw-X");
 		cc_setop(10, "Examine");
 		cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
-		cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comsubid)");
+		cc_setonop("raids_storage_items_op(event_op, event_com, event_comsubid)");
 		$int3 = calc($int3 + 1);
 	} else {
 		cc_sethide(true);

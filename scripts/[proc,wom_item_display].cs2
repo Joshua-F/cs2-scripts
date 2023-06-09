@@ -40,8 +40,8 @@ while ($enum14 ! null) {
 			cc_setopbase("<col=ff9040><oc_name($namedobj11)></col>");
 			cc_setdragdeadzone(5);
 			cc_setdragdeadtime(5);
-			cc_setonop("wom_item_hide(event_comsubid, $component0, event_opindex, $component1)");
-			cc_setondragcomplete("wom_item_move(event_comsubid, event_com, event_drop)");
+			cc_setonop("wom_item_hide(event_comsubid, $component0, event_op, $component1)");
+			cc_setondragcomplete("wom_item_move(event_comsubid, event_com, event_com2)");
 			$int5 = calc($int5 + 3 * $int12);
 			if ($int5 >= calc(if_getwidth($component0) - $int12)) {
 				$int6 = calc($int6 + 3 * $int13);

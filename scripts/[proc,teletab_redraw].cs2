@@ -44,7 +44,7 @@ if ($obj22 = null) {
 	~teletab_confirm_draw(false, $string0, $component13);
 	if_setonmouserepeat("teletab_confirm_draw(true, $string0, $component13)", $component13);
 	if_setonmouseleave("teletab_confirm_draw(false, $string0, $component13)", $component13);
-	if_setonop("teletab_confirm_op(event_opindex, event_com, $string0)", $component13);
+	if_setonop("teletab_confirm_op(event_op, event_com, $string0)", $component13);
 	if_setop(1, $string0, $component13);
 	$lvl18 = oc_param($obj22, spell_levelreq);
 	if (stat(magic) >= $lvl18) {

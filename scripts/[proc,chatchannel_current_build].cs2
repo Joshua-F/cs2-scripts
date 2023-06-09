@@ -126,7 +126,7 @@ if (%varbit6363 = 1) {
 	if_setonmouseleave("v2_stone_button(event_com)", $component13);
 	if_settext("Setup", $component12);
 	if_setop(1, "Setup", $component12);
-	if_setonop("opsound(event_opindex, 1)", $component12);
+	if_setonop("opsound(event_op, 1)", $component12);
 }
 def_string $text0 = "";
 def_int $world16 = -1;
@@ -190,8 +190,8 @@ while ($int24 < $int15) {
 	}
 	cc_setopbase("<col=ff9040><$text0></col>");
 	.cc_setopbase("<col=ff9040><$text0></col>");
-	cc_setonop("friendschat_op(event_opbase, event_opindex)");
-	.cc_setonop("friendschat_op(event_opbase, event_opindex)");
+	cc_setonop("friendschat_op(event_opbase, event_op)");
+	.cc_setonop("friendschat_op(event_opbase, event_op)");
 	$int24, $height22 = calc($int24 + 1), calc($height22 + $int23);
 }
 if ($int15 >= 1) {
@@ -210,17 +210,17 @@ if (%varbit6363 = 1) {
 	if_settext("<col=ff0000>Leave</col>", $component10);
 	if (%varbit5432 = 1 | %varbit4289 ! 0) {
 		if_setop(6, "Leave", $component10);
-		if_setonop("joinchat_onop(event_opindex, 6)", $component10);
+		if_setonop("joinchat_onop(event_op, 6)", $component10);
 	} else {
 		if_setop(1, "Leave", $component10);
-		if_setonop("joinchat_onop(event_opindex, 1)", $component10);
+		if_setonop("joinchat_onop(event_op, 1)", $component10);
 	}
 } else {
 	if_settext("<col=808080><enum(int, string, enum_3839, 0)></col>", $component0);
 	if_settext("<col=808080>Not in channel</col>", $component1);
 	if_settext("<col=0dc10d>Join</col>", $component10);
 	if_setop(1, "Join", $component10);
-	if_setonop("joinchat_onop(event_opindex, 1)", $component10);
+	if_setonop("joinchat_onop(event_op, 1)", $component10);
 }
 if ($height22 > if_getheight($component8)) {
 	if_setscrollsize(0, $height22, $component8);

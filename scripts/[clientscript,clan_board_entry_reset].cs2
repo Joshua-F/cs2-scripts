@@ -12,7 +12,7 @@ if (~on_mobile = false) {
 	if_setonmouserepeat("script1015(event_com, $int1, $int4, $int5)", $component0);
 }
 if_setonmouseleave("script1015(event_com, $int1, $int2, $int3)", $component0);
-if_setonop("clan_board_entry_op(event_opindex, event_com, $int1, $int2, $int3, $int4, $int5, $int6, $string0, $component8)", $component0);
+if_setonop("clan_board_entry_op(event_op, event_com, $int1, $int2, $int3, $int4, $int5, $int6, $string0, $component8)", $component0);
 if_setop(1, "View clan", $component0);
 if_setop(10, "Report name", $component0);
 if_setopbase("<col=ff9040><removetags($string0)></col>", $component0);

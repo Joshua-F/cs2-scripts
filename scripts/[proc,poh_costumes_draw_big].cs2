@@ -62,7 +62,7 @@ if (cc_find($component8, $int9) = ^true) {
 		cc_settrans(120);
 		if ($boolean7 = true) {
 			cc_setop(1, "Set");
-			cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comsubid, 0, 120)");
+			cc_setonop("poh_costumes_opgraphic(event_op, event_com, event_comsubid, 0, 120)");
 			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 40, null)");
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 120, null)");
 			if (.cc_find($component8, calc($int9 + 1)) = ^true) {
@@ -83,7 +83,7 @@ if (cc_find($component8, $int9) = ^true) {
 		cc_settrans(0);
 		if ($boolean7 = true & $int17 = 0) {
 			cc_setop(1, "Set");
-			cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comsubid, 120, 0)");
+			cc_setonop("poh_costumes_opgraphic(event_op, event_com, event_comsubid, 120, 0)");
 			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 80, null)");
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
 			if (.cc_find($component8, calc($int9 + 1)) = ^true) {

@@ -14,7 +14,7 @@ if ($int0 = 1) {
 	if_setonmouseover("skillmulti_quantitybutton_draw(true, $op0, $component2)", $component2);
 	if_setonmouseleave("skillmulti_quantitybutton_draw(false, $op0, $component2)", $component2);
 	if_setop(1, $op0, $component2);
-	if_setonop("skillmulti_quantitybutton_op(event_opindex, $int1, $int3, $int4)", $component2);
+	if_setonop("skillmulti_quantitybutton_op(event_op, $int1, $int3, $int4)", $component2);
 	if_setontimer(null, $component2);
 }
 return(calc($int5 + if_getwidth($component2) + 5));

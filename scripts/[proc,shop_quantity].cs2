@@ -11,10 +11,10 @@ switch_int (%varbit6348) {
 		~options_button_off($component3, 0);
 		~options_button_off($component4, 0);
 		~options_button_on($component0, 0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 1, $component5)", $component1);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 2, $component5)", $component2);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 3, $component5)", $component3);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 4, $component5)", $component4);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 1, $component5)", $component1);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 2, $component5)", $component2);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 3, $component5)", $component3);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 4, $component5)", $component4);
 		if_setonop(null, $component0);
 	case 1 :
 		~options_button_off($component0, 0);
@@ -22,10 +22,10 @@ switch_int (%varbit6348) {
 		~options_button_off($component3, 0);
 		~options_button_off($component4, 0);
 		~options_button_on($component1, 0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 0, $component5)", $component0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 2, $component5)", $component2);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 3, $component5)", $component3);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 4, $component5)", $component4);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 0, $component5)", $component0);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 2, $component5)", $component2);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 3, $component5)", $component3);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 4, $component5)", $component4);
 		if_setonop(null, $component1);
 	case 2 :
 		~options_button_off($component0, 0);
@@ -33,10 +33,10 @@ switch_int (%varbit6348) {
 		~options_button_off($component3, 0);
 		~options_button_off($component4, 0);
 		~options_button_on($component2, 0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 0, $component5)", $component0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 1, $component5)", $component1);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 3, $component5)", $component3);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 4, $component5)", $component4);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 0, $component5)", $component0);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 1, $component5)", $component1);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 3, $component5)", $component3);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 4, $component5)", $component4);
 		if_setonop(null, $component2);
 	case 3 :
 		~options_button_off($component0, 0);
@@ -44,10 +44,10 @@ switch_int (%varbit6348) {
 		~options_button_off($component2, 0);
 		~options_button_off($component4, 0);
 		~options_button_on($component3, 0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 0, $component5)", $component0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 1, $component5)", $component1);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 2, $component5)", $component2);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 4, $component5)", $component4);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 0, $component5)", $component0);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 1, $component5)", $component1);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 2, $component5)", $component2);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 4, $component5)", $component4);
 		if_setonop(null, $component3);
 	case 4 :
 		~options_button_off($component0, 0);
@@ -55,9 +55,9 @@ switch_int (%varbit6348) {
 		~options_button_off($component2, 0);
 		~options_button_off($component3, 0);
 		~options_button_on($component4, 0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 0, $component5)", $component0);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 1, $component5)", $component1);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 2, $component5)", $component2);
-		if_setonop("shop_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 3, $component5)", $component3);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 0, $component5)", $component0);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 1, $component5)", $component1);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 2, $component5)", $component2);
+		if_setonop("shop_quantity_op(event_op, $component0, $component1, $component2, $component3, $component4, 3, $component5)", $component3);
 		if_setonop(null, $component4);
 }

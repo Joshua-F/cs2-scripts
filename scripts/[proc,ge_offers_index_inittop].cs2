@@ -13,7 +13,7 @@ cc_setposition($x4, calc(($height2 - 22) / 2), ^setpos_abs_left, ^setpos_abs_top
 cc_settiling(false);
 cc_setop(1, "Collect to inventory");
 cc_setop(2, "Collect to bank");
-cc_setonop("opsound(event_opindex, 6)");
+cc_setonop("opsound(event_op, 6)");
 cc_create($component0, ^iftype_text, $int3);
 def_int $comsubid6 = $int3;
 $int3 = calc($int3 + 1);

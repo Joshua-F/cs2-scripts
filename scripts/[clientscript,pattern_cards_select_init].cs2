@@ -7,4 +7,4 @@ cc_setposition(5, 5, ^setpos_abs_right, ^setpos_abs_bottom);
 cc_setgraphic("tick");
 ~pattern_cards_select_update($index1);
 if_setonvartransmit("pattern_cards_select_update(event_com, cc_getid, $index1){var1037}", $component0);
-if_setonop("pattern_cards_select_op(event_opindex, event_com, cc_getid, $index1)", $component0);
+if_setonop("pattern_cards_select_op(event_op, event_com, cc_getid, $index1)", $component0);

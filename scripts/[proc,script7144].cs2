@@ -124,9 +124,9 @@ if (~on_mobile = false & $int4 = 0) {
 	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour28)");
 }
 if ($int4 = 0) {
-	cc_setonop("script7145($dbrow2, $inv3, $int0, event_opindex)");
+	cc_setonop("script7145($dbrow2, $inv3, $int0, event_op)");
 } else {
-	cc_setonop("script7145($dbrow2, $inv3, -1, event_opindex)");
+	cc_setonop("script7145($dbrow2, $inv3, -1, event_op)");
 }
 def_int $int29 = 0;
 if (%var3871 = 1) {

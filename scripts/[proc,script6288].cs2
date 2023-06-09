@@ -11,7 +11,7 @@ switch_int (%varbit14023) {
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 			~script6290;
 			cc_setonvartransmit("script6289(event_com, .cc_getid){var3464}");
-			cc_setonop("script6291(event_opindex, event_com, event_comsubid, $int2, .cc_getid, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)");
+			cc_setonop("script6291(event_op, event_com, event_comsubid, $int2, .cc_getid, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)");
 		}
 		if (cc_find($component0, $int2) = ^true) {
 			cc_sethide(false);

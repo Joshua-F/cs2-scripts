@@ -69,7 +69,7 @@ if (%varcint55 >= %varcint202 & %varcint55 > calc(clientclock - 3000) & chat_get
 			}
 			if_setop(10, "Clear history", $component10);
 			if_setopbase("<col=ff9040>Notification</col>", $component10);
-			if_setonop("chat_broadcast_op(event_opindex, 10, $string4, $int16)", $component10);
+			if_setonop("chat_broadcast_op(event_op, 10, $string4, $int16)", $component10);
 			$int9 = calc($int9 + 1);
 			$component10 = enum(int, component, enum_580, $int9);
 		}
@@ -109,7 +109,7 @@ if (%var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0)) {
 					if_setop(10, "Crown Info", $component10);
 				}
 				if_setopbase("<col=ffffff><$string1></col>", $component10);
-				if_setonop("private_op(event_opindex, event_opbase)", $component10);
+				if_setonop("private_op(event_op, event_opbase)", $component10);
 			} else {
 				if_setonop(null, $component10);
 			}

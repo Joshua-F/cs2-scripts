@@ -26,7 +26,7 @@ if ($obj0 ! null) {
 	cc_settrans(0);
 	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 	cc_setondrag("shared_bank_dragitem(event_mousey, 0, $component3, event_com, event_comsubid, $component5)");
-	cc_setondragcomplete("shared_bank_reorder($component3, event_com, event_comsubid, event_drop, event_dropsubid, $comsubid2, 0, $component5)");
+	cc_setondragcomplete("shared_bank_reorder($component3, event_com, event_comsubid, event_com2, event_comsubid2, $comsubid2, 0, $component5)");
 	return(1);
 }
 cc_setobject_nonum(obj_6512, 1);

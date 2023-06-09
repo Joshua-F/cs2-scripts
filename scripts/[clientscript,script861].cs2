@@ -13,7 +13,7 @@ if ($obj0 ! null) {
 	if_setonmouseleave("text_colour_swapper(interface_127:13, 0xa6a692)", interface_127:12);
 	if_setop(1, "Remove", interface_127:12);
 	if_setopbase("<col=ff9040><oc_name($obj0)></col>", interface_127:12);
-	if_setonop("script862(event_opindex, event_com, cc_getlayer, cc_getid)", interface_127:12);
+	if_setonop("script862(event_op, event_com, cc_getlayer, cc_getid)", interface_127:12);
 } else {
 	if_settext("---", interface_127:13);
 	if_setonmouserepeat(null, interface_127:12);
@@ -32,7 +32,7 @@ if ($obj1 ! null) {
 	if_setonmouseleave("comp_sethide(true, interface_127:19)", interface_127:18);
 	if_setop(1, "Previous:", interface_127:18);
 	if_setopbase("<col=ff9040><oc_name($obj1)></col>", interface_127:18);
-	if_setonop("script864(event_opindex, event_com, model_5626, model_5627, interface_127:19, cc_getlayer, cc_getid)", interface_127:18);
+	if_setonop("script864(event_op, event_com, model_5626, model_5627, interface_127:19, cc_getlayer, cc_getid)", interface_127:18);
 	if_setonclick(null, interface_127:18);
 } else {
 	if_setonmouserepeat(null, interface_127:18);
@@ -55,7 +55,7 @@ if ($obj2 ! null) {
 	if_setonmouseleave("comp_sethide(true, interface_127:16)", interface_127:15);
 	if_setop(1, "Next:", interface_127:15);
 	if_setopbase("<col=ff9040><oc_name($obj2)></col>", interface_127:15);
-	if_setonop("script864(event_opindex, event_com, model_5625, model_5629, interface_127:16, cc_getlayer, cc_getid)", interface_127:15);
+	if_setonop("script864(event_op, event_com, model_5625, model_5629, interface_127:16, cc_getlayer, cc_getid)", interface_127:15);
 	if_setonclick(null, interface_127:15);
 } else {
 	if_setonmouserepeat(null, interface_127:15);

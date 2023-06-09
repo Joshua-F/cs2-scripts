@@ -6,7 +6,7 @@ if ($obj1 = steam_battlestaff_11787) {
 }
 if ($int2 > 0) {
 	cc_setcolour(^white);
-	if_setonop("opsound(event_opindex, 2)", $component0);
+	if_setonop("opsound(event_op, 2)", $component0);
 } else {
 	cc_setcolour(0xaaaaaa);
 	if_setonop(null, $component0);

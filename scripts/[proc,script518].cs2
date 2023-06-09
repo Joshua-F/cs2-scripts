@@ -6,4 +6,4 @@ cc_setsize($width2, 17, ^setsize_abs, ^setsize_abs);
 cc_setop(1, $op0);
 cc_setonmouserepeat("cc_colour_swapper(event_com, calc($int1 + 8), ^white)");
 cc_setonmouseleave("cc_colour_swapper(event_com, calc($int1 + 8), 0xff981f)");
-cc_setonop("script521(event_opindex, event_com, $int1)");
+cc_setonop("script521(event_op, event_com, $int1)");

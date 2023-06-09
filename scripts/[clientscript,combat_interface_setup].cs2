@@ -275,7 +275,7 @@ if ($graphic14 ! null) {
 	if_setgraphic($graphic14, interface_593:6);
 	if_settext($op1, interface_593:7);
 	if_setop(1, $op1, interface_593:4);
-	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 0)", interface_593:4);
+	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_op, 0)", interface_593:4);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:4);
 	if (string_length($string5) > 0) {
 		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:42, $string5, 25, 140)", interface_593:4);
@@ -290,7 +290,7 @@ if ($graphic15 ! null) {
 	if_setgraphic($graphic15, interface_593:10);
 	if_settext($op2, interface_593:11);
 	if_setop(1, $op2, interface_593:8);
-	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 1)", interface_593:8);
+	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_op, 1)", interface_593:8);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:8);
 	if (string_length($string6) > 0) {
 		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:42, $string6, 25, 140)", interface_593:8);
@@ -305,7 +305,7 @@ if ($graphic16 ! null) {
 	if_setgraphic($graphic16, interface_593:14);
 	if_settext($op3, interface_593:15);
 	if_setop(1, $op3, interface_593:12);
-	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 2)", interface_593:12);
+	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_op, 2)", interface_593:12);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:12);
 	if (string_length($string7) > 0) {
 		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:42, $string7, 25, 140)", interface_593:12);
@@ -320,7 +320,7 @@ if ($graphic17 ! null) {
 	if_setgraphic($graphic17, interface_593:18);
 	if_settext($op4, interface_593:19);
 	if_setop(1, $op4, interface_593:16);
-	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 3)", interface_593:16);
+	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_op, 3)", interface_593:16);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:16);
 	if (string_length($string8) > 0) {
 		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:42, $string8, 25, 140)", interface_593:16);

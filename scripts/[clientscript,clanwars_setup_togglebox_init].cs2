@@ -21,7 +21,7 @@ while ($int9 ! -1) {
 	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component4, enum(int, string, $enum5, $int8), 25, 512)");
 	cc_setonmouseleave("clanwars_setup_mouseleave(event_com, event_comsubid, $component4)");
 	cc_setop(1, $op1);
-	cc_setonop("clanwars_setup_togglebox_op(event_opindex, $component3, event_comsubid, $int9)");
+	cc_setonop("clanwars_setup_togglebox_op(event_op, $component3, event_comsubid, $int9)");
 	cc_setonvartransmit("clanwars_setup_togglebox_update($component3, event_comsubid, $int9){var92}");
 	cc_create($component3, ^iftype_graphic, calc($int8 * 3 + 1));
 	cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);

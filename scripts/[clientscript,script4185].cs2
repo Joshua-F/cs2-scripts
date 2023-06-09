@@ -195,7 +195,7 @@ while ($int40 < $int37) {
 		cc_setposition($int42, $int43, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour($int41);
 		cc_setfill(true);
-		cc_setonop("script4190(event_opindex, event_com, event_comsubid, $component0, $int41, $component11, $comsubid19, $comsubid20, $struct4, $component12, $comsubid22, $comsubid23, $comsubid24, $comsubid25)");
+		cc_setonop("script4190(event_op, event_com, event_comsubid, $component0, $int41, $component11, $comsubid19, $comsubid20, $struct4, $component12, $comsubid22, $comsubid23, $comsubid24, $comsubid25)");
 		cc_setop(1, "Select colour");
 		$int17 = calc($int17 + 1);
 		if ($boolean46 = false) {

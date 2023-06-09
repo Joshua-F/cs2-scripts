@@ -43,12 +43,12 @@ if ($int11 > if_getheight($component1)) {
 	if_sethide(true, $component2);
 }
 if_setop(1, "Value", $component3);
-if_setonop("script3638(event_opindex, event_com, 0, $count7, $component1, $component3, $component4, $component5, $component6)", $component3);
+if_setonop("script3638(event_op, event_com, 0, $count7, $component1, $component3, $component4, $component5, $component6)", $component3);
 if_setop(1, "1", $component4);
-if_setonop("script3638(event_opindex, event_com, 1, $count7, $component1, $component3, $component4, $component5, $component6)", $component4);
+if_setonop("script3638(event_op, event_com, 1, $count7, $component1, $component3, $component4, $component5, $component6)", $component4);
 if_setop(1, "5", $component5);
-if_setonop("script3638(event_opindex, event_com, 2, $count7, $component1, $component3, $component4, $component5, $component6)", $component5);
+if_setonop("script3638(event_op, event_com, 2, $count7, $component1, $component3, $component4, $component5, $component6)", $component5);
 if_setop(1, "X", $component6);
-if_setonop("script3638(event_opindex, event_com, 3, $count7, $component1, $component3, $component4, $component5, $component6)", $component6);
+if_setonop("script3638(event_op, event_com, 3, $count7, $component1, $component3, $component4, $component5, $component6)", $component6);
 ~script3640($count7, $component1, $component3, $component4, $component5, $component6);
 if_setonvartransmit("script3639($count7, $component1, $component3, $component4, $component5, $component6){var1022}", $component0);

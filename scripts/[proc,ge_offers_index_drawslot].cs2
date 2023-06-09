@@ -81,7 +81,7 @@ if (stockmarket_isofferempty($int9) = true) {
 				cc_setposition(0, $int41, ^setpos_abs_centre, ^setpos_abs_top);
 				if ($int40 = 1) {
 					cc_setop(1, "Create <col=ff9040>Buy</col> offer");
-					cc_setonop("script805(event_opindex, $int9, 0, $component2, $comsubid3, $component4, $component5, $component6, $component7, $component27)");
+					cc_setonop("script805(event_op, $int9, 0, $component2, $comsubid3, $component4, $component5, $component6, $component7, $component27)");
 					cc_setonmouseover("cc_graphic_swapper($component8, $comsubid25, $graphic33, null)");
 					cc_setonmouseleave("cc_graphic_swapper($component8, $comsubid25, $graphic32, $component27)");
 					$string1 = "Offer to buy a bond.";
@@ -128,8 +128,8 @@ if (stockmarket_isofferempty($int9) = true) {
 				if ($int40 = 1) {
 					cc_setop(1, "Create <col=ff9040>Buy</col> offer");
 					.cc_setop(1, "Create <col=ff9040>Sell</col> offer");
-					cc_setonop("script805(event_opindex, $int9, 0, $component2, $comsubid3, $component4, $component5, $component6, $component7, $component27)");
-					.cc_setonop("script805(event_opindex, $int9, 1, $component2, $comsubid3, $component4, $component5, $component6, $component7, $component27)");
+					cc_setonop("script805(event_op, $int9, 0, $component2, $comsubid3, $component4, $component5, $component6, $component7, $component27)");
+					.cc_setonop("script805(event_op, $int9, 1, $component2, $comsubid3, $component4, $component5, $component6, $component7, $component27)");
 					cc_setonmouseover("cc_graphic_swapper($component8, $comsubid25, $graphic33, null)");
 					.cc_setonmouseover("cc_graphic_swapper($component8, $comsubid26, $graphic35, null)");
 					cc_setonmouseleave("cc_graphic_swapper($component8, $comsubid25, $graphic32, $component27)");

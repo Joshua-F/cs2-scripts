@@ -44,7 +44,7 @@ cc_setoutline(1);
 if_setop(1, "Build", $component4);
 if_setop(10, "Examine", $component4);
 if_setopbase("<col=ff9040><oc_name($obj1)></col>", $component4);
-if_setonop("script1405(event_opindex, $int0, $obj1, event_com, cc_getid)", $component4);
+if_setonop("script1405(event_op, $int0, $obj1, event_com, cc_getid)", $component4);
 cc_create($component4, ^iftype_graphic, 5);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(12, 0, ^setpos_abs_left, ^setpos_abs_top);

@@ -8,7 +8,7 @@ if_setop(1, "Discard-All", $component6);
 if_setontimer(null, $component6);
 if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $component7, null, null)", $component6);
 if_setonmouseleave("gravestone_retrieval_buttonhover(false, $component7, null, null)", $component6);
-if_setonop("gravestone_retrieval_buttonop(event_opindex, $component6, $component7, null, null)", $component6);
+if_setonop("gravestone_retrieval_buttonop(event_op, $component6, $component7, null, null)", $component6);
 def_int $int11 = calc(36 + 10);
 def_int $int12 = calc(32 + 8);
 cc_deleteall($component2);

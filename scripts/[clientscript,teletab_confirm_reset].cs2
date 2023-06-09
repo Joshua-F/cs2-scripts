@@ -6,5 +6,5 @@ if (clientclock < $clock0) {
 ~teletab_confirm_draw(false, $string0, $component1);
 if_setonmouserepeat("teletab_confirm_draw(true, $string0, $component1)", $component1);
 if_setonmouseleave("teletab_confirm_draw(false, $string0, $component1)", $component1);
-if_setonop("teletab_confirm_op(event_opindex, event_com, $string0)", $component1);
+if_setonop("teletab_confirm_op(event_op, event_com, $string0)", $component1);
 if_setontimer(null, $component1);

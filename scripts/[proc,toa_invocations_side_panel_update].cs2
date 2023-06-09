@@ -76,7 +76,7 @@ if (cc_find($component0, 3) = ^true) {
 }
 if_setonmouserepeat("cc_settrans(event_com, cc_getid, 0, null)", $component3);
 if_setonmouseleave("cc_settrans(event_com, cc_getid, 50, null)", $component3);
-if_setonop("opsound(event_opindex, 2)", $component3);
+if_setonop("opsound(event_op, 2)", $component3);
 if_setop(1, "Rewards Info", $component3);
 def_int $int14 = 1;
 def_int $int15 = 2;

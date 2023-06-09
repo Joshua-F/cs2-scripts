@@ -60,9 +60,9 @@ if (%varbit4704 = 1) {
 	if_setonmouseleave("settrans($component8, 255)", $component5);
 	if_setonmouseleave(null, $component6);
 	if_setonmouseleave("settrans($component10, 255)", $component7);
-	if_setonop("script1024(event_opindex, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component5);
+	if_setonop("script1024(event_op, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component5);
 	if_setonop(null, $component6);
-	if_setonop("script1024(event_opindex, 2, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component7);
+	if_setonop("script1024(event_op, 2, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component7);
 	if ($stat23 ! null) {
 		if_settext(~xpdrops_tostring(%var261, 1), $component14);
 	} else {
@@ -79,7 +79,7 @@ if (%varbit4704 = 1) {
 	if_setonmouseleave(null, $component12);
 	if_setonmouserepeat(null, $component13);
 	if_setonmouseleave(null, $component13);
-	if_setonop("opsound(event_opindex, 1216)", $component11);
+	if_setonop("opsound(event_op, 1216)", $component11);
 	if_setonop(null, $component12);
 	if_setonop(null, $component13);
 } else if (%varbit4704 = 2) {
@@ -101,8 +101,8 @@ if (%varbit4704 = 1) {
 	if_setonmouseleave("settrans($component8, 255)", $component5);
 	if_setonmouseleave("settrans($component9, 255)", $component6);
 	if_setonmouseleave(null, $component7);
-	if_setonop("script1024(event_opindex, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component5);
-	if_setonop("script1024(event_opindex, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component6);
+	if_setonop("script1024(event_op, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component5);
+	if_setonop("script1024(event_op, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component6);
 	if_setonop(null, $component7);
 	if_settext("", $component14);
 	if ($stat23 ! null) {
@@ -122,8 +122,8 @@ if (%varbit4704 = 1) {
 	if_setonmouserepeat("text_colour_swapper($component19, ^white)", $component13);
 	if_setonmouseleave("text_colour_swapper($component19, 0xff981f)", $component13);
 	if_setonop(null, $component11);
-	if_setonop("opsound(event_opindex, 1216)", $component12);
-	if_setonop("opsound(event_opindex, 192)", $component13);
+	if_setonop("opsound(event_op, 1216)", $component12);
+	if_setonop("opsound(event_op, 192)", $component13);
 } else {
 	if (cc_find($component5, 0) = ^true) {
 		cc_setgraphic("options_radio_buttons,2");
@@ -144,8 +144,8 @@ if (%varbit4704 = 1) {
 	if_setonmouseleave("settrans($component9, 255)", $component6);
 	if_setonmouseleave("settrans($component10, 255)", $component7);
 	if_setonop(null, $component5);
-	if_setonop("script1024(event_opindex, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component6);
-	if_setonop("script1024(event_opindex, 2, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component7);
+	if_setonop("script1024(event_op, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component6);
+	if_setonop("script1024(event_op, 2, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component7);
 	if_settext("", $component14);
 	if_settext("", $component15);
 	if_settext("", $component16);

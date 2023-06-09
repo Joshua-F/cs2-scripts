@@ -40,5 +40,5 @@ if ($int3 = -1) {
 	return;
 }
 ~clan_stonebutton_init("Confirm", $component0, "p12_full");
-if_setonop("pattern_cards_confirm_op(event_opindex, $component0)", $component0);
+if_setonop("pattern_cards_confirm_op(event_op, $component0)", $component0);
 if_setontimer(null, $component0);

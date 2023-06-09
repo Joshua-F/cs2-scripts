@@ -69,7 +69,7 @@ if (testbit($flags1, 0) = ^false) {
 	cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic7, null)");
 	cc_setop(1, "Close");
 	cc_setonop("closebutton_click");
-	cc_setonkey("closebutton_key(event_key)");
+	cc_setonkey("closebutton_key(event_keycode)");
 	$comsubid12 = 12;
 }
 if (testbit($flags1, 1) = ^true) {

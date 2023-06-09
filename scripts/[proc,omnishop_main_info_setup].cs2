@@ -16,7 +16,7 @@ if (%var3871 = 1) {
 	}
 	if (cc_find($component11, 11) = ^true) {
 		cc_setonop("omnishop_main_info_closebutton_click");
-		cc_setonkey("omnishop_main_info_closebutton_key(event_key)");
+		cc_setonkey("omnishop_main_info_closebutton_key(event_keycode)");
 		if_setonop("omnishop_main_info_closebutton_click", $component12);
 	}
 }

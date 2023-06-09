@@ -32,7 +32,7 @@ if (inv_total(inv, agility_arena_ticket_2996) < $int1) {
 	if ($component3 ! null) {
 		if_setonop("agilityarena_rewards_hidelayer(false, $component3)", $component0);
 	} else {
-		if_setonop("opsound(event_opindex, 2)", $component0);
+		if_setonop("opsound(event_op, 2)", $component0);
 	}
 } else {
 	$comsubid4 = ~v2_stone_button_out_filled($component0);
@@ -47,6 +47,6 @@ if (inv_total(inv, agility_arena_ticket_2996) < $int1) {
 	if ($component3 ! null) {
 		if_setonop("agilityarena_rewards_hidelayer(false, $component3)", $component0);
 	} else {
-		if_setonop("opsound(event_opindex, 2)", $component0);
+		if_setonop("opsound(event_op, 2)", $component0);
 	}
 }

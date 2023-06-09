@@ -5,7 +5,7 @@ if (%varcint435 = true) {
 	if_setop(1, "Look up name", $component0);
 	if_sethide(false, $component0);
 	if_sethide(true, $component1);
-	if_setonop("script4146($component0, $component1, $component2, $component3, $component4, event_opindex)", $component0);
+	if_setonop("script4146($component0, $component1, $component2, $component3, $component4, event_op)", $component0);
 } else if (%varbit5605 = 1) {
 	if (compare(%varcstring436, %varcstring437) = 0) {
 		~displayname_disablebutton($component0, "Look up name");

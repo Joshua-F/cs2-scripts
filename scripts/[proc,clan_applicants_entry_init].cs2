@@ -11,7 +11,7 @@ if (~on_mobile = false) {
 	if_setonmouserepeat("script1015(event_com, cc_getid, ^white, 220)", $component1);
 }
 if_setonmouseleave("script1015(event_com, cc_getid, $int4, $int5)", $component1);
-if_setonop("clan_applicants_entry_op(event_opindex, event_com, cc_getid, $int4, $int5, 16777215, 220, $int2, $string0, $component3)", $component1);
+if_setonop("clan_applicants_entry_op(event_op, event_com, cc_getid, $int4, $int5, 16777215, 220, $int2, $string0, $component3)", $component1);
 if_setop(1, "Review", $component1);
 if_setopbase("<col=ff9040><removetags($string0)></col>", $component1);
 if_setontimer(null, $component1);

@@ -55,7 +55,7 @@ while ($namedobj10 ! null) {
 		cc_setopbase("<col=ff9040>Large water container</col>");
 	}
 	cc_setopbase("<col=ff9040><oc_name($namedobj10)></col>");
-	cc_setonop("opsound(event_opindex, 1086)");
+	cc_setonop("opsound(event_op, 1086)");
 	$int9 = calc($int9 + 1);
 	$namedobj10 = enum(int, namedobj, enum_1779, $int9);
 }

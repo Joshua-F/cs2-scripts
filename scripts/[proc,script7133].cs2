@@ -72,7 +72,7 @@ while ($int7 < 10) {
 		}
 		cc_setop(2, "Clear data");
 		cc_setopbase("<col=ff9040><$string0></col>");
-		cc_setonop("script7179(event_opindex, $int7)");
+		cc_setonop("script7179(event_op, $int7)");
 		cc_create($component1, ^iftype_text, $int24);
 		$int24 = calc($int24 + 1);
 		cc_setposition(6, calc($int23 + 4), ^setpos_abs_left, ^setpos_abs_top);
@@ -125,7 +125,7 @@ while ($int7 < 10) {
 								.cc_setop(2, "Ignore");
 							}
 							.cc_setopbase("<col=ff9040><oc_name($obj15)></col>");
-							.cc_setonop("script7180(event_opindex, $int7, $int8)");
+							.cc_setonop("script7180(event_op, $int7, $int8)");
 							$int25 = calc($int25 + 1);
 							$int26 = calc(($int26 + 1) % 5);
 							if ($int26 = 0) {

@@ -152,10 +152,10 @@ if ($boolean0 = true) {
 			if_setposition(22, 2, ^setpos_abs_right, ^setpos_abs_bottom, $component6);
 		}
 		~clan_stonebutton_init("Settings", $component5, "p12_full");
-		if_setonop("opsound(event_opindex, 2)", $component5);
+		if_setonop("opsound(event_op, 2)", $component5);
 		if ($component6 ! null) {
 			~clan_stonebutton_init("<col=ff0000>Discard</col>", $component6, "p12_full");
-			if_setonop("opsound(event_opindex, 2)", $component6);
+			if_setonop("opsound(event_op, 2)", $component6);
 		}
 		if_sethide(false, $component3);
 		if ($int13 = 1) {
@@ -174,7 +174,7 @@ if ($boolean0 = true) {
 				if_setonop(null, $component4);
 			} else {
 				~clan_stonebutton_init("<col=ff0000>Leave</col>", $component4, "p12_full");
-				if_setonop("opsound(event_opindex, 2)", $component4);
+				if_setonop("opsound(event_op, 2)", $component4);
 				if_sethide(false, $component4);
 			}
 			$int9 = activeclanchannel_getusercount;
@@ -203,7 +203,7 @@ if ($boolean0 = true) {
 				if_setonop(null, $component4);
 			} else {
 				~clan_stonebutton_init("<col=0dc10d>Chat</col>", $component4, "p12_full");
-				if_setonop("opsound(event_opindex, 2)", $component4);
+				if_setonop("opsound(event_op, 2)", $component4);
 			}
 			if ($int11 = 1) {
 				~gim_sidepanel_drawchannel($component2);
@@ -230,7 +230,7 @@ if ($boolean0 = true) {
 	}
 	if ($component6 ! null) {
 		~clan_stonebutton_init("<col=0dc10d>Find</col>", $component6, "p12_full");
-		if_setonop("opsound(event_opindex, 2)", $component6);
+		if_setonop("opsound(event_op, 2)", $component6);
 	}
 } else {
 	$int7 = %varbit933;
@@ -278,7 +278,7 @@ if ($boolean0 = true) {
 		cc_setcolour(0xffb83f);
 		$int10 = 0;
 		~clan_stonebutton_init("Settings", $component5, "p12_full");
-		if_setonop("opsound(event_opindex, 2)", $component5);
+		if_setonop("opsound(event_op, 2)", $component5);
 		if_sethide(false, $component3);
 		if (activeclanchannel_find_affined(^clantype_clan) = true) {
 			if (%varbit13806 = 1) {
@@ -289,7 +289,7 @@ if ($boolean0 = true) {
 				if_setonop(null, $component4);
 			} else {
 				~clan_stonebutton_init("<col=ff0000>Leave</col>", $component4, "p12_full");
-				if_setonop("opsound(event_opindex, 2)", $component4);
+				if_setonop("opsound(event_op, 2)", $component4);
 			}
 			$int9 = activeclanchannel_getusercount;
 			if ($int9 > 0) {
@@ -318,7 +318,7 @@ if ($boolean0 = true) {
 				if_setonop(null, $component4);
 			} else {
 				~clan_stonebutton_init("<col=0dc10d>Chat</col>", $component4, "p12_full");
-				if_setonop("opsound(event_opindex, 2)", $component4);
+				if_setonop("opsound(event_op, 2)", $component4);
 			}
 		}
 		if_setscrollpos(0, 0, $component2);

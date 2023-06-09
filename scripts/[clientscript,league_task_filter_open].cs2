@@ -49,7 +49,7 @@ while ($int15 < $int10) {
 		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int6)");
 		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int6)");
 	}
-	cc_setonop("league_task_filter_close(event_opindex, $int15, $enum0, $component2, $comsubid3, $component4, $int6)");
+	cc_setonop("league_task_filter_close(event_op, $int15, $enum0, $component2, $comsubid3, $component4, $int6)");
 	cc_settext(enum(int, string, $enum0, $int15));
 	$int15, $int14 = calc($int15 + 1), calc($int14 + 1);
 }

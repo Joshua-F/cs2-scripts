@@ -21,7 +21,7 @@ while ($count3 < $count4) {
 		cc_setobject($namedobj6, 1);
 		cc_setop(1, "Select <col=ff981f><$string0>");
 		cc_setop(2, "Examine <col=ff981f><$string0>");
-		cc_setonop("magic_training_rewards_op(event_opindex, $component1, $count3, $component2, $component0)");
+		cc_setonop("magic_training_rewards_op(event_op, $component1, $count3, $component2, $component0)");
 		if (~on_mobile = false) {
 			cc_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)");
 			cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 140, null)");

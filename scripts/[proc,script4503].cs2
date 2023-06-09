@@ -4,7 +4,7 @@
 if_settext($text0, interface_162:41);
 ~script222("");
 def_string $string1 = "";
-if_setonkey("script4504(event_key, event_keychar, $string1, $component1, $component2, $comsubid3, $comsubid4, $struct5, $component6, $comsubid7, $comsubid8, $comsubid9, $comsubid10)", interface_162:42);
+if_setonkey("script4504(event_keycode, event_keychar, $string1, $component1, $component2, $comsubid3, $comsubid4, $struct5, $component6, $comsubid7, $comsubid8, $comsubid9, $comsubid10)", interface_162:42);
 if_setondialogabort("meslayer_ondialogabort", interface_162:42);
 if (~on_mobile = true) {
 	if ($int0 ! 22) {

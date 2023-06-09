@@ -28,7 +28,7 @@ if ($int0 ! -1) {
 		cc_setonmouserepeat("script848(true, $string1, $text0, $component4)");
 		cc_setonmouseleave("script848(false, $string1, $text0, $component4)");
 	}
-	cc_setonop("soul_wars_rewards_confirmop(event_opindex, $component2, $component3, $component4, $int6, $component7, $component8)");
+	cc_setonop("soul_wars_rewards_confirmop(event_op, $component2, $component3, $component4, $int6, $component7, $component8)");
 } else {
 	$int9 = ~v2_stone_button_in_filled($component4);
 	cc_create($component4, ^iftype_text, $int9);

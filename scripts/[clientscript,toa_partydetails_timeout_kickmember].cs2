@@ -16,5 +16,5 @@ if (cc_find($component2, $comsubid3) = ^true) {
 	} else {
 		cc_setop(10, "Quit Party");
 	}
-	cc_setonop("toa_partydetails_kickmember(event_opindex, $int1, event_com, event_comsubid, $string0, $int4)");
+	cc_setonop("toa_partydetails_kickmember(event_op, $int1, event_com, event_comsubid, $string0, $int4)");
 }

@@ -57,7 +57,7 @@ if ($int0 ! -1) {
 		cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component8)");
 		cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component8)");
 	}
-	cc_setonop("speedrunning_reward_shop_confirmop(event_opindex, $component9)");
+	cc_setonop("speedrunning_reward_shop_confirmop(event_op, $component9)");
 	~steelborder($component10, $text0, 1);
 	if ($int25 = 1) {
 		if_settext("<col=ffffff><$text0></col><br><$string1><br><br>You've previously purchased this reward.<br>Do you wish to reclaim it for free?", $component11);
@@ -79,7 +79,7 @@ if ($int0 ! -1) {
 		if_setonmouseleave("league_relic_button_hover($component12, false, $op2, 0xff891f)", $component12);
 		if_setonmouseover("league_relic_button_hover($component12, true, $op2, 0xff891f)", $component12);
 	}
-	if_setonop("speedrunning_reward_shop_buy(event_opindex, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14)", $component12);
+	if_setonop("speedrunning_reward_shop_buy(event_op, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14)", $component12);
 	$int22 = ~v2_stone_button($component13);
 	cc_create($component13, ^iftype_text, $int22);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

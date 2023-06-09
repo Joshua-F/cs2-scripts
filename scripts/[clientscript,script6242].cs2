@@ -46,7 +46,7 @@ while ($count9 < $count12) {
 	cc_settrans(255);
 	cc_setop(1, $op0);
 	cc_setop(1, "Select");
-	cc_setonop("script6243(event_opindex, event_com, $count9, $component2, $component0, $enum6, $enum7)");
+	cc_setonop("script6243(event_op, event_com, $count9, $component2, $component0, $enum6, $enum7)");
 	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 190, null)");
 		cc_setonmouseleave("cc_settrans(event_com, cc_getid, 255, null)");

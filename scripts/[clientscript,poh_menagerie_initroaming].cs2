@@ -17,4 +17,4 @@ if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $component0
 if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $component0);
 ~poh_menagerie_setroaming($component0);
 if_setonvartransmit("poh_menagerie_setroaming(event_com, cc_getid, 0){var661}", $component0);
-if_setonop("poh_menagerie_toggleroaming(event_opindex, event_com, cc_getid)", $component0);
+if_setonop("poh_menagerie_toggleroaming(event_op, event_com, cc_getid)", $component0);

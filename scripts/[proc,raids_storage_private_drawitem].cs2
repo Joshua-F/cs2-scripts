@@ -10,9 +10,9 @@ if ($obj0 ! null) {
 	cc_setop(5, "Withdraw-X");
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-	cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comsubid)");
+	cc_setonop("raids_storage_items_op(event_op, event_com, event_comsubid)");
 	cc_setondrag("raids_storage_private_dragscroll(event_com, event_comsubid, event_mousex, event_mousey, $component3, 0)");
-	cc_setondragcomplete("raids_storage_private_reorder(event_com, event_comsubid, event_dropsubid, $component3)");
+	cc_setondragcomplete("raids_storage_private_reorder(event_com, event_comsubid, event_comsubid2, $component3)");
 	$int2 = calc($int2 + 1);
 } else {
 	cc_settrans(255);

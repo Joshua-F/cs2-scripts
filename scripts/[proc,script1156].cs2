@@ -11,7 +11,7 @@ if ($obj0 ! null) {
 	cc_setop(5, "Withdraw-All");
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff981f><oc_name($obj0)>");
-	cc_setondragcomplete("script1157(event_com, event_comsubid, event_dropsubid)");
+	cc_setondragcomplete("script1157(event_com, event_comsubid, event_comsubid2)");
 } else {
 	cc_settrans(255);
 	cc_setobject_nonum(obj_6512, 1);

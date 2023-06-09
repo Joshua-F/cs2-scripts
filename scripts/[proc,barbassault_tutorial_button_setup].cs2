@@ -14,5 +14,5 @@ if (%varbit3264 < $int1) {
 		if_setonmouseleave("text_colour_swapper($component0, ^green)", $component0);
 	}
 	if_setonmouserepeat("text_colour_swapper($component0, ^white)", $component0);
-	if_setonop("opsound(event_opindex, 2)", $component0);
+	if_setonop("opsound(event_op, 2)", $component0);
 }

@@ -10,14 +10,14 @@ if (cc_find($component9, $int2) = ^true) {
 	if ($num7 > 0) {
 		cc_setobject($namedobj6, $num7);
 		cc_settrans(0);
-		cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comsubid, 100, 0)");
+		cc_setonop("poh_costumes_opgraphic(event_op, event_com, event_comsubid, 100, 0)");
 		if ($boolean8 = true) {
 			cc_setop(1, "Take");
 		}
 	} else {
 		cc_setobject_nonum($namedobj6, 1);
 		cc_settrans(140);
-		cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comsubid, 180, 140)");
+		cc_setonop("poh_costumes_opgraphic(event_op, event_com, event_comsubid, 180, 140)");
 	}
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($namedobj6)></col>");

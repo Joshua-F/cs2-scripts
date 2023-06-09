@@ -56,13 +56,13 @@ def_int $int8 = calc(25 * (3 + 1) + 4);
 if_setsize(calc($int7 + 4), $int8, ^setsize_abs, ^setsize_abs, $component2);
 ~br_settings_indicators($component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2));
 if (cc_find($component3, 0) = ^true) {
-	cc_setonop("br_settings_op(event_opindex, 0, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
+	cc_setonop("br_settings_op(event_op, 0, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
 }
 if (cc_find($component3, 1) = ^true) {
-	cc_setonop("br_settings_op(event_opindex, 1, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
+	cc_setonop("br_settings_op(event_op, 1, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
 }
 if (cc_find($component3, 2) = ^true) {
-	cc_setonop("br_settings_op(event_opindex, 2, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
+	cc_setonop("br_settings_op(event_op, 2, $component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
 }
 if_setonvartransmit("br_settings_indicators($component3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2)){var1373}", $component3);
 cc_deleteall($component1);

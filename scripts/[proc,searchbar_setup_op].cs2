@@ -23,5 +23,5 @@ if (%varbit9638 = 0) {
 	if_setonmouseover(null, $component3);
 	if_setonmouseleave(null, $component3);
 	if_settext(append(%varcstring417, "<col=f4f4f4>*</col>"), $component3);
-	if_setonkey("searchbar_keypress(event_key, event_keychar, $component3, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16)", $component3);
+	if_setonkey("searchbar_keypress(event_keycode, event_keychar, $component3, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16)", $component3);
 }

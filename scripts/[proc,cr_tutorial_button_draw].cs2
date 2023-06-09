@@ -13,7 +13,7 @@ if (string_length($string0) > 0) {
 	cc_settext($string0);
 	if_setop(1, "Close", $component0);
 	if_setonop("closebutton_click_sound", $component0);
-	if_setonkey("closebutton_key(event_key)", $component0);
+	if_setonkey("closebutton_key(event_keycode)", $component0);
 }
 if (~on_mobile = false) {
 	if_setonmouseleave("cr_tutorial_button_hover($component0, 0, $string0)", $component0);

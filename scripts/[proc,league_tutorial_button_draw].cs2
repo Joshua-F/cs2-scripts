@@ -17,5 +17,5 @@ if (~on_mobile = false) {
 	if_setonmouseleave("league_tutorial_button_hover($component0, 0, $string0)", $component0);
 	if_setonmouserepeat("league_tutorial_button_hover($component0, 1, $string0)", $component0);
 }
-if_setonop("league_tutorial_button_op(event_opindex, $component0, $string0)", $component0);
+if_setonop("league_tutorial_button_op(event_op, $component0, $string0)", $component0);
 if_setontimer(null, $component0);

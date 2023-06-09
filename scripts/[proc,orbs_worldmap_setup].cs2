@@ -47,7 +47,7 @@ if (if_hassub(enum(component, component, $enum3, toplevel_osrs_stretch:17)) = tr
 	if_setonmouseleave("settrans(event_com, 125)", $component2);
 	if_clearops($component2);
 	if_setop(2, "Close <col=ff9040>Floating panel</col>", $component2);
-	if_setonop("opsound(event_opindex, -1)", $component2);
+	if_setonop("opsound(event_op, -1)", $component2);
 } else {
 	if_settrans(0, $component2);
 	if_setgraphic($graphic4, $component2);
@@ -76,5 +76,5 @@ if (if_hassub(enum(component, component, $enum3, toplevel_osrs_stretch:17)) = tr
 		if_setop(2, "Floating <col=ff9040>World Map</col>", $component2);
 		if_setop(3, "Fullscreen <col=ff9040>World Map</col>", $component2);
 	}
-	if_setonop("opsound(event_opindex, -1)", $component2);
+	if_setonop("opsound(event_op, -1)", $component2);
 }

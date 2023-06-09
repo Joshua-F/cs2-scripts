@@ -13,7 +13,7 @@ while ($int3 <= 5) {
 			cc_setgraphic("combatboxes,2");
 			cc_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, ^white)");
 			cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
-			cc_setonop("farming_view_optab(event_opindex, $int3, $component0, $component1, $component2)");
+			cc_setonop("farming_view_optab(event_op, $int3, $component0, $component1, $component2)");
 		}
 	}
 	$int3 = calc($int3 + 1);

@@ -45,12 +45,12 @@ def_string $string1 = ",";
 if (%var2876 < $int20) {
 	cc_setcolour(0x9f9f9f);
 	$mes0 = "You need <~tostring_spacer($int20, $string1)> <~script853($int20)> to claim that reward.";
-	.cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	.cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
 } else if (string_length(~script854($namedobj15)) > 0) {
 	$mes0 = ~script854($namedobj15);
 	cc_setcolour(0x9f9f9f);
-	.cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	.cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
 } else {
 	if ($count12 = $count0) {
@@ -58,7 +58,7 @@ if (%var2876 < $int20) {
 	} else {
 		cc_setcolour(0x00df00);
 	}
-	.cc_setonop("soul_wars_rewards_select($count0, 0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	.cc_setonop("soul_wars_rewards_select($count0, 0, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 }
 def_string $string2 = oc_name($namedobj15);
 if (parawidth($string2, 512, p12_full) > $width17) {
@@ -85,12 +85,12 @@ if ($int20 > 0) {
 if (%var2876 < $int20) {
 	cc_setcolour(0x9f9f9f);
 	$mes0 = "You need <~tostring_spacer($int20, $string1)> <~script853($int20)> to claim that reward.";
-	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
 } else if (string_length(~script854($namedobj15)) > 0) {
 	$mes0 = ~script854($namedobj15);
 	cc_setcolour(0x9f9f9f);
-	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
 } else {
 	if ($count12 = $count0 & $int1 = 0) {
@@ -98,7 +98,7 @@ if (%var2876 < $int20) {
 	} else {
 		cc_setcolour($colour18);
 	}
-	cc_setonop("soul_wars_rewards_select($count0, 0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	cc_setonop("soul_wars_rewards_select($count0, 0, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 }
 if ($count12 = $count0 & $int1 = 0) {
 	cc_setcolour(^white);
@@ -131,12 +131,12 @@ cc_settext("Buy X");
 if (%var2876 < $int20) {
 	cc_setcolour(0x9f9f9f);
 	$mes0 = "You need at least <~tostring_spacer($int20, $string1)> <~script853($int20)> to claim that reward.";
-	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
 } else if (string_length(~script854($namedobj15)) > 0) {
 	$mes0 = ~script854($namedobj15);
 	cc_setcolour(0x9f9f9f);
-	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	cc_setonop("soul_wars_rewards_refuse($mes0, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 	$colour18, $colour19 = 0x9f9f9f, 0x9f9f9f;
 } else {
 	if ($count12 = $count0 & $int1 = 1) {
@@ -144,7 +144,7 @@ if (%var2876 < $int20) {
 	} else {
 		cc_setcolour($colour18);
 	}
-	cc_setonop("soul_wars_rewards_select($count0, 1, $component8, $component9, $component10, $int7, event_opindex, $component13, $component14)");
+	cc_setonop("soul_wars_rewards_select($count0, 1, $component8, $component9, $component10, $int7, event_op, $component13, $component14)");
 }
 if ($count12 = $count0 & $int1 = 1) {
 	cc_setcolour(^white);

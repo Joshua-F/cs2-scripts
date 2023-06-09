@@ -66,7 +66,7 @@ while ($int11 < $int4) {
 		~quickprayer_button_update($obj7);
 		cc_setonvartransmit("quickprayer_button_update($obj7, event_com, event_comsubid, .cc_getid){var84, var3781, var1636}");
 		cc_setonstattransmit("quickprayer_button_update($obj7, event_com, event_comsubid, .cc_getid){prayer, defence}");
-		cc_setonop("quickprayer_button_op(event_opindex, $obj7, event_com, event_comsubid, .cc_getid)");
+		cc_setonop("quickprayer_button_op(event_op, $obj7, event_com, event_comsubid, .cc_getid)");
 	}
 	$int11 = calc($int11 + 1);
 }

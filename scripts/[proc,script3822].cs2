@@ -14,7 +14,7 @@ if ($boolean0 = true) {
 	if_setop(1, "Start", $component2);
 	if_setonmouserepeat("script3821(false, true, $component2)", $component2);
 	if_setonmouseleave("script3821(false, false, $component2)", $component2);
-	if_setonop("script3823(event_opindex, $component2)", $component2);
+	if_setonop("script3823(event_op, $component2)", $component2);
 }
 cc_create($component2, ^iftype_text, $comsubid3);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

@@ -69,7 +69,7 @@ if (cc_find($component4, $comsubid10) = ^true) {
 	cc_setonmouseover("script1755(true, $component4, $comsubid10, -1, $int11, ^yellow)");
 	cc_setonmouseleave("script1755(false, $component4, $comsubid10, -1, $int11, $colour24)");
 	cc_setop(1, "Scroll map");
-	cc_setonop("script1756(event_opindex, $coord1, $boolean2)");
+	cc_setonop("script1756(event_op, $coord1, $boolean2)");
 }
 if (cc_find($component4, $int11) = ^true) {
 	cc_setposition($x16, $y17, ^setpos_abs_centre, ^setpos_abs_centre);

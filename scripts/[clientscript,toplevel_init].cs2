@@ -9,7 +9,7 @@ while ($component3 ! null) {
 	$component3 = enum(component, component, $enum1, $component3);
 	if ($component3 ! null) {
 		if_setop(1, enum(int, string, enum_1141, $int2), $component3);
-		if_setonop("toplevel_sidebutton_op(event_opindex, $enum1, $int2)", $component3);
+		if_setonop("toplevel_sidebutton_op(event_op, $enum1, $int2)", $component3);
 	}
 	$int2 = calc($int2 + 1);
 	$component3 = enum(int, component, enum_1138, $int2);

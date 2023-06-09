@@ -21,7 +21,7 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^white);
 cc_settrans(255);
-cc_setonop("script805(event_opindex, $int7, -1, $component0, $comsubid1, $component2, $component3, $component4, $component5, $component8)");
+cc_setonop("script805(event_op, $int7, -1, $component0, $comsubid1, $component2, $component3, $component4, $component5, $component8)");
 cc_create($component6, ^iftype_rectangle, $int9);
 def_int $comsubid13 = $int9;
 $int9 = calc($int9 + 1);

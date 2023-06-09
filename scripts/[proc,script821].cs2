@@ -221,7 +221,7 @@ if (cc_find($component8, $comsubid10) = ^true) {
 				cc_setgraphic($graphic27);
 				cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic28, null)");
 				cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic27, null)");
-				cc_setonop("opsound(event_opindex, 2)");
+				cc_setonop("opsound(event_op, 2)");
 			} else {
 				cc_settrans(120);
 				cc_setgraphic($graphic28);

@@ -23,5 +23,5 @@ if_setonmouseover("settrans($component7, 75)", $component6);
 if_setonmouseleave("settrans($component7, 0)", $component6);
 def_graphic $graphic12 = "miscgraphics,0";
 def_graphic $graphic13 = "miscgraphics,9";
-if_setonop("bankmain_depositall(event_com, $graphic13, $graphic12, event_opindex)", $component4);
-if_setonop("bankmain_depositall(event_com, $graphic13, $graphic12, event_opindex)", $component6);
+if_setonop("bankmain_depositall(event_com, $graphic13, $graphic12, event_op)", $component4);
+if_setonop("bankmain_depositall(event_com, $graphic13, $graphic12, event_op)", $component6);

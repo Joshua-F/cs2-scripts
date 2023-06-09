@@ -13,7 +13,7 @@ if ($obj0 ! null) {
 		cc_setop(4, "Store-X");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
-		cc_setondragcomplete("rune_pouch_inventoryreorder(event_com, event_drop, event_comsubid, event_dropsubid, 255, 0)");
+		cc_setondragcomplete("rune_pouch_inventoryreorder(event_com, event_com2, event_comsubid, event_comsubid2, 255, 0)");
 	} else {
 		cc_settrans(150);
 		cc_setobject($obj0, $num1);
@@ -21,7 +21,7 @@ if ($obj0 ! null) {
 		cc_setop(1, "Store");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 175, 150)");
-		cc_setondragcomplete("rune_pouch_inventoryreorder(event_com, event_drop, event_comsubid, event_dropsubid, 255, 150)");
+		cc_setondragcomplete("rune_pouch_inventoryreorder(event_com, event_com2, event_comsubid, event_comsubid2, 255, 150)");
 	}
 } else {
 	cc_settrans(0);

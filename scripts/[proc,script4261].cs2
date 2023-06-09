@@ -29,7 +29,7 @@ while ($int8 < $int1) {
 				.cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, .cc_gettrans)");
 			}
 			.cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, .cc_gettrans)");
-			.cc_setonop("clan_members_op(event_opindex, event_com, event_comsubid, .cc_gettrans, 5, $string0)");
+			.cc_setonop("clan_members_op(event_op, event_com, event_comsubid, .cc_gettrans, 5, $string0)");
 			.cc_setontimer(null);
 			$int5, $int6 = calc($int5 + $int2), calc($int6 + 1);
 		} else {

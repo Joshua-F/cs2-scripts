@@ -7,7 +7,7 @@ if (clientclock >= $clock0 & cc_find($component1, $comsubid2) = ^true) {
 		cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, 255)");
 	}
 	cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, 255)");
-	cc_setonop("gim_sidepanel_op(event_opindex, event_com, event_comsubid, $string0, $world3)");
+	cc_setonop("gim_sidepanel_op(event_op, event_com, event_comsubid, $string0, $world3)");
 	if ($boolean4 = true) {
 		if ($world3 ! -1) {
 			resume_countdialog(tostring($world3));

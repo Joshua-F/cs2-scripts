@@ -60,18 +60,18 @@ if ($count12 < 0) {
 		if (string_length($string1) > 0) {
 			if ($boolean11 = true) {
 				cc_setop(10, "Reveal previous name");
-				cc_setonop("ignore_op(event_opindex, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0)");
+				cc_setonop("ignore_op(event_op, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0)");
 			} else {
 				$string1 = "Previous name:<br><$string1>";
 				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component6, $string1, 25, 190)");
 				cc_setonmouseleave("deltooltip($component6)");
-				cc_setonop("ignore_op(event_opindex, event_opbase, null, -1, -1, "null", "null")");
+				cc_setonop("ignore_op(event_op, event_opbase, null, -1, -1, "null", "null")");
 			}
 			.cc_sethide(false);
 		} else {
 			cc_setonmouseover("deltooltip($component6)");
 			.cc_sethide(true);
-			cc_setonop("ignore_op(event_opindex, event_opbase, null, -1, -1, "null", "null")");
+			cc_setonop("ignore_op(event_op, event_opbase, null, -1, -1, "null", "null")");
 		}
 		$count7, $height9 = calc($count7 + 1), calc($height9 + $int10);
 	}

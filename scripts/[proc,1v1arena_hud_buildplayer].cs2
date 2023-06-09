@@ -31,7 +31,7 @@ if (string_length($string1) > 0) {
 		if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)", $component8);
 	}
 	if_setonmouseover("cc_colour_swapper(event_com, cc_getid, ^white)", $component8);
-	if_setonop("opsound(event_opindex, 2)", $component8);
+	if_setonop("opsound(event_op, 2)", $component8);
 	cc_settextshadow(true);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

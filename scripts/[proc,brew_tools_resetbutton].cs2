@@ -8,5 +8,5 @@ if (~on_mobile = true) {
 	if_setonmouserepeat("settrans($component1, 245)", $component0);
 	if_setonmouseleave("settrans($component1, 255)", $component0);
 }
-if_setonop("brew_tools_op(event_opindex, $component0, $component1)", $component0);
+if_setonop("brew_tools_op(event_op, $component0, $component1)", $component0);
 if_setontimer(null, $component0);

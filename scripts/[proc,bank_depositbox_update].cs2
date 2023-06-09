@@ -16,7 +16,7 @@ def_graphic $graphic7 = "miscgraphics,9";
 if (inv_total(inv, looting_bag_11941) > 0 | inv_total(inv, looting_bag_22586) > 0) {
 	if_setonmouseover("settrans($component2, 75)", $component1);
 	if_setonmouseleave("settrans($component2, 0)", $component1);
-	if_setonop("bankmain_depositall(event_com, $graphic7, $graphic6, event_opindex)", $component1);
+	if_setonop("bankmain_depositall(event_com, $graphic7, $graphic6, event_op)", $component1);
 } else {
 	if_setonmouseover(null, $component1);
 	if_setonmouseleave(null, $component1);

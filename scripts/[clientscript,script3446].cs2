@@ -63,11 +63,11 @@ while ($int1 < $int2) {
 		if (calc($int1 % 2) = 0) {
 			.cc_settrans(230);
 			.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 230, null)");
-			.cc_setonop("script3447(event_opindex, event_com, event_comsubid, 230)");
+			.cc_setonop("script3447(event_op, event_com, event_comsubid, 230)");
 		} else {
 			.cc_settrans(245);
 			.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 245, null)");
-			.cc_setonop("script3447(event_opindex, event_com, event_comsubid, 245)");
+			.cc_setonop("script3447(event_op, event_com, event_comsubid, 245)");
 		}
 	}
 	$int1, $height3 = calc($int1 + 1), calc($height3 + 22);

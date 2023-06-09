@@ -31,4 +31,4 @@ if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $component1
 if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $component12);
 ~kourend_sidepanel_hudtoggle($component12, $component13);
 if_setonvartransmit("kourend_sidepanel_hudtoggle($component12, cc_getid, .cc_getid, $component13){var1055}", $component12);
-if_setonop("kourend_sidepanel_hudop(event_opindex, $component12, cc_getid, .cc_getid, $component13)", $component12);
+if_setonop("kourend_sidepanel_hudop(event_op, $component12, cc_getid, .cc_getid, $component13)", $component12);

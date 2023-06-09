@@ -50,7 +50,7 @@ if (cc_find($component2, $int7) = ^true) {
 	cc_sethide(false);
 	cc_setop(1, "Focus on");
 	cc_setopbase("<col=ff9040><struct_param($struct1, param_985)></col>");
-	cc_setonop("script1756(event_opindex, $coord0, false)");
+	cc_setonop("script1756(event_op, $coord0, false)");
 	cc_setposition($x9, $y10, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic($graphic11);
 	cc_set2dangle($angle13);
@@ -64,7 +64,7 @@ if (cc_find($component2, $int7) = ^true) {
 	cc_sethide(false);
 	cc_setop(1, "Focus on");
 	cc_setopbase("<col=ff9040><struct_param($struct1, param_985)></col>");
-	cc_setonop("script1756(event_opindex, $coord0, false)");
+	cc_setonop("script1756(event_op, $coord0, false)");
 	cc_setsize($int8, $int8, ^setsize_abs, ^setsize_abs);
 	cc_setposition($x9, $y10, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic($graphic11);

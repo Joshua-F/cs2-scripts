@@ -21,7 +21,7 @@ cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(70, 31, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("graphic_1121");
 cc_setop(1, "Choose item");
-cc_setonop("opsound(event_opindex, 2)");
+cc_setonop("opsound(event_op, 2)");
 cc_create($component0, ^iftype_graphic, $int12);
 def_int $comsubid14 = $int12;
 $int12 = calc($int12 + 1);
@@ -111,7 +111,7 @@ if ($boolean3 = true) {
 	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
 	cc_setop(1, "Enter quantity");
-	cc_setonop("opsound(event_opindex, 2)");
+	cc_setonop("opsound(event_op, 2)");
 }
 cc_create($component0, ^iftype_graphic, $int12);
 def_int $comsubid21 = $int12;
@@ -165,7 +165,7 @@ cc_setgraphic($graphic10);
 cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
 cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
 cc_setop(1, "Guide price");
-cc_setonop("opsound(event_opindex, 2)");
+cc_setonop("opsound(event_op, 2)");
 cc_create($component0, ^iftype_graphic, $int12);
 def_int $comsubid25 = $int12;
 $int12 = calc($int12 + 1);
@@ -179,7 +179,7 @@ cc_setgraphic($graphic10);
 cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic11, null)");
 cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
 cc_setop(1, "Enter price");
-cc_setonop("opsound(event_opindex, 2)");
+cc_setonop("opsound(event_op, 2)");
 cc_create($component0, ^iftype_graphic, $int12);
 def_int $comsubid26 = $int12;
 $int12 = calc($int12 + 1);
@@ -234,35 +234,35 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setonvartransmit("ge_offers_setup_draw($boolean3, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20){var1151, var563, var1043, var375}", $component0);
 if_setoninvtransmit("ge_offers_setup_draw($boolean3, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20){inv}", $component0);
 if (cc_find($component0, $comsubid14) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity($boolean3, -1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, -1, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid15) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity($boolean3, 1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, 1, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid16) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity($boolean3, 1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, 1, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid17) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity($boolean3, 10, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, 10, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid18) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity($boolean3, 100, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, 100, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid19) = ^true) {
-	cc_setonop("ge_offers_setup_changequantity($boolean3, ^max_32bit_int, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changequantity($boolean3, ^max_32bit_int, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid20) = ^true) {
-	cc_setonop("script6910($boolean3, ^max_32bit_int, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("script6910($boolean3, ^max_32bit_int, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid21) = ^true) {
-	cc_setonop("ge_offers_setup_changeprice($boolean3, -1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changeprice($boolean3, -1, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid22) = ^true) {
-	cc_setonop("ge_offers_setup_changeprice($boolean3, 1, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changeprice($boolean3, 1, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid23) = ^true) {
-	cc_setonop("ge_offers_setup_changeprice($boolean3, -5, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changeprice($boolean3, -5, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }
 if (cc_find($component0, $comsubid26) = ^true) {
-	cc_setonop("ge_offers_setup_changeprice($boolean3, 5, event_opindex, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
+	cc_setonop("ge_offers_setup_changeprice($boolean3, 5, event_op, $component0, $comsubid13, $comsubid19, $comsubid36, $comsubid27, $comsubid28, $comsubid29, $comsubid30, $comsubid31, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $component2, $comsubid37, $comsubid20)");
 }

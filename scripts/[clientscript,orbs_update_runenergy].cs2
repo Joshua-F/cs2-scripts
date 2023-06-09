@@ -5,7 +5,7 @@ if ($component0 ! null) {
 	if_setonmisctransmit("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
 	if_setonvartransmit("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6){var173, var1575, var281, var2686}", $component0);
 	if_setonsubchange("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
-	if_setonop("orbs_toggle_runmode(event_opindex, $component3, $component4)", $component6);
+	if_setonop("orbs_toggle_runmode(event_op, $component3, $component4)", $component6);
 }
 def_graphic $graphic7 = "orb_frame,1";
 def_graphic $graphic8 = "orb_frame,0";

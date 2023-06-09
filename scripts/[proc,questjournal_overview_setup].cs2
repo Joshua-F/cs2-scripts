@@ -68,7 +68,7 @@ if ($coord10 ! null & $coord10 ! 0_0_0_0_0) {
 	$string11 = "Show on Map";
 	cc_settext($string11);
 	cc_setop(1, $string11);
-	cc_setonop("questjournal_overview_button_op(event_com, event_comsubid, event_opindex, 4145151, 200, $string11)");
+	cc_setonop("questjournal_overview_button_op(event_com, event_comsubid, event_op, 4145151, 200, $string11)");
 	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, 0x3f3fff)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x0000c8)");

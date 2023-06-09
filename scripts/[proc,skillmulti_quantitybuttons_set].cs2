@@ -59,7 +59,7 @@ if ($boolean2 = true) {
 		if_setonmouseover("skillmulti_quantitybutton_draw(true, $text0, event_com)", interface_270:11);
 		if_setonmouseleave("skillmulti_quantitybutton_draw(false, $text0, event_com)", interface_270:11);
 		if_setop(1, "Other quantity", interface_270:11);
-		if_setonop("skillmulti_quantitybutton_x_start(event_opindex, $int0, $int1)", interface_270:11);
+		if_setonop("skillmulti_quantitybutton_x_start(event_op, $int0, $int1)", interface_270:11);
 		if_setontimer(null, interface_270:11);
 	} else {
 		~skillmulti_wipebutton(interface_270:11);

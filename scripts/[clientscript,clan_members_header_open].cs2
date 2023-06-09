@@ -31,7 +31,7 @@ while ($count19 < $count20) {
 		cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff981f)");
 	}
 	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
-	cc_setonop("clan_members_header_op(event_opindex, $count19, $component0, $component2, $component3, $comsubid4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component15, $component16)");
+	cc_setonop("clan_members_header_op(event_op, $count19, $component0, $component2, $component3, $comsubid4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component15, $component16)");
 	cc_setposition(0, calc($count19 * $int18), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settext(enum(int, string, enum_3793, $count19));
 	$count19 = calc($count19 + 1);

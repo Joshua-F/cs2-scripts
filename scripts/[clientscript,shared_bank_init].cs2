@@ -23,7 +23,7 @@ if (~bankmain_searching = 1) {
 	%varcstring359 = "";
 }
 ~shared_bank_search_setbutton($component6, $component0, $component7, $component8, $int25, $component1, $comsubid22, $component2);
-if_setonop("shared_bank_search_toggle(event_opindex, $component6, $component0, $component7, $component8, $int25, $component1, $comsubid22, $component2)", $component6);
+if_setonop("shared_bank_search_toggle(event_op, $component6, $component0, $component7, $component8, $int25, $component1, $comsubid22, $component2)", $component6);
 if_settext(~tostring_spacer($int25, ","), $component3);
 def_int $int27 = 0;
 while ($int27 < $int25) {

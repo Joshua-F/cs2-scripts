@@ -8,7 +8,7 @@ if (~bankmain_searching = 1) {
 	%varcstring359 = "";
 }
 ~bankmain_search_setbutton($component0, $component2, $component7, $component8, $component9, $component16, $component17, $component15, $component18, $component19, $component20, $component21, $component28, $component29, $component30, $component31, $component32);
-if_setonop("bankmain_search_toggle(event_opindex, $component0, $component2, $component7, $component8, $component9, $component16, $component17, $component15, $component18, $component19, $component20, $component21, $component28, $component29, $component30, $component31, $component32)", $component15);
+if_setonop("bankmain_search_toggle(event_op, $component0, $component2, $component7, $component8, $component9, $component16, $component17, $component15, $component18, $component19, $component20, $component21, $component28, $component29, $component30, $component31, $component32)", $component15);
 cc_deleteall($component8);
 ~scrollbar_vertical($component8, $component7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~bankmain_swapinsert($component10, $component11);
@@ -56,7 +56,7 @@ while ($int36 <= 9) {
 	cc_settext("Tab <tostring($int36)>");
 	cc_setop(1, "View tab");
 	cc_setopbase("<col=ff9040><tostring($int36)></col>");
-	cc_setonop("bankmain_switchtab($component0, $component2, $component7, $component8, $component9, $component16, $component17, $component15, $component18, $component19, $component20, $component21, event_opindex, $int36, $component28, $component29, $component30, $component31, $component32)");
+	cc_setonop("bankmain_switchtab($component0, $component2, $component7, $component8, $component9, $component16, $component17, $component15, $component18, $component19, $component20, $component21, event_op, $int36, $component28, $component29, $component30, $component31, $component32)");
 	$int36 = calc($int36 + 1);
 }
 $int36 = 0;

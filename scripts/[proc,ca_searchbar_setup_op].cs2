@@ -23,5 +23,5 @@ if (%varbit12884 = 0) {
 	if_setonmouseover(null, $component2);
 	if_setonmouseleave(null, $component2);
 	if_settext(append(%varcstring527, "<col=f4f4f4>*</col>"), $component2);
-	if_setonkey("ca_searchbar_keypress(event_key, event_keychar, $component0, $component2)", $component2);
+	if_setonkey("ca_searchbar_keypress(event_keycode, event_keychar, $component0, $component2)", $component2);
 }

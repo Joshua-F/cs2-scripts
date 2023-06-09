@@ -177,8 +177,8 @@ while ($int8 < 92) {
 				.cc_setondrag("seed_vault_drag_text($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
 				.cc_setdragdeadtime(5);
 				.cc_setdragdeadzone(5);
-				cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comsubid, event_dropsubid, cc_getx, cc_gety)");
-				.cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comsubid, event_dropsubid, cc_getx, cc_gety)");
+				cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comsubid, event_comsubid2, cc_getx, cc_gety)");
+				.cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comsubid, event_comsubid2, cc_getx, cc_gety)");
 			} else {
 				cc_setdragdeadtime(10000);
 				cc_setdragdeadzone(10000);

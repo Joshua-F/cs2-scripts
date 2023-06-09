@@ -23,9 +23,9 @@ if (inv_total(inv, agility_arena_ticket_2996) < $int3 | $int5 = 0) {
 } else if ($boolean4 = true) {
 	$int6 = ~v2_stone_button_in_filled($component0);
 	~agilityarena_rewards_gracefulbutton_drawcomponents($component0, $int6, $obj1, $text1, ^white);
-	if_setonop("opsound(event_opindex, 2)", $component0);
+	if_setonop("opsound(event_op, 2)", $component0);
 } else {
 	$int6 = ~v2_stone_button_out_filled($component0);
 	~agilityarena_rewards_gracefulbutton_drawcomponents($component0, $int6, $obj1, $text1, 0xff981f);
-	if_setonop("opsound(event_opindex, 2)", $component0);
+	if_setonop("opsound(event_op, 2)", $component0);
 }

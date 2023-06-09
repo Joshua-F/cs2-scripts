@@ -30,7 +30,7 @@ if (string_length($string0) <= 0) {
 	}
 	cc_setop(1, "Continue");
 	cc_setonop("graphicbox_listener(true, -1, null, 83, $string1, event_com, event_comsubid, 0, $op2, $component0, 0)");
-	cc_setonkey("graphicbox_listener(false, event_key, event_keychar, 83, $string1, event_com, event_comsubid, 0, $op2, $component0, 0)");
+	cc_setonkey("graphicbox_listener(false, event_keycode, event_keychar, 83, $string1, event_com, event_comsubid, 0, $op2, $component0, 0)");
 	if ($component0 ! null) {
 		if_setonclick("graphicbox_listener(true, -1, null, 83, $string1, event_com, cc_getid, 0, $op2, $component0, 0)", $component0);
 	}
@@ -55,8 +55,8 @@ if (string_length($string0) <= 0) {
 	.cc_setop(1, $string0);
 	$string1 = "1";
 	cc_setonop("graphicbox_listener(true, -1, null, 13, $string1, event_com, event_comsubid, 0, $op2, null, 0)");
-	cc_setonkey("graphicbox_listener(false, event_key, event_keychar, 13, $string1, event_com, event_comsubid, 0, $op2, null, 0)");
+	cc_setonkey("graphicbox_listener(false, event_keycode, event_keychar, 13, $string1, event_com, event_comsubid, 0, $op2, null, 0)");
 	$string1 = "2";
 	.cc_setonop("graphicbox_listener(true, -1, null, 83, $string1, event_com, event_comsubid, 1, $string0, null, 0)");
-	.cc_setonkey("graphicbox_listener(false, event_key, event_keychar, 83, $string1, event_com, event_comsubid, 1, $string0, null, 0)");
+	.cc_setonkey("graphicbox_listener(false, event_keycode, event_keychar, 83, $string1, event_com, event_comsubid, 1, $string0, null, 0)");
 }

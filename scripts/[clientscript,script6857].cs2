@@ -99,7 +99,7 @@ while ($int25 < $int24) {
 		if (~string_isnullorempty($string1) = 0) {
 			.cc_setop(10, "Examine");
 		}
-		.cc_setonop("script6858(event_opindex, $dbrow27, $comsubid21, $comsubid22, $comsubid23, $component9, $component10)");
+		.cc_setonop("script6858(event_op, $dbrow27, $comsubid21, $comsubid22, $comsubid23, $component9, $component10)");
 		if ($int25 ! $int4) {
 			.cc_setonmouserepeat("script6860(true, $int25, $int4, $comsubid21, $comsubid22, $comsubid23, $component9)");
 			.cc_setonmouseleave("script6860(false, $int25, $int4, $comsubid21, $comsubid22, $comsubid23, $component9)");

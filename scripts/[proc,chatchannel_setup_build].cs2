@@ -100,7 +100,7 @@ if ($count16 <= -2) {
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextfont(b12_full);
 		.cc_settext(enum(int, string, enum_1541, $rank13));
-		cc_setonop("chatchannel_setup_setrank($component3, .cc_getid, event_opbase, event_opindex)");
+		cc_setonop("chatchannel_setup_setrank($component3, .cc_getid, event_opbase, event_op)");
 		cc_create($component3, ^iftype_text, $int10);
 		$int10 = calc($int10 + 1);
 		cc_setsize($width7, $int12, ^setsize_abs, ^setsize_abs);

@@ -18,7 +18,7 @@ def_int $int9 = -1;
 if ($int7 = $int2) {
 	if_sethide(false, $component5);
 	if_setop(1, "View", $component5);
-	if_setonop("poh_viewer_room_op(event_opindex, event_com, $int0)", $component5);
+	if_setonop("poh_viewer_room_op(event_op, event_com, $int0)", $component5);
 	if (cc_find(interface_422:5, calc($int2 * $int4 + $int8 * $int3 + $int6)) = ^true) {
 		cc_sethide(true);
 	}

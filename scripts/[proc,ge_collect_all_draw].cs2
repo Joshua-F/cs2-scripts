@@ -7,7 +7,7 @@ if (~script708 = 1) {
 	.cc_setcolour(0xff981f);
 	if_setonmouserepeat("cc_graphic_swapper(event_com, cc_getid, $graphic2, null)", $component0);
 	if_setonmouseleave("cc_graphic_swapper(event_com, cc_getid, $graphic1, null)", $component0);
-	if_setonop("opsound(event_opindex, 2)", $component0);
+	if_setonop("opsound(event_op, 2)", $component0);
 } else {
 	.cc_setcolour(0x7f7f7f);
 	if_setonmouserepeat(null, $component0);

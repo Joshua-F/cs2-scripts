@@ -11,5 +11,5 @@ if (cc_find(interface_729:5, $comsubid0) = ^true) {
 	cc_setop(8, "Close");
 	cc_setop(9, "Close all but");
 	cc_setop(10, $op1);
-	cc_setonop("xptracker_ops(event_opindex, $stat1)");
+	cc_setonop("xptracker_ops(event_op, $stat1)");
 }
