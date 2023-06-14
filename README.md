@@ -316,7 +316,6 @@
 [**313**](scripts/[clientscript,music_vartransmit].cs2) `[clientscript,music_vartransmit]`  
 [**314**](scripts/[proc,music_setcolour].cs2) `[proc,music_setcolour]`  
 [**315**](scripts/[clientscript,music_optionbuttons_setmode].cs2) `[clientscript,music_optionbuttons_setmode]`  
-[**316**](scripts/[clientscript,music_optionbuttons_setloop].cs2) `[clientscript,music_optionbuttons_setloop]`  
 [**317**](scripts/[clientscript,music_optionbuttons_resynch].cs2) `[clientscript,music_optionbuttons_resynch]`  
 [**318**](scripts/[proc,music_optionbuttons].cs2) `[proc,music_optionbuttons]`  
 [**319**](scripts/[clientscript,slayer_rewards_confirm_back].cs2) `[clientscript,slayer_rewards_confirm_back]`  
@@ -1283,8 +1282,6 @@
 [**1280**](scripts/[proc,script1280].cs2)  
 [**1281**](scripts/[clientscript,burgh_set_hover].cs2) `[clientscript,burgh_set_hover]`  
 [**1282**](scripts/[proc,script1282].cs2)  
-[**1283**](scripts/[worldmapelementmouserepeat,mapelement_650].cs2) `[worldmapelementmouserepeat,mapelement_650]`  
-[**1284**](scripts/[worldmapelementmouseleave,mapelement_650].cs2) `[worldmapelementmouseleave,mapelement_650]`  
 [**1285**](scripts/[proc,colour_interpolate].cs2) `[proc,colour_interpolate]`  
 [**1286**](scripts/[clientscript,glidermap_init].cs2) `[clientscript,glidermap_init]`  
 [**1287**](scripts/[clientscript,glidermap_hideshow].cs2) `[clientscript,glidermap_hideshow]`  
@@ -1760,180 +1757,14 @@
 [**1757**](scripts/[proc,worldmap_elements_marker].cs2) `[proc,worldmap_elements_marker]`  
 [**1758**](scripts/[clientscript,script1758].cs2)  
 [**1759**](scripts/[proc,script1759].cs2)  
-[**1760**](scripts/[worldmapelementmouserepeat,mapelement_0].cs2) `[worldmapelementmouserepeat,mapelement_0]`  
-[**1761**](scripts/[worldmapelementmouserepeat,mapelement_1].cs2) `[worldmapelementmouserepeat,mapelement_1]`  
-[**1762**](scripts/[worldmapelementmouserepeat,mapelement_2].cs2) `[worldmapelementmouserepeat,mapelement_2]`  
-[**1763**](scripts/[worldmapelementmouserepeat,mapelement_3].cs2) `[worldmapelementmouserepeat,mapelement_3]`  
-[**1764**](scripts/[worldmapelementmouserepeat,mapelement_4].cs2) `[worldmapelementmouserepeat,mapelement_4]`  
-[**1765**](scripts/[worldmapelementmouserepeat,mapelement_5].cs2) `[worldmapelementmouserepeat,mapelement_5]`  
 [**1766**](scripts/[clientscript,helper_agility_highlight_obstacles].cs2) `[clientscript,helper_agility_highlight_obstacles]`  
-[**1767**](scripts/[worldmapelementmouserepeat,mapelement_7].cs2) `[worldmapelementmouserepeat,mapelement_7]`  
-[**1768**](scripts/[worldmapelementmouserepeat,mapelement_8].cs2) `[worldmapelementmouserepeat,mapelement_8]`  
-[**1769**](scripts/[worldmapelementmouserepeat,mapelement_9].cs2) `[worldmapelementmouserepeat,mapelement_9]`  
-[**1770**](scripts/[worldmapelementmouserepeat,mapelement_10].cs2) `[worldmapelementmouserepeat,mapelement_10]`  
-[**1771**](scripts/[worldmapelementmouserepeat,mapelement_11].cs2) `[worldmapelementmouserepeat,mapelement_11]`  
-[**1772**](scripts/[worldmapelementmouserepeat,mapelement_12].cs2) `[worldmapelementmouserepeat,mapelement_12]`  
-[**1773**](scripts/[worldmapelementmouserepeat,mapelement_13].cs2) `[worldmapelementmouserepeat,mapelement_13]`  
-[**1774**](scripts/[worldmapelementmouserepeat,mapelement_14].cs2) `[worldmapelementmouserepeat,mapelement_14]`  
-[**1775**](scripts/[worldmapelementmouserepeat,mapelement_15].cs2) `[worldmapelementmouserepeat,mapelement_15]`  
-[**1776**](scripts/[worldmapelementmouserepeat,mapelement_16].cs2) `[worldmapelementmouserepeat,mapelement_16]`  
-[**1777**](scripts/[worldmapelementmouserepeat,mapelement_17].cs2) `[worldmapelementmouserepeat,mapelement_17]`  
-[**1778**](scripts/[worldmapelementmouserepeat,mapelement_18].cs2) `[worldmapelementmouserepeat,mapelement_18]`  
-[**1779**](scripts/[worldmapelementmouserepeat,mapelement_19].cs2) `[worldmapelementmouserepeat,mapelement_19]`  
-[**1780**](scripts/[worldmapelementmouserepeat,mapelement_20].cs2) `[worldmapelementmouserepeat,mapelement_20]`  
-[**1781**](scripts/[worldmapelementmouserepeat,mapelement_21].cs2) `[worldmapelementmouserepeat,mapelement_21]`  
-[**1782**](scripts/[worldmapelementmouserepeat,mapelement_22].cs2) `[worldmapelementmouserepeat,mapelement_22]`  
-[**1783**](scripts/[worldmapelementmouserepeat,mapelement_23].cs2) `[worldmapelementmouserepeat,mapelement_23]`  
-[**1784**](scripts/[worldmapelementmouserepeat,mapelement_24].cs2) `[worldmapelementmouserepeat,mapelement_24]`  
-[**1785**](scripts/[worldmapelementmouserepeat,mapelement_25].cs2) `[worldmapelementmouserepeat,mapelement_25]`  
-[**1786**](scripts/[worldmapelementmouserepeat,mapelement_26].cs2) `[worldmapelementmouserepeat,mapelement_26]`  
-[**1787**](scripts/[worldmapelementmouserepeat,mapelement_27].cs2) `[worldmapelementmouserepeat,mapelement_27]`  
-[**1788**](scripts/[worldmapelementmouserepeat,mapelement_28].cs2) `[worldmapelementmouserepeat,mapelement_28]`  
-[**1789**](scripts/[worldmapelementmouserepeat,mapelement_29].cs2) `[worldmapelementmouserepeat,mapelement_29]`  
-[**1790**](scripts/[worldmapelementmouserepeat,mapelement_30].cs2) `[worldmapelementmouserepeat,mapelement_30]`  
-[**1791**](scripts/[worldmapelementmouserepeat,mapelement_31].cs2) `[worldmapelementmouserepeat,mapelement_31]`  
-[**1792**](scripts/[worldmapelementmouserepeat,mapelement_32].cs2) `[worldmapelementmouserepeat,mapelement_32]`  
-[**1793**](scripts/[worldmapelementmouserepeat,mapelement_33].cs2) `[worldmapelementmouserepeat,mapelement_33]`  
-[**1794**](scripts/[worldmapelementmouserepeat,mapelement_34].cs2) `[worldmapelementmouserepeat,mapelement_34]`  
-[**1795**](scripts/[worldmapelementmouserepeat,mapelement_35].cs2) `[worldmapelementmouserepeat,mapelement_35]`  
-[**1796**](scripts/[worldmapelementmouserepeat,mapelement_36].cs2) `[worldmapelementmouserepeat,mapelement_36]`  
-[**1797**](scripts/[worldmapelementmouserepeat,mapelement_37].cs2) `[worldmapelementmouserepeat,mapelement_37]`  
-[**1798**](scripts/[worldmapelementmouserepeat,mapelement_38].cs2) `[worldmapelementmouserepeat,mapelement_38]`  
-[**1799**](scripts/[worldmapelementmouserepeat,mapelement_39].cs2) `[worldmapelementmouserepeat,mapelement_39]`  
-[**1800**](scripts/[worldmapelementmouserepeat,mapelement_40].cs2) `[worldmapelementmouserepeat,mapelement_40]`  
-[**1801**](scripts/[worldmapelementmouserepeat,mapelement_41].cs2) `[worldmapelementmouserepeat,mapelement_41]`  
-[**1802**](scripts/[worldmapelementmouserepeat,mapelement_42].cs2) `[worldmapelementmouserepeat,mapelement_42]`  
-[**1803**](scripts/[worldmapelementmouserepeat,mapelement_43].cs2) `[worldmapelementmouserepeat,mapelement_43]`  
-[**1804**](scripts/[worldmapelementmouserepeat,mapelement_44].cs2) `[worldmapelementmouserepeat,mapelement_44]`  
-[**1805**](scripts/[worldmapelementmouserepeat,mapelement_45].cs2) `[worldmapelementmouserepeat,mapelement_45]`  
-[**1806**](scripts/[worldmapelementmouserepeat,mapelement_46].cs2) `[worldmapelementmouserepeat,mapelement_46]`  
-[**1807**](scripts/[worldmapelementmouserepeat,mapelement_47].cs2) `[worldmapelementmouserepeat,mapelement_47]`  
-[**1808**](scripts/[worldmapelementmouserepeat,mapelement_48].cs2) `[worldmapelementmouserepeat,mapelement_48]`  
-[**1809**](scripts/[worldmapelementmouserepeat,mapelement_49].cs2) `[worldmapelementmouserepeat,mapelement_49]`  
-[**1810**](scripts/[worldmapelementmouserepeat,mapelement_50].cs2) `[worldmapelementmouserepeat,mapelement_50]`  
-[**1811**](scripts/[worldmapelementmouserepeat,mapelement_51].cs2) `[worldmapelementmouserepeat,mapelement_51]`  
-[**1812**](scripts/[worldmapelementmouserepeat,mapelement_52].cs2) `[worldmapelementmouserepeat,mapelement_52]`  
-[**1813**](scripts/[worldmapelementmouserepeat,mapelement_53].cs2) `[worldmapelementmouserepeat,mapelement_53]`  
-[**1814**](scripts/[worldmapelementmouserepeat,mapelement_54].cs2) `[worldmapelementmouserepeat,mapelement_54]`  
-[**1815**](scripts/[worldmapelementmouserepeat,mapelement_55].cs2) `[worldmapelementmouserepeat,mapelement_55]`  
-[**1816**](scripts/[worldmapelementmouserepeat,mapelement_56].cs2) `[worldmapelementmouserepeat,mapelement_56]`  
 [**1817**](scripts/[clientscript,keyboard_show_string].cs2) `[clientscript,keyboard_show_string]`  
-[**1818**](scripts/[worldmapelementmouserepeat,mapelement_58].cs2) `[worldmapelementmouserepeat,mapelement_58]`  
-[**1819**](scripts/[worldmapelementmouserepeat,mapelement_59].cs2) `[worldmapelementmouserepeat,mapelement_59]`  
-[**1820**](scripts/[worldmapelementmouserepeat,mapelement_60].cs2) `[worldmapelementmouserepeat,mapelement_60]`  
-[**1821**](scripts/[worldmapelementmouserepeat,mapelement_61].cs2) `[worldmapelementmouserepeat,mapelement_61]`  
-[**1822**](scripts/[worldmapelementmouserepeat,mapelement_62].cs2) `[worldmapelementmouserepeat,mapelement_62]`  
-[**1823**](scripts/[worldmapelementmouserepeat,mapelement_63].cs2) `[worldmapelementmouserepeat,mapelement_63]`  
-[**1824**](scripts/[worldmapelementmouserepeat,mapelement_64].cs2) `[worldmapelementmouserepeat,mapelement_64]`  
-[**1825**](scripts/[worldmapelementmouserepeat,mapelement_65].cs2) `[worldmapelementmouserepeat,mapelement_65]`  
-[**1826**](scripts/[worldmapelementmouserepeat,mapelement_66].cs2) `[worldmapelementmouserepeat,mapelement_66]`  
-[**1827**](scripts/[worldmapelementmouserepeat,mapelement_67].cs2) `[worldmapelementmouserepeat,mapelement_67]`  
-[**1828**](scripts/[worldmapelementmouserepeat,mapelement_68].cs2) `[worldmapelementmouserepeat,mapelement_68]`  
-[**1829**](scripts/[worldmapelementmouserepeat,mapelement_69].cs2) `[worldmapelementmouserepeat,mapelement_69]`  
-[**1830**](scripts/[worldmapelementmouserepeat,mapelement_70].cs2) `[worldmapelementmouserepeat,mapelement_70]`  
-[**1831**](scripts/[worldmapelementmouserepeat,mapelement_71].cs2) `[worldmapelementmouserepeat,mapelement_71]`  
-[**1832**](scripts/[worldmapelementmouserepeat,mapelement_72].cs2) `[worldmapelementmouserepeat,mapelement_72]`  
-[**1833**](scripts/[worldmapelementmouserepeat,mapelement_73].cs2) `[worldmapelementmouserepeat,mapelement_73]`  
-[**1834**](scripts/[worldmapelementmouserepeat,mapelement_74].cs2) `[worldmapelementmouserepeat,mapelement_74]`  
-[**1835**](scripts/[worldmapelementmouserepeat,mapelement_75].cs2) `[worldmapelementmouserepeat,mapelement_75]`  
-[**1836**](scripts/[worldmapelementmouserepeat,mapelement_76].cs2) `[worldmapelementmouserepeat,mapelement_76]`  
-[**1837**](scripts/[worldmapelementmouserepeat,mapelement_77].cs2) `[worldmapelementmouserepeat,mapelement_77]`  
 [**1838**](scripts/[proc,keyboard_show_string].cs2) `[proc,keyboard_show_string]`  
-[**1839**](scripts/[worldmapelementmouserepeat,mapelement_79].cs2) `[worldmapelementmouserepeat,mapelement_79]`  
-[**1840**](scripts/[worldmapelementmouserepeat,mapelement_80].cs2) `[worldmapelementmouserepeat,mapelement_80]`  
-[**1841**](scripts/[worldmapelementmouserepeat,mapelement_81].cs2) `[worldmapelementmouserepeat,mapelement_81]`  
-[**1842**](scripts/[worldmapelementmouserepeat,mapelement_82].cs2) `[worldmapelementmouserepeat,mapelement_82]`  
-[**1843**](scripts/[worldmapelementmouserepeat,mapelement_83].cs2) `[worldmapelementmouserepeat,mapelement_83]`  
-[**1844**](scripts/[worldmapelementmouserepeat,mapelement_84].cs2) `[worldmapelementmouserepeat,mapelement_84]`  
-[**1845**](scripts/[worldmapelementmouserepeat,mapelement_85].cs2) `[worldmapelementmouserepeat,mapelement_85]`  
 [**1846**](scripts/[clientscript,script1846].cs2)  
 [**1847**](scripts/[proc,worldmap_element_tooltip].cs2) `[proc,worldmap_element_tooltip]`  
-[**1848**](scripts/[worldmapelementmouseleave,mapelement_0].cs2) `[worldmapelementmouseleave,mapelement_0]`  
-[**1849**](scripts/[worldmapelementmouseleave,mapelement_1].cs2) `[worldmapelementmouseleave,mapelement_1]`  
-[**1850**](scripts/[worldmapelementmouseleave,mapelement_2].cs2) `[worldmapelementmouseleave,mapelement_2]`  
-[**1851**](scripts/[worldmapelementmouseleave,mapelement_3].cs2) `[worldmapelementmouseleave,mapelement_3]`  
-[**1852**](scripts/[worldmapelementmouseleave,mapelement_4].cs2) `[worldmapelementmouseleave,mapelement_4]`  
-[**1853**](scripts/[worldmapelementmouseleave,mapelement_5].cs2) `[worldmapelementmouseleave,mapelement_5]`  
 [**1854**](scripts/[proc,helper_agility_highlight_obstacles].cs2) `[proc,helper_agility_highlight_obstacles]`  
-[**1855**](scripts/[worldmapelementmouseleave,mapelement_7].cs2) `[worldmapelementmouseleave,mapelement_7]`  
-[**1856**](scripts/[worldmapelementmouseleave,mapelement_8].cs2) `[worldmapelementmouseleave,mapelement_8]`  
-[**1857**](scripts/[worldmapelementmouseleave,mapelement_9].cs2) `[worldmapelementmouseleave,mapelement_9]`  
-[**1858**](scripts/[worldmapelementmouseleave,mapelement_10].cs2) `[worldmapelementmouseleave,mapelement_10]`  
-[**1859**](scripts/[worldmapelementmouseleave,mapelement_11].cs2) `[worldmapelementmouseleave,mapelement_11]`  
-[**1860**](scripts/[worldmapelementmouseleave,mapelement_12].cs2) `[worldmapelementmouseleave,mapelement_12]`  
-[**1861**](scripts/[worldmapelementmouseleave,mapelement_13].cs2) `[worldmapelementmouseleave,mapelement_13]`  
-[**1862**](scripts/[worldmapelementmouseleave,mapelement_14].cs2) `[worldmapelementmouseleave,mapelement_14]`  
-[**1863**](scripts/[worldmapelementmouseleave,mapelement_15].cs2) `[worldmapelementmouseleave,mapelement_15]`  
-[**1864**](scripts/[worldmapelementmouseleave,mapelement_16].cs2) `[worldmapelementmouseleave,mapelement_16]`  
-[**1865**](scripts/[worldmapelementmouseleave,mapelement_17].cs2) `[worldmapelementmouseleave,mapelement_17]`  
-[**1866**](scripts/[worldmapelementmouseleave,mapelement_18].cs2) `[worldmapelementmouseleave,mapelement_18]`  
-[**1867**](scripts/[worldmapelementmouseleave,mapelement_19].cs2) `[worldmapelementmouseleave,mapelement_19]`  
-[**1868**](scripts/[worldmapelementmouseleave,mapelement_20].cs2) `[worldmapelementmouseleave,mapelement_20]`  
-[**1869**](scripts/[worldmapelementmouseleave,mapelement_21].cs2) `[worldmapelementmouseleave,mapelement_21]`  
-[**1870**](scripts/[worldmapelementmouseleave,mapelement_22].cs2) `[worldmapelementmouseleave,mapelement_22]`  
-[**1871**](scripts/[worldmapelementmouseleave,mapelement_23].cs2) `[worldmapelementmouseleave,mapelement_23]`  
-[**1872**](scripts/[worldmapelementmouseleave,mapelement_24].cs2) `[worldmapelementmouseleave,mapelement_24]`  
-[**1873**](scripts/[worldmapelementmouseleave,mapelement_25].cs2) `[worldmapelementmouseleave,mapelement_25]`  
-[**1874**](scripts/[worldmapelementmouseleave,mapelement_26].cs2) `[worldmapelementmouseleave,mapelement_26]`  
-[**1875**](scripts/[worldmapelementmouseleave,mapelement_27].cs2) `[worldmapelementmouseleave,mapelement_27]`  
-[**1876**](scripts/[worldmapelementmouseleave,mapelement_28].cs2) `[worldmapelementmouseleave,mapelement_28]`  
-[**1877**](scripts/[worldmapelementmouseleave,mapelement_29].cs2) `[worldmapelementmouseleave,mapelement_29]`  
-[**1878**](scripts/[worldmapelementmouseleave,mapelement_30].cs2) `[worldmapelementmouseleave,mapelement_30]`  
-[**1879**](scripts/[worldmapelementmouseleave,mapelement_31].cs2) `[worldmapelementmouseleave,mapelement_31]`  
-[**1880**](scripts/[worldmapelementmouseleave,mapelement_32].cs2) `[worldmapelementmouseleave,mapelement_32]`  
-[**1881**](scripts/[worldmapelementmouseleave,mapelement_33].cs2) `[worldmapelementmouseleave,mapelement_33]`  
-[**1882**](scripts/[worldmapelementmouseleave,mapelement_34].cs2) `[worldmapelementmouseleave,mapelement_34]`  
-[**1883**](scripts/[worldmapelementmouseleave,mapelement_35].cs2) `[worldmapelementmouseleave,mapelement_35]`  
-[**1884**](scripts/[worldmapelementmouseleave,mapelement_36].cs2) `[worldmapelementmouseleave,mapelement_36]`  
-[**1885**](scripts/[worldmapelementmouseleave,mapelement_37].cs2) `[worldmapelementmouseleave,mapelement_37]`  
-[**1886**](scripts/[worldmapelementmouseleave,mapelement_38].cs2) `[worldmapelementmouseleave,mapelement_38]`  
-[**1887**](scripts/[worldmapelementmouseleave,mapelement_39].cs2) `[worldmapelementmouseleave,mapelement_39]`  
-[**1888**](scripts/[worldmapelementmouseleave,mapelement_40].cs2) `[worldmapelementmouseleave,mapelement_40]`  
-[**1889**](scripts/[worldmapelementmouseleave,mapelement_41].cs2) `[worldmapelementmouseleave,mapelement_41]`  
-[**1890**](scripts/[worldmapelementmouseleave,mapelement_42].cs2) `[worldmapelementmouseleave,mapelement_42]`  
-[**1891**](scripts/[worldmapelementmouseleave,mapelement_43].cs2) `[worldmapelementmouseleave,mapelement_43]`  
-[**1892**](scripts/[worldmapelementmouseleave,mapelement_44].cs2) `[worldmapelementmouseleave,mapelement_44]`  
-[**1893**](scripts/[worldmapelementmouseleave,mapelement_45].cs2) `[worldmapelementmouseleave,mapelement_45]`  
-[**1894**](scripts/[worldmapelementmouseleave,mapelement_46].cs2) `[worldmapelementmouseleave,mapelement_46]`  
-[**1895**](scripts/[worldmapelementmouseleave,mapelement_47].cs2) `[worldmapelementmouseleave,mapelement_47]`  
-[**1896**](scripts/[worldmapelementmouseleave,mapelement_48].cs2) `[worldmapelementmouseleave,mapelement_48]`  
-[**1897**](scripts/[worldmapelementmouseleave,mapelement_49].cs2) `[worldmapelementmouseleave,mapelement_49]`  
-[**1898**](scripts/[worldmapelementmouseleave,mapelement_50].cs2) `[worldmapelementmouseleave,mapelement_50]`  
-[**1899**](scripts/[worldmapelementmouseleave,mapelement_51].cs2) `[worldmapelementmouseleave,mapelement_51]`  
-[**1900**](scripts/[worldmapelementmouseleave,mapelement_52].cs2) `[worldmapelementmouseleave,mapelement_52]`  
-[**1901**](scripts/[worldmapelementmouseleave,mapelement_53].cs2) `[worldmapelementmouseleave,mapelement_53]`  
-[**1902**](scripts/[worldmapelementmouseleave,mapelement_54].cs2) `[worldmapelementmouseleave,mapelement_54]`  
-[**1903**](scripts/[worldmapelementmouseleave,mapelement_55].cs2) `[worldmapelementmouseleave,mapelement_55]`  
-[**1904**](scripts/[worldmapelementmouseleave,mapelement_56].cs2) `[worldmapelementmouseleave,mapelement_56]`  
 [**1905**](scripts/[clientscript,bugreport_textinput].cs2) `[clientscript,bugreport_textinput]`  
-[**1906**](scripts/[worldmapelementmouseleave,mapelement_58].cs2) `[worldmapelementmouseleave,mapelement_58]`  
-[**1907**](scripts/[worldmapelementmouseleave,mapelement_59].cs2) `[worldmapelementmouseleave,mapelement_59]`  
-[**1908**](scripts/[worldmapelementmouseleave,mapelement_60].cs2) `[worldmapelementmouseleave,mapelement_60]`  
-[**1909**](scripts/[worldmapelementmouseleave,mapelement_61].cs2) `[worldmapelementmouseleave,mapelement_61]`  
-[**1910**](scripts/[worldmapelementmouseleave,mapelement_62].cs2) `[worldmapelementmouseleave,mapelement_62]`  
-[**1911**](scripts/[worldmapelementmouseleave,mapelement_63].cs2) `[worldmapelementmouseleave,mapelement_63]`  
-[**1912**](scripts/[worldmapelementmouseleave,mapelement_64].cs2) `[worldmapelementmouseleave,mapelement_64]`  
-[**1913**](scripts/[worldmapelementmouseleave,mapelement_65].cs2) `[worldmapelementmouseleave,mapelement_65]`  
-[**1914**](scripts/[worldmapelementmouseleave,mapelement_66].cs2) `[worldmapelementmouseleave,mapelement_66]`  
-[**1915**](scripts/[worldmapelementmouseleave,mapelement_67].cs2) `[worldmapelementmouseleave,mapelement_67]`  
-[**1916**](scripts/[worldmapelementmouseleave,mapelement_68].cs2) `[worldmapelementmouseleave,mapelement_68]`  
-[**1917**](scripts/[worldmapelementmouseleave,mapelement_69].cs2) `[worldmapelementmouseleave,mapelement_69]`  
-[**1918**](scripts/[worldmapelementmouseleave,mapelement_70].cs2) `[worldmapelementmouseleave,mapelement_70]`  
-[**1919**](scripts/[worldmapelementmouseleave,mapelement_71].cs2) `[worldmapelementmouseleave,mapelement_71]`  
-[**1920**](scripts/[worldmapelementmouseleave,mapelement_72].cs2) `[worldmapelementmouseleave,mapelement_72]`  
-[**1921**](scripts/[worldmapelementmouseleave,mapelement_73].cs2) `[worldmapelementmouseleave,mapelement_73]`  
-[**1922**](scripts/[worldmapelementmouseleave,mapelement_74].cs2) `[worldmapelementmouseleave,mapelement_74]`  
-[**1923**](scripts/[worldmapelementmouseleave,mapelement_75].cs2) `[worldmapelementmouseleave,mapelement_75]`  
-[**1924**](scripts/[worldmapelementmouseleave,mapelement_76].cs2) `[worldmapelementmouseleave,mapelement_76]`  
-[**1925**](scripts/[worldmapelementmouseleave,mapelement_77].cs2) `[worldmapelementmouseleave,mapelement_77]`  
 [**1926**](scripts/[clientscript,script1926].cs2)  
-[**1927**](scripts/[worldmapelementmouseleave,mapelement_79].cs2) `[worldmapelementmouseleave,mapelement_79]`  
-[**1928**](scripts/[worldmapelementmouseleave,mapelement_80].cs2) `[worldmapelementmouseleave,mapelement_80]`  
-[**1929**](scripts/[worldmapelementmouseleave,mapelement_81].cs2) `[worldmapelementmouseleave,mapelement_81]`  
-[**1930**](scripts/[worldmapelementmouseleave,mapelement_82].cs2) `[worldmapelementmouseleave,mapelement_82]`  
-[**1931**](scripts/[worldmapelementmouseleave,mapelement_83].cs2) `[worldmapelementmouseleave,mapelement_83]`  
-[**1932**](scripts/[worldmapelementmouseleave,mapelement_84].cs2) `[worldmapelementmouseleave,mapelement_84]`  
-[**1933**](scripts/[worldmapelementmouseleave,mapelement_85].cs2) `[worldmapelementmouseleave,mapelement_85]`  
 [**1934**](scripts/[proc,script1934].cs2)  
 [**1935**](scripts/[proc,instance_check].cs2) `[proc,instance_check]`  
 [**1936**](scripts/[proc,script1936].cs2)  
@@ -2415,58 +2246,6 @@
 [**2412**](scripts/[proc,script2412].cs2)  
 [**2413**](scripts/[clientscript,steelbox_background].cs2) `[clientscript,steelbox_background]`  
 [**2414**](scripts/[proc,show_storebutton].cs2) `[proc,show_storebutton]`  
-[**2415**](scripts/[worldmapelementmouserepeat,mapelement_274].cs2) `[worldmapelementmouserepeat,mapelement_274]`  
-[**2416**](scripts/[worldmapelementmouserepeat,mapelement_576].cs2) `[worldmapelementmouserepeat,mapelement_576]`  
-[**2417**](scripts/[worldmapelementmouserepeat,mapelement_577].cs2) `[worldmapelementmouserepeat,mapelement_577]`  
-[**2418**](scripts/[worldmapelementmouserepeat,mapelement_578].cs2) `[worldmapelementmouserepeat,mapelement_578]`  
-[**2419**](scripts/[worldmapelementmouserepeat,mapelement_579].cs2) `[worldmapelementmouserepeat,mapelement_579]`  
-[**2420**](scripts/[worldmapelementmouserepeat,mapelement_580].cs2) `[worldmapelementmouserepeat,mapelement_580]`  
-[**2421**](scripts/[worldmapelementmouserepeat,mapelement_581].cs2) `[worldmapelementmouserepeat,mapelement_581]`  
-[**2422**](scripts/[worldmapelementmouserepeat,mapelement_582].cs2) `[worldmapelementmouserepeat,mapelement_582]`  
-[**2423**](scripts/[worldmapelementmouserepeat,mapelement_583].cs2) `[worldmapelementmouserepeat,mapelement_583]`  
-[**2424**](scripts/[worldmapelementmouserepeat,mapelement_584].cs2) `[worldmapelementmouserepeat,mapelement_584]`  
-[**2425**](scripts/[worldmapelementmouserepeat,mapelement_585].cs2) `[worldmapelementmouserepeat,mapelement_585]`  
-[**2426**](scripts/[worldmapelementmouserepeat,mapelement_586].cs2) `[worldmapelementmouserepeat,mapelement_586]`  
-[**2427**](scripts/[worldmapelementmouserepeat,mapelement_587].cs2) `[worldmapelementmouserepeat,mapelement_587]`  
-[**2428**](scripts/[worldmapelementmouserepeat,mapelement_588].cs2) `[worldmapelementmouserepeat,mapelement_588]`  
-[**2429**](scripts/[worldmapelementmouserepeat,mapelement_589].cs2) `[worldmapelementmouserepeat,mapelement_589]`  
-[**2430**](scripts/[worldmapelementmouserepeat,mapelement_591].cs2) `[worldmapelementmouserepeat,mapelement_591]`  
-[**2431**](scripts/[worldmapelementmouserepeat,mapelement_592].cs2) `[worldmapelementmouserepeat,mapelement_592]`  
-[**2432**](scripts/[worldmapelementmouserepeat,mapelement_593].cs2) `[worldmapelementmouserepeat,mapelement_593]`  
-[**2433**](scripts/[worldmapelementmouserepeat,mapelement_594].cs2) `[worldmapelementmouserepeat,mapelement_594]`  
-[**2434**](scripts/[worldmapelementmouserepeat,mapelement_595].cs2) `[worldmapelementmouserepeat,mapelement_595]`  
-[**2435**](scripts/[worldmapelementmouserepeat,mapelement_596].cs2) `[worldmapelementmouserepeat,mapelement_596]`  
-[**2436**](scripts/[worldmapelementmouserepeat,mapelement_597].cs2) `[worldmapelementmouserepeat,mapelement_597]`  
-[**2437**](scripts/[worldmapelementmouserepeat,mapelement_598].cs2) `[worldmapelementmouserepeat,mapelement_598]`  
-[**2438**](scripts/[worldmapelementmouserepeat,mapelement_590].cs2) `[worldmapelementmouserepeat,mapelement_590]`  
-[**2439**](scripts/[worldmapelementmouserepeat,mapelement_599].cs2) `[worldmapelementmouserepeat,mapelement_599]`  
-[**2440**](scripts/[worldmapelementmouserepeat,mapelement_600].cs2) `[worldmapelementmouserepeat,mapelement_600]`  
-[**2441**](scripts/[worldmapelementmouseleave,mapelement_274].cs2) `[worldmapelementmouseleave,mapelement_274]`  
-[**2442**](scripts/[worldmapelementmouseleave,mapelement_576].cs2) `[worldmapelementmouseleave,mapelement_576]`  
-[**2443**](scripts/[worldmapelementmouseleave,mapelement_577].cs2) `[worldmapelementmouseleave,mapelement_577]`  
-[**2444**](scripts/[worldmapelementmouseleave,mapelement_578].cs2) `[worldmapelementmouseleave,mapelement_578]`  
-[**2445**](scripts/[worldmapelementmouseleave,mapelement_579].cs2) `[worldmapelementmouseleave,mapelement_579]`  
-[**2446**](scripts/[worldmapelementmouseleave,mapelement_580].cs2) `[worldmapelementmouseleave,mapelement_580]`  
-[**2447**](scripts/[worldmapelementmouseleave,mapelement_581].cs2) `[worldmapelementmouseleave,mapelement_581]`  
-[**2448**](scripts/[worldmapelementmouseleave,mapelement_582].cs2) `[worldmapelementmouseleave,mapelement_582]`  
-[**2449**](scripts/[worldmapelementmouseleave,mapelement_583].cs2) `[worldmapelementmouseleave,mapelement_583]`  
-[**2450**](scripts/[worldmapelementmouseleave,mapelement_584].cs2) `[worldmapelementmouseleave,mapelement_584]`  
-[**2451**](scripts/[worldmapelementmouseleave,mapelement_585].cs2) `[worldmapelementmouseleave,mapelement_585]`  
-[**2452**](scripts/[worldmapelementmouseleave,mapelement_586].cs2) `[worldmapelementmouseleave,mapelement_586]`  
-[**2453**](scripts/[worldmapelementmouseleave,mapelement_587].cs2) `[worldmapelementmouseleave,mapelement_587]`  
-[**2454**](scripts/[worldmapelementmouseleave,mapelement_588].cs2) `[worldmapelementmouseleave,mapelement_588]`  
-[**2455**](scripts/[worldmapelementmouseleave,mapelement_589].cs2) `[worldmapelementmouseleave,mapelement_589]`  
-[**2456**](scripts/[worldmapelementmouseleave,mapelement_591].cs2) `[worldmapelementmouseleave,mapelement_591]`  
-[**2457**](scripts/[worldmapelementmouseleave,mapelement_592].cs2) `[worldmapelementmouseleave,mapelement_592]`  
-[**2458**](scripts/[worldmapelementmouseleave,mapelement_593].cs2) `[worldmapelementmouseleave,mapelement_593]`  
-[**2459**](scripts/[worldmapelementmouseleave,mapelement_594].cs2) `[worldmapelementmouseleave,mapelement_594]`  
-[**2460**](scripts/[worldmapelementmouseleave,mapelement_595].cs2) `[worldmapelementmouseleave,mapelement_595]`  
-[**2461**](scripts/[worldmapelementmouseleave,mapelement_596].cs2) `[worldmapelementmouseleave,mapelement_596]`  
-[**2462**](scripts/[worldmapelementmouseleave,mapelement_597].cs2) `[worldmapelementmouseleave,mapelement_597]`  
-[**2463**](scripts/[worldmapelementmouseleave,mapelement_598].cs2) `[worldmapelementmouseleave,mapelement_598]`  
-[**2464**](scripts/[worldmapelementmouseleave,mapelement_590].cs2) `[worldmapelementmouseleave,mapelement_590]`  
-[**2465**](scripts/[worldmapelementmouseleave,mapelement_599].cs2) `[worldmapelementmouseleave,mapelement_599]`  
-[**2466**](scripts/[worldmapelementmouseleave,mapelement_600].cs2) `[worldmapelementmouseleave,mapelement_600]`  
 [**2467**](scripts/[proc,script2467].cs2)  
 [**2468**](scripts/[clientscript,script2468].cs2)  
 [**2469**](scripts/[proc,meslayer_button_draw].cs2) `[proc,meslayer_button_draw]`  
@@ -2835,8 +2614,6 @@
 [**2832**](scripts/[proc,script2832].cs2)  
 [**2833**](scripts/[proc,script2833].cs2)  
 [**2834**](scripts/[clientscript,if_flash_component].cs2) `[clientscript,if_flash_component]`  
-[**2835**](scripts/[worldmapelementmouserepeat,mapelement_619].cs2) `[worldmapelementmouserepeat,mapelement_619]`  
-[**2836**](scripts/[worldmapelementmouseleave,mapelement_619].cs2) `[worldmapelementmouseleave,mapelement_619]`  
 [**2837**](scripts/[clientscript,script2837].cs2)  
 [**2838**](scripts/[clientscript,script2838].cs2)  
 [**2839**](scripts/[proc,script2839].cs2)  
@@ -2904,10 +2681,6 @@
 [**2901**](scripts/[clientscript,script2901].cs2)  
 [**2902**](scripts/[clientscript,script2902].cs2)  
 [**2903**](scripts/[clientscript,script2903].cs2)  
-[**2904**](scripts/[worldmapelementmouserepeat,mapelement_630].cs2) `[worldmapelementmouserepeat,mapelement_630]`  
-[**2905**](scripts/[worldmapelementmouserepeat,mapelement_631].cs2) `[worldmapelementmouserepeat,mapelement_631]`  
-[**2906**](scripts/[worldmapelementmouseleave,mapelement_630].cs2) `[worldmapelementmouseleave,mapelement_630]`  
-[**2907**](scripts/[worldmapelementmouseleave,mapelement_631].cs2) `[worldmapelementmouseleave,mapelement_631]`  
 [**2908**](scripts/[clientscript,gauntlet_map_init].cs2) `[clientscript,gauntlet_map_init]`  
 [**2909**](scripts/[proc,gauntlet_map_update].cs2) `[proc,gauntlet_map_update]`  
 [**2910**](scripts/[proc,gauntlet_map_start_update].cs2) `[proc,gauntlet_map_start_update]`  
@@ -3233,8 +3006,6 @@
 [**3230**](scripts/[clientscript,league_side_panel_hudtoggle].cs2) `[clientscript,league_side_panel_hudtoggle]`  
 [**3231**](scripts/[clientscript,league_side_panel_hudop].cs2) `[clientscript,league_side_panel_hudop]`  
 [**3232**](scripts/[proc,league_side_panel_hudtoggle].cs2) `[proc,league_side_panel_hudtoggle]`  
-[**3233**](scripts/[worldmapelementmouserepeat,mapelement_645].cs2) `[worldmapelementmouserepeat,mapelement_645]`  
-[**3234**](scripts/[worldmapelementmouseleave,mapelement_645].cs2) `[worldmapelementmouseleave,mapelement_645]`  
 [**3235**](scripts/[proc,update_diary_entry_grey].cs2) `[proc,update_diary_entry_grey]`  
 [**3236**](scripts/[proc,script3236].cs2)  
 [**3237**](scripts/[proc,script3237].cs2)  
@@ -3507,8 +3278,6 @@
 [**3504**](scripts/[clientscript,script3504].cs2)  
 [**3505**](scripts/[proc,inv_freespace].cs2) `[proc,inv_freespace]`  
 [**3506**](scripts/[proc,script3506].cs2)  
-[**3507**](scripts/[worldmapelementmouserepeat,mapelement_652].cs2) `[worldmapelementmouserepeat,mapelement_652]`  
-[**3508**](scripts/[worldmapelementmouseleave,mapelement_652].cs2) `[worldmapelementmouseleave,mapelement_652]`  
 [**3509**](scripts/[proc,adventurepath_voucher_init].cs2) `[proc,adventurepath_voucher_init]`  
 [**3510**](scripts/[proc,script3510].cs2)  
 [**3511**](scripts/[proc,script3511].cs2)  
@@ -4031,8 +3800,6 @@
 [**4028**](scripts/[proc,script4028].cs2)  
 [**4029**](scripts/[proc,quest_status_get].cs2) `[proc,quest_status_get]`  
 [**4030**](scripts/[clientscript,questlist_completed].cs2) `[clientscript,questlist_completed]`  
-[**4031**](scripts/[worldmapelementmouserepeat,mapelement_680].cs2) `[worldmapelementmouserepeat,mapelement_680]`  
-[**4032**](scripts/[worldmapelementmouseleave,mapelement_680].cs2) `[worldmapelementmouseleave,mapelement_680]`  
 [**4033**](scripts/[clientscript,warguild_defence_mini_highlight].cs2) `[clientscript,warguild_defence_mini_highlight]`  
 [**4034**](scripts/[proc,settings_separate_hours].cs2) `[proc,settings_separate_hours]`  
 [**4035**](scripts/[clientscript,publishing_platform].cs2) `[clientscript,publishing_platform]`  
@@ -4221,8 +3988,6 @@
 [**4218**](scripts/[proc,loading_icon_init].cs2) `[proc,loading_icon_init]`  
 [**4219**](scripts/[proc,loading_icon_draw].cs2) `[proc,loading_icon_draw]`  
 [**4220**](scripts/[clientscript,loading_icon_resize].cs2) `[clientscript,loading_icon_resize]`  
-[**4221**](scripts/[worldmapelementmouserepeat,mapelement_690].cs2) `[worldmapelementmouserepeat,mapelement_690]`  
-[**4222**](scripts/[worldmapelementmouseleave,mapelement_690].cs2) `[worldmapelementmouseleave,mapelement_690]`  
 [**4223**](scripts/[clientscript,clan_members_init].cs2) `[clientscript,clan_members_init]`  
 [**4224**](scripts/[proc,clan_members_header_init].cs2) `[proc,clan_members_header_init]`  
 [**4225**](scripts/[clientscript,clan_members_header_open].cs2) `[clientscript,clan_members_header_open]`  
@@ -4850,8 +4615,6 @@
 [**4847**](scripts/[clientscript,ca_boss_tab_click].cs2) `[clientscript,ca_boss_tab_click]`  
 [**4848**](scripts/[proc,ca_boss_tab_details].cs2) `[proc,ca_boss_tab_details]`  
 [**4849**](scripts/[proc,dynamic_stone_button_filled].cs2) `[proc,dynamic_stone_button_filled]`  
-[**4850**](scripts/[worldmapelementmouserepeat,mapelement_697].cs2) `[worldmapelementmouserepeat,mapelement_697]`  
-[**4851**](scripts/[worldmapelementmouseleave,mapelement_697].cs2) `[worldmapelementmouseleave,mapelement_697]`  
 [**4852**](scripts/[clientscript,script4852].cs2)  
 [**4853**](scripts/[proc,script4853].cs2)  
 [**4854**](scripts/[clientscript,script4854].cs2)  
@@ -4863,308 +4626,6 @@
 [**4860**](scripts/[proc,script4860].cs2)  
 [**4861**](scripts/[clientscript,ca_tasks_reviewsize].cs2) `[clientscript,ca_tasks_reviewsize]`  
 [**4862**](scripts/[proc,script4862].cs2)  
-[**4863**](scripts/[worldmapelementmouserepeat,mapelement_700].cs2) `[worldmapelementmouserepeat,mapelement_700]`  
-[**4864**](scripts/[worldmapelementmouserepeat,mapelement_701].cs2) `[worldmapelementmouserepeat,mapelement_701]`  
-[**4865**](scripts/[worldmapelementmouserepeat,mapelement_702].cs2) `[worldmapelementmouserepeat,mapelement_702]`  
-[**4866**](scripts/[worldmapelementmouserepeat,mapelement_703].cs2) `[worldmapelementmouserepeat,mapelement_703]`  
-[**4867**](scripts/[worldmapelementmouserepeat,mapelement_704].cs2) `[worldmapelementmouserepeat,mapelement_704]`  
-[**4868**](scripts/[worldmapelementmouserepeat,mapelement_705].cs2) `[worldmapelementmouserepeat,mapelement_705]`  
-[**4869**](scripts/[worldmapelementmouserepeat,mapelement_706].cs2) `[worldmapelementmouserepeat,mapelement_706]`  
-[**4870**](scripts/[worldmapelementmouserepeat,mapelement_707].cs2) `[worldmapelementmouserepeat,mapelement_707]`  
-[**4871**](scripts/[worldmapelementmouserepeat,mapelement_708].cs2) `[worldmapelementmouserepeat,mapelement_708]`  
-[**4872**](scripts/[worldmapelementmouserepeat,mapelement_709].cs2) `[worldmapelementmouserepeat,mapelement_709]`  
-[**4873**](scripts/[worldmapelementmouserepeat,mapelement_710].cs2) `[worldmapelementmouserepeat,mapelement_710]`  
-[**4874**](scripts/[worldmapelementmouserepeat,mapelement_711].cs2) `[worldmapelementmouserepeat,mapelement_711]`  
-[**4875**](scripts/[worldmapelementmouserepeat,mapelement_712].cs2) `[worldmapelementmouserepeat,mapelement_712]`  
-[**4876**](scripts/[worldmapelementmouserepeat,mapelement_713].cs2) `[worldmapelementmouserepeat,mapelement_713]`  
-[**4877**](scripts/[worldmapelementmouserepeat,mapelement_714].cs2) `[worldmapelementmouserepeat,mapelement_714]`  
-[**4878**](scripts/[worldmapelementmouserepeat,mapelement_715].cs2) `[worldmapelementmouserepeat,mapelement_715]`  
-[**4879**](scripts/[worldmapelementmouserepeat,mapelement_716].cs2) `[worldmapelementmouserepeat,mapelement_716]`  
-[**4880**](scripts/[worldmapelementmouserepeat,mapelement_717].cs2) `[worldmapelementmouserepeat,mapelement_717]`  
-[**4881**](scripts/[worldmapelementmouserepeat,mapelement_718].cs2) `[worldmapelementmouserepeat,mapelement_718]`  
-[**4882**](scripts/[worldmapelementmouserepeat,mapelement_719].cs2) `[worldmapelementmouserepeat,mapelement_719]`  
-[**4883**](scripts/[worldmapelementmouserepeat,mapelement_720].cs2) `[worldmapelementmouserepeat,mapelement_720]`  
-[**4884**](scripts/[worldmapelementmouserepeat,mapelement_721].cs2) `[worldmapelementmouserepeat,mapelement_721]`  
-[**4885**](scripts/[worldmapelementmouserepeat,mapelement_722].cs2) `[worldmapelementmouserepeat,mapelement_722]`  
-[**4886**](scripts/[worldmapelementmouserepeat,mapelement_723].cs2) `[worldmapelementmouserepeat,mapelement_723]`  
-[**4887**](scripts/[worldmapelementmouserepeat,mapelement_724].cs2) `[worldmapelementmouserepeat,mapelement_724]`  
-[**4888**](scripts/[worldmapelementmouserepeat,mapelement_725].cs2) `[worldmapelementmouserepeat,mapelement_725]`  
-[**4889**](scripts/[worldmapelementmouserepeat,mapelement_726].cs2) `[worldmapelementmouserepeat,mapelement_726]`  
-[**4890**](scripts/[worldmapelementmouserepeat,mapelement_727].cs2) `[worldmapelementmouserepeat,mapelement_727]`  
-[**4891**](scripts/[worldmapelementmouserepeat,mapelement_728].cs2) `[worldmapelementmouserepeat,mapelement_728]`  
-[**4892**](scripts/[worldmapelementmouserepeat,mapelement_729].cs2) `[worldmapelementmouserepeat,mapelement_729]`  
-[**4893**](scripts/[worldmapelementmouserepeat,mapelement_730].cs2) `[worldmapelementmouserepeat,mapelement_730]`  
-[**4894**](scripts/[worldmapelementmouserepeat,mapelement_731].cs2) `[worldmapelementmouserepeat,mapelement_731]`  
-[**4895**](scripts/[worldmapelementmouserepeat,mapelement_732].cs2) `[worldmapelementmouserepeat,mapelement_732]`  
-[**4896**](scripts/[worldmapelementmouserepeat,mapelement_733].cs2) `[worldmapelementmouserepeat,mapelement_733]`  
-[**4897**](scripts/[worldmapelementmouserepeat,mapelement_734].cs2) `[worldmapelementmouserepeat,mapelement_734]`  
-[**4898**](scripts/[worldmapelementmouserepeat,mapelement_735].cs2) `[worldmapelementmouserepeat,mapelement_735]`  
-[**4899**](scripts/[worldmapelementmouserepeat,mapelement_736].cs2) `[worldmapelementmouserepeat,mapelement_736]`  
-[**4900**](scripts/[worldmapelementmouserepeat,mapelement_737].cs2) `[worldmapelementmouserepeat,mapelement_737]`  
-[**4901**](scripts/[worldmapelementmouserepeat,mapelement_738].cs2) `[worldmapelementmouserepeat,mapelement_738]`  
-[**4902**](scripts/[worldmapelementmouserepeat,mapelement_739].cs2) `[worldmapelementmouserepeat,mapelement_739]`  
-[**4903**](scripts/[worldmapelementmouserepeat,mapelement_740].cs2) `[worldmapelementmouserepeat,mapelement_740]`  
-[**4904**](scripts/[worldmapelementmouserepeat,mapelement_741].cs2) `[worldmapelementmouserepeat,mapelement_741]`  
-[**4905**](scripts/[worldmapelementmouserepeat,mapelement_742].cs2) `[worldmapelementmouserepeat,mapelement_742]`  
-[**4906**](scripts/[worldmapelementmouserepeat,mapelement_743].cs2) `[worldmapelementmouserepeat,mapelement_743]`  
-[**4907**](scripts/[worldmapelementmouserepeat,mapelement_744].cs2) `[worldmapelementmouserepeat,mapelement_744]`  
-[**4908**](scripts/[worldmapelementmouserepeat,mapelement_745].cs2) `[worldmapelementmouserepeat,mapelement_745]`  
-[**4909**](scripts/[worldmapelementmouserepeat,mapelement_746].cs2) `[worldmapelementmouserepeat,mapelement_746]`  
-[**4910**](scripts/[worldmapelementmouserepeat,mapelement_747].cs2) `[worldmapelementmouserepeat,mapelement_747]`  
-[**4911**](scripts/[worldmapelementmouserepeat,mapelement_748].cs2) `[worldmapelementmouserepeat,mapelement_748]`  
-[**4912**](scripts/[worldmapelementmouserepeat,mapelement_749].cs2) `[worldmapelementmouserepeat,mapelement_749]`  
-[**4913**](scripts/[worldmapelementmouserepeat,mapelement_750].cs2) `[worldmapelementmouserepeat,mapelement_750]`  
-[**4914**](scripts/[worldmapelementmouserepeat,mapelement_751].cs2) `[worldmapelementmouserepeat,mapelement_751]`  
-[**4915**](scripts/[worldmapelementmouserepeat,mapelement_752].cs2) `[worldmapelementmouserepeat,mapelement_752]`  
-[**4916**](scripts/[worldmapelementmouserepeat,mapelement_753].cs2) `[worldmapelementmouserepeat,mapelement_753]`  
-[**4917**](scripts/[worldmapelementmouserepeat,mapelement_754].cs2) `[worldmapelementmouserepeat,mapelement_754]`  
-[**4918**](scripts/[worldmapelementmouserepeat,mapelement_755].cs2) `[worldmapelementmouserepeat,mapelement_755]`  
-[**4919**](scripts/[worldmapelementmouserepeat,mapelement_756].cs2) `[worldmapelementmouserepeat,mapelement_756]`  
-[**4920**](scripts/[worldmapelementmouserepeat,mapelement_757].cs2) `[worldmapelementmouserepeat,mapelement_757]`  
-[**4921**](scripts/[worldmapelementmouserepeat,mapelement_758].cs2) `[worldmapelementmouserepeat,mapelement_758]`  
-[**4922**](scripts/[worldmapelementmouserepeat,mapelement_759].cs2) `[worldmapelementmouserepeat,mapelement_759]`  
-[**4923**](scripts/[worldmapelementmouserepeat,mapelement_760].cs2) `[worldmapelementmouserepeat,mapelement_760]`  
-[**4924**](scripts/[worldmapelementmouserepeat,mapelement_761].cs2) `[worldmapelementmouserepeat,mapelement_761]`  
-[**4925**](scripts/[worldmapelementmouserepeat,mapelement_762].cs2) `[worldmapelementmouserepeat,mapelement_762]`  
-[**4926**](scripts/[worldmapelementmouserepeat,mapelement_763].cs2) `[worldmapelementmouserepeat,mapelement_763]`  
-[**4927**](scripts/[worldmapelementmouserepeat,mapelement_764].cs2) `[worldmapelementmouserepeat,mapelement_764]`  
-[**4928**](scripts/[worldmapelementmouserepeat,mapelement_765].cs2) `[worldmapelementmouserepeat,mapelement_765]`  
-[**4929**](scripts/[worldmapelementmouserepeat,mapelement_766].cs2) `[worldmapelementmouserepeat,mapelement_766]`  
-[**4930**](scripts/[worldmapelementmouserepeat,mapelement_767].cs2) `[worldmapelementmouserepeat,mapelement_767]`  
-[**4931**](scripts/[worldmapelementmouserepeat,mapelement_768].cs2) `[worldmapelementmouserepeat,mapelement_768]`  
-[**4932**](scripts/[worldmapelementmouserepeat,mapelement_769].cs2) `[worldmapelementmouserepeat,mapelement_769]`  
-[**4933**](scripts/[worldmapelementmouserepeat,mapelement_770].cs2) `[worldmapelementmouserepeat,mapelement_770]`  
-[**4934**](scripts/[worldmapelementmouserepeat,mapelement_771].cs2) `[worldmapelementmouserepeat,mapelement_771]`  
-[**4935**](scripts/[worldmapelementmouserepeat,mapelement_772].cs2) `[worldmapelementmouserepeat,mapelement_772]`  
-[**4936**](scripts/[worldmapelementmouserepeat,mapelement_773].cs2) `[worldmapelementmouserepeat,mapelement_773]`  
-[**4937**](scripts/[worldmapelementmouserepeat,mapelement_774].cs2) `[worldmapelementmouserepeat,mapelement_774]`  
-[**4938**](scripts/[worldmapelementmouserepeat,mapelement_775].cs2) `[worldmapelementmouserepeat,mapelement_775]`  
-[**4939**](scripts/[worldmapelementmouserepeat,mapelement_776].cs2) `[worldmapelementmouserepeat,mapelement_776]`  
-[**4940**](scripts/[worldmapelementmouserepeat,mapelement_777].cs2) `[worldmapelementmouserepeat,mapelement_777]`  
-[**4941**](scripts/[worldmapelementmouserepeat,mapelement_778].cs2) `[worldmapelementmouserepeat,mapelement_778]`  
-[**4942**](scripts/[worldmapelementmouserepeat,mapelement_779].cs2) `[worldmapelementmouserepeat,mapelement_779]`  
-[**4943**](scripts/[worldmapelementmouserepeat,mapelement_780].cs2) `[worldmapelementmouserepeat,mapelement_780]`  
-[**4944**](scripts/[worldmapelementmouserepeat,mapelement_781].cs2) `[worldmapelementmouserepeat,mapelement_781]`  
-[**4945**](scripts/[worldmapelementmouserepeat,mapelement_782].cs2) `[worldmapelementmouserepeat,mapelement_782]`  
-[**4946**](scripts/[worldmapelementmouserepeat,mapelement_783].cs2) `[worldmapelementmouserepeat,mapelement_783]`  
-[**4947**](scripts/[worldmapelementmouserepeat,mapelement_784].cs2) `[worldmapelementmouserepeat,mapelement_784]`  
-[**4948**](scripts/[worldmapelementmouserepeat,mapelement_785].cs2) `[worldmapelementmouserepeat,mapelement_785]`  
-[**4949**](scripts/[worldmapelementmouserepeat,mapelement_786].cs2) `[worldmapelementmouserepeat,mapelement_786]`  
-[**4950**](scripts/[worldmapelementmouserepeat,mapelement_787].cs2) `[worldmapelementmouserepeat,mapelement_787]`  
-[**4951**](scripts/[worldmapelementmouserepeat,mapelement_788].cs2) `[worldmapelementmouserepeat,mapelement_788]`  
-[**4952**](scripts/[worldmapelementmouserepeat,mapelement_789].cs2) `[worldmapelementmouserepeat,mapelement_789]`  
-[**4953**](scripts/[worldmapelementmouserepeat,mapelement_790].cs2) `[worldmapelementmouserepeat,mapelement_790]`  
-[**4954**](scripts/[worldmapelementmouserepeat,mapelement_791].cs2) `[worldmapelementmouserepeat,mapelement_791]`  
-[**4955**](scripts/[worldmapelementmouserepeat,mapelement_792].cs2) `[worldmapelementmouserepeat,mapelement_792]`  
-[**4956**](scripts/[worldmapelementmouserepeat,mapelement_793].cs2) `[worldmapelementmouserepeat,mapelement_793]`  
-[**4957**](scripts/[worldmapelementmouserepeat,mapelement_794].cs2) `[worldmapelementmouserepeat,mapelement_794]`  
-[**4958**](scripts/[worldmapelementmouserepeat,mapelement_795].cs2) `[worldmapelementmouserepeat,mapelement_795]`  
-[**4959**](scripts/[worldmapelementmouserepeat,mapelement_796].cs2) `[worldmapelementmouserepeat,mapelement_796]`  
-[**4960**](scripts/[worldmapelementmouserepeat,mapelement_797].cs2) `[worldmapelementmouserepeat,mapelement_797]`  
-[**4961**](scripts/[worldmapelementmouserepeat,mapelement_798].cs2) `[worldmapelementmouserepeat,mapelement_798]`  
-[**4962**](scripts/[worldmapelementmouserepeat,mapelement_799].cs2) `[worldmapelementmouserepeat,mapelement_799]`  
-[**4963**](scripts/[worldmapelementmouserepeat,mapelement_800].cs2) `[worldmapelementmouserepeat,mapelement_800]`  
-[**4964**](scripts/[worldmapelementmouserepeat,mapelement_801].cs2) `[worldmapelementmouserepeat,mapelement_801]`  
-[**4965**](scripts/[worldmapelementmouserepeat,mapelement_802].cs2) `[worldmapelementmouserepeat,mapelement_802]`  
-[**4966**](scripts/[worldmapelementmouserepeat,mapelement_803].cs2) `[worldmapelementmouserepeat,mapelement_803]`  
-[**4967**](scripts/[worldmapelementmouserepeat,mapelement_804].cs2) `[worldmapelementmouserepeat,mapelement_804]`  
-[**4968**](scripts/[worldmapelementmouserepeat,mapelement_805].cs2) `[worldmapelementmouserepeat,mapelement_805]`  
-[**4969**](scripts/[worldmapelementmouserepeat,mapelement_806].cs2) `[worldmapelementmouserepeat,mapelement_806]`  
-[**4970**](scripts/[worldmapelementmouserepeat,mapelement_807].cs2) `[worldmapelementmouserepeat,mapelement_807]`  
-[**4971**](scripts/[worldmapelementmouserepeat,mapelement_808].cs2) `[worldmapelementmouserepeat,mapelement_808]`  
-[**4972**](scripts/[worldmapelementmouserepeat,mapelement_809].cs2) `[worldmapelementmouserepeat,mapelement_809]`  
-[**4973**](scripts/[worldmapelementmouserepeat,mapelement_810].cs2) `[worldmapelementmouserepeat,mapelement_810]`  
-[**4974**](scripts/[worldmapelementmouserepeat,mapelement_811].cs2) `[worldmapelementmouserepeat,mapelement_811]`  
-[**4975**](scripts/[worldmapelementmouserepeat,mapelement_812].cs2) `[worldmapelementmouserepeat,mapelement_812]`  
-[**4976**](scripts/[worldmapelementmouserepeat,mapelement_813].cs2) `[worldmapelementmouserepeat,mapelement_813]`  
-[**4977**](scripts/[worldmapelementmouserepeat,mapelement_814].cs2) `[worldmapelementmouserepeat,mapelement_814]`  
-[**4978**](scripts/[worldmapelementmouserepeat,mapelement_815].cs2) `[worldmapelementmouserepeat,mapelement_815]`  
-[**4979**](scripts/[worldmapelementmouserepeat,mapelement_816].cs2) `[worldmapelementmouserepeat,mapelement_816]`  
-[**4980**](scripts/[worldmapelementmouserepeat,mapelement_817].cs2) `[worldmapelementmouserepeat,mapelement_817]`  
-[**4981**](scripts/[worldmapelementmouserepeat,mapelement_818].cs2) `[worldmapelementmouserepeat,mapelement_818]`  
-[**4982**](scripts/[worldmapelementmouserepeat,mapelement_819].cs2) `[worldmapelementmouserepeat,mapelement_819]`  
-[**4983**](scripts/[worldmapelementmouserepeat,mapelement_820].cs2) `[worldmapelementmouserepeat,mapelement_820]`  
-[**4984**](scripts/[worldmapelementmouserepeat,mapelement_821].cs2) `[worldmapelementmouserepeat,mapelement_821]`  
-[**4985**](scripts/[worldmapelementmouserepeat,mapelement_822].cs2) `[worldmapelementmouserepeat,mapelement_822]`  
-[**4986**](scripts/[worldmapelementmouserepeat,mapelement_823].cs2) `[worldmapelementmouserepeat,mapelement_823]`  
-[**4987**](scripts/[worldmapelementmouserepeat,mapelement_824].cs2) `[worldmapelementmouserepeat,mapelement_824]`  
-[**4988**](scripts/[worldmapelementmouserepeat,mapelement_825].cs2) `[worldmapelementmouserepeat,mapelement_825]`  
-[**4989**](scripts/[worldmapelementmouserepeat,mapelement_826].cs2) `[worldmapelementmouserepeat,mapelement_826]`  
-[**4990**](scripts/[worldmapelementmouserepeat,mapelement_827].cs2) `[worldmapelementmouserepeat,mapelement_827]`  
-[**4991**](scripts/[worldmapelementmouserepeat,mapelement_828].cs2) `[worldmapelementmouserepeat,mapelement_828]`  
-[**4992**](scripts/[worldmapelementmouserepeat,mapelement_829].cs2) `[worldmapelementmouserepeat,mapelement_829]`  
-[**4993**](scripts/[worldmapelementmouserepeat,mapelement_830].cs2) `[worldmapelementmouserepeat,mapelement_830]`  
-[**4994**](scripts/[worldmapelementmouserepeat,mapelement_831].cs2) `[worldmapelementmouserepeat,mapelement_831]`  
-[**4995**](scripts/[worldmapelementmouserepeat,mapelement_832].cs2) `[worldmapelementmouserepeat,mapelement_832]`  
-[**4996**](scripts/[worldmapelementmouserepeat,mapelement_833].cs2) `[worldmapelementmouserepeat,mapelement_833]`  
-[**4997**](scripts/[worldmapelementmouserepeat,mapelement_834].cs2) `[worldmapelementmouserepeat,mapelement_834]`  
-[**4998**](scripts/[worldmapelementmouserepeat,mapelement_835].cs2) `[worldmapelementmouserepeat,mapelement_835]`  
-[**4999**](scripts/[worldmapelementmouserepeat,mapelement_836].cs2) `[worldmapelementmouserepeat,mapelement_836]`  
-[**5000**](scripts/[worldmapelementmouserepeat,mapelement_837].cs2) `[worldmapelementmouserepeat,mapelement_837]`  
-[**5001**](scripts/[worldmapelementmouserepeat,mapelement_838].cs2) `[worldmapelementmouserepeat,mapelement_838]`  
-[**5002**](scripts/[worldmapelementmouserepeat,mapelement_839].cs2) `[worldmapelementmouserepeat,mapelement_839]`  
-[**5003**](scripts/[worldmapelementmouserepeat,mapelement_840].cs2) `[worldmapelementmouserepeat,mapelement_840]`  
-[**5004**](scripts/[worldmapelementmouserepeat,mapelement_841].cs2) `[worldmapelementmouserepeat,mapelement_841]`  
-[**5005**](scripts/[worldmapelementmouserepeat,mapelement_842].cs2) `[worldmapelementmouserepeat,mapelement_842]`  
-[**5006**](scripts/[worldmapelementmouserepeat,mapelement_843].cs2) `[worldmapelementmouserepeat,mapelement_843]`  
-[**5007**](scripts/[worldmapelementmouserepeat,mapelement_844].cs2) `[worldmapelementmouserepeat,mapelement_844]`  
-[**5008**](scripts/[worldmapelementmouserepeat,mapelement_845].cs2) `[worldmapelementmouserepeat,mapelement_845]`  
-[**5009**](scripts/[worldmapelementmouserepeat,mapelement_846].cs2) `[worldmapelementmouserepeat,mapelement_846]`  
-[**5010**](scripts/[worldmapelementmouserepeat,mapelement_847].cs2) `[worldmapelementmouserepeat,mapelement_847]`  
-[**5011**](scripts/[worldmapelementmouserepeat,mapelement_848].cs2) `[worldmapelementmouserepeat,mapelement_848]`  
-[**5012**](scripts/[worldmapelementmouserepeat,mapelement_849].cs2) `[worldmapelementmouserepeat,mapelement_849]`  
-[**5013**](scripts/[worldmapelementmouserepeat,mapelement_850].cs2) `[worldmapelementmouserepeat,mapelement_850]`  
-[**5014**](scripts/[worldmapelementmouseleave,mapelement_700].cs2) `[worldmapelementmouseleave,mapelement_700]`  
-[**5015**](scripts/[worldmapelementmouseleave,mapelement_701].cs2) `[worldmapelementmouseleave,mapelement_701]`  
-[**5016**](scripts/[worldmapelementmouseleave,mapelement_702].cs2) `[worldmapelementmouseleave,mapelement_702]`  
-[**5017**](scripts/[worldmapelementmouseleave,mapelement_703].cs2) `[worldmapelementmouseleave,mapelement_703]`  
-[**5018**](scripts/[worldmapelementmouseleave,mapelement_704].cs2) `[worldmapelementmouseleave,mapelement_704]`  
-[**5019**](scripts/[worldmapelementmouseleave,mapelement_705].cs2) `[worldmapelementmouseleave,mapelement_705]`  
-[**5020**](scripts/[worldmapelementmouseleave,mapelement_706].cs2) `[worldmapelementmouseleave,mapelement_706]`  
-[**5021**](scripts/[worldmapelementmouseleave,mapelement_707].cs2) `[worldmapelementmouseleave,mapelement_707]`  
-[**5022**](scripts/[worldmapelementmouseleave,mapelement_708].cs2) `[worldmapelementmouseleave,mapelement_708]`  
-[**5023**](scripts/[worldmapelementmouseleave,mapelement_709].cs2) `[worldmapelementmouseleave,mapelement_709]`  
-[**5024**](scripts/[worldmapelementmouseleave,mapelement_710].cs2) `[worldmapelementmouseleave,mapelement_710]`  
-[**5025**](scripts/[worldmapelementmouseleave,mapelement_711].cs2) `[worldmapelementmouseleave,mapelement_711]`  
-[**5026**](scripts/[worldmapelementmouseleave,mapelement_712].cs2) `[worldmapelementmouseleave,mapelement_712]`  
-[**5027**](scripts/[worldmapelementmouseleave,mapelement_713].cs2) `[worldmapelementmouseleave,mapelement_713]`  
-[**5028**](scripts/[worldmapelementmouseleave,mapelement_714].cs2) `[worldmapelementmouseleave,mapelement_714]`  
-[**5029**](scripts/[worldmapelementmouseleave,mapelement_715].cs2) `[worldmapelementmouseleave,mapelement_715]`  
-[**5030**](scripts/[worldmapelementmouseleave,mapelement_716].cs2) `[worldmapelementmouseleave,mapelement_716]`  
-[**5031**](scripts/[worldmapelementmouseleave,mapelement_717].cs2) `[worldmapelementmouseleave,mapelement_717]`  
-[**5032**](scripts/[worldmapelementmouseleave,mapelement_718].cs2) `[worldmapelementmouseleave,mapelement_718]`  
-[**5033**](scripts/[worldmapelementmouseleave,mapelement_719].cs2) `[worldmapelementmouseleave,mapelement_719]`  
-[**5034**](scripts/[worldmapelementmouseleave,mapelement_720].cs2) `[worldmapelementmouseleave,mapelement_720]`  
-[**5035**](scripts/[worldmapelementmouseleave,mapelement_721].cs2) `[worldmapelementmouseleave,mapelement_721]`  
-[**5036**](scripts/[worldmapelementmouseleave,mapelement_722].cs2) `[worldmapelementmouseleave,mapelement_722]`  
-[**5037**](scripts/[worldmapelementmouseleave,mapelement_723].cs2) `[worldmapelementmouseleave,mapelement_723]`  
-[**5038**](scripts/[worldmapelementmouseleave,mapelement_724].cs2) `[worldmapelementmouseleave,mapelement_724]`  
-[**5039**](scripts/[worldmapelementmouseleave,mapelement_725].cs2) `[worldmapelementmouseleave,mapelement_725]`  
-[**5040**](scripts/[worldmapelementmouseleave,mapelement_726].cs2) `[worldmapelementmouseleave,mapelement_726]`  
-[**5041**](scripts/[worldmapelementmouseleave,mapelement_727].cs2) `[worldmapelementmouseleave,mapelement_727]`  
-[**5042**](scripts/[worldmapelementmouseleave,mapelement_728].cs2) `[worldmapelementmouseleave,mapelement_728]`  
-[**5043**](scripts/[worldmapelementmouseleave,mapelement_729].cs2) `[worldmapelementmouseleave,mapelement_729]`  
-[**5044**](scripts/[worldmapelementmouseleave,mapelement_730].cs2) `[worldmapelementmouseleave,mapelement_730]`  
-[**5045**](scripts/[worldmapelementmouseleave,mapelement_731].cs2) `[worldmapelementmouseleave,mapelement_731]`  
-[**5046**](scripts/[worldmapelementmouseleave,mapelement_732].cs2) `[worldmapelementmouseleave,mapelement_732]`  
-[**5047**](scripts/[worldmapelementmouseleave,mapelement_733].cs2) `[worldmapelementmouseleave,mapelement_733]`  
-[**5048**](scripts/[worldmapelementmouseleave,mapelement_734].cs2) `[worldmapelementmouseleave,mapelement_734]`  
-[**5049**](scripts/[worldmapelementmouseleave,mapelement_735].cs2) `[worldmapelementmouseleave,mapelement_735]`  
-[**5050**](scripts/[worldmapelementmouseleave,mapelement_736].cs2) `[worldmapelementmouseleave,mapelement_736]`  
-[**5051**](scripts/[worldmapelementmouseleave,mapelement_737].cs2) `[worldmapelementmouseleave,mapelement_737]`  
-[**5052**](scripts/[worldmapelementmouseleave,mapelement_738].cs2) `[worldmapelementmouseleave,mapelement_738]`  
-[**5053**](scripts/[worldmapelementmouseleave,mapelement_739].cs2) `[worldmapelementmouseleave,mapelement_739]`  
-[**5054**](scripts/[worldmapelementmouseleave,mapelement_740].cs2) `[worldmapelementmouseleave,mapelement_740]`  
-[**5055**](scripts/[worldmapelementmouseleave,mapelement_741].cs2) `[worldmapelementmouseleave,mapelement_741]`  
-[**5056**](scripts/[worldmapelementmouseleave,mapelement_742].cs2) `[worldmapelementmouseleave,mapelement_742]`  
-[**5057**](scripts/[worldmapelementmouseleave,mapelement_743].cs2) `[worldmapelementmouseleave,mapelement_743]`  
-[**5058**](scripts/[worldmapelementmouseleave,mapelement_744].cs2) `[worldmapelementmouseleave,mapelement_744]`  
-[**5059**](scripts/[worldmapelementmouseleave,mapelement_745].cs2) `[worldmapelementmouseleave,mapelement_745]`  
-[**5060**](scripts/[worldmapelementmouseleave,mapelement_746].cs2) `[worldmapelementmouseleave,mapelement_746]`  
-[**5061**](scripts/[worldmapelementmouseleave,mapelement_747].cs2) `[worldmapelementmouseleave,mapelement_747]`  
-[**5062**](scripts/[worldmapelementmouseleave,mapelement_748].cs2) `[worldmapelementmouseleave,mapelement_748]`  
-[**5063**](scripts/[worldmapelementmouseleave,mapelement_749].cs2) `[worldmapelementmouseleave,mapelement_749]`  
-[**5064**](scripts/[worldmapelementmouseleave,mapelement_750].cs2) `[worldmapelementmouseleave,mapelement_750]`  
-[**5065**](scripts/[worldmapelementmouseleave,mapelement_751].cs2) `[worldmapelementmouseleave,mapelement_751]`  
-[**5066**](scripts/[worldmapelementmouseleave,mapelement_752].cs2) `[worldmapelementmouseleave,mapelement_752]`  
-[**5067**](scripts/[worldmapelementmouseleave,mapelement_753].cs2) `[worldmapelementmouseleave,mapelement_753]`  
-[**5068**](scripts/[worldmapelementmouseleave,mapelement_754].cs2) `[worldmapelementmouseleave,mapelement_754]`  
-[**5069**](scripts/[worldmapelementmouseleave,mapelement_755].cs2) `[worldmapelementmouseleave,mapelement_755]`  
-[**5070**](scripts/[worldmapelementmouseleave,mapelement_756].cs2) `[worldmapelementmouseleave,mapelement_756]`  
-[**5071**](scripts/[worldmapelementmouseleave,mapelement_757].cs2) `[worldmapelementmouseleave,mapelement_757]`  
-[**5072**](scripts/[worldmapelementmouseleave,mapelement_758].cs2) `[worldmapelementmouseleave,mapelement_758]`  
-[**5073**](scripts/[worldmapelementmouseleave,mapelement_759].cs2) `[worldmapelementmouseleave,mapelement_759]`  
-[**5074**](scripts/[worldmapelementmouseleave,mapelement_760].cs2) `[worldmapelementmouseleave,mapelement_760]`  
-[**5075**](scripts/[worldmapelementmouseleave,mapelement_761].cs2) `[worldmapelementmouseleave,mapelement_761]`  
-[**5076**](scripts/[worldmapelementmouseleave,mapelement_762].cs2) `[worldmapelementmouseleave,mapelement_762]`  
-[**5077**](scripts/[worldmapelementmouseleave,mapelement_763].cs2) `[worldmapelementmouseleave,mapelement_763]`  
-[**5078**](scripts/[worldmapelementmouseleave,mapelement_764].cs2) `[worldmapelementmouseleave,mapelement_764]`  
-[**5079**](scripts/[worldmapelementmouseleave,mapelement_765].cs2) `[worldmapelementmouseleave,mapelement_765]`  
-[**5080**](scripts/[worldmapelementmouseleave,mapelement_766].cs2) `[worldmapelementmouseleave,mapelement_766]`  
-[**5081**](scripts/[worldmapelementmouseleave,mapelement_767].cs2) `[worldmapelementmouseleave,mapelement_767]`  
-[**5082**](scripts/[worldmapelementmouseleave,mapelement_768].cs2) `[worldmapelementmouseleave,mapelement_768]`  
-[**5083**](scripts/[worldmapelementmouseleave,mapelement_769].cs2) `[worldmapelementmouseleave,mapelement_769]`  
-[**5084**](scripts/[worldmapelementmouseleave,mapelement_770].cs2) `[worldmapelementmouseleave,mapelement_770]`  
-[**5085**](scripts/[worldmapelementmouseleave,mapelement_771].cs2) `[worldmapelementmouseleave,mapelement_771]`  
-[**5086**](scripts/[worldmapelementmouseleave,mapelement_772].cs2) `[worldmapelementmouseleave,mapelement_772]`  
-[**5087**](scripts/[worldmapelementmouseleave,mapelement_773].cs2) `[worldmapelementmouseleave,mapelement_773]`  
-[**5088**](scripts/[worldmapelementmouseleave,mapelement_774].cs2) `[worldmapelementmouseleave,mapelement_774]`  
-[**5089**](scripts/[worldmapelementmouseleave,mapelement_775].cs2) `[worldmapelementmouseleave,mapelement_775]`  
-[**5090**](scripts/[worldmapelementmouseleave,mapelement_776].cs2) `[worldmapelementmouseleave,mapelement_776]`  
-[**5091**](scripts/[worldmapelementmouseleave,mapelement_777].cs2) `[worldmapelementmouseleave,mapelement_777]`  
-[**5092**](scripts/[worldmapelementmouseleave,mapelement_778].cs2) `[worldmapelementmouseleave,mapelement_778]`  
-[**5093**](scripts/[worldmapelementmouseleave,mapelement_779].cs2) `[worldmapelementmouseleave,mapelement_779]`  
-[**5094**](scripts/[worldmapelementmouseleave,mapelement_780].cs2) `[worldmapelementmouseleave,mapelement_780]`  
-[**5095**](scripts/[worldmapelementmouseleave,mapelement_781].cs2) `[worldmapelementmouseleave,mapelement_781]`  
-[**5096**](scripts/[worldmapelementmouseleave,mapelement_782].cs2) `[worldmapelementmouseleave,mapelement_782]`  
-[**5097**](scripts/[worldmapelementmouseleave,mapelement_783].cs2) `[worldmapelementmouseleave,mapelement_783]`  
-[**5098**](scripts/[worldmapelementmouseleave,mapelement_784].cs2) `[worldmapelementmouseleave,mapelement_784]`  
-[**5099**](scripts/[worldmapelementmouseleave,mapelement_785].cs2) `[worldmapelementmouseleave,mapelement_785]`  
-[**5100**](scripts/[worldmapelementmouseleave,mapelement_786].cs2) `[worldmapelementmouseleave,mapelement_786]`  
-[**5101**](scripts/[worldmapelementmouseleave,mapelement_787].cs2) `[worldmapelementmouseleave,mapelement_787]`  
-[**5102**](scripts/[worldmapelementmouseleave,mapelement_788].cs2) `[worldmapelementmouseleave,mapelement_788]`  
-[**5103**](scripts/[worldmapelementmouseleave,mapelement_789].cs2) `[worldmapelementmouseleave,mapelement_789]`  
-[**5104**](scripts/[worldmapelementmouseleave,mapelement_790].cs2) `[worldmapelementmouseleave,mapelement_790]`  
-[**5105**](scripts/[worldmapelementmouseleave,mapelement_791].cs2) `[worldmapelementmouseleave,mapelement_791]`  
-[**5106**](scripts/[worldmapelementmouseleave,mapelement_792].cs2) `[worldmapelementmouseleave,mapelement_792]`  
-[**5107**](scripts/[worldmapelementmouseleave,mapelement_793].cs2) `[worldmapelementmouseleave,mapelement_793]`  
-[**5108**](scripts/[worldmapelementmouseleave,mapelement_794].cs2) `[worldmapelementmouseleave,mapelement_794]`  
-[**5109**](scripts/[worldmapelementmouseleave,mapelement_795].cs2) `[worldmapelementmouseleave,mapelement_795]`  
-[**5110**](scripts/[worldmapelementmouseleave,mapelement_796].cs2) `[worldmapelementmouseleave,mapelement_796]`  
-[**5111**](scripts/[worldmapelementmouseleave,mapelement_797].cs2) `[worldmapelementmouseleave,mapelement_797]`  
-[**5112**](scripts/[worldmapelementmouseleave,mapelement_798].cs2) `[worldmapelementmouseleave,mapelement_798]`  
-[**5113**](scripts/[worldmapelementmouseleave,mapelement_799].cs2) `[worldmapelementmouseleave,mapelement_799]`  
-[**5114**](scripts/[worldmapelementmouseleave,mapelement_800].cs2) `[worldmapelementmouseleave,mapelement_800]`  
-[**5115**](scripts/[worldmapelementmouseleave,mapelement_801].cs2) `[worldmapelementmouseleave,mapelement_801]`  
-[**5116**](scripts/[worldmapelementmouseleave,mapelement_802].cs2) `[worldmapelementmouseleave,mapelement_802]`  
-[**5117**](scripts/[worldmapelementmouseleave,mapelement_803].cs2) `[worldmapelementmouseleave,mapelement_803]`  
-[**5118**](scripts/[worldmapelementmouseleave,mapelement_804].cs2) `[worldmapelementmouseleave,mapelement_804]`  
-[**5119**](scripts/[worldmapelementmouseleave,mapelement_805].cs2) `[worldmapelementmouseleave,mapelement_805]`  
-[**5120**](scripts/[worldmapelementmouseleave,mapelement_806].cs2) `[worldmapelementmouseleave,mapelement_806]`  
-[**5121**](scripts/[worldmapelementmouseleave,mapelement_807].cs2) `[worldmapelementmouseleave,mapelement_807]`  
-[**5122**](scripts/[worldmapelementmouseleave,mapelement_808].cs2) `[worldmapelementmouseleave,mapelement_808]`  
-[**5123**](scripts/[worldmapelementmouseleave,mapelement_809].cs2) `[worldmapelementmouseleave,mapelement_809]`  
-[**5124**](scripts/[worldmapelementmouseleave,mapelement_810].cs2) `[worldmapelementmouseleave,mapelement_810]`  
-[**5125**](scripts/[worldmapelementmouseleave,mapelement_811].cs2) `[worldmapelementmouseleave,mapelement_811]`  
-[**5126**](scripts/[worldmapelementmouseleave,mapelement_812].cs2) `[worldmapelementmouseleave,mapelement_812]`  
-[**5127**](scripts/[worldmapelementmouseleave,mapelement_813].cs2) `[worldmapelementmouseleave,mapelement_813]`  
-[**5128**](scripts/[worldmapelementmouseleave,mapelement_814].cs2) `[worldmapelementmouseleave,mapelement_814]`  
-[**5129**](scripts/[worldmapelementmouseleave,mapelement_815].cs2) `[worldmapelementmouseleave,mapelement_815]`  
-[**5130**](scripts/[worldmapelementmouseleave,mapelement_816].cs2) `[worldmapelementmouseleave,mapelement_816]`  
-[**5131**](scripts/[worldmapelementmouseleave,mapelement_817].cs2) `[worldmapelementmouseleave,mapelement_817]`  
-[**5132**](scripts/[worldmapelementmouseleave,mapelement_818].cs2) `[worldmapelementmouseleave,mapelement_818]`  
-[**5133**](scripts/[worldmapelementmouseleave,mapelement_819].cs2) `[worldmapelementmouseleave,mapelement_819]`  
-[**5134**](scripts/[worldmapelementmouseleave,mapelement_820].cs2) `[worldmapelementmouseleave,mapelement_820]`  
-[**5135**](scripts/[worldmapelementmouseleave,mapelement_821].cs2) `[worldmapelementmouseleave,mapelement_821]`  
-[**5136**](scripts/[worldmapelementmouseleave,mapelement_822].cs2) `[worldmapelementmouseleave,mapelement_822]`  
-[**5137**](scripts/[worldmapelementmouseleave,mapelement_823].cs2) `[worldmapelementmouseleave,mapelement_823]`  
-[**5138**](scripts/[worldmapelementmouseleave,mapelement_824].cs2) `[worldmapelementmouseleave,mapelement_824]`  
-[**5139**](scripts/[worldmapelementmouseleave,mapelement_825].cs2) `[worldmapelementmouseleave,mapelement_825]`  
-[**5140**](scripts/[worldmapelementmouseleave,mapelement_826].cs2) `[worldmapelementmouseleave,mapelement_826]`  
-[**5141**](scripts/[worldmapelementmouseleave,mapelement_827].cs2) `[worldmapelementmouseleave,mapelement_827]`  
-[**5142**](scripts/[worldmapelementmouseleave,mapelement_828].cs2) `[worldmapelementmouseleave,mapelement_828]`  
-[**5143**](scripts/[worldmapelementmouseleave,mapelement_829].cs2) `[worldmapelementmouseleave,mapelement_829]`  
-[**5144**](scripts/[worldmapelementmouseleave,mapelement_830].cs2) `[worldmapelementmouseleave,mapelement_830]`  
-[**5145**](scripts/[worldmapelementmouseleave,mapelement_831].cs2) `[worldmapelementmouseleave,mapelement_831]`  
-[**5146**](scripts/[worldmapelementmouseleave,mapelement_832].cs2) `[worldmapelementmouseleave,mapelement_832]`  
-[**5147**](scripts/[worldmapelementmouseleave,mapelement_833].cs2) `[worldmapelementmouseleave,mapelement_833]`  
-[**5148**](scripts/[worldmapelementmouseleave,mapelement_834].cs2) `[worldmapelementmouseleave,mapelement_834]`  
-[**5149**](scripts/[worldmapelementmouseleave,mapelement_835].cs2) `[worldmapelementmouseleave,mapelement_835]`  
-[**5150**](scripts/[worldmapelementmouseleave,mapelement_836].cs2) `[worldmapelementmouseleave,mapelement_836]`  
-[**5151**](scripts/[worldmapelementmouseleave,mapelement_837].cs2) `[worldmapelementmouseleave,mapelement_837]`  
-[**5152**](scripts/[worldmapelementmouseleave,mapelement_838].cs2) `[worldmapelementmouseleave,mapelement_838]`  
-[**5153**](scripts/[worldmapelementmouseleave,mapelement_839].cs2) `[worldmapelementmouseleave,mapelement_839]`  
-[**5154**](scripts/[worldmapelementmouseleave,mapelement_840].cs2) `[worldmapelementmouseleave,mapelement_840]`  
-[**5155**](scripts/[worldmapelementmouseleave,mapelement_841].cs2) `[worldmapelementmouseleave,mapelement_841]`  
-[**5156**](scripts/[worldmapelementmouseleave,mapelement_842].cs2) `[worldmapelementmouseleave,mapelement_842]`  
-[**5157**](scripts/[worldmapelementmouseleave,mapelement_843].cs2) `[worldmapelementmouseleave,mapelement_843]`  
-[**5158**](scripts/[worldmapelementmouseleave,mapelement_844].cs2) `[worldmapelementmouseleave,mapelement_844]`  
-[**5159**](scripts/[worldmapelementmouseleave,mapelement_845].cs2) `[worldmapelementmouseleave,mapelement_845]`  
-[**5160**](scripts/[worldmapelementmouseleave,mapelement_846].cs2) `[worldmapelementmouseleave,mapelement_846]`  
-[**5161**](scripts/[worldmapelementmouseleave,mapelement_847].cs2) `[worldmapelementmouseleave,mapelement_847]`  
-[**5162**](scripts/[worldmapelementmouseleave,mapelement_848].cs2) `[worldmapelementmouseleave,mapelement_848]`  
-[**5163**](scripts/[worldmapelementmouseleave,mapelement_849].cs2) `[worldmapelementmouseleave,mapelement_849]`  
-[**5164**](scripts/[worldmapelementmouseleave,mapelement_850].cs2) `[worldmapelementmouseleave,mapelement_850]`  
 [**5165**](scripts/[clientscript,script5165].cs2)  
 [**5166**](scripts/[proc,script5166].cs2)  
 [**5167**](scripts/[clientscript,helper_agility_highlight_course].cs2) `[clientscript,helper_agility_highlight_course]`  
@@ -5866,8 +5327,6 @@
 [**5863**](scripts/[clientscript,script5863].cs2)  
 [**5864**](scripts/[clientscript,script5864].cs2)  
 [**5865**](scripts/[proc,script5865].cs2)  
-[**5866**](scripts/[worldmapelementmouserepeat,mapelement_853].cs2) `[worldmapelementmouserepeat,mapelement_853]`  
-[**5867**](scripts/[worldmapelementmouseleave,mapelement_853].cs2) `[worldmapelementmouseleave,mapelement_853]`  
 [**5868**](scripts/[proc,speedrunning_misc_unlocks].cs2) `[proc,speedrunning_misc_unlocks]`  
 [**5869**](scripts/[proc,script5869].cs2)  
 [**5870**](scripts/[clientscript,script5870].cs2)  
@@ -5987,8 +5446,6 @@
 [**5984**](scripts/[clientscript,script5984].cs2)  
 [**5985**](scripts/[proc,cr_utility_module_v1_init].cs2) `[proc,cr_utility_module_v1_init]`  
 [**5986**](scripts/[clientscript,script5986].cs2)  
-[**5987**](scripts/[worldmapelementmouserepeat,mapelement_854].cs2) `[worldmapelementmouserepeat,mapelement_854]`  
-[**5988**](scripts/[worldmapelementmouseleave,mapelement_854].cs2) `[worldmapelementmouseleave,mapelement_854]`  
 [**5989**](scripts/[proc,quest_requirement_check].cs2) `[proc,quest_requirement_check]`  
 [**5990**](scripts/[proc,script5990].cs2)  
 [**5991**](scripts/[proc,quest_requirement_check_quest].cs2) `[proc,quest_requirement_check_quest]`  
@@ -6046,8 +5503,6 @@
 [**6043**](scripts/[clientscript,script6043].cs2)  
 [**6044**](scripts/[proc,script6044].cs2)  
 [**6045**](scripts/[proc,script6045].cs2)  
-[**6046**](scripts/[worldmapelementmouserepeat,mapelement_857].cs2) `[worldmapelementmouserepeat,mapelement_857]`  
-[**6047**](scripts/[worldmapelementmouseleave,mapelement_857].cs2) `[worldmapelementmouseleave,mapelement_857]`  
 [**6048**](scripts/[clientscript,script6048].cs2)  
 [**6049**](scripts/[proc,script6049].cs2)  
 [**6050**](scripts/[proc,health_regen_values].cs2) `[proc,health_regen_values]`  
@@ -6074,14 +5529,6 @@
 [**6071**](scripts/[proc,raffle_tab_selected].cs2) `[proc,raffle_tab_selected]`  
 [**6072**](scripts/[clientscript,raffle_tab_op].cs2) `[clientscript,raffle_tab_op]`  
 [**6073**](scripts/[proc,settings_full_screen].cs2) `[proc,settings_full_screen]`  
-[**6074**](scripts/[worldmapelementmouserepeat,mapelement_858].cs2) `[worldmapelementmouserepeat,mapelement_858]`  
-[**6075**](scripts/[worldmapelementmouserepeat,mapelement_859].cs2) `[worldmapelementmouserepeat,mapelement_859]`  
-[**6076**](scripts/[worldmapelementmouserepeat,mapelement_860].cs2) `[worldmapelementmouserepeat,mapelement_860]`  
-[**6077**](scripts/[worldmapelementmouseleave,mapelement_858].cs2) `[worldmapelementmouseleave,mapelement_858]`  
-[**6078**](scripts/[worldmapelementmouseleave,mapelement_859].cs2) `[worldmapelementmouseleave,mapelement_859]`  
-[**6079**](scripts/[worldmapelementmouseleave,mapelement_860].cs2) `[worldmapelementmouseleave,mapelement_860]`  
-[**6080**](scripts/[worldmapelementmouserepeat,mapelement_863].cs2) `[worldmapelementmouserepeat,mapelement_863]`  
-[**6081**](scripts/[worldmapelementmouseleave,mapelement_863].cs2) `[worldmapelementmouseleave,mapelement_863]`  
 [**6082**](scripts/[clientscript,reward_shop_init].cs2) `[clientscript,reward_shop_init]`  
 [**6083**](scripts/[clientscript,script6083].cs2)  
 [**6084**](scripts/[clientscript,script6084].cs2)  
@@ -6699,7 +6146,6 @@
 [**6696**](scripts/[clientscript,npc_name_vartransmit].cs2) `[clientscript,npc_name_vartransmit]`  
 [**6697**](scripts/[clientscript,npc_name_timer].cs2) `[clientscript,npc_name_timer]`  
 [**6698**](scripts/[proc,npc_name_create].cs2) `[proc,npc_name_create]`  
-[**6699**](scripts/[proc,music_isunlocked_core].cs2) `[proc,music_isunlocked_core]`  
 [**6700**](scripts/[clientscript,script6700].cs2)  
 [**6701**](scripts/[clientscript,script6701].cs2)  
 [**6702**](scripts/[clientscript,script6702].cs2)  
@@ -6785,8 +6231,6 @@
 [**6783**](scripts/[clientscript,script6783].cs2)  
 [**6784**](scripts/[proc,script6784].cs2)  
 [**6785**](scripts/[proc,script6785].cs2)  
-[**6786**](scripts/[worldmapelementmouserepeat,mapelement_91].cs2) `[worldmapelementmouserepeat,mapelement_91]`  
-[**6787**](scripts/[worldmapelementmouseleave,mapelement_91].cs2) `[worldmapelementmouseleave,mapelement_91]`  
 [**6788**](scripts/[proc,script6788].cs2)  
 [**6789**](scripts/[proc,script6789].cs2)  
 [**6790**](scripts/[proc,script6790].cs2)  
@@ -6812,8 +6256,6 @@
 [**6810**](scripts/[proc,script6810].cs2)  
 [**6811**](scripts/[proc,script6811].cs2)  
 [**6812**](scripts/[proc,script6812].cs2)  
-[**6813**](scripts/[worldmapelementmouserepeat,mapelement_86].cs2) `[worldmapelementmouserepeat,mapelement_86]`  
-[**6814**](scripts/[worldmapelementmouseleave,mapelement_86].cs2) `[worldmapelementmouseleave,mapelement_86]`  
 [**6815**](scripts/[clientscript,script6815].cs2)  
 [**6816**](scripts/[proc,questscroll_closebutton_init].cs2) `[proc,questscroll_closebutton_init]`  
 [**6817**](scripts/[proc,script6817].cs2)  
@@ -6948,8 +6390,6 @@
 [**6946**](scripts/[clientscript,script6946].cs2)  
 [**6947**](scripts/[clientscript,script6947].cs2)  
 [**6948**](scripts/[proc,script6948].cs2)  
-[**6949**](scripts/[worldmapelementmouserepeat,mapelement_263].cs2) `[worldmapelementmouserepeat,mapelement_263]`  
-[**6950**](scripts/[worldmapelementmouseleave,mapelement_263].cs2) `[worldmapelementmouseleave,mapelement_263]`  
 [**6951**](scripts/[proc,percentage_string].cs2) `[proc,percentage_string]`  
 [**6952**](scripts/[proc,divide_up].cs2) `[proc,divide_up]`  
 [**6953**](scripts/[proc,divide_round].cs2) `[proc,divide_round]`  
@@ -7021,8 +6461,6 @@
 [**7019**](scripts/[proc,tostring_commas].cs2) `[proc,tostring_commas]`  
 [**7020**](scripts/[clientscript,script7020].cs2)  
 [**7021**](scripts/[clientscript,script7021].cs2)  
-[**7022**](scripts/[worldmapelementmouserepeat,mapelement_871].cs2) `[worldmapelementmouserepeat,mapelement_871]`  
-[**7023**](scripts/[worldmapelementmouseleave,mapelement_871].cs2) `[worldmapelementmouseleave,mapelement_871]`  
 [**7024**](scripts/[proc,script7024].cs2)  
 [**7025**](scripts/[clientscript,settings_minimap_zoom_op].cs2) `[clientscript,settings_minimap_zoom_op]`  
 [**7026**](scripts/[clientscript,settings_minimap_zoom_position_timer].cs2) `[clientscript,settings_minimap_zoom_position_timer]`  
@@ -7031,7 +6469,6 @@
 [**7029**](scripts/[clientscript,script7029].cs2)  
 [**7030**](scripts/[proc,membership_benefits_prompt_close].cs2) `[proc,membership_benefits_prompt_close]`  
 [**7031**](scripts/[clientscript,membership_benefits_prompt_banner].cs2) `[clientscript,membership_benefits_prompt_banner]`  
-[**7032**](scripts/[proc,script7032].cs2)  
 [**7033**](scripts/[clientscript,script7033].cs2)  
 [**7034**](scripts/[proc,script7034].cs2)  
 [**7035**](scripts/[proc,membership_benefits_prompt_banner_highlight].cs2) `[proc,membership_benefits_prompt_banner_highlight]`  
@@ -7062,8 +6499,6 @@
 [**7060**](scripts/[proc,fade_component].cs2) `[proc,fade_component]`  
 [**7061**](scripts/[clientscript,fade_component_update].cs2) `[clientscript,fade_component_update]`  
 [**7062**](scripts/[proc,fade_component_increment].cs2) `[proc,fade_component_increment]`  
-[**7063**](scripts/[worldmapelementmouserepeat,mapelement_239].cs2) `[worldmapelementmouserepeat,mapelement_239]`  
-[**7064**](scripts/[worldmapelementmouseleave,mapelement_239].cs2) `[worldmapelementmouseleave,mapelement_239]`  
 [**7065**](scripts/[clientscript,stat_group_tooltip].cs2) `[clientscript,stat_group_tooltip]`  
 [**7066**](scripts/[proc,stat_group_tooltip].cs2) `[proc,stat_group_tooltip]`  
 [**7067**](scripts/[clientscript,stat_group_tooltips].cs2) `[clientscript,stat_group_tooltips]`  
@@ -7266,3 +6701,67 @@
 [**7264**](scripts/[proc,omnishop_get_obj].cs2) `[proc,omnishop_get_obj]`  
 [**7265**](scripts/[proc,beta_world].cs2) `[proc,beta_world]`  
 [**7266**](scripts/[proc,script7266].cs2)  
+[**7267**](scripts/[proc,script7267].cs2)  
+[**7268**](scripts/[proc,script7268].cs2)  
+[**7269**](scripts/[proc,script7269].cs2)  
+[**7270**](scripts/[clientscript,script7270].cs2)  
+[**7271**](scripts/[proc,script7271].cs2)  
+[**7272**](scripts/[clientscript,script7272].cs2)  
+[**7273**](scripts/[proc,script7273].cs2)  
+[**7274**](scripts/[clientscript,script7274].cs2)  
+[**7275**](scripts/[clientscript,script7275].cs2)  
+[**7276**](scripts/[proc,script7276].cs2)  
+[**7277**](scripts/[clientscript,script7277].cs2)  
+[**7278**](scripts/[clientscript,script7278].cs2)  
+[**7279**](scripts/[proc,script7279].cs2)  
+[**7280**](scripts/[clientscript,script7280].cs2)  
+[**7281**](scripts/[proc,script7281].cs2)  
+[**7282**](scripts/[clientscript,script7282].cs2)  
+[**7283**](scripts/[proc,script7283].cs2)  
+[**7284**](scripts/[proc,script7284].cs2)  
+[**7285**](scripts/[clientscript,script7285].cs2)  
+[**7286**](scripts/[clientscript,script7286].cs2)  
+[**7287**](scripts/[clientscript,script7287].cs2)  
+[**7288**](scripts/[proc,script7288].cs2)  
+[**7289**](scripts/[proc,script7289].cs2)  
+[**7290**](scripts/[clientscript,script7290].cs2)  
+[**7291**](scripts/[clientscript,script7291].cs2)  
+[**7292**](scripts/[clientscript,script7292].cs2)  
+[**7293**](scripts/[proc,script7293].cs2)  
+[**7294**](scripts/[proc,script7294].cs2)  
+[**7295**](scripts/[proc,script7295].cs2)  
+[**7296**](scripts/[proc,script7296].cs2)  
+[**7297**](scripts/[proc,script7297].cs2)  
+[**7298**](scripts/[proc,script7298].cs2)  
+[**7299**](scripts/[proc,script7299].cs2)  
+[**7300**](scripts/[proc,script7300].cs2)  
+[**7301**](scripts/[proc,script7301].cs2)  
+[**7302**](scripts/[proc,script7302].cs2)  
+[**7303**](scripts/[proc,script7303].cs2)  
+[**7304**](scripts/[proc,script7304].cs2)  
+[**7305**](scripts/[proc,script7305].cs2)  
+[**7306**](scripts/[proc,script7306].cs2)  
+[**7307**](scripts/[clientscript,script7307].cs2)  
+[**7308**](scripts/[proc,script7308].cs2)  
+[**7309**](scripts/[proc,script7309].cs2)  
+[**7310**](scripts/[proc,script7310].cs2)  
+[**7311**](scripts/[proc,script7311].cs2)  
+[**7312**](scripts/[proc,script7312].cs2)  
+[**7313**](scripts/[proc,script7313].cs2)  
+[**7314**](scripts/[proc,script7314].cs2)  
+[**7315**](scripts/[proc,script7315].cs2)  
+[**7316**](scripts/[proc,script7316].cs2)  
+[**7317**](scripts/[proc,script7317].cs2)  
+[**7318**](scripts/[proc,script7318].cs2)  
+[**7319**](scripts/[proc,script7319].cs2)  
+[**7320**](scripts/[proc,script7320].cs2)  
+[**7321**](scripts/[proc,script7321].cs2)  
+[**7322**](scripts/[proc,script7322].cs2)  
+[**7323**](scripts/[proc,script7323].cs2)  
+[**7324**](scripts/[proc,script7324].cs2)  
+[**7325**](scripts/[worldmapelementmouserepeat,_].cs2) `[worldmapelementmouserepeat,_]`  
+[**7326**](scripts/[worldmapelementmouseleave,_].cs2) `[worldmapelementmouseleave,_]`  
+[**7327**](scripts/[proc,script7327].cs2)  
+[**7328**](scripts/[proc,script7328].cs2)  
+[**7329**](scripts/[proc,script7329].cs2)  
+[**7330**](scripts/[proc,script7330].cs2)  

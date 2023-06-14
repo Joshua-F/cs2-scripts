@@ -1,123 +1,65 @@
 // 250
-[clientscript,music_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+[clientscript,music_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
 cc_deleteall($component1);
 if_setscrollpos(0, 0, $component2);
-def_int $count8 = enum_getoutputcount(enum_818);
-if_setontimer("music_init_counter(event_com, $count8)", $component4);
-if_setonvartransmit("music_vartransmit(event_com, $component4, $count8){var568, var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065, var2237, var2950, var3418, var3575}", $component1);
-def_int $countarray0($count8);
-def_int $count9 = 0;
-while ($count9 < $count8) {
-	$countarray0($count9) = $count9;
-	cc_create($component1, ^iftype_text, $count9);
-	cc_sethide(true);
-	$count9 = calc($count9 + 1);
-}
-def_int $int10 = 15;
-if (~on_mobile = true) {
-	$int10 = scale(4, 3, $int10);
-}
-def_int $int11 = calc(3 + $count8 * $int10 + 3);
-if_setscrollsize(0, $int11, $component2);
-if ($count8 > 1) {
-	~music_sort(countarray0, 0, calc($count8 - 1));
-}
-$count9 = 0;
+if_setontimer("music_init_counter($component4)", $component4);
+~script7321($component1, $component4);
+def_int $int11 = db_find_with_count(dbtable_44:8, false);
+def_int $intarray0($int11);
 def_int $int12 = 0;
-def_coord $coord13 = null;
-def_int $int14 = -1;
-def_int $index15 = -1;
-def_int $flags16 = 0;
+while ($int12 < $int11) {
+	$intarray0($int12) = $int12;
+	cc_create($component1, ^iftype_text, $int12);
+	cc_sethide(true);
+	$int12 = calc($int12 + 1);
+}
+def_int $int13 = 15;
+if (~on_mobile = true) {
+	$int13 = scale(4, 3, $int13);
+}
+def_int $int14 = calc(3 + $int11 * $int13 + 3);
+if_setscrollsize(0, $int14, $component2);
+if ($int11 > 1) {
+	~music_sort(intarray0, 0, calc($int11 - 1));
+}
+$int12 = 0;
+def_dbrow $dbrow15 = null;
 def_string $text0 = "";
-while ($count9 < $count8) {
-	if (cc_find($component1, $countarray0($count9)) = ^true) {
+while ($int12 < $int11) {
+	if (cc_find($component1, $intarray0($int12)) = ^true) {
 		cc_sethide(false);
-		cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+		cc_setsize(0, $int14, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-		$int12 = enum(int, int, enum_818, $countarray0($count9));
-		if ($int12 ! 0) {
-			cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
-			cc_setposition(0, calc(3 + $count9 * $int10), ^setpos_abs_centre, ^setpos_abs_top);
+		$dbrow15 = db_findbyindex($intarray0($int12));
+		if ($dbrow15 ! null) {
+			cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
+			cc_setposition(0, calc(3 + $int12 * $int13), ^setpos_abs_centre, ^setpos_abs_top);
 			cc_settextfont(p12_full);
 			cc_settextshadow(true);
 			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-			$text0 = enum(int, string, enum_812, $int12);
+			$text0 = ~script7311($dbrow15);
 			cc_settext($text0);
 			cc_setop(1, "Play");
 			cc_setop(2, "Unlock hint");
 			cc_setopbase("<col=ff9040><$text0></col>");
-			$coord13 = enum(int, coord, enum_819, $int12);
-			if ($coord13 ! null) {
-				$int14, $index15 = coordx($coord13), coordz($coord13);
-				switch_int ($int14) {
-					case 1 :
-						$flags16 = %var20;
-					case 2 :
-						$flags16 = %var21;
-					case 3 :
-						$flags16 = %var22;
-					case 4 :
-						$flags16 = %var23;
-					case 5 :
-						$flags16 = %var24;
-					case 6 :
-						$flags16 = %var25;
-					case 7 :
-						$flags16 = %var298;
-					case 8 :
-						$flags16 = %var311;
-					case 9 :
-						$flags16 = %var346;
-					case 10 :
-						$flags16 = %var414;
-					case 11 :
-						$flags16 = %var464;
-					case 12 :
-						$flags16 = %var598;
-					case 13 :
-						$flags16 = %var662;
-					case 14 :
-						$flags16 = %var721;
-					case 15 :
-						$flags16 = %var906;
-					case 16 :
-						$flags16 = %var1009;
-					case 17 :
-						$flags16 = %var1338;
-					case 18 :
-						$flags16 = %var1681;
-					case 19 :
-						$flags16 = %var2065;
-					case 20 :
-						$flags16 = %var2237;
-					case 21 :
-						$flags16 = %var2950;
-					case 22 :
-						$flags16 = %var3418;
-					case 23 :
-						$flags16 = %var3575;
-				}
-				if (testbit($flags16, $index15) = ^true) {
-					~music_setcolour(0x0dc10d);
-				} else {
-					~music_setcolour(^red);
-				}
-			} else {
+			if (~music_isunlocked($dbrow15) = 1) {
 				~music_setcolour(0x0dc10d);
+			} else {
+				~music_setcolour(^red);
 			}
 			cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
 		} else {
 			cc_sethide(true);
 		}
 	}
-	$count9 = calc($count9 + 1);
+	$int12 = calc($int12 + 1);
 }
-~music_optionbuttons($component5, $component6, $component7);
-if_setonvartransmit("music_optionbuttons_resynch($component5, $component6, $component7){var18, var19}", $component0);
-if_setonop("music_optionbuttons_setmode(event_op, 1, $component5, $component6, $component7)", $component5);
-if_setonop("music_optionbuttons_setmode(event_op, 0, $component5, $component6, $component7)", $component6);
-if_setonop("music_optionbuttons_setloop(event_op, $component5, $component6, $component7)", $component7);
+~music_optionbuttons($component6, $component8, $component10);
+if_setonvartransmit("music_optionbuttons_resynch($component6, $component8, $component10){var18, var19}", $component0);
+if_setonop("music_optionbuttons_setmode(event_op, 0, $component6, $component8, $component10)", $component5);
+if_setonop("music_optionbuttons_setmode(event_op, 1, $component6, $component8, $component10)", $component7);
+if_setonop("music_optionbuttons_setmode(event_op, 2, $component6, $component8, $component10)", $component9);
 cc_deleteall($component3);
-%varcint75 = ~max(0, ~min(calc($int11 - if_getheight($component2)), %varcint75));
+%varcint75 = ~max(0, ~min(calc($int14 - if_getheight($component2)), %varcint75));
 ~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~scrollbar_resize($component3, $component2, %varcint75);

@@ -1,0 +1,9 @@
+// 7320
+[proc,script7320](dbrow $dbrow0)(int)
+def_int $int1 = -1;
+def_int $int2 = -1;
+$int1, $int2 = ~script7316($dbrow0);
+if ($int1 >= 1 & $int2 >= 0) {
+	return(0);
+}
+return(1);

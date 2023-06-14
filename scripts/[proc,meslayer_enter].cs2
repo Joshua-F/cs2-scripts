@@ -53,22 +53,25 @@ if ($length1 > 0) {
 			%varcstring361 = removetags(%varcstring359);
 			resume_namedialog(%varcstring359);
 			%varcint5 = 0;
-		case 9, 15, 20, 21 :
-			if (%varcint5 = 20) {
-				~script4394(removetags(%varcstring359));
-			} else if (%varcint5 = 21) {
-				%varcstring359 = ~script4191(%varcstring359, "jagex", " ");
-				%varcstring359 = ~script4191(%varcstring359, "jaqex", " ");
-				%varcstring359 = ~script4191(%varcstring359, "jagx", " ");
-				%varcstring359 = ~script4191(%varcstring359, "jgex", " ");
-				%varcstring359 = ~script4191(%varcstring359, "jgx", " ");
-				%varcstring359 = ~script4191(%varcstring359, "admin", " ");
-				%varcstring359 = ~script4191(%varcstring359, "staff", " ");
-				%varcstring359 = ~script4191(%varcstring359, "mod ", " ");
-				%varcstring359 = ~script4191(%varcstring359, "m0d ", " ");
-				%varcstring359 = ~script4191(%varcstring359, "-", " ");
-				%varcstring359 = ~script4191(%varcstring359, "_", " ");
-				%varcstring359 = ~script4191(%varcstring359, "  ", " ");
+		case 9, 15, 20, 21, 27 :
+			switch_int (%varcint5) {
+				case 20 :
+					~script4394(removetags(%varcstring359));
+				case 27 :
+					~script7330(removetags(%varcstring359));
+				case 21 :
+					%varcstring359 = ~script4191(%varcstring359, "jagex", " ");
+					%varcstring359 = ~script4191(%varcstring359, "jaqex", " ");
+					%varcstring359 = ~script4191(%varcstring359, "jagx", " ");
+					%varcstring359 = ~script4191(%varcstring359, "jgex", " ");
+					%varcstring359 = ~script4191(%varcstring359, "jgx", " ");
+					%varcstring359 = ~script4191(%varcstring359, "admin", " ");
+					%varcstring359 = ~script4191(%varcstring359, "staff", " ");
+					%varcstring359 = ~script4191(%varcstring359, "mod ", " ");
+					%varcstring359 = ~script4191(%varcstring359, "m0d ", " ");
+					%varcstring359 = ~script4191(%varcstring359, "-", " ");
+					%varcstring359 = ~script4191(%varcstring359, "_", " ");
+					%varcstring359 = ~script4191(%varcstring359, "  ", " ");
 			}
 			resume_stringdialog(%varcstring359);
 			%varcint5 = 0;
@@ -109,6 +112,8 @@ if ($length1 > 0) {
 			return;
 		case 16 :
 			return;
+		case 27 :
+			~script7330("");
 	}
 }
 ~meslayer_close(1, 1, 1);

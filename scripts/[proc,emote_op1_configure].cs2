@@ -1,3 +1,8 @@
 // 4105
 [proc,emote_op1_configure](int $int0)
-cc_setop(1, ~emote_get_name($int0));
+def_string $op0 = "Perform";
+if ($int0 = 50) {
+	cc_setop(1, "<$op0> <col=ff9040><~emote_get_name($int0)></col>");
+} else {
+	cc_setop(1, $op0);
+}

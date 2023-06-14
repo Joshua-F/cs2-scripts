@@ -1,8 +1,8 @@
 // 761
-[clientscript,worldswitcher_sortbutton_op](int $opindex0, int $int1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
+[clientscript,worldswitcher_sortbutton_op](int $opindex0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, int $int7, int $int8, int $int9, graphic $graphic10, fontmetrics $fontmetrics11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21)
 if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
 %varbit4596 = $int1;
-~worldswitcher_draw($component2, $component3, $component4, $component5, $int6, $int7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17);
+~worldswitcher_draw($component2, $component3, $component4, $component5, $component6, $int7, $int8, $int9, $graphic10, $fontmetrics11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21);

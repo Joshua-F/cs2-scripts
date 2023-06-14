@@ -5,15 +5,16 @@ if (~keypress_permit(null, overlayinterface_162) = 0) {
 }
 if ($key0 = ^key_return) {
 	if (%varcint56 = 1 & string_length(%varcstring359) <= 0) {
-		if (%varcint5 = 8) {
-			%varcstring359 = %varcstring361;
-			~script222($string0);
-		} else if (%varcint5 = 10) {
-			%varcstring359 = %varcstring362;
-			~script222($string0);
-		} else if (%varcint5 = 20) {
-			%varcstring359 = ~script4393;
-			~script222($string0);
+		switch_int (%varcint5) {
+			case 8 :
+				%varcstring359 = %varcstring361;
+				~script222($string0);
+			case 10 :
+				%varcstring359 = %varcstring362;
+				~script222($string0);
+			case 20 :
+				%varcstring359 = ~script4393;
+				~script222($string0);
 		}
 	}
 	~meslayer_enter;
@@ -55,6 +56,8 @@ switch_int (%varcint5) {
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 4, $key0, $keychar1);
 	case 20, 21 :
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 8, $key0, $keychar1);
+	case 27 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 12, $key0, $keychar1);
 	case default :
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 2, $key0, $keychar1);
 }

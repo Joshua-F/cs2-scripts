@@ -1,0 +1,12 @@
+// 7275
+[clientscript,script7275](int $clock0, component $component1, int $comsubid2, component $component3, int $comsubid4, int $trans5)
+if (clientclock >= $clock0) {
+	if (cc_find($component3, $comsubid4) = ^true) {
+		cc_settrans($trans5);
+	}
+	if ($comsubid2 ! -1 & .cc_find($component1, $comsubid2) = ^true) {
+		.cc_setontimer(null);
+	} else {
+		if_setontimer(null, $component1);
+	}
+}

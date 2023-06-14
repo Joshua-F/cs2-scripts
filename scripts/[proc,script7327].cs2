@@ -1,0 +1,6 @@
+// 7327
+[proc,script7327](dbrow $dbrow0)(int)
+if (db_getfield($dbrow0, quest:type, 0) = 1) {
+	return(1);
+}
+return(0);

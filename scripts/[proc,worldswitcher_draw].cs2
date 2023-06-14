@@ -1,13 +1,13 @@
 // 892
-[proc,worldswitcher_draw](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
-if_setsize(0, $int5, ^setsize_minus, ^setsize_abs, $component6);
-if_setsize(16, $int5, ^setsize_minus, ^setsize_minus, $component0);
-if_setsize(16, $int5, ^setsize_abs, ^setsize_minus, $component1);
-~worldswitcher_sortbutton_draw($component7, 2, 3, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-~worldswitcher_sortbutton_draw($component8, 0, 1, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-~worldswitcher_sortbutton_draw($component9, 4, 5, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-~worldswitcher_sortbutton_draw($component10, 8, 9, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-~worldswitcher_sortbutton_draw($component11, 6, 7, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
+[proc,worldswitcher_draw](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, int $int6, int $int7, graphic $graphic8, fontmetrics $fontmetrics9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
+if_setsize(0, $int7, ^setsize_minus, ^setsize_abs, $component10);
+if_setsize(16, $int7, ^setsize_minus, ^setsize_minus, $component1);
+if_setsize(16, $int7, ^setsize_abs, ^setsize_minus, $component2);
+~worldswitcher_sortbutton_draw($component11, 2, 3, $component0, $component1, $component2, $component3, $component4, $int5, $int6, $int7, $graphic8, $fontmetrics9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
+~worldswitcher_sortbutton_draw($component12, 0, 1, $component0, $component1, $component2, $component3, $component4, $int5, $int6, $int7, $graphic8, $fontmetrics9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
+~worldswitcher_sortbutton_draw($component13, 4, 5, $component0, $component1, $component2, $component3, $component4, $int5, $int6, $int7, $graphic8, $fontmetrics9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
+~worldswitcher_sortbutton_draw($component14, 8, 9, $component0, $component1, $component2, $component3, $component4, $int5, $int6, $int7, $graphic8, $fontmetrics9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
+~worldswitcher_sortbutton_draw($component15, 6, 7, $component0, $component1, $component2, $component3, $component4, $int5, $int6, $int7, $graphic8, $fontmetrics9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
 switch_int (%varbit4596) {
 	case 2 :
 		worldlist_sort(7, false, 0, false);
@@ -30,71 +30,102 @@ switch_int (%varbit4596) {
 	case default :
 		worldlist_sort(0, false, 7, false);
 }
-def_int $height16 = 0;
-def_int $width17 = if_getwidth($component7);
-def_int $width18 = if_getwidth($component8);
-def_int $width19 = if_getwidth($component9);
-def_int $width20 = if_getwidth($component10);
+def_int $int20 = 0;
+while ($int20 <= 600) {
+	if (cc_find($component4, $int20) = ^true) {
+		cc_sethide(true);
+	}
+	$int20 = calc($int20 + 1);
+}
+if ($component19 ! null) {
+	~deltooltip_action($component19);
+}
 def_int $width21 = if_getwidth($component11);
-cc_deleteall($component2);
-def_int $int22 = ~stat_totallevel;
-def_int $int23 = ~stat_f2plevel;
-def_int $int24 = 0;
-def_int $world25 = 0;
-def_int $flags26 = 0;
+def_int $width22 = if_getwidth($component12);
+def_int $width23 = if_getwidth($component13);
+def_int $width24 = if_getwidth($component14);
+def_int $width25 = if_getwidth($component15);
+def_int $int26 = ~stat_totallevel;
+def_int $int27 = ~stat_f2plevel;
+def_component $layer28 = if_getlayer($component0);
+cc_deleteall($component3);
+$int20 = 0;
+def_int $height29 = 0;
+switch_int (%varbit4596) {
+	case default :
+		$int20, $height29 = ~script7273($component3, $int20, $height29, -1, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+	case 4 :
+		$int20, $height29 = ~script7273($component3, $int20, $height29, -42, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+		$int20, $height29 = ~script7273($component3, $int20, $height29, 0, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+		$int20, $height29 = ~script7273($component3, $int20, $height29, -73, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+		$int20, $height29 = ~script7273($component3, $int20, $height29, -69, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+	case 5 :
+		$int20, $height29 = ~script7273($component3, $int20, $height29, -69, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+		$int20, $height29 = ~script7273($component3, $int20, $height29, -73, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+		$int20, $height29 = ~script7273($component3, $int20, $height29, 0, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+		$int20, $height29 = ~script7273($component3, $int20, $height29, -42, $component4, $int5, $graphic8, $fontmetrics9, $width21, $width22, $width23, $width24, $width25, $int26, $int27, $layer28, $component19);
+}
+if ($int20 <= 0) {
+	cc_create($component3, ^iftype_text, $int20);
+	cc_setsize(10, 100, ^setsize_minus, ^setsize_abs);
+	$int20, $height29 = calc($int20 + 1), calc($height29 + 100);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext("Please review your filter settings.");
+}
+if ($height29 > if_getheight($component1)) {
+	if_setscrollsize(0, $height29, $component1);
+} else {
+	if_setscrollsize(0, 0, $component1);
+}
+if_setsize(0, $height29, ^setsize_minus, ^setsize_abs, $component4);
+if_setsize(0, $height29, ^setsize_minus, ^setsize_abs, $component3);
+if ($layer28 ! null) {
+	%varcint63 = ~max(0, %varcint63);
+	~script7276($layer28, $component0, $component2, $component1, $int6, $int7, ~max(180, $height29), if_getheight($layer28));
+} else {
+	%varcint69 = ~max(0, %varcint69);
+	~scrollbar_resize($component2, $component1, %varcint69);
+}
+cc_deleteall($component16);
+cc_deleteall($component17);
+def_int $x30 = calc(if_getwidth($component16) - ($width21 + $width22 + $width23 + $width24));
+def_int $world31 = 0;
+def_int $flags32 = 0;
 def_string $string0 = "";
-def_int $int27 = -1;
-def_int $int28 = 0;
+def_int $int33 = -1;
+def_int $int34 = 0;
 def_string $string1 = "";
-$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_start;
-while ($world25 > 0) {
-	if (~script961($world25, $flags26) = 1) {
-		$int24 = ~worldswitcher_entry_draw($component2, $int24, $height16, $component3, $world25, $world25, $flags26, $string0, $int27, $int28, $int4, $width17, $width18, $width19, $width20, $width21, $int22, $int23, $component15);
-		$height16 = calc($height16 + $int4);
-	}
-	$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_next;
-}
-if ($height16 > if_getheight($component0)) {
-	if_setscrollsize(0, $height16, $component0);
-} else {
-	if_setscrollsize(0, 0, $component0);
-}
-if_setsize(0, $height16, ^setsize_minus, ^setsize_abs, $component3);
-if_setsize(0, $height16, ^setsize_minus, ^setsize_abs, $component2);
-if (%varcint69 < 0) {
-	%varcint69 = 0;
-}
-~scrollbar_resize($component1, $component0, %varcint69);
-cc_deleteall($component12);
-cc_deleteall($component13);
-def_int $x29 = calc(if_getwidth($component12) - ($width17 + $width18 + $width19 + $width20));
 if (%varbit4597 > 0) {
-	if_sethide(true, $component14);
-	$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4597);
-	if (~script961($world25, $flags26) = 0) {
-		$world25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
+	if_sethide(true, $component18);
+	$world31, $flags32, $string0, $int33, $int34, $string1 = ~script7296(%varbit4597);
+	if (~script961($world31, $flags32) = 0) {
+		$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 	}
-	~worldswitcher_entry_draw($component12, 0, 0, $component12, -1, $world25, $flags26, $string0, $int27, $int28, $int4, $width17, $width18, $width19, $width20, $x29, $int22, $int23, $component15);
+	~worldswitcher_entry_draw($component16, 0, 0, $component16, -1, $world31, $flags32, $string0, $int33, $int34, $int5, $graphic8, $fontmetrics9, -1, $width21, $width22, $width23, $width24, $x30, $int26, $int27, $component19);
 	if (%varbit4598 > 0) {
-		$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
-		if (~script961($world25, $flags26) = 0) {
-			$world25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
+		$world31, $flags32, $string0, $int33, $int34, $string1 = ~script7296(%varbit4598);
+		if (~script961($world31, $flags32) = 0) {
+			$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 		}
-		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $world25, $flags26, $string0, $int27, $int28, $int4, $width17, $width18, $width19, $width20, $x29, $int22, $int23, $component15);
+		~worldswitcher_entry_draw($component17, 0, 0, $component17, -1, $world31, $flags32, $string0, $int33, $int34, $int5, $graphic8, $fontmetrics9, -1, $width21, $width22, $width23, $width24, $x30, $int26, $int27, $component19);
 	} else {
-		~worldswitcher_wipe_favourite($component13);
+		~worldswitcher_wipe_favourite($component17);
 	}
 } else {
-	~worldswitcher_wipe_favourite($component12);
+	~worldswitcher_wipe_favourite($component16);
 	if (%varbit4598 > 0) {
-		if_sethide(true, $component14);
-		$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
-		if (~script961($world25, $flags26) = 0) {
-			$world25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
+		if_sethide(true, $component18);
+		$world31, $flags32, $string0, $int33, $int34, $string1 = ~script7296(%varbit4598);
+		if (~script961($world31, $flags32) = 0) {
+			$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 		}
-		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $world25, $flags26, $string0, $int27, $int28, $int4, $width17, $width18, $width19, $width20, $x29, $int22, $int23, $component15);
+		~worldswitcher_entry_draw($component17, 0, 0, $component17, -1, $world31, $flags32, $string0, $int33, $int34, $int5, $graphic8, $fontmetrics9, -1, $width21, $width22, $width23, $width24, $x30, $int26, $int27, $component19);
 	} else {
-		if_sethide(false, $component14);
-		~worldswitcher_wipe_favourite($component13);
+		if_sethide(false, $component18);
+		~worldswitcher_wipe_favourite($component17);
 	}
 }

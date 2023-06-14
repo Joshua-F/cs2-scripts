@@ -25,6 +25,8 @@ switch_int ($int0) {
 		if (~script1353($string0) = 1) {
 			$length4 = 79;
 		}
+	case 12 :
+		$length4 = 8;
 }
 if (char_isprintable($keychar2) = false) {
 	if ($int0 = 5 & $key1 = ^key_return) {
@@ -41,60 +43,66 @@ if (char_isprintable($keychar2) = false) {
 	}
 	return($string0);
 }
-if ($int0 = 2) {
-	if ((char_isalphanumeric($keychar2) = true | string_indexof_char(" _-", $keychar2) ! -1) & $length3 < 12) {
-		return(append_char($string0, $keychar2));
-	}
-	return($string0);
-}
-if ($int0 = 8) {
-	if ((char_isalphanumeric($keychar2) = true | string_indexof_char(" ", $keychar2) ! -1) & $length3 < 12) {
-		return(append_char($string0, $keychar2));
-	}
-	return($string0);
-}
-def_int $int5 = 0;
-def_string $string1 = "";
-if ($int0 = 1) {
-	if ($length3 > 0) {
-		$string1 = lowercase(substring($string0, calc($length3 - 1), $length3));
-		if (compare($string1, "k") = 0 | compare($string1, "m") = 0 | compare($string1, "b") = 0) {
+switch_int ($int0) {
+	case 2 :
+		if ((char_isalphanumeric($keychar2) = true | string_indexof_char(" _-", $keychar2) ! -1) & $length3 < 12) {
+			return(append_char($string0, $keychar2));
+		}
+		return($string0);
+	case 8 :
+		if ((char_isalphanumeric($keychar2) = true | string_indexof_char(" ", $keychar2) ! -1) & $length3 < 12) {
+			return(append_char($string0, $keychar2));
+		}
+		return($string0);
+	case 12 :
+		if ((char_isalphanumeric($keychar2) = true | string_indexof_char("0123456789abcdefghijklmnopqrstuvwxyz _-", $keychar2) ! -1) & $length3 < $length4) {
+			return(append_char($string0, $keychar2));
+		}
+		return($string0);
+	case default :
+		def_int $int5 = 0;
+		def_string $string1 = "";
+		if ($int0 = 1) {
+			if ($length3 > 0) {
+				$string1 = lowercase(substring($string0, calc($length3 - 1), $length3));
+				if (compare($string1, "k") = 0 | compare($string1, "m") = 0 | compare($string1, "b") = 0) {
+					return($string0);
+				}
+			}
+			if (string_indexof_char("kKmMbB", $keychar2) ! -1) {
+				$int5 = 1;
+			}
+			if (($int5 = 1 | char_isnumeric($keychar2) = true) & $length3 < 10) {
+				if ($int5 = 1 & $length3 <= 0) {
+					return($string0);
+				}
+				return(append_char($string0, $keychar2));
+			}
 			return($string0);
 		}
-	}
-	if (string_indexof_char("kKmMbB", $keychar2) ! -1) {
-		$int5 = 1;
-	}
-	if (($int5 = 1 | char_isnumeric($keychar2) = true) & $length3 < 10) {
-		if ($int5 = 1 & $length3 <= 0) {
+		if ($int0 = 6) {
+			if (char_isnumeric($keychar2) = true & $length3 < 4) {
+				return(append_char($string0, $keychar2));
+			}
 			return($string0);
 		}
-		return(append_char($string0, $keychar2));
-	}
-	return($string0);
+		if ($int0 = 5 & string_indexof_char("|", $keychar2) ! -1) {
+			return($string0);
+		}
+		if ($int0 = 10) {
+			if (char_isnumeric($keychar2) = true & $length3 < 3) {
+				return(append_char($string0, $keychar2));
+			}
+			return($string0);
+		}
+		if ($int0 = 9) {
+			if ($length3 < 6) {
+				return(append_char($string0, $keychar2));
+			}
+			return($string0);
+		}
+		if ($length3 < $length4) {
+			return(append_char($string0, $keychar2));
+		}
+		return($string0);
 }
-if ($int0 = 6) {
-	if (char_isnumeric($keychar2) = true & $length3 < 4) {
-		return(append_char($string0, $keychar2));
-	}
-	return($string0);
-}
-if ($int0 = 5 & string_indexof_char("|", $keychar2) ! -1) {
-	return($string0);
-}
-if ($int0 = 10) {
-	if (char_isnumeric($keychar2) = true & $length3 < 3) {
-		return(append_char($string0, $keychar2));
-	}
-	return($string0);
-}
-if ($int0 = 9) {
-	if ($length3 < 6) {
-		return(append_char($string0, $keychar2));
-	}
-	return($string0);
-}
-if ($length3 < $length4) {
-	return(append_char($string0, $keychar2));
-}
-return($string0);

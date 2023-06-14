@@ -1,0 +1,14 @@
+// 7309
+[proc,script7309](int $int0, int $index1, int $int2)(int)
+def_int $int3 = ~script7305($int0);
+def_int $int4 = $int3;
+if ($int2 = 1) {
+	$int4 = setbit($int3, $index1);
+} else if ($int2 = 0) {
+	$int4 = clearbit($int3, $index1);
+}
+~script7306($int0, $int4);
+if ($int3 = $int4) {
+	return(0);
+}
+return(1);

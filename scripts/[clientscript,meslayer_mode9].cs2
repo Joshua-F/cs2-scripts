@@ -9,6 +9,8 @@ switch_int ($int0) {
 		~meslayer_open(21);
 	case 11 :
 		~meslayer_open(26);
+	case 12 :
+		~meslayer_open(27);
 	case default :
 		~meslayer_open(9);
 }
@@ -18,11 +20,14 @@ def_string $string1 = "";
 if_setonkey("meslayer_onkey(event_keycode, event_keychar, $string1)", interface_162:42);
 if_setondialogabort("meslayer_ondialogabort", interface_162:42);
 ~meslayer_initlastnames;
-def_string $string2 = ~script4393;
-if (%varcint5 = 20 & string_length($string2) > 0) {
-	~meslayer_dynamicbutton;
-	cc_settext("<col=000000>Last clan:</col> <$string2>");
-	cc_setonclick("meslayer_lastname_click(20, $string2)");
+def_string $string2 = "";
+if (%varcint5 = 20) {
+	$string2 = ~script4393;
+	if (string_length($string2) > 0) {
+		~meslayer_dynamicbutton;
+		cc_settext("<col=000000>Last clan:</col> <$string2>");
+		cc_setonclick("meslayer_lastname_click(20, $string2)");
+	}
 }
 if (~on_mobile = true) {
 	~keyboard_show(0, 80);

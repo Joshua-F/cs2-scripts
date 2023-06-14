@@ -1,17 +1,21 @@
 // 747
 [clientscript,worldswitcher_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
-def_int $int18 = 16;
-def_int $int19 = 11;
-if (~on_mobile = true) {
-	if_setsize(0, 190, ^setsize_minus, ^setsize_abs, $component2);
-	if_setsize(0, 48, ^setsize_minus, ^setsize_abs, $component13);
-	$int18, $int19 = 24, 21;
-} else {
-	if_setsize(0, 206, ^setsize_minus, ^setsize_abs, $component2);
-	if_setsize(0, 32, ^setsize_minus, ^setsize_abs, $component13);
-}
 if_settext(~text_device("Right-click on worlds to<br>set them as Favourites.", "Long press on worlds to<br>set them as Favourites."), $component16);
-if_settext("Loading...", $component1);
+def_int $int18 = 10;
+if ($component1 ! null) {
+	if_settext("<col=9f9f9f>Loading...</col>", $component1);
+	if_setonvartransmit(null, $component1);
+	if_setonsubchange(null, $component1);
+	$int18 = 0;
+}
+def_int $int19 = 16;
+def_int $int20 = 11;
+def_int $int21 = 32;
+if (~on_mobile = true) {
+	$int19, $int20, $int21 = 24, 21, 48;
+}
+if_setsize(calc($int18 * 2), $int21, ^setsize_minus, ^setsize_abs, $component13);
+if_setsize(calc($int18 * 2), calc(if_gety($component2) + $int21 + $int18), ^setsize_minus, ^setsize_minus, $component2);
 if_setscrollpos(0, 0, $component3);
 if_sethide(true, $component3);
 cc_deleteall($component4);
@@ -22,14 +26,19 @@ if_sethide(true, $component10);
 if_sethide(true, $component11);
 if_sethide(true, $component12);
 cc_deleteall($component6);
-def_int $int20 = 0;
-while ($int20 <= 600) {
-	cc_create($component6, ^iftype_graphic, $int20);
-	cc_setsize(0, $int18, ^setsize_minus, ^setsize_abs);
+def_int $int22 = 0;
+while ($int22 <= 600) {
+	cc_create($component6, ^iftype_graphic, $int22);
+	cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
 	cc_setop(1, "Switch");
 	cc_setop(2, "Favourite");
-	cc_setopbase("<col=ff9040><tostring($int20)></col>");
+	cc_setopbase("<col=ff9040><tostring($int22)></col>");
 	cc_sethide(true);
-	$int20 = calc($int20 + 1);
+	$int22 = calc($int22 + 1);
 }
-if_setontimer("worldswitcher_loading($component0, $component1, $component3, $component4, $component5, $component6, $int18, $int19, $component7, $component8, $component9, $component10, $component11, $component12, $component14, $component15, $component16, $component17)", $component0);
+if (worldlist_fetch = true) {
+	~script7269($component0, $component1, $component3, $component4, $component5, $component6, $int19, $int21, $int20, $component7, $component8, $component9, $component10, $component11, $component12, $component14, $component15, $component16, $component17);
+	if_setontimer(null, $component0);
+} else {
+	if_setontimer("worldswitcher_loading($component0, $component1, $component3, $component4, $component5, $component6, $int19, $int21, $int20, $component7, $component8, $component9, $component10, $component11, $component12, $component14, $component15, $component16, $component17)", $component0);
+}

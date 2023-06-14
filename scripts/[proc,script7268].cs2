@@ -1,0 +1,13 @@
+// 7268
+[proc,script7268]()(int, int, string, int, int, string)
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_string $string0 = "";
+def_int $int2 = -1;
+def_int $int3 = 0;
+def_string $string1 = "";
+while ($int0 <= 0 & %varcint179 <= 584) {
+	$int0, $int1, $string0, $int2, $int3, $string1 = ~script7300(%varcint179);
+	%varcint179 = calc(%varcint179 + 1);
+}
+return($int0, $int1, $string0, $int2, $int3, $string1);

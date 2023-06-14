@@ -1,0 +1,25 @@
+// 7294
+[proc,script7294](enum $enum0, struct $struct1)
+def_int $index2 = struct_param($struct1, param_1787);
+if ($index2 ! -1) {
+	switch_enum ($enum0) {
+		case enum_4995 :
+			if (testbit(%varbit14967, $index2) = ^true) {
+				%varbit14967 = clearbit(%varbit14967, $index2);
+			} else {
+				%varbit14967 = setbit(%varbit14967, $index2);
+			}
+		case enum_4996 :
+			if (testbit(%varbit14968, $index2) = ^true) {
+				%varbit14968 = clearbit(%varbit14968, $index2);
+			} else {
+				%varbit14968 = setbit(%varbit14968, $index2);
+			}
+		case enum_4997 :
+			if (testbit(%varbit14969, $index2) = ^true) {
+				%varbit14969 = clearbit(%varbit14969, $index2);
+			} else {
+				%varbit14969 = setbit(%varbit14969, $index2);
+			}
+	}
+}

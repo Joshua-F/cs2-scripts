@@ -1,0 +1,6 @@
+// 7277
+[clientscript,script7277](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5, int $height6, int $height7)
+def_int $height8 = if_getheight($component0);
+if ($height8 ! $height7) {
+	~script7276($component0, $component1, $component2, $component3, $int4, $int5, $height6, $height8);
+}

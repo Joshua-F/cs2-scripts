@@ -6,12 +6,12 @@ $intarray0($index3) = $intarray0($int2);
 $intarray0($int2) = $int4;
 def_int $int5 = $int1;
 def_int $int6 = $int1;
-def_int $int7 = 0;
-def_int $int8 = enum(int, int, enum_818, $int4);
-def_string $string0 = enum(int, string, enum_817, $int8);
+def_dbrow $dbrow7 = null;
+def_int $int8 = $int4;
+def_string $string0 = ~script7312(db_findbyindex($int4));
 while ($int6 < $int2) {
-	$int7 = enum(int, int, enum_818, $intarray0($int6));
-	if (compare(enum(int, string, enum_817, $int7), $string0) <= 0) {
+	$dbrow7 = db_findbyindex($intarray0($int6));
+	if (compare(~script7312($dbrow7), $string0) <= 0) {
 		$int8 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);
 		$intarray0($int5) = $int8;

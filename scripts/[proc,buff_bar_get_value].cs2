@@ -133,10 +133,6 @@ switch_struct ($struct0) {
 		if (%varcint478 > 0) {
 			return(~script5942(%varcint478, %varbit2451, 50));
 		}
-	case buff_vindication_buff_active_4498 :
-		if (%varbit14863 > 0) {
-			return(1);
-		}
 	case buff_lesser_corruption_3118 :
 		if (%varbit12136 = 1) {
 			return(1);
@@ -375,6 +371,10 @@ switch_struct ($struct0) {
 				return(~script5940(%varcint1144, calc(10 * (5 - %varbit14692))));
 			}
 			return(~script5940(%varcint1144, 10));
+		}
+	case buff_bleeding_4499 :
+		if (%varcint1164 > 0) {
+			return(~script4678(%varcint1164));
 		}
 }
 return(struct_param($struct0, param_1540));

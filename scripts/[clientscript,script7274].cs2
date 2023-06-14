@@ -1,0 +1,34 @@
+// 7274
+[clientscript,script7274](boolean $boolean0, component $component1, int $int2, component $component3, int $comsubid4, component $component5, string $string0, int $trans6)
+if ($component5 ! null) {
+	if ($boolean0 = true & string_length($string0) > 0) {
+		~tooltip_mouserepeat($component1, $int2, $component5, removetags($string0), 25, 190);
+	} else {
+		~deltooltip_action($component5);
+	}
+}
+if ($trans6 ! -1) {
+	if ($int2 ! -1 & .cc_find($component1, $int2) = ^true) {
+		if ($boolean0 = true & ~on_mobile = false) {
+			if (cc_find($component3, $comsubid4) = ^true) {
+				cc_settrans(200);
+			}
+			.cc_setontimer("script7275(calc(clientclock + 2), event_com, event_comsubid, $component3, $comsubid4, $trans6)");
+		} else {
+			if (cc_find($component3, $comsubid4) = ^true) {
+				cc_settrans($trans6);
+			}
+			.cc_setontimer(null);
+		}
+	} else if ($boolean0 = true & ~on_mobile = false) {
+		if (cc_find($component3, $comsubid4) = ^true) {
+			cc_settrans(200);
+		}
+		if_setontimer("script7275(calc(clientclock + 2), event_com, -1, $component3, $comsubid4, $trans6)", $component1);
+	} else {
+		if (cc_find($component3, $comsubid4) = ^true) {
+			cc_settrans($trans6);
+		}
+		if_setontimer(null, $component1);
+	}
+}

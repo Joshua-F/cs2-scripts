@@ -1,0 +1,7 @@
+// 7302
+[proc,script7302](int $int0)
+if ($int0 = 50) {
+	cc_setopbase("");
+} else {
+	cc_setopbase("<col=ff9040><~emote_get_name($int0)></col>");
+}

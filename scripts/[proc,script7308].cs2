@@ -1,0 +1,11 @@
+// 7308
+[proc,script7308](int $int0, int $index1)(int)
+def_int $flags2 = ~script7305($int0);
+if ($flags2 = -1) {
+	return(1);
+}
+if ($flags2 = -1) {
+	return(0);
+}
+def_int $bool3 = testbit($flags2, $index1);
+return($bool3);

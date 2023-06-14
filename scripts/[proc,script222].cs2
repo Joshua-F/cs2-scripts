@@ -20,6 +20,8 @@ switch_int (%varcint5) {
 		$string1 = append("#", $string1);
 	case 23, 24, 25 :
 		$length0 = 3;
+	case 27 :
+		$length0 = 8;
 }
 if (string_length(%varcstring359) < $length0) {
 	$string1 = append($string1, "*");

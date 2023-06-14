@@ -1,0 +1,10 @@
+// 7296
+[proc,script7296](int $world0)(int, int, string, int, int, string)
+def_int $flags1 = 0;
+def_string $string0 = "";
+def_int $int2 = -1;
+def_int $int3 = 0;
+def_string $string1 = "";
+$world0, $flags1, $string0, $int2, $int3, $string1 = worldlist_specific($world0);
+$int2 = ~script7299($world0, $int2);
+return($world0, $flags1, $string0, $int2, $int3, $string1);

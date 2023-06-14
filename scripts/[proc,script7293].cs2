@@ -1,0 +1,14 @@
+// 7293
+[proc,script7293](enum $enum0, struct $struct1)(boolean)
+def_int $index2 = struct_param($struct1, param_1787);
+if ($index2 ! -1) {
+	switch_enum ($enum0) {
+		case enum_4995 :
+			return(~int_to_bool(testbit(%varbit14967, $index2)));
+		case enum_4996 :
+			return(~int_to_bool(testbit(%varbit14968, $index2)));
+		case enum_4997 :
+			return(~int_to_bool(testbit(%varbit14969, $index2)));
+	}
+}
+return(false);

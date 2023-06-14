@@ -1,0 +1,564 @@
+// 7300
+[proc,script7300](int $int0)(int, int, string, int, int, string)
+def_int $int1 = 0;
+def_string $string0 = "";
+def_int $int2 = -1;
+def_int $int3 = 0;
+def_string $string1 = "";
+switch_int ($int0) {
+	case default :
+		$int0 = 0;
+	case 301 :
+		$int1, $string0, $int2 = 0, "Trade - Free", 0;
+	case 302 :
+		$int1, $string0, $int2 = 1, "Trade - Members", 1;
+	case 303 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 304 :
+		$int1, $string0, $int2 = 1, "Trouble Brewing", 7;
+	case 305 :
+		$int1, $string0, $int2 = 1, "Falador Party Room", 0;
+	case 306 :
+		$int1, $string0, $int2 = 1, "Barbarian Assault", 0;
+	case 307 :
+		$int1, $string0, $int2 = 1, "Wintertodt", 0;
+	case 308 :
+		$int1, $string0, $int2 = 0, "Wilderness PK - Free", 1;
+	case 309 :
+		$int1, $string0, $int2 = 1, "Wintertodt", 1;
+	case 310 :
+		$int1, $string0, $int2 = 1, "Barbarian Assault", 1;
+	case 311 :
+		$int1, $string0, $int2 = 1, "Wintertodt", 7;
+	case 312 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 313 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 314 :
+		$int1, $string0, $int2 = 1, "Brimhaven Agility Arena", 0;
+	case 315 :
+		$int1, $string0, $int2 = 1, "Fishing Trawler", 0;
+	case 316 :
+		$int1, $string0, $int2 = 0, "Wilderness PK - Free", 1;
+	case 317 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 318 :
+		$int1, $string0, $int2 = 33, "Target World", 1;
+	case 319 :
+		$int1, $string0, $int2 = 33, "Target World", 0;
+	case 320 :
+		$int1, $string0, $int2 = 1, "Soul Wars", 0;
+	case 321 :
+		$int1, $string0, $int2 = 1, "Sulliuscep cutting", 0;
+	case 322 :
+		$int1, $string0, $int2 = 1, "Clan Wars - Free-for-all", 0;
+	case 323 :
+		$int1, $string0, $int2 = 1, "Volcanic Mine", 0;
+	case 324 :
+		$int1, $string0, $int2 = 1, "Group Iron", 0;
+	case 325 :
+		$int1, $string0, $int2 = 1, "Group Iron", 1;
+	case 326 :
+		$int1, $string0, $int2 = 16384, "LMS Casual", 1;
+	case 327 :
+		$int1, $string0, $int2 = 1, "Ourania Altar", 7;
+	case 328 :
+		$int1, $string0, $int2 = 1, "Group Iron", 7;
+	case 329 :
+		$int1, $string0, $int2 = 1, "Tombs of Amascut", 0;
+	case 330 :
+		$int1, $string0, $int2 = 1, "House Party, Gilded Altar", 0;
+	case 331 :
+		$int1, $string0, $int2 = 1, "Tombs of Amascut", 0;
+	case 332 :
+		$int1, $string0, $int2 = 1, "Nex FFA", 0;
+	case 333 :
+		$int1, $string0, $int2 = 1, "Tombs of Amascut", 1;
+	case 334 :
+		$int1, $string0, $int2 = 1, "Castle Wars 1", 1;
+	case 335 :
+		$int1, $string0, $int2 = 0, "Group Iron", 7;
+	case 336 :
+		$int1, $string0, $int2 = 1, "ToA FFA", 7;
+	case 337 :
+		$int1, $string0, $int2 = 1, "Nightmare of Ashihama", 0;
+	case 338 :
+		$int1, $string0, $int2 = 1, "ToA FFA", 0;
+	case 339 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 340 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 341 :
+		$int1, $string0, $int2 = 1, "Tempoross", 1;
+	case 342 :
+		$int1, $string0, $int2 = 1, "Role-playing", 1;
+	case 343 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 344 :
+		$int1, $string0, $int2 = 1, "Pest Control", 7;
+	case 345 :
+		$int1, $string0, $int2 = 536870913, "Deadman", 0;
+	case 346 :
+		$int1, $string0, $int2 = 1, "Agility Training", 0;
+	case 347 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 348 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 349 :
+		$int1, $string0, $int2 = 129, "2000 skill total", 1;
+	case 350 :
+		$int1, $string0, $int2 = 1, "Soul Wars", 1;
+	case 351 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 352 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 7;
+	case 353 :
+		$int1, $string0, $int2 = 129, "1250 skill total", 0;
+	case 354 :
+		$int1, $string0, $int2 = 1, "Castle Wars 2", 0;
+	case 355 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 0;
+	case 356 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 0;
+	case 357 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 0;
+	case 358 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 1;
+	case 359 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 360 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 361 :
+		$int1, $string0, $int2 = 129, "2000 skill total", 0;
+	case 362 :
+		$int1, $string0, $int2 = 1, "TzHaar Fight Pit", 0;
+	case 363 :
+		$int1, $string0, $int2 = 129, "2200 skill total", 1;
+	case 364 :
+		$int1, $string0, $int2 = 129, "1250 skill total", 1;
+	case 365 :
+		$int1, $string0, $int2 = 1025, "High Risk World", 1;
+	case 366 :
+		$int1, $string0, $int2 = 129, "1500 skill total", 1;
+	case 367 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 368 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 369 :
+		$int1, $string0, $int2 = 1, "Wilderness PK - Members", 0;
+	case 370 :
+		$int1, $string0, $int2 = 1, "Fishing Trawler", 0;
+	case 371 :
+		$int1, $string0, $int2 = 0, "Group Iron", 1;
+	case 372 :
+		$int1, $string0, $int2 = 128, "750 skill total", 1;
+	case 373 :
+		$int1, $string0, $int2 = 129, "1750 skill total", 1;
+	case 374 :
+		$int1, $string0, $int2 = 1, "Theatre of Blood", 0;
+	case 375 :
+		$int1, $string0, $int2 = 1, "Zalcano", 7;
+	case 376 :
+		$int1, $string0, $int2 = 1, "Theatre of Blood", 7;
+	case 377 :
+		$int1, $string0, $int2 = 1, "Mort'ton temple, Rat Pits", 0;
+	case 378 :
+		$int1, $string0, $int2 = 1, "Zalcano", 0;
+	case 379 :
+		$int1, $string0, $int2 = 0, "PvP Arena (Legacy Duels)", 1;
+	case 380 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 381 :
+		$int1, $string0, $int2 = 128, "500 skill total", 1;
+	case 382 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 383 :
+		$int1, $string0, $int2 = 0, "Castle Wars - Free", 7;
+	case 384 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 385 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 386 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 0;
+	case 387 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 3;
+	case 388 :
+		$int1, $string0, $int2 = 1, "Theatre of Blood", 3;
+	case 389 :
+		$int1, $string0, $int2 = 1, "Wintertodt", 3;
+	case 390 :
+		$int1, $string0, $int2 = 16385, "LMS Competitive", 3;
+	case 391 :
+		$int1, $string0, $int2 = 129, "1750 skill total", 3;
+	case 392 :
+		$int1, $string0, $int2 = 5, "PvP World", 3;
+	case 393 :
+		$int1, $string0, $int2 = 128, "750 skill total", 0;
+	case 394 :
+		$int1, $string0, $int2 = 0, "Clan Wars - Free", 0;
+	case 395 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 7;
+	case 396 :
+		$int1, $string0, $int2 = 129, "2000 skill total", 7;
+	case 397 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 398 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 399 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 400 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 401 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 403 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 404 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 405 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 406 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 407 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 408 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 409 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 410 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 411 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 412 :
+		$int1, $string0, $int2 = 1, "", 3;
+	case 413 :
+		$int1, $string0, $int2 = 128, "500 skill total", 7;
+	case 414 :
+		$int1, $string0, $int2 = 128, "750 skill total", 7;
+	case 415 :
+		$int1, $string0, $int2 = 129, "2200 skill total", 0;
+	case 416 :
+		$int1, $string0, $int2 = 129, "1500 skill total", 0;
+	case 417 :
+		$int1, $string0, $int2 = 0, "Group Iron", 0;
+	case 418 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 419 :
+		$int1, $string0, $int2 = 128, "500 skill total", 0;
+	case 420 :
+		$int1, $string0, $int2 = 129, "1500 skill total", 0;
+	case 421 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 422 :
+		$int1, $string0, $int2 = 1, "Tempoross", 0;
+	case 423 :
+		$int1, $string0, $int2 = 134217729, "Fresh Start", 0;
+	case 424 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 3;
+	case 425 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 3;
+	case 427 :
+		$int1, $string0, $int2 = 128, "500 skill total", 3;
+	case 428 :
+		$int1, $string0, $int2 = 129, "2000 skill total", 0;
+	case 429 :
+		$int1, $string0, $int2 = 129, "1250 skill total", 0;
+	case 430 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 431 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 432 :
+		$int1, $string0, $int2 = 128, "750 skill total", 0;
+	case 433 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 434 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 435 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 436 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 437 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 438 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 439 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 440 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 441 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 0;
+	case 442 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 443 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 444 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 445 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 0;
+	case 446 :
+		$int1, $string0, $int2 = 1, "Role-playing", 0;
+	case 447 :
+		$int1, $string0, $int2 = 129, "1250 skill total", 7;
+	case 448 :
+		$int1, $string0, $int2 = 129, "1500 skill total", 7;
+	case 449 :
+		$int1, $string0, $int2 = 129, "1750 skill total", 7;
+	case 450 :
+		$int1, $string0, $int2 = 129, "2200 skill total", 7;
+	case 451 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 452 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 453 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 454 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 455 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 456 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 457 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 458 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 459 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 7;
+	case 460 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 461 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 462 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 463 :
+		$int1, $string0, $int2 = 1, "Tempoross", 7;
+	case 464 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 7;
+	case 465 :
+		$int1, $string0, $int2 = 1, "House Party, Gilded Altar", 7;
+	case 466 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 7;
+	case 467 :
+		$int1, $string0, $int2 = 129, "1750 skill total", 0;
+	case 468 :
+		$int1, $string0, $int2 = 128, "500 skill total", 0;
+	case 469 :
+		$int1, $string0, $int2 = 16384, "LMS Casual", 0;
+	case 470 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 471 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 472 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 473 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 474 :
+		$int1, $string0, $int2 = 1025, "High Risk World", 0;
+	case 475 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 476 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 477 :
+		$int1, $string0, $int2 = 1, "Clan Recruitment", 0;
+	case 478 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 0;
+	case 479 :
+		$int1, $string0, $int2 = 1, "PvP Arena (Legacy Duels)", 0;
+	case 480 :
+		$int1, $string0, $int2 = 1, "Ourania Altar", 0;
+	case 481 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 482 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 483 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 484 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 485 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 486 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 487 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 488 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 489 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 490 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 0;
+	case 491 :
+		$int1, $string0, $int2 = 1, "Burthorpe Games Room", 0;
+	case 492 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 0;
+	case 493 :
+		$int1, $string0, $int2 = 1, "Pyramid Plunder", 0;
+	case 494 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 0;
+	case 495 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 0;
+	case 496 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 0;
+	case 497 :
+		$int1, $string0, $int2 = 0, "Clan Recruitment", 1;
+	case 498 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 499 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 500 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 501 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 502 :
+		$int1, $string0, $int2 = 257, "Speedrunning World", 1;
+	case 503 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 504 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 505 :
+		$int1, $string0, $int2 = 1, "Nex FFA", 1;
+	case 506 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 507 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 1;
+	case 508 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 509 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 510 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 511 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 512 :
+		$int1, $string0, $int2 = 1, "House Party, Gilded Altar", 1;
+	case 513 :
+		$int1, $string0, $int2 = 1, "Zeah Runecrafting", 1;
+	case 514 :
+		$int1, $string0, $int2 = 1, "Nightmare of Ashihama", 1;
+	case 515 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 1;
+	case 516 :
+		$int1, $string0, $int2 = 1, "Blast Furnace", 1;
+	case 517 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 518 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 519 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 520 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 521 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 522 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 1;
+	case 523 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 524 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 525 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 526 :
+		$int1, $string0, $int2 = 129, "2200 skill total", 3;
+	case 527 :
+		$int1, $string0, $int2 = 129, "2000 skill total", 3;
+	case 528 :
+		$int1, $string0, $int2 = 129, "1500 skill total", 3;
+	case 529 :
+		$int1, $string0, $int2 = 129, "1250 skill total", 3;
+	case 530 :
+		$int1, $string0, $int2 = 128, "750 skill total", 3;
+	case 531 :
+		$int1, $string0, $int2 = 1, "Tombs of Amascut", 3;
+	case 532 :
+		$int1, $string0, $int2 = 1, "Group PvM", 3;
+	case 533 :
+		$int1, $string0, $int2 = 1025, "High Risk World", 3;
+	case 534 :
+		$int1, $string0, $int2 = 1, "Guardians of the Rift", 3;
+	case 535 :
+		$int1, $string0, $int2 = 1, "Soul Wars", 3;
+	case 536 :
+		$int1, $string0, $int2 = 0, "", 3;
+	case 537 :
+		$int1, $string0, $int2 = 0, "", 3;
+	case 538 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 539 :
+		$int1, $string0, $int2 = 5, "PvP World", 0;
+	case 540 :
+		$int1, $string0, $int2 = 257, "Speedrunning World", 0;
+	case 541 :
+		$int1, $string0, $int2 = 1, "", 0;
+	case 542 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 543 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 544 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 545 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 546 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 547 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 548 :
+		$int1, $string0, $int2 = 1029, "PvP World - High Risk", 7;
+	case 549 :
+		$int1, $string0, $int2 = 257, "Speedrunning World", 7;
+	case 550 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 551 :
+		$int1, $string0, $int2 = 1, "", 7;
+	case 552 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 553 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 554 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 555 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 556 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 557 :
+		$int1, $string0, $int2 = 0, "", 7;
+	case 558 :
+		$int1, $string0, $int2 = 65, "PvP Arena (UK)", 1;
+	case 559 :
+		$int1, $string0, $int2 = 16385, "LMS Competitive", 1;
+	case 560 :
+		$int1, $string0, $int2 = 5, "PvP World", 1;
+	case 561 :
+		$int1, $string0, $int2 = 4, "PvP World - Free", 1;
+	case 562 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 563 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 564 :
+		$int1, $string0, $int2 = 0, "", 1;
+	case 565 :
+		$int1, $string0, $int2 = 134217728, "Fresh Start", 1;
+	case 566 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 567 :
+		$int1, $string0, $int2 = 1, "", 1;
+	case 568 :
+		$int1, $string0, $int2 = 257, "Speedrunning World", 3;
+	case 569 :
+		$int1, $string0, $int2 = 1, "", 3;
+	case 570 :
+		$int1, $string0, $int2 = 65, "PvP Arena (AUS)", 3;
+	case 571 :
+		$int1, $string0, $int2 = 0, "", 3;
+	case 573 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 575 :
+		$int1, $string0, $int2 = 0, "", 0;
+	case 576 :
+		$int1, $string0, $int2 = 257, "Speedrunning World", 0;
+	case 577 :
+		$int1, $string0, $int2 = 4, "PvP World - Free", 0;
+	case 578 :
+		$int1, $string0, $int2 = 65, "PvP Arena (US)", 0;
+	case 579 :
+		$int1, $string0, $int2 = 1029, "PvP World - High Risk", 0;
+	case 580 :
+		$int1, $string0, $int2 = 16385, "LMS Competitive", 0;
+}
+return($int0, $int1, $string0, $int2, $int3, $string1);

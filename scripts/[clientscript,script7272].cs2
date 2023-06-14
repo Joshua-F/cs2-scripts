@@ -1,0 +1,10 @@
+// 7272
+[clientscript,script7272](string $string0, int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, int $int8, graphic $graphic9, fontmetrics $fontmetrics10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20)
+if (%varcint5 = $int0 & calc(clientclock % 20) ! 0) {
+	return;
+}
+def_string $string1 = ~script7329;
+if (~script7281($string1, $string0) = 1) {
+	~worldswitcher_draw($component1, $component2, $component3, $component4, $component5, $int6, $int7, $int8, $graphic9, $fontmetrics10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20);
+}
+if_setontimer("script7272($string1, %varcint5, $component1, $component2, $component3, $component4, $component5, $int6, $int7, $int8, $graphic9, $fontmetrics10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20)", $component1);
