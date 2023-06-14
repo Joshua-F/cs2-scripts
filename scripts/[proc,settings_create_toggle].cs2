@@ -13,7 +13,7 @@ if ($boolean9 = true & string_length(struct_param($struct5, param_1097)) > 0) {
 	$string1 = struct_param($struct5, param_1097);
 }
 if (string_length($string1) > 0) {
-	$int10 = calc(paraheight($string1, if_getwidth($component7) - 45, p12_full) * 14);
+	$int10 = calc(paraheight($string1, calc(if_getwidth($component7) - 45), p12_full) * 14);
 }
 $int1 = calc($int1 + $int10);
 if ($boolean12 = true | $int11 = 1) {
@@ -23,7 +23,7 @@ def_int $setting13 = struct_param($struct5, param_1077);
 def_boolean $boolean14 = struct_param($struct5, param_1085);
 def_int $int15 = ~script3957($struct5);
 def_boolean $boolean16 = struct_param($struct5, param_1084);
-def_int $int17 = calc(paraheight($string0, if_getwidth($component7) - 45, b12_full) * 14);
+def_int $int17 = calc(paraheight($string0, calc(if_getwidth($component7) - 45), b12_full) * 14);
 if ($boolean9 = true & $int17 < 20) {
 	$int17 = 20;
 }

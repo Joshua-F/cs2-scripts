@@ -20,7 +20,7 @@ if (~inzone(0_52_62_0_0, 3_54_64_63_63, coord) = 1 & ~inzone(0_53_63_21_21, 3_53
 } else if (~inzone(0_25_180_0_0, 3_25_180_63_63, coord) = 1) {
 	$int0 = 29;
 } else if (~inzone(0_52_160_0_0, 3_52_160_63_63, coord) = 1) {
-	$int0 = calc(33 + scale(coordz(coord) % 64 - 6, 50, 7));
+	$int0 = calc(33 + scale(calc(coordz(coord) % 64 - 6), 50, 7));
 } else if (~inzone(0_46_155_0_0, 3_53_169_63_63, coord) = 1) {
 	$int0 = calc((coordz(coord) - 155 * 64) / 8 + 1);
 }

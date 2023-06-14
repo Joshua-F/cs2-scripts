@@ -44,7 +44,7 @@ if (cc_find($component5, $comsubid0) = ^true) {
 		$int19 = calc($int19 + $int23);
 	}
 	if ($int22 < calc($int8 + 10)) {
-		$int20, $int22 = calc($int20 + ~max(0, $int22 - $int8)), $int8;
+		$int20, $int22 = calc($int20 + ~max(0, calc($int22 - $int8))), $int8;
 	}
 	$int23 = calc($int25 + $int8 - ($int22 + $int20));
 	if ($int23 < 10) {

@@ -48,7 +48,7 @@ def_string $string1 = oc_param($obj10, param_1733);
 if (string_length($string1) = 0) {
 	$string1 = oc_name($obj10);
 }
-def_int $int21 = calc(paraheight($string1, $width20 - $int15 * 2, $fontmetrics12) * $int17);
+def_int $int21 = calc(paraheight($string1, calc($width20 - $int15 * 2), $fontmetrics12) * $int17);
 cc_create($component9, ^iftype_text, $int18);
 cc_setposition($int15, 3, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width20 - $int15 * 2), $int21, ^setsize_abs, ^setsize_abs);
@@ -133,7 +133,7 @@ if (string_length($string0) > 0) {
 	$int19 = calc($int19 + 6);
 }
 if (string_length($string0) > 0) {
-	$int21 = calc(paraheight($string0, $width20 - $int15 * 2, $fontmetrics14) * $int17);
+	$int21 = calc(paraheight($string0, calc($width20 - $int15 * 2), $fontmetrics14) * $int17);
 	cc_create($component9, ^iftype_text, $int18);
 	cc_setposition($int15, $int19, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($width20 - $int15 * 2), $int21, ^setsize_abs, ^setsize_abs);

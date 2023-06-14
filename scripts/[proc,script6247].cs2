@@ -32,7 +32,7 @@ if (%varcint991 <= calc(150 * 30)) {
 	$int3, $int4, $int5, $int14 = $int9, $int10, $int11, $int12;
 } else if (%varcint991 <= calc(200 * 30)) {
 	$int3, $int4, $int5 = $int6, $int7, $int8;
-	$int14 = ~max(0, ~min(255, calc($int12 + scale(%varcint991 - 150 * 30, (200 - 150) * 30, $int13 - $int12))));
+	$int14 = ~max(0, ~min(255, calc($int12 + scale(calc(%varcint991 - 150 * 30), calc((200 - 150) * 30), calc($int13 - $int12)))));
 } else {
 	$int3, $int4, $int5, $int14 = $int15, $int16, $int17, $int13;
 }

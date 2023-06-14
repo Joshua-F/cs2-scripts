@@ -14,7 +14,7 @@ def_int $int5 = 0;
 def_int $int6 = 0;
 while ($int4 < 6 & $int5 = 0) {
 	if (%varbit14815 < $intarray0(calc(1 + $int4))) {
-		$int6 = calc($intarray0(1 + $int4) - %varbit14815);
+		$int6 = calc($intarray0(calc(1 + $int4)) - %varbit14815);
 		$int5 = 1;
 	} else {
 		$int3 = calc($int3 + 1);

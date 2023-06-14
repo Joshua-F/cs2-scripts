@@ -19,7 +19,7 @@ if (string_length($string1) > 0 & ~on_mobile = false) {
 }
 $int7 = calc($int7 + 1);
 def_int $width13 = parawidth($string2, if_getwidth($component0), p11_full);
-def_int $int14 = calc(paraheight($string0, if_getwidth($component0) / 2 - 10, p11_full) * 12);
+def_int $int14 = calc(paraheight($string0, calc(if_getwidth($component0) / 2 - 10), p11_full) * 12);
 .cc_create($component0, ^iftype_text, $int7);
 .cc_setsize($width13, calc($int5 - $int14), ^setsize_abs, ^setsize_abs);
 .cc_settextfont(p11_full);

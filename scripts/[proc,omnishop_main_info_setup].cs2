@@ -75,7 +75,7 @@ if ($int2 ! -1) {
 		$string1 = "<$string1> (x<tostring($int24)>)";
 	}
 }
-def_int $int25 = calc(paraheight($string1, $width23 - $int17 * 2, $fontmetrics14) * $int19);
+def_int $int25 = calc(paraheight($string1, calc($width23 - $int17 * 2), $fontmetrics14) * $int19);
 cc_create($component8, ^iftype_text, $int21);
 cc_setposition($int17, $int17, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width23 - $int17 * 2), $int25, ^setsize_abs, ^setsize_abs);
@@ -167,7 +167,7 @@ if ($int2 = -1) {
 } else if (string_length($string0) > 0) {
 	$string1 = $string0;
 }
-$int25 = calc(paraheight($string1, $width23 - $int17 * 2, $fontmetrics16) * $int19);
+$int25 = calc(paraheight($string1, calc($width23 - $int17 * 2), $fontmetrics16) * $int19);
 cc_create($component8, ^iftype_text, $int21);
 cc_setposition($int17, $int22, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width23 - $int17 * 2), $int25, ^setsize_abs, ^setsize_abs);

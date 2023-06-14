@@ -18,7 +18,7 @@ if (string_length($string1) > 0 & ~on_mobile = false) {
 	cc_setonmouseleave("cc_colour_swapper($component0, $int7, 0xff9933)");
 }
 $int7 = calc($int7 + 1);
-def_int $int13 = calc(paraheight($string0, if_getwidth($component0) / 2 - 20, p11_full) * 12);
+def_int $int13 = calc(paraheight($string0, calc(if_getwidth($component0) / 2 - 20), p11_full) * 12);
 def_int $int14 = 18;
 cc_create($component0, ^iftype_graphic, $int7);
 cc_setgraphic($graphic6);

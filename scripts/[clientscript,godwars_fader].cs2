@@ -12,7 +12,7 @@ if ($int5 < $int6) {
 }
 $int6 = calc($int6 + $int4);
 if ($int5 < $int6) {
-	if_settrans(calc(255 - scale($int6 - $int5, $int4, 255)), $component0);
+	if_settrans(calc(255 - scale(calc($int6 - $int5), $int4, 255)), $component0);
 	return;
 }
 if_settrans(255, $component0);

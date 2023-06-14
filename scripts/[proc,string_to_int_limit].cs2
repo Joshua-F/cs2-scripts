@@ -20,7 +20,7 @@ if ($int2 > 10 | $int2 = 10 & ~string_to_int_limit($string0, 1) > 2) {
 		$string1 = substring($string0, $int4, calc($int4 + 1));
 		$int3 = string_indexof_string("0123456789", $string1, 0);
 		if ($int3 ! -1) {
-			$int3 = calc($int3 * pow(10, $int2 - 1 - $int4));
+			$int3 = calc($int3 * pow(10, calc($int2 - 1 - $int4)));
 			if (calc(^max_32bit_int - $int3) < $int5) {
 				$int5 = ^max_32bit_int;
 				$int4 = $int2;

@@ -85,7 +85,7 @@ def_int $int23 = 0;
 if ($int13 > 1) {
 	if (calc($int15 * $int13 + $int16 * $int17) > $int14) {
 		$int16 = calc(($int14 - $int15 * $int13) / $int17);
-		$int18 = calc($int18 + 2 * ~max(0, 7 - $int13));
+		$int18 = calc($int18 + 2 * ~max(0, calc(7 - $int13)));
 		if ($int16 < $int18) {
 			$int15, $int16 = calc(($int14 - $int18 * $int17) / $int13), $int18;
 		}

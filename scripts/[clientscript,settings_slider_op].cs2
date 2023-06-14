@@ -10,7 +10,7 @@ if (cc_find($component5, $comsubid6) = ^true) {
 	} else if ($int2 = calc($int3 - 1)) {
 		cc_setposition(calc($int9 - 16), $y7, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc($int8 + scale($int2 * 2, ($int3 - 1) * 2, $int4 - 16)), $y7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int8 + scale(calc($int2 * 2), calc(($int3 - 1) * 2), calc($int4 - 16))), $y7, ^setpos_abs_left, ^setpos_abs_top);
 	}
 }
 def_string $string1 = "";

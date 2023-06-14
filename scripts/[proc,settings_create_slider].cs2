@@ -13,13 +13,13 @@ if ($boolean12 = true & string_length(struct_param($struct6, param_1097)) > 0) {
 	$string1 = struct_param($struct6, param_1097);
 }
 if (string_length($string1) > 0) {
-	$int13 = calc(paraheight($string1, if_getwidth($component8) - 20, p12_full) * 14);
+	$int13 = calc(paraheight($string1, calc(if_getwidth($component8) - 20), p12_full) * 14);
 }
 $int1 = calc($int1 + $int13);
 if ($int14 = 1 | $boolean15 = true) {
 	$int13 = 0;
 }
-def_int $int16 = calc(paraheight($string0, if_getwidth($component8) - 20, b12_full) * 14);
+def_int $int16 = calc(paraheight($string0, calc(if_getwidth($component8) - 20), b12_full) * 14);
 def_int $int17 = calc($int16 + $int13 + 34);
 def_int $int18 = struct_param($struct6, param_1101);
 def_int $int19 = struct_param($struct6, param_1102);
@@ -101,7 +101,7 @@ while ($int29 < $int19) {
 		$int2 = calc($int2 + 1);
 		cc_setgraphic("settings_slider,11");
 		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
-		$int30 = calc($int33 + scale($int29, $int19 - 1, $int35 - 16));
+		$int30 = calc($int33 + scale($int29, calc($int19 - 1), calc($int35 - 16)));
 		cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
 		$intarray0($int29) = $int30;
 	}
@@ -127,7 +127,7 @@ if (struct_param($struct6, param_1107) = false) {
 	} else if ($int36 = calc($int18 - 1)) {
 		cc_setposition(calc($int34 - 16), $int32, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc($int33 + scale($int36 * 2, ($int18 - 1) * 2, $int35 - 16)), $int32, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int33 + scale(calc($int36 * 2), calc(($int18 - 1) * 2), calc($int35 - 16))), $int32, ^setpos_abs_left, ^setpos_abs_top);
 	}
 } else {
 	~script3888($setting21, $component7, calc($int3 - 1), $int35, $int32, $int33, $int34, $int18);
@@ -161,7 +161,7 @@ while ($int29 < $int18) {
 	}
 	cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
 	if ($int18 > 1) {
-		$int39 = calc(scale(1 + $int42, $int18, $int35) - scale($int42, $int18, $int35));
+		$int39 = calc(scale(calc(1 + $int42), $int18, $int35) - scale($int42, $int18, $int35));
 		$int42 = calc($int42 + 1);
 	} else {
 		$int39 = $int35;

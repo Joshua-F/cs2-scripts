@@ -7,7 +7,7 @@ if ($boolean10 = true & string_length(struct_param($struct5, param_1087)) > 0) {
 	$string0 = struct_param($struct5, param_1087);
 }
 def_int $int11 = calc(if_getwidth($component7) / 3);
-def_int $int12 = calc(paraheight($string0, $int11 - 10, p12_full) * 14);
+def_int $int12 = calc(paraheight($string0, calc($int11 - 10), p12_full) * 14);
 if ($int12 < 22) {
 	$int12 = 22;
 }

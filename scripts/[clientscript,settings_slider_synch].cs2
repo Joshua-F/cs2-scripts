@@ -14,7 +14,7 @@ if (cc_find($component11, $comsubid12) = ^true) {
 			} else if ($int14 = calc($int4 - 1)) {
 				.cc_setposition(calc($int10 - 16), $y8, ^setpos_abs_left, ^setpos_abs_top);
 			} else {
-				.cc_setposition(calc($int9 + scale($int14 * 2, ($int4 - 1) * 2, $int5 - 16)), $y8, ^setpos_abs_left, ^setpos_abs_top);
+				.cc_setposition(calc($int9 + scale(calc($int14 * 2), calc(($int4 - 1) * 2), calc($int5 - 16))), $y8, ^setpos_abs_left, ^setpos_abs_top);
 			}
 		}
 		if (.cc_find($component11, $comsubid13) = ^true) {

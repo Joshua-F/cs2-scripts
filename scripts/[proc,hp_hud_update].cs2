@@ -43,7 +43,7 @@ if (%varbit10338 > 0 & %varbit10338 <= $int16) {
 }
 if (%varbit10339 > 0 & %varbit10339 <= $int16) {
 	if_sethide(false, $component8);
-	if_setposition(calc($width14 - scale(%varbit10339 - 1, %varbit6100, $width14)), 0, ^setpos_abs_right, ^setpos_abs_centre, $component8);
+	if_setposition(calc($width14 - scale(calc(%varbit10339 - 1), %varbit6100, $width14)), 0, ^setpos_abs_right, ^setpos_abs_centre, $component8);
 } else {
 	if_sethide(true, $component8);
 }

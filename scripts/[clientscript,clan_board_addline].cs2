@@ -69,7 +69,7 @@ if (string_length($string0) > 0) {
 	if (string_length($string7) > 0) {
 		$flags3 = setbit($flags3, 1);
 	}
-	$int4 = calc(paraheight($string5, if_getwidth(interface_700:20) - 4, p12_full) * 12 + 3);
+	$int4 = calc(paraheight($string5, calc(if_getwidth(interface_700:20) - 4), p12_full) * 12 + 3);
 	cc_create($component2, ^iftype_text, 4);
 	cc_setposition(0, 22, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(4, $int4, ^setsize_minus, ^setsize_abs);

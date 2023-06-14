@@ -6,6 +6,6 @@ if (cc_find($component3, $comsubid4) = ^true) {
 	} else if ($int0 = calc($int1 - 1)) {
 		cc_setposition(calc($int7 - 16), $y5, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc($int6 + scale($int0 * 2, ($int1 - 1) * 2, $int2 - 16)), $y5, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int6 + scale(calc($int0 * 2), calc(($int1 - 1) * 2), calc($int2 - 16))), $y5, ^setpos_abs_left, ^setpos_abs_top);
 	}
 }

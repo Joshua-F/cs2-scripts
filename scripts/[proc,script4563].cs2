@@ -3,7 +3,7 @@
 def_int $int6 = ~max(0, ~min(600, scale($int2, $int3, 600)));
 if (cc_find($component0, $comsubid1) = ^true & %varcint381 ! $int6) {
 	%varcint381 = $int6;
-	cc_setposition(calc($int5 + ~min(scale(%varcint381, 600, $int3), $int3 - 16)), $y4, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int5 + ~min(scale(%varcint381, 600, $int3), calc($int3 - 16))), $y4, ^setpos_abs_left, ^setpos_abs_top);
 	if (~toplevel_getcomponents = enum_1745) {
 		~script4729(toplevel_osm:19, null, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, false);
 	}

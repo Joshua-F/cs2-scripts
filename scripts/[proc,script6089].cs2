@@ -52,7 +52,7 @@ if ($obj5 ! null) {
 } else if ($struct6 ! null) {
 	$string0 = struct_param($struct6, param_1621);
 }
-def_int $int18 = calc(paraheight($string0, $width17 - $int12 * 2, $fontmetrics9) * $int14);
+def_int $int18 = calc(paraheight($string0, calc($width17 - $int12 * 2), $fontmetrics9) * $int14);
 cc_create($component2, ^iftype_text, $int15);
 cc_setposition($int12, $int12, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
@@ -80,7 +80,7 @@ if ($obj5 ! null) {
 if ($obj5 ! null | $struct6 ! null) {
 	$int7 = struct_param($struct4, param_1638);
 	$string0 = "Cost: <tostring($int7)>";
-	$int18 = calc(paraheight($string0, $width17 - $int12 * 2, $fontmetrics11) * $int14);
+	$int18 = calc(paraheight($string0, calc($width17 - $int12 * 2), $fontmetrics11) * $int14);
 	cc_create($component2, ^iftype_text, $int15);
 	cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
@@ -96,7 +96,7 @@ $string0 = "You can check your current balance in the Foundry Reputation section
 if ($obj5 ! null | $struct6 ! null) {
 	$string0 = struct_param($struct4, param_1639);
 }
-$int18 = calc(paraheight($string0, $width17 - $int12 * 2, $fontmetrics11) * $int14);
+$int18 = calc(paraheight($string0, calc($width17 - $int12 * 2), $fontmetrics11) * $int14);
 cc_create($component2, ^iftype_text, $int15);
 cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);

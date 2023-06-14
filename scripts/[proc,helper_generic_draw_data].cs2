@@ -3,7 +3,7 @@
 def_int $width1 = parawidth(~helper_generic_get_string($int0), calc(140 / 2), p12_full);
 def_int $width2 = parawidth(~helper_generic_get_string(calc($int0 + 1)), calc(140 - $width1), p12_full);
 def_int $int3 = calc(paraheight(~helper_generic_get_string($int0), $width1, p12_full) * 12);
-def_int $int4 = calc(paraheight(~helper_generic_get_string($int0 + 1), $width2, p12_full) * 12);
+def_int $int4 = calc(paraheight(~helper_generic_get_string(calc($int0 + 1)), $width2, p12_full) * 12);
 def_int $int5 = ~max($int3, $int4);
 if (cc_find(interface_711:5, $int0) = ^true) {
 	cc_setsize($width1, $int5, ^setsize_abs, ^setsize_abs);

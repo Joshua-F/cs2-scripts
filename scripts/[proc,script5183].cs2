@@ -88,7 +88,7 @@ while ($count14 < $count15) {
 		$int20 = ~script5353($flags9, $flags10, struct_param($struct16, param_1289));
 		if ($int2 = 0 & $int20 = 0 | $int2 = 1) {
 			$height27 = $height25;
-			$int28 = ~max(calc($int22 + 20), calc(paraheight($string0, $int29 - 10, p11_full) * 15 + 8));
+			$int28 = ~max(calc($int22 + 20), calc(paraheight($string0, calc($int29 - 10), p11_full) * 15 + 8));
 			cc_create($component4, ^iftype_rectangle, $int23);
 			cc_setsize($int29, $int28, ^setsize_abs, ^setsize_abs);
 			cc_setposition($int26, $height25, ^setpos_abs_left, ^setpos_abs_top);

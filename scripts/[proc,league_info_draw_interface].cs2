@@ -63,11 +63,11 @@ def_string $string0 = "";
 def_int $width30 = if_getwidth($component2);
 def_int $width31 = if_getwidth($component3);
 def_string $string1 = "<img=13> <~text_device("Click", "Tap")> to open the Leagues blog!<br>";
-def_int $int32 = calc(12 * paraheight($string1, $width30 - 10, p12_full) + 10);
+def_int $int32 = calc(12 * paraheight($string1, calc($width30 - 10), p12_full) + 10);
 def_string $string2 = "<img=13> <~text_device("Click", "Tap")> to open the <~league_get_league_name> blog!<br>";
 def_string $url3 = "https://osrs.game/Leagues";
 def_string $url4 = "https://secure.runescape.com/m=news/leagues-iii---shattered-relics-launch?oldschool=1";
-def_int $int33 = calc(12 * paraheight($string2, $width31 - 10, p12_full) + 10);
+def_int $int33 = calc(12 * paraheight($string2, calc($width31 - 10), p12_full) + 10);
 def_int $int34 = $int33;
 if ($int32 > $int33) {
 	$int34 = $int32;

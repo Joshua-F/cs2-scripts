@@ -79,7 +79,7 @@ while ($int18 < 4) {
 	$int18 = calc($int18 + 1);
 }
 def_int $int21 = calc(12 + parawidth(~gravestone_generic_parsecoffer(^max_32bit_int), 512, p11_full) + 2 + 10);
-def_int $int22 = calc(14 + ~max(32 + 4, 42) + 2);
+def_int $int22 = calc(14 + ~max(calc(32 + 4), 42) + 2);
 def_int $int23 = 109;
 def_int $int24 = calc(40 + $int22 + $int23 + 10);
 if (%varcint395 < $int21) {

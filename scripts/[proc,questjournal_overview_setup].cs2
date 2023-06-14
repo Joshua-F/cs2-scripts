@@ -44,7 +44,7 @@ def_int $int9 = 0;
 cc_create($component1, ^iftype_text, $int7);
 $int7 = calc($int7 + 1);
 cc_setposition(0, $height8, ^setpos_abs_centre, ^setpos_abs_top);
-$int9 = calc(paraheight($string2, if_getwidth($component1) - 10, p12_full) * 20);
+$int9 = calc(paraheight($string2, calc(if_getwidth($component1) - 10), p12_full) * 20);
 cc_setsize(10, $int9, ^setsize_minus, ^setsize_abs);
 cc_setcolour(0x000080);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 20);

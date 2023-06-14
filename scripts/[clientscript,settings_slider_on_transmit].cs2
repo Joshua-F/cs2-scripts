@@ -10,7 +10,7 @@ if (cc_find($component5, $int6) = ^true) {
 	} else if ($int16 = calc($int2 - 1)) {
 		cc_setposition(calc($int9 - 16), $y7, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc($int8 + scale($int16 * 2, ($int2 - 1) * 2, $int4 - 16)), $y7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int8 + scale(calc($int16 * 2), calc(($int2 - 1) * 2), calc($int4 - 16))), $y7, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	if ($int15 = 1) {
 		if ($boolean14 = true) {

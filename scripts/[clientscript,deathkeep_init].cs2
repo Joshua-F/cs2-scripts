@@ -5,7 +5,7 @@ def_int $int10 = 0;
 cc_deleteall(interface_4:3);
 def_int $int11 = 0;
 if (string_length($string0) > 0) {
-	$int9 = calc(3 + paraheight($string0, if_getwidth(interface_4:2) - 6, p12_full) * 12 + 4 + 3);
+	$int9 = calc(3 + paraheight($string0, calc(if_getwidth(interface_4:2) - 6), p12_full) * 12 + 4 + 3);
 	cc_create(interface_4:3, ^iftype_graphic, $int11);
 	$int11 = calc($int11 + 1);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);

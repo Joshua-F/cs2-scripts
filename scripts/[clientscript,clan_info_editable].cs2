@@ -16,7 +16,7 @@ def_string $string2 = "";
 $string0, $string2 = ~script632($string0);
 def_int $int5 = calc(parawidth($string1, 512, p12_full) + 5);
 def_int $int6 = calc($int5 + 2);
-def_int $int7 = calc(3 + 13 * paraheight($string0, if_getwidth($component0) - $int6, p12_full));
+def_int $int7 = calc(3 + 13 * paraheight($string0, calc(if_getwidth($component0) - $int6), p12_full));
 cc_create($component0, ^iftype_text, $int3);
 $int3 = calc($int3 + 1);
 .cc_create($component0, ^iftype_text, $int3);

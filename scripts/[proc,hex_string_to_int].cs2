@@ -23,7 +23,7 @@ while ($length3 < $length0) {
 	} else {
 		return(^max_32bit_int);
 	}
-	$int2 = calc($int2 + $int1 * pow(16, 5 - $length3));
+	$int2 = calc($int2 + $int1 * pow(16, calc(5 - $length3)));
 	$length3 = calc($length3 + 1);
 }
 return(~min(16777215, $int2));

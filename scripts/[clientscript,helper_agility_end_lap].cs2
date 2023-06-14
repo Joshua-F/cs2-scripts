@@ -11,5 +11,5 @@ if (%varcint532 = 0) {
 %varcint536 = 0;
 ~script5172;
 if (%varcint533 > 1) {
-	%varcint535 = calc(%varcint533 * 6000 / ~max($int0 - %varcint532, 1));
+	%varcint535 = calc(%varcint533 * 6000 / ~max(calc($int0 - %varcint532), 1));
 }

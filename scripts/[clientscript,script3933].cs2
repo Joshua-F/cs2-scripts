@@ -24,7 +24,7 @@ while ($int6 <= $int5) {
 	cc_create($component1, ^iftype_rectangle, $int6);
 	cc_setop(1, "Adjust Music Volume");
 	cc_setposition(scale($int6, $int5, $width7), 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc(scale(1 + $int6, $int5, $width7) - scale($int6, $int5, $width7)), 0, ^setsize_abs, ^setsize_minus);
+	cc_setsize(calc(scale(calc(1 + $int6), $int5, $width7) - scale($int6, $int5, $width7)), 0, ^setsize_abs, ^setsize_minus);
 	cc_setfill(true);
 	cc_setcolour(^white);
 	cc_settrans(255);

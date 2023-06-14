@@ -108,7 +108,7 @@ while ($int22 < $int21) {
 	$graphic14, $int15, $int16, $int17, $string0, $string1, $string2 = db_getfield(dbrow_172, dbtable_32:0, $int22);
 	$int20 = calc(paraheight($string0, $int3, $fontmetrics2) * $int6 + $int23);
 	$int18 = calc(paraheight($string1, $int4, $fontmetrics2) * $int6 + $int23);
-	$int19 = calc(paraheight($string2, $int10 - $int23, $fontmetrics2) * $int6 + $int23);
+	$int19 = calc(paraheight($string2, calc($int10 - $int23), $fontmetrics2) * $int6 + $int23);
 	if ($int18 > $int20) {
 		$int20 = $int18;
 	}
