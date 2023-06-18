@@ -1,5 +1,5 @@
 // 7144
-[proc,script7144](int $int0, int $int1, dbrow $dbrow2, inv $inv3, int $int4)(int, int)
+[proc,omnishop_main_list_item_setup](int $int0, int $int1, dbrow $dbrow2, inv $inv3, int $int4)(int, int)
 def_int $int5 = calc($int0 * 12);
 def_component $component6 = interface_819:32;
 def_obj $obj7 = null;
@@ -124,9 +124,9 @@ if (~on_mobile = false & $int4 = 0) {
 	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour28)");
 }
 if ($int4 = 0) {
-	cc_setonop("script7145($dbrow2, $inv3, $int0, event_op)");
+	cc_setonop("omnishop_main_list_item_select($dbrow2, $inv3, $int0, event_op)");
 } else {
-	cc_setonop("script7145($dbrow2, $inv3, -1, event_op)");
+	cc_setonop("omnishop_main_list_item_select($dbrow2, $inv3, -1, event_op)");
 }
 def_int $int29 = 0;
 if (%var3871 = 1) {

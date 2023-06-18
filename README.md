@@ -6578,8 +6578,8 @@
 [**7141**](scripts/[clientscript,omnishop_main_setup].cs2) `[clientscript,omnishop_main_setup]`  
 [**7142**](scripts/[proc,omnishop_main_setup].cs2) `[proc,omnishop_main_setup]`  
 [**7143**](scripts/[proc,omnishop_main_list_setup].cs2) `[proc,omnishop_main_list_setup]`  
-[**7144**](scripts/[proc,script7144].cs2)  
-[**7145**](scripts/[clientscript,script7145].cs2)  
+[**7144**](scripts/[proc,omnishop_main_list_item_setup].cs2) `[proc,omnishop_main_list_item_setup]`  
+[**7145**](scripts/[clientscript,omnishop_main_list_item_select].cs2) `[clientscript,omnishop_main_list_item_select]`  
 [**7146**](scripts/[clientscript,omnishop_main_info_setup].cs2) `[clientscript,omnishop_main_info_setup]`  
 [**7147**](scripts/[proc,omnishop_main_info_setup].cs2) `[proc,omnishop_main_info_setup]`  
 [**7148**](scripts/[clientscript,omnishop_main_info_closebutton_click].cs2) `[clientscript,omnishop_main_info_closebutton_click]`  

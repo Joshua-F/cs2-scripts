@@ -19,7 +19,7 @@ while ($int6 < $int12) {
 	} else {
 		$int9 = 0;
 	}
-	$int8, $height10 = ~script7144($int6, $int7, $dbrow0, $inv1, $int9);
+	$int8, $height10 = ~omnishop_main_list_item_setup($int6, $int7, $dbrow0, $inv1, $int9);
 	if ($int8 = 1) {
 		$int7 = calc($int7 + 1);
 		$height11 = $height10;
