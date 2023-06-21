@@ -4,15 +4,15 @@ def_string $string0 = enum(int, string, enum_3047, %varbit10535);
 def_int $int2 = 1;
 if (%varbit11792 > 0 & %varbit11792 < 5) {
 	$int2 = 0;
-	$string0 = append($string0, "<col=ffffff>Swampbark Armour: <br><br>When wearing a piece of Swampbark armour, the duration of Bind, Snare and Entangle spells is increased.<br>This is cumulative for each piece worn.</col><br><br>");
+	$string0 = append($string0, "<col=ffffff>Swampbark Armour: <br><br>When wearing the Swampbark Helm, Body, or Legs, the duration of Bind, Snare and Entangle spells is increased by 1.2 seconds.<br>This is cumulative for each piece worn.</col><br><br>");
 }
 if (%varbit11793 > 0 & %varbit11793 < 5) {
 	$int2 = 0;
-	$string0 = append($string0, "<col=ffffff>Bloodbark Armour: <br><br>When wearing a piece of Bloodbark armour, the amount of health restored by Blood spells is increased by 1.5%.<br>This is cumulative for each piece worn.</col><br><br>");
+	$string0 = append($string0, "<col=ffffff>Bloodbark Armour: <br><br>When wearing a piece of Bloodbark armour, the amount of health restored by Blood spells is increased by 2.0%.<br>This is cumulative for each piece worn.</col><br><br>");
 }
 if (%varbit11794 > 0 & %varbit11794 < 4) {
 	$int2 = 0;
-	$string0 = append($string0, "<col=ffffff>Zealot's prayer robes:<br><br>When wearing a piece of the Zealot's prayer robes, you have a 1.25% chance of saving ensouled heads when reanimating them and bones when burying or offering them. This works alongside the Wilderness altar's bone saving effect.<br>This is cumulative for each piece worn.</col><br><br>");
+	$string0 = append($string0, "<col=ffffff>Zealot's prayer robes:<br><br>When wearing a piece of the Zealot's prayer robes, you have a 1.25% chance of saving ensouled heads when reanimating them, bones when burying or offering them, and bonemeal & slime at the Ectofuntus. This works alongside the Wilderness altar's bone saving effect.<br>This is cumulative for each piece worn.</col><br><br>");
 }
 if (%varbit10542 > 0 & %varbit10542 < 6) {
 	$int2 = 0;
