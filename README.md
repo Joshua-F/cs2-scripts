@@ -4284,7 +4284,7 @@
 [**4516**](scripts/[proc,script4516].cs2)  
 [**4517**](scripts/[clientscript,script4517].cs2)  
 [**4518**](scripts/[clientscript,script4518].cs2)  
-[**4519**](scripts/[proc,script4519].cs2)  
+[**4519**](scripts/[proc,stat_boosts_hud_update_timer_targets].cs2) `[proc,stat_boosts_hud_update_timer_targets]`  
 [**4520**](scripts/[clientscript,script4520].cs2)  
 [**4521**](scripts/[clientscript,script4521].cs2)  
 [**4522**](scripts/[proc,stat_boosts_hud_debug_mes].cs2) `[proc,stat_boosts_hud_debug_mes]`  
