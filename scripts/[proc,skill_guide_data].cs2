@@ -121,301 +121,218 @@ switch_int ($int0) {
 		return(~skill_guide_data_defence($int1, $int2));
 	case 3 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, shortbow_841, "Standard bows<br> Ammo: Arrows up to iron");
+			switch_int ($int2) {
+				case 0 :
+					return(1, shortbow_841, "Standard bows<br> Ammo: Arrows up to iron");
+				case 1 :
+					return(5, oak_shortbow_843, "Oak bows<br> Ammo: Arrows up to steel");
+				case 2 :
+					return(20, willow_shortbow_849, "Willow bows<br> Ammo: Arrows up to mithril");
+				case 3 :
+					return(30, maple_shortbow_853, "Maple bows<br> Ammo: Arrows up to adamant");
+				case 4 :
+					return(30, comp_ogre_bow_4827, "Members: Ogre composite bows<br> Ammo: 'Brutal' arrows up to rune");
+				case 5 :
+					return(40, yew_shortbow_857, "Members: Yew bows<br> Ammo: Arrows up to rune");
+				case 6 :
+					return(50, magic_shortbow_861, "Members: Magic bows<br> Ammo: Arrows up to amethyst");
+				case 7 :
+					return(50, seercull_6724, "Members: Seerculls<br> Ammo: Arrows up to amethyst");
+				case 8 :
+					return(60, dark_bow_11235, "Members: Dark bows<br> Ammo: Arrows up to dragon");
+				case 9 :
+					return(60, craws_bow_22550, "Members: Craw's bow<br> Ammo: None");
+				case 10 :
+					return(65, 3rd_age_bow_12424, "Members: 3rd age bow<br> Ammo: Arrows up to dragon");
+				case 11 :
+					return(70, crystal_bow_23983, "Members: Crystal bows (with 50 Agility)<br> Ammo: None");
+				case 12 :
+					return(70, webweaver_bow_27655, "Members: Webweaver bow<br> Ammo: None");
+				case 13 :
+					return(80, bow_of_faerdhinen_25865, "Members: Bow of Faerdhinen (with 70 Agility)<br> Ammo: None");
+				case 14 :
+					return(80, venator_bow_27610, "Members: Venator bow<br> Ammo: Arrows up to dragon");
+				case 15 :
+					return(85, twisted_bow_20997, "Members: Twisted bow<br> Ammo: Arrows up to dragon");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(5, oak_shortbow_843, "Oak bows<br> Ammo: Arrows up to steel");
-			}
-			if ($int2 = 2) {
-				return(20, willow_shortbow_849, "Willow bows<br> Ammo: Arrows up to mithril");
-			}
-			if ($int2 = 3) {
-				return(30, maple_shortbow_853, "Maple bows<br> Ammo: Arrows up to adamant");
-			}
-			if ($int2 = 4) {
-				return(30, comp_ogre_bow_4827, "Members: Ogre composite bows<br> Ammo: 'Brutal' arrows up to rune");
-			}
-			if ($int2 = 5) {
-				return(40, yew_shortbow_857, "Members: Yew bows<br> Ammo: Arrows up to rune");
-			}
-			if ($int2 = 6) {
-				return(50, magic_shortbow_861, "Members: Magic bows<br> Ammo: Arrows up to amethyst");
-			}
-			if ($int2 = 7) {
-				return(50, seercull_6724, "Members: Seerculls<br> Ammo: Arrows up to amethyst");
-			}
-			if ($int2 = 8) {
-				return(60, dark_bow_11235, "Members: Dark bows<br> Ammo: Arrows up to dragon");
-			}
-			if ($int2 = 9) {
-				return(60, craws_bow_22550, "Members: Craw's bow<br> Ammo: None");
-			}
-			if ($int2 = 10) {
-				return(65, 3rd_age_bow_12424, "Members: 3rd age bow<br> Ammo: Arrows up to dragon");
-			}
-			if ($int2 = 11) {
-				return(70, crystal_bow_23983, "Members: Crystal bows (with 50 Agility)<br> Ammo: None");
-			}
-			if ($int2 = 12) {
-				return(70, webweaver_bow_27655, "Members: Webweaver bow<br> Ammo: None");
-			}
-			if ($int2 = 13) {
-				return(80, bow_of_faerdhinen_25865, "Members: Bow of Faerdhinen (with 70 Agility)<br> Ammo: None");
-			}
-			if ($int2 = 14) {
-				return(80, venator_bow_27610, "Members: Venator bow<br> Ammo: Arrows up to dragon");
-			}
-			if ($int2 = 15) {
-				return(85, twisted_bow_20997, "Members: Twisted bow<br> Ammo: Arrows up to dragon");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(1, bronze_knife_864, "Bronze items");
+			switch_int ($int2) {
+				case 0 :
+					return(1, bronze_knife_864, "Bronze items");
+				case 1 :
+					return(1, iron_knife_863, "Iron items");
+				case 2 :
+					return(5, steel_knife_865, "Steel items");
+				case 3 :
+					return(10, black_knife_869, "Black items");
+				case 4 :
+					return(20, mithril_knife_866, "Mithril items");
+				case 5 :
+					return(30, adamant_knife_867, "Adamantite items");
+				case 6 :
+					return(40, rune_knife_868, "Rune items");
+				case 7 :
+					return(45, chinchompa_10033, "Chinchompas");
+				case 8 :
+					return(50, amethyst_dart_25849, "Amethyst darts");
+				case 9 :
+					return(55, red_chinchompa_10034, "Carnivorous chinchompas");
+				case 10 :
+					return(60, dragon_dart_11230, "Dragon darts");
+				case 11 :
+					return(60, dragon_knife_22804, "Dragon knives");
+				case 12 :
+					return(60, toktz_xil_ul_6522, "TokTz-Xil-Ul");
+				case 13 :
+					return(61, dragon_thrownaxe_20849, "Dragon thrownaxes");
+				case 14 :
+					return(65, black_chinchompa_11959, "Black chinchompas");
+				case 15 :
+					return(75, toxic_blowpipe_empty_12924, "Toxic blowpipe");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, iron_knife_863, "Iron items");
-			}
-			if ($int2 = 2) {
-				return(5, steel_knife_865, "Steel items");
-			}
-			if ($int2 = 3) {
-				return(10, black_knife_869, "Black items");
-			}
-			if ($int2 = 4) {
-				return(20, mithril_knife_866, "Mithril items");
-			}
-			if ($int2 = 5) {
-				return(30, adamant_knife_867, "Adamantite items");
-			}
-			if ($int2 = 6) {
-				return(40, rune_knife_868, "Rune items");
-			}
-			if ($int2 = 7) {
-				return(45, chinchompa_10033, "Chinchompas");
-			}
-			if ($int2 = 8) {
-				return(50, amethyst_dart_25849, "Amethyst darts");
-			}
-			if ($int2 = 9) {
-				return(55, red_chinchompa_10034, "Carnivorous chinchompas");
-			}
-			if ($int2 = 10) {
-				return(60, dragon_dart_11230, "Dragon darts");
-			}
-			if ($int2 = 11) {
-				return(60, dragon_knife_22804, "Dragon knives");
-			}
-			if ($int2 = 12) {
-				return(60, toktz_xil_ul_6522, "TokTz-Xil-Ul");
-			}
-			if ($int2 = 13) {
-				return(61, dragon_thrownaxe_20849, "Dragon thrownaxes");
-			}
-			if ($int2 = 14) {
-				return(65, black_chinchompa_11959, "Black chinchompas");
-			}
-			if ($int2 = 15) {
-				return(75, toxic_blowpipe_empty_12924, "Toxic blowpipe");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(1, crossbow_837, "Crossbow<br> Ammo: Bronze crossbow bolts");
+			switch_int ($int2) {
+				case 0 :
+					return(1, crossbow_837, "Crossbow<br> Ammo: Bronze crossbow bolts");
+				case 1 :
+					return(1, phoenix_crossbow_767, "Phoenix crossbow<br> Ammo: Bronze crossbow bolts");
+				case 2 :
+					return(1, bronze_crossbow_9174, "Members: Bronze crossbow<br> Ammo: Bronze crossbow bolts");
+				case 3 :
+					return(16, blurite_crossbow_9176, "Members: Blurite crossbow<br> Ammo: Bolts up to blurite");
+				case 4 :
+					return(26, iron_crossbow_9177, "Members: Iron crossbow<br> Ammo: Bolts up to iron");
+				case 5 :
+					return(28, dorgeshuun_crossbow_8880, "Members: Dorgeshuun crossbow<br> Ammo: Bolts up to iron");
+				case 6 :
+					return(31, steel_crossbow_9179, "Members: Steel crossbow<br> Ammo: Bolts up to steel");
+				case 7 :
+					return(36, mithril_crossbow_9181, "Members: Mithril crossbow<br> Ammo: Bolts up to mithril");
+				case 8 :
+					return(46, adamant_crossbow_9183, "Members: Adamantite crossbow<br> Ammo: Bolts up to adamant");
+				case 9 :
+					return(50, hunters_crossbow_10156, "Members: Hunters' crossbow<br> Ammo: Kebbit bolts");
+				case 10 :
+					return(61, rune_crossbow_9185, "Members: Runite crossbow<br> Ammo: Bolts up to runite");
+				case 11 :
+					return(64, dragon_crossbow_21902, "Members: Dragon crossbow<br> Ammo: Bolts up to dragon");
+				case 12 :
+					return(70, dragon_hunter_crossbow_21012, "Members: Dragon hunter crossbow<br> Ammo: Bolts up to dragon");
+				case 13 :
+					return(70, armadyl_crossbow_11785, "Members: Armadyl crossbow<br> Ammo: Bolts up to dragon");
+				case 14 :
+					return(70, karils_crossbow_4734, "Members: Karil's crossbow");
+				case 15 :
+					return(80, zaryte_crossbow_26374, "Members: Zaryte crossbow<br> Ammo: Bolts up to dragon");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, phoenix_crossbow_767, "Phoenix crossbow<br> Ammo: Bronze crossbow bolts");
-			}
-			if ($int2 = 2) {
-				return(1, bronze_crossbow_9174, "Members: Bronze crossbow<br> Ammo: Bronze crossbow bolts");
-			}
-			if ($int2 = 3) {
-				return(16, blurite_crossbow_9176, "Members: Blurite crossbow<br> Ammo: Bolts up to blurite");
-			}
-			if ($int2 = 4) {
-				return(26, iron_crossbow_9177, "Members: Iron crossbow<br> Ammo: Bolts up to iron");
-			}
-			if ($int2 = 5) {
-				return(28, dorgeshuun_crossbow_8880, "Members: Dorgeshuun crossbow<br> Ammo: Bolts up to iron");
-			}
-			if ($int2 = 6) {
-				return(31, steel_crossbow_9179, "Members: Steel crossbow<br> Ammo: Bolts up to steel");
-			}
-			if ($int2 = 7) {
-				return(36, mithril_crossbow_9181, "Members: Mithril crossbow<br> Ammo: Bolts up to mithril");
-			}
-			if ($int2 = 8) {
-				return(46, adamant_crossbow_9183, "Members: Adamantite crossbow<br> Ammo: Bolts up to adamant");
-			}
-			if ($int2 = 9) {
-				return(50, hunters_crossbow_10156, "Members: Hunters' crossbow<br> Ammo: Kebbit bolts");
-			}
-			if ($int2 = 10) {
-				return(61, rune_crossbow_9185, "Members: Runite crossbow<br> Ammo: Bolts up to runite");
-			}
-			if ($int2 = 11) {
-				return(64, dragon_crossbow_21902, "Members: Dragon crossbow<br> Ammo: Bolts up to dragon");
-			}
-			if ($int2 = 12) {
-				return(70, dragon_hunter_crossbow_21012, "Members: Dragon hunter crossbow<br> Ammo: Bolts up to dragon");
-			}
-			if ($int2 = 13) {
-				return(70, armadyl_crossbow_11785, "Members: Armadyl crossbow<br> Ammo: Bolts up to dragon");
-			}
-			if ($int2 = 14) {
-				return(70, karils_crossbow_4734, "Members: Karil's crossbow");
-			}
-			if ($int2 = 15) {
-				return(80, zaryte_crossbow_26374, "Members: Zaryte crossbow<br> Ammo: Bolts up to dragon");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 3) {
-			if ($int2 = 0) {
-				return(1, leather_body_1129, "Plain leather items");
+			switch_int ($int2) {
+				case 0 :
+					return(1, leather_body_1129, "Plain leather items");
+				case 1 :
+					return(1, hardleather_body_1131, "Hard leather body<br> (with 10 Defence)");
+				case 2 :
+					return(20, studded_body_1133, "Studded leather body<br> (with 20 Defence)");
+				case 3 :
+					return(20, studded_chaps_1097, "Studded leather chaps");
+				case 4 :
+					return(20, coif_1169, "Coif");
+				case 5 :
+					return(20, hard_leather_shield_22269, "Members: Hard leather shield <br> (with 10 Defence)");
+				case 6 :
+					return(25, frog_leather_body_10954, "Members: Frog-leather <br> (with 25 Defence)");
+				case 7 :
+					return(30, snakeskin_body_6322, "Members: Snakeskin armour<br> (with 30 Defence)");
+				case 8 :
+					return(30, snakeskin_shield_22272, "Members: Snakeskin shield <br> (with 30 Defence)");
+				case 9 :
+					return(30, avas_attractor_10498, "Members: Ava's attractor<br> (after Animal Magnetism)");
+				case 10 :
+					return(40, ranger_boots_2577, "Members: Ranger boots");
+				case 11 :
+					return(40, robin_hood_hat_2581, "Members: Robin Hood hat");
+				case 12 :
+					return(40, rangers_tunic_12596, "Members: Rangers' tunic");
+				case 13 :
+					return(40, ranger_gloves_19994, "Members: Ranger gloves");
+				case 14 :
+					return(40, rangers_tights_23249, "Members: Rangers' tights");
+				case 15 :
+					return(40, spined_body_6133, "Members: Spined armour<br> (after The Fremennik Trials, with 40 Defence)");
+				case 16 :
+					return(40, green_dhide_vambraces_1065, "Green dragonhide vambraces");
+				case 17 :
+					return(40, green_dhide_chaps_1099, "Green dragonhide chaps");
+				case 18 :
+					return(40, green_dhide_body_1135, "Green dragonhide body<br> (with 40 Defence)");
+				case 19 :
+					return(40, green_dhide_shield_22275, "Members: Green dragonhide shield <br> (with 40 Defence)");
+				case 20 :
+					return(42, void_knight_top_8839, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				case 21 :
+					return(50, avas_accumulator_10499, "Members: Ava's accumulator<br> (after Animal Magnetism)");
+				case 22 :
+					return(50, blue_dhide_vambraces_2487, "Members: Blue dragonhide vambraces");
+				case 23 :
+					return(50, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
+				case 24 :
+					return(50, blue_dhide_body_2499, "Members: Blue dragonhide body<br> (with 40 Defence)");
+				case 25 :
+					return(50, blue_dhide_shield_22278, "Members: Blue dragonhide shield <br> (with 40 Defence)");
+				case 26 :
+					return(60, penance_skirt_10555, "Members: Penance skirt<br> (with 40 Defence)");
+				case 27 :
+					return(60, red_dhide_vambraces_2489, "Members: Red dragonhide vambraces");
+				case 28 :
+					return(60, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
+				case 29 :
+					return(60, red_dhide_body_2501, "Members: Red dragonhide body<br> (with 40 Defence)");
+				case 30 :
+					return(60, red_dhide_shield_22281, "Members: Red dragonhide shield <br> (with 40 Defence)");
+				case 31 :
+					return(65, 3rd_age_range_top_10330, "Members: 3rd age range armour<br> (with 45 Defence)");
+				case 32 :
+					return(70, avas_assembler_22109, "Members: Ava's Assembler<br> (after Dragon Slayer II)");
+				case 33 :
+					return(70, black_dhide_vambraces_2491, "Members: Black dragonhide vambraces");
+				case 34 :
+					return(70, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
+				case 35 :
+					return(70, black_dhide_body_2503, "Members: Black dragonhide body<br> (with 40 Defence)");
+				case 36 :
+					return(70, black_dhide_shield_22284, "Members: Black dragonhide shield<br> (with 40 Defence)");
+				case 37 :
+					return(70, guthix_dhide_shield_23188, "Members: God dragonhide shields<br> (with 40 Defence)");
+				case 38 :
+					return(70, zamorak_dhide_body_10370, "Members: God dragonhide armour<br> (with 40 Defence)");
+				case 39 :
+					return(70, armadyl_helmet_11826, "Members: Armadyl armour<br> (with 70 Defence)");
+				case 40 :
+					return(70, karils_leathertop_4736, "Members: Karil's leather armour<br> (with 70 Defence)");
+				case 41 :
+					return(70, dragonfire_ward_22002, "Members: Dragonfire ward<br>(with 75 Defence)");
+				case 42 :
+					return(70, boots_of_brimstone_22951, "Members: Boots of brimstone<br>(with 70 Defence and Magic)");
+				case 43 :
+					return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Defence)");
+				case 44 :
+					return(75, twisted_buckler_21000, "Members: Twisted buckler<br> (with 75 Defence)");
+				case 45 :
+					return(80, zaryte_vambraces_26235, "Members: Zaryte vambraces<br> (with 45 Defence)");
+				case 46 :
+					return(80, masori_body_27229, "Members: Masori armour<br> (with 30 Defence)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, hardleather_body_1131, "Hard leather body<br> (with 10 Defence)");
-			}
-			if ($int2 = 2) {
-				return(20, studded_body_1133, "Studded leather body<br> (with 20 Defence)");
-			}
-			if ($int2 = 3) {
-				return(20, studded_chaps_1097, "Studded leather chaps");
-			}
-			if ($int2 = 4) {
-				return(20, coif_1169, "Coif");
-			}
-			if ($int2 = 5) {
-				return(20, hard_leather_shield_22269, "Members: Hard leather shield <br> (with 10 Defence)");
-			}
-			if ($int2 = 6) {
-				return(25, frog_leather_body_10954, "Members: Frog-leather <br> (with 25 Defence)");
-			}
-			if ($int2 = 7) {
-				return(30, snakeskin_body_6322, "Members: Snakeskin armour<br> (with 30 Defence)");
-			}
-			if ($int2 = 8) {
-				return(30, snakeskin_shield_22272, "Members: Snakeskin shield <br> (with 30 Defence)");
-			}
-			if ($int2 = 9) {
-				return(30, avas_attractor_10498, "Members: Ava's attractor<br> (after Animal Magnetism)");
-			}
-			if ($int2 = 10) {
-				return(40, ranger_boots_2577, "Members: Ranger boots");
-			}
-			if ($int2 = 11) {
-				return(40, robin_hood_hat_2581, "Members: Robin Hood hat");
-			}
-			if ($int2 = 12) {
-				return(40, rangers_tunic_12596, "Members: Rangers' tunic");
-			}
-			if ($int2 = 13) {
-				return(40, ranger_gloves_19994, "Members: Ranger gloves");
-			}
-			if ($int2 = 14) {
-				return(40, rangers_tights_23249, "Members: Rangers' tights");
-			}
-			if ($int2 = 15) {
-				return(40, spined_body_6133, "Members: Spined armour<br> (after The Fremennik Trials, with 40 Defence)");
-			}
-			if ($int2 = 16) {
-				return(40, green_dhide_vambraces_1065, "Green dragonhide vambraces");
-			}
-			if ($int2 = 17) {
-				return(40, green_dhide_chaps_1099, "Green dragonhide chaps");
-			}
-			if ($int2 = 18) {
-				return(40, green_dhide_body_1135, "Green dragonhide body<br> (with 40 Defence)");
-			}
-			if ($int2 = 19) {
-				return(40, green_dhide_shield_22275, "Members: Green dragonhide shield <br> (with 40 Defence)");
-			}
-			if ($int2 = 20) {
-				return(42, void_knight_top_8839, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
-			}
-			if ($int2 = 21) {
-				return(50, avas_accumulator_10499, "Members: Ava's accumulator<br> (after Animal Magnetism)");
-			}
-			if ($int2 = 22) {
-				return(50, blue_dhide_vambraces_2487, "Members: Blue dragonhide vambraces");
-			}
-			if ($int2 = 23) {
-				return(50, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
-			}
-			if ($int2 = 24) {
-				return(50, blue_dhide_body_2499, "Members: Blue dragonhide body<br> (with 40 Defence)");
-			}
-			if ($int2 = 25) {
-				return(50, blue_dhide_shield_22278, "Members: Blue dragonhide shield <br> (with 40 Defence)");
-			}
-			if ($int2 = 26) {
-				return(60, penance_skirt_10555, "Members: Penance skirt<br> (with 40 Defence)");
-			}
-			if ($int2 = 27) {
-				return(60, red_dhide_vambraces_2489, "Members: Red dragonhide vambraces");
-			}
-			if ($int2 = 28) {
-				return(60, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
-			}
-			if ($int2 = 29) {
-				return(60, red_dhide_body_2501, "Members: Red dragonhide body<br> (with 40 Defence)");
-			}
-			if ($int2 = 30) {
-				return(60, red_dhide_shield_22281, "Members: Red dragonhide shield <br> (with 40 Defence)");
-			}
-			if ($int2 = 31) {
-				return(65, 3rd_age_range_top_10330, "Members: 3rd age range armour<br> (with 45 Defence)");
-			}
-			if ($int2 = 32) {
-				return(70, avas_assembler_22109, "Members: Ava's Assembler<br> (after Dragon Slayer II)");
-			}
-			if ($int2 = 33) {
-				return(70, black_dhide_vambraces_2491, "Members: Black dragonhide vambraces");
-			}
-			if ($int2 = 34) {
-				return(70, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
-			}
-			if ($int2 = 35) {
-				return(70, black_dhide_body_2503, "Members: Black dragonhide body<br> (with 40 Defence)");
-			}
-			if ($int2 = 36) {
-				return(70, black_dhide_shield_22284, "Members: Black dragonhide shield<br> (with 40 Defence)");
-			}
-			if ($int2 = 37) {
-				return(70, guthix_dhide_shield_23188, "Members: God dragonhide shields<br> (with 40 Defence)");
-			}
-			if ($int2 = 38) {
-				return(70, zamorak_dhide_body_10370, "Members: God dragonhide armour<br> (with 40 Defence)");
-			}
-			if ($int2 = 39) {
-				return(70, armadyl_helmet_11826, "Members: Armadyl armour<br> (with 70 Defence)");
-			}
-			if ($int2 = 40) {
-				return(70, karils_leathertop_4736, "Members: Karil's leather armour<br> (with 70 Defence)");
-			}
-			if ($int2 = 41) {
-				return(70, dragonfire_ward_22002, "Members: Dragonfire ward<br>(with 75 Defence)");
-			}
-			if ($int2 = 42) {
-				return(70, boots_of_brimstone_22951, "Members: Boots of brimstone<br>(with 70 Defence and Magic)");
-			}
-			if ($int2 = 43) {
-				return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Defence)");
-			}
-			if ($int2 = 44) {
-				return(75, twisted_buckler_21000, "Members: Twisted buckler<br> (with 75 Defence)");
-			}
-			if ($int2 = 45) {
-				return(80, zaryte_vambraces_26235, "Members: Zaryte vambraces<br> (with 45 Defence)");
-			}
-			if ($int2 = 46) {
-				return(80, masori_body_27229, "Members: Masori armour<br> (with 30 Defence)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 4) {
 			if ($int2 = 0) {
@@ -430,34 +347,28 @@ switch_int ($int0) {
 			return(-1, null, "");
 		}
 		if ($int1 = 5) {
-			if ($int2 = 0) {
-				return(19, agility_climb_6517, "Scale Falador wall<br>(with 11 Agility and 37 Strength)");
+			switch_int ($int2) {
+				case 0 :
+					return(19, agility_climb_6517, "Scale Falador wall<br>(with 11 Agility and 37 Strength)");
+				case 1 :
+					return(21, agility_climb_6517, "Scale Yanille wall<br>(with 39 Agility and 38 Strength)");
+				case 2 :
+					return(24, agility_climb_6517, "Scale Observatory cliff (after Observatory quest)<br>(with 23 Agility and 28 Strength)");
+				case 3 :
+					return(35, agility_climb_6517, "Scale the Catherby cliff<br>(with 32 Agility and 35 Strength)");
+				case 4 :
+					return(37, agility_balance_6515, "Cross the River Lum to Al Kharid<br>(with 8 Agility and 19 Strength)");
+				case 5 :
+					return(39, agility_balance_6515, "Escape from the water obelisk island<br>(with 36 Agility and 22 Strength)");
+				case 6 :
+					return(42, agility_balance_6515, "Karamja, south of the volcano<br>(with 53 Agility and 21 Strength)");
+				case 7 :
+					return(62, agility_jump_6514, "Hallowed Sepulchre - Grapple swing");
+				case 8 :
+					return(70, agility_balance_6515, "Cross cave south of Dorgesh-Kaan<br>(with 70 Agility and 70 Strength)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(21, agility_climb_6517, "Scale Yanille wall<br>(with 39 Agility and 38 Strength)");
-			}
-			if ($int2 = 2) {
-				return(24, agility_climb_6517, "Scale Observatory cliff (after Observatory quest)<br>(with 23 Agility and 28 Strength)");
-			}
-			if ($int2 = 3) {
-				return(35, agility_climb_6517, "Scale the Catherby cliff<br>(with 32 Agility and 35 Strength)");
-			}
-			if ($int2 = 4) {
-				return(37, agility_balance_6515, "Cross the River Lum to Al Kharid<br>(with 8 Agility and 19 Strength)");
-			}
-			if ($int2 = 5) {
-				return(39, agility_balance_6515, "Escape from the water obelisk island<br>(with 36 Agility and 22 Strength)");
-			}
-			if ($int2 = 6) {
-				return(42, agility_balance_6515, "Karamja, south of the volcano<br>(with 53 Agility and 21 Strength)");
-			}
-			if ($int2 = 7) {
-				return(62, agility_jump_6514, "Hallowed Sepulchre - Grapple swing");
-			}
-			if ($int2 = 8) {
-				return(70, agility_balance_6515, "Cross cave south of Dorgesh-Kaan<br>(with 70 Agility and 70 Strength)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 6) {
 			return(~skill_guide_salamanders($int2));
@@ -914,405 +825,294 @@ switch_int ($int0) {
 				}
 				return(-1, null, "");
 			case 1 :
-				if ($int2 = 0) {
-					return(1, leather_gloves_1059, "Leather gloves");
+				switch_int ($int2) {
+					case 0 :
+						return(1, leather_gloves_1059, "Leather gloves");
+					case 1 :
+						return(7, leather_boots_1061, "Leather boots");
+					case 2 :
+						return(9, leather_cowl_1167, "Leather cowl");
+					case 3 :
+						return(11, leather_vambraces_1063, "Leather vambraces");
+					case 4 :
+						return(14, leather_body_1129, "Leather body");
+					case 5 :
+						return(14, xerician_hat_13385, "Members: Xerician hat");
+					case 6 :
+						return(15, myre_snelm_3327, "Members: Snail helmet");
+					case 7 :
+						return(15, crab_helmet_7539, "Members: Crab shell armour");
+					case 8 :
+						return(17, xerician_robe_13389, "Members: Xerician robe");
+					case 9 :
+						return(18, leather_chaps_1095, "Leather chaps");
+					case 10 :
+						return(22, xerician_top_13387, "Members: Xerician top");
+					case 11 :
+						return(28, hardleather_body_1131, "Hard leather body");
+					case 12 :
+						return(32, spiky_vambraces_10077, "Members: Spiked vambraces");
+					case 13 :
+						return(35, broodoo_shield_10_6259, "Members: Broodoo shield");
+					case 14 :
+						return(38, coif_1169, "Members: Coif");
+					case 15 :
+						return(41, studded_body_1133, "Members: Studded body");
+					case 16 :
+						return(41, hard_leather_shield_22269, "Members: Leather shield");
+					case 17 :
+						return(43, yak_hide_armour_10824, "Members: Yak-hide leg armour");
+					case 18 :
+						return(44, studded_chaps_1097, "Members: Studded chaps");
+					case 19 :
+						return(45, snakeskin_boots_6328, "Members: Snakeskin boots");
+					case 20 :
+						return(46, yak_hide_armour_10822, "Members: Yak-hide body armour");
+					case 21 :
+						return(47, snakeskin_vambraces_6330, "Members: Snakeskin vambraces");
+					case 22 :
+						return(48, snakeskin_bandana_6326, "Members: Snakeskin bandana");
+					case 23 :
+						return(51, snakeskin_chaps_6324, "Members: Snakeskin chaps");
+					case 24 :
+						return(52, serpentine_helm_12931, "Members: Serpentine helm");
+					case 25 :
+						return(53, snakeskin_body_6322, "Members: Snakeskin body");
+					case 26 :
+						return(55, slayer_helmet_11864, "Members: Slayer helm");
+					case 27 :
+						return(56, snakeskin_shield_22272, "Members: Snakeskin shield");
+					case 28 :
+						return(57, green_dhide_vambraces_1065, "Members: Green dragonhide vambraces");
+					case 29 :
+						return(60, green_dhide_chaps_1099, "Members: Green dragonhide chaps");
+					case 30 :
+						return(60, splitbark_gauntlets_3391, "Members: Splitbark gauntlets");
+					case 31 :
+						return(60, splitbark_boots_3393, "Members: Splitbark boots");
+					case 32 :
+						return(61, splitbark_helm_3385, "Members: Splitbark helm");
+					case 33 :
+						return(62, green_dhide_shield_22275, "Members: Green dragonhide shield");
+					case 34 :
+						return(62, splitbark_body_3387, "Members: Splitbark body");
+					case 35 :
+						return(62, splitbark_legs_3389, "Members: Splitbark legs");
+					case 36 :
+						return(63, green_dhide_body_1135, "Members: Green dragonhide body");
+					case 37 :
+						return(66, blue_dhide_vambraces_2487, "Members: Blue dragonhide vambraces");
+					case 38 :
+						return(68, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
+					case 39 :
+						return(69, blue_dhide_shield_22278, "Members: Blue dragonhide shield");
+					case 40 :
+						return(71, blue_dhide_body_2499, "Members: Blue dragonhide body");
+					case 41 :
+						return(73, red_dhide_vambraces_2489, "Members: Red dragonhide vambraces");
+					case 42 :
+						return(75, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
+					case 43 :
+						return(76, red_dhide_shield_22281, "Members: Red dragonhide shield");
+					case 44 :
+						return(77, red_dhide_body_2501, "Members: Red dragonhide body");
+					case 45 :
+						return(79, black_dhide_vambraces_2491, "Members: Black dragonhide vambraces");
+					case 46 :
+						return(82, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
+					case 47 :
+						return(83, black_dhide_shield_22284, "Members: Black dragonhide shield");
+					case 48 :
+						return(84, black_dhide_body_2503, "Members: Black dragonhide body");
+					case 49 :
+						return(90, masori_body_f_27238, "Members: Break down armadylean armour and fortify Masori armour");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(7, leather_boots_1061, "Leather boots");
-				}
-				if ($int2 = 2) {
-					return(9, leather_cowl_1167, "Leather cowl");
-				}
-				if ($int2 = 3) {
-					return(11, leather_vambraces_1063, "Leather vambraces");
-				}
-				if ($int2 = 4) {
-					return(14, leather_body_1129, "Leather body");
-				}
-				if ($int2 = 5) {
-					return(14, xerician_hat_13385, "Members: Xerician hat");
-				}
-				if ($int2 = 6) {
-					return(15, myre_snelm_3327, "Members: Snail helmet");
-				}
-				if ($int2 = 7) {
-					return(15, crab_helmet_7539, "Members: Crab shell armour");
-				}
-				if ($int2 = 8) {
-					return(17, xerician_robe_13389, "Members: Xerician robe");
-				}
-				if ($int2 = 9) {
-					return(18, leather_chaps_1095, "Leather chaps");
-				}
-				if ($int2 = 10) {
-					return(22, xerician_top_13387, "Members: Xerician top");
-				}
-				if ($int2 = 11) {
-					return(28, hardleather_body_1131, "Hard leather body");
-				}
-				if ($int2 = 12) {
-					return(32, spiky_vambraces_10077, "Members: Spiked vambraces");
-				}
-				if ($int2 = 13) {
-					return(35, broodoo_shield_10_6259, "Members: Broodoo shield");
-				}
-				if ($int2 = 14) {
-					return(38, coif_1169, "Members: Coif");
-				}
-				if ($int2 = 15) {
-					return(41, studded_body_1133, "Members: Studded body");
-				}
-				if ($int2 = 16) {
-					return(41, hard_leather_shield_22269, "Members: Leather shield");
-				}
-				if ($int2 = 17) {
-					return(43, yak_hide_armour_10824, "Members: Yak-hide leg armour");
-				}
-				if ($int2 = 18) {
-					return(44, studded_chaps_1097, "Members: Studded chaps");
-				}
-				if ($int2 = 19) {
-					return(45, snakeskin_boots_6328, "Members: Snakeskin boots");
-				}
-				if ($int2 = 20) {
-					return(46, yak_hide_armour_10822, "Members: Yak-hide body armour");
-				}
-				if ($int2 = 21) {
-					return(47, snakeskin_vambraces_6330, "Members: Snakeskin vambraces");
-				}
-				if ($int2 = 22) {
-					return(48, snakeskin_bandana_6326, "Members: Snakeskin bandana");
-				}
-				if ($int2 = 23) {
-					return(51, snakeskin_chaps_6324, "Members: Snakeskin chaps");
-				}
-				if ($int2 = 24) {
-					return(52, serpentine_helm_12931, "Members: Serpentine helm");
-				}
-				if ($int2 = 25) {
-					return(53, snakeskin_body_6322, "Members: Snakeskin body");
-				}
-				if ($int2 = 26) {
-					return(55, slayer_helmet_11864, "Members: Slayer helm");
-				}
-				if ($int2 = 27) {
-					return(56, snakeskin_shield_22272, "Members: Snakeskin shield");
-				}
-				if ($int2 = 28) {
-					return(57, green_dhide_vambraces_1065, "Members: Green dragonhide vambraces");
-				}
-				if ($int2 = 29) {
-					return(60, green_dhide_chaps_1099, "Members: Green dragonhide chaps");
-				}
-				if ($int2 = 30) {
-					return(60, splitbark_gauntlets_3391, "Members: Splitbark gauntlets");
-				}
-				if ($int2 = 31) {
-					return(60, splitbark_boots_3393, "Members: Splitbark boots");
-				}
-				if ($int2 = 32) {
-					return(61, splitbark_helm_3385, "Members: Splitbark helm");
-				}
-				if ($int2 = 33) {
-					return(62, green_dhide_shield_22275, "Members: Green dragonhide shield");
-				}
-				if ($int2 = 34) {
-					return(62, splitbark_body_3387, "Members: Splitbark body");
-				}
-				if ($int2 = 35) {
-					return(62, splitbark_legs_3389, "Members: Splitbark legs");
-				}
-				if ($int2 = 36) {
-					return(63, green_dhide_body_1135, "Members: Green dragonhide body");
-				}
-				if ($int2 = 37) {
-					return(66, blue_dhide_vambraces_2487, "Members: Blue dragonhide vambraces");
-				}
-				if ($int2 = 38) {
-					return(68, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
-				}
-				if ($int2 = 39) {
-					return(69, blue_dhide_shield_22278, "Members: Blue dragonhide shield");
-				}
-				if ($int2 = 40) {
-					return(71, blue_dhide_body_2499, "Members: Blue dragonhide body");
-				}
-				if ($int2 = 41) {
-					return(73, red_dhide_vambraces_2489, "Members: Red dragonhide vambraces");
-				}
-				if ($int2 = 42) {
-					return(75, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
-				}
-				if ($int2 = 43) {
-					return(76, red_dhide_shield_22281, "Members: Red dragonhide shield");
-				}
-				if ($int2 = 44) {
-					return(77, red_dhide_body_2501, "Members: Red dragonhide body");
-				}
-				if ($int2 = 45) {
-					return(79, black_dhide_vambraces_2491, "Members: Black dragonhide vambraces");
-				}
-				if ($int2 = 46) {
-					return(82, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
-				}
-				if ($int2 = 47) {
-					return(83, black_dhide_shield_22284, "Members: Black dragonhide shield");
-				}
-				if ($int2 = 48) {
-					return(84, black_dhide_body_2503, "Members: Black dragonhide body");
-				}
-				if ($int2 = 49) {
-					return(90, masori_body_f_27238, "Members: Break down armadylean armour and fortify Masori armour");
-				}
-				return(-1, null, "");
 			case 2 :
-				if ($int2 = 0) {
-					return(1, ball_of_wool_1759, "Wool");
+				switch_int ($int2) {
+					case 0 :
+						return(1, ball_of_wool_1759, "Wool");
+					case 1 :
+						return(10, bow_string_1777, "Members: Flax into bow strings");
+					case 2 :
+						return(10, crossbow_string_9438, "Members: Sinew into crossbow strings");
+					case 3 :
+						return(19, magic_string_6038, "Members: Magic tree roots into magic strings");
+					case 4 :
+						return(30, rope_954, "Members: Yak hair into rope");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(10, bow_string_1777, "Members: Flax into bow strings");
-				}
-				if ($int2 = 2) {
-					return(10, crossbow_string_9438, "Members: Sinew into crossbow strings");
-				}
-				if ($int2 = 3) {
-					return(19, magic_string_6038, "Members: Magic tree roots into magic strings");
-				}
-				if ($int2 = 4) {
-					return(30, rope_954, "Members: Yak hair into rope");
-				}
-				return(-1, null, "");
 			case 3 :
-				if ($int2 = 0) {
-					return(1, pot_1931, "Pot");
+				switch_int ($int2) {
+					case 0 :
+						return(1, pot_1931, "Pot");
+					case 1 :
+						return(3, empty_cup_1980, "Members: Cup");
+					case 2 :
+						return(7, pie_dish_2313, "Pie dish");
+					case 3 :
+						return(8, bowl_1923, "Bowl");
+					case 4 :
+						return(19, empty_plant_pot_5350, "Members: Plant pot");
+					case 5 :
+						return(25, pot_lid_4440, "Members: Pot lid");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(7, pie_dish_2313, "Pie dish");
-				}
-				if ($int2 = 2) {
-					return(8, bowl_1923, "Bowl");
-				}
-				if ($int2 = 3) {
-					return(19, empty_plant_pot_5350, "Members: Plant pot");
-				}
-				if ($int2 = 4) {
-					return(25, pot_lid_4440, "Members: Pot lid");
-				}
-				return(-1, null, "");
 			case 4 :
-				if ($int2 = 0) {
-					return(1, beer_glass_1919, "Beer glass");
+				switch_int ($int2) {
+					case 0 :
+						return(1, beer_glass_1919, "Beer glass");
+					case 1 :
+						return(4, empty_candle_lantern_4527, "Candle lantern");
+					case 2 :
+						return(12, empty_oil_lamp_4525, "Oil lamp");
+					case 3 :
+						return(26, empty_oil_lantern_4535, "Oil lantern");
+					case 4 :
+						return(33, vial_229, "Vial");
+					case 5 :
+						return(42, empty_fishbowl_6667, "Fishbowl");
+					case 6 :
+						return(46, unpowered_orb_567, "Glass orb");
+					case 7 :
+						return(49, lantern_lens_4542, "Bullseye lantern lens");
+					case 8 :
+						return(87, light_orb_10973, "Dorgeshuun light orb");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(4, empty_candle_lantern_4527, "Candle lantern");
-				}
-				if ($int2 = 2) {
-					return(12, empty_oil_lamp_4525, "Oil lamp");
-				}
-				if ($int2 = 3) {
-					return(26, empty_oil_lantern_4535, "Oil lantern");
-				}
-				if ($int2 = 4) {
-					return(33, vial_229, "Vial");
-				}
-				if ($int2 = 5) {
-					return(42, empty_fishbowl_6667, "Fishbowl");
-				}
-				if ($int2 = 6) {
-					return(46, unpowered_orb_567, "Glass orb");
-				}
-				if ($int2 = 7) {
-					return(49, lantern_lens_4542, "Bullseye lantern lens");
-				}
-				if ($int2 = 8) {
-					return(87, light_orb_10973, "Dorgeshuun light orb");
-				}
-				return(-1, null, "");
 			case 5 :
-				if ($int2 = 0) {
-					return(1, opal_1609, "Members: Cut opal");
+				switch_int ($int2) {
+					case 0 :
+						return(1, opal_1609, "Members: Cut opal");
+					case 1 :
+						return(1, opal_ring_21081, "Members: Opal ring");
+					case 2 :
+						return(3, polished_buttons_10496, "Polished buttons");
+					case 3 :
+						return(5, gold_ring_1635, "Gold ring");
+					case 4 :
+						return(6, gold_necklace_1654, "Gold necklace");
+					case 5 :
+						return(7, gold_bracelet_11069, "Members: Gold bracelet");
+					case 6 :
+						return(8, gold_amulet_1692, "Gold amulet");
+					case 7 :
+						return(13, jade_1611, "Members: Cut jade");
+					case 8 :
+						return(13, jade_ring_21084, "Members: Jade ring");
+					case 9 :
+						return(16, unblessed_symbol_1716, "Holy symbol");
+					case 10 :
+						return(16, red_topaz_1613, "Members: Cut red topaz");
+					case 11 :
+						return(16, topaz_ring_21087, "Members: Red topaz ring");
+					case 12 :
+						return(16, opal_necklace_21090, "Members: Opal necklace");
+					case 13 :
+						return(17, unpowered_symbol_1722, "Members: Unholy symbol");
+					case 14 :
+						return(20, sapphire_1607, "Cut sapphire");
+					case 15 :
+						return(20, sapphire_ring_1637, "Sapphire ring");
+					case 16 :
+						return(22, sapphire_necklace_1656, "Sapphire necklace");
+					case 17 :
+						return(22, opal_bracelet_21117, "Members: Opal bracelet");
+					case 18 :
+						return(23, tiara_5525, "Tiara");
+					case 19 :
+						return(23, sapphire_bracelet_11072, "Members: Sapphire bracelet");
+					case 20 :
+						return(24, sapphire_amulet_1694, "Sapphire amulet");
+					case 21 :
+						return(25, jade_necklace_21093, "Members: Jade necklace");
+					case 22 :
+						return(27, emerald_1605, "Cut emerald");
+					case 23 :
+						return(27, emerald_ring_1639, "Emerald ring");
+					case 24 :
+						return(27, opal_amulet_21108, "Members: Opal amulet");
+					case 25 :
+						return(29, emerald_necklace_1658, "Emerald necklace");
+					case 26 :
+						return(29, jade_bracelet_21120, "Members: Jade bracelet");
+					case 27 :
+						return(30, emerald_bracelet_11076, "Members: Emerald bracelet");
+					case 28 :
+						return(31, emerald_amulet_1696, "Emerald amulet");
+					case 29 :
+						return(32, topaz_necklace_21096, "Members: Red topaz necklace");
+					case 30 :
+						return(34, ruby_1603, "Cut ruby");
+					case 31 :
+						return(34, ruby_ring_1641, "Ruby ring");
+					case 32 :
+						return(34, jade_amulet_21111, "Members: Jade amulet");
+					case 33 :
+						return(37, strung_rabbit_foot_10132, "Members: Rabbit-foot necklaces");
+					case 34 :
+						return(38, topaz_bracelet_21123, "Members: Red topaz bracelet");
+					case 35 :
+						return(40, ruby_necklace_1660, "Ruby necklace");
+					case 36 :
+						return(42, ruby_bracelet_11085, "Members: Ruby bracelet");
+					case 37 :
+						return(42, gold_tiara_26788, "Members: Gold Tiara");
+					case 38 :
+						return(43, diamond_1601, "Cut diamond");
+					case 39 :
+						return(43, diamond_ring_1643, "Diamond ring");
+					case 40 :
+						return(45, topaz_amulet_21114, "Members: Red topaz amulet");
+					case 41 :
+						return(50, ruby_amulet_1698, "Ruby amulet");
+					case 42 :
+						return(55, dragonstone_1615, "Members: Cut dragonstone");
+					case 43 :
+						return(55, dragonstone_ring_1645, "Members: Dragonstone ring");
+					case 44 :
+						return(56, diamond_necklace_1662, "Diamond necklace");
+					case 45 :
+						return(58, diamond_bracelet_11092, "Members: Diamond bracelet");
+					case 46 :
+						return(67, onyx_6573, "Members: Cut onyx");
+					case 47 :
+						return(67, onyx_ring_6575, "Members: Onyx ring");
+					case 48 :
+						return(70, diamond_amulet_1700, "Diamond amulet");
+					case 49 :
+						return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 35 Farming and 70 Woodcutting)");
+					case 50 :
+						return(72, dragon_necklace_1664, "Members: Dragonstone necklace");
+					case 51 :
+						return(74, dragonstone_bracelet_11115, "Members: Dragonstone bracelet");
+					case 52 :
+						return(75, slayer_ring_8_11866, "Members: Slayer ring");
+					case 53 :
+						return(80, dragonstone_amulet_1702, "Members: Dragonstone amulet");
+					case 54 :
+						return(82, onyx_necklace_6577, "Members: Onyx necklace");
+					case 55 :
+						return(84, onyx_bracelet_11130, "Members: Onyx bracelet");
+					case 56 :
+						return(89, zenyte_19493, "Members: Cut zenyte");
+					case 57 :
+						return(89, zenyte_ring_19538, "Members: Zenyte ring");
+					case 58 :
+						return(90, onyx_amulet_6581, "Members: Onyx amulet");
+					case 59 :
+						return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
+					case 60 :
+						return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
+					case 61 :
+						return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(1, opal_ring_21081, "Members: Opal ring");
-				}
-				if ($int2 = 2) {
-					return(3, polished_buttons_10496, "Polished buttons");
-				}
-				if ($int2 = 3) {
-					return(5, gold_ring_1635, "Gold ring");
-				}
-				if ($int2 = 4) {
-					return(6, gold_necklace_1654, "Gold necklace");
-				}
-				if ($int2 = 5) {
-					return(7, gold_bracelet_11069, "Members: Gold bracelet");
-				}
-				if ($int2 = 6) {
-					return(8, gold_amulet_1692, "Gold amulet");
-				}
-				if ($int2 = 7) {
-					return(13, jade_1611, "Members: Cut jade");
-				}
-				if ($int2 = 8) {
-					return(13, jade_ring_21084, "Members: Jade ring");
-				}
-				if ($int2 = 9) {
-					return(16, unblessed_symbol_1716, "Holy symbol");
-				}
-				if ($int2 = 10) {
-					return(16, red_topaz_1613, "Members: Cut red topaz");
-				}
-				if ($int2 = 11) {
-					return(16, topaz_ring_21087, "Members: Red topaz ring");
-				}
-				if ($int2 = 12) {
-					return(16, opal_necklace_21090, "Members: Opal necklace");
-				}
-				if ($int2 = 13) {
-					return(17, unpowered_symbol_1722, "Members: Unholy symbol");
-				}
-				if ($int2 = 14) {
-					return(20, sapphire_1607, "Cut sapphire");
-				}
-				if ($int2 = 15) {
-					return(20, sapphire_ring_1637, "Sapphire ring");
-				}
-				if ($int2 = 16) {
-					return(22, sapphire_necklace_1656, "Sapphire necklace");
-				}
-				if ($int2 = 17) {
-					return(22, opal_bracelet_21117, "Members: Opal bracelet");
-				}
-				if ($int2 = 18) {
-					return(23, tiara_5525, "Tiara");
-				}
-				if ($int2 = 19) {
-					return(23, sapphire_bracelet_11072, "Members: Sapphire bracelet");
-				}
-				if ($int2 = 20) {
-					return(24, sapphire_amulet_1694, "Sapphire amulet");
-				}
-				if ($int2 = 21) {
-					return(25, jade_necklace_21093, "Members: Jade necklace");
-				}
-				if ($int2 = 22) {
-					return(27, emerald_1605, "Cut emerald");
-				}
-				if ($int2 = 23) {
-					return(27, emerald_ring_1639, "Emerald ring");
-				}
-				if ($int2 = 24) {
-					return(27, opal_amulet_21108, "Members: Opal amulet");
-				}
-				if ($int2 = 25) {
-					return(29, emerald_necklace_1658, "Emerald necklace");
-				}
-				if ($int2 = 26) {
-					return(29, jade_bracelet_21120, "Members: Jade bracelet");
-				}
-				if ($int2 = 27) {
-					return(30, emerald_bracelet_11076, "Members: Emerald bracelet");
-				}
-				if ($int2 = 28) {
-					return(31, emerald_amulet_1696, "Emerald amulet");
-				}
-				if ($int2 = 29) {
-					return(32, topaz_necklace_21096, "Members: Red topaz necklace");
-				}
-				if ($int2 = 30) {
-					return(34, ruby_1603, "Cut ruby");
-				}
-				if ($int2 = 31) {
-					return(34, ruby_ring_1641, "Ruby ring");
-				}
-				if ($int2 = 32) {
-					return(34, jade_amulet_21111, "Members: Jade amulet");
-				}
-				if ($int2 = 33) {
-					return(37, strung_rabbit_foot_10132, "Members: Rabbit-foot necklaces");
-				}
-				if ($int2 = 34) {
-					return(38, topaz_bracelet_21123, "Members: Red topaz bracelet");
-				}
-				if ($int2 = 35) {
-					return(40, ruby_necklace_1660, "Ruby necklace");
-				}
-				if ($int2 = 36) {
-					return(42, ruby_bracelet_11085, "Members: Ruby bracelet");
-				}
-				if ($int2 = 37) {
-					return(42, gold_tiara_26788, "Members: Gold Tiara");
-				}
-				if ($int2 = 38) {
-					return(43, diamond_1601, "Cut diamond");
-				}
-				if ($int2 = 39) {
-					return(43, diamond_ring_1643, "Diamond ring");
-				}
-				if ($int2 = 40) {
-					return(45, topaz_amulet_21114, "Members: Red topaz amulet");
-				}
-				if ($int2 = 41) {
-					return(50, ruby_amulet_1698, "Ruby amulet");
-				}
-				if ($int2 = 42) {
-					return(55, dragonstone_1615, "Members: Cut dragonstone");
-				}
-				if ($int2 = 43) {
-					return(55, dragonstone_ring_1645, "Members: Dragonstone ring");
-				}
-				if ($int2 = 44) {
-					return(56, diamond_necklace_1662, "Diamond necklace");
-				}
-				if ($int2 = 45) {
-					return(58, diamond_bracelet_11092, "Members: Diamond bracelet");
-				}
-				if ($int2 = 46) {
-					return(67, onyx_6573, "Members: Cut onyx");
-				}
-				if ($int2 = 47) {
-					return(67, onyx_ring_6575, "Members: Onyx ring");
-				}
-				if ($int2 = 48) {
-					return(70, diamond_amulet_1700, "Diamond amulet");
-				}
-				if ($int2 = 49) {
-					return(72, dragon_necklace_1664, "Members: Dragonstone necklace");
-				}
-				if ($int2 = 50) {
-					return(74, dragonstone_bracelet_11115, "Members: Dragonstone bracelet");
-				}
-				if ($int2 = 51) {
-					return(75, slayer_ring_8_11866, "Members: Slayer ring");
-				}
-				if ($int2 = 52) {
-					return(80, dragonstone_amulet_1702, "Members: Dragonstone amulet");
-				}
-				if ($int2 = 53) {
-					return(82, onyx_necklace_6577, "Members: Onyx necklace");
-				}
-				if ($int2 = 54) {
-					return(84, onyx_bracelet_11130, "Members: Onyx bracelet");
-				}
-				if ($int2 = 55) {
-					return(89, zenyte_19493, "Members: Cut zenyte");
-				}
-				if ($int2 = 56) {
-					return(89, zenyte_ring_19538, "Members: Zenyte ring");
-				}
-				if ($int2 = 57) {
-					return(90, onyx_amulet_6581, "Members: Onyx amulet");
-				}
-				if ($int2 = 58) {
-					return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
-				}
-				if ($int2 = 59) {
-					return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
-				}
-				if ($int2 = 60) {
-					return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
-				}
-				return(-1, null, "");
 			case 6 :
 				switch_int ($int2) {
 					case 0 :
@@ -1402,14 +1202,16 @@ switch_int ($int0) {
 					case 8 :
 						return(50, mahogany_bird_house_22195, "Craft a birdhouse trap from mahogany logs");
 					case 9 :
-						return(56, colossal_pouch_26784, "Craft a colossal pouch from essence pouches");
+						return(50, clothes_pouch_28163, "Craft a clothes pouch<br>(with 50 Woodcutting)");
 					case 10 :
-						return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
+						return(56, colossal_pouch_26784, "Craft a colossal pouch from essence pouches");
 					case 11 :
-						return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
+						return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
 					case 12 :
-						return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
+						return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
 					case 13 :
+						return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
+					case 14 :
 						return(90, redwood_bird_house_22204, "Craft a birdhouse trap from redwood logs");
 					case default :
 						return(-1, null, "");
@@ -1419,310 +1221,236 @@ switch_int ($int0) {
 		}
 	case 19 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, arrow_shaft_5_6443, "15 Arrow shafts (Logs)");
+			switch_int ($int2) {
+				case 0 :
+					return(1, arrow_shaft_5_6443, "15 Arrow shafts (Logs)");
+				case 1 :
+					return(1, bronze_arrow_882, "Bronze arrows");
+				case 2 :
+					return(7, bronze_brutal_4773, "Bronze 'brutal' arrows");
+				case 3 :
+					return(15, arrow_shaft_5_6443, "30 Arrow shafts (Oak logs)");
+				case 4 :
+					return(15, iron_arrow_884, "Iron arrows");
+				case 5 :
+					return(18, iron_brutal_4778, "Iron 'brutal' arrows");
+				case 6 :
+					return(30, arrow_shaft_5_6443, "45 Arrow shafts (Willow logs)");
+				case 7 :
+					return(30, steel_arrow_886, "Steel arrows");
+				case 8 :
+					return(33, steel_brutal_4783, "Steel 'brutal' arrows");
+				case 9 :
+					return(38, black_brutal_4788, "Black 'brutal' arrows");
+				case 10 :
+					return(45, arrow_shaft_5_6443, "60 Arrow shafts (Maple logs)");
+				case 11 :
+					return(45, mithril_arrow_888, "Mithril arrows");
+				case 12 :
+					return(49, mithril_brutal_4793, "Mithril 'brutal' arrows");
+				case 13 :
+					return(52, broad_arrows_4160, "Broad arrows");
+				case 14 :
+					return(60, arrow_shaft_5_6443, "75 Arrow shafts (Yew logs)");
+				case 15 :
+					return(60, adamant_arrow_890, "Adamant arrows");
+				case 16 :
+					return(62, adamant_brutal_4798, "Adamant 'brutal' arrows");
+				case 17 :
+					return(75, arrow_shaft_5_6443, "90 Arrow shafts (Magic logs)");
+				case 18 :
+					return(75, rune_arrow_892, "Rune arrows");
+				case 19 :
+					return(77, rune_brutal_4803, "Rune 'brutal' arrows");
+				case 20 :
+					return(82, amethyst_arrow_21326, "Amethyst arrows");
+				case 21 :
+					return(90, arrow_shaft_5_6443, "105 Arrow shafts (Redwood logs)");
+				case 22 :
+					return(90, dragon_arrow_11212, "Dragon arrows");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, bronze_arrow_882, "Bronze arrows");
-			}
-			if ($int2 = 2) {
-				return(7, bronze_brutal_4773, "Bronze 'brutal' arrows");
-			}
-			if ($int2 = 3) {
-				return(15, arrow_shaft_5_6443, "30 Arrow shafts (Oak logs)");
-			}
-			if ($int2 = 4) {
-				return(15, iron_arrow_884, "Iron arrows");
-			}
-			if ($int2 = 5) {
-				return(18, iron_brutal_4778, "Iron 'brutal' arrows");
-			}
-			if ($int2 = 6) {
-				return(30, arrow_shaft_5_6443, "45 Arrow shafts (Willow logs)");
-			}
-			if ($int2 = 7) {
-				return(30, steel_arrow_886, "Steel arrows");
-			}
-			if ($int2 = 8) {
-				return(33, steel_brutal_4783, "Steel 'brutal' arrows");
-			}
-			if ($int2 = 9) {
-				return(38, black_brutal_4788, "Black 'brutal' arrows");
-			}
-			if ($int2 = 10) {
-				return(45, arrow_shaft_5_6443, "60 Arrow shafts (Maple logs)");
-			}
-			if ($int2 = 11) {
-				return(45, mithril_arrow_888, "Mithril arrows");
-			}
-			if ($int2 = 12) {
-				return(49, mithril_brutal_4793, "Mithril 'brutal' arrows");
-			}
-			if ($int2 = 13) {
-				return(52, broad_arrows_4160, "Broad arrows");
-			}
-			if ($int2 = 14) {
-				return(60, arrow_shaft_5_6443, "75 Arrow shafts (Yew logs)");
-			}
-			if ($int2 = 15) {
-				return(60, adamant_arrow_890, "Adamant arrows");
-			}
-			if ($int2 = 16) {
-				return(62, adamant_brutal_4798, "Adamant 'brutal' arrows");
-			}
-			if ($int2 = 17) {
-				return(75, arrow_shaft_5_6443, "90 Arrow shafts (Magic logs)");
-			}
-			if ($int2 = 18) {
-				return(75, rune_arrow_892, "Rune arrows");
-			}
-			if ($int2 = 19) {
-				return(77, rune_brutal_4803, "Rune 'brutal' arrows");
-			}
-			if ($int2 = 20) {
-				return(82, amethyst_arrow_21326, "Amethyst arrows");
-			}
-			if ($int2 = 21) {
-				return(90, arrow_shaft_5_6443, "105 Arrow shafts (Redwood logs)");
-			}
-			if ($int2 = 22) {
-				return(90, dragon_arrow_11212, "Dragon arrows");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(5, shortbow_841, "Shortbows");
+			switch_int ($int2) {
+				case 0 :
+					return(5, shortbow_841, "Shortbows");
+				case 1 :
+					return(10, longbow_839, "Longbows");
+				case 2 :
+					return(20, oak_shortbow_843, "Oak shortbows");
+				case 3 :
+					return(25, oak_longbow_845, "Oak longbows");
+				case 4 :
+					return(30, comp_ogre_bow_4827, "Ogre composite bows");
+				case 5 :
+					return(35, willow_shortbow_849, "Willow shortbows");
+				case 6 :
+					return(40, willow_longbow_847, "Willow longbows");
+				case 7 :
+					return(50, maple_shortbow_853, "Maple shortbows");
+				case 8 :
+					return(55, maple_longbow_851, "Maple longbows");
+				case 9 :
+					return(65, yew_shortbow_857, "Yew shortbows");
+				case 10 :
+					return(70, yew_longbow_855, "Yew longbows");
+				case 11 :
+					return(80, magic_shortbow_861, "Magic shortbows");
+				case 12 :
+					return(85, magic_longbow_859, "Magic longbows");
+				case 13 :
+					return(85, webweaver_bow_27655, "Webweaver bow");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(10, longbow_839, "Longbows");
-			}
-			if ($int2 = 2) {
-				return(20, oak_shortbow_843, "Oak shortbows");
-			}
-			if ($int2 = 3) {
-				return(25, oak_longbow_845, "Oak longbows");
-			}
-			if ($int2 = 4) {
-				return(30, comp_ogre_bow_4827, "Ogre composite bows");
-			}
-			if ($int2 = 5) {
-				return(35, willow_shortbow_849, "Willow shortbows");
-			}
-			if ($int2 = 6) {
-				return(40, willow_longbow_847, "Willow longbows");
-			}
-			if ($int2 = 7) {
-				return(50, maple_shortbow_853, "Maple shortbows");
-			}
-			if ($int2 = 8) {
-				return(55, maple_longbow_851, "Maple longbows");
-			}
-			if ($int2 = 9) {
-				return(65, yew_shortbow_857, "Yew shortbows");
-			}
-			if ($int2 = 10) {
-				return(70, yew_longbow_855, "Yew longbows");
-			}
-			if ($int2 = 11) {
-				return(80, magic_shortbow_861, "Magic shortbows");
-			}
-			if ($int2 = 12) {
-				return(85, magic_longbow_859, "Magic longbows");
-			}
-			if ($int2 = 13) {
-				return(85, webweaver_bow_27655, "Webweaver bow");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(9, bronze_bolts_877, "Bronze bolts");
+			switch_int ($int2) {
+				case 0 :
+					return(9, bronze_bolts_877, "Bronze bolts");
+				case 1 :
+					return(11, opal_bolts_879, "Opal-tipped bronze bolts");
+				case 2 :
+					return(24, blurite_bolts_9139, "Blurite bolts<br>(after Knight's Sword quest)");
+				case 3 :
+					return(26, jade_bolts_9335, "Jade-tipped blurite bolts");
+				case 4 :
+					return(32, kebbit_bolts_10158, "Kebbit-tipped hunting bolts");
+				case 5 :
+					return(39, iron_bolts_9140, "Iron bolts");
+				case 6 :
+					return(41, pearl_bolts_880, "Pearl-tipped iron bolts");
+				case 7 :
+					return(42, long_kebbit_bolts_10159, "Long kebbit-tipped hunting bolts");
+				case 8 :
+					return(43, silver_bolts_9145, "Silver bolts");
+				case 9 :
+					return(46, steel_bolts_9141, "Steel bolts");
+				case 10 :
+					return(48, topaz_bolts_9336, "Red topaz-tipped steel bolts");
+				case 11 :
+					return(51, barbed_bolts_881, "Barbed-tipped bolts");
+				case 12 :
+					return(54, mithril_bolts_9142, "Mithril bolts");
+				case 13 :
+					return(55, broad_bolts_11875, "Broad bolts");
+				case 14 :
+					return(56, sapphire_bolts_9337, "Sapphire-tipped mithril bolts");
+				case 15 :
+					return(58, emerald_bolts_9338, "Emerald-tipped mithril bolts");
+				case 16 :
+					return(59, mith_grapple_9418, "Mithril grapple-tipped bolts");
+				case 17 :
+					return(61, adamant_bolts_9143, "Adamantite bolts");
+				case 18 :
+					return(63, ruby_bolts_9339, "Ruby-tipped adamantite bolts");
+				case 19 :
+					return(65, diamond_bolts_9340, "Diamond-tipped adamantite bolts");
+				case 20 :
+					return(69, runite_bolts_9144, "Runite bolts");
+				case 21 :
+					return(71, dragonstone_bolts_9341, "Dragonstone-tipped runite bolts");
+				case 22 :
+					return(73, onyx_bolts_9342, "Onyx-tipped runite bolts");
+				case 23 :
+					return(76, amethyst_broad_bolts_21316, "Amethyst broad bolts");
+				case 24 :
+					return(84, dragon_bolts_21905, "Dragon bolts");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(11, opal_bolts_879, "Opal-tipped bronze bolts");
-			}
-			if ($int2 = 2) {
-				return(24, blurite_bolts_9139, "Blurite bolts<br>(after Knight's Sword quest)");
-			}
-			if ($int2 = 3) {
-				return(26, jade_bolts_9335, "Jade-tipped blurite bolts");
-			}
-			if ($int2 = 4) {
-				return(32, kebbit_bolts_10158, "Kebbit-tipped hunting bolts");
-			}
-			if ($int2 = 5) {
-				return(39, iron_bolts_9140, "Iron bolts");
-			}
-			if ($int2 = 6) {
-				return(41, pearl_bolts_880, "Pearl-tipped iron bolts");
-			}
-			if ($int2 = 7) {
-				return(42, long_kebbit_bolts_10159, "Long kebbit-tipped hunting bolts");
-			}
-			if ($int2 = 8) {
-				return(43, silver_bolts_9145, "Silver bolts");
-			}
-			if ($int2 = 9) {
-				return(46, steel_bolts_9141, "Steel bolts");
-			}
-			if ($int2 = 10) {
-				return(48, topaz_bolts_9336, "Red topaz-tipped steel bolts");
-			}
-			if ($int2 = 11) {
-				return(51, barbed_bolts_881, "Barbed-tipped bolts");
-			}
-			if ($int2 = 12) {
-				return(54, mithril_bolts_9142, "Mithril bolts");
-			}
-			if ($int2 = 13) {
-				return(55, broad_bolts_11875, "Broad bolts");
-			}
-			if ($int2 = 14) {
-				return(56, sapphire_bolts_9337, "Sapphire-tipped mithril bolts");
-			}
-			if ($int2 = 15) {
-				return(58, emerald_bolts_9338, "Emerald-tipped mithril bolts");
-			}
-			if ($int2 = 16) {
-				return(59, mith_grapple_9418, "Mithril grapple-tipped bolts");
-			}
-			if ($int2 = 17) {
-				return(61, adamant_bolts_9143, "Adamantite bolts");
-			}
-			if ($int2 = 18) {
-				return(63, ruby_bolts_9339, "Ruby-tipped adamantite bolts");
-			}
-			if ($int2 = 19) {
-				return(65, diamond_bolts_9340, "Diamond-tipped adamantite bolts");
-			}
-			if ($int2 = 20) {
-				return(69, runite_bolts_9144, "Runite bolts");
-			}
-			if ($int2 = 21) {
-				return(71, dragonstone_bolts_9341, "Dragonstone-tipped runite bolts");
-			}
-			if ($int2 = 22) {
-				return(73, onyx_bolts_9342, "Onyx-tipped runite bolts");
-			}
-			if ($int2 = 23) {
-				return(76, amethyst_broad_bolts_21316, "Amethyst broad bolts");
-			}
-			if ($int2 = 24) {
-				return(84, dragon_bolts_21905, "Dragon bolts");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 3) {
-			if ($int2 = 0) {
-				return(10, bronze_dart_806, "Bronze darts");
+			switch_int ($int2) {
+				case 0 :
+					return(10, bronze_dart_806, "Bronze darts");
+				case 1 :
+					return(22, iron_dart_807, "Iron darts");
+				case 2 :
+					return(37, steel_dart_808, "Steel darts");
+				case 3 :
+					return(52, mithril_dart_809, "Mithril darts");
+				case 4 :
+					return(53, toxic_blowpipe_12926, "Toxic blowpipe");
+				case 5 :
+					return(67, adamant_dart_810, "Adamant darts");
+				case 6 :
+					return(81, rune_dart_811, "Rune darts");
+				case 7 :
+					return(90, amethyst_dart_25849, "Amethyst darts");
+				case 8 :
+					return(95, dragon_dart_11230, "Dragon darts");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(22, iron_dart_807, "Iron darts");
-			}
-			if ($int2 = 2) {
-				return(37, steel_dart_808, "Steel darts");
-			}
-			if ($int2 = 3) {
-				return(52, mithril_dart_809, "Mithril darts");
-			}
-			if ($int2 = 4) {
-				return(53, toxic_blowpipe_12926, "Toxic blowpipe");
-			}
-			if ($int2 = 5) {
-				return(67, adamant_dart_810, "Adamant darts");
-			}
-			if ($int2 = 6) {
-				return(81, rune_dart_811, "Rune darts");
-			}
-			if ($int2 = 7) {
-				return(90, amethyst_dart_25849, "Amethyst darts");
-			}
-			if ($int2 = 8) {
-				return(95, dragon_dart_11230, "Dragon darts");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 4) {
-			if ($int2 = 0) {
-				return(9, wooden_stock_9440, "Bronze/wooden crossbows");
+			switch_int ($int2) {
+				case 0 :
+					return(9, wooden_stock_9440, "Bronze/wooden crossbows");
+				case 1 :
+					return(24, oak_stock_9442, "Blurite/oak crossbows<br>(after Knight's Sword quest)");
+				case 2 :
+					return(39, willow_stock_9444, "Iron/willow crossbows");
+				case 3 :
+					return(46, teak_stock_9446, "Steel/teak crossbows");
+				case 4 :
+					return(54, maple_stock_9448, "Mithril/maple crossbows");
+				case 5 :
+					return(61, mahogany_stock_9450, "Adamantite/mahogany crossbows");
+				case 6 :
+					return(69, yew_stock_9452, "Runite/yew crossbows");
+				case 7 :
+					return(78, magic_stock_21952, "Dragon/magic crossbows");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(24, oak_stock_9442, "Blurite/oak crossbows<br>(after Knight's Sword quest)");
-			}
-			if ($int2 = 2) {
-				return(39, willow_stock_9444, "Iron/willow crossbows");
-			}
-			if ($int2 = 3) {
-				return(46, teak_stock_9446, "Steel/teak crossbows");
-			}
-			if ($int2 = 4) {
-				return(54, maple_stock_9448, "Mithril/maple crossbows");
-			}
-			if ($int2 = 5) {
-				return(61, mahogany_stock_9450, "Adamantite/mahogany crossbows");
-			}
-			if ($int2 = 6) {
-				return(69, yew_stock_9452, "Runite/yew crossbows");
-			}
-			if ($int2 = 7) {
-				return(78, magic_stock_21952, "Dragon/magic crossbows");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 5) {
-			if ($int2 = 0) {
-				return(3, bronze_javelin_825, "Bronze javelins");
+			switch_int ($int2) {
+				case 0 :
+					return(3, bronze_javelin_825, "Bronze javelins");
+				case 1 :
+					return(17, iron_javelin_826, "Iron javelins");
+				case 2 :
+					return(32, steel_javelin_827, "Steel javelins");
+				case 3 :
+					return(47, light_ballista_19478, "Light ballistae");
+				case 4 :
+					return(47, mithril_javelin_828, "Mithril javelins");
+				case 5 :
+					return(62, adamant_javelin_829, "Adamant javelins");
+				case 6 :
+					return(72, heavy_ballista_19481, "Heavy ballistae");
+				case 7 :
+					return(77, rune_javelin_830, "Rune javelins");
+				case 8 :
+					return(84, amethyst_javelin_21318, "Amethyst javelins");
+				case 9 :
+					return(92, dragon_javelin_19484, "Dragon javelins");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(17, iron_javelin_826, "Iron javelins");
-			}
-			if ($int2 = 2) {
-				return(32, steel_javelin_827, "Steel javelins");
-			}
-			if ($int2 = 3) {
-				return(47, light_ballista_19478, "Light ballistae");
-			}
-			if ($int2 = 4) {
-				return(47, mithril_javelin_828, "Mithril javelins");
-			}
-			if ($int2 = 5) {
-				return(62, adamant_javelin_829, "Adamant javelins");
-			}
-			if ($int2 = 6) {
-				return(72, heavy_ballista_19481, "Heavy ballistae");
-			}
-			if ($int2 = 7) {
-				return(77, rune_javelin_830, "Rune javelins");
-			}
-			if ($int2 = 8) {
-				return(84, amethyst_javelin_21318, "Amethyst javelins");
-			}
-			if ($int2 = 9) {
-				return(92, dragon_javelin_19484, "Dragon javelins");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 6) {
-			if ($int2 = 0) {
-				return(27, oak_shield_22251, "Oak shield");
+			switch_int ($int2) {
+				case 0 :
+					return(27, oak_shield_22251, "Oak shield");
+				case 1 :
+					return(42, willow_shield_22254, "Willow shield");
+				case 2 :
+					return(57, maple_shield_22257, "Maple shield");
+				case 3 :
+					return(72, yew_shield_22260, "Yew shield");
+				case 4 :
+					return(87, magic_shield_22263, "Magic shield");
+				case 5 :
+					return(92, redwood_shield_22266, "Redwood shield");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(42, willow_shield_22254, "Willow shield");
-			}
-			if ($int2 = 2) {
-				return(57, maple_shield_22257, "Maple shield");
-			}
-			if ($int2 = 3) {
-				return(72, yew_shield_22260, "Yew shield");
-			}
-			if ($int2 = 4) {
-				return(87, magic_shield_22263, "Magic shield");
-			}
-			if ($int2 = 5) {
-				return(92, redwood_shield_22266, "Redwood shield");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 7) {
 			if ($int2 = 0) {
@@ -1881,94 +1609,76 @@ switch_int ($int0) {
 		return(~skill_guide_data_smithing($int1, $int2));
 	case 15 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, raw_shrimps_317, "Shrimp - Small fishing net");
+			switch_int ($int2) {
+				case 0 :
+					return(1, raw_shrimps_317, "Shrimp - Small fishing net");
+				case 1 :
+					return(5, raw_karambwanji_3150, "Members: Karambwanji - Small fishing net");
+				case 2 :
+					return(7, raw_guppy_25652, "Guppy - Small fishing net (After Below Ice Mountain)");
+				case 3 :
+					return(15, raw_anchovies_321, "Anchovies - Small fishing net");
+				case 4 :
+					return(20, raw_cavefish_25658, "Cavefish - Small fishing net (After Below Ice Mountain)");
+				case 5 :
+					return(33, frog_spawn_5004, "Members: Giant frogspawn - Small fishing net");
+				case 6 :
+					return(33, raw_tetra_25664, "Tetra - Small fishing net (After Below Ice Mountain)");
+				case 7 :
+					return(62, raw_monkfish_7944, "Members: Monkfish - Small fishing net");
+				case 8 :
+					return(82, minnow_3_10572, "Members: Minnow - Small fishing net<br>(after Fishing Contest)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(5, raw_karambwanji_3150, "Members: Karambwanji - Small fishing net");
-			}
-			if ($int2 = 2) {
-				return(7, raw_guppy_25652, "Guppy - Small fishing net (After Below Ice Mountain)");
-			}
-			if ($int2 = 3) {
-				return(15, raw_anchovies_321, "Anchovies - Small fishing net");
-			}
-			if ($int2 = 4) {
-				return(20, raw_cavefish_25658, "Cavefish - Small fishing net (After Below Ice Mountain)");
-			}
-			if ($int2 = 5) {
-				return(33, frog_spawn_5004, "Members: Giant frogspawn - Small fishing net");
-			}
-			if ($int2 = 6) {
-				return(33, raw_tetra_25664, "Tetra - Small fishing net (After Below Ice Mountain)");
-			}
-			if ($int2 = 7) {
-				return(62, raw_monkfish_7944, "Members: Monkfish - Small fishing net");
-			}
-			if ($int2 = 8) {
-				return(82, minnow_3_10572, "Members: Minnow - Small fishing net<br>(after Fishing Contest)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(16, raw_mackerel_353, "Members: Mackerel - Big fishing net");
+			switch_int ($int2) {
+				case 0 :
+					return(16, raw_mackerel_353, "Members: Mackerel - Big fishing net");
+				case 1 :
+					return(16, oyster_407, "Members: Oyster - Big fishing net");
+				case 2 :
+					return(16, casket_405, "Members: Caskets - Big fishing net");
+				case 3 :
+					return(23, raw_cod_341, "Members: Cod - Big fishing net");
+				case 4 :
+					return(46, raw_bass_363, "Members: Bass - Big fishing net");
+				case 5 :
+					return(46, raw_catfish_25670, "Members: Catfish - Big fishing net (After Below Ice Mountain)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(16, oyster_407, "Members: Oyster - Big fishing net");
-			}
-			if ($int2 = 2) {
-				return(16, casket_405, "Members: Caskets - Big fishing net");
-			}
-			if ($int2 = 3) {
-				return(23, raw_cod_341, "Members: Cod - Big fishing net");
-			}
-			if ($int2 = 4) {
-				return(46, raw_bass_363, "Members: Bass - Big fishing net");
-			}
-			if ($int2 = 5) {
-				return(46, raw_catfish_25670, "Members: Catfish - Big fishing net (After Below Ice Mountain)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(5, raw_sardine_327, "Sardine - Fishing rod & Fishing bait");
+			switch_int ($int2) {
+				case 0 :
+					return(5, raw_sardine_327, "Sardine - Fishing rod & Fishing bait");
+				case 1 :
+					return(10, raw_herring_345, "Herring - Fishing rod & Fishing bait");
+				case 2 :
+					return(20, raw_trout_335, "Trout - Fly fishing rod & Feathers");
+				case 3 :
+					return(25, raw_pike_349, "Pike - Fishing rod & Fishing bait");
+				case 4 :
+					return(28, raw_slimy_eel_3379, "Members: Slimy eel - Fishing rod & Fishing bait");
+				case 5 :
+					return(30, raw_salmon_331, "Salmon - Fly fishing rod & feathers");
+				case 6 :
+					return(38, raw_rainbow_fish_10138, "Members: Rainbow fish - Fly fishing rod & Stripy feathers");
+				case 7 :
+					return(38, raw_cave_eel_5001, "Members: Cave eel - Fishing rod & Fishing bait");
+				case 8 :
+					return(53, raw_lava_eel_2148, "Members: Lava eel - Oily fishing rod & Fishing bait");
+				case 9 :
+					return(80, infernal_eel_21293, "Members: Infernal eel - Oily fishing rod & Fishing bait");
+				case 10 :
+					return(82, raw_anglerfish_13439, "Members: Anglerfish - Fishing rod & Sandworms");
+				case 11 :
+					return(87, sacred_eel_13339, "Members: Sacred eel - Fishing rod & Fishing bait");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(10, raw_herring_345, "Herring - Fishing rod & Fishing bait");
-			}
-			if ($int2 = 2) {
-				return(20, raw_trout_335, "Trout - Fly fishing rod & Feathers");
-			}
-			if ($int2 = 3) {
-				return(25, raw_pike_349, "Pike - Fishing rod & Fishing bait");
-			}
-			if ($int2 = 4) {
-				return(28, raw_slimy_eel_3379, "Members: Slimy eel - Fishing rod & Fishing bait");
-			}
-			if ($int2 = 5) {
-				return(30, raw_salmon_331, "Salmon - Fly fishing rod & feathers");
-			}
-			if ($int2 = 6) {
-				return(38, raw_rainbow_fish_10138, "Members: Rainbow fish - Fly fishing rod & Stripy feathers");
-			}
-			if ($int2 = 7) {
-				return(38, raw_cave_eel_5001, "Members: Cave eel - Fishing rod & Fishing bait");
-			}
-			if ($int2 = 8) {
-				return(53, raw_lava_eel_2148, "Members: Lava eel - Oily fishing rod & Fishing bait");
-			}
-			if ($int2 = 9) {
-				return(80, infernal_eel_21293, "Members: Infernal eel - Oily fishing rod & Fishing bait");
-			}
-			if ($int2 = 10) {
-				return(82, raw_anglerfish_13439, "Members: Anglerfish - Fishing rod & Sandworms");
-			}
-			if ($int2 = 11) {
-				return(87, sacred_eel_13339, "Members: Sacred eel - Fishing rod & Fishing bait");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 3) {
 			if ($int2 = 0) {
@@ -1983,19 +1693,18 @@ switch_int ($int0) {
 			return(-1, null, "");
 		}
 		if ($int1 = 4) {
-			if ($int2 = 0) {
-				return(43, bluegill_22826, "Members: Bluegill - Aerial fishing<br>(With 35 hunter)");
+			switch_int ($int2) {
+				case 0 :
+					return(43, bluegill_22826, "Members: Bluegill - Aerial fishing<br>(With 35 hunter)");
+				case 1 :
+					return(56, common_tench_22829, "Members: Common tench - Aerial fishing<br>(With 51 hunter)");
+				case 2 :
+					return(73, mottled_eel_22832, "Members: Mottled eel - Aerial fishing<br>(With 68 hunter)");
+				case 3 :
+					return(91, greater_siren_22835, "Members: Greater siren - Aerial fishing<br>(With 87 hunter)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(56, common_tench_22829, "Members: Common tench - Aerial fishing<br>(With 51 hunter)");
-			}
-			if ($int2 = 2) {
-				return(73, mottled_eel_22832, "Members: Mottled eel - Aerial fishing<br>(With 68 hunter)");
-			}
-			if ($int2 = 3) {
-				return(91, greater_siren_22835, "Members: Greater siren - Aerial fishing<br>(With 87 hunter)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 5) {
 			if ($int2 = 0) {
@@ -2007,711 +1716,551 @@ switch_int ($int0) {
 			return(-1, null, "");
 		}
 		if ($int1 = 6) {
-			if ($int2 = 0) {
-				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
+			switch_int ($int2) {
+				case 0 :
+					return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
+				case 1 :
+					return(48, leaping_trout_11328, "Leaping trout - Barbarian rod & most bait types<br> (with 15 Agility & 15 Strength)");
+				case 2 :
+					return(55, raw_tuna_359, "Tuna<br> (with 35 Strength)");
+				case 3 :
+					return(55, raw_harpoonfish_25564, "Harpoonfish<br> (with 35 Strength)");
+				case 4 :
+					return(58, leaping_salmon_11330, "Leaping salmon - Barbarian rod & most bait types<br> (with 30 Agility & 30 Strength)");
+				case 5 :
+					return(70, leaping_sturgeon_11332, "Leaping sturgeon - Barbarian rod & most bait types<br> (with 45 Agility & 45 Strength)");
+				case 6 :
+					return(70, raw_swordfish_371, "Swordfish<br> (with 50 Strength)");
+				case 7 :
+					return(96, raw_shark_383, "Shark<br> (with 76 Strength)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(48, leaping_trout_11328, "Leaping trout - Barbarian rod & most bait types<br> (with 15 Agility & 15 Strength)");
-			}
-			if ($int2 = 2) {
-				return(55, raw_tuna_359, "Tuna<br> (with 35 Strength)");
-			}
-			if ($int2 = 3) {
-				return(55, raw_harpoonfish_25564, "Harpoonfish<br> (with 35 Strength)");
-			}
-			if ($int2 = 4) {
-				return(58, leaping_salmon_11330, "Leaping salmon - Barbarian rod & most bait types<br> (with 30 Agility & 30 Strength)");
-			}
-			if ($int2 = 5) {
-				return(70, leaping_sturgeon_11332, "Leaping sturgeon - Barbarian rod & most bait types<br> (with 45 Agility & 45 Strength)");
-			}
-			if ($int2 = 6) {
-				return(70, raw_swordfish_371, "Swordfish<br> (with 50 Strength)");
-			}
-			if ($int2 = 7) {
-				return(96, raw_shark_383, "Shark<br> (with 76 Strength)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 7) {
-			if ($int2 = 0) {
-				return(1, small_fishing_net_303, "Small fishing net");
+			switch_int ($int2) {
+				case 0 :
+					return(1, small_fishing_net_303, "Small fishing net");
+				case 1 :
+					return(1, fishing_rod_307, "Fishing rod");
+				case 2 :
+					return(1, big_fishing_net_305, "Members: Big fishing net");
+				case 3 :
+					return(1, harpoon_311, "Harpoon");
+				case 4 :
+					return(1, fly_fishing_rod_309, "Fly fishing rod");
+				case 5 :
+					return(1, lobster_pot_301, "Lobster pot");
+				case 6 :
+					return(1, karambwan_vessel_3157, "Members: Karambwan vessel (after Tai Bwo Wannai Trio)");
+				case 7 :
+					return(34, angler_hat_13258, "Members: Angler's outfit");
+				case 8 :
+					return(43, cormorants_glove_22816, "Members: Cormorant's glove<br>(with 35 hunter)");
+				case 9 :
+					return(48, barbarian_rod_11323, "Members: Barbarian rod<br>(with 15 strength & 15 agility)");
+				case 10 :
+					return(61, dragon_harpoon_21028, "Members: Dragon harpoon");
+				case 11 :
+					return(71, crystal_harpoon_23762, "Members: Crystal harpoon<br>(after Song of the Elves)");
+				case 12 :
+					return(75, infernal_harpoon_21031, "Members: Infernal harpoon<br>(with 85 Cooking)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, fishing_rod_307, "Fishing rod");
-			}
-			if ($int2 = 2) {
-				return(1, big_fishing_net_305, "Members: Big fishing net");
-			}
-			if ($int2 = 3) {
-				return(1, harpoon_311, "Harpoon");
-			}
-			if ($int2 = 4) {
-				return(1, fly_fishing_rod_309, "Fly fishing rod");
-			}
-			if ($int2 = 5) {
-				return(1, lobster_pot_301, "Lobster pot");
-			}
-			if ($int2 = 6) {
-				return(1, karambwan_vessel_3157, "Members: Karambwan vessel (after Tai Bwo Wannai Trio)");
-			}
-			if ($int2 = 7) {
-				return(34, angler_hat_13258, "Members: Angler's outfit");
-			}
-			if ($int2 = 8) {
-				return(43, cormorants_glove_22816, "Members: Cormorant's glove<br>(with 35 hunter)");
-			}
-			if ($int2 = 9) {
-				return(48, barbarian_rod_11323, "Members: Barbarian rod<br>(with 15 strength & 15 agility)");
-			}
-			if ($int2 = 10) {
-				return(61, dragon_harpoon_21028, "Members: Dragon harpoon");
-			}
-			if ($int2 = 11) {
-				return(71, crystal_harpoon_23762, "Members: Crystal harpoon<br>(after Song of the Elves)");
-			}
-			if ($int2 = 12) {
-				return(75, infernal_harpoon_21031, "Members: Infernal harpoon<br>(with 85 Cooking)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 8) {
-			if ($int2 = 0) {
-				return(1, raw_pysk_fish_0_20855, "Pysk fish");
+			switch_int ($int2) {
+				case 0 :
+					return(1, raw_pysk_fish_0_20855, "Pysk fish");
+				case 1 :
+					return(15, raw_suphi_fish_1_20857, "Suphi fish");
+				case 2 :
+					return(30, raw_leckish_fish_2_20859, "Leckish fish");
+				case 3 :
+					return(45, raw_brawk_fish_3_20861, "Brawk fish");
+				case 4 :
+					return(60, raw_mycil_fish_4_20863, "Mycil fish");
+				case 5 :
+					return(75, raw_roqed_fish_5_20865, "Roqed fish");
+				case 6 :
+					return(90, raw_kyren_fish_6_20867, "Kyren fish");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(15, raw_suphi_fish_1_20857, "Suphi fish");
-			}
-			if ($int2 = 2) {
-				return(30, raw_leckish_fish_2_20859, "Leckish fish");
-			}
-			if ($int2 = 3) {
-				return(45, raw_brawk_fish_3_20861, "Brawk fish");
-			}
-			if ($int2 = 4) {
-				return(60, raw_mycil_fish_4_20863, "Mycil fish");
-			}
-			if ($int2 = 5) {
-				return(75, raw_roqed_fish_5_20865, "Roqed fish");
-			}
-			if ($int2 = 6) {
-				return(90, raw_kyren_fish_6_20867, "Kyren fish");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 9) {
-			if ($int2 = 0) {
-				return(15, fresh_fish_13429, "Members: Collecting from barrels of fresh fish");
+			switch_int ($int2) {
+				case 0 :
+					return(15, fresh_fish_13429, "Members: Collecting from barrels of fresh fish");
+				case 1 :
+					return(35, harpoonfish_25565, "Members: Fighting Tempoross");
+				case 2 :
+					return(47, pufferfish_21655, "Members: Accessing drift net fishing on Fossil Island (with 44 hunter)");
+				case 3 :
+					return(65, raw_karambwan_3142, "Members: Karambwan - Karambwan vessel");
+				case 4 :
+					return(79, raw_sea_turtle_395, "Members: Sea turtle - Trawler & Tempoross");
+				case 5 :
+					return(81, raw_manta_ray_389, "Members: Manta ray - Trawler & Tempoross");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(35, harpoonfish_25565, "Members: Fighting Tempoross");
-			}
-			if ($int2 = 2) {
-				return(47, pufferfish_21655, "Members: Accessing drift net fishing on Fossil Island (with 44 hunter)");
-			}
-			if ($int2 = 3) {
-				return(65, raw_karambwan_3142, "Members: Karambwan - Karambwan vessel");
-			}
-			if ($int2 = 4) {
-				return(79, raw_sea_turtle_395, "Members: Sea turtle - Trawler & Tempoross");
-			}
-			if ($int2 = 5) {
-				return(81, raw_manta_ray_389, "Members: Manta ray - Trawler & Tempoross");
-			}
-			return(-1, null, "");
 		}
 		return(-1, null, "");
 	case 16 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, cooked_meat_2142, "Meat");
+			switch_int ($int2) {
+				case 0 :
+					return(1, cooked_meat_2142, "Meat");
+				case 1 :
+					return(1, sinew_9436, "Members: Sinew<br>(made by drying beef or bear meat on a range)");
+				case 2 :
+					return(1, shrimps_315, "Shrimp");
+				case 3 :
+					return(1, cooked_chicken_2140, "Chicken");
+				case 4 :
+					return(1, cooked_rabbit_3228, "Members: Rabbit");
+				case 5 :
+					return(1, anchovies_319, "Anchovies");
+				case 6 :
+					return(1, sardine_325, "Sardine");
+				case 7 :
+					return(1, poison_karambwan_3146, "Members: Karambwan");
+				case 8 :
+					return(1, ugthanki_kebab_1885, "Members: Ugthanki kebab");
+				case 9 :
+					return(5, herring_347, "Herring");
+				case 10 :
+					return(10, mackerel_355, "Members: Mackerel");
+				case 11 :
+					return(11, roast_bird_meat_9980, "Members: Roasted bird meat");
+				case 12 :
+					return(12, thin_snail_meat_3369, "Members: Thin snail");
+				case 13 :
+					return(15, trout_333, "Trout");
+				case 14 :
+					return(16, spider_on_stick_6297, "Members: Spider");
+				case 15 :
+					return(16, roast_rabbit_7223, "Members: Roasted rabbit");
+				case 16 :
+					return(17, lean_snail_meat_3371, "Members: Lean snail");
+				case 17 :
+					return(18, cod_339, "Members: Cod");
+				case 18 :
+					return(20, pike_351, "Pike");
+				case 19 :
+					return(21, roast_beast_meat_9988, "Members: Roasted beast meat");
+				case 20 :
+					return(21, cooked_crab_meat_7521, "Members: Giant crab meat");
+				case 21 :
+					return(22, fat_snail_meat_3373, "Members: Fat snail");
+				case 22 :
+					return(25, salmon_329, "Salmon");
+				case 23 :
+					return(28, cooked_slimy_eel_3381, "Members: Slimy eel");
+				case 24 :
+					return(30, tuna_361, "Tuna");
+				case 25 :
+					return(30, cooked_chompy_2878, "Members: Roasted chompy");
+				case 26 :
+					return(31, cooked_fishcake_7530, "Members: Fishcakes");
+				case 27 :
+					return(35, rainbow_fish_10136, "Members: Rainbow fish");
+				case 28 :
+					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Woodcutting)");
+				case 29 :
+					return(38, cave_eel_5003, "Members: Cave eel");
+				case 30 :
+					return(40, lobster_379, "Lobster");
+				case 31 :
+					return(41, cooked_jubbly_7568, "Members: Jubbly");
+				case 32 :
+					return(43, bass_365, "Members: Bass");
+				case 33 :
+					return(45, swordfish_373, "Swordfish");
+				case 34 :
+					return(53, lava_eel_2149, "Members: Lava eel");
+				case 35 :
+					return(62, monkfish_7946, "Members: Monkfish");
+				case 36 :
+					return(72, sacred_eel_13339, "Members: Dissect sacred eels");
+				case 37 :
+					return(80, shark_385, "Members: Shark");
+				case 38 :
+					return(82, sea_turtle_397, "Members: Sea turtle");
+				case 39 :
+					return(84, anglerfish_13441, "Members: Anglerfish");
+				case 40 :
+					return(90, dark_crab_11936, "Members: Dark crab");
+				case 41 :
+					return(91, manta_ray_391, "Members: Manta ray");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, sinew_9436, "Members: Sinew<br>(made by drying beef or bear meat on a range)");
-			}
-			if ($int2 = 2) {
-				return(1, shrimps_315, "Shrimp");
-			}
-			if ($int2 = 3) {
-				return(1, cooked_chicken_2140, "Chicken");
-			}
-			if ($int2 = 4) {
-				return(1, cooked_rabbit_3228, "Members: Rabbit");
-			}
-			if ($int2 = 5) {
-				return(1, anchovies_319, "Anchovies");
-			}
-			if ($int2 = 6) {
-				return(1, sardine_325, "Sardine");
-			}
-			if ($int2 = 7) {
-				return(1, poison_karambwan_3146, "Members: Karambwan");
-			}
-			if ($int2 = 8) {
-				return(1, ugthanki_kebab_1885, "Members: Ugthanki kebab");
-			}
-			if ($int2 = 9) {
-				return(5, herring_347, "Herring");
-			}
-			if ($int2 = 10) {
-				return(10, mackerel_355, "Members: Mackerel");
-			}
-			if ($int2 = 11) {
-				return(11, roast_bird_meat_9980, "Members: Roasted bird meat");
-			}
-			if ($int2 = 12) {
-				return(12, thin_snail_meat_3369, "Members: Thin snail");
-			}
-			if ($int2 = 13) {
-				return(15, trout_333, "Trout");
-			}
-			if ($int2 = 14) {
-				return(16, spider_on_stick_6297, "Members: Spider");
-			}
-			if ($int2 = 15) {
-				return(16, roast_rabbit_7223, "Members: Roasted rabbit");
-			}
-			if ($int2 = 16) {
-				return(17, lean_snail_meat_3371, "Members: Lean snail");
-			}
-			if ($int2 = 17) {
-				return(18, cod_339, "Members: Cod");
-			}
-			if ($int2 = 18) {
-				return(20, pike_351, "Pike");
-			}
-			if ($int2 = 19) {
-				return(21, roast_beast_meat_9988, "Members: Roasted beast meat");
-			}
-			if ($int2 = 20) {
-				return(21, cooked_crab_meat_7521, "Members: Giant crab meat");
-			}
-			if ($int2 = 21) {
-				return(22, fat_snail_meat_3373, "Members: Fat snail");
-			}
-			if ($int2 = 22) {
-				return(25, salmon_329, "Salmon");
-			}
-			if ($int2 = 23) {
-				return(28, cooked_slimy_eel_3381, "Members: Slimy eel");
-			}
-			if ($int2 = 24) {
-				return(30, tuna_361, "Tuna");
-			}
-			if ($int2 = 25) {
-				return(30, cooked_chompy_2878, "Members: Roasted chompy");
-			}
-			if ($int2 = 26) {
-				return(31, cooked_fishcake_7530, "Members: Fishcakes");
-			}
-			if ($int2 = 27) {
-				return(35, rainbow_fish_10136, "Members: Rainbow fish");
-			}
-			if ($int2 = 28) {
-				return(38, cave_eel_5003, "Members: Cave eel");
-			}
-			if ($int2 = 29) {
-				return(40, lobster_379, "Lobster");
-			}
-			if ($int2 = 30) {
-				return(41, cooked_jubbly_7568, "Members: Jubbly");
-			}
-			if ($int2 = 31) {
-				return(43, bass_365, "Members: Bass");
-			}
-			if ($int2 = 32) {
-				return(45, swordfish_373, "Swordfish");
-			}
-			if ($int2 = 33) {
-				return(53, lava_eel_2149, "Members: Lava eel");
-			}
-			if ($int2 = 34) {
-				return(62, monkfish_7946, "Members: Monkfish");
-			}
-			if ($int2 = 35) {
-				return(72, sacred_eel_13339, "Members: Dissect sacred eels");
-			}
-			if ($int2 = 36) {
-				return(80, shark_385, "Members: Shark");
-			}
-			if ($int2 = 37) {
-				return(82, sea_turtle_397, "Members: Sea turtle");
-			}
-			if ($int2 = 38) {
-				return(84, anglerfish_13441, "Members: Anglerfish");
-			}
-			if ($int2 = 39) {
-				return(90, dark_crab_11936, "Members: Dark crab");
-			}
-			if ($int2 = 40) {
-				return(91, manta_ray_391, "Members: Manta ray");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(1, bread_2309, "Bread");
+			switch_int ($int2) {
+				case 0 :
+					return(1, bread_2309, "Bread");
+				case 1 :
+					return(58, pitta_bread_1865, "Members: Pitta bread");
+				case 2 :
+					return(-1, obj_7620, "1. Pick some grain and take it to a windmill to make flour.");
+				case 3 :
+					return(-1, obj_7620, "2. Use a pot to collect the flour you have made.");
+				case 4 :
+					return(-1, obj_7620, "3. Fill a bucket or jug with water from a sink or fountain.");
+				case 5 :
+					return(-1, obj_7620, "4. Mix the flour and water to make some bread dough.");
+				case 6 :
+					return(-1, obj_7620, "5. Cook the dough by using it with a stove.");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(58, pitta_bread_1865, "Members: Pitta bread");
-			}
-			if ($int2 = 2) {
-				return(-1, obj_7620, "1. Pick some grain and take it to a windmill to make flour.");
-			}
-			if ($int2 = 3) {
-				return(-1, obj_7620, "2. Use a pot to collect the flour you have made.");
-			}
-			if ($int2 = 4) {
-				return(-1, obj_7620, "3. Fill a bucket or jug with water from a sink or fountain.");
-			}
-			if ($int2 = 5) {
-				return(-1, obj_7620, "4. Mix the flour and water to make some bread dough.");
-			}
-			if ($int2 = 6) {
-				return(-1, obj_7620, "5. Cook the dough by using it with a stove.");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(10, redberry_pie_2325, "Redberry pie");
+			switch_int ($int2) {
+				case 0 :
+					return(10, redberry_pie_2325, "Redberry pie");
+				case 1 :
+					return(20, meat_pie_2327, "Meat pie");
+				case 2 :
+					return(29, mud_pie_7170, "Members: Mud pie");
+				case 3 :
+					return(30, apple_pie_2323, "Apple pie");
+				case 4 :
+					return(34, garden_pie_7178, "Members: Garden pie");
+				case 5 :
+					return(47, fish_pie_7188, "Members: Fish pie");
+				case 6 :
+					return(52, botanical_pie_19662, "Members: Botanical pie");
+				case 7 :
+					return(60, mushroom_pie_21690, "Members: Mushroom pie");
+				case 8 :
+					return(70, admiral_pie_7198, "Members: Admiral pie");
+				case 9 :
+					return(73, dragonfruit_pie_22795, "Members: Dragonfruit pie");
+				case 10 :
+					return(85, wild_pie_7208, "Members: Wild pie");
+				case 11 :
+					return(95, summer_pie_7218, "Members: Summer pie");
+				case 12 :
+					return(-1, obj_7620, "To make a pie:");
+				case 13 :
+					return(-1, obj_7620, "1. Mix flour and water to make pastry dough.");
+				case 14 :
+					return(-1, obj_7620, "2. Place the dough in an empty pie dish.");
+				case 15 :
+					return(-1, obj_7620, "3. Use your choice of filling with the empty pie (refer to pie recipe book).");
+				case 16 :
+					return(-1, obj_7620, "4. Cook the pie by using it with a stove.");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(20, meat_pie_2327, "Meat pie");
-			}
-			if ($int2 = 2) {
-				return(29, mud_pie_7170, "Members: Mud pie");
-			}
-			if ($int2 = 3) {
-				return(30, apple_pie_2323, "Apple pie");
-			}
-			if ($int2 = 4) {
-				return(34, garden_pie_7178, "Members: Garden pie");
-			}
-			if ($int2 = 5) {
-				return(47, fish_pie_7188, "Members: Fish pie");
-			}
-			if ($int2 = 6) {
-				return(52, botanical_pie_19662, "Members: Botanical pie");
-			}
-			if ($int2 = 7) {
-				return(60, mushroom_pie_21690, "Members: Mushroom pie");
-			}
-			if ($int2 = 8) {
-				return(70, admiral_pie_7198, "Members: Admiral pie");
-			}
-			if ($int2 = 9) {
-				return(73, dragonfruit_pie_22795, "Members: Dragonfruit pie");
-			}
-			if ($int2 = 10) {
-				return(85, wild_pie_7208, "Members: Wild pie");
-			}
-			if ($int2 = 11) {
-				return(95, summer_pie_7218, "Members: Summer pie");
-			}
-			if ($int2 = 12) {
-				return(-1, obj_7620, "To make a pie:");
-			}
-			if ($int2 = 13) {
-				return(-1, obj_7620, "1. Mix flour and water to make pastry dough.");
-			}
-			if ($int2 = 14) {
-				return(-1, obj_7620, "2. Place the dough in an empty pie dish.");
-			}
-			if ($int2 = 15) {
-				return(-1, obj_7620, "3. Use your choice of filling with the empty pie (refer to pie recipe book).");
-			}
-			if ($int2 = 16) {
-				return(-1, obj_7620, "4. Cook the pie by using it with a stove.");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 3) {
-			if ($int2 = 0) {
-				return(25, stew_2003, "Stew");
+			switch_int ($int2) {
+				case 0 :
+					return(25, stew_2003, "Stew");
+				case 1 :
+					return(60, curry_2011, "Members: Curry");
+				case 2 :
+					return(-1, obj_7620, "To make stew:");
+				case 3 :
+					return(-1, obj_7620, "1. Obtain a bowl and fill it with water from a sink or fountain.");
+				case 4 :
+					return(-1, obj_7620, "2. Pick a potato and place it in the bowl.");
+				case 5 :
+					return(-1, obj_7620, "3. Cook some meat and place it in the bowl.");
+				case 6 :
+					return(-1, obj_7620, "4. Cook the stew by using it with a stove or fire.");
+				case 7 :
+					return(-1, obj_7620, "After completing Evil Dave's miniquest<br>from Recipe for Disaster, I can add<br>spices to cooked stew.");
+				case 8 :
+					return(-1, obj_7620, "To make curry: make uncooked stew as above. Before cooking, add some spices or 3 curry leaves.");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(60, curry_2011, "Members: Curry");
-			}
-			if ($int2 = 2) {
-				return(-1, obj_7620, "To make stew:");
-			}
-			if ($int2 = 3) {
-				return(-1, obj_7620, "1. Obtain a bowl and fill it with water from a sink or fountain.");
-			}
-			if ($int2 = 4) {
-				return(-1, obj_7620, "2. Pick a potato and place it in the bowl.");
-			}
-			if ($int2 = 5) {
-				return(-1, obj_7620, "3. Cook some meat and place it in the bowl.");
-			}
-			if ($int2 = 6) {
-				return(-1, obj_7620, "4. Cook the stew by using it with a stove or fire.");
-			}
-			if ($int2 = 7) {
-				return(-1, obj_7620, "After completing Evil Dave's miniquest<br>from Recipe for Disaster, I can add<br>spices to cooked stew.");
-			}
-			if ($int2 = 8) {
-				return(-1, obj_7620, "To make curry: make uncooked stew as above. Before cooking, add some spices or 3 curry leaves.");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 4) {
-			if ($int2 = 0) {
-				return(35, plain_pizza_2289, "Plain pizza");
+			switch_int ($int2) {
+				case 0 :
+					return(35, plain_pizza_2289, "Plain pizza");
+				case 1 :
+					return(45, meat_pizza_2293, "Meat pizza");
+				case 2 :
+					return(55, anchovy_pizza_2297, "Anchovy pizza");
+				case 3 :
+					return(65, pineapple_pizza_2301, "Members: Pineapple pizza");
+				case 4 :
+					return(-1, obj_7620, "To make a pizza:");
+				case 5 :
+					return(-1, obj_7620, "1. Mix flour and water to make a pizza base.");
+				case 6 :
+					return(-1, obj_7620, "2. Add a tomato to the pizza.");
+				case 7 :
+					return(-1, obj_7620, "3. Add some cheese to the pizza.");
+				case 8 :
+					return(-1, obj_7620, "4. Cook the pizza by using it with a stove.");
+				case 9 :
+					return(-1, obj_7620, "5. Add your choice of topping to the pizza.");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(45, meat_pizza_2293, "Meat pizza");
-			}
-			if ($int2 = 2) {
-				return(55, anchovy_pizza_2297, "Anchovy pizza");
-			}
-			if ($int2 = 3) {
-				return(65, pineapple_pizza_2301, "Members: Pineapple pizza");
-			}
-			if ($int2 = 4) {
-				return(-1, obj_7620, "To make a pizza:");
-			}
-			if ($int2 = 5) {
-				return(-1, obj_7620, "1. Mix flour and water to make a pizza base.");
-			}
-			if ($int2 = 6) {
-				return(-1, obj_7620, "2. Add a tomato to the pizza.");
-			}
-			if ($int2 = 7) {
-				return(-1, obj_7620, "3. Add some cheese to the pizza.");
-			}
-			if ($int2 = 8) {
-				return(-1, obj_7620, "4. Cook the pizza by using it with a stove.");
-			}
-			if ($int2 = 9) {
-				return(-1, obj_7620, "5. Add your choice of topping to the pizza.");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 5) {
-			if ($int2 = 0) {
-				return(40, cake_1891, "Cake");
+			switch_int ($int2) {
+				case 0 :
+					return(40, cake_1891, "Cake");
+				case 1 :
+					return(50, chocolate_cake_1897, "Chocolate cake");
+				case 2 :
+					return(-1, obj_7620, "To make a cake:");
+				case 3 :
+					return(-1, obj_7620, "1. Mix flour, eggs and milk together in a cake tin.");
+				case 4 :
+					return(-1, obj_7620, "2. Cook the cake by using it with a stove.");
+				case 5 :
+					return(-1, obj_7620, "3. Optional: Buy some chocolate and add it to the cake to make a chocolate cake.");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(50, chocolate_cake_1897, "Chocolate cake");
-			}
-			if ($int2 = 2) {
-				return(-1, obj_7620, "To make a cake:");
-			}
-			if ($int2 = 3) {
-				return(-1, obj_7620, "1. Mix flour, eggs and milk together in a cake tin.");
-			}
-			if ($int2 = 4) {
-				return(-1, obj_7620, "2. Cook the cake by using it with a stove.");
-			}
-			if ($int2 = 5) {
-				return(-1, obj_7620, "3. Optional: Buy some chocolate and add it to the cake to make a chocolate cake.");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 6) {
-			if ($int2 = 0) {
-				return(35, jug_of_wine_1993, "Wine");
+			switch_int ($int2) {
+				case 0 :
+					return(35, jug_of_wine_1993, "Wine");
+				case 1 :
+					return(65, wine_of_zamorak_245, "Members: Wine of Zamorak");
+				case 2 :
+					return(-1, obj_7620, "To make wine:");
+				case 3 :
+					return(-1, obj_7620, "1. Fill a jug with water.");
+				case 4 :
+					return(-1, obj_7620, "2. Use grapes with the jug of water.");
+				case 5 :
+					return(-1, obj_7620, "3. Wait until the wine ferments.");
+				case 6 :
+					return(-1, obj_7620, "Wine will ferment when left in<br>your inventory or the bank.");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(65, wine_of_zamorak_245, "Members: Wine of Zamorak");
-			}
-			if ($int2 = 2) {
-				return(-1, obj_7620, "To make wine:");
-			}
-			if ($int2 = 3) {
-				return(-1, obj_7620, "1. Fill a jug with water.");
-			}
-			if ($int2 = 4) {
-				return(-1, obj_7620, "2. Use grapes with the jug of water.");
-			}
-			if ($int2 = 5) {
-				return(-1, obj_7620, "3. Wait until the wine ferments.");
-			}
-			if ($int2 = 6) {
-				return(-1, obj_7620, "Wine will ferment when left in<br>your inventory or the bank.");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 7) {
-			if ($int2 = 0) {
-				return(20, cup_of_tea_4242, "Nettle tea");
+			switch_int ($int2) {
+				case 0 :
+					return(20, cup_of_tea_4242, "Nettle tea");
+				case 1 :
+					return(-1, obj_7620, "To make nettle tea:");
+				case 2 :
+					return(-1, obj_7620, "1. Fill a bowl with water.");
+				case 3 :
+					return(-1, obj_7620, "2. Put some picked nettles into the bowl of water.");
+				case 4 :
+					return(-1, obj_7620, "3. Boil the nettle-water by using it with a range or a fire.");
+				case 5 :
+					return(-1, obj_7620, "4. Use the bowl of nettle tea with a cup.");
+				case 6 :
+					return(-1, obj_7620, "5. If you take milk, use a bucket of milk on the nettle tea.");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(-1, obj_7620, "To make nettle tea:");
-			}
-			if ($int2 = 2) {
-				return(-1, obj_7620, "1. Fill a bowl with water.");
-			}
-			if ($int2 = 3) {
-				return(-1, obj_7620, "2. Put some picked nettles into the bowl of water.");
-			}
-			if ($int2 = 4) {
-				return(-1, obj_7620, "3. Boil the nettle-water by using it with a range or a fire.");
-			}
-			if ($int2 = 5) {
-				return(-1, obj_7620, "4. Use the bowl of nettle tea with a cup.");
-			}
-			if ($int2 = 6) {
-				return(-1, obj_7620, "5. If you take milk, use a bucket of milk on the nettle tea.");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 8) {
-			if ($int2 = 0) {
-				return(14, cider_5763, "Cider<br>4 Apple mush");
+			switch_int ($int2) {
+				case 0 :
+					return(14, cider_5763, "Cider<br>4 Apple mush");
+				case 1 :
+					return(19, dwarven_stout_1913, "Dwarven Stout<br>4 Hammerstone hops");
+				case 2 :
+					return(24, asgarnian_ale_1905, "Asgarnian Ale<br>4 Asgarnian hops");
+				case 3 :
+					return(29, greenmans_ale_1909, "Greenman's Ale<br>4 Harralander leaves");
+				case 4 :
+					return(34, wizards_mind_bomb_1907, "Wizard's Mind Bomb<br>4 Yanillian hops");
+				case 5 :
+					return(39, dragon_bitter_1911, "Dragon Bitter<br>4 Krandorian hops");
+				case 6 :
+					return(44, moonlight_mead_2955, "Moonlight Mead<br>4 Bittercap mushrooms");
+				case 7 :
+					return(49, axemans_folly_5751, "Axeman's Folly<br>1 Oak root");
+				case 8 :
+					return(54, chefs_delight_5755, "Chef's Delight<br>4 Portions of chocolate dust");
+				case 9 :
+					return(59, slayers_respite_5759, "Slayer's Respite<br>4 Wildblood hops");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(19, dwarven_stout_1913, "Dwarven Stout<br>4 Hammerstone hops");
-			}
-			if ($int2 = 2) {
-				return(24, asgarnian_ale_1905, "Asgarnian Ale<br>4 Asgarnian hops");
-			}
-			if ($int2 = 3) {
-				return(29, greenmans_ale_1909, "Greenman's Ale<br>4 Harralander leaves");
-			}
-			if ($int2 = 4) {
-				return(34, wizards_mind_bomb_1907, "Wizard's Mind Bomb<br>4 Yanillian hops");
-			}
-			if ($int2 = 5) {
-				return(39, dragon_bitter_1911, "Dragon Bitter<br>4 Krandorian hops");
-			}
-			if ($int2 = 6) {
-				return(44, moonlight_mead_2955, "Moonlight Mead<br>4 Bittercap mushrooms");
-			}
-			if ($int2 = 7) {
-				return(49, axemans_folly_5751, "Axeman's Folly<br>1 Oak root");
-			}
-			if ($int2 = 8) {
-				return(54, chefs_delight_5755, "Chef's Delight<br>4 Portions of chocolate dust");
-			}
-			if ($int2 = 9) {
-				return(59, slayers_respite_5759, "Slayer's Respite<br>4 Wildblood hops");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 9) {
-			if ($int2 = 0) {
-				return(7, baked_potato_6701, "Baked potato");
+			switch_int ($int2) {
+				case 0 :
+					return(7, baked_potato_6701, "Baked potato");
+				case 1 :
+					return(9, spicy_sauce_7072, "Spicy sauce (topping ingredient)");
+				case 2 :
+					return(11, chilli_con_carne_7062, "Chilli con carne (topping)");
+				case 3 :
+					return(13, scrambled_egg_7078, "Scrambled egg (topping ingredient)");
+				case 4 :
+					return(23, egg_and_tomato_7064, "Scrambled egg and tomato (topping)");
+				case 5 :
+					return(28, cooked_sweetcorn_5988, "Sweetcorn");
+				case 6 :
+					return(39, potato_with_butter_6703, "Baked potato with butter");
+				case 7 :
+					return(41, chilli_potato_7054, "Baked potato with chilli con carne");
+				case 8 :
+					return(42, fried_onions_7084, "Fried onion (topping ingredient)");
+				case 9 :
+					return(46, fried_mushrooms_7082, "Fried mushroom (topping ingredient)");
+				case 10 :
+					return(47, potato_with_cheese_6705, "Baked potato with butter and cheese");
+				case 11 :
+					return(51, egg_potato_7056, "Baked potato with egg and tomato");
+				case 12 :
+					return(57, mushroom_onion_7066, "Fried mushroom and onion (topping)");
+				case 13 :
+					return(64, mushroom_potato_7058, "Baked potato with mushroom and onion");
+				case 14 :
+					return(67, tuna_and_corn_7068, "Tuna and sweetcorn (topping)");
+				case 15 :
+					return(68, tuna_potato_7060, "Baked potato with tuna and sweetcorn");
+				case 16 :
+					return(-1, obj_7620, "To make baked potatoes with toppings:");
+				case 17 :
+					return(-1, obj_7620, "1. Bake the potato on a range.");
+				case 18 :
+					return(-1, obj_7620, "2. Add some butter.");
+				case 19 :
+					return(-1, obj_7620, "3. If needed, combine topping ingredients by chopping them into a bowl.");
+				case 20 :
+					return(-1, obj_7620, "Ingredients for toppings:");
+				case 21 :
+					return(-1, obj_7620, "1. Chilli con carne: meat & spicy sauce (made from garlic and gnome spice)");
+				case 22 :
+					return(-1, obj_7620, "2. Egg and tomato: scrambled egg & tomato");
+				case 23 :
+					return(-1, obj_7620, "3. Mushroom and onion: fried bittercap mushroom & fried onion");
+				case 24 :
+					return(-1, obj_7620, "4. Tuna and sweetcorn: tuna & cooked sweetcorn");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(9, spicy_sauce_7072, "Spicy sauce (topping ingredient)");
-			}
-			if ($int2 = 2) {
-				return(11, chilli_con_carne_7062, "Chilli con carne (topping)");
-			}
-			if ($int2 = 3) {
-				return(13, scrambled_egg_7078, "Scrambled egg (topping ingredient)");
-			}
-			if ($int2 = 4) {
-				return(23, egg_and_tomato_7064, "Scrambled egg and tomato (topping)");
-			}
-			if ($int2 = 5) {
-				return(28, cooked_sweetcorn_5988, "Sweetcorn");
-			}
-			if ($int2 = 6) {
-				return(39, potato_with_butter_6703, "Baked potato with butter");
-			}
-			if ($int2 = 7) {
-				return(41, chilli_potato_7054, "Baked potato with chilli con carne");
-			}
-			if ($int2 = 8) {
-				return(42, fried_onions_7084, "Fried onion (topping ingredient)");
-			}
-			if ($int2 = 9) {
-				return(46, fried_mushrooms_7082, "Fried mushroom (topping ingredient)");
-			}
-			if ($int2 = 10) {
-				return(47, potato_with_cheese_6705, "Baked potato with butter and cheese");
-			}
-			if ($int2 = 11) {
-				return(51, egg_potato_7056, "Baked potato with egg and tomato");
-			}
-			if ($int2 = 12) {
-				return(57, mushroom_onion_7066, "Fried mushroom and onion (topping)");
-			}
-			if ($int2 = 13) {
-				return(64, mushroom_potato_7058, "Baked potato with mushroom and onion");
-			}
-			if ($int2 = 14) {
-				return(67, tuna_and_corn_7068, "Tuna and sweetcorn (topping)");
-			}
-			if ($int2 = 15) {
-				return(68, tuna_potato_7060, "Baked potato with tuna and sweetcorn");
-			}
-			if ($int2 = 16) {
-				return(-1, obj_7620, "To make baked potatoes with toppings:");
-			}
-			if ($int2 = 17) {
-				return(-1, obj_7620, "1. Bake the potato on a range.");
-			}
-			if ($int2 = 18) {
-				return(-1, obj_7620, "2. Add some butter.");
-			}
-			if ($int2 = 19) {
-				return(-1, obj_7620, "3. If needed, combine topping ingredients by chopping them into a bowl.");
-			}
-			if ($int2 = 20) {
-				return(-1, obj_7620, "Ingredients for toppings:");
-			}
-			if ($int2 = 21) {
-				return(-1, obj_7620, "1. Chilli con carne: meat & spicy sauce (made from garlic and gnome spice)");
-			}
-			if ($int2 = 22) {
-				return(-1, obj_7620, "2. Egg and tomato: scrambled egg & tomato");
-			}
-			if ($int2 = 23) {
-				return(-1, obj_7620, "3. Mushroom and onion: fried bittercap mushroom & fried onion");
-			}
-			if ($int2 = 24) {
-				return(-1, obj_7620, "4. Tuna and sweetcorn: tuna & cooked sweetcorn");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 10) {
-			if ($int2 = 0) {
-				return(21, pot_of_cream_2130, "Cream");
+			switch_int ($int2) {
+				case 0 :
+					return(21, pot_of_cream_2130, "Cream");
+				case 1 :
+					return(38, pat_of_butter_6697, "Butter");
+				case 2 :
+					return(48, cheese_1985, "Cheese");
+				case 3 :
+					return(-1, obj_7620, "To make dairy products:");
+				case 4 :
+					return(-1, obj_7620, "1. Get a bucket of milk, a pot of cream or a pot of butter.");
+				case 5 :
+					return(-1, obj_7620, "2. Use the milk, cream or butter in a churn.");
+				case 6 :
+					return(-1, obj_7620, "3. Milk can be churned into cream, then into butter, then into cheese.");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(38, pat_of_butter_6697, "Butter");
-			}
-			if ($int2 = 2) {
-				return(48, cheese_1985, "Cheese");
-			}
-			if ($int2 = 3) {
-				return(-1, obj_7620, "To make dairy products:");
-			}
-			if ($int2 = 4) {
-				return(-1, obj_7620, "1. Get a bucket of milk, a pot of cream or a pot of butter.");
-			}
-			if ($int2 = 5) {
-				return(-1, obj_7620, "2. Use the milk, cream or butter in a churn.");
-			}
-			if ($int2 = 6) {
-				return(-1, obj_7620, "3. Milk can be churned into cream, then into butter, then into cheese.");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 11) {
-			if ($int2 = 0) {
-				return(6, fruit_blast_2084, "Fruit Blast");
+			switch_int ($int2) {
+				case 0 :
+					return(6, fruit_blast_2084, "Fruit Blast");
+				case 1 :
+					return(8, pineapple_punch_2048, "Pineapple Punch");
+				case 2 :
+					return(10, toad_crunchies_2217, "Toad crunchies");
+				case 3 :
+					return(12, spicy_crunchies_2213, "Spicy crunchies");
+				case 4 :
+					return(14, worm_crunchies_2205, "Worm crunchies");
+				case 5 :
+					return(16, chocchip_crunchies_2209, "Chocolate chip crunchies");
+				case 6 :
+					return(18, wizard_blizzard_2054, "Wizard Blizzard");
+				case 7 :
+					return(20, short_green_guy_2080, "Short Green Guy (SGG)");
+				case 8 :
+					return(25, fruit_batta_2277, "Fruit batta");
+				case 9 :
+					return(26, toad_batta_2255, "Toad batta");
+				case 10 :
+					return(27, worm_batta_2253, "Worm batta");
+				case 11 :
+					return(28, vegetable_batta_2281, "Vegetable batta");
+				case 12 :
+					return(29, cheese_tom_batta_2259, "Cheese and tomato batta");
+				case 13 :
+					return(30, worm_hole_2191, "Worm hole");
+				case 14 :
+					return(32, drunk_dragon_2092, "Drunk Dragon");
+				case 15 :
+					return(33, choc_saturday_2074, "Chocolate Saturday");
+				case 16 :
+					return(35, veg_ball_2195, "Vegetable ball");
+				case 17 :
+					return(37, blurberry_special_2064, "Blurberry Special");
+				case 18 :
+					return(40, tangled_toads_legs_2187, "Tangled toads' legs");
+				case 19 :
+					return(42, chocolate_bomb_2185, "Chocolate bomb");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(8, pineapple_punch_2048, "Pineapple Punch");
-			}
-			if ($int2 = 2) {
-				return(10, toad_crunchies_2217, "Toad crunchies");
-			}
-			if ($int2 = 3) {
-				return(12, spicy_crunchies_2213, "Spicy crunchies");
-			}
-			if ($int2 = 4) {
-				return(14, worm_crunchies_2205, "Worm crunchies");
-			}
-			if ($int2 = 5) {
-				return(16, chocchip_crunchies_2209, "Chocolate chip crunchies");
-			}
-			if ($int2 = 6) {
-				return(18, wizard_blizzard_2054, "Wizard Blizzard");
-			}
-			if ($int2 = 7) {
-				return(20, short_green_guy_2080, "Short Green Guy (SGG)");
-			}
-			if ($int2 = 8) {
-				return(25, fruit_batta_2277, "Fruit batta");
-			}
-			if ($int2 = 9) {
-				return(26, toad_batta_2255, "Toad batta");
-			}
-			if ($int2 = 10) {
-				return(27, worm_batta_2253, "Worm batta");
-			}
-			if ($int2 = 11) {
-				return(28, vegetable_batta_2281, "Vegetable batta");
-			}
-			if ($int2 = 12) {
-				return(29, cheese_tom_batta_2259, "Cheese and tomato batta");
-			}
-			if ($int2 = 13) {
-				return(30, worm_hole_2191, "Worm hole");
-			}
-			if ($int2 = 14) {
-				return(32, drunk_dragon_2092, "Drunk Dragon");
-			}
-			if ($int2 = 15) {
-				return(33, choc_saturday_2074, "Chocolate Saturday");
-			}
-			if ($int2 = 16) {
-				return(35, veg_ball_2195, "Vegetable ball");
-			}
-			if ($int2 = 17) {
-				return(37, blurberry_special_2064, "Blurberry Special");
-			}
-			if ($int2 = 18) {
-				return(40, tangled_toads_legs_2187, "Tangled toads' legs");
-			}
-			if ($int2 = 19) {
-				return(42, chocolate_bomb_2185, "Chocolate bomb");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 12) {
-			if ($int2 = 0) {
-				return(1, pysk_fish_0_20856, "Pysk fish");
+			switch_int ($int2) {
+				case 0 :
+					return(1, pysk_fish_0_20856, "Pysk fish");
+				case 1 :
+					return(1, guanic_bat_0_20871, "Guanic bat");
+				case 2 :
+					return(15, suphi_fish_1_20858, "Suphi fish");
+				case 3 :
+					return(15, prael_bat_1_20873, "Prael bat");
+				case 4 :
+					return(30, leckish_fish_2_20860, "Leckish fish");
+				case 5 :
+					return(30, giral_bat_2_20875, "Giral bat");
+				case 6 :
+					return(45, brawk_fish_3_20862, "Brawk fish");
+				case 7 :
+					return(45, phluxia_bat_3_20877, "Phluxia bat");
+				case 8 :
+					return(60, mycil_fish_4_20864, "Mycil fish");
+				case 9 :
+					return(60, kryket_bat_4_20879, "Kryket bat");
+				case 10 :
+					return(75, roqed_fish_5_20866, "Roqed fish");
+				case 11 :
+					return(75, murng_bat_5_20881, "Murng bat");
+				case 12 :
+					return(90, kyren_fish_6_20868, "Kyren fish");
+				case 13 :
+					return(90, psykk_bat_6_20883, "Psykk bat");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, guanic_bat_0_20871, "Guanic bat");
-			}
-			if ($int2 = 2) {
-				return(15, suphi_fish_1_20858, "Suphi fish");
-			}
-			if ($int2 = 3) {
-				return(15, prael_bat_1_20873, "Prael bat");
-			}
-			if ($int2 = 4) {
-				return(30, leckish_fish_2_20860, "Leckish fish");
-			}
-			if ($int2 = 5) {
-				return(30, giral_bat_2_20875, "Giral bat");
-			}
-			if ($int2 = 6) {
-				return(45, brawk_fish_3_20862, "Brawk fish");
-			}
-			if ($int2 = 7) {
-				return(45, phluxia_bat_3_20877, "Phluxia bat");
-			}
-			if ($int2 = 8) {
-				return(60, mycil_fish_4_20864, "Mycil fish");
-			}
-			if ($int2 = 9) {
-				return(60, kryket_bat_4_20879, "Kryket bat");
-			}
-			if ($int2 = 10) {
-				return(75, roqed_fish_5_20866, "Roqed fish");
-			}
-			if ($int2 = 11) {
-				return(75, murng_bat_5_20881, "Murng bat");
-			}
-			if ($int2 = 12) {
-				return(90, kyren_fish_6_20868, "Kyren fish");
-			}
-			if ($int2 = 13) {
-				return(90, psykk_bat_6_20883, "Psykk bat");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 13) {
-			if ($int2 = 0) {
-				return(-1, obj_7620, "Ritual Offering are used in the Ancient Offering Ritual in the ruins of Camdozaal (After Below Ice Mountain).");
-			} else if ($int2 = 1) {
-				return(7, guppy_25654, "Guppy");
-			} else if ($int2 = 2) {
-				return(20, cavefish_25660, "Cavefish");
-			} else if ($int2 = 3) {
-				return(33, tetra_25666, "Tetra");
-			} else if ($int2 = 4) {
-				return(46, catfish_25672, "Members: Catfish");
+			switch_int ($int2) {
+				case 0 :
+					return(-1, obj_7620, "Ritual Offering are used in the Ancient Offering Ritual in the ruins of Camdozaal (After Below Ice Mountain).");
+				case 1 :
+					return(7, guppy_25654, "Guppy");
+				case 2 :
+					return(20, cavefish_25660, "Cavefish");
+				case 3 :
+					return(33, tetra_25666, "Tetra");
+				case 4 :
+					return(46, catfish_25672, "Members: Catfish");
 			}
 		}
 		return(-1, null, "");
@@ -2793,16 +2342,38 @@ switch_int ($int0) {
 		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
+					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Cooking)");
+				case 1 :
+					return(35, secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Smithing)");
+				case 2 :
+					return(35, bee_on_a_stick_28184, "Members: Bee on a Stick<br>(with 50 Hunter)");
+				case 3 :
+					return(50, clothes_pouch_28163, "Members: Clothes Pouch<br>(with 50 Crafting)");
+				case 4 :
+					return(68, nature_offerings_28152, "Members: Nature Offerings<br>(with 50 Farming)");
+				case 5 :
+					return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 70 Crafting and 35 Farming)");
+				case 6 :
+					return(75, sturdy_harness_28149, "Members: Sturdy Harness<br>(with 75 Smithing)");
+				case default :
+					return(-1, null, "");
+			}
+		}
+		if ($int1 = 3) {
+			switch_int ($int2) {
+				case 0 :
 					return(12, paddle_7414, "Log canoe");
 				case 1 :
 					return(27, paddle_7414, "Dugout canoe");
 				case 2 :
 					return(42, paddle_7414, "Stable dugout canoe");
 				case 3 :
-					return(56, neitiznot_shield_10826, "Members: Fremennik round shield");
+					return(44, lumberjack_top_10939, "Members: Lumberjack and Forestry outfit.");
 				case 4 :
-					return(56, split_log_10812, "Members: Split arctic pine logs");
+					return(56, neitiznot_shield_10826, "Members: Fremennik round shield");
 				case 5 :
+					return(56, split_log_10812, "Members: Split arctic pine logs");
+				case 6 :
 					return(57, paddle_7414, "Waka canoe");
 				case default :
 					return(-1, null, "");
@@ -2811,235 +2382,173 @@ switch_int ($int0) {
 		return(-1, null, "");
 	case 12 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, air_rune_556, "Air runes");
+			switch_int ($int2) {
+				case 0 :
+					return(1, air_rune_556, "Air runes");
+				case 1 :
+					return(2, mind_rune_558, "Mind runes");
+				case 2 :
+					return(5, water_rune_555, "Water runes");
+				case 3 :
+					return(6, mist_rune_4695, "Members: Mist runes");
+				case 4 :
+					return(9, earth_rune_557, "Earth runes");
+				case 5 :
+					return(10, dust_rune_4696, "Members: Dust runes");
+				case 6 :
+					return(13, mud_rune_4698, "Members: Mud runes");
+				case 7 :
+					return(14, fire_rune_554, "Fire runes");
+				case 8 :
+					return(15, smoke_rune_4697, "Members: Smoke runes");
+				case 9 :
+					return(19, steam_rune_4694, "Members: Steam runes");
+				case 10 :
+					return(20, body_rune_559, "Body runes");
+				case 11 :
+					return(23, lava_rune_4699, "Members: Lava runes");
+				case 12 :
+					return(27, cosmic_rune_564, "Members: Cosmic runes");
+				case 13 :
+					return(35, chaos_rune_562, "Members: Chaos runes");
+				case 14 :
+					return(40, astral_rune_9075, "Members: Astral runes");
+				case 15 :
+					return(44, nature_rune_561, "Members: Nature runes");
+				case 16 :
+					return(54, law_rune_563, "Members: Law runes");
+				case 17 :
+					return(65, death_rune_560, "Members: Death runes");
+				case 18 :
+					return(77, blood_rune_565, "Members: Blood runes");
+				case 19 :
+					return(90, soul_rune_566, "Members: Soul runes");
+				case 20 :
+					return(95, wrath_rune_21880, "Members: Wrath runes");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(2, mind_rune_558, "Mind runes");
-			}
-			if ($int2 = 2) {
-				return(5, water_rune_555, "Water runes");
-			}
-			if ($int2 = 3) {
-				return(6, mist_rune_4695, "Members: Mist runes");
-			}
-			if ($int2 = 4) {
-				return(9, earth_rune_557, "Earth runes");
-			}
-			if ($int2 = 5) {
-				return(10, dust_rune_4696, "Members: Dust runes");
-			}
-			if ($int2 = 6) {
-				return(13, mud_rune_4698, "Members: Mud runes");
-			}
-			if ($int2 = 7) {
-				return(14, fire_rune_554, "Fire runes");
-			}
-			if ($int2 = 8) {
-				return(15, smoke_rune_4697, "Members: Smoke runes");
-			}
-			if ($int2 = 9) {
-				return(19, steam_rune_4694, "Members: Steam runes");
-			}
-			if ($int2 = 10) {
-				return(20, body_rune_559, "Body runes");
-			}
-			if ($int2 = 11) {
-				return(23, lava_rune_4699, "Members: Lava runes");
-			}
-			if ($int2 = 12) {
-				return(27, cosmic_rune_564, "Members: Cosmic runes");
-			}
-			if ($int2 = 13) {
-				return(35, chaos_rune_562, "Members: Chaos runes");
-			}
-			if ($int2 = 14) {
-				return(40, astral_rune_9075, "Members: Astral runes");
-			}
-			if ($int2 = 15) {
-				return(44, nature_rune_561, "Members: Nature runes");
-			}
-			if ($int2 = 16) {
-				return(54, law_rune_563, "Members: Law runes");
-			}
-			if ($int2 = 17) {
-				return(65, death_rune_560, "Members: Death runes");
-			}
-			if ($int2 = 18) {
-				return(77, blood_rune_565, "Members: Blood runes");
-			}
-			if ($int2 = 19) {
-				return(90, soul_rune_566, "Members: Soul runes");
-			}
-			if ($int2 = 20) {
-				return(95, wrath_rune_21880, "Members: Wrath runes");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(-1, obj_7620, "As your Runecrafting skill develops, you will be able to craft multiple runes from one piece of essence. You only receive experience for each piece of essence crafted, not each rune crafted.");
+			switch_int ($int2) {
+				case 0 :
+					return(-1, obj_7620, "As your Runecrafting skill develops, you will be able to craft multiple runes from one piece of essence. You only receive experience for each piece of essence crafted, not each rune crafted.");
+				case 1 :
+					return(11, air_rune_556, "2 Air runes per essence");
+				case 2 :
+					return(14, mind_rune_558, "2 Mind runes per essence");
+				case 3 :
+					return(19, water_rune_555, "2 Water runes per essence");
+				case 4 :
+					return(22, air_rune_556, "3 Air runes per essence");
+				case 5 :
+					return(26, earth_rune_557, "2 Earth runes per essence");
+				case 6 :
+					return(28, mind_rune_558, "3 Mind runes per essence");
+				case 7 :
+					return(33, air_rune_556, "4 Air runes per essence");
+				case 8 :
+					return(35, fire_rune_554, "2 Fire runes per essence");
+				case 9 :
+					return(38, water_rune_555, "3 Water runes per essence");
+				case 10 :
+					return(42, mind_rune_558, "4 Mind runes per essence");
+				case 11 :
+					return(44, air_rune_556, "5 Air runes per essence");
+				case 12 :
+					return(46, body_rune_559, "2 Body runes per essence");
+				case 13 :
+					return(52, earth_rune_557, "3 Earth runes per essence");
+				case 14 :
+					return(55, air_rune_556, "6 Air runes per essence");
+				case 15 :
+					return(56, mind_rune_558, "5 Mind runes per essence");
+				case 16 :
+					return(57, water_rune_555, "4 Water runes per essence");
+				case 17 :
+					return(59, cosmic_rune_564, "Members: 2 Cosmic runes per essence");
+				case 18 :
+					return(66, air_rune_556, "7 Air runes per essence");
+				case 19 :
+					return(70, mind_rune_558, "6 Mind runes per essence");
+				case 20 :
+					return(70, fire_rune_554, "3 Fire runes per essence");
+				case 21 :
+					return(74, chaos_rune_562, "Members: 2 Chaos runes per essence");
+				case 22 :
+					return(76, water_rune_555, "5 Water runes per essence");
+				case 23 :
+					return(77, air_rune_556, "8 Air runes per essence");
+				case 24 :
+					return(78, earth_rune_557, "4 Earth runes per essence");
+				case 25 :
+					return(82, astral_rune_9075, "Members: 2 Astral runes per essence");
+				case 26 :
+					return(84, mind_rune_558, "7 Mind runes per essence");
+				case 27 :
+					return(88, air_rune_556, "9 Air runes per essence");
+				case 28 :
+					return(91, nature_rune_561, "Members: 2 Nature runes per essence");
+				case 29 :
+					return(92, body_rune_559, "3 Body runes per essence");
+				case 30 :
+					return(95, water_rune_555, "6 Water runes per essence");
+				case 31 :
+					return(95, law_rune_563, "Members: 2 Law runes per essence");
+				case 32 :
+					return(98, mind_rune_558, "8 Mind runes per essence");
+				case 33 :
+					return(99, air_rune_556, "10 Air runes per essence");
+				case 34 :
+					return(99, death_rune_560, "Members: 2 Death runes per essence");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(11, air_rune_556, "2 Air runes per essence");
-			}
-			if ($int2 = 2) {
-				return(14, mind_rune_558, "2 Mind runes per essence");
-			}
-			if ($int2 = 3) {
-				return(19, water_rune_555, "2 Water runes per essence");
-			}
-			if ($int2 = 4) {
-				return(22, air_rune_556, "3 Air runes per essence");
-			}
-			if ($int2 = 5) {
-				return(26, earth_rune_557, "2 Earth runes per essence");
-			}
-			if ($int2 = 6) {
-				return(28, mind_rune_558, "3 Mind runes per essence");
-			}
-			if ($int2 = 7) {
-				return(33, air_rune_556, "4 Air runes per essence");
-			}
-			if ($int2 = 8) {
-				return(35, fire_rune_554, "2 Fire runes per essence");
-			}
-			if ($int2 = 9) {
-				return(38, water_rune_555, "3 Water runes per essence");
-			}
-			if ($int2 = 10) {
-				return(42, mind_rune_558, "4 Mind runes per essence");
-			}
-			if ($int2 = 11) {
-				return(44, air_rune_556, "5 Air runes per essence");
-			}
-			if ($int2 = 12) {
-				return(46, body_rune_559, "2 Body runes per essence");
-			}
-			if ($int2 = 13) {
-				return(52, earth_rune_557, "3 Earth runes per essence");
-			}
-			if ($int2 = 14) {
-				return(55, air_rune_556, "6 Air runes per essence");
-			}
-			if ($int2 = 15) {
-				return(56, mind_rune_558, "5 Mind runes per essence");
-			}
-			if ($int2 = 16) {
-				return(57, water_rune_555, "4 Water runes per essence");
-			}
-			if ($int2 = 17) {
-				return(59, cosmic_rune_564, "Members: 2 Cosmic runes per essence");
-			}
-			if ($int2 = 18) {
-				return(66, air_rune_556, "7 Air runes per essence");
-			}
-			if ($int2 = 19) {
-				return(70, mind_rune_558, "6 Mind runes per essence");
-			}
-			if ($int2 = 20) {
-				return(70, fire_rune_554, "3 Fire runes per essence");
-			}
-			if ($int2 = 21) {
-				return(74, chaos_rune_562, "Members: 2 Chaos runes per essence");
-			}
-			if ($int2 = 22) {
-				return(76, water_rune_555, "5 Water runes per essence");
-			}
-			if ($int2 = 23) {
-				return(77, air_rune_556, "8 Air runes per essence");
-			}
-			if ($int2 = 24) {
-				return(78, earth_rune_557, "4 Earth runes per essence");
-			}
-			if ($int2 = 25) {
-				return(82, astral_rune_9075, "Members: 2 Astral runes per essence");
-			}
-			if ($int2 = 26) {
-				return(84, mind_rune_558, "7 Mind runes per essence");
-			}
-			if ($int2 = 27) {
-				return(88, air_rune_556, "9 Air runes per essence");
-			}
-			if ($int2 = 28) {
-				return(91, nature_rune_561, "Members: 2 Nature runes per essence");
-			}
-			if ($int2 = 29) {
-				return(92, body_rune_559, "3 Body runes per essence");
-			}
-			if ($int2 = 30) {
-				return(95, water_rune_555, "6 Water runes per essence");
-			}
-			if ($int2 = 31) {
-				return(95, law_rune_563, "Members: 2 Law runes per essence");
-			}
-			if ($int2 = 32) {
-				return(98, mind_rune_558, "8 Mind runes per essence");
-			}
-			if ($int2 = 33) {
-				return(99, air_rune_556, "10 Air runes per essence");
-			}
-			if ($int2 = 34) {
-				return(99, death_rune_560, "Members: 2 Death runes per essence");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(-1, obj_7620, "Pouches come in various sizes which allow you to carry extra essence in them. As you use the pouches they degrade and store less essence, just speak to the Dark Mage at the centre of the Abyss to restore them.");
+			switch_int ($int2) {
+				case 0 :
+					return(-1, obj_7620, "Pouches come in various sizes which allow you to carry extra essence in them. As you use the pouches they degrade and store less essence, just speak to the Dark Mage at the centre of the Abyss to restore them.");
+				case 1 :
+					return(1, small_pouch_5509, "Small pouch: Holds 3 extra essence");
+				case 2 :
+					return(25, medium_pouch_5510, "Medium pouch: Holds 6 extra essence");
+				case 3 :
+					return(50, large_pouch_5512, "Large pouch: Holds 9 extra essence");
+				case 4 :
+					return(75, giant_pouch_5514, "Giant pouch: Holds 12 extra essence");
+				case 5 :
+					return(85, colossal_pouch_26784, "Colossal pouch: Holds 40 essence");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, small_pouch_5509, "Small pouch: Holds 3 extra essence");
-			}
-			if ($int2 = 2) {
-				return(25, medium_pouch_5510, "Medium pouch: Holds 6 extra essence");
-			}
-			if ($int2 = 3) {
-				return(50, large_pouch_5512, "Large pouch: Holds 9 extra essence");
-			}
-			if ($int2 = 4) {
-				return(75, giant_pouch_5514, "Giant pouch: Holds 12 extra essence");
-			}
-			if ($int2 = 5) {
-				return(85, colossal_pouch_26784, "Colossal pouch: Holds 40 essence");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 3) {
-			if ($int2 = 0) {
-				return(42, swampbark_boots_25395, "Swampbark boots and gauntlets");
+			switch_int ($int2) {
+				case 0 :
+					return(42, swampbark_boots_25395, "Swampbark boots and gauntlets");
+				case 1 :
+					return(46, swampbark_helm_25398, "Swampbark helm");
+				case 2 :
+					return(48, swampbark_body_25389, "Swampbark body and legs");
+				case 3 :
+					return(60, eternal_boots_13235, "Eternal boots (with 60 Magic)");
+				case 4 :
+					return(60, pegasian_boots_13237, "Pegasian boots (with 60 Magic)");
+				case 5 :
+					return(60, primordial_boots_13239, "Primordial boots (with 60 Magic)");
+				case 6 :
+					return(77, bloodbark_boots_25410, "Bloodbark boots and gauntlets");
+				case 7 :
+					return(79, bloodbark_helm_25413, "Bloodbark helm");
+				case 8 :
+					return(81, bloodbark_body_25404, "Bloodbark body and legs");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(46, swampbark_helm_25398, "Swampbark helm");
-			}
-			if ($int2 = 2) {
-				return(48, swampbark_body_25389, "Swampbark body and legs");
-			}
-			if ($int2 = 3) {
-				return(60, eternal_boots_13235, "Eternal boots (with 60 Magic)");
-			}
-			if ($int2 = 4) {
-				return(60, pegasian_boots_13237, "Pegasian boots (with 60 Magic)");
-			}
-			if ($int2 = 5) {
-				return(60, primordial_boots_13239, "Primordial boots (with 60 Magic)");
-			}
-			if ($int2 = 6) {
-				return(77, bloodbark_boots_25410, "Bloodbark boots and gauntlets");
-			}
-			if ($int2 = 7) {
-				return(79, bloodbark_helm_25413, "Bloodbark helm");
-			}
-			if ($int2 = 8) {
-				return(81, bloodbark_body_25404, "Bloodbark body and legs");
-			}
-			return(-1, null, "");
 		}
-		if ($int1 = 4) {
-			if ($int2 = 0) {
-				return(27, eye_amulet_26903, "Guardians of the Rift<br>(after Temple of the Eye)");
-			}
-			return(-1, null, "");
+		if ($int1 = 4 & $int2 = 0) {
+			return(27, eye_amulet_26903, "Guardians of the Rift<br>(after Temple of the Eye)");
 		}
 		return(-1, null, "");
 	case 20 :

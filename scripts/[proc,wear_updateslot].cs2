@@ -12,7 +12,7 @@ if ($obj3 = null) {
 cc_sethide(false);
 .cc_sethide(true);
 cc_setobject($obj3, inv_getnum(worn, $int1));
-if_setopbase("<col=ff9040><oc_name($obj3)></col>", $component0);
+if_setopbase("<col=ff9040><~script1787($obj3)></col>", $component0);
 if_setop(1, "Remove", $component0);
 def_string $string0 = "";
 if ($boolean2 = true) {
@@ -49,14 +49,18 @@ if ($boolean2 = true) {
 		if (string_length($string0) > 0) {
 			if_setop(9, $string0, $component0);
 		}
-		if ($obj3 = camulet_6707) {
-			if (%varbit4525 = 1 | %varbit4526 = 1) {
-				if_setop(3, "Temple", $component0);
-				if_setop(4, "Surface", $component0);
-			}
-			if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){var1190}", $component0);
-		} else {
-			if_setonvartransmit(null, $component0);
+		switch_obj ($obj3) {
+			case camulet_6707 :
+				if (%varbit4525 = 1 | %varbit4526 = 1) {
+					if_setop(3, "Temple", $component0);
+					if_setop(4, "Surface", $component0);
+				}
+				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){var1190}", $component0);
+			case escape_crystal_22517 :
+				if_setop(4, ~script1786($obj3, 3), $component0);
+				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){var3150}", $component0);
+			case default :
+				if_setonvartransmit(null, $component0);
 		}
 	} else {
 		if_setonvartransmit(null, $component0);

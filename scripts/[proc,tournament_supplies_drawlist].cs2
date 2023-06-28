@@ -12,6 +12,9 @@ if (~wildwars_world = 1) {
 	$enum8 = enum_1735;
 }
 def_int $int9 = ~tournament_beta_world;
+if (~beta_world = 1) {
+	$int9 = 1;
+}
 def_namedobj $namedobj10 = enum(int, namedobj, $enum8, $int7);
 while ($namedobj10 ! null) {
 	if (cc_find($component0, $int7) = ^true) {

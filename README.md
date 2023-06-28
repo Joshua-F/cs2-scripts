@@ -316,6 +316,7 @@
 [**313**](scripts/[clientscript,music_vartransmit].cs2) `[clientscript,music_vartransmit]`  
 [**314**](scripts/[proc,music_setcolour].cs2) `[proc,music_setcolour]`  
 [**315**](scripts/[clientscript,music_optionbuttons_setmode].cs2) `[clientscript,music_optionbuttons_setmode]`  
+[**316**](scripts/[clientscript,script316].cs2)  
 [**317**](scripts/[clientscript,music_optionbuttons_resynch].cs2) `[clientscript,music_optionbuttons_resynch]`  
 [**318**](scripts/[proc,music_optionbuttons].cs2) `[proc,music_optionbuttons]`  
 [**319**](scripts/[clientscript,slayer_rewards_confirm_back].cs2) `[clientscript,slayer_rewards_confirm_back]`  
@@ -1282,6 +1283,8 @@
 [**1280**](scripts/[proc,script1280].cs2)  
 [**1281**](scripts/[clientscript,burgh_set_hover].cs2) `[clientscript,burgh_set_hover]`  
 [**1282**](scripts/[proc,script1282].cs2)  
+[**1283**](scripts/[clientscript,script1283].cs2)  
+[**1284**](scripts/[proc,script1284].cs2)  
 [**1285**](scripts/[proc,colour_interpolate].cs2) `[proc,colour_interpolate]`  
 [**1286**](scripts/[clientscript,glidermap_init].cs2) `[clientscript,glidermap_init]`  
 [**1287**](scripts/[clientscript,glidermap_hideshow].cs2) `[clientscript,glidermap_hideshow]`  
@@ -1757,7 +1760,34 @@
 [**1757**](scripts/[proc,worldmap_elements_marker].cs2) `[proc,worldmap_elements_marker]`  
 [**1758**](scripts/[clientscript,script1758].cs2)  
 [**1759**](scripts/[proc,script1759].cs2)  
+[**1760**](scripts/[proc,script1760].cs2)  
+[**1761**](scripts/[clientscript,script1761].cs2)  
+[**1762**](scripts/[proc,script1762].cs2)  
+[**1763**](scripts/[proc,script1763].cs2)  
+[**1764**](scripts/[clientscript,script1764].cs2)  
+[**1765**](scripts/[clientscript,script1765].cs2)  
 [**1766**](scripts/[clientscript,helper_agility_highlight_obstacles].cs2) `[clientscript,helper_agility_highlight_obstacles]`  
+[**1767**](scripts/[proc,script1767].cs2)  
+[**1768**](scripts/[proc,script1768].cs2)  
+[**1769**](scripts/[proc,script1769].cs2)  
+[**1770**](scripts/[clientscript,script1770].cs2)  
+[**1771**](scripts/[clientscript,script1771].cs2)  
+[**1772**](scripts/[proc,script1772].cs2)  
+[**1773**](scripts/[proc,script1773].cs2)  
+[**1774**](scripts/[proc,script1774].cs2)  
+[**1775**](scripts/[proc,script1775].cs2)  
+[**1776**](scripts/[proc,script1776].cs2)  
+[**1777**](scripts/[proc,script1777].cs2)  
+[**1778**](scripts/[proc,script1778].cs2)  
+[**1779**](scripts/[clientscript,script1779].cs2)  
+[**1780**](scripts/[clientscript,script1780].cs2)  
+[**1781**](scripts/[clientscript,script1781].cs2)  
+[**1782**](scripts/[clientscript,script1782].cs2)  
+[**1783**](scripts/[proc,script1783].cs2)  
+[**1784**](scripts/[proc,script1784].cs2)  
+[**1785**](scripts/[proc,script1785].cs2)  
+[**1786**](scripts/[proc,script1786].cs2)  
+[**1787**](scripts/[proc,script1787].cs2)  
 [**1817**](scripts/[clientscript,keyboard_show_string].cs2) `[clientscript,keyboard_show_string]`  
 [**1838**](scripts/[proc,keyboard_show_string].cs2) `[proc,keyboard_show_string]`  
 [**1846**](scripts/[clientscript,script1846].cs2)  

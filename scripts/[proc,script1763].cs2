@@ -1,0 +1,53 @@
+// 1763
+[proc,script1763](int $int0)
+def_component $component1 = interface_823:11;
+def_component $component2 = interface_823:12;
+def_component $component3 = interface_823:13;
+def_component $component4 = interface_823:14;
+def_component $component5 = interface_823:15;
+def_component $component6 = interface_823:16;
+def_component $component7 = interface_823:10;
+def_fontmetrics $fontmetrics8 = p11_full;
+switch_int (%varcint988) {
+	case 1 :
+		$fontmetrics8 = verdana_11pt_regular;
+	case 2 :
+		$fontmetrics8 = verdana_11pt_regular;
+	case 3 :
+		$fontmetrics8 = verdana_13pt_regular;
+}
+def_boolean $boolean9 = true;
+def_int $size10 = 0;
+def_namedobj $namedobj11 = enum(int, namedobj, enum_817, $int0);
+def_int $total12 = inv_total(inv_814, $namedobj11);
+if ($total12 < 1) {
+	$boolean9 = false;
+}
+~script7139($component4, "All", $boolean9, false);
+~script7139($component3, "X", $boolean9, false);
+~script7139($component1, "1", $boolean9, false);
+if ($total12 < 5) {
+	$boolean9 = false;
+}
+~script7139($component2, "5", $boolean9, false);
+$boolean9 = false;
+$size10 = 1;
+def_namedobj $namedobj13 = enum(int, namedobj, enum_817, $size10);
+while ($namedobj13 ! null & $boolean9 = false) {
+	if (inv_total(inv, $namedobj13) > 0) {
+		$boolean9 = true;
+	}
+	$size10 = calc($size10 + 1);
+	$namedobj13 = enum(int, namedobj, enum_817, $size10);
+}
+~script7139($component5, "Fill", $boolean9, false);
+$boolean9 = false;
+$size10 = 0;
+while ($size10 < inv_size(inv_814) & $boolean9 = false) {
+	if (inv_getnum(inv_814, $size10) > 0) {
+		$boolean9 = true;
+	}
+	$size10 = calc($size10 + 1);
+}
+~script7139($component6, "Empty", $boolean9, false);
+if_settextfont($fontmetrics8, $component7);

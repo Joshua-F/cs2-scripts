@@ -1,0 +1,26 @@
+// 1775
+[proc,script1775](int $int0)(string)
+if ($int0 < 2) {
+	return("a moment");
+}
+def_int $int1 = calc($int0 / 60);
+$int0 = calc($int0 % 60);
+if ($int1 < 1) {
+	return("<tostring($int0)> seconds");
+}
+if ($int1 = 1) {
+	if ($int0 = 0) {
+		return("1 minute");
+	}
+	if ($int0 = 1) {
+		return("1 minute, 1 second");
+	}
+	return("1 minute, <tostring($int0)> seconds");
+}
+if ($int0 = 0) {
+	return("<tostring($int1)> minutes");
+}
+if ($int0 = 1) {
+	return("<tostring($int1)> minutes, 1 second");
+}
+return("<tostring($int1)> minutes, <tostring($int0)> seconds");

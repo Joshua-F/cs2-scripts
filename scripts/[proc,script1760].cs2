@@ -1,0 +1,111 @@
+// 1760
+[proc,script1760](int $int0, int $int1, int $int2, namedobj $namedobj3, int $total4, int $int5)(int, int, int)
+def_int $int6 = 0;
+if (oc_param($namedobj3, param_1793) = true & inv_total(inv_814, $namedobj3) < 1) {
+	$int6 = 1;
+}
+def_component $component7 = interface_823:21;
+def_int $int8 = 3;
+def_int $int9 = 7;
+def_int $int10 = 74;
+def_int $int11 = 100;
+def_fontmetrics $fontmetrics12 = p12_full;
+def_int $int13 = 496;
+def_int $int14 = 0;
+switch_int (%varcint988) {
+	case 1 :
+		$int8 = 4;
+		$int10 = 78;
+		$fontmetrics12 = verdana_11pt_regular;
+		$int13 = 1446;
+		$int14 = 1;
+	case 2 :
+		$int8 = 6;
+		$int11 = 120;
+		$int10 = 82;
+		$int9 = 10;
+		$fontmetrics12 = verdana_13pt_regular;
+		$int13 = 1446;
+		$int14 = 1;
+	case 3 :
+		$int8 = 7;
+		$int11 = 120;
+		$int10 = 86;
+		$int9 = 12;
+		$fontmetrics12 = verdana_13pt_regular;
+		$int13 = 1446;
+		$int14 = 2;
+}
+def_int $int15 = calc(if_getwidth($component7) / $int11);
+def_int $int16 = calc((if_getwidth($component7) - ($int15 + 1) * $int8) / $int15);
+def_int $int17 = calc($int2 % $int15 * ($int16 + $int8) + $int8);
+def_int $int18 = calc($int2 / $int15 * ($int10 + $int8) + $int8);
+def_int $int19 = 0;
+if ($int6 = 1) {
+	while ($int19 < 12) {
+		cc_create($component7, ^iftype_rectangle, $int0);
+		cc_sethide(true);
+		$int0 = calc($int0 + 1);
+		$int19 = calc($int19 + 1);
+	}
+	if (calc($int2 % $int15) > 0) {
+		$int18 = calc($int18 + $int10 + $int8);
+	}
+	return($int0, 0, $int18);
+}
+def_int $colour20 = 0x726451;
+if ($int5 = 1) {
+	$colour20 = 0xff981f;
+}
+$int0 = ~script5288($component7, $int0, $int17, $int18, $int16, $int10, struct_3712, $colour20);
+cc_setop(1, "Select");
+switch_int (%varbit14985) {
+	case default :
+		cc_setop(2, "Withdraw-1");
+		cc_setop(4, "Withdraw-5");
+		cc_setop(5, "Withdraw-X");
+		cc_setop(6, "Withdraw-All");
+	case 1 :
+		cc_setop(2, "Withdraw-5");
+		cc_setop(3, "Withdraw-1");
+		cc_setop(5, "Withdraw-X");
+		cc_setop(6, "Withdraw-All");
+	case 3 :
+		cc_setop(2, "Withdraw-X");
+		cc_setop(3, "Withdraw-1");
+		cc_setop(4, "Withdraw-5");
+		cc_setop(6, "Withdraw-All");
+	case 2 :
+		cc_setop(2, "Withdraw-All");
+		cc_setop(3, "Withdraw-1");
+		cc_setop(4, "Withdraw-5");
+		cc_setop(5, "Withdraw-X");
+}
+cc_setop(10, "Examine");
+cc_setopbase("<col=ff9040><oc_name($namedobj3)></col>");
+if (~on_mobile = false & $int5 = 0) {
+	cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0xb8a182)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour20)");
+}
+if ($int5 = 0) {
+	cc_setonop("script1761($int1, event_op)");
+} else {
+	cc_setonop("script1761(-1, event_op)");
+}
+cc_create($component7, ^iftype_graphic, $int0);
+cc_setposition(calc($int17 + $int16 / 2 - 36 / 2), calc($int18 + $int9), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setobject($namedobj3, $total4);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+$int0 = calc($int0 + 1);
+cc_create($component7, ^iftype_text, $int0);
+cc_setposition(calc($int17 + 7), calc($int18 + 27 + $int9 + $int14), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int16 - 14), 40, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics12);
+cc_setcolour(0xff981f);
+cc_settext(oc_name($namedobj3));
+$int0 = calc($int0 + 1);
+return($int0, 1, calc($int18 + $int10 + $int8));

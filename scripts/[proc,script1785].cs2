@@ -1,0 +1,16 @@
+// 1785
+[proc,script1785](component $component0)
+switch_int (%varcint988) {
+	case 1 :
+		if_setposition(0, 37, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+		if_setsize(12, calc(37 + 6), ^setsize_minus, ^setsize_minus, $component0);
+	case 2 :
+		if_setposition(0, 37, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+		if_setsize(12, calc(37 + 6), ^setsize_minus, ^setsize_minus, $component0);
+	case 3 :
+		if_setposition(0, 39, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+		if_setsize(12, calc(39 + 6), ^setsize_minus, ^setsize_minus, $component0);
+	case default :
+		if_setposition(0, 35, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+		if_setsize(12, calc(35 + 6), ^setsize_minus, ^setsize_minus, $component0);
+}

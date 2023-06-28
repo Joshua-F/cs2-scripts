@@ -1,0 +1,6 @@
+// 1781
+[clientscript,script1781](int $int0, string $string0, string $string1)
+if (~rental_world = 0 | $int0 ! 1) {
+	return;
+}
+~debug_mes_error($string0, $string1);

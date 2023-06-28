@@ -1,5 +1,5 @@
-// 4061
-[clientscript,tackle_box_side_init](component $component0)
+// 1764
+[clientscript,script1764](component $component0)
 cc_deleteall($component0);
 def_int $size1 = inv_size(inv);
 def_int $size2 = 0;
@@ -12,6 +12,5 @@ while ($size2 < $size1) {
 	cc_setdragdeadtime(5);
 	$size2 = calc($size2 + 1);
 }
-~tackle_box_side_draw($size1, $component0);
-if_setoninvtransmit("tackle_box_side_draw($size1, $component0){inv}", $component0);
-if_setonvartransmit("tackle_box_side_draw($size1, $component0){var2894}", $component0);
+~script1767($size1, $component0);
+if_setoninvtransmit("script1765($size1, $component0){inv}", $component0);

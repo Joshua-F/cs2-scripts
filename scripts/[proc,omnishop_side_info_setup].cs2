@@ -84,6 +84,10 @@ def_int $int22 = 0;
 def_int $int23 = 1;
 def_inv $inv24 = db_getfield($dbrow1, dbtable_39:1, 0);
 def_dbrow $dbrow25 = null;
+if ($int5 ! -1) {
+	$dbrow25 = db_getfield($dbrow1, dbtable_39:5, $int5);
+}
+def_dbrow $dbrow26 = null;
 if (string_length($string0) > 0) {
 	cc_create($component9, ^iftype_text, $int18);
 	cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
@@ -96,13 +100,16 @@ if (string_length($string0) > 0) {
 	$int18 = calc($int18 + 1);
 	$int19 = calc($int19 + 20);
 	if ($int5 ! -1) {
-		$dbrow25, $int4 = ~omnishop_cost($dbrow1, $inv24, $int5, $int22, 0);
+		$dbrow26, $int4 = ~omnishop_cost($dbrow1, $inv24, $int5, $int22, 0);
+	}
+	if ($int5 ! -1 & db_getfield($dbrow25, dbtable_40:13, 0) = false) {
+		$int4 = 0;
 	}
 	while ($int4 > 0) {
 		if ($int4 = 1) {
-			$string1 = "<tostring($int4)> <db_getfield($dbrow25, dbtable_41:1, 0)>";
+			$string1 = "<tostring($int4)> <db_getfield($dbrow26, dbtable_41:1, 0)>";
 		} else {
-			$string1 = "<tostring($int4)> <db_getfield($dbrow25, dbtable_41:2, 0)>";
+			$string1 = "<tostring($int4)> <db_getfield($dbrow26, dbtable_41:2, 0)>";
 		}
 		cc_create($component9, ^iftype_text, $int18);
 		cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
@@ -115,7 +122,7 @@ if (string_length($string0) > 0) {
 		$int18 = calc($int18 + 1);
 		$int19 = calc($int19 + 20);
 		$int22 = calc($int22 + 1);
-		$dbrow25, $int4 = ~omnishop_cost($dbrow1, $inv24, $int5, $int22, 0);
+		$dbrow26, $int4 = ~omnishop_cost($dbrow1, $inv24, $int5, $int22, 0);
 	}
 	if ($int22 = 0) {
 		cc_create($component9, ^iftype_text, $int18);

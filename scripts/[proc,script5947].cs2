@@ -121,9 +121,5 @@ if (struct_param($struct0, param_1553) = true) {
 }
 $int1 = calc($int1 + 1);
 def_component $component15 = interface_651:5;
-if (struct_param($struct0, param_1482) = true) {
-	~buff_bar_buff_create_tooltip($component2, $int1, $component15, ~buff_bar_dynamic_tooltip($int3), $int6, $int7);
-} else {
-	~buff_bar_buff_create_tooltip($component2, $int1, $component15, struct_param($struct0, param_1279), $int6, $int7);
-}
+~buff_bar_buff_create_tooltip($struct0, $component2, $int1, $component15, $int6, $int7);
 $int1 = calc($int1 + 1);

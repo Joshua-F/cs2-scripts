@@ -250,10 +250,14 @@ switch_int ($int0) {
 	case 12 :
 		switch_int ($int1) {
 			case 0 :
-				return(45, obj_23006, "Farming Guild - Low tier<br>(with 60% Hosidius Favour)");
+				return(35, leprechaun_charm_28179, "Leprechaun Charm<br>(with 70 Crafting and 70 Woodcutting)");
 			case 1 :
-				return(65, obj_23005, "Farming Guild - Mid tier<br>(with 60% Hosidius Favour)");
+				return(45, obj_23006, "Farming Guild - Low tier<br>(with 60% Hosidius Favour)");
 			case 2 :
+				return(50, nature_offerings_28152, "Nature offerings<br>(with 68 Woodcutting)");
+			case 3 :
+				return(65, obj_23005, "Farming Guild - Mid tier<br>(with 60% Hosidius Favour)");
+			case 4 :
 				return(85, obj_23005, "Farming Guild - High tier<br>(with 60% Hosidius Favour)");
 		}
 }

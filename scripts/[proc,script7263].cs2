@@ -1,5 +1,8 @@
 // 7263
 [proc,script7263](dbrow $dbrow0, inv $inv1, int $int2)(obj, namedobj, int)
+if ($int2 < 0) {
+	return(null, null, 0);
+}
 def_int $int3 = 1;
 def_dbrow $dbrow4 = null;
 if (db_getfieldcount($dbrow0, dbtable_39:5) = 0) {

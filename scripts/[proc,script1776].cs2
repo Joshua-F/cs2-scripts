@@ -1,0 +1,7 @@
+// 1776
+[proc,script1776](int $int0)(int)
+def_int $int1 = scale(60, 100, $int0);
+if (calc($int0 % 10 * 6 % 10) >= 5) {
+	$int1 = calc($int1 + 1);
+}
+return($int1);

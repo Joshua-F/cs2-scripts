@@ -1,15 +1,14 @@
 // 662
 [proc,skill_guide_salamanders](int $int0)(int, namedobj, string)
-if ($int0 = 0) {
-	return(30, swamp_lizard_10149, "Swamp lizard<br> (with 30 Attack, 30 Ranged & 30 Magic)");
+switch_int ($int0) {
+	case 0 :
+		return(30, swamp_lizard_10149, "Swamp lizard<br> (with 30 Attack, 30 Ranged & 30 Magic)");
+	case 1 :
+		return(50, orange_salamander_10146, "Orange salamander<br> (with 50 Attack, 50 Ranged & 50 Magic)");
+	case 2 :
+		return(60, red_salamander_10147, "Red salamander<br> (with 60 Attack, 60 Ranged & 60 Magic)");
+	case 3 :
+		return(70, black_salamander_10148, "Black salamander<br> (with 70 Attack, 70 Ranged & 70 Magic)");
+	case default :
+		return(-1, null, "");
 }
-if ($int0 = 1) {
-	return(50, orange_salamander_10146, "Orange salamander<br> (with 50 Attack, 50 Ranged & 50 Magic)");
-}
-if ($int0 = 2) {
-	return(60, red_salamander_10147, "Red salamander<br> (with 60 Attack, 60 Ranged & 60 Magic)");
-}
-if ($int0 = 3) {
-	return(70, black_salamander_10148, "Black salamander<br> (with 70 Attack, 70 Ranged & 70 Magic)");
-}
-return(-1, null, "");

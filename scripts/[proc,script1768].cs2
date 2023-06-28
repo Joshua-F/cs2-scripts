@@ -1,20 +1,20 @@
-// 4053
-[proc,tackle_box_setsideitem](obj $obj0, int $num1, int $comsubid2)
+// 1768
+[proc,script1768](obj $obj0, int $num1, int $comsubid2)
 def_int $trans3 = 150;
 def_int $trans4 = 200;
 def_int $int5 = 0;
-def_int $int6 = 0;
-def_namedobj $namedobj7 = enum(int, namedobj, enum_3702, $int6);
+def_int $int6 = 1;
+def_namedobj $namedobj7 = enum(int, namedobj, enum_817, $int6);
 while ($int5 = 0 & $namedobj7 ! null) {
 	if ($obj0 = $namedobj7) {
 		$int5, $trans3, $trans4 = 1, 0, 120;
 	}
 	$int6 = calc($int6 + 1);
-	$namedobj7 = enum(int, namedobj, enum_3702, $int6);
+	$namedobj7 = enum(int, namedobj, enum_817, $int6);
 }
 cc_settrans($trans3);
 cc_setobject($obj0, $num1);
-switch_int (%varbit11795) {
+switch_int (%varbit14985) {
 	case default :
 		cc_setop(1, "Deposit-1");
 		cc_setop(3, "Deposit-5");
@@ -38,5 +38,5 @@ switch_int (%varbit11795) {
 }
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-cc_setonop("tackle_box_opitem(event_op, event_com, event_comsubid, $trans4, $trans3)");
-cc_setondragcomplete("tackle_box_swapsideitem(event_com, event_comsubid, event_com2, event_comsubid2, $comsubid2)");
+cc_setonop("script1770(event_op, event_com, event_comsubid, $trans4, $trans3)");
+cc_setondragcomplete("script1771(event_com, event_comsubid, event_com2, event_comsubid2, $comsubid2)");
