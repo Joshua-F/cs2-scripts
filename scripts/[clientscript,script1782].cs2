@@ -2,7 +2,7 @@
 [clientscript,script1782](struct $struct0, component $component1, int $int2, component $component3, int $width4)
 def_string $string0 = ~buff_bar_dynamic_tooltip(struct_param($struct0, param_1275));
 if (~on_mobile = true) {
-	~script1783($component1, $int2, $component3, $string0, $width4);
+	~buff_bar_mobile_tooltip($component1, $int2, $component3, $string0, $width4);
 } else {
 	~tooltip_mouserepeat($component1, $int2, $component3, $string0, 0, $width4);
 }

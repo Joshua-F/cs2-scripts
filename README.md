@@ -1783,7 +1783,7 @@
 [**1780**](scripts/[clientscript,script1780].cs2)  
 [**1781**](scripts/[clientscript,script1781].cs2)  
 [**1782**](scripts/[clientscript,script1782].cs2)  
-[**1783**](scripts/[proc,script1783].cs2)  
+[**1783**](scripts/[proc,buff_bar_mobile_tooltip].cs2) `[proc,buff_bar_mobile_tooltip]`  
 [**1784**](scripts/[proc,script1784].cs2)  
 [**1785**](scripts/[proc,script1785].cs2)  
 [**1786**](scripts/[proc,script1786].cs2)  
