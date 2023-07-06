@@ -5,7 +5,7 @@ def_int $int1 = 0;
 def_int $int2 = 0;
 while ($int2 < 10) {
 	$component0 = ~script7168($int2);
-	if (string_length(if_gettext($component0)) > 0 & if_getfillcolour($component0) = 0x000001) {
+	if (string_length(if_gettext($component0)) > 0 & if_getgradientcolour($component0) = 0x000001) {
 		$int1 = 1;
 	}
 	$int2 = calc($int2 + 1);

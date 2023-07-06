@@ -6,7 +6,7 @@ def_int $int3 = -1;
 def_component $component4 = null;
 switch_int ($opindex0) {
 	case 1 :
-		if_setgradientcolour(calc(1 - if_getfillcolour($component2)), $component2);
+		if_setgradientcolour(calc(1 - if_getgradientcolour($component2)), $component2);
 		~script7133;
 	case 2 :
 		$int3 = 0;
@@ -19,7 +19,7 @@ switch_int ($opindex0) {
 			if ($component4 = null) {
 				$intarray0($int3) = 1;
 			} else {
-				$intarray0($int3) = if_getfillcolour($component4);
+				$intarray0($int3) = if_getgradientcolour($component4);
 			}
 			$int3 = calc($int3 + 1);
 		}

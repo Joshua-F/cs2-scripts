@@ -6,7 +6,7 @@ if ($int0 = -1) {
 	$int0 = 0;
 	while ($int2 < 10) {
 		$component1 = ~script7168($int2);
-		if (string_length(if_gettext($component1)) > 0 & if_getfillcolour($component1) = 0x000001) {
+		if (string_length(if_gettext($component1)) > 0 & if_getgradientcolour($component1) = 0x000001) {
 			$int0 = 1;
 		}
 		$int2 = calc($int2 + 1);
