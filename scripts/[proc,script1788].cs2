@@ -1,0 +1,15 @@
+// 1788
+[proc,script1788](obj $obj0)(obj)
+if (oc_param($obj0, param_347) = 1) {
+	return(clue_scroll_easy_10180);
+}
+if (oc_param($obj0, param_348) = 1) {
+	return(clue_scroll_medium_2841);
+}
+if (oc_param($obj0, param_349) = 1) {
+	return(clue_scroll_hard_7268);
+}
+if (oc_param($obj0, param_350) = 1) {
+	return(clue_scroll_elite_12132);
+}
+return($obj0);

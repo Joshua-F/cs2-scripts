@@ -1,7 +1,10 @@
 // 7191
 [clientscript,script7191](npc $npc0, int $int1, int $int2, int $int3)
 def_string $string0 = removetags(nc_name($npc0));
-if (string_length($string0) = 0) {
+def_string $string1 = enum(npc, string, enum_3755, $npc0);
+if (string_length($string1) > 0) {
+	$string0 = $string1;
+} else if (string_length($string0) = 0) {
 	return;
 }
 loottracker_sourceadd($string0, $int2, $int3, $int1);

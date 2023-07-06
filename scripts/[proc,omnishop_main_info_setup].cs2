@@ -141,6 +141,9 @@ if (string_length($string0) > 0) {
 		cc_settextshadow(true);
 		cc_settextfont($fontmetrics13);
 		cc_setcolour(0xefefef);
+		if ($dbrow26 = dbrow_3353) {
+			$text3 = db_getfield($dbrow26, dbtable_41:1, 0);
+		}
 		cc_settext($text3);
 		$int21 = calc($int21 + 1);
 		$int22 = calc($int22 + 20);

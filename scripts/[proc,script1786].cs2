@@ -1,14 +1,16 @@
 // 1786
 [proc,script1786](obj $obj0, int $opindex1)(string)
 def_string $op0 = oc_iop($obj0, $opindex1);
-switch_obj ($obj0) {
-	case escape_crystal_22517 :
-		if ($opindex1 = 3) {
-			if (%varbit14838 = 1) {
-				$op0 = "Disable-auto";
-			} else {
-				$op0 = "Enable-autotele";
+if (map_members = ^true | oc_members($obj0) = ^false) {
+	switch_obj ($obj0) {
+		case escape_crystal_22517 :
+			if ($opindex1 = 3) {
+				if (%varbit14838 = 1) {
+					$op0 = "Disable-autotele";
+				} else {
+					$op0 = "Enable-autotele";
+				}
 			}
-		}
+	}
 }
 return($op0);

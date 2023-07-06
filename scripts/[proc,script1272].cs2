@@ -3,7 +3,7 @@
 def_obj $obj1 = null;
 def_int $int2 = 0;
 def_int $int3 = 0;
-while ($int3 < 1200) {
+while ($int3 < 1220) {
 	$obj1 = inv_getobj(bank, $int3);
 	if (oc_unplaceholder($obj1) ! $obj1) {
 		$int2 = calc($int2 + 1);

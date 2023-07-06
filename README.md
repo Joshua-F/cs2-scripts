@@ -1788,6 +1788,7 @@
 [**1785**](scripts/[proc,script1785].cs2)  
 [**1786**](scripts/[proc,script1786].cs2)  
 [**1787**](scripts/[proc,script1787].cs2)  
+[**1788**](scripts/[proc,script1788].cs2)  
 [**1817**](scripts/[clientscript,keyboard_show_string].cs2) `[clientscript,keyboard_show_string]`  
 [**1838**](scripts/[proc,keyboard_show_string].cs2) `[proc,keyboard_show_string]`  
 [**1846**](scripts/[clientscript,script1846].cs2)  

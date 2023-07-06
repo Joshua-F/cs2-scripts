@@ -2342,18 +2342,20 @@ switch_int ($int0) {
 		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
-					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Cooking)");
+					return(1, forestry_kit_28136, "Forestry kit");
 				case 1 :
-					return(35, secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Smithing)");
+					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Cooking)");
 				case 2 :
-					return(35, bee_on_a_stick_28184, "Members: Bee on a Stick<br>(with 50 Hunter)");
+					return(35, secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Smithing)");
 				case 3 :
-					return(50, clothes_pouch_28163, "Members: Clothes Pouch<br>(with 50 Crafting)");
+					return(35, bee_on_a_stick_28184, "Members: Bee on a Stick<br>(with 50 Hunter)");
 				case 4 :
-					return(68, nature_offerings_28152, "Members: Nature Offerings<br>(with 50 Farming)");
+					return(50, clothes_pouch_28163, "Members: Clothes Pouch<br>(with 50 Crafting)");
 				case 5 :
-					return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 70 Crafting and 35 Farming)");
+					return(68, nature_offerings_28152, "Members: Nature Offerings<br>(with 50 Farming)");
 				case 6 :
+					return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 70 Crafting and 35 Farming)");
+				case 7 :
 					return(75, sturdy_harness_28149, "Members: Sturdy Harness<br>(with 75 Smithing)");
 				case default :
 					return(-1, null, "");
