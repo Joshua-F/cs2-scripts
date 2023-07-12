@@ -1,7 +1,7 @@
 // 7098
 [proc,script7098](component $component0, int $int1, struct $struct2, int $setting3, component $component4, int $int5)
 switch_int ($setting3) {
-	case 345 :
+	case 345, 349 :
 		cc_setonvartransmit("script7093($component0, $int1, $struct2, $setting3, $component4, $int5){var2855, var3795}");
 	case default :
 		cc_setonvartransmit("script7093($component0, $int1, $struct2, $setting3, $component4, $int5){var2855}");

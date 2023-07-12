@@ -1,11 +1,12 @@
 // 7173
-[proc,script7173](component $component0, int $comsubid1)(obj, int, int, int, int, int)
+[proc,script7173](component $component0, int $comsubid1)(obj, int, int, int, int, int, int)
 def_obj $obj2 = null;
 def_int $int3 = -1;
 def_int $int4 = -1;
 def_int $int5 = -1;
 def_int $int6 = -1;
 def_int $int7 = -1;
+def_int $int8 = -1;
 if (cc_find($component0, $comsubid1) = ^true) {
 	$obj2 = cc_getinvobject;
 	$int3 = cc_getinvcount;
@@ -13,5 +14,6 @@ if (cc_find($component0, $comsubid1) = ^true) {
 	$int5 = cc_getgradientcolour;
 	$int6 = calc($int4 * $int3);
 	$int7 = calc($int5 * $int3);
+	$int8 = cc_getgradienttrans;
 }
-return($obj2, $int3, $int4, $int5, $int6, $int7);
+return($obj2, $int3, $int4, $int5, $int6, $int7, $int8);

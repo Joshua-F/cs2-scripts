@@ -1,10 +1,10 @@
 // 7163
-[proc,script7163](component $component0, component $component1, int $int2, int $int3)
-def_int $num4 = 0;
-if (cc_find($component0, $int2) = ^true) {
-	$num4 = calc(cc_getinvcount + $int3);
-	cc_setobject(cc_getinvobject, $num4);
-	if (cc_find($component1, calc(5 + (1 + 2 * $int2))) = ^true) {
-		cc_setobject(cc_getinvobject, $num4);
+[proc,script7163](component $component0, component $component1, int $comsubid2, int $int3, int $int4)
+def_int $num5 = 0;
+if (cc_find($component0, $comsubid2) = ^true) {
+	$num5 = calc(cc_getinvcount + $int4);
+	cc_setobject(cc_getinvobject, $num5);
+	if (cc_find($component1, calc(5 + (1 + 2 * $int3))) = ^true) {
+		cc_setobject(cc_getinvobject, $num5);
 	}
 }

@@ -57,7 +57,9 @@ if ($boolean9 = false & $int12 = 1 & string_length($string1) > 0) {
 }
 cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 def_int $setting17 = struct_param($struct0, param_1077);
-~script7098($component1, $int6, $struct0, $setting17, $component2, $int7);
+if (struct_param($struct0, param_1085) = true) {
+	~script7098($component1, $int6, $struct0, $setting17, $component2, $int7);
+}
 cc_create($component1, ^iftype_rectangle, $int6);
 $int6 = calc($int6 + 1);
 cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);

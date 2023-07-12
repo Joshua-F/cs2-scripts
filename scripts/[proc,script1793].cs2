@@ -1,0 +1,20 @@
+// 1793
+[proc,script1793](int $length0)(string)
+def_string $string0 = "";
+def_int $int1 = stringvector_size(stringvector_1);
+if ($int1 < 1) {
+	return($string0);
+}
+def_int $int2 = 0;
+while ($int2 < $int1) {
+	if ($int2 = 0) {
+		$string0 = stringvector_get(stringvector_1, $int2);
+	} else {
+		$string0 = "<$string0>, <stringvector_get(stringvector_1, $int2)>";
+	}
+	$int2 = calc($int2 + 1);
+}
+if ($length0 > 0) {
+	$string0 = ~script7204($string0, $length0);
+}
+return($string0);

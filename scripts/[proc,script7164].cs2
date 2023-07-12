@@ -10,3 +10,4 @@ cc_create($component0, ^iftype_rectangle, $colour4);
 cc_setobject($obj2, $num3);
 cc_setcolour($colour5);
 cc_setgradientcolour($colour6);
+cc_setgradienttrans(~bool_to_int(stringvector_contains(stringvector_2, oc_name($obj2), true, false)));

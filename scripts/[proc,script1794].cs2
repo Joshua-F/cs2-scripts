@@ -1,0 +1,32 @@
+// 1794
+[proc,script1794](string $string0)
+def_string $string1 = "null";
+def_int $index0 = 0;
+loottracker_ignoresourceclear;
+stringvector_clear(stringvector_1);
+$string0 = lowercase($string0);
+$string0 = ~script7123($string0);
+def_int $index1 = string_indexof_string($string0, ",", 0);
+def_int $int2 = 0;
+while ($index1 ! -1 & $int2 < 50) {
+	$string1 = substring($string0, $index0, $index1);
+	$string1 = ~string_trim($string1);
+	if (string_length($string1) > 0) {
+		loottracker_ignoresourceadd($string1);
+		stringvector_addunique(stringvector_1, $string1, false);
+	}
+	$index0 = calc($index1 + 1);
+	$index1 = string_indexof_string($string0, ",", $index0);
+	$int2 = calc($int2 + 1);
+}
+$string1 = substring($string0, $index0, string_length($string0));
+$string1 = ~string_trim($string1);
+if (string_length($string1) > 0) {
+	loottracker_ignoresourceadd($string1);
+	stringvector_addunique(stringvector_1, $string1, false);
+}
+if (stringvector_size(stringvector_1) > 0) {
+	%varcint1165 = 1;
+} else {
+	%varcint1165 = 0;
+}

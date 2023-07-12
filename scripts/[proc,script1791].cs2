@@ -1,0 +1,14 @@
+// 1791
+[proc,script1791](component $component0, int $int1, string $text0)
+if (stringvector_contains(stringvector_1, $text0, false, false) = false) {
+	loottracker_ignoresourceadd($text0);
+	stringvector_addunique(stringvector_1, $text0, false);
+} else {
+	loottracker_ignoresourcedel($text0);
+	stringvector_remove(stringvector_1, $text0, false);
+}
+if (stringvector_size(stringvector_1) > 0) {
+	%varcint1165 = 1;
+} else {
+	%varcint1165 = 0;
+}

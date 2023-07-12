@@ -116,14 +116,14 @@ if (string_length($string0) > 0) {
 		cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		cc_settextfont($fontmetrics11);
+		cc_settextfont(p11_full);
 		cc_setcolour(0xefefef);
 		if ($dbrow26 = dbrow_3353) {
 			$string1 = db_getfield($dbrow26, dbtable_41:1, 0);
 		}
 		cc_settext($string1);
 		$int18 = calc($int18 + 1);
-		$int19 = calc($int19 + 20);
+		$int19 = calc($int19 + 16);
 		$int22 = calc($int22 + 1);
 		$dbrow26, $int4 = ~omnishop_cost($dbrow1, $inv24, $int5, $int22, 0);
 	}
@@ -133,12 +133,12 @@ if (string_length($string0) > 0) {
 		cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		cc_settextfont($fontmetrics11);
+		cc_settextfont(p11_full);
 		cc_setcolour(0xefefef);
 		cc_settext("No shop offer");
 		$int23 = 0;
 		$int18 = calc($int18 + 1);
-		$int19 = calc($int19 + 20);
+		$int19 = calc($int19 + 16);
 	}
 	$int19 = calc($int19 + 6);
 }

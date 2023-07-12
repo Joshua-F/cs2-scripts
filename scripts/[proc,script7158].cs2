@@ -1,16 +1,20 @@
 // 7158
 [proc,script7158](string $string0, obj $obj0, int $int1)
+if (stringvector_contains(stringvector_2, oc_name($obj0), true, false) = true & %varbit14880 = 0) {
+	return;
+}
 def_component $component2 = null;
 def_component $component3 = null;
 def_int $int4 = 0;
-def_int $int5 = ~script7176($string0);
-if ($int5 >= 0) {
-	$component2 = ~script7168($int5);
-	$component3 = ~script7167($int5);
-	$int4 = ~script7177($component2, $obj0);
-	if ($int4 >= 0) {
-		~script7163($component2, $component3, $int4, $int1);
-		~script7165($component2, $component3, $int5, $int4);
+def_int $int5 = 0;
+def_int $int6 = ~script7176($string0);
+if ($int6 >= 0) {
+	$component2 = ~script7168($int6);
+	$component3 = ~script7167($int6);
+	$int4, $int5 = ~script7177($component2, $obj0);
+	if ($int4 >= 0 & $int5 >= 0) {
+		~script7163($component2, $component3, $int4, $int5, $int1);
+		~script7165($component2, $component3, $int6, $int4, $int5);
 	} else {
 		~script7164($component2, $component3, $obj0, $int1);
 		~script7133;

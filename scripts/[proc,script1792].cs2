@@ -1,0 +1,16 @@
+// 1792
+[proc,script1792]
+def_int $int0 = 1;
+def_int $int1 = loottracker_ignoresourcecount;
+def_string $string0 = "null";
+stringvector_clear(stringvector_1);
+while ($int0 <= $int1) {
+	$string0 = loottracker_ignoresourceget($int0);
+	stringvector_addunique(stringvector_1, $string0, false);
+	$int0 = calc($int0 + 1);
+}
+if ($int0 > 1) {
+	%varcint1165 = 1;
+} else {
+	%varcint1165 = 0;
+}

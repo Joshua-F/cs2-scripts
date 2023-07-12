@@ -1,7 +1,7 @@
 // 7239
 [proc,ground_items_display](obj $obj0)(int)
 def_string $string0 = removetags(oc_name($obj0));
-if (stringvector_contains(stringvector_3, $string0, true, false) = 1) {
+if (stringvector_contains(stringvector_3, $string0, true, false) = true) {
 	return(0);
 }
 return(1);

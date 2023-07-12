@@ -10,14 +10,17 @@ def_obj $obj3 = null;
 def_int $num4 = 0;
 def_int $colour5 = ^black;
 def_int $colour6 = ^black;
+def_int $int7 = 0;
 while (cc_find($component0, $int2) = ^true) {
 	$obj3 = cc_getinvobject;
 	$num4 = cc_getinvcount;
 	$colour5 = cc_getcolour;
 	$colour6 = cc_getgradientcolour;
+	$int7 = cc_getgradienttrans;
 	cc_create($component1, ^iftype_rectangle, $int2);
 	cc_setobject($obj3, $num4);
 	cc_setcolour($colour5);
 	cc_setgradientcolour($colour6);
+	cc_setgradienttrans($int7);
 	$int2 = calc($int2 + 1);
 }

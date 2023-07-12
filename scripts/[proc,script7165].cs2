@@ -1,39 +1,42 @@
 // 7165
-[proc,script7165](component $component0, component $component1, int $int2, int $int3)
-def_obj $obj4 = null;
-def_int $int5 = -1;
+[proc,script7165](component $component0, component $component1, int $int2, int $int3, int $int4)
+def_obj $obj5 = null;
 def_int $int6 = -1;
 def_int $int7 = -1;
 def_int $int8 = -1;
 def_int $int9 = -1;
-$obj4, $int5, $int6, $int7, $int8, $int9 = ~script7173($component0, $int3);
-def_component $component10 = interface_650:55;
-def_string $string0 = ~script7174($obj4, $int5, $int6, $int7, $int8, $int9);
-def_int $int11 = calc(5 + (1 + 2 * $int3));
-if (cc_find($component1, $int11) = ^true) {
-	cc_setonmouserepeat("tooltip_mouserepeat($component1, $int11, $component10, $string0, 0, 512)");
-	cc_setonmouseleave("deltooltip($component10)");
+def_int $int10 = -1;
+def_int $int11 = -1;
+$obj5, $int6, $int7, $int8, $int9, $int10, $int11 = ~script7173($component0, $int3);
+def_component $component12 = interface_650:55;
+def_string $string0 = ~script7174($obj5, $int6, $int7, $int8, $int9, $int10);
+def_int $int13 = calc(5 + (1 + 2 * $int3));
+if (cc_find($component1, $int13) = ^true) {
+	cc_setonmouserepeat("tooltip_mouserepeat($component1, $int13, $component12, $string0, 0, 512)");
+	cc_setonmouseleave("deltooltip($component12)");
 }
-def_int $int12 = 0;
-def_int $int13 = 0;
-while (cc_find($component0, $int12) = ^true) {
-	$obj4, $int5, $int6, $int7, $int8, $int9 = ~script7173($component0, $int12);
-	if (%varbit14881 = 0) {
-		$int13 = calc($int13 + $int9);
-	} else {
-		$int13 = calc($int13 + $int8);
+def_int $int14 = 0;
+def_int $int15 = 0;
+while (cc_find($component0, $int14) = ^true) {
+	$obj5, $int6, $int7, $int8, $int9, $int10, $int11 = ~script7173($component0, $int14);
+	if ($int11 = 0 | %varbit14880 = 1) {
+		if (%varbit14881 = 0) {
+			$int15 = calc($int15 + $int10);
+		} else {
+			$int15 = calc($int15 + $int9);
+		}
 	}
-	$int12 = calc($int12 + 1);
+	$int14 = calc($int14 + 1);
 }
 if (cc_find($component1, 4) = ^true) {
-	cc_settext("<~magic_spacer_tostring_extended($int13, ".", 1)> gp");
+	cc_settext("<~magic_spacer_tostring_extended($int15, ".", 1)> gp");
 }
-def_int $width14 = if_getscrollwidth(interface_650:2);
-def_int $int15 = if_getscrollheight(interface_650:2);
+def_int $width16 = if_getscrollwidth(interface_650:2);
+def_int $int17 = if_getscrollheight(interface_650:2);
 if (%varbit14881 = 0) {
-	$int15 = calc($int15 + $int7);
+	$int17 = calc($int17 + $int8);
 } else {
-	$int15 = calc($int15 + $int6);
+	$int17 = calc($int17 + $int7);
 }
-if_setscrollsize($width14, $int15, interface_650:2);
-if_settext("<tostring($width14)><br><~magic_spacer_tostring_extended($int15, ".", 1)> gp", interface_650:31);
+if_setscrollsize($width16, $int17, interface_650:2);
+if_settext("<tostring($width16)><br><~magic_spacer_tostring_extended($int17, ".", 1)> gp", interface_650:31);
