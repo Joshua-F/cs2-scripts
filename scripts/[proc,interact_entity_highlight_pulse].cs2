@@ -21,7 +21,7 @@ if (if_find_entityoverlay($entityoverlay1) = ^true) {
 		$int10 = calc(17 - $int8);
 	}
 	$int11 = _7460;
-	if (component_find_active_minimenu_entry = true) {
+	if (get_minimenu_opened = true) {
 		~entity_highlight_clear(4);
 		~entity_highlight_minimenu(4);
 		if ($int8 >= $int9) {

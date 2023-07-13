@@ -4,7 +4,7 @@ def_int $int5 = 1;
 def_int $int6 = 1;
 if (%varbit12344 = 1 | enum(int, boolean, enum_3903, $minimenu_entry_type2) = false | ~on_mobile = true) {
 	$int5 = 0;
-} else if ($minimenu_entry_type2 = ^minimenu_entry_type_component & targetmode_active = true) {
+} else if ($minimenu_entry_type2 = ^minimenu_entry_type_component & component_find_active_minimenu_entry = true) {
 	switch_component (cc_getlayer) {
 		case magic_spellbook:3 :
 			$int5 = 0;
