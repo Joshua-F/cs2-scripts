@@ -39,9 +39,7 @@ if ($int30 = -1) {
 }
 def_int $int31 = 0;
 def_int $int32 = 500000;
-if (%varbit1777 ! 0) {
-	$int32 = calc($int32 / 2);
-}
+$int32 = ~script1797($int32);
 def_int $int33 = 0;
 while ($int33 < 120) {
 	if (cc_find($component10, $int33) = ^true) {
@@ -86,9 +84,7 @@ while ($int33 < 120) {
 				} else {
 					$int31 = calc(100000 * inv_getnum(inv_525, $int33));
 				}
-				if (%varbit1777 ! 0) {
-					$int31 = calc($int31 / 2);
-				}
+				$int31 = ~script1797($int31);
 				$int31 = ~min($int32, $int31);
 				if ($int31 >= 1000) {
 					.cc_settext("<tostring(calc($int31 / 1000))>k");

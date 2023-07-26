@@ -1,0 +1,5 @@
+// 1798
+[proc,script1798](dbrow $dbrow0)(int)
+def_int $int1 = db_getfieldcount($dbrow0, dbtable_36:0);
+$int1 = calc($int1 + db_getfieldcount($dbrow0, dbtable_36:1));
+return($int1);

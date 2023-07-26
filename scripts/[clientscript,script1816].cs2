@@ -1,0 +1,38 @@
+// 1816
+[clientscript,script1816](int $int0)
+if_sethide(true, interface_833:11);
+if_settrans(255, interface_833:11);
+if_sethide(true, interface_833:10);
+if_settrans(255, interface_833:10);
+if_sethide(true, interface_833:9);
+if_settrans(255, interface_833:9);
+if_sethide(true, interface_833:8);
+if_settrans(255, interface_833:8);
+if_sethide(true, interface_833:7);
+if_settrans(255, interface_833:7);
+if_sethide(true, interface_833:6);
+if_settrans(255, interface_833:6);
+~script1825;
+if ($int0 >= 1) {
+	~script1819(interface_833:11);
+}
+if ($int0 >= 2) {
+	~script1819(interface_833:10);
+}
+if ($int0 >= 3) {
+	~script1819(interface_833:9);
+}
+if ($int0 >= 4) {
+	~script1819(interface_833:8);
+}
+if ($int0 >= 5) {
+	~script1819(interface_833:7);
+}
+if ($int0 >= 6) {
+	~script1819(interface_833:6);
+}
+def_int $clock1 = calc(clientclock + 30);
+if_setmodelanim(seq_10370, interface_833:2);
+if_setontimer("script1818(interface_833:2, seq_10371, $clock1)", interface_833:2);
+if_setmodelanim(seq_10367, interface_833:4);
+if_setontimer("script1818(interface_833:4, seq_10368, $clock1)", interface_833:4);

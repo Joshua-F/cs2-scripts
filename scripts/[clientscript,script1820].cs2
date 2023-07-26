@@ -1,0 +1,9 @@
+// 1820
+[clientscript,script1820](component $component0)
+def_int $int1 = if_gettrans($component0);
+$int1 = ~minmax(0, 255, calc($int1 - 15));
+if_settrans($int1, $component0);
+if ($int1 <= 0) {
+	if_setontimer(null, $component0);
+	if_setmodelanim(seq_10374, $component0);
+}

@@ -1,0 +1,6 @@
+// 1823
+[clientscript,script1823]
+if_setmodelanim(seq_10372, interface_833:2);
+if_setmodelanim(seq_10369, interface_833:4);
+def_int $clock0 = calc(clientclock + 30);
+if_setontimer("script1824($clock0, interface_833:4)", interface_833:4);

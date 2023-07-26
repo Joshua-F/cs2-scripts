@@ -1,0 +1,13 @@
+// 1861
+[clientscript,script1861](int $comsubid0, int $dropsubid1)
+def_int $x2 = 0;
+def_int $y3 = 0;
+if (cc_find(interface_838:35, $comsubid0) = ^true & .cc_find(interface_838:32, $dropsubid1) = ^true) {
+	if (~script1862($dropsubid1) = 0) {
+		return;
+	}
+	$x2 = .cc_getx;
+	$y3 = .cc_gety;
+	cc_setposition($x2, $y3, ^setpos_abs_left, ^setpos_abs_top);
+	sound_synth(100_equip_claw, 1, 0);
+}

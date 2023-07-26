@@ -1,0 +1,9 @@
+// 1814
+[proc,script1814](wma $wma0)(int)
+if ($wma0 = ghorrock_prison & %varbit15127 < 6) {
+	return(0);
+}
+if ($wma0 = lassar_undercity & %varbit15126 < 8) {
+	return(0);
+}
+return(1);

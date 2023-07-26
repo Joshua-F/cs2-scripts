@@ -16,12 +16,13 @@ if ($obj0 ! null) {
 			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 		} else {
 			cc_settrans(120);
-			cc_setonop(null);
+			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 200, 120)");
 		}
 	} else {
 		cc_settrans(120);
-		cc_setonop(null);
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 200, 120)");
 	}
+	cc_setop(9, "Deposit");
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
 	cc_setondragcomplete("bankside_worn_reorder(event_com, event_com2, event_comsubid, event_comsubid2)");

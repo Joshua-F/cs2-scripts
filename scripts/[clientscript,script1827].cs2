@@ -1,0 +1,24 @@
+// 1827
+[clientscript,script1827](component $component0, component $component1, boolean $boolean2)
+def_component $component3 = interface_834:0;
+if_setontimer("script6110($component3, -1)", $component3);
+if_setonresize("script1827($component0, $component1, false)", $component3);
+def_int $width4 = 135;
+switch_int (%varcint988) {
+	case 1 :
+		$width4 = 140;
+	case 2 :
+		$width4 = 180;
+	case 3 :
+		$width4 = 250;
+}
+def_int $int5 = 0;
+if ($width4 ! if_getwidth(interface_834:3)) {
+	$int5 = 1;
+}
+if_setsize($width4, 50, ^setsize_abs, ^setsize_abs, interface_834:3);
+~script4729($component0, $component1, setbit(setbit(52984, 12), 13), ^setpos_abs_left, ^setpos_abs_top, true);
+if_setonvartransmit("script1828{var3939}", interface_834:8);
+if ($boolean2 = true | $int5 = 1) {
+	~script1830(100, %varbit15064, interface_834:13, interface_834:11, interface_834:8, interface_834:6, true);
+}

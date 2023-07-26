@@ -1,0 +1,17 @@
+// 1797
+[proc,script1797](int $int0)(int)
+if (%varbit1777 ! 0) {
+	$int0 = scale(1, 2, $int0);
+}
+if (%varbit15023 = 0) {
+	if (~inzone(0_17_53_31_15, 0_17_53_51_36, %var3916) = 1 & %var3970 < 5) {
+		$int0 = scale(1, 4, $int0);
+	} else if ((~inzone(0_41_99_16_17, 0_41_99_47_48, %var3916) = 1 | ~inzone(0_37_99_16_17, 0_37_99_47_48, %var3916) = 1) & %var3969 < 5) {
+		$int0 = scale(1, 4, $int0);
+	} else if (~inzone(0_47_100_21_33, 0_47_100_41_57, %var3916) = 1 & %var3967 < 5) {
+		$int0 = scale(1, 4, $int0);
+	} else if (~inzone(0_32_99_18_22, 0_32_99_48_52, %var3916) = 1 & %var3968 < 5) {
+		$int0 = scale(1, 4, $int0);
+	}
+}
+return($int0);

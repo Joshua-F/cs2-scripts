@@ -1,0 +1,11 @@
+// 1824
+[clientscript,script1824](int $clock0, component $component1)
+if (clientclock < $clock0) {
+	return;
+}
+if_setontimer(null, $component1);
+if_sethide(true, interface_833:0);
+if_sethide(true, interface_833:2);
+if_sethide(true, interface_833:4);
+if_sethide(true, interface_833:5);
+if_close;

@@ -1,0 +1,62 @@
+// 1857
+[clientscript,script1857](int $int0, int $int1)
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $comsubid4 = -1;
+def_int $x5 = 0;
+def_int $y6 = 0;
+def_int $int7 = 1;
+def_int $int8 = 1;
+def_int $int9 = 0;
+while ($int9 < 64) {
+	if ($int9 > 0 & calc($int9 % 8) = 0) {
+		$int7 = 1;
+		$int8 = calc($int8 + 38);
+	}
+	cc_create(interface_838:32, ^iftype_rectangle, $int9);
+	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(true);
+	$int7 = calc($int7 + 38);
+	$int9 = calc($int9 + 1);
+}
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_enum $enum12 = null;
+while ($int2 < 8) {
+	$enum12 = enum(int, enum, enum_5120, $int2);
+	$int11 = enum_getoutputcount($enum12);
+	while ($int10 < $int11) {
+		if (.cc_find(interface_838:32, enum(int, int, $enum12, $int10)) = ^true) {
+			.cc_setcolour(enum(int, int, enum_5129, $int2));
+			.cc_settrans(180);
+			$int10 = calc($int10 + 1);
+		}
+	}
+	$int10 = 0;
+	$comsubid4 = ~script1860($int2);
+	if (.cc_find(interface_838:32, $comsubid4) = ^true) {
+		cc_create(interface_838:35, ^iftype_graphic, $int2);
+		cc_setgraphicshadow(0x333333);
+		cc_setobject_nonum(charged_cell_28403, 1);
+		$x5 = .cc_getx;
+		$y6 = .cc_gety;
+		cc_setposition($x5, $y6, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+		cc_setdraggable(interface_838:14, -1);
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(5);
+		cc_setondragcomplete("script1861($int2, event_comsubid2)");
+		cc_setop(1, "Select");
+	}
+	$int2 = calc($int2 + 1);
+}
+~script1859(interface_838:4, 0);
+cc_create(interface_838:3, ^iftype_graphic, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setgraphic("tradebacking");
+~script4215(interface_838:5, "Close");
+if_setonop("closebutton_click", interface_838:5);
+if_setonop("script1858", interface_838:4);

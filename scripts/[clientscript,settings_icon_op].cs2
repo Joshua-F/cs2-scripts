@@ -24,12 +24,12 @@ if ($int7 > 0) {
 				return;
 			}
 			if (%varbit14817 <= 0) {
-				%varbit14817 = 25;
+				%varbit14817 = 100;
 			}
 			~settings_set_slider($setting0, calc(%varbit14817 / 5));
 		case ^setting_volumemusic :
 			if (%varbit12426 <= 0) {
-				%varbit12426 = 25;
+				%varbit12426 = 20;
 			}
 			~settings_set_slider($setting0, calc(%varbit12426 / 5));
 		case ^setting_volumesounds :

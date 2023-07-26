@@ -8,7 +8,7 @@ def_int $int4 = 0;
 if (string_length($string0) = 0) {
 	$int4 = 1;
 }
-def_int $height5 = calc(paraheight($string1, if_getwidth($component1), q8_full) * 15 + 10);
+def_int $height5 = calc(paraheight($string1, if_getwidth($component1), q8_full) * 16 + 10);
 if ($int4 = 1) {
 	if ($height5 < 266) {
 		$height5 = 266;

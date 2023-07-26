@@ -1,0 +1,44 @@
+// 1811
+[proc,script1811](component $component0, component $component1, enum $enum2, enum $enum3)
+cc_deleteall($component0);
+def_int $int4 = 0;
+cc_create($component0, ^iftype_graphic, $int4);
+cc_setgraphic("graphic_4955");
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(28, 65, ^setsize_abs, ^setsize_abs);
+$int4 = calc($int4 + 1);
+cc_create($component0, ^iftype_graphic, $int4);
+cc_setgraphic("graphic_4956");
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(28, 65, ^setsize_abs, ^setsize_abs);
+$int4 = calc($int4 + 1);
+def_int $int5 = 0;
+def_int $int6 = ~minmax(10, 26, enum_getoutputcount($enum2));
+def_int $int7 = 0;
+while ($int5 < $int6) {
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize(14, 65, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(28 + $int5 * 14), 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setgraphic(~script1812(calc($int5 % 5)));
+	$int4 = calc($int4 + 1);
+	cc_create($component0, ^iftype_text, $int4);
+	cc_setsize(13, 15, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(28 + $int5 * 14), -16, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_settextfont(b12_full);
+	cc_setcolour(0xfce8c9);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext(enum(int, string, $enum2, $int5));
+	$int4 = calc($int4 + 1);
+	cc_create($component0, ^iftype_text, $int4);
+	cc_setsize(13, 15, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(28 + $int5 * 14), 10, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_settextfont(b12_full);
+	cc_setcolour(0xfdfdfd);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext(enum(int, string, $enum3, ~script1813($int5, %varcint1166, $int6)));
+	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
+}
+if_setsize(~minmax(265, 489, calc($int6 * 14 + 55 + 70)), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);

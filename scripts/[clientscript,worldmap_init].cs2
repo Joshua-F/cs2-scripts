@@ -35,7 +35,7 @@ if (~toplevel_getcomponents ! enum_1132) {
 def_int $int26 = calc((4 + 1) * 21);
 if_setsize(0, $int26, ^setsize_minus, ^setsize_minus, $component20);
 if_setsize(6, $int26, ^setsize_minus, ^setsize_abs, $component10);
-def_int $intarray0(~max(enum_getoutputcount(enum_1705), calc(40 + 1)));
+def_int $intarray0(~max(enum_getoutputcount(enum_1705), calc(41 + 1)));
 cc_deleteall($component21);
 $int25 = 0;
 def_int $int27 = 16;
@@ -281,7 +281,7 @@ def_coord $coord41 = null;
 def_coord $coord42 = null;
 def_fontmetrics $fontmetrics43 = null;
 def_fontmetrics $fontmetrics44 = null;
-$string0, $int29, $int28 = "", 0, 0;
+$string0, $int29, $int28, $int36 = "", 0, 0, 0;
 def_wma $wma45 = enum(int, wma, enum_1697, $int28);
 while ($wma45 ! null) {
 	$intarray0($int28) = $int25;
@@ -305,10 +305,15 @@ while ($wma45 ! null) {
 	cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff981f)");
 	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
 	cc_setonop("worldmap_maplist_select(event_op, $wma45, $component12, $component13, $component4, $component6, $component7, $component18, $component19)");
-	$int29 = ~max($int29, parawidth($string0, 512, $fontmetrics43));
-	$coord41 = ~worldmap_findcoordinmap($wma45, %varcint188);
-	if ($coord41 ! null) {
-		$wma40, $coord42 = $wma45, $coord41;
+	if (~script1814($wma45) = 1) {
+		$int29 = ~max($int29, parawidth($string0, 512, $fontmetrics43));
+		$coord41 = ~worldmap_findcoordinmap($wma45, %varcint188);
+		if ($coord41 ! null) {
+			$wma40, $coord42 = $wma45, $coord41;
+		}
+		$int36 = calc($int36 + 1);
+	} else {
+		cc_sethide(true);
 	}
 	$wma45 = enum(int, wma, enum_1697, $int28);
 }
@@ -332,7 +337,7 @@ cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(gravestone_317, param_624));
 if ($int28 >= 3) {
-	~quicksort_cctext(intarray0, $component16, 1, 40);
+	~quicksort_cctext(intarray0, $component16, 1, 41);
 }
 $int29 = calc(3 + $int29 + 2 + 26 + 2 + 16 + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);
@@ -340,7 +345,7 @@ def_int $int46 = calc(262 + $int29);
 ~worldmap_window_set($component0, $layer2, $component24, $component3, $int46);
 ~worldmap_size_handler($component0, $layer2, $component24, $component3, ^min_32bit_int, ^min_32bit_int, $component21, $component22, $int29, $int46, $component11, $int39);
 if_setscrollpos(0, 0, $component16);
-$int26 = calc($int28 * $int27 + 2);
+$int26 = calc($int36 * $int27 + 2);
 def_int $int47 = 124;
 if (~on_mobile = true) {
 	$int47 = 196;
@@ -367,8 +372,9 @@ if (~on_mobile = false) {
 }
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);
-	if (cc_find($component16, $intarray0($int28)) = ^true) {
-		cc_setposition(0, calc($int28 * $int27), ^setpos_abs_centre, ^setpos_abs_top);
+	if (cc_find($component16, $intarray0($int28)) = ^true & cc_gethide = false) {
+		$int36 = calc($int36 - 1);
+		cc_setposition(0, calc($int36 * $int27), ^setpos_abs_centre, ^setpos_abs_top);
 	}
 }
 cc_deleteall($component12);

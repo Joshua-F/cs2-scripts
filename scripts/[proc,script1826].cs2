@@ -1,0 +1,10 @@
+// 1826
+[proc,script1826](component $component0, int $int1)
+def_component $layer2 = if_getlayer($component0);
+def_int $int3 = calc((if_getwidth($layer2) - 20) / 4);
+def_int $int4 = calc((if_getheight($layer2) - 20) / 3);
+def_int $int5 = calc($int3 * ($int1 % 4));
+def_int $int6 = calc($int4 * ($int1 / 4));
+$int5 = calc($int5 + 10 + randominc(calc($int3 - 48)));
+$int6 = calc($int6 + 10 + randominc(calc($int4 - 48)));
+if_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top, $component0);

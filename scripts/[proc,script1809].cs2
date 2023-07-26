@@ -1,0 +1,14 @@
+// 1809
+[proc,script1809](int $int0, int $int1)
+def_int $int2 = %varcint1166;
+if ($int0 = 3) {
+	$int2 = calc($int2 + 1);
+} else {
+	$int2 = calc($int2 - 1);
+}
+if ($int2 >= $int1) {
+	$int2 = 0;
+} else if ($int2 < 0) {
+	$int2 = calc($int1 - 1);
+}
+%varcint1166 = $int2;

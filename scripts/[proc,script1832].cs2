@@ -1,0 +1,23 @@
+// 1832
+[proc,script1832](boolean $boolean0, component $component1, int $int2, component $component3, int $width4, component $component5)
+def_int $width6 = if_getwidth($component1);
+def_int $int7 = $width6;
+def_int $width8 = if_getwidth($component3);
+if ($width4 ! $width8) {
+	$int7 = $int2;
+} else if ($boolean0 = true | if_getwidth($component1) = 0) {
+	$int7 = $int2;
+} else if ($width6 < $int2) {
+	$int7 = calc($width6 + 1);
+} else if ($width6 > $int2) {
+	$int7 = calc($width6 - 1);
+}
+if ($int7 = $width8) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component1);
+} else {
+	if_setsize($int7, 0, ^setsize_abs, ^setsize_minus, $component1);
+}
+if_settrans(calc(255 - scale($int7, if_getwidth($component3), 255)), $component5);
+if ($int7 = $int2) {
+	if_setontimer(null, $component1);
+}

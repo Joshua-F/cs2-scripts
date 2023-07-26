@@ -1,0 +1,24 @@
+// 1839
+[proc,script1839](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, boolean $boolean6)
+def_int $int7 = 0;
+if ($int1 = 0) {
+	if_settext("Healthy", interface_836:9);
+	if_setcolour(^green, interface_836:9);
+	if_setsize(0, if_getheight(interface_836:7), ^setsize_abs, ^setsize_abs, interface_836:7);
+} else if ($int1 = 100) {
+	if_settext("Strangled!", interface_836:9);
+	if_setcolour(^red, interface_836:9);
+	if_setsize(if_getwidth(interface_836:5), if_getheight(interface_836:7), ^setsize_abs, ^setsize_abs, interface_836:7);
+} else {
+	if_setcolour(^white, interface_836:9);
+	$int7 = ~max(scale($int1, $int0, if_getwidth(interface_836:5)), 1);
+	if ($int7 > 0 & if_getwidth($component3) <= 0) {
+		if_setsize(1, 0, ^setsize_abs, ^setsize_minus, $component3);
+	}
+	if_settext("Infection: <tostring(~max(scale($int1, $int0, 100), 1))>%", $component2);
+	if ($boolean6 = true) {
+		~script1841($boolean6, $component3, $int7, $component4, if_getwidth($component4), $component5);
+	} else {
+		if_setontimer("script1840($boolean6, $component3, $int7, $component4, if_getwidth($component4), $component5)", $component3);
+	}
+}

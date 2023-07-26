@@ -58,6 +58,8 @@ switch_int ($int0) {
 					case 24 :
 						return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Attack)");
 					case 25 :
+						return(80, soulreaper_axe_28338, "Members: Soulreaper axe<br> (with 80 Attack)");
+					case 26 :
 						return(90, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 80 Attack)");
 				}
 			case 1 :
@@ -985,134 +987,199 @@ switch_int ($int0) {
 						return(-1, null, "");
 				}
 			case 5 :
-				switch_int ($int2) {
-					case 0 :
-						return(1, opal_1609, "Members: Cut opal");
-					case 1 :
-						return(1, opal_ring_21081, "Members: Opal ring");
-					case 2 :
-						return(3, polished_buttons_10496, "Polished buttons");
-					case 3 :
-						return(5, gold_ring_1635, "Gold ring");
-					case 4 :
-						return(6, gold_necklace_1654, "Gold necklace");
-					case 5 :
-						return(7, gold_bracelet_11069, "Members: Gold bracelet");
-					case 6 :
-						return(8, gold_amulet_1692, "Gold amulet");
-					case 7 :
-						return(13, jade_1611, "Members: Cut jade");
-					case 8 :
-						return(13, jade_ring_21084, "Members: Jade ring");
-					case 9 :
-						return(16, unblessed_symbol_1716, "Holy symbol");
-					case 10 :
-						return(16, red_topaz_1613, "Members: Cut red topaz");
-					case 11 :
-						return(16, topaz_ring_21087, "Members: Red topaz ring");
-					case 12 :
-						return(16, opal_necklace_21090, "Members: Opal necklace");
-					case 13 :
-						return(17, unpowered_symbol_1722, "Members: Unholy symbol");
-					case 14 :
-						return(20, sapphire_1607, "Cut sapphire");
-					case 15 :
-						return(20, sapphire_ring_1637, "Sapphire ring");
-					case 16 :
-						return(22, sapphire_necklace_1656, "Sapphire necklace");
-					case 17 :
-						return(22, opal_bracelet_21117, "Members: Opal bracelet");
-					case 18 :
-						return(23, tiara_5525, "Tiara");
-					case 19 :
-						return(23, sapphire_bracelet_11072, "Members: Sapphire bracelet");
-					case 20 :
-						return(24, sapphire_amulet_1694, "Sapphire amulet");
-					case 21 :
-						return(25, jade_necklace_21093, "Members: Jade necklace");
-					case 22 :
-						return(27, emerald_1605, "Cut emerald");
-					case 23 :
-						return(27, emerald_ring_1639, "Emerald ring");
-					case 24 :
-						return(27, opal_amulet_21108, "Members: Opal amulet");
-					case 25 :
-						return(29, emerald_necklace_1658, "Emerald necklace");
-					case 26 :
-						return(29, jade_bracelet_21120, "Members: Jade bracelet");
-					case 27 :
-						return(30, emerald_bracelet_11076, "Members: Emerald bracelet");
-					case 28 :
-						return(31, emerald_amulet_1696, "Emerald amulet");
-					case 29 :
-						return(32, topaz_necklace_21096, "Members: Red topaz necklace");
-					case 30 :
-						return(34, ruby_1603, "Cut ruby");
-					case 31 :
-						return(34, ruby_ring_1641, "Ruby ring");
-					case 32 :
-						return(34, jade_amulet_21111, "Members: Jade amulet");
-					case 33 :
-						return(37, strung_rabbit_foot_10132, "Members: Rabbit-foot necklaces");
-					case 34 :
-						return(38, topaz_bracelet_21123, "Members: Red topaz bracelet");
-					case 35 :
-						return(40, ruby_necklace_1660, "Ruby necklace");
-					case 36 :
-						return(42, ruby_bracelet_11085, "Members: Ruby bracelet");
-					case 37 :
-						return(42, gold_tiara_26788, "Members: Gold Tiara");
-					case 38 :
-						return(43, diamond_1601, "Cut diamond");
-					case 39 :
-						return(43, diamond_ring_1643, "Diamond ring");
-					case 40 :
-						return(45, topaz_amulet_21114, "Members: Red topaz amulet");
-					case 41 :
-						return(50, ruby_amulet_1698, "Ruby amulet");
-					case 42 :
-						return(55, dragonstone_1615, "Members: Cut dragonstone");
-					case 43 :
-						return(55, dragonstone_ring_1645, "Members: Dragonstone ring");
-					case 44 :
-						return(56, diamond_necklace_1662, "Diamond necklace");
-					case 45 :
-						return(58, diamond_bracelet_11092, "Members: Diamond bracelet");
-					case 46 :
-						return(67, onyx_6573, "Members: Cut onyx");
-					case 47 :
-						return(67, onyx_ring_6575, "Members: Onyx ring");
-					case 48 :
-						return(70, diamond_amulet_1700, "Diamond amulet");
-					case 49 :
-						return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 35 Farming and 70 Woodcutting)");
-					case 50 :
-						return(72, dragon_necklace_1664, "Members: Dragonstone necklace");
-					case 51 :
-						return(74, dragonstone_bracelet_11115, "Members: Dragonstone bracelet");
-					case 52 :
-						return(75, slayer_ring_8_11866, "Members: Slayer ring");
-					case 53 :
-						return(80, dragonstone_amulet_1702, "Members: Dragonstone amulet");
-					case 54 :
-						return(82, onyx_necklace_6577, "Members: Onyx necklace");
-					case 55 :
-						return(84, onyx_bracelet_11130, "Members: Onyx bracelet");
-					case 56 :
-						return(89, zenyte_19493, "Members: Cut zenyte");
-					case 57 :
-						return(89, zenyte_ring_19538, "Members: Zenyte ring");
-					case 58 :
-						return(90, onyx_amulet_6581, "Members: Onyx amulet");
-					case 59 :
-						return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
-					case 60 :
-						return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
-					case 61 :
-						return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
-					case default :
-						return(-1, null, "");
+				if ($int2 = 0) {
+					return(1, opal_1609, "Members: Cut opal");
 				}
+				if ($int2 = 1) {
+					return(1, opal_ring_21081, "Members: Opal ring");
+				}
+				if ($int2 = 2) {
+					return(3, polished_buttons_10496, "Polished buttons");
+				}
+				if ($int2 = 3) {
+					return(5, gold_ring_1635, "Gold ring");
+				}
+				if ($int2 = 4) {
+					return(6, gold_necklace_1654, "Gold necklace");
+				}
+				if ($int2 = 5) {
+					return(7, gold_bracelet_11069, "Members: Gold bracelet");
+				}
+				if ($int2 = 6) {
+					return(8, gold_amulet_1692, "Gold amulet");
+				}
+				if ($int2 = 7) {
+					return(13, jade_1611, "Members: Cut jade");
+				}
+				if ($int2 = 8) {
+					return(13, jade_ring_21084, "Members: Jade ring");
+				}
+				if ($int2 = 9) {
+					return(16, unblessed_symbol_1716, "Holy symbol");
+				}
+				if ($int2 = 10) {
+					return(16, red_topaz_1613, "Members: Cut red topaz");
+				}
+				if ($int2 = 11) {
+					return(16, topaz_ring_21087, "Members: Red topaz ring");
+				}
+				if ($int2 = 12) {
+					return(16, opal_necklace_21090, "Members: Opal necklace");
+				}
+				if ($int2 = 13) {
+					return(17, unpowered_symbol_1722, "Members: Unholy symbol");
+				}
+				if ($int2 = 14) {
+					return(20, sapphire_1607, "Cut sapphire");
+				}
+				if ($int2 = 15) {
+					return(20, sapphire_ring_1637, "Sapphire ring");
+				}
+				if ($int2 = 16) {
+					return(22, sapphire_necklace_1656, "Sapphire necklace");
+				}
+				if ($int2 = 17) {
+					return(22, opal_bracelet_21117, "Members: Opal bracelet");
+				}
+				if ($int2 = 18) {
+					return(23, tiara_5525, "Tiara");
+				}
+				if ($int2 = 19) {
+					return(23, sapphire_bracelet_11072, "Members: Sapphire bracelet");
+				}
+				if ($int2 = 20) {
+					return(24, sapphire_amulet_1694, "Sapphire amulet");
+				}
+				if ($int2 = 21) {
+					return(25, jade_necklace_21093, "Members: Jade necklace");
+				}
+				if ($int2 = 22) {
+					return(27, emerald_1605, "Cut emerald");
+				}
+				if ($int2 = 23) {
+					return(27, emerald_ring_1639, "Emerald ring");
+				}
+				if ($int2 = 24) {
+					return(27, opal_amulet_21108, "Members: Opal amulet");
+				}
+				if ($int2 = 25) {
+					return(29, emerald_necklace_1658, "Emerald necklace");
+				}
+				if ($int2 = 26) {
+					return(29, jade_bracelet_21120, "Members: Jade bracelet");
+				}
+				if ($int2 = 27) {
+					return(30, emerald_bracelet_11076, "Members: Emerald bracelet");
+				}
+				if ($int2 = 28) {
+					return(31, emerald_amulet_1696, "Emerald amulet");
+				}
+				if ($int2 = 29) {
+					return(32, topaz_necklace_21096, "Members: Red topaz necklace");
+				}
+				if ($int2 = 30) {
+					return(34, ruby_1603, "Cut ruby");
+				}
+				if ($int2 = 31) {
+					return(34, ruby_ring_1641, "Ruby ring");
+				}
+				if ($int2 = 32) {
+					return(34, jade_amulet_21111, "Members: Jade amulet");
+				}
+				if ($int2 = 33) {
+					return(37, strung_rabbit_foot_10132, "Members: Rabbit-foot necklaces");
+				}
+				if ($int2 = 34) {
+					return(38, topaz_bracelet_21123, "Members: Red topaz bracelet");
+				}
+				if ($int2 = 35) {
+					return(40, ruby_necklace_1660, "Ruby necklace");
+				}
+				if ($int2 = 36) {
+					return(42, ruby_bracelet_11085, "Members: Ruby bracelet");
+				}
+				if ($int2 = 37) {
+					return(42, gold_tiara_26788, "Members: Gold Tiara");
+				}
+				if ($int2 = 38) {
+					return(43, diamond_1601, "Cut diamond");
+				}
+				if ($int2 = 39) {
+					return(43, diamond_ring_1643, "Diamond ring");
+				}
+				if ($int2 = 40) {
+					return(45, topaz_amulet_21114, "Members: Red topaz amulet");
+				}
+				if ($int2 = 41) {
+					return(50, ruby_amulet_1698, "Ruby amulet");
+				}
+				if ($int2 = 42) {
+					return(55, dragonstone_1615, "Members: Cut dragonstone");
+				}
+				if ($int2 = 43) {
+					return(55, dragonstone_ring_1645, "Members: Dragonstone ring");
+				}
+				if ($int2 = 44) {
+					return(56, diamond_necklace_1662, "Diamond necklace");
+				}
+				if ($int2 = 45) {
+					return(58, diamond_bracelet_11092, "Members: Diamond bracelet");
+				}
+				if ($int2 = 46) {
+					return(67, onyx_6573, "Members: Cut onyx");
+				}
+				if ($int2 = 47) {
+					return(67, onyx_ring_6575, "Members: Onyx ring");
+				}
+				if ($int2 = 48) {
+					return(70, diamond_amulet_1700, "Diamond amulet");
+				}
+				if ($int2 = 49) {
+					return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 35 Farming and 70 Woodcutting)");
+				}
+				if ($int2 = 50) {
+					return(72, dragon_necklace_1664, "Members: Dragonstone necklace");
+				}
+				if ($int2 = 51) {
+					return(74, dragonstone_bracelet_11115, "Members: Dragonstone bracelet");
+				}
+				if ($int2 = 52) {
+					return(75, slayer_ring_8_11866, "Members: Slayer ring");
+				}
+				if ($int2 = 53) {
+					return(80, dragonstone_amulet_1702, "Members: Dragonstone amulet");
+				}
+				if ($int2 = 54) {
+					return(80, berserker_icon_28295, "Members: Icon Removal");
+				}
+				if ($int2 = 55) {
+					return(80, ultor_ring_28307, "Members: Ultor, Venator, Bellator, Magus rings");
+				}
+				if ($int2 = 56) {
+					return(82, onyx_necklace_6577, "Members: Onyx necklace");
+				}
+				if ($int2 = 57) {
+					return(84, onyx_bracelet_11130, "Members: Onyx bracelet");
+				}
+				if ($int2 = 58) {
+					return(89, zenyte_19493, "Members: Cut zenyte");
+				}
+				if ($int2 = 59) {
+					return(89, zenyte_ring_19538, "Members: Zenyte ring");
+				}
+				if ($int2 = 60) {
+					return(90, onyx_amulet_6581, "Members: Onyx amulet");
+				}
+				if ($int2 = 61) {
+					return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
+				}
+				if ($int2 = 62) {
+					return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
+				}
+				if ($int2 = 63) {
+					return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
+				}
+				return(-1, null, "");
 			case 6 :
 				switch_int ($int2) {
 					case 0 :

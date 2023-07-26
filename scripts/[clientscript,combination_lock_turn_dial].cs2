@@ -1,15 +1,27 @@
 // 6964
-[clientscript,combination_lock_turn_dial](component $component0, int $comsubid1, int $int2, dbrow $dbrow3, int $int4)
-def_int $int5 = ~combination_lock_getvar($int2);
-def_int $int6 = ~combination_lock_offset_index($int5, $dbrow3, $int4);
-~combination_lock_setvar($int2, $int6);
-if (cc_find($component0, $comsubid1) = ^true) {
-	cc_settext(db_getfield($dbrow3, dbtable_36:0, $int6));
-}
-if (cc_find($component0, calc($comsubid1 + 3)) = ^true) {
-	cc_settext(db_getfield($dbrow3, dbtable_36:0, ~combination_lock_offset_index($int6, $dbrow3, -1)));
-}
-if (cc_find($component0, calc($comsubid1 + 4)) = ^true) {
-	cc_settext(db_getfield($dbrow3, dbtable_36:0, ~combination_lock_offset_index($int6, $dbrow3, 1)));
+[clientscript,combination_lock_turn_dial](component $component0, int $comsubid1, int $int2, dbrow $dbrow3, int $int4, int $int5)
+def_int $int6 = ~combination_lock_getvar($int2);
+def_int $int7 = ~combination_lock_offset_index($int6, $dbrow3, $int5);
+~combination_lock_setvar($int2, $int7);
+if ($int4 = 0) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_settext(db_getfield($dbrow3, dbtable_36:0, $int7));
+	}
+	if (cc_find($component0, calc($comsubid1 + 3)) = ^true) {
+		cc_settext(db_getfield($dbrow3, dbtable_36:0, ~combination_lock_offset_index($int7, $dbrow3, -1)));
+	}
+	if (cc_find($component0, calc($comsubid1 + 4)) = ^true) {
+		cc_settext(db_getfield($dbrow3, dbtable_36:0, ~combination_lock_offset_index($int7, $dbrow3, 1)));
+	}
+} else {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_setgraphic(db_getfield($dbrow3, dbtable_36:1, $int7));
+	}
+	if (cc_find($component0, calc($comsubid1 + 3)) = ^true) {
+		cc_setgraphic(db_getfield($dbrow3, dbtable_36:1, ~combination_lock_offset_index($int7, $dbrow3, -1)));
+	}
+	if (cc_find($component0, calc($comsubid1 + 4)) = ^true) {
+		cc_setgraphic(db_getfield($dbrow3, dbtable_36:1, ~combination_lock_offset_index($int7, $dbrow3, 1)));
+	}
 }
 sound_synth(synth_6650, 1, 0);

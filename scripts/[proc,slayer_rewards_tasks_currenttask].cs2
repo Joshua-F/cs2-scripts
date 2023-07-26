@@ -11,10 +11,10 @@ def_int $int10 = 0;
 def_string $string0 = "Creature";
 if (%var262 = 98) {
 	if (%var261 > 0) {
-		$int10, $string0 = 1, enum(int, string, enum_1174, %var263);
+		$int10, $string0 = 1, struct_param(enum(int, struct, enum_5008, %var263), param_1801);
 		if_settext("<tostring(%var261)> x <$string0>", $component2);
 	} else if (%var261 = -1) {
-		$int10, $string0 = 1, enum(int, string, enum_1174, %var263);
+		$int10, $string0 = 1, struct_param(enum(int, struct, enum_5008, %var263), param_1801);
 		if_settext($string0, $component2);
 	} else {
 		if_settext("None", $component2);
@@ -29,11 +29,11 @@ def_int $int11 = 0;
 def_string $string1 = "Creature";
 if (%var265 = 98) {
 	if (%var264 > 0) {
-		$int11, $string1 = 1, enum(int, string, enum_1174, %var266);
+		$int11, $string1 = 1, struct_param(enum(int, struct, enum_5008, %var266), param_1801);
 		if_settext("<tostring(%var264)> x <$string1>", $component8);
 		if_setcolour(^white, $component8);
 	} else if (%var264 = -1) {
-		$int11, $string1 = 1, enum(int, string, enum_1174, %var266);
+		$int11, $string1 = 1, struct_param(enum(int, struct, enum_5008, %var266), param_1801);
 		if_settext($string1, $component8);
 		if_setcolour(^white, $component8);
 	} else {

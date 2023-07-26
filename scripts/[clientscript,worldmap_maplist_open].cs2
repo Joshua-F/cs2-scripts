@@ -8,24 +8,24 @@ def_int $y7 = ^min_32bit_int;
 def_int $y8 = ^min_32bit_int;
 def_int $int9 = 0;
 def_wma $wma10 = null;
-while ($int9 <= 40) {
+while ($int9 <= 41) {
 	$wma10 = enum(int, wma, enum_1697, $int9);
 	if ($wma10 ! null & cc_find($component2, calc($int9 + 1)) = ^true) {
-		if (~worldmap_findcoordinmap($wma10, %varcint188) ! null) {
+		if (~worldmap_findcoordinmap($wma10, %varcint188) ! null & cc_gethide = false) {
 			if (~on_mobile = false) {
 				$y6 = calc(cc_gety - 1);
 			} else {
 				$y6 = calc(cc_gety + 3);
 			}
 		}
-		if (~worldmap_findcoordinmap($wma10, %varcint1078) ! null) {
+		if (~worldmap_findcoordinmap($wma10, %varcint1078) ! null & cc_gethide = false) {
 			if (~on_mobile = false) {
 				$y7 = calc(cc_gety - 1);
 			} else {
 				$y7 = calc(cc_gety + 3);
 			}
 		}
-		if (~worldmap_findcoordinmap($wma10, %varcint401) ! null) {
+		if (~worldmap_findcoordinmap($wma10, %varcint401) ! null & cc_gethide = false) {
 			if (~on_mobile = false) {
 				$y8 = calc(cc_gety - 1);
 			} else {

@@ -29,7 +29,7 @@ def_int $int6 = 1000;
 if ($int5 < 0) {
 	$int5 = 0;
 }
-if ($obj2 = soulreaper_axe_25484) {
+if ($obj2 = soulreaper_axe_28338) {
 	$int5, $int6 = %var3784, 5;
 	if ($int5 > 0) {
 		$int3 = 1;
@@ -53,6 +53,8 @@ def_string $string0 = "<enum(obj, string, enum_1739, $obj7)> (<tostring(calc(~sc
 switch_obj ($obj7) {
 	case dragon_hasta_22731, dragon_hasta_p_22734, dragon_hasta_p_22737, dragon_hasta_p_22740, dragon_hasta_kp_22743 :
 		$string0 = "<enum(obj, string, enum_1739, $obj7)> 5-100% ";
+	case soulreaper_axe_28338 :
+		$string0 = "<enum(obj, string, enum_1739, $obj7)> 0-5";
 }
 if (%varbit5712 = 0) {
 	if (($obj7 = dark_bow_11235 | $obj7 = dark_bow_20408 | $obj7 = dark_bow_12765 | $obj7 = dark_bow_12768 | $obj7 = dark_bow_12767) & (inv_getobj(worn, 13) = dragon_arrow_11212 | inv_getobj(worn, 13) = dragon_arrow_p_11227 | inv_getobj(worn, 13) = dragon_arrow_p_11228 | inv_getobj(worn, 13) = dragon_arrow_p_11229)) {

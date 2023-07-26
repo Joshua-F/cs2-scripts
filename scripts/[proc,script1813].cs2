@@ -1,0 +1,7 @@
+// 1813
+[proc,script1813](int $int0, int $int1, int $int2)(int)
+def_int $int3 = calc($int0 + $int1);
+if ($int3 >= $int2) {
+	$int3 = calc($int3 - $int2);
+}
+return($int3);

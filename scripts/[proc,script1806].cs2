@@ -1,0 +1,29 @@
+// 1806
+[proc,script1806](component $component0, graphic $graphic1, string $text0, boolean $boolean2, int $int3)(int)
+cc_deleteall($component0);
+def_int $comsubid4 = 0;
+if ($boolean2 = true) {
+	$comsubid4 = ~v2_stone_button_in_filled($component0);
+} else {
+	$comsubid4 = ~v2_stone_button_out_filled($component0);
+}
+if ($graphic1 ! null) {
+	cc_create($component0, ^iftype_graphic, $comsubid4);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic1);
+} else {
+	cc_create($component0, ^iftype_text, $comsubid4);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	if ($int3 = 1) {
+		cc_settext("<col=7f7f7f>...</col>");
+	} else {
+		cc_settext($text0);
+	}
+}
+return(0);

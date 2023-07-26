@@ -2,10 +2,12 @@
 [proc,skill_guide_subsection_prayer](int $int0)(string, int)
 switch_int ($int0) {
 	case 0 :
-		return("Prayers", 0);
+		return("Standard Prayers", 0);
 	case 1 :
-		return("Equipment", 1);
+		return("Ruinous Powers", 1);
 	case 2 :
+		return("Equipment", 1);
+	case 3 :
 		return("Other", 1);
 	case default :
 		return("", -1);
