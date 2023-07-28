@@ -48,7 +48,7 @@ cc_setsize($int10, $int11, $setsize12, $setsize13);
 cc_setposition($x14, $y15, $setposh16, $setposv17);
 cc_setfill(true);
 cc_setcolour(0x372e22);
-cc_create($component9, 12, $int18);
+cc_create($component9, ^iftype_input, $int18);
 def_int $comsubid19 = $int18;
 $int18 = calc($int18 + 1);
 cc_setsize(calc($int10 + 10), calc($int11 + 10), $setsize12, $setsize13);

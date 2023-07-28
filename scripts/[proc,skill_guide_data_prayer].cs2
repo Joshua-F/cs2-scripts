@@ -69,57 +69,6 @@ switch_int ($int0) {
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(oc_param(rejuvenation_25983, param_1753), rejuvenation_25983, "Rejuvenation");
-			case 1 :
-				return(oc_param(ancient_strength_26218, param_1753), ancient_strength_26218, "Ancient Strength");
-			case 2 :
-				return(oc_param(ancient_sight_26217, param_1753), ancient_sight_26217, "Ancient Sight");
-			case 3 :
-				return(oc_param(ancient_will_25972, param_1753), ancient_will_25972, "Ancient Will");
-			case 4 :
-				return(oc_param(protect_item_25942, param_1753), protect_item_25942, "Protect Item");
-			case 5 :
-				return(oc_param(ruinous_grace_25974, param_1753), ruinous_grace_25974, "Ruinous Grace");
-			case 6 :
-				return(oc_param(dampen_magic_15297, param_1753), dampen_magic_15297, "Dampen Magic");
-			case 7 :
-				return(oc_param(dampen_ranged_25987, param_1753), dampen_ranged_25987, "Dampen Ranged");
-			case 8 :
-				return(oc_param(dampen_melee_25988, param_1753), dampen_melee_25988, "Dampen Melee");
-			case 9 :
-				return(oc_param(trinitas_25971, param_1753), trinitas_25971, "Trinitas");
-			case 10 :
-				return(oc_param(berserker_26982, param_1753), berserker_26982, "Berserker");
-			case 11 :
-				return(oc_param(purge_25984, param_1753), purge_25984, "Purge");
-			case 12 :
-				return(oc_param(metabolise_26983, param_1753), metabolise_26983, "Metabolise");
-			case 13 :
-				return(oc_param(rebuke_25948, param_1753), rebuke_25948, "Rebuke");
-			case 14 :
-				return(oc_param(vindication_25945, param_1753), vindication_25945, "Vindication");
-			case 15 :
-				return(oc_param(decimate_25970, param_1753), decimate_25970, "Decimate");
-			case 16 :
-				return(oc_param(annihilate_25969, param_1753), annihilate_25969, "Annihilate");
-			case 17 :
-				return(oc_param(vaporise_25989, param_1753), vaporise_25989, "Vaporise");
-			case 18 :
-				return(oc_param(fumus_vow_26981, param_1753), fumus_vow_26981, "Fumus' Vow");
-			case 19 :
-				return(oc_param(umbras_vow_25977, param_1753), umbras_vow_25977, "Umbra's Vow");
-			case 20 :
-				return(oc_param(cruors_vow_25978, param_1753), cruors_vow_25978, "Cruor's Vow");
-			case 21 :
-				return(oc_param(glacies_vow_25954, param_1753), glacies_vow_25954, "Glacies' Vow");
-			case 22 :
-				return(oc_param(wrath_25973, param_1753), wrath_25973, "Wrath");
-			case 23 :
-				return(oc_param(intensify_25951, param_1753), intensify_25951, "Intensify");
-		}
-	case 2 :
-		switch_int ($int1) {
-			case 0 :
 				return(10, initiate_sallet_5574, "Initiate armour<br> (after Recruitment Drive, with 20 Defence)");
 			case 1 :
 				return(20, proselyte_sallet_9672, "Proselyte armour<br> (after Slug Menace, with 30 Defence)");
@@ -172,7 +121,7 @@ switch_int ($int0) {
 			case default :
 				return(-1, null, "");
 		}
-	case 3 :
+	case 2 :
 		switch_int ($int1) {
 			case 0 :
 				return(54, hallowed_token_24719, "Hallowed Sepulchre - Portal sacrifice");
@@ -183,5 +132,6 @@ switch_int ($int0) {
 			case default :
 				return(-1, null, "");
 		}
+	case default :
+		return(-1, null, "");
 }
-return(-1, null, "");

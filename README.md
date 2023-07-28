@@ -1796,6 +1796,7 @@
 [**1793**](scripts/[proc,script1793].cs2)  
 [**1794**](scripts/[proc,script1794].cs2)  
 [**1795**](scripts/[proc,script1795].cs2)  
+[**1796**](scripts/[loadloc,rocks_47570].cs2) `[loadloc,rocks_47570]`  
 [**1797**](scripts/[proc,script1797].cs2)  
 [**1798**](scripts/[proc,script1798].cs2)  
 [**1799**](scripts/[clientscript,script1799].cs2)  
@@ -1863,6 +1864,7 @@
 [**1861**](scripts/[clientscript,script1861].cs2)  
 [**1862**](scripts/[proc,script1862].cs2)  
 [**1863**](scripts/[clientscript,script1863].cs2)  
+[**1864**](scripts/[loadloc,rocks_47571].cs2) `[loadloc,rocks_47571]`  
 [**1905**](scripts/[clientscript,bugreport_textinput].cs2) `[clientscript,bugreport_textinput]`  
 [**1926**](scripts/[clientscript,script1926].cs2)  
 [**1934**](scripts/[proc,script1934].cs2)  
