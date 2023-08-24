@@ -35,7 +35,7 @@ if ($int9 ! -1) {
 } else {
 	$int9 = 0;
 }
-if_sethide(false, $component1);
+if_sethide(true, $component1);
 if_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top, $component1);
 def_int $count12 = enum_getoutputcount(enum_2648);
 def_int $intarray0($count12);

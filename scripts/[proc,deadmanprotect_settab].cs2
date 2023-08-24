@@ -15,29 +15,25 @@ def_string $text0 = "";
 switch_int ($int0) {
 	case 0 :
 		if (~deadman_world = 3) {
-			$text0 = "In this Deadman event, when you die <col=ffffff>unskulled</col> from <col=ffffff>PvM combat</col>, you lose the items you are carrying at the time. Your 3 most valuable items are protected.<br><br>Once you have lost <col=ffffff>all three of your lives</col>, you will also lose <col=ffffff>all</col> your items, <col=ffffff>all</col> your combat XP and <col=ffffff>10%</col> of your non-combat XP.";
+			$text0 = "In this Deadman event, when you die <col=ffffff>unskulled</col> from <col=ffffff>PvM combat</col>, you lose the items you are carrying at the time. Your 3 most valuable items are protected.<br><br>You may lose more if you are <col=ffffff>skulled</col> at the time.";
 		} else {
 			$text0 = "In Deadman mode, when you die <col=ffffff>unskulled</col> from <col=ffffff>PvM combat</col>, you only lose the items you are carrying at the time. Your 3 most valuable items are protected. You do not lose any experience.<br><br>You may lose more if you are <col=ffffff>skulled</col> at the time.";
 		}
 	case 1 :
 		if (~deadman_world = 3) {
-			if (%varbit13017 = 2) {
-				$text0 = "In this Deadman event, as you are on your <col=ff0000>last life</col>, when you die from <col=ffffff>PvP combat</col>, you will lose the <col=ffffff>28</col> most valuable stacks of items in your bank and safety deposit box, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Once you have lost <col=ffffff>this life</col>, you will also lose <col=ffffff>all</col> your items, <col=ffffff>all</col> your combat XP and <col=ffffff>10%</col> of your non-combat XP.";
-			} else {
-				$text0 = "In this Deadman event, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Once you have lost <col=ffffff>all three of your lives</col>, you will also lose <col=ffffff>all</col> your items, <col=ffffff>all</col> your combat XP and <col=ffffff>10%</col> of your non-combat XP.";
-			}
+			$text0 = "In this Deadman event, dying in <col=ffffff>PvP combat</col> results in you losing <col=ffffff>all</col> of the items you're carrying and <col=ffffff>80%</col> from each of your <col=ffffff>10</col> most valuable item stacks in the bank.<br><br>You will not lose any experience if you die.";
 		} else {
 			$text0 = "In Deadman mode, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>You will not lose any experience if you die <col=ffffff>unskulled</col>.";
 		}
 	case 2 :
 		if (~deadman_world = 3) {
-			$text0 = "In this Deadman event, if you die whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Once you have lost <col=ffffff>all three of your lives</col>, you will also lose <col=ffffff>all</col> your items, <col=ffffff>all</col> your combat XP and <col=ffffff>10%</col> of your non-combat XP.";
+			$text0 = "In this Deadman event, if you die whilst <col=ffffff>skulled</col>, you lose <col=ffffff>all</col> of the items you're carrying and <col=ffffff>80%</col> from each of your <col=ffffff>10</col> most valuable item stacks in the bank.<br><br>You will not lose any experience if you die.";
 		} else {
 			$text0 = "In Deadman mode, if you die whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 50%</col> of your experience in any unprotected skills. You may lose even more in a <col=ffffff>guarded</col> area.";
 		}
 	case 3 :
 		if (~deadman_world = 3) {
-			$text0 = "In this Deadman event, if you die in a <col=ffffff>guarded</col> area whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Once you have lost <col=ffffff>all three of your lives</col>, you will also lose <col=ffffff>all</col> your items, <col=ffffff>all</col> your combat XP and <col=ffffff>10%</col> of your non-combat XP.";
+			$text0 = "In this Deadman event, if you die in a <col=ffffff>guarded</col> area whilst <col=ffffff>skulled</col>, you lose <col=ffffff>all</col> of the items you're carrying and <col=ffffff>80%</col> from each of your <col=ffffff>10</col> most valuable item stacks in the bank.<br><br>You will not lose any experience if you die.";
 		} else {
 			$text0 = "In Deadman mode, if you die in a <col=ffffff>guarded</col> area whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 10%</col> of your experience in any protected skills, and <col=ffffff>up to 50%</col> in any unprotected skills.";
 		}

@@ -1,0 +1,11 @@
+// 1875
+[proc,script1875](int $int0, string $text0, int $x1, int $y2, int $width3, int $height4, fontmetrics $fontmetrics5, int $int6, int $colour7)(int)
+cc_create(interface_847:39, ^iftype_text, $int0);
+cc_setposition($x1, $y2, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont($fontmetrics5);
+cc_setcolour($colour7);
+cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_top, $int6);
+cc_settextshadow(true);
+cc_settext($text0);
+return(calc($int0 + 1));

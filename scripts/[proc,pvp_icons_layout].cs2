@@ -67,10 +67,10 @@ if (~pvp_world = 1) {
 		}
 		if (if_gettop = toplevel_spectator) {
 			if_sethide(true, interface_90:28);
-		} else if (%var1676 > 5 | %varbit4989 = $int6) {
+		} else if (%var1676 > 6 | %varbit4989 = $int6) {
 			~script1434(false, $enum4, true);
 			if_sethide(true, interface_90:38);
-		} else if (%var1676 = 5) {
+		} else if (%var1676 = 5 | %var1676 = 6) {
 			~script1434(false, $enum4, false);
 			if_sethide(false, interface_90:38);
 		}
@@ -88,7 +88,7 @@ if (~pvp_world = 1) {
 		} else if (~private_event_world ! 0) {
 			if_setgraphic(enum(int, graphic, enum_4042, -1), interface_90:46);
 		} else {
-			if_setgraphic(enum(int, graphic, enum_4042, %varbit13017), interface_90:46);
+			if_setgraphic(enum(int, graphic, enum_4042, -1), interface_90:46);
 		}
 	} else {
 		if_setgraphic("pvpw_icons,0", interface_90:46);

@@ -173,7 +173,7 @@ while ($int41 < $length1) {
 	$string1, $string0 = ~script632($string0);
 	if ($int41 = 0) {
 		$string2 = $string1;
-	} else if ($int41 = 1 & ($length1 = 2 | $length1 = 3 & $intarray0(40) = 2) & $int0 = -1 & compare(lowercase($string2), "yes") = 0 & compare(lowercase($string1), "no") = 0 & $intarray1(0) >= calc($intarray0(42) * 10) & cc_find(poll_results:11, $int37) = ^true) {
+	} else if ($int41 = 1 & ($length1 = 2 | $length1 = 3 & $intarray0(40) = 2) & $int0 = -1 & compare(lowercase($string2), "yes") = 0 & compare(lowercase($string1), "no") = 0 & $intarray0(42) > 0 & $intarray1(0) >= calc($intarray0(42) * 10) & cc_find(poll_results:11, $int37) = ^true) {
 		cc_setcolour(^green);
 	}
 	$int39 = calc(paraheight($string1, $intarray0(39), p11_full) * 10 + 2);

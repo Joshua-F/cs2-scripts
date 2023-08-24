@@ -18,8 +18,8 @@ if (~wildwars_world = 1) {
 } else if (%varbit4991 = 2) {
 	$text0 = "<col=ff812c>You'll </col><col=ff0000>DIE</col><col=ff812c> if you stay in this area - Get to safety</col>";
 } else if (%varbit4991 = 1) {
-	$text0 = "<col=ffa71f>When the timer hits 0:00 you'll </col><col=ff0000>DIE</col><col=ffa71f> - Get to safety</col>";
+	$text0 = "<col=ffa71f>The Strange Power is </col><col=ff0000>approaching you</col><col=ffa71f> - Get to safety</col>";
 } else {
-	$text0 = "<col=00ff00>When the timer hits 0:00 you'll be safe here</col>";
+	$text0 = "<col=00ff00>The Strange Power hasn't reached this area yet...</col>";
 }
 if_settext($text0, $component0);

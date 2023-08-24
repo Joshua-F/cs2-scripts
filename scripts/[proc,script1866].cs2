@@ -1,0 +1,17 @@
+// 1866
+[proc,script1866]
+def_component $component0 = interface_846:10;
+def_int $int1 = 0;
+.cc_create($component0, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setfill(true);
+.cc_setcolour(^white);
+.cc_settrans(255);
+.cc_setonmouserepeat("script6874($component0, .cc_getid, ^yellow)");
+.cc_setonmouseleave("script6875($component0, .cc_getid)");
+.cc_setonop("script6876($component0, .cc_getid)");
+.cc_setop(1, "Refresh");
+.cc_setopbase("Points");
+$int1 = ~script5288($component0, $int1, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3712, 0x777777);
