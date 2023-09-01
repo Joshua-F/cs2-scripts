@@ -3,13 +3,13 @@
 def_int $count2 = 0;
 def_struct $struct3 = null;
 def_int $count4 = enum_getoutputcount(enum_4664);
+def_int $height5 = 0;
 cc_deleteall($component1);
 while ($count2 < $count4) {
 	$struct3 = enum(int, struct, enum_4664, $count2);
-	~script6610($count2, $struct3, $component1);
+	$height5 = ~script6610($count2, $struct3, $component1);
 	$count2 = calc($count2 + 1);
 }
-def_int $height5 = calc($count4 * 75);
 if_setscrollsize(0, $height5, $component1);
 if_setscrollpos(0, 0, $component1);
 ~scrollbar_vertical($component0, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

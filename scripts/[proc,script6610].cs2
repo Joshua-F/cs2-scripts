@@ -1,11 +1,13 @@
 // 6610
-[proc,script6610](int $count0, struct $struct1, component $component2)
+[proc,script6610](int $count0, struct $struct1, component $component2)(int)
 def_int $int3 = calc($count0 * 5);
 def_int $int4 = 0;
-def_int $int5 = calc($count0 * 75);
+def_int $int5 = 7;
+def_int $int6 = calc($int5 * 12 + 3);
+def_int $int7 = calc($count0 * $int6);
 cc_create($component2, ^iftype_rectangle, $int3);
-cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(0, 75, ^setsize_minus, ^setsize_abs);
+cc_setposition($int4, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int6, ^setsize_minus, ^setsize_abs);
 cc_setfill(true);
 cc_setcolour(^black);
 if (calc($count0 % 2) = 0) {
@@ -15,18 +17,18 @@ if (calc($count0 % 2) = 0) {
 }
 $int3 = calc($int3 + 1);
 cc_create($component2, ^iftype_line, $int3);
-cc_setposition(calc($int4 + 113), $int5, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(0, 75, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int4 + 113), $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int6, ^setsize_abs, ^setsize_abs);
 cc_setcolour(0x494034);
 $int3 = calc($int3 + 1);
 cc_create($component2, ^iftype_graphic, $int3);
-cc_setposition(calc($int4 + 39), calc($int5 + 10), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int4 + 39), calc($int7 + ($int6 - 55) / 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
 cc_setgraphic(struct_param($struct1, param_1297));
 cc_settrans(0);
 $int3 = calc($int3 + 1);
 cc_create($component2, ^iftype_text, $int3);
-cc_setposition(calc($int4 + 7), calc($int5 + 49), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int4 + 7), calc($int7 + 39 + ($int6 - 55) / 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(97, 20, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -35,19 +37,19 @@ cc_setcolour(0xff981f);
 cc_settext(struct_param($struct1, param_1160));
 $int3 = calc($int3 + 1);
 cc_create($component2, ^iftype_text, $int3);
-cc_setposition(calc($int4 + 121), calc($int5 + 6), ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc($int4 + 129), 63, ^setsize_minus, ^setsize_abs);
+cc_setposition(calc($int4 + 121), calc($int7 + 6), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int4 + 129), calc(($int5 - 1) * 12 + 3), ^setsize_minus, ^setsize_abs);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 def_string $text0 = struct_param($struct1, param_1262);
-def_int $int6 = struct_param($struct1, param_1162);
-if ($int6 < 0) {
-	$int6 = calc($int6 * -1);
-	$text0 = "<$text0><br><br>Decreases Raid Level by <tostring($int6)>.";
-} else if ($int6 > 0) {
-	$text0 = "<$text0><br><br>Increases Raid Level by <tostring($int6)>.";
+def_int $int8 = struct_param($struct1, param_1162);
+if ($int8 < 0) {
+	$int8 = calc($int8 * -1);
+	$text0 = "<$text0><br><br>Decreases Raid Level by <tostring($int8)>.";
+} else if ($int8 > 0) {
+	$text0 = "<$text0><br><br>Increases Raid Level by <tostring($int8)>.";
 }
 cc_settext($text0);
-$int3 = calc($int3 + 1);
+return(calc($int7 + $int6));

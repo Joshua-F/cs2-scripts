@@ -85,6 +85,18 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				} else {
 					$text0 = "<col=9f9f9f>N/A</col>";
 				}
+			case loot_key_broadcast_value_4678 :
+				if (~clan_permission_get(loot_key_broadcasts_4677) ! 128) {
+					if (%varclansetting98 > 1) {
+						$text0 = "<~tostring_spacer(%varclansetting98, ",")> coins";
+					} else if (%varclansetting98 = 1) {
+						$text0 = "1 coin";
+					} else {
+						$text0 = "No minimum";
+					}
+				} else {
+					$text0 = "<col=9f9f9f>N/A</col>";
+				}
 			case level_up_increments_of_10_4239 :
 				if (~clan_permission_get(level_up_broadcasts_4236) ! 128) {
 					if (%varclansetting66 > 0) {
