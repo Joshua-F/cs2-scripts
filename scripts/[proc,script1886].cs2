@@ -1,0 +1,32 @@
+// 1886
+[proc,script1886](component $component0, component $component1, component $component2)
+def_string $op0 = "Insert";
+if (%var3994 ! null) {
+	$op0 = "Replace <col=ff9040><oc_name(%var3994)></col>";
+	if (%var856 ! null) {
+		$op0 = "<$op0> with <col=ff9040><oc_name(%var856)></col>";
+	}
+} else if (%var856 ! null) {
+	$op0 = "<$op0> <col=ff9040><oc_name(%var856)></col>";
+}
+if_setop(1, $op0, $component0);
+def_string $op1 = "Insert";
+if (%var3995 ! null) {
+	$op1 = "Replace <col=ff9040><oc_name(%var3995)></col>";
+	if (%var856 ! null) {
+		$op1 = "<$op1> with <col=ff9040><oc_name(%var856)></col>";
+	}
+} else if (%var856 ! null) {
+	$op1 = "<$op1> <col=ff9040><oc_name(%var856)></col>";
+}
+if_setop(1, $op1, $component1);
+def_string $op2 = "Insert";
+if (%var3996 ! null) {
+	$op2 = "Replace <col=ff9040><oc_name(%var3996)></col>";
+	if (%var856 ! null) {
+		$op2 = "<$op2> with <col=ff9040><oc_name(%var856)></col>";
+	}
+} else if (%var856 ! null) {
+	$op2 = "<$op2> <col=ff9040><oc_name(%var856)></col>";
+}
+if_setop(1, $op2, $component2);

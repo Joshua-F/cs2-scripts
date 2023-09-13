@@ -1,0 +1,6 @@
+// 1896
+[clientscript,script1896](int $colour0, component $component1, int $int2, int $int3, int $int4)
+def_int $int5 = 0;
+if (cc_find($component1, 0) = ^true) {
+	cc_setontimer("screen_glow_fadeout(calc(clientclock + $int2), calc(clientclock + $int3), $int4, cc_gettrans, $colour0, $component1, true)");
+}

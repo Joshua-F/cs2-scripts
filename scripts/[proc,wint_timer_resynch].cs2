@@ -1,7 +1,6 @@
 // 2755
 [proc,wint_timer_resynch](component $component0)
 if (%varbit7980 <= 0) {
-	if_settext("", $component0);
 	if_setontimer(null, $component0);
 	return;
 }

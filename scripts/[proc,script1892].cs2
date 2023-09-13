@@ -1,0 +1,13 @@
+// 1892
+[proc,script1892](component $component0, inv $inv1)
+cc_deleteall($component0);
+def_int $int2 = calc((if_getwidth($component0) - 36 * 4) / 3);
+def_int $int3 = calc((if_getheight($component0) - 32 * 7) / 6);
+def_int $int4 = 0;
+while ($int4 <= 28) {
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc((36 + $int2) * ($int4 % 4)), calc($int4 / 4 * (32 + $int3)), ^setpos_abs_left, ^setpos_abs_top);
+	~script1893($inv1, $int4, $component0);
+	$int4 = calc($int4 + 1);
+}

@@ -1,0 +1,20 @@
+// 1894
+[clientscript,script1894](component $component0, int $comsubid1, int $opindex2, inv $inv3, component $component4)
+def_obj $obj5 = inv_getobj($inv3, $comsubid1);
+if ($opindex2 = 1) {
+	if ($obj5 = %var856) {
+		%var856 = null;
+	} else {
+		%var856 = $obj5;
+	}
+	~script1892($component4, $inv3);
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans(100);
+	if ($obj5 = %var856) {
+		cc_setoutline(2);
+	} else {
+		cc_setoutline(1);
+	}
+	cc_setontimer("script1895(event_com, event_comsubid, calc(clientclock + 10))");
+}

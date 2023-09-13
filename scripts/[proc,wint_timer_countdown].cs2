@@ -2,7 +2,6 @@
 [proc,wint_timer_countdown](component $component0, int $int1)
 def_int $int2 = calc($int1 - clientclock);
 if ($int2 <= 0) {
-	if_settext("", $component0);
 	return;
 }
 def_int $int3 = calc($int2 / 50);

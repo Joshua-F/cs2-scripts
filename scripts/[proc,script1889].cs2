@@ -1,0 +1,55 @@
+// 1889
+[proc,script1889](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+def_string $op0 = "Insert";
+def_obj $obj7 = inv_getobj(inv_438, 0);
+if ($obj7 ! null) {
+	$op0 = "Replace <col=ff9040><oc_name($obj7)></col>";
+	if (%var856 ! null) {
+		$op0 = "<$op0> with <col=ff9040><oc_name(%var856)></col>";
+	}
+} else if (%var856 ! null) {
+	$op0 = "<$op0> <col=ff9040><oc_name(%var856)></col>";
+}
+if_setop(1, $op0, $component0);
+def_string $op1 = "Insert";
+def_obj $obj8 = inv_getobj(inv_438, 1);
+if ($obj8 ! null) {
+	$op1 = "Replace <col=ff9040><oc_name($obj8)></col>";
+	if (%var856 ! null) {
+		$op1 = "<$op1> with <col=ff9040><oc_name(%var856)></col>";
+	}
+} else if (%var856 ! null) {
+	$op1 = "<$op1> <col=ff9040><oc_name(%var856)></col>";
+}
+if_setop(1, $op1, $component1);
+def_string $op2 = "Insert";
+def_obj $obj9 = inv_getobj(inv_438, 2);
+if ($obj9 ! null) {
+	$op2 = "Replace <col=ff9040><oc_name($obj9)></col>";
+	if (%var856 ! null) {
+		$op2 = "<$op2> with <col=ff9040><oc_name(%var856)></col>";
+	}
+} else if (%var856 ! null) {
+	$op2 = "<$op2> <col=ff9040><oc_name(%var856)></col>";
+}
+if_setop(1, $op2, $component2);
+if (inv_getobj(inv_439, 0) ! null) {
+	if_setop(10, "Examine <col=ff9040><oc_name(inv_getobj(inv_439, 0))></col>", $component3);
+} else {
+	if_setop(10, "", $component3);
+}
+if (inv_getobj(inv_439, 1) ! null) {
+	if_setop(10, "Examine <col=ff9040><oc_name(inv_getobj(inv_439, 1))></col>", $component4);
+} else {
+	if_setop(10, "", $component4);
+}
+if (inv_getobj(inv_439, 2) ! null) {
+	if_setop(10, "Examine <col=ff9040><oc_name(inv_getobj(inv_439, 2))></col>", $component5);
+} else {
+	if_setop(10, "", $component5);
+}
+if (inv_getobj(inv_439, 3) ! null) {
+	if_setop(10, "Examine <col=ff9040><oc_name(inv_getobj(inv_439, 3))></col>", $component6);
+} else {
+	if_setop(10, "", $component6);
+}
