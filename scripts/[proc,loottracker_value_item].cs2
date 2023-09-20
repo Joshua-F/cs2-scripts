@@ -3,7 +3,7 @@
 def_int $colour1 = ^black;
 def_int $int2 = 0;
 def_int $int3 = 0;
-if (oc_param($obj0, param_295) = 0) {
+if (oc_param($obj0, no_alchemy) = 0) {
 	$colour1 = ~script7127(oc_cost($obj0));
 }
 if (oc_stockmarket($obj0) = true) {

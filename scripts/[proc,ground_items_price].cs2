@@ -14,7 +14,7 @@ if (%varbit14870 = 0 & oc_stockmarket($obj0) = true) {
 	}
 	$int3 = 0;
 }
-if (oc_param($obj0, param_295) = 0) {
+if (oc_param($obj0, no_alchemy) = 0) {
 	$int1 = ~script7127(oc_cost($obj0));
 }
 return($int1, $int3);
