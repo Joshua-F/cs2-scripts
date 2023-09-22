@@ -1,0 +1,11 @@
+// 4851
+[clientscript,script4851]
+if (%varcint1177 = 1) {
+	%varcint1177 = 0;
+} else {
+	%varcint1177 = 1;
+}
+if_setgraphic("graphic_5277", toplevel_osm:90);
+if_sethide(false, toplevel_osm:97);
+~script4863;
+~toplevel_side_customise(enum_1745);

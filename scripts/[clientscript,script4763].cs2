@@ -1,6 +1,6 @@
 // 4763
 [clientscript,script4763](component $component0, int $int1, struct $struct2, int $setting3, component $component4, int $int5)
-if (~on_enhanced_desktop = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 def_int $colour6 = ~settings_get_colour_or_default(^setting_tile_highlight_colour_colour);

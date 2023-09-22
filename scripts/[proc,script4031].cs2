@@ -1,0 +1,12 @@
+// 4031
+[proc,script4031]
+if (~toplevel_getcomponents ! enum_1745) {
+	return;
+}
+if (cc_find(toplevel_osm:34, 1) = ^true) {
+	if (%varcint1176 = 1) {
+		cc_settext("<col=a0a0a0>Chat Filter</col><br><col=ffffff>Closed");
+	} else {
+		cc_settext("<col=a0a0a0>Chat Filter</col><br><col=ffffff><enum(int, string, enum_5188, %varcint41)>");
+	}
+}

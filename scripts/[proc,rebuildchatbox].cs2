@@ -6,7 +6,7 @@ if (%varcint1112 = clientclock) {
 	return;
 }
 %varcint1112 = clientclock;
-def_int $width1 = if_getwidth(interface_162:56);
+def_int $width1 = if_getwidth(interface_162:55);
 def_string $string0 = removetags(chat_playername);
 def_int $int2 = 0;
 if (%varcint41 = 3) {
@@ -69,7 +69,7 @@ def_int $int7 = 0;
 def_int $int8 = 0;
 def_component $component9 = enum(int, component, enum_579, $int8);
 if ((%varcint41 = 0 | %varcint41 = 2) & string_length(chat_getmessagefilter) > 0) {
-	$int7 = ~script199("<$string4>Public chat filtering:</col> <lt><lowercase(escape(chat_getmessagefilter))><gt>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+	$int7 = ~script199("<$string4>Public chat filtering:</col> <lt><lowercase(escape(chat_getmessagefilter))><gt>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 	if_clearops($component9);
 	if_setonop(null, $component9);
 	if_setonmouseover(null, $component9);
@@ -109,52 +109,52 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 	if (~panetest($chattype11, $string18, $int15, $string20) = 1 & ~filtertest($chattype11, $string18, ~affixtimestamp($string23, $string20, "null"), $string20, $int12, $int2, $string0, $int15) = 1) {
 		switch_int ($chattype11) {
 			case ^chattype_publicchat, ^chattype_modchat :
-				$int7 = ~script203(~affixtimestamp($string23, "<$string18>:", "null"), "<$string4><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script203(~affixtimestamp($string23, "<$string18>:", "null"), "<$string4><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_autotyper, ^chattype_modautotyper :
-				$int7 = ~script203(~affixtimestamp($string23, "<$string18>:", "null"), "<$string6><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script203(~affixtimestamp($string23, "<$string18>:", "null"), "<$string6><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_privatechat, ^chattype_modprivatechat :
-				$int7 = ~script203(~affixtimestamp($string23, "From <$string18>:", "null"), "<$string5><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script203(~affixtimestamp($string23, "From <$string18>:", "null"), "<$string5><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_tradereq :
-				$int7 = ~script199(~affixtimestamp($string23, "<$string9><$string20></col>", "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, "<$string9><$string20></col>", "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_loginlogoutnotification :
-				$int7 = ~script199(~affixtimestamp($string23, "<$string5><$string20></col>", "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, "<$string5><$string20></col>", "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 				if (%varbit1627 = 0) {
 					%varcint65 = calc($int12 + 500 + 1);
 					if_setontimer("script664(false)", interface_162:0);
 				}
 			case ^chattype_privatechatout :
-				$int7 = ~script203(~affixtimestamp($string23, "To <$string18>:", "null"), "<$string5><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script203(~affixtimestamp($string23, "To <$string18>:", "null"), "<$string5><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_chalreq_trade, ^chattype_chalreq_friendschat, ^chattype_chalreq_clanchat :
-				$int7 = ~script199(~affixtimestamp($string23, "<$string10><$string20></col>", "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, "<$string10><$string20></col>", "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_clancreationinvitation :
-				$int7 = ~script199(~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_friendschat :
-				$int7 = ~script203(~affixtimestamp($string23, "[<$string3><$string19></col>] <$string18>:", "null"), "<$string7><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script203(~affixtimestamp($string23, "[<$string3><$string19></col>] <$string18>:", "null"), "<$string7><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case 111 :
 				$string24, $string20 = ~script632($string20);
-				$int7 = ~script199(~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case 112 :
 				$string24, $string20 = ~script632($string20);
-				$int7 = ~script199(~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_clanchat :
 				if (activeclansettings_find_affined(^clantype_gim) = true & activeclanchannel_find_affined(^clantype_gim) = true & ~script5501($string20) = 1) {
 					$string24, $string20 = ~script632($string20);
-					$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string18>:", "<$string12><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+					$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string18>:", "<$string12><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 				} else if (activeclansettings_find_affined(^clantype_clan) = true & activeclanchannel_find_affined(^clantype_clan) = true) {
 					$clanslot17 = activeclansettings_getaffinedslot(removetags($string18));
 					if ($clanslot17 ! null) {
 						$string22, $graphic16 = ~script4302(activeclansettings_getaffinedrank($clanslot17));
 						if ($graphic16 ! null) {
-							$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), $graphic16, 13, 13, "<$string18>:", "<$string8><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+							$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), $graphic16, 13, 13, "<$string18>:", "<$string8><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 						} else {
-							$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string2><$string22></col> <$string18>:", "<$string8><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+							$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string2><$string22></col> <$string18>:", "<$string8><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 						}
 					} else {
 						$string22, $graphic16 = ~script4302(-1);
-						$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), $graphic16, 13, 13, "<$string18>:", "<$string8><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+						$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), $graphic16, 13, 13, "<$string18>:", "<$string8><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 					}
 				} else {
-					$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string18>:", "<$string8><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+					$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string18>:", "<$string8><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 				}
 			case ^chattype_clanguestchat :
 				if (activeclansettings_find_listened = true & activeclanchannel_find_listened = true) {
@@ -162,63 +162,63 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					if ($clanslot17 ! null) {
 						$string22, $graphic16 = ~script4302(activeclansettings_getaffinedrank($clanslot17));
 						if ($graphic16 ! null) {
-							$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), $graphic16, 13, 13, "<$string18>:", "<$string11><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+							$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), $graphic16, 13, 13, "<$string18>:", "<$string11><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 						} else {
-							$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string2><$string22></col> <$string18>:", "<$string11><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+							$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string2><$string22></col> <$string18>:", "<$string11><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 						}
 					} else {
 						$string22, $graphic16 = ~script4302(-1);
-						$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), $graphic16, 13, 13, "<$string18>:", "<$string11><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+						$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), $graphic16, 13, 13, "<$string18>:", "<$string11><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 					}
 				} else {
-					$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string18>:", "<$string11><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+					$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), null, 0, 0, "<$string18>:", "<$string11><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 				}
 			case ^chattype_clanmessage :
 				if (~gim_notification_message($string20) = 1) {
 					$string18, $string20 = ~script632($string20);
 					$string20 = ~script3302($string20, "</col>", append("</col>", $string14));
 					if (activeclansettings_find_affined(^clantype_gim) = true) {
-						$int7 = ~script203(~affixtimestamp($string23, "[<$string2><activeclansettings_getclanname></col>]", "null"), "<$string14><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+						$int7 = ~script203(~affixtimestamp($string23, "[<$string2><activeclansettings_getclanname></col>]", "null"), "<$string14><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 					} else {
-						$int7 = ~script203(~affixtimestamp($string23, "", "null"), "<$string14><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+						$int7 = ~script203(~affixtimestamp($string23, "", "null"), "<$string14><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 					}
 				} else if (~pvpa_notification_message($string20) = 1) {
 					$string18, $string20 = ~script632($string20);
 					if (activeclanchannel_find_affined(^clantype_pvpa_group) = true) {
-						$int7 = ~script203(~affixtimestamp($string23, "[<$string2>PvP Arena</col>]", "null"), $string20, $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+						$int7 = ~script203(~affixtimestamp($string23, "[<$string2>PvP Arena</col>]", "null"), $string20, $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 					} else {
-						$int7 = ~script203(~affixtimestamp($string23, "", "null"), $string20, $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+						$int7 = ~script203(~affixtimestamp($string23, "", "null"), $string20, $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 					}
 				} else {
 					$string20 = ~script3302($string20, "</col>", append("</col>", $string13));
 					if (activeclanchannel_find_affined(^clantype_clan) = true) {
-						$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><activeclanchannel_getclanname></col>]", "null"), null, 0, 0, "", "<$string13><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+						$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><activeclanchannel_getclanname></col>]", "null"), null, 0, 0, "", "<$string13><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 					} else {
-						$int7 = ~script4483(~affixtimestamp($string23, "", "null"), null, 0, 0, "", "<$string13><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+						$int7 = ~script4483(~affixtimestamp($string23, "", "null"), null, 0, 0, "", "<$string13><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 					}
 				}
 			case ^chattype_clanguestmessage :
 				if (activeclanchannel_find_listened = true) {
-					$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><activeclanchannel_getclanname></col>]", "null"), null, 0, 0, "", $string20, $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+					$int7 = ~script4483(~affixtimestamp($string23, "[<$string2><activeclanchannel_getclanname></col>]", "null"), null, 0, 0, "", $string20, $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 				} else {
-					$int7 = ~script4483(~affixtimestamp($string23, "", "null"), null, 0, 0, "", $string20, $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+					$int7 = ~script4483(~affixtimestamp($string23, "", "null"), null, 0, 0, "", $string20, $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 				}
 			case ^chattype_broadcast :
 				$string20, $string21, $int13 = ~chat_broadcast_parseurl($string20);
-				$int7 = ~script203(~affixtimestamp($string23, "<$string1>Broadcast:</col>", "null"), "<$string17><$string20></col>", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script203(~affixtimestamp($string23, "<$string1>Broadcast:</col>", "null"), "<$string17><$string20></col>", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_10sectimeout :
 				if (calc(clientclock - $int12) > 500) {
-					$int7 = ~script199("jk :P", $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+					$int7 = ~script199("jk :P", $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 				} else {
-					$int7 = ~script199(~affixtimestamp($string23, $string20, "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+					$int7 = ~script199(~affixtimestamp($string23, $string20, "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 				}
 			case 113 :
-				$int7 = ~script199(~affixtimestamp($string23, "<$string15><$string20></col>", "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, "<$string15><$string20></col>", "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_dialogue :
 				$string18, $string20 = ~script632($string20);
-				$int7 = ~script199(~affixtimestamp($string23, "<$string18>: <$string16><$string20></col>", "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, "<$string18>: <$string16><$string20></col>", "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case default :
-				$int7 = ~script199(~affixtimestamp($string23, $string20, "null"), $int8, $component9, interface_162:56, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
+				$int7 = ~script199(~affixtimestamp($string23, $string20, "null"), $int8, $component9, interface_162:55, $width1, 3, 14, $int6, ^setpos_abs_top, 103, $colour3, $boolean4);
 		}
 		if_clearops($component9);
 		switch_int ($chattype11) {
@@ -347,19 +347,19 @@ while ($component9 ! null) {
 	if_setonmouseover(null, $component9);
 	if_setonmouseleave(null, $component9);
 	if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component9);
-	if (cc_find(interface_162:56, calc($int8 * 4)) = ^true) {
+	if (cc_find(interface_162:55, calc($int8 * 4)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 1)) = ^true) {
+	if (cc_find(interface_162:55, calc($int8 * 4 + 1)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 2)) = ^true) {
+	if (cc_find(interface_162:55, calc($int8 * 4 + 2)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 3)) = ^true) {
+	if (cc_find(interface_162:55, calc($int8 * 4 + 3)) = ^true) {
 		cc_sethide(true);
 	}
 	$int8 = calc($int8 + 1);
@@ -367,7 +367,7 @@ while ($component9 ! null) {
 }
 $int6 = calc($int6 - 2);
 $int6 = calc(0 - $int6);
-def_int $int23 = if_getheight(interface_162:56);
+def_int $int23 = if_getheight(interface_162:55);
 if ($int6 > $int23) {
 	$int23 = $int6;
 }
@@ -377,19 +377,19 @@ while ($int8 > 0) {
 	$component9 = enum(int, component, enum_579, $int8);
 	$int6 = calc(if_gety($component9) + $int23 - 2);
 	if_setposition(if_getx($component9), $int6, ^setpos_abs_left, ^setpos_abs_top, $component9);
-	if (cc_find(interface_162:56, calc($int8 * 4)) = ^true) {
+	if (cc_find(interface_162:55, calc($int8 * 4)) = ^true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 1)) = ^true) {
+	if (cc_find(interface_162:55, calc($int8 * 4 + 1)) = ^true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 2)) = ^true) {
+	if (cc_find(interface_162:55, calc($int8 * 4 + 2)) = ^true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 3)) = ^true) {
+	if (cc_find(interface_162:55, calc($int8 * 4 + 3)) = ^true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
 }
-if_setscrollsize(0, $int23, interface_162:56);
-~scrollbar_resize(interface_162:557, interface_162:56, calc(%varcint7 + ($int23 - %varcint8)));
-%varcint7, %varcint8 = if_getscrolly(interface_162:56), $int23;
+if_setscrollsize(0, $int23, interface_162:55);
+~scrollbar_resize(interface_162:556, interface_162:55, calc(%varcint7 + ($int23 - %varcint8)));
+%varcint7, %varcint8 = if_getscrolly(interface_162:55), $int23;

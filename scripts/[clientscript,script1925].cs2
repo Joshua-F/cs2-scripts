@@ -1,0 +1,6 @@
+// 1925
+[clientscript,script1925](component $component0, component $component1)
+if_setsize(0, 0, ^setsize_minus, ^setsize_abs, $component0);
+if_setsize(0, 30, ^setsize_minus, ^setsize_minus, $component1);
+~settings_op_sound(1);
+~scrollbar_vertical_rebuild(interface_860:9, interface_860:11);

@@ -1,0 +1,11 @@
+// 2430
+[clientscript,script2430](int $int0, int $int1, int $int2, int $int3, int $int4, boolean $boolean5)
+if ($int0 = %varbit15317 & $int1 = %varbit15318 & $int2 = %varbit15319 & $int3 = %varbit15320 & $int4 = %varbit15321) {
+	if ($boolean5 = true & ~popout_available(-1) = true) {
+		return;
+	} else if ($boolean5 = false & ~popout_available(-1) = false) {
+		return;
+	}
+}
+~script2425;
+if_setonvartransmit("script2430(%varbit15317, %varbit15318, %varbit15319, %varbit15320, %varbit15321, ~popout_available(-1)){var1021, var3417, var3539, var4000, var4001}", interface_861:1);

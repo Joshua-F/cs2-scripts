@@ -4,8 +4,8 @@ def_int $int2 = 0;
 def_fontmetrics $fontmetrics3 = p12_full;
 ~popout_tooltip_clear;
 if (~on_mobile = true) {
-	~script2344($layer0, $comsubid1, interface_728:16, $string0, $string1, $fontmetrics3);
-	if_setontimer("popout_tooltip_remove_delayed(calc(clientclock + 240))", interface_728:16);
+	~script2344($layer0, $comsubid1, interface_728:8, $string0, $string1, $fontmetrics3);
+	if_setontimer("popout_tooltip_remove_delayed(calc(clientclock + 240))", interface_728:8);
 } else {
-	~script5338($layer0, $comsubid1, interface_728:16, $string0, $string1, $fontmetrics3, $int2);
+	~script5338($layer0, $comsubid1, interface_728:8, $string0, $string1, $fontmetrics3, $int2);
 }

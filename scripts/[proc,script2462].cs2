@@ -1,0 +1,10 @@
+// 2462
+[proc,script2462]()(int)
+def_boolean $boolean0 = ~on_mobile;
+if ($boolean0 = false & %varbit15323 = 1) {
+	return(1);
+}
+if ($boolean0 = true & %varcint1174 = 1) {
+	return(1);
+}
+return(0);

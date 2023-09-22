@@ -1,0 +1,70 @@
+// 2435
+[clientscript,script2435](int $opindex0, int $int1, struct $struct2, component $component3)
+switch_int ($int1) {
+	case 19 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 10, true);
+	case 6 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 3, true);
+	case 7 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 4, true);
+	case 8 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 5, true);
+	case 9 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 6, true);
+	case 10 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 0, true);
+	case 11 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 2, true);
+	case 12 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 1, true);
+	case 13 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 12, true);
+	case 14 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 13, true);
+	case 15 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 7, true);
+	case 17 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 8, true);
+	case 16 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 9, true);
+	case 18 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 11, true);
+	case 4 :
+		~script2448;
+	case 5 :
+		~script2451;
+	case 1 :
+		~script2446;
+	case 2 :
+		~script2445;
+	case 3 :
+		if ($opindex0 = 1) {
+			~script4865;
+		} else if ($opindex0 = 2) {
+			~script4869;
+		}
+	case 24 :
+		~settings_ground_items;
+	case 20 :
+	case 21 :
+		if ($opindex0 = 2) {
+			return;
+		}
+		if (%varbit6254 = 0) {
+			~orbs_toggle_prayer($opindex0, interface_863:17, interface_863:20, interface_863:15);
+		} else {
+			~orbs_toggle_prayer($opindex0, interface_864:18, interface_864:21, interface_864:16);
+		}
+	case 22 :
+		if (%varbit6254 = 0) {
+			~orbs_toggle_runmode($opindex0, interface_863:25, interface_863:28);
+		} else {
+			~orbs_toggle_runmode($opindex0, interface_864:26, interface_864:29);
+		}
+	case 23 :
+		if (%varbit6254 = 0) {
+			~orbs_toggle_spec_op($opindex0, interface_863:29, interface_863:32, interface_863:34, interface_863:33, interface_863:30, interface_863:31);
+		} else {
+			~orbs_toggle_spec_op($opindex0, interface_864:30, interface_864:33, interface_864:35, interface_864:34, interface_864:31, interface_864:32);
+		}
+}

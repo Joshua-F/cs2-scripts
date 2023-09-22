@@ -3,7 +3,7 @@
 %varcint980 = clientclock;
 ~chatdefault_setonkey(1);
 if_setonvartransmit("script924{var1054, var1055, var1021, var499, var1737, var2992, var2993, var2994, var2995, var2996, var2997, var2998, var2999, var3060, var3191, var3192, var3193, var3000, var3001, var3002, var3003, var3004, var3005, var3006, var3007, var3061, var3194, var3195, var3196, var3008, var3009}", interface_162:0);
-if_setonsubchange("chat_onsubchange(event_com, getwindowmode, if_hassub(interface_162:559), if_hassub(interface_162:558), ~toplevel_getcomponents)", interface_162:0);
+if_setonsubchange("chat_onsubchange(event_com, getwindowmode, if_hassub(interface_162:558), if_hassub(interface_162:557), ~toplevel_getcomponents)", interface_162:0);
 if_setonchattransmit("chat_onchattransmit", interface_162:0);
 if_setonfriendtransmit("chat_onchattransmit", interface_162:0);
 if_setonclantransmit("rebuildchatbox", interface_162:0);
@@ -23,8 +23,8 @@ if (%varcint41 >= 0 & %varcint41 <= 6 | %varcint41 = 1337) {
 def_int $int0 = 0;
 def_component $component1 = enum(int, component, enum_579, $int0);
 while ($component1 ! null) {
-	cc_create(interface_162:56, ^iftype_text, calc($int0 * 4));
-	.cc_create(interface_162:56, ^iftype_text, calc($int0 * 4 + 1));
+	cc_create(interface_162:55, ^iftype_text, calc($int0 * 4));
+	.cc_create(interface_162:55, ^iftype_text, calc($int0 * 4 + 1));
 	cc_setcolour(^black);
 	.cc_setcolour(^black);
 	cc_settextfont(p12_full);
@@ -33,8 +33,8 @@ while ($component1 ! null) {
 	.cc_settextalign(^settextalign_left, ^settextalign_top, 14);
 	cc_sethide(true);
 	.cc_sethide(true);
-	cc_create(interface_162:56, ^iftype_text, calc($int0 * 4 + 2));
-	.cc_create(interface_162:56, ^iftype_graphic, calc($int0 * 4 + 3));
+	cc_create(interface_162:55, ^iftype_text, calc($int0 * 4 + 2));
+	.cc_create(interface_162:55, ^iftype_graphic, calc($int0 * 4 + 3));
 	cc_setcolour(^black);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 14);
@@ -43,8 +43,8 @@ while ($component1 ! null) {
 	$int0 = calc($int0 + 1);
 	$component1 = enum(int, component, enum_579, $int0);
 }
-if_setscrollpos(0, 0, interface_162:56);
-~scrollbar_vertical(interface_162:557, interface_162:56, null, null, null, null, null, null);
+if_setscrollpos(0, 0, interface_162:55);
+~scrollbar_vertical(interface_162:556, interface_162:55, null, null, null, null, null, null);
 ~toplevel_chatbox_background;
 chat_setmessagefilter("");
 ~script223;

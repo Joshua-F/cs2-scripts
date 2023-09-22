@@ -1,0 +1,15 @@
+// 2423
+[clientscript,script2423]
+~script2424;
+if_setonvartransmit("script2430(%varbit15317, %varbit15318, %varbit15319, %varbit15320, %varbit15321, ~popout_available(-1)){var1021, var3417, var3539, var4000, var4001}", interface_861:1);
+if_setonvartransmit("script2429(%varbit15324){var3053}", interface_861:0);
+if (%varbit15324 = 1) {
+	if_sethide(true, interface_861:1);
+} else {
+	if_sethide(false, interface_861:1);
+	if (%varcint1172 = 0) {
+		%varcint1170 = -1;
+		%varcint1171 = -1;
+	}
+	~script2425;
+}

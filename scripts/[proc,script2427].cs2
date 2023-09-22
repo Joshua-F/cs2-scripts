@@ -1,0 +1,21 @@
+// 2427
+[proc,script2427](enum $enum0)
+if ($enum0 = null | $enum0 ! enum_1745) {
+	return;
+}
+def_component $component1 = enum(component, component, $enum0, toplevel_osm:26);
+def_component $component2 = enum(component, component, $enum0, toplevel_osm:27);
+def_component $component3 = enum(component, component, $enum0, toplevel_osrs_stretch:33);
+if ($component1 = null | $component2 = null | $component3 = null) {
+	return;
+}
+if (%varcint1178 = 1) {
+	if_setposition(0, calc(if_getheight($component2) + if_gety($component2) + 10), ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+def_int $int4 = calc(if_getheight($component2) + if_gety($component2));
+def_int $int5 = calc(if_getheight($component3) - (85 + 4));
+def_int $int6 = calc($int5 - $int4);
+$int6 = calc(($int6 - if_getheight($component1)) / 2);
+$int4 = calc($int4 + $int6);
+if_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top, $component1);

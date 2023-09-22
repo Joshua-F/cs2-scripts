@@ -1,0 +1,24 @@
+// 2433
+[proc,script2433](int $int0, int $int1)
+switch_int ($int0) {
+	case 20 :
+		if (%var102 > 0 | %var456 > 0 | %varbit10151 > 0) {
+			cc_setgraphic("graphic_5277");
+		} else {
+			cc_setgraphic("graphic_5282");
+		}
+	case 23 :
+		if (map_members = ^false & %varbit5314 = 0 | ~script3648(inv_getobj(worn, 3)) <= 0) {
+			cc_setgraphic("graphic_5282");
+		} else if (%var301 > 0) {
+			cc_setgraphic("graphic_5281");
+		} else {
+			cc_setgraphic("graphic_5280");
+		}
+	case default :
+		if ($int1 = 1) {
+			cc_setgraphic("graphic_5279");
+		} else {
+			cc_setgraphic("graphic_5277");
+		}
+}

@@ -3,15 +3,16 @@
 if ($component0 ! null) {
 	if_setnoclickthrough(true, $component5);
 	if_setonstattransmit("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6){prayer}", $component0);
-	if_setonvartransmit("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6){var375, var1377}", $component0);
+	if_setonvartransmit("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6){var375, var1377, var2974}", $component0);
 	if_setonsubchange("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
 	if_setonop("orbs_toggle_prayer(event_op, $component3, $component4, $component6)", $component6);
 }
-def_graphic $graphic7 = "orb_frame,1";
+def_graphic $graphic7 = ~graphic_device("orb_frame,1", "graphic_5302");
 if (~toplevel_check_sidepanel(5) = true) {
 	if_setonmouserepeat("graphic_swapper($component5, $graphic7)", $component6);
-	$graphic7 = "orb_frame,0";
+	$graphic7 = ~graphic_device("orb_frame,0", "graphic_5301");
 	if_setonmouseleave("graphic_swapper($component5, $graphic7)", $component6);
+	if_setgraphic($graphic7, $component5);
 	if_sethide(false, $component6);
 } else {
 	if_setgraphic("orb_frame,0", $component5);

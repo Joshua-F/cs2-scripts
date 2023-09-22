@@ -1,0 +1,25 @@
+// 1898
+[clientscript,loottracker_debug_output_items_with_source_ids]
+~debug_mes("loottracker_debug_output_items_with_source_ids");
+def_int $int0 = loottracker_sourcequery_new(0, 100, 2);
+~debug_mes("<tostring($int0)> sources");
+def_int $int1 = 0;
+def_string $string0 = "0";
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_obj $obj5 = null;
+def_int $int6 = 0;
+while ($int4 < $int0) {
+	$int1 = loottracker_sourcequery_get($int4);
+	$string0 = loottracker_sourcename($int1);
+	$int2 = loottracker_lootcount_byid($int1);
+	$int3 = 1;
+	~debug_mes("source (<~script47($int1)> <$string0>)");
+	while ($int3 <= $int2) {
+		$obj5, $int6 = loottracker_lootget_byid($int1, $int3);
+		~debug_mes(" - item (<~script47($int3)>) = <tostring($int6)> x <oc_name($obj5)>");
+		$int3 = calc($int3 + 1);
+	}
+	$int4 = calc($int4 + 1);
+}

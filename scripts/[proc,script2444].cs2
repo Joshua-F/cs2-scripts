@@ -1,0 +1,12 @@
+// 2444
+[proc,script2444](int $int0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+$int2, $int1 = ~script2422($int0);
+if ($int2 = 0) {
+	return;
+}
+def_component $component3 = enum(int, component, enum_5185, calc($int1 - 1));
+if ($component3 ! null) {
+	~script2426($component3, $int0, enum(int, struct, enum_5181, $int0));
+}

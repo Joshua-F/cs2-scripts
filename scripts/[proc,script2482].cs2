@@ -2,8 +2,10 @@
 [proc,script2482]
 if (%varcint1007 = 1) {
 	if_setop(1, "Close Activity Adviser", interface_160:3);
-	if_setop(1, "Close Activity Adviser", interface_311:4);
+	if_setop(1, "Close Activity Adviser", interface_864:50);
+	if_setop(1, "Close Activity Adviser", interface_862:47);
 } else {
 	if_setop(1, "Open Activity Adviser", interface_160:3);
-	if_setop(1, "Open Activity Adviser", interface_311:4);
+	if_setop(1, "Open Activity Adviser", interface_864:50);
+	if_setop(1, "Open Activity Adviser", interface_862:47);
 }

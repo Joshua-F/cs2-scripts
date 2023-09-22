@@ -3,8 +3,4 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-def_int $int0 = 0;
-if (%varbit12342 = 0) {
-	$int0 = 1;
-}
-%varbit12342 = $int0;
+%varbit12342 = calc(1 - %varbit12342);

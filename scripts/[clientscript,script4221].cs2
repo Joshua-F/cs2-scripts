@@ -1,0 +1,24 @@
+// 4221
+[clientscript,script4221]
+if (%varcint1175 = 1) {
+	return;
+}
+if (%varcint1176 = 1) {
+	%varcint1176 = 0;
+	if (cc_find(toplevel_osm:34, 0) = ^true) {
+		cc_setgraphic("graphic_5284");
+	}
+	if (cc_find(toplevel_osm:34, 1) = ^true) {
+		cc_settext("<col=a0a0a0>Chat Filter</col><br><col=ffffff><enum(int, string, enum_5188, %varcint41)>");
+	}
+} else {
+	%varcint1176 = 1;
+	if (cc_find(toplevel_osm:34, 0) = ^true) {
+		cc_setgraphic("graphic_5283");
+	}
+	if (cc_find(toplevel_osm:34, 1) = ^true) {
+		cc_settext("<col=a0a0a0>Chat Filter</col><br><col=ffffff>Closed");
+	}
+}
+~script113;
+%varcint222 = clientclock;

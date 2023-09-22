@@ -1,0 +1,18 @@
+// 2451
+[proc,script2451]
+if (~on_mobile = false) {
+	return;
+}
+if (%varcint1169 = 1) {
+	%varcint1169 = 0;
+	if (%varcint1172 = 1) {
+		~script4866(0);
+		mes("Tile highlighting disabled!");
+	} else {
+		mes("Entity interactions enabled!");
+	}
+} else {
+	%varcint1169 = 1;
+	mes("Entity interactions disabled!");
+}
+~script2452;

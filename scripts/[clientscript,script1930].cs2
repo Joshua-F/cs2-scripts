@@ -1,0 +1,10 @@
+// 1930
+[clientscript,script1930](int $count0, component $component1, int $comsubid2, int $comsubid3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_settext(enum(int, string, enum_5183, $count0));
+}
+%varcint1167 = $count0;
+%varbit15322 = 0;
+~script1932($count0);
+~script2418($component1, $comsubid3, $component4, $component5, $component6, $component7, $component8, $component9);
+~settings_op_sound(1);

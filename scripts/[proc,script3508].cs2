@@ -1,0 +1,59 @@
+// 3508
+[proc,script3508]
+def_int $int0 = 0;
+cc_create(toplevel_osm:33, ^iftype_graphic, 0);
+cc_setsize(58, 40, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%varcint1175 = 1) {
+	cc_setgraphic("graphic_5283");
+} else {
+	cc_setgraphic("graphic_5284");
+}
+cc_create(toplevel_osm:33, ^iftype_graphic, 1);
+cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("options_icons,5");
+if_setop(1, "Toggle Chatbox", toplevel_osm:33);
+if_setop(2, "Report options", toplevel_osm:33);
+if_setop(3, "Report abuse", toplevel_osm:33);
+if_setop(4, "Toggle player option", toplevel_osm:33);
+if_setop(5, "Report game bug", toplevel_osm:33);
+if_setonop("script4032(event_op)", toplevel_osm:33);
+cc_create(toplevel_osm:34, ^iftype_graphic, 0);
+cc_setsize(58, 40, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%varcint1176 = 1) {
+	cc_setgraphic("graphic_5283");
+} else {
+	cc_setgraphic("graphic_5284");
+}
+cc_create(toplevel_osm:34, ^iftype_text, 1);
+cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+if (%varcint1176 = 1) {
+	cc_settext("<col=a0a0a0>Chat Filter</col><br><col=ffffff>Closed");
+} else {
+	cc_settext("<col=a0a0a0>Chat Filter</col><br><col=ffffff><enum(int, string, enum_5188, %varcint41)>");
+}
+if_setop(1, "Toggle Filters", toplevel_osm:34);
+if_setonop("script4221", toplevel_osm:34);
+cc_create(toplevel_osm:35, ^iftype_graphic, 0);
+cc_setsize(58, 24, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("graphic_5289");
+cc_create(toplevel_osm:35, ^iftype_graphic, 1);
+cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("side_icons,40");
+if_setop(1, "Start chatting", toplevel_osm:35);
+if (%varcint1175 = 1) {
+	if_sethide(true, toplevel_osm:35);
+	if_sethide(true, toplevel_osm:34);
+} else {
+	if_sethide(false, toplevel_osm:35);
+	if_sethide(false, toplevel_osm:34);
+}

@@ -1,0 +1,18 @@
+// 2448
+[proc,script2448]
+if (~on_mobile = false) {
+	return;
+}
+if (%varcint1168 = 1) {
+	%varcint1168 = 0;
+	if (%varcint1172 = 1) {
+		~script4866(0);
+		mes("Tile highlighting disabled!");
+	} else {
+		mes("Tap to walk enabled!");
+	}
+} else {
+	%varcint1168 = 1;
+	mes("Tap to walk disabled!");
+}
+~script2449;

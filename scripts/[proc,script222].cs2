@@ -26,9 +26,9 @@ switch_int (%varcint5) {
 if (string_length(%varcstring359) < $length0) {
 	$string1 = append($string1, "*");
 }
-if (parawidth($string1, ^max_32bit_int, b12_full) > if_getwidth(interface_162:42)) {
-	if_settextalign(^settextalign_right, ^settextalign_centre, 0, interface_162:42);
+if (parawidth($string1, ^max_32bit_int, b12_full) > if_getwidth(interface_162:41)) {
+	if_settextalign(^settextalign_right, ^settextalign_centre, 0, interface_162:41);
 } else {
-	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, interface_162:42);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, interface_162:41);
 }
-if_settext($string1, interface_162:42);
+if_settext($string1, interface_162:41);

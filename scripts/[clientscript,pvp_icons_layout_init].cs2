@@ -4,7 +4,7 @@
 ~script4729($component2, $component0, setbit(0, 12), ^setpos_abs_left, ^setpos_abs_top, false);
 ~script4729($component6, interface_90:19, clearbit(clearbit(52968, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);
 ~script4729($component3, interface_90:28, clearbit(clearbit(36582, 12), 13), ^setpos_abs_right, ^setpos_abs_top, false);
-~script4729($component4, $component7, clearbit(clearbit(52968, 13), 12), ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($component4, $component7, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
 if (~on_mobile = true) {
 	~script4729($component5, interface_90:44, setbit(36578, 12), ^setpos_abs_right, ^setpos_abs_bottom, false);
 } else if (getwindowmode = ^windowmode_fixed) {

@@ -1,6 +1,6 @@
 // 4762
 [clientscript,script4762]
-if (~on_enhanced_desktop = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 if (highlight_tile_get(tile_coord, 6, 1) = true) {

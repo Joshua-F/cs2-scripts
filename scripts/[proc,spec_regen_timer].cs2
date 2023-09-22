@@ -4,8 +4,10 @@ if (~on_enhanced_any = 0) {
 	return;
 }
 def_component $component2 = interface_160:40;
-if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
-	$component2 = interface_311:42;
+if (~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
+	$component2 = interface_862:37;
+} else if (~on_mobile = true & %varbit6254 = 1) {
+	$component2 = interface_864:37;
 }
 cc_deleteall($component2);
 if_setonvartransmit("spec_regen_vartransmit($component2, %varbit12346, %var300){var2856, var300}", $component2);

@@ -1,0 +1,72 @@
+// 1929
+[clientscript,script1929](component $component0, int $int1, int $width2, int $height3, int $x4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+~settings_op_sound(1);
+cc_deleteall($component6);
+cc_deleteall($component7);
+cc_deleteall($component8);
+cc_deleteall($component10);
+cc_deleteall($component11);
+if_sethide(true, $component8);
+if_sethide(false, $component9);
+if_setnoclickthrough(true, $component7);
+if_setonclick("script2417($component0, $int1, $component6, $component7, $component8, $component9, $component10, $component11)", $component7);
+def_int $count12 = 0;
+def_int $count13 = enum_getoutputcount(enum_5183);
+def_int $int14 = 0;
+def_int $int15 = 24;
+def_int $int16 = 0;
+def_int $trans17 = 220;
+def_string $text0 = "";
+while ($count12 < $count13) {
+	cc_create($component9, ^iftype_rectangle, $int14);
+	cc_setsize(0, $int15, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int16, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_settrans($trans17);
+	$int14 = calc($int14 + 1);
+	cc_create($component9, ^iftype_text, $int14);
+	cc_setsize(0, $int15, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int16, ^setpos_abs_left, ^setpos_abs_top);
+	$text0 = enum(int, string, enum_5183, $count12);
+	cc_settext($text0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+	$int14 = calc($int14 + 1);
+	cc_create($component9, ^iftype_rectangle, $int14);
+	cc_setsize(0, $int15, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int16, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_settrans(255);
+	cc_setop(1, "Select");
+	cc_setonop("script1930($count12, $component0, calc($int1 + 1), $int1, $component6, $component7, $component8, $component9, $component10, $component11)");
+	$int14 = calc($int14 + 1);
+	$int16 = calc($int16 + $int15);
+	$count12 = calc($count12 + 1);
+	if ($trans17 = 220) {
+		$trans17 = 200;
+	} else {
+		$trans17 = 220;
+	}
+}
+def_int $int18 = $int16;
+if ($int18 > 120) {
+	$int18 = 120;
+}
+if_setsize($width2, calc($int18 + 4), ^setsize_abs, ^setsize_abs, $component6);
+if_setposition($x4, calc(if_getheight($component0) + $int5), ^setpos_abs_left, ^setpos_abs_top, $component6);
+if_setscrollpos(0, 0, $component9);
+if ($int16 > $int18) {
+	if_setscrollsize(0, $int16, $component9);
+} else {
+	if_setscrollsize(0, 0, $component9);
+}
+~scrollbar_vertical($component10, $component9, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_sethide(false, $component11);
+if_setnoscrollthrough(true, $component9);
+if (cc_find($component0, $int1) = ^true) {
+	cc_setgraphic("scrollbar_v2,0");
+}

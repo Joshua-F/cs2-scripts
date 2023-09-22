@@ -1,0 +1,4 @@
+// 1910
+[clientscript,loottracker_debug_ignore_item_add](obj $obj0)
+~debug_mes("loottracker_ignore_item_add (<oc_name($obj0)>)");
+loottracker_ignorelootadd(oc_name($obj0));

@@ -1,7 +1,7 @@
 // 2792
 [proc,orbs_spec_draw_button](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-def_graphic $graphic6 = "orb_frame,1";
-def_graphic $graphic7 = "orb_frame,0";
+def_graphic $graphic6 = ~graphic_device("orb_frame,1", "graphic_5302");
+def_graphic $graphic7 = ~graphic_device("orb_frame,0", "graphic_5301");
 if_clearops($component5);
 if (map_members = ^false & %varbit5314 = 0 | ~script3648(inv_getobj(worn, 3)) <= 0) {
 	if_sethide(true, $component5);

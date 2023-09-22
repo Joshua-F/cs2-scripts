@@ -1,0 +1,76 @@
+// 2436
+[proc,script2436](int $int0, struct $struct1)
+switch_int ($int0) {
+	case 16 :
+		if (%varbit6516 = 0) {
+			.cc_setgraphic("sideicons_interface,8");
+		} else {
+			.cc_setgraphic("sideicons_interface,9");
+		}
+	case 11 :
+		switch_int (%varbit8168) {
+			case default :
+				.cc_setgraphic("sideicons_interface,30");
+			case 1 :
+				.cc_setgraphic("sideicons_interface,2");
+			case 2 :
+				.cc_setgraphic("sideicons_interface,16");
+			case 3 :
+				.cc_setgraphic("sideicons_interface,17");
+			case 4 :
+				.cc_setgraphic("sideicons_interface,23");
+			case 5 :
+				.cc_setgraphic("sideicons_interface,35");
+		}
+	case 9 :
+		switch_int (%varbit4070) {
+			case 1 :
+				.cc_setgraphic("sideicons_interface,19");
+			case 2 :
+				.cc_setgraphic("sideicons_interface,20");
+			case 3 :
+				.cc_setgraphic("sideicons_interface,21");
+			case default :
+				.cc_setgraphic("sideicons_interface,6");
+		}
+	case 15 :
+		.cc_setgraphic(enum(int, graphic, enum_3841, %varbit13071));
+	case 21 :
+		if (%varbit12142 > 0) {
+			if (%varbit4103 = 1) {
+				.cc_setgraphic("orb_icon,9");
+			} else {
+				.cc_setgraphic("orb_icon,8");
+			}
+		} else if (%varbit4103 = 1) {
+			.cc_setgraphic("orb_icon,4");
+		} else {
+			.cc_setgraphic("orb_icon,1");
+		}
+	case 22 :
+		if (%var173 = 1) {
+			if (%varbit25 = 1) {
+				.cc_setgraphic("orb_icon,5");
+			} else {
+				.cc_setgraphic("orb_icon,3");
+			}
+		} else if (%varbit25 = 1) {
+			.cc_setgraphic("orb_icon,5");
+		} else {
+			.cc_setgraphic("orb_icon,2");
+		}
+	case 23 :
+		if (map_members = ^false & %varbit5314 = 0 | ~script3648(inv_getobj(worn, 3)) <= 0) {
+			.cc_setgraphic("side_icons,57");
+		} else {
+			.cc_setgraphic(struct_param($struct1, param_1830));
+		}
+	case 20 :
+		if (%var102 > 0 | %var456 > 0 | %varbit10151 > 0) {
+			.cc_setgraphic(struct_param($struct1, param_1830));
+		} else {
+			.cc_setgraphic("orb_icon,17");
+		}
+	case default :
+		.cc_setgraphic(struct_param($struct1, param_1830));
+}

@@ -1,0 +1,22 @@
+// 4032
+[clientscript,script4032](int $opindex0)
+switch_int ($opindex0) {
+	case 1 :
+		if (%varcint1175 = 1) {
+			%varcint1175 = 0;
+			if (cc_find(toplevel_osm:33, 0) = ^true) {
+				cc_setgraphic("graphic_5284");
+			}
+			if_sethide(false, toplevel_osm:35);
+			if_sethide(false, toplevel_osm:34);
+		} else {
+			%varcint1175 = 1;
+			if (cc_find(toplevel_osm:33, 0) = ^true) {
+				cc_setgraphic("graphic_5283");
+			}
+			if_sethide(true, toplevel_osm:35);
+			if_sethide(true, toplevel_osm:34);
+		}
+		~script113;
+}
+%varcint222 = clientclock;

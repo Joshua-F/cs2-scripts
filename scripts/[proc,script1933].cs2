@@ -1,0 +1,129 @@
+// 1933
+[proc,script1933](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $count12 = enum_getoutputcount(enum_5180);
+def_component $component13 = null;
+def_struct $struct14 = null;
+def_int $int15 = 80;
+def_int $int16 = calc(if_getwidth($component0) / 2 - 10);
+def_int $int17 = 5;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_string $text0 = "";
+def_int $int23 = 0;
+def_int $int24 = 0;
+while ($int11 < $count12) {
+	$component13 = enum(int, component, enum_5184, $int11);
+	$struct14 = enum(int, struct, enum_5180, $int11);
+	if ($component13 ! null & $struct14 ! null) {
+		cc_deleteall($component13);
+		if_sethide(false, $component13);
+		if_setop(1, "", $component13);
+		if_setop(2, "", $component13);
+		if_setsize($int16, $int15, ^setsize_abs, ^setsize_abs, $component13);
+		cc_create($component13, ^iftype_graphic, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(0, 36, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("tradebacking_dark");
+		cc_settiling(true);
+		$int10 = ~thinbox_specific($component13, $int10, 0, 0, $int16, 36, ^setpos_abs_left, ^setpos_abs_top);
+		$int10 = ~thinbox_specific($component13, $int10, 0, 0, $int16, calc(80 - (36 - 1)), ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_create($component13, ^iftype_text, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(0, calc(36 - 5), ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_settextfont(b12_full);
+		cc_settextshadow(true);
+		cc_setcolour(0xff981f);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+		cc_settext(struct_param($struct14, param_1833));
+		cc_create($component13, ^iftype_graphic, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(struct_param($struct14, param_1831), struct_param($struct14, param_1832), ^setsize_abs, ^setsize_abs);
+		$int18 = calc((80 - 36) / 2 - struct_param($struct14, param_1832) / 2);
+		cc_setposition(5, $int18, ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setgraphic(struct_param($struct14, param_1830));
+		cc_create($component13, ^iftype_graphic, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
+		$int18 = calc((80 - 36) / 2 - 7);
+		cc_setposition(calc(struct_param($struct14, param_1831) + 10), $int18, ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setgraphic("toa_info_icon");
+		cc_create($component13, ^iftype_rectangle, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(calc(struct_param($struct14, param_1831) + 20), ~max(struct_param($struct14, param_1832), 15), ^setsize_abs, ^setsize_abs);
+		cc_setposition(5, $int18, ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setfill(true);
+		cc_setcolour(^black);
+		cc_settrans(255);
+		cc_setop(1, "Info");
+		cc_setonop("script1924($component8, $component9, $struct14)");
+		$int18 = calc((80 - 36) / 2 - 10);
+		cc_create($component13, ^iftype_graphic, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(120, 20, ^setsize_abs, ^setsize_abs);
+		cc_setposition(10, $int18, ^setpos_abs_right, ^setpos_abs_bottom);
+		cc_setgraphic("tradebacking");
+		cc_settiling(true);
+		cc_create($component13, ^iftype_rectangle, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(120, 20, ^setsize_abs, ^setsize_abs);
+		cc_setposition(10, $int18, ^setpos_abs_right, ^setpos_abs_bottom);
+		cc_setfill(false);
+		cc_setcolour(0x0e0e0c);
+		cc_create($component13, ^iftype_rectangle, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(calc(120 - 2), 18, ^setsize_abs, ^setsize_abs);
+		cc_setposition(11, calc($int18 + 1), ^setpos_abs_right, ^setpos_abs_bottom);
+		cc_setfill(false);
+		cc_setcolour(0x474745);
+		cc_create($component13, ^iftype_graphic, $int10);
+		$int19 = $int10;
+		$int10 = calc($int10 + 1);
+		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+		cc_setposition(12, calc($int18 + 2), ^setpos_abs_right, ^setpos_abs_bottom);
+		cc_setgraphic("scrollbar_v2,1");
+		cc_create($component13, ^iftype_text, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(calc(120 - 20), 16, ^setsize_abs, ^setsize_abs);
+		cc_setposition(28, calc($int18 + 2), ^setpos_abs_right, ^setpos_abs_bottom);
+		cc_settextfont(p12_full);
+		cc_setcolour(0xff981f);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		$int23, $int24 = ~script2422(struct_param($struct14, param_1828));
+		if ($int23 = 1) {
+			$text0 = enum(int, string, enum_5182, $int24);
+		} else {
+			$text0 = "-";
+		}
+		cc_settext($text0);
+		cc_create($component13, ^iftype_rectangle, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(120, 20, ^setsize_abs, ^setsize_abs);
+		cc_setposition(10, $int18, ^setpos_abs_right, ^setpos_abs_bottom);
+		cc_setfill(true);
+		cc_setcolour(^black);
+		cc_settrans(255);
+		cc_setop(1, "Select");
+		$int20 = cc_getx;
+		$int21 = cc_gety;
+		$int22 = calc($int22 + 1);
+		cc_setonop("script2415($component13, struct_param($struct14, param_1828), $component0, $int19, 120, 20, $int20, $int21, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $struct14)");
+	}
+	$int11 = calc($int11 + 1);
+	if ($int11 > 0 & calc($int11 % 2) = 0) {
+		$int17 = calc($int17 + 5 + $int15);
+	}
+	$int10 = 0;
+}
+if (calc($int22 % 2) ! 0) {
+	$int17 = calc($int17 + 5 + $int15);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script1932(%varcint1167);

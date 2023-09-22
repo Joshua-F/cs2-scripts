@@ -1,6 +1,8 @@
 // 3961
 [proc,settings_get_slider](int $setting0)(int)
 switch_int ($setting0) {
+	case 310 :
+		return(calc(minimap_zoom - 2));
 	case 319 :
 		return(calc(%var3796 / 5));
 	case ^setting_volumemusic :

@@ -6,7 +6,7 @@ cc_setop(enum(int, int, enum_4303, 3), ~script1786($obj0, 3));
 cc_setop(enum(int, int, enum_4303, 4), ~script1786($obj0, 4));
 cc_setop(enum(int, int, enum_4303, 5), ~script1786($obj0, 5));
 def_int $int2 = oc_shiftclickop($obj0);
-if (%varbit5542 = 1 & ($boolean1 = true | gettaptodrop = true) & $int2 ! -1) {
+if (~script2462 = 1 & ($boolean1 = true | gettaptodrop = true) & $int2 ! -1) {
 	cc_setop(1, cc_getop(enum(int, int, enum_4303, $int2)));
 	cc_setop(enum(int, int, enum_4303, $int2), "");
 }

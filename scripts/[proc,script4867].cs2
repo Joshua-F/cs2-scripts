@@ -1,0 +1,27 @@
+// 4867
+[proc,script4867]
+if (~on_enhanced_mobile = 0) {
+	return;
+}
+if (%varcint1172 = 1) {
+	shiftop_tile_set(1, "Mark tile", 4762);
+	if (%varcint1168 = -1) {
+		%varcint1168 = 0;
+	}
+	if (%varcint1169 = -1) {
+		%varcint1169 = 0;
+	}
+	%varcint1170 = %varcint1168;
+	%varcint1171 = %varcint1169;
+	%varcint1168 = 1;
+	%varcint1169 = 1;
+	~script2449;
+	~script2452;
+} else {
+	shiftop_tile_del(1);
+	~script4868;
+	~script2449;
+	~script2452;
+}
+~script2444(3);
+~script2443;

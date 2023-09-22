@@ -1,0 +1,13 @@
+// 4864
+[proc,script4864]
+def_int $colour0 = ~settings_get_colour_or_default(^setting_tile_highlight_colour_colour);
+if (%varcint1172 = 1) {
+	shiftop_tile_set(1, "Mark tile", 4762);
+} else {
+	shiftop_tile_del(1);
+}
+if (%varcint1173 = 1) {
+	highlight_tile_setup(6, null, 0, 0, 64);
+} else {
+	highlight_tile_setup(6, $colour0, 2, 50, 90);
+}

@@ -43,14 +43,14 @@ if ($int12 = 1) {
 			cc_settext("Showing items: <col=ff0000><$string0></col>");
 		}
 		if (%varcint5 = 11) {
-			if_settext("Show items whose names contain the following text: (<~tostring_spacer($int10, ",")> found)", interface_162:41);
+			if_settext("Show items whose names contain the following text: (<~tostring_spacer($int10, ",")> found)", interface_162:40);
 		}
 	} else {
 		if (cc_find($component4, $comsubid5) = ^true) {
 			cc_settext("Showing items: <col=ff0000>*</col>");
 		}
 		if (%varcint5 = 11) {
-			if_settext("Show items whose names contain the following text:", interface_162:41);
+			if_settext("Show items whose names contain the following text:", interface_162:40);
 		}
 	}
 } else if (cc_find($component4, $comsubid5) = ^true) {

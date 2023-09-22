@@ -1,0 +1,32 @@
+// 1924
+[clientscript,script1924](component $component0, component $component1, struct $struct2)
+if ($struct2 = null) {
+	~settings_op_sound(0);
+	return;
+}
+if_setsize(0, 70, ^setsize_minus, ^setsize_abs, $component0);
+if_setsize(0, 100, ^setsize_minus, ^setsize_minus, $component1);
+def_int $int3 = struct_param($struct2, param_1831);
+def_int $height4 = struct_param($struct2, param_1832);
+def_string $string0 = struct_param($struct2, param_1834);
+if (cc_find($component0, 6) = ^true) {
+	cc_settext(struct_param($struct2, param_1833));
+}
+if (cc_find($component0, 7) = ^true) {
+	cc_settext($string0);
+	cc_setsize(calc($int3 + 15), 40, ^setsize_minus, ^setsize_abs);
+	cc_setposition(calc($int3 / 2 + 5), 5, ^setpos_abs_centre, ^setpos_abs_bottom);
+}
+def_int $int5 = 0;
+def_int $y6 = 5;
+def_int $width7 = calc(if_getwidth($component0) - $int3 - 15);
+if (cc_find($component0, 5) = ^true) {
+	$int5 = parawidth($string0, $width7, p12_full);
+	$int5 = calc(0 - ($int5 / 2 + 5));
+	$y6 = calc(50 - $int3 / 2);
+	cc_setgraphic(struct_param($struct2, param_1830));
+	cc_setsize($int3, $height4, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int5, $y6, ^setpos_abs_centre, ^setpos_abs_top);
+}
+~settings_op_sound(1);
+~scrollbar_vertical_rebuild(interface_860:9, interface_860:11);

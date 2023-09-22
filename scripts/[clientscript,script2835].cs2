@@ -1,0 +1,16 @@
+// 2835
+[clientscript,script2835]
+if (%varcint1178 = 1) {
+	if (%varbit13090 ! 0) {
+		%varcint1178 = 2;
+	} else {
+		%varcint1178 = 0;
+	}
+} else if (%varcint1178 = 2) {
+	%varcint1178 = 0;
+} else {
+	%varcint1178 = 1;
+}
+def_enum $enum0 = ~toplevel_getcomponents;
+~script2836($enum0);
+~script2427($enum0);

@@ -1,0 +1,22 @@
+// 2428
+[clientscript,script2428](int $opindex0)
+if ($opindex0 ! 1) {
+	return;
+}
+if (%varcint1179 = 1) {
+	%varcint1179 = 0;
+} else {
+	%varcint1179 = 1;
+}
+if (cc_find(interface_861:15, 0) = ^true & .cc_find(interface_861:15, 1) = ^true) {
+	if (%varcint1179 = 1) {
+		cc_setgraphic("graphic_5292");
+		.cc_setgraphic("side_icons,48");
+		if_setop(1, "Show", interface_861:15);
+	} else {
+		cc_setgraphic("graphic_5293");
+		.cc_setgraphic("side_icons,49");
+		if_setop(1, "Hide", interface_861:15);
+	}
+}
+~script2425;

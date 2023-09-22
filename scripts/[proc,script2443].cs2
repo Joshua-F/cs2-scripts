@@ -1,0 +1,9 @@
+// 2443
+[proc,script2443]
+if (~on_mobile = true) {
+	settaptodrop(~script2442);
+	setshiftclickdrop(true);
+} else {
+	setshiftclickdrop(~script2442);
+	settaptodrop(false);
+}

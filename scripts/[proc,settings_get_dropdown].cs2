@@ -8,8 +8,6 @@ switch_int ($setting0) {
 		return(%var1107);
 	case 56 :
 		return(%var1306);
-	case 78 :
-		return(%varbit6255);
 	case 86 :
 		return(%varbit12135);
 	case ^setting_windowmode :
@@ -73,6 +71,8 @@ switch_int ($setting0) {
 		return(%varbit14871);
 	case 340 :
 		return(enum(int, int, enum_4975, %varbit14877));
+	case 364 :
+		return(~script2458(18));
 	case default :
 		return(0);
 }

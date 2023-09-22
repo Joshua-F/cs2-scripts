@@ -34,7 +34,7 @@ if ($component7 ! null & $component8 ! null) {
 	$component7 = enum(component, component, $enum1, $component7);
 	$component8 = enum(component, component, $enum1, $component8);
 	if ($component7 ! null & $component8 ! null) {
-		if_setontimer("toplevel_timer($component7, $component8)", $component0);
+		if_setontimer("toplevel_timer($component7, $component8, enum(component, int, enum_5187, $component7))", $component0);
 	} else {
 		if_setontimer(null, $component0);
 	}
@@ -242,11 +242,7 @@ if (%varbit4134 = 1) {
 } else {
 	setmousecam(true);
 }
-def_boolean $boolean10 = false;
-if (%varbit5542 = 1) {
-	$boolean10 = true;
-}
-~shiftclick_toggle($boolean10);
+~shiftclick_toggle;
 if (%varbit5599 = 1) {
 	setfolloweropslowpriority(true);
 } else {
@@ -268,3 +264,19 @@ if (%varcint967 = 0) {
 ~logout_timer_notifier;
 ~script6682($enum1);
 ~script5355($enum1);
+$component2 = enum(component, component, $enum1, toplevel_osm:27);
+if ($component2 ! null) {
+	if (%varbit542 = 0) {
+		if_sethide(false, $component2);
+	} else {
+		if_sethide(true, $component2);
+	}
+}
+$component2 = enum(component, component, $enum1, toplevel_osm:26);
+if ($component2 ! null) {
+	if (%varbit542 = 0) {
+		if_sethide(false, $component2);
+	} else {
+		if_sethide(true, $component2);
+	}
+}

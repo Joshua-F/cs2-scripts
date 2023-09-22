@@ -10,6 +10,9 @@ def_int $int8 = calc(if_getheight($component2) - $int1);
 %varcint1010 = ~max($int1, ~min(%varcint1010, calc($int1 + $int8 - %varcint1012)));
 if_sethide(false, $component3);
 if_sethide(true, $component4);
+if (~on_mobile = true & $int0 = 1) {
+	%varcint1010 = calc(if_getheight($component2) - %varcint1012);
+}
 if_setposition(%varcint1009, %varcint1010, ^setpos_abs_left, ^setpos_abs_top, $component3);
 if_setsize(%varcint1011, %varcint1012, ^setsize_abs, ^setsize_abs, $component3);
 def_int $height9 = calc(%varcint1012 - 6 * 2);

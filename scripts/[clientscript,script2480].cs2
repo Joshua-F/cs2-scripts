@@ -4,8 +4,8 @@ def_enum $enum5 = ~toplevel_getcomponents;
 if ($enum5 = null) {
 	return;
 }
-def_graphic $graphic6 = "ring_34,0";
-def_graphic $graphic7 = "ring_34,1";
+def_graphic $graphic6 = ~graphic_device("ring_34,0", "graphic_5304");
+def_graphic $graphic7 = ~graphic_device("ring_34,1", "graphic_5305");
 if ($component0 ! null) {
 	if_setnoclickthrough(true, $component2);
 	if_setnoclickthrough(true, $component1);
@@ -14,7 +14,9 @@ if ($component0 ! null) {
 if (~script2481 = 1) {
 	if_sethide(false, $component1);
 	if_sethide(false, $component2);
-	if_sethide(false, $component3);
+	if ($component3 ! null) {
+		if_sethide(false, $component3);
+	}
 	if_sethide(false, $component4);
 	if (%varcint1007 = 1) {
 		if_setop(1, "Close Activity Adviser", $component1);
@@ -26,7 +28,17 @@ if (~script2481 = 1) {
 	if_setonmouserepeat("graphic_swapper($component2, $graphic7)", $component1);
 	if_setonmouseleave("graphic_swapper($component2, $graphic6)", $component1);
 	if_setonop("opsound(event_op, -1)", $component1);
-	if ($enum5 = enum_1129) {
+	if ($enum5 = enum_1745) {
+		if (%varbit6254 = 1) {
+			if (~show_storebutton = 1) {
+				if_setposition(79, 144, ^setpos_abs_right, ^setpos_abs_top, interface_864:40);
+			} else {
+				if_setposition(44, 144, ^setpos_abs_right, ^setpos_abs_top, interface_864:40);
+			}
+		} else {
+			if_setposition(101, 156, ^setpos_abs_left, ^setpos_abs_top, interface_863:42);
+		}
+	} else if ($enum5 = enum_1129) {
 		if_setposition(0, 50, ^setpos_abs_right, ^setpos_abs_top, interface_160:47);
 	} else if (~show_storebutton = 0) {
 		if_setposition(85, 143, ^setpos_abs_left, ^setpos_abs_top, interface_160:47);
@@ -36,7 +48,9 @@ if (~script2481 = 1) {
 } else {
 	if_sethide(true, $component1);
 	if_sethide(true, $component2);
-	if_sethide(true, $component3);
+	if ($component3 ! null) {
+		if_sethide(true, $component3);
+	}
 	if_sethide(true, $component4);
 	if_clearops($component1);
 	if_setonop(null, $component1);

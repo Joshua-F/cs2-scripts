@@ -3,16 +3,18 @@
 def_enum $enum5 = null;
 def_int $width6 = 0;
 def_int $y7 = 0;
+def_int $int8 = 0;
 if ($clock3 ! %varcint222 | %varcint490 ! $component4 | calc(clientclock % 75) = 0) {
 	~xpdrops_setposition($component2, $component1);
 	$y7 = ~script2372($component2);
 	$enum5 = ~toplevel_getcomponents;
 	if ($enum5 = enum_1745) {
-		if (~script2519 = 1) {
+		$int8 = ~script2519;
+		if ($int8 = 3 | $int8 = 4) {
 			if (%varbit6254 = 0) {
-				$width6 = calc(if_getwidth(enum(component, component, $enum5, toplevel_pre_eoc:94)) - 182);
+				$width6 = calc(if_getwidth(enum(component, component, $enum5, toplevel_pre_eoc:94)) - 181);
 			} else {
-				$width6 = calc(if_getwidth(enum(component, component, $enum5, toplevel_pre_eoc:94)) - 120);
+				$width6 = calc(if_getwidth(enum(component, component, $enum5, toplevel_pre_eoc:94)) - 84);
 			}
 		} else {
 			$width6 = 2;

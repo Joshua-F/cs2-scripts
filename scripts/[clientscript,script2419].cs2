@@ -1,0 +1,28 @@
+// 2419
+[clientscript,script2419](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5)
+if ($int1 = %varbit15317 & $int2 = %varbit15318 & $int3 = %varbit15319 & $int4 = %varbit15320 & $int5 = %varbit15321) {
+	return;
+}
+def_int $count6 = 0;
+def_int $count7 = enum_getoutputcount(enum_5180);
+def_string $text0 = "";
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_component $component10 = null;
+def_struct $struct11 = null;
+while ($count6 < $count7) {
+	$component10 = enum(int, component, enum_5184, $count6);
+	$struct11 = enum(int, struct, enum_5180, $count6);
+	if ($struct11 ! null & $component10 ! null & cc_find($component10, 13) = ^true) {
+		$int8, $int9 = ~script2422(struct_param($struct11, param_1828));
+		if ($int8 = 1) {
+			$text0 = enum(int, string, enum_5182, $int9);
+		} else {
+			$text0 = "-";
+		}
+		cc_settext($text0);
+		if_setontimer(null, $component10);
+	}
+	$count6 = calc($count6 + 1);
+}
+if_setonvartransmit("script2419($component0, %varbit15317, %varbit15318, %varbit15319, %varbit15320, %varbit15321){var3539, var3795, var4000, var4001}", $component0);

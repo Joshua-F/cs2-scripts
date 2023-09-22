@@ -2,21 +2,41 @@
 [proc,redraw_chat_buttons]
 def_graphic $graphic0 = null;
 def_int $int1 = 0;
+def_enum $enum2 = ~toplevel_getcomponents;
+def_component $component3 = null;
 while ($int1 <= 6) {
+	$component3 = enum(int, component, enum_683, $int1);
+	if ($enum2 = enum_1745) {
+		if_setsize(58, 24, ^setsize_abs, ^setsize_abs, $component3);
+	} else {
+		if_setsize(56, 22, ^setsize_abs, ^setsize_abs, $component3);
+	}
 	if (%varcint41 = $int1) {
-		if (%varcint42 = $int1) {
+		if ($enum2 = enum_1745) {
+			$graphic0 = "graphic_5290";
+		} else if (%varcint42 = $int1) {
 			$graphic0 = "chat_tab_button,3";
 		} else {
 			$graphic0 = "chat_tab_button,2";
 		}
 	} else if (%varcint42 = $int1) {
-		$graphic0 = "chat_tab_button,1";
+		if ($enum2 = enum_1745) {
+			$graphic0 = "graphic_5290";
+		} else {
+			$graphic0 = "chat_tab_button,1";
+		}
 	} else if (calc(~chat_alert_get($int1) / 25 % 2) = 1) {
-		$graphic0 = "chat_tab_button,4";
+		if ($enum2 = enum_1745) {
+			$graphic0 = "graphic_5291";
+		} else {
+			$graphic0 = "chat_tab_button,4";
+		}
+	} else if ($enum2 = enum_1745) {
+		$graphic0 = "graphic_5289";
 	} else {
 		$graphic0 = "chat_tab_button,0";
 	}
-	if_setgraphic($graphic0, enum(int, component, enum_683, $int1));
+	if_setgraphic($graphic0, $component3);
 	if ($int1 >= 2) {
 		if_settext(enum(int, string, enum_3844, ~chat_get_filter($int1)), enum(int, component, enum_3843, $int1));
 	}

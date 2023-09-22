@@ -1,0 +1,66 @@
+// 2836
+[proc,script2836](enum $enum0)
+if ($enum0 ! enum_1745) {
+	return;
+}
+def_int $width1 = -1;
+if (if_hassub(interface_728:9) = true) {
+	$width1 = calc(58 + 278);
+	if_sethide(false, interface_728:11);
+} else {
+	$width1 = 58;
+	if_sethide(true, interface_728:11);
+}
+def_component $component2 = enum(component, component, $enum0, toplevel_osrs_stretch:94);
+def_component $component3 = enum(component, component, $enum0, toplevel_osrs_stretch:34);
+def_struct $struct4 = null;
+def_graphic $graphic5 = null;
+def_int $int6 = 0;
+if ($component3 ! null & $component2 ! null) {
+	if_sethide(false, interface_728:12);
+	if (%varcint1178 = 1) {
+		if (%varbit13090 ! 0) {
+			if_setop(1, "Compact", interface_728:13);
+		} else {
+			if_setop(1, "Close", interface_728:13);
+		}
+		if_setsize($width1, calc(if_getheight($component2) + 14), ^setsize_abs, ^setsize_minus, $component3);
+		if_sethide(true, interface_728:28);
+		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, interface_728:27);
+		if_setgraphic("side_icons,52", interface_728:27);
+		if_setsize(58, 0, ^setsize_abs, ^setsize_minus, interface_728:10);
+	} else {
+		$struct4 = enum(int, struct, enum_4067, %varbit13090);
+		if ($struct4 = null & %varcint1178 = 2) {
+			%varcint1178 = 0;
+		}
+		if (%varcint1178 = 2) {
+			if_sethide(true, interface_728:12);
+			if_setop(1, "Close", interface_728:13);
+			if_setsize($width1, 85, ^setsize_abs, ^setsize_abs, $component3);
+			if_setgraphic("side_icons,44", interface_728:27);
+			if_setsize(58, 46, ^setsize_abs, ^setsize_abs, interface_728:10);
+		} else {
+			if_setop(1, "Expand", interface_728:13);
+			if_setsize(58, 46, ^setsize_abs, ^setsize_abs, $component3);
+			if_setgraphic("side_icons,43", interface_728:27);
+			if_setsize(58, 0, ^setsize_abs, ^setsize_minus, interface_728:10);
+		}
+		if (%varbit13090 ! 0) {
+			$struct4 = enum(int, struct, enum_4067, %varbit13090);
+			if ($struct4 ! null) {
+				$graphic5 = struct_param($struct4, param_1412);
+			}
+			if ($graphic5 ! null) {
+				if_sethide(false, interface_728:28);
+				if_setgraphic($graphic5, interface_728:28);
+				if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre, interface_728:27);
+				~script2904;
+				return;
+			}
+		}
+		if_sethide(true, interface_728:28);
+		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, interface_728:27);
+	}
+	~script2904;
+}

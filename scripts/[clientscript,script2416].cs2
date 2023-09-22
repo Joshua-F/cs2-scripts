@@ -1,0 +1,61 @@
+// 2416
+[clientscript,script2416](component $component0, int $count1, int $int2, int $comsubid3, int $comsubid4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, struct $struct11)
+def_component $component12 = null;
+def_int $count13 = 0;
+def_int $count14 = enum_getoutputcount(enum_5180);
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_struct $struct18 = null;
+if ($count1 = 0) {
+	$int15, $int16 = ~script2422($int2);
+	if ($int15 = 1) {
+		if (~script1931($struct11, 0) = 1) {
+			~script2418($component0, $comsubid4, $component5, $component6, $component7, $component8, $component9, $component10);
+			~settings_op_sound(0);
+			return;
+		}
+		~script2421($int16, 0);
+		~script2439($int2);
+	}
+} else {
+	$int17 = ~script2420($count1);
+	$int15, $int16 = ~script2422($int2);
+	if ($int17 > 0) {
+		while ($count13 < $count14) {
+			$struct18 = enum(int, struct, enum_5180, $count13);
+			if ($struct18 ! null & struct_param($struct18, param_1828) = $int17) {
+				$component12 = enum(int, component, enum_5184, $count13);
+				$count13 = $count14;
+			}
+			$count13 = calc($count13 + 1);
+		}
+	}
+	if (~script1931($struct11, 1) = 1 | ~script1931($struct18, $int15) = 1) {
+		~script2418($component0, $comsubid4, $component5, $component6, $component7, $component8, $component9, $component10);
+		~settings_op_sound(0);
+		return;
+	}
+	if ($int15 = 1) {
+		~script2421($int16, $int17);
+	} else {
+		~script2439($int17);
+	}
+	~script2421($count1, $int2);
+}
+~settings_op_sound(1);
+if ($component12 ! null & cc_find($component12, $comsubid3) = ^true) {
+	if ($int17 > 0) {
+		cc_settext(enum(int, string, enum_5182, $int16));
+	} else {
+		cc_settext("-");
+	}
+}
+if ($component0 ! null & cc_find($component0, $comsubid3) = ^true) {
+	if ($int2 > 0) {
+		cc_settext(enum(int, string, enum_5182, $count1));
+	} else {
+		cc_settext("-");
+	}
+}
+~script2418($component0, $comsubid4, $component5, $component6, $component7, $component8, $component9, $component10);

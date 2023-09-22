@@ -10,15 +10,20 @@ if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 	if ((if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:73)) = true | $component1 ! null & if_hassub(enum(component, component, $enum0, $component1)) = true) & ~script4138 = 0) {
 		if_sethide(false, $component2);
 		if ($enum0 = enum_1745) {
-			switch_component ($component1) {
-				case toplevel_osrs_stretch:75, toplevel_osrs_stretch:80, toplevel_osrs_stretch:81, toplevel_osrs_stretch:87, toplevel_osrs_stretch:83, toplevel_osrs_stretch:84, toplevel_osrs_stretch:82 :
-					if (if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:73)) = true & if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:16)) = true) {
-						if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
-					} else {
-						if_setposition(37, 87, ^setpos_abs_left, ^setpos_abs_centre, $component2);
-					}
-				case default :
-					if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
+			if (if_getheight(toplevel_osm:20) < 503) {
+				if (%varcint1177 = 1) {
+					if_setposition(58, 4, ^setpos_abs_right, ^setpos_abs_bottom, $component2);
+				} else {
+					if_setposition(85, 4, ^setpos_abs_right, ^setpos_abs_bottom, $component2);
+				}
+				if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_osm:36);
+			} else {
+				if (%varcint1177 = 1) {
+					if_setposition(58, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
+				} else {
+					if_setposition(85, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
+				}
+				if_setposition(0, 87, ^setpos_abs_right, ^setpos_abs_centre, toplevel_osm:36);
 			}
 		}
 	} else {

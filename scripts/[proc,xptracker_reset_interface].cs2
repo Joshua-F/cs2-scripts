@@ -7,6 +7,9 @@ cc_deleteall(interface_729:3);
 cc_deleteall(interface_729:2);
 cc_create(interface_729:3, ^iftype_rectangle, 0);
 ~scrollbar_vertical(interface_729:2, interface_729:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find(interface_729:2, 1) = ^true) {
+	~scrollbar_vertical_doscroll(interface_729:2, interface_729:3, 0, true);
+}
 ~xptracker_create_overall;
 %varcint561 = 1;
 def_stat $stat0 = null;
