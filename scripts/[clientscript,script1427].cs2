@@ -1,0 +1,7 @@
+// 1427
+[clientscript,script1427]
+if_setonsubchange(null, interface_548:11);
+if (detailget_antialiasing_default ! detailget_antialiasing) {
+	detail_antialiasing(0);
+	detail_antialiasing_default(0);
+}

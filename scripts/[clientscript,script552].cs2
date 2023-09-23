@@ -1,0 +1,11 @@
+// 552
+[clientscript,script552]
+if (%varbit4110 = 0) {
+	sound_synth(synth_4020, 1, 0);
+	return;
+}
+%varbit4110 = calc(%varbit4110 - 1);
+def_int $y0 = calc((15 - %varbit4110) * 6);
+if_setposition(0, $y0, ^setpos_abs_left, ^setpos_abs_top, interface_624:17);
+if_settext(tostring(%varbit4110), interface_624:71);
+sound_synth(synth_4026, 1, 0);

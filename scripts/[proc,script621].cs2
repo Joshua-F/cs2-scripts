@@ -1,0 +1,66 @@
+// 621
+[proc,script621]
+def_int $int0 = 0;
+def_string $string0 = "null";
+~script622;
+if (%var1112 = -1 | stockmarket_isofferempty(%var1112) = true & %var1113 = -1) {
+	~script41(interface_105:213);
+	if_sethide(false, interface_105:16);
+	~script628;
+	if_setoninvtransmit(null, interface_105:200);
+	%varcint83 = 0;
+	%varcint82 = 0;
+} else {
+	while ($int0 < 6) {
+		~script41(~script626($int0));
+		$int0 = calc($int0 + 1);
+	}
+	if (stockmarket_isofferempty(%var1112) = false) {
+		if_sethide(false, interface_105:126);
+		if_sethide(false, interface_105:200);
+		~script594(stockmarket_getoffertype(%var1112), stockmarket_getofferitem(%var1112), stockmarket_getoffercount(%var1112), stockmarket_getofferprice(%var1112));
+		~script593(%var1112);
+		if (stockmarket_getoffertype(%var1112) = 0) {
+			$string0 = "Maximum total cost of purchase";
+		} else {
+			$string0 = "Minimum total value of sale";
+		}
+		if_setonmouserepeat("script649(interface_105:189, interface_105:213, $string0, 25, 300)", interface_105:189);
+		$string0 = ~script46(calc(stockmarket_getoffercount(%var1112) * stockmarket_getofferprice(%var1112)), ",");
+		if_settext("<$string0> gp", interface_105:189);
+	} else {
+		if_sethide(false, interface_105:126);
+		if_sethide(false, interface_105:156);
+		if (%var1113 = 0) {
+			if_sethide(false, interface_105:192);
+			if (%var1109 ! null) {
+				if_sethide(true, interface_105:195);
+				if_sethide(true, interface_105:196);
+			} else {
+				if_sethide(false, interface_105:195);
+				if_sethide(false, interface_105:196);
+			}
+			$string0 = "Maximum total cost of purchase";
+		} else {
+			if_sethide(false, interface_105:197);
+			if (%var1109 ! null) {
+				if_sethide(true, interface_105:199);
+			} else {
+				if_sethide(false, interface_105:199);
+			}
+			$string0 = "Minimum total value of sale";
+		}
+		if_setonmouserepeat("script649(interface_105:189, interface_105:213, $string0, 25, 300)", interface_105:189);
+		if (%var1111 > 0) {
+			if (%var1110 > calc(^max_32bit_int / %var1111)) {
+				if_settext("Too high!", interface_105:189);
+			} else {
+				$string0 = ~script46(calc(%var1110 * %var1111), ",");
+				if_settext("<$string0> gp", interface_105:189);
+			}
+		} else {
+			if_settext("0 gp", interface_105:189);
+		}
+		~script594(%var1113, %var1109, %var1110, %var1111);
+	}
+}

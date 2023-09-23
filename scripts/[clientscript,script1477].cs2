@@ -1,0 +1,5 @@
+// 1477
+[clientscript,script1477](component $component0)
+if (compare(substring(if_gettext($component0), calc(string_length(if_gettext($component0)) - 1), string_length(if_gettext($component0))), "*") = 0) {
+	if_settext(substring(if_gettext($component0), 0, calc(string_length(if_gettext($component0)) - 1)), $component0);
+}

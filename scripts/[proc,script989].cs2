@@ -1,0 +1,18 @@
+// 989
+[proc,script989](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Trees", 0);
+	case 1 :
+		return("Axes", 0);
+	case 2 :
+		return("Canoes", 1);
+	case 3 :
+		return("Woodcraft", 1);
+	case 4 :
+		return("Minigames", 1);
+	case 5 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

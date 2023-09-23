@@ -1,0 +1,14 @@
+// 1809
+[proc,script1809](component $component0, component $component1, component $component2)
+def_string $string0 = "";
+if (string_length(%varcstring38) > 0) {
+	$string0 = ~script1814(%varcstring38);
+	if_settext($string0, $component1);
+	if_setsize(parawidth($string0, 512, b12_full), 15, ^setsize_abs, ^setsize_abs, $component1);
+} else {
+	if_settext("", $component1);
+	if_setsize(0, 15, ^setsize_abs, ^setsize_abs, $component1);
+}
+%varcint267 = -1;
+%varcstring39 = "";
+~script1811($component0, $component1, $component2);

@@ -1,0 +1,37 @@
+// 121
+[proc,script121](int $int0)(component)
+if (getwindowmode >= ^windowmode_resizable) {
+	return(~script1742($int0));
+}
+switch_int ($int0) {
+	case 0 :
+		return(interface_548:45);
+	case 1 :
+		return(interface_548:46);
+	case 2 :
+		return(interface_548:47);
+	case 3 :
+		return(interface_548:48);
+	case 4 :
+		return(interface_548:49);
+	case 5 :
+		return(interface_548:50);
+	case 6 :
+		return(interface_548:51);
+	case 7 :
+		return(interface_548:27);
+	case 8 :
+		return(interface_548:28);
+	case 9 :
+		return(interface_548:29);
+	case 10 :
+		return(interface_548:30);
+	case 11 :
+		return(interface_548:31);
+	case 12 :
+		return(interface_548:32);
+	case 13 :
+		return(interface_548:33);
+	case default :
+		return(null);
+}

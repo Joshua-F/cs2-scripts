@@ -1,0 +1,10 @@
+// 1814
+[proc,script1814](string $string0)(string)
+def_string $string1 = "";
+def_string $string2 = "";
+$string1 = substring($string0, 0, 1);
+if (string_length($string0) > 1) {
+	$string2 = substring($string0, 1, string_length($string0));
+}
+$string1 = ~script1815($string1);
+return(append($string1, $string2));

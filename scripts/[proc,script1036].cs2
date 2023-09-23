@@ -1,0 +1,10 @@
+// 1036
+[proc,script1036]()(chatcat)
+def_chatcat $chatcat0 = null;
+if (enum(int, int, enum_1548, %varbit4758) > 0) {
+	$chatcat0 = enum(int, chatcat, enum_1549, %varbit4758);
+	if ($chatcat0 ! null) {
+		return($chatcat0);
+	}
+}
+return(enum(int, chatcat, enum_1483, %varbit4759));

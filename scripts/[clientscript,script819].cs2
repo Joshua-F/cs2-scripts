@@ -1,0 +1,18 @@
+// 819
+[clientscript,script819]
+def_seq $seq0 = null;
+if_setnpchead(%var1174, interface_663:3);
+def_string $text0 = oc_name(%var448);
+if (%varbit1049 = 1) {
+	if_settext(~script821, interface_663:25);
+} else {
+	if_settext($text0, interface_663:25);
+}
+if (%varbit4282 > 50) {
+	%varbit4282 = calc(%varbit4282 - 50);
+	$seq0 = enum(int, seq, enum_1275, %varbit4282);
+	if_setmodelanim($seq0, interface_663:3);
+} else {
+	$seq0 = enum(int, seq, enum_1276, %varbit4282);
+	if_setmodelanim($seq0, interface_663:3);
+}

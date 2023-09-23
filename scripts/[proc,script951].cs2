@@ -1,0 +1,8 @@
+// 951
+[proc,script951](component $component0)(int, int)
+def_int $int1 = calc(if_getx($component0) - if_getx(interface_726:123));
+def_int $int2 = calc(if_gety(interface_726:123) - if_gety($component0));
+if (calc($int1 % 32) ! 0 | calc($int2 % 32) ! 0) {
+	return(-1, -1);
+}
+return(calc($int1 / 32), calc($int2 / 32));

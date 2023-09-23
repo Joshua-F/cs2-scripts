@@ -1,0 +1,5 @@
+// 1159
+[proc,script1159]
+def_int $int0 = calc(if_getwidth(interface_743:30) - if_getwidth(interface_743:9));
+def_int $x1 = scale(detailget_musicvol, 255, $int0);
+if_setposition($x1, 0, ^setpos_abs_left, ^setpos_abs_top, interface_743:9);

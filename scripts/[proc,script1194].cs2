@@ -1,0 +1,16 @@
+// 1194
+[proc,script1194]
+if (_6103 = false & getwindowmode >= ^windowmode_fixed) {
+	if_settext("Roofs<br>(in-game only)", interface_744:68);
+} else {
+	if_settext("Remove roofs", interface_744:68);
+}
+if (_6102 = false) {
+	~script1355("Must be `Always'", interface_744:290, interface_744:291, interface_744:292, null, "graphic_884", 0x7f0000, p11_full);
+	return;
+}
+def_int $int0 = 0;
+if (_6103 = true) {
+	$int0 = 1;
+}
+~script1435(enum_1579, $int0, 1, interface_744:290, interface_744:291, interface_744:292, null, "graphic_884", "graphic_1248", 1250, "graphic_1402", 0x7f0000, ^white, 0xffc61a, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

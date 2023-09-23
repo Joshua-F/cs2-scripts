@@ -1,0 +1,9 @@
+// 822
+[proc,script822](int $int0, int $int1, string $string0)(string)
+def_int $int2 = $int0;
+if ($int1 = 1) {
+	$string0 = ~script823($int2, $string0);
+} else {
+	$string0 = ~script824($int2, $string0);
+}
+return($string0);

@@ -1,0 +1,41 @@
+// 1029
+[proc,script1029](enum $enum0, int $int1)
+cc_deleteall(interface_157:23);
+cc_deleteall(interface_157:25);
+if_settext("Quick-chat - Shortcut Reference", interface_157:14);
+if_sethide(false, interface_157:35);
+if_sethide(true, interface_157:17);
+if_setonclick("script784(enum_1486, 0, 7)", interface_157:30);
+if_settext("User Guide", interface_157:30);
+def_int $int2 = 0;
+def_int $height3 = 20;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_string $string0 = "";
+cc_create(interface_157:25, ^iftype_graphic, $int4);
+cc_setgraphic("v2_borders_slim,11");
+cc_setposition(35, calc($height3 - 22), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(400, 32, ^setsize_abs, ^setsize_abs);
+$int4 = calc($int4 + 1);
+while ($int2 < $int1) {
+	$int2 = calc($int2 + 1);
+	~script1034($int4, 35, $height3, 400, 100, enum(int, string, $enum0, $int5), ^yellow);
+	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
+	$string0 = enum(int, string, $enum0, $int5);
+	$int6 = calc(paraheight($string0, 300, p12_full) * 12);
+	~script1034($int4, 150, $height3, 300, $int6, $string0, ^white);
+	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
+	$height3 = calc($height3 + $int6 + 10);
+	cc_create(interface_157:25, ^iftype_graphic, $int4);
+	cc_setgraphic("v2_borders_slim,11");
+	cc_setposition(35, calc($height3 - 20), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(400, 32, ^setsize_abs, ^setsize_abs);
+	$int4 = calc($int4 + 1);
+}
+if ($height3 > if_getheight(interface_157:25)) {
+	if_setscrollsize(0, $height3, interface_157:25);
+	~script31(interface_157:24, interface_157:25, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+}

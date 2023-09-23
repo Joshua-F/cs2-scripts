@@ -1,0 +1,216 @@
+// 23
+[clientscript,script23]
+def_int $int0 = 0;
+def_string $text0 = "";
+$text0, $int0 = ~script12(%varbit3288);
+if_settext($text0, interface_499:6);
+def_string $string1 = "";
+def_int $int1 = 0;
+if ($int0 > 1) {
+	$string1, $int1 = ~script13(%varbit3288, 0);
+	if_settext($string1, interface_499:10);
+	if_sethide(false, interface_499:10);
+} else {
+	if_settext("", interface_499:10);
+	if_sethide(true, interface_499:10);
+}
+if ($int0 >= 2) {
+	$string1, $int1 = ~script13(%varbit3288, 1);
+	if_settext($string1, interface_499:11);
+	if_setposition(353, 78, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:11);
+} else {
+	if_settext("", interface_499:11);
+	if_sethide(true, interface_499:11);
+}
+if ($int0 >= 3) {
+	$string1, $int1 = ~script13(%varbit3288, 2);
+	if_settext($string1, interface_499:12);
+	if_setposition(353, 95, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:12);
+} else {
+	if_settext("", interface_499:12);
+	if_sethide(true, interface_499:12);
+}
+if ($int0 >= 4) {
+	$string1, $int1 = ~script13(%varbit3288, 3);
+	if_settext($string1, interface_499:13);
+	if_setposition(353, 114, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:13);
+} else {
+	if_settext("", interface_499:13);
+	if_sethide(true, interface_499:13);
+}
+if ($int0 >= 5) {
+	$string1, $int1 = ~script13(%varbit3288, 4);
+	if_settext($string1, interface_499:14);
+	if_setposition(353, 129, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:14);
+} else {
+	if_settext("", interface_499:14);
+	if_sethide(true, interface_499:14);
+}
+if ($int0 >= 6) {
+	$string1, $int1 = ~script13(%varbit3288, 5);
+	if_settext($string1, interface_499:15);
+	if_setposition(353, 146, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:15);
+} else {
+	if_settext("", interface_499:15);
+	if_sethide(true, interface_499:15);
+}
+if ($int0 >= 7) {
+	$string1, $int1 = ~script13(%varbit3288, 6);
+	if_settext($string1, interface_499:16);
+	if_setposition(353, 168, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:16);
+} else {
+	if_settext("", interface_499:16);
+	if_sethide(true, interface_499:16);
+}
+if ($int0 >= 8) {
+	$string1, $int1 = ~script13(%varbit3288, 7);
+	if_settext($string1, interface_499:17);
+	if_setposition(353, 180, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:17);
+} else {
+	if_settext("", interface_499:17);
+	if_sethide(true, interface_499:17);
+}
+if ($int0 >= 9) {
+	$string1, $int1 = ~script13(%varbit3288, 8);
+	if_settext($string1, interface_499:18);
+	if_setposition(353, 197, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:18);
+} else {
+	if_settext("", interface_499:18);
+	if_sethide(true, interface_499:18);
+}
+if ($int0 >= 10) {
+	$string1, $int1 = ~script13(%varbit3288, 9);
+	if_settext($string1, interface_499:19);
+	if_setposition(353, 214, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:19);
+} else {
+	if_settext("", interface_499:19);
+	if_sethide(true, interface_499:19);
+}
+if ($int0 >= 11) {
+	$string1, $int1 = ~script13(%varbit3288, 10);
+	if_settext($string1, interface_499:20);
+	if_setposition(353, 231, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:20);
+} else {
+	if_settext("", interface_499:20);
+	if_sethide(true, interface_499:20);
+}
+if ($int0 >= 12) {
+	$string1, $int1 = ~script13(%varbit3288, 11);
+	if_settext($string1, interface_499:21);
+	if_setposition(353, 248, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:21);
+} else {
+	if_settext("", interface_499:21);
+	if_sethide(true, interface_499:21);
+}
+if ($int0 >= 13) {
+	$string1, $int1 = ~script13(%varbit3288, 12);
+	if_settext($string1, interface_499:22);
+	if_setposition(353, 265, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:22);
+} else {
+	if_settext("", interface_499:22);
+	if_sethide(true, interface_499:22);
+}
+if ($int0 >= 14) {
+	$string1, $int1 = ~script13(%varbit3288, 13);
+	if_settext($string1, interface_499:23);
+	if_setposition(353, 282, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:23);
+} else {
+	if_settext("", interface_499:23);
+	if_sethide(true, interface_499:23);
+}
+if ($int0 >= 15) {
+	$string1, $int1 = ~script13(%varbit3288, 14);
+	if_settext($string1, interface_499:24);
+	if_setposition(353, 299, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:24);
+} else {
+	if_settext("", interface_499:24);
+	if_sethide(true, interface_499:24);
+}
+if ($int0 >= 16) {
+	$string1, $int1 = ~script13(%varbit3288, 15);
+	if_settext($string1, interface_499:25);
+	if_setposition(353, 316, ^setpos_abs_left, ^setpos_abs_top, interface_499:5);
+	if_sethide(false, interface_499:25);
+} else {
+	if_settext("", interface_499:25);
+	if_sethide(true, interface_499:25);
+}
+if ($int0 < 2) {
+	if_sethide(true, interface_499:4);
+	if_sethide(true, interface_499:3);
+	if_sethide(true, interface_499:5);
+} else {
+	if_sethide(false, interface_499:4);
+	if_sethide(false, interface_499:3);
+	if_sethide(false, interface_499:5);
+}
+if ($int0 = 2) {
+	if_setmodel(model_20838, interface_499:3);
+} else if ($int0 = 3) {
+	if_setmodel(model_20839, interface_499:3);
+} else if ($int0 = 4) {
+	if_setmodel(model_20840, interface_499:3);
+} else if ($int0 = 5) {
+	if_setmodel(model_20841, interface_499:3);
+} else if ($int0 = 6) {
+	if_setmodel(model_20842, interface_499:3);
+} else if ($int0 = 7) {
+	if_setmodel(model_20843, interface_499:3);
+} else if ($int0 = 8) {
+	if_setmodel(model_20844, interface_499:3);
+} else if ($int0 = 9) {
+	if_setmodel(model_20845, interface_499:3);
+} else if ($int0 = 10) {
+	if_setmodel(model_20846, interface_499:3);
+} else if ($int0 = 11) {
+	if_setmodel(model_20847, interface_499:3);
+} else if ($int0 = 12) {
+	if_setmodel(model_20848, interface_499:3);
+} else if ($int0 = 13) {
+	if_setmodel(model_20849, interface_499:3);
+} else if ($int0 = 14) {
+	if_setmodel(model_20850, interface_499:3);
+} else if ($int0 = 15) {
+	if_setmodel(model_43501, interface_499:3);
+} else if ($int0 = 16) {
+	if_setmodel(model_43500, interface_499:3);
+}
+$string1, $int1 = ~script13(%varbit3288, %varbit3289);
+if_settext($string1, interface_499:9);
+if ($int1 = 0) {
+	if_settext($string1, interface_499:9);
+} else {
+	if_settext(append($string1, " - Members Only"), interface_499:9);
+}
+cc_deleteall(interface_499:7);
+cc_deleteall(interface_499:8);
+def_int $int2 = 0;
+def_int $int3 = 3;
+def_int $int4 = 0;
+def_namedobj $namedobj5 = silvthrill_rod_7620;
+def_string $string2 = "";
+def_string $string3 = "";
+while ($namedobj5 ! null) {
+	$int4, $namedobj5, $string2, $string3 = ~script14(%varbit3288, %varbit3289, $int2);
+	$int3 = calc($int3 + ~script24($int4, $namedobj5, $string2, $int2, $int3));
+	$int2 = calc($int2 + 1);
+}
+if_setscrollpos(0, 0, interface_499:7);
+if_setscrollsize(296, $int3, interface_499:7);
+if ($int3 > 240) {
+	~script31(interface_499:8, interface_499:7, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+}

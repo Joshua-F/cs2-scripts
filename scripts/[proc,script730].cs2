@@ -1,0 +1,10 @@
+// 730
+[proc,script730](namedobj $namedobj0, component $component1, component $component2)
+def_int $total3 = inv_total(inv, runecrafting_guild_token_13650);
+def_int $total4 = enum(obj, int, enum_1680, $namedobj0);
+if_settext("<tostring($total4)> tokens", $component1);
+if ($total4 > $total3 | oc_members($namedobj0) = ^true & map_members = ^false) {
+	if_setcolour(^red, $component2);
+} else {
+	if_setcolour(0x01b801, $component2);
+}

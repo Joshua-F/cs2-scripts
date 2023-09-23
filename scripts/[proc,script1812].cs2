@@ -1,0 +1,11 @@
+// 1812
+[proc,script1812](string $string0, component $component0)
+if (string_length($string0) = 0) {
+	if_settext("", $component0);
+	%varcstring39 = "";
+	if_setontimer(null, $component0);
+	return;
+}
+if_settext($string0, $component0);
+%varcstring39 = $string0;
+if_setontimer("script1813(calc(clientclock + 1000), $component0)", $component0);

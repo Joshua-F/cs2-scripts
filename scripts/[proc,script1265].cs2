@@ -1,0 +1,14 @@
+// 1265
+[proc,script1265]
+def_string $string0 = "null";
+if (%var171 = 1) {
+	if_setgraphic("options_boxes,0", interface_261:4);
+	$string0 = "Chat effects<br>(currently off)";
+	if_setonmouserepeat("script38(event_com, interface_261:22, $string0, 25, 180)", interface_261:4);
+	%varcint2 = 0;
+} else if (%var171 = 0) {
+	if_setgraphic("options_boxes,1", interface_261:4);
+	$string0 = "Chat effects<br>(currently on)";
+	if_setonmouserepeat("script38(event_com, interface_261:22, $string0, 25, 180)", interface_261:4);
+	%varcint2 = 0;
+}

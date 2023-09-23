@@ -1,0 +1,14 @@
+// 1145
+[clientscript,script1145](int $int0, component $component1)
+if (_6121 = false | getwindowmode < ^windowmode_fixed) {
+	return;
+}
+def_int $windowmode2 = ~script1345($int0, $component1);
+if ($windowmode2 = detailget_antialiasing) {
+	return;
+}
+detail_antialiasing($windowmode2);
+if ($windowmode2 = 0) {
+	detail_antialiasing_default(0);
+}
+~script1845;

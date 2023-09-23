@@ -1,0 +1,836 @@
+// 3
+[proc,script3](int $int0, int $int1)(int, namedobj, string, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, pond_8170, "Garden", "You can now build a <col=000080>garden</col> for your house.");
+			case 1 :
+				return(1, mahogany_armchair_8315, "Parlour", "You can now build a <col=000080>parlour</col> for your house.");
+			case 2 :
+				return(5, fancy_range_8222, "Kitchen", "You can now build a <col=000080>kitchen</col> for your house.");
+			case 3 :
+				return(10, opulent_table_8121, "Dining room", "You can now build a <col=000080>dining room</col> for your house.");
+			case 4 :
+				return(15, bench_with_lathe_8379, "Workshop", "You can now build a <col=000080>workshop</col> for your house.");
+			case 5 :
+				return(20, gilded_4_poster_8037, "Bedroom", "You can now build a <col=000080>bedroom</col> for your house.");
+			case 6 :
+				return(25, marble_staircase_8255, "Hall (skill trophies)", "You can now build a <col=000080>hall</col> for your house, in which you can display <col=000080>skill trophies</col>.");
+			case 7 :
+				return(30, dartboard_8163, "Games room", "You can now build a <col=000080>games room</col> for your house.");
+			case 8 :
+				return(32, balance_beam_8027, "Combat room", "You can now build a <col=000080>combat room</col> for your house.");
+			case 9 :
+				return(35, marble_spiral_8259, "Hall (quest trophies)", "You can now build a <col=000080>hall</col> for your house, in which you can display your <col=000080>quest trophies</col>.");
+			case 10 :
+				return(40, mahogany_demon_8340, "Study", "You can now build a <col=000080>study</col> for your house.");
+			case 11 :
+				return(42, magical_cape_rack_9822, "Costume room", "You can now build a <col=000080>costume room</col> for your house.");
+			case 12 :
+				return(45, gilded_altar_8068, "Chapel", "You can now build a <col=000080>chapel</col> for your house.");
+			case 13 :
+				return(50, scrying_pool_8333, "Portal chamber", "You can now build a <col=000080>portal chamber</col> for your house.");
+			case 14 :
+				return(55, posh_fountain_8195, "Formal garden", "You can now build a <col=000080>formal garden</col> for your house.");
+			case 15 :
+				return(60, demonic_throne_8363, "Throne room", "You can now build a <col=000080>throne room</col> for your house.");
+			case 16 :
+				return(65, spikes_8302, "Oubliette", "You can now build an <col=000080>oubliette</col> for your house.");
+			case 17 :
+				return(70, steel_plated_door_8123, "Dungeon", "You can now build a <col=000080>dungeon</col> for your house.");
+			case 18 :
+				return(75, mahogany_chest_8151, "Treasure room", "You can now build a <col=000080>treasure room</col> for your house.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(3, clay_fireplace_8325, "Clay fireplace", "You can now construct <col=000080>clay fireplaces</col> for your house.");
+			case 1 :
+				return(5, firepit_8216, "Firepit", "You can now construct <col=000080>firepits</col> for your house.");
+			case 2 :
+				return(7, pump_and_drain_8230, "Pump and drain", "You can now construct <col=000080>pump and drains</col> for your house.");
+			case 3 :
+				return(11, firepit_with_hook_8217, "Firepit with hook", "You can now construct <col=000080>firepits with hooks</col> for your house.");
+			case 4 :
+				return(15, repair_bench_8389, "Repair bench", "You can now construct <col=000080>repair benches</col> for your house (at which you can repair <col=000080>bent arrows</col> and <col=000080>broken staves</col>).");
+			case 5 :
+				return(16, pluming_stand_8392, "Pluming stand", "You can now construct <col=000080>pluming stands</col> for your house.");
+			case 6 :
+				return(16, crafting_table_1_8380, "Crafting table 1", "You can now construct <col=000080>crafting table 1</col> for your house, at which you can craft <col=000080>toy horsies</col>.");
+			case 7 :
+				return(17, firepit_with_pot_8218, "Firepit with pot", "You can now construct <col=000080>firepits with pots</col> for your house.");
+			case 8 :
+				return(17, wooden_workbench_8375, "Wooden workbench", "You can now construct <col=000080>wooden workbenches</col> for your house, at which you can build <col=000080>flatpack items</col> up to <col=000080>level 20 Construction</col>.");
+			case 9 :
+				return(24, small_oven_8219, "Small oven", "You can now construct <col=000080>small ovens</col> for your house.");
+			case 10 :
+				return(25, crafting_table_2_8381, "Crafting table 2", "You can now construct <col=000080>crafting table 2</col> for your house, at which you can craft <col=000080>toy horsies</col> and <col=000080>clockwork mechanisms</col>.");
+			case 11 :
+				return(27, pump_and_tub_8231, "Pump and tub", "You can now construct <col=000080>pump and tubs</col> for your house.");
+			case 12 :
+				return(29, large_oven_8220, "Large oven", "You can now construct <col=000080>large ovens</col> for your house.");
+			case 13 :
+				return(32, oak_workbench_8376, "Oak workbench", "You can now construct <col=000080>oak workbenches</col> for your house, at which you can build <col=000080>flatpack items</col> up to <col=000080>level 40 Construction</col>.");
+			case 14 :
+				return(33, stone_fireplace_8326, "Stone fireplace", "You can now construct <col=000080>stone fireplaces</col> for your house.");
+			case 15 :
+				return(34, crafting_table_3_8382, "Crafting table 3", "You can now construct <col=000080>crafting table 3</col> for your house, at which you can craft <col=000080>toy horsies</col>, <col=000080>clockwork mechanisms</col>, <col=000080>clockwork soldiers</col> and <col=000080>clockwork dolls</col>.");
+			case 16 :
+				return(34, steel_range_8221, "Steel range", "You can now construct <col=000080>steel ranges</col> for your house.");
+			case 17 :
+				return(35, whetstone_8390, "Whetstone", "You can now construct <col=000080>whetstones</col> for your house, at which you can sharpen <col=000080>rusty swords</col>, and repair <col=000080>broken arrows</col> and <col=000080>staves</col>.");
+			case 18 :
+				return(41, shield_easel_8393, "Shield easel", "You can now construct <col=000080>shield easels</col> for your house.");
+			case 19 :
+				return(42, fancy_range_8222, "Fancy range", "You can now construct <col=000080>fancy ranges</col> for your house.");
+			case 20 :
+				return(42, crafting_table_4_8383, "Crafting table 4", "You can now construct <col=000080>crafting table 4</col> for your house, at which you can craft <col=000080>toy horsies</col>, <col=000080>clockwork mechanisms</col>, <col=000080>clockwork soldiers</col>, <col=000080>clockwork dolls</col>, <col=000080>clockwork mice</col>, <col=000080>clockwork cats</col>, <col=000080>watches</col> and <col=000080>sextants</col>.");
+			case 21 :
+				return(46, steel_framed_bench_8377, "Steel-framed workbench", "You can now construct <col=000080>steel-framed workbenches</col> for your house, at which you can build flatpack items</col> up to level 60 Construction</col>.");
+			case 22 :
+				return(47, sink_8232, "Sink", "You can now construct <col=000080>sinks</col> for your house.");
+			case 23 :
+				return(55, armour_stand_8391, "Armour stand", "You can now construct <col=000080>armour stands</col> for your house, at which you can repair <col=000080>broken arrows</col>, <col=000080>broken staves</col>, <col=000080>rusty swords</col>, <col=000080>damaged armour</col> and <col=000080>damaged Barrows items</col>.");
+			case 24 :
+				return(62, bench_with_vice_8378, "Workbench with vice", "You can now construct <col=000080>workbenches with vices</col> for your house, at which you can build <col=000080>flatpack items</col> up to <col=000080>level 80 Construction</col>.");
+			case 25 :
+				return(63, marble_fireplace_8327, "Marble fireplace", "You can now construct <col=000080>marble fireplaces</col> for your house.");
+			case 26 :
+				return(66, banner_easel_8394, "Banner easel", "You can now construct <col=000080>banner easels</col> for your house.");
+			case 27 :
+				return(77, bench_with_lathe_8379, "Workbench with lathe", "You can now construct <col=000080>workbenches with lathes</col> for your house, at which you can build <col=000080>flatpack items</col> of <col=000080>any level</col>.");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, crude_wooden_chair_8309, "Crude wooden chair", "You can now construct <col=000080>crude wooden chairs</col> for your house.");
+			case 1 :
+				return(8, wooden_chair_8310, "Wooden chair", "You can now construct <col=000080>wooden chairs</col> for your house.");
+			case 2 :
+				return(10, wood_dining_table_8115, "Wooden dining table", "You can now construct <col=000080>wooden dining tables</col> for your house.");
+			case 3 :
+				return(10, wooden_bench_8108, "Wooden dining bench", "You can now construct <col=000080>wooden dining benches</col> for your house.");
+			case 4 :
+				return(12, wood_kitchen_table_8246, "Wooden kitchen table", "You can now construct <col=000080>wooden kitchen tables</col> for your house.");
+			case 5 :
+				return(14, rocking_chair_8311, "Rocking chair", "You can now construct <col=000080>rocking chairs</col> for your house.");
+			case 6 :
+				return(19, oak_chair_8312, "Oak chair", "You can now construct <col=000080>oak chairs</col> for your house.");
+			case 7 :
+				return(20, wooden_bed_8031, "Wooden bed", "You can now construct <col=000080>wooden beds</col> for your house.");
+			case 8 :
+				return(22, oak_dining_table_8116, "Oak dining table", "You can now construct <col=000080>oak dining tables</col> for your house.");
+			case 9 :
+				return(22, oak_bench_8109, "Oak dining bench", "You can now construct <col=000080>oak dining benches</col> for your house.");
+			case 10 :
+				return(26, oak_armchair_8313, "Oak armchair", "You can now construct <col=000080>oak armchairs</col> for your house.");
+			case 11 :
+				return(30, oak_bed_8032, "Oak bed", "You can now construct <col=000080>oak beds</col> for your house.");
+			case 12 :
+				return(31, carved_oak_table_8117, "Carved oak dining table", "You can now construct <col=000080>carved oak dining tables</col> for your house.");
+			case 13 :
+				return(31, carved_oak_bench_8110, "Carved oak dining bench", "You can now construct <col=000080>carved oak dining benches</col> for your house.");
+			case 14 :
+				return(32, oak_kitchen_table_8247, "Oak kitchen table", "You can now construct <col=000080>oak kitchen tables</col> for your house.");
+			case 15 :
+				return(34, large_oak_bed_8033, "Large oak bed", "You can now construct <col=000080>large oak beds</col> for your house.");
+			case 16 :
+				return(35, teak_armchair_8314, "Teak armchair", "You can now construct <col=000080>teak armchairs</col> for your house.");
+			case 17 :
+				return(38, teak_table_8118, "Teak dining table", "You can now construct <col=000080>teak dining tables</col> for your house.");
+			case 18 :
+				return(38, teak_dining_bench_8111, "Teak dining bench", "You can now construct <col=000080>teak dining benches</col> for your house.");
+			case 19 :
+				return(40, teak_bed_8034, "Teak bed", "You can now construct <col=000080>teak beds</col> for your house.");
+			case 20 :
+				return(44, carved_teak_bench_8112, "Carved teak dining bench", "You can now construct <col=000080>carved teak dining benches</col> for your house.");
+			case 21 :
+				return(45, carved_teak_table_8119, "Carved teak dining table", "You can now construct <col=000080>carved teak dining tables</col> for your house.");
+			case 22 :
+				return(45, large_teak_bed_8035, "Large teak bed", "You can now construct <col=000080>large teak beds</col> for your house.");
+			case 23 :
+				return(50, mahogany_armchair_8315, "Mahogany armchair", "You can now construct <col=000080>mahogany armchairs</col> for your house.");
+			case 24 :
+				return(52, mahogany_table_8120, "Mahogany dining table", "You can now construct <col=000080>mahogany dining tables</col> for your house.");
+			case 25 :
+				return(52, mahogany_bench_8113, "Mahogany dining bench", "You can now construct <col=000080>mahogany dining benches</col> for your house.");
+			case 26 :
+				return(52, teak_kitchen_table_8248, "Teak kitchen table", "You can now construct <col=000080>teak kitchen tables</col> for your house.");
+			case 27 :
+				return(53, 4_poster_8036, "Mahogany four-poster bed", "You can now construct <col=000080>mahogany four-poster beds</col> for your house.");
+			case 28 :
+				return(60, oak_throne_8357, "Oak throne", "You can now construct <col=000080>oak thrones</col> for your house.");
+			case 29 :
+				return(60, gilded_4_poster_8037, "Gilded mahogany four-poster bed", "You can now construct <col=000080>gilded mahogany four-poster beds</col> for your house.");
+			case 30 :
+				return(61, gilded_bench_8114, "Gilded mahogany dining bench", "You can now construct <col=000080>gilded mahogany dining benches</col> for your house.");
+			case 31 :
+				return(67, teak_throne_8358, "Teak throne", "You can now construct <col=000080>teak thrones</col> for your house.");
+			case 32 :
+				return(72, opulent_table_8121, "Gilded mahogany and marble table", "You can now construct <col=000080>gilded mahogany and marble tables</col> for your house.");
+			case 33 :
+				return(74, mahogany_throne_8359, "Mahogany throne", "You can now construct <col=000080>mahogany thrones</col> for your house.");
+			case 34 :
+				return(81, gilded_throne_8360, "Gilded mahogany throne", "You can now construct <col=000080>gilded mahogany thrones</col> for your house.");
+			case 35 :
+				return(88, skeleton_throne_8361, "Skeleton throne", "You can now construct <col=000080>skeleton thrones</col> for your house.");
+			case 36 :
+				return(95, crystal_throne_8362, "Crystal throne", "You can now construct <col=000080>crystal thrones</col> for your house.");
+			case 37 :
+				return(99, demonic_throne_8363, "Demonic throne", "You can now construct <col=000080>demonic thrones</col> for your house.");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(4, wooden_bookcase_8319, "Wooden bookcase", "You can now construct <col=000080>wooden bookcases</col> for your house.");
+			case 1 :
+				return(6, wooden_shelves_1_8223, "Wooden shelves 1", "You can now construct <col=000080>wooden shelves 1</col> for your house, which provide <col=000080>kettles</col>, <col=000080>teapots</col> and <col=000080>cups</col>.");
+			case 2 :
+				return(7, beer_barrel_8239, "Beer barrel", "You can now construct <col=000080>beer barrels</col> for your house.");
+			case 3 :
+				return(9, wooden_larder_8233, "Wooden larder", "You can now construct <col=000080>wooden larders</col> for your house.");
+			case 4 :
+				return(12, cider_barrel_8240, "Cider barrel", "You can now construct <col=000080>cider barrels</col> for your house.");
+			case 5 :
+				return(12, wooden_shelves_2_8224, "Wooden shelves 2", "You can now construct <col=000080>wooden shelves 2</col> for your house, which provide <col=000080>kettles</col>, <col=000080>teapots</col>, <col=000080>cups</col> and <col=000080>beer glasses</col>.");
+			case 6 :
+				return(15, tool_store_1_8384, "Tool store 1", "You can now construct <col=000080>tool store 1</col> for your house, which provide <col=000080>saws</col>, <col=000080>hammers</col>, <col=000080>chisels</col> and <col=000080>shears</col>.");
+			case 7 :
+				return(18, asgarnian_ale_8241, "Asgarnian Ale barrel", "You can now construct <col=000080>Asgarnian Ale barrels</col> for your house.");
+			case 8 :
+				return(20, shoe_box_8038, "Shoe box", "You can now construct <col=000080>shoe boxes</col> for your house.");
+			case 9 :
+				return(21, shaving_stand_8045, "Wooden shaving stand", "You can now construct <col=000080>wooden shaving stands</col> for your house.");
+			case 10 :
+				return(23, wooden_shelves_3_8225, "Wooden shelves 3", "You can now construct <col=000080>wooden shelves 3</col> for your house, which provide <col=000080>kettles</col>, <col=000080>teapots</col>, <col=000080>cups</col>, <col=000080>beer glasses</col> and <col=000080>cake tins</col>.");
+			case 11 :
+				return(25, tool_store_2_8385, "Tool store 2", "You can now construct <col=000080>tool store 2</col> for your house, which provide <col=000080>buckets</col>, <col=000080>spades</col> and <col=000080>tinderboxes</col>.");
+			case 12 :
+				return(26, greenmans_ale_8242, "Greenman's Ale barrel", "You can now construct <col=000080>Greenman's Ale barrels</col> for your house.");
+			case 13 :
+				return(27, oak_drawers_8039, "Oak chest of drawers", "You can now construct <col=000080>oak chests of drawers</col> for your house.");
+			case 14 :
+				return(29, oak_shaving_stand_8046, "Oak shaving stand", "You can now construct <col=000080>oak shaving stands</col> for your house.");
+			case 15 :
+				return(29, oak_bookcase_8320, "Oak bookcase", "You can now construct <col=000080>oak bookcases</col> for your house.");
+			case 16 :
+				return(33, oak_larder_8234, "Oak larder", "You can now construct <col=000080>oak larders</col> for your house.");
+			case 17 :
+				return(34, oak_shelves_1_8226, "Oak shelves 1", "You can now construct <col=000080>oak shelves 1</col> for your house, which provide <col=000080>kettles</col>, <col=000080>teapots</col>, <col=000080>cups</col>, <col=000080>beer glasses</col>, <col=000080>cake tins</col> and <col=000080>bowls</col>.");
+			case 18 :
+				return(35, tool_store_3_8386, "Tool store 3", "You can now construct <col=000080>tool store 3</col> for your house, which provide <col=000080>brown aprons</col>, <col=000080>glassblowing pipes</col> and <col=000080>needles</col>.");
+			case 19 :
+				return(36, dragon_bitter_8243, "Dragon Bitter barrel", "You can now construct <col=000080>Dragon Bitter barrels</col> for your house.");
+			case 20 :
+				return(37, oak_dresser_8047, "Oak dresser", "You can now construct <col=000080>oak dressers</col> for your house.");
+			case 21 :
+				return(39, oak_wardrobe_8040, "Oak wardrobe (bedroom)", "You can now construct <col=000080>oak wardrobes (bedroom)</col>  for your house.");
+			case 22 :
+				return(40, mahogany_bkcase_8321, "Mahogany bookcase", "You can now construct <col=000080>mahogany bookcases</col> for your house.");
+			case 23 :
+				return(43, teak_larder_8235, "Teak larder", "You can now construct <col=000080>teak larders</col> for your house.");
+			case 24 :
+				return(44, tool_store_4_8387, "Tool store 4", "You can now construct <col=000080>tool store 4</col> for your house, which provide <col=000080>amulets</col>, <col=000080>necklaces</col>, <col=000080>rings</col>, <col=000080>holy symbols</col> and <col=000080>tiara moulds</col>.");
+			case 25 :
+				return(45, oak_shelves_2_8227, "Oak shelves 2", "You can now construct <col=000080>oak shelves 2</col> for your house, which provide <col=000080>kettles</col>, <col=000080>teapots</col>, <col=000080>cups</col>, <col=000080>beer glasses</col>, <col=000080>cake tins</col>, <col=000080>bowls</col> and <col=000080>pie dishes</col>.");
+			case 26 :
+				return(46, teak_dresser_8048, "Teak dresser", "You can now construct <col=000080>teak dressers</col> for your house.");
+			case 27 :
+				return(48, chefs_delight_8244, "Chef's Delight barrel", "You can now construct <col=000080>Chef's Delight barrels</col> for your house.");
+			case 28 :
+				return(51, teak_drawers_8041, "Teak chest of drawers", "You can now construct <col=000080>teak chests of drawers</col> for your house.");
+			case 29 :
+				return(55, tool_store_5_8388, "Tool store 5", "You can now construct <col=000080>tool store 5</col> for your house, which provide <col=000080>rakes</col>, <col=000080>spades</col>, <col=000080>trowels</col>, <col=000080>seed dibbers</col> and <col=000080>watering cans</col>).");
+			case 30 :
+				return(56, fancy_teak_dresser_8049, "Fancy teak dresser", "You can now construct <col=000080>fancy teak dressers</col> for your house.");
+			case 31 :
+				return(56, teak_shelves_1_8228, "Teak shelves 1", "You can now construct <col=000080>teak shelves 1</col> for your house, which provide <col=000080>kettles</col>, <col=000080>teapots</col>, <col=000080>cups</col>, <col=000080>beer glasses</col>, <col=000080>cake tins</col>, <col=000080>bowls</col>, <col=000080>pie dishes</col> and <col=000080>pots</col>.");
+			case 32 :
+				return(63, teak_wardrobe_8042, "Teak wardrobe (bedroom)", "You can now construct <col=000080>teak wardrobes (bedroom)</col> for your house.");
+			case 33 :
+				return(64, mahogany_dresser_8050, "Mahogany dresser", "You can now construct <col=000080>mahogany dressers</col> for your house.");
+			case 34 :
+				return(67, teak_shelves_2_8229, "Teak shelves 2", "You can now construct <col=000080>teak shelves 2</col> for your house, which provide <col=000080>kettles</col>, <col=000080>teapots</col>, <col=000080>cups</col>, <col=000080>beer glasses</col>, <col=000080>cake tins</col>, <col=000080>bowls</col>, <col=000080>pie dishes</col>, <col=000080>pots</col> and <col=000080>chef's hats</col>.");
+			case 35 :
+				return(74, gilded_dresser_8051, "Gilded mahogany dresser", "You can now construct <col=000080>gilded mahogany dressers</col> for your house.");
+			case 36 :
+				return(75, mahogany_drobe_8043, "Mahogany wardrobe (bedroom)", "You can now construct <col=000080>mahogany wardrobes (bedroom)</col> for your house.");
+			case 37 :
+				return(87, gilded_wardrobe_8044, "Gilded mahogany wardrobe (bedroom)", "You can now construct <col=000080>gilded mahogany wardrobes (bedroom)</col> for your house.");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(2, brown_rug_8316, "Brown rug", "You can now make <col=000080>brown rugs</col> for your house.");
+			case 1 :
+				return(2, torn_curtains_8322, "Torn curtains", "You can now make <col=000080>torn curtains</col> for your house.");
+			case 2 :
+				return(13, rug_8317, "Rug", "You can now make <col=000080>rugs</col> for your house.");
+			case 3 :
+				return(18, curtains_8323, "Curtains", "You can now make <col=000080>curtains</col> for your house.");
+			case 4 :
+				return(25, oak_clock_8052, "Oak clock", "You can now construct <col=000080>oak clocks</col> for your house.");
+			case 5 :
+				return(40, oak_lectern_8334, "Oak lectern", "You can now construct <col=000080>oak lecterns</col> for your house.");
+			case 6 :
+				return(40, opulent_curtains_8324, "Opulent curtains", "You can now make <col=000080>opulent curtains</col> for your house.");
+			case 7 :
+				return(41, globe_8341, "Globe", "You can now construct <col=000080>globes</col> for your house.");
+			case 8 :
+				return(43, alchemical_chart_8354, "Alchemical chart", "You can now make <col=000080>alchemical charts</col> for your house.");
+			case 9 :
+				return(44, wooden_telescope_8348, "Wooden telescope", "You can now construct <col=000080>wooden telescopes</col> for your house.");
+			case 10 :
+				return(47, eagle_lectern_8335, "Oak eagle lectern", "You can now construct <col=000080>oak eagle lecterns</col> for your house.");
+			case 11 :
+				return(47, demon_lectern_8336, "Oak demon lectern", "You can now construct <col=000080>oak demon lecterns</col> for your house.");
+			case 12 :
+				return(50, ornamental_globe_8342, "Ornamental globe", "You can now construct <col=000080>ornamental globes</col> for your house.");
+			case 13 :
+				return(55, teak_clock_8053, "Teak clock", "You can now construct <col=000080>teak clocks</col> for your house.");
+			case 14 :
+				return(57, teak_eagle_lectern_8337, "Teak eagle lectern", "You can now construct <col=000080>teak eagle lecterns</col> for your house.");
+			case 15 :
+				return(57, teak_demon_lectern_8338, "Teak demon lectern", "You can now construct <col=000080>teak demon lecterns</col> for your house.");
+			case 16 :
+				return(59, lunar_globe_8343, "Lunar globe", "You can now construct <col=000080>lunar globes</col> for your house.");
+			case 17 :
+				return(63, astronomical_chart_8355, "Astronomical chart", "You can now make <col=000080>astronomical charts</col> for your house.");
+			case 18 :
+				return(64, teak_telescope_8349, "Teak telescope", "You can now construct <col=000080>teak telescopes</col> for your house.");
+			case 19 :
+				return(65, opulent_rug_8318, "Opulent rug", "You can now make <col=000080>opulent rugs</col> for your house.");
+			case 20 :
+				return(67, mahogany_eagle_8339, "Mahogany eagle lectern", "You can now construct <col=000080>mahogany eagle lecterns</col> for your house.");
+			case 21 :
+				return(67, mahogany_demon_8340, "Mahogany demon lectern", "You can now construct <col=000080>mahogany demon lecterns</col> for your house.");
+			case 22 :
+				return(68, celestial_globe_8344, "Celestial globe", "You can now construct <col=000080>celestial globes</col> for your house.");
+			case 23 :
+				return(72, candles_8128, "Dungeon candles", "You can now make <col=000080>dungeon candles</col> for your house.");
+			case 24 :
+				return(72, decorative_blood_8125, "Decorative dungeon bloodstain", "You can now put <col=000080>decorative dungeon bloodstains</col> in your house.");
+			case 25 :
+				return(77, armillary_sphere_8345, "Armillary sphere", "You can now construct <col=000080>armillary spheres</col> for your house.");
+			case 26 :
+				return(83, infernal_chart_8356, "Infernal chart", "You can now make <col=000080>infernal charts</col> for your house.");
+			case 27 :
+				return(83, decorative_pipe_8126, "Decorative dungeon pipe", "You can now construct <col=000080>decorative dungeon pipes</col> for your house.");
+			case 28 :
+				return(84, torches_8129, "Dungeon torches", "You can now make <col=000080>dungeon torches</col> for your house.");
+			case 29 :
+				return(84, mahogany_scope_8350, "Mahogany 'scope", "You can now construct <col=000080>mahogany 'scopes</col> for your house.");
+			case 30 :
+				return(85, gilded_clock_8054, "Gilded mahogany clock", "You can now construct <col=000080>gilded mahogany clocks</col> for your house.");
+			case 31 :
+				return(86, small_orrery_8346, "Small orrery", "You can now construct <col=000080>small orreries</col> for your house.");
+			case 32 :
+				return(94, hanging_skeleton_8127, "Hanging dungeon skeleton", "You can now put <col=000080>hanging dungeon skeletons</col> in your house.");
+			case 33 :
+				return(94, skull_torches_8130, "Dungeon skull torches", "You can now make <col=000080>dungeon skull torches</col> for your house.");
+			case 34 :
+				return(95, large_orrery_8347, "Large orrery", "You can now construct <col=000080>large orreries</col> for your house.");
+		}
+	case 5 :
+		switch_int ($int1) {
+			case 0 :
+				return(16, oak_decoration_8102, "Oak wall decoration", "You can now display <col=000080>oak wall decorations</col> in your house.");
+			case 1 :
+				return(28, suit_of_armour_8085, "Suit of armour", "You can now display a <col=000080>suit of armour</col> in your house.");
+			case 2 :
+				return(35, small_portrait_8086, "Small portrait", "You can now display <col=000080>small portraits</col> in your house.");
+			case 3 :
+				return(36, mounted_bass_8267, "Mounted bass", "You can now display <col=000080>mounted bass</col> in your house.");
+			case 4 :
+				return(36, teak_decoration_8103, "Teak wall decoration", "You can now display <col=000080>teak wall decorations</col> in your house.");
+			case 5 :
+				return(38, minor_head_8087, "Minor Slayer monster head", "You can now display <col=000080>minor Slayer monster heads</col> in your house.");
+			case 6 :
+				return(38, small_map_8294, "Small map", "You can now display <col=000080>small maps</col> in your house.");
+			case 7 :
+				return(41, rune_display_case_8095, "Rune display case", "You can now put <col=000080>rune display cases</col> in your house.");
+			case 8 :
+				return(42, mounted_sword_8090, "Mounted sword", "You can now display <col=000080>mounted swords</col> in your house.");
+			case 9 :
+				return(44, small_landscape_8091, "Small landscape", "You can now display <col=000080>small landscapes</col> in your house.");
+			case 10 :
+				return(47, guild_trophy_8092, "Guild trophy", "You can now display <col=000080>guild trophies</col> in your house.");
+			case 11 :
+				return(55, large_portrait_8093, "Large portrait", "You can now display <col=000080>large portraits</col> in your house.");
+			case 12 :
+				return(56, gilded_decoration_8104, "Gilded mahogany wall decoration", "You can now display <col=000080>gilded mahogany wall decorations</col> in your house.");
+			case 13 :
+				return(56, mounted_swordfish_8268, "Mounted swordfish", "You can now display <col=000080>mounted swordfish</col> in your house.");
+			case 14 :
+				return(58, medium_map_8295, "Medium map", "You can now display <col=000080>medium maps</col> in your house.");
+			case 15 :
+				return(58, medium_head_8088, "Medium Slayer monster head", "You can now display <col=000080>medium Slayer monster heads</col> in your house.");
+			case 16 :
+				return(65, large_landscape_8094, "Large landscape", "You can now display <col=000080>large landscapes</col> in your house.");
+			case 17 :
+				return(66, round_shield_8105, "Round wall-mounted shield", "You can now display <col=000080>round wall-mounted shields</col> in your house.");
+			case 18 :
+				return(76, mounted_shark_8269, "Mounted shark", "You can now display <col=000080>mounted shark</col> in your house.");
+			case 19 :
+				return(76, square_shield_8106, "Square wall-mounted shield", "You can now display <col=000080>square wall-mounted shields</col> in your house.");
+			case 20 :
+				return(78, major_head_8089, "Major Slayer monster head", "You can now display <col=000080>major Slayer monster heads</col> in your house.");
+			case 21 :
+				return(78, large_map_8296, "Large map", "You can now display <col=000080>large maps</col> in your house.");
+			case 22 :
+				return(86, kite_shield_8107, "Wall-mounted kiteshield", "You can now display <col=000080>wall-mounted kiteshields</col> in your house.");
+		}
+	case 6 :
+		switch_int ($int1) {
+			case 0 :
+				return(30, hoop_and_stick_8162, "Hoop-and-stick game", "You can now construct <col=000080>hoop-and-stick games</col> for your <col=000080>games room</col>.");
+			case 1 :
+				return(32, boxing_ring_8023, "Boxing ring", "You can now construct <col=000080>boxing rings</col> for your <col=000080>combat room</col>.");
+			case 2 :
+				return(34, glove_rack_8028, "Boxing glove rack", "You can now construct <col=000080>boxing glove racks</col> for your <col=000080>combat room</col>.");
+			case 3 :
+				return(34, oak_prize_chest_8165, "Oak prize chest", "You can now construct <col=000080>oak prize chests</col> for your <col=000080>games room</col>.");
+			case 4 :
+				return(37, magical_balance_1_8156, "Lesser magical balance", "You can now construct <col=000080>lesser magical balances</col> for your <col=000080>games room</col>.");
+			case 5 :
+				return(39, jester_8159, "Jester game", "You can now construct <col=000080>jester games</col> for your <col=000080>games room</col>");
+			case 6 :
+				return(39, clay_attack_stone_8153, "Clay attack stone", "You can now construct <col=000080>clay attack stones</col> for your <col=000080>games room</col>.");
+			case 7 :
+				return(41, fencing_ring_8024, "Fencing ring", "You can now construct <col=000080>fencing rings</col> for your <col=000080>combat room</col>.");
+			case 8 :
+				return(44, weapons_rack_8029, "Weapons rack", "You can now construct <col=000080>weapons racks</col> for your <col=000080>combat room</col>.");
+			case 9 :
+				return(44, teak_prize_chest_8166, "Teak prize chest", "You can now construct <col=000080>teak prize chests</col> for your <col=000080>games room</col>.");
+			case 10 :
+				return(49, treasure_hunt_8160, "Treasure hunt fairy house", "You can now construct <col=000080>treasure hunt fairy houses</col> for your <col=000080>games room</col>.");
+			case 11 :
+				return(51, combat_ring_8025, "Combat ring", "You can now construct <col=000080>combat rings</col> for your <col=000080>combat room</col>.");
+			case 12 :
+				return(54, dartboard_8163, "Dartboard", "You can now construct <col=000080>dartboards</col> for your <col=000080>games room</col>.");
+			case 13 :
+				return(54, extra_weapons_rack_8030, "Upgraded weapons rack", "You can now construct <col=000080>upgraded weapons racks</col> for your <col=000080>combat room</col>.");
+			case 14 :
+				return(54, mahogany_chest_8167, "Mahogany prize chest", "You can now construct <col=000080>mahogany prize chests</col> for your <col=000080>games room</col>.");
+			case 15 :
+				return(57, magical_balance_2_8157, "Medium balance", "You can now construct <col=000080>medium balances</col> for your <col=000080>games room</col>.");
+			case 16 :
+				return(59, attack_stone_8154, "Limestone attack stone", "You can now construct <col=000080>limestone attack stones</col> for your <col=000080>games room</col>.");
+			case 17 :
+				return(59, hangman_game_8161, "Hangman game", "You can now construct <col=000080>hangman games</col> for your <col=000080>games room</col>.");
+			case 18 :
+				return(71, ranging_pedestals_8026, "Ranging pedestals", "You can now construct <col=000080>ranging pedestals</col> for your <col=000080>combat room</col>.");
+			case 19 :
+				return(77, magical_balance_3_8158, "Greater magical balance", "You can now add <col=000080>greater magic balances</col> for your <col=000080>games room</col>.");
+			case 20 :
+				return(79, marble_att_stone_8155, "Marble attack stone", "You can now construct <col=000080>marble attack stones</col> for your <col=000080>games room</col>.");
+			case 21 :
+				return(81, archery_target_8164, "Archery target", "You can now construct <col=000080>archery targets</col> for your <col=000080>games room</col>.");
+			case 22 :
+				return(81, balance_beam_8027, "Balance beam", "You can now construct <col=000080>balance beams</col> for your <col=000080>games room</col>.");
+		}
+	case 7 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, exit_portal_8168, "Exit portal", "You can now build an <col=000080>exit portal</col> for your <col=000080>garden</col>.");
+			case 1 :
+				return(1, low_level_plants_8096, "Low-level plants", "You can now put <col=000080>low-level plants</col> in your <col=000080>garden</col>.");
+			case 2 :
+				return(5, decorative_rock_8169, "Decorative rock", "You can now put <col=000080>decorative rocks</col> in your <col=000080>garden</col>.");
+			case 3 :
+				return(5, tree_8173, "Tree", "You can now plant <col=000080>trees</col> in your <col=000080>garden</col>.");
+			case 4 :
+				return(6, mid_level_plants_8097, "Mid-level plants", "You can now put <col=000080>mid-level plants</col> in your <col=000080>garden</col>.");
+			case 5 :
+				return(10, pond_8170, "Pond", "You can now put a <col=000080>pond</col> in your <col=000080>garden</col>.");
+			case 6 :
+				return(10, nice_tree_8174, "Nice tree", "You can now plant <col=000080>nice trees</col> in your <col=000080>garden</col>.");
+			case 7 :
+				return(12, high_level_plants_8098, "High-level plants", "You can now put <col=000080>high-level plants</col> in your <col=000080>garden</col>.");
+			case 8 :
+				return(15, imp_statue_8171, "Imp statue", "You can now put <col=000080>imp statues</col> in your <col=000080>garden</col>.");
+			case 9 :
+				return(15, oak_tree_8175, "Oak tree", "You can now plant <col=000080>oak trees</col> in your <col=000080>garden</col>.");
+			case 10 :
+				return(30, willow_tree_8176, "Willow tree", "You can now plant <col=000080>willow trees</col> in your <col=000080>garden</col>.");
+			case 11 :
+				return(45, maple_tree_8177, "Maple tree", "You can now plant <col=000080>maple trees</col> in your <col=000080>garden</col>.");
+			case 12 :
+				return(55, boundary_stones_8196, "Boundary stones", "You can now put <col=000080>boundary stones</col> in your <col=000080>garden</col>.");
+			case 13 :
+				return(56, thorny_hedge_8203, "Thorny hedge", "You can now plant <col=000080>thorny hedges</col> in your <col=000080>garden</col>.");
+			case 14 :
+				return(59, wooden_fence_8197, "Wooden fence", "You can now put <col=000080>wooden fences</col> around your <col=000080>garden</col>.");
+			case 15 :
+				return(60, nice_hedge_8204, "Nice hedge", "You can now plant <col=000080>nice hedges</col> in your <col=000080>garden</col>.");
+			case 16 :
+				return(60, yew_tree_8178, "Yew tree", "You can now plant <col=000080>yew trees</col> in your <col=000080>garden</col>.");
+			case 17 :
+				return(63, stone_wall_8198, "Stone wall", "You can now put <col=000080>stone walls</col> around your <col=000080>garden</col>.");
+			case 18 :
+				return(64, small_box_hedge_8205, "Small box hedge", "You can now plant <col=000080>small box hedges</col> in your <col=000080>garden</col>.");
+			case 19 :
+				return(65, gazebo_8192, "Gazebo", "You can now put <col=000080>gazebos</col> in your <col=000080>garden</col>.");
+			case 20 :
+				return(66, sunflower_8213, "Sunflower", "You can now plant <col=000080>sunflowers</col> in your <col=000080>garden</col>.");
+			case 21 :
+				return(66, rosemary_8210, "Rosemary", "You can now plant <col=000080>rosemary</col> in your <col=000080>garden</col>.");
+			case 22 :
+				return(67, iron_railings_8199, "Iron railings", "You can now put <col=000080>iron railings</col> around your <col=000080>garden</col>.");
+			case 23 :
+				return(68, topiary_hedge_8206, "Topiary hedge", "You can now plant <col=000080>topiary hedges</col> in your <col=000080>garden</col>.");
+			case 24 :
+				return(70, dungeon_entrance_8172, "Dungeon entrance", "You can now put <col=000080>dungeon entrances</col> in your <col=000080>garden</col>.");
+			case 25 :
+				return(71, marigolds_8214, "Marigolds", "You can now plant <col=000080>marigolds</col> in your <col=000080>garden</col>.");
+			case 26 :
+				return(71, daffodils_8211, "Daffodils", "You can now plant <col=000080>daffodils</col> in your <col=000080>garden</col>.");
+			case 27 :
+				return(71, picket_fence_8200, "Picket fence", "You can now put <col=000080>picket fences</col> around your <col=000080>garden</col>.");
+			case 28 :
+				return(71, small_fountain_8193, "Small fountain", "You can now put <col=000080>small fountains</col> in your <col=000080>garden</col>.");
+			case 29 :
+				return(72, fancy_hedge_8207, "Fancy hedge", "You can now put <col=000080>fancy hedges</col> around your <col=000080>garden</col>.");
+			case 30 :
+				return(75, magic_tree_8179, "Magic tree", "You can now plant <col=000080>magic trees</col> in your <col=000080>garden</col>.");
+			case 31 :
+				return(75, large_fountain_8194, "Large fountain", "You can now put <col=000080>large fountains</col> in your <col=000080>garden</col>.");
+			case 32 :
+				return(75, garden_fence_8201, "Garden fence", "You can now put <col=000080>garden fences</col> around your <col=000080>garden</col>.");
+			case 33 :
+				return(76, tall_fancy_hedge_8208, "Tall fancy hedge", "You can now plant <col=000080>tall fancy hedges</col> in your <col=000080>garden</col>.");
+			case 34 :
+				return(76, roses_8215, "Roses", "You can now plant <col=000080>roses</col> in your <col=000080>garden</col>.");
+			case 35 :
+				return(76, bluebells_8212, "Bluebells", "You can now plant <col=000080>bluebells</col> in your <col=000080>garden</col>.");
+			case 36 :
+				return(79, marble_wall_8202, "Marble wall", "You can now put <col=000080>marble walls</col> around your <col=000080>garden</col>.");
+			case 37 :
+				return(80, tall_box_hedge_8209, "Tall box hedge", "You can now plant <col=000080>tall box hedges</col> in your <col=000080>garden</col>.");
+			case 38 :
+				return(81, posh_fountain_8195, "Posh fountain", "You can now put <col=000080>posh fountains</col> in your <col=000080>garden</col>.");
+		}
+	case 8 :
+		switch_int ($int1) {
+			case 0 :
+				return(61, floor_decoration_8370, "Throne room floor decoration", "You can now add <col=000080>throne room floor decorations</col> to your <col=000080>dungeon</col>.");
+			case 1 :
+				return(65, oak_cage_8297, "Oak cage", "You can add <col=000080>oak cages</col> to your <col=000080>dungeon</col>.");
+			case 2 :
+				return(65, spikes_8302, "Oubliette spikes", "You can now add <col=000080>oubliette spikes</col> to your <col=000080>dungeon</col>.");
+			case 3 :
+				return(68, steel_cage_8371, "Steel cage", "You can now add <col=000080>steel cages</col> to your <col=000080>dungeon</col>.");
+			case 4 :
+				return(70, oak_and_steel_cage_8298, "Oak and steel cage", "You can now add <col=000080>oak and steel cages</col> to your <col=000080>dungeon</col>.");
+			case 5 :
+				return(70, skeleton_guard_8131, "Skeleton guard", "You can now add <col=000080>skeleton guards</col> to your <col=000080>dungeon</col>.");
+			case 6 :
+				return(71, tentacle_pool_8303, "Tentacle pool", "You can now add <col=000080>tentacle pools</col> to your <col=000080>dungeon</col>.");
+			case 7 :
+				return(72, spike_trap_8143, "Spike trap", "You can now add <col=000080>spike traps</col> to your <col=000080>dungeon</col>.");
+			case 8 :
+				return(74, trapdoor_8372, "Large trapdoor", "You can now add <col=000080>large trapdoors</col> to your <col=000080>dungeon</col>.");
+			case 9 :
+				return(74, oak_door_8122, "Oak dungeon door", "You can now add <col=000080>oak dungeon doors</col> to your <col=000080>dungeon</col>.");
+			case 10 :
+				return(74, guard_dog_8132, "Guard dog", "You can now add <col=000080>guard dogs</col> to your <col=000080>dungeon</col>.");
+			case 11 :
+				return(75, wooden_crate_8148, "Wooden dungeon treasure crate", "You can now add <col=000080>wooden dungeon treasure crates</col> to your <col=000080>treasure room</col>.");
+			case 12 :
+				return(75, demon_8138, "Demon", "You can now add <col=000080>demons</col> to your <col=000080>dungeon</col>.");
+			case 13 :
+				return(75, steel_cage_8299, "Steel cage", "You can now add <col=000080>steel cages</col> to your <col=000080>dungeon</col>.");
+			case 14 :
+				return(76, man_trap_8144, "Man trap", "You can now add <col=000080>man traps</col> to your <col=000080>dungeon</col>.");
+			case 15 :
+				return(77, flame_pit_8304, "Oubliette flame pit", "You can now add <col=000080>oubliette flame pits</col> to your <col=000080>dungeon</col>.");
+			case 16 :
+				return(78, hobgoblin_guard_8133, "Hobgoblin guard", "You can now add <col=000080>hobgoblin guards</col> to your <col=000080>dungeon</col>.");
+			case 17 :
+				return(79, oak_chest_8149, "Oak dungeon treasure chest", "You can now add <col=000080>oak dungeon treasure chests</col> to your <col=000080>treasure room</col>.");
+			case 18 :
+				return(80, spiked_cage_8300, "Spiked cage", "You can now add <col=000080>spiked cages</col> to your <col=000080>dungeon</col>.");
+			case 19 :
+				return(80, tangle_vine_8145, "Tangle vine", "You can now add <col=000080>tangle vines</col> to your <col=000080>dungeon</col>.");
+			case 20 :
+				return(80, kalphite_soldier_8139, "Kalphite soldier", "You can now add <col=000080>kalphite soldiers</col> to your <col=000080>dungeon</col>.");
+			case 21 :
+				return(82, lesser_magic_cage_8373, "Lesser magic cage", "You can now add <col=000080>lesser magic cages</col> to your <col=000080>dungeon</col>.");
+			case 22 :
+				return(82, baby_red_dragon_8134, "Baby red dragon", "You can now add <col=000080>baby red dragons</col> to your <col=000080>dungeon</col>.");
+			case 23 :
+				return(83, teak_chest_8150, "Teak dungeon treasure chest", "You can now add <col=000080>teak dungeon treasure chests</col> to your <col=000080>treasure room</col>.");
+			case 24 :
+				return(83, rocnar_8305, "Rocnar", "You can now add <col=000080>rocnars</col> to your <col=000080>dungeon</col>.");
+			case 25 :
+				return(84, steel_plated_door_8123, "Steel-plated oak door", "You can now add <col=000080>steel-plated oak doors</col> to your <col=000080>dungeon</col>.");
+			case 26 :
+				return(84, marble_trap_8146, "Marble trap", "You can now add <col=000080>marble traps</col> to your <col=000080>dungeon</col>.");
+			case 27 :
+				return(85, tok_xil_8140, "Tok-Xil", "You can now add <col=000080>Tok-Xil</col> to your <col=000080>dungeon</col>.");
+			case 28 :
+				return(85, bone_cage_8301, "Bone cage", "You can now add <col=000080>bone cages</col> to your <col=000080>dungeon</col>.");
+			case 29 :
+				return(86, huge_spider_8135, "Huge spider", "You can now add <col=000080>huge spiders</col> to your <col=000080>dungeon</col>.");
+			case 30 :
+				return(87, mahogany_chest_8151, "Mahogany dungeon treasure chest", "You can now add <col=000080>mahogany dungeon treasure chests</col> to your <col=000080>treasure room</col>.");
+			case 31 :
+				return(88, teleport_trap_8147, "Teleport trap", "You can now add <col=000080>teleport traps</col> to your <col=000080>dungeon</col>.");
+			case 32 :
+				return(89, greater_magic_cage_8374, "Greater magic cage", "You can now add <col=000080>greater magic cages</col> to your <col=000080>dungeon</col>.");
+			case 33 :
+				return(90, troll_guard_8136, "Troll guard", "You can now add <col=000080>troll guards</col> to your <col=000080>dungeon</col>.");
+			case 34 :
+				return(90, dagannoth_8141, "Dagannoth", "You can now add <col=000080>dagannoths</col> to your <col=000080>dungeon</col>.");
+			case 35 :
+				return(91, magic_chest_8152, "Magic dungeon treasure chest", "You can now add <col=000080>magic dungeon treasure chests</col> to your <col=000080>treasure room</col>.");
+			case 36 :
+				return(94, marble_door_8124, "Marble dungeon door", "You can now add <col=000080>marble dungeon doors</col> to your <col=000080>dungeon</col>.");
+			case 37 :
+				return(94, hellhound_8137, "Hellhound", "You can now add <col=000080>hellhounds</col> to your <col=000080>dungeon</col>.");
+			case 38 :
+				return(95, steel_dragon_8142, "Steel dragon", "You can now add <col=000080>steel dragons</col> to your <col=000080>dungeon</col>.");
+		}
+	case 9 :
+		switch_int ($int1) {
+			case 0 :
+				return(45, oak_altar_8062, "Oak altar", "You can now construct <col=000080>oak altars</col> for your <col=000080>chapel</col>.");
+			case 1 :
+				return(45, steel_torches_8070, "Steel torches", "You can now add <col=000080>steel torches</col> to your <col=000080>chapel</col>.");
+			case 2 :
+				return(48, saradomin_symbol_8055, "Symbol of Saradomin", "You can now add <col=000080>symbols of Saradomin</col> to your <col=000080>chapel</col>.");
+			case 3 :
+				return(48, guthix_symbol_8057, "Symbol of Guthix", "You can now add <col=000080>symbols of Guthix</col> to your <col=000080>chapel</col>.");
+			case 4 :
+				return(48, zamorak_symbol_8056, "Symbol of Zamorak", "You can now add <col=000080>symbols of Zamorak</col> to your <col=000080>chapel</col>.");
+			case 5 :
+				return(49, wooden_torches_8069, "Wooden torches", "You can now add <col=000080>wooden torches</col> to your <col=000080>chapel</col>.");
+			case 6 :
+				return(49, windchimes_8079, "Chapel windchimes", "You can now add <col=000080>chapel windchimes</col> to your <col=000080>chapel</col>.");
+			case 7 :
+				return(49, small_statues_8082, "Small chapel statue", "You can now construct <col=000080>small chapel statues</col> for your <col=000080>chapel</col>.");
+			case 8 :
+				return(49, shuttered_window_8076, "Shuttered chapel window", "You can now add <col=000080>shuttered windows</col> to your <col=000080>chapel</col>.");
+			case 9 :
+				return(50, teak_altar_8063, "Teak altar", "You can now construct <col=000080>teak altars</col> for your <col=000080>chapel</col>.");
+			case 10 :
+				return(53, steel_candlesticks_8071, "Steel candlesticks", "You can now add <col=000080>steel candlesticks</col> to your <col=000080>chapel</col>.");
+			case 11 :
+				return(56, cloth_coverd_altar_8064, "Cloth-covered teak altar", "You can now add <col=000080>cloth-covered teak altars</col> to your <col=000080>chapel</col>.");
+			case 12 :
+				return(57, gold_candlesticks_8072, "Gold candlesticks", "You can now add <col=000080>gold candlesticks</col> to your <col=000080>chapel</col>.");
+			case 13 :
+				return(58, bells_8080, "Chapel bells", "You can now add <col=000080>chapel bells</col> to your <col=000080>chapel</col>.");
+			case 14 :
+				return(59, saradomin_icon_8058, "Icon of Saradomin", "You can now add <col=000080>icons of Saradomin</col> to your <col=000080>chapel</col>.");
+			case 15 :
+				return(59, guthix_icon_8060, "Icon of Guthix", "You can now add <col=000080>icons of Guthix</col> to your <col=000080>chapel</col>.");
+			case 16 :
+				return(59, zamorak_icon_8059, "Icon of Zamorak", "You can now add <col=000080>icons of Zamorak</col> to your <col=000080>chapel</col>.");
+			case 17 :
+				return(60, mahogany_altar_8065, "Cloth-covered mahogany altar", "You can now construct <col=000080>cloth-covered mahogany altars</col> for your <col=000080>chapel</col>.");
+			case 18 :
+				return(61, incense_burners_8073, "Oak incense burners", "You can now add <col=000080>oak incense burners</col> to your <col=000080>chapel</col>.");
+			case 19 :
+				return(64, limestone_altar_8066, "Limestone altar", "You can now construct <col=000080>limestone altars</col> to your <col=000080>chapel</col>.");
+			case 20 :
+				return(65, mahogany_burners_8074, "Mahogany incense burners", "You can now add <col=000080>mahogany incense burners</col> to your <col=000080>chapel</col>.");
+			case 21 :
+				return(69, medium_statues_8083, "Medium chapel statue", "You can now add <col=000080>medium chapel statues</col> to your <col=000080>chapel</col>.");
+			case 22 :
+				return(69, organ_8081, "Chapel organ", "You can now add <col=000080>organs</col> to your <col=000080>chapel</col>.");
+			case 23 :
+				return(69, decorative_window_8077, "Decorative chapel window", "You can now add <col=000080>decorative windows</col> to your <col=000080>chapel</col>.");
+			case 24 :
+				return(69, marble_burners_8075, "Marble incense burner", "You can now add <col=000080>marble incense burners</col> to your <col=000080>chapel</col>.");
+			case 25 :
+				return(70, marble_altar_8067, "Marble altar", "You can now construct <col=000080>marble altars</col> for your <col=000080>chapel</col>.");
+			case 26 :
+				return(71, icon_of_bob_8061, "Icon of Bob the Cat", "You can now add <col=000080>icons of Bob the Cat</col> to your <col=000080>chapel</col>.");
+			case 27 :
+				return(75, gilded_altar_8068, "Gilded marble altar", "You can now construct <col=000080>gilded marble altars</col> for your <col=000080>chapel</col>.");
+			case 28 :
+				return(89, large_statues_8084, "Large chapel statue", "You can now add <col=000080>large chapel statues</col> to your <col=000080>chapel</col>.");
+			case 29 :
+				return(89, stained_glass_8078, "Stained-glass chapel window", "You can now add <col=000080>stained-glass windows</col> to your <col=000080>chapel</col>.");
+		}
+	case 10 :
+		switch_int ($int1) {
+			case 0 :
+				return(5, cat_blanket_8236, "Cat blanket", "You can now add <col=000080>cat blankets</col> to your house.");
+			case 1 :
+				return(19, cat_basket_8237, "Cat basket", "You can now add <col=000080>cat baskets</col> to your house.");
+			case 2 :
+				return(26, rope_bell_pull_8099, "Rope bell pull", "You can now add <col=000080>rope bell pulls</col> to your house.");
+			case 3 :
+				return(27, oak_staircase_8249, "Oak staircase", "You can now construct <col=000080>oak staircases</col> for your house.");
+			case 4 :
+				return(33, cushioned_basket_8238, "Cushioned cat basket", "You can now add <col=000080>cushioned cat baskets</col> to your house.");
+			case 5 :
+				return(37, bell_pull_8100, "Teak bell pull", "You can now add <col=000080>teak bell pulls</col> to your house.");
+			case 6 :
+				return(42, crystal_ball_8351, "Crystal ball", "You can now add <col=000080>crystal balls</col> to your house.");
+			case 7 :
+				return(48, teak_staircase_8252, "Teak staircase", "You can now construct <col=000080>teak staircases</col> for your house.");
+			case 8 :
+				return(50, teak_portal_8328, "Teak portal frame", "You can now construct <col=000080>teak portal frames</col> for your house.");
+			case 9 :
+				return(50, teleport_focus_8331, "Teleport focus", "You can now construct <col=000080>teleport focuses</col> for your house.");
+			case 10 :
+				return(54, elemental_sphere_8352, "Elemental sphere", "You can now add <col=000080>elemental spheres</col> to your house.");
+			case 11 :
+				return(60, posh_bell_pull_8101, "Gilded teak bell pull", "You can now add <col=000080>gilded teak bell pulls</col> to your house.");
+			case 12 :
+				return(65, greater_focus_8332, "Greater teleport focus", "You can now construct <col=000080>greater teleport focuses</col> for your house.");
+			case 13 :
+				return(65, mahogany_portal_8329, "Mahogany portal frame", "You can now construct <col=000080>mahogany portal frames</col> for your house.");
+			case 14 :
+				return(66, crystal_of_power_8353, "Crystal of power", "You can now make <col=000080>crystals of power</col> for your house.");
+			case 15 :
+				return(67, spiral_staircase_8258, "Limestone spiral staircase", "You can now construct <col=000080>limestone spiral staircases</col> for your house.");
+			case 16 :
+				return(68, oak_ladder_8306, "Oak oubliette ladder", "You can now construct <col=000080>oak oubliette ladders</col> for your house.");
+			case 17 :
+				return(68, oak_lever_8364, "Oak lever", "You can now construct <col=000080>oak levers</col> for your house.");
+			case 18 :
+				return(68, trapdoor_8367, "Oak trapdoor", "You can now make <col=000080>oak trapdoors</col> for your <col=000080>throne room</col>.");
+			case 19 :
+				return(78, teak_ladder_8307, "Teak oubliette ladder", "You can now construct <col=000080>teak oubliette ladders</col> for your house.");
+			case 20 :
+				return(78, teak_lever_8365, "Teak lever", "You can now construct <col=000080>teak levers</col> for your house.");
+			case 21 :
+				return(78, trapdoor_8368, "Teak trapdoor", "You can now construct <col=000080>teak trapdoors</col> for your <col=000080>throne room</col>.");
+			case 22 :
+				return(80, marble_portal_8330, "Marble portal frame", "You can now construct <col=000080>marble portal frames</col> for your house.");
+			case 23 :
+				return(80, scrying_pool_8333, "Scrying pool", "You can now construct <col=000080>scrying pools</col> for your house.");
+			case 24 :
+				return(82, marble_staircase_8255, "Marble staircase", "You can now construct a <col=000080>marble staircase</col> for your house.");
+			case 25 :
+				return(88, mahogany_ladder_8308, "Mahogany oubliette ladder", "You can now construct <col=000080>mahogany oubliette ladders</col> for your house.");
+			case 26 :
+				return(88, mahogany_lever_8366, "Mahogany lever", "You can now construct <col=000080>mahogany levers</col> for your house.");
+			case 27 :
+				return(88, trapdoor_8369, "Mahogany trapdoor", "You can now construct <col=000080>mahogany trapdoors</col> for your <col=000080>throne room</col>.");
+			case 28 :
+				return(97, marble_spiral_8259, "Marble spiral staircase", "You can now construct <col=000080>marble spiral staircases</col> for your house.");
+		}
+	case 11 :
+		switch_int ($int1) {
+			case 0 :
+				return(42, oak_magic_wardrobe_9829, "Oak wardrobe", "You can now construct <col=000080>oak wardrobes</col> for your <col=000080>costume room</col>.");
+			case 1 :
+				return(44, oak_costume_box_9823, "Oak fancy dress box", "You can now construct <col=000080>oak fancy dress boxes</col> for your <col=000080>costume room</col>.");
+			case 2 :
+				return(46, oak_armour_case_9826, "Oak armour case", "You can now construct <col=000080>oak armour cases</col> for your <col=000080>costume room</col>.");
+			case 3 :
+				return(48, oak_treasure_chest_9839, "Oak treasure chest", "You can now construct <col=000080>oak treasure chests</col> for your <col=000080>costume room</col>.");
+			case 4 :
+				return(50, oak_toy_box_9836, "Oak toy box", "You can now construct <col=000080>oak toy boxes</col> for your <col=000080>costume room</col>.");
+			case 5 :
+				return(51, carved_oak_magic_wardrobe_9830, "Carved oak wardrobe", "You can now construct <col=000080>carved oak wardrobes</col> for your <col=000080>costume room</col>.");
+			case 6 :
+				return(54, oak_cape_rack_9817, "Oak cape rack", "You can now construct <col=000080>oak cape racks</col> for your <col=000080>costume room</col>.");
+			case 7 :
+				return(60, teak_magic_wardrobe_9831, "Teak wardrobe", "You can now construct <col=000080>teak wardrobes</col> for your <col=000080>costume room</col>.");
+			case 8 :
+				return(62, teak_costume_box_9824, "Teak fancy dress box", "You can now construct <col=000080>teak fancy dress boxes</col> for your <col=000080>costume room</col>.");
+			case 9 :
+				return(63, teak_cape_rack_9818, "Teak cape rack", "You can now construct <col=000080>teak cape racks</col> for your <col=000080>costume room</col>.");
+			case 10 :
+				return(64, teak_armour_case_9827, "Teak armour case", "You can now construct <col=000080>teak armour cases</col> for your <col=000080>costume room</col>.");
+			case 11 :
+				return(66, teak_treas_chest_9840, "Teak treasure chest", "You can now construct <col=000080>teak treasure chests</col> for your <col=000080>costume room</col>.");
+			case 12 :
+				return(68, teak_toy_box_9837, "Teak toy box", "You can now construct <col=000080>teak toy boxes</col> for your <col=000080>costume room</col>.");
+			case 13 :
+				return(69, carved_teak_magic_wardrobe_9832, "Carved teak wardrobe", "You can now construct <col=000080>carved teak wardrobes</col> for your <col=000080>costume room</col>.");
+			case 14 :
+				return(72, mgany_cape_rack_9819, "Mahogany cape rack", "You can now construct <col=000080>mahogany cape racks</col> for your <col=000080>costume room</col>.");
+			case 15 :
+				return(78, mahogany_magic_wardrobe_9833, "Mahogany wardrobe", "You can now construct <col=000080>mahogany wardrobes</col> for your <col=000080>costume room</col>.");
+			case 16 :
+				return(80, mahogany_cos_box_9825, "Mahogany fancy dress box", "You can now construct <col=000080>mahogany fancy dress boxes</col> for your <col=000080>costume room</col>.");
+			case 17 :
+				return(81, gilded_cape_rack_9820, "Gilded mahogany cape rack", "You can now construct <col=000080>gilded mahogany cape racks</col> for your <col=000080>costume room</col>.");
+			case 18 :
+				return(82, mgany_armr_case_9828, "Mahogany armour case", "You can now construct <col=000080>mahogany armour cases</col> for your <col=000080>costume room</col>.");
+			case 19 :
+				return(84, mgany_treas_chest_9841, "Mahogany treasure chest", "You can now construct <col=000080>mahogany treasure chests</col> for your <col=000080>costume room</col>.");
+			case 20 :
+				return(86, mahogany_toy_box_9838, "Mahogany toy box", "You can now construct <col=000080>mahogany toy boxes</col> for your <col=000080>costume room</col>.");
+			case 21 :
+				return(87, gilded_magic_wardrobe_9834, "Gilded mahogany wardrobe", "You can now construct <col=000080>gilded mahogany wardrobes</col> for your <col=000080>costume room</col>.");
+			case 22 :
+				return(90, marble_cape_rack_9821, "Marble cape rack", "You can now construct <col=000080>marble cape racks</col> for your <col=000080>costume room</col>.");
+			case 23 :
+				return(96, marble_magic_wardrobe_9835, "Marble wardrobe", "You can now construct <col=000080>marble wardrobes</col> for your <col=000080>costume room</col>.");
+			case 24 :
+				return(99, magical_cape_rack_9822, "Magic stone cape rack", "You can now construct <col=000080>magic stone cape racks</col> for your <col=000080>costume room</col>.");
+		}
+	case 12 :
+		switch_int ($int1) {
+			case 0 :
+				return(20, servant_bell_7974, "Rick", "You can now hire <col=000080>Rick</col>.");
+			case 1 :
+				return(25, servant_bell_7974, "Maid", "You can now hire <col=000080>maids</col>.");
+			case 2 :
+				return(30, servant_bell_7974, "Cook", "You can now hire <col=000080>cooks</col>.");
+			case 3 :
+				return(40, servant_bell_7974, "Butler", "You can now hire <col=000080>butlers</col>.");
+			case 4 :
+				return(50, servant_bell_7974, "Demon butler", "You can now hire <col=000080>demon butlers</col>.");
+		}
+	case 13 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, barrier_class_1_14172, "Stealing Creation - class 1 barriers", "You can now make <col=000080>class 1 barriers</col> in the Stealing Creation minigame.");
+			case 1 :
+				return(20, barrier_class_2_14174, "Stealing Creation - class 2 barriers", "You can now make <col=000080>class 2 barriers</col> in the Stealing Creation minigame.");
+			case 2 :
+				return(40, barrier_class_3_14176, "Stealing Creation - class 3 barriers", "You can now make <col=000080>class 3 barriers</col> in the Stealing Creation minigame.");
+			case 3 :
+				return(60, barrier_class_4_14178, "Stealing Creation - class 4 barriers", "You can now make <col=000080>class 4 barriers</col> in the Stealing Creation minigame.");
+			case 4 :
+				return(80, barrier_class_5_14180, "Stealing Creation - class 5 barriers", "You can now make <col=000080>class 5 barriers</col> in the Stealing Creation minigame.");
+		}
+	case 14 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, hammer_2347, "Maximum rooms: 20", "You can now have a maximum of <col=000080>20 rooms</col> in your house.");
+			case 1 :
+				return(1, saw_8794, "Maximum dimensions: 3x3", "Your house can now have maximum dimensions of <col=000080>3 rooms wide by 3 rooms long</col>.");
+			case 2 :
+				return(15, saw_8794, "Maximum dimensions: 4x4", "Your house can now have maximum dimensions of <col=000080>4 rooms wide by 4 rooms long</col>.");
+			case 3 :
+				return(30, saw_8794, "Maximum dimensions: 5x5", "Your house can now have maximum dimensions of <col=000080>5 rooms wide by 5 rooms long</col>.");
+			case 4 :
+				return(45, saw_8794, "Maximum dimensions: 6x6", "Your house can now have maximum dimensions of <col=000080>6 rooms wide by 6 rooms long</col>.");
+			case 5 :
+				return(50, hammer_2347, "Maximum rooms: 21", "You can now have a maximum of <col=000080>21 rooms</col> in your house.");
+			case 6 :
+				return(56, hammer_2347, "Maximum rooms: 22", "You can now have a maximum of <col=000080>22 rooms</col> in your house.");
+			case 7 :
+				return(60, saw_8794, "Maximum dimensions: 7x7", "Your house can now have maximum dimensions of <col=000080>7 rooms wide by 7 rooms long</col>.");
+			case 8 :
+				return(62, hammer_2347, "Maximum rooms: 23", "You can now have a maximum of <col=000080>23 rooms</col> in your house.");
+			case 9 :
+				return(68, hammer_2347, "Maximum rooms: 24", "You can now have a maximum of <col=000080>24 rooms</col> in your house.");
+			case 10 :
+				return(74, hammer_2347, "Maximum rooms: 25", "You can now have a maximum of <col=000080>25 rooms</col> in your house.");
+			case 11 :
+				return(80, hammer_2347, "Maximum rooms: 26", "You can now have a maximum of <col=000080>26 rooms</col> in your house.");
+			case 12 :
+				return(86, hammer_2347, "Maximum rooms: 27", "You can now have a maximum of <col=000080>27 rooms</col> in your house.");
+			case 13 :
+				return(92, hammer_2347, "Maximum rooms: 28", "You can now have a maximum of <col=000080>28 rooms</col> in your house.");
+			case 14 :
+				return(96, hammer_2347, "Maximum rooms: 29", "You can now have a maximum of <col=000080>29 rooms</col> in your house.");
+			case 15 :
+				return(99, hammer_2347, "Maximum rooms: 30", "You can now have a maximum of <col=000080>30 rooms</col> in your house.");
+			case 16 :
+				return(99, construct_cape_9789, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Construction<col=000080>. Why not visit the <col=800000>Estate Agent<col=000080>? He has something special that is only available to true masters of the <col=800000>Construction<col=000080> skill!");
+		}
+}
+return(0, null, "", "");

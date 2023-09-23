@@ -1,0 +1,9 @@
+// 748
+[clientscript,script748](int $int0, int $int1)
+if (~script750($int0) = 0) {
+	if_setgraphic("combatboxes_very_large,1", interface_664:9);
+	if_settext("Auto-retaliate <br>(On)", interface_664:10);
+} else {
+	if_setgraphic("combatboxes_very_large,0", interface_664:9);
+	if_settext("Auto-retaliate <br>(Off)", interface_664:10);
+}

@@ -1,0 +1,206 @@
+// 1002
+[proc,script1002](int $int0, int $int1)(int, namedobj, string, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, silvthrill_rod_7620, "You must complete Druidic Ritual before you can use Herblore.", "");
+			case 1 :
+				return(3, attack_potion_3_121, "Attack potion<br>Guam & eye of newt", "You can now make <col=000080>Attack potions</col>.");
+			case 2 :
+				return(5, antipoison_3_175, "Anti-poison<br>Marrentill & ground unicorn horn", "You can now make <col=000080>anti-poison</col>.");
+			case 3 :
+				return(8, relicyms_balm_3_4844, "Relicym's balm<br>Rogue's Purse and snake weed (after starting Zogre Flesh Eaters)", "You now have the Herblore level required to make <col=000080>Relicym's balms</col> (after starting Zogre Flesh Eaters).");
+			case 4 :
+				return(12, strength_potion_3_115, "Strength potion<br>Tarromin & limpwurt root", "You can now make <col=000080>Strength potions</col>.");
+			case 5 :
+				return(19, guam_tar_10142, "Guam tar<br>Guam & swamp tar", "You can now make <col=000080>guam tar</col>.");
+			case 6 :
+				return(22, restore_potion_3_127, "Stat restore potion<br>Harralander & red spiders' eggs", "You can now make <col=000080>stat restore potions</col>.");
+			case 7 :
+				return(22, guthix_balance_3_7662, "Guthix Balance potion<br>Harralander, red spiders' eggs, garlic and silver dust", "You can now make <col=000080>Guthix Balance potions</col>.");
+			case 8 :
+				return(25, blamish_oil_1582, "Blamish oil<br>Harralander & blamish snail slime", "You can now make <col=000080>blamish oil</col>.");
+			case 9 :
+				return(26, energy_potion_3_3010, "Energy potion<br>Harralander & chocolate dust", "You can now make <col=000080>energy potions</col>.");
+			case 10 :
+				return(30, defence_potion_3_133, "Defence potion<br>Ranarr & white berries", "You can now make <col=000080>Defence potions</col>.");
+			case 11 :
+				return(31, marrentill_tar_10143, "Marrentill tar<br>Marrentill & swamp tar", "You can now make <col=000080>marrentill tar</col>.");
+			case 12 :
+				return(31, super_fishing_explosive_12633, "Super fishing explosive<br>Guam & rubium (after Kennith's Concerns)", "You now have the Herblore level required to make <col=000080>super fishing explosives</col> (after Kennith's Concerns).");
+			case 13 :
+				return(34, agility_potion_3_3034, "Agility potion<br>Toadflax & toad legs", "You can now make <col=000080>Agility potions</col>.");
+			case 14 :
+				return(36, combat_potion_3_9741, "Combat potion<br>Harralander & ground desert goat horn", "You can now make <col=000080>combat potions</col>.");
+			case 15 :
+				return(38, prayer_potion_3_139, "Prayer restore potion<br>Ranarr & snape grass", "You can now make <col=000080>Prayer restore potions</col>.");
+			case 16 :
+				return(39, tarromin_tar_10144, "Tarromin tar<br>Tarromin & swamp tar", "You can now make <col=000080>tarromin tar</col>.");
+			case 17 :
+				return(40, summoning_potion_3_12142, "Summoning Potion<br>Spirit weed & cockatrice egg", "You can now make <col=000080>Summoning potions</col>.");
+			case 18 :
+				return(44, harralander_tar_10145, "Harralander tar<br>Harralander & swamp tar", "You can now make <col=000080>harralander tar</col>.");
+			case 19 :
+				return(45, super_attack_3_145, "Super Attack potion<br>Irit & eye of newt", "You can now make <col=000080>super Attack potions</col>.");
+			case 20 :
+				return(48, super_antipoison_3_181, "Super anti-poison<br>Irit & ground unicorn horn", "You can now make <col=000080>super anti-poison</col>.");
+			case 21 :
+				return(50, fishing_potion_3_151, "Fishing potion<br>Avantoe & snape grass", "You can now make <col=000080>Fishing potions</col>.");
+			case 22 :
+				return(52, super_energy_3_3018, "Super energy potion<br>Avantoe & Mort Myre fungi", "You can now make <col=000080>super energy potions</col>.");
+			case 23 :
+				return(53, hunter_potion_3_10000, "Hunter potion - Avantoe & ground sabre-toothed kebbit teeth", "You can now make <col=000080>Hunter potions</col>.");
+			case 24 :
+				return(55, super_strength_3_157, "Super Strength potion<br>Kwuarm & limpwurt root", "You can now make <col=000080>super Strength potions</col>.");
+			case 25 :
+				return(57, magic_essence_3_9022, "Magic essence potion<br>Starflower & ground gorak claw", "You can now make <col=000080>Magic essence potions</col>.");
+			case 26 :
+				return(60, weapon_poison_187, "Weapon poison<br>Kwuarm & ground blue dragon scale", "You can now make <col=000080>weapon poisons</col>.");
+			case 27 :
+				return(63, super_restore_3_3026, "Super restore potion<br>Snapdragon & red spiders' eggs", "You can now make <col=000080>super restore potions</col>.");
+			case 28 :
+				return(65, sanfew_serum_3_10927, "Sanfew Serum<br>Super restore potion, snake weed, ground unicorn horn and nail beast nails.", "You can now make <col=000080>Sanfew Serums</col>.");
+			case 29 :
+				return(66, super_defence_3_163, "Super Defence potion<br>Cadantine & white berries", "You can now make <col=000080>super Defence potions</col>.");
+			case 30 :
+				return(68, antipoison_3_5945, "Anti-poison+<br>Coconut milk, toadflax & yew roots", "You can now make <col=000080>anti-poison+ potions</col>.");
+			case 31 :
+				return(69, antifire_potion_3_2454, "Anti fire-breath potion<br>Lantadyme & ground blue dragon scale", "You can now make <col=000080>anti fire-breath potions</col>.");
+			case 32 :
+				return(72, ranging_potion_3_169, "Ranging potion<br>Dwarf weed & wine of Zamorak", "You can now make <col=000080>Ranging potions</col>.");
+			case 33 :
+				return(73, weapon_poison_5937, "Weapon poison+<br>Coconut milk, cactus spine & red spiders' eggs", "You can now make <col=000080>weapon poison+ potions</col>.");
+			case 34 :
+				return(76, magic_potion_3_3042, "Magic potion<br>Lantadyme & potato cactus", "You can now make <col=000080>Magic potions</col>.");
+			case 35 :
+				return(78, zamorak_brew_3_189, "Zamorak brew<br>Torstol & jangerberries", "You can now make <col=000080>Zamorak brews</col>.");
+			case 36 :
+				return(79, antipoison_3_5954, "Anti-poison++<br>Coconut milk, irit & magic tree roots", "You can now make <col=000080>anti-poison++ potions</col>.");
+			case 37 :
+				return(81, saradomin_brew_3_6687, "Saradomin Brew<br>Toadflax & crushed bird nest", "You can now make <col=000080>Saradomin Brews</col>.");
+			case 38 :
+				return(82, weapon_poison_5940, "Weapon poison++<br>Coconut milk, nightshade & poison ivy berries", "You can now make <col=000080>weapon poison++ potions</col>.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, silvthrill_rod_7620, "You must complete Druidic Ritual before you can use Herblore", "");
+			case 1 :
+				return(3, clean_guam_249, "Guam leaf", "You can now clean <col=000080>guam</col>.");
+			case 2 :
+				return(3, clean_rogues_purse_1534, "Rogue's purse", "You can now clean <col=000080>rogue's purse</col>.");
+			case 3 :
+				return(3, clean_snake_weed_1526, "Snake weed", "You can now clean <col=000080>snake weed</col>.");
+			case 4 :
+				return(5, clean_marrentill_251, "Marrentill", "You can now clean <col=000080>marrentill</col>.");
+			case 5 :
+				return(11, clean_tarromin_253, "Tarromin", "You can now clean <col=000080>tarromin</col>.");
+			case 6 :
+				return(20, clean_harralander_255, "Harralander", "You can now clean <col=000080>harralander</col>.");
+			case 7 :
+				return(25, clean_ranarr_257, "Ranarr", "You can now clean <col=000080>ranarr</col>.");
+			case 8 :
+				return(30, clean_toadflax_2998, "Toadflax", "You can now clean <col=000080>toadflax</col>.");
+			case 9 :
+				return(35, clean_spirit_weed_12172, "Spirit weed", "You can now clean <col=000080>spirit weed</col>.");
+			case 10 :
+				return(40, clean_irit_259, "Irit leaf", "You can now clean <col=000080>irit leaf</col>.");
+			case 11 :
+				return(48, clean_avantoe_261, "Avantoe", "You can now clean <col=000080>avantoe</col>.");
+			case 12 :
+				return(54, clean_kwuarm_263, "Kwuarm", "You can now clean <col=000080>kwuarm</col>.");
+			case 13 :
+				return(59, clean_snapdragon_3000, "Snapdragon", "You can now clean <col=000080>snapdragon</col>.");
+			case 14 :
+				return(65, clean_cadantine_265, "Cadantine", "You can now clean <col=000080>cadantine</col>.");
+			case 15 :
+				return(67, clean_lantadyme_2481, "Lantadyme", "You can now clean <col=000080>lantadyme</col>.");
+			case 16 :
+				return(70, clean_dwarf_weed_267, "Dwarf weed", "You can now clean <col=000080>dwarf weed</col>.");
+			case 17 :
+				return(75, clean_torstol_269, "Torstol", "You can now clean <col=000080>torstol</col>.");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, silvthrill_rod_7620, "You must complete barbarian Herblore training before you can make these potions.", " ");
+			case 1 :
+				return(4, attack_mix_2_11429, "Attack mix", "You can now make <col=000080>Attack mixes</col>.");
+			case 2 :
+				return(6, antipoison_mix_2_11433, "Anti-poison mix", "You can now make <col=000080>anti-poison mixes</col>.");
+			case 3 :
+				return(9, relicyms_mix_2_11437, "Relicym's Balm mix", "You can now make <col=000080>Relicym's Balm mixes</col>.");
+			case 4 :
+				return(14, strength_mix_2_11443, "Strength mix", "You can now make <col=000080>Strength mixes</col>.");
+			case 5 :
+				return(24, restore_mix_2_11449, "Stat restore mix", "You can now make <col=000080>stat restore mixes</col>.");
+			case 6 :
+				return(29, energy_mix_2_11453, "Energy mix", "You can now make <col=000080>energy mixes</col>.");
+			case 7 :
+				return(33, defence_mix_2_11457, "Defence mix", "You can now make <col=000080>Defence mixes</col>.");
+			case 8 :
+				return(37, agility_mix_2_11461, "Agility mix", "You can now make <col=000080>Agility mixes</col>.");
+			case 9 :
+				return(40, combat_mix_2_11445, "Combat mix", "You can now make <col=000080>combat mixes</col>.");
+			case 10 :
+				return(42, prayer_mix_2_11465, "Prayer restore mix", "You can now make <col=000080>Prayer restore mixes</col>.");
+			case 11 :
+				return(47, superattack_mix_2_11469, "Super Attack mix", "You can now make <col=000080>super Attack mixes</col>.");
+			case 12 :
+				return(51, anti_p_supermix_2_11473, "Super anti-poison mix", "You can now make <col=000080>super anti-poison mixes</col>.");
+			case 13 :
+				return(53, fishing_mix_2_11477, "Fishing mix", "You can now make <col=000080>Fishing mixes</col>.");
+			case 14 :
+				return(56, sup_energy_mix_2_11481, "Super energy mix", "You can now make <col=000080>super energy mixes</col>.");
+			case 15 :
+				return(58, hunting_mix_2_11517, "Hunter mix", "You can now make <col=000080>Hunter mixes</col>.");
+			case 16 :
+				return(59, sup_str_mix_2_11485, "Super Strength mix", "You can now make <col=000080>super Strength mixes</col>.");
+			case 17 :
+				return(61, magic_ess_mix_2_11489, "Magic essence mix", "You can now make <col=000080>Magic essence mixes</col>.");
+			case 18 :
+				return(67, sup_restore_mix_2_11493, "Super restore mix", "You can now make <col=000080>super restore mix</col>.");
+			case 19 :
+				return(71, sup_def_mix_2_11497, "Super Defence mix", "You can now make <col=000080>super Defence mix</col>.");
+			case 20 :
+				return(74, antidote_mix_2_11501, "Anti-poison+ mix", "You can now make <col=000080>anti-poison+ mix</col>.");
+			case 21 :
+				return(75, antifire_mix_2_11505, "Anti fire-breath mix", "You can now make <col=000080>anti fire-breath mix</col>.");
+			case 22 :
+				return(80, ranging_mix_2_11509, "Ranging mix", "You can now make <col=000080>Ranging mix</col>.");
+			case 23 :
+				return(83, magic_mix_2_11513, "Magic mix", "You can now make <col=000080>Magic mix</col>.");
+			case 24 :
+				return(85, zamorak_mix_2_11521, "Zamorak mix", "You can now make <col=000080>Zamorak mix</col>.");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(50, irit_gloves_12856, "Irit gloves", "You can now wear <col=000080>irit gloves.");
+			case 1 :
+				return(60, avantoe_gloves_12857, "Avantoe gloves", "You can now wear <col=000080>avantoe gloves.");
+			case 2 :
+				return(70, kwuarm_gloves_12858, "Kwuarm gloves", "You can now wear <col=000080>kwuarm gloves.");
+			case 3 :
+				return(80, cadantine_gloves_12859, "Cadantine gloves", "You can now wear <col=000080>cadantine gloves.");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, prayer_potion_1_14215, "Stealing Creation - class 1 sacred clay", "Members can now make <col=000080>1-dose potions out of class 1 sacred clay</col> in the Stealing Creation minigame.");
+			case 1 :
+				return(20, prayer_potion_2_14213, "Stealing Creation - class 2 sacred clay", "Members can now make <col=000080>2-doses potions out of class 2 sacred clay</col> in the Stealing Creation minigame.");
+			case 2 :
+				return(40, prayer_potion_3_14211, "Stealing Creation - class 3 sacred clay", "Members can now make <col=000080>3-doses potions out of class 3 sacred clay</col> in the Stealing Creation minigame.");
+			case 3 :
+				return(60, prayer_potion_4_14209, "Stealing Creation - class 4 sacred clay", "Members can now make <col=000080>4-doses potions out of class 4 sacred clay</col> in the Stealing Creation minigame.");
+			case 4 :
+				return(80, prayer_potion_5_14207, "Stealing Creation - class 5 sacred clay", "Members can now make <col=000080>5-doses potions out of class 5 sacred clay</col> in the Stealing Creation minigame.");
+		}
+	case 5 :
+		if ($int1 = 0) {
+			return(99, herblore_cape_9774, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Herblore<col=000080>. Why not visit <col=800000>Kaqemeex<col=000080>, near <col=800000>Taverley<col=000080>? He has something special that is only available to true masters of the <col=800000>Herblore<col=000080> skill!");
+		}
+}
+return(0, null, "", "");

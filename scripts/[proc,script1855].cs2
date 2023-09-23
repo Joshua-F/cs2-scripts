@@ -1,0 +1,24 @@
+// 1855
+[proc,script1855](int $flags0)
+def_int $world1 = _6505;
+if (testbit($flags0, 0) = ^true) {
+	$world1 = setbit($world1, 0);
+} else {
+	$world1 = clearbit($world1, 0);
+}
+if (testbit($flags0, 1) = ^true) {
+	$world1 = setbit($world1, 1);
+} else {
+	$world1 = clearbit($world1, 1);
+}
+if (testbit($flags0, 2) = ^true) {
+	$world1 = setbit($world1, 2);
+} else {
+	$world1 = clearbit($world1, 2);
+}
+if (testbit($flags0, 3) = ^true) {
+	$world1 = setbit($world1, 3);
+} else {
+	$world1 = clearbit($world1, 3);
+}
+_6504($world1);

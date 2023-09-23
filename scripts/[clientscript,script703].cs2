@@ -1,0 +1,10 @@
+// 703
+[clientscript,script703](component $component0, int $comsubid1, component $drop2, int $dropsubid3)
+def_int $x4 = 0;
+def_int $y5 = 0;
+if (cc_find($component0, $comsubid1) = ^true & .cc_find($drop2, $dropsubid3) = ^true) {
+	$x4 = cc_getx;
+	$y5 = cc_gety;
+	cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition($x4, $y5, ^setpos_abs_left, ^setpos_abs_top);
+}

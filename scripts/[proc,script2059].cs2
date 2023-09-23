@@ -1,0 +1,72 @@
+// 2059
+[proc,script2059](int $int0)
+def_struct $struct1 = enum(int, struct, enum_2162, %varbit357);
+def_int $int2 = 0;
+switch_int (%varbit357) {
+	case 0 :
+		$int2 = %varbit5822;
+	case 1 :
+		$int2 = %varbit5823;
+	case 2 :
+		$int2 = %varbit5824;
+}
+if ($int0 ! -1) {
+	if ($int2 ! $int0) {
+		sound_synth(synth_5845, 1, 0);
+	}
+	$int2 = $int0;
+}
+%varcint631 = $int2;
+def_enum $enum3 = enum(int, enum, struct_param($struct1, param_662), $int2);
+def_int $int4 = struct_param($struct1, param_654);
+def_int $int5 = struct_param($struct1, param_655);
+def_int $count6 = enum_getoutputcount($enum3);
+def_int $int7 = 0;
+def_int $count8 = 0;
+def_enum $enum9 = null;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_component $component13 = null;
+def_int $int14 = -1;
+def_int $int15 = -1;
+while ($count8 < $count6) {
+	$enum9 = enum(int, enum, $enum3, $count8);
+	if ($enum9 ! null) {
+		$int7 = enum_getoutputcount($enum9);
+		$int10 = 0;
+		$int12 = 0;
+		while ($int10 < $int7) {
+			$component13 = enum(int, component, $enum9, $int12);
+			if ($component13 ! null) {
+				if_setposition($int5, $int4, ^setpos_abs_left, ^setpos_abs_top, $component13);
+				$int5 = calc($int5 + (struct_param($struct1, param_657) + struct_param($struct1, param_658)));
+				$int10 = calc($int10 + 1);
+				$int11 = calc($int11 + 1);
+				if (calc($int11 % struct_param($struct1, param_660)) = 0) {
+					$int4 = calc($int4 + (struct_param($struct1, param_656) + struct_param($struct1, param_659)));
+					$int5 = struct_param($struct1, param_655);
+				}
+			}
+			$int12 = calc($int12 + 1);
+			if ($int12 > 997) {
+				return;
+			}
+		}
+	}
+	$count8 = calc($count8 + 1);
+}
+def_enum $enum16 = struct_param($struct1, param_663);
+def_int $int17 = 0;
+if ($enum16 ! null) {
+	$int17 = enum_getoutputcount($enum16);
+	$int12 = 0;
+	while ($int12 < $int17) {
+		if ($int12 = $int2) {
+			if_setgraphic("graphic_1703", enum(int, component, $enum16, $int12));
+		} else {
+			if_setgraphic("graphic_1702", enum(int, component, $enum16, $int12));
+		}
+		$int12 = calc($int12 + 1);
+	}
+}

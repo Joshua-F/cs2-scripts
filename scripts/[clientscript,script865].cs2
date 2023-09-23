@@ -1,0 +1,20 @@
+// 865
+[clientscript,script865]
+def_int $int0 = 0;
+def_int $int1 = 0;
+if (%var1113 = 0) {
+	if (%varcint84 <= 2147482647) {
+		%varcint84 = calc(%varcint84 + 1000);
+	}
+} else {
+	$int0 = inv_total(inv, %var1109);
+	if (%var1109 ! oc_cert(%var1109)) {
+		$int1 = inv_total(inv, oc_cert(%var1109));
+	}
+	%varcint84 = $int0;
+	if (%varcint84 <= 1000000000 & $int1 <= 1000000000) {
+		%varcint84 = calc(%varcint84 + $int1);
+	}
+}
+if_settext(~script46(%varcint84, ","), interface_105:150);
+~script602;

@@ -1,0 +1,9 @@
+// 941
+[proc,script941](int $comsubid0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)
+if (cc_find(interface_727:29, $comsubid0) = ^true) {
+	if ($int7 = 1) {
+		~script943($int1, $int2, $int3, $int4, $int5, $int6);
+		return;
+	}
+	cc_setontimer("script944(event_comsubid, clientclock, cc_getx, cc_gety, $int1, $int2, $int3, $int4, $int5, $int6, $int8)");
+}

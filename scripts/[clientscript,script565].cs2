@@ -1,0 +1,108 @@
+// 565
+[clientscript,script565]
+def_int $x0 = 50;
+def_int $int1 = 45;
+def_string $string0 = ~script20(%varbit4138);
+if (%varbit4140 > 0) {
+	if_sethide(false, interface_635:35);
+	if_settext(tostring(%varbit4140), interface_635:29);
+	if_settext(tostring(%varbit4143), interface_635:34);
+	if_settext("<$string0> Coins", interface_635:33);
+	if (%varbit4144 = 0) {
+		if_setgraphic("staticons2,8", interface_635:15);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:15);
+		if_sethide(false, interface_635:2);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:2);
+	}
+	if (%varbit4145 = 0) {
+		if_setgraphic("staticons2,10", interface_635:16);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:16);
+		if_sethide(false, interface_635:3);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:3);
+	}
+	if (%varbit4146 = 0) {
+		if_setgraphic("staticons,4", interface_635:17);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:17);
+		if_sethide(false, interface_635:4);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:4);
+	}
+	if (%varbit4147 = 0) {
+		if_setgraphic("staticons2,11", interface_635:18);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:18);
+		if_sethide(false, interface_635:5);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:5);
+	}
+	if (%varbit4151 = 0) {
+		if_setgraphic("staticons,6", interface_635:20);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:20);
+		if_sethide(false, interface_635:7);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:7);
+	}
+	if (%varbit4152 = 1) {
+		if_setgraphic("staticons2,12", interface_635:21);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:21);
+		if_sethide(false, interface_635:8);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:8);
+	}
+	if (%varbit4276 = 1) {
+		if_setgraphic("staticons2,7", interface_635:19);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:19);
+		if_sethide(false, interface_635:6);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:6);
+	}
+	$x0 = 8;
+	$int1 = 45;
+	if (%varbit4148 = 0) {
+		if_setgraphic("staticons,3", interface_635:22);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:22);
+		if_sethide(false, interface_635:9);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:9);
+	}
+	if (%varbit4149 = 0) {
+		if_setgraphic("staticons,0", interface_635:23);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:23);
+		if_sethide(false, interface_635:10);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:10);
+	}
+	if (%varbit4150 = 0) {
+		if_setgraphic("staticons,5", interface_635:24);
+		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:24);
+		if_sethide(false, interface_635:11);
+		$int1 = calc($int1 + 29);
+	} else {
+		if_sethide(true, interface_635:11);
+	}
+} else {
+	if_setgraphic(null, interface_635:15);
+	if_setgraphic(null, interface_635:16);
+	if_setgraphic(null, interface_635:17);
+	if_setgraphic(null, interface_635:18);
+	if_setgraphic(null, interface_635:20);
+	if_setgraphic(null, interface_635:21);
+	if_setgraphic(null, interface_635:22);
+	if_setgraphic(null, interface_635:24);
+	if_setgraphic(null, interface_635:23);
+	if_setgraphic(null, interface_635:19);
+	if_settext(" ", interface_635:34);
+	if_settext(" ", interface_635:33);
+	if_settext(" ", interface_635:26);
+	if_sethide(true, interface_635:35);
+}

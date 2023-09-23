@@ -1,0 +1,28 @@
+// 1887
+[proc,script1887](component $component0, component $component1, component $component2, component $component3, component $component4)
+if (if_find($component1) = true) {
+	cc_setsize(16384, 16384, 4, ^setsize_2);
+	cc_setaspect(956, 503);
+	cc_settrans(0);
+	cc_setontimer(null);
+	cc_sethide(false);
+}
+if_setontimer(null, $component0);
+if_setontradingposttransmit(null, $component0);
+if_sethide(true, $component0);
+if_setontimer(null, $component2);
+if_setcolour(^black, $component2);
+if_settrans(0, $component2);
+if_sethide(false, $component2);
+if (getwindowmode >= ^windowmode_fixed) {
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
+	_6021(true);
+	~script1886;
+	%varcint177 = calc(clientclock + 30 + 30);
+	if_setontimer("script1248($component0, $component1, $component2)", $component1);
+} else {
+	%varcint176 = 0;
+	if_sethide(false, $component3);
+	if_sethide(false, $component4);
+}

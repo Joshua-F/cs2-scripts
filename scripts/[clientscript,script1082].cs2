@@ -1,0 +1,33 @@
+// 1082
+[clientscript,script1082](int $int0, component $component1, int $int2)
+def_int $int3 = calc($int0 + 1);
+if (if_gethide(enum(int, component, enum_1550, $int3)) = false) {
+	if (cc_find($component1, $int2) = ^true) {
+		cc_sethide(false);
+		cc_setcolour(0x969777);
+	}
+	if (%varcint128 >= 0) {
+		$int3 = calc($int3 + 1);
+		while (if_gethide(enum(int, component, enum_1550, $int3)) = false) {
+			$int3 = calc($int3 + 1);
+		}
+		if (cc_find(enum(int, component, enum_1551, calc($int3 - 1)), %varcint128) = ^true) {
+			cc_sethide(true);
+		}
+		%varcint128 = -1;
+	}
+	return;
+}
+if (%varcint128 = $int2) {
+	return;
+}
+if (%varcint128 >= 0 & cc_find($component1, %varcint128) = ^true) {
+	cc_sethide(true);
+}
+if (cc_find($component1, $int2) = ^true) {
+	if (cc_gethide = true) {
+		cc_sethide(false);
+		cc_setcolour(0x577e45);
+	}
+	%varcint128 = $int2;
+}

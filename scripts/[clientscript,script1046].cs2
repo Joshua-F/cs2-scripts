@@ -1,0 +1,103 @@
+// 1046
+[clientscript,script1046](int $key0, char $keychar1, component $component2, component $component3, component $component4, chatphrase $chatphrase5, int $int6)
+def_int $int7 = 1;
+def_int $int8 = 0;
+def_int $int9 = 1000;
+def_int $int10 = -1;
+if (char_isalphanumeric($keychar1) = true) {
+	while ($int8 < $int6) {
+		if (cc_find($component3, calc(~script1844($int8) + 1)) = ^true & string_indexof_char(lowercase(cc_gettext), char_tolowercase($keychar1), 0) = 0 & .cc_find($component3, 0) = ^true) {
+			.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+			.cc_setcolour(0x577e45);
+			.cc_setfill(true);
+			if ($int8 < %varcint128) {
+				if (cc_gety < if_getscrolly($component3)) {
+					~script72($component4, $component3, cc_gety);
+				}
+			} else if ($int8 > %varcint128 & calc(cc_gety + cc_getheight) > calc(if_getheight($component3) + if_getscrolly($component3))) {
+				~script72($component4, $component3, calc(cc_gety + cc_getheight - if_getheight($component3)));
+			}
+			%varcint128 = $int8;
+			return;
+		}
+		$int8 = calc($int8 + 1);
+	}
+	return;
+}
+if ($key0 = ^key_page_up) {
+	if ($int6 = 0) {
+		return;
+	}
+	if (%varcint128 <= 0) {
+		%varcint128 = calc($int6 - 1);
+	} else {
+		%varcint128 = calc(%varcint128 - 1);
+	}
+	if (cc_find($component3, calc(~script1844(%varcint128) + 1)) = ^true) {
+		if (.cc_find($component3, 0) = ^true) {
+			.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+			.cc_setcolour(0x577e45);
+			.cc_setfill(true);
+		}
+		if (cc_gety < if_getscrolly($component3)) {
+			~script72($component4, $component3, calc(if_getscrolly($component3) - cc_getheight));
+		} else if (calc(cc_gety + cc_getheight) > calc(if_getheight($component3) + if_getscrolly($component3))) {
+			~script72($component4, $component3, if_getscrollheight($component3));
+		}
+	}
+	return;
+}
+if ($key0 = ^key_page_down) {
+	if ($int6 = 0) {
+		return;
+	}
+	if (%varcint128 = calc($int6 - 1)) {
+		%varcint128 = 0;
+	} else {
+		%varcint128 = calc(%varcint128 + 1);
+	}
+	if (cc_find($component3, calc(~script1844(%varcint128) + 1)) = ^true) {
+		if (.cc_find($component3, 0) = ^true) {
+			.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+			.cc_setcolour(0x577e45);
+			.cc_setfill(true);
+		}
+		if (calc(cc_gety + cc_getheight) > calc(if_getheight($component3) + if_getscrolly($component3))) {
+			~script72($component4, $component3, calc(if_getscrolly($component3) + cc_getheight));
+		} else if (cc_gety < if_getscrolly($component3)) {
+			~script72($component4, $component3, 0);
+		}
+	}
+	return;
+}
+if ($key0 = ^key_home) {
+	~script1050(%varcint126, %varcstring27);
+	return;
+}
+if ($key0 = ^key_escape) {
+	~script1054;
+	return;
+}
+if ($key0 = ^key_return) {
+	if (%varcint128 >= 0 & cc_find($component3, calc(%varcint128 + 1)) = ^true) {
+		~script1074($component2, $chatphrase5, ~script1844(%varcint128));
+	}
+	return;
+}
+if ($key0 = ^key_backspace) {
+	if (%varcint127 = 0) {
+		~script1054;
+	} else {
+		%varcint128 = -1;
+		if_sethide(true, interface_137:7);
+		if_sethide(true, interface_137:9);
+		if_sethide(true, interface_137:13);
+		if_sethide(false, interface_137:17);
+		if_sethide(false, interface_137:1);
+		if_sethide(true, interface_137:3);
+	}
+	return;
+}

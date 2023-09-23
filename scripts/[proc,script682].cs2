@@ -1,0 +1,41 @@
+// 682
+[proc,script682](component $component0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6)
+def_int $int7 = calc((if_getwidth($component0) - 164) / 2);
+def_int $int8 = calc($int7 + (146 + $int7) * $int2);
+cc_create($component0, ^iftype_rectangle, calc($int2 * 6));
+cc_setsize(164, 146, ^setsize_abs, ^setsize_abs);
+cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
+if (%varbit4190 = $int1) {
+	cc_setcolour(0x7f0000);
+} else {
+	cc_setcolour(^black);
+}
+cc_settrans(200);
+cc_setfill(true);
+cc_setop(1, "Choose");
+cc_setopbase("<col=ff9040><enum(int, string, enum_1099, $int1)></col>");
+cc_setonop("script687($int1, $component0, event_comsubid, $component3, $component4, $component5, $component6)");
+cc_create($component0, ^iftype_model, calc($int2 * 6 + 1));
+cc_setsize(164, 146, ^setsize_abs, ^setsize_abs);
+cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
+~script683($int1);
+cc_create($component0, ^iftype_graphic, calc($int2 * 6 + 2));
+cc_setsize(163, 32, ^setsize_abs, ^setsize_abs);
+cc_settiling(true);
+cc_setgraphic("v2_borders_slim,11");
+cc_setposition($int7, calc($int8 - 17), ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component0, ^iftype_graphic, calc($int2 * 6 + 3));
+cc_setsize(163, 32, ^setsize_abs, ^setsize_abs);
+cc_settiling(true);
+cc_setgraphic("v2_borders_slim,11");
+cc_setposition($int7, calc($int8 + 129), ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component0, ^iftype_graphic, calc($int2 * 6 + 4));
+cc_setsize(32, 145, ^setsize_abs, ^setsize_abs);
+cc_settiling(true);
+cc_setgraphic("v2_borders_slim,12");
+cc_setposition(calc($int7 - 14), $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component0, ^iftype_graphic, calc($int2 * 6 + 5));
+cc_setsize(32, 145, ^setsize_abs, ^setsize_abs);
+cc_settiling(true);
+cc_setgraphic("v2_borders_slim,12");
+cc_setposition(calc($int7 + 149), $int8, ^setpos_abs_left, ^setpos_abs_top);

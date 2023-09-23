@@ -1,0 +1,43 @@
+// 1171
+[proc,script1171](component $component0, graphic $graphic1, component $component2, component $component3, component $component4, int $colour5, int $colour6, graphic $graphic7, int $comsubid8, int $comsubid9, graphic $graphic10, graphic $graphic11, graphic $graphic12, graphic $graphic13, graphic $graphic14, graphic $graphic15)
+if (cc_find($component4, $comsubid9) = ^true) {
+	cc_setvflip(true);
+}
+cc_create($component0, ^iftype_graphic, if_getnextsubid($component0));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic1);
+cc_settiling(true);
+cc_create($component0, ^iftype_rectangle, if_getnextsubid($component0));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_setcolour(^black);
+if_setscrollsize(if_getwidth($component2), calc(fullscreen_modecount * 15), $component2);
+def_int $windowmode16 = 0;
+def_int $comsubid17 = -1;
+def_string $text0 = "";
+def_int $int18 = 0;
+def_int $int19 = 0;
+while ($windowmode16 < fullscreen_modecount) {
+	$comsubid17 = if_getnextsubid($component2);
+	cc_create($component2, ^iftype_text, $comsubid17);
+	$int18, $int19 = fullscreen_getmode($windowmode16);
+	$text0 = "<tostring($int18)> x <tostring($int19)>";
+	cc_settext($text0);
+	cc_setcolour($colour5);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setposition(5, calc($windowmode16 * 15), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(if_getwidth($component2) - 16), 15, ^setsize_abs, ^setsize_abs);
+	cc_settextshadow(false);
+	cc_settextfont($graphic7);
+	cc_setonmouseover("script1353($component2, $comsubid17, $colour6)");
+	cc_setonmouseleave("script1354($component2, $comsubid17, $colour5)");
+	cc_setonclick("script1350($component0, $component2, $component3, $component4, $comsubid8, $comsubid9, $text0, $colour5)");
+	$windowmode16 = calc($windowmode16 + 1);
+}
+if ($component3 ! null) {
+	~script31($component3, $component2, $graphic10, $graphic11, $graphic12, $graphic13, $graphic14, $graphic15);
+	if_sethide(false, $component3);
+}
+if_sethide(false, $component0);
+if_sethide(false, $component2);

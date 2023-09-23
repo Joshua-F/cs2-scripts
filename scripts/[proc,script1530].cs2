@@ -1,0 +1,50 @@
+// 1530
+[proc,script1530](int $int0)(int, component)
+def_npc $npc1 = enum(int, npc, enum_1630, $int0);
+switch_npc ($npc1) {
+	case ranged_tutor_7951 :
+		if (%varbit4926 = 50) {
+			return(1, interface_765:1);
+		}
+		return(0, interface_765:1);
+	case fishing_tutor_7955 :
+		if (%varbit4927 = 20) {
+			return(1, interface_765:3);
+		}
+		return(0, interface_765:3);
+	case cooking_tutor_7953 :
+		if (compare(if_gettext(interface_765:4), "remove") = 0 | %varbit4928 = 25) {
+			return(1, interface_765:4);
+		}
+		return(0, interface_765:4);
+	case magic_tutor_7952 :
+		if (compare(if_gettext(interface_765:5), "remove") = 0 | %varbit4929 = 25) {
+			return(1, interface_765:5);
+		}
+		return(0, interface_765:5);
+	case prayer_tutor_7957 :
+		return(1, null);
+	case bank_tutor_7961 :
+		if (%varbit4931 = 30) {
+			return(1, interface_765:6);
+		}
+		return(0, interface_765:6);
+	case mining_tutor_7956 :
+		return(1, null);
+	case smithing_tutor_7959, smelting_tutor_7958 :
+		return(1, null);
+	case woodcutting_tutor_7960 :
+		if (%varbit4935 = 15) {
+			return(1, interface_765:7);
+		}
+		return(0, interface_765:7);
+	case shopkeeper_7967 :
+		if (compare(if_gettext(interface_765:8), "remove") = 0 | %varbit4936 = 20) {
+			return(1, interface_765:8);
+		}
+		return(0, interface_765:8);
+	case hans_0 :
+		return(1, interface_765:9);
+	case default :
+		return(1, interface_765:9);
+}

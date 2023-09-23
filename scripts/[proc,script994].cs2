@@ -1,0 +1,24 @@
+// 994
+[proc,script994](int $int0, int $int1)(int, namedobj, string, string)
+if ($int0 = 0) {
+	switch_int ($int1) {
+		case 0 :
+			return(-1, silvthrill_rod_7620, "Hitpoints tell you how healthy your character is. A character who reaches 0 Hitpoints has died, but will reappear at their chosen respawn location (normally Lumbridge).", "");
+		case 1 :
+			return(-1, silvthrill_rod_7620, "If you see any <col=800000>red 'hitsplats'</col> during combat, the number shown corresponds to the number of Hitpoints lost as a result of that strike.", "");
+		case 2 :
+			return(-1, silvthrill_rod_7620, "<col=800000>Blue hitsplats</col> mean no damage has been dealt.", "");
+		case 3 :
+			return(-1, silvthrill_rod_7620, "<col=800000>Green hitsplats</col> are poison damage (members).", "");
+		case 4 :
+			return(-1, silvthrill_rod_7620, "<col=800000>Yellow hitsplats</col> are disease damage (members).", "");
+	}
+}
+if ($int0 = 1) {
+	if ($int1 = 0) {
+		return(70, oak_door_8122, "Members: Zamorak's Fortress in the God Wars Dungeon", "Members can now access the <col=000080>Zamorak Fortress</col> in the <col=000080>God Wars Dungeon</col>.");
+	} else if ($int1 = 1) {
+		return(99, hitpoints_cape_9768, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Hitpoints<col=000080>. Why not visit <col=800000>Nurse Tafani<col=000080> at the <col=800000>Duel Arena Hospital<col=000080>? She has something special that is only available to true masters of the <col=800000>Hitpoints<col=000080> skill!");
+	}
+}
+return(0, null, "", "");

@@ -1,0 +1,19 @@
+// 1251
+[proc,script1251](int $int0, component $component1, component $component2, component $component3, int $int4)
+cam_movealong(0, $int0, ~script1898($int0), 1, $int0);
+if (spline_length(0) <= calc($int0 + 2)) {
+	if_setcolour($int4, $component3);
+	if_settrans(255, $component3);
+	if_sethide(false, $component3);
+	if_setontimer("script1253($component3)", $component3);
+	if_setontimer("script1249($component1, $component2, $component3)", $component1);
+	if_setontradingposttransmit(null, $component1);
+	if (%varcint176 = 2) {
+		%varcint176 = calc(%varcint176 + 8 + 10 * (random(calc(13 - 1)) + 1));
+	} else {
+		%varcint176 = calc(%varcint176 + 8);
+	}
+	%varcint177 = calc(clientclock + 30);
+	return;
+}
+if_setontradingposttransmit("script1250(calc($int0 + 1), $component1, $component2, $component3, $int4)", $component1);

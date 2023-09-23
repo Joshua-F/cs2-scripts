@@ -1,0 +1,24 @@
+// 198
+[proc,script198](int $rank0)(graphic)
+switch_int ($rank0) {
+	case 0 :
+		return("clan_chat_icons,0");
+	case 1 :
+		return("clan_chat_icons,8");
+	case 2 :
+		return("clan_chat_icons,7");
+	case 3 :
+		return("clan_chat_icons,6");
+	case 4 :
+		return("clan_chat_icons,5");
+	case 5 :
+		return("clan_chat_icons,4");
+	case 6 :
+		return("clan_chat_icons,3");
+	case 7 :
+		return("clan_chat_icons,2");
+	case 127 :
+		return("clan_chat_icons,1");
+	case default :
+		return(null);
+}

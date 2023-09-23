@@ -1,0 +1,92 @@
+// 1878
+[clientscript,script1878](int $flags0)
+def_int $flags1 = ~script1851;
+if ($flags1 = $flags0) {
+	return;
+}
+~script1875;
+~script1299;
+switch_int ($flags0) {
+	case 0 :
+		if ($flags1 = 1) {
+			~script1855(0);
+			return;
+		}
+	case 2 :
+		if ($flags1 = 3) {
+			~script1855(2);
+			return;
+		}
+	case 4 :
+		if ($flags1 = 5) {
+			~script1855(4);
+			return;
+		}
+	case 6 :
+		if ($flags1 = 7) {
+			~script1855(6);
+			return;
+		}
+	case 8 :
+		if ($flags1 = 9) {
+			~script1855(8);
+			return;
+		}
+	case 14 :
+		if ($flags1 = 15) {
+			~script1855(14);
+			return;
+		}
+	case 10 :
+		if ($flags1 = 11) {
+			~script1855(10);
+			return;
+		}
+	case 12 :
+		if ($flags1 = 13) {
+			~script1855(12);
+			return;
+		}
+	case 1 :
+		if ($flags1 = 0) {
+			~script1855(1);
+			return;
+		}
+	case 3 :
+		if ($flags1 = 2) {
+			~script1855(3);
+			return;
+		}
+	case 5 :
+		if ($flags1 = 4) {
+			~script1855(5);
+			return;
+		}
+	case 7 :
+		if ($flags1 = 6) {
+			~script1855(7);
+			return;
+		}
+	case 9 :
+		if ($flags1 = 8) {
+			~script1855(9);
+			return;
+		}
+	case 15 :
+		if ($flags1 = 14) {
+			~script1855(15);
+			return;
+		}
+	case 11 :
+		if ($flags1 = 10) {
+			~script1855(11);
+			return;
+		}
+	case 13 :
+		if ($flags1 = 12) {
+			~script1855(13);
+			return;
+		}
+}
+~script1856($flags1);
+~script1855($flags0);

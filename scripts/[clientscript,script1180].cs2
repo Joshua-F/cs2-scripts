@@ -1,0 +1,21 @@
+// 1180
+[clientscript,script1180]
+def_string $string0 = "";
+def_int $int0 = string_length(%varcstring33);
+while ($int0 > 0) {
+	$string0 = append($string0, "*");
+	$int0 = calc($int0 - 1);
+}
+if (calc(clientclock % 40) < 20 & login_reply ! -3 & login_reply ! 21 & login_reply ! 1) {
+	if (%varcint174 = 1) {
+		if_settext(append(%varcstring32, "|"), interface_744:340);
+		if_settext($string0, interface_744:346);
+	} else if (%varcint174 = 2) {
+		if_settext(%varcstring32, interface_744:340);
+		if_settext(append($string0, "|"), interface_744:346);
+	}
+} else {
+	if_settext(%varcstring32, interface_744:340);
+	if_settext($string0, interface_744:346);
+}
+~script711(interface_744:334);

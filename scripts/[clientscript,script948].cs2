@@ -1,0 +1,23 @@
+// 948
+[clientscript,script948]
+if (%varbit4538 >= 61) {
+	mes("The game has ended.");
+	if_close;
+	return;
+}
+if (%varcint185 = %varbit4538) {
+	return;
+}
+if (%varcint185 = -1) {
+	while (%varcint185 < %varbit4538) {
+		%varcint185 = calc(%varcint185 + 1);
+		~script949(%varcint185, 0);
+	}
+	~script928(%varbit4538, "Teapotspout", "Hotwater", interface_726:121);
+	return;
+}
+%varcint185 = %varbit4538;
+~script949(%varbit4538, 1);
+if (%varbit4538 < calc(61 - 1)) {
+	~script928(%varbit4538, "Teapotspout", "Hotwater", interface_726:121);
+}

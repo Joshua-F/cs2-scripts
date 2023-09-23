@@ -1,0 +1,13 @@
+// 648
+[clientscript,script648](component $component0, int $comsubid1, component $component2, string $string0, int $int3, int $width4)
+def_int $int5 = 0;
+if (%varcint2 = 1) {
+	while ($int5 < 6) {
+		~script41(~script626($int5));
+		$int5 = calc($int5 + 1);
+	}
+}
+if (if_gethide(interface_105:16) = true) {
+	return;
+}
+~script569($component0, $comsubid1, $component2, $string0, $int3, $width4);

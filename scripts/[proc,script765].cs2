@@ -1,0 +1,71 @@
+// 765
+[proc,script765](component $component0, int $int1, int $int2, string $op0, string $op1, string $op2, string $op3, string $op4)
+cc_deleteall($component0);
+def_int $int3 = 0;
+def_int $int4 = 0;
+if (if_getscrollwidth($component0) > 0) {
+	$int3 = calc((if_getscrollwidth($component0) - 36 * $int1) / ($int1 - 1));
+} else {
+	$int3 = calc((if_getwidth($component0) - 36 * $int1) / ($int1 - 1));
+}
+if (if_getscrollheight($component0) > 0) {
+	$int4 = calc((if_getscrollheight($component0) - 64 * $int2) / ($int2 - 1));
+} else {
+	$int4 = calc((if_getheight($component0) - 64 * $int2) / ($int2 - 1));
+}
+def_int $int5 = 0;
+def_int $int6 = 1;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = -1;
+def_obj $obj10 = null;
+def_obj $obj11 = null;
+def_string $string5 = "hello";
+def_int $int12 = 0;
+while ($int5 < 78) {
+	$obj10 = enum(int, obj, enum_1277, $int6);
+	$int8 = calc($int5 % $int1);
+	cc_create($component0, ^iftype_graphic, $int5);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(~script761($int8), calc($int5 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+	$obj11 = enum(int, obj, enum_1188, $int6);
+	if ($obj11 = scroll_12421) {
+		~script760($obj11, $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
+	} else if (~script768($obj11, $obj10) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj10)) {
+		~script760($obj11, $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
+	} else {
+		~script760(enum(int, obj, enum_1184, $int6), $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
+	}
+	if ($obj11 = scroll_12421) {
+		cc_setonmouserepeat("script782(event_comsubid, interface_673:22, interface_673:15, $int12, $string5)");
+		cc_setonmouseleave("script40(interface_673:22)");
+	} else {
+		$string5 = enum(obj, string, enum_1187, $obj11);
+		$int12 = enum(obj, int, enum_1185, $obj10);
+		cc_setonmouserepeat("script770(event_comsubid, interface_673:22, interface_673:15, $int12, $string5, $obj10, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1)");
+		cc_setonmouseleave("script40(interface_673:22)");
+	}
+	$int5 = calc($int5 + 1);
+	$int6 = calc($int6 + 1);
+}
+$int6 = 1;
+while ($int7 < 78) {
+	$int8 = calc($int7 % $int1);
+	cc_create($component0, ^iftype_text, $int5);
+	cc_setposition(~script762($int8), calc(32 + $int7 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+	$obj10 = enum(int, obj, enum_1277, $int6);
+	$obj11 = enum(int, obj, enum_1188, $int6);
+	cc_settext(enum(obj, string, enum_1187, $obj11));
+	cc_settextfont(b12_full);
+	cc_setsize(90, 50, ^setsize_abs, ^setsize_abs);
+	if (~script768($obj11, $obj10) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj10)) {
+		cc_setcolour(0xffff64);
+	} else {
+		cc_setcolour(0x111111);
+	}
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+	$int7 = calc($int7 + 1);
+	$int5 = calc($int5 + 1);
+	$int6 = calc($int6 + 1);
+}

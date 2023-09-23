@@ -1,0 +1,16 @@
+// 1764
+[clientscript,script1764](component $component0, component $component1, int $int2, int $int3)
+def_int $int4 = calc(if_getwidth($component0) - if_getwidth($component1));
+$int2 = max($int2, 0);
+$int2 = min($int2, $int4);
+switch_int ($int3) {
+	case 0 :
+		detail_musicvol(scale($int2, $int4, 255));
+		~script1159;
+	case 1 :
+		detail_soundvol(scale($int2, $int4, 127));
+		~script1165;
+	case 2 :
+		detail_bgsoundvol(scale($int2, $int4, 127));
+		~script1162;
+}

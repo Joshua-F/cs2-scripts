@@ -1,0 +1,32 @@
+// 129
+[proc,script129]
+def_int $int0 = 0;
+cc_deleteall(interface_551:1);
+if (ignore_count < 0) {
+	if_settext("Loading Ignore List<br>Please wait...", interface_551:8);
+} else {
+	if_settext("", interface_551:8);
+	while ($int0 < ignore_count) {
+		cc_create(interface_551:1, ^iftype_text, $int0);
+		cc_settext(ignore_getname($int0));
+		cc_setposition(3, calc($int0 * 15), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(100, 14, ^setsize_abs, ^setsize_abs);
+		cc_setcolour(^white);
+		cc_settextfont(friendslist_font);
+		cc_settextshadow(true);
+		cc_setopbase("<col=ffffff><ignore_getname($int0)>");
+		cc_setop(1, "Delete");
+		cc_setonop("script130(event_opbase)");
+		$int0 = calc($int0 + 1);
+	}
+	if ($int0 < 13) {
+		$int0 = 13;
+	}
+	if (ignore_count >= 13) {
+		if_setscrollsize(158, calc($int0 * 15 + 5), interface_551:1);
+		~script72(interface_551:2, interface_551:1, 0);
+	} else {
+		if_setscrollsize(158, calc($int0 * 15), interface_551:1);
+		~script72(interface_551:2, interface_551:1, 0);
+	}
+}

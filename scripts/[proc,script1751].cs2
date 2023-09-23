@@ -1,0 +1,26 @@
+// 1751
+[proc,script1751](int $int0)(string)
+if ($int0 < 2) {
+	return("in a minute");
+}
+def_int $int1 = calc($int0 / 60);
+$int0 = calc($int0 % 60);
+if ($int1 > 1) {
+	if ($int0 > 1) {
+		return("in <tostring($int1)> hours <tostring($int0)> minutes");
+	}
+	if ($int0 = 1) {
+		return("in <tostring($int1)> hours 1 minute");
+	}
+	return("in <tostring($int1)> hours");
+}
+if ($int1 = 1) {
+	if ($int0 > 1) {
+		return("in 1 hour <tostring($int0)> minutes");
+	}
+	if ($int0 = 1) {
+		return("in 1 hour 1 minute");
+	}
+	return("in 1 hour");
+}
+return("in <tostring($int0)> minutes");

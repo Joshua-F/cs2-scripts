@@ -1,0 +1,15 @@
+// 1927
+[proc,script1927](component $component0)
+def_int $int1 = 1;
+while ($int1 <= 6) {
+	if ($int1 = enum(component, int, enum_2027, $component0) | $int1 = %varcint544) {
+		if_sethide(false, enum(int, component, enum_2031, $int1));
+		if_setcolour(^white, enum(int, component, enum_2030, $int1));
+		if_setcolour(^white, enum(int, component, enum_2029, $int1));
+	} else {
+		if_sethide(true, enum(int, component, enum_2031, $int1));
+		if_setcolour(0xc8aa64, enum(int, component, enum_2030, $int1));
+		if_setcolour(0xc8aa64, enum(int, component, enum_2029, $int1));
+	}
+	$int1 = calc($int1 + 1);
+}

@@ -1,0 +1,13 @@
+// 715
+[clientscript,script715](int $int0)
+if ($int0 = 0) {
+	if_settextfont(p12_full, interface_334:2);
+	if_settextfont(p12_full, interface_334:1);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 17, interface_334:2);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 17, interface_334:1);
+} else {
+	if_settextfont(p11_full, interface_334:2);
+	if_settextfont(p11_full, interface_334:1);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, interface_334:2);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, interface_334:1);
+}

@@ -1,0 +1,55 @@
+// 1169
+[proc,script1169](component $component0, component $component1, component $component2, component $component3, graphic $graphic4, graphic $graphic5, graphic $graphic6, graphic $graphic7, int $colour8, int $colour9, graphic $graphic10, graphic $graphic11, graphic $graphic12, graphic $graphic13, graphic $graphic14, graphic $graphic15, graphic $graphic16)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, if_getnextsubid($component0));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic4);
+cc_settiling(true);
+cc_create($component0, ^iftype_rectangle, if_getnextsubid($component0));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_setcolour(^black);
+if (fullscreen_modecount < 1) {
+	cc_create($component0, ^iftype_text, if_getnextsubid($component0));
+	cc_settext("No modes available.");
+	cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(if_getwidth($component0) - 22), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+	cc_settextshadow(false);
+	cc_settextfont($graphic10);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setcolour($colour8);
+	return;
+}
+def_int $comsubid17 = if_getnextsubid($component0);
+cc_create($component0, ^iftype_graphic, $comsubid17);
+cc_setposition(calc(if_getwidth($component0) - 16), 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(16, if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic5);
+cc_settiling(false);
+cc_setonmouseover("script1351($component0, $comsubid17, $graphic6)");
+cc_setonmouseleave("script1352($component0, $comsubid17, $graphic5)");
+def_int $comsubid18 = if_getnextsubid($component0);
+cc_setonclick("script1170($component1, $graphic7, $component2, $component3, $component0, $colour8, $colour9, $graphic10, $comsubid18, $comsubid17, $graphic11, $graphic12, $graphic13, $graphic14, $graphic15, $graphic16)");
+cc_create($component0, ^iftype_text, $comsubid18);
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $windowmode21 = 0;
+if (getwindowmode = ^windowmode_fullscreen) {
+	$windowmode21 = max(fullscreen_lastmode, 0);
+} else if (%varcint178 ! null) {
+	$windowmode21 = %varcint178;
+} else {
+	$windowmode21 = max(fullscreen_lastmode, 0);
+}
+$int19, $int20 = fullscreen_getmode($windowmode21);
+cc_settext("<tostring($int19)> x <tostring($int20)>");
+cc_setonmouseover("script1353($component0, $comsubid18, $colour9)");
+cc_setonmouseleave("script1354($component0, $comsubid18, $colour8)");
+cc_setonclick("script1170($component1, $graphic7, $component2, $component3, $component0, $colour8, $colour9, $graphic10, $comsubid18, $comsubid17, $graphic11, $graphic12, $graphic13, $graphic14, $graphic15, $graphic16)");
+cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc(if_getwidth($component0) - 22), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_settextshadow(false);
+cc_settextfont($graphic10);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setcolour($colour8);

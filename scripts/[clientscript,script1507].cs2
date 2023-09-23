@@ -1,0 +1,12 @@
+// 1507
+[clientscript,script1507](graphic $graphic0)
+if ($graphic0 = "combaticons2,15" | $graphic0 = "combaticons2,16" | $graphic0 = "combaticons2,17") {
+	if_setsize(34, 24, ^setsize_abs, ^setsize_abs, interface_674:1);
+} else if ($graphic0 = "side_icons,3") {
+	if_setsize(32, 36, ^setsize_abs, ^setsize_abs, interface_674:1);
+}
+if_setsize(455, 93, ^setsize_abs, ^setsize_abs, interface_674:0);
+if_setposition(50, 20, ^setpos_abs_left, ^setpos_abs_top, interface_674:0);
+if_sethide(false, interface_674:1);
+if_setgraphic($graphic0, interface_674:1);
+if_sethide(false, interface_674:0);

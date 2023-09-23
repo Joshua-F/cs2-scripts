@@ -1,0 +1,16 @@
+// 185
+[proc,script185](int $int0)(int)
+switch_int ($int0) {
+	case 2 :
+		return(chat_getfilter_public);
+	case 3 :
+		return(chat_getfilter_private);
+	case 4 :
+		return(%var1054);
+	case 5 :
+		return(chat_getfilter_trade);
+	case 6 :
+		return(%var1055);
+	case default :
+		return(^chatfilter_on);
+}

@@ -1,0 +1,16 @@
+// 1873
+[proc,script1873]
+cc_deleteall(interface_744:224);
+~script1875;
+if_settext("Loading...", interface_744:223);
+if_sethide(false, interface_744:223);
+~script1874;
+if_setposition(min(calc((if_getwidth(interface_744:194) + parawidth(if_gettext(interface_744:197), 512, b12_full)) / 2 + 8), calc(if_getwidth(interface_744:194) - if_getwidth(interface_744:198))), 0, ^setpos_abs_left, ^setpos_abs_centre, interface_744:198);
+if_setposition(min(calc((if_getwidth(interface_744:211) + parawidth(if_gettext(interface_744:214), 512, b12_full)) / 2 + 8), calc(if_getwidth(interface_744:211) - if_getwidth(interface_744:215))), 0, ^setpos_abs_left, ^setpos_abs_centre, interface_744:215);
+if (map_lang = 0) {
+	if_settext("Location", interface_744:193);
+} else {
+	if_settext("Language", interface_744:193);
+}
+if_setonresize("script1880", interface_744:224);
+~script1299;

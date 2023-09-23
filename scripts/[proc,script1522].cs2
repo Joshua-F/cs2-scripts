@@ -1,0 +1,87 @@
+// 1522
+[proc,script1522](component $component0)
+if (%varbit4895 ! 2) {
+	return;
+}
+if (%var281 = 1000) {
+	if_setcolour(0x99ff00, $component0);
+	return;
+}
+if (%var281 = 0) {
+	if_setcolour(0xff1e1e, $component0);
+	return;
+}
+switch_component ($component0) {
+	case interface_761:10 :
+		if (%var281 >= 90) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%var281 = 0) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+	case interface_761:11 :
+		if (%var281 >= 180) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%var281 < 100) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+	case interface_761:12 :
+		if (%varbit4926 >= 50) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%varbit4926 = 0) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+	case interface_761:13 :
+		if (%varbit4927 >= 20) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%varbit4927 = 0) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+	case interface_761:14 :
+		if (%varbit4928 >= 25) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%varbit4928 = 0) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+	case interface_761:15 :
+		if (%varbit4929 >= 25) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%varbit4929 = 0) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+	case interface_761:16 :
+		if (%varbit4935 >= 15) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%varbit4935 = 0) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+	case interface_761:17 :
+		if (%varbit4936 >= 20) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%varbit4936 = 0) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+	case interface_761:18 :
+		if (%var281 = 1000) {
+			if_setcolour(0x99ff00, $component0);
+		} else if (%var281 < 190) {
+			if_setcolour(0xff1e1e, $component0);
+		} else {
+			if_setcolour(0xffff66, $component0);
+		}
+}

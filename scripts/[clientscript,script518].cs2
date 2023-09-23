@@ -1,0 +1,17 @@
+// 518
+[clientscript,script518]
+%varcint53 = calc(%varcint53 + 1);
+if (%varcint53 > 499) {
+	%varcint53 = 0;
+	if (%varbit4072 = 1 | %varbit4073 = 1) {
+		if_setgraphic("loot_icon,2", interface_589:14);
+	} else if (%varbit4071 = 1) {
+		if (%varbit4465 = 1) {
+			if_setgraphic("loot_icon,3", interface_589:14);
+		} else {
+			if_setgraphic("loot_icon,0", interface_589:14);
+		}
+	} else {
+		if_setgraphic("loot_icon,1", interface_589:14);
+	}
+}

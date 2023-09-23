@@ -1,0 +1,12 @@
+// 1003
+[proc,script1003](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Prayers", 0);
+	case 1 :
+		return("Equipment", 1);
+	case 2 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

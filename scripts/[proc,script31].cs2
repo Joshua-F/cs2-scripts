@@ -1,0 +1,52 @@
+// 31
+[proc,script31](component $component0, component $component1, graphic $graphic2, graphic $graphic3, graphic $graphic4, graphic $graphic5, graphic $graphic6, graphic $graphic7)
+cc_create($component0, ^iftype_graphic, 0);
+cc_setposition(0, 16, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(16, calc(if_getheight($component0) - 32), ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic2);
+cc_settiling(true);
+cc_setonclick("script34($component0, $component1, event_mousey)");
+.cc_create($component0, ^iftype_graphic, 1);
+.cc_setposition(0, 16, ^setpos_abs_left, ^setpos_abs_top);
+def_int $height8 = 0;
+if (if_getscrollheight($component1) <= 0) {
+	$height8 = calc((if_getheight($component0) - 32) * if_getheight($component0));
+} else {
+	$height8 = calc((if_getheight($component0) - 32) * if_getheight($component0) / if_getscrollheight($component1));
+}
+if ($height8 < 10) {
+	$height8 = 10;
+}
+.cc_setsize(16, $height8, ^setsize_abs, ^setsize_abs);
+.cc_setgraphic($graphic4);
+.cc_settiling(true);
+.cc_setdraggable($component0, 0);
+if ($height8 < calc(if_getheight($component0) - 32)) {
+	.cc_setondrag("script35($component0, $component1, event_mousey, false)");
+	.cc_setondragcomplete("script35($component0, $component1, event_mousey, true)");
+}
+.cc_setdraggablebehavior(1);
+cc_create($component0, ^iftype_graphic, 2);
+cc_setposition(0, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(16, 5, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic3);
+cc_settiling(false);
+cc_create($component0, ^iftype_graphic, 3);
+cc_setposition(0, calc(.cc_gety + .cc_getheight - 5), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(16, 5, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic5);
+cc_settiling(false);
+cc_create($component0, ^iftype_graphic, 4);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic6);
+cc_settiling(false);
+cc_setonhold("script32($component0, $component1)");
+cc_create($component0, ^iftype_graphic, 5);
+cc_setposition(0, calc(if_getheight($component0) - 16), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic7);
+cc_settiling(false);
+cc_setonhold("script33($component0, $component1)");
+if_setonscrollwheel("script36($component0, $component1, event_mousey)", $component0);
+if_setonscrollwheel("script36($component0, $component1, event_mousey)", $component1);

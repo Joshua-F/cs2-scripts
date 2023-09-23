@@ -1,0 +1,158 @@
+// 992
+[proc,script992](int $int0, int $int1)(int, namedobj, string, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, man_3241, "Man", "You can now pickpocket <col=000080>men</col> and <col=000080>women</col>.");
+			case 1 :
+				return(10, farmer_3243, "Farmer", "You can now pickpocket <col=000080>farmers</col>.");
+			case 2 :
+				return(15, female_h_a_m_4295, "Female H.A.M. follower", "You can now pickpocket <col=000080>female H.A.M. followers</col>.");
+			case 3 :
+				return(20, male_h_a_m_4297, "Male H.A.M. follower", "You can now pickpocket <col=000080>male H.A.M. followers</col>.");
+			case 4 :
+				return(25, warrior_woman_3245, "Warrior", "You can now pickpocket <col=000080>warriors</col>.");
+			case 5 :
+				return(32, rogue_3247, "Rogue", "You can now pickpocket <col=000080>rogues</col>.");
+			case 6 :
+				return(36, cave_goblin_10998, "Cave goblin", "You can now pickpocket <col=000080>cave goblins</col>.");
+			case 7 :
+				return(38, master_farmer_5068, "Master farmer", "You can now pickpocket <col=000080>master farmers</col>.");
+			case 8 :
+				return(40, guard_3249, "Guard", "You can now pickpocket <col=000080>guards</col>.");
+			case 9 :
+				return(45, fremennik_3686, "Fremennik citizen", "You can now pickpocket <col=000080>Fremennik citizens</col>.");
+			case 10 :
+				return(45, bandit_6782, "Bearded Pollnivnian bandit", "You can now pickpocket <col=000080>bearded Pollnivnian bandits</col>.");
+			case 11 :
+				return(53, bandit_4625, "Desert bandit", "You can now pickpocket <col=000080>desert bandits</col>.");
+			case 12 :
+				return(55, knight_of_ardougne_3251, "Knight", "You can now pickpocket <col=000080>knights</col>.");
+			case 13 :
+				return(55, bandit_6781, "Pollnivnian bandit", "You can now pickpocket <col=000080>Pollnivnian bandits</col>.");
+			case 14 :
+				return(65, watchman_3253, "Watchman", "You can now pickpocket <col=000080>watchmen</col>.");
+			case 15 :
+				return(65, menaphite_thug_6780, "Menaphite thug", "You can now pickpocket <col=000080>Menaphite thugs</col>.");
+			case 16 :
+				return(70, paladin_3255, "Paladin", "You can now pickpocket <col=000080>paladins</col>.");
+			case 17 :
+				return(75, gnome_3257, "Gnome", "You can now pickpocket <col=000080>gnomes</col>.");
+			case 18 :
+				return(80, hero_3259, "Hero", "You can now pickpocket <col=000080>heroes</col>.");
+			case 19 :
+				return(85, elf_6105, "Elf", "You can now pickpocket <col=000080>elves</col>.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(2, cabbage_1965, "Vegetable stall<br> (after Fremennik Trials)", "You now have the Thieving level required to steal from <col=000080>vegetable stalls</col> (after Fremennik Trials).");
+			case 1 :
+				return(5, cake_1891, "Baker's stall", "You can now steal from <col=000080>bakers' stalls</col>.");
+			case 2 :
+				return(5, pot_of_flour_1933, "Ape Atoll general stall<br> (after starting Monkey Madness)", "You now have the Thieving level required to steal from the <col=000080>general stall</col> on Ape Atoll (after starting Monkey Madness).");
+			case 3 :
+				return(5, cup_of_tea_1978, "Tea stall", "You can now steal from <col=000080>tea stalls</col>.");
+			case 4 :
+				return(5, chisel_1755, "Crafting stall", "You can now steal from the <col=000080>crafting stalls</col> in Keldagrim and, after starting Monkey Madness, the Ape Atoll.");
+			case 5 :
+				return(5, banana_1963, "Monkey food stall<br> (after starting Monkey Madness)", "You now have the Thieving level required to steal from the <col=000080>monkey food stall</col> (after starting Monkey Madness).");
+			case 6 :
+				return(15, rock_cake_2379, "Rock cake stall", "You can now steal from <col=000080>rock cake stalls</col>.");
+			case 7 :
+				return(20, silk_950, "Silk stall", "You can now steal from <col=000080>silk stalls</col>.");
+			case 8 :
+				return(22, bottle_of_wine_7919, "Wine stall", "You can now steal from <col=000080>wine stalls</col>.");
+			case 9 :
+				return(27, seeds_5171, "Seed stall", "You can now steal from <col=000080>seed stalls</col>.");
+			case 10 :
+				return(35, bear_fur_948, "Fur stall", "You can now steal from <col=000080>fur stalls</col>.");
+			case 11 :
+				return(42, raw_salmon_331, "Fish stall", "You can now steal from <col=000080>fish stalls</col>.");
+			case 12 :
+				return(49, bronze_crossbow_9174, "Crossbow stall", "You can now steal from <col=000080>crossbow stalls</col>.");
+			case 13 :
+				return(50, silver_ore_442, "Silver stall", "You can now steal from <col=000080>silver stalls</col>.");
+			case 14 :
+				return(63, clue_scroll_2773, "Customs evidence files<br> (after Rocking Out)", "You now have the Thieving level to steal from the <col=000080>customs evidence files</col> of <col=000080>Rock Island Prison</col> (after Rocking Out).");
+			case 15 :
+				return(65, air_rune_556, "Magic stall", "You can now steal from <col=000080>magic stalls</col>.");
+			case 16 :
+				return(65, iron_scimitar_1323, "Scimitar stall", "You can now steal from <col=000080>scimitar stalls</col>.");
+			case 17 :
+				return(65, spice_2007, "Spice stall", "You can now steal from <col=000080>spice stalls</col>.");
+			case 18 :
+				return(75, sapphire_1607, "Gem stall", "You can now steal from <col=000080>gem stalls</col>.");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(13, coins_100_1001, "Ardougne, Rellekka and the Wilderness", "You can now steal from certain <col=000080>chests</col> in <col=000080>Ardougne</col>, <col=000080>Rellekka</col> and the <col=000080>Wilderness</col>.");
+			case 1 :
+				return(28, nature_rune_561, "Upstairs in Ardougne and Rellekka", "You can now steal from certain <col=000080>chests</col> upstairs in <col=000080>Ardougne</col> and <col=000080>Rellekka</col>.");
+			case 2 :
+				return(43, coins_100_1001, "Upstairs in Ardougne", "You can now steal from certain <col=000080>chests</col> upstairs in <col=000080>Ardougne</col>.");
+			case 3 :
+				return(47, steel_arrowtips_41, "Hemenster", "You can now steal from certain <col=000080>chests</col> in <col=000080>Hemenster</col>.");
+			case 4 :
+				return(47, coins_100_1001, "Rellekka", "You can now steal from certain <col=000080>chests</col> in <col=000080>Rellekka</col>.");
+			case 5 :
+				return(52, oil_lamp_4522, "Dorgesh-Kaan (average chests)", "You can now steal from <col=000080>average chests</col> in <col=000080>Dorgesh-Kaan</col>.");
+			case 6 :
+				return(59, blood_rune_565, "Chaos Druid Tower north of Ardougne", "You can now steal from <col=000080>chests</col> in the <col=000080>Chaos Druid Tower</col> north of <col=000080>Ardougne</col>.");
+			case 7 :
+				return(72, raw_shark_383, "King Lathas's castle in Ardougne", "You can now steal from <col=000080>chests</col> in <col=000080>King Lathas's castle</col> in <col=000080>Ardougne</col>.");
+			case 8 :
+				return(78, uncut_sapphire_1623, "Dorgesh-Kaan (rich chests)", "You can now steal from <col=000080>rich chests</col> in <col=000080>Dorgesh-Kaan</col>.");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(15, cowbells_10593, "Cowbells from dairy cows (after starting Cold War)", "You now have the Thieving level required to steal <col=000080>cowbells</col> from <col=000080>dairy cows</col> (after starting Cold War).");
+			case 1 :
+				return(20, ourg_bones_4834, "Zogre coffins at Jiggig", "You can now pick locks in <col=000080>zogre coffins</col> at <col=000080>Jiggig</col>.");
+			case 2 :
+				return(30, oak_blackjack_4599, "Blackjack lure and knockout<br> (after starting The Feud)", "Members now have the Thieving level required to use a <col=000080>blackjack</col> to lure and knockout a target (after starting The Feud).");
+			case 3 :
+				return(44, cave_goblin_wire_10981, "Wire from the Dorgeshuun wire machine.", "You can now steal <col=000080>wire</col> from the <col=000080>Dorgeshuun wire machine</col>.");
+			case 4 :
+				return(82, lockpick_1523, "Pick lock to enter Agility Dungeon from Yanille", "You can now use your lock-picking skills to access the <col=000080>Agility Dungeon</col> from <col=000080>Yanille</col>.");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, silvthrill_rod_7620, "In Stealing Creation, you can pickpocket players 20 levels above your own.", "");
+			case 1 :
+				return(1, winter_garden_10855, "Sorceress's Garden - Winter", "You can now enter the <col=000080>Winter Garden</col> in the <col=000080>Sorceress's Garden</col> minigame.");
+			case 2 :
+				return(21, ivory_comb_9026, "Pyramid Plunder - Room 1", "You can now enter the <col=000080>first chamber</col> of the <col=000080>Pyramid of Jalsavrah</col> in the <col=000080>Pyramid Plunder</col> minigame.");
+			case 3 :
+				return(25, spring_garden_10853, "Sorceress's Garden - Spring", "You can now enter the <col=000080>Spring Garden</col> in the <col=000080>Sorceress's Garden</col> minigame.");
+			case 4 :
+				return(31, pottery_scarab_9032, "Pyramid Plunder - Room 2", "You can now enter the <col=000080>second chamber</col> of the <col=000080>Pyramid of Jalsavrah</col> in the <col=000080>Pyramid Plunder</col> minigame.");
+			case 5 :
+				return(41, pottery_statuette_9036, "Pyramid Plunder - Room 3", "You can now enter the <col=000080>third chamber</col> of the <col=000080>Pyramid of Jalsavrah</col> in the <col=000080>Pyramid Plunder</col> minigame.");
+			case 6 :
+				return(45, autumn_garden_10854, "Sorceress's Garden - Autumn", "You can now enter the <col=000080>Autumn Garden</col> in the <col=000080>Sorceress's Garden</col> minigame.");
+			case 7 :
+				return(50, flash_powder_5559, "Rogues' Den<br> (with 50 Agility)", "You now have the Thieving level required to attempt the <col=000080>Rogues' Den</col>, located below the Toad and Chicken in <col=000080>Burthorpe</col>. (You also need level 50 Agility.)");
+			case 8 :
+				return(51, stone_seal_9042, "Pyramid Plunder - Room 4", "You can now enter the <col=000080>fourth chamber</col> of the <col=000080>Pyramid of Jalsavrah</col> in the <col=000080>Pyramid Plunder</col> minigame.");
+			case 9 :
+				return(61, stone_statuette_9038, "Pyramid Plunder - Room 5", "You can now enter the <col=000080>fifth chamber</col> of the <col=000080>Pyramid of Jalsavrah</col> in the <col=000080>Pyramid Plunder</col> minigame.");
+			case 10 :
+				return(65, summer_garden_10852, "Sorceress's Garden - Summer", "You can now enter the <col=000080>Summer Garden</col> in the <col=000080>Sorceress's Garden</col> minigame.");
+			case 11 :
+				return(71, gold_seal_9040, "Pyramid Plunder - Room 6", "You can now enter the <col=000080>sixth chamber</col> of the <col=000080>Pyramid of Jalsavrah</col> in the <col=000080>Pyramid Plunder</col> minigame.");
+			case 12 :
+				return(81, golden_scarab_9028, "Pyramid Plunder - Room 7", "You can now enter the <col=000080>seventh chamber</col> of the <col=000080>Pyramid of Jalsavrah</col> in the <col=000080>Pyramid Plunder</col> minigame.");
+			case 13 :
+				return(91, golden_statuette_9034, "Pyramid Plunder - Room 8", "You can now enter the <col=000080>eighth chamber</col> of the <col=000080>Pyramid of Jalsavrah</col> in the <col=000080>Pyramid Plunder</col> minigame.");
+		}
+	case 5 :
+		if ($int1 = 0) {
+			return(99, thieving_cape_9777, "Skill mastery", "<col=000080>Congratulations! You are now a master thief. Why not visit <col=800000>Martin Thwait<col=000080> who runs a shop at the <col=800000>Rogues' Den<col=000080>. He has something special that is only available to true masters of the <col=800000>Thieving<col=000080> skill!");
+		}
+}
+return(0, null, "", "");

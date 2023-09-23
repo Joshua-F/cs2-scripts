@@ -1,0 +1,8 @@
+// 1040
+[clientscript,script1040](component $component0, component $component1, component $component2, component $component3, chatphrase $chatphrase4)
+%varcint129 = calc(%varcint129 - 1);
+if (%varcint129 > 0) {
+	return;
+}
+if_setontimer(null, $component1);
+~script1041($component0, $component2, $component3, $chatphrase4);

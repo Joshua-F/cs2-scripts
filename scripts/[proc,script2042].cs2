@@ -1,0 +1,14 @@
+// 2042
+[proc,script2042](stat $stat0, int $lvl1, int $int2)(string, namedobj, int)
+def_string $string0 = "null";
+def_namedobj $namedobj3 = null;
+def_int $int4 = 1;
+if (~script1024($int2) = 0) {
+	$string0 = "<col=000080>130 combined levels in <col=800000>Attack and Strength<col=000080> is one of the requirements for <col=800000><enum_string(enum_1481, $int2)><col=000080>.";
+} else {
+	$string0 = "<col=000080>You now have all the levels necessary to complete <col=800000><enum_string(enum_1481, $int2)><col=000080>.";
+}
+if ($namedobj3 = null) {
+	$namedobj3 = dummy_warrant_6513;
+}
+return($string0, $namedobj3, $int4);

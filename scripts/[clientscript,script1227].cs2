@@ -1,0 +1,9 @@
+// 1227
+[clientscript,script1227]
+if (calc(clientclock % 40) < 20 & create_reply ! -3) {
+	if (%varcint174 = 3) {
+		if_settext(append(%varcstring34, "|"), interface_744:394);
+	}
+} else {
+	if_settext(%varcstring34, interface_744:394);
+}

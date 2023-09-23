@@ -1,0 +1,16 @@
+// 1448
+[clientscript,script1448](component $component0)
+cc_deleteall($component0);
+def_int $int1 = 0;
+def_int $int2 = 0;
+$int1 = calc((if_getwidth($component0) - 36 * 4) / 3);
+$int2 = calc((if_getheight($component0) - 32 * 7) / 6);
+def_int $size3 = 0;
+def_int $size4 = inv_size(inv);
+while ($size3 < $size4) {
+	cc_create($component0, ^iftype_graphic, $size3);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc((36 + $int1) * ($size3 % 4)), calc($size3 / 4 * (32 + $int2)), ^setpos_abs_left, ^setpos_abs_top);
+	~script154(inv, $size3, $component0, $size3, 1, null, "Deposit-1", "Deposit-5", "Deposit-10", "Deposit-<tostring(%var1249)>", "Deposit-X", "Deposit-All", "", "", "");
+	$size3 = calc($size3 + 1);
+}

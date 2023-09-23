@@ -1,0 +1,16 @@
+// 1015
+[proc,script1015](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Ores", 0);
+	case 1 :
+		return("Pickaxes", 0);
+	case 2 :
+		return("Other", 1);
+	case 3 :
+		return("Shooting Stars", 1);
+	case 4 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

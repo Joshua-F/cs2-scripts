@@ -1,0 +1,5 @@
+// 2053
+[clientscript,script2053](int $opindex0, component $component1, coord $coord2)
+if ($opindex0 = 1) {
+	if_setontimer("script2054(calc(clientclock + 3), $component1, $coord2)", $component1);
+}

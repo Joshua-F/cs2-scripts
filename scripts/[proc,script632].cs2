@@ -1,0 +1,5 @@
+// 632
+[proc,script632](int $int0)
+if (stockmarket_isofferempty($int0) = false & cc_find(~script623($int0), 0) = ^true) {
+	cc_settrans(255);
+}

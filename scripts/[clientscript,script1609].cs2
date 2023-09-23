@@ -1,0 +1,11 @@
+// 1609
+[clientscript,script1609]
+if (%varcint197 = 0) {
+	if_setgraphic("warning_icons,2", interface_771:398);
+	%varcint197 = 2;
+	mes("%playerdesign2_client_random = <tostring(%varcint197)>");
+} else if (%varcint197 > 0) {
+	if_setgraphic("warning_icons,1", interface_771:398);
+	%varcint197 = 1;
+	mes("%playerdesign2_client_random = <tostring(%varcint197)>");
+}

@@ -1,0 +1,9 @@
+// 911
+[clientscript,script911]
+if (%varbit4532 = 1 & %varcint118 < 253) {
+	%varcint118 = calc(%varcint118 + 3);
+	if_settrans(calc(255 - %varcint118), interface_721:3);
+} else if (%varbit4532 = 0 & %varcint118 > 3) {
+	%varcint118 = calc(%varcint118 - 3);
+	if_settrans(calc(255 - %varcint118), interface_721:3);
+}

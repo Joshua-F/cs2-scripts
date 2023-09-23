@@ -1,0 +1,25 @@
+// 1183
+[proc,script1183]
+if (string_length(%varcstring32) = 0) {
+	%varcint174 = 1;
+	return;
+}
+if (string_length(%varcstring33) = 0) {
+	%varcint174 = 2;
+	return;
+}
+if (~script1431 = 1 & %varcint547 = 0) {
+	%varcint174 = 7;
+	if_sethide(false, interface_744:132);
+	if_sethide(true, interface_744:131);
+	if_sethide(false, interface_744:242);
+	sound_jingle(349, 0);
+	if_sethide(true, interface_744:241);
+	return;
+}
+%varcint200 = 0;
+%varcint201 = 0;
+if_settext("Performing login...", interface_744:334);
+if_sethide(true, interface_744:347);
+if_sethide(true, interface_744:348);
+login_request(%varcstring32, %varcstring33, 0);

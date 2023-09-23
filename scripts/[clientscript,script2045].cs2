@@ -1,0 +1,29 @@
+// 2045
+[clientscript,script2045](component $component0, component $component1)
+if (worldmap_isloaded = false) {
+	~script2046;
+	return;
+}
+def_int $int2 = 0;
+def_int $int3 = 0;
+$int2, $int3 = worldmap_getsize;
+if ($int2 <= 0) {
+	return;
+}
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+$int8, $int9 = worldmap_getdisplayposition;
+$int4 = calc($int9 + $int3 / 2);
+$int5 = calc($int9 - $int3 / 2);
+$int6 = calc($int8 + $int2 / 2);
+$int7 = calc($int8 - $int2 / 2);
+$int7 = calc($int7 + scale($int2, if_getwidth($component1), calc(if_getwidth($component1) - if_getwidth($component0))));
+~script2056(interface_755:6, coord, "You are here", struct_280, $component0, $int4, $int5, $int6, $int7);
+~script2056(interface_755:7, %varcint623, %varcstring53, %varcint624, $component0, $int4, $int5, $int6, $int7);
+~script2056(interface_755:8, %varcint625, %varcstring54, %varcint626, $component0, $int4, $int5, $int6, $int7);
+~script2056(interface_755:9, %varcint627, %varcstring55, %varcint628, $component0, $int4, $int5, $int6, $int7);
+~script2056(interface_755:10, %varcint629, %varcstring56, %varcint630, $component0, $int4, $int5, $int6, $int7);

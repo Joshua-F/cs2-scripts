@@ -1,0 +1,18 @@
+// 1453
+[proc,script1453](int $slot0)
+def_obj $obj1 = inv_getobj(bank, $slot0);
+cc_setobject($obj1, inv_getnum(bank, $slot0));
+cc_setopbase("<col=ff981f><oc_name(inv_getobj(bank, $slot0))>");
+cc_setop(1, "Withdraw-1");
+cc_setop(2, "Withdraw-5");
+cc_setop(3, "Withdraw-10");
+cc_setop(4, "Withdraw-<tostring(%var1249)>");
+cc_setop(5, "Withdraw-X");
+cc_setop(6, "Withdraw-All");
+cc_setop(7, "Withdraw-All but one");
+cc_setop(10, "Examine<col=ff9040>");
+cc_setdraggable(interface_762:61, -1);
+cc_setdragdeadzone(5);
+cc_setdragdeadtime(5);
+cc_setondrag("script1454(event_mousey)");
+cc_setondragcomplete("script1482(event_com2)");

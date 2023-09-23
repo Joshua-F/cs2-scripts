@@ -1,0 +1,62 @@
+// 1456
+[proc,script1456]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 8;
+def_int $height4 = 5;
+def_int $int5 = 0;
+def_int $size6 = inv_size(bank);
+~script1464;
+$int1, $int2 = ~script1467($int5);
+while ($int5 <= 9) {
+	$int0 = $int1;
+	if ($int5 ! 0) {
+		if_sethide(false, enum(int, component, enum_1611, $int5));
+		if_setposition(calc($int3 - 2), calc($height4 - 2), ^setpos_abs_left, ^setpos_abs_top, enum(int, component, enum_1611, $int5));
+	}
+	while ($int0 < $int2) {
+		if (cc_find(interface_762:73, $int0) = ^true) {
+			if (inv_getnum(bank, $int0) ! 0) {
+				cc_setposition($int3, $height4, ^setpos_abs_left, ^setpos_abs_top);
+				cc_sethide(false);
+				$int3 = calc($int3 + 44);
+				if ($int3 >= calc(44 * 10)) {
+					$int3 = 8;
+					$height4 = calc($height4 + 44);
+				}
+			} else {
+				$int0 = 1000;
+			}
+		}
+		$int0 = calc($int0 + 1);
+	}
+	if ($int3 ! 8) {
+		if_setposition($int3, $height4, ^setpos_abs_left, ^setpos_abs_top, enum(int, component, enum_1612, $int5));
+		if_setsize(calc(44 * 10 - $int3), 32, ^setsize_abs, ^setsize_abs, enum(int, component, enum_1612, $int5));
+		if_sethide(false, enum(int, component, enum_1612, $int5));
+		$height4 = calc($height4 + 44);
+	}
+	if ($int5 = 0) {
+		$int5 = 2;
+	} else {
+		$int5 = calc($int5 + 1);
+	}
+	$int1, $int2 = ~script1467($int5);
+	if ($int1 = $int2) {
+		$int5 = 100;
+	}
+	if (enum(int, component, enum_1610, $int5) ! null) {
+		if_sethide(false, enum(int, component, enum_1610, $int5));
+		if_setposition(0, $height4, ^setpos_abs_left, ^setpos_abs_top, enum(int, component, enum_1610, $int5));
+		$height4 = calc($height4 + 15);
+		$int3 = 0;
+	}
+}
+if_setscrollsize(if_getwidth(interface_762:73), $height4, interface_762:73);
+if_setscrollpos(0, %varcint203, interface_762:73);
+cc_deleteall(interface_762:95);
+if ($height4 > if_getheight(interface_762:73)) {
+	~script31(interface_762:95, interface_762:73, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~script157(interface_762:95, interface_762:73, if_getscrolly(interface_762:73), 1);
+}

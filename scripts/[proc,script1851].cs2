@@ -1,0 +1,17 @@
+// 1851
+[proc,script1851]()(int)
+def_int $world0 = _6505;
+def_int $int1 = 0;
+if (testbit($world0, 0) = ^true) {
+	$int1 = setbit($int1, 0);
+}
+if (testbit($world0, 1) = ^true) {
+	$int1 = setbit($int1, 1);
+}
+if (testbit($world0, 2) = ^true) {
+	$int1 = setbit($int1, 2);
+}
+if (testbit($world0, 3) = ^true) {
+	$int1 = setbit($int1, 3);
+}
+return($int1);

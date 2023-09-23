@@ -1,0 +1,17 @@
+// 753
+[clientscript,script753]
+if (%varbit4286 ! 101) {
+	if_settext("<tostring(%varbit4286)>%", interface_662:49);
+	if (%varbit4286 > 74) {
+		if_setcolour(^red, interface_662:49);
+	} else {
+		if_setcolour(^white, interface_662:49);
+	}
+} else {
+	if_settext("NA", interface_662:49);
+}
+if (%varbit4285 ! 101) {
+	if_settext("<tostring(%varbit4285)>%", interface_662:47);
+} else {
+	if_settext("NA", interface_662:47);
+}

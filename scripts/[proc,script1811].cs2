@@ -1,0 +1,28 @@
+// 1811
+[proc,script1811](component $component0, component $component1, component $component2)
+if (string_length(%varcstring38) = 0) {
+	~script1812("", $component2);
+	return;
+}
+def_int $int3 = calc(min(chat_gethistorylength, 100) - 1);
+def_string $string0 = "";
+def_int $int4 = -1;
+while ($int3 >= 0) {
+	switch_int (chat_gethistorytype($int3)) {
+		case ^chattype_modchat, ^chattype_publicchat, ^chattype_privatechat, ^chattype_modprivatechat, ^chattype_friendschat, ^chattype_friendschatnotification, 17, 18, 20 :
+			if (compare(lowercase(removetags(chat_gethistoryname($int3))), %varcstring38) = 0) {
+				$string0 = chat_gethistorymessage($int3);
+				$int4 = $int3;
+			}
+	}
+	$int3 = calc($int3 - 1);
+}
+if ($int4 < 0) {
+	%varcint267 = -1;
+	~script1812("", $component2);
+	return;
+}
+if (%varcint267 = -1 | $int4 <= %varcint267 | compare($string0, %varcstring39) ! 0) {
+	~script1812($string0, $component2);
+}
+%varcint267 = $int4;

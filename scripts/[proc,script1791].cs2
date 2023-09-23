@@ -1,0 +1,9 @@
+// 1791
+[proc,script1791](component $component0)
+def_int $int1 = calc(%varcint270 / 60);
+def_int $int2 = calc(%varcint270 % 60);
+if ($int2 >= 10) {
+	if_settext("<tostring($int1)>h <tostring($int2)>m", $component0);
+} else {
+	if_settext("<tostring($int1)>h 0<tostring($int2)>m", $component0);
+}

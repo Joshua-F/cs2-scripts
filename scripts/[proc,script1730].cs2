@@ -1,0 +1,7 @@
+// 1730
+[proc,script1730](component $component0)
+if (%varcint198 ! 1) {
+	if_sethide(false, $component0);
+	%varcint198 = 1;
+	if_setontimer("script1731($component0, if_gettext($component0))", $component0);
+}

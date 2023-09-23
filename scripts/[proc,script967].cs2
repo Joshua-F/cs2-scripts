@@ -1,0 +1,18 @@
+// 967
+[proc,script967](int $int0, int $int1)(int)
+if ($int1 > $int0) {
+	if (calc($int1 - $int0) <= 1024) {
+		return(min(calc($int0 + 6), $int1));
+	}
+	if ($int0 >= 6) {
+		return(calc($int0 - 6));
+	}
+	return(max(~script686(calc($int0 - 6), 2048), $int1));
+}
+if (calc($int0 - $int1) <= 1024) {
+	return(max(calc($int0 - 6), $int1));
+}
+if ($int0 < calc(2048 - 6)) {
+	return(calc($int0 + 6));
+}
+return(min(calc(($int0 + 6) % 2048), $int1));

@@ -1,0 +1,14 @@
+// 1490
+[proc,script1490]
+def_string $string0 = "";
+if (%var304 = 0) {
+	if_setgraphic("graphic_1431", interface_762:14);
+	if_setgraphic("graphic_1425", interface_762:15);
+	$string0 = "Switch to insert items mode";
+} else {
+	if_setgraphic("graphic_1433", interface_762:14);
+	if_setgraphic("graphic_1426", interface_762:15);
+	$string0 = "Switch to swap items mode";
+}
+if_setop(1, $string0, interface_762:14);
+if_setonmouserepeat("script38(event_com, interface_762:101, $string0, 25, 150)", interface_762:14);

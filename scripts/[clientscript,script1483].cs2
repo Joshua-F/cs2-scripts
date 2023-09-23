@@ -1,0 +1,6 @@
+// 1483
+[clientscript,script1483](int $clock0, component $component1)
+if (clientclock >= $clock0) {
+	if_setontimer(null, $component1);
+	~script1463(%varbit4893);
+}

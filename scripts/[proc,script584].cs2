@@ -1,0 +1,32 @@
+// 584
+[proc,script584](component $component0, string $text0)
+def_int $width1 = if_getwidth($component0);
+def_int $height2 = if_getheight($component0);
+def_int $x3 = calc($width1 - 32);
+def_int $y4 = calc($height2 - 32);
+def_int $width5 = calc($width1 - 64);
+def_int $height6 = calc($height2 - 64);
+if ($width5 < 0) {
+	$width5 = 0;
+}
+if ($height6 < 0) {
+	$height6 = 0;
+}
+def_int $comsubid7 = if_getnextsubid($component0);
+~script98($component0, $comsubid7, "v2_stone_borders,28", 0, 0, 32, 32);
+~script98($component0, calc($comsubid7 + 1), "v2_stone_borders,29", $x3, 0, 32, 32);
+~script98($component0, calc($comsubid7 + 2), "v2_stone_borders,30", 0, $y4, 32, 32);
+~script98($component0, calc($comsubid7 + 3), "v2_stone_borders,31", $x3, $y4, 32, 32);
+~script98($component0, calc($comsubid7 + 4), "v2_stone_borders,33", 32, 0, $width5, 3);
+~script98($component0, calc($comsubid7 + 5), "v2_stone_borders,33", 32, calc($height2 - 3), $width5, 3);
+~script98($component0, calc($comsubid7 + 6), "v2_stone_borders,34", 0, 32, 3, $height6);
+~script98($component0, calc($comsubid7 + 7), "v2_stone_borders,34", calc($width1 - 3), 32, 3, $height6);
+~script98($component0, calc($comsubid7 + 8), "v2_stone_borders,33", 2, 22, calc($width1 - 5), 3);
+cc_create($component0, ^iftype_text, calc($comsubid7 + 9));
+cc_setposition(3, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($width1 - 6), 15, ^setsize_abs, ^setsize_abs);
+cc_settext($text0);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xcc9900);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

@@ -1,0 +1,24 @@
+// 582
+[proc,script582](component $component0)
+def_int $width1 = if_getwidth($component0);
+def_int $height2 = if_getheight($component0);
+def_int $x3 = calc($width1 - 32);
+def_int $y4 = calc($height2 - 32);
+def_int $width5 = calc($width1 - 64);
+def_int $height6 = calc($height2 - 64);
+if ($width5 < 0) {
+	$width5 = 0;
+}
+if ($height6 < 0) {
+	$height6 = 0;
+}
+def_int $comsubid7 = if_getnextsubid($component0);
+~script98($component0, $comsubid7, "graphic_1136", 7, 7, calc($width1 - 14), calc($height2 - 14));
+~script98($component0, calc($comsubid7 + 1), "v2_stone_borders_alt,4", 0, 0, 32, 32);
+~script98($component0, calc($comsubid7 + 2), "v2_stone_borders_alt,5", $x3, 0, 32, 32);
+~script98($component0, calc($comsubid7 + 3), "v2_stone_borders_alt,6", 0, $y4, 32, 32);
+~script98($component0, calc($comsubid7 + 4), "v2_stone_borders_alt,7", $x3, $y4, 32, 32);
+~script98($component0, calc($comsubid7 + 5), "v2_stone_borders_alt,0", 32, 0, $width5, 32);
+~script98($component0, calc($comsubid7 + 6), "v2_stone_borders_alt,1", 0, 32, 32, $height6);
+~script98($component0, calc($comsubid7 + 7), "v2_stone_borders_alt,2", 32, $y4, $width5, 32);
+~script98($component0, calc($comsubid7 + 8), "v2_stone_borders_alt,3", $x3, 32, 32, $height6);

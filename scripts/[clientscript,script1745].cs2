@@ -1,0 +1,15 @@
+// 1745
+[clientscript,script1745]
+if (%varcint217 < 1) {
+	%varcint217 = calc(%varcint217 + 1);
+	return;
+}
+%varcint217 = 0;
+if (%varcint216 = 1) {
+	%varcint215 = calc(%varcint215 - 9);
+} else {
+	%varcint215 = calc(%varcint215 + 9);
+}
+%varcint215 = min(%varcint215, 255);
+%varcint215 = max(%varcint215, 0);
+if_settrans(%varcint215, interface_680:2);

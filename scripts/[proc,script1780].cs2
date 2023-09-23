@@ -1,0 +1,10 @@
+// 1780
+[proc,script1780]
+if (%varcint255 = false) {
+	if_setgraphic("options_radio_buttons,2", interface_791:137);
+	if_settrans(0, interface_791:136);
+} else {
+	if_setgraphic("options_radio_buttons,1", interface_791:137);
+	if_settrans(225, interface_791:136);
+}
+~script1784;

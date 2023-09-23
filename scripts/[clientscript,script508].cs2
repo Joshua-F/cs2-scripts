@@ -1,0 +1,14 @@
+// 508
+[clientscript,script508]
+if_setonkey("script133(event_keycode, event_keychar)", interface_553:15);
+if_setonkey(null, interface_137:51);
+if_settext("<escape(%varcstring24)><col=ffff00>|", interface_553:15);
+%varcint6 = 0;
+if_settext("Moderator option: Mute player for 48 hours: <lt>OFF<gt>", interface_553:16);
+%varcint11 = 1;
+if (if_gethide(interface_752:3) = false) {
+	if_sethide(true, interface_752:3);
+	if_sethide(false, interface_752:7);
+	%varcint5 = 0;
+	%varcstring22 = "";
+}

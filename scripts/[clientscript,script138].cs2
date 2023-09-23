@@ -1,0 +1,11 @@
+// 138
+[clientscript,script138]
+if (%varcint5 = 7 | %varcint5 = 8 | %varcint5 = 9) {
+	if_sethide(true, interface_752:3);
+	if_sethide(true, interface_752:6);
+	if_sethide(false, interface_752:7);
+	%varcint5 = 0;
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	~script1364;
+}

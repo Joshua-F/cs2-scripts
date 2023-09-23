@@ -1,0 +1,9 @@
+// 1514
+[proc,script1514]
+if (%var170 = 1 & string_length(if_gettext(interface_769:2)) > 0) {
+	if_sethide(false, interface_769:2);
+	if_sethide(true, interface_769:1);
+	return;
+}
+if_sethide(false, interface_769:1);
+if_sethide(true, interface_769:2);

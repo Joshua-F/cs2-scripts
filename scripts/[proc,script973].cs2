@@ -1,0 +1,120 @@
+// 973
+[proc,script973]
+def_int $int0 = %varbit4729;
+if (%varbit4729 < 1 | %varbit4729 > 24) {
+	return;
+}
+def_string $text0 = enum_string(enum_1477, $int0);
+def_stat $stat1 = enum(int, stat, enum_681, $int0);
+def_graphic $graphic2 = enum(int, graphic, enum_1478, $int0);
+def_int $int3 = 1;
+if ($int0 ! 0) {
+	if ($int0 = 9 & stat_base($stat1) = 3) {
+		$text0 = "You've just advanced 2 Herblore levels!";
+	}
+	if ($int0 = 24 & stat_base($stat1) = 4) {
+		$text0 = "You've just advanced 3 Summoning levels!";
+	}
+}
+if_settext($text0, interface_741:4);
+if_settext("You have now reached level <tostring(stat_base($stat1))>.", interface_741:6);
+if_setgraphic($graphic2, interface_741:7);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_string $string1 = "";
+def_int $int7 = 0;
+def_namedobj $namedobj8 = null;
+def_int $int9 = 0;
+cc_deleteall(interface_741:2);
+cc_deleteall(interface_741:3);
+if (%var281 < 1000 & stat_base($stat1) = 3) {
+	$string1 = "<col=000080>You've now reached the highest skill level that you can achieve during the tutorial. Once you finish the tutorial, you can advance this skill even further!";
+	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
+	cc_settext($string1);
+	$int5 = ~script975($int5, $int6);
+	$int4 = calc(2 + $int4);
+}
+if (%varbit4730 = 1) {
+	$string1 = "<col=800000>Well done! You've reached the total level <tostring(enum(int, int, enum_1475, %varbit4728))> milestone!";
+	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
+	cc_settext($string1);
+	$int5 = ~script975($int5, $int6);
+	$int4 = calc(2 + $int4);
+}
+$int7 = 0;
+$string1 = "null";
+$namedobj8 = silvthrill_rod_7620;
+if ($int0 = 1 | $int0 = 2 | $int0 = 5 | $int0 = 3 | $int0 = 7 | $int0 = 4 | $int0 = 6 | $int0 = 24) {
+	if (%varbit4731 = 1) {
+		$string1 = "<col=800000>Well done! You've reached the Combat level <tostring(enum(int, int, enum_1473, %varbit4727))> milestone!";
+		$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
+		cc_settext($string1);
+		$int5 = ~script975($int5, $int6);
+		$int4 = calc(2 + $int4);
+	}
+	if (%varbit5395 = 1) {
+		while ($namedobj8 ! null) {
+			$int9, $namedobj8, $string1 = ~script976($int7);
+			if ($int9 = ~script1432) {
+				$int6 = ~script974($int4, $int5, $namedobj8, $string1);
+				cc_settext($string1);
+				$int5 = ~script975($int5, $int6);
+				$int4 = calc(2 + $int4);
+			}
+			$int7 = calc($int7 + 1);
+		}
+	}
+}
+$string1 = "";
+$namedobj8 = silvthrill_rod_7620;
+def_int $int10 = 0;
+$int7 = 0;
+while ($int10 ! -1) {
+	$int10 = 0;
+	$string1, $namedobj8, $int10 = ~script1023($stat1, $int7);
+	if ($int10 = 1) {
+		$int6 = ~script974($int4, $int5, $namedobj8, $string1);
+		cc_settext($string1);
+		$int5 = ~script975($int5, $int6);
+		$int4 = calc(2 + $int4);
+		$int3 = 0;
+	}
+	$int7 = calc($int7 + 1);
+}
+$namedobj8 = silvthrill_rod_7620;
+$string1 = "";
+$int7 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_string $string2 = "";
+$text0, $int11 = ~script12($int0);
+while ($int7 < $int11) {
+	$text0, $int12 = ~script13($int0, $int7);
+	$int13 = 0;
+	$namedobj8 = silvthrill_rod_7620;
+	while ($namedobj8 ! null) {
+		$int9, $namedobj8, $string2, $string1 = ~script14($int0, $int7, $int13);
+		if ($int9 = stat_base($stat1)) {
+			$int6 = ~script974($int4, $int5, $namedobj8, $string1);
+			cc_settext($string1);
+			$int5 = ~script975($int5, $int6);
+			$int4 = calc(2 + $int4);
+			$int3 = 0;
+		}
+		$int13 = calc($int13 + 1);
+	}
+	$int7 = calc($int7 + 1);
+}
+if ($int3 = 1) {
+	$string1 = "Check out the skill advance guide to see what you'll be able to do when you reach even higher levels...";
+	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
+	cc_settext($string1);
+	$int5 = ~script975($int5, $int6);
+}
+if_setscrollpos(0, 0, interface_741:2);
+if_setscrollsize(296, $int5, interface_741:2);
+if ($int5 > 160) {
+	~script31(interface_741:3, interface_741:2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+}

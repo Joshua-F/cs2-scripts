@@ -1,0 +1,9 @@
+// 1744
+[proc,script1744]()(int)
+def_int $int0 = cc_gety;
+def_component $layer1 = cc_getlayer;
+while ($layer1 ! null) {
+	$int0 = calc($int0 + if_gety($layer1));
+	$layer1 = if_getlayer($layer1);
+}
+return($int0);

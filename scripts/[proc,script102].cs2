@@ -1,0 +1,19 @@
+// 102
+[proc,script102](string $mes0)
+if (%varcint5 < 2) {
+	if (getwindowmode >= ^windowmode_resizable) {
+		if_sethide(false, interface_746:70);
+	}
+	if_sethide(false, interface_752:3);
+	if_sethide(true, interface_752:6);
+	if_sethide(true, interface_752:7);
+	if_settext($mes0, interface_752:4);
+	if_settext("Click here to continue", interface_752:5);
+	%varcint5 = 1;
+	if_setonclick("script101", interface_752:3);
+	if_setonkey(null, interface_752:5);
+	if_setcolour(0x000080, interface_752:5);
+	if_setonmouserepeat("script45(event_com, ^white)", interface_752:5);
+	if_setonmouseleave("script45(event_com, 0x000080)", interface_752:5);
+	~script1188;
+}

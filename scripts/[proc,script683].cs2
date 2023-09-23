@@ -1,0 +1,83 @@
+// 683
+[proc,script683](int $int0)
+cc_setnpchead(enum(int, npc, enum_1098, $int0));
+if ($int0 = 0) {
+	~script684(0, 63);
+	cc_setmodelangle(0, 0, 0, 0, 0, 528);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 2)");
+	return;
+}
+if ($int0 = 1) {
+	~script684(-31, 58);
+	cc_setmodelangle(0, 0, 0, 0, 0, 400);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 3)");
+	cc_setmodelanim(seq_7375);
+	return;
+}
+if ($int0 = 2) {
+	~script684(0, 58);
+	cc_setmodelangle(0, 0, 0, 0, 0, 528);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 2)");
+	return;
+}
+if ($int0 = 3) {
+	~script684(0, 48);
+	cc_setmodelangle(0, 0, 52, 0, 0, 650);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 2)");
+	return;
+}
+if ($int0 = 4) {
+	~script684(0, 62);
+	cc_setmodelangle(0, 0, 35, 0, 0, 528);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 2)");
+	return;
+}
+if ($int0 = 5) {
+	~script684(-3, 60);
+	cc_setmodelangle(0, 0, 35, 0, 0, 656);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 512, 3)");
+	return;
+}
+if ($int0 = 6) {
+	~script684(0, 68);
+	cc_setmodelangle(0, 0, 35, 0, 0, 720);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 2)");
+	return;
+}
+if ($int0 = 7) {
+	~script684(0, 61);
+	cc_setmodelangle(0, 0, 35, 0, 0, 584);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 2)");
+	return;
+}
+if ($int0 = 8) {
+	~script684(0, 67);
+	cc_setmodelangle(0, 0, 35, 0, 0, 840);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 2)");
+	return;
+}
+if ($int0 = 9) {
+	~script684(0, 65);
+	cc_setmodelangle(0, 0, 35, 0, 0, 614);
+	cc_setontimer("script685(event_com, event_comsubid, 0, 0, 256, 2)");
+	return;
+}
+if ($int0 = 10) {
+	~script684(0, 69);
+	cc_setmodelangle(0, 0, 35, 0, 0, 755);
+	cc_setontimer("script685(event_com, event_comsubid, 35, 0, 256, 2)");
+	return;
+}
+if ($int0 = 11) {
+	~script684(0, 68);
+	cc_setmodelangle(0, 0, 35, 0, 0, 671);
+	cc_setontimer("script685(event_com, event_comsubid, 35, 0, 256, 2)");
+	return;
+}
+if ($int0 = 12) {
+	~script684(0, 70);
+	cc_setmodelangle(0, 0, 35, 1891, 0, 1277);
+	cc_setontimer("script685(event_com, event_comsubid, 35, 0, 256, 2)");
+	return;
+}
+cc_setmodelangle(0, 0, 0, 0, 0, 2000);

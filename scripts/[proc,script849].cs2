@@ -1,0 +1,48 @@
+// 849
+[proc,script849](int $int0, int $int1)
+def_component $component2 = enum(int, component, enum_1354, $int0);
+def_component $component3 = enum(int, component, enum_1355, $int0);
+def_component $component4 = enum(int, component, enum_1358, $int0);
+def_int $int5 = ~script853($int0);
+def_int $int6 = ~script854($int0);
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = if_getx($component2);
+def_int $int12 = if_gety($component2);
+def_int $int13 = if_getx($component3);
+def_int $int14 = if_gety($component3);
+def_int $int15 = if_getmodelangle_y($component2);
+if ($int0 ! 10) {
+	sound_synth(synth_4503, 1, 0);
+	if ($int1 = 0) {
+		$int15 = calc($int15 + 512);
+		if ($int15 >= 2047) {
+			$int15 = 0;
+		}
+	} else {
+		$int15 = calc($int15 - 512);
+		if ($int15 < 0) {
+			$int15 = 2047;
+		}
+	}
+	if_setmodelangle(0, 0, 512, $int15, 0, 3500, $component2);
+	if_setmodelangle(0, 0, 512, $int15, 0, 3500, $component3);
+	if_setmodelangle(0, 0, 512, $int15, 0, 3500, $component4);
+	if (~script850($int5) ! ~script850($int6)) {
+		if ($int15 = 512 | $int15 = 1536) {
+			$int9 = 9;
+			$int10 = 9;
+		} else {
+			$int9 = -9;
+			$int10 = -9;
+		}
+		$int11 = calc($int11 + $int9 + $int7);
+		$int12 = calc($int12 + $int10 + $int8);
+		$int13 = calc($int13 + $int9 + $int7);
+		$int14 = calc($int14 + $int10 + $int8);
+	}
+	if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, $component2);
+	if_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top, $component3);
+}

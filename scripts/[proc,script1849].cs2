@@ -1,0 +1,16 @@
+// 1849
+[proc,script1849](component $component0)
+if_setontimer(null, $component0);
+mes("Your display mode change has been aborted.");
+if_setonsubchange(null, interface_548:11);
+def_int $windowmode1 = getdefaultwindowmode;
+if (detailget_antialiasing_default ! detailget_antialiasing) {
+	detail_antialiasing(0);
+	detail_antialiasing_default(0);
+	if (getwindowmode < ^windowmode_fullscreen & getwindowmode ! $windowmode1) {
+		setwindowmode($windowmode1);
+	}
+} else if (getwindowmode ! $windowmode1) {
+	setwindowmode($windowmode1);
+}
+%varcint543 = getwindowmode;

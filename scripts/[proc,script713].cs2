@@ -1,0 +1,58 @@
+// 713
+[proc,script713](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+def_obj $obj7 = inv_getobj(inv_541, 0);
+if ($obj7 ! null) {
+	if_setobject_nonum($obj7, 1, $component1);
+	if_setoutline(1, $component1);
+	if_setgraphicshadow(0x333333, $component1);
+	if_setop(1, "Remove", $component1);
+	if_setop(10, "Examine", $component1);
+	if_setopbase("<col=ff9040><oc_name($obj7)></col>", $component1);
+	if (%varbit5026 = 0) {
+		if_settext("<col=ff0000>Until</col><br><col=ff0000>logout</col>", $component2);
+		if_clearops($component2);
+		if_setop(2, "Specify", $component2);
+	} else {
+		if (%varbit5026 = 1) {
+			if_settext("1 hour", $component2);
+		} else {
+			if_settext("<tostring(%varbit5026)> hours", $component2);
+		}
+		if_setop(1, "'Until logout'", $component2);
+		if_setop(2, "Edit", $component2);
+	}
+	if_setopbase("<col=ff9040>Duration</col>", $component2);
+	~script679($component3);
+	if_setonmouserepeat("script94($component3)", $component3);
+	if_setonmouseleave("script92($component3)", $component3);
+} else {
+	if_setobject_nonum(null, 0, $component1);
+	if_settext("", $component2);
+	if_clearops($component1);
+	if_clearops($component2);
+	if_setopbase("", $component1);
+	if_setopbase("", $component2);
+	cc_deleteall($component3);
+	if_setonmouserepeat(null, $component3);
+	if_setonmouseleave(null, $component3);
+}
+$obj7 = invother_getobj(inv_541, 0);
+if ($obj7 ! null) {
+	if_setobject_nonum($obj7, 1, $component5);
+	if_setoutline(1, $component5);
+	if_setgraphicshadow(0x333333, $component5);
+	if_setop(10, "Examine", $component5);
+	if_setopbase("<col=ff9040><oc_name($obj7)></col>", $component5);
+	if (%varbit5070 = 0) {
+		if_settext("<col=ff0000>Until</col><br><col=ff0000>logout</col>", $component6);
+	} else if (%varbit5070 = 1) {
+		if_settext("1 hour", $component6);
+	} else {
+		if_settext("<tostring(%varbit5070)> hours", $component6);
+	}
+} else {
+	if_setobject_nonum(null, 0, $component5);
+	if_settext("", $component6);
+	if_clearops($component5);
+	if_setopbase("", $component5);
+}

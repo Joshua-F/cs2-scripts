@@ -1,0 +1,9 @@
+// 1904
+[proc,script1904](component $component0, component $component1, component $component2)
+cc_deleteall($component1);
+if (string_length(%varcstring30) > 0) {
+	~script1902($component0, $component1, $component2);
+} else {
+	if_setscrollsize(0, 0, $component1);
+	~script1905($component1, $component2);
+}

@@ -1,0 +1,32 @@
+// 1854
+[proc,script1854]()(int)
+def_int $world0 = _6505;
+def_int $world1 = 0;
+if (testbit($world0, 23) = ^true) {
+	$world1 = setbit($world1, 0);
+}
+if (testbit($world0, 24) = ^true) {
+	$world1 = setbit($world1, 1);
+}
+if (testbit($world0, 25) = ^true) {
+	$world1 = setbit($world1, 2);
+}
+if (testbit($world0, 26) = ^true) {
+	$world1 = setbit($world1, 3);
+}
+if (testbit($world0, 27) = ^true) {
+	$world1 = setbit($world1, 4);
+}
+if (testbit($world0, 28) = ^true) {
+	$world1 = setbit($world1, 5);
+}
+if (testbit($world0, 29) = ^true) {
+	$world1 = setbit($world1, 6);
+}
+if (testbit($world0, 30) = ^true) {
+	$world1 = setbit($world1, 7);
+}
+if (testbit($world0, 31) = ^true) {
+	$world1 = setbit($world1, 8);
+}
+return($world1);

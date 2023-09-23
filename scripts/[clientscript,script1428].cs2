@@ -1,0 +1,11 @@
+// 1428
+[clientscript,script1428](int $int0, component $component1)
+if ($int0 ! 1) {
+	return;
+}
+if_setontimer(null, $component1);
+if_setonsubchange(null, interface_548:11);
+if (getwindowmode < ^windowmode_fullscreen) {
+	setdefaultwindowmode(getwindowmode);
+}
+detail_antialiasing_default(detailget_antialiasing);

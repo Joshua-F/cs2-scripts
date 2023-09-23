@@ -1,0 +1,14 @@
+// 1790
+[proc,script1790](component $component0)
+def_int $int1 = scale(3, 5, %varcint265);
+if ($int1 <= 3) {
+	if_settext("<col=ff0000>GET READY!</col>", $component0);
+	return;
+}
+def_int $int2 = calc($int1 / 60);
+$int1 = calc($int1 % 60);
+if ($int1 >= 10) {
+	if_settext("<tostring($int2)>m <tostring($int1)>s", $component0);
+} else {
+	if_settext("<tostring($int2)>m 0<tostring($int1)>s", $component0);
+}

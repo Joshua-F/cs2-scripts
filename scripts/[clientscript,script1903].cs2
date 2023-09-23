@@ -1,0 +1,8 @@
+// 1903
+[clientscript,script1903](component $component0, component $component1, component $component2, component $component3)
+%varcint129 = calc(%varcint129 - 1);
+if (%varcint129 > 0) {
+	return;
+}
+if_setontimer(null, $component1);
+~script1904($component0, $component2, $component3);

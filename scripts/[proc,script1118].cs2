@@ -1,0 +1,14 @@
+// 1118
+[proc,script1118]
+if (getwindowmode = 0) {
+	if_setcolour(0x996600, interface_742:52);
+	~script1355("High Detail only", interface_742:53, interface_742:54, interface_742:55, null, "tradebacking_dark", 0xcf0000, p11_full);
+	return;
+}
+if (_6121 = false) {
+	if_setcolour(0x996600, interface_742:52);
+	~script1355("Incompatible", interface_742:53, interface_742:54, interface_742:55, null, "tradebacking_dark", 0xcf0000, p11_full);
+	return;
+}
+if_setcolour(0xe1981f, interface_742:52);
+~script1435(enum_1583, detailget_antialiasing, 2, interface_742:53, interface_742:54, interface_742:55, null, "tradebacking_dark", "scrollbar_v2,1", 788, "tradebacking_light", 0xcf0000, ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

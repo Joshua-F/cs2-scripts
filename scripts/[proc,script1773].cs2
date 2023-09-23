@@ -1,0 +1,16 @@
+// 1773
+[proc,script1773]
+if (%varcint249 = false) {
+	if_setcolour(^black, interface_791:111);
+	if_setcolour(0xff981f, interface_791:112);
+	if_sethide(true, interface_791:114);
+	if_setcolour(0xff981f, interface_791:115);
+	if_settext("...you keep<br>your items.", interface_791:115);
+} else {
+	if_setcolour(^red, interface_791:111);
+	if_setcolour(^yellow, interface_791:112);
+	if_sethide(false, interface_791:114);
+	if_setcolour(^yellow, interface_791:115);
+	if_settext("...you DROP ALL your items.", interface_791:115);
+}
+~script1784;

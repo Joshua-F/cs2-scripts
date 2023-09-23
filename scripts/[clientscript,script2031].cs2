@@ -1,0 +1,9 @@
+// 2031
+[clientscript,script2031](component $component0)
+if (testbit(%var331, 29) = ^true) {
+	if_setmodelangle(0, 0, 512, 1024, 0, 1000, $component0);
+} else if (testbit(%var331, 30) = ^true) {
+	if_setmodelangle(0, 0, 512, 1536, 0, 1000, $component0);
+} else if (testbit(%var331, 31) = ^true) {
+	if_setmodelangle(0, 0, 512, 0, 0, 1000, $component0);
+}

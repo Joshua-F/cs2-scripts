@@ -1,0 +1,8 @@
+// 575
+[clientscript,script575]
+%varcint81 = calc(%varcint81 - 1);
+if (%varcint81 > 0) {
+	return;
+}
+if_setontimer(null, interface_389:9);
+~script576;

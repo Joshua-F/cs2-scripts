@@ -1,0 +1,31 @@
+// 808
+[clientscript,script808]
+if_sethide(false, interface_748:5);
+def_int $int0 = ~script807(hitpoints);
+def_int $int1 = calc(clientclock % 32);
+if ($int0 > 25) {
+	%varcint615 = 0;
+	if (if_gettrans(interface_748:5) ! 0) {
+		if_settrans(0, interface_748:5);
+	} else {
+		return;
+	}
+} else {
+	if ($int1 = 1) {
+		if (%varcint615 <= 0) {
+			%varcint615 = clientclock;
+		}
+		if (calc(clientclock - %varcint615) < 1500) {
+			sound_synth(synth_5644, 1, 0);
+		}
+	}
+	if ($int1 < 8) {
+		if_settrans(0, interface_748:5);
+	} else if ($int1 < 16) {
+		if_settrans(85, interface_748:5);
+	} else if ($int1 < 24) {
+		if_settrans(255, interface_748:5);
+	} else {
+		if_settrans(85, interface_748:5);
+	}
+}

@@ -1,0 +1,36 @@
+// 1537
+[proc,script1537](int $x0, int $int1)(int)
+def_int $int2 = 0;
+def_enum $enum3 = null;
+while (enum(int, enum, enum_1634, $int2) ! null) {
+	$int2 = calc($int2 + 1);
+}
+def_component $componentarray0($int2);
+def_int $int4 = $int2;
+$int2 = 0;
+while ($int2 < $int4) {
+	$enum3 = enum(int, enum, enum_1634, $int2);
+	$componentarray0($int2) = enum(int, component, $enum3, 0);
+	$int2 = calc($int2 + 1);
+}
+~script0(componentarray0, 0, calc($int4 - 1));
+def_int $x5 = $x0;
+def_int $int6 = $int1;
+if_setposition($x5, $int6, ^setpos_abs_left, ^setpos_abs_top, interface_259:1);
+$int2 = 0;
+while ($int2 < $int4) {
+	$enum3 = enum(component, enum, enum_1636, $componentarray0($int2));
+	$x5 = 14;
+	$int6 = calc($int6 + 22);
+	if_setposition($x5, $int6, ^setpos_abs_left, ^setpos_abs_top, enum(int, component, $enum3, 0));
+	$x5 = 28;
+	$int6 = calc($int6 + 14);
+	if_setposition($x5, $int6, ^setpos_abs_left, ^setpos_abs_top, enum(int, component, $enum3, 1));
+	$int6 = calc($int6 + 14);
+	if_setposition($x5, $int6, ^setpos_abs_left, ^setpos_abs_top, enum(int, component, $enum3, 2));
+	$int6 = calc($int6 + 14);
+	if_setposition($x5, $int6, ^setpos_abs_left, ^setpos_abs_top, enum(int, component, $enum3, 3));
+	$int6 = calc($int6 + 14);
+	$int2 = calc($int2 + 1);
+}
+return($int6);

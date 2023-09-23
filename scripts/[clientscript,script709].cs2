@@ -1,0 +1,7 @@
+// 709
+[clientscript,script709](component $component0)
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setsize(if_getwidth(interface_746:4), if_getheight(interface_746:4), ^setsize_abs, ^setsize_abs, $component0);
+} else {
+	if_setsize(if_getwidth(interface_548:4), if_getheight(interface_548:4), ^setsize_abs, ^setsize_abs, $component0);
+}

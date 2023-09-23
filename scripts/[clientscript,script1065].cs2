@@ -1,0 +1,24 @@
+// 1065
+[clientscript,script1065](component $layer0, int $x1)
+if (if_getscrollx($layer0) > $x1) {
+	if_setscrollsize(calc(if_getscrollwidth($layer0) - 10), 0, $layer0);
+	if_setscrollpos(calc(if_getscrollx($layer0) - 10), 0, $layer0);
+	if (if_getscrollx($layer0) < $x1) {
+		if_setscrollsize(calc($x1 + if_getwidth($layer0)), 0, $layer0);
+		if_setscrollpos($x1, 0, $layer0);
+		if_setontimer(null, $layer0);
+		return;
+	}
+} else if (if_getscrollx($layer0) < $x1) {
+	if_setscrollsize(calc(if_getscrollwidth($layer0) + 10), 0, $layer0);
+	if_setscrollpos(calc(if_getscrollx($layer0) + 10), 0, $layer0);
+	if (if_getscrollx($layer0) > $x1) {
+		if_setscrollsize(calc($x1 + if_getwidth($layer0)), 0, $layer0);
+		if_setscrollpos($x1, 0, $layer0);
+		if_setontimer(null, $layer0);
+		return;
+	}
+} else {
+	if_setontimer(null, $layer0);
+	return;
+}

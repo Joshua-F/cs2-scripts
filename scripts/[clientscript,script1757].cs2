@@ -1,0 +1,8 @@
+// 1757
+[clientscript,script1757](component $component0, component $component1)
+if (%varcint219 > 0) {
+	if_sethide(false, $component0);
+} else {
+	if_sethide(true, $component0);
+}
+if_settext(tostring(%varcint219), $component1);

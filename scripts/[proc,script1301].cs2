@@ -1,0 +1,20 @@
+// 1301
+[proc,script1301](component $component0, component $component1)
+def_int $comsubid2 = 0;
+if (getwindowmode >= ^windowmode_resizable) {
+	~script31($component0, $component1, "graphic_883", "graphic_802", "graphic_881", "graphic_882", "graphic_641", "graphic_642");
+	while ($comsubid2 < if_getnextsubid($component0)) {
+		if (cc_find($component0, $comsubid2) = ^true) {
+			cc_setalpha(true);
+		}
+		$comsubid2 = calc($comsubid2 + 1);
+	}
+} else {
+	~script31($component0, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	while ($comsubid2 < if_getnextsubid($component0)) {
+		if (cc_find($component0, $comsubid2) = ^true) {
+			cc_setalpha(false);
+		}
+		$comsubid2 = calc($comsubid2 + 1);
+	}
+}

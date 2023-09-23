@@ -1,0 +1,8 @@
+// 1137
+[clientscript,script1137](int $int0, component $component1)
+def_int $windowmode2 = ~script1345($int0, $component1);
+if ($windowmode2 = 0) {
+	detail_flickering_on(false);
+} else if ($windowmode2 = ^windowmode_fixed) {
+	detail_flickering_on(true);
+}

@@ -1,0 +1,18 @@
+// 991
+[proc,script991](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Pickpocket", 1);
+	case 1 :
+		return("Stalls", 1);
+	case 2 :
+		return("Chests", 1);
+	case 3 :
+		return("Miscellaneous", 1);
+	case 4 :
+		return("Minigames", 1);
+	case 5 :
+		return("Milestones", 1);
+	case default :
+		return("", -1);
+}

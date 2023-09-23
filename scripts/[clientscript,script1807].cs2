@@ -1,0 +1,10 @@
+// 1807
+[clientscript,script1807](component $component0, component $component1, component $component2)
+if (~script42(%varcint266) = 0) {
+	%varcstring38 = "";
+	%varcstring39 = "";
+	%varcint266 = true;
+}
+~script1809($component0, $component1, $component2);
+if_setonvarcstrtransmit("script1808($component0, $component1, $component2){varcstring38}", $component0);
+if_setonchattransmit("script1810($component0, $component1, $component2)", $component0);

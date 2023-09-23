@@ -1,0 +1,26 @@
+// 143
+[clientscript,script143](component $component0, int $int1, int $int2, int $int3)
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+while (cc_find($component0, $int8) = ^true) {
+	$int8 = calc($int8 + 1);
+}
+if (if_getscrollwidth($component0) > 0) {
+	$int6 = calc((if_getscrollwidth($component0) - 36 * $int1) / ($int1 - 1));
+} else {
+	$int6 = calc((if_getwidth($component0) - 36 * $int1) / ($int1 - 1));
+}
+if (if_getscrollheight($component0) > 0) {
+	$int7 = calc((if_getscrollheight($component0) - 32 * $int2) / ($int2 - 1));
+} else {
+	$int7 = calc((if_getheight($component0) - 32 * $int2) / ($int2 - 1));
+}
+cc_create($component0, ^iftype_graphic, $int8);
+cc_setgraphic("exclamation_mark");
+cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc((36 + $int6) * ($int3 % $int1) + 13), calc($int3 / $int1 * (32 + $int7)), ^setpos_abs_left, ^setpos_abs_top);
+cc_sethide(false);
+cc_setontimer("script144($component0, $int8, clientclock, calc(clientclock + 750))");

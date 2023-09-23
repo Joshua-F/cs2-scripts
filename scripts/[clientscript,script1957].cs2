@@ -1,0 +1,9 @@
+// 1957
+[clientscript,script1957](component $component0, obj $obj1, int $total2)
+def_int $total3 = inv_total(inv, $obj1);
+if_settext("<tostring($total3)>/<tostring($total2)>", $component0);
+if ($total3 >= $total2) {
+	if_setcolour(^green, $component0);
+} else {
+	if_setcolour(^red, $component0);
+}

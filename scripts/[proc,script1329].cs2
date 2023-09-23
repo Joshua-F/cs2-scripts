@@ -1,0 +1,11 @@
+// 1329
+[proc,script1329]
+if (getwindowmode = 0) {
+	~script1355("High Detail only", interface_744:56, interface_744:57, interface_744:58, null, "graphic_884", 0x7f0000, p11_full);
+	return;
+}
+def_int $int0 = 0;
+if (detailget_fog_on = true) {
+	$int0 = 1;
+}
+~script1435(enum_1577, $int0, 1, interface_744:56, interface_744:57, interface_744:58, null, "graphic_884", "graphic_1248", 1250, "graphic_1402", 0x7f0000, ^white, 0xffc61a, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

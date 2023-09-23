@@ -1,0 +1,51 @@
+// 2064
+[proc,script2064](int $int0)
+if_sethide(true, interface_138:21);
+if_sethide(true, interface_138:30);
+if_sethide(true, interface_138:29);
+if_sethide(true, interface_138:24);
+if_sethide(true, interface_138:32);
+if_sethide(true, interface_138:31);
+if_sethide(true, interface_138:28);
+if_sethide(true, interface_138:27);
+if_sethide(true, interface_138:26);
+if_sethide(true, interface_138:25);
+if_sethide(true, interface_138:22);
+if_sethide(true, interface_138:23);
+switch_int ($int0) {
+	case 0 :
+		if_sethide(false, interface_138:21);
+	case 1 :
+		if_sethide(false, interface_138:30);
+		if_setmodelanim(seq_786, interface_138:30);
+	case 2 :
+		if_sethide(false, interface_138:29);
+		if_setmodelanim(seq_786, interface_138:29);
+	case 3 :
+		if_sethide(false, interface_138:24);
+		if_setmodelanim(seq_785, interface_138:24);
+	case 4 :
+		if_sethide(false, interface_138:32);
+		if_setmodelanim(seq_785, interface_138:32);
+	case 5 :
+		if_sethide(false, interface_138:31);
+		if_setmodelanim(seq_785, interface_138:31);
+	case 6 :
+		if_sethide(false, interface_138:28);
+		if_setmodelanim(seq_785, interface_138:28);
+	case 7 :
+		if_sethide(false, interface_138:27);
+		if_setmodelanim(seq_785, interface_138:27);
+	case 8 :
+		if_sethide(false, interface_138:25);
+		if_setmodelanim(seq_785, interface_138:25);
+	case 9 :
+		if_sethide(false, interface_138:26);
+		if_setmodelanim(seq_785, interface_138:26);
+	case 10 :
+		if_sethide(false, interface_138:22);
+		if_setmodelanim(seq_785, interface_138:22);
+	case 11 :
+		if_sethide(false, interface_138:23);
+		if_setmodelanim(seq_785, interface_138:23);
+}

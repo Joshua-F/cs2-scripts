@@ -1,0 +1,24 @@
+// 1971
+[proc,script1971](int $int0, component $component1)
+switch_int ($int0) {
+	case 0 :
+		if (%varcint618 < 0 | %varcint618 > 25) {
+			%varcint618 = 0;
+		}
+		if_settext(enum(int, string, enum_2121, %varcint618), $component1);
+	case 1 :
+		if (%varcint619 < 0 | %varcint619 > 25) {
+			%varcint619 = 0;
+		}
+		if_settext(enum(int, string, enum_2121, %varcint619), $component1);
+	case 2 :
+		if (%varcint620 < 0 | %varcint620 > 25) {
+			%varcint620 = 0;
+		}
+		if_settext(enum(int, string, enum_2121, %varcint620), $component1);
+	case 3 :
+		if (%varcint621 < 0 | %varcint621 > 25) {
+			%varcint621 = 0;
+		}
+		if_settext(enum(int, string, enum_2121, %varcint621), $component1);
+}

@@ -1,0 +1,8 @@
+// 1138
+[clientscript,script1138](int $int0, component $component1)
+def_int $windowmode2 = ~script1345($int0, $component1);
+if ($windowmode2 = 0) {
+	_6009(false);
+} else if ($windowmode2 = ^windowmode_fixed) {
+	_6009(true);
+}

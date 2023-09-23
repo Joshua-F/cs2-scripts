@@ -1,0 +1,407 @@
+// 1024
+[proc,script1024](int $int0)(int)
+switch_int ($int0) {
+	case 0 :
+		if (stat_base(mining) >= 10) {
+			return(1);
+		}
+	case 1 :
+		if (stat_base(attack) >= 15 & stat_base(prayer) >= 25) {
+			return(1);
+		}
+	case 2 :
+		if (stat_base(defence) >= 30 & stat_base(mining) >= 40 & stat_base(smithing) >= 50) {
+			return(1);
+		}
+	case 3 :
+		if (stat_base(cooking) >= 30 & stat_base(fletching) >= 5 & stat_base(ranged) >= 30) {
+			return(1);
+		}
+	case 4 :
+		if (stat_base(agility) >= 42 & stat_base(crafting) >= 45 & stat_base(ranged) >= 40 & stat_base(smithing) >= 50) {
+			return(1);
+		}
+	case 5 :
+		if (stat_base(crafting) >= 20 & stat_base(thieving) >= 25) {
+			return(1);
+		}
+	case 6 :
+		if (stat_base(agility) >= 26 & stat_base(construction) >= 5 & stat_base(crafting) >= 32 & stat_base(magic) >= 33 & stat_base(mining) >= 20 & stat_base(strength) >= 40 & stat_base(thieving) >= 22) {
+			return(1);
+		}
+	case 7 :
+		if (stat_base(firemaking) >= 50 & stat_base(magic) >= 50 & stat_base(slayer) >= 10 & stat_base(thieving) >= 53) {
+			return(1);
+		}
+	case 8 :
+		if (stat_base(fletching) >= 50 & stat_base(runecraft) >= 50 & stat_base(smithing) >= 65) {
+			return(1);
+		}
+	case 9 :
+		if (stat_base(agility) >= 10 & stat_base(herblore) >= 10 & stat_base(thieving) >= 25) {
+			return(1);
+		}
+	case 10 :
+		if (stat_base(herblore) >= 31) {
+			return(1);
+		}
+	case 11 :
+		if (stat_base(hunter) >= 27) {
+			return(1);
+		}
+	case 12 :
+		if (stat_base(crafting) >= 20 & stat_base(mining) >= 20 & stat_base(smithing) >= 20) {
+			return(1);
+		}
+	case 13 :
+		if (stat_base(crafting) >= 50 & stat_base(firemaking) >= 45 & stat_base(magic) >= 39 & stat_base(prayer) >= 43) {
+			return(1);
+		}
+	case 14 :
+		if (stat_base(farming) >= 49 & stat_base(herblore) >= 57 & stat_base(thieving) >= 40) {
+			return(1);
+		}
+	case 15 :
+		if (stat_base(crafting) >= 40 & stat_base(magic) >= 59 & stat_base(mining) >= 40 & stat_base(smithing) >= 40) {
+			return(1);
+		}
+	case 16 :
+		if (stat_base(fishing) >= 10) {
+			return(1);
+		}
+	case 17 :
+		if (stat_base(cooking) >= 22 & stat_base(farming) >= 17) {
+			return(1);
+		}
+	case 18 :
+		if (stat_base(crafting) >= 40 & stat_base(fletching) >= 25 & stat_base(woodcutting) >= 40) {
+			return(1);
+		}
+	case 19 :
+		if (stat_base(farming) >= 25) {
+			return(1);
+		}
+	case 20 :
+		if (stat_base(agility) >= 25 & stat_base(cooking) >= 20) {
+			return(1);
+		}
+	case 21 :
+		if (stat_base(crafting) >= 12 & stat_base(firemaking) >= 16 & stat_base(magic) >= 33 & stat_base(thieving) >= 14) {
+			return(1);
+		}
+	case 22 :
+		if (stat_base(crafting) >= 20 & stat_base(thieving) >= 25) {
+			return(1);
+		}
+	case 23 :
+		if (stat_base(agility) >= 25) {
+			return(1);
+		}
+	case 24 :
+		if (stat_base(crafting) >= 49 & stat_base(thieving) >= 17) {
+			return(1);
+		}
+	case 25 :
+		if (stat_base(agility) >= 15 & stat_base(crafting) >= 35) {
+			return(1);
+		}
+	case 26 :
+		if (stat_base(cooking) >= 53 & stat_base(fishing) >= 53 & stat_base(herblore) >= 25 & stat_base(mining) >= 50) {
+			return(1);
+		}
+	case 27 :
+		if (stat_base(agility) >= 35) {
+			return(1);
+		}
+	case 28 :
+		if (stat_base(crafting) >= 25 & stat_base(magic) >= 7 & stat_base(mining) >= 15) {
+			return(1);
+		}
+	case 29 :
+		if (stat_base(herblore) >= 3) {
+			return(1);
+		}
+	case 30 :
+		if (stat_base(agility) >= 50 & stat_base(crafting) >= 50 & stat_base(herblore) >= 45 & stat_base(magic) >= 56 & stat_base(mining) >= 52 & stat_base(prayer) >= 42 & stat_base(smithing) >= 50 & stat_base(strength) >= 50 & stat_base(thieving) >= 50 & stat_base(woodcutting) >= 50) {
+			return(1);
+		}
+	case 31 :
+		if (stat_base(crafting) >= 31 & stat_base(woodcutting) >= 36) {
+			return(1);
+		}
+	case 32 :
+		if (stat_base(agility) >= 13 & stat_base(mining) >= 17 & stat_base(thieving) >= 13) {
+			return(1);
+		}
+	case 33 :
+		if (stat_base(crafting) >= 61 & stat_base(defence) >= 40 & stat_base(firemaking) >= 49 & stat_base(herblore) >= 5 & stat_base(magic) >= 65 & stat_base(mining) >= 60 & stat_base(woodcutting) >= 55) {
+			return(1);
+		}
+	case 34 :
+		if (stat_base(crafting) >= 20 & stat_base(magic) >= 7 & stat_base(smithing) >= 40) {
+			return(1);
+		}
+	case 35 :
+		if (stat_base(thieving) >= 30) {
+			return(1);
+		}
+	case 36 :
+		if (stat_base(agility) >= 20) {
+			return(1);
+		}
+	case 37 :
+		if (stat_base(ranged) >= 60 & stat_base(thieving) >= 50) {
+			return(1);
+		}
+	case 38 :
+		if (stat_base(agility) >= 25) {
+			return(1);
+		}
+	case 39 :
+		if (stat_base(farming) >= 29 & stat_base(woodcutting) >= 10) {
+			return(1);
+		}
+	case 40 :
+		if (stat_base(crafting) >= 18) {
+			return(1);
+		}
+	case 41 :
+		if (stat_base(agility) >= 36 & stat_base(crafting) >= 25 & stat_base(herblore) >= 18 & stat_base(smithing) >= 30) {
+			return(1);
+		}
+	case 42 :
+		if (stat_base(agility) >= 56) {
+			return(1);
+		}
+	case 43 :
+		if (stat_base(agility) >= 40 & stat_base(slayer) >= 40) {
+			return(1);
+		}
+	case 44 :
+		if (stat_base(prayer) >= 31) {
+			return(1);
+		}
+	case 45 :
+		if (stat_base(firemaking) >= 30) {
+			return(1);
+		}
+	case 46 :
+		if (stat_base(crafting) >= 20 & stat_base(herblore) >= 15) {
+			return(1);
+		}
+	case 47 :
+		if (stat_base(crafting) >= 30) {
+			return(1);
+		}
+	case 48 :
+		if (stat_base(agility) >= 32 & stat_base(crafting) >= 20) {
+			return(1);
+		}
+	case 49 :
+		if (stat_base(magic) >= 33 & stat_base(mining) >= 37 & stat_base(ranged) >= 37 & stat_base(thieving) >= 37) {
+			return(1);
+		}
+	case 50 :
+		if (stat_base(cooking) >= 62 & stat_base(crafting) >= 40 & stat_base(firemaking) >= 42 & stat_base(fishing) >= 62 & stat_base(magic) >= 66 & stat_base(smithing) >= 45) {
+			return(1);
+		}
+	case 51 :
+		if (stat_base(agility) >= 15 & stat_base(cooking) >= 30 & stat_base(fishing) >= 5) {
+			return(1);
+		}
+	case 52 :
+		if (stat_base(crafting) >= 20 & stat_base(firemaking) >= 49 & stat_base(mining) >= 20) {
+			return(1);
+		}
+	case 53 :
+		if (stat_base(ranged) >= 40 & stat_base(thieving) >= 42) {
+			return(1);
+		}
+	case 54 :
+		if (stat_base(fletching) >= 10 & stat_base(smithing) >= 20) {
+			return(1);
+		}
+	case 55 :
+		if (stat_base(thieving) >= 21) {
+			return(1);
+		}
+	case 56 :
+		if (stat_base(agility) >= 28) {
+			return(1);
+		}
+	case 57 :
+		if (stat_base(agility) >= 15) {
+			return(1);
+		}
+	case 58 :
+		if (stat_base(ranged) >= 25) {
+			return(1);
+		}
+	case 59 :
+		if (stat_base(agility) >= 25 & stat_base(herblore) >= 14 & stat_base(magic) >= 14 & stat_base(mining) >= 40 & stat_base(thieving) >= 15) {
+			return(1);
+		}
+	case 60 :
+		if (stat_base(attack) >= 20) {
+			return(1);
+		}
+	case 61 :
+		if (stat_base(construction) >= 5 & stat_base(magic) >= 46) {
+			return(1);
+		}
+	case 62 :
+		if (stat_base(agility) >= 23 & stat_base(thieving) >= 23) {
+			return(1);
+		}
+	case 63 :
+		if (stat_base(crafting) >= 19 & stat_base(ranged) >= 30 & stat_base(slayer) >= 18 & stat_base(woodcutting) >= 35) {
+			return(1);
+		}
+	case 64 :
+		if (stat_base(magic) >= 20 & stat_base(smithing) >= 30) {
+			return(1);
+		}
+	case 65 :
+		if (stat_base(crafting) >= 36 & stat_base(farming) >= 30 & stat_base(firemaking) >= 20) {
+			return(1);
+		}
+	case 66 :
+		if (stat_base(construction) >= 30 & stat_base(crafting) >= 16 & stat_base(prayer) >= 50) {
+			return(1);
+		}
+	case 67 :
+		if (stat_base(crafting) >= 30 & stat_base(runecraft) >= 30 & stat_base(slayer) >= 30 & stat_base(thieving) >= 30) {
+			return(1);
+		}
+	case 68 :
+		if (stat_base(agility) >= 30 & stat_base(construction) >= 34 & stat_base(crafting) >= 30 & stat_base(hunter) >= 10) {
+			return(1);
+		}
+	case 69 :
+		if (stat_base(agility) >= 40 & stat_base(construction) >= 20 & stat_base(crafting) >= 46 & stat_base(woodcutting) >= 56) {
+			return(1);
+		}
+	case 70 :
+		if (stat_base(construction) >= 10) {
+			return(1);
+		}
+	case 71 :
+		if (stat_base(runecraft) >= 35) {
+			return(1);
+		}
+	case 72 :
+		if (stat_base(firemaking) >= 40 & stat_base(woodcutting) >= 50) {
+			return(1);
+		}
+	case 73 :
+		if (stat_base(agility) >= 59 & stat_base(farming) >= 45 & stat_base(herblore) >= 52 & stat_base(thieving) >= 58 & stat_base(woodcutting) >= 71) {
+			return(1);
+		}
+	case 74 :
+		if (stat_base(magic) >= 45 & stat_base(defence) >= 65) {
+			return(1);
+		}
+	case 75 :
+		if (stat_base(agility) >= 45 & stat_base(ranged) >= 47 & stat_base(slayer) >= 56 & stat_base(thieving) >= 56 & stat_base(strength) >= 60) {
+			return(1);
+		}
+	case 76 :
+		if (stat_base(agility) >= 55 & stat_base(farming) >= 53 & stat_base(slayer) >= 59 & stat_base(woodcutting) >= 72) {
+			return(1);
+		}
+	case 77 :
+		if (stat_base(prayer) >= 30 & stat_base(agility) >= 36 & stat_base(thieving) >= 36 & stat_base(fishing) >= 36 & stat_base(herblore) >= 37) {
+			return(1);
+		}
+	case 78 :
+		if (stat_base(cooking) >= 10) {
+			return(1);
+		}
+	case 79 :
+		if (stat_base(cooking) >= 31) {
+			return(1);
+		}
+	case 80 :
+		if (stat_base(cooking) >= 40) {
+			return(1);
+		}
+	case 81 :
+		if (stat_base(cooking) >= 25) {
+			return(1);
+		}
+	case 82 :
+		if (stat_base(cooking) >= 41 & stat_base(firemaking) >= 20) {
+			return(1);
+		}
+	case 83 :
+		if (stat_base(cooking) >= 70 & stat_base(agility) >= 48) {
+			return(1);
+		}
+	case 84 :
+		if (stat_base(hunter) >= 48 & stat_base(firemaking) >= 51 & stat_base(woodcutting) >= 58) {
+			return(1);
+		}
+	case 85 :
+		if (stat_base(mining) >= 46) {
+			return(1);
+		}
+	case 86 :
+		if (stat_base(construction) >= 44 & stat_base(fletching) >= 42) {
+			return(1);
+		}
+	case 87 :
+		if (stat_base(agility) >= 50 & stat_base(firemaking) >= 21 & stat_base(thieving) >= 60 & stat_base(strength) >= 60) {
+			return(1);
+		}
+	case 88 :
+		if (stat_base(crafting) >= 42 & stat_base(farming) >= 40 & stat_base(fishing) >= 50 & stat_base(prayer) >= 47 & stat_base(slayer) >= 42) {
+			return(1);
+		}
+	case 89 :
+		if (stat_base(construction) >= 20 & stat_base(agility) >= 29 & stat_base(crafting) >= 47 & stat_base(magic) >= 49 & stat_base(mining) >= 35 & stat_base(slayer) >= 31 & stat_base(firemaking) >= 40) {
+			return(1);
+		}
+	case 90 :
+		if (stat_base(attack) >= 40 & stat_base(mining) >= 41 & stat_base(crafting) >= 43 & stat_base(strength) >= 45 & stat_base(construction) >= 50) {
+			return(1);
+		}
+	case 91 :
+		if (stat_base(construction) >= 10 & stat_base(farming) >= 10 & stat_base(hunter) >= 10 & stat_base(thieving) >= 11) {
+			return(1);
+		}
+	case 92 :
+		if (stat_base(slayer) >= 35 & stat_base(crafting) >= 25 & ~script1432 >= 85) {
+			return(1);
+		}
+	case 93 :
+		if (stat_base(agility) >= 60 & stat_base(thieving) >= 63 & stat_base(crafting) >= 66 & stat_base(smithing) >= 69) {
+			return(1);
+		}
+	case 94 :
+		if (stat_base(construction) >= 40 & stat_base(farming) >= 26 & stat_base(prayer) >= 35 & stat_base(summoning) >= 19) {
+			return(1);
+		}
+	case 95 :
+		if (stat_base(firemaking) >= 43) {
+			return(1);
+		}
+	case 96 :
+		if (stat_base(firemaking) >= 47 & stat_base(hunter) >= 35 & stat_base(mining) >= 45 & stat_base(prayer) >= 55 & stat_base(summoning) >= 23 & stat_base(woodcutting) >= 37) {
+			return(1);
+		}
+	case 97 :
+		if (stat_base(hunter) >= 51 & stat_base(agility) >= 51 & stat_base(smithing) >= 54 & stat_base(mining) >= 59) {
+			return(1);
+		}
+	case 98 :
+		if (stat_base(defence) >= 65 & stat_base(magic) >= 75 & stat_base(herblore) >= 65 & stat_base(thieving) >= 60 & stat_base(hunter) >= 55 & stat_base(farming) >= 65 & stat_base(summoning) >= 23 & ~script395 = 1) {
+			return(1);
+		}
+	case 99 :
+		if (stat_base(firemaking) >= 55 & stat_base(fletching) >= 53 & stat_base(crafting) >= 52) {
+			return(1);
+		}
+	case default :
+		return(0);
+}
+return(0);

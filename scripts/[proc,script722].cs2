@@ -1,0 +1,125 @@
+// 722
+[proc,script722]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $x2 = 0;
+def_int $y3 = 0;
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setsize(viewport_geteffectivesize, ^setsize_abs, ^setsize_abs, interface_746:4);
+	$int0 = if_getwidth(interface_746:0);
+	$int1 = if_getheight(interface_746:0);
+	$x2 = calc(($int0 - 512) / 2);
+	$y3 = calc(($int1 - 334) / 2);
+	if ($x2 < 200) {
+		$x2 = 200;
+	}
+	if ($y3 < 165) {
+		$y3 = 165;
+	}
+	if_setposition($x2, $y3, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:6);
+	if ($int0 <= 981) {
+		if_setposition(0, 72, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:73);
+		if_setsize(231, 72, ^setsize_abs, ^setsize_abs, interface_746:24);
+		if_setsize(231, 72, ^setsize_abs, ^setsize_abs, interface_746:40);
+		if_setsize(231, 72, ^setsize_abs, ^setsize_abs, interface_746:25);
+		if_setsize(231, 72, ^setsize_abs, ^setsize_abs, interface_746:55);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:24);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:40);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:25);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:55);
+		if_setposition(0, -3, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:69);
+		if_setposition(33, -3, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:68);
+		if_setposition(65, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:67);
+		if_setposition(99, -1, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:66);
+		if_setposition(132, -1, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:65);
+		if_setposition(165, -1, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:64);
+		if_setposition(199, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:62);
+		if_setposition(0, 37, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:61);
+		if_setposition(32, 34, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:60);
+		if_setposition(67, 38, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:59);
+		if_setposition(99, 35, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:58);
+		if_setposition(131, 37, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:57);
+		if_setposition(163, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:56);
+		if_setposition(199, 35, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:63);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:39);
+		if_setposition(33, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:38);
+		if_setposition(66, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:37);
+		if_setposition(99, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:36);
+		if_setposition(132, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:35);
+		if_setposition(165, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:34);
+		if_setposition(198, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:32);
+		if_setposition(0, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:31);
+		if_setposition(33, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:30);
+		if_setposition(66, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:29);
+		if_setposition(99, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:28);
+		if_setposition(132, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:27);
+		if_setposition(165, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:26);
+		if_setposition(198, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:33);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:54);
+		if_setposition(33, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:53);
+		if_setposition(66, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:52);
+		if_setposition(99, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:51);
+		if_setposition(132, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:50);
+		if_setposition(165, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:49);
+		if_setposition(198, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:47);
+		if_setposition(0, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:46);
+		if_setposition(33, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:45);
+		if_setposition(66, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:44);
+		if_setposition(99, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:43);
+		if_setposition(132, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:42);
+		if_setposition(165, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:41);
+		if_setposition(198, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:48);
+	} else {
+		if_setposition(0, 36, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:73);
+		if_setsize(462, 36, ^setsize_abs, ^setsize_abs, interface_746:24);
+		if_setsize(462, 36, ^setsize_abs, ^setsize_abs, interface_746:40);
+		if_setsize(462, 36, ^setsize_abs, ^setsize_abs, interface_746:25);
+		if_setsize(462, 36, ^setsize_abs, ^setsize_abs, interface_746:55);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:24);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:40);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:25);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:55);
+		if_setposition(0, -3, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:69);
+		if_setposition(33, -3, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:68);
+		if_setposition(65, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:67);
+		if_setposition(99, -1, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:66);
+		if_setposition(132, -1, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:65);
+		if_setposition(165, -1, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:64);
+		if_setposition(199, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:62);
+		if_setposition(232, 1, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:61);
+		if_setposition(265, -2, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:60);
+		if_setposition(297, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:59);
+		if_setposition(330, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:58);
+		if_setposition(363, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:57);
+		if_setposition(396, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:56);
+		if_setposition(430, -1, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:63);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:39);
+		if_setposition(33, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:38);
+		if_setposition(66, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:37);
+		if_setposition(99, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:36);
+		if_setposition(132, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:35);
+		if_setposition(165, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:34);
+		if_setposition(198, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:32);
+		if_setposition(231, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:31);
+		if_setposition(264, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:30);
+		if_setposition(297, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:29);
+		if_setposition(330, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:28);
+		if_setposition(363, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:27);
+		if_setposition(396, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:26);
+		if_setposition(429, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:33);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:54);
+		if_setposition(33, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:53);
+		if_setposition(66, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:52);
+		if_setposition(99, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:51);
+		if_setposition(132, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:50);
+		if_setposition(165, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:49);
+		if_setposition(198, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:47);
+		if_setposition(231, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:46);
+		if_setposition(264, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:45);
+		if_setposition(297, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:44);
+		if_setposition(330, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:43);
+		if_setposition(363, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:42);
+		if_setposition(396, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:41);
+		if_setposition(429, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_746:48);
+	}
+}

@@ -1,0 +1,46 @@
+// 1186
+[proc,script1186]
+def_int $int0 = 0;
+if (getwindowmode >= ^windowmode_resizable) {
+	if (if_hassub(interface_752:12) = true) {
+		if_sethide(false, interface_752:1);
+		if_setalpha(true, interface_752:1);
+		if (%varbit542 = 0) {
+			if_setgraphic("chat_window", interface_752:1);
+			if_sethide(false, interface_752:2);
+		} else {
+			if_setgraphic("graphic_1205", interface_752:1);
+			if_sethide(true, interface_752:2);
+		}
+	} else if (if_hassub(interface_752:11) = true) {
+		if_sethide(false, interface_752:1);
+		if_setalpha(true, interface_752:1);
+		if (%varbit542 = 0) {
+			if_setgraphic("chat_window", interface_752:1);
+			if_sethide(false, interface_752:2);
+		} else {
+			if_setgraphic("graphic_1205", interface_752:1);
+			if_sethide(true, interface_752:2);
+		}
+	} else if (if_hassub(interface_752:10) = true) {
+		if_sethide(false, interface_752:1);
+		if_setalpha(true, interface_752:1);
+		if (%varbit542 = 0) {
+			if_setgraphic("chat_window", interface_752:1);
+			if_sethide(false, interface_752:2);
+		} else {
+			if_setgraphic("graphic_1205", interface_752:1);
+			if_sethide(true, interface_752:2);
+		}
+	} else if (if_hassub(interface_752:9) = true) {
+		if_sethide(false, interface_752:1);
+		if_setalpha(true, interface_752:1);
+		if (%varbit542 = 0) {
+			if_setgraphic("chat_window", interface_752:1);
+			if_sethide(false, interface_752:2);
+		} else {
+			if_setgraphic("graphic_1205", interface_752:1);
+			if_sethide(true, interface_752:2);
+		}
+	}
+}

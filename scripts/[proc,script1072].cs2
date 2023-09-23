@@ -1,0 +1,27 @@
+// 1072
+[proc,script1072](component $component0, chatphrase $chatphrase1)
+def_int $count2 = chatphrase_getdynamiccommandcount($chatphrase1);
+def_int $int3 = 0;
+if ($count2 > 0) {
+	while (%varcint134 < $count2 & %varcint134 < 10) {
+		$int3 = chatphrase_getdynamiccommand($chatphrase1, %varcint134);
+		if ($int3 = 0) {
+			~script1044($chatphrase1);
+			return;
+		}
+		if ($int3 = 1) {
+			~script1037($chatphrase1, false);
+			return;
+		}
+		if ($int3 = 10) {
+			~script1037($chatphrase1, true);
+			return;
+		}
+		if ($int3 = 2) {
+			~script1047($chatphrase1);
+			return;
+		}
+		%varcint134 = calc(%varcint134 + 1);
+	}
+}
+~script1077($chatphrase1);

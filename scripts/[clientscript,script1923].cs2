@@ -1,0 +1,23 @@
+// 1923
+[clientscript,script1923]
+def_int $int0 = %varcint550;
+def_int $int1 = %varcint554;
+def_int $int2 = %varcint555;
+def_int $int3 = 0;
+if ($int0 = 0) {
+	$int1 = max(0, min(calc(5 - $int1), 5));
+	$int2 = max(0, min(calc(5 - $int2), 5));
+	if_settext(tostring($int1), interface_804:34);
+	if_settext(tostring($int2), interface_804:33);
+	if_sethide(false, interface_804:2);
+} else {
+	if_sethide(true, interface_804:2);
+	if (calc($int0 % 100) ! 0) {
+		$int3 = 1;
+	}
+	$int0 = calc($int0 * 60 / 100 / 60);
+	if ($int3 = 1) {
+		$int0 = calc($int0 + 1);
+	}
+	if_settext("Game start : <tostring($int0)> mins", interface_804:1);
+}

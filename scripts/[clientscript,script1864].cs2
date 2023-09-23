@@ -1,0 +1,120 @@
+// 1864
+[clientscript,script1864](int $opindex0, obj $obj1, int $int2, int $int3)
+if ($opindex0 ! 1) {
+	return;
+}
+switch_int ($int2) {
+	case 12 :
+		switch_int ($int3) {
+			case 0 :
+				mes("Rick: <tostring(enum(int, int, enum_238, 1))> coins.");
+			case 1 :
+				mes("Maid: <tostring(enum(int, int, enum_238, 3))> coins.");
+			case 2 :
+				mes("Cook: <tostring(enum(int, int, enum_238, 5))> coins.");
+			case 3 :
+				mes("Butler: <tostring(enum(int, int, enum_238, 6))> coins.");
+			case 4 :
+				mes("Demon Butler: <tostring(enum(int, int, enum_238, 8))> coins.");
+		}
+		return;
+	case 0 :
+		switch_obj ($obj1) {
+			case pond_8170 :
+				$obj1 = garden_8415;
+			case mahogany_armchair_8315 :
+				$obj1 = parlour_8395;
+			case fancy_range_8222 :
+				$obj1 = kitchen_8396;
+			case opulent_table_8121 :
+				$obj1 = dining_room_8397;
+			case bench_with_lathe_8379 :
+				$obj1 = workshop_8406;
+			case gilded_4_poster_8037 :
+				$obj1 = bedroom_8398;
+			case marble_staircase_8255 :
+				$obj1 = hall_8401;
+			case dartboard_8163 :
+				$obj1 = games_room_8399;
+			case balance_beam_8027 :
+				$obj1 = combat_room_8400;
+			case marble_spiral_8259 :
+				$obj1 = hall_8403;
+			case mahogany_demon_8340 :
+				$obj1 = study_8407;
+			case magical_cape_rack_9822 :
+				$obj1 = costume_room_9842;
+			case gilded_altar_8068 :
+				$obj1 = chapel_8405;
+			case scrying_pool_8333 :
+				$obj1 = portal_chamber_8408;
+			case posh_fountain_8195 :
+				$obj1 = formal_garden_8416;
+			case demonic_throne_8363 :
+				$obj1 = throne_room_8409;
+			case spikes_8302 :
+				$obj1 = oubliette_8410;
+			case steel_plated_door_8123 :
+				$obj1 = dungeon_corridor_8411;
+			case mahogany_chest_8151 :
+				$obj1 = treasure_room_8414;
+		}
+		mes("<oc_name($obj1)>: <tostring(oc_cost($obj1))> coins.");
+		return;
+	case 13, 14 :
+		return;
+	case default :
+		def_obj $objarray0(6);
+		def_int $intarray1(6);
+		def_int $int4 = 0;
+		if (oc_param($obj1, param_211) ! null) {
+			$objarray0(0) = oc_param($obj1, param_211);
+			$intarray1(0) = oc_param($obj1, param_212);
+			$int4 = calc($int4 + 1);
+		}
+		if (oc_param($obj1, param_213) ! null) {
+			$objarray0(1) = oc_param($obj1, param_213);
+			$intarray1(1) = oc_param($obj1, param_214);
+			$int4 = calc($int4 + 1);
+		}
+		if (oc_param($obj1, param_215) ! null) {
+			$objarray0(2) = oc_param($obj1, param_215);
+			$intarray1(2) = oc_param($obj1, param_216);
+			$int4 = calc($int4 + 1);
+		}
+		if (oc_param($obj1, param_217) ! null) {
+			$objarray0(3) = oc_param($obj1, param_217);
+			$intarray1(3) = oc_param($obj1, param_218);
+			$int4 = calc($int4 + 1);
+		}
+		if (oc_param($obj1, param_219) ! null) {
+			$objarray0(4) = oc_param($obj1, param_219);
+			$intarray1(4) = oc_param($obj1, param_220);
+			$int4 = calc($int4 + 1);
+		}
+		if (oc_param($obj1, param_221) ! null) {
+			$objarray0(5) = oc_param($obj1, param_221);
+			$intarray1(5) = oc_param($obj1, param_222);
+			$int4 = calc($int4 + 1);
+		}
+		switch_int ($int4) {
+			case 1 :
+				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>.");
+			case 2 :
+				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))> and <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))>.");
+			case 3 :
+				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>, <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))> and <tostring($intarray1(2))> x <lowercase(oc_name($objarray0(2)))>.");
+			case 4 :
+				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>, <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))>,");
+				mes("<tostring($intarray1(2))> x <lowercase(oc_name($objarray0(2)))> and <tostring($intarray1(3))> x <lowercase(oc_name($objarray0(3)))>.");
+			case 5 :
+				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>, <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))>,");
+				mes("<tostring($intarray1(2))> x <lowercase(oc_name($objarray0(2)))>, <tostring($intarray1(3))> x <lowercase(oc_name($objarray0(3)))> and <tostring($intarray1(4))> x <lowercase(oc_name($objarray0(4)))>.");
+			case 6 :
+				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>, <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))>, <tostring($intarray1(2))> x <lowercase(oc_name($objarray0(2)))>,");
+				mes("<tostring($intarray1(3))> x <lowercase(oc_name($objarray0(3)))>, <tostring($intarray1(4))> x <lowercase(oc_name($objarray0(4)))> and <tostring($intarray1(5))> x <lowercase(oc_name($objarray0(5)))>.");
+			case default :
+				mes(oc_name($obj1));
+		}
+		return;
+}

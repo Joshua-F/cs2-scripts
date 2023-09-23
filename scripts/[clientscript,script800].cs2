@@ -1,0 +1,48 @@
+// 800
+[clientscript,script800](int $comsubid0, component $component1, component $component2, int $int3, string $text0)
+cc_deleteall($component1);
+def_int $int4 = calc(2 + 13 * paraheight("Level <tostring($int3)>: <$text0>", 177, p12_full));
+def_int $int5 = calc(2 + 13 * paraheight("You cannot make this Summoning pouch.", 177, p11_full));
+def_int $int6 = calc(2 + $int4 + $int5 + 32 + 14 + 2);
+def_int $int7 = 5;
+def_int $int8 = 5;
+def_int $int9 = 1;
+def_int $int10 = 1;
+if (cc_find($component2, $comsubid0) = ^true) {
+	$int6 = calc($int6 - 32 - 14);
+	$int7 = calc(cc_gety - if_getscrolly($component2) + 110);
+	if ($int7 > 200) {
+		$int7 = calc(cc_gety - if_getscrolly($component2) - $int6 + 45);
+	}
+	$int8 = calc(cc_getx - 60);
+	if ($int8 < 0) {
+		$int8 = 5;
+	}
+	if ($int8 > 270) {
+		$int8 = 285;
+	}
+	cc_create($component1, ^iftype_rectangle, 0);
+	cc_setposition($int8, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(180, $int6, ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_settrans(42);
+	cc_create($component1, ^iftype_rectangle, 1);
+	cc_setposition(calc($int8 + 1), calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(179, calc($int6 - 1), ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x2e2b23);
+	cc_create($component1, ^iftype_rectangle, 2);
+	cc_setposition($int8, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(179, calc($int6 - 1), ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x726451);
+	cc_create($component1, ^iftype_text, 3);
+	cc_setposition(calc($int8 + 2), calc($int7 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(177, $int4, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(false);
+	cc_settext($text0);
+}

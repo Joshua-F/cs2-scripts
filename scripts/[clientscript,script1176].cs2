@@ -1,0 +1,15 @@
+// 1176
+[clientscript,script1176]
+if (%varcint543 = ^windowmode_fullscreen & getwindowmode ! ^windowmode_fullscreen) {
+	if (%varcint174 = 6) {
+		~script1893(1);
+		return;
+	}
+	~script1888;
+	if (if_gethide(interface_744:226) = false) {
+		~script1174(interface_744:226);
+	} else if (if_gethide(interface_744:138) = false) {
+		~script1174(interface_744:138);
+	}
+	%varcint543 = getwindowmode;
+}

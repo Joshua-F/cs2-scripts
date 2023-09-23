@@ -1,0 +1,25 @@
+// 794
+[proc,script794](obj $obj0, obj $obj1, component $component2, int $comsubid3, string $op0, string $op1, string $op2, string $op3, string $op4)
+if (cc_find($component2, $comsubid3) = ^true) {
+	if ($obj0 ! null) {
+		cc_setobject($obj0, -1);
+		cc_setopbase(oc_name($obj1));
+		cc_setop(1, $op0);
+		cc_setop(2, $op1);
+		cc_setop(3, $op2);
+		cc_setop(4, $op3);
+		cc_setop(5, $op4);
+		cc_setop(6, "Examine<col=ff9040>");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+	} else {
+		cc_setobject(null, 0);
+		cc_setopbase("");
+		cc_setop(1, "");
+		cc_setop(2, "");
+		cc_setop(3, "");
+		cc_setop(4, "");
+		cc_setop(5, "");
+		cc_setop(6, "");
+	}
+}

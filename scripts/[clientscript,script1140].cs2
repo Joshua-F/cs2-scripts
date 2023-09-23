@@ -1,0 +1,6 @@
+// 1140
+[clientscript,script1140](int $int0, component $component1)
+def_int $windowmode2 = ~script1345($int0, $component1);
+if ($windowmode2 = 0 | $windowmode2 = ^windowmode_fixed | $windowmode2 = ^windowmode_resizable) {
+	_6011($windowmode2);
+}

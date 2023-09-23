@@ -1,0 +1,25 @@
+// 1782
+[proc,script1782]
+if (%var1149 ! -1) {
+	~script1801;
+	if (%varcint258 = false) {
+		~script1363(interface_791:143);
+		if_setonmouserepeat("script95(event_com)", interface_791:143);
+		if_setonmouseleave("script97(event_com)", interface_791:143);
+		if (%varcint259 = 0) {
+			if_settext("Accept", interface_791:146);
+			if_settextfont(b12_full, interface_791:146);
+		} else {
+			if_settext("Accept -<br>Opponent has accepted.", interface_791:146);
+			if_settextfont(p11_full, interface_791:146);
+		}
+	} else {
+		~script1360(interface_791:143);
+		if_setonmouserepeat(null, interface_791:143);
+		if_setonmouseleave(null, interface_791:143);
+		if_settext("Waiting for opponent...", interface_791:146);
+		if_settextfont(p12_full, interface_791:146);
+	}
+} else {
+	~script1802;
+}

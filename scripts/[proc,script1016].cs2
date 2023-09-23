@@ -1,0 +1,99 @@
+// 1016
+[proc,script1016](int $int0, int $int1)(int, namedobj, string, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, rune_essence_1436, "Rune essence<br>(after Rune Mysteries)", "You now have the Mining level required to mine <col=000080>rune essence</col> (after Rune Mysteries).");
+			case 1 :
+				return(1, clay_434, "Clay", "You can now mine <col=000080>clay</col>.");
+			case 2 :
+				return(1, copper_ore_436, "Copper ore", "You can now mine <col=000080>copper ore</col>.");
+			case 3 :
+				return(1, tin_ore_438, "Tin ore", "You can now mine <col=000080>tin ore</col>.");
+			case 4 :
+				return(10, limestone_3211, "Members: Limestone", "Members can now mine <col=000080>limestone</col>.");
+			case 5 :
+				return(10, blurite_ore_668, "Blurite ore", "You can now mine <col=000080>blurite ore</col>.");
+			case 6 :
+				return(15, iron_ore_440, "Iron ore", "You can now mine <col=000080>iron ore</col>.");
+			case 7 :
+				return(20, elemental_ore_2892, "Members: Elemental ore<br> (after starting Elemental Workshop)", "Members now have the Mining level required to mine <col=000080>elemental ore</col> (after starting Elemental Workshop).");
+			case 8 :
+				return(20, silver_ore_442, "Silver ore", "You can now mine <col=000080>silver ore</col>.");
+			case 9 :
+				return(30, coal_453, "Coal", "You can now mine <col=000080>coal</col>.");
+			case 10 :
+				return(30, pure_essence_7936, "Members: Pure essence<br> (after Rune Mysteries)", "Members now have the Mining level required to mine <col=000080>pure essence</col> (after Rune Mysteries).");
+			case 11 :
+				return(35, sandstone_10kg_6977, "Members: Sandstone", "Members can now mine <col=000080>sandstone</col>.");
+			case 12 :
+				return(40, gold_ore_444, "Gold", "You can now mine <col=000080>gold</col>.");
+			case 13 :
+				return(45, granite_5kg_6983, "Members: Granite", "Members can now mine <col=000080>granite.");
+			case 14 :
+				return(46, rubium_12630, "Members: Rubium ore<br>(after Kennith's Concerns)", "Members can now mine <col=000080>rubium ore</col> (after Kennith's Concerns).");
+			case 15 :
+				return(55, mithril_ore_447, "Mithril ore", "You can now mine <col=000080>mithril ore</col>.");
+			case 16 :
+				return(70, adamantite_ore_449, "Adamantite ore", "You can now mine <col=000080>adamantite ore</col>.");
+			case 17 :
+				return(85, runite_ore_451, "Runite ore", "You can now mine <col=000080>runite ore</col>.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, bronze_pickaxe_1265, "Bronze pickaxe", "You can now use <col=000080>bronze pickaxes</col>.");
+			case 1 :
+				return(1, iron_pickaxe_1267, "Iron pickaxe", "You can now use <col=000080>iron pickaxes</col>.");
+			case 2 :
+				return(6, steel_pickaxe_1269, "Steel pickaxe", "You can now use <col=000080>steel pickaxes</col>.");
+			case 3 :
+				return(21, mithril_pickaxe_1273, "Mithril pickaxe", "You can now use <col=000080>mithril pickaxes</col>.");
+			case 4 :
+				return(31, adamant_pickaxe_1271, "Adamant pickaxe", "You can now use <col=000080>adamant pickaxes</col>.");
+			case 5 :
+				return(41, rune_pickaxe_1275, "Rune pickaxe", "You can now use <col=000080>rune pickaxes</col>.");
+			case 6 :
+				return(41, inferno_adze_13661, "Members: Inferno Adze<br> (after All Fired Up, with 92 Firemaking)", "Members can now use the <col=000080>Inferno Adze</col> to mine with (after All Fired Up and with level 92 Firemaking).");
+		}
+	case 2 :
+		if ($int1 = 0) {
+			return(40, ruby_1603, "Gem rocks<br> (after Shilo Village)", "Members now have the Mining level required to mine <col=000080>gem rocks</col> (after Shilo Village).");
+		} else if ($int1 = 1) {
+			return(41, stone_slab_13245, "Stone slab<br> (with rune pickaxe, after starting TokTz-Ket-Dill)", "Members now have the Mining level required to mine <col=000080>stone slabs</col> with rune pickaxes (after starting TokTz-Ket-Dill).");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(10, stardust_13727, "Size-1 stars", "Members can now mine size-1 <col=000080>crashed stars</col>.");
+			case 1 :
+				return(20, stardust_13727, "Size-2 stars", "Members can now mine size-2 <col=000080>crashed stars</col>.");
+			case 2 :
+				return(30, stardust_13727, "Size-3 stars", "Members can now mine size-3 <col=000080>crashed stars</col>.");
+			case 3 :
+				return(40, stardust_13727, "Size-4 stars", "Members can now mine size-4 <col=000080>crashed stars</col>.");
+			case 4 :
+				return(50, stardust_13727, "Size-5 stars", "Members can now mine size-5 <col=000080>crashed stars</col>.");
+			case 5 :
+				return(60, stardust_13727, "Size-6 stars", "Members can now mine size-6 <col=000080>crashed stars</col>.");
+			case 6 :
+				return(70, stardust_13727, "Size-7 stars", "Members can now mine size-7 <col=000080>crashed stars</col>.");
+			case 7 :
+				return(80, stardust_13727, "Size-8 stars", "Members can now mine size-8 <col=000080>crashed stars</col>.");
+			case 8 :
+				return(90, stardust_13727, "Size-9 stars", "Members can now mine size-9 <col=000080>crashed stars</col>.");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(25, obj_5079, "Mining Tutor - new info", "There is new information available from the <col=000080>Mining Tutor</col> south of <col=000080>Lumbridge</col>.");
+			case 1 :
+				return(39, obj_5079, "Mining Tutor - new info", "There is new information available from the <col=000080>Mining Tutor</col> south of <col=000080>Lumbridge</col>.");
+			case 2 :
+				return(60, mithril_ore_447, "Mining Guild", "You can now enter the world-famous <col=000080>Mining Guild</col>.");
+			case 3 :
+				return(99, mining_cape_9792, "Skill mastery", "<col=000080>Congratulations! You are now a master miner. Why not visit the <col=800000>dwarf<col=000080> who guards the entrance to the <col=800000>Mining Guild<col=000080>? He has something special that is only available to true masters of the <col=800000>Mining<col=000080> skill!");
+		}
+}
+return(0, null, "", "");

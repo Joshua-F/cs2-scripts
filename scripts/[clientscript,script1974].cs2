@@ -1,0 +1,4 @@
+// 1974
+[clientscript,script1974](component $component0, obj $obj1, int $int2)
+if_setmodelangle(0, 0, if_getmodelangle_x($component0), if_getmodelangle_y($component0), if_getmodelangle_y($component0), $int2, $component0);
+if_setobject($obj1, 1, $component0);

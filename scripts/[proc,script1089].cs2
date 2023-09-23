@@ -1,0 +1,8 @@
+// 1089
+[proc,script1089]
+if (chat_getfilter_private = ^chatfilter_off) {
+	chat_setfilter(chat_getfilter_public, ^chatfilter_friends, chat_getfilter_trade);
+	~script178;
+	~script84;
+	~script89;
+}

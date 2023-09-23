@@ -1,0 +1,17 @@
+// 622
+[proc,script622]
+if (%var1118 = 1) {
+	if_sethide(false, interface_105:16);
+	if_sethide(false, interface_105:126);
+	if_sethide(false, interface_105:156);
+	if_sethide(false, interface_105:192);
+	if_sethide(false, interface_105:197);
+	if_sethide(false, interface_105:200);
+} else {
+	if_sethide(true, interface_105:16);
+	if_sethide(true, interface_105:126);
+	if_sethide(true, interface_105:156);
+	if_sethide(true, interface_105:192);
+	if_sethide(true, interface_105:197);
+	if_sethide(true, interface_105:200);
+}

@@ -1,0 +1,38 @@
+// 1239
+[proc,script1239](int $int0)(coord, int)
+def_int $int1 = calc(%varcint176 / 10);
+if ($int1 > 13) {
+	$int1 = 1;
+	%varcint176 = calc($int1 * 10);
+}
+def_coord $coord2 = null;
+def_int $int3 = 0;
+switch_int ($int1) {
+	case 0, 1 :
+		$coord2, $int3 = ~script1244($int0);
+	case 2 :
+		$coord2, $int3 = ~script1240($int0);
+	case 3 :
+		$coord2, $int3 = ~script1241($int0);
+	case 4 :
+		$coord2, $int3 = ~script1242($int0);
+	case 5 :
+		$coord2, $int3 = ~script1243($int0);
+	case 6 :
+		$coord2, $int3 = ~script1950($int0);
+	case 7 :
+		$coord2, $int3 = ~script1245($int0);
+	case 8 :
+		$coord2, $int3 = ~script1246($int0);
+	case 9 :
+		$coord2, $int3 = ~script1247($int0);
+	case 10 :
+		$coord2, $int3 = ~script1430($int0);
+	case 11 :
+		$coord2, $int3 = ~script1859($int0);
+	case 12 :
+		$coord2, $int3 = ~script1866($int0);
+	case 13 :
+		$coord2, $int3 = ~script1860($int0);
+}
+return($coord2, $int3);

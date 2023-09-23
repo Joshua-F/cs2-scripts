@@ -1,0 +1,12 @@
+// 1393
+[clientscript,script1393]
+def_int $x0 = 14;
+def_int $int1 = 11;
+$int1 = ~script1537($x0, $int1);
+$int1 = calc($int1 + 10);
+$int1 = ~script1538($x0, $int1);
+$int1 = calc($int1 + 22);
+$x0 = 14;
+if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_259:31);
+if_setscrollsize(167, calc(95 + $int1), interface_259:7);
+~script31(interface_259:10, interface_259:7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

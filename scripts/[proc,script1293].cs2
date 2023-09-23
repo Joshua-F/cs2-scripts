@@ -1,0 +1,9 @@
+// 1293
+[proc,script1293](namedobj $namedobj0)(int)
+if ($namedobj0 = secateurs_5329 | $namedobj0 = magic_secateurs_7409) {
+	return(calc(inv_total(inv, secateurs_5329) + inv_total(inv, magic_secateurs_7409)));
+}
+if ($namedobj0 = watering_can_6797 | $namedobj0 = watering_can_8_5340 | $namedobj0 = watering_can_7_5339 | $namedobj0 = watering_can_6_5338 | $namedobj0 = watering_can_5_5337 | $namedobj0 = watering_can_4_5336 | $namedobj0 = watering_can_3_5335 | $namedobj0 = watering_can_2_5334 | $namedobj0 = watering_can_1_5333 | $namedobj0 = watering_can_5331) {
+	return(calc(inv_total(inv, watering_can_8_5340) + inv_total(inv, watering_can_7_5339) + inv_total(inv, watering_can_6_5338) + inv_total(inv, watering_can_5_5337) + inv_total(inv, watering_can_4_5336) + inv_total(inv, watering_can_3_5335) + inv_total(inv, watering_can_2_5334) + inv_total(inv, watering_can_1_5333) + inv_total(inv, watering_can_5331)));
+}
+return(inv_total(inv, $namedobj0));

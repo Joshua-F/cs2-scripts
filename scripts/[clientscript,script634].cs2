@@ -1,0 +1,7 @@
+// 634
+[clientscript,script634](component $component0, int $trans1, int $trans2, int $int3)
+def_int $trans4 = calc(if_gettrans($component0) - $int3);
+if_settrans($trans4, $component0);
+if ($trans4 <= $trans1) {
+	if_setontimer("script633($component0, $trans1, $trans2, $int3)", $component0);
+}

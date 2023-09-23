@@ -1,0 +1,34 @@
+// 981
+[proc,script981](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Bronze", 0);
+	case 1 :
+		return("Iron", 0);
+	case 2 :
+		return("Steel", 0);
+	case 3 :
+		return("Black", 0);
+	case 4 :
+		return("White", 1);
+	case 5 :
+		return("Mithril", 0);
+	case 6 :
+		return("Adamant", 0);
+	case 7 :
+		return("Rune", 0);
+	case 8 :
+		return("Dragon", 0);
+	case 9 :
+		return("Barrows", 1);
+	case 10 :
+		return("Special", 0);
+	case 11 :
+		return("Salamanders", 1);
+	case 12 :
+		return("Minigames", 1);
+	case 13 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

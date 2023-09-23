@@ -1,0 +1,33 @@
+// 1050
+[proc,script1050](int $int0, string $string0)
+if ($int0 = 2 & compare("", clan_getchatdisplayname) = 0) {
+	return;
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setgraphic("chat_background", interface_752:1);
+	if_setalpha(false, interface_752:1);
+	if_sethide(false, interface_752:1);
+	if_sethide(false, interface_752:2);
+}
+if_sethide(true, interface_137:50);
+if_setonkey(null, interface_137:51);
+if_sethide(false, interface_137:0);
+if_sethide(true, interface_137:7);
+if_sethide(true, interface_137:9);
+if_sethide(true, interface_137:13);
+if_sethide(false, interface_137:17);
+if_sethide(false, interface_137:1);
+if_sethide(true, interface_137:3);
+if_setscrollpos(0, 0, interface_137:17);
+def_chatcat $chatcat1 = chatcat_85;
+def_chatcat $chatcat2 = ~script1036;
+def_int $int3 = 1;
+if ($int0 = 3) {
+	$chatcat1 = chatcat_32769;
+	$chatcat2 = null;
+	$int3 = 0;
+}
+%varcint126 = $int0;
+%varcstring27 = $string0;
+%varcint127 = 1;
+~script1062(interface_137:1, 0, $chatcat1, $chatcat2, $int3);

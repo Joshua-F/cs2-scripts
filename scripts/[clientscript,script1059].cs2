@@ -1,0 +1,129 @@
+// 1059
+[clientscript,script1059](int $key0, char $char1, component $component2, int $int3, chatcat $chatcat4, chatphrase $chatphrase5, int $int6)
+if (if_gethide(enum(int, component, enum_1550, calc($int3 + 1))) = false) {
+	return;
+}
+def_component $component7 = enum(int, component, enum_1551, $int3);
+if ($key0 = ^key_page_up) {
+	if ($int6 = 0) {
+		return;
+	}
+	if (cc_find($component7, %varcint128) = ^true) {
+		cc_sethide(true);
+	}
+	if (%varcint128 <= 0) {
+		%varcint128 = calc($int6 - 1);
+	} else {
+		%varcint128 = calc(%varcint128 - 1);
+	}
+	if (cc_find($component7, %varcint128) = ^true & cc_gethide = true) {
+		cc_sethide(false);
+		cc_setcolour(0x577e45);
+	}
+	return;
+}
+if ($key0 = ^key_page_down) {
+	if ($int6 = 0) {
+		return;
+	}
+	if (cc_find($component7, %varcint128) = ^true) {
+		cc_sethide(true);
+	}
+	if (%varcint128 = calc($int6 - 1)) {
+		%varcint128 = 0;
+	} else {
+		%varcint128 = calc(%varcint128 + 1);
+	}
+	if (cc_find($component7, %varcint128) = ^true & cc_gethide = true) {
+		cc_sethide(false);
+		cc_setcolour(0x577e45);
+	}
+	return;
+}
+def_int $int8 = 0;
+def_int $int9 = 0;
+if ($key0 = ^key_return) {
+	if (%varcint128 < 0) {
+		if ($chatcat4 ! chatcat_32769 & $int3 = 0) {
+			~script1900(enum(int, component, enum_1550, $int3), enum(int, component, enum_1551, $int3), %varcint128, calc($int3 + 1));
+		}
+	} else if ($chatcat4 ! null) {
+		$int8 = chatcat_getsubcatcount($chatcat4);
+		$int9 = chatcat_getphrasecount($chatcat4);
+		if (%varcint128 = calc($int8 + $int9)) {
+			if ($int3 = 0 & ~script1036 ! null & cc_find(enum(int, component, enum_1550, $int3), %varcint128) = ^true) {
+				~script1061(enum(int, component, enum_1550, $int3), enum(int, component, enum_1551, $int3), %varcint128, $component2, calc($int3 + 1), ~script1036);
+			}
+		} else if (%varcint128 < $int8) {
+			~script1061(enum(int, component, enum_1550, $int3), enum(int, component, enum_1551, $int3), %varcint128, $component2, calc($int3 + 1), chatcat_getsubcat($chatcat4, %varcint128));
+		} else if (%varcint128 < calc($int8 + $int9)) {
+			~script1071($component2, chatcat_getphrase($chatcat4, calc(%varcint128 - $int8)), $int3);
+		} else {
+			~script1900(enum(int, component, enum_1550, $int3), enum(int, component, enum_1551, $int3), %varcint128, calc($int3 + 1));
+		}
+	} else if ($chatphrase5 ! null) {
+		$int8 = 0;
+		$int9 = chatphrase_getautoresponsecount($chatphrase5);
+		~script1071($component2, chatphrase_getautoresponse($chatphrase5, %varcint128), $int3);
+	}
+	return;
+}
+if ($key0 = ^key_home) {
+	~script1050(%varcint126, %varcstring27);
+	return;
+}
+if ($key0 = ^key_escape) {
+	~script1054;
+	return;
+}
+if ($key0 = ^key_backspace & $int3 > 0) {
+	~script1068($component2, calc($int3 - 1));
+	return;
+}
+if (char_isalphanumeric($char1) = false) {
+	return;
+}
+$char1 = char_touppercase($char1);
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_char $char12 = null;
+if ($chatcat4 ! null) {
+	$int8 = chatcat_getsubcatcount($chatcat4);
+	$int9 = chatcat_getphrasecount($chatcat4);
+	if ($int3 = 0 & compare("X", append_char("", $char1)) = 0 & ~script1036 ! null) {
+		$int10 = calc($int8 + $int9);
+		if (cc_find(enum(int, component, enum_1550, $int3), $int10) = ^true) {
+			~script1061(enum(int, component, enum_1550, $int3), enum(int, component, enum_1551, $int3), $int10, $component2, calc($int3 + 1), ~script1036);
+		}
+		return;
+	}
+	$int10 = 0;
+	while ($int11 < $int8) {
+		$char12 = char_touppercase(chatcat_getsubcatshortcut($chatcat4, $int11));
+		if ($char12 = $char1) {
+			~script1061(enum(int, component, enum_1550, $int3), enum(int, component, enum_1551, $int3), $int10, $component2, calc($int3 + 1), chatcat_getsubcat($chatcat4, $int10));
+			return;
+		}
+		$int10 = calc($int10 + 1);
+		$int11 = calc($int11 + 1);
+	}
+} else {
+	$int8 = 0;
+	$int9 = chatphrase_getautoresponsecount($chatphrase5);
+}
+if (char_isnumeric($char1) = false) {
+	return;
+}
+def_int $int13 = string_indexof_char("0123456789", $char1, 0);
+if ($int13 = 0) {
+	$int13 = 10;
+}
+if ($int13 > $int9) {
+	return;
+}
+$int10 = calc($int13 - 1);
+if ($chatcat4 ! null) {
+	~script1071($component2, chatcat_getphrase($chatcat4, $int10), $int3);
+} else if ($chatphrase5 ! null) {
+	~script1071($component2, chatphrase_getautoresponse($chatphrase5, $int10), $int3);
+}

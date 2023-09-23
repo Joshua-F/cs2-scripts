@@ -1,0 +1,7 @@
+// 204
+[clientscript,script204](int $count0, int $opindex1)
+def_int $rank2 = calc($opindex1 - 1);
+friend_setrank(friend_getname($count0), $rank2);
+if (cc_find(interface_590:13, calc($count0 + $count0 + 1)) = ^true) {
+	cc_settext(~script203($rank2));
+}

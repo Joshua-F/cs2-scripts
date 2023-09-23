@@ -1,0 +1,153 @@
+// 1221
+[clientscript,script1221](int $key0, char $keychar1)
+if (%varcint174 = 6) {
+	return;
+}
+if (%varcint174 = 7 & $key0 = ^key_escape) {
+	~script723(0);
+	return;
+}
+if (%varcint174 = 0) {
+	if ($key0 = ^key_return) {
+		if (if_gethide(interface_744:226) = false) {
+			~script1174(interface_744:241);
+		}
+		return;
+	}
+	if ($key0 = ^key_escape & if_gethide(interface_744:226) = true) {
+		~script1174(interface_744:226);
+	}
+	return;
+}
+if (%varcint174 = 1) {
+	if (login_reply = -3 | login_reply = 21 | login_reply = 1) {
+		return;
+	}
+	if ($key0 = ^key_return | $key0 = ^key_tab) {
+		if (%varcint175 >= clientclock) {
+			return;
+		}
+		%varcint174 = 2;
+		%varcint175 = clientclock;
+		return;
+	}
+	if ($key0 = ^key_escape) {
+		~script1174(interface_744:226);
+		return;
+	}
+	if (string_length(%varcstring32) >= 12 & $key0 ! ^key_backspace) {
+		return;
+	}
+	%varcstring32 = removetags(~script74(%varcstring32, 0, $key0, $keychar1));
+	if_settext(%varcstring32, interface_744:340);
+	return;
+}
+if (%varcint174 = 3) {
+	if (create_reply = -3) {
+		return;
+	}
+	if ($key0 = ^key_escape) {
+		~script1174(interface_744:226);
+		return;
+	}
+	if (string_length(%varcstring34) >= 12 & $key0 ! ^key_backspace) {
+		return;
+	}
+	%varcstring34 = removetags(~script74(%varcstring34, 0, $key0, $keychar1));
+	if_settext(%varcstring34, interface_744:394);
+	return;
+}
+def_string $string0 = "";
+def_int $int2 = 0;
+if (%varcint174 = 2) {
+	if (login_reply = -3 | login_reply = 21 | login_reply = 1) {
+		return;
+	}
+	if ($key0 = ^key_return) {
+		if (%varcint175 >= clientclock) {
+			return;
+		}
+		%varcint175 = clientclock;
+		~script1183;
+		return;
+	}
+	if ($key0 = ^key_tab) {
+		if (%varcint175 >= clientclock) {
+			return;
+		}
+		%varcint174 = 1;
+		%varcint175 = clientclock;
+		return;
+	}
+	if ($key0 = ^key_escape) {
+		~script1174(interface_744:226);
+		return;
+	}
+	if (string_length(%varcstring33) >= 20 & $key0 ! ^key_backspace) {
+		return;
+	}
+	%varcstring33 = ~script74(%varcstring33, 0, $key0, $keychar1);
+	$int2 = string_length(%varcstring33);
+	while ($int2 > 0) {
+		$string0 = append($string0, "*");
+		$int2 = calc($int2 - 1);
+	}
+	if_settext($string0, interface_744:346);
+	return;
+}
+if (%varcint174 = 4) {
+	if (create_reply = -3) {
+		return;
+	}
+	if ($key0 = ^key_return | $key0 = ^key_tab) {
+		if (%varcint175 >= clientclock) {
+			return;
+		}
+		%varcint175 = clientclock;
+		%varcint174 = 5;
+		return;
+	}
+	if ($key0 = ^key_escape) {
+		~script1174(interface_744:226);
+		return;
+	}
+	if (string_length(%varcstring35) >= 20 & $key0 ! ^key_backspace) {
+		return;
+	}
+	%varcstring35 = ~script74(%varcstring35, 0, $key0, $keychar1);
+	$int2 = string_length(%varcstring35);
+	while ($int2 > 0) {
+		$string0 = append($string0, "*");
+		$int2 = calc($int2 - 1);
+	}
+	if_settext($string0, interface_744:421);
+	return;
+}
+if (%varcint174 = 5) {
+	if (create_reply = -3) {
+		return;
+	}
+	if ($key0 = ^key_tab) {
+		if (%varcint175 >= clientclock) {
+			return;
+		}
+		%varcint175 = clientclock;
+		%varcint174 = 4;
+		return;
+	}
+	if ($key0 = ^key_escape) {
+		~script1174(interface_744:226);
+		return;
+	}
+	if (string_length(%varcstring36) >= 20 & $key0 ! ^key_backspace) {
+		return;
+	}
+	%varcstring36 = ~script74(%varcstring36, 0, $key0, $keychar1);
+	$int2 = string_length(%varcstring36);
+	while ($int2 > 0) {
+		$string0 = append($string0, "*");
+		$int2 = calc($int2 - 1);
+	}
+	if_settext($string0, interface_744:426);
+	return;
+}

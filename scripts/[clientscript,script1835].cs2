@@ -1,0 +1,66 @@
+// 1835
+[clientscript,script1835](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
+if (coordx(coord) >= coordx(0_43_86_0_0) & coordx(coord) <= coordx(3_44_87_63_63) & coordz(coord) >= coordz(0_43_86_0_0) & coordz(coord) <= coordz(3_44_87_63_63)) {
+	if (coordz(coord) < calc(coordz(0_43_86_0_0) + 8)) {
+		if_sethide(false, $component5);
+		cc_deleteall($component5);
+		~script1086($component5, 0, 0, 0);
+	} else {
+		if_sethide(true, $component5);
+	}
+	if ($int6 = 0 & calc(clientclock % 50) ! 0) {
+		return;
+	}
+	if_setcolour(0xff981f, $component3);
+	if_setcolour(0xff981f, $component4);
+	if_setgraphic("tex_brown", $component1);
+	if_settext("ITEMS ARE<br>SAFE", $component4);
+} else if (coordx(coord) >= coordx(0_46_86_0_0) & coordx(coord) <= coordx(3_47_87_63_63) & coordz(coord) >= coordz(0_46_86_0_0) & coordz(coord) <= coordz(3_47_87_63_63)) {
+	if (coordz(coord) < calc(coordz(0_46_86_0_0) + 8)) {
+		if_sethide(false, $component5);
+		cc_deleteall($component5);
+		~script1086($component5, 0, 0, 0);
+	} else {
+		if_sethide(true, $component5);
+	}
+	if ($int6 = 0 & calc(clientclock % 50) ! 0) {
+		return;
+	}
+	if_setcolour(^yellow, $component3);
+	if_setcolour(^yellow, $component4);
+	if_setgraphic("tex_red", $component1);
+	if_settext("ITEMS ARE<br>DROPPED", $component4);
+} else {
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
+	if_sethide(true, $component1);
+	if_sethide(true, $component2);
+	if_sethide(true, $component5);
+	cc_deleteall($component0);
+	return;
+}
+if_sethide(false, $component3);
+if_sethide(false, $component4);
+if_sethide(false, $component1);
+if_sethide(false, $component2);
+if_settiling(true, $component1);
+def_int $int7 = parawidth(if_gettext($component3), 512, p11_full);
+$int7 = max(parawidth(if_gettext($component4), 512, p11_full), $int7);
+$int7 = calc($int7 + 8);
+def_int $int8 = 5;
+if_setposition(0, $int8, ^setpos_abs_left, ^setpos_abs_top, $component3);
+def_int $int9 = paraheight(if_gettext($component3), $int7, p11_full);
+$int9 = calc($int9 * 10 + 3);
+if_setsize($int7, $int9, ^setsize_abs, ^setsize_abs, $component3);
+$int8 = calc($int8 + $int9 - 1);
+if_setposition(calc(($int7 - if_getwidth($component2)) / 2), $int8, ^setpos_abs_left, ^setpos_abs_top, $component2);
+$int8 = calc($int8 + if_getheight($component2) - 1);
+if_setposition(0, $int8, ^setpos_abs_left, ^setpos_abs_top, $component4);
+def_int $int10 = paraheight(if_gettext($component4), $int7, p11_full);
+$int10 = calc($int10 * 10 + 3);
+if_setsize($int7, $int9, ^setsize_abs, ^setsize_abs, $component4);
+$int8 = calc($int8 + $int10 + 3);
+if_setsize($int7, $int8, ^setsize_abs, ^setsize_abs, $component0);
+if_setsize($int7, $int8, ^setsize_abs, ^setsize_abs, $component1);
+cc_deleteall($component0);
+~script1086($component0, 0, 0, 0);

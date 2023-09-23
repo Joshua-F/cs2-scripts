@@ -1,0 +1,26 @@
+// 1379
+[clientscript,script1379]
+switch_int (%varbit5389) {
+	case 1 :
+		if_setmodelanim(seq_10439, interface_796:10);
+	case 2 :
+		if_sethide(true, interface_796:11);
+		if_sethide(false, interface_796:7);
+	case 3 :
+		if_setmodelanim(seq_10439, interface_796:6);
+	case 4 :
+		if_sethide(true, interface_796:7);
+		if_sethide(false, interface_796:9);
+	case 5 :
+		if_setmodelanim(seq_10443, interface_796:8);
+	case 6 :
+		if_sethide(true, interface_796:9);
+		if_sethide(false, interface_796:5);
+	case 7 :
+		if_setmodelanim(seq_10437, interface_796:4);
+	case 8 :
+		if_sethide(true, interface_796:5);
+		if_sethide(true, interface_796:3);
+		if_sethide(false, interface_796:30);
+		if_sethide(false, interface_796:1);
+}

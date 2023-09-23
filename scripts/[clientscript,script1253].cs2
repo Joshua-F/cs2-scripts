@@ -1,0 +1,9 @@
+// 1253
+[clientscript,script1253](component $component0)
+def_int $int1 = if_gettrans($component0);
+$int1 = max(calc($int1 - 255 / 30), 0);
+if_settrans($int1, $component0);
+if ($int1 <= 0) {
+	if_setontimer(null, $component0);
+	return;
+}

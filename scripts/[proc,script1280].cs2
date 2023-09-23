@@ -1,0 +1,21 @@
+// 1280
+[proc,script1280](inv $inv0, int $slot1, component $component2, int $comsubid3)
+def_string $opbase0 = "";
+if (cc_find($component2, $comsubid3) = ^true) {
+	if (inv_getobj($inv0, $slot1) ! null) {
+		$opbase0 = "<col=ff981f><oc_name(inv_getobj($inv0, $slot1))>";
+		cc_setobject(inv_getobj($inv0, $slot1), inv_getnum($inv0, $slot1));
+		cc_setopbase($opbase0);
+		cc_setop(10, "Examine<col=ff9040>");
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(10);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+	} else {
+		cc_setmodel(null);
+		cc_clearops;
+		cc_setdragdeadzone(0);
+		cc_setdragdeadtime(0);
+		cc_setondragcomplete(null);
+	}
+}

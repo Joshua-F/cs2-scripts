@@ -1,0 +1,11 @@
+// 1587
+[clientscript,script1587]
+if (%varbit5011 = 0) {
+	return;
+}
+if_sethide(true, interface_771:28);
+if (gender = 1) {
+	~script1715;
+} else {
+	~script1712;
+}

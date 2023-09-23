@@ -1,0 +1,35 @@
+// 927
+[proc,script927](int $int0, int $int1)
+cc_deleteall(interface_725:70);
+def_component $component2 = enum(int, component, enum_1442, $int0);
+if ($component2 = interface_725:26) {
+	return;
+}
+if ($component2 = null) {
+	if_close;
+	return;
+}
+def_namedobj $namedobj3 = cosmic_rune_564;
+if (calc($int0 % 2) = 0) {
+	$namedobj3 = nature_rune_561;
+}
+if_setobject($namedobj3, -1, $component2);
+if ($int1 = 1) {
+	cc_create(interface_725:70, ^iftype_model, 0);
+	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(if_getx($component2), if_gety($component2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setmodel(model_4611);
+	cc_setmodelangle(0, 0, 512, 0, 0, 768);
+	cc_setmodelanim(seq_1355);
+	sound_synth(synth_1122, 1, 0);
+}
+if ($int0 = calc(43 - 1)) {
+	if_setobject(board_game_piece_3875, -1, interface_725:45);
+	if_setobject(board_game_piece_3875, -1, interface_725:51);
+	if_setobject(board_game_piece_3875, -1, interface_725:57);
+	if_setobject(board_game_piece_3875, -1, interface_725:63);
+	sound_jingle(110, 6656);
+	if_settext("Fairtrade wins!", interface_725:26);
+	if_settext("Player got four in a row.", interface_725:27);
+	return;
+}

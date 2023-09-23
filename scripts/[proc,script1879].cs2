@@ -1,0 +1,128 @@
+// 1879
+[proc,script1879]
+cc_deleteall(interface_744:224);
+if_sethide(true, interface_744:223);
+if_settext("", interface_744:223);
+def_int $int0 = ~script1851;
+def_int $int1 = ~script1852;
+if ($int1 = $int0 & $int1 ! 0) {
+	$int1 = 0;
+	~script1856(0);
+}
+worldlist_sort(calc($int0 / 2), ~script734(calc($int0 % 2)), calc($int1 / 2), ~script734(calc($int1 % 2)));
+def_int $int2 = 0;
+def_int $width3 = if_getwidth(interface_744:224);
+cc_create(interface_744:224, ^iftype_text, if_getnextsubid(interface_744:224));
+def_int $comsubid4 = cc_getid;
+cc_setsize($width3, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+$int2 = calc($int2 + 18);
+cc_settextfont(b12_full);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+def_int $world5 = ~script1853;
+def_int $world6 = ~script1854;
+if ($world5 > 0) {
+	if ($world6 > 0) {
+		cc_settext("Favourite worlds (max 2)");
+		$int2 = calc($int2 + 18 + 18 + 10);
+	} else {
+		cc_settext("Favourite world (max 2)");
+		$int2 = calc($int2 + 18 + 10);
+	}
+} else if ($world6 > 0) {
+	cc_settext("Favourite world (max 2)");
+	$int2 = calc($int2 + 18 + 10);
+} else {
+	cc_settext("Click the heart icons to mark your favourite two worlds.");
+}
+def_int $int7 = 0;
+def_int $world8 = 0;
+def_int $flags9 = 0;
+def_string $text0 = "";
+def_int $int10 = 0;
+def_string $text1 = "";
+def_int $int11 = 0;
+$world8, $flags9, $text0, $int10, $text1, $int11 = worldlist_start;
+if ($world8 = -1) {
+	if_settext("<col=7f0000>Unable to load list.</col>", interface_744:217);
+	if_settext("The world list could not be loaded.<br><br>Please accept our sincerest apologies for the<br>inconvenience, and try again later.", interface_744:223);
+	if_sethide(false, interface_744:223);
+	if (cc_find(interface_744:224, $comsubid4) = ^true) {
+		cc_sethide(true);
+	}
+	if_setontimer(null, interface_744:218);
+	return;
+}
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+while ($world8 ! -1) {
+	if ($int12 = 0 & $world5 = $world8) {
+		~script1882(18, $world8, $flags9, $text0, $int10, $text1, $int11, $width3, 1);
+		$int12 = 1;
+	} else if ($int13 = 0 & $world6 = $world8) {
+		if ($world5 > 0) {
+			~script1882(calc(18 + 18), $world8, $flags9, $text0, $int10, $text1, $int11, $width3, 2);
+		} else {
+			~script1882(18, $world8, $flags9, $text0, $int10, $text1, $int11, $width3, 2);
+		}
+		$int13 = 1;
+	} else {
+		~script1882($int2, $world8, $flags9, $text0, $int10, $text1, $int11, $width3, $int14);
+		$int2 = calc($int2 + 18);
+		$int14 = calc(-1 - $int14);
+	}
+	$int7 = calc($int7 + 1);
+	$world8, $flags9, $text0, $int10, $text1, $int11 = worldlist_next;
+}
+def_graphic $graphic15 = "graphic_1541";
+def_int $int16 = 1545;
+def_graphic $graphic17 = "graphic_1542";
+def_int $int18 = 1546;
+if ($int12 = 0 & $world5 > 0) {
+	cc_create(interface_744:224, ^iftype_rectangle, if_getnextsubid(interface_744:224));
+	cc_setsize($width3, 18, ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(0x593d15);
+	cc_setposition(0, 18, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create(interface_744:224, ^iftype_text, if_getnextsubid(interface_744:224));
+	cc_setsize(calc($width3 - 30), 18, ^setsize_abs, ^setsize_abs);
+	cc_setposition(30, 18, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p12_full);
+	cc_setcolour(^white);
+	cc_settext("World <tostring($world5)> is running in a different language or is unavailable.");
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+	cc_setsize(13, 12, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic15);
+	cc_setposition(5, calc(18 + (18 - cc_getheight) / 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setonclick("script1883($world5, 0)");
+	cc_setonmouseover("script688(interface_744:224, cc_getid, $graphic17)");
+	cc_setonmouseleave("script688(interface_744:224, cc_getid, $graphic15)");
+}
+def_int $int19 = 18;
+if ($int13 = 0 & $world6 > 0) {
+	if ($world5 > 0) {
+		$int19 = calc(18 + 18);
+	}
+	cc_create(interface_744:224, ^iftype_rectangle, if_getnextsubid(interface_744:224));
+	cc_setsize($width3, 18, ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(0x73521c);
+	cc_setposition(0, $int19, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create(interface_744:224, ^iftype_text, if_getnextsubid(interface_744:224));
+	cc_setsize(calc($width3 - 30), 18, ^setsize_abs, ^setsize_abs);
+	cc_settextfont(p12_full);
+	cc_setcolour(^white);
+	cc_settext("World <tostring($world6)> is running in a different language or is unavailable.");
+	cc_setposition(30, $int19, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+	cc_setsize(13, 12, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic15);
+	cc_setonclick("script1883($world6, 0)");
+	cc_setonmouseover("script688(interface_744:224, cc_getid, $graphic17)");
+	cc_setonmouseleave("script688(interface_744:224, cc_getid, $graphic15)");
+	cc_setposition(5, calc($int19 + (18 - cc_getheight) / 2), ^setpos_abs_left, ^setpos_abs_top);
+}
+~script1881($int2);

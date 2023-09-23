@@ -1,0 +1,11 @@
+// 600
+[clientscript,script600]
+if (%var1113 = 0) {
+	if (%varcint84 <= 2147483547) {
+		%varcint84 = calc(%varcint84 + 100);
+	}
+} else {
+	%varcint84 = 100;
+}
+if_settext(~script46(%varcint84, ","), interface_105:150);
+~script602;

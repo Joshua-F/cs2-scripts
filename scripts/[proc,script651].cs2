@@ -1,0 +1,127 @@
+// 651
+[proc,script651](int $int0)
+def_component $component1 = ~script623($int0);
+cc_deleteall($component1);
+def_int $width2 = if_getwidth($component1);
+def_int $int3 = if_getheight($component1);
+def_int $int4 = stockmarket_getoffertype($int0);
+def_int $int5 = stockmarket_getoffercount($int0);
+def_int $int6 = stockmarket_getoffercompletedcount($int0);
+def_obj $obj7 = stockmarket_getofferitem($int0);
+def_int $int8 = stockmarket_getofferprice($int0);
+def_string $string0 = "";
+if (stockmarket_isofferempty($int0) = true) {
+	$string0 = "Empty";
+} else if (stockmarket_getoffertype($int0) = 0) {
+	$string0 = "Buy";
+} else {
+	$string0 = "Sell";
+}
+cc_create($component1, ^iftype_rectangle, 0);
+cc_setsize($width2, $int3, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(255);
+~script584($component1, $string0);
+def_int $int9 = if_getnextsubid($component1);
+if_setonmouseover("script629($int0)", $component1);
+if_setonmouseleave("script631($int0)", $component1);
+if (stockmarket_isofferempty($int0) = true) {
+	if_setonop(null, $component1);
+	if_setop(1, "", $component1);
+	if_setop(2, "", $component1);
+	if ($int0 >= 2) {
+		if (playermember = true) {
+			if_sethide(true, ~script624($int0));
+		} else {
+			if_sethide(false, ~script624($int0));
+		}
+	}
+} else {
+	if_setop(1, "View Offer", $component1);
+	if (stockmarket_isofferfinished($int0) = false) {
+		if_setop(2, "Abort Offer", $component1);
+	} else {
+		if_setop(2, "", $component1);
+	}
+}
+def_string $string1 = ~script46($int5, ",");
+def_string $string2 = ~script46($int8, ",");
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_component $component12 = ~script627($int0);
+if_sethide(true, $component12);
+def_component $component13 = ~script626($int0);
+def_component $component14 = ~script625($int0);
+def_string $string3 = "";
+def_int $width15 = 0;
+def_int $width16 = 0;
+if (stockmarket_isofferempty($int0) = true) {
+	if ($int0 < 2 | playermember = true) {
+		if_sethide(false, $component12);
+	}
+} else {
+	$int10 = 7;
+	$int11 = calc($int3 - 30);
+	if (stockmarket_isofferadding($int0) = true) {
+		$int9 = if_getnextsubid($component1);
+		.cc_create($component1, ^iftype_text, $int9);
+		.cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setsize(calc($width2 - 14), 15, ^setsize_abs, ^setsize_abs);
+		.cc_settextfont(p11_full);
+		.cc_setcolour(0xdbd884);
+		.cc_settext("Submitting...");
+		.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	} else {
+		~script652($int10, $int11, calc($width2 - 14), 15, $int0, $component1, $int9, $component13, 1);
+	}
+	$int9 = if_getnextsubid($component1);
+	cc_create($component1, ^iftype_graphic, $int9);
+	$int9 = calc($int9 + 1);
+	cc_setposition(6, 30, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("bank_slot,0");
+	cc_create($component1, ^iftype_graphic, $int9);
+	cc_setposition(8, 32, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj7, $int5);
+	cc_setgraphicshadow(^black);
+	$string0 = ~script46($int5, ",");
+	cc_setonmouserepeat("script648($component1, $int9, $component13, $string0, 25, 106)");
+	cc_setonmouseleave("script40($component13)");
+	$int9 = calc($int9 + 1);
+	cc_create($component1, ^iftype_text, $int9);
+	cc_setposition(48, 30, ^setpos_abs_left, ^setpos_abs_top);
+	$string0 = oc_name($obj7);
+	$width16 = calc($width2 - 53);
+	$width15 = parawidth($string0, $width16, p11_full);
+	if ($width15 > $width16) {
+		$int10 = string_length($string0);
+		while ($width15 > $width16 & $int10 > 0) {
+			$int10 = calc($int10 - 1);
+			$string0 = "<substring($string0, 0, $int10)>...";
+			$width15 = parawidth($string0, $width16, p11_full);
+		}
+	}
+	$int9 = calc($int9 + 1);
+	$int3 = calc(paraheight($string0, $width16, p11_full) * 11);
+	if ($int3 < 22) {
+		$int3 = 22;
+	}
+	cc_setsize($width16, $int3, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xcc9900);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settextshadow(true);
+	cc_settext($string0);
+	cc_create($component1, ^iftype_text, $int9);
+	$int9 = calc($int9 + 1);
+	cc_setposition(48, calc(32 + $int3), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($width2 - 53), 15, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xbdbb5b);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+	cc_settextshadow(true);
+	cc_settext("<$string2> gp");
+}

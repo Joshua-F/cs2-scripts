@@ -1,0 +1,6 @@
+// 1738
+[proc,script1738](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans(0);
+	cc_setontimer(null);
+}

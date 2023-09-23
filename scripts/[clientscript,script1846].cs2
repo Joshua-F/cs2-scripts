@@ -1,0 +1,19 @@
+// 1846
+[clientscript,script1846](component $component0, int $int1)
+%varcint178 = ~script1345($int1, $component0);
+if (getwindowmode = ^windowmode_fullscreen) {
+	if (playermember = false) {
+		setwindowmode(getdefaultwindowmode);
+		%varcint543 = getwindowmode;
+		mes("Fullscreen mode is only available to members.");
+		return;
+	} else if (fullscreen_lastmode ! %varcint178) {
+		if (fullscreen_enter(fullscreen_getmode(%varcint178)) = true) {
+		} else {
+			setwindowmode(getdefaultwindowmode);
+			%varcint543 = getwindowmode;
+			mes("That resolution didn't seem to work.");
+			mes("Please try a different resolution.");
+		}
+	}
+}

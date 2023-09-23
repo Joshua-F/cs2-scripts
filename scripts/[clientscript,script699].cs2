@@ -1,0 +1,11 @@
+// 699
+[clientscript,script699](component $component0)
+if (%varbit1009 < 2) {
+	if_settext("I don't know it.", $component0);
+	if_setop(1, "I don't know it.", $component0);
+	if_setposition(327, 252, ^setpos_abs_left, ^setpos_abs_top, interface_13:30);
+} else {
+	if_settext("", $component0);
+	if_clearops($component0);
+	if_setposition(327, 263, ^setpos_abs_left, ^setpos_abs_top, interface_13:30);
+}

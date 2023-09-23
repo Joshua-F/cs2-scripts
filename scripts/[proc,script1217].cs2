@@ -1,0 +1,5 @@
+// 1217
+[proc,script1217](component $component0, component $component1)
+def_int $int2 = calc(if_getwidth($component0) - if_getwidth($component1));
+def_int $x3 = scale(detailget_soundvol, 127, $int2);
+if_setposition($x3, 0, ^setpos_abs_left, ^setpos_abs_top, $component1);

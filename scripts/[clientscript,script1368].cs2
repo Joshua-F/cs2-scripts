@@ -1,0 +1,60 @@
+// 1368
+[clientscript,script1368]
+if_settext("Zamorak = <tostring(%varbit155)>", interface_59:0);
+if_settext("<tostring(%varbit145)> = Saradomin", interface_59:1);
+if_settext("<tostring(%var380)> Min", interface_59:8);
+if (%varbit146 = 0) {
+	if_settext("Health <tostring(%varbit146)>%", interface_59:7);
+	if_setcolour(^red, interface_59:7);
+} else {
+	if_settext("Health <tostring(%varbit146)>%", interface_59:7);
+	if_setcolour(^green, interface_59:7);
+}
+if (%varbit143 = 0) {
+	if_settext("Safe", interface_59:4);
+	if_setcolour(^green, interface_59:4);
+} else if (%varbit143 = 1) {
+	if_settext("Taken", interface_59:4);
+	if_setcolour(^red, interface_59:4);
+} else if (%varbit143 = 2) {
+	if_settext("Dropped", interface_59:4);
+	if_setcolour(^yellow, interface_59:4);
+}
+if (%varbit153 = 0) {
+	if_settext("Safe", interface_59:5);
+	if_setcolour(^green, interface_59:5);
+} else if (%varbit153 = 1) {
+	if_settext("Taken", interface_59:5);
+	if_setcolour(^red, interface_59:5);
+} else if (%varbit153 = 2) {
+	if_settext("Dropped", interface_59:5);
+	if_setcolour(^yellow, interface_59:5);
+}
+if (%varbit147 = 1) {
+	if_settext("Unlocked", interface_59:11);
+	if_setcolour(^red, interface_59:11);
+} else {
+	if_settext("Locked", interface_59:11);
+	if_setcolour(^green, interface_59:11);
+}
+if (%varbit148 = 1) {
+	if_settext("Cleared", interface_59:13);
+	if_setcolour(^red, interface_59:13);
+} else {
+	if_settext("Collapsed", interface_59:13);
+	if_setcolour(^green, interface_59:13);
+}
+if (%varbit149 = 1) {
+	if_settext("Cleared", interface_59:14);
+	if_setcolour(^red, interface_59:14);
+} else {
+	if_settext("Collapsed", interface_59:14);
+	if_setcolour(^green, interface_59:14);
+}
+if (%varbit150 = 1) {
+	if_settext("Destroyed", interface_59:17);
+	if_setcolour(^red, interface_59:17);
+} else {
+	if_settext("Operational", interface_59:17);
+	if_setcolour(^green, interface_59:17);
+}

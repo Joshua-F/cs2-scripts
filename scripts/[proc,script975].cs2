@@ -1,0 +1,13 @@
+// 975
+[proc,script975](int $int0, int $int1)(int)
+cc_setposition(50, $int0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 16);
+cc_setcolour(0x46320a);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+if (calc($int1 * 16) < 32) {
+	$int0 = calc($int0 + 32);
+} else {
+	$int0 = calc($int0 + ($int1 * 16 + 5));
+}
+return($int0);

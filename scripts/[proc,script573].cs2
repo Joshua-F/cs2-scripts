@@ -1,0 +1,12 @@
+// 573
+[proc,script573]
+cc_deleteall(interface_389:4);
+if_sethide(false, interface_752:7);
+if_sethide(true, interface_752:3);
+if_sethide(true, interface_752:6);
+if_setonkey(null, interface_389:9);
+if_setondialogabort(null, interface_389:9);
+if_setontimer(null, interface_389:9);
+if (getwindowmode >= ^windowmode_resizable) {
+	~script1364;
+}

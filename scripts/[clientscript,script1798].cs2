@@ -1,0 +1,61 @@
+// 1798
+[clientscript,script1798](component $component0, component $component1)
+def_int $int2 = 0;
+def_int $int3 = 0;
+while ($int2 < 12) {
+	switch_int ($int2) {
+		case 0 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:58);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:59);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:60);
+		case 1 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:61);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:62);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:63);
+		case 2 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:64);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:65);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:66);
+		case 3 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:67);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:68);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:69);
+		case 4 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:70);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:71);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:72);
+		case 5 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:73);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:74);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:75);
+		case 6 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:76);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:77);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:78);
+		case 7 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:79);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:80);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:81);
+		case 8 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:82);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:83);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:84);
+		case 9 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:85);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:86);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:87);
+		case 10 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:88);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:89);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:90);
+		case 11 :
+			if_setposition(25, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:91);
+			if_setposition(4, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:92);
+			if_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_791:93);
+	}
+	$int3 = calc($int3 + 17);
+	$int2 = calc($int2 + 1);
+}
+if_setscrollsize(0, $int3, $component0);
+if_setscrollpos(0, 0, $component0);
+~script31($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

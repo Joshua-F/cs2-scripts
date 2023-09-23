@@ -1,0 +1,6 @@
+// 768
+[proc,script768](obj $obj0, obj $obj1)(int)
+if (inv_total(inv, $obj1) < 1) {
+	return(0);
+}
+return(1);

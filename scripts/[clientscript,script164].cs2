@@ -1,0 +1,7 @@
+// 164
+[clientscript,script164](component $component0, int $int1)
+if (~script166($int1) = 7) {
+	if_setgraphic("warning_icons,2", $component0);
+	return;
+}
+if_setgraphic("warning_icons,1", $component0);

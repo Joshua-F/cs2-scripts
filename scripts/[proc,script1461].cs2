@@ -1,0 +1,15 @@
+// 1461
+[proc,script1461](int $int0)
+def_component $component1 = enum(int, component, enum_1614, $int0);
+def_component $component2 = enum(int, component, enum_1615, $int0);
+if_sethide(false, $component1);
+if_sethide(false, $component2);
+if_setobject(null, -1, $component2);
+if_setgraphic("graphic_1435", $component2);
+if_setoutline(0, $component2);
+if_setgraphicshadow(^black, $component2);
+if_clearops($component1);
+if_setonclick("script1481", $component1);
+def_string $string0 = "Drag an item here to create a new tab";
+if_setonmouserepeat("script38(event_com, interface_762:101, $string0, 25, 150)", $component1);
+if_setonmouseleave("script40(interface_762:101)", $component1);

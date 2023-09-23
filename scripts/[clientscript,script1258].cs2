@@ -1,0 +1,10 @@
+// 1258
+[clientscript,script1258]
+if (%varbit305 = 1) {
+	return;
+}
+if (%var264 = 0) {
+	if_setgraphic("miscgraphics,10", interface_114:27);
+} else {
+	if_setgraphic("miscgraphics,11", interface_114:27);
+}

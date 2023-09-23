@@ -1,0 +1,25 @@
+// 107
+[proc,script107](string $username0)
+if (%varcint11 = 1) {
+	mes("You can't do that while you're reporting abuse.");
+	return;
+}
+if (%var281 < 1000 & %varbit4895 = 2) {
+	mes("You need to complete 'Learning the Ropes' before talking to other players using Private Chat.");
+	return;
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	if_sethide(false, interface_746:70);
+}
+%varcstring23 = $username0;
+if_sethide(false, interface_752:3);
+if_sethide(true, interface_752:6);
+if_sethide(true, interface_752:7);
+if_settext("Enter message to send to <%varcstring23>", interface_752:4);
+if_settext("*", interface_752:5);
+%varcint5 = 6;
+%varcstring22 = "";
+if_setonclick(null, interface_752:3);
+~script2026;
+if_setonkey("script112(event_keycode, event_keychar)", interface_752:5);
+~script1188;

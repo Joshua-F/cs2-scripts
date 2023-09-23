@@ -1,0 +1,249 @@
+// 766
+[proc,script766](obj $obj0)(int)
+if (enum(obj, int, enum_1270, $obj0) > 0 & inv_total(inv, spirit_shards_12183) < enum(obj, int, enum_1270, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1189, $obj0) > 0 & inv_total(inv, wolf_bones_2859) < enum(obj, int, enum_1189, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1190, $obj0) > 0 & inv_total(inv, gold_charm_12158) < enum(obj, int, enum_1190, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1192, $obj0) > 0 & inv_total(inv, raw_chicken_2138) < enum(obj, int, enum_1192, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1193, $obj0) > 0 & inv_total(inv, spider_carcass_6291) < enum(obj, int, enum_1193, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1194, $obj0) > 0 & inv_total(inv, green_charm_12159) < enum(obj, int, enum_1194, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1195, $obj0) > 0 & inv_total(inv, iron_ore_440) < enum(obj, int, enum_1195, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1196, $obj0) > 0 & inv_total(inv, bucket_of_sand_1783) < enum(obj, int, enum_1196, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1197, $obj0) > 0 & inv_total(inv, potato_cactus_3138) < enum(obj, int, enum_1197, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1198, $obj0) > 0 & inv_total(inv, vampire_dust_3325) < enum(obj, int, enum_1198, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1199, $obj0) > 0 & inv_total(inv, honeycomb_12156) < enum(obj, int, enum_1199, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1200, $obj0) > 0 & inv_total(inv, carved_evil_turnip_12153) < enum(obj, int, enum_1200, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1201, $obj0) > 0 & inv_total(inv, gold_ring_1635) < enum(obj, int, enum_1201, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1317, $obj0) > 0 & inv_total(inv, swamp_toad_2150) < enum(obj, int, enum_1317, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1203, $obj0) > 0 & inv_total(inv, banana_1963) < enum(obj, int, enum_1203, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1204, $obj0) > 0 & inv_total(inv, granite_500g_6979) < enum(obj, int, enum_1204, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1205, $obj0) > 0 & inv_total(inv, ruby_harvest_10020) < enum(obj, int, enum_1205, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1206, $obj0) > 0 & inv_total(inv, unicorn_horn_237) < enum(obj, int, enum_1206, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1207, $obj0) > 0 & inv_total(inv, yak_hide_10818) < enum(obj, int, enum_1207, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1208, $obj0) > 0 & inv_total(inv, tortoise_shell_7939) < enum(obj, int, enum_1208, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1209, $obj0) > 0 & calc(inv_total(inv, snake_hide_6287) + inv_total(inv, snake_hide_7801)) < enum(obj, int, enum_1209, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1191, $obj0) > 0 & inv_total(inv, abyssal_charm_12161) < enum(obj, int, enum_1191, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1210, $obj0) > 0 & inv_total(inv, blue_charm_12163) < enum(obj, int, enum_1210, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1211, $obj0) > 0 & inv_total(inv, fishbowl_6667) < enum(obj, int, enum_1211, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1212, $obj0) > 0 & inv_total(inv, raw_rabbit_3226) < enum(obj, int, enum_1212, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1202, $obj0) > 0 & inv_total(inv, willow_branch_5933) < enum(obj, int, enum_1202, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1216, $obj0) > 0 & inv_total(inv, compost_6032) < enum(obj, int, enum_1216, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1215, $obj0) > 0 & inv_total(inv, talon_beast_charm_12162) < enum(obj, int, enum_1215, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1217, $obj0) > 0 & inv_total(inv, thin_snail_3363) < enum(obj, int, enum_1217, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1219, $obj0) > 0 & inv_total(inv, cockatrice_egg_12109) < enum(obj, int, enum_1219, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1220, $obj0) > 0 & inv_total(inv, guthatrice_egg_12111) < enum(obj, int, enum_1220, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1221, $obj0) > 0 & inv_total(inv, saratrice_egg_12113) < enum(obj, int, enum_1221, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1222, $obj0) > 0 & inv_total(inv, zamatrice_egg_12115) < enum(obj, int, enum_1222, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1223, $obj0) > 0 & inv_total(inv, pengatrice_egg_12117) < enum(obj, int, enum_1223, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1224, $obj0) > 0 & inv_total(inv, coraxatrice_egg_12119) < enum(obj, int, enum_1224, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1225, $obj0) > 0 & inv_total(inv, vulatrice_egg_12121) < enum(obj, int, enum_1225, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1218, $obj0) > 0 & inv_total(inv, crimson_charm_12160) < enum(obj, int, enum_1218, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1226, $obj0) > 0 & inv_total(inv, water_talisman_1444) < enum(obj, int, enum_1226, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1227, $obj0) > 0 & inv_total(inv, supercompost_6034) < enum(obj, int, enum_1227, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1228, $obj0) > 0 & inv_total(inv, raw_shark_383) < enum(obj, int, enum_1228, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1230, $obj0) > 0 & inv_total(inv, graahk_fur_10099) < enum(obj, int, enum_1230, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1229, $obj0) > 0 & inv_total(inv, kyatt_fur_10103) < enum(obj, int, enum_1229, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1231, $obj0) > 0 & inv_total(inv, steel_bar_2353) < enum(obj, int, enum_1231, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1232, $obj0) > 0 & inv_total(inv, obsidian_charm_12168) < enum(obj, int, enum_1232, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1233, $obj0) > 0 & inv_total(inv, ravager_charm_12164) < enum(obj, int, enum_1233, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1234, $obj0) > 0 & inv_total(inv, shifter_charm_12165) < enum(obj, int, enum_1234, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1235, $obj0) > 0 & inv_total(inv, spinner_charm_12166) < enum(obj, int, enum_1235, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1236, $obj0) > 0 & inv_total(inv, torcher_charm_12167) < enum(obj, int, enum_1236, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1238, $obj0) > 0 & inv_total(inv, proboscis_6319) < enum(obj, int, enum_1238, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1240, $obj0) > 0 & inv_total(inv, iron_bar_2351) < enum(obj, int, enum_1240, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1239, $obj0) > 0 & inv_total(inv, larupia_fur_10095) < enum(obj, int, enum_1239, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1241, $obj0) > 0 & inv_total(inv, bronze_claws_3095) < enum(obj, int, enum_1241, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1242, $obj0) > 0 & inv_total(inv, raw_rat_meat_2134) < enum(obj, int, enum_1242, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1244, $obj0) > 0 & inv_total(inv, pot_of_flour_1933) < enum(obj, int, enum_1244, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1245, $obj0) > 0 & inv_total(inv, willow_logs_1519) < enum(obj, int, enum_1245, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1243, $obj0) > 0 & inv_total(inv, marigolds_6010) < enum(obj, int, enum_1243, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1249, $obj0) > 0 & inv_total(inv, clean_guam_249) < enum(obj, int, enum_1249, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1248, $obj0) > 0 & inv_total(inv, cabbage_1965) < enum(obj, int, enum_1248, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1246, $obj0) > 0 & inv_total(inv, tinderbox_590) < enum(obj, int, enum_1246, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1247, $obj0) > 0 & inv_total(inv, raw_beef_2132) < enum(obj, int, enum_1247, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1250, $obj0) > 0 & inv_total(inv, chinchompa_10033) < enum(obj, int, enum_1250, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1251, $obj0) > 0 & inv_total(inv, raw_bird_meat_9978) < enum(obj, int, enum_1251, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1252, $obj0) > 0 & inv_total(inv, jug_of_water_1937) < enum(obj, int, enum_1252, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1253, $obj0) > 0 & inv_total(inv, harpoon_311) < enum(obj, int, enum_1253, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1254, $obj0) > 0 & inv_total(inv, goat_horn_dust_9736) < enum(obj, int, enum_1254, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1255, $obj0) > 0 & inv_total(inv, bagged_plant_1_8431) < enum(obj, int, enum_1255, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1256, $obj0) > 0 & inv_total(inv, polar_kebbit_fur_10117) < enum(obj, int, enum_1256, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1257, $obj0) > 0 & inv_total(inv, flowers_2462) < enum(obj, int, enum_1257, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1258, $obj0) > 0 & inv_total(inv, air_talisman_1438) < enum(obj, int, enum_1258, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1259, $obj0) > 0 & inv_total(inv, earth_talisman_1440) < enum(obj, int, enum_1259, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1260, $obj0) > 0 & inv_total(inv, fire_talisman_1442) < enum(obj, int, enum_1260, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1261, $obj0) > 0 & inv_total(inv, water_orb_571) < enum(obj, int, enum_1261, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1262, $obj0) > 0 & inv_total(inv, dagannoth_hide_6155) < enum(obj, int, enum_1262, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1263, $obj0) > 0 & inv_total(inv, swamp_lizard_10149) < enum(obj, int, enum_1263, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1264, $obj0) > 0 & inv_total(inv, bronze_bar_2349) < enum(obj, int, enum_1264, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1265, $obj0) > 0 & inv_total(inv, mithril_bar_2359) < enum(obj, int, enum_1265, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1266, $obj0) > 0 & inv_total(inv, adamantite_bar_2361) < enum(obj, int, enum_1266, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1267, $obj0) > 0 & inv_total(inv, runite_bar_2363) < enum(obj, int, enum_1267, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1268, $obj0) > 0 & inv_total(inv, iron_platebody_1115) < enum(obj, int, enum_1268, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_1269, $obj0) > 0 & inv_total(inv, steel_platebody_1119) < enum(obj, int, enum_1269, $obj0)) {
+	return(0);
+}
+if (enum(obj, int, enum_2160, $obj0) > 0 & inv_total(inv, phoenix_quill_14616) < enum(obj, int, enum_2160, $obj0)) {
+	return(0);
+}
+if (inv_total(inv, pouch_12155) < 1) {
+	return(0);
+}
+return(1);

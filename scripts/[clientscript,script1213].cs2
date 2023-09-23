@@ -1,0 +1,16 @@
+// 1213
+[clientscript,script1213](int $int0, component $component1)
+if (_6121 = false | getwindowmode < ^windowmode_fixed) {
+	return;
+}
+def_int $windowmode2 = ~script1345($int0, $component1);
+if ($windowmode2 = detailget_antialiasing) {
+	return;
+}
+detail_antialiasing($windowmode2);
+if ($windowmode2 = 0) {
+	detail_antialiasing_default(0);
+	return;
+}
+if_setonclick("script1890(interface_744:138)", interface_744:238);
+~script1174(interface_744:237);

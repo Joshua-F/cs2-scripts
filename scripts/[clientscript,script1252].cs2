@@ -1,0 +1,10 @@
+// 1252
+[clientscript,script1252](component $component0, int $int1)
+def_int $int2 = if_gettrans($component0);
+$int2 = min(calc($int2 + 255 * $int1 / 30), 255);
+if_settrans($int2, $component0);
+if ($int2 >= 255) {
+	if_setontimer(null, $component0);
+	if_sethide(true, $component0);
+	return;
+}

@@ -1,0 +1,20 @@
+// 985
+[proc,script985](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Firemaking", 0);
+	case 1 :
+		return("Barbarian fires", 1);
+	case 2 :
+		return("Pyre ships", 1);
+	case 3 :
+		return("Equipment", 0);
+	case 4 :
+		return("Beacons", 1);
+	case 5 :
+		return("Minigames", 1);
+	case 6 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

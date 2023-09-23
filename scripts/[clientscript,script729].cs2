@@ -1,0 +1,119 @@
+// 729
+[clientscript,script729]
+~script730(air_talisman_1438, interface_779:17, interface_779:16);
+~script730(mind_talisman_1448, interface_779:31, interface_779:30);
+~script730(water_talisman_1444, interface_779:35, interface_779:34);
+~script730(earth_talisman_1440, interface_779:25, interface_779:24);
+~script730(fire_talisman_1442, interface_779:27, interface_779:26);
+~script730(body_talisman_1446, interface_779:19, interface_779:18);
+~script730(chaos_talisman_1452, interface_779:21, interface_779:20);
+~script730(law_talisman_1458, interface_779:29, interface_779:28);
+~script730(nature_talisman_1462, interface_779:33, interface_779:32);
+~script730(cosmic_talisman_1454, interface_779:23, interface_779:22);
+~script730(runecrafter_hat_13625, interface_779:49, interface_779:48);
+~script730(runecrafter_robe_13624, interface_779:55, interface_779:54);
+~script730(runecrafter_skirt_13627, interface_779:61, interface_779:60);
+~script730(runecrafter_gloves_13628, interface_779:67, interface_779:66);
+~script730(runecrafter_hat_13615, interface_779:51, interface_779:50);
+~script730(runecrafter_robe_13614, interface_779:57, interface_779:56);
+~script730(runecrafter_skirt_13617, interface_779:63, interface_779:62);
+~script730(runecrafter_gloves_13618, interface_779:69, interface_779:68);
+~script730(runecrafter_hat_13620, interface_779:53, interface_779:52);
+~script730(runecrafter_robe_13619, interface_779:59, interface_779:58);
+~script730(runecrafter_skirt_13622, interface_779:65, interface_779:64);
+~script730(runecrafter_gloves_13623, interface_779:71, interface_779:70);
+~script730(air_altar_teleport_13599, interface_779:87, interface_779:86);
+~script730(earth_altar_teleport_13602, interface_779:97, interface_779:96);
+~script730(water_altar_teleport_13601, interface_779:109, interface_779:108);
+~script730(fire_altar_teleport_13603, interface_779:99, interface_779:98);
+~script730(mind_altar_teleport_13600, interface_779:103, interface_779:102);
+~script730(body_altar_teleport_13604, interface_779:89, interface_779:88);
+~script730(law_altar_teleport_13608, interface_779:101, interface_779:100);
+~script730(chaos_altar_teleport_13606, interface_779:91, interface_779:90);
+~script730(cosmic_altar_teleport_13605, interface_779:93, interface_779:92);
+~script730(nature_altar_teleport_13607, interface_779:105, interface_779:104);
+~script730(death_altar_teleport_13609, interface_779:95, interface_779:94);
+~script730(blood_altar_teleport_13610, interface_779:111, interface_779:110);
+~script730(runecrafting_guild_teleport_13598, interface_779:113, interface_779:112);
+~script730(astral_altar_teleport_13611, interface_779:107, interface_779:106);
+~script730(runecrafting_staff_13629, interface_779:117, interface_779:116);
+~script730(cert_rune_essence_1437, interface_779:119, interface_779:118);
+if_settext("1 token each", interface_779:119);
+switch_int (%var1278) {
+	case 1438 :
+		if_setcolour(^white, interface_779:16);
+	case 1440 :
+		if_setcolour(^white, interface_779:24);
+	case 1442 :
+		if_setcolour(^white, interface_779:26);
+	case 1444 :
+		if_setcolour(^white, interface_779:34);
+	case 1448 :
+		if_setcolour(^white, interface_779:30);
+	case 1446 :
+		if_setcolour(^white, interface_779:18);
+	case 1458 :
+		if_setcolour(^white, interface_779:28);
+	case 1452 :
+		if_setcolour(^white, interface_779:20);
+	case 1462 :
+		if_setcolour(^white, interface_779:32);
+	case 1454 :
+		if_setcolour(^white, interface_779:22);
+	case 13625 :
+		if_setcolour(^white, interface_779:48);
+	case 13624 :
+		if_setcolour(^white, interface_779:54);
+	case 13627 :
+		if_setcolour(^white, interface_779:60);
+	case 13628 :
+		if_setcolour(^white, interface_779:66);
+	case 13615 :
+		if_setcolour(^white, interface_779:50);
+	case 13614 :
+		if_setcolour(^white, interface_779:56);
+	case 13617 :
+		if_setcolour(^white, interface_779:62);
+	case 13618 :
+		if_setcolour(^white, interface_779:68);
+	case 13620 :
+		if_setcolour(^white, interface_779:52);
+	case 13619 :
+		if_setcolour(^white, interface_779:58);
+	case 13622 :
+		if_setcolour(^white, interface_779:64);
+	case 13623 :
+		if_setcolour(^white, interface_779:70);
+	case 13599 :
+		if_setcolour(^white, interface_779:86);
+	case 13601 :
+		if_setcolour(^white, interface_779:108);
+	case 13602 :
+		if_setcolour(^white, interface_779:96);
+	case 13603 :
+		if_setcolour(^white, interface_779:98);
+	case 13600 :
+		if_setcolour(^white, interface_779:102);
+	case 13604 :
+		if_setcolour(^white, interface_779:88);
+	case 13608 :
+		if_setcolour(^white, interface_779:100);
+	case 13606 :
+		if_setcolour(^white, interface_779:90);
+	case 13607 :
+		if_setcolour(^white, interface_779:104);
+	case 13605 :
+		if_setcolour(^white, interface_779:92);
+	case 13609 :
+		if_setcolour(^white, interface_779:94);
+	case 13610 :
+		if_setcolour(^white, interface_779:110);
+	case 13598 :
+		if_setcolour(^white, interface_779:112);
+	case 13611 :
+		if_setcolour(^white, interface_779:106);
+	case 13629 :
+		if_setcolour(^white, interface_779:116);
+	case 1437 :
+		if_setcolour(^white, interface_779:118);
+}

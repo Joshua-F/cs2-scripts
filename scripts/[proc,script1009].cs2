@@ -1,0 +1,26 @@
+// 1009
+[proc,script1009](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Bows", 0);
+	case 1 :
+		return("Thrown", 1);
+	case 2 :
+		return("Armour", 0);
+	case 3 :
+		return("Crossbows", 0);
+	case 4 :
+		return("Shortcuts", 1);
+	case 5 :
+		return("Salamanders", 1);
+	case 6 :
+		return("Areas", 1);
+	case 7 :
+		return("Other", 1);
+	case 8 :
+		return("Minigames", 1);
+	case 9 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

@@ -1,0 +1,67 @@
+// 593
+[proc,script593](int $int0)
+def_inv $inv1 = ~script659(%var1112);
+def_obj $obj2 = inv_getobj($inv1, 0);
+if_setobject($obj2, inv_getnum($inv1, 0), interface_105:209);
+if_clearops(interface_105:209);
+if ($obj2 ! null) {
+	if (oc_cert($obj2) ! $obj2) {
+		if_setop(1, "Collect-notes", interface_105:209);
+		if_setop(2, "Collect-items", interface_105:209);
+	} else {
+		if_setop(2, "Collect", interface_105:209);
+	}
+	if_setopbase(oc_name($obj2), interface_105:209);
+} else {
+	if_setopbase("", interface_105:209);
+}
+def_obj $obj3 = inv_getobj($inv1, 1);
+if_setobject($obj3, inv_getnum($inv1, 1), interface_105:211);
+if_clearops(interface_105:211);
+if ($obj3 ! null) {
+	if (oc_cert($obj3) ! $obj3) {
+		if_setop(1, "Collect-notes", interface_105:211);
+		if_setop(2, "Collect-items", interface_105:211);
+	} else {
+		if_setop(2, "Collect", interface_105:211);
+	}
+	if_setopbase(oc_name($obj3), interface_105:211);
+} else {
+	if_setopbase("", interface_105:211);
+}
+if_setoninvtransmit("script589{$inv1}", interface_105:200);
+def_int $int4 = stockmarket_getoffertype($int0);
+def_int $int5 = stockmarket_getoffercount($int0);
+def_int $int6 = stockmarket_getoffercompletedcount($int0);
+def_int $int7 = stockmarket_getoffercompletedgold($int0);
+def_string $string0 = ~script46($int6, ",");
+def_string $string1 = ~script46($int7, ",");
+cc_deleteall(interface_105:202);
+if (if_find(interface_105:202) = true) {
+	if (stockmarket_isofferadding($int0) = true) {
+		.cc_create(interface_105:202, ^iftype_text, 0);
+		.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+		.cc_settextfont(p11_full);
+		.cc_setcolour(0xdbd884);
+		.cc_settext("Submitting offer...");
+		.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	} else {
+		~script652(0, 0, cc_getwidth, cc_getheight, $int0, interface_105:202, 0, interface_105:213, 2);
+	}
+}
+if (stockmarket_isofferfinished($int0) = true) {
+	if ($int4 = 0) {
+		if_settext("You bought a total of <col=cc9900><$string0></col><br>for a total price of <col=cc9900><$string1></col> gp.", interface_105:201);
+	} else {
+		if_settext("You sold a total of <col=cc9900><$string0></col><br>for a total price of <col=cc9900><$string1></col> gp.", interface_105:201);
+	}
+	if_sethide(true, interface_105:203);
+} else {
+	if ($int4 = 0) {
+		if_settext("You have bought a total of <col=cc9900><$string0></col> so far<br>for a total price of <col=cc9900><$string1></col> gp.", interface_105:201);
+	} else {
+		if_settext("You have sold a total of <col=cc9900><$string0></col> so far<br>for a total price of <col=cc9900><$string1></col> gp.", interface_105:201);
+	}
+	if_sethide(false, interface_105:203);
+}

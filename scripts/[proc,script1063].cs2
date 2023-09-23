@@ -1,0 +1,78 @@
+// 1063
+[proc,script1063](component $component0, chatphrase $chatphrase1)
+def_component $component2 = enum(int, component, enum_1550, 0);
+def_component $component3 = enum(int, component, enum_1551, 0);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_create($component0, ^iftype_text, 0);
+cc_setcolour(^black);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+def_string $string0 = chatphrase_gettext($chatphrase1);
+if (%varcint126 = 1) {
+	$string0 = "From <%varcstring27>: <col=800000><$string0>";
+} else if (%varcint126 = 2) {
+	$string0 = "[<col=0000ff><clan_getchatdisplayname><col=000000>] <%varcstring27>: <col=800000><$string0>";
+} else {
+	$string0 = "<%varcstring27>: <col=0000ff><$string0>";
+}
+cc_settext($string0);
+cc_settextshadow(false);
+cc_setsize(parawidth($string0, if_getwidth($component0), p12_full), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+if_sethide(false, $component2);
+def_int $int4 = chatphrase_getautoresponsecount($chatphrase1);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_chatphrase $chatphrase9 = null;
+def_int $int10 = 0;
+while ($int5 < $int4) {
+	cc_create($component2, ^iftype_text, $int6);
+	cc_setcolour(^black);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	$chatphrase9 = chatphrase_getautoresponse($chatphrase1, $int5);
+	$string0 = chatphrase_gettext($chatphrase9);
+	cc_setonop("script1070($component0, $chatphrase9, 0)");
+	cc_setopbase($string0);
+	cc_setop(1, "Send: ");
+	cc_setonmouseover("script1082(0, $component3, $int6)");
+	cc_setonmouseleave("script1083(0, $component3, $int6)");
+	if ($int5 < 10) {
+		$string0 = "<col=555555><tostring(calc(($int5 + 1) % 10))>. <col=000000><$string0>";
+	}
+	cc_settext($string0);
+	cc_settextshadow(false);
+	$int7 = parawidth($string0, if_getwidth($component0), p12_full);
+	if ($int7 > $int8) {
+		$int8 = $int7;
+	}
+	$int5 = calc($int5 + 1);
+	$int6 = calc($int6 + 1);
+}
+if_setonkey("script1059(event_keycode, event_keychar, $component0, 0, null, $chatphrase1, $int6)", $component2);
+$int5 = 0;
+def_int $int11 = 0;
+while (cc_find($component2, $int5) = ^true) {
+	if (calc($int10 * 14 + 14) > if_getheight($component2)) {
+		$int11 = calc($int11 + $int8 + 4);
+		$int10 = 0;
+	}
+	cc_setsize($int8, 14, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int11 + 2), calc($int10 * 14), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_create($component3, ^iftype_rectangle, $int5);
+	.cc_setsize(calc(cc_getwidth + 4), cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(calc(cc_getx - 2), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setcolour(0x577e45);
+	.cc_setfill(true);
+	.cc_sethide(true);
+	$int5 = calc($int5 + 1);
+	$int10 = calc($int10 + 1);
+}
+$int11 = calc($int11 + $int8 + 4);
+def_component $layer12 = if_getlayer($component2);
+if_setsize($int11, if_getheight($layer12), ^setsize_abs, ^setsize_abs, $component2);
+if_setsize($int11, if_getheight($layer12), ^setsize_abs, ^setsize_abs, $component3);
+~script1068($component0, 0);

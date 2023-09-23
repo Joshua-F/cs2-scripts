@@ -1,0 +1,1245 @@
+// 1023
+[proc,script1023](stat $stat0, int $int1)(string, namedobj, int)
+def_int $lvl2 = stat_base($stat0);
+def_string $string0 = "null";
+def_namedobj $namedobj3 = null;
+def_int $int4 = 0;
+switch_int ($int1) {
+	case 0 :
+		if ($stat0 = mining & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var122 = 7) {
+			$int4 = 0;
+		}
+	case 1 :
+		if ($stat0 = attack & stat_base($stat0) = 15) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = prayer & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3550 = 11) {
+			$int4 = 0;
+		}
+	case 2 :
+		if ($stat0 = defence & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit299 > 109) {
+			$int4 = 0;
+		}
+	case 3 :
+		if ($stat0 = cooking & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fletching & stat_base($stat0) = 5) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = ranged & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var293 = 65) {
+			$int4 = 0;
+		}
+	case 4 :
+		if ($stat0 = agility & stat_base($stat0) = 42) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = ranged & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var655 > 130) {
+			$int4 = 0;
+		}
+	case 5 :
+		if ($stat0 = crafting & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var399 > 6) {
+			$int4 = 0;
+		}
+	case 6 :
+		if ($stat0 = agility & stat_base($stat0) = 26) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = construction & stat_base($stat0) = 5) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 32) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 33) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = strength & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 22) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2573 = 320) {
+			$int4 = 0;
+		}
+	case 7 :
+		if ($stat0 = firemaking & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = slayer & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 53) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit358 = 15) {
+			$int4 = 0;
+		}
+	case 8 :
+		if ($stat0 = fletching & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = runecraft & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 65) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1465 = 80) {
+			$int4 = 0;
+		}
+	case 9 :
+		if ($stat0 = herblore & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = agility & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var131 = 9) {
+			$int4 = 0;
+		}
+	case 10 :
+		if ($stat0 = herblore & stat_base($stat0) = 31) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var335 = 110) {
+			$int4 = 0;
+		}
+	case 11 :
+		if ($stat0 = hunter & stat_base($stat0) = 27) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2780 = 40) {
+			$int4 = 0;
+		}
+	case 12 :
+		if ($stat0 = crafting & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (testbit(%var299, 20) = ^true) {
+			$int4 = 0;
+		}
+	case 13 :
+		if ($stat0 = crafting & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 39) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = prayer & stat_base($stat0) = 43) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1560 > 69) {
+			$int4 = 0;
+		}
+	case 14 :
+		if ($stat0 = farming & stat_base($stat0) = 49) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 57) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2326 > 80) {
+			$int4 = 0;
+		}
+	case 15 :
+		if ($stat0 = crafting & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 59) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var148 = 11) {
+			$int4 = 0;
+		}
+	case 16 :
+		if ($stat0 = fishing & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var11 = 5) {
+			$int4 = 0;
+		}
+	case 17 :
+		if ($stat0 = cooking & stat_base($stat0) = 22) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = farming & stat_base($stat0) = 17) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit822 >= 140) {
+			$int4 = 0;
+		}
+	case 18 :
+		if ($stat0 = crafting & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fletching & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var347 > 9) {
+			$int4 = 0;
+		}
+	case 19 :
+		if ($stat0 = farming & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit961 = 60) {
+			$int4 = 0;
+		}
+	case 20 :
+		if ($stat0 = agility & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = cooking & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit217 > 7) {
+			$int4 = 0;
+		}
+	case 21 :
+		if ($stat0 = crafting & stat_base($stat0) = 12) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 16) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 33) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 14) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit571 > 49) {
+			$int4 = 0;
+		}
+	case 22 :
+		if ($stat0 = crafting & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit346 > 9) {
+			$int4 = 0;
+		}
+	case 23 :
+		if ($stat0 = agility & stat_base($stat0) = 25) {
+			~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var150 = 160) {
+			$int4 = 0;
+		}
+	case 24 :
+		if ($stat0 = crafting & stat_base($stat0) = 49) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 17) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1527 > 159) {
+			$int4 = 0;
+		}
+	case 25 :
+		if ($stat0 = agility & stat_base($stat0) = 15) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 35) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var382 = 11) {
+			$int4 = 0;
+		}
+	case 26 :
+		if ($stat0 = cooking & stat_base($stat0) = 53) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fishing & stat_base($stat0) = 53) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var188 = 15) {
+			$int4 = 0;
+		}
+	case 27 :
+		if ($stat0 = agility & stat_base($stat0) = 35) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit34 > 9) {
+			$int4 = 0;
+		}
+	case 28 :
+		if ($stat0 = crafting & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 7) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 15) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1990 > 420) {
+			$int4 = 0;
+		}
+	case 29 :
+		if ($stat0 = herblore & stat_base($stat0) = 3) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var175 > 11) {
+			$int4 = 0;
+		}
+	case 30 :
+		if ($stat0 = agility & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 56) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 52) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = prayer & stat_base($stat0) = 42) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = strength & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var139 = 75) {
+			$int4 = 0;
+		}
+	case 31 :
+		if ($stat0 = crafting & stat_base($stat0) = 31) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 36) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var147 = 6) {
+			$int4 = 0;
+		}
+	case 32 :
+		if ($stat0 = agility & stat_base($stat0) = 13) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 17) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 13) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit532 > 10) {
+			$int4 = 0;
+		}
+	case 33 :
+		if ($stat0 = crafting & stat_base($stat0) = 61) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = defence & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 49) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 5) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 65) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 60) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 55) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2448 = 190) {
+			$int4 = 0;
+		}
+	case 34 :
+		if ($stat0 = crafting & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 7) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1383 > 3) {
+			$int4 = 0;
+		}
+	case 35 :
+		if ($stat0 = thieving & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit334 > 27) {
+			$int4 = 0;
+		}
+	case 36 :
+		if ($stat0 = agility & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit260 > 69) {
+			$int4 = 0;
+		}
+	case 37 :
+		if ($stat0 = ranged & stat_base($stat0) = 60) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var517 > 7) {
+			$int4 = 0;
+		}
+	case 38 :
+		if ($stat0 = agility & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var387 > 100) {
+			$int4 = 0;
+		}
+	case 39 :
+		if ($stat0 = farming & stat_base($stat0) = 29) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2790 > 310) {
+			$int4 = 0;
+		}
+	case 40 :
+		if ($stat0 = crafting & stat_base($stat0) = 18) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var307 = 110) {
+			$int4 = 0;
+		}
+	case 41 :
+		if ($stat0 = agility & stat_base($stat0) = 36) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 18) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var416 > 275) {
+			$int4 = 0;
+		}
+	case 42 :
+		if ($stat0 = agility & stat_base($stat0) = 56) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var328 > 14) {
+			$int4 = 0;
+		}
+	case 43 :
+		if ($stat0 = agility & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = slayer & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2140 > 20) {
+			$int4 = 0;
+		}
+	case 44 :
+		if ($stat0 = prayer & stat_base($stat0) = 31) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var76 = 6) {
+			$int4 = 0;
+		}
+	case 45 :
+		if ($stat0 = firemaking & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var159 >= 12) {
+			$int4 = 0;
+		}
+	case 46 :
+		if ($stat0 = crafting & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 15) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var339 = 85) {
+			$int4 = 0;
+		}
+	case 47 :
+		if ($stat0 = crafting & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1372 > 124) {
+			$int4 = 0;
+		}
+	case 48 :
+		if ($stat0 = agility & stat_base($stat0) = 32) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var116 > 14) {
+			$int4 = 0;
+		}
+	case 49 :
+		if ($stat0 = magic & stat_base($stat0) = 33) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 37) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = ranged & stat_base($stat0) = 37) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 37) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1444 > 59) {
+			$int4 = 0;
+		}
+	case 50 :
+		if ($stat0 = cooking & stat_base($stat0) = 62) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 42) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fishing & stat_base($stat0) = 62) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 66) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2098 = 200) {
+			$int4 = 0;
+		}
+	case 51 :
+		if ($stat0 = agility & stat_base($stat0) = 15) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = cooking & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fishing & stat_base($stat0) = 5) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var320 = 6) {
+			$int4 = 0;
+		}
+	case 52 :
+		if ($stat0 = crafting & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 49) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit451 > 1) {
+			$int4 = 0;
+		}
+	case 53 :
+		if ($stat0 = ranged & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 42) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var26 = 80 | %var26 = 90) {
+			$int4 = 0;
+		}
+	case 54 :
+		if ($stat0 = fletching & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var197 = 30) {
+			$int4 = 0;
+		}
+	case 55 :
+		if ($stat0 = thieving & stat_base($stat0) = 21) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var200 = 5) {
+			$int4 = 0;
+		}
+	case 56 :
+		if ($stat0 = agility & stat_base($stat0) = 28) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var385 > 44) {
+			$int4 = 0;
+		}
+	case 57 :
+		if ($stat0 = agility & stat_base($stat0) = 15) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var317 = 50) {
+			$int4 = 0;
+		}
+	case 58 :
+		if ($stat0 = ranged & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var161 = 10) {
+			$int4 = 0;
+		}
+	case 59 :
+		if ($stat0 = agility & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 14) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 14) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 15) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var212 > 12) {
+			$int4 = 0;
+		}
+	case 60 :
+		if ($stat0 = attack & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var5 = 10) {
+			$int4 = 0;
+		}
+	case 61 :
+		if ($stat0 = construction & stat_base($stat0) = 5) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 46) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2497 = 60) {
+			$int4 = 0;
+		}
+	case 62 :
+		if ($stat0 = agility & stat_base($stat0) = 23) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 23) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2258 = 13) {
+			$int4 = 0;
+		}
+	case 63 :
+		if ($stat0 = crafting & stat_base($stat0) = 19) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = ranged & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = slayer & stat_base($stat0) = 18) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 35) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3185 = 240) {
+			$int4 = 0;
+		}
+	case 64 :
+		if ($stat0 = magic & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2639 = 11) {
+			$int4 = 0;
+		}
+	case 65 :
+		if ($stat0 = crafting & stat_base($stat0) = 36) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = farming & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2866 = 200) {
+			$int4 = 0;
+		}
+	case 66 :
+		if ($stat0 = construction & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 16) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = prayer & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var980 > 129) {
+			$int4 = 0;
+		}
+	case 67 :
+		if ($stat0 = crafting & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = runecraft & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = slayer & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2610 = 14) {
+			$int4 = 0;
+		}
+	case 68 :
+		if ($stat0 = agility & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = construction & stat_base($stat0) = 34) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = hunter & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3293 = 135) {
+			$int4 = 0;
+		}
+	case 69 :
+		if ($stat0 = agility & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = construction & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 46) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 56) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3311 = 340) {
+			$int4 = 0;
+		}
+	case 70 :
+		if ($stat0 = construction & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3337 = 18) {
+			$int4 = 0;
+		}
+	case 71 :
+		if ($stat0 = runecraft & stat_base($stat0) = 35) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3523 > 149) {
+			$int4 = 0;
+		}
+	case 72 :
+		if ($stat0 = firemaking & stat_base($stat0) = 40) {
+			~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3534 = 80) {
+			$int4 = 0;
+		}
+	case 73 :
+		if ($stat0 = agility & stat_base($stat0) = 59) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = farming & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 52) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 58) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 71) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit2783 = 60) {
+			$int4 = 0;
+		}
+	case 74 :
+		if ($stat0 = magic & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = defence & stat_base($stat0) = 65) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3888 = 90) {
+			$int4 = 0;
+		}
+	case 75 :
+		if ($stat0 = agility & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = ranged & stat_base($stat0) = 47) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = slayer & stat_base($stat0) = 56) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 56) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = strength & stat_base($stat0) = 60) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit3954 = 200) {
+			$int4 = 0;
+		}
+	case 76 :
+		if ($stat0 = agility & stat_base($stat0) = 55) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = farming & stat_base($stat0) = 53) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = slayer & stat_base($stat0) = 59) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 72) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4055 = 65) {
+			$int4 = 0;
+		}
+	case 77 :
+		if ($stat0 = prayer & stat_base($stat0) = 30) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = agility & stat_base($stat0) = 36) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 36) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fishing & stat_base($stat0) = 36) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 37) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4105 = 18) {
+			$int4 = 0;
+		}
+	case 78 :
+		if ($stat0 = cooking & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1850 = 1) {
+			$int4 = 0;
+		}
+	case 79 :
+		if ($stat0 = cooking & stat_base($stat0) = 31) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1895 = 110) {
+			$int4 = 0;
+		}
+	case 80 :
+		if ($stat0 = cooking & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1896 = 5) {
+			$int4 = 0;
+		}
+	case 81 :
+		if ($stat0 = cooking & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1878 = 5) {
+			$int4 = 0;
+		}
+	case 82 :
+		if ($stat0 = cooking & stat_base($stat0) = 41) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1904 = 170) {
+			$int4 = 0;
+		}
+	case 83 :
+		if ($stat0 = cooking & stat_base($stat0) = 70) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = agility & stat_base($stat0) = 48) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit1914 = 50) {
+			$int4 = 0;
+		}
+	case 84 :
+		if ($stat0 = hunter & stat_base($stat0) = 48) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 51) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 58) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4321 = 200) {
+			$int4 = 0;
+		}
+	case 85 :
+		if ($stat0 = mining & stat_base($stat0) = 46) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4505 = 100) {
+			$int4 = 0;
+		}
+	case 86 :
+		if ($stat0 = construction & stat_base($stat0) = 44) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fletching & stat_base($stat0) = 42) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4396 = 60) {
+			$int4 = 0;
+		}
+	case 87 :
+		if ($stat0 = agility & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 21) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 60) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = strength & stat_base($stat0) = 60) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4230 = 700) {
+			$int4 = 0;
+		}
+	case 88 :
+		if ($stat0 = crafting & stat_base($stat0) = 42) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = farming & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fishing & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = prayer & stat_base($stat0) = 47) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = slayer & stat_base($stat0) = 42) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%var600 > 18) {
+			$int4 = 0;
+		}
+	case 89 :
+		if ($stat0 = construction & stat_base($stat0) = 20) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = agility & stat_base($stat0) = 29) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 47) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 49) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 35) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = slayer & stat_base($stat0) = 31) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = firemaking & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4569 = 500) {
+			$int4 = 0;
+		}
+	case 90 :
+		if ($stat0 = attack & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 41) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 43) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = strength & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = construction & stat_base($stat0) = 50) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4700 = 63) {
+			$int4 = 0;
+		}
+	case 91 :
+		if ($stat0 = construction & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = farming & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = hunter & stat_base($stat0) = 10) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 11) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4684 = 150) {
+			$int4 = 0;
+		}
+	case 92 :
+		if ($stat0 = slayer & stat_base($stat0) = 35) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 25) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4764 = 250) {
+			$int4 = 0;
+		}
+	case 93 :
+		if ($stat0 = agility & stat_base($stat0) = 60) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 63) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 66) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 69) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit4797 = 100) {
+			$int4 = 0;
+		}
+	case 94 :
+		if ($stat0 = construction & stat_base($stat0) = 40) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = farming & stat_base($stat0) = 26) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = prayer & stat_base($stat0) = 35) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = summoning & stat_base($stat0) = 19) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit5032 = 80) {
+			$int4 = 0;
+		}
+	case 95 :
+		if ($stat0 = firemaking & stat_base($stat0) = 43) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit5133 >= 90) {
+			$int4 = 0;
+		}
+	case 96 :
+		if ($stat0 = firemaking & stat_base($stat0) = 47) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = hunter & stat_base($stat0) = 35) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 45) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = prayer & stat_base($stat0) = 55) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = summoning & stat_base($stat0) = 23) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = woodcutting & stat_base($stat0) = 37) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit5331 = 35) {
+			$int4 = 0;
+		}
+	case 97 :
+		if ($stat0 = hunter & stat_base($stat0) = 51) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = agility & stat_base($stat0) = 51) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = smithing & stat_base($stat0) = 54) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = mining & stat_base($stat0) = 59) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit5387 >= 250) {
+			$int4 = 0;
+		}
+	case 98 :
+		if ($stat0 = defence & stat_base($stat0) = 65) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = magic & stat_base($stat0) = 75) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = herblore & stat_base($stat0) = 65) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = thieving & stat_base($stat0) = 60) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = hunter & stat_base($stat0) = 55) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = farming & stat_base($stat0) = 65) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = summoning & stat_base($stat0) = 23) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (~script395 = 1 & ($stat0 = strength | $stat0 = attack)) {
+			$string0, $namedobj3, $int4 = ~script2042($stat0, $lvl2, $int1);
+		}
+		if (%varbit5491 >= 910) {
+			$int4 = 0;
+		}
+	case 99 :
+		if ($stat0 = firemaking & stat_base($stat0) = 55) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = crafting & stat_base($stat0) = 52) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if ($stat0 = fletching & stat_base($stat0) = 53) {
+			$string0, $namedobj3, $int4 = ~script1025($stat0, $lvl2, $int1);
+		}
+		if (%varbit5761 = 30) {
+			$int4 = 0;
+		}
+	case default :
+		$int4 = -1;
+}
+return($string0, $namedobj3, $int4);

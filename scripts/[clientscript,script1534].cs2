@@ -1,0 +1,11 @@
+// 1534
+[clientscript,script1534](component $component0, int $opindex1)
+if ($opindex1 ! 1) {
+	return;
+}
+if (~script42(%varcint214) = 1) {
+	%varcint214 = false;
+} else {
+	%varcint214 = true;
+}
+~script1741($component0);

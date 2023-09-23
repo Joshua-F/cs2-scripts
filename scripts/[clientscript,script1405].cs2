@@ -1,0 +1,18 @@
+// 1405
+[clientscript,script1405]
+if (%varbit61 = 0) {
+	if_settext("Draughts: Options", interface_756:10);
+	~script1406(interface_756:3);
+} else if (%varbit61 = 1) {
+	if_settext("Runelink: Options", interface_756:10);
+	~script1406(interface_756:4);
+} else if (%varbit61 = 2) {
+	if_settext("Runesquares: Options", interface_756:10);
+	~script1406(interface_756:8);
+} else if (%varbit61 = 3) {
+	if_settext("Runeversi: Options", interface_756:10);
+	~script1406(interface_756:6);
+}
+~script1407;
+~script1408;
+~script1409;

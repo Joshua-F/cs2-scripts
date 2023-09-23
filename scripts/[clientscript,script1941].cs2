@@ -1,0 +1,28 @@
+// 1941
+[clientscript,script1941]
+def_int $int0 = calc(%var1332 + %var1334 + %var1337 + 2 * (%var1333 - %var1335));
+if_settext("Score: <tostring($int0)>", interface_809:17);
+if (%varcint556 = 0) {
+	return;
+}
+def_int $int1 = calc(%varcint556 - clientclock);
+def_int $int2 = calc($int1 / 3000);
+def_int $int3 = calc($int1 / 50 % 60);
+if ($int2 < 0 | $int3 < 0) {
+	if_settext("Game ending", interface_809:15);
+	if_settextshadow(true, interface_809:15);
+	~script1942;
+} else if ($int2 = 0 & $int3 = 0) {
+	if_settext("Game ending", interface_809:15);
+} else if ($int3 < 10) {
+	if_settext("<tostring($int2)>:0<tostring($int3)>", interface_809:15);
+} else {
+	if_settext("<tostring($int2)>:<tostring($int3)>", interface_809:15);
+}
+if ($int2 < 1) {
+	if_setcolour(^red, interface_809:15);
+	if_settextshadow(true, interface_809:15);
+	~script1942;
+} else if (if_gethide(interface_809:18) = false) {
+	if_sethide(true, interface_809:18);
+}

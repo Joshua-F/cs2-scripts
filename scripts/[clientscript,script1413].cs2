@@ -1,0 +1,18 @@
+// 1413
+[clientscript,script1413](component $component0)
+cc_deleteall($component0);
+def_int $width1 = if_getwidth($component0);
+def_int $height2 = if_getheight($component0);
+def_int $x3 = calc($width1 - 9);
+def_int $y4 = calc($height2 - 9);
+def_int $width5 = calc($width1 - 18);
+def_int $height6 = calc($height2 - 18);
+~script98($component0, 0, "tradebacking_dark", 0, 0, $width1, $height2);
+~script98($component0, 1, "graphic_1267", 0, 0, 9, 9);
+~script98($component0, 2, "graphic_1268", $x3, 0, 9, 9);
+~script98($component0, 3, "graphic_1269", 0, $y4, 9, 9);
+~script98($component0, 4, "graphic_1270", $x3, $y4, 9, 9);
+~script98($component0, 5, "graphic_1271", 0, 9, 9, $height6);
+~script98($component0, 6, "graphic_1272", 9, 0, $width5, 9);
+~script98($component0, 7, "graphic_1273", $x3, 9, 9, $height6);
+~script98($component0, 8, "graphic_1274", 9, $y4, $width5, 9);

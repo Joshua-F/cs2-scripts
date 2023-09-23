@@ -1,0 +1,21 @@
+// 775
+[proc,script775](obj $obj0)(int, string, namedobj)
+if (%var448 = bronze_minotaur_pouch_12073) {
+	return(36, "Bronze Bull Rush", bronze_bull_rush_scroll_12461);
+}
+if (%var448 = iron_minotaur_pouch_12075) {
+	return(46, "Iron Bull Rush", iron_bull_rush_scroll_12462);
+}
+if (%var448 = steel_minotaur_pouch_12077) {
+	return(56, "Steel Bull Rush", steel_bull_rush_scroll_12463);
+}
+if (%var448 = mithril_minotaur_pouch_12079) {
+	return(66, "Mithril Bull Rush", mith_bull_rush_scroll_12464);
+}
+if (%var448 = adamant_minotaur_pouch_12081) {
+	return(76, "Adamant Bull Rush", addy_bull_rush_scroll_12465);
+}
+if (%var448 = rune_minotaur_pouch_12083) {
+	return(86, "Rune Bull Rush", rune_bull_rush_scroll_12466);
+}
+return(0, "", null);

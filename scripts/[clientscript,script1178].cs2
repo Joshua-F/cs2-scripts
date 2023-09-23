@@ -1,0 +1,4 @@
+// 1178
+[clientscript,script1178]
+%varcint548 = max(0, calc(%varcint548 - 1));
+if_settext(tostring(calc(%varcint548 * 2 / 100)), interface_745:5);

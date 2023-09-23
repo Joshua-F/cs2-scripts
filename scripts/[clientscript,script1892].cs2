@@ -1,0 +1,13 @@
+// 1892
+[clientscript,script1892]
+%varcint183 = calc(%varcint183 - 1);
+if (%varcint183 <= 0) {
+	~script1893(1);
+	return;
+}
+def_int $int0 = calc(%varcint183 / 50 + 1);
+if ($int0 = 1) {
+	if_settext("Reverting in 1 second...", interface_744:240);
+} else {
+	if_settext("Reverting in <tostring($int0)> seconds...", interface_744:240);
+}

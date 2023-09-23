@@ -1,0 +1,48 @@
+// 1077
+[proc,script1077](chatphrase $chatphrase0)
+def_chatphrase $chatphrase1 = $chatphrase0;
+if ($chatphrase0 = chatphrase_105 & %var394 = 0) {
+	$chatphrase0 = chatphrase_561;
+}
+activechatphrase_prepare($chatphrase0);
+def_int $int2 = 0;
+def_int $count3 = chatphrase_getdynamiccommandcount($chatphrase0);
+def_int $int4 = -1;
+while ($int2 < $count3 & $int2 < 10) {
+	switch_int (chatphrase_getdynamiccommand($chatphrase0, $int2)) {
+		case 0 :
+			~script1078($int2);
+		case 1 :
+			~script1079($int2);
+		case 10 :
+			~script1079($int2);
+		case 2 :
+			~script1078($int2);
+	}
+	$int2 = calc($int2 + 1);
+}
+if (%varcint126 = 0 | %varcint126 = 4) {
+	activechatphrase_sendpublic;
+} else if (%varcint126 = 1) {
+	$int4 = ~script1090(%varcstring27);
+	if ($int4 = 1) {
+		activechatphrase_sendprivate(removetags(%varcstring27));
+		~script1089;
+	} else if ($int4 = -1) {
+		mes("Sorry, this user is not on your Friends List.");
+	} else {
+		mes("Sorry, your friend is no longer playing RuneScape.");
+	}
+} else if (%varcint126 = 5) {
+	activechatphrase_sendprivate(removetags(%varcstring27));
+	~script1089;
+} else if (%varcint126 = 3 | %varcint126 = 7) {
+	activechatphrase_sendprivate(removetags(%varcstring27));
+	~script1089;
+} else if (%varcint126 = 2 | %varcint126 = 6) {
+	activechatphrase_sendclan;
+}
+%varcint130 = $chatphrase1;
+%varcint131 = %varcint126;
+%varcstring28 = %varcstring27;
+~script1054;

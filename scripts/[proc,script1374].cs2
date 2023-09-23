@@ -1,0 +1,10 @@
+// 1374
+[proc,script1374](int $int0)
+if ($int0 = 1) {
+	if_sethide(false, interface_755:25);
+	if_setop(1, "Hide overview", interface_755:18);
+} else {
+	if_sethide(true, interface_755:25);
+	if_setop(1, "Show overview", interface_755:18);
+}
+if_setonop("script1373", interface_755:18);

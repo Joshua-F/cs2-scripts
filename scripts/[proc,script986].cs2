@@ -1,0 +1,181 @@
+// 986
+[proc,script986](int $int0, int $int1)(int, namedobj, string, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, logs_1511, "Normal logs", "You can now light <col=000080>normal logs</col>.");
+			case 1 :
+				return(1, unlit_torch_596, "Members: Torch", "Members can now light <col=000080>torches</col>.");
+			case 2 :
+				return(1, candle_36, "Members: Candle", "Members can now light <col=000080>candles</col>.");
+			case 3 :
+				return(1, achey_tree_logs_2862, "Members: Achey logs", "Members can now light <col=000080>achey logs</col>.");
+			case 4 :
+				return(4, candle_lantern_4531, "Members: Candle lantern", "Members can now light <col=000080>candle lanterns</col>.");
+			case 5 :
+				return(5, pyre_logs_3438, "Members: Pyre logs", "Members can now light <col=000080>pyre logs</col>.");
+			case 6 :
+				return(12, oil_lamp_4524, "Members: Oil lamp", "Members can now light <col=000080>oil lamps</col>.");
+			case 7 :
+				return(15, oak_logs_1521, "Oak logs", "You can now light <col=000080>oak logs</col>.");
+			case 8 :
+				return(20, iron_spit_7225, "Members: Iron spit", "Members can now cook with <col=000080>iron spits</col>.");
+			case 9 :
+				return(20, oak_pyre_logs_3440, "Members: Oak pyre logs", "Members can now light <col=000080>oak pyre logs</col>.");
+			case 10 :
+				return(26, oil_lantern_4539, "Members: Oil lantern", "Members can now light <col=000080>oil lanterns</col>.");
+			case 11 :
+				return(30, willow_logs_1519, "Willow logs", "You can now light <col=000080>willow logs</col>.");
+			case 12 :
+				return(33, lit_bug_lantern_7053, "Members: Harpie bug lantern (not a light source)", "Members can now light <col=000080>harpie bug lanterns</col>. These are not a light source.");
+			case 13 :
+				return(35, teak_logs_6333, "Members: Teak logs", "Members can now light <col=000080>teak logs</col>.");
+			case 14 :
+				return(35, willow_pyre_logs_3442, "Members: Willow pyre logs", "Members can now light <col=000080>willow pyre logs</col>.");
+			case 15 :
+				return(40, teak_pyre_logs_6211, "Members: Teak pyre logs", "Members can now light <col=000080>teak pyre logs</col>.");
+			case 16 :
+				return(42, arctic_pine_logs_10810, "Members: Arctic pine logs", "Members can now light <col=000080>arctic pine logs</col>.");
+			case 17 :
+				return(45, maple_logs_1517, "Maple logs", "You can now light <col=000080>maple logs</col>.");
+			case 18 :
+				return(47, arctic_pyre_logs_10808, "Members: Arctic pine pyre logs", "Members can now light <col=000080>arctic pine pyre logs</col>.");
+			case 19 :
+				return(49, bullseye_lantern_4550, "Members: Bullseye lantern", "Members can now light <col=000080>bullseye lanterns</col>.");
+			case 20 :
+				return(49, sapphire_lantern_4702, "Members: Sapphire lantern", "Members can now light <col=000080>sapphire lanterns</col>.");
+			case 21 :
+				return(49, emerald_lantern_9065, "Members: Emerald lantern", "Members can now light <col=000080>emerald lanterns</col>.");
+			case 22 :
+				return(50, mahogany_logs_6332, "Members: Mahogany logs", "Members can now light <col=000080>mahogany logs</col>.");
+			case 23 :
+				return(50, maple_pyre_logs_3444, "Members: Maple pyre logs", "Members can now light <col=000080>maple pyre logs</col>.");
+			case 24 :
+				return(52, light_orb_10973, "Members: Replace Dorgeshuun light orb", "Members can now replace <col=000080>Dorgeshuun light orbs</col>.");
+			case 25 :
+				return(55, mahogany_pyre_log_6213, "Members: Mahogany pyre logs", "Members can now light <col=000080>mahogany pyre logs</col>.");
+			case 26 :
+				return(58, eucalyptus_logs_12581, "Members: Eucalyptus logs", "Members can now light <col=000080>eucalyptus logs</col>.");
+			case 27 :
+				return(60, yew_logs_1515, "Yew logs", "You can now light <col=000080>yew logs</col>.");
+			case 28 :
+				return(63, eucalyptus_pyre_logs_12583, "Members: Eucalyptus pyre logs", "Members can now light <col=000080>eucalyptus pyre logs</col>.");
+			case 29 :
+				return(65, mining_helmet_5013, "Members: Cave goblin mining helmet", "Members can now light <col=000080>cave goblin mining helmets</col>.");
+			case 30 :
+				return(65, yew_pyre_logs_3446, "Members: Yew pyre logs", "Members can now light <col=000080>yew pyre logs</col>.");
+			case 31 :
+				return(75, magic_logs_1513, "Members: Magic logs", "Members can now light <col=000080>magic logs</col>.");
+			case 32 :
+				return(80, magic_pyre_logs_3448, "Members: Magic pyre logs", "Members can now light <col=000080>magic pyre logs</col>.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, silvthrill_rod_7620, "To start Firemaking in the manner of the barbarians, talk to Otto Godblessed when you have level 35 Firemaking or higher.", "");
+			case 1 :
+				return(21, logs_1511, "Normal Logs", "Members versed in the art of barbarian firemaking can now light <col=000080>normal logs</col> without a tinderbox.");
+			case 2 :
+				return(21, achey_tree_logs_2862, "Achey tree", "Members versed in the art of barbarian firemaking can now light <col=000080>achey tree logs</col> without a tinderbox.");
+			case 3 :
+				return(35, oak_logs_1521, "Oak", "Members versed in the art of barbarian firemaking can now light <col=000080>oak logs</col> without a tinderbox.");
+			case 4 :
+				return(50, willow_logs_1519, "Willow", "Members versed in the art of barbarian firemaking can now light <col=000080>willow logs</col> without a tinderbox.");
+			case 5 :
+				return(55, teak_logs_6333, "Teak", "Members versed in the art of barbarian firemaking can now light <col=000080>teak logs</col> without a tinderbox.");
+			case 6 :
+				return(62, arctic_pine_logs_10810, "Arctic pine", "Members versed in the art of barbarian firemaking can now light <col=000080>arctic pine logs</col> without a tinderbox.");
+			case 7 :
+				return(65, maple_logs_1517, "Maple", "Members versed in the art of barbarian firemaking can now light <col=000080>maple logs</col> without a tinderbox.");
+			case 8 :
+				return(70, mahogany_logs_6332, "Mahogany", "Members versed in the art of barbarian firemaking can now light <col=000080>mahogany logs</col> without a tinderbox.");
+			case 9 :
+				return(78, eucalyptus_logs_12581, "Eucalyptus", "Members versed in the art of barbarian firemaking can now light <col=000080>eucalyptus logs</col> without a tinderbox.");
+			case 10 :
+				return(80, yew_logs_1515, "Yew", "Members versed in the art of barbarian firemaking can now light <col=000080>yew logs</col> without a tinderbox.");
+			case 11 :
+				return(95, magic_logs_1513, "Magic", "Members versed in the art of barbarian firemaking can now light <col=000080>magic logs</col> without a tinderbox.");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, silvthrill_rod_7620, "To start Firemaking in the manner of the barbarians, talk to Otto Godblessed when you have level 35 Firemaking or higher. Pyre ships can only be constructed and burnt where the ground is charred, around the lake next to Otto's hut.", "");
+			case 1 :
+				return(11, logs_1511, "Wood<br> (with 11 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>logs</col>. (They also need level 11 Crafting.)");
+			case 2 :
+				return(11, achey_tree_logs_2862, "Achey<br> (with 11 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>achey tree logs</col>. (They also need level 11 Crafting.)");
+			case 3 :
+				return(25, oak_logs_1521, "Oak<br> (with 25 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>oak logs</col>. (They also need level 25 Crafting.)");
+			case 4 :
+				return(40, willow_logs_1519, "Willow<br> (with 40 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>willow logs</col>. (They also need level 40 Crafting.)");
+			case 5 :
+				return(45, teak_logs_6333, "Teak<br> (with 45 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>teak logs</col>. (They also need level 45 Crafting.)");
+			case 6 :
+				return(52, arctic_pine_logs_10810, "Arctic pine<br> (with 52 Crafting)", "Members versed in the art of barbarian Firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>arctic pine logs</col>. (They also need level 52 Crafting.)");
+			case 7 :
+				return(55, maple_logs_1517, "Maple<br> (with 55 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>maple logs</col>. (They also need level 55 Crafting.)");
+			case 8 :
+				return(60, mahogany_logs_6332, "Mahogany<br> (with 60 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>mahogany logs</col>. (They also need level 60 Crafting.)");
+			case 9 :
+				return(68, eucalyptus_logs_12581, "Eucalyptus<br> (with 68 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>eucalyptus logs</col>. (They also need level 68 Crafting.)");
+			case 10 :
+				return(70, yew_logs_1515, "Yew<br> (with 70 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>yew logs</col>. (They also need level 70 Crafting.)");
+			case 11 :
+				return(85, magic_logs_1513, "Magic<br> (with 85 Crafting)", "Members versed in the art of barbarian firemaking now have the Firemaking level required to light pyre ships made out of <col=000080>magic logs</col>. (They also need level 85 Crafting.)");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, tinderbox_590, "Tinderbox", "You can now light fires with a <col=000080>tinderbox</col>.");
+			case 1 :
+				return(62, ring_of_fire_13659, "Members: Ring of Fire<br> (after All Fired Up)", "Members can now wear the <col=000080>Ring of Fire</col> (after All Fired Up).");
+			case 2 :
+				return(79, flame_gloves_13660, "Members: Flame Gloves<br> (after All Fired Up)", "Members can now wear the <col=000080>Flame Gloves</col> (after All Fired Up).");
+			case 3 :
+				return(92, inferno_adze_13661, "Members: Inferno Adze<br> (after All Fired Up)", "Members can now use the <col=000080>Inferno Adze</col> (after All Fired Up).");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, silvthrill_rod_7620, "To use the beacons, you must have completed All Fired Up.", "");
+			case 1 :
+				return(43, fire_beacon_13662, "Beacon near the River Salve", "Members can now light the <col=000080>beacon</col> near the <col=000080>River Salve</col> (after All Fired Up).");
+			case 2 :
+				return(43, fire_beacon_13662, "Beacon near the Rag and Bone Man", "Members can now light the <col=000080>beacon</col> near the <col=000080>Rag and Bone Man</col> (after All Fired Up).");
+			case 3 :
+				return(48, fire_beacon_13662, "Beacon near the Jolly Boar", "Members can now light the <col=000080>beacon</col> near the <col=000080>Jolly Boar</col> (after All Fired Up).");
+			case 4 :
+				return(53, fire_beacon_13662, "Beacon north of Varrock Castle", "Members can now light the <col=000080>beacon</col> north of <col=000080>Varrock Castle</col> (after All Fired Up).");
+			case 5 :
+				return(59, fire_beacon_13662, "Beacon near the Grand Exchange", "Members can now light the <col=000080>beacon</col> near the <col=000080>Grand Exchange</col> (after All Fired Up).");
+			case 6 :
+				return(62, fire_beacon_13662, "Beacon near Edgeville", "Members can now light the <col=000080>beacon</col> near <col=000080>Edgeville</col> (after All Fired Up).");
+			case 7 :
+				return(68, fire_beacon_13662, "Beacon near the Monastery<br> (after joining the Monastery)", "Members can now light the <col=000080>beacon</col> near <col=000080>the Monastery</col> (after All Fired Up and after joining the Monastery).");
+			case 8 :
+				return(72, fire_beacon_13662, "Beacon near Goblin Village<br> (after Land of the Goblins)", "Members can now light the <col=000080>beacon</col> near <col=000080>Goblin Village</col> (after All Fired Up and Land of the Goblins).");
+			case 9 :
+				return(76, fire_beacon_13662, "Beacon near Burthorpe<br> (with 56 Smithing)", "Members now have the Firemaking level required to light the <col=000080>beacon</col> near <col=000080>Burthorpe</col>. (They also need level 56 Smithing and to have completed All Fired Up).");
+			case 10 :
+				return(79, fire_beacon_13662, "Beacon east of Death Plateau<br> (with 42 Construction)", "Members now have the Firemaking level required to light the <col=000080>beacon</col> east of <col=000080>Death Plateau</col>. (They also need level 42 Construction and to have completed All Fired Up).");
+			case 11 :
+				return(83, fire_beacon_13662, "Beacon near the Trollheim shortcut<br> (with 64 Agility)", "Members now have the Firemaking level required to light the <col=000080>beacon</col> near the <col=000080>Trollheim shortcut</col>. (They also need level 64 Agility and to have completed All Fired Up).");
+			case 12 :
+				return(87, fire_beacon_13662, "Beacon near the entrance to the God Wars Dungeon<br> (with 60 Crafting)", "Members now have the Firemaking level required to light the <col=000080>beacon</col> near the entrance to the <col=000080>God Wars Dungeon</col>. (They also need level 60 Crafting and to have completed All Fired Up).");
+			case 13 :
+				return(89, fire_beacon_13662, "Beacon near small temple in the Wilderness<br> (with 70 Smithing or 59 Construction)", "Members now have the Firemaking level required to light the <col=000080>beacon</col> near the <col=000080>small temple in the Wilderness</col>. (They will also need level 70 Smithing or level 59 Construction, and to have completed All Fired Up).");
+			case 14 :
+				return(92, fire_beacon_13662, "Beacon on the Frozen Waste Plateau", "Members can now light the <col=000080>beacon</col> on the <col=000080>Frozen Waste Plateau</col> (after All Fired Up).");
+		}
+	case 5 :
+		switch_int ($int1) {
+			case 0 :
+				return(55, obj_14619, "Phoenix lair - funeral pyre", "Members can now light the phoenix's <col=000080>funeral pyre</col> in the phoenix lair.");
+		}
+	case 6 :
+		if ($int1 = 0) {
+			return(99, firemaking_cape_9804, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Firemaking<col=000080>. Why not visit <col=800000>Ignatius<col=000080>, south of <col=800000>Seers' Village<col=000080>? He has something special that is only available to true masters of the <col=800000>Firemaking<col=000080> skill!");
+		}
+}
+return(0, null, "", "");

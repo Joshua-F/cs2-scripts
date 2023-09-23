@@ -1,0 +1,9 @@
+// 1951
+[clientscript,script1951]
+if (%varcint616 = 1) {
+	if_sethide(false, interface_745:1);
+} else {
+	%varcint616 = 0;
+	if_sethide(true, interface_745:1);
+	~script1952;
+}

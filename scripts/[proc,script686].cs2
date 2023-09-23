@@ -1,0 +1,6 @@
+// 686
+[proc,script686](int $int0, int $int1)(int)
+while ($int0 < 0) {
+	$int0 = calc($int0 + $int1);
+}
+return($int0);

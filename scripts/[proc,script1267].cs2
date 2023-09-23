@@ -1,0 +1,14 @@
+// 1267
+[proc,script1267]
+def_string $string0 = "null";
+if (%var287 = 0) {
+	if_setgraphic("options_boxes,0", interface_261:5);
+	$string0 = "Split Private Chat<br>(currently off)";
+	if_setonmouserepeat("script38(event_com, interface_261:22, $string0, 25, 180)", interface_261:5);
+	%varcint2 = 0;
+} else if (%var287 = 1) {
+	if_setgraphic("options_boxes,1", interface_261:5);
+	$string0 = "Split Private Chat<br>(currently on)";
+	if_setonmouserepeat("script38(event_com, interface_261:22, $string0, 25, 180)", interface_261:5);
+	%varcint2 = 0;
+}

@@ -1,0 +1,35 @@
+// 726
+[clientscript,script726](component $component0, component $component1)
+if (if_hassub($component1) = false | %varcint199 = null) {
+	cc_deleteall($component0);
+	%varcint199 = null;
+	if_setonsubchange(null, $component0);
+	if_setonresize(null, $component0);
+	return;
+}
+if_setonsubchange("script727($component0, $component1)", $component0);
+if_setonresize("script726($component0, $component1)", $component0);
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setposition(0, 0, ^setpos_3, ^setpos_3);
+cc_setsize(if_getx($component1), 16384, ^setsize_abs, ^setsize_2);
+cc_setcolour(%varcint199);
+cc_settrans(%varcint213);
+cc_setfill(true);
+cc_create($component0, ^iftype_rectangle, 1);
+cc_setposition(0, 0, ^setpos_5, ^setpos_3);
+cc_setsize(calc(if_getwidth($component0) - (if_getx($component1) + if_getwidth($component1))), 16384, ^setsize_abs, ^setsize_2);
+cc_setcolour(%varcint199);
+cc_settrans(%varcint213);
+cc_setfill(true);
+cc_create($component0, ^iftype_rectangle, 2);
+cc_setposition(if_getx($component1), 0, ^setpos_abs_left, ^setpos_3);
+cc_setsize(if_getwidth($component1), if_gety($component1), ^setsize_abs, ^setsize_abs);
+cc_setcolour(%varcint199);
+cc_settrans(%varcint213);
+cc_setfill(true);
+cc_create($component0, ^iftype_rectangle, 3);
+cc_setposition(if_getx($component1), 0, ^setpos_abs_left, ^setpos_5);
+cc_setsize(if_getwidth($component1), calc(if_getheight($component0) - (if_gety($component1) + if_getheight($component1))), ^setsize_abs, ^setsize_abs);
+cc_setcolour(%varcint199);
+cc_settrans(%varcint213);
+cc_setfill(true);

@@ -1,0 +1,62 @@
+// 175
+[clientscript,script175](int $int0, int $int1)
+if (%var281 < 1000 & %varbit4895 = 2 & %varbit4925 < 3) {
+	if (%varbit4925 = 0) {
+		mes("You will be taught about the chat filter buttons later in the tutorial.");
+		return;
+	}
+	if (%varbit4925 = 1) {
+		if ($int1 ! 3 | $int0 ! 3) {
+			mes("Set your Private chat filter to Friends.");
+			return;
+		}
+		~script184($int1, ^chatfilter_friends);
+		~script178;
+		~script84;
+		~script89;
+	} else if (%varbit4925 = 2) {
+		if ($int1 ! 2 | $int0 ! 2) {
+			mes("Set your Public chat filter to On.");
+			return;
+		}
+		~script184($int1, ^chatfilter_on);
+		~script178;
+		~script84;
+		~script89;
+		if_setonvartransmit("script1532{var1252}", interface_751:12);
+	}
+} else if ($int0 = 1) {
+	if (%varcint41 = $int1 & getwindowmode >= ^windowmode_resizable & %var281 >= 1000) {
+		%varcint41 = -1;
+		~script1364;
+	} else if (%varcint41 = -1) {
+		%varcint41 = $int1;
+		~script1364;
+	} else {
+		%varcint41 = $int1;
+	}
+	~script181(%varcint41);
+	~script178;
+	~script84;
+	~script89;
+} else if ($int0 = 2) {
+	~script184($int1, ^chatfilter_on);
+	~script178;
+	~script84;
+	~script89;
+} else if ($int0 = 3) {
+	~script184($int1, ^chatfilter_friends);
+	~script178;
+	~script84;
+	~script89;
+} else if ($int0 = 4) {
+	~script184($int1, ^chatfilter_off);
+	~script178;
+	~script84;
+	~script89;
+} else if ($int0 = 5) {
+	~script184($int1, ^chatfilter_hide);
+	~script178;
+	~script84;
+	~script89;
+}

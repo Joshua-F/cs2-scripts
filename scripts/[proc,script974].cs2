@@ -1,0 +1,17 @@
+// 974
+[proc,script974](int $int0, int $y1, namedobj $namedobj2, string $string0)(int)
+def_int $int3 = 0;
+cc_create(interface_741:2, ^iftype_graphic, $int0);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setoutline(1);
+cc_setgraphicshadow(0x604e32);
+if ($namedobj2 ! null) {
+	cc_setobject($namedobj2, -1);
+} else {
+	cc_setobject(silvthrill_rod_7620, -1);
+}
+cc_setposition(0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_create(interface_741:2, ^iftype_text, calc($int0 + 1));
+$int3 = paraheight($string0, 300, p12_full);
+cc_setsize(300, calc($int3 * 16), ^setsize_abs, ^setsize_abs);
+return($int3);

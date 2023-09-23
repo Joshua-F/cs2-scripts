@@ -1,0 +1,5 @@
+// 665
+[clientscript,script665](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true | $comsubid1 = -1 & if_find($component0) = true) {
+	cc_setgraphic("bank_slot,1");
+}

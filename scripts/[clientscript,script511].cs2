@@ -1,0 +1,8 @@
+// 511
+[clientscript,script511]
+if (%varcint51 > 170) {
+	%varcint51 = calc(%varcint51 - 1);
+	if_setmodelangle(0, 0, 0, 0, 0, %varcint51, interface_605:0);
+} else {
+	if_setmodel(null, interface_605:0);
+}

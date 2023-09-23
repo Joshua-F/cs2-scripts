@@ -1,0 +1,13 @@
+// 1264
+[proc,script1264]
+def_string $string0 = "null";
+if (%var170 = 0) {
+	if_setgraphic("options_boxes,1", interface_261:6);
+	$string0 = "Mouse buttons<br>(currently 2)";
+	if_setonmouserepeat("script38(event_com, interface_261:22, $string0, 25, 180)", interface_261:6);
+} else if (%var170 = 1) {
+	if_setgraphic("options_boxes,0", interface_261:6);
+	$string0 = "Mouse buttons<br>(currently 1)";
+	if_setonmouserepeat("script38(event_com, interface_261:22, $string0, 25, 180)", interface_261:6);
+}
+%varcint2 = 0;

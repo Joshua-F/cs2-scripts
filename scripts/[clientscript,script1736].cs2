@@ -1,0 +1,13 @@
+// 1736
+[clientscript,script1736](component $component0, int $comsubid1)
+def_int $int2 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (calc(clientclock % 40) > 20) {
+		cc_settrans(0);
+		if (calc(clientclock % 40) = 21) {
+			sound_synth(synth_5009, 1, 0);
+		}
+	} else {
+		cc_settrans(255);
+	}
+}

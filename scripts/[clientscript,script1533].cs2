@@ -1,0 +1,13 @@
+// 1533
+[clientscript,script1533](component $component0)
+if (~script42(%varcint214) = 1) {
+	if (getwindowmode >= ^windowmode_resizable) {
+		if_setgraphic("graphic_1462", $component0);
+	} else {
+		if_setgraphic("graphic_1458", $component0);
+	}
+} else if (getwindowmode >= ^windowmode_resizable) {
+	if_setgraphic("graphic_1460", $component0);
+} else {
+	if_setgraphic("graphic_1456", $component0);
+}

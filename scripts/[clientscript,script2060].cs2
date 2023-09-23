@@ -1,0 +1,13 @@
+// 2060
+[clientscript,script2060](component $component0)
+def_struct $struct1 = enum(int, struct, enum_2162, %varbit357);
+def_int $int2 = enum(component, int, struct_param($struct1, param_664), $component0);
+def_component $component3 = struct_param($struct1, param_661);
+if ($component3 ! null) {
+	~script41($component3);
+}
+if ($int2 = %varcint631) {
+	if_setgraphic("graphic_1703", $component0);
+} else {
+	if_setgraphic("graphic_1702", $component0);
+}

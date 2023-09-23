@@ -1,0 +1,7 @@
+// 628
+[proc,script628]
+def_int $int0 = 0;
+while ($int0 < 6) {
+	~script651($int0);
+	$int0 = calc($int0 + 1);
+}

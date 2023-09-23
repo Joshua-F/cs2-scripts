@@ -1,0 +1,6 @@
+// 1847
+[clientscript,script1847](component $component0)
+if_setontimer("script1848($component0, clientclock)", $component0);
+if (getwindowmode <= ^windowmode_fixed) {
+	if_setonsubchange("script1850(getwindowmode, detailget_antialiasing, interface_548:11, $component0)", interface_548:11);
+}

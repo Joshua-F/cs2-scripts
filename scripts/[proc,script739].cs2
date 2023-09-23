@@ -1,0 +1,34 @@
+// 739
+[proc,script739](int $int0)(int)
+$int0 = calc($int0 - 1);
+def_int $int1 = 1;
+def_int $int2 = 1;
+def_int $int3 = 0;
+def_int $intarray0(36);
+def_int $int4 = 0;
+if (%varcint103 ! %varbit4227) {
+	%varcint103 = %varbit4227;
+}
+$int3 = %varcint103;
+while ($int1 <= 12) {
+	while ($int2 <= 3) {
+		$int4 = calc($int3 % 36);
+		while ($intarray0($int4) ! 0) {
+			$int4 = calc($int4 + 1);
+			if ($int4 = 36) {
+				$int4 = 0;
+			}
+		}
+		if ($int4 = $int0) {
+			return($int1);
+		}
+		$intarray0($int4) = $int1;
+		$int3 = calc($int3 * $int3);
+		$int3 = calc($int3 - $int3 / 1000000 * 1000000);
+		$int3 = calc($int3 / 100);
+		$int2 = calc($int2 + 1);
+	}
+	$int1 = calc($int1 + 1);
+	$int2 = 1;
+}
+return(0);

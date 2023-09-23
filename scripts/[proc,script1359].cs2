@@ -1,0 +1,11 @@
+// 1359
+[proc,script1359]
+if (getwindowmode = 0) {
+	~script1355("High Detail only", interface_744:78, interface_744:79, interface_744:80, null, "graphic_884", 0x7f0000, p11_full);
+	return;
+}
+if (_6121 = false) {
+	~script1355("Incompatible", interface_744:78, interface_744:79, interface_744:80, null, "graphic_884", 0x7f0000, p11_full);
+	return;
+}
+~script1435(enum_1583, detailget_antialiasing, 2, interface_744:78, interface_744:79, interface_744:80, null, "graphic_884", "graphic_1248", 1250, "graphic_1402", 0x7f0000, ^white, 0xffc61a, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

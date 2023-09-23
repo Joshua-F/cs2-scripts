@@ -1,0 +1,18 @@
+// 113
+[clientscript,script113](component $component0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+$int3 = random(100);
+if ($int3 > 49) {
+	$int1 = calc(10 - random(30));
+} else {
+	$int1 = calc(-10 + random(30));
+}
+$int3 = random(100);
+if ($int3 > 49) {
+	$int2 = calc(5 - random(15));
+} else {
+	$int2 = calc(-5 + random(15));
+}
+if_setontimer("script66($int1, $int2, 0, $component0)", $component0);

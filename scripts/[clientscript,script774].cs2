@@ -1,0 +1,10 @@
+// 774
+[clientscript,script774](component $component0, component $component1, component $component2, graphic $graphic3, graphic $graphic4, int $int5, obj $obj6, int $int7, obj $obj8, int $int9, obj $obj10, int $int11, obj $obj12, int $int13, string $string0, string $string1)
+~script719($component0, $component1, $component2, $graphic3, $graphic4, $int5, $string0, $string1, $obj6, $int7, $obj8, $int9, $obj10, $int11, $obj12, $int13);
+if (if_gettargetmask($component0) ! 0) {
+	if_setontargetenter("script17($component0)", $component0);
+	if_setontargetleave("script18($component0)", $component0);
+}
+if_setoninvtransmit("script718($component0, $component1, $component2, $graphic3, $graphic4, $int5, $string0, $string1, $obj6, $int7, $obj8, $int9, $obj10, $int11, $obj12, $int13){inv}", $component0);
+if_setonstattransmit("script718($component0, $component1, $component2, $graphic3, $graphic4, $int5, $string0, $string1, $obj6, $int7, $obj8, $int9, $obj10, $int11, $obj12, $int13){summoning}", $component0);
+if_setonvartransmit("script718($component0, $component1, $component2, $graphic3, $graphic4, $int5, $string0, $string1, $obj6, $int7, $obj8, $int9, $obj10, $int11, $obj12, $int13){var1175, var448}", $component0);

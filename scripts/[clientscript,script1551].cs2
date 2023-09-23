@@ -1,0 +1,27 @@
+// 1551
+[clientscript,script1551]
+%varcint87 = 0;
+%varcint88 = 0;
+%varcint89 = 0;
+%varcint90 = 0;
+%varcint91 = 0;
+%varcint92 = 0;
+%varcint93 = 0;
+%varcint196 = 0;
+%varcint94 = 0;
+%varcint95 = 0;
+%varcint96 = 0;
+%varcint97 = 0;
+%varcint98 = 0;
+~script1560;
+~script1561(interface_771:14, "bank_tabs,1", interface_771:403);
+~script1562(interface_771:16, "bank_tabs,0", "bank_tabs,3", interface_771:403);
+~script1562(interface_771:18, "bank_tabs,0", "bank_tabs,3", interface_771:403);
+~script1562(interface_771:20, "bank_tabs,0", "bank_tabs,3", interface_771:403);
+if (%varcint197 = 0) {
+	if_setgraphic("warning_icons,1", interface_771:381);
+	if_setgraphic("warning_icons,1", interface_771:398);
+} else if (%varcint197 > 0) {
+	if_setgraphic("warning_icons,2", interface_771:381);
+	if_setgraphic("warning_icons,2", interface_771:398);
+}

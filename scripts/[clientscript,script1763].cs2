@@ -1,0 +1,13 @@
+// 1763
+[clientscript,script1763](int $int0)
+$int0 = calc($int0 + if_getwidth(interface_742:35) / 2);
+if ($int0 <= 23) {
+	detail_brightness(1);
+} else if ($int0 <= 53) {
+	detail_brightness(2);
+} else if ($int0 <= 86) {
+	detail_brightness(3);
+} else {
+	detail_brightness(4);
+}
+~script1152;

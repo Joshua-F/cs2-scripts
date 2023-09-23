@@ -1,0 +1,41 @@
+// 777
+[clientscript,script777](component $component0, component $component1, int $int2, int $int3)
+cc_deleteall($component1);
+def_int $int4 = calc(2 + 13 * paraheight("<tostring(%var1177)>/60 special move points remaining", 125, p12_full));
+def_int $int5 = calc(2 + $int4 + 32 + 14 + 2);
+def_int $int6 = 5;
+def_int $int7 = 5;
+def_int $int8 = 1;
+def_int $int9 = 1;
+$int5 = calc($int5 - 32 - 14);
+$int6 = if_gety($component0);
+if ($int6 = 224) {
+	$int6 = 180;
+}
+$int7 = calc(if_getx($component0) - 60);
+if ($int7 < 0) {
+	$int7 = 5;
+}
+cc_create($component1, ^iftype_rectangle, 0);
+cc_setposition($int7, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(128, $int5, ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(0xffffa0);
+cc_create($component1, ^iftype_rectangle, 1);
+cc_setposition(calc($int7 + 1), calc($int6 + 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(127, calc($int5 - 1), ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(^black);
+cc_create($component1, ^iftype_rectangle, 2);
+cc_setposition($int7, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(127, calc($int5 - 1), ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(^black);
+cc_create($component1, ^iftype_text, 3);
+cc_setposition(calc($int7 + 2), calc($int6 + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(125, $int4, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(p12_full);
+cc_setcolour(^black);
+cc_settextshadow(false);
+cc_settext("<tostring(%var1177)>/60 special move points remaining");

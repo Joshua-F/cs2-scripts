@@ -1,0 +1,11 @@
+// 932
+[proc,script932](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16)
+~script935($int0, $int15, $int16);
+if ($int1 = -1) {
+	return;
+}
+if ($int16 = 1) {
+	~script933($int1, $int2, $int3, $int4, $int5, $int6, $int7, $int8, $int9, $int10, $int11, $int12, $int13, $int14, $int15);
+	return;
+}
+if_setontimer("script934(calc(clientclock + 16), $int1, $int2, $int3, $int4, $int5, $int6, $int7, $int8, $int9, $int10, $int11, $int12, $int13, $int14, $int15)", interface_724:27);

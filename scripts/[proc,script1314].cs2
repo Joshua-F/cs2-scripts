@@ -1,0 +1,70 @@
+// 1314
+[proc,script1314](int $int0)(boolean)
+if (getwindowmode >= ^windowmode_resizable) {
+	switch_int ($int0) {
+		case 0 :
+			return(if_gethide(interface_746:93));
+		case 1 :
+			return(if_gethide(interface_746:94));
+		case 2 :
+			return(if_gethide(interface_746:95));
+		case 3 :
+			return(if_gethide(interface_746:96));
+		case 4 :
+			return(if_gethide(interface_746:97));
+		case 5 :
+			return(if_gethide(interface_746:98));
+		case 6 :
+			return(if_gethide(interface_746:99));
+		case 7 :
+			return(if_gethide(interface_746:100));
+		case 8 :
+			return(if_gethide(interface_746:101));
+		case 9 :
+			return(if_gethide(interface_746:102));
+		case 10 :
+			return(if_gethide(interface_746:103));
+		case 11 :
+			return(if_gethide(interface_746:104));
+		case 12 :
+			return(if_gethide(interface_746:105));
+		case 13 :
+			return(if_gethide(interface_746:106));
+		case 99 :
+			return(if_gethide(interface_746:107));
+	}
+} else {
+	switch_int ($int0) {
+		case 0 :
+			return(if_gethide(interface_548:83));
+		case 1 :
+			return(if_gethide(interface_548:84));
+		case 2 :
+			return(if_gethide(interface_548:85));
+		case 3 :
+			return(if_gethide(interface_548:86));
+		case 4 :
+			return(if_gethide(interface_548:87));
+		case 5 :
+			return(if_gethide(interface_548:88));
+		case 6 :
+			return(if_gethide(interface_548:89));
+		case 7 :
+			return(if_gethide(interface_548:90));
+		case 8 :
+			return(if_gethide(interface_548:91));
+		case 9 :
+			return(if_gethide(interface_548:92));
+		case 10 :
+			return(if_gethide(interface_548:93));
+		case 11 :
+			return(if_gethide(interface_548:94));
+		case 12 :
+			return(if_gethide(interface_548:95));
+		case 13 :
+			return(if_gethide(interface_548:96));
+		case 99 :
+			return(if_gethide(interface_548:97));
+	}
+}
+return(null);

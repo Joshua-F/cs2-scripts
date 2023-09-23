@@ -1,0 +1,36 @@
+// 1175
+[clientscript,script1175]
+if (calc(clientclock % 10) ! 0) {
+	return;
+}
+def_int $int0 = 0;
+def_int $z1 = coordz(coord);
+def_int $x2 = coordx(coord);
+if ($z1 > 9919 & $z1 < 10368 & $x2 > 3007 & $x2 < 3136) {
+	$int0 = calc(($z1 - 9920) / 8 + 1);
+} else if ($z1 > 3524 & $z1 < 3967 & $x2 > 2943 & $x2 < 3393 & %varbit5447 = 0) {
+	$int0 = calc(($z1 - 3520) / 8 + 1);
+}
+if ($int0 < 0) {
+	$int0 = 0;
+} else if ($int0 > 60) {
+	$int0 = 60;
+}
+def_int $int3 = comlevel_active;
+def_int $int4 = calc($int3 - ($int0 + (5 + $int3 / 10)));
+if ($int4 < 20) {
+	$int4 = 20;
+}
+def_int $int5 = calc($int3 + ($int0 + (5 + $int3 / 10)));
+if ($int5 > 138) {
+	$int5 = 138;
+}
+while ($int5 < 139 & calc($int5 - ($int0 + (5 + $int5 / 10))) <= $int3) {
+	$int5 = calc($int5 + 1);
+}
+$int5 = calc($int5 - 1);
+if (getwindowmode < ^windowmode_resizable) {
+	if_settext("<tostring($int4)> - <tostring($int5)>", interface_548:6);
+} else {
+	if_settext("<tostring($int4)> - <tostring($int5)>", interface_746:19);
+}

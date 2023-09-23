@@ -1,0 +1,8 @@
+// 1350
+[clientscript,script1350](component $component0, component $component1, component $component2, component $component3, int $comsubid4, int $comsubid5, string $text0, int $colour6)
+if (cc_find($component3, $comsubid4) = ^true) {
+	cc_settext($text0);
+	cc_setcolour($colour6);
+	cc_setonmouseleave("script1354($component3, $comsubid4, $colour6)");
+}
+~script1349($component3, $component0, $component1, $component2, $comsubid5);

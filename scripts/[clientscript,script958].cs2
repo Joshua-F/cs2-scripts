@@ -1,0 +1,9 @@
+// 958
+[clientscript,script958](component $component0, component $component1, component $component2)
+if (%varbit4618 = 0) {
+	~script959($component0, $component1, 1);
+	if_setgraphic("graphic_1157", $component2);
+} else {
+	~script959($component0, $component1, 0);
+	if_setgraphic("graphic_1156", $component2);
+}

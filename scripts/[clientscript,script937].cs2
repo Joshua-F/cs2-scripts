@@ -1,0 +1,10 @@
+// 937
+[clientscript,script937](int $comsubid0, int $clock1)
+def_int $int2 = calc(clientclock - $clock1);
+if (cc_find(interface_724:27, $comsubid0) = ^true) {
+	$int2 = calc($int2 % 10);
+	if (calc($int2 / 5) >= 1) {
+		$int2 = calc(10 - $int2);
+	}
+	cc_settrans(calc($int2 * 40));
+}

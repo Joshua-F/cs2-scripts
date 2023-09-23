@@ -1,0 +1,16 @@
+// 1460
+[proc,script1460](int $int0, int $slot1)
+def_component $component2 = enum(int, component, enum_1614, $int0);
+def_component $component3 = enum(int, component, enum_1615, $int0);
+if_sethide(false, $component2);
+if_sethide(false, $component3);
+if_setobject_nonum(inv_getobj(bank, $slot1), inv_getnum(bank, $slot1), $component3);
+if_setoutline(1, $component3);
+if_setgraphicshadow(0x333333, $component3);
+if_clearops($component2);
+if_setop(1, "View tab <tostring($int0)>", $component2);
+if_setop(2, "Collapse tab <tostring($int0)>", $component2);
+if_setonclick(null, $component2);
+def_string $string0 = "Click here to select tab <tostring($int0)>";
+if_setonmouserepeat("script38(event_com, interface_762:101, $string0, 25, 150)", $component2);
+if_setonmouseleave("script40(interface_762:101)", $component2);

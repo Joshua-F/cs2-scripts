@@ -1,0 +1,7 @@
+// 70
+[clientscript,script70]
+if (%var560 < 1) {
+	if_settext("You're the Winner!", interface_373:1);
+} else {
+	if_settext("Foes Remaining: <tostring(%var560)>", interface_373:1);
+}

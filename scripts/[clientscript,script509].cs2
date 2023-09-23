@@ -1,0 +1,20 @@
+// 509
+[clientscript,script509](component $component0)
+def_string $string0 = "";
+if ($component0 = interface_613:9) {
+	$string0 = oc_name(%var1065);
+	if (%var1065 = null) {
+		$string0 = "Empty";
+	}
+} else if ($component0 = interface_613:10) {
+	$string0 = oc_name(%var1066);
+	if (%var1066 = null) {
+		$string0 = "Empty";
+	}
+} else if ($component0 = interface_613:11) {
+	$string0 = oc_name(%var1067);
+	if (%var1067 = null) {
+		$string0 = "Empty";
+	}
+}
+~script39($component0, interface_613:24, $string0, 25, 199);

@@ -1,0 +1,6 @@
+// 1940
+[clientscript,script1940]
+def_int $int0 = calc(clientclock + %varcint557 * 3000);
+if ($int0 < %varcint556) {
+	%varcint556 = $int0;
+}

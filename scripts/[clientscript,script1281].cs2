@@ -1,0 +1,8 @@
+// 1281
+[clientscript,script1281](inv $inv0, int $slot1, int $slot2, component $component3)
+if ($slot2 = -1) {
+	~script1280($inv0, $slot1, $component3, $slot1);
+	return;
+}
+~script1280($inv0, $slot1, $component3, $slot2);
+~script1280($inv0, $slot2, $component3, $slot1);

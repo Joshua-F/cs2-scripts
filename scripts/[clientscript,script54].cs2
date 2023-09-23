@@ -1,0 +1,10 @@
+// 54
+[clientscript,script54]
+def_int $z0 = coordz(coord);
+def_int $int1 = calc(($z0 - 9920) / 8 + 1);
+def_int $int2 = calc(($z0 - 3520) / 8 + 1);
+if ($z0 > 6400) {
+	if_settext("Level: <tostring($int1)>", interface_381:1);
+} else {
+	if_settext("Level: <tostring($int2)>", interface_381:1);
+}

@@ -1,0 +1,32 @@
+// 1021
+[proc,script1021](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Smelting", 0);
+	case 1 :
+		return("Bronze", 0);
+	case 2 :
+		return("Blurite", 1);
+	case 3 :
+		return("Iron", 0);
+	case 4 :
+		return("Steel", 0);
+	case 5 :
+		return("Mithril", 0);
+	case 6 :
+		return("Adamantite", 0);
+	case 7 :
+		return("Runite", 0);
+	case 8 :
+		return("Gold", 1);
+	case 9 :
+		return("Elemental", 1);
+	case 10 :
+		return("Other armour", 1);
+	case 11 :
+		return("Minigames", 1);
+	case 12 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

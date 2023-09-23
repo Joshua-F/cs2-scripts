@@ -1,0 +1,9 @@
+// 597
+[clientscript,script597]
+def_string $text0 = "null";
+if (%varcint84 < ^max_32bit_int) {
+	%varcint84 = calc(%varcint84 + 1);
+	$text0 = ~script46(%varcint84, ",");
+	if_settext($text0, interface_105:150);
+	~script602;
+}

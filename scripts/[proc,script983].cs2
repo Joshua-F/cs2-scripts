@@ -1,0 +1,18 @@
+// 983
+[proc,script983](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Weaponry", 1);
+	case 1 :
+		return("Armour", 1);
+	case 2 :
+		return("Shortcuts", 1);
+	case 3 :
+		return("Areas", 1);
+	case 4 :
+		return("Barbarian", 1);
+	case 5 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

@@ -1,0 +1,17 @@
+// 1871
+[clientscript,script1871](int $world0, int $int1)
+if (worldlist_switch($world0) = true) {
+	~script1174(interface_744:241);
+	if ($int1 = 1) {
+		%varcint545 = 0;
+	} else if ($int1 = 2) {
+		%varcint546 = 0;
+	}
+	return;
+}
+if ($int1 = 1) {
+	%varcint545 = 1;
+} else if ($int1 = 2) {
+	%varcint546 = 1;
+}
+~script1868;

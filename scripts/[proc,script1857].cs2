@@ -1,0 +1,49 @@
+// 1857
+[proc,script1857](int $flags0)
+def_int $world1 = _6505;
+if (testbit($flags0, 0) = ^true) {
+	$world1 = setbit($world1, 14);
+} else {
+	$world1 = clearbit($world1, 14);
+}
+if (testbit($flags0, 1) = ^true) {
+	$world1 = setbit($world1, 15);
+} else {
+	$world1 = clearbit($world1, 15);
+}
+if (testbit($flags0, 2) = ^true) {
+	$world1 = setbit($world1, 16);
+} else {
+	$world1 = clearbit($world1, 16);
+}
+if (testbit($flags0, 3) = ^true) {
+	$world1 = setbit($world1, 17);
+} else {
+	$world1 = clearbit($world1, 17);
+}
+if (testbit($flags0, 4) = ^true) {
+	$world1 = setbit($world1, 18);
+} else {
+	$world1 = clearbit($world1, 18);
+}
+if (testbit($flags0, 5) = ^true) {
+	$world1 = setbit($world1, 19);
+} else {
+	$world1 = clearbit($world1, 19);
+}
+if (testbit($flags0, 6) = ^true) {
+	$world1 = setbit($world1, 20);
+} else {
+	$world1 = clearbit($world1, 20);
+}
+if (testbit($flags0, 7) = ^true) {
+	$world1 = setbit($world1, 21);
+} else {
+	$world1 = clearbit($world1, 21);
+}
+if (testbit($flags0, 8) = ^true) {
+	$world1 = setbit($world1, 22);
+} else {
+	$world1 = clearbit($world1, 22);
+}
+_6504($world1);

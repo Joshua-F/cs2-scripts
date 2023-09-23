@@ -1,0 +1,52 @@
+// 202
+[proc,script202](component $component0, component $component1)
+cc_deleteall($component0);
+if (friend_count = -2) {
+	cc_create($component0, ^iftype_text, 0);
+	cc_settextfont(b12_full);
+	cc_settext("Loading Friend List - please wait...");
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(138, 100, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xffff64);
+	cc_settextshadow(true);
+	return;
+}
+if (friend_count = -1) {
+	cc_create($component0, ^iftype_text, 0);
+	cc_settextfont(b12_full);
+	cc_settext("Connecting to friend server - please wait...");
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(138, 100, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xffff64);
+	cc_settextshadow(true);
+	return;
+}
+def_int $count2 = 0;
+while ($count2 < friend_count) {
+	cc_create($component0, ^iftype_text, calc($count2 + $count2));
+	cc_settextfont(b12_full);
+	cc_settext(friend_getname($count2));
+	cc_setposition(0, calc($count2 * 15), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(138, 15, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xffff64);
+	cc_settextshadow(true);
+	cc_create($component0, ^iftype_text, calc($count2 + $count2 + 1));
+	cc_settextfont(b12_full);
+	cc_settext(~script203(friend_getrank($count2)));
+	cc_setposition(137, calc($count2 * 15), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(131, 15, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(^white);
+	cc_settextshadow(true);
+	cc_setop(1, "Not in clan");
+	cc_setop(2, "Recruit");
+	cc_setop(3, "Corporal");
+	cc_setop(4, "Sergeant");
+	cc_setop(5, "Lieutenant");
+	cc_setop(6, "Captain");
+	cc_setop(7, "General");
+	cc_setonop("script204($count2, event_op)");
+	$count2 = calc($count2 + 1);
+}
+if_setscrollsize(0, calc(15 * friend_count + 2), $component0);
+~script31($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script72($component1, $component0, if_getscrolly($component0));

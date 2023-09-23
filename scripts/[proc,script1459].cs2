@@ -1,0 +1,35 @@
+// 1459
+[proc,script1459]
+def_int $int0 = 2;
+def_int $int1 = 0;
+def_int $int2 = 0;
+while ($int0 <= 9) {
+	switch_int ($int0) {
+		case 2 :
+			$int1 = %varbit4885;
+		case 3 :
+			$int1 = %varbit4886;
+		case 4 :
+			$int1 = %varbit4887;
+		case 5 :
+			$int1 = %varbit4888;
+		case 6 :
+			$int1 = %varbit4889;
+		case 7 :
+			$int1 = %varbit4890;
+		case 8 :
+			$int1 = %varbit4891;
+		case 9 :
+			$int1 = %varbit4892;
+	}
+	if ($int1 > 0) {
+		~script1460($int0, ~script1470($int0));
+	} else if ($int2 = 0) {
+		~script1461($int0);
+		$int2 = 1;
+	} else {
+		~script1462($int0);
+	}
+	$int0 = calc($int0 + 1);
+}
+~script1463(%varbit4893);

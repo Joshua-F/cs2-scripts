@@ -1,0 +1,17 @@
+// 1870
+[proc,script1870](int $world0)
+if (%varcint546 = 1) {
+	if_settext("<col=7f0000>N/A</col>", interface_744:256);
+	if_setgraphic("graphic_1555", interface_744:255);
+	if_setonclick(null, interface_744:236);
+	if_setonmouseover(null, interface_744:236);
+	if_setonmouseleave(null, interface_744:236);
+	return;
+}
+def_graphic $graphic1 = "graphic_1551";
+def_graphic $graphic2 = "graphic_1552";
+if_settext(tostring($world0), interface_744:256);
+if_setgraphic($graphic1, interface_744:255);
+if_setonclick("script1871($world0, 2)", interface_744:236);
+if_setonmouseover("script1872(interface_744:255, $graphic2, interface_744:256, 0xffe1be)", interface_744:236);
+if_setonmouseleave("script1872(interface_744:255, $graphic1, interface_744:256, 0x461e00)", interface_744:236);

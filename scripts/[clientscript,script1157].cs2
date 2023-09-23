@@ -1,0 +1,28 @@
+// 1157
+[clientscript,script1157](int $int0)
+if ($int0 ! 1) {
+	return;
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	if_sethide(false, interface_746:70);
+}
+if_sethide(false, interface_752:3);
+if_sethide(true, interface_752:6);
+if_sethide(true, interface_752:7);
+if (~script42(%varcint266) = 0) {
+	%varcstring38 = "";
+	%varcstring39 = "";
+	%varcint266 = true;
+}
+if (string_length(%varcstring38) > 0) {
+	if_settext("Edit the name of your caller:<br>(Delete it to disable this feature.)", interface_752:4);
+} else {
+	if_settext("Enter the name of your caller:", interface_752:4);
+}
+if_settext("<%varcstring38>*", interface_752:5);
+%varcint5 = 12;
+%varcstring22 = %varcstring38;
+if_setonclick("script1805", interface_752:3);
+~script2026;
+if_setonkey("script112(event_keycode, event_keychar)", interface_752:5);
+~script1188;

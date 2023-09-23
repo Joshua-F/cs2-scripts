@@ -1,0 +1,28 @@
+// 999
+[proc,script999](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Weaving", 1);
+	case 1 :
+		return("Armour", 0);
+	case 2 :
+		return("Spinning", 0);
+	case 3 :
+		return("Pottery", 0);
+	case 4 :
+		return("Glass", 1);
+	case 5 :
+		return("Jewellery", 0);
+	case 6 :
+		return("Weaponry", 1);
+	case 7 :
+		return("Pyre ships", 1);
+	case 8 :
+		return("Objects", 1);
+	case 9 :
+		return("Minigames", 1);
+	case 10 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

@@ -1,0 +1,142 @@
+// 998
+[proc,script998](int $int0, int $int1)(int, namedobj, string, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, small_fishing_net_303, "Small net", "You can now fish with a <col=000080>small net</col>.");
+			case 1 :
+				return(1, crayfish_cage_13431, "Crayfish cage", "You can now fish with a <col=000080>crayfish cage</col>.");
+			case 2 :
+				return(5, fishing_rod_307, "Bait fishing", "You can now fish with <col=000080>fishing rods</col> and bait</col>.");
+			case 3 :
+				return(16, big_fishing_net_305, "Members: Big net fishing", "Members can now fish with <col=000080>big nets</col>.");
+			case 4 :
+				return(20, fly_fishing_rod_309, "Fly fishing rod", "You can now fish with <col=000080>fly-fishing rods</col> and <col=000080>feathers</col>.");
+			case 5 :
+				return(35, harpoon_311, "Harpoon", "You can now fish with <col=000080>harpoons</col>.");
+			case 6 :
+				return(40, lobster_pot_301, "Lobster pot", "You can now fish with <col=000080>lobster pots</col>.");
+			case 7 :
+				return(40, sacred_clay_harpoon_14109, "Members: Sacred clay harpoon", "Members can now use <col=000080>Sacred clay harpoons</col>");
+			case 8 :
+				return(40, volatile_clay_harpoon_14101, "Members: Volatile harpoon", "Members can now use <col=000080>Volatile harpoons</col>");
+			case 9 :
+				return(48, barbarian_rod_11323, "Members: Heavy rod<br> (with 15 Agility and 15 Strength)", "Members who are versed in the art of barbarian fishing now have the Fishing level required to fish with <col=000080>heavy rods</col>. (They also need level 15 Agility and level 15 Strength.)");
+			case 10 :
+				return(65, karambwan_vessel_3157, "Members: Vessel fishing<br> (after starting Tai Bwo Wannai Trio)", "Members now have the Fishing level required to use <col=000080>karambwan vessels</col> to fish for <col=000080>karambwan</col> (after starting Tai Bwo Wannai Trio).");
+			case 11 :
+				return(65, swordfish_gloves_12860, "Swordfish gloves", "You can now wear <col=000080>swordfish gloves</col>.");
+			case 12 :
+				return(90, shark_gloves_12861, "Members: Shark gloves", "Members can now wear <col=000080>shark gloves</col>.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, raw_shrimps_317, "Shrimp - Net fishing", "You can now catch <col=000080>shrimp</col> with a net.");
+			case 1 :
+				return(1, raw_crayfish_13435, "Crayfish - Crayfish cage", "You can now catch <col=000080>crayfish</col> with a crayfish cage.");
+			case 2 :
+				return(5, raw_sardine_327, "Sardine - Sea bait fishing", "You can now catch <col=000080>sardines</col> with a fishing rod.");
+			case 3 :
+				return(5, raw_karambwanji_3150, "Members: Karambwanji - Net fishing", "Members can now catch <col=000080>karabwanji</col> with a net.");
+			case 4 :
+				return(10, raw_herring_345, "Herring - Sea bait fishing", "You can now catch <col=000080>herring</col> with a fishing rod.");
+			case 5 :
+				return(15, raw_anchovies_321, "Anchovies - Net fishing", "You can now catch <col=000080>anchovies</col> with a net.");
+			case 6 :
+				return(16, raw_mackerel_353, "Members: Mackerel - Big net fishing", "Members can now catch <col=000080>mackerel</col> with a big net.");
+			case 7 :
+				return(16, oyster_407, "Members: Oyster - Big net fishing", "Members can now catch <col=000080>oysters</col> with a big net.");
+			case 8 :
+				return(16, casket_405, "Members: Caskets - Big net fishing", "Members can now catch <col=000080>caskets</col> with a big net.");
+			case 9 :
+				return(16, seaweed_401, "Members: Seaweed - Big net fishing", "Members can now catch <col=000080>seaweed</col> with a big net.");
+			case 10 :
+				return(20, raw_trout_335, "Trout - Fly-fishing", "You can now catch <col=000080>trout</col> with a fly-fishing rod.");
+			case 11 :
+				return(23, raw_cod_341, "Members: Cod - Big net fishing", "Members can now catch <col=000080>cod</col> with a big net.");
+			case 12 :
+				return(25, raw_pike_349, "Pike - River bait fishing", "You can now catch <col=000080>pike</col> with a fishing rod.");
+			case 13 :
+				return(28, slimy_eel_3379, "Members: Slimy eel - River bait fishing", "Members can now catch <col=000080>slimy eel</col> with a fishing rod.");
+			case 14 :
+				return(30, raw_salmon_331, "Salmon - Fly-fishing", "You can now catch <col=000080>salmon</col> with a fly-fishing rod.");
+			case 15 :
+				return(33, frog_spawn_5004, "Members: Giant frogspawn - Net fishing", "Members can now catch <col=000080>giant frogspawn</col> with a net.");
+			case 16 :
+				return(35, raw_tuna_359, "Tuna - Harpoon fishing", "You can now catch <col=000080>tuna</col> with a harpoon.");
+			case 17 :
+				return(38, raw_rainbow_fish_10138, "Members: Rainbow fish - Stripy fly-fishing", "Members can now catch <col=000080>rainbow fish</col> with a fly-fishing rod.");
+			case 18 :
+				return(38, raw_cave_eel_5001, "Members: Cave eel - River bait fishing", "Members can now catch <col=000080>cave eels</col> with a fishing rod.");
+			case 19 :
+				return(40, raw_lobster_377, "Lobster - Lobster pot fishing", "You can now catch <col=000080>lobsters</col> with a lobster pot.");
+			case 20 :
+				return(46, raw_bass_363, "Members: Bass - Big net fishing", "Members can now catch <col=000080>bass</col> with a big net.");
+			case 21 :
+				return(50, raw_swordfish_371, "Swordfish - Harpoon fishing", "You can now catch <col=000080>swordfish</col> with a harpoon.");
+			case 22 :
+				return(53, raw_lava_eel_2148, "Members: Lava eel - Bait fishing (oily fishing rod)", "Members can now catch <col=000080>lava eels</col> with an oily fishing rod.");
+			case 23 :
+				return(62, raw_monkfish_7944, "Members: Monkfish - Net fishing", "Members can now catch <col=000080>monkfish</col> with a net.");
+			case 24 :
+				return(65, raw_karambwan_3142, "Members: Karambwan - Vessel fishing", "Members can now catch <col=000080>karambwan</col> with a karambwan vessel in Karamja.");
+			case 25 :
+				return(76, raw_shark_383, "Members: Shark - Harpoon fishing", "Members can now catch <col=000080>shark</col> with a harpoon.");
+			case 26 :
+				return(79, raw_sea_turtle_395, "Members: Sea turtle - Fishing Trawler minigame", "Members can now catch <col=000080>sea turtles</col> in the Fishing Trawler minigame.");
+			case 27 :
+				return(81, raw_manta_ray_389, "Members: Manta ray - Fishing Trawler minigame", "Members can now catch <col=000080>manta rays</col> in the Fishing Trawler minigame.");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, silvthrill_rod_7620, "To start fishing like a barbarian, talk to Otto Godblessed when you have at least level 48 Fishing, level 15 Agility and level 15 Strength.", "");
+			case 1 :
+				return(48, leaping_trout_11328, "Leaping trout<br> (with 15 Strength and 15 Agility)", "Members who are versed in the art of barbarian fishing now have the Fishing level required to catch <col=000080>leaping trout</col> with a heavy rod. (They also need level 15 Agility and level 15 Strength.)");
+			case 2 :
+				return(55, tuna_361, "Tuna<br> (with 35 Strength)", "Members who are versed in the art of barbarian fishing now have the Fishing level required to catch <col=000080>tuna</col> without a harpoon. (They also need level 35 Strength.)");
+			case 3 :
+				return(58, leaping_salmon_11330, "Leaping salmon<br> (with 30 Strength and 30 Agility)", "Members who are versed in the art of barbarian fishing now have the Fishing level required to catch <col=000080>leaping salmon</col> with a heavy rod. (They also need level 30 Agility and level 30 Strength.)");
+			case 4 :
+				return(70, swordfish_373, "Swordfish<br>(with 50 Strength)", "Members who are versed in the art of barbarian fishing now have the Fishing level required to catch <col=000080>swordfish</col> without a harpoon. (They also need level 50 Strength.)");
+			case 5 :
+				return(70, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Strength and 45 Agility)", "Members who are versed in the art of barbarian fishing now have the Fishing level required to catch <col=000080>leaping sturgeon</col> with a heavy rod. (They also need level 45 Agility and level 45 Strength.)");
+			case 6 :
+				return(96, shark_385, "Shark<br> (with 76 Strength)", "Members who are versed in the art of barbarian fishing now have the Fishing level required to catch <col=000080>shark</col> without a harpoon. (They also need level 76 Strength.)");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, harpoon_class_1_14142, "Stealing Creation - class 1 harpoon", "Members can now use <col=000080>class 1 harpoons</col> in the Stealing Creation minigame.");
+			case 1 :
+				return(20, sacred_clay_class_2_14184, "Stealing Creation - catch class 2 sacred clay", "Members can now catch <col=000080>class 2 sacred clay</col> in the Stealing Creation minigame.");
+			case 2 :
+				return(20, harpoon_class_2_14144, "Stealing Creation - class 2 harpoon", "Members can now use <col=000080>class 2 harpoons</col> in the Stealing Creation minigame.");
+			case 3 :
+				return(40, sacred_clay_class_3_14186, "Stealing Creation - catch class 3 sacred clay", "Members can now catch <col=000080>class 3 sacred clay</col> in the Stealing Creation minigame.");
+			case 4 :
+				return(40, harpoon_class_3_14146, "Stealing Creation - class 3 harpoon", "Members can now use <col=000080>class 3 harpoons</col> in the Stealing Creation minigame.");
+			case 5 :
+				return(60, sacred_clay_class_4_14188, "Stealing Creation - catch class 4 sacred clay", "Members can now catch <col=000080>class 4 sacred clay</col> in the Stealing Creation minigame.");
+			case 6 :
+				return(60, harpoon_class_4_14148, "Stealing Creation - class 4 harpoon", "Members can now use <col=000080>class 4 harpoons</col> in the Stealing Creation minigame.");
+			case 7 :
+				return(80, sacred_clay_class_5_14190, "Stealing Creation - catch class 5 sacred clay", "Members can now catch <col=000080>class 5 sacred clay</col> in the Stealing Creation minigame.");
+			case 8 :
+				return(80, harpoon_class_5_14150, "Stealing Creation - class 5 harpoon", "Members can now use <col=000080>class 5 harpoons</col> in the Stealing Creation minigame.");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(29, obj_5079, "Fishing Tutor - new info available", "There is new information available from the <col=000080>Fishing Tutor</col> south of <col=000080>Lumbridge</col>.");
+			case 1 :
+				return(39, obj_5079, "Fishing Tutor - new info available", "There is new information available from the <col=000080>Fishing Tutor</col> south of <col=000080>Lumbridge</col>.");
+			case 2 :
+				return(68, shark_385, "Members: Fishing Guild", "Members can now enter the <col=000080>Fishing Guild</col>.");
+			case 3 :
+				return(99, fishing_cape_9798, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Fishing<col=000080>. Why not visit the <col=800000>Master Fisherman<col=000080> at the <col=800000>Fishing Guild<col=000080>? He has something special that is only available to true masters of the <col=800000>Fishing<col=000080> skill!");
+		}
+}
+return(0, null, "", "");

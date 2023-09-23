@@ -1,0 +1,35 @@
+// 192
+[proc,script192]
+def_int $int0 = chat_gethistorylength;
+def_int $chattype1 = ^chattype_gamemessage;
+if ($int0 > %varcint43) {
+	if (%varcint41 = 0) {
+		%varcint43 = $int0;
+		return;
+	}
+	$int0 = calc($int0 - %varcint43 - 1);
+	if ($int0 >= 100) {
+		$int0 = 99;
+	}
+	while ($int0 >= 0) {
+		$chattype1 = chat_gethistorytype($int0);
+		if (~script90($int0, 0) = 1 & ~script506($int0) = 0) {
+			switch_int ($chattype1) {
+				case ^chattype_gamemessage :
+					~script180(1);
+				case ^chattype_modchat, ^chattype_publicchat, 17 :
+					~script180(2);
+				case ^chattype_privatechat, ^chattype_loginlogoutnotification, ^chattype_privatechatout, ^chattype_modprivatechat, 18, 19 :
+					~script180(3);
+				case ^chattype_engine, 8, 12, 14, 15, 21 :
+					~script180(5);
+				case ^chattype_friendschat, ^chattype_friendschatnotification, 16, 20 :
+					~script180(4);
+				case 10, 13 :
+					~script180(6);
+			}
+		}
+		$int0 = calc($int0 - 1);
+	}
+	%varcint43 = chat_gethistorylength;
+}

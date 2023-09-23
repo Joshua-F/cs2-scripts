@@ -1,0 +1,14 @@
+// 1487
+[proc,script1487]
+def_string $string0 = "";
+if (%var115 = 0) {
+	if_setgraphic("graphic_1431", interface_762:16);
+	if_setgraphic("graphic_1427", interface_762:17);
+	$string0 = "Switch to note withdrawal mode";
+} else {
+	if_setgraphic("graphic_1433", interface_762:16);
+	if_setgraphic("graphic_1428", interface_762:17);
+	$string0 = "Switch to item withdrawal mode";
+}
+if_setop(1, $string0, interface_762:16);
+if_setonmouserepeat("script38(event_com, interface_762:101, $string0, 25, 150)", interface_762:16);

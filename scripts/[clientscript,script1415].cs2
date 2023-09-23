@@ -1,0 +1,26 @@
+// 1415
+[clientscript,script1415]
+def_int $size0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+while ($size0 <= inv_size(inv)) {
+	cc_create(interface_323:5, ^iftype_graphic, $size0);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(5 + 40 * $int1), calc(40 * $int2), ^setpos_abs_left, ^setpos_abs_top);
+	if (inv_getobj(inv, $size0) ! null) {
+		cc_setobject(inv_getobj(inv, $size0), inv_getnum(inv, $size0));
+		cc_setopbase("<col=ff9040><oc_name(inv_getobj(inv, $size0))>");
+		cc_setop(1, "<col=00ff00>Value");
+		cc_setop(2, "Pack <col=ff0000>1");
+		cc_setop(3, "Pack <col=ff0000>5");
+		cc_setop(4, "Pack <col=ff0000>All");
+		cc_setop(5, "Pack <col=ff0000>X");
+		cc_setop(10, "Examine");
+	}
+	$size0 = calc($size0 + 1);
+	$int1 = calc($int1 + 1);
+	if ($int1 > 6) {
+		$int1 = 0;
+		$int2 = calc($int2 + 1);
+	}
+}

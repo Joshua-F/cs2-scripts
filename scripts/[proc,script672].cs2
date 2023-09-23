@@ -1,0 +1,8 @@
+// 672
+[proc,script672]
+~script673(0, 0, 2, 0, 0, staff_of_air_1381, 1281, 0, 0, -1);
+def_int $int0 = 1;
+while ($int0 < 6) {
+	~script673($int0, 0, 0, 0, 0, null, 0, 1, 0, -1);
+	$int0 = calc($int0 + 1);
+}

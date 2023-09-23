@@ -1,0 +1,21 @@
+// 1528
+[clientscript,script1528]
+if_sethide(true, interface_765:1);
+if_sethide(true, interface_765:3);
+if_sethide(true, interface_765:4);
+if_sethide(true, interface_765:5);
+if_sethide(true, interface_765:6);
+if_sethide(true, interface_765:7);
+if_sethide(true, interface_765:8);
+if_sethide(true, interface_765:9);
+if_sethide(true, interface_765:2);
+if (%varcint195 <= 0) {
+	%varcint195 = 1;
+}
+if (compare(if_gettext(interface_765:9), "More.") = 0) {
+	%varcint195 = calc(%varcint195 + 1);
+}
+if (compare(if_gettext(interface_765:9), "Back.") = 0) {
+	~script1526;
+}
+~script1529;

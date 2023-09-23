@@ -1,0 +1,8 @@
+// 2048
+[proc,script2048](component $component0, int $comsubid1, graphic $graphic2, int $width3, int $height4, int $x5, int $y6, int $angle7, boolean $boolean8, boolean $boolean9, boolean $boolean10, int $int11, string $string0, string $op1, coord $coord12)
+if (cc_find($component0, $comsubid1) = ^true) {
+	~script2049($graphic2, $width3, $height4, $x5, $y6, $angle7, $boolean8, $boolean9, $boolean10, $int11, $string0, $op1, $coord12);
+} else {
+	cc_create($component0, ^iftype_graphic, $comsubid1);
+	~script2049($graphic2, $width3, $height4, $x5, $y6, $angle7, $boolean8, $boolean9, $boolean10, $int11, $string0, $op1, $coord12);
+}

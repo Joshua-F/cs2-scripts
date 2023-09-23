@@ -1,0 +1,4 @@
+// 1185
+[proc,script1185](component $component0, component $component1)
+def_int $int2 = calc(if_getwidth($component0) - if_getwidth($component1));
+if_setposition(calc((detailget_brightness - 1) * ($int2 / 3)), 0, ^setpos_abs_left, ^setpos_abs_top, $component1);

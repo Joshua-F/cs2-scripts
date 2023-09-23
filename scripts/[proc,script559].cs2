@@ -1,0 +1,11 @@
+// 559
+[proc,script559](component $component0)
+def_int $width1 = if_getwidth($component0);
+def_int $height2 = if_getheight($component0);
+def_int $x3 = calc($width1 - 2);
+def_int $y4 = calc($height2 - 2);
+def_int $comsubid5 = if_getnextsubid($component0);
+~script98($component0, $comsubid5, "v2_borders_slim,13", 0, 0, $width1, 2);
+~script98($component0, calc($comsubid5 + 1), "v2_borders_slim,13", 1, $y4, calc($width1 - 1), 2);
+~script98($component0, calc($comsubid5 + 2), "v2_borders_slim,14", 0, 1, 2, calc($height2 - 3));
+~script98($component0, calc($comsubid5 + 3), "v2_borders_slim,14", $x3, 1, 2, calc($height2 - 2));

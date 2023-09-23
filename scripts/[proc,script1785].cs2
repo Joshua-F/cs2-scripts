@@ -1,0 +1,16 @@
+// 1785
+[proc,script1785](string $string0, int $height0, int $int1, int $width2, int $int3)(int, int)
+cc_create(interface_792:3, ^iftype_text, $int1);
+cc_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setsize($width2, calc(paraheight($string0, $width2, p12_full) * 12 + 5), ^setsize_abs, ^setsize_abs);
+cc_settext($string0);
+if ($int3 = 1) {
+	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+	cc_setcolour(0xff981f);
+	return(calc($height0 + cc_getheight + 12), calc($int1 + 1));
+}
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_setcolour(0xc8aa64);
+return(calc($height0 + cc_getheight + 5), calc($int1 + 1));

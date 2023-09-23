@@ -1,0 +1,9 @@
+// 896
+[proc,script896]
+def_int $int0 = calc(116 / 12);
+def_int $int1 = calc($int0 * %varbit4527);
+def_int $int2 = calc($int0 * %varbit4526);
+if_setposition(if_getx(interface_717:8), calc(122 + (116 - $int1)), ^setpos_abs_left, ^setpos_abs_top, interface_717:8);
+if_setposition(if_getx(interface_717:7), calc(122 + (116 - $int2)), ^setpos_abs_left, ^setpos_abs_top, interface_717:7);
+if_setsize(27, $int1, ^setsize_abs, ^setsize_abs, interface_717:8);
+if_setsize(27, $int2, ^setsize_abs, ^setsize_abs, interface_717:7);

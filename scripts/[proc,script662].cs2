@@ -1,0 +1,98 @@
+// 662
+[proc,script662](int $int0)
+def_component $component1 = ~script658($int0);
+def_component $component2 = ~script660($int0);
+def_inv $inv3 = ~script659($int0);
+cc_deleteall($component1);
+def_int $width4 = if_getwidth($component1);
+def_int $height5 = if_getheight($component1);
+def_int $int6 = calc($width4 / 2 - 40);
+def_int $int7 = calc($height5 - 47);
+def_obj $obj8 = inv_getobj($inv3, 0);
+def_obj $obj9 = inv_getobj($inv3, 1);
+def_component $component10 = ~script661($int0);
+if ($component10 ! null) {
+	if (playermember = true | stockmarket_isofferempty($int0) = false) {
+		if_sethide(true, $component10);
+	} else {
+		if_sethide(false, $component10);
+	}
+}
+~script98($component1, 0, "bank_slot,1", calc($int6 - 2), calc($int7 - 2), 40, 36);
+if (($component10 = null | if_gethide($component10) = true) & cc_find($component1, 0) = ^true) {
+	cc_setonmouseover("script664(event_com, event_comsubid)");
+	cc_setonmouseleave("script665(event_com, event_comsubid)");
+	if ($obj8 ! null) {
+		if (oc_cert($obj8) ! $obj8) {
+			cc_setop(1, "Collect-notes");
+			cc_setop(2, "Collect-items");
+		} else {
+			cc_setop(2, "Collect");
+		}
+		cc_setopbase(oc_name($obj8));
+	}
+}
+cc_create($component1, ^iftype_graphic, 1);
+cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setgraphicshadow(0x333333);
+cc_setobject($obj8, inv_getnum($inv3, 0));
+$int6 = calc($width4 / 2 + 4);
+~script98($component1, 2, "bank_slot,1", calc($int6 - 2), calc($int7 - 2), 40, 36);
+if (($component10 = null | if_gethide($component10) = true) & cc_find($component1, 2) = ^true) {
+	cc_setonmouseover("script664(event_com, event_comsubid)");
+	cc_setonmouseleave("script665(event_com, event_comsubid)");
+	if ($obj9 ! null) {
+		if (oc_cert($obj9) ! $obj9) {
+			cc_setop(1, "Collect-notes");
+			cc_setop(2, "Collect-items");
+		} else {
+			cc_setop(2, "Collect");
+		}
+		cc_setopbase(oc_name($obj9));
+	}
+}
+cc_create($component1, ^iftype_graphic, 3);
+cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setgraphicshadow(0x333333);
+cc_setobject($obj9, inv_getnum($inv3, 1));
+~script652(11, 11, calc($width4 - 65), 16, $int0, $component1, 4, $component2, 0);
+cc_create($component1, ^iftype_rectangle, 9);
+$int6 = calc($width4 - 30);
+cc_setposition($int6, 11, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(18, 16, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^black);
+cc_settrans(160);
+cc_setfill(true);
+cc_create($component1, ^iftype_model, 10);
+def_obj $obj11 = stockmarket_getofferitem($int0);
+if (stockmarket_isofferempty($int0) = false) {
+	cc_setposition($int6, 11, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(18, 16, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj11, 0);
+	cc_setonmouserepeat("script568($component1, 10, $component2, oc_name($obj11), 25, 106)");
+	cc_setonmouseleave("script40($component2)");
+}
+cc_create($component1, ^iftype_rectangle, 11);
+$int6 = calc($width4 - 50);
+cc_setposition($int6, 11, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(18, 16, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^black);
+cc_settrans(160);
+cc_setfill(true);
+cc_create($component1, ^iftype_graphic, 12);
+def_string $string0 = "null";
+if (stockmarket_isofferempty($int0) = false) {
+	cc_setposition($int6, 12, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(16, 14, ^setsize_abs, ^setsize_abs);
+	if (stockmarket_getoffertype($int0) = 0) {
+		cc_setgraphic("graphic_1157");
+		$string0 = "Buy";
+	} else {
+		cc_setgraphic("graphic_1156");
+		$string0 = "Sell";
+	}
+	cc_setonmouserepeat("script568($component1, 12, $component2, $string0, 25, 106)");
+	cc_setonmouseleave("script40($component2)");
+}

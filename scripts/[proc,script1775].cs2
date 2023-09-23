@@ -1,0 +1,37 @@
+// 1775
+[proc,script1775]
+switch_int (%varcint252) {
+	case 0 :
+		if_setgraphic("options_radio_buttons,2", interface_791:127);
+		if_sethide(false, interface_791:125);
+		if_sethide(false, interface_791:126);
+		if_sethide(false, interface_791:124);
+		if_sethide(false, interface_791:123);
+		if_settrans(0, interface_791:122);
+	case 1 :
+		if_setgraphic("options_radio_buttons,2", interface_791:127);
+		if_sethide(true, interface_791:125);
+		if_sethide(true, interface_791:126);
+		if_sethide(false, interface_791:124);
+		if_sethide(false, interface_791:123);
+		if (map_members = ^true) {
+			if_settrans(225, interface_791:122);
+		} else {
+			if_settrans(0, interface_791:122);
+		}
+	case 2 :
+		if_setgraphic("options_radio_buttons,2", interface_791:127);
+		if_sethide(true, interface_791:125);
+		if_sethide(true, interface_791:126);
+		if_sethide(true, interface_791:124);
+		if_sethide(false, interface_791:123);
+		if_settrans(225, interface_791:122);
+	case 3 :
+		if_setgraphic("options_radio_buttons,1", interface_791:127);
+		if_sethide(true, interface_791:125);
+		if_sethide(true, interface_791:126);
+		if_sethide(true, interface_791:124);
+		if_sethide(true, interface_791:123);
+		if_settrans(225, interface_791:122);
+}
+~script1784;

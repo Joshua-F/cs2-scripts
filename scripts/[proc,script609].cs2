@@ -1,0 +1,8 @@
+// 609
+[proc,script609]
+if (%varcint83 <= 0) {
+	%varcint83 = 100;
+} else {
+	%varcint83 = calc(%varcint83 + 10);
+}
+if_setontimer("script610", interface_105:155);

@@ -1,0 +1,7 @@
+// 98
+[proc,script98](component $component0, int $comsubid1, graphic $graphic2, int $x3, int $y4, int $width5, int $height6)
+cc_create($component0, ^iftype_graphic, $comsubid1);
+cc_setposition($x3, $y4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width5, $height6, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic2);
+cc_settiling(true);

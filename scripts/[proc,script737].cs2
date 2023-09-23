@@ -1,0 +1,36 @@
+// 737
+[proc,script737](int $int0)
+def_model $model1 = null;
+if (%varcint99 = 0) {
+	%varcint99 = $int0;
+	return;
+}
+if (%varcint100 = 0) {
+	%varcint100 = $int0;
+	return;
+}
+if (%varcint101 = 0) {
+	%varcint101 = $int0;
+	if (~script739(%varcint99) = ~script739(%varcint100) & ~script739(%varcint99) = ~script739(%varcint101)) {
+		$model1 = enum(int, model, enum_1152, ~script739(%varcint99));
+		if_setmodel($model1, enum(int, component, enum_1153, %varcint99));
+		if_setmodel($model1, enum(int, component, enum_1153, %varcint100));
+		if_setmodel($model1, enum(int, component, enum_1153, %varcint101));
+		%varcint104 = setbit(%varcint104, ~script739(%varcint99));
+		%varcint99 = 0;
+		%varcint100 = 0;
+		%varcint101 = 0;
+		%varcint102 = calc(%varcint102 + 1);
+		%varcint105 = calc(%varcint105 - 1);
+		~script738;
+	}
+	return;
+}
+if_setmodel(model_31025, enum(int, component, enum_1153, %varcint99));
+if_setmodel(model_31025, enum(int, component, enum_1153, %varcint100));
+if_setmodel(model_31025, enum(int, component, enum_1153, %varcint101));
+%varcint99 = $int0;
+%varcint100 = 0;
+%varcint101 = 0;
+%varcint105 = calc(%varcint105 - 1);
+~script738;

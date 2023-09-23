@@ -1,0 +1,23 @@
+// 1279
+[proc,script1279](component $component0, inv $inv1, int $int2, int $int3)
+cc_deleteall($component0);
+def_int $int4 = 0;
+def_int $int5 = 0;
+if (if_getscrollwidth($component0) > 0) {
+	$int4 = calc((if_getscrollwidth($component0) - 36 * $int2) / ($int2 - 1));
+} else {
+	$int4 = calc((if_getwidth($component0) - 36 * $int2) / ($int2 - 1));
+}
+if (if_getscrollheight($component0) > 0) {
+	$int5 = calc((if_getscrollheight($component0) - 32 * $int3) / ($int3 - 1));
+} else {
+	$int5 = calc((if_getheight($component0) - 32 * $int3) / ($int3 - 1));
+}
+def_int $int6 = 0;
+while ($int6 <= calc($int2 * $int3)) {
+	cc_create($component0, ^iftype_graphic, $int6);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc((36 + $int4) * ($int6 % $int2)), calc($int6 / $int2 * (32 + $int5)), ^setpos_abs_left, ^setpos_abs_top);
+	~script1280($inv1, $int6, $component0, $int6);
+	$int6 = calc($int6 + 1);
+}

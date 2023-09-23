@@ -1,0 +1,12 @@
+// 134
+[clientscript,script134]
+if (%varcint6 = 1) {
+	%varcint6 = 0;
+} else {
+	%varcint6 = 1;
+}
+if (%varcint6 = 0) {
+	if_settext("Moderator option: Mute player for 48 hours: <lt>OFF<gt>", interface_553:16);
+} else {
+	if_settext("<col=ff0000>Moderator option: Mute player for 48 hours: <lt>ON<gt>", interface_553:16);
+}

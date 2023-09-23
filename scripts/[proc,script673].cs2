@@ -1,0 +1,85 @@
+// 673
+[proc,script673](int $int0, int $int1, int $int2, int $int3, int $int4, namedobj $namedobj5, int $int6, int $int7, int $int8, int $int9)
+def_component $component10 = ~script666($int0);
+cc_deleteall($component10);
+def_int $width11 = if_getwidth($component10);
+def_int $height12 = if_getheight($component10);
+def_string $text0 = "";
+if ($int7 = 1) {
+	$text0 = "Empty";
+} else if ($int1 = 0) {
+	$text0 = "Buy";
+} else {
+	$text0 = "Sell";
+}
+cc_create($component10, ^iftype_rectangle, 0);
+cc_setsize($width11, $height12, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(255);
+~script584($component10, $text0);
+def_int $int13 = if_getnextsubid($component10);
+if ($int7 = 1) {
+	if ($int0 < 2 | playermember = true) {
+		if ($int9 = $int0) {
+			~script867($component10);
+		}
+	} else {
+		if_sethide(false, ~script667($int0));
+	}
+}
+def_string $string1 = ~script46($int2, ",");
+def_string $string2 = ~script46($int6, ",");
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_component $component16 = ~script668($int0);
+if_sethide(true, $component16);
+def_string $string3 = "";
+if ($int7 = 1) {
+	if ($int0 < 2 | playermember = true) {
+		if ($int0 = $int9) {
+			if_sethide(false, $component16);
+		} else {
+			cc_create($component10, ^iftype_graphic, $int13);
+			cc_setgraphic("graphic_1155");
+			cc_setsize(16, 14, ^setsize_abs, ^setsize_abs);
+			cc_setposition(5, 29, ^setpos_abs_left, ^setpos_abs_top);
+			$int13 = calc($int13 + 1);
+		}
+	}
+} else {
+	$int14 = 7;
+	$int15 = calc($height12 - 30);
+	~script674($int14, $int15, calc($width11 - 14), 15, $int0, $component10, $int13, 1, $int7, $int8, $int2, $int3);
+	$int13 = if_getnextsubid($component10);
+	cc_create($component10, ^iftype_graphic, $int13);
+	$int13 = calc($int13 + 1);
+	cc_setposition(6, 30, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("bank_slot,0");
+	cc_create($component10, ^iftype_graphic, $int13);
+	cc_setposition(8, 32, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($namedobj5, $int2);
+	cc_setgraphicshadow(^black);
+	$int13 = calc($int13 + 1);
+	cc_create($component10, ^iftype_text, $int13);
+	$int13 = calc($int13 + 1);
+	cc_setposition(48, 30, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($width11 - 53), 22, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xcc9900);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settextshadow(true);
+	cc_settext(oc_name($namedobj5));
+	cc_create($component10, ^iftype_text, $int13);
+	$int13 = calc($int13 + 1);
+	cc_setposition(48, 54, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($width11 - 53), 15, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xbdbb5b);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+	cc_settextshadow(true);
+	cc_settext("<$string2> gp");
+}

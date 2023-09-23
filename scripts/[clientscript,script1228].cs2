@@ -1,0 +1,26 @@
+// 1228
+[clientscript,script1228]
+def_string $string0 = "";
+def_int $int0 = string_length(%varcstring35);
+while ($int0 > 0) {
+	$string0 = append($string0, "*");
+	$int0 = calc($int0 - 1);
+}
+def_string $string1 = "";
+def_int $int1 = string_length(%varcstring36);
+while ($int1 > 0) {
+	$string1 = append($string1, "*");
+	$int1 = calc($int1 - 1);
+}
+if (calc(clientclock % 40) < 20 & create_reply ! -3) {
+	if (%varcint174 = 4) {
+		if_settext(append($string0, "|"), interface_744:421);
+		if_settext($string1, interface_744:426);
+	} else if (%varcint174 = 5) {
+		if_settext($string0, interface_744:421);
+		if_settext(append($string1, "|"), interface_744:426);
+	}
+} else {
+	if_settext($string0, interface_744:421);
+	if_settext($string1, interface_744:426);
+}

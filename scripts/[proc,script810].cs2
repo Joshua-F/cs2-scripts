@@ -1,0 +1,18 @@
+// 810
+[proc,script810]
+if (map_members = ^true & %varbit4280 = 1) {
+	if_sethide(false, interface_747:1);
+	if_sethide(false, interface_747:2);
+	if_sethide(false, interface_747:5);
+	if_sethide(false, interface_747:3);
+	~script817(summoning);
+	if_sethide(false, interface_747:4);
+	if_setcolour(~script805(summoning), interface_747:4);
+	if_settext(tostring(stat(summoning)), interface_747:4);
+} else {
+	if_sethide(true, interface_747:1);
+	if_sethide(true, interface_747:2);
+	if_sethide(true, interface_747:4);
+	if_sethide(true, interface_747:5);
+	if_sethide(true, interface_747:3);
+}

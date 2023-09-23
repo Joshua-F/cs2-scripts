@@ -1,0 +1,11 @@
+// 1726
+[clientscript,script1726](component $component0)
+def_int $int1 = 0;
+if (calc(clientclock % 40) > 20) {
+	if_settrans(0, $component0);
+	if (calc(clientclock % 40) = 21) {
+		sound_synth(synth_5009, 1, 0);
+	}
+} else {
+	if_settrans(255, $component0);
+}

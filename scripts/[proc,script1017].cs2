@@ -1,0 +1,34 @@
+// 1017
+[proc,script1017](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Meats", 0);
+	case 1 :
+		return("Bread", 0);
+	case 2 :
+		return("Pies", 0);
+	case 3 :
+		return("Stews", 0);
+	case 4 :
+		return("Pizzas", 0);
+	case 5 :
+		return("Cakes", 0);
+	case 6 :
+		return("Wine", 0);
+	case 7 :
+		return("Hot Drinks", 1);
+	case 8 :
+		return("Brewing", 1);
+	case 9 :
+		return("Potatoes & Toppings", 1);
+	case 10 :
+		return("Dairy", 1);
+	case 11 :
+		return("Gnome", 1);
+	case 12 :
+		return("Minigames", 1);
+	case 13 :
+		return("Milestones", 0);
+	case default :
+		return("", -1);
+}

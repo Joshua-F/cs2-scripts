@@ -1,0 +1,111 @@
+// 676
+[clientscript,script676]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+$int2 = calc((if_getwidth(interface_645:16) - 36 * 10) / (10 - 1));
+$int3 = calc((if_getheight(interface_645:16) - 128) / 3);
+while ($int4 = 0) {
+	if (enum(int, namedobj, enum_1087, calc($int0 + 1)) ! logs_11760) {
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = barrows_ahrims_set_11846) {
+			$int5 = calc($int5 + 2);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = third_age_melee_set_11858) {
+			$int5 = calc($int5 + 4);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = green_dragonhide_set_11864) {
+			$int5 = calc($int5 + 7);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = mystic_robes_set_11872) {
+			$int5 = calc($int5 + 6);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = black_trimmed_armour_set_l_11878) {
+			$int5 = calc($int5 + 5);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = enchanted_set_11902) {
+			$int5 = calc($int5 + 8);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = trimmed_leather_armour_set_11908) {
+			$int5 = calc($int5 + 7);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = guthix_armour_set_l_11926) {
+			$int5 = calc($int5 + 1);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = rockshell_armour_set_11942) {
+			$int5 = calc($int5 + 2);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = dwarf_cannon_set_11967) {
+			$int5 = calc($int5 + 7);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = dagonhai_robes_set_14525) {
+			$int5 = calc($int5 + 9);
+		}
+		cc_create(interface_645:16, ^iftype_graphic, $int0);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((36 + $int2) * ($int5 % 10)), calc($int5 / 10 * (32 + $int3)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject(enum(int, namedobj, enum_1087, calc($int0 + 1)), -1);
+		cc_setopbase("<col=ff981f><oc_name(enum(int, namedobj, enum_1087, calc($int0 + 1)))>");
+		cc_setop(1, "Components");
+		cc_setop(2, "Exchange");
+		cc_setop(3, "Examine");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		$int0 = calc($int0 + 1);
+		$int5 = calc($int5 + 1);
+	} else {
+		$int4 = 1;
+	}
+}
+$int1 = $int0;
+$int0 = 0;
+$int5 = 0;
+$int4 = 0;
+while ($int4 = 0) {
+	if (enum(int, namedobj, enum_1087, calc($int0 + 1)) ! logs_11760) {
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = barrows_ahrims_set_11846) {
+			$int5 = calc($int5 + 2);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = third_age_melee_set_11858) {
+			$int5 = calc($int5 + 4);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = green_dragonhide_set_11864) {
+			$int5 = calc($int5 + 7);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = mystic_robes_set_11872) {
+			$int5 = calc($int5 + 6);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = black_trimmed_armour_set_l_11878) {
+			$int5 = calc($int5 + 5);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = enchanted_set_11902) {
+			$int5 = calc($int5 + 8);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = trimmed_leather_armour_set_11908) {
+			$int5 = calc($int5 + 7);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = guthix_armour_set_l_11926) {
+			$int5 = calc($int5 + 1);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = rockshell_armour_set_11942) {
+			$int5 = calc($int5 + 2);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = dwarf_cannon_set_11967) {
+			$int5 = calc($int5 + 7);
+		}
+		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = dagonhai_robes_set_14525) {
+			$int5 = calc($int5 + 9);
+		}
+		cc_create(interface_645:16, ^iftype_graphic, $int1);
+		cc_setsize(12, 6, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((36 + $int2) * ($int5 % 10)), calc($int5 / 10 * (32 + $int3)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("graphic_1066");
+	} else {
+		$int4 = 1;
+	}
+	$int0 = calc($int0 + 1);
+	$int5 = calc($int5 + 1);
+	$int1 = calc($int1 + 1);
+}

@@ -1,0 +1,8 @@
+// 81
+[clientscript,script81]
+if ((if_hassub(interface_752:9) = true | if_hassub(interface_752:10) = true) & chat_gethistorytype(0) = ^chattype_gamemessage) {
+	~script102(chat_gethistorymessage(0));
+}
+~script84;
+~script89;
+~script192;

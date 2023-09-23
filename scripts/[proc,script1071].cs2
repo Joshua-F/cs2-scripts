@@ -1,0 +1,11 @@
+// 1071
+[proc,script1071](component $component0, chatphrase $chatphrase1, int $int2)
+if ($int2 >= 0) {
+	~script1068($component0, $int2);
+}
+%varcint134 = 0;
+if (chatphrase_getdynamiccommandcount($chatphrase1) > 0) {
+	~script1072($component0, $chatphrase1);
+} else {
+	~script1077($chatphrase1);
+}

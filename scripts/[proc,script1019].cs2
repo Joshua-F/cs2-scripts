@@ -1,0 +1,18 @@
+// 1019
+[proc,script1019](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Familiars", 1);
+	case 1 :
+		return("Summoning Scrolls", 1);
+	case 2 :
+		return("Pets", 1);
+	case 3 :
+		return("Equipment", 1);
+	case 4 :
+		return("Minigames", 1);
+	case 5 :
+		return("Milestones", 1);
+	case default :
+		return("", -1);
+}

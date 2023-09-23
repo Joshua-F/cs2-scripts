@@ -1,0 +1,12 @@
+// 1833
+[clientscript,script1833](int $opindex0, int $int1)
+if (~script1820($opindex0) = 0) {
+	return;
+}
+if (map_members = ^false & struct_param(enum(int, struct, enum_1604, $int1), param_557) = true) {
+	return;
+}
+if (%varcint257 ! $int1) {
+	%varcint257 = $int1;
+	~script1781;
+}

@@ -1,0 +1,30 @@
+// 1942
+[proc,script1942]
+if (%varcint560 = 0) {
+	%varcint559 = min(255, calc(%varcint559 + 6));
+	if (%varcint559 = 255) {
+		%varcint560 = 1;
+	}
+} else if (%varcint560 = 1) {
+	%varcint559 = max(60, calc(%varcint559 - 6));
+	if (%varcint559 = 60) {
+		%varcint560 = 0;
+	}
+}
+if_settrans(%varcint559, interface_809:14);
+if (%varcint561 < 4) {
+	if (if_gethide(interface_809:18) = true) {
+		%varcint562 = min(20, calc(%varcint562 + 1));
+		if (%varcint562 = 20) {
+			%varcint562 = 0;
+			if_sethide(false, interface_809:18);
+		}
+	} else {
+		%varcint562 = min(35, calc(%varcint562 + 1));
+		if (%varcint562 = 35) {
+			%varcint562 = 0;
+			if_sethide(true, interface_809:18);
+			%varcint561 = min(4, calc(%varcint561 + 1));
+		}
+	}
+}

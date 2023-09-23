@@ -1,0 +1,16 @@
+// 871
+[clientscript,script871]
+def_int $int0 = calc(20 - 0);
+def_int $int1 = calc(80 - 0);
+def_int $int2 = calc($int1 / $int0);
+def_int $int3 = calc(%varbit4523 * $int2);
+def_int $int4 = calc(1024 / $int1);
+%varcint111 = $int3;
+def_int $int5 = calc(%varcint111 * $int4);
+$int5 = calc($int5 + 512);
+$int5 = calc(2048 - $int5);
+if_setmodelangle(0, 0, 0, 0, $int5, 388, interface_717:4);
+~script896;
+def_int $int6 = calc(enum(int, int, enum_1422, %varbit4519) * (1024 / $int0));
+$int6 = calc($int6 + 512);
+if_setmodelangle(0, 0, 0, 0, $int6, 365, interface_717:3);

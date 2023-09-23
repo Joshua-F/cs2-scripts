@@ -1,0 +1,70 @@
+// 1815
+[proc,script1815](string $string0)(string)
+if (compare($string0, "n") < 0) {
+	if (compare($string0, "g") < 0) {
+		if (compare($string0, "a") = 0) {
+			return("A");
+		} else if (compare($string0, "b") = 0) {
+			return("B");
+		} else if (compare($string0, "c") = 0) {
+			return("C");
+		} else if (compare($string0, "d") = 0) {
+			return("D");
+		} else if (compare($string0, "e") = 0) {
+			return("E");
+		} else if (compare($string0, "f") = 0) {
+			return("F");
+		}
+	}
+	if (compare($string0, "g") = 0) {
+		return("G");
+	} else if (compare($string0, "h") = 0) {
+		return("H");
+	} else if (compare($string0, "i") = 0) {
+		return("I");
+	} else if (compare($string0, "j") = 0) {
+		return("J");
+	} else if (compare($string0, "k") = 0) {
+		return("K");
+	} else if (compare($string0, "l") = 0) {
+		return("L");
+	} else if (compare($string0, "m") = 0) {
+		return("M");
+	}
+}
+if (compare($string0, "u") < 0) {
+	if (compare($string0, "n") = 0) {
+		return("N");
+	} else if (compare($string0, "o") = 0) {
+		return("O");
+	} else if (compare($string0, "p") = 0) {
+		return("P");
+	} else if (compare($string0, "q") = 0) {
+		return("Q");
+	} else if (compare($string0, "r") = 0) {
+		return("R");
+	} else if (compare($string0, "s") = 0) {
+		return("S");
+	} else if (compare($string0, "t") = 0) {
+		return("T");
+	}
+}
+if (compare($string0, "u") = 0) {
+	return("U");
+}
+if (compare($string0, "v") = 0) {
+	return("V");
+}
+if (compare($string0, "w") = 0) {
+	return("W");
+}
+if (compare($string0, "x") = 0) {
+	return("X");
+}
+if (compare($string0, "y") = 0) {
+	return("Y");
+}
+if (compare($string0, "z") = 0) {
+	return("Z");
+}
+return($string0);

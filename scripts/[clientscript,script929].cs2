@@ -1,0 +1,56 @@
+// 929
+[clientscript,script929]
+if (%varbit4538 >= 60) {
+	return;
+}
+if_settext("Sliceoflemon (1000)", interface_724:19);
+if_settext("Milknosugar (1000)", interface_724:21);
+def_int $int0 = 0;
+while ($int0 <= 55) {
+	cc_create(interface_724:27, ^iftype_rectangle, $int0);
+	cc_setfill(true);
+	cc_setsize(2, 32, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(^white);
+	cc_sethide(false);
+	cc_setposition(calc($int0 % 7 * 34 + 34), calc($int0 / 7 * 34 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	$int0 = calc($int0 + 1);
+}
+$int0 = 0;
+while ($int0 <= 55) {
+	cc_create(interface_724:27, ^iftype_rectangle, calc($int0 + 56));
+	cc_setfill(true);
+	cc_setsize(32, 2, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(^white);
+	cc_sethide(false);
+	cc_setposition(calc($int0 % 8 * 34 + 2), calc($int0 / 8 * 34 + 34), ^setpos_abs_left, ^setpos_abs_top);
+	$int0 = calc($int0 + 1);
+}
+$int0 = 0;
+while ($int0 <= 55) {
+	cc_create(interface_724:27, ^iftype_rectangle, calc($int0 + 112));
+	cc_setfill(true);
+	cc_setsize(2, 32, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0x555555);
+	cc_sethide(false);
+	cc_setposition(calc($int0 % 7 * 34 + 34), calc($int0 / 7 * 34 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	$int0 = calc($int0 + 1);
+}
+$int0 = 0;
+while ($int0 <= 55) {
+	cc_create(interface_724:27, ^iftype_rectangle, calc($int0 + 168));
+	cc_setfill(true);
+	cc_setsize(32, 2, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0x555555);
+	cc_sethide(false);
+	cc_setposition(calc($int0 % 8 * 34 + 2), calc($int0 / 8 * 34 + 34), ^setpos_abs_left, ^setpos_abs_top);
+	$int0 = calc($int0 + 1);
+}
+$int0 = 0;
+while ($int0 <= 63) {
+	cc_create(interface_724:27, ^iftype_graphic, calc($int0 + 224));
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int0 % 8 * 34 + 2), calc($int0 / 8 * 34 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_sethide(true);
+	$int0 = calc($int0 + 1);
+}
+%varcint185 = 0;

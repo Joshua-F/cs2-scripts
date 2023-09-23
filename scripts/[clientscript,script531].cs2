@@ -1,0 +1,69 @@
+// 531
+[clientscript,script531](component $component0, graphic $graphic1, graphic $graphic2, component $component3)
+def_graphic $graphic4 = null;
+def_int $int5 = 0;
+def_int $int6 = -1;
+def_component $component7 = null;
+def_component $component8 = null;
+def_boolean $boolean9 = false;
+if ($component0 = null | $graphic1 = null | $graphic2 = null) {
+	return;
+}
+if ($component0 = interface_301:88) {
+	$int5 = ~script543(%varbit4090);
+	$component7 = interface_301:70;
+	$component8 = interface_301:71;
+}
+if ($component0 = interface_301:89) {
+	$int5 = ~script543(%varbit4091);
+	$component7 = interface_301:72;
+	$component8 = interface_301:73;
+}
+if ($component0 = interface_301:90) {
+	$int5 = ~script543(%varbit4093);
+	$component7 = interface_301:74;
+	$component8 = interface_301:75;
+}
+if ($component0 = interface_301:91) {
+	$int5 = ~script543(%varbit4095);
+	$component7 = interface_301:76;
+	$component8 = interface_301:77;
+}
+if ($component0 = interface_301:92) {
+	$int5 = ~script543(%varbit4096);
+	$component7 = interface_301:78;
+	$component8 = interface_301:79;
+}
+if ($component0 = interface_301:93) {
+	$int5 = ~script543(%varbit4098);
+	$component7 = interface_301:80;
+	$component8 = interface_301:81;
+}
+if ($component0 = interface_301:94) {
+	$int5 = ~script543(%varbit4100);
+	$component7 = interface_301:82;
+	$component8 = interface_301:83;
+}
+if ($component0 = interface_301:95) {
+	$int5 = ~script543(%varbit4101);
+	$component7 = interface_301:84;
+	$component8 = interface_301:85;
+}
+if ($component0 = interface_301:96) {
+	$int5 = ~script543(%varbit4102);
+	$component7 = interface_301:86;
+	$component8 = interface_301:87;
+}
+if ($int5 = 1) {
+	$graphic4 = $graphic1;
+	$boolean9 = false;
+	if_setcolour(0xfab432, $component7);
+	if_setcolour(0xfab432, $component8);
+} else {
+	$graphic4 = $graphic2;
+	$boolean9 = true;
+	if_setcolour(0x606060, $component7);
+	if_setcolour(0x606060, $component8);
+}
+if_setgraphic($graphic4, $component0);
+if_sethide($boolean9, $component3);
