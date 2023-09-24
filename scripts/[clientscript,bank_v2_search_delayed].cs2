@@ -1,0 +1,6 @@
+// 1476
+[clientscript,bank_v2_search_delayed](int $clock0)
+if (clientclock >= $clock0) {
+	~bank_v2_show_search(%varcstring22);
+	if_setontimer(null, bank_v2_main:com_20);
+}

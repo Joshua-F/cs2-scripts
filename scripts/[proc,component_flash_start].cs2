@@ -1,0 +1,4 @@
+// 1725
+[proc,component_flash_start](component $component0)
+if_sethide(false, $component0);
+if_setontimer("component_flash_timer($component0)", $component0);

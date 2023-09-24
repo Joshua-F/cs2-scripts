@@ -1,10 +1,10 @@
 // 918
 [clientscript,script918](component $component0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6)
 if (%varbit4537 ! 0 | if_gethide($component3) = true) {
-	~script41($component1);
+	~deltooltip_action($component1);
 	return;
 }
-~script39($component0, $component1, "Use the arrow buttons to read the commentary.", 25, if_getwidth(if_getlayer($component1)));
+~addtooltip_action($component0, $component1, "Use the arrow buttons to read the commentary.", 25, if_getwidth(if_getlayer($component1)));
 if (%varcint2 = 0) {
 	return;
 }

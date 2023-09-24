@@ -1,0 +1,37 @@
+// 121
+[proc,getsideicon](int $int0)(component)
+if (getwindowmode >= ^windowmode_resizable) {
+	return(~script1742($int0));
+}
+switch_int ($int0) {
+	case 0 :
+		return(toplevel:icon0);
+	case 1 :
+		return(toplevel:icon1);
+	case 2 :
+		return(toplevel:icon2);
+	case 3 :
+		return(toplevel:icon3);
+	case 4 :
+		return(toplevel:icon4);
+	case 5 :
+		return(toplevel:icon5);
+	case 6 :
+		return(toplevel:icon6);
+	case 7 :
+		return(toplevel:icon7);
+	case 8 :
+		return(toplevel:icon8);
+	case 9 :
+		return(toplevel:icon9);
+	case 10 :
+		return(toplevel:icon10);
+	case 11 :
+		return(toplevel:icon11);
+	case 12 :
+		return(toplevel:icon12);
+	case 13 :
+		return(toplevel:icon13);
+	case default :
+		return(null);
+}

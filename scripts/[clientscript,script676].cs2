@@ -6,8 +6,8 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
 def_int $int5 = 0;
-$int2 = calc((if_getwidth(interface_645:16) - 36 * 10) / (10 - 1));
-$int3 = calc((if_getheight(interface_645:16) - 128) / 3);
+$int2 = calc((if_getwidth(exchange_itemsets:com_16) - 36 * 10) / (10 - 1));
+$int3 = calc((if_getheight(exchange_itemsets:com_16) - 128) / 3);
 while ($int4 = 0) {
 	if (enum(int, namedobj, enum_1087, calc($int0 + 1)) ! logs_11760) {
 		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = barrows_ahrims_set_11846) {
@@ -43,7 +43,7 @@ while ($int4 = 0) {
 		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = dagonhai_robes_set_14525) {
 			$int5 = calc($int5 + 9);
 		}
-		cc_create(interface_645:16, ^iftype_graphic, $int0);
+		cc_create(exchange_itemsets:com_16, ^iftype_graphic, $int0);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((36 + $int2) * ($int5 % 10)), calc($int5 / 10 * (32 + $int3)), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setobject(enum(int, namedobj, enum_1087, calc($int0 + 1)), -1);
@@ -98,7 +98,7 @@ while ($int4 = 0) {
 		if (enum(int, namedobj, enum_1087, calc($int0 + 1)) = dagonhai_robes_set_14525) {
 			$int5 = calc($int5 + 9);
 		}
-		cc_create(interface_645:16, ^iftype_graphic, $int1);
+		cc_create(exchange_itemsets:com_16, ^iftype_graphic, $int1);
 		cc_setsize(12, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((36 + $int2) * ($int5 % 10)), calc($int5 / 10 * (32 + $int3)), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("graphic_1066");

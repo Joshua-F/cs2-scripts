@@ -1,0 +1,17 @@
+// 1741
+[proc,topstat_run_button_update](component $component0)
+if (~bool_to_int(%varcint214) = 1) {
+	if (getwindowmode >= ^windowmode_resizable) {
+		if_setgraphic("graphic_1461", $component0);
+	} else {
+		if_setgraphic("graphic_1457", $component0);
+	}
+	if_setop(1, "Turn run mode off", $component0);
+} else {
+	if (getwindowmode >= ^windowmode_resizable) {
+		if_setgraphic("graphic_1459", $component0);
+	} else {
+		if_setgraphic("graphic_423", $component0);
+	}
+	if_setop(1, "Turn run mode on", $component0);
+}

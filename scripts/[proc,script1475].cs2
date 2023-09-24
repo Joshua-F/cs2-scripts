@@ -1,9 +1,0 @@
-// 1475
-[proc,script1475]
-if (clientclock > %varcint191) {
-	~script1479(%varcstring22);
-	if_setontimer(null, interface_762:20);
-	%varcint191 = calc(clientclock + 10);
-} else {
-	if_setontimer("script1476(%varcint191)", interface_762:20);
-}

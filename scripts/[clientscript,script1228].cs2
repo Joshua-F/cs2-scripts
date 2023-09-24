@@ -14,13 +14,13 @@ while ($int1 > 0) {
 }
 if (calc(clientclock % 40) < 20 & create_reply ! -3) {
 	if (%varcint174 = 4) {
-		if_settext(append($string0, "|"), interface_744:421);
-		if_settext($string1, interface_744:426);
+		if_settext(append($string0, "|"), loginscreen:com_421);
+		if_settext($string1, loginscreen:com_426);
 	} else if (%varcint174 = 5) {
-		if_settext($string0, interface_744:421);
-		if_settext(append($string1, "|"), interface_744:426);
+		if_settext($string0, loginscreen:com_421);
+		if_settext(append($string1, "|"), loginscreen:com_426);
 	}
 } else {
-	if_settext($string0, interface_744:421);
-	if_settext($string1, interface_744:426);
+	if_settext($string0, loginscreen:com_421);
+	if_settext($string1, loginscreen:com_426);
 }

@@ -3,8 +3,8 @@
 def_string $string0 = "";
 if (login_reply = -3) {
 	if_settext("Performing login...", $component0);
-	if_sethide(true, interface_744:347);
-	if_sethide(true, interface_744:348);
+	if_sethide(true, loginscreen:login_button);
+	if_sethide(true, loginscreen:com_348);
 	return;
 }
 if (login_reply = 21) {
@@ -17,8 +17,8 @@ if (login_reply = 21) {
 		return;
 	}
 	if_settext("You have only just left another world. Your profile will be transferred in <tostring(calc(%varcint200 / 50))> seconds.", $component0);
-	if_sethide(true, interface_744:347);
-	if_sethide(true, interface_744:348);
+	if_sethide(true, loginscreen:login_button);
+	if_sethide(true, loginscreen:com_348);
 	return;
 }
 if (login_reply = 1) {
@@ -29,8 +29,8 @@ if (login_reply = 1) {
 			%varcint202 = 1;
 		}
 	}
-	if_sethide(true, interface_744:347);
-	if_sethide(true, interface_744:348);
+	if_sethide(true, loginscreen:login_button);
+	if_sethide(true, loginscreen:com_348);
 	if (%varcint202 = 0) {
 		if_settext("Could not display video advertisement. Login will continue in <tostring(calc((500 - %varcint201) / 50))> seconds.", $component0);
 	} else if (%varcint201 < 500) {
@@ -45,8 +45,8 @@ if (login_reply = 1) {
 	login_continue;
 	return;
 }
-if_sethide(false, interface_744:347);
-if_sethide(false, interface_744:348);
+if_sethide(false, loginscreen:login_button);
+if_sethide(false, loginscreen:com_348);
 switch_int (login_reply) {
 	case -2 :
 		if_settext("Enter your username and password.", $component0);
@@ -59,11 +59,11 @@ switch_int (login_reply) {
 	case 3 :
 		if_settext("Invalid username or password. If you have forgotten your password, <shad=-1><u=0000ff><col=0000ff>click here</col></u><shad>.", $component0);
 		$string0 = "loginapplet/loginapplet.ws?mod=accountappeal&dest=passwordchoice.ws";
-		if_setonclick("script702($string0, false)", $component0);
+		if_setonclick("openurl_nologin($string0, false)", $component0);
 	case 4 :
 		if_settext("Your account has been disabled. Please <shad=-1><u=0000ff><col=0000ff>click here</col></u><shad> to check your Message Centre for details.", $component0);
 		$string0 = "loginapplet/login.ws?mod=ticketing&ssl=1&expired=0&dest=inbox.ws";
-		if_setonclick("script702($string0, false)", $component0);
+		if_setonclick("openurl_nologin($string0, false)", $component0);
 	case 5 :
 		if_settext("Your account has not logged out from its last session. Try again in a few minutes.", $component0);
 	case 6 :
@@ -79,7 +79,7 @@ switch_int (login_reply) {
 	case 11 :
 		if_settext("Your password is an extremely common choice, and is very weak. You must change it before you can login. <shad=-1><u=0000ff><col=0000ff>Click here</col></u><shad>", $component0);
 		$string0 = "loginapplet/loginapplet.ws?mod=password_history&ssl=1&expired=0&dest=password.ws";
-		if_setonclick("script702($string0, false)", $component0);
+		if_setonclick("openurl_nologin($string0, false)", $component0);
 	case 12 :
 		if_settext("You need a members' account to log in to this world. Please subscribe or use a different world. ", $component0);
 	case 13 :
@@ -93,7 +93,7 @@ switch_int (login_reply) {
 	case 18 :
 		if_settext("Your account has been locked as we suspect it has been stolen. <shad=-1><u=0000ff><col=0000ff>Click here</col></u><shad> to recover your account.", $component0);
 		$string0 = "loginapplet/loginapplet.ws?mod=accountappeal&dest=lockchoice.ws";
-		if_setonclick("script702($string0, false)", $component0);
+		if_setonclick("openurl_nologin($string0, false)", $component0);
 	case 19 :
 		if_settext("Fullscreen is currently a members-only feature. To log in, either return to the main menu and exit fullscreen or use a members' account.", $component0);
 	case 20 :
@@ -115,7 +115,7 @@ switch_int (login_reply) {
 	case 30 :
 		if_settext("This is not a member's account; please choose the 'Free Users' option from the <shad=-1><u=0000ff><col=0000ff>website</col></u><shad> to play on this account.", $component0);
 		$string0 = "index.ws";
-		if_setonclick("script702($string0, false)", $component0);
+		if_setonclick("openurl_nologin($string0, false)", $component0);
 	case default :
 		if_settext("Unexpected server response. Please try using a different world.", $component0);
 }

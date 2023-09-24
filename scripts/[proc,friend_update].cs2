@@ -1,0 +1,72 @@
+// 125
+[proc,friend_update]
+def_int $int0 = 0;
+def_int $world1 = 0;
+cc_deleteall(friends2:com_2);
+if (friend_count = -2) {
+	if_settext("Loading Friends List<br>Please wait...", friends2:loadingmes);
+} else if (friend_count = -1) {
+	if_settext("Connecting to friendserver<br>Please wait...", friends2:loadingmes);
+} else {
+	if_settext("", friends2:loadingmes);
+	while ($int0 < friend_count) {
+		cc_create(friends2:com_2, ^iftype_text, $int0);
+		cc_settext(friend_getname($int0));
+		cc_setposition(3, calc($int0 * 15), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(100, 14, ^setsize_abs, ^setsize_abs);
+		cc_setcolour(^white);
+		cc_settextfont(friendslist_font);
+		cc_settextshadow(true);
+		cc_setopbase("<col=ffffff><friend_getname($int0)>");
+		if (friend_getworld($int0) ! 0) {
+			if (map_quickchat = false & _3328 = false) {
+				cc_setop(1, "Message");
+			}
+			cc_setop(2, "Quick Message");
+			cc_setop(3, "");
+			cc_setop(4, "");
+		} else {
+			cc_setop(1, "");
+			cc_setop(2, "");
+			if (map_quickchat = false & _3328 = false) {
+				cc_setop(3, "Message");
+			}
+			cc_setop(4, "Quick Message");
+		}
+		cc_setop(5, "Delete");
+		cc_setonop("friend_op(event_op, event_opbase, $int0)");
+		$int0 = calc($int0 + 1);
+	}
+	$int0 = 0;
+	while ($int0 < friend_count) {
+		cc_create(friends2:com_2, ^iftype_text, calc($int0 + friend_count));
+		$world1 = friend_getworld($int0);
+		if ($world1 = 0) {
+			cc_settext("Offline");
+			cc_setcolour(^red);
+		} else {
+			cc_settext(friend_getworldname($int0));
+			if ($world1 = map_world) {
+				cc_setcolour(^green);
+			} else {
+				cc_setcolour(^yellow);
+			}
+		}
+		cc_setposition(99, calc($int0 * 15), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(55, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextfont(friendslist_font);
+		cc_settextalign(^settextalign_right, ^settextalign_top, 0);
+		cc_settextshadow(true);
+		$int0 = calc($int0 + 1);
+	}
+	if ($int0 < 13) {
+		$int0 = 13;
+	}
+	if (friend_count >= 13) {
+		if_setscrollsize(158, calc($int0 * 15 + 5), friends2:com_2);
+		~scrollbar_resize(friends2:com_1, friends2:com_2, %varcint9);
+	} else {
+		if_setscrollsize(158, calc($int0 * 15), friends2:com_2);
+		~scrollbar_resize(friends2:com_1, friends2:com_2, 0);
+	}
+}

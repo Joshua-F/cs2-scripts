@@ -1,0 +1,9 @@
+// 1424
+[clientscript,agilityarena_overlay]
+if (testbit(%var309, 2) = ^false) {
+	if_setcolour(0x002300, agilityarena_overlay:green);
+	if_setcolour(^red, agilityarena_overlay:red);
+} else {
+	if_setcolour(^green, agilityarena_overlay:green);
+	if_setcolour(0x230000, agilityarena_overlay:red);
+}

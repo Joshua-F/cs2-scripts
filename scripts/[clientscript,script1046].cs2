@@ -13,10 +13,10 @@ if (char_isalphanumeric($keychar1) = true) {
 			.cc_setfill(true);
 			if ($int8 < %varcint128) {
 				if (cc_gety < if_getscrolly($component3)) {
-					~script72($component4, $component3, cc_gety);
+					~scrollbar_resize($component4, $component3, cc_gety);
 				}
 			} else if ($int8 > %varcint128 & calc(cc_gety + cc_getheight) > calc(if_getheight($component3) + if_getscrolly($component3))) {
-				~script72($component4, $component3, calc(cc_gety + cc_getheight - if_getheight($component3)));
+				~scrollbar_resize($component4, $component3, calc(cc_gety + cc_getheight - if_getheight($component3)));
 			}
 			%varcint128 = $int8;
 			return;
@@ -42,9 +42,9 @@ if ($key0 = ^key_page_up) {
 			.cc_setfill(true);
 		}
 		if (cc_gety < if_getscrolly($component3)) {
-			~script72($component4, $component3, calc(if_getscrolly($component3) - cc_getheight));
+			~scrollbar_resize($component4, $component3, calc(if_getscrolly($component3) - cc_getheight));
 		} else if (calc(cc_gety + cc_getheight) > calc(if_getheight($component3) + if_getscrolly($component3))) {
-			~script72($component4, $component3, if_getscrollheight($component3));
+			~scrollbar_resize($component4, $component3, if_getscrollheight($component3));
 		}
 	}
 	return;
@@ -66,38 +66,38 @@ if ($key0 = ^key_page_down) {
 			.cc_setfill(true);
 		}
 		if (calc(cc_gety + cc_getheight) > calc(if_getheight($component3) + if_getscrolly($component3))) {
-			~script72($component4, $component3, calc(if_getscrolly($component3) + cc_getheight));
+			~scrollbar_resize($component4, $component3, calc(if_getscrolly($component3) + cc_getheight));
 		} else if (cc_gety < if_getscrolly($component3)) {
-			~script72($component4, $component3, 0);
+			~scrollbar_resize($component4, $component3, 0);
 		}
 	}
 	return;
 }
 if ($key0 = ^key_home) {
-	~script1050(%varcint126, %varcstring27);
+	~quickchat_open(%varcint126, %varcstring27);
 	return;
 }
 if ($key0 = ^key_escape) {
-	~script1054;
+	~quickchat_close;
 	return;
 }
 if ($key0 = ^key_return) {
 	if (%varcint128 >= 0 & cc_find($component3, calc(%varcint128 + 1)) = ^true) {
-		~script1074($component2, $chatphrase5, ~script1844(%varcint128));
+		~quickchat_phrase_int($component2, $chatphrase5, ~script1844(%varcint128));
 	}
 	return;
 }
 if ($key0 = ^key_backspace) {
 	if (%varcint127 = 0) {
-		~script1054;
+		~quickchat_close;
 	} else {
 		%varcint128 = -1;
-		if_sethide(true, interface_137:7);
-		if_sethide(true, interface_137:9);
-		if_sethide(true, interface_137:13);
-		if_sethide(false, interface_137:17);
-		if_sethide(false, interface_137:1);
-		if_sethide(true, interface_137:3);
+		if_sethide(true, chatdefault:com_7);
+		if_sethide(true, chatdefault:com_9);
+		if_sethide(true, chatdefault:com_13);
+		if_sethide(false, chatdefault:quickchat_menu);
+		if_sethide(false, chatdefault:com_1);
+		if_sethide(true, chatdefault:quickchat_title);
 	}
 	return;
 }

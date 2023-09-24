@@ -1,0 +1,28 @@
+// 1468
+[proc,bank_v2_get_tab](int $int0)(int)
+$int0 = calc($int0 + 1);
+if ($int0 <= %varbit4885) {
+	return(2);
+}
+if ($int0 <= calc(%varbit4885 + %varbit4886)) {
+	return(3);
+}
+if ($int0 <= calc(%varbit4885 + %varbit4886 + %varbit4887)) {
+	return(4);
+}
+if ($int0 <= calc(%varbit4885 + %varbit4886 + %varbit4887 + %varbit4888)) {
+	return(5);
+}
+if ($int0 <= calc(%varbit4885 + %varbit4886 + %varbit4887 + %varbit4888 + %varbit4889)) {
+	return(6);
+}
+if ($int0 <= calc(%varbit4885 + %varbit4886 + %varbit4887 + %varbit4888 + %varbit4889 + %varbit4890)) {
+	return(7);
+}
+if ($int0 <= calc(%varbit4885 + %varbit4886 + %varbit4887 + %varbit4888 + %varbit4889 + %varbit4890 + %varbit4891)) {
+	return(8);
+}
+if ($int0 <= calc(%varbit4885 + %varbit4886 + %varbit4887 + %varbit4888 + %varbit4889 + %varbit4890 + %varbit4891 + %varbit4892)) {
+	return(9);
+}
+return(1);

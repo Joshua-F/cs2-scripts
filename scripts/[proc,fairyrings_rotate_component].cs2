@@ -1,0 +1,7 @@
+// 966
+[proc,fairyrings_rotate_component](component $component0, int $int1)
+def_int $int2 = if_getmodelangle_z($component0);
+if ($int2 ! $int1) {
+	if_setmodelangle(0, 0, if_getmodelangle_x($component0), if_getmodelangle_y($component0), ~script967($int2, $int1), if_getmodelzoom($component0), $component0);
+	%varcint125 = clientclock;
+}

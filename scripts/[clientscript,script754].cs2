@@ -1,7 +1,7 @@
 // 754
 [clientscript,script754](int $int0, int $int1)
 if ($int1 = 0) {
-	if_settext("<tostring($int0)>.00", interface_662:45);
+	if_settext("<tostring($int0)>.00", lore_stats_side:animal_time_left);
 } else {
-	if_settext("<tostring($int0)>.30", interface_662:45);
+	if_settext("<tostring($int0)>.30", lore_stats_side:animal_time_left);
 }

@@ -1,0 +1,6 @@
+// 1444
+[clientscript,bank_v2_help_init]
+~bank_v2_help_showpage(0);
+if_settext(tostring(%varcint192), bank_v2_help:com_27);
+if_settext(tostring(~bank_v2_get_size), bank_v2_help:bank_space);
+if_setonvarctransmit("script1445(bank_v2_help:com_27){varcint192}", bank_v2_help:main);

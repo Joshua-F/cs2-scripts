@@ -1,0 +1,25 @@
+// 537
+[clientscript,assist_flash_icon](int $clock0, int $clock1)
+def_int $int2 = 0;
+def_int $clock3 = calc($clock1 + 25);
+def_int $int4 = calc(clientclock - $clock0);
+if (clientclock >= $clock1) {
+	if (clientclock < $clock3) {
+		$int2 = calc(255 / ($clock3 - $clock1));
+		$int2 = calc(255 - $int2 * (clientclock - $clock1));
+		if_settrans($int2, statusicons:com_2);
+		return;
+	}
+	if_setontimer(null, statusicons:com_2);
+	if_settrans(0, statusicons:com_2);
+	return;
+}
+if ($int4 <= 5) {
+	if_settrans(0, statusicons:com_2);
+} else if ($int4 <= 10) {
+	if_settrans(85, statusicons:com_2);
+} else if ($int4 <= 15) {
+	if_settrans(200, statusicons:com_2);
+} else {
+	if_settrans(85, statusicons:com_2);
+}

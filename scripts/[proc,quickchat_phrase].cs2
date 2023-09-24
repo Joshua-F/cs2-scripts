@@ -1,0 +1,11 @@
+// 1071
+[proc,quickchat_phrase](component $component0, chatphrase $chatphrase1, int $int2)
+if ($int2 >= 0) {
+	~quickchat_return($component0, $int2);
+}
+%varcint134 = 0;
+if (chatphrase_getdynamiccommandcount($chatphrase1) > 0) {
+	~quickchat_phrase_setup($component0, $chatphrase1);
+} else {
+	~quickchat_phrase_send($chatphrase1);
+}

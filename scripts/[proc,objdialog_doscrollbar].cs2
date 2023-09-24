@@ -1,0 +1,17 @@
+// 578
+[proc,objdialog_doscrollbar]
+def_int $height0 = if_getheight(objdialog:resultlist);
+def_int $int1 = if_getscrollheight(objdialog:resultlist);
+if ($int1 < 15) {
+	$int1 = 15;
+	if_setscrollsize(0, 15, objdialog:resultlist);
+}
+def_int $int2 = calc($int1 - $height0);
+if ($int2 < 0) {
+	$int2 = 0;
+}
+def_int $int3 = if_getscrolly(objdialog:resultlist);
+if ($int3 > $int2) {
+	$int3 = $int2;
+}
+~scrollbar_resize(objdialog:resultscrollbar, objdialog:resultlist, $int3);

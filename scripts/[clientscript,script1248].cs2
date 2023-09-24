@@ -8,5 +8,5 @@ if (calc(%varcint176 % 10) ! 2) {
 	%varcint176 = calc(%varcint176 - %varcint176 % 10 + 2);
 }
 if_sethide(false, $component0);
-if_setontimer("script1249($component0, $component1, $component2)", $component0);
+if_setontimer("loginscreen_camera_timer($component0, $component1, $component2)", $component0);
 if_setontimer(null, $component1);

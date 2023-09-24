@@ -1,8 +1,8 @@
 // 2051
 [proc,script2051](component $component0, int $comsubid1, string $text0, int $width2, int $height3, int $x4, int $y5, int $colour6, string $string1, string $op2, coord $coord7)
 if (cc_find($component0, $comsubid1) = ^true) {
-	~script2052($text0, $width2, $height3, $x4, $y5, $colour6, $string1, $op2, $coord7);
+	~worldmap_setuptext($text0, $width2, $height3, $x4, $y5, $colour6, $string1, $op2, $coord7);
 } else {
 	cc_create($component0, ^iftype_text, $comsubid1);
-	~script2052($text0, $width2, $height3, $x4, $y5, $colour6, $string1, $op2, $coord7);
+	~worldmap_setuptext($text0, $width2, $height3, $x4, $y5, $colour6, $string1, $op2, $coord7);
 }

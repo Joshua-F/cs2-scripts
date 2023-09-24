@@ -1,7 +1,0 @@
-// 522
-[clientscript,script522](component $component0, stat $stat1)
-def_int $int2 = stat_xp($stat1);
-def_int $xp3 = stat_xp($stat1);
-$int2 = ~script523($stat1);
-def_int $int4 = calc($xp3 - $int2);
-if_settext(tostring($int4), $component0);

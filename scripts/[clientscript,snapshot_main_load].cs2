@@ -1,0 +1,14 @@
+// 508
+[clientscript,snapshot_main_load]
+if_setonkey("snapshot_onkey(event_keycode, event_keychar)", snapshot_main:name);
+if_setonkey(null, chatdefault:input);
+if_settext("<escape(%varcstring24)><col=ffff00>|", snapshot_main:name);
+%varcint6 = 0;
+if_settext("Moderator option: Mute player for 48 hours: <lt>OFF<gt>", snapshot_main:com_16);
+%varcint11 = 1;
+if (if_gethide(chattop:mes_layer) = false) {
+	if_sethide(true, chattop:mes_layer);
+	if_sethide(false, chattop:mes_layer_hide);
+	%varcint5 = 0;
+	%varcstring22 = "";
+}

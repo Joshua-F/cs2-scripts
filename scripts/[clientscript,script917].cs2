@@ -1,24 +1,24 @@
 // 917
 [clientscript,script917](component $component0, component $component1)
 def_string $string0 = "";
-if ($component0 = interface_728:17) {
+if ($component0 = carpet_main:com_17) {
 	%varcint2 = 0;
 	if (%varbit4536 = 0) {
 		$string0 = "Turns off the <col=7f0000>autopilot</col>, letting you fly manually.";
 	} else {
 		$string0 = "Turns on the <col=7f0000>autopilot</col> to fly you automatically around the mapsquare.";
 	}
-} else if ($component0 = interface_728:18) {
+} else if ($component0 = carpet_main:exit) {
 	$string0 = "Return to Lumbridge.";
-} else if ($component0 = interface_728:20) {
+} else if ($component0 = carpet_main:first) {
 	$string0 = "First page.";
-} else if ($component0 = interface_728:21) {
+} else if ($component0 = carpet_main:back) {
 	$string0 = "Previous page.";
-} else if ($component0 = interface_728:22) {
+} else if ($component0 = carpet_main:com_22) {
 	$string0 = "Next page.";
-} else if ($component0 = interface_728:23) {
+} else if ($component0 = carpet_main:last) {
 	$string0 = "Last page.";
 } else {
 	return;
 }
-~script39($component0, $component1, $string0, 25, 110);
+~addtooltip_action($component0, $component1, $string0, 25, 110);

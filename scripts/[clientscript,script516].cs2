@@ -6,5 +6,5 @@ if (%varcint52 < 300) {
 if (%varcint51 > 0 & calc(%varcint52 % 3) = 0) {
 	%varcint51 = calc(%varcint51 - 3);
 	%varcint50 = calc(%varcint50 + 1);
-	if_setmodelangle(0, %varcint50, 0, 0, 0, %varcint51, interface_615:5);
+	if_setmodelangle(0, %varcint50, 0, 0, 0, %varcint51, interface_615:com_5);
 }

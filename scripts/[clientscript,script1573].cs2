@@ -3,9 +3,9 @@
 if (%var170 = 0) {
 	return;
 }
-~script1361(interface_771:40);
-if_setonmouseleave("script40(interface_771:399)", interface_771:40);
-if_setonmouseover(null, interface_771:40);
-if_setonmouseleave("script1358(interface_771:399, event_com)", interface_771:37);
-if_setonmouseover("script97(event_com)", interface_771:37);
-~script680(interface_771:37);
+~v2_stone_button_in_filled_proc(interface_771:com_40);
+if_setonmouseleave("deltooltip(interface_771:com_399)", interface_771:com_40);
+if_setonmouseover(null, interface_771:com_40);
+if_setonmouseleave("v2_stone_button_filled_deltooltip(interface_771:com_399, event_com)", interface_771:com_37);
+if_setonmouseover("v2_stone_button_out_filled(event_com)", interface_771:com_37);
+~v2_stone_button_filled(interface_771:com_37);

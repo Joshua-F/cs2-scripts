@@ -1,0 +1,39 @@
+// 26
+[clientscript,magictraining_shop]
+def_int $size0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 25;
+def_int $int3 = 20;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+$int4 = calc((if_getwidth(magictraining_shop:com_16) - $int2) / ($int2 + 36));
+while ($size0 <= inv_size(inv_347)) {
+	cc_create(magictraining_shop:com_16, ^iftype_graphic, $size0);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int2 + (36 + $int2) * ($size0 - $int1 * $int4)), calc($int3 + $int1 * (32 + $int3)), ^setpos_abs_left, ^setpos_abs_top);
+	$int5 = calc($int2 + (36 + $int2) * ($size0 - $int1 * $int4));
+	$int6 = calc($int3 + $int1 * (32 + $int3));
+	if (inv_getobj(inv_347, $size0) ! null) {
+		if (inv_getobj(inv_347, $size0) = apprentice_wand_6910) {
+			if_setposition(calc($int5 - 8), calc($int6 + 94), ^setpos_abs_left, ^setpos_abs_top, magictraining_shop:com_12);
+		}
+		if (inv_getobj(inv_347, $size0) = teacher_wand_6912) {
+			if_setposition(calc($int5 - 8), calc($int6 + 94), ^setpos_abs_left, ^setpos_abs_top, magictraining_shop:com_14);
+		}
+		if (inv_getobj(inv_347, $size0) = master_wand_6914) {
+			if_setposition(calc($int5 - 8), calc($int6 + 94), ^setpos_abs_left, ^setpos_abs_top, magictraining_shop:com_13);
+		}
+		cc_setobject(inv_getobj(inv_347, $size0), inv_getnum(inv_347, $size0));
+		cc_setgraphicshadow(^black);
+		cc_setopbase("<col=ff9040><oc_name(inv_getobj(inv_347, $size0))>");
+		cc_setoutline(1);
+		cc_setop(1, "Value");
+		cc_setop(2, "Buy");
+		cc_setop(10, "Examine");
+	}
+	$size0 = calc($size0 + 1);
+	if (calc($size0 % $int4) = 0) {
+		$int1 = calc($int1 + 1);
+	}
+}

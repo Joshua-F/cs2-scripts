@@ -1,6 +1,6 @@
 // 649
 [clientscript,script649](component $component0, component $component1, string $string0, int $int2, int $width3)
-if (if_gethide(interface_105:16) = false) {
+if (if_gethide(stockmarket:com_16) = false) {
 	return;
 }
-~script39($component0, $component1, $string0, $int2, $width3);
+~addtooltip_action($component0, $component1, $string0, $int2, $width3);

@@ -1,0 +1,6 @@
+// 1889
+[proc,world_x_pvp]()(string)
+if (~script1431 = 1) {
+	return("World <tostring(map_world)> (PvP)");
+}
+return("World <tostring(map_world)>");

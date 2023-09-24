@@ -1,6 +1,6 @@
 // 24
 [proc,script24](int $int0, namedobj $namedobj1, string $string0, int $int2, int $y3)(int)
-cc_create(interface_499:7, ^iftype_text, calc($int2 * 3));
+cc_create(skill_guide_v2:info, ^iftype_text, calc($int2 * 3));
 cc_setsize(26, 32, ^setsize_abs, ^setsize_abs);
 if ($int0 > 0) {
 	cc_settext(tostring($int0));
@@ -12,7 +12,7 @@ cc_settextalign(^settextalign_right, ^settextalign_top, 0);
 cc_setcolour(0x46320a);
 cc_settextfont(q8_full);
 cc_settextshadow(false);
-cc_create(interface_499:7, ^iftype_graphic, calc($int2 * 3 + 1));
+cc_create(skill_guide_v2:info, ^iftype_graphic, calc($int2 * 3 + 1));
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setoutline(1);
 cc_setgraphicshadow(0x604e32);
@@ -25,7 +25,7 @@ if ($namedobj1 ! null) {
 		cc_setonmouseleave("script1863(event_com, event_comsubid)");
 	} else if (%varbit3288 = 22 & %varbit3289 ! 13 & %varbit3289 ! 14) {
 		cc_setop(1, "Check materials");
-		cc_setonop("script1864(event_op, $namedobj1, %varbit3289, $int2)");
+		cc_setonop("construction_materials(event_op, $namedobj1, %varbit3289, $int2)");
 		cc_setonmouseover("script1862(event_com, event_comsubid)");
 		cc_setonmouseleave("script1863(event_com, event_comsubid)");
 	}
@@ -33,7 +33,7 @@ if ($namedobj1 ! null) {
 	cc_setobject(silvthrill_rod_7620, -1);
 }
 cc_setposition(28, $y3, ^setpos_abs_left, ^setpos_abs_top);
-cc_create(interface_499:7, ^iftype_text, calc($int2 * 3 + 2));
+cc_create(skill_guide_v2:info, ^iftype_text, calc($int2 * 3 + 2));
 def_int $height4 = paraheight($string0, 228, p12_full);
 cc_setsize(228, calc($height4 * 15), ^setsize_abs, ^setsize_abs);
 cc_settext($string0);

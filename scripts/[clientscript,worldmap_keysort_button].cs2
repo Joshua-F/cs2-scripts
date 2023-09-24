@@ -1,0 +1,10 @@
+// 692
+[clientscript,worldmap_keysort_button](component $component0, component $component1, component $component2)
+switch_int (%varbit5367) {
+	case 0 :
+		~worldmap_key_build(1, $component0, $component1, $component2);
+	case 1 :
+		~worldmap_key_build(2, $component0, $component1, $component2);
+	case default :
+		~worldmap_key_build(0, $component0, $component1, $component2);
+}

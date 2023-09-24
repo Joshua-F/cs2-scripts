@@ -1,0 +1,34 @@
+// 21
+[proc,magic_updateicon](component $component0, graphic $graphic1, graphic $graphic2, int $int3, obj $obj4, int $int5, obj $obj6, int $int7, obj $obj8, int $int9, obj $obj10, int $int11)
+if (stat(magic) < $int3) {
+	if (%varbit4089 = 1) {
+		if (%var1092 < $int3 | enum(component, int, enum_1061, $component0) = 0) {
+			if_setgraphic($graphic2, $component0);
+			return;
+		}
+	} else {
+		if_setgraphic($graphic2, $component0);
+		return;
+	}
+}
+if ($obj4 ! null & ~magic_runecount($obj4) < $int5) {
+	if_setgraphic($graphic2, $component0);
+	return;
+}
+if ($obj6 ! null & ~magic_runecount($obj6) < $int7) {
+	if_setgraphic($graphic2, $component0);
+	return;
+}
+if ($obj8 ! null & ~magic_runecount($obj8) < $int9) {
+	if_setgraphic($graphic2, $component0);
+	return;
+}
+if ($obj10 ! null & ~magic_runecount($obj10) < $int11) {
+	if_setgraphic($graphic2, $component0);
+	return;
+}
+if ($component0 = magic:com_3 & map_members = ^false) {
+	if_setgraphic($graphic2, $component0);
+	return;
+}
+if_setgraphic($graphic1, $component0);

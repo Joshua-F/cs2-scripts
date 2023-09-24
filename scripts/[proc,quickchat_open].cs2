@@ -1,0 +1,33 @@
+// 1050
+[proc,quickchat_open](int $int0, string $string0)
+if ($int0 = 2 & compare("", clan_getchatdisplayname) = 0) {
+	return;
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setgraphic("chat_background", chattop:chat_graphic);
+	if_setalpha(false, chattop:chat_graphic);
+	if_sethide(false, chattop:chat_graphic);
+	if_sethide(false, chattop:chat_border);
+}
+if_sethide(true, chatdefault:chat);
+if_setonkey(null, chatdefault:input);
+if_sethide(false, chatdefault:quickchat);
+if_sethide(true, chatdefault:com_7);
+if_sethide(true, chatdefault:com_9);
+if_sethide(true, chatdefault:com_13);
+if_sethide(false, chatdefault:quickchat_menu);
+if_sethide(false, chatdefault:com_1);
+if_sethide(true, chatdefault:quickchat_title);
+if_setscrollpos(0, 0, chatdefault:quickchat_menu);
+def_chatcat $chatcat1 = chatcat_85;
+def_chatcat $chatcat2 = ~script1036;
+def_int $int3 = 1;
+if ($int0 = 3) {
+	$chatcat1 = chatcat_32769;
+	$chatcat2 = null;
+	$int3 = 0;
+}
+%varcint126 = $int0;
+%varcstring27 = $string0;
+%varcint127 = 1;
+~quickchat_menu_add(chatdefault:com_1, 0, $chatcat1, $chatcat2, $int3);

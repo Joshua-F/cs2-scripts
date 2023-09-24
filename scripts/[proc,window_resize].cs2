@@ -1,0 +1,125 @@
+// 722
+[proc,window_resize]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $x2 = 0;
+def_int $y3 = 0;
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setsize(viewport_geteffectivesize, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:mainoverlay);
+	$int0 = if_getwidth(toplevel_fullscreen:maingame);
+	$int1 = if_getheight(toplevel_fullscreen:maingame);
+	$x2 = calc(($int0 - 512) / 2);
+	$y3 = calc(($int1 - 334) / 2);
+	if ($x2 < 200) {
+		$x2 = 200;
+	}
+	if ($y3 < 165) {
+		$y3 = 165;
+	}
+	if_setposition($x2, $y3, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:mainmodal);
+	if ($int0 <= 981) {
+		if_setposition(0, 72, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:side);
+		if_setsize(231, 72, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:backbase2);
+		if_setsize(231, 72, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:stones_on);
+		if_setsize(231, 72, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:stones_off);
+		if_setsize(231, 72, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:icons);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:backbase2);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stones_on);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stones_off);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icons);
+		if_setposition(0, -3, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon13);
+		if_setposition(33, -3, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon12);
+		if_setposition(65, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon11);
+		if_setposition(99, -1, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon10);
+		if_setposition(132, -1, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon9);
+		if_setposition(165, -1, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon8);
+		if_setposition(199, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon6);
+		if_setposition(0, 37, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon5);
+		if_setposition(32, 34, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon4);
+		if_setposition(67, 38, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon3);
+		if_setposition(99, 35, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon2);
+		if_setposition(131, 37, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon1);
+		if_setposition(163, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon0);
+		if_setposition(199, 35, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon7);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off13);
+		if_setposition(33, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off12);
+		if_setposition(66, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off11);
+		if_setposition(99, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off10);
+		if_setposition(132, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off9);
+		if_setposition(165, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off8);
+		if_setposition(198, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off6);
+		if_setposition(0, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off5);
+		if_setposition(33, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off4);
+		if_setposition(66, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off3);
+		if_setposition(99, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off2);
+		if_setposition(132, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off1);
+		if_setposition(165, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off0);
+		if_setposition(198, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off7);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone13);
+		if_setposition(33, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone12);
+		if_setposition(66, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone11);
+		if_setposition(99, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone10);
+		if_setposition(132, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone9);
+		if_setposition(165, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone8);
+		if_setposition(198, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone6);
+		if_setposition(0, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone5);
+		if_setposition(33, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone4);
+		if_setposition(66, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone3);
+		if_setposition(99, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone2);
+		if_setposition(132, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone1);
+		if_setposition(165, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone0);
+		if_setposition(198, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone7);
+	} else {
+		if_setposition(0, 36, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:side);
+		if_setsize(462, 36, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:backbase2);
+		if_setsize(462, 36, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:stones_on);
+		if_setsize(462, 36, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:stones_off);
+		if_setsize(462, 36, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:icons);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:backbase2);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stones_on);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stones_off);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icons);
+		if_setposition(0, -3, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon13);
+		if_setposition(33, -3, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon12);
+		if_setposition(65, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon11);
+		if_setposition(99, -1, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon10);
+		if_setposition(132, -1, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon9);
+		if_setposition(165, -1, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon8);
+		if_setposition(199, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon6);
+		if_setposition(232, 1, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon5);
+		if_setposition(265, -2, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon4);
+		if_setposition(297, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon3);
+		if_setposition(330, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon2);
+		if_setposition(363, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon1);
+		if_setposition(396, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon0);
+		if_setposition(430, -1, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:icon7);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off13);
+		if_setposition(33, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off12);
+		if_setposition(66, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off11);
+		if_setposition(99, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off10);
+		if_setposition(132, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off9);
+		if_setposition(165, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off8);
+		if_setposition(198, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off6);
+		if_setposition(231, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off5);
+		if_setposition(264, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off4);
+		if_setposition(297, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off3);
+		if_setposition(330, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off2);
+		if_setposition(363, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off1);
+		if_setposition(396, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off0);
+		if_setposition(429, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:off7);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone13);
+		if_setposition(33, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone12);
+		if_setposition(66, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone11);
+		if_setposition(99, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone10);
+		if_setposition(132, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone9);
+		if_setposition(165, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone8);
+		if_setposition(198, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone6);
+		if_setposition(231, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone5);
+		if_setposition(264, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone4);
+		if_setposition(297, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone3);
+		if_setposition(330, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone2);
+		if_setposition(363, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone1);
+		if_setposition(396, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone0);
+		if_setposition(429, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_fullscreen:stone7);
+	}
+}

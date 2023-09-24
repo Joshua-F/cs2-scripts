@@ -3,6 +3,6 @@
 if_setgraphic("graphic_1170", $component0);
 def_int $int1 = 0;
 while ($int1 < 6) {
-	~script41(~script626($int1));
+	~deltooltip_action(~script626($int1));
 	$int1 = calc($int1 + 1);
 }

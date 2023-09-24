@@ -1,0 +1,9 @@
+// 1034
+[proc,quickchat_tutorial_addtext](int $comsubid0, int $x1, int $y2, int $width3, int $height4, string $text0, int $colour5)
+cc_create(quickchat_tutorial:text, ^iftype_text, $comsubid0);
+cc_setposition($x1, $y2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
+cc_setcolour($colour5);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settext($text0);

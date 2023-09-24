@@ -1,11 +1,11 @@
 // 1874
 [proc,script1874]
 if (map_world = -1) {
-	if_settext("World: Auto", interface_744:124);
-	if_sethide(true, interface_744:181);
+	if_settext("World: Auto", loginscreen:com_124);
+	if_sethide(true, loginscreen:com_181);
 	return;
 }
-if_settext(~script1889, interface_744:124);
+if_settext(~world_x_pvp, loginscreen:com_124);
 def_int $flags0 = 0;
 def_string $string0 = "";
 def_int $int1 = 0;
@@ -13,9 +13,9 @@ def_string $string1 = "";
 def_int $int2 = 0;
 $flags0, $string0, $int1, $string1, $int2 = worldlist_specific(map_world);
 if (testbit($flags0, 0) = ^true) {
-	if_setgraphic("graphic_1531", interface_744:181);
+	if_setgraphic("graphic_1531", loginscreen:com_181);
 } else {
-	if_setgraphic("graphic_1532", interface_744:181);
+	if_setgraphic("graphic_1532", loginscreen:com_181);
 }
-if_setposition(calc(if_getx(interface_744:124) + if_getwidth(interface_744:124) - (parawidth(if_gettext(interface_744:124), 512, p12_full) + if_getwidth(interface_744:181) + 5)), 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_744:181);
-if_sethide(false, interface_744:181);
+if_setposition(calc(if_getx(loginscreen:com_124) + if_getwidth(loginscreen:com_124) - (parawidth(if_gettext(loginscreen:com_124), 512, p12_full) + if_getwidth(loginscreen:com_181) + 5)), 0, ^setpos_abs_left, ^setpos_abs_bottom, loginscreen:com_181);
+if_sethide(false, loginscreen:com_181);

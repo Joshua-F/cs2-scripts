@@ -1,10 +1,10 @@
 // 1881
 [proc,script1881](int $height0)
-if_setscrollsize(0, $height0, interface_744:224);
-if ($height0 >= if_getheight(interface_744:224)) {
-	~script31(interface_744:225, interface_744:224, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-	~script72(interface_744:225, interface_744:224, if_getscrolly(interface_744:224));
+if_setscrollsize(0, $height0, loginscreen:com_224);
+if ($height0 >= if_getheight(loginscreen:com_224)) {
+	~scrollbar_vertical(loginscreen:com_225, loginscreen:com_224, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+	~scrollbar_resize(loginscreen:com_225, loginscreen:com_224, if_getscrolly(loginscreen:com_224));
 } else {
-	if_setscrollpos(0, 0, interface_744:224);
-	cc_deleteall(interface_744:225);
+	if_setscrollpos(0, 0, loginscreen:com_224);
+	cc_deleteall(loginscreen:com_225);
 }

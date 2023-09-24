@@ -4,7 +4,7 @@ def_int $intarray0(calc(646 + 1));
 def_int $int0 = 0;
 while ($int0 <= 646) {
 	$intarray0($int0) = $int0;
-	cc_create(interface_187:1, ^iftype_text, $int0);
+	cc_create(music_v3:com_1, ^iftype_text, $int0);
 	$int0 = calc($int0 + 1);
 }
 ~script520(intarray0, 0, 646, enum_1347);
@@ -14,15 +14,15 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 while ($int1 <= 646) {
 	$int0 = $intarray0($int1);
-	if (cc_find(interface_187:1, $int0) = ^true) {
-		if (enum(int, midi, enum_1351, $int0) = midi_147 | enum(int, int, enum_1350, $int0) = 1) {
+	if (cc_find(music_v3:com_1, $int0) = ^true) {
+		if (enum(int, midi, enum_1351, $int0) = silence | enum(int, int, enum_1350, $int0) = 1) {
 			$int1 = calc($int1 + 1);
 		} else {
 			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 			cc_settext(enum_string(enum_1345, $int0));
 			cc_setposition(10, calc(5 + $int2 * 15), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setsize(150, 15, ^setsize_abs, ^setsize_abs);
-			cc_setonop("script833(event_op, $int0)");
+			cc_setonop("music_ops(event_op, $int0)");
 			cc_setop(1, "Click to play");
 			cc_setop(2, "Unlock hint");
 			cc_setopbase(enum_string(enum_1345, $int0));
@@ -30,7 +30,7 @@ while ($int1 <= 646) {
 			cc_settextfont(p11_full);
 			cc_setonmouseover("script829($int0, event_com)");
 			cc_setonmouseleave("script830($int0, event_com)");
-			if (~script837($int0) = 1) {
+			if (~music_getvar($int0) = 1) {
 				$int3 = calc($int3 + 1);
 				cc_setcolour(^green);
 			} else {
@@ -41,7 +41,7 @@ while ($int1 <= 646) {
 		}
 	}
 }
-if_setscrollsize(167, calc(5 + $int2 * 15), interface_187:1);
-if_setscrollpos(0, 0, interface_187:1);
-~script31(interface_187:12, interface_187:1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_settext("Unlocked:<br><tostring($int3)> / <tostring($int2)>", interface_187:16);
+if_setscrollsize(167, calc(5 + $int2 * 15), music_v3:com_1);
+if_setscrollpos(0, 0, music_v3:com_1);
+~scrollbar_vertical(music_v3:scrollbar, music_v3:com_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_settext("Unlocked:<br><tostring($int3)> / <tostring($int2)>", music_v3:unlock_counter);

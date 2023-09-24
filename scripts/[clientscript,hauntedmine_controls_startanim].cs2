@@ -1,0 +1,7 @@
+// 1295
+[clientscript,hauntedmine_controls_startanim]
+if_setcolour(^red, hauntedmine_controls:com_147);
+if_setonmouseleave("text_colour_swapper(event_com, ^red)", hauntedmine_controls:com_147);
+if_sethide(true, hauntedmine_controls:com_186);
+if_setmodel(model_4910, hauntedmine_controls:com_187);
+if_setmodelanim(seq_1453, hauntedmine_controls:com_187);

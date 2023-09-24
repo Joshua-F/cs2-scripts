@@ -1,0 +1,25 @@
+// 1782
+[proc,clanwars_resynch_accept]
+if (%var1149 ! -1) {
+	~script1801;
+	if (%varcint258 = false) {
+		~v2_stone_button_out_proc(clanwars_setup:accept_button);
+		if_setonmouserepeat("v2_stone_button_in_filled(event_com)", clanwars_setup:accept_button);
+		if_setonmouseleave("v2_stone_button_out_filled(event_com)", clanwars_setup:accept_button);
+		if (%varcint259 = 0) {
+			if_settext("Accept", clanwars_setup:accept_text);
+			if_settextfont(b12_full, clanwars_setup:accept_text);
+		} else {
+			if_settext("Accept -<br>Opponent has accepted.", clanwars_setup:accept_text);
+			if_settextfont(p11_full, clanwars_setup:accept_text);
+		}
+	} else {
+		~v2_stone_button_in_proc(clanwars_setup:accept_button);
+		if_setonmouserepeat(null, clanwars_setup:accept_button);
+		if_setonmouseleave(null, clanwars_setup:accept_button);
+		if_settext("Waiting for opponent...", clanwars_setup:accept_text);
+		if_settextfont(p12_full, clanwars_setup:accept_text);
+	}
+} else {
+	~script1802;
+}

@@ -1,0 +1,6 @@
+// 1
+[proc,inv_total_available](inv $inv0, obj $obj1)(int)
+if (oc_members($obj1) = ^true & map_members = ^false) {
+	return(0);
+}
+return(inv_total($inv0, $obj1));

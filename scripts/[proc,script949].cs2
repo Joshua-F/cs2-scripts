@@ -1,12 +1,12 @@
 // 949
 [proc,script949](int $int0, int $int1)
-cc_deleteall(interface_726:187);
+cc_deleteall(carpet_runeversi:com_187);
 def_component $component2 = enum(int, component, enum_1443, $int0);
-if ($component2 = interface_726:121) {
-	if_setobject(fire_rune_554, -1, interface_726:150);
-	if_setobject(law_rune_563, -1, interface_726:151);
-	if_setobject(fire_rune_554, -1, interface_726:159);
-	if_setobject(law_rune_563, -1, interface_726:158);
+if ($component2 = carpet_runeversi:text_1) {
+	if_setobject(fire_rune_554, -1, carpet_runeversi:d3);
+	if_setobject(law_rune_563, -1, carpet_runeversi:d4);
+	if_setobject(fire_rune_554, -1, carpet_runeversi:e4);
+	if_setobject(law_rune_563, -1, carpet_runeversi:e3);
 	return;
 }
 if ($component2 = null) {
@@ -19,7 +19,7 @@ if (calc($int0 % 2) = 0) {
 }
 if_setobject($namedobj3, -1, $component2);
 if ($int1 = 1) {
-	cc_create(interface_726:187, ^iftype_model, 0);
+	cc_create(carpet_runeversi:com_187, ^iftype_model, 0);
 	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(if_getx($component2), if_gety($component2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setmodel(model_4611);
@@ -75,17 +75,17 @@ if ($int0 = calc(61 - 1)) {
 	}
 	if ($int6 > $int7) {
 		sound_jingle(110, 6656);
-		if_settext("Teapotspout wins!", interface_726:121);
+		if_settext("Teapotspout wins!", carpet_runeversi:text_1);
 	} else if ($int6 < $int7) {
 		sound_jingle(110, 6656);
-		if_settext("Hotwater wins!", interface_726:121);
+		if_settext("Hotwater wins!", carpet_runeversi:text_1);
 	} else {
 		sound_jingle(108, 6449);
-		if_settext("It's a draw.", interface_726:121);
+		if_settext("It's a draw.", carpet_runeversi:text_1);
 	}
 	if (calc($int6 + $int7) >= 64) {
-		if_settext("The board is full.", interface_726:122);
+		if_settext("The board is full.", carpet_runeversi:text_2);
 	} else {
-		if_settext("Neither player can move.", interface_726:122);
+		if_settext("Neither player can move.", carpet_runeversi:text_2);
 	}
 }

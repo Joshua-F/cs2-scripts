@@ -1,0 +1,9 @@
+// 1041
+[proc,quickchat_objdialog_refreshsearch](component $component0, component $component1, component $component2, chatphrase $chatphrase3)
+cc_deleteall($component1);
+if (string_length(%varcstring30) > 0) {
+	~quickchat_objdialog_dosearch($component0, $component1, $component2, $chatphrase3);
+} else {
+	if_setscrollsize(0, 0, $component1);
+	~quickchat_objdialog_doscrollbar($component1, $component2);
+}

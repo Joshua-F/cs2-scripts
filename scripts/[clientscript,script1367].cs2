@@ -1,60 +1,60 @@
 // 1367
 [clientscript,script1367]
-if_settext("Zamorak = <tostring(%varbit155)>", interface_58:0);
-if_settext("<tostring(%varbit145)> = Saradomin", interface_58:1);
-if_settext("<tostring(%var380)> Min", interface_58:8);
+if_settext("Zamorak = <tostring(%varbit155)>", castlewars_status_overlay_saradomin:zamorak_score);
+if_settext("<tostring(%varbit145)> = Saradomin", castlewars_status_overlay_saradomin:saradomin_score);
+if_settext("<tostring(%var380)> Min", castlewars_status_overlay_saradomin:time_remaining);
 if (%varbit136 = 0) {
-	if_settext("Health <tostring(%varbit136)>%", interface_58:7);
-	if_setcolour(^red, interface_58:7);
+	if_settext("Health <tostring(%varbit136)>%", castlewars_status_overlay_saradomin:health);
+	if_setcolour(^red, castlewars_status_overlay_saradomin:health);
 } else {
-	if_settext("Health <tostring(%varbit136)>%", interface_58:7);
-	if_setcolour(^green, interface_58:7);
+	if_settext("Health <tostring(%varbit136)>%", castlewars_status_overlay_saradomin:health);
+	if_setcolour(^green, castlewars_status_overlay_saradomin:health);
 }
 if (%varbit143 = 0) {
-	if_settext("Safe", interface_58:4);
-	if_setcolour(^green, interface_58:4);
+	if_settext("Safe", castlewars_status_overlay_saradomin:saradomin_flag);
+	if_setcolour(^green, castlewars_status_overlay_saradomin:saradomin_flag);
 } else if (%varbit143 = 1) {
-	if_settext("Taken", interface_58:4);
-	if_setcolour(^red, interface_58:4);
+	if_settext("Taken", castlewars_status_overlay_saradomin:saradomin_flag);
+	if_setcolour(^red, castlewars_status_overlay_saradomin:saradomin_flag);
 } else if (%varbit143 = 2) {
-	if_settext("Dropped", interface_58:4);
-	if_setcolour(^yellow, interface_58:4);
+	if_settext("Dropped", castlewars_status_overlay_saradomin:saradomin_flag);
+	if_setcolour(^yellow, castlewars_status_overlay_saradomin:saradomin_flag);
 }
 if (%varbit153 = 0) {
-	if_settext("Safe", interface_58:5);
-	if_setcolour(^green, interface_58:5);
+	if_settext("Safe", castlewars_status_overlay_saradomin:zamorak_flag);
+	if_setcolour(^green, castlewars_status_overlay_saradomin:zamorak_flag);
 } else if (%varbit153 = 1) {
-	if_settext("Taken", interface_58:5);
-	if_setcolour(^red, interface_58:5);
+	if_settext("Taken", castlewars_status_overlay_saradomin:zamorak_flag);
+	if_setcolour(^red, castlewars_status_overlay_saradomin:zamorak_flag);
 } else if (%varbit153 = 2) {
-	if_settext("Dropped", interface_58:5);
-	if_setcolour(^yellow, interface_58:5);
+	if_settext("Dropped", castlewars_status_overlay_saradomin:zamorak_flag);
+	if_setcolour(^yellow, castlewars_status_overlay_saradomin:zamorak_flag);
 }
 if (%varbit137 = 1) {
-	if_settext("Unlocked", interface_58:11);
-	if_setcolour(^red, interface_58:11);
+	if_settext("Unlocked", castlewars_status_overlay_saradomin:door);
+	if_setcolour(^red, castlewars_status_overlay_saradomin:door);
 } else {
-	if_settext("Locked", interface_58:11);
-	if_setcolour(^green, interface_58:11);
+	if_settext("Locked", castlewars_status_overlay_saradomin:door);
+	if_setcolour(^green, castlewars_status_overlay_saradomin:door);
 }
 if (%varbit138 = 1) {
-	if_settext("Cleared", interface_58:13);
-	if_setcolour(^red, interface_58:13);
+	if_settext("Cleared", castlewars_status_overlay_saradomin:tunnel1);
+	if_setcolour(^red, castlewars_status_overlay_saradomin:tunnel1);
 } else {
-	if_settext("Collapsed", interface_58:13);
-	if_setcolour(^green, interface_58:13);
+	if_settext("Collapsed", castlewars_status_overlay_saradomin:tunnel1);
+	if_setcolour(^green, castlewars_status_overlay_saradomin:tunnel1);
 }
 if (%varbit139 = 1) {
-	if_settext("Cleared", interface_58:15);
-	if_setcolour(^red, interface_58:15);
+	if_settext("Cleared", castlewars_status_overlay_saradomin:tunnel2);
+	if_setcolour(^red, castlewars_status_overlay_saradomin:tunnel2);
 } else {
-	if_settext("Collapsed", interface_58:15);
-	if_setcolour(^green, interface_58:15);
+	if_settext("Collapsed", castlewars_status_overlay_saradomin:tunnel2);
+	if_setcolour(^green, castlewars_status_overlay_saradomin:tunnel2);
 }
 if (%varbit140 = 1) {
-	if_settext("Destroyed", interface_58:17);
-	if_setcolour(^red, interface_58:17);
+	if_settext("Destroyed", castlewars_status_overlay_saradomin:catapult);
+	if_setcolour(^red, castlewars_status_overlay_saradomin:catapult);
 } else {
-	if_settext("Operational", interface_58:17);
-	if_setcolour(^green, interface_58:17);
+	if_settext("Operational", castlewars_status_overlay_saradomin:catapult);
+	if_setcolour(^green, castlewars_status_overlay_saradomin:catapult);
 }

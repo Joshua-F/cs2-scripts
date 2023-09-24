@@ -1,7 +1,0 @@
-// 807
-[proc,script807](stat $stat0)(int)
-def_int $int1 = 0;
-if (stat_base($stat0) > 0) {
-	$int1 = calc(100 * stat($stat0) / stat_base($stat0));
-}
-return($int1);

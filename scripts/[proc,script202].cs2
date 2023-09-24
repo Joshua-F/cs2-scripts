@@ -44,9 +44,9 @@ while ($count2 < friend_count) {
 	cc_setop(5, "Lieutenant");
 	cc_setop(6, "Captain");
 	cc_setop(7, "General");
-	cc_setonop("script204($count2, event_op)");
+	cc_setonop("clansetrank($count2, event_op)");
 	$count2 = calc($count2 + 1);
 }
 if_setscrollsize(0, calc(15 * friend_count + 2), $component0);
-~script31($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script72($component1, $component0, if_getscrolly($component0));
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component1, $component0, if_getscrolly($component0));

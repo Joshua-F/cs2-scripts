@@ -29,8 +29,8 @@ if ($int7 = 1) {
 		if_sethide(false, ~script667($int0));
 	}
 }
-def_string $string1 = ~script46($int2, ",");
-def_string $string2 = ~script46($int6, ",");
+def_string $string1 = ~tostring_spacer($int2, ",");
+def_string $string2 = ~tostring_spacer($int6, ",");
 def_int $int14 = 0;
 def_int $int15 = 0;
 def_component $component16 = ~script668($int0);

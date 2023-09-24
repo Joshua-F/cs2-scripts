@@ -46,8 +46,8 @@ if (stockmarket_isofferempty($int0) = true) {
 		if_setop(2, "", $component1);
 	}
 }
-def_string $string1 = ~script46($int5, ",");
-def_string $string2 = ~script46($int8, ",");
+def_string $string1 = ~tostring_spacer($int5, ",");
+def_string $string2 = ~tostring_spacer($int8, ",");
 def_int $int10 = 0;
 def_int $int11 = 0;
 def_component $component12 = ~script627($int0);
@@ -87,9 +87,9 @@ if (stockmarket_isofferempty($int0) = true) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setobject($obj7, $int5);
 	cc_setgraphicshadow(^black);
-	$string0 = ~script46($int5, ",");
+	$string0 = ~tostring_spacer($int5, ",");
 	cc_setonmouserepeat("script648($component1, $int9, $component13, $string0, 25, 106)");
-	cc_setonmouseleave("script40($component13)");
+	cc_setonmouseleave("deltooltip($component13)");
 	$int9 = calc($int9 + 1);
 	cc_create($component1, ^iftype_text, $int9);
 	cc_setposition(48, 30, ^setpos_abs_left, ^setpos_abs_top);

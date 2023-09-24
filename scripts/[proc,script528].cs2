@@ -1,9 +1,0 @@
-// 528
-[proc,script528](int $int0, graphic $graphic1, graphic $graphic2, component $component3, component $component4)
-if ($int0 = 1) {
-	if_setgraphic($graphic1, $component3);
-	if_sethide(false, $component4);
-} else {
-	if_setgraphic($graphic2, $component3);
-	if_sethide(true, $component4);
-}

@@ -3,8 +3,8 @@
 if (%varcint600 < 1 & %varcint603 < 1) {
 	mes("The awards tab is not available for this scoring.");
 } else {
-	if_sethide(true, interface_810:84);
-	if_sethide(false, interface_810:85);
-	if_sethide(true, interface_810:86);
-	if_sethide(false, interface_810:143);
+	if_sethide(true, sc_scores:com_84);
+	if_sethide(false, sc_scores:com_85);
+	if_sethide(true, sc_scores:com_86);
+	if_sethide(false, sc_scores:com_143);
 }

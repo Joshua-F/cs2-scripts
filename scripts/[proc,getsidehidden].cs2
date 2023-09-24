@@ -1,0 +1,70 @@
+// 1314
+[proc,getsidehidden](int $int0)(boolean)
+if (getwindowmode >= ^windowmode_resizable) {
+	switch_int ($int0) {
+		case 0 :
+			return(if_gethide(toplevel_fullscreen:side0));
+		case 1 :
+			return(if_gethide(toplevel_fullscreen:side1));
+		case 2 :
+			return(if_gethide(toplevel_fullscreen:side2));
+		case 3 :
+			return(if_gethide(toplevel_fullscreen:side3));
+		case 4 :
+			return(if_gethide(toplevel_fullscreen:side4));
+		case 5 :
+			return(if_gethide(toplevel_fullscreen:side5));
+		case 6 :
+			return(if_gethide(toplevel_fullscreen:side6));
+		case 7 :
+			return(if_gethide(toplevel_fullscreen:side7));
+		case 8 :
+			return(if_gethide(toplevel_fullscreen:side8));
+		case 9 :
+			return(if_gethide(toplevel_fullscreen:side9));
+		case 10 :
+			return(if_gethide(toplevel_fullscreen:side10));
+		case 11 :
+			return(if_gethide(toplevel_fullscreen:side11));
+		case 12 :
+			return(if_gethide(toplevel_fullscreen:side12));
+		case 13 :
+			return(if_gethide(toplevel_fullscreen:side13));
+		case 99 :
+			return(if_gethide(toplevel_fullscreen:side99));
+	}
+} else {
+	switch_int ($int0) {
+		case 0 :
+			return(if_gethide(toplevel:side0));
+		case 1 :
+			return(if_gethide(toplevel:side1));
+		case 2 :
+			return(if_gethide(toplevel:side2));
+		case 3 :
+			return(if_gethide(toplevel:side3));
+		case 4 :
+			return(if_gethide(toplevel:side4));
+		case 5 :
+			return(if_gethide(toplevel:side5));
+		case 6 :
+			return(if_gethide(toplevel:side6));
+		case 7 :
+			return(if_gethide(toplevel:side7));
+		case 8 :
+			return(if_gethide(toplevel:side8));
+		case 9 :
+			return(if_gethide(toplevel:side9));
+		case 10 :
+			return(if_gethide(toplevel:side10));
+		case 11 :
+			return(if_gethide(toplevel:side11));
+		case 12 :
+			return(if_gethide(toplevel:side12));
+		case 13 :
+			return(if_gethide(toplevel:side13));
+		case 99 :
+			return(if_gethide(toplevel:side99));
+	}
+}
+return(null);

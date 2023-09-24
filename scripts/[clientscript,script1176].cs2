@@ -6,10 +6,10 @@ if (%varcint543 = ^windowmode_fullscreen & getwindowmode ! ^windowmode_fullscree
 		return;
 	}
 	~script1888;
-	if (if_gethide(interface_744:226) = false) {
-		~script1174(interface_744:226);
-	} else if (if_gethide(interface_744:138) = false) {
-		~script1174(interface_744:138);
+	if (if_gethide(loginscreen:com_226) = false) {
+		~loginscreen_setactivemenu(loginscreen:com_226);
+	} else if (if_gethide(loginscreen:com_138) = false) {
+		~loginscreen_setactivemenu(loginscreen:com_138);
 	}
 	%varcint543 = getwindowmode;
 }

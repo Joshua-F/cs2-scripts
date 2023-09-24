@@ -1,0 +1,220 @@
+// 770
+[clientscript,lore_addtooltip](int $comsubid0, component $component1, component $component2, int $int3, string $string0, obj $obj4, int $int5, obj $obj6, int $int7, obj $obj8, int $int9, obj $obj10, int $int11, obj $obj12, int $int13, obj $obj14, int $int15, obj $obj16, int $int17, obj $obj18, int $int19, obj $obj20, int $int21, obj $obj22, int $int23)
+cc_deleteall($component1);
+def_int $height24 = paraheight("Level <tostring($int3)>: <$string0>", 177, p12_full);
+def_int $int25 = calc(2 + 13 * $height24);
+def_int $int26 = calc(2 + 13 * paraheight("To craft this you need", 177, p11_full));
+def_int $int27 = calc(2 + $int25 + $int26 + 32 + 14 + 2);
+def_int $int28 = 5;
+def_int $int29 = 5;
+def_int $int30 = 1;
+def_int $int31 = 1;
+if (cc_find($component2, $comsubid0) = ^true) {
+	if ($obj4 = null) {
+		$int27 = calc($int27 - 32 - 14);
+	}
+	if ($height24 > 1) {
+		if ($obj12 ! null) {
+			$int27 = calc($int27 + 57);
+		}
+	} else if ($obj12 ! null) {
+		$int27 = calc($int27 + 32 + 14);
+	}
+	$int28 = calc(cc_gety - if_getscrolly($component2) + 110);
+	if ($int28 > 200) {
+		$int28 = calc(cc_gety - if_getscrolly($component2) - $int27 + 45);
+	}
+	$int29 = calc(cc_getx - 60);
+	if ($int29 < 0) {
+		$int29 = 5;
+	}
+	if ($int29 > 270) {
+		$int29 = 285;
+	}
+	cc_create($component1, ^iftype_rectangle, 0);
+	cc_setposition($int29, $int28, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(180, $int27, ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_settrans(42);
+	cc_create($component1, ^iftype_rectangle, 1);
+	cc_setposition(calc($int29 + 1), calc($int28 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(179, calc($int27 - 1), ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x2e2b23);
+	cc_create($component1, ^iftype_rectangle, 2);
+	cc_setposition($int29, $int28, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(179, calc($int27 - 1), ^setsize_abs, ^setsize_abs);
+	cc_setfill(false);
+	cc_setcolour(0x726451);
+	cc_create($component1, ^iftype_text, 3);
+	cc_setposition(calc($int29 + 2), calc($int28 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(177, $int25, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(false);
+	cc_settext("Level <tostring($int3)>: <$string0>");
+	cc_create($component1, ^iftype_text, 4);
+	cc_setposition($int29, calc($int28 + 2 + $int25), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(177, $int26, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p11_full);
+	cc_setcolour(0xaf6a1a);
+	cc_settextshadow(false);
+	cc_settext("This item requires");
+	if ($obj6 ! null) {
+		$int30 = 2;
+	}
+	if ($obj8 ! null) {
+		$int30 = 3;
+	}
+	if ($obj10 ! null) {
+		$int30 = 4;
+	}
+	$int31 = calc((190 - $int30 * 35) / ($int30 + 1));
+	if ($obj4 ! null) {
+		cc_create($component1, ^iftype_graphic, 5);
+		cc_setposition(calc($int29 + $int31), calc($int28 + 2 + $int25 + $int26), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj4, -1);
+		cc_create($component1, ^iftype_text, 6);
+		cc_setposition(calc($int29 + $int31), calc($int28 + 2 + $int25 + $int26 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextfont(p11_full);
+		if (~lore_itemcount($obj4) >= $int5) {
+			cc_setcolour(^green);
+		} else {
+			cc_setcolour(^red);
+		}
+		cc_settextshadow(false);
+		cc_settext("<~lore_tostring_pouch(~lore_itemcount($obj4))>/<tostring($int5)>");
+	}
+	if ($obj6 ! null) {
+		cc_create($component1, ^iftype_graphic, 7);
+		cc_setposition(calc($int29 + $int31 * 2 + 35), calc($int28 + 2 + $int25 + $int26), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj6, -1);
+		cc_create($component1, ^iftype_text, 8);
+		cc_setposition(calc($int29 + $int31 * 2 + 35), calc($int28 + 2 + $int25 + $int26 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextfont(p11_full);
+		if (~lore_itemcount($obj6) >= $int7) {
+			cc_setcolour(^green);
+		} else {
+			cc_setcolour(^red);
+		}
+		cc_settextshadow(false);
+		cc_settext("<~lore_tostring(~lore_itemcount($obj6))>/<tostring($int7)>");
+	}
+	if ($obj8 ! null) {
+		cc_create($component1, ^iftype_graphic, 9);
+		cc_setposition(calc($int29 + $int31 * 3 + 70), calc($int28 + 2 + $int25 + $int26), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj8, -1);
+		cc_create($component1, ^iftype_text, 10);
+		cc_setposition(calc($int29 + $int31 * 3 + 70), calc($int28 + 2 + $int25 + $int26 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextfont(p11_full);
+		if (~lore_itemcount($obj8) >= $int9) {
+			cc_setcolour(^green);
+		} else {
+			cc_setcolour(^red);
+		}
+		cc_settextshadow(false);
+		cc_settext("<~lore_tostring(~lore_itemcount($obj8))>/<tostring($int9)>");
+	}
+	if ($obj10 ! null) {
+		cc_create($component1, ^iftype_graphic, 11);
+		cc_setposition(calc($int29 + $int31 * 4 + 105), calc($int28 + 2 + $int25 + $int26), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj10, -1);
+		cc_create($component1, ^iftype_text, 12);
+		cc_setposition(calc($int29 + $int31 * 4 + 105), calc($int28 + 2 + $int25 + $int26 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextfont(p11_full);
+		if (~lore_itemcount($obj10) >= $int11) {
+			cc_setcolour(^green);
+		} else {
+			cc_setcolour(^red);
+		}
+		cc_settextshadow(false);
+		cc_settext("<~lore_tostring(~lore_itemcount($obj10))>/<tostring($int11)>");
+	}
+	if ($obj12 ! null) {
+		cc_create($component1, ^iftype_graphic, 13);
+		cc_setposition(calc($int29 + $int31), calc($int28 + 16 + 2 * $int25 + 2 * $int26), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj12, -1);
+		cc_create($component1, ^iftype_text, 14);
+		cc_setposition(calc($int29 + $int31), calc($int28 + 16 + 2 * $int25 + 2 * $int26 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextfont(p11_full);
+		if (~lore_itemcount($obj12) >= $int13) {
+			cc_setcolour(^green);
+		} else {
+			cc_setcolour(^red);
+		}
+		cc_settextshadow(false);
+		cc_settext("<~lore_tostring(~lore_itemcount($obj12))>/<tostring($int13)>");
+	}
+	if ($obj14 ! null) {
+		cc_create($component1, ^iftype_graphic, 15);
+		cc_setposition(calc($int29 + $int31 * 2 + 35), calc($int28 + 16 + 2 * $int25 + 2 * $int26), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj14, -1);
+		cc_create($component1, ^iftype_text, 16);
+		cc_setposition(calc($int29 + $int31 * 2 + 35), calc($int28 + 16 + 2 * $int25 + 2 * $int26 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextfont(p11_full);
+		if (~lore_itemcount($obj14) >= $int15) {
+			cc_setcolour(^green);
+		} else {
+			cc_setcolour(^red);
+		}
+		cc_settextshadow(false);
+		cc_settext("<~lore_tostring(~lore_itemcount($obj14))>/<tostring($int15)>");
+	}
+	if ($obj16 ! null) {
+		cc_create($component1, ^iftype_graphic, 15);
+		cc_setposition(calc($int29 + $int31 * 3 + 35 + 2), calc($int28 + 16 + 2 * $int25 + 2 * $int26), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj16, -1);
+		cc_create($component1, ^iftype_text, 16);
+		cc_setposition(calc($int29 + $int31 * 3 + 35 + 2), calc($int28 + 16 + 2 * $int25 + 2 * $int26 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextfont(p11_full);
+		if (~lore_itemcount($obj16) >= $int17) {
+			cc_setcolour(^green);
+		} else {
+			cc_setcolour(^red);
+		}
+		cc_settextshadow(false);
+		cc_settext("<~lore_tostring(~lore_itemcount($obj16))>/<tostring($int17)>");
+	}
+	if ($obj18 ! null) {
+		cc_create($component1, ^iftype_graphic, 15);
+		cc_setposition(calc($int29 + $int31 * 4 + 35 + 3), calc($int28 + 16 + 2 * $int25 + 2 * $int26), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject($obj18, -1);
+		cc_create($component1, ^iftype_text, 16);
+		cc_setposition(calc($int29 + $int31 * 4 + 35 + 3), calc($int28 + 16 + 2 * $int25 + 2 * $int26 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextfont(p11_full);
+		if (~lore_itemcount($obj18) >= $int19) {
+			cc_setcolour(^green);
+		} else {
+			cc_setcolour(^red);
+		}
+		cc_settextshadow(false);
+		cc_settext("<~lore_tostring(~lore_itemcount($obj18))>/<tostring($int19)>");
+	}
+}

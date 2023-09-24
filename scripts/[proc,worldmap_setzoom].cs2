@@ -1,0 +1,38 @@
+// 1372
+[proc,worldmap_setzoom]
+worldmap_setzoom(%varcint172);
+def_int $colour0 = 0xff981f;
+def_int $colour1 = ^white;
+switch_int (%varcint172) {
+	case 200 :
+		if_setcolour($colour0, worldmap:com_42);
+		if_setcolour($colour1, worldmap:com_40);
+		if_setcolour($colour1, worldmap:com_38);
+		if_setcolour($colour1, worldmap:com_36);
+		if_setcolour($colour1, worldmap:com_34);
+	case default :
+		%varcint172 = 100;
+		if_setcolour($colour1, worldmap:com_42);
+		if_setcolour($colour0, worldmap:com_40);
+		if_setcolour($colour1, worldmap:com_38);
+		if_setcolour($colour1, worldmap:com_36);
+		if_setcolour($colour1, worldmap:com_34);
+	case 75 :
+		if_setcolour($colour1, worldmap:com_42);
+		if_setcolour($colour1, worldmap:com_40);
+		if_setcolour($colour0, worldmap:com_38);
+		if_setcolour($colour1, worldmap:com_36);
+		if_setcolour($colour1, worldmap:com_34);
+	case 50 :
+		if_setcolour($colour1, worldmap:com_42);
+		if_setcolour($colour1, worldmap:com_40);
+		if_setcolour($colour1, worldmap:com_38);
+		if_setcolour($colour0, worldmap:com_36);
+		if_setcolour($colour1, worldmap:com_34);
+	case 37 :
+		if_setcolour($colour1, worldmap:com_42);
+		if_setcolour($colour1, worldmap:com_40);
+		if_setcolour($colour1, worldmap:com_38);
+		if_setcolour($colour1, worldmap:com_36);
+		if_setcolour($colour0, worldmap:com_34);
+}

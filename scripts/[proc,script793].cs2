@@ -49,7 +49,7 @@ while ($int5 < 78) {
 	cc_setposition(~script761($int8), calc($int5 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
 	$obj31 = enum(int, obj, enum_1182, $int6);
 	if ($int6 = 1) {
-		if (~script795($obj31) = 1) {
+		if (~wolf_pouch_checker($obj31) = 1) {
 			~script794($obj31, $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4);
 		} else {
 			~script794(enum(int, obj, enum_1183, $int6), $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4);
@@ -62,12 +62,12 @@ while ($int5 < 78) {
 	$string5 = enum(obj, string, enum_1187, $obj31);
 	$int30 = enum(obj, int, enum_1185, $obj31);
 	if ($int6 = 1) {
-		cc_setonmouserepeat("script770(event_comsubid, interface_672:24, interface_672:16, $int30, $string5, $namedobj10, 1, $namedobj11, $int21, $namedobj12, $int22, $namedobj13, $int23, $namedobj14, $int24, $namedobj15, $int25, $namedobj16, $int26, $namedobj17, $int27, $namedobj18, $int28, $namedobj19, $int29)");
-		cc_setonmouseleave("script40(interface_672:24)");
+		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_672:com_24, interface_672:scroll_icons, $int30, $string5, $namedobj10, 1, $namedobj11, $int21, $namedobj12, $int22, $namedobj13, $int23, $namedobj14, $int24, $namedobj15, $int25, $namedobj16, $int26, $namedobj17, $int27, $namedobj18, $int28, $namedobj19, $int29)");
+		cc_setonmouseleave("deltooltip(interface_672:com_24)");
 	} else {
 		$string5 = "You do not have access to this type of Summoning pouch.";
-		cc_setonmouserepeat("script800(event_comsubid, interface_672:24, interface_672:16, $int30, $string5)");
-		cc_setonmouseleave("script40(interface_672:24)");
+		cc_setonmouserepeat("script800(event_comsubid, interface_672:com_24, interface_672:scroll_icons, $int30, $string5)");
+		cc_setonmouseleave("deltooltip(interface_672:com_24)");
 	}
 	$int5 = calc($int5 + 1);
 	$int6 = calc($int6 + 1);
@@ -82,7 +82,7 @@ while ($int7 < 78) {
 	$obj31 = enum(int, obj, enum_1182, $int6);
 	cc_settext(enum(obj, string, enum_1187, $obj31));
 	if ($int6 = 1) {
-		if (~script795($obj31) = 1) {
+		if (~wolf_pouch_checker($obj31) = 1) {
 			cc_setcolour(0xffff64);
 		} else {
 			cc_setcolour(0x111111);

@@ -1,0 +1,58 @@
+// 1294
+[clientscript,hauntedmine_controls_load]
+if (testbit(%var383, 1) = ^true) {
+	if_setmodel(model_4912, hauntedmine_controls:com_134);
+}
+if (testbit(%var383, 2) = ^true) {
+	if_setmodel(model_4912, hauntedmine_controls:com_135);
+}
+if (testbit(%var383, 3) = ^true) {
+	if_setmodel(model_4913, hauntedmine_controls:com_136);
+}
+if (testbit(%var383, 4) = ^true) {
+	if_setmodel(model_4912, hauntedmine_controls:com_137);
+}
+if (testbit(%var383, 5) = ^true) {
+	if_setmodel(model_4912, hauntedmine_controls:com_138);
+}
+if (testbit(%var383, 6) = ^true) {
+	if_setmodel(model_4913, hauntedmine_controls:com_139);
+}
+if (testbit(%var383, 7) = ^true) {
+	if_setmodel(model_4913, hauntedmine_controls:com_140);
+}
+if (testbit(%var383, 8) = ^true) {
+	if_setmodel(model_4912, hauntedmine_controls:com_141);
+}
+if (%var383 > 8191) {
+	if_sethide(true, hauntedmine_controls:com_186);
+	if_setgraphic("combatboxes,3", hauntedmine_controls:com_146);
+}
+if (testbit(%var383, 14) = ^true) {
+	if_setmodel(model_4910, hauntedmine_controls:com_174);
+	if_setmodelanim(seq_1456, hauntedmine_controls:com_174);
+}
+if (testbit(%var383, 15) = ^true) {
+	if_setmodel(model_4910, hauntedmine_controls:com_172);
+	if_setmodelanim(seq_1456, hauntedmine_controls:com_172);
+}
+if (testbit(%var383, 16) = ^true) {
+	if_setmodel(model_4910, hauntedmine_controls:com_176);
+	if_setmodelanim(seq_1456, hauntedmine_controls:com_176);
+}
+if (testbit(%var383, 17) = ^true) {
+	if_setmodel(model_4910, hauntedmine_controls:com_178);
+	if_setmodelanim(seq_1455, hauntedmine_controls:com_178);
+}
+if (testbit(%var383, 18) = ^true) {
+	if_setmodel(model_4910, hauntedmine_controls:com_180);
+	if_setmodelanim(seq_1455, hauntedmine_controls:com_180);
+}
+if (testbit(%var383, 19) = ^true) {
+	if_setmodel(model_4910, hauntedmine_controls:com_183);
+	if_setmodelanim(seq_1453, hauntedmine_controls:com_183);
+}
+if (testbit(%var383, 20) = ^true) {
+	if_setmodel(model_4910, hauntedmine_controls:com_185);
+	if_setmodelanim(seq_1453, hauntedmine_controls:com_185);
+}

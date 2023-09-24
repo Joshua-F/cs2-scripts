@@ -1,0 +1,57 @@
+// 1839
+[proc,worldmap_key_build](int $int0, component $component1, component $component2, component $component3)
+cc_deleteall($component1);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $intarray0(calc(95 + 1));
+def_int $int8 = -1;
+if ($int0 = 0) {
+	while ($int4 <= 95) {
+		if (enum(int, struct, enum_1805, $int4) ! null) {
+			$int7 = ~worldmap_createline($component1, $int4, $int7);
+		}
+		$int4 = calc($int4 + 1);
+	}
+	if_settext("Key order:<br>Traditional", $component3);
+} else {
+	while ($int4 <= 95) {
+		if (enum(int, struct, enum_1805, $int4) ! null) {
+			$intarray0($int6) = $int4;
+			$int6 = calc($int6 + 1);
+		}
+		$int4 = calc($int4 + 1);
+	}
+	$int6 = calc($int6 - 1);
+	$int4 = 0;
+	if ($int0 = 1) {
+		~worldmap_quicksort_alphabetical(intarray0, 0, $int6);
+		while ($int4 <= $int6) {
+			$int7 = ~worldmap_createline($component1, $intarray0($int4), $int7);
+			$int4 = calc($int4 + 1);
+		}
+		if_settext("Key order:<br>Alphabetical", $component3);
+	} else if ($int0 = 2) {
+		~worldmap_quicksort_category(intarray0, 0, $int6);
+		while ($int8 <= 2) {
+			$int7 = ~worldmap_createtitle($component1, $int8, $int7);
+			while (struct_param(enum(int, struct, enum_1805, $intarray0($int5)), param_597) = $int8) {
+				$int5 = calc($int5 + 1);
+			}
+			~worldmap_quicksort_alphabetical(intarray0, $int4, calc($int5 - 1));
+			while ($int4 < $int5) {
+				$int7 = ~worldmap_createline($component1, $intarray0($int4), $int7);
+				$int4 = calc($int4 + 1);
+			}
+			$int8 = calc($int8 + 1);
+		}
+		if_settext("Key order:<br>Categorised", $component3);
+	}
+}
+$int7 = calc($int7 + 5);
+if_setscrollsize(0, $int7, $component1);
+~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find($component2, 1) = ^true) {
+	~scrollbar_vertical_doscroll($component2, $component1, if_getscrolly($component1), true);
+}

@@ -51,7 +51,7 @@ def_int $int20 = 0;
 def_string $op1 = "Scroll map";
 def_string $string2 = "";
 if (string_length($string0) > 0) {
-	if ($component0 = interface_755:6) {
+	if ($component0 = worldmap:com_6) {
 		$string2 = "Your position";
 	} else {
 		$string2 = removetags(~script2047($string0));
@@ -118,7 +118,7 @@ if ($int16 = -1) {
 			$int19 = $int14;
 			$int20 = 0;
 	}
-	~script2050($component0, 1);
+	~worldmap_hidegraphic($component0, 1);
 }
 def_int $int21 = 0;
 def_int $int22 = 0;

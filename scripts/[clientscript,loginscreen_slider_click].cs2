@@ -1,0 +1,22 @@
+// 1214
+[clientscript,loginscreen_slider_click](component $component0, component $component1, int $int2, int $int3)
+def_int $int4 = calc(if_getwidth($component0) - if_getwidth($component1));
+def_int $int5 = calc(if_getwidth($component1) / 2);
+if ($int2 = -1) {
+	$int2 = if_getwidth($component0);
+}
+$int2 = max(calc($int2 - $int5), 0);
+$int2 = min($int2, $int4);
+if ($int3 = 0) {
+	detail_soundvol(scale($int2, $int4, 127));
+	~loginscreen_soundvol($component0, $component1);
+} else if ($int3 = 1) {
+	detail_musicvol(scale($int2, $int4, 255));
+	~loginscreen_musicvol($component0, $component1);
+} else if ($int3 = 2) {
+	detail_bgsoundvol(scale($int2, $int4, 127));
+	~loginscreen_bgsoundvol($component0, $component1);
+} else if ($int3 = 3) {
+	detail_brightness(calc(min(scale($int2, $int4, 4), 3) + 1));
+	~loginscreen_brightness($component0, $component1);
+}

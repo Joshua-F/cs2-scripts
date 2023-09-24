@@ -1,0 +1,7 @@
+// 1963
+[clientscript,pest_mouseover](component $component0, int $int1)
+if (%var261 ! $int1) {
+	if_settext("<col=ff981f><removetags(if_gettext($component0))></col>", $component0);
+} else {
+	if_settext(removetags(if_gettext($component0)), $component0);
+}

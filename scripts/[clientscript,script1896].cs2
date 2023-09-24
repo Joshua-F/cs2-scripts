@@ -23,30 +23,30 @@ if ($windowmode0 = ^windowmode_fullscreen) {
 		switch_int ($int1) {
 			case 1 :
 				if (%varcint543 < ^windowmode_fixed) {
-					~script1887(interface_744:125, interface_744:127, interface_744:126, interface_744:128, interface_744:129);
+					~script1887(loginscreen:com_125, loginscreen:com_127, loginscreen:fader, loginscreen:com_128, loginscreen:com_129);
 				}
-				if_setonclick("script1890(interface_744:226)", interface_744:238);
-				~script1174(interface_744:237);
+				if_setonclick("script1890(loginscreen:com_226)", loginscreen:windowmode_confirm_yes);
+				~loginscreen_setactivemenu(loginscreen:windowmode_confirm);
 			case 2 :
 				if (%varcint543 < ^windowmode_fixed) {
-					~script1887(interface_744:125, interface_744:127, interface_744:126, interface_744:128, interface_744:129);
+					~script1887(loginscreen:com_125, loginscreen:com_127, loginscreen:fader, loginscreen:com_128, loginscreen:com_129);
 				}
-				if_setonclick("script1890(interface_744:138)", interface_744:238);
-				~script1174(interface_744:237);
+				if_setonclick("script1890(loginscreen:com_138)", loginscreen:windowmode_confirm_yes);
+				~loginscreen_setactivemenu(loginscreen:windowmode_confirm);
 		}
 		%varcint543 = ^windowmode_fullscreen;
 		return;
 	}
 	setwindowmode(getdefaultwindowmode);
-	~script1887(interface_744:125, interface_744:127, interface_744:126, interface_744:128, interface_744:129);
+	~script1887(loginscreen:com_125, loginscreen:com_127, loginscreen:fader, loginscreen:com_128, loginscreen:com_129);
 	%varcint543 = getwindowmode;
 	switch_int ($int1) {
 		case 1, 2 :
-			if_settext("RuneScape was unable to enter High Detail (fullscreen) at the specified resolution.<br><br>Please try a different resolution or a different display mode.", interface_744:135);
-			if_setonclick("script1173(interface_744:138)", interface_744:137);
-			if_settext("Advanced info", interface_744:136);
-			if_setonclick("script702($string0, true)", interface_744:136);
-			~script1174(interface_744:411);
+			if_settext("RuneScape was unable to enter High Detail (fullscreen) at the specified resolution.<br><br>Please try a different resolution or a different display mode.", loginscreen:general_messages_text);
+			if_setonclick("loginscreen_setactivemenu(loginscreen:com_138)", loginscreen:general_messages_continue);
+			if_settext("Advanced info", loginscreen:com_136);
+			if_setonclick("openurl_nologin($string0, true)", loginscreen:com_136);
+			~loginscreen_setactivemenu(loginscreen:general_messages);
 		case 3 :
 			mes("RuneScape was unable to enter the High Detail (fullscreen) mode.");
 	}
@@ -64,17 +64,17 @@ if (getwindowmode ! $windowmode0) {
 	%varcint543 = getwindowmode;
 	switch_int ($int1) {
 		case 1 :
-			if_settext("RuneScape was unable to enter the chosen display mode.", interface_744:135);
-			if_setonclick("script1173(interface_744:226)", interface_744:137);
-			if_settext("Advanced info", interface_744:136);
-			if_setonclick("script702($string0, true)", interface_744:136);
-			~script1174(interface_744:411);
+			if_settext("RuneScape was unable to enter the chosen display mode.", loginscreen:general_messages_text);
+			if_setonclick("loginscreen_setactivemenu(loginscreen:com_226)", loginscreen:general_messages_continue);
+			if_settext("Advanced info", loginscreen:com_136);
+			if_setonclick("openurl_nologin($string0, true)", loginscreen:com_136);
+			~loginscreen_setactivemenu(loginscreen:general_messages);
 		case 2 :
-			if_settext("RuneScape was unable to enter the chosen display mode.", interface_744:135);
-			if_setonclick("script1173(interface_744:138)", interface_744:137);
-			if_settext("Advanced info", interface_744:136);
-			if_setonclick("script702($string0, true)", interface_744:136);
-			~script1174(interface_744:411);
+			if_settext("RuneScape was unable to enter the chosen display mode.", loginscreen:general_messages_text);
+			if_setonclick("loginscreen_setactivemenu(loginscreen:com_138)", loginscreen:general_messages_continue);
+			if_settext("Advanced info", loginscreen:com_136);
+			if_setonclick("openurl_nologin($string0, true)", loginscreen:com_136);
+			~loginscreen_setactivemenu(loginscreen:general_messages);
 		case 3 :
 			mes("RuneScape was unable to enter the chosen display mode.");
 	}
@@ -84,12 +84,12 @@ if ($int2 = 1) {
 	switch_int ($int1) {
 		case 1 :
 			~script1888;
-			if_setonclick("script1890(interface_744:226)", interface_744:238);
-			~script1174(interface_744:237);
+			if_setonclick("script1890(loginscreen:com_226)", loginscreen:windowmode_confirm_yes);
+			~loginscreen_setactivemenu(loginscreen:windowmode_confirm);
 		case 2 :
 			~script1888;
-			if_setonclick("script1890(interface_744:138)", interface_744:238);
-			~script1174(interface_744:237);
+			if_setonclick("script1890(loginscreen:com_138)", loginscreen:windowmode_confirm_yes);
+			~loginscreen_setactivemenu(loginscreen:windowmode_confirm);
 		case 3 :
 			~script1845;
 	}
@@ -100,10 +100,10 @@ setdefaultwindowmode($windowmode0);
 switch_int ($int1) {
 	case 1 :
 		~script1888;
-		~script1174(interface_744:226);
+		~loginscreen_setactivemenu(loginscreen:com_226);
 	case 2 :
 		~script1888;
-		~script1174(interface_744:138);
+		~loginscreen_setactivemenu(loginscreen:com_138);
 	case 3 :
 		~script1845;
 }

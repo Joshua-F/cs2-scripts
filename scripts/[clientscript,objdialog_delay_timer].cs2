@@ -1,0 +1,8 @@
+// 575
+[clientscript,objdialog_delay_timer]
+%varcint81 = calc(%varcint81 - 1);
+if (%varcint81 > 0) {
+	return;
+}
+if_setontimer(null, objdialog:searchtext);
+~objdialog_refreshsearch;

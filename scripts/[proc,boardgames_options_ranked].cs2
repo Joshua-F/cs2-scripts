@@ -1,0 +1,7 @@
+// 1407
+[proc,boardgames_options_ranked]
+if (%varbit68 = 1) {
+	if_setgraphic("miscgraphics,11", boardgames_options:com_50);
+} else {
+	if_setgraphic("miscgraphics,10", boardgames_options:com_50);
+}

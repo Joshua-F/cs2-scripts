@@ -1,0 +1,61 @@
+// 687
+[clientscript,gravestone_shop_select](int $int0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, component $component6)
+cc_deleteall($component3);
+def_int $int7 = 0;
+while ($int7 <= 27) {
+	if (cc_find($component1, calc($int7 * 6)) = ^true) {
+		cc_settrans(200);
+	}
+	$int7 = calc($int7 + 1);
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans(150);
+}
+if_settext(enum(int, string, enum_1099, $int0), $component5);
+if_settext(enum(int, string, enum_1100, $int0), $component6);
+$int7 = enum(int, int, enum_1101, $int0);
+if ($int7 < 0) {
+	if_settext("<col=ff0000>Unavailable</col>", $component4);
+	return;
+}
+def_string $string0 = "";
+if ($int7 = 0) {
+	$string0 = "(No charge)";
+} else if ($int7 = 1) {
+	if (inv_total(inv, coins_995) >= 1) {
+		$string0 = "1 coin";
+	} else {
+		$string0 = "<col=ff0000>1 coin</col>";
+	}
+} else if (inv_total(inv, coins_995) >= $int7) {
+	$string0 = "<~tostring_spacer($int7, ",")> coins";
+	if (parawidth($string0, if_getwidth($component4), b12_full) > calc(if_getwidth($component4) - 5)) {
+		$string0 = "<~tostring_spacer($int7, ",")><br>coins";
+	}
+} else {
+	$string0 = "<col=ff0000><~tostring_spacer($int7, ",")> coins</col>";
+	if (parawidth($string0, if_getwidth($component4), b12_full) > calc(if_getwidth($component4) - 5)) {
+		$string0 = "<col=ff0000><~tostring_spacer($int7, ",")></col><br><col=ff0000>coins</col>";
+	}
+}
+if_settext(append("Confirm:<br>", $string0), $component4);
+$int7 = 0;
+def_graphic $graphic8 = null;
+while ($int7 <= 27) {
+	cc_create($component3, ^iftype_graphic, $int7);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(if_getwidth($component3), if_getheight($component3), ^setsize_abs, ^setsize_abs);
+	if ($int7 = $int0) {
+		cc_setgraphic("graphic_833");
+		cc_sethide(false);
+		$graphic8 = "graphic_834";
+		cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic8)");
+		$graphic8 = "graphic_833";
+		cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic8)");
+		cc_setop(1, "Confirm:");
+		cc_setopbase("<col=ff9040><enum(int, string, enum_1099, $int0)></col>");
+	} else {
+		cc_sethide(true);
+	}
+	$int7 = calc($int7 + 1);
+}

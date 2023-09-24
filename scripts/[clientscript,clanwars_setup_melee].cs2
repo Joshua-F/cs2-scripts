@@ -1,0 +1,11 @@
+// 1826
+[clientscript,clanwars_setup_melee](int $int0)
+if (~clanwars_setup_clicktest($int0) = 0) {
+	return;
+}
+if (%varcint250 = false) {
+	%varcint250 = true;
+} else {
+	%varcint250 = false;
+}
+~clanwars_resynch_melee;

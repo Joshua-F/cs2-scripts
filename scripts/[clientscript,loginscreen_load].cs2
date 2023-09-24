@@ -1,0 +1,13 @@
+// 1172
+[clientscript,loginscreen_load](component $component0, component $component1, component $component2, component $component3, component $component4)
+%varcstring32 = "";
+%varcstring33 = "";
+%varcint543 = getwindowmode;
+%varcint547 = 0;
+if_setonkey("loginscreen_keypress(event_keycode, event_keychar)", loginscreen:com_134);
+if_setonresize("script1176", loginscreen:background_layer);
+~loginscreen_setactivemenu(loginscreen:com_226);
+if (%varcint178 <= 0) {
+	%varcint178 = max(fullscreen_lastmode, 0);
+}
+~script1887($component0, $component1, $component2, $component3, $component4);

@@ -1,10 +1,10 @@
 // 1897
 [clientscript,script1897](int $int0)
-%varcint178 = ~script1345($int0, interface_744:285);
+%varcint178 = ~dropdownbox_getselected($int0, loginscreen:com_285);
 if (getwindowmode = ^windowmode_fullscreen & fullscreen_lastmode ! %varcint178) {
 	if (fullscreen_enter(fullscreen_getmode(%varcint178)) = true) {
-		if_setonclick("script1890(interface_744:138)", interface_744:238);
-		~script1174(interface_744:237);
+		if_setonclick("script1890(loginscreen:com_138)", loginscreen:windowmode_confirm_yes);
+		~loginscreen_setactivemenu(loginscreen:windowmode_confirm);
 	} else {
 		setwindowmode(getdefaultwindowmode);
 		~script1888;

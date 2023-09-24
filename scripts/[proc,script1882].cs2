@@ -24,44 +24,44 @@ if (testbit($flags2, 3) = ^true) {
 if (testbit($flags2, 4) = ^true) {
 	$int15 = 1;
 }
-cc_create(interface_744:224, ^iftype_rectangle, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_rectangle, if_getnextsubid(loginscreen:com_224));
 cc_setsize($width5, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setonclick("script1883($world1, event_mousex)");
-.cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+.cc_create(loginscreen:com_224, ^iftype_graphic, if_getnextsubid(loginscreen:com_224));
 .cc_setsize(13, 12, ^setsize_abs, ^setsize_abs);
 .cc_setposition(5, calc((18 - .cc_getheight) / 2 + $int0), ^setpos_abs_left, ^setpos_abs_top);
 switch_int ($int6) {
 	case 1 :
-		cc_setonmouserepeat("script1884(interface_744:224, cc_getid, .cc_getid, 0x593d15, $graphic9, $graphic7, $int4, event_mousex)");
-		cc_setonmouseleave("script1885(interface_744:224, cc_getid, .cc_getid, 0x593d15, $graphic7)");
+		cc_setonmouserepeat("script1884(loginscreen:com_224, cc_getid, .cc_getid, 0x593d15, $graphic9, $graphic7, $int4, event_mousex)");
+		cc_setonmouseleave("script1885(loginscreen:com_224, cc_getid, .cc_getid, 0x593d15, $graphic7)");
 		cc_setcolour(0x593d15);
 		.cc_setgraphic($graphic7);
 	case 2 :
-		cc_setonmouserepeat("script1884(interface_744:224, cc_getid, .cc_getid, 0x73521c, $graphic9, $graphic7, $int4, event_mousex)");
-		cc_setonmouseleave("script1885(interface_744:224, cc_getid, .cc_getid, 0x73521c, $graphic7)");
+		cc_setonmouserepeat("script1884(loginscreen:com_224, cc_getid, .cc_getid, 0x73521c, $graphic9, $graphic7, $int4, event_mousex)");
+		cc_setonmouseleave("script1885(loginscreen:com_224, cc_getid, .cc_getid, 0x73521c, $graphic7)");
 		cc_setcolour(0x73521c);
 		.cc_setgraphic($graphic7);
 	case 0 :
-		cc_setonmouserepeat("script1884(interface_744:224, cc_getid, .cc_getid, 0x574423, $graphic10, $graphic8, $int4, event_mousex)");
-		cc_setonmouseleave("script1885(interface_744:224, cc_getid, .cc_getid, 0x574423, $graphic8)");
+		cc_setonmouserepeat("script1884(loginscreen:com_224, cc_getid, .cc_getid, 0x574423, $graphic10, $graphic8, $int4, event_mousex)");
+		cc_setonmouseleave("script1885(loginscreen:com_224, cc_getid, .cc_getid, 0x574423, $graphic8)");
 		cc_setcolour(0x574423);
 		.cc_setgraphic($graphic8);
 	case default :
-		cc_setonmouserepeat("script1884(interface_744:224, cc_getid, .cc_getid, 0x45351b, $graphic10, $graphic8, $int4, event_mousex)");
-		cc_setonmouseleave("script1885(interface_744:224, cc_getid, .cc_getid, 0x45351b, $graphic8)");
+		cc_setonmouserepeat("script1884(loginscreen:com_224, cc_getid, .cc_getid, 0x45351b, $graphic10, $graphic8, $int4, event_mousex)");
+		cc_setonmouseleave("script1885(loginscreen:com_224, cc_getid, .cc_getid, 0x45351b, $graphic8)");
 		cc_setcolour(0x45351b);
 		.cc_setgraphic($graphic8);
 }
-cc_create(interface_744:224, ^iftype_text, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_text, if_getnextsubid(loginscreen:com_224));
 cc_setsize(60, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(45, $int0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
 cc_setcolour(^white);
 cc_settext("World <tostring($world1)>");
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-cc_create(interface_744:224, ^iftype_text, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_text, if_getnextsubid(loginscreen:com_224));
 cc_setsize(65, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(85, $int0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
@@ -74,10 +74,10 @@ if ($int4 >= 1980) {
 	cc_settext("OFFLINE");
 }
 cc_settextalign(^settextalign_right, ^settextalign_top, 0);
-cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_graphic, if_getnextsubid(loginscreen:com_224));
 cc_setsize(24, 12, ^setsize_abs, ^setsize_abs);
 cc_setposition(155, calc((18 - cc_getheight) / 2 + $int0), ^setpos_abs_left, ^setpos_abs_top);
-.cc_create(interface_744:224, ^iftype_text, if_getnextsubid(interface_744:224));
+.cc_create(loginscreen:com_224, ^iftype_text, if_getnextsubid(loginscreen:com_224));
 .cc_setsize(105, 18, ^setsize_abs, ^setsize_abs);
 .cc_setposition(180, $int0, ^setpos_abs_left, ^setpos_abs_top);
 .cc_settextfont(p12_full);
@@ -93,7 +93,7 @@ if (map_lang = 0) {
 	cc_setgraphic(enum(int, graphic, enum_1810, 74));
 	.cc_settext("French");
 }
-cc_create(interface_744:224, ^iftype_text, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_text, if_getnextsubid(loginscreen:com_224));
 cc_setsize(200, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(290, $int0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
@@ -104,7 +104,7 @@ if ($int15 = 1) {
 }
 cc_settext($text0);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_graphic, if_getnextsubid(loginscreen:com_224));
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(456, $int0, ^setpos_abs_left, ^setpos_abs_top);
 if ($int14 = 1) {
@@ -112,10 +112,10 @@ if ($int14 = 1) {
 } else {
 	cc_setgraphic("options_radio_buttons,1");
 }
-cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_graphic, if_getnextsubid(loginscreen:com_224));
 cc_setsize(19, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(25, $int0, ^setpos_abs_left, ^setpos_abs_top);
-.cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+.cc_create(loginscreen:com_224, ^iftype_graphic, if_getnextsubid(loginscreen:com_224));
 .cc_setsize(19, 18, ^setsize_abs, ^setsize_abs);
 .cc_setposition(555, $int0, ^setpos_abs_left, ^setpos_abs_top);
 if ($int11 = 1) {
@@ -125,7 +125,7 @@ if ($int11 = 1) {
 	cc_setgraphic("graphic_1532");
 	.cc_setgraphic("graphic_1532");
 }
-cc_create(interface_744:224, ^iftype_text, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_text, if_getnextsubid(loginscreen:com_224));
 cc_setsize(100, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(575, $int0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
@@ -136,7 +136,7 @@ if ($int11 = 1) {
 	cc_settext("Free");
 }
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_graphic, if_getnextsubid(loginscreen:com_224));
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(490, $int0, ^setpos_abs_left, ^setpos_abs_top);
 if ($int12 = 1) {
@@ -144,7 +144,7 @@ if ($int12 = 1) {
 } else {
 	cc_setgraphic("options_radio_buttons,1");
 }
-cc_create(interface_744:224, ^iftype_graphic, if_getnextsubid(interface_744:224));
+cc_create(loginscreen:com_224, ^iftype_graphic, if_getnextsubid(loginscreen:com_224));
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(525, $int0, ^setpos_abs_left, ^setpos_abs_top);
 if ($int13 = 1) {

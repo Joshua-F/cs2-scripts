@@ -1,0 +1,40 @@
+// 963
+[clientscript,fairyrings_anticlockwise](component $component0)
+%varcint157 = 1;
+if (%varcint125 >= calc(clientclock - 5)) {
+	return;
+}
+if ($component0 = interface_734:left_base) {
+	switch_int (%varcint122) {
+		case 0 :
+			%varcint122 = 512;
+		case 512 :
+			%varcint122 = 1024;
+		case 1024 :
+			%varcint122 = 1536;
+		case default :
+			%varcint122 = 0;
+	}
+} else if ($component0 = interface_734:middle_base) {
+	switch_int (%varcint123) {
+		case 0 :
+			%varcint123 = 512;
+		case 512 :
+			%varcint123 = 1024;
+		case 1024 :
+			%varcint123 = 1536;
+		case default :
+			%varcint123 = 0;
+	}
+} else if ($component0 = interface_734:right_base) {
+	switch_int (%varcint124) {
+		case 0 :
+			%varcint124 = 512;
+		case 512 :
+			%varcint124 = 1024;
+		case 1024 :
+			%varcint124 = 1536;
+		case default :
+			%varcint124 = 0;
+	}
+}

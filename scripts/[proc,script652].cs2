@@ -22,9 +22,9 @@ if (stockmarket_isofferempty($int4) = false) {
 		} else if ($int8 = 2) {
 			cc_setonmouserepeat("script649($component5, $component7, $string0, 25, 106)");
 		} else {
-			cc_setonmouserepeat("script568($component5, $int6, $component7, $string0, 25, 106)");
+			cc_setonmouserepeat("addtooltip_dynamic($component5, $int6, $component7, $string0, 25, 106)");
 		}
-		cc_setonmouseleave("script40($component7)");
+		cc_setonmouseleave("deltooltip($component7)");
 	}
 }
 def_int $x9 = calc($int0 + 1);

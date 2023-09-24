@@ -1,0 +1,30 @@
+// 523
+[proc,enum_var](stat $stat0)(int)
+if ($stat0 = runecraft) {
+	return(%varcint54);
+}
+if ($stat0 = crafting) {
+	return(%varcint55);
+}
+if ($stat0 = fletching) {
+	return(%varcint57);
+}
+if ($stat0 = cooking) {
+	return(%varcint58);
+}
+if ($stat0 = construction) {
+	return(%varcint60);
+}
+if ($stat0 = herblore) {
+	return(%varcint61);
+}
+if ($stat0 = magic) {
+	return(%varcint64);
+}
+if ($stat0 = smithing) {
+	return(%varcint66);
+}
+if ($stat0 = farming) {
+	return(%varcint62);
+}
+return(0);

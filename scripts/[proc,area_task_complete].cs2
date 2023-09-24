@@ -1,0 +1,56 @@
+// 56
+[proc,area_task_complete](int $int0)(int)
+switch_int ($int0) {
+	case 0 :
+		if (calc(%varbit3578 + %varbit3599 + %varbit3611) = 6) {
+			return(2);
+		}
+		if (%varbit3576 = 0) {
+			return(0);
+		}
+		return(1);
+	case 1 :
+		if (calc(%varbit3982 + %varbit3983 + %varbit3984) = 3) {
+			return(2);
+		}
+		if (%varbit3981 = 0) {
+			return(0);
+		}
+		return(1);
+	case 3 :
+		if (calc(%varbit4942 + %varbit4944 + %varbit4945) = 3) {
+			return(2);
+		}
+		if (%varbit4940 = 0) {
+			return(0);
+		}
+		return(1);
+	case 4 :
+		if (~script1987 = 1) {
+			return(2);
+		}
+		if (%varbit5644 = 0) {
+			return(0);
+		}
+		return(1);
+	case 5 :
+		if (calc(%varbit5688 + %varbit5689 + %varbit5690) = 3) {
+			return(2);
+		}
+		if (%varbit5687 = 0) {
+			return(0);
+		}
+		return(1);
+	case 6 :
+		if (calc(%varbit5779 + %varbit5780 + %varbit5781) = 3) {
+			return(2);
+		}
+		if (%varbit5778 = 0) {
+			return(0);
+		}
+		return(1);
+	case 2 :
+		return(0);
+	case default :
+		return(-1);
+}

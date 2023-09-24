@@ -1,0 +1,6 @@
+// 781
+[proc,lore_tostring_pouch](int $int0)(string)
+if ($int0 >= 1000) {
+	return("*");
+}
+return(tostring($int0));

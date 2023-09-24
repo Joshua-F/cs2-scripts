@@ -1,0 +1,9 @@
+// 1951
+[clientscript,statusicons_serverupdate]
+if (%varcint616 = 1) {
+	if_sethide(false, statusicons:multiway_icon);
+} else {
+	%varcint616 = 0;
+	if_sethide(true, statusicons:multiway_icon);
+	~statusicons_deltooltip;
+}

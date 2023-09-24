@@ -1,0 +1,10 @@
+// 1374
+[proc,worldmap_showoverview](int $int0)
+if ($int0 = 1) {
+	if_sethide(false, worldmap:overviewframe);
+	if_setop(1, "Hide overview", worldmap:overviewtoggle);
+} else {
+	if_sethide(true, worldmap:overviewframe);
+	if_setop(1, "Show overview", worldmap:overviewtoggle);
+}
+if_setonop("worldmap_toggleoverview", worldmap:overviewtoggle);

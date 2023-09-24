@@ -1,0 +1,37 @@
+// 1775
+[proc,clanwars_resynch_magic]
+switch_int (%varcint252) {
+	case 0 :
+		if_setgraphic("options_radio_buttons,2", clanwars_setup:magic_indicator);
+		if_sethide(false, clanwars_setup:magic_zaros);
+		if_sethide(false, clanwars_setup:magic_lunar);
+		if_sethide(false, clanwars_setup:com_124);
+		if_sethide(false, clanwars_setup:com_123);
+		if_settrans(0, clanwars_setup:magic);
+	case 1 :
+		if_setgraphic("options_radio_buttons,2", clanwars_setup:magic_indicator);
+		if_sethide(true, clanwars_setup:magic_zaros);
+		if_sethide(true, clanwars_setup:magic_lunar);
+		if_sethide(false, clanwars_setup:com_124);
+		if_sethide(false, clanwars_setup:com_123);
+		if (map_members = ^true) {
+			if_settrans(225, clanwars_setup:magic);
+		} else {
+			if_settrans(0, clanwars_setup:magic);
+		}
+	case 2 :
+		if_setgraphic("options_radio_buttons,2", clanwars_setup:magic_indicator);
+		if_sethide(true, clanwars_setup:magic_zaros);
+		if_sethide(true, clanwars_setup:magic_lunar);
+		if_sethide(true, clanwars_setup:com_124);
+		if_sethide(false, clanwars_setup:com_123);
+		if_settrans(225, clanwars_setup:magic);
+	case 3 :
+		if_setgraphic("options_radio_buttons,1", clanwars_setup:magic_indicator);
+		if_sethide(true, clanwars_setup:magic_zaros);
+		if_sethide(true, clanwars_setup:magic_lunar);
+		if_sethide(true, clanwars_setup:com_124);
+		if_sethide(true, clanwars_setup:com_123);
+		if_settrans(225, clanwars_setup:magic);
+}
+~clanwars_updateside;

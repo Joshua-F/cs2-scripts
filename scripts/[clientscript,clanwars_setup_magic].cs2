@@ -1,0 +1,17 @@
+// 1827
+[clientscript,clanwars_setup_magic](int $int0)
+if (~clanwars_setup_clicktest($int0) = 0) {
+	return;
+}
+if (map_members = ^false) {
+	if (%varcint252 = 1) {
+		%varcint252 = 2;
+	} else if (%varcint252 = 2) {
+		%varcint252 = 3;
+	} else {
+		%varcint252 = 1;
+	}
+} else {
+	%varcint252 = calc((%varcint252 + 1) % 4);
+}
+~clanwars_resynch_magic;

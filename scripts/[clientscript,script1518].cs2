@@ -4,7 +4,7 @@ def_int $int0 = 0;
 def_int $int1 = 0;
 while ($int1 = 0 & $int0 < 20) {
 	if (enum(int, namedobj, enum_861, $int0) = tinderbox_590) {
-		if (cc_find(interface_620:23, calc($int0 - 1)) = ^true) {
+		if (cc_find(shop_template:main_stock, calc($int0 - 1)) = ^true) {
 			$int0 = calc($int0 - 1);
 			cc_sethide(false);
 			cc_setontimer("script1519($int0)");

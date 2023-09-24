@@ -1,7 +1,7 @@
 // 1519
 [clientscript,script1519](int $comsubid0)
 def_int $int1 = 0;
-if (cc_find(interface_620:23, $comsubid0) = ^true) {
+if (cc_find(shop_template:main_stock, $comsubid0) = ^true) {
 	if (calc(clientclock % 50) > 25) {
 		cc_settrans(0);
 		if (calc(clientclock % 50) = 26) {

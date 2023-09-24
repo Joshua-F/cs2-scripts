@@ -27,8 +27,8 @@ cc_setposition(calc(if_getwidth($component0) - 16), 0, ^setpos_abs_left, ^setpos
 cc_setsize(16, if_getheight($component0), ^setsize_abs, ^setsize_abs);
 cc_setgraphic($graphic5);
 cc_settiling(false);
-cc_setonmouseover("script1351($component0, $comsubid17, $graphic6)");
-cc_setonmouseleave("script1352($component0, $comsubid17, $graphic5)");
+cc_setonmouseover("dropdownbox_mouseoverarrow($component0, $comsubid17, $graphic6)");
+cc_setonmouseleave("dropdownbox_mouseoutarrow($component0, $comsubid17, $graphic5)");
 def_int $comsubid18 = if_getnextsubid($component0);
 cc_setonclick("script1170($component1, $graphic7, $component2, $component3, $component0, $colour8, $colour9, $graphic10, $comsubid18, $comsubid17, $graphic11, $graphic12, $graphic13, $graphic14, $graphic15, $graphic16)");
 cc_create($component0, ^iftype_text, $comsubid18);
@@ -44,8 +44,8 @@ if (getwindowmode = ^windowmode_fullscreen) {
 }
 $int19, $int20 = fullscreen_getmode($windowmode21);
 cc_settext("<tostring($int19)> x <tostring($int20)>");
-cc_setonmouseover("script1353($component0, $comsubid18, $colour9)");
-cc_setonmouseleave("script1354($component0, $comsubid18, $colour8)");
+cc_setonmouseover("dropdownbox_mouseoverelement($component0, $comsubid18, $colour9)");
+cc_setonmouseleave("dropdownbox_mouseoutelement($component0, $comsubid18, $colour8)");
 cc_setonclick("script1170($component1, $graphic7, $component2, $component3, $component0, $colour8, $colour9, $graphic10, $comsubid18, $comsubid17, $graphic11, $graphic12, $graphic13, $graphic14, $graphic15, $graphic16)");
 cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc(if_getwidth($component0) - 22), if_getheight($component0), ^setsize_abs, ^setsize_abs);

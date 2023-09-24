@@ -1,0 +1,114 @@
+// 1387
+[proc,side_if_open](int $int0)
+if (getwindowmode >= ^windowmode_resizable) {
+	switch_int ($int0) {
+		case 0 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone0);
+			if_sethide(false, toplevel_fullscreen:side0);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 1 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone1);
+			if_sethide(false, toplevel_fullscreen:side1);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 2 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone2);
+			if_sethide(false, toplevel_fullscreen:side2);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 3 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone3);
+			if_sethide(false, toplevel_fullscreen:side3);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 4 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone4);
+			if_sethide(false, toplevel_fullscreen:side4);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 5 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone5);
+			if_sethide(false, toplevel_fullscreen:side5);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 6 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone6);
+			if_sethide(false, toplevel_fullscreen:side6);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 7 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone7);
+			if_sethide(false, toplevel_fullscreen:side7);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 8 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone8);
+			if_sethide(false, toplevel_fullscreen:side8);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 9 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone9);
+			if_sethide(false, toplevel_fullscreen:side9);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 10 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone10);
+			if_sethide(false, toplevel_fullscreen:side10);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 11 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone11);
+			if_sethide(false, toplevel_fullscreen:side11);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 12 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone12);
+			if_sethide(false, toplevel_fullscreen:side12);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 13 :
+			if_setgraphic("side_stone_highlights,4", toplevel_fullscreen:stone13);
+			if_sethide(false, toplevel_fullscreen:side13);
+			if_sethide(false, toplevel_fullscreen:side_border);
+		case 99 :
+			if_setgraphic("fullscreen_logout_button,2", toplevel_fullscreen:logoutbutton);
+			if_sethide(false, toplevel_fullscreen:side99);
+			if_sethide(false, toplevel_fullscreen:side_border);
+	}
+} else {
+	switch_int ($int0) {
+		case 0 :
+			if_setgraphic("side_stone_highlights,0", toplevel:stone0);
+			if_sethide(false, toplevel:side0);
+		case 1 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone1);
+			if_sethide(false, toplevel:side1);
+		case 2 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone2);
+			if_sethide(false, toplevel:side2);
+		case 3 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone3);
+			if_sethide(false, toplevel:side3);
+		case 4 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone4);
+			if_sethide(false, toplevel:side4);
+		case 5 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone5);
+			if_sethide(false, toplevel:side5);
+		case 6 :
+			if_setgraphic("side_stone_highlights,1", toplevel:stone6);
+			if_sethide(false, toplevel:side6);
+		case 7 :
+			if_setgraphic("side_stone_highlights,2", toplevel:stone7);
+			if_sethide(false, toplevel:side7);
+		case 8 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone8);
+			if_sethide(false, toplevel:side8);
+		case 9 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone9);
+			if_sethide(false, toplevel:side9);
+		case 10 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone10);
+			if_sethide(false, toplevel:side10);
+		case 11 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone11);
+			if_sethide(false, toplevel:side11);
+		case 12 :
+			if_setgraphic("side_stone_highlights,4", toplevel:stone12);
+			if_sethide(false, toplevel:side12);
+		case 13 :
+			if_setgraphic("side_stone_highlights,3", toplevel:stone13);
+			if_sethide(false, toplevel:side13);
+		case 99 :
+			if_setgraphic("fullscreen_logout_button,2", toplevel:logoutbutton);
+			if_sethide(false, toplevel:side99);
+	}
+}

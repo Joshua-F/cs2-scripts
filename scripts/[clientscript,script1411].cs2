@@ -1,8 +1,8 @@
 // 1411
 [clientscript,script1411]
 def_int $int0 = 10;
-if_sethide(false, interface_274:5);
-if_setposition($int0, 10, ^setpos_abs_left, ^setpos_abs_top, interface_274:5);
+if_sethide(false, questjournal_v2:tutorial);
+if_setposition($int0, 10, ^setpos_abs_left, ^setpos_abs_top, questjournal_v2:tutorial);
 $int0 = calc($int0 + 20);
 def_component $componentarray0(calc(130 + 1));
 def_int $int1 = 0;
@@ -10,8 +10,8 @@ while ($int1 <= 17) {
 	$componentarray0($int1) = enum(int, component, enum_208, $int1);
 	$int1 = calc($int1 + 1);
 }
-~script62(componentarray0, 0, 17, enum_504);
-if_setposition(10, $int0, ^setpos_abs_left, ^setpos_abs_top, interface_274:12);
+~quicksort_enum(componentarray0, 0, 17, enum_504);
+if_setposition(10, $int0, ^setpos_abs_left, ^setpos_abs_top, questjournal_v2:com_12);
 $int0 = calc($int0 + 20);
 $int1 = 0;
 while ($int1 <= 17) {
@@ -24,9 +24,9 @@ while ($int1 <= 130) {
 	$componentarray0($int1) = enum(int, component, enum_209, $int1);
 	$int1 = calc($int1 + 1);
 }
-~script62(componentarray0, 0, 130, enum_504);
+~quicksort_enum(componentarray0, 0, 130, enum_504);
 $int0 = calc($int0 + 5);
-if_setposition(10, $int0, ^setpos_abs_left, ^setpos_abs_top, interface_274:31);
+if_setposition(10, $int0, ^setpos_abs_left, ^setpos_abs_top, questjournal_v2:com_31);
 $int0 = calc($int0 + 20);
 $int1 = 0;
 while ($int1 <= 130) {
@@ -34,8 +34,8 @@ while ($int1 <= 130) {
 	$int1 = calc($int1 + 1);
 	$int0 = calc($int0 + 15);
 }
-if_setscrollsize(167, $int0, interface_274:1);
-~script31(interface_274:4, interface_274:1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if (cc_find(interface_274:4, 1) = ^true) {
-	~script37(interface_274:4, interface_274:1, %varcint10, true);
+if_setscrollsize(167, $int0, questjournal_v2:com_1);
+~scrollbar_vertical(questjournal_v2:scrollbar, questjournal_v2:com_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find(questjournal_v2:scrollbar, 1) = ^true) {
+	~scrollbar_vertical_doscroll(questjournal_v2:scrollbar, questjournal_v2:com_1, %varcint10, true);
 }

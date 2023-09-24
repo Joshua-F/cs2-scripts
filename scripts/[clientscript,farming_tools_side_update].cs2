@@ -1,0 +1,49 @@
+// 1292
+[clientscript,farming_tools_side_update](component $component0, namedobj $namedobj1, component $component2, component $component3)
+if ($namedobj1 = secateurs_5329) {
+	if (inv_total(inv, magic_secateurs_7409) > 0) {
+		$namedobj1 = magic_secateurs_7409;
+	}
+} else if ($namedobj1 = watering_can_6797) {
+	if (inv_total(inv, watering_can_8_5340) > 0) {
+		$namedobj1 = watering_can_8_5340;
+		if_setopbase("<col=ff9040>Watering Can (8)", $component0);
+	} else if (inv_total(inv, watering_can_7_5339) > 0) {
+		$namedobj1 = watering_can_7_5339;
+		if_setopbase("<col=ff9040>Watering Can (7)", $component0);
+	} else if (inv_total(inv, watering_can_6_5338) > 0) {
+		$namedobj1 = watering_can_6_5338;
+		if_setopbase("<col=ff9040>Watering Can (6)", $component0);
+	} else if (inv_total(inv, watering_can_5_5337) > 0) {
+		$namedobj1 = watering_can_5_5337;
+		if_setopbase("<col=ff9040>Watering Can (5)", $component0);
+	} else if (inv_total(inv, watering_can_4_5336) > 0) {
+		$namedobj1 = watering_can_4_5336;
+		if_setopbase("<col=ff9040>Watering Can (4)", $component0);
+	} else if (inv_total(inv, watering_can_3_5335) > 0) {
+		$namedobj1 = watering_can_3_5335;
+		if_setopbase("<col=ff9040>Watering Can (3)", $component0);
+	} else if (inv_total(inv, watering_can_2_5334) > 0) {
+		$namedobj1 = watering_can_2_5334;
+		if_setopbase("<col=ff9040>Watering Can (2)", $component0);
+	} else if (inv_total(inv, watering_can_1_5333) > 0) {
+		$namedobj1 = watering_can_1_5333;
+		if_setopbase("<col=ff9040>Watering Can (1)", $component0);
+	} else if (inv_total(inv, watering_can_5331) > 0) {
+		$namedobj1 = watering_can_5331;
+		if_setopbase("<col=ff9040>Watering Can (0)", $component0);
+	} else {
+		if_setopbase("<col=ff9040>Watering Can", $component0);
+	}
+}
+if_setobject($namedobj1, -1, $component0);
+if_setoutline(1, $component0);
+def_int $int4 = ~script1293($namedobj1);
+if_settext(tostring($int4), $component3);
+if ($int4 > 0) {
+	if_setcolour(0x7dd764, $component2);
+	if_setcolour(0x7dd764, $component3);
+} else {
+	if_setcolour(0x872300, $component2);
+	if_setcolour(0x872300, $component3);
+}

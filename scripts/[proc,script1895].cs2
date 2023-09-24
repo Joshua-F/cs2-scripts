@@ -9,8 +9,8 @@ if ($component1 ! null) {
 	} else {
 		if_setgraphic(null, $component2);
 		if_setonclick("script1896(0, $int0)", $component1);
-		if_setonmouseover("script45($component3, $colour13)", $component1);
-		if_setonmouseleave("script45($component3, $colour14)", $component1);
+		if_setonmouseover("text_colour_swapper($component3, $colour13)", $component1);
+		if_setonmouseleave("text_colour_swapper($component3, $colour14)", $component1);
 	}
 	if_setcolour($colour14, $component3);
 }
@@ -23,8 +23,8 @@ if ($component4 ! null) {
 	} else {
 		if_setgraphic(null, $component5);
 		if_setonclick("script1896(^windowmode_fixed, $int0)", $component4);
-		if_setonmouseover("script45($component6, $colour13)", $component4);
-		if_setonmouseleave("script45($component6, $colour14)", $component4);
+		if_setonmouseover("text_colour_swapper($component6, $colour13)", $component4);
+		if_setonmouseleave("text_colour_swapper($component6, $colour14)", $component4);
 	}
 	if_setcolour($colour14, $component6);
 }
@@ -37,8 +37,8 @@ if ($component7 ! null) {
 	} else {
 		if_setgraphic(null, $component8);
 		if_setonclick("script1896(^windowmode_resizable, $int0)", $component7);
-		if_setonmouseover("script45($component9, $colour13)", $component7);
-		if_setonmouseleave("script45($component9, $colour14)", $component7);
+		if_setonmouseover("text_colour_swapper($component9, $colour13)", $component7);
+		if_setonmouseleave("text_colour_swapper($component9, $colour14)", $component7);
 	}
 	if_setcolour($colour14, $component9);
 }
@@ -68,8 +68,8 @@ if ($component10 ! null) {
 	} else {
 		if_setgraphic(null, $component11);
 		if_setonclick("script1896(^windowmode_fullscreen, $int0)", $component10);
-		if_setonmouseover("script45($component12, $colour13)", $component10);
-		if_setonmouseleave("script45($component12, $colour14)", $component10);
+		if_setonmouseover("text_colour_swapper($component12, $colour13)", $component10);
+		if_setonmouseleave("text_colour_swapper($component12, $colour14)", $component10);
 	}
 	if_setcolour($colour14, $component12);
 }

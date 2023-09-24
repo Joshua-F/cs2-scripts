@@ -1,0 +1,14 @@
+// 1269
+[proc,options_aid]
+def_string $string0 = "null";
+if (%var427 = 0) {
+	if_setgraphic("options_boxes,0", options:optaid);
+	$string0 = "Accept aid<br>(currently off)";
+	if_setonmouserepeat("addtooltip(event_com, options:options_tooltip, $string0, 25, 180)", options:optaid);
+	%varcint2 = 0;
+} else if (%var427 = 1) {
+	if_setgraphic("options_boxes,1", options:optaid);
+	$string0 = "Accept aid<br>(currently on)";
+	if_setonmouserepeat("addtooltip(event_com, options:options_tooltip, $string0, 25, 180)", options:optaid);
+	%varcint2 = 0;
+}

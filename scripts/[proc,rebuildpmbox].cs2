@@ -1,0 +1,60 @@
+// 89
+[proc,rebuildpmbox]
+def_int $int0 = 0;
+def_component $component1 = null;
+def_int $int2 = 0;
+def_int $int3 = 0;
+if (reboottimer > 0) {
+	$int2 = calc(reboottimer / 50 % 60);
+	$int3 = calc(reboottimer / 3000);
+	if ($int2 < 10) {
+		if_settext("<col=ffff00>System update in: <tostring($int3)>:0<tostring($int2)>", pmchat:pm5);
+	} else {
+		if_settext("<col=ffff00>System update in: <tostring($int3)>:<tostring($int2)>", pmchat:pm5);
+	}
+	$int0 = 1;
+}
+def_int $int4 = 0;
+def_int $chattype5 = ^chattype_gamemessage;
+if (%var287 = 1 & (getwindowmode < ^windowmode_resizable | %varcint41 ! -1)) {
+	while ($int4 < 100 & $int0 < 5) {
+		if (~pm_filtertest($int4) = 1) {
+			$component1 = enum(int, component, enum_580, $int0);
+			$chattype5 = chat_gethistorytype($int4);
+			switch_int ($chattype5) {
+				case ^chattype_privatechat, ^chattype_modprivatechat, 18 :
+					if_settext("From <chat_gethistoryname($int4)>: <chat_gethistorymessage($int4)>", $component1);
+				case ^chattype_loginlogoutnotification :
+					if_settext(chat_gethistorymessage($int4), $component1);
+				case ^chattype_privatechatout, 19 :
+					if_settext("To <chat_gethistoryname($int4)>: <chat_gethistorymessage($int4)>", $component1);
+			}
+			if_clearops($component1);
+			switch_int ($chattype5) {
+				case ^chattype_privatechat, ^chattype_loginlogoutnotification, ^chattype_privatechatout, ^chattype_modprivatechat, 18, 19 :
+					if_setopbase("<col=ffffff><chat_gethistoryname($int4)>", $component1);
+					if (compare(removetags(chat_playername), removetags(chat_gethistoryname($int4))) ! 0) {
+						if (friend_test(chat_gethistoryname($int4)) = true) {
+							if (map_quickchat = false & _3328 = false) {
+								if_setop(8, "Message", $component1);
+							}
+						} else {
+							if_setop(8, "Add friend", $component1);
+							if_setop(9, "Add ignore", $component1);
+						}
+						if (staffmodlevel > 0 | playermod > ^false) {
+							if_setop(10, "Report abuse", $component1);
+						}
+					}
+			}
+			$int0 = calc($int0 + 1);
+		}
+		$int4 = calc($int4 + 1);
+	}
+}
+while ($int0 < 5) {
+	$component1 = enum(int, component, enum_580, $int0);
+	if_settext("", $component1);
+	if_clearops($component1);
+	$int0 = calc($int0 + 1);
+}

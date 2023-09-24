@@ -1,0 +1,11 @@
+// 1831
+[clientscript,clanwars_setup_food](int $int0)
+if (~clanwars_setup_clicktest($int0) = 0) {
+	return;
+}
+if (%varcint254 = false) {
+	%varcint254 = true;
+} else {
+	%varcint254 = false;
+}
+~clanwars_resynch_food;

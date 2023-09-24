@@ -1,0 +1,19 @@
+// 1432
+[proc,comlevel]()(int)
+def_int $int0 = calc(stat_base(attack) + stat_base(strength));
+def_int $int1 = calc(stat_base(ranged) * 3 / 2);
+def_int $int2 = calc(stat_base(magic) * 3 / 2);
+def_int $int3 = $int0;
+if ($int1 > $int3) {
+	$int3 = $int1;
+}
+if ($int2 > $int3) {
+	$int3 = $int2;
+}
+$int3 = calc($int3 * 13 / 10);
+if (map_members = ^true) {
+	$int3 = calc(($int3 + stat_base(defence) + stat_base(hitpoints) + stat_base(prayer) / 2 + stat_base(summoning) / 2) / 4);
+} else {
+	$int3 = calc(($int3 + stat_base(defence) + stat_base(hitpoints) + stat_base(prayer) / 2) / 4);
+}
+return($int3);

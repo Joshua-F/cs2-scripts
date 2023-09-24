@@ -12,5 +12,5 @@ if_setop(1, "View tab <tostring($int0)>", $component2);
 if_setop(2, "Collapse tab <tostring($int0)>", $component2);
 if_setonclick(null, $component2);
 def_string $string0 = "Click here to select tab <tostring($int0)>";
-if_setonmouserepeat("script38(event_com, interface_762:101, $string0, 25, 150)", $component2);
-if_setonmouseleave("script40(interface_762:101)", $component2);
+if_setonmouserepeat("addtooltip(event_com, bank_v2_main:tooltip, $string0, 25, 150)", $component2);
+if_setonmouseleave("deltooltip(bank_v2_main:tooltip)", $component2);

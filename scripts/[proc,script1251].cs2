@@ -6,7 +6,7 @@ if (spline_length(0) <= calc($int0 + 2)) {
 	if_settrans(255, $component3);
 	if_sethide(false, $component3);
 	if_setontimer("script1253($component3)", $component3);
-	if_setontimer("script1249($component1, $component2, $component3)", $component1);
+	if_setontimer("loginscreen_camera_timer($component1, $component2, $component3)", $component1);
 	if_setontradingposttransmit(null, $component1);
 	if (%varcint176 = 2) {
 		%varcint176 = calc(%varcint176 + 8 + 10 * (random(calc(13 - 1)) + 1));
@@ -16,4 +16,4 @@ if (spline_length(0) <= calc($int0 + 2)) {
 	%varcint177 = calc(clientclock + 30);
 	return;
 }
-if_setontradingposttransmit("script1250(calc($int0 + 1), $component1, $component2, $component3, $int4)", $component1);
+if_setontradingposttransmit("loginscreen_camfinished(calc($int0 + 1), $component1, $component2, $component3, $int4)", $component1);

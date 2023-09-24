@@ -1,0 +1,17 @@
+// 2052
+[proc,worldmap_setuptext](string $text0, int $width0, int $height1, int $x2, int $y3, int $colour4, string $string1, string $op2, coord $coord5)
+cc_sethide(false);
+cc_setsize($width0, $height1, ^setsize_abs, ^setsize_abs);
+cc_setposition($x2, $y3, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour($colour4);
+cc_settextfont(menu_font_small);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+cc_settext($text0);
+if ($coord5 ! null) {
+	cc_setopbase("<col=ff9040><$string1></col>");
+	cc_setop(1, $op2);
+	cc_setonop("worldmap_op(event_op, event_com, $coord5)");
+} else {
+	cc_setop(1, "");
+	cc_setonop(null);
+}

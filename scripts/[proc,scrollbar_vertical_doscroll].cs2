@@ -1,0 +1,39 @@
+// 37
+[proc,scrollbar_vertical_doscroll](component $component0, component $component1, int $int2, boolean $boolean3)
+def_int $int4 = calc(if_getscrollheight($component1) - if_getheight($component1));
+if ($int4 = 0) {
+	$int4 = 1;
+}
+if ($int2 < 0) {
+	$int2 = 0;
+}
+if ($int2 > $int4) {
+	$int2 = $int4;
+}
+if_setscrollpos(0, $int2, $component1);
+switch_component ($component1) {
+	case chatdefault:scrollarea :
+		%varcint7 = if_getscrolly($component1);
+	case questjournal_v2:com_1 :
+		%varcint10 = if_getscrolly($component1);
+	case friends2:com_2 :
+		%varcint9 = if_getscrolly($component1);
+	case stats:com_149 :
+		%varcint107 = if_getscrolly($component1);
+	case smithing_new:com_15 :
+		%varcint109 = if_getscrolly($component1);
+	case interface_735:text_layer :
+		%varcint121 = if_getscrolly($component1);
+	case bank_v2_main:com_73 :
+		~bank_v2_set_tab_scrollpos(%varbit4893, if_getscrolly($component1));
+}
+def_int $int5 = calc(if_getheight($component0) - 32 - cc_getheight);
+if ($boolean3 = true) {
+	cc_setposition(0, calc(16 + $int5 * $int2 / $int4), ^setpos_abs_left, ^setpos_abs_top);
+	if (.cc_find($component0, 2) = ^true) {
+		.cc_setposition(0, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if (.cc_find($component0, 3) = ^true) {
+		.cc_setposition(0, calc(cc_gety + cc_getheight - 5), ^setpos_abs_left, ^setpos_abs_top);
+	}
+}

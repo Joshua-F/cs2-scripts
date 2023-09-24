@@ -1,0 +1,9 @@
+// 957
+[clientscript,fairyrings_log_init](component $component0, component $component1, component $component2)
+if (%varbit4618 = 0) {
+	~fairyrings_log_sort($component0, $component1, 0);
+	if_setgraphic("graphic_1156", $component2);
+} else {
+	~fairyrings_log_sort($component0, $component1, 1);
+	if_setgraphic("graphic_1157", $component2);
+}

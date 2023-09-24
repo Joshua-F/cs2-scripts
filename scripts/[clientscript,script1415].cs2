@@ -4,7 +4,7 @@ def_int $size0 = 0;
 def_int $int1 = 0;
 def_int $int2 = 0;
 while ($size0 <= inv_size(inv)) {
-	cc_create(interface_323:5, ^iftype_graphic, $size0);
+	cc_create(interface_323:com_5, ^iftype_graphic, $size0);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(5 + 40 * $int1), calc(40 * $int2), ^setpos_abs_left, ^setpos_abs_top);
 	if (inv_getobj(inv, $size0) ! null) {

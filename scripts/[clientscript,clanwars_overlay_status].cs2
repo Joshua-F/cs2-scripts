@@ -1,0 +1,118 @@
+// 1787
+[clientscript,clanwars_overlay_status](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+def_string $text0 = "";
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+if (%varcint271 = 1) {
+	if_settext("<clan_getchatdisplayname>:", $component3);
+} else {
+	if_settext("This clan:", $component3);
+}
+if_settext(tostring(%varcint261), $component5);
+if_settext(tostring(%varcint262), $component11);
+if (%varbit5280 > 0) {
+	if (%varcint263 < 65535) {
+		if_settext(~tostring_spacer(%varcint263, ","), $component7);
+	} else {
+		if_settext("<col=ff0000>You rock!</col>", $component7);
+	}
+	if (%varcint264 < 65535) {
+		if_settext(~tostring_spacer(%varcint264, ","), $component13);
+	} else {
+		if_settext("<col=ff0000>They rock!</col>", $component13);
+	}
+	if_sethide(false, $component6);
+	if_sethide(false, $component12);
+	if_sethide(false, $component7);
+	if_sethide(false, $component13);
+	$int17 = 1;
+	if (%varbit5280 < 15) {
+		$text0 = "/ <~tostring_spacer(enum(int, int, enum_1605, %varbit5280), ",")>";
+		if_settext($text0, $component8);
+		if_settext($text0, $component14);
+		if_sethide(false, $component8);
+		if_sethide(false, $component14);
+		$int18 = 1;
+	} else {
+		if_sethide(true, $component8);
+		if_sethide(true, $component14);
+	}
+} else {
+	if_sethide(true, $component6);
+	if_sethide(true, $component12);
+	if_sethide(true, $component7);
+	if_sethide(true, $component13);
+	if_sethide(true, $component8);
+	if_sethide(true, $component14);
+}
+if (%varcint260 = 1) {
+	if_setontimer(null, $component16);
+	if (%varbit5281 > 0) {
+		if_settext("Time remaining:", $component15);
+		if (%varcint270 > 60) {
+			~script1791($component16);
+		} else if (%varcint270 > 1) {
+			if_settext("<tostring(%varcint270)> minutes", $component16);
+		} else if (%varcint270 = 1) {
+			if_settext("<col=ff0000>1 minute</col>", $component16);
+		} else {
+			if_settext("<col=ff0000>Not much!</col>", $component16);
+		}
+		if_sethide(false, $component15);
+		if_sethide(false, $component16);
+		$int19 = 1;
+	} else {
+		if_sethide(true, $component15);
+		if_sethide(true, $component16);
+	}
+} else {
+	if_settext("Countdown to battle:", $component15);
+	if (%varcint265 ! %varcint270) {
+		%varcint265 = %varcint270;
+		~script1790($component16);
+		if_setontimer("clanwars_overlay_status_timecounter($component16, clientclock, %varcint270)", $component16);
+	}
+	if_sethide(false, $component15);
+	if_sethide(false, $component16);
+	$int19 = 1;
+}
+def_int $int20 = parawidth(if_gettext($component3), 512, p11_full);
+def_int $int21 = parawidth(if_gettext($component9), 512, p11_full);
+$int20 = max(calc(parawidth(if_gettext($component4), 512, p11_full) + 10 + parawidth(if_gettext($component5), 512, p11_full)), $int20);
+$int21 = max(calc(parawidth(if_gettext($component10), 512, p11_full) + 10 + parawidth(if_gettext($component11), 512, p11_full)), $int21);
+def_int $int22 = calc(if_getheight($component3) + if_getheight($component4));
+if ($int17 = 1) {
+	$int20 = max(calc(parawidth(if_gettext($component6), 512, p11_full) + 10 + parawidth(if_gettext($component7), 512, p11_full)), $int20);
+	$int21 = max(calc(parawidth(if_gettext($component12), 512, p11_full) + 10 + parawidth(if_gettext($component13), 512, p11_full)), $int21);
+	$int22 = calc($int22 + if_getheight($component6));
+	if ($int18 = 1) {
+		$int20 = max(parawidth(if_gettext($component8), 512, p11_full), $int20);
+		$int21 = max(parawidth(if_gettext($component14), 512, p11_full), $int21);
+		$int22 = calc($int22 + if_getheight($component8));
+	}
+}
+def_int $int23 = calc($int20 + 10 + $int21);
+if ($int19 = 0) {
+	if_setsize(calc($int23 + 8), calc($int22 + 8), ^setsize_abs, ^setsize_abs, $component0);
+	if_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component1);
+	~script1788($int20, $component3, $component4, $component5, $component6, $component7, $component8, $int21, $component9, $component10, $component11, $component12, $component13, $component14, $int23);
+	if_setposition(calc(4 + $int20 + 5), 4, ^setpos_abs_left, ^setpos_abs_top, $component2);
+	if_setsize(0, $int22, ^setsize_abs, ^setsize_abs, $component2);
+	~clanwars_setup_createbox($component0, 0, 0, 0);
+	return;
+}
+def_int $int24 = $int22;
+$int22 = calc($int22 + 10 + if_getheight($component15) + if_getheight($component16));
+$int23 = max(parawidth(if_gettext($component15), 512, p11_full), $int23);
+$int23 = max(parawidth(if_gettext($component16), 512, p11_full), $int23);
+if_setsize(calc($int23 + 8), calc($int22 + 8), ^setsize_abs, ^setsize_abs, $component0);
+if_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component1);
+~script1788($int20, $component3, $component4, $component5, $component6, $component7, $component8, $int21, $component9, $component10, $component11, $component12, $component13, $component14, $int23);
+if_setposition(calc(4 + $int20 + ($int23 - ($int20 + $int21)) / 2), 4, ^setpos_abs_left, ^setpos_abs_top, $component2);
+if_setsize(0, $int24, ^setsize_abs, ^setsize_abs, $component2);
+if_setsize($int23, if_getheight($component15), ^setsize_abs, ^setsize_abs, $component15);
+if_setsize($int23, if_getheight($component16), ^setsize_abs, ^setsize_abs, $component16);
+if_setposition(4, calc(4 + $int24 + 10), ^setpos_abs_left, ^setpos_abs_top, $component15);
+if_setposition(4, calc(4 + $int24 + 10 + if_getheight($component15)), ^setpos_abs_left, ^setpos_abs_top, $component16);
+~clanwars_setup_createbox($component0, calc(4 + $int24 + 5), 0, 0);

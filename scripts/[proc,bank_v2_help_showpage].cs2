@@ -1,0 +1,28 @@
+// 1447
+[proc,bank_v2_help_showpage](int $int0)
+def_int $int1 = 0;
+def_component $component2 = enum(int, component, enum_1617, $int1);
+while ($component2 ! null) {
+	if ($int1 = $int0) {
+		if_sethide(false, $component2);
+	} else {
+		if_sethide(true, $component2);
+	}
+	$int1 = calc($int1 + 1);
+	$component2 = enum(int, component, enum_1617, $int1);
+}
+if ($int0 > 0) {
+	if_setonop("bank_v2_help_showpage(calc($int0 - 1))", bank_v2_help:button_back);
+	if_settrans(0, bank_v2_help:button_back);
+} else {
+	if_setonop(null, bank_v2_help:button_back);
+	if_settrans(200, bank_v2_help:button_back);
+}
+if ($int0 < calc($int1 - 1)) {
+	if_setonop("bank_v2_help_showpage(calc($int0 + 1))", bank_v2_help:button_next);
+	if_settrans(0, bank_v2_help:button_next);
+} else {
+	if_setonop(null, bank_v2_help:button_next);
+	if_settrans(200, bank_v2_help:button_next);
+}
+if_settext("Page <tostring(calc($int0 + 1))> of <tostring($int1)>", bank_v2_help:pagecount);

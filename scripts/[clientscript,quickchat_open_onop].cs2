@@ -1,0 +1,7 @@
+// 1049
+[clientscript,quickchat_open_onop](int $int0)
+if ($int0 = 1) {
+	~quickchat_open(0, "");
+} else if ($int0 = 2) {
+	~quickchat_open(2, "");
+}

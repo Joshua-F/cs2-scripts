@@ -1,0 +1,8 @@
+// 526
+[clientscript,assist_comp_sethide](boolean $boolean0, component $component1, component $component2)
+if_sethide($boolean0, $component1);
+if ($boolean0 = true) {
+	if_setfill(false, $component2);
+}
+~deltooltip_action(assister_interface:com_100);
+%varcint1 = 0;

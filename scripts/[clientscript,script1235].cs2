@@ -1,9 +1,9 @@
 // 1235
 [clientscript,script1235]
-if_sethide(true, interface_744:388);
-if_settext("Please wait...", interface_744:389);
-if_setonclick(null, interface_744:389);
-_5604(if_gettext(interface_744:394));
-if_settext("Usernames can be a maximum of 12 characters long and may contain letters, numbers and underscores. Note: first letters will be capitalised and underscores will be converted into spaces. For example, the username red_rooster would display in the game as Red Rooster.", interface_744:386);
-if_setcolour(0x461e00, interface_744:386);
-if_setontimer("script1236", interface_744:405);
+if_sethide(true, loginscreen:com_388);
+if_settext("Please wait...", loginscreen:com_389);
+if_setonclick(null, loginscreen:com_389);
+_5604(if_gettext(loginscreen:com_394));
+if_settext("Usernames can be a maximum of 12 characters long and may contain letters, numbers and underscores. Note: first letters will be capitalised and underscores will be converted into spaces. For example, the username red_rooster would display in the game as Red Rooster.", loginscreen:com_386);
+if_setcolour(0x461e00, loginscreen:com_386);
+if_setontimer("script1236", loginscreen:com_405);

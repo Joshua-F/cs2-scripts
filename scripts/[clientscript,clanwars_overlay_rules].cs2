@@ -1,0 +1,33 @@
+// 1792
+[clientscript,clanwars_overlay_rules](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5)
+if (%varbit5283 = 0) {
+	if_setcolour(0xff981f, $component3);
+	if_setcolour(0xff981f, $component4);
+	if_setgraphic("tex_brown", $component1);
+	if_settext("ITEMS ARE<br>SAFE", $component4);
+} else {
+	if_setcolour(^yellow, $component3);
+	if_setcolour(^yellow, $component4);
+	if_setgraphic("tex_red", $component1);
+	if_settext("ITEMS ARE<br>DROPPED", $component4);
+}
+if_settiling(true, $component1);
+def_int $int6 = parawidth(if_gettext($component3), 512, p11_full);
+$int6 = max(parawidth(if_gettext($component4), 512, p11_full), $int6);
+$int6 = calc($int6 + 6);
+def_int $int7 = 5;
+if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top, $component3);
+def_int $int8 = paraheight(if_gettext($component3), $int6, p11_full);
+$int8 = calc($int8 * 10 + 3);
+if_setsize($int6, $int8, ^setsize_abs, ^setsize_abs, $component3);
+$int7 = calc($int7 + $int8 - 1);
+if_setposition(calc(($int6 - if_getwidth($component2)) / 2), $int7, ^setpos_abs_left, ^setpos_abs_top, $component2);
+$int7 = calc($int7 + if_getheight($component2) - 1);
+if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top, $component4);
+def_int $int9 = paraheight(if_gettext($component4), $int6, p11_full);
+$int9 = calc($int9 * 10 + 3);
+if_setsize($int6, $int8, ^setsize_abs, ^setsize_abs, $component4);
+$int7 = calc($int7 + $int9 + 3);
+if_setsize($int6, $int7, ^setsize_abs, ^setsize_abs, $component0);
+if_setsize($int6, $int7, ^setsize_abs, ^setsize_abs, $component1);
+~clanwars_setup_createbox($component0, 0, 0, 0);

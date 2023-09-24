@@ -1,12 +1,12 @@
 // 808
 [clientscript,script808]
-if_sethide(false, interface_748:5);
-def_int $int0 = ~script807(hitpoints);
+if_sethide(false, topstat_hitpoints:com_5);
+def_int $int0 = ~topstat_calculate_percent(hitpoints);
 def_int $int1 = calc(clientclock % 32);
 if ($int0 > 25) {
 	%varcint615 = 0;
-	if (if_gettrans(interface_748:5) ! 0) {
-		if_settrans(0, interface_748:5);
+	if (if_gettrans(topstat_hitpoints:com_5) ! 0) {
+		if_settrans(0, topstat_hitpoints:com_5);
 	} else {
 		return;
 	}
@@ -20,12 +20,12 @@ if ($int0 > 25) {
 		}
 	}
 	if ($int1 < 8) {
-		if_settrans(0, interface_748:5);
+		if_settrans(0, topstat_hitpoints:com_5);
 	} else if ($int1 < 16) {
-		if_settrans(85, interface_748:5);
+		if_settrans(85, topstat_hitpoints:com_5);
 	} else if ($int1 < 24) {
-		if_settrans(255, interface_748:5);
+		if_settrans(255, topstat_hitpoints:com_5);
 	} else {
-		if_settrans(85, interface_748:5);
+		if_settrans(85, topstat_hitpoints:com_5);
 	}
 }

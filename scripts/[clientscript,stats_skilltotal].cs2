@@ -1,0 +1,3 @@
+// 544
+[clientscript,stats_skilltotal](component $component0)
+if_settext("Total level: <tostring(calc(stat_base(attack) + stat_base(strength) + stat_base(defence) + stat_base(ranged) + stat_base(prayer) + stat_base(magic) + stat_base(runecraft) + stat_base(construction) + stat_base(hitpoints) + stat_base(agility) + stat_base(herblore) + stat_base(thieving) + stat_base(crafting) + stat_base(fletching) + stat_base(slayer) + stat_base(hunter) + stat_base(mining) + stat_base(smithing) + stat_base(fishing) + stat_base(cooking) + stat_base(firemaking) + stat_base(woodcutting) + stat_base(farming) + stat_base(summoning)))>", $component0);

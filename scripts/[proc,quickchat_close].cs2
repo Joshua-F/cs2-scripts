@@ -1,0 +1,13 @@
+// 1054
+[proc,quickchat_close]
+if_sethide(false, chatdefault:chat);
+if_setonkey("chatdefault_onkey(event_keycode, event_keychar)", chatdefault:input);
+if_sethide(true, chatdefault:quickchat);
+def_int $int0 = 0;
+while (enum(int, component, enum_1550, $int0) ! null) {
+	if_setonkey(null, enum(int, component, enum_1550, $int0));
+	$int0 = calc($int0 + 1);
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	~subchanged;
+}

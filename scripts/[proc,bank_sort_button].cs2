@@ -1,0 +1,14 @@
+// 1490
+[proc,bank_sort_button]
+def_string $string0 = "";
+if (%var304 = 0) {
+	if_setgraphic("graphic_1431", bank_v2_main:bank_sort_button);
+	if_setgraphic("graphic_1425", bank_v2_main:bank_sort_icon);
+	$string0 = "Switch to insert items mode";
+} else {
+	if_setgraphic("graphic_1433", bank_v2_main:bank_sort_button);
+	if_setgraphic("graphic_1426", bank_v2_main:bank_sort_icon);
+	$string0 = "Switch to swap items mode";
+}
+if_setop(1, $string0, bank_v2_main:bank_sort_button);
+if_setonmouserepeat("addtooltip(event_com, bank_v2_main:tooltip, $string0, 25, 150)", bank_v2_main:bank_sort_button);

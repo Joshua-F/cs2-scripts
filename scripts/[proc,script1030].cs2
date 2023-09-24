@@ -1,9 +1,9 @@
 // 1030
 [proc,script1030](int $int0)
-if_sethide(true, interface_157:17);
-if_sethide(false, interface_157:35);
-cc_deleteall(interface_157:23);
-cc_deleteall(interface_157:25);
-if_setonclick("script1031", interface_157:30);
-if_settext("Safety Guide", interface_157:30);
-~script1033(enum(int, string, enum_1485, 0));
+if_sethide(true, quickchat_tutorial:pagecontrols);
+if_sethide(false, quickchat_tutorial:buttoncontrol);
+cc_deleteall(quickchat_tutorial:main);
+cc_deleteall(quickchat_tutorial:text);
+if_setonclick("script1031", quickchat_tutorial:button);
+if_settext("Safety Guide", quickchat_tutorial:button);
+~quickchat_tutorial_displaydata(enum(int, string, enum_1485, 0));

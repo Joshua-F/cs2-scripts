@@ -1,0 +1,73 @@
+// 1066
+[proc,quickchat_path_scroll](component $component0, int $int1)
+def_int $width2 = if_getwidth($component0);
+def_int $width3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+while (cc_find($component0, $int4) = ^true) {
+	$width3 = calc($width3 + cc_getwidth);
+	$int4 = calc($int4 + 1);
+}
+if ($width3 <= $width2) {
+	$int4 = 0;
+	$int5 = 0;
+	while (cc_find($component0, $int4) = ^true) {
+		cc_sethide(false);
+		cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
+		if (.cc_find(chatdefault:com_2, $int4) = ^true) {
+			.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+		}
+		$int5 = calc($int5 + cc_getwidth);
+		$int4 = calc($int4 + 1);
+	}
+	return;
+}
+cc_create($component0, ^iftype_text, calc($int1 + 1));
+cc_setcolour(^black);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext(" ... <img=2>");
+cc_settextshadow(false);
+cc_setsize(parawidth(" ... <img=2>", $width2, p12_full), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+$width3 = cc_getwidth;
+if (cc_find($component0, $int1) = ^true) {
+	$width3 = calc($width3 + cc_getwidth);
+}
+$int4 = 0;
+while ($int4 < $int1) {
+	if (cc_find($component0, $int4) = ^true) {
+		if (calc($width3 + cc_getwidth) <= $width2) {
+			cc_sethide(false);
+			$width3 = calc($width3 + cc_getwidth);
+		} else {
+			cc_sethide(true);
+		}
+	}
+	$int4 = calc($int4 + 1);
+}
+$int4 = 0;
+$int5 = 0;
+while ($int4 < $int1) {
+	if (cc_find($component0, $int4) = ^true) {
+		if (cc_gethide = false) {
+			cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
+			if (.cc_find(chatdefault:com_2, $int4) = ^true) {
+				.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			}
+			$int5 = calc($int5 + cc_getwidth);
+		} else if (.cc_find(chatdefault:com_2, $int4) = ^true) {
+			.cc_sethide(true);
+		}
+	}
+	$int4 = calc($int4 + 1);
+}
+if (cc_find($component0, calc($int1 + 1)) = ^true) {
+	cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
+	$int5 = calc($int5 + cc_getwidth);
+}
+if (cc_find($component0, $int1) = ^true) {
+	cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
+	if (.cc_find(chatdefault:com_2, $int4) = ^true) {
+		.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	}
+}

@@ -1,6 +1,0 @@
-// 36
-[clientscript,script36](component $component0, component $component1, int $mousey2)
-def_int $int3 = calc(if_getscrolly($component1) + $mousey2 * 45);
-if (cc_find($component0, 1) = ^true) {
-	~script37($component0, $component1, $int3, true);
-}

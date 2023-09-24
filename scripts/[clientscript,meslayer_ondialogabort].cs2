@@ -1,0 +1,11 @@
+// 138
+[clientscript,meslayer_ondialogabort]
+if (%varcint5 = 7 | %varcint5 = 8 | %varcint5 = 9) {
+	if_sethide(true, chattop:mes_layer);
+	if_sethide(true, chattop:mes_layer_large);
+	if_sethide(false, chattop:mes_layer_hide);
+	%varcint5 = 0;
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	~subchanged;
+}

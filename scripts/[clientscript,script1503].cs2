@@ -3,13 +3,13 @@
 def_int $int1 = 0;
 def_obj $obj2 = null;
 if (clientclock > $clock0) {
-	if_setontimer(null, interface_763:0);
-	while (cc_find(interface_763:0, $int1) = ^true) {
+	if_setontimer(null, bank_v2_side:inventory_layer);
+	while (cc_find(bank_v2_side:inventory_layer, $int1) = ^true) {
 		$obj2 = cc_getinvobject;
 		if ($obj2 ! null) {
 			if (oc_param($obj2, param_59) ! 1) {
 				cc_settrans(200);
-				~script1735(interface_763:0, $int1);
+				~script1735(bank_v2_side:inventory_layer, $int1);
 			}
 			$int1 = 100;
 		}

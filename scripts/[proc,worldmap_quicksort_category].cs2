@@ -1,0 +1,30 @@
+// 1843
+[proc,worldmap_quicksort_category](intarray $intarray0, int $int1, int $int2)
+def_int $index3 = calc(($int1 + $int2) / 2);
+def_int $int4 = $intarray0($index3);
+$intarray0($index3) = $intarray0($int2);
+$intarray0($int2) = $int4;
+def_int $int5 = $int1;
+def_int $int6 = $int1;
+def_int $int7 = 0;
+def_struct $struct8 = null;
+def_struct $struct9 = null;
+while ($int6 < $int2) {
+	$struct8 = enum(int, struct, enum_1805, $intarray0($int6));
+	$struct9 = enum(int, struct, enum_1805, $int4);
+	if (struct_param($struct8, param_597) < struct_param($struct9, param_597)) {
+		$int7 = $intarray0($int6);
+		$intarray0($int6) = $intarray0($int5);
+		$intarray0($int5) = $int7;
+		$int5 = calc($int5 + 1);
+	}
+	$int6 = calc($int6 + 1);
+}
+$intarray0($int2) = $intarray0($int5);
+$intarray0($int5) = $int4;
+if ($int1 < calc($int5 - 1)) {
+	~worldmap_quicksort_category(intarray0, $int1, calc($int5 - 1));
+}
+if (calc($int5 + 1) < $int2) {
+	~worldmap_quicksort_category(intarray0, calc($int5 + 1), $int2);
+}

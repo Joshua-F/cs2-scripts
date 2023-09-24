@@ -2,17 +2,17 @@
 [clientscript,script562]
 def_int $int0 = 0;
 def_int $int1 = 0;
-$int0 = if_getscrolly(interface_631:103);
-$int1 = if_getscrolly(interface_631:104);
-if_setscrollsize(0, 15, interface_631:103);
-~script31(interface_631:98, interface_631:103, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script157(interface_631:98, interface_631:103, $int0, 1);
-if_setscrollsize(0, 15, interface_631:104);
-~script31(interface_631:99, interface_631:104, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script157(interface_631:99, interface_631:104, $int1, 1);
+$int0 = if_getscrolly(interface_631:com_103);
+$int1 = if_getscrolly(interface_631:com_104);
+if_setscrollsize(0, 15, interface_631:com_103);
+~scrollbar_vertical(interface_631:com_98, interface_631:com_103, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_ondrag_doscroll(interface_631:com_98, interface_631:com_103, $int0, 1);
+if_setscrollsize(0, 15, interface_631:com_104);
+~scrollbar_vertical(interface_631:com_99, interface_631:com_104, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_ondrag_doscroll(interface_631:com_99, interface_631:com_104, $int1, 1);
 if (map_members = ^true) {
-	if_setscrollsize(0, 221, interface_631:56);
-	~script31(interface_631:54, interface_631:56, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if_setscrollsize(0, 221, interface_631:com_56);
+	~scrollbar_vertical(interface_631:com_54, interface_631:com_56, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 } else {
-	if_sethide(true, interface_631:55);
+	if_sethide(true, interface_631:com_55);
 }

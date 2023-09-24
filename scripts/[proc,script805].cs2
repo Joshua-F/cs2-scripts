@@ -1,6 +1,6 @@
 // 805
 [proc,script805](stat $stat0)(int)
-def_int $int1 = ~script807($stat0);
+def_int $int1 = ~topstat_calculate_percent($stat0);
 def_int $colour2 = 0x555555;
 if ($int1 > 75) {
 	$colour2 = ^green;

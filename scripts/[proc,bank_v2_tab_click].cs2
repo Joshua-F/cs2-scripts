@@ -1,0 +1,39 @@
+// 1500
+[proc,bank_v2_tab_click](int $int0, int $int1)
+if (~bank_v2_get_tab_size($int1) > 0) {
+	if ($int0 = 1) {
+		if (%varcint188 = 1) {
+			~script1474;
+		}
+		~bank_v2_hide_all;
+		~bank_v2_show_range(~bank_v2_get_tab_range($int1));
+		~bank_v2_tab_highlight($int1);
+		if_setscrollpos(0, ~bank_v2_get_tab_scrollpos($int1), bank_v2_main:com_73);
+		~scrollbar_ondrag_doscroll(bank_v2_main:scrollbar, bank_v2_main:com_73, if_getscrolly(bank_v2_main:com_73), 1);
+	} else if ($int0 = 2) {
+		if ($int1 = 2) {
+			%varcint204 = %varcint205;
+		}
+		if ($int1 <= 3) {
+			%varcint205 = %varcint206;
+		}
+		if ($int1 <= 4) {
+			%varcint206 = %varcint207;
+		}
+		if ($int1 <= 5) {
+			%varcint207 = %varcint208;
+		}
+		if ($int1 <= 6) {
+			%varcint208 = %varcint209;
+		}
+		if ($int1 <= 7) {
+			%varcint209 = %varcint210;
+		}
+		if ($int1 <= 8) {
+			%varcint210 = %varcint211;
+		}
+		if ($int1 <= 9) {
+			%varcint211 = 0;
+		}
+	}
+}

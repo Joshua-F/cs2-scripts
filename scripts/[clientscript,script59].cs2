@@ -4,7 +4,7 @@ def_int $int1 = enum(component, int, enum_1638, $component0);
 def_int $int2 = enum(component, int, enum_1637, $component0);
 def_int $int3 = 0;
 if ($int2 = -1) {
-	$int3 = ~script56($int1);
+	$int3 = ~area_task_complete($int1);
 } else {
 	$int3 = ~script1535($int1, $int2);
 }

@@ -1,0 +1,13 @@
+// 1264
+[proc,options_mouse]
+def_string $string0 = "null";
+if (%var170 = 0) {
+	if_setgraphic("options_boxes,1", options:optmouse);
+	$string0 = "Mouse buttons<br>(currently 2)";
+	if_setonmouserepeat("addtooltip(event_com, options:options_tooltip, $string0, 25, 180)", options:optmouse);
+} else if (%var170 = 1) {
+	if_setgraphic("options_boxes,0", options:optmouse);
+	$string0 = "Mouse buttons<br>(currently 1)";
+	if_setonmouserepeat("addtooltip(event_com, options:options_tooltip, $string0, 25, 180)", options:optmouse);
+}
+%varcint2 = 0;

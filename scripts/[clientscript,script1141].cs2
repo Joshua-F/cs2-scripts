@@ -2,8 +2,8 @@
 [clientscript,script1141]
 if (~script1431 = 1) {
 	if (getwindowmode < ^windowmode_resizable) {
-		if_setontimer("script1175", interface_548:6);
+		if_setontimer("script1175", toplevel:com_6);
 	} else {
-		if_setontimer("script1175", interface_746:19);
+		if_setontimer("script1175", toplevel_fullscreen:com_19);
 	}
 }

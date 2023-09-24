@@ -1,0 +1,28 @@
+// 965
+[clientscript,fairyrings_rotate](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+~fairyrings_rotate_component($component0, %varcint122);
+~fairyrings_rotate_component($component1, %varcint122);
+~fairyrings_rotate_component($component2, %varcint122);
+~fairyrings_rotate_component($component3, %varcint122);
+~fairyrings_rotate_component($component4, %varcint122);
+~fairyrings_rotate_component($component5, %varcint123);
+~fairyrings_rotate_component($component6, %varcint123);
+~fairyrings_rotate_component($component7, %varcint123);
+~fairyrings_rotate_component($component8, %varcint123);
+~fairyrings_rotate_component($component9, %varcint123);
+~fairyrings_rotate_component($component10, %varcint124);
+~fairyrings_rotate_component($component11, %varcint124);
+~fairyrings_rotate_component($component12, %varcint124);
+~fairyrings_rotate_component($component13, %varcint124);
+~fairyrings_rotate_component($component14, %varcint124);
+if (%varcint125 < clientclock) {
+	if_sethide(false, $component15);
+	if_sethide(true, $component16);
+} else {
+	if (%varcint156 <= clientclock & %varcint157 = 1) {
+		sound_synth(synth_2871, 1, 0);
+		%varcint156 = calc(clientclock + 10);
+	}
+	if_sethide(true, $component15);
+	if_sethide(false, $component16);
+}

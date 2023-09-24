@@ -6,6 +6,6 @@ if (%varbit4111 = 0) {
 }
 %varbit4111 = calc(%varbit4111 - 1);
 def_int $y0 = calc((15 - %varbit4111) * 6);
-if_setposition(0, $y0, ^setpos_abs_left, ^setpos_abs_top, interface_624:19);
-if_settext(tostring(%varbit4111), interface_624:72);
+if_setposition(0, $y0, ^setpos_abs_left, ^setpos_abs_top, interface_624:com_19);
+if_settext(tostring(%varbit4111), interface_624:com_72);
 sound_synth(synth_4026, 1, 0);

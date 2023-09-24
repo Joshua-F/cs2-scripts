@@ -1,0 +1,125 @@
+// 19
+[proc,magic_runecount](obj $obj0)(int)
+def_int $int1 = 0;
+if ($obj0 = air_rune_556) {
+	if (inv_total(worn, staff_of_air_1381) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, air_battlestaff_1397) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_air_staff_1405) > 0) {
+		return(99999999);
+	}
+	$int1 = calc(inv_total(inv, air_rune_556) + ~inv_total_available(inv, smoke_rune_4697) + ~inv_total_available(inv, mist_rune_4695) + ~inv_total_available(inv, dust_rune_4696));
+	if (%varbit4540 = 2 | %varbit4540 = 3 | %varbit5493 ! 0) {
+		$int1 = calc($int1 + inv_total(inv, elemental_rune_12850));
+	}
+	return($int1);
+}
+if ($obj0 = water_rune_555) {
+	if (inv_total(worn, staff_of_water_1383) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, water_battlestaff_1395) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_water_staff_1403) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mud_battlestaff_6562) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_mud_staff_6563) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, steam_battlestaff_11736) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_steam_staff_11738) > 0) {
+		return(99999999);
+	}
+	$int1 = calc(inv_total(inv, water_rune_555) + ~inv_total_available(inv, steam_rune_4694) + ~inv_total_available(inv, mist_rune_4695) + ~inv_total_available(inv, mud_rune_4698));
+	if (%varbit4540 = 2 | %varbit4540 = 3 | %varbit5493 ! 0) {
+		$int1 = calc($int1 + inv_total(inv, elemental_rune_12850));
+	}
+	return($int1);
+}
+if ($obj0 = earth_rune_557) {
+	if (inv_total(worn, staff_of_earth_1385) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, earth_battlestaff_1399) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_earth_staff_1407) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, lava_battlestaff_3053) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_lava_staff_3054) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mud_battlestaff_6562) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_mud_staff_6563) > 0) {
+		return(99999999);
+	}
+	$int1 = calc(inv_total(inv, earth_rune_557) + ~inv_total_available(inv, dust_rune_4696) + ~inv_total_available(inv, lava_rune_4699) + ~inv_total_available(inv, mud_rune_4698));
+	if (%varbit4540 = 2 | %varbit4540 = 3 | %varbit5493 ! 0) {
+		$int1 = calc($int1 + inv_total(inv, elemental_rune_12850));
+	}
+	return($int1);
+}
+if ($obj0 = fire_rune_554) {
+	if (inv_total(worn, staff_of_fire_1387) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, fire_battlestaff_1393) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_fire_staff_1401) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, lava_battlestaff_3053) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_lava_staff_3054) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, steam_battlestaff_11736) > 0) {
+		return(99999999);
+	}
+	if (~inv_total_available(worn, mystic_steam_staff_11738) > 0) {
+		return(99999999);
+	}
+	$int1 = calc(inv_total(inv, fire_rune_554) + ~inv_total_available(inv, steam_rune_4694) + ~inv_total_available(inv, smoke_rune_4697) + ~inv_total_available(inv, lava_rune_4699));
+	if (%varbit4540 = 2 | %varbit4540 = 3 | %varbit5493 ! 0) {
+		$int1 = calc($int1 + inv_total(inv, elemental_rune_12850));
+	}
+	return($int1);
+}
+if ($obj0 = obj_8843) {
+	return(calc(~inv_total_available(worn, guthix_staff_2416) + ~inv_total_available(worn, void_knight_mace_8841)));
+}
+if ($obj0 = ibans_staff_1409 | $obj0 = slayers_staff_4170 | $obj0 = saradomin_staff_2415 | $obj0 = zamorak_staff_2417) {
+	return(~inv_total_available(worn, $obj0));
+}
+if ($obj0 = zuriels_staff_13867) {
+	if (~inv_total_available(worn, zuriels_staff_deg_13869) > 0) {
+		return(~inv_total_available(worn, zuriels_staff_deg_13869));
+	}
+	if (~inv_total_available(worn, corrupt_zuriels_staff_13941) > 0) {
+		return(~inv_total_available(worn, corrupt_zuriels_staff_13941));
+	}
+	if (~inv_total_available(worn, corrupt_zuriels_staff_deg_13943) > 0) {
+		return(~inv_total_available(worn, corrupt_zuriels_staff_deg_13943));
+	}
+	return(~inv_total_available(worn, $obj0));
+}
+if ((%varbit4540 = 2 | %varbit4540 = 3 | %varbit5493 ! 0) & ($obj0 = body_rune_559 | $obj0 = mind_rune_558 | $obj0 = cosmic_rune_564 | $obj0 = chaos_rune_562 | $obj0 = nature_rune_561 | $obj0 = death_rune_560 | $obj0 = law_rune_563 | $obj0 = soul_rune_566 | $obj0 = blood_rune_565 | $obj0 = astral_rune_9075)) {
+	return(calc(~inv_total_available(inv, $obj0) + ~inv_total_available(inv, catalytic_rune_12851)));
+}
+return(~inv_total_available(inv, $obj0));

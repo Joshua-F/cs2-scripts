@@ -1,0 +1,25 @@
+// 1052
+[proc,quickchat_respond](int $int0, string $username0, chatphrase $chatphrase1)
+if ($chatphrase1 = null | chatphrase_getautoresponsecount($chatphrase1) = 0) {
+	return;
+}
+%varcint126 = $int0;
+%varcstring27 = $username0;
+%varcint127 = 1;
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setgraphic("chat_background", chattop:chat_graphic);
+	if_setalpha(false, chattop:chat_graphic);
+	if_sethide(false, chattop:chat_graphic);
+	if_sethide(false, chattop:chat_border);
+}
+if_sethide(true, chatdefault:chat);
+if_setonkey(null, chatdefault:input);
+if_sethide(false, chatdefault:quickchat);
+if_sethide(true, chatdefault:com_7);
+if_sethide(true, chatdefault:com_9);
+if_sethide(true, chatdefault:com_13);
+if_sethide(false, chatdefault:quickchat_menu);
+if_sethide(false, chatdefault:com_1);
+if_sethide(true, chatdefault:quickchat_title);
+if_setscrollpos(0, 0, chatdefault:quickchat_menu);
+~quickchat_response_add(chatdefault:com_1, $chatphrase1);

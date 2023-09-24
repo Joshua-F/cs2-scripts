@@ -1,0 +1,8 @@
+// 678
+[clientscript,partyroom_interface_setup]
+~scrollbar_vertical(interface_647:scrollbar_left, interface_647:chest_inv_layer, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollpos(0, 0, interface_647:scrollbar_left);
+~scrollbar_ondrag_doscroll(interface_647:scrollbar_left, interface_647:chest_inv_layer, 0, 1);
+~scrollbar_vertical(interface_647:scrollbar_right, interface_647:drop_inv_layer, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollpos(0, 0, interface_647:scrollbar_right);
+~scrollbar_ondrag_doscroll(interface_647:scrollbar_right, interface_647:drop_inv_layer, 0, 1);

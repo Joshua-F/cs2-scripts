@@ -1,6 +1,6 @@
 // 1763
 [clientscript,script1763](int $int0)
-$int0 = calc($int0 + if_getwidth(interface_742:35) / 2);
+$int0 = calc($int0 + if_getwidth(graphics_options:com_35) / 2);
 if ($int0 <= 23) {
 	detail_brightness(1);
 } else if ($int0 <= 53) {

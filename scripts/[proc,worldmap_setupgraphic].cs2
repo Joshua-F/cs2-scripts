@@ -1,0 +1,30 @@
+// 2049
+[proc,worldmap_setupgraphic](graphic $graphic0, int $width1, int $height2, int $x3, int $y4, int $angle5, boolean $boolean6, boolean $boolean7, boolean $boolean8, int $int9, string $string0, string $op1, coord $coord10)
+cc_sethide(false);
+cc_setsize($width1, $height2, ^setsize_abs, ^setsize_abs);
+cc_setposition($x3, $y4, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_set2dangle($angle5);
+cc_settiling($boolean6);
+cc_sethflip($boolean7);
+cc_setvflip($boolean8);
+cc_setgraphic($graphic0);
+def_int $int11 = 0;
+def_int $int12 = 0;
+if ($int9 = 1) {
+	cc_setalpha(true);
+	$int11 = calc(clientclock % 50);
+	$int12 = calc(50 / 2);
+	if ($int11 <= $int12) {
+		cc_settrans(calc(255 - scale($int11, $int12, 255)));
+	} else {
+		cc_settrans(scale(calc($int11 - $int12), $int12, 255));
+	}
+}
+if ($coord10 ! null) {
+	cc_setopbase("<col=ff9040><$string0></col>");
+	cc_setop(1, $op1);
+	cc_setonop("worldmap_op(event_op, event_com, $coord10)");
+} else {
+	cc_setop(1, "");
+	cc_setonop(null);
+}

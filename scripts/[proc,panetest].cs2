@@ -1,0 +1,43 @@
+// 193
+[proc,panetest](int $int0)(int)
+if (%varcint41 = 0) {
+	return(1);
+}
+def_int $chattype1 = chat_gethistorytype($int0);
+if ($chattype1 = null) {
+	return(0);
+}
+switch_int (%varcint41) {
+	case 1 :
+		if ($chattype1 = ^chattype_gamemessage) {
+			return(1);
+		}
+	case 2 :
+		if ($chattype1 = ^chattype_modchat | $chattype1 = ^chattype_publicchat | $chattype1 = 17) {
+			return(1);
+		}
+	case 3 :
+		switch_int ($chattype1) {
+			case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_loginlogoutnotification, 18, 19, ^chattype_modprivatechat :
+				return(1);
+		}
+	case 4 :
+		switch_int ($chattype1) {
+			case ^chattype_friendschat, ^chattype_friendschatnotification, 16, 20 :
+				return(1);
+		}
+	case 5 :
+		switch_int ($chattype1) {
+			case 4, 8, 12, 14, 15, 21 :
+				return(1);
+			case default :
+				if (~partnercheck($int0) = 1) {
+					return(1);
+				}
+		}
+	case 6 :
+		if ($chattype1 = 10 | $chattype1 = 13) {
+			return(1);
+		}
+}
+return(0);

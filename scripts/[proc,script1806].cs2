@@ -1,6 +1,6 @@
 // 1806
 [proc,script1806](string $string0)
-~script1548(12);
+~meslayer_close(12);
 $string0 = lowercase(removetags($string0));
 def_int $index0 = string_indexof_string($string0, "_", 0);
 def_int $length1 = string_length($string0);
@@ -37,5 +37,5 @@ if (string_length(%varcstring38) > 0) {
 } else {
 	mes("Caller feature disabled.");
 }
-~script1809(interface_265:22, interface_265:24, interface_265:25);
-~script1809(interface_789:14, interface_789:16, interface_789:17);
+~script1809(clanwars_overlay:com_22, clanwars_overlay:com_24, clanwars_overlay:com_25);
+~script1809(clanwars_ffa_overlay:com_14, clanwars_ffa_overlay:com_16, clanwars_ffa_overlay:com_17);

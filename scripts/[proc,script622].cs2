@@ -1,17 +1,17 @@
 // 622
 [proc,script622]
 if (%var1118 = 1) {
-	if_sethide(false, interface_105:16);
-	if_sethide(false, interface_105:126);
-	if_sethide(false, interface_105:156);
-	if_sethide(false, interface_105:192);
-	if_sethide(false, interface_105:197);
-	if_sethide(false, interface_105:200);
+	if_sethide(false, stockmarket:com_16);
+	if_sethide(false, stockmarket:offerlayer);
+	if_sethide(false, stockmarket:com_156);
+	if_sethide(false, stockmarket:buylayer);
+	if_sethide(false, stockmarket:selllayer);
+	if_sethide(false, stockmarket:com_200);
 } else {
-	if_sethide(true, interface_105:16);
-	if_sethide(true, interface_105:126);
-	if_sethide(true, interface_105:156);
-	if_sethide(true, interface_105:192);
-	if_sethide(true, interface_105:197);
-	if_sethide(true, interface_105:200);
+	if_sethide(true, stockmarket:com_16);
+	if_sethide(true, stockmarket:offerlayer);
+	if_sethide(true, stockmarket:com_156);
+	if_sethide(true, stockmarket:buylayer);
+	if_sethide(true, stockmarket:selllayer);
+	if_sethide(true, stockmarket:com_200);
 }

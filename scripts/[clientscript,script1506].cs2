@@ -1,8 +1,8 @@
 // 1506
 [clientscript,script1506](graphic $graphic0)
-if_setsize(455, 93, ^setsize_abs, ^setsize_abs, interface_769:1);
-if_setsize(455, 93, ^setsize_abs, ^setsize_abs, interface_769:2);
-if_setposition(45, 20, ^setpos_abs_left, ^setpos_abs_top, interface_769:1);
-if_setposition(45, 20, ^setpos_abs_left, ^setpos_abs_top, interface_769:2);
-if_sethide(false, interface_769:3);
-if_setgraphic($graphic0, interface_769:3);
+if_setsize(455, 93, ^setsize_abs, ^setsize_abs, tutorial2_text:textbox);
+if_setsize(455, 93, ^setsize_abs, ^setsize_abs, tutorial2_text:textbox2);
+if_setposition(45, 20, ^setpos_abs_left, ^setpos_abs_top, tutorial2_text:textbox);
+if_setposition(45, 20, ^setpos_abs_left, ^setpos_abs_top, tutorial2_text:textbox2);
+if_sethide(false, tutorial2_text:com_3);
+if_setgraphic($graphic0, tutorial2_text:com_3);

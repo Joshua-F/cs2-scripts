@@ -1,0 +1,6 @@
+// 123
+[clientscript,friend_init]
+if_settext("Friends List - RuneScape <tostring(map_world)>", friends2:friends_title);
+if_setonfriendtransmit("friend_transmit", friends2:com_2);
+~friend_update;
+~scrollbar_vertical(friends2:com_1, friends2:com_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

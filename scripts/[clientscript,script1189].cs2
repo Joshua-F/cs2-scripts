@@ -1,13 +1,13 @@
 // 1189
 [clientscript,script1189](int $int0, component $component1)
-def_int $windowmode2 = ~script1345($int0, $component1);
+def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
 if ($windowmode2 = 0) {
 	_6003(false);
 } else {
 	_6003(true);
 }
 if (_6103 = false & getwindowmode >= ^windowmode_fixed) {
-	if_settext("Roofs<br>(in-game only)", interface_744:68);
+	if_settext("Roofs<br>(in-game only)", loginscreen:com_68);
 } else {
-	if_settext("Remove roofs", interface_744:68);
+	if_settext("Remove roofs", loginscreen:com_68);
 }

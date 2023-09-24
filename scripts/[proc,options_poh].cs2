@@ -1,0 +1,6 @@
+// 1272
+[proc,options_poh]
+def_string $string0 = "null";
+$string0 = "House options";
+if_setonmouserepeat("addtooltip(event_com, options:options_tooltip, $string0, 25, 180)", options:houseoptions);
+%varcint2 = 0;

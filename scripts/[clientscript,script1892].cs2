@@ -7,7 +7,7 @@ if (%varcint183 <= 0) {
 }
 def_int $int0 = calc(%varcint183 / 50 + 1);
 if ($int0 = 1) {
-	if_settext("Reverting in 1 second...", interface_744:240);
+	if_settext("Reverting in 1 second...", loginscreen:windowmode_confirm_countdown_text);
 } else {
-	if_settext("Reverting in <tostring($int0)> seconds...", interface_744:240);
+	if_settext("Reverting in <tostring($int0)> seconds...", loginscreen:windowmode_confirm_countdown_text);
 }

@@ -1,7 +1,7 @@
 // 1883
 [clientscript,script1883](int $world0, int $int1)
 if ($world0 < 1) {
-	if_settext("That's an invalid world number (<tostring($world0)>).", interface_744:217);
+	if_settext("That's an invalid world number (<tostring($world0)>).", loginscreen:com_217);
 	return;
 }
 def_int $world2 = 0;
@@ -12,9 +12,9 @@ if ($int1 < 24) {
 		~script1857(0);
 		%varcint545 = 0;
 		if (_5420 = true) {
-			if_settext("<col=7f0000>Your changes cannot be saved because</col><br><col=7f0000>you are using the unsigned client.</col>", interface_744:217);
+			if_settext("<col=7f0000>Your changes cannot be saved because</col><br><col=7f0000>you are using the unsigned client.</col>", loginscreen:com_217);
 		} else {
-			if_settext("World <tostring($world0)> has been removed from your favourites.", interface_744:217);
+			if_settext("World <tostring($world0)> has been removed from your favourites.", loginscreen:com_217);
 		}
 		~script1299;
 		return;
@@ -24,24 +24,24 @@ if ($int1 < 24) {
 		~script1858(0);
 		%varcint546 = 0;
 		if (_5420 = true) {
-			if_settext("<col=7f0000>Your changes cannot be saved because</col><br><col=7f0000>you are using the unsigned client.</col>", interface_744:217);
+			if_settext("<col=7f0000>Your changes cannot be saved because</col><br><col=7f0000>you are using the unsigned client.</col>", loginscreen:com_217);
 		} else {
-			if_settext("World <tostring($world0)> has been removed from your favourites.", interface_744:217);
+			if_settext("World <tostring($world0)> has been removed from your favourites.", loginscreen:com_217);
 		}
 		~script1299;
 		return;
 	}
 	if ($world2 > 0) {
 		if ($world3 > 0) {
-			if_settext("<col=7f0000>Please delete one of your existing favourites before setting more.</col>", interface_744:217);
+			if_settext("<col=7f0000>Please delete one of your existing favourites before setting more.</col>", loginscreen:com_217);
 			return;
 		}
 		~script1858($world0);
 		%varcint546 = 0;
 		if (_5420 = true) {
-			if_settext("<col=7f0000>Your changes cannot be saved because</col><br><col=7f0000>you are using the unsigned client.</col>", interface_744:217);
+			if_settext("<col=7f0000>Your changes cannot be saved because</col><br><col=7f0000>you are using the unsigned client.</col>", loginscreen:com_217);
 		} else {
-			if_settext("World <tostring($world0)> has been added to your favourites.", interface_744:217);
+			if_settext("World <tostring($world0)> has been added to your favourites.", loginscreen:com_217);
 		}
 		~script1299;
 		return;
@@ -49,9 +49,9 @@ if ($int1 < 24) {
 	~script1857($world0);
 	%varcint545 = 0;
 	if (_5420 = true) {
-		if_settext("<col=7f0000>Your changes cannot be saved because</col><br><col=7f0000>you are using the unsigned client.</col>", interface_744:217);
+		if_settext("<col=7f0000>Your changes cannot be saved because</col><br><col=7f0000>you are using the unsigned client.</col>", loginscreen:com_217);
 	} else {
-		if_settext("World <tostring($world0)> has been added to your favourites.", interface_744:217);
+		if_settext("World <tostring($world0)> has been added to your favourites.", loginscreen:com_217);
 	}
 	~script1299;
 	return;
@@ -63,14 +63,14 @@ def_string $string1 = "";
 def_int $int6 = 0;
 $int4, $string0, $int5, $string1, $int6 = worldlist_specific($world0);
 if ($int6 = -1) {
-	if_settext("World <tostring($world0)> is currently offline.<br>Please choose a different one.", interface_744:217);
+	if_settext("World <tostring($world0)> is currently offline.<br>Please choose a different one.", loginscreen:com_217);
 	~script1874;
 	return;
 }
 if (worldlist_switch($world0) = true) {
 	~script1874;
-	~script1174(interface_744:226);
+	~loginscreen_setactivemenu(loginscreen:com_226);
 	return;
 }
-if_settext("Sorry, we couldn't contact World <tostring($world0)>.<br>Please choose a different one.", interface_744:217);
+if_settext("Sorry, we couldn't contact World <tostring($world0)>.<br>Please choose a different one.", loginscreen:com_217);
 ~script1874;

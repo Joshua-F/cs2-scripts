@@ -4,47 +4,47 @@ def_npc $npc1 = enum(int, npc, enum_1630, $int0);
 switch_npc ($npc1) {
 	case ranged_tutor_7951 :
 		if (%varbit4926 = 50) {
-			return(1, interface_765:1);
+			return(1, tutorial2_switch_task:box1);
 		}
-		return(0, interface_765:1);
+		return(0, tutorial2_switch_task:box1);
 	case fishing_tutor_7955 :
 		if (%varbit4927 = 20) {
-			return(1, interface_765:3);
+			return(1, tutorial2_switch_task:box2);
 		}
-		return(0, interface_765:3);
+		return(0, tutorial2_switch_task:box2);
 	case cooking_tutor_7953 :
-		if (compare(if_gettext(interface_765:4), "remove") = 0 | %varbit4928 = 25) {
-			return(1, interface_765:4);
+		if (compare(if_gettext(tutorial2_switch_task:box3), "remove") = 0 | %varbit4928 = 25) {
+			return(1, tutorial2_switch_task:box3);
 		}
-		return(0, interface_765:4);
+		return(0, tutorial2_switch_task:box3);
 	case magic_tutor_7952 :
-		if (compare(if_gettext(interface_765:5), "remove") = 0 | %varbit4929 = 25) {
-			return(1, interface_765:5);
+		if (compare(if_gettext(tutorial2_switch_task:box4), "remove") = 0 | %varbit4929 = 25) {
+			return(1, tutorial2_switch_task:box4);
 		}
-		return(0, interface_765:5);
+		return(0, tutorial2_switch_task:box4);
 	case prayer_tutor_7957 :
 		return(1, null);
 	case bank_tutor_7961 :
 		if (%varbit4931 = 30) {
-			return(1, interface_765:6);
+			return(1, tutorial2_switch_task:box6);
 		}
-		return(0, interface_765:6);
+		return(0, tutorial2_switch_task:box6);
 	case mining_tutor_7956 :
 		return(1, null);
 	case smithing_tutor_7959, smelting_tutor_7958 :
 		return(1, null);
 	case woodcutting_tutor_7960 :
 		if (%varbit4935 = 15) {
-			return(1, interface_765:7);
+			return(1, tutorial2_switch_task:box9);
 		}
-		return(0, interface_765:7);
+		return(0, tutorial2_switch_task:box9);
 	case shopkeeper_7967 :
-		if (compare(if_gettext(interface_765:8), "remove") = 0 | %varbit4936 = 20) {
-			return(1, interface_765:8);
+		if (compare(if_gettext(tutorial2_switch_task:box10), "remove") = 0 | %varbit4936 = 20) {
+			return(1, tutorial2_switch_task:box10);
 		}
-		return(0, interface_765:8);
+		return(0, tutorial2_switch_task:box10);
 	case hans_0 :
-		return(1, interface_765:9);
+		return(1, tutorial2_switch_task:more);
 	case default :
-		return(1, interface_765:9);
+		return(1, tutorial2_switch_task:more);
 }

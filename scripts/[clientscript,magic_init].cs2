@@ -1,0 +1,15 @@
+// 6
+[clientscript,magic_init](component $component0, component $component1, graphic $graphic2, graphic $graphic3, int $int4, obj $obj5, int $int6, obj $obj7, int $int8, obj $obj9, int $int10, obj $obj11, int $int12, string $string0, string $string1)
+if (map_members = ^false & ($component0 = magic_zaros:teleport_home | $component0 = magic_lunar:home_teleport)) {
+	$string0 = "Lumbridge Home Teleport";
+}
+if_setopbase("<col=00ff00><$string0>", $component0);
+~magic_updateicon($component0, $graphic2, $graphic3, $int4, $obj5, $int6, $obj7, $int8, $obj9, $int10, $obj11, $int12);
+if_setonmouserepeat("magic_addtooltip($component0, $component1, $int4, $string0, $string1, $obj5, $int6, $obj7, $int8, $obj9, $int10, $obj11, $int12)", $component0);
+if_setonmouseleave("magic_deltooltip($component1)", $component0);
+if (if_gettargetmask($component0) ! 0) {
+	if_setontargetenter("magic_entertargetmode($component0)", $component0);
+	if_setontargetleave("magic_leavetargetmode($component0)", $component0);
+}
+if_setoninvtransmit("magic_updateicon($component0, $graphic2, $graphic3, $int4, $obj5, $int6, $obj7, $int8, $obj9, $int10, $obj11, $int12){inv}", $component0);
+if_setonstattransmit("magic_updateicon($component0, $graphic2, $graphic3, $int4, $obj5, $int6, $obj7, $int8, $obj9, $int10, $obj11, $int12){magic}", $component0);

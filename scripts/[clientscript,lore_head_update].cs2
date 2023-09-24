@@ -1,0 +1,38 @@
+// 751
+[clientscript,lore_head_update]
+def_seq $seq0 = null;
+def_string $string0 = "";
+if (%var1174 ! null) {
+	$string0 = enum(npc, string, enum_1279, %var1174);
+	if_setnpchead(%var1174, lore_stats_side:lore_chathead);
+} else if (enum(obj, npc, enum_1320, %var448) ! pikkupstix_multi_6988) {
+	%var1174 = enum(obj, npc, enum_1320, %var448);
+	$string0 = enum(npc, string, enum_1279, %var1174);
+	if_setnpchead(%var1174, lore_stats_side:lore_chathead);
+}
+if (compare($string0, "Animal") = 0) {
+	if_settext(oc_name(%var448), lore_stats_side:lore_name);
+} else {
+	if_settext($string0, lore_stats_side:lore_name);
+}
+if (%varbit4282 > 50) {
+	%varbit4282 = calc(%varbit4282 - 50);
+	$seq0 = enum(int, seq, enum_1275, %varbit4282);
+	if_setmodelanim($seq0, lore_stats_side:lore_chathead);
+} else {
+	$seq0 = enum(int, seq, enum_1276, %varbit4282);
+	if_setmodelanim($seq0, lore_stats_side:lore_chathead);
+}
+if (enum(obj, obj, enum_1283, %var448) ! bones_526) {
+	if_sethide(true, lore_stats_side:lore_pets);
+	if (enum(npc, component, enum_1282, %var1174) ! lore_stats_side:com_47) {
+		if_sethide(false, lore_stats_side:com_63);
+		if_sethide(false, lore_stats_side:com_61);
+		if_sethide(false, enum(npc, component, enum_1282, %var1174));
+	} else {
+		if_sethide(true, lore_stats_side:com_61);
+	}
+} else {
+	if_sethide(false, lore_stats_side:lore_pets);
+	if_sethide(true, lore_stats_side:com_61);
+}

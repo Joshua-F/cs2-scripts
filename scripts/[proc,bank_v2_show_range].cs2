@@ -1,0 +1,16 @@
+// 1457
+[proc,bank_v2_show_range](int $int0, int $int1)
+def_int $int2 = 0;
+def_int $int3 = $int0;
+while ($int3 < $int1) {
+	if (cc_find(bank_v2_main:com_73, $int3) = ^true) {
+		cc_setposition(calc(44 * ($int2 % 10) + 8), calc($int2 / 10 * 44 + 5), ^setpos_abs_left, ^setpos_abs_top);
+		cc_sethide(false);
+		$int2 = calc($int2 + 1);
+	}
+	$int3 = calc($int3 + 1);
+}
+~script1464;
+if_sethide(false, bank_v2_main:com_64);
+if_setposition(calc(8 - 2), calc(5 - 2), ^setpos_abs_left, ^setpos_abs_top, bank_v2_main:com_64);
+~bank_v2_build_scrollbar($int2);

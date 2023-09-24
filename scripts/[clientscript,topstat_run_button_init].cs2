@@ -1,0 +1,8 @@
+// 1315
+[clientscript,topstat_run_button_init](component $component0)
+%varcint214 = ~int_to_bool(%var173);
+if_setonvartransmit("topstat_run_button_vartransmit($component0){var173}", $component0);
+if_setonmouserepeat("topstat_run_button_mouseover($component0)", $component0);
+if_setonmouseleave("topstat_run_button_update($component0)", $component0);
+if_setonop("topstat_run_button_op($component0, event_op)", $component0);
+~topstat_run_button_update($component0);

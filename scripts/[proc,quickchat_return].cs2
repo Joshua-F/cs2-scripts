@@ -1,0 +1,36 @@
+// 1068
+[proc,quickchat_return](component $component0, int $int1)
+def_int $int2 = calc($int1 + 1);
+def_component $component3 = enum(int, component, enum_1550, $int2);
+def_component $component4 = enum(int, component, enum_1551, $int2);
+while ($component3 ! null) {
+	cc_deleteall($component3);
+	cc_deleteall($component4);
+	if_sethide(true, $component3);
+	if_setonkey(null, $component3);
+	$component3 = enum(int, component, enum_1550, $int2);
+	$component4 = enum(int, component, enum_1551, $int2);
+	$int2 = calc($int2 + 1);
+}
+$int2 = calc($int1 + 1);
+while (cc_find($component0, $int2) = ^true) {
+	cc_delete;
+	if (.cc_find(chatdefault:com_2, $int2) = ^true) {
+		.cc_delete;
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$component3 = enum(int, component, enum_1550, $int1);
+$component4 = enum(int, component, enum_1551, $int1);
+while (cc_find($component3, $int2) = ^true) {
+	cc_setonmouseover("script1082($int1, $component4, $int2)");
+	cc_setonmouseleave("script1083($int1, $component4, $int2)");
+	if (.cc_find($component4, $int2) = ^true) {
+		.cc_sethide(true);
+	}
+	$int2 = calc($int2 + 1);
+}
+%varcint128 = -1;
+~quickchat_menu_scroll($int1);
+~quickchat_path_scroll($component0, $int1);

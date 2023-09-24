@@ -12,4 +12,4 @@ if ($int2 > $int3) {
 }
 def_int $int4 = calc(stat_base(defence) + stat_base(hitpoints) + stat_base(prayer) / 2);
 def_int $int5 = calc(($int3 * 13 / 10 + $int4) / 4);
-if_settext("Combat Lvl: <tostring($int5)>", interface_664:27);
+if_settext("Combat Lvl: <tostring($int5)>", interface_664:com_27);

@@ -1,0 +1,18 @@
+// 1454
+[clientscript,bank_v2_bankitemdrag](int $mousey0)
+def_int $int1 = 0;
+def_int $mousey2 = calc(if_gety(bank_v2_main:com_73) - 25);
+def_int $mousey3 = calc(if_gety(bank_v2_main:com_73) + if_getheight(bank_v2_main:com_73) - 16);
+if ($mousey0 > $mousey2 & $mousey0 < calc($mousey2 + 25)) {
+	$int1 = -4;
+} else if ($mousey0 < $mousey3 & $mousey0 > calc($mousey3 - 30)) {
+	$int1 = 4;
+} else {
+	%varcint189 = 0;
+	return;
+}
+%varcint189 = calc(%varcint189 + 1);
+if (%varcint189 > 5) {
+	~bank_v2_set_tab_scrollpos(%varbit4893, calc(if_getscrolly(bank_v2_main:com_73) + $int1));
+	~scrollbar_ondrag_doscroll(bank_v2_main:scrollbar, bank_v2_main:com_73, calc(if_getscrolly(bank_v2_main:com_73) + $int1), 1);
+}

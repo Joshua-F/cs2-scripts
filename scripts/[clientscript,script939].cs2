@@ -13,15 +13,15 @@ if (%varcint185 = 0) {
 		%varcint185 = calc(%varcint185 + 1);
 		~script940(%varcint185, 1);
 	}
-	~script928(%varbit4538, "Lapsang", "Souchong", interface_727:27);
+	~script928(%varbit4538, "Lapsang", "Souchong", carpet_draughts:text_1);
 	return;
 }
 %varcint185 = %varbit4538;
 ~script940(%varbit4538, 0);
 if (%varbit4538 = calc(91 - 1)) {
 	sound_jingle(110, 6656);
-	if_settext("Souchong wins!", interface_727:27);
-	if_settext("Opponent has no pieces left.", interface_727:28);
+	if_settext("Souchong wins!", carpet_draughts:text_1);
+	if_settext("Opponent has no pieces left.", carpet_draughts:text_2);
 	return;
 }
-~script928(%varbit4538, "Lapsang", "Souchong", interface_727:27);
+~script928(%varbit4538, "Lapsang", "Souchong", carpet_draughts:text_1);

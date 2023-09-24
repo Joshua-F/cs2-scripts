@@ -31,19 +31,19 @@ while ($int5 < 78) {
 	$obj11 = enum(int, obj, enum_1188, $int6);
 	if ($obj11 = scroll_12421) {
 		~script760($obj11, $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
-	} else if (~script768($obj11, $obj10) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj10)) {
+	} else if (~lore_magic_pouch_checker($obj11, $obj10) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj10)) {
 		~script760($obj11, $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
 	} else {
 		~script760(enum(int, obj, enum_1184, $int6), $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
 	}
 	if ($obj11 = scroll_12421) {
-		cc_setonmouserepeat("script782(event_comsubid, interface_673:22, interface_673:15, $int12, $string5)");
-		cc_setonmouseleave("script40(interface_673:22)");
+		cc_setonmouserepeat("lore_blanktip(event_comsubid, interface_673:com_22, interface_673:scroll_icons, $int12, $string5)");
+		cc_setonmouseleave("deltooltip(interface_673:com_22)");
 	} else {
 		$string5 = enum(obj, string, enum_1187, $obj11);
 		$int12 = enum(obj, int, enum_1185, $obj10);
-		cc_setonmouserepeat("script770(event_comsubid, interface_673:22, interface_673:15, $int12, $string5, $obj10, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1)");
-		cc_setonmouseleave("script40(interface_673:22)");
+		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_673:com_22, interface_673:scroll_icons, $int12, $string5, $obj10, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1)");
+		cc_setonmouseleave("deltooltip(interface_673:com_22)");
 	}
 	$int5 = calc($int5 + 1);
 	$int6 = calc($int6 + 1);
@@ -58,7 +58,7 @@ while ($int7 < 78) {
 	cc_settext(enum(obj, string, enum_1187, $obj11));
 	cc_settextfont(b12_full);
 	cc_setsize(90, 50, ^setsize_abs, ^setsize_abs);
-	if (~script768($obj11, $obj10) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj10)) {
+	if (~lore_magic_pouch_checker($obj11, $obj10) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj10)) {
 		cc_setcolour(0xffff64);
 	} else {
 		cc_setcolour(0x111111);

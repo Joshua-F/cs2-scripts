@@ -1,0 +1,49 @@
+// 1443
+[clientscript,tog_update_interface]
+if_settext(tostring(%varbit455), tog_water_bowl:cow26);
+if (%varbit455 = 0) {
+	if_setmodel(null, tog_water_bowl:drip);
+} else if (%varbit455 = 1) {
+	if_setmodel(model_6545, tog_water_bowl:drip);
+} else if (%varbit455 < 4) {
+	if_setmodel(model_6547, tog_water_bowl:drip);
+} else if (%varbit455 < 7) {
+	if_setmodel(model_6548, tog_water_bowl:drip);
+} else if (%varbit455 < 11) {
+	if_setmodel(model_6549, tog_water_bowl:drip);
+} else if (%varbit455 < 16) {
+	if_setmodel(model_6550, tog_water_bowl:drip);
+} else if (%varbit455 < 22) {
+	if_setmodel(model_6551, tog_water_bowl:drip);
+} else if (%varbit455 < 29) {
+	if_setmodel(model_6552, tog_water_bowl:drip);
+} else if (%varbit455 < 37) {
+	if_setmodel(model_6553, tog_water_bowl:drip);
+} else if (%varbit455 < 46) {
+	if_setmodel(model_6554, tog_water_bowl:drip);
+} else {
+	if_setmodel(model_6546, tog_water_bowl:drip);
+}
+if (%varbit454 = 0) {
+	if_setmodel(null, tog_water_bowl:time_bar);
+} else if (%varbit454 = 1) {
+	if_setmodel(model_6557, tog_water_bowl:time_bar);
+} else if (%varbit454 = 2) {
+	if_setmodel(model_6559, tog_water_bowl:time_bar);
+} else if (%varbit454 = 3) {
+	if_setmodel(model_6560, tog_water_bowl:time_bar);
+} else if (%varbit454 = 4) {
+	if_setmodel(model_6561, tog_water_bowl:time_bar);
+} else if (%varbit454 = 5) {
+	if_setmodel(model_6562, tog_water_bowl:time_bar);
+} else if (%varbit454 = 6) {
+	if_setmodel(model_6563, tog_water_bowl:time_bar);
+} else if (%varbit454 = 7) {
+	if_setmodel(model_6564, tog_water_bowl:time_bar);
+} else if (%varbit454 = 8) {
+	if_setmodel(model_6565, tog_water_bowl:time_bar);
+} else if (%varbit454 = 9) {
+	if_setmodel(model_6566, tog_water_bowl:time_bar);
+} else {
+	if_setmodel(model_6558, tog_water_bowl:time_bar);
+}

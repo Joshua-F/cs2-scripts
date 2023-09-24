@@ -1,0 +1,26 @@
+// 1074
+[proc,quickchat_phrase_int](component $component0, chatphrase $chatphrase1, int $int2)
+switch_int (%varcint134) {
+	case 0 :
+		%varcint135 = $int2;
+	case 1 :
+		%varcint136 = $int2;
+	case 2 :
+		%varcint137 = $int2;
+	case 3 :
+		%varcint138 = $int2;
+	case 4 :
+		%varcint139 = $int2;
+	case 5 :
+		%varcint140 = $int2;
+	case 6 :
+		%varcint141 = $int2;
+	case 7 :
+		%varcint142 = $int2;
+	case 8 :
+		%varcint143 = $int2;
+	case 9 :
+		%varcint144 = $int2;
+}
+%varcint134 = calc(%varcint134 + 1);
+~quickchat_phrase_setup($component0, $chatphrase1);

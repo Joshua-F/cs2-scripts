@@ -1,0 +1,9 @@
+// 597
+[clientscript,stock_offercount_plus]
+def_string $text0 = "null";
+if (%varcint84 < ^max_32bit_int) {
+	%varcint84 = calc(%varcint84 + 1);
+	$text0 = ~tostring_spacer(%varcint84, ",");
+	if_settext($text0, stockmarket:offercount);
+	~script602;
+}

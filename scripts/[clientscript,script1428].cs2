@@ -4,7 +4,7 @@ if ($int0 ! 1) {
 	return;
 }
 if_setontimer(null, $component1);
-if_setonsubchange(null, interface_548:11);
+if_setonsubchange(null, toplevel:mainmodal);
 if (getwindowmode < ^windowmode_fullscreen) {
 	setdefaultwindowmode(getwindowmode);
 }

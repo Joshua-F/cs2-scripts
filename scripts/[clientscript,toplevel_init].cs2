@@ -1,0 +1,8 @@
+// 1433
+[clientscript,toplevel_init]
+if (getwindowmode >= ^windowmode_fixed) {
+	if_setonvarctransmit("toplevel_fovchange{varcint184}", toplevel_fullscreen:mainoverlay);
+	if_setonvarctransmit("toplevel_fovchange{varcint184}", toplevel:main);
+}
+if_setonvarctransmit("meslayer_varc_update{varcint5}", chattop:mes_layer);
+if_setonresize("window_resize", toplevel_fullscreen:maingame);

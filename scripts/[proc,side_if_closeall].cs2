@@ -1,0 +1,7 @@
+// 1306
+[proc,side_if_closeall]
+if (getwindowmode >= ^windowmode_resizable) {
+	~side_if_closeall_fullscreen;
+} else {
+	~side_if_closeall_windowed;
+}

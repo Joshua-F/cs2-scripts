@@ -1,0 +1,19 @@
+// 102
+[proc,meslayer_mode1](string $mes0)
+if (%varcint5 < 2) {
+	if (getwindowmode >= ^windowmode_resizable) {
+		if_sethide(false, toplevel_fullscreen:chattop);
+	}
+	if_sethide(false, chattop:mes_layer);
+	if_sethide(true, chattop:mes_layer_large);
+	if_sethide(true, chattop:mes_layer_hide);
+	if_settext($mes0, chattop:mes_text);
+	if_settext("Click here to continue", chattop:mes_text2);
+	%varcint5 = 1;
+	if_setonclick("meslayer_close", chattop:mes_layer);
+	if_setonkey(null, chattop:mes_text2);
+	if_setcolour(0x000080, chattop:mes_text2);
+	if_setonmouserepeat("text_colour_swapper(event_com, ^white)", chattop:mes_text2);
+	if_setonmouseleave("text_colour_swapper(event_com, 0x000080)", chattop:mes_text2);
+	~script1188;
+}

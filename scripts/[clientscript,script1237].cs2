@@ -1,12 +1,12 @@
 // 1237
 [clientscript,script1237]
 if (compare(%varcstring35, %varcstring36) ! 0) {
-	if_settext("The values in the `Password' and `Confirm Password' boxes are not the same.", interface_744:413);
-	if_setcolour(0x8c320a, interface_744:413);
+	if_settext("The values in the `Password' and `Confirm Password' boxes are not the same.", loginscreen:com_413);
+	if_setcolour(0x8c320a, loginscreen:com_413);
 	return;
 }
-if_sethide(true, interface_744:427);
-if_settext("Please wait...", interface_744:428);
-if_setonclick(null, interface_744:428);
+if_sethide(true, loginscreen:com_427);
+if_settext("Please wait...", loginscreen:com_428);
+if_setonclick(null, loginscreen:com_428);
 _5605(%varcstring34, %varcstring35, %varcint179, %varcint180, %varcint181, %varcint182);
-if_setontimer("script1238", interface_744:409);
+if_setontimer("script1238", loginscreen:com_409);

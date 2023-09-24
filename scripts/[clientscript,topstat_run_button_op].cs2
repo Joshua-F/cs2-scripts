@@ -1,0 +1,11 @@
+// 1534
+[clientscript,topstat_run_button_op](component $component0, int $opindex1)
+if ($opindex1 ! 1) {
+	return;
+}
+if (~bool_to_int(%varcint214) = 1) {
+	%varcint214 = false;
+} else {
+	%varcint214 = true;
+}
+~topstat_run_button_update($component0);

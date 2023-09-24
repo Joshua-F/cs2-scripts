@@ -1,0 +1,138 @@
+// 50
+[clientscript,topstat_prayer_button_update](component $component0, component $component1)
+if (~script51($component0) = 0) {
+	if (map_members = ^false & ($component0 = prayer:com_47 | $component0 = prayer:com_49 | $component0 = prayer:com_51 | $component0 = prayer:com_55 | $component0 = prayer:com_57 | $component0 = prayer:com_53)) {
+		mes("You need to be on a members' server to use this Prayer.");
+		return;
+	}
+	if (stat(prayer) = 0) {
+		sound_synth(synth_2673, 1, 0);
+		mes("You need to recharge your Prayer at an altar.");
+		return;
+	}
+	if ($component0 = prayer:com_7 & stat_base(prayer) < 4) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_9 & stat_base(prayer) < 7) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_11 & stat_base(prayer) < 8) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_13 & stat_base(prayer) < 9) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_15 & stat_base(prayer) < 10) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_17 & stat_base(prayer) < 13) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_19 & stat_base(prayer) < 16) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_21 & stat_base(prayer) < 19) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_23 & stat_base(prayer) < 22) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_25 & stat_base(prayer) < 25) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_27 & stat_base(prayer) < 26) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_29 & stat_base(prayer) < 27) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_31 & stat_base(prayer) < 28) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_33 & stat_base(prayer) < 31) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_35 & stat_base(prayer) < 34) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_37 & stat_base(prayer) < 37) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_39 & stat_base(prayer) < 40) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_41 & stat_base(prayer) < 43) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_43 & stat_base(prayer) < 44) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_45 & stat_base(prayer) < 45) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_47 & stat_base(prayer) < 46) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_49 & stat_base(prayer) < 49) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_51 & stat_base(prayer) < 52) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_53 & stat_base(prayer) < 35) {
+		sound_synth(synth_2673, 1, 0);
+		return;
+	}
+	if ($component0 = prayer:com_55) {
+		if (stat_base(prayer) < 60) {
+			sound_synth(synth_2673, 1, 0);
+			return;
+		} else if (stat_base(defence) < 55) {
+			sound_synth(synth_2673, 1, 0);
+			return;
+		} else if (%varbit3909 ! 8) {
+			sound_synth(synth_2673, 1, 0);
+			return;
+		}
+	}
+	if ($component0 = prayer:com_57) {
+		if (stat_base(prayer) < 70) {
+			sound_synth(synth_2673, 1, 0);
+			return;
+		} else if (stat_base(defence) < 70) {
+			sound_synth(synth_2673, 1, 0);
+			return;
+		} else if (%varbit3909 ! 8) {
+			sound_synth(synth_2673, 1, 0);
+			return;
+		}
+	}
+	if_sethide(false, $component1);
+	if_setop(1, "Deactivate", $component0);
+} else {
+	if_sethide(true, $component1);
+	if_setop(1, "Activate", $component0);
+}

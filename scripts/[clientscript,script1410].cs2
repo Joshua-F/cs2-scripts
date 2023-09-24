@@ -7,7 +7,7 @@ def_int $int3 = 0;
 def_int $int4 = 0;
 while ($int0 < 450) {
 	while ($int1 < 120) {
-		cc_create(interface_39:115, ^iftype_graphic, $int2);
+		cc_create(boardgames_runelink_view:runelink_inv, ^iftype_graphic, $int2);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int1, $int0, ^setpos_abs_left, ^setpos_abs_top);
 		if (invother_getobj(inv_215, $int2) ! null) {

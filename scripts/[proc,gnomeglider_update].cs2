@@ -1,0 +1,51 @@
+// 2064
+[proc,gnomeglider_update](int $int0)
+if_sethide(true, glidermap:close);
+if_sethide(true, glidermap:mountaingo);
+if_sethide(true, glidermap:mountainback);
+if_sethide(true, glidermap:varrockgo);
+if_sethide(true, glidermap:desertgo);
+if_sethide(true, glidermap:desertback);
+if_sethide(true, glidermap:junglego);
+if_sethide(true, glidermap:jungleback);
+if_sethide(true, glidermap:com_26);
+if_sethide(true, glidermap:com_25);
+if_sethide(true, glidermap:com_22);
+if_sethide(true, glidermap:com_23);
+switch_int ($int0) {
+	case 0 :
+		if_sethide(false, glidermap:close);
+	case 1 :
+		if_sethide(false, glidermap:mountaingo);
+		if_setmodelanim(seq_786, glidermap:mountaingo);
+	case 2 :
+		if_sethide(false, glidermap:mountainback);
+		if_setmodelanim(seq_786, glidermap:mountainback);
+	case 3 :
+		if_sethide(false, glidermap:varrockgo);
+		if_setmodelanim(seq_785, glidermap:varrockgo);
+	case 4 :
+		if_sethide(false, glidermap:desertgo);
+		if_setmodelanim(seq_785, glidermap:desertgo);
+	case 5 :
+		if_sethide(false, glidermap:desertback);
+		if_setmodelanim(seq_785, glidermap:desertback);
+	case 6 :
+		if_sethide(false, glidermap:junglego);
+		if_setmodelanim(seq_785, glidermap:junglego);
+	case 7 :
+		if_sethide(false, glidermap:jungleback);
+		if_setmodelanim(seq_785, glidermap:jungleback);
+	case 8 :
+		if_sethide(false, glidermap:com_25);
+		if_setmodelanim(seq_785, glidermap:com_25);
+	case 9 :
+		if_sethide(false, glidermap:com_26);
+		if_setmodelanim(seq_785, glidermap:com_26);
+	case 10 :
+		if_sethide(false, glidermap:com_22);
+		if_setmodelanim(seq_785, glidermap:com_22);
+	case 11 :
+		if_sethide(false, glidermap:com_23);
+		if_setmodelanim(seq_785, glidermap:com_23);
+}

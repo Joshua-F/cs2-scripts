@@ -1,0 +1,105 @@
+// 1784
+[proc,clanwars_updateside]
+def_int $height0 = 0;
+def_int $width1 = calc(if_getwidth(clanwars_setup_side:contents) - 16);
+def_int $int2 = 0;
+$height0, $int2 = ~clanwars_updateside_textbox("~ Winning ~", $height0, $int2, $width1, 1);
+$height0, $int2 = ~clanwars_updateside_textbox("Victory is awarded...", $height0, $int2, $width1, 0);
+if (%varcint248 = false) {
+	$height0, $int2 = ~clanwars_updateside_textbox("...to the team that defeats all its enemies.", $height0, $int2, $width1, 0);
+} else {
+	$height0, $int2 = ~clanwars_updateside_textbox("...to the team that defeats all its enemies, excluding the last five.", $height0, $int2, $width1, 0);
+}
+if (%varcint246 > 0 & %varcint246 < 15) {
+	$height0, $int2 = ~clanwars_updateside_textbox("OR<br>...to the team that first achieves <tostring(enum(int, int, enum_1605, %varcint246))> kills.", $height0, $int2, $width1, 0);
+}
+if (%varcint247 > 0) {
+	if (%varcint246 > 0) {
+		$height0, $int2 = ~clanwars_updateside_textbox("OR<br>...to the team that scores the most kills <~durationmes(enum(int, int, enum_1800, %varcint247))>.", $height0, $int2, $width1, 0);
+	} else {
+		$height0, $int2 = ~clanwars_updateside_textbox("OR<br>...to the team with the most survivors <~durationmes(enum(int, int, enum_1800, %varcint247))>.", $height0, $int2, $width1, 0);
+	}
+}
+$height0 = calc($height0 + 7);
+if (%varcint246 = 0) {
+	$height0, $int2 = ~clanwars_updateside_textbox("<col=ff981f>Knock-out mode:</col><br>Once war has begun, players may no longer join/rejoin the fight.", $height0, $int2, $width1, 0);
+} else {
+	$height0, $int2 = ~clanwars_updateside_textbox("<col=ff981f>Run-in mode:</col><br>Players may join/rejoin the fight at any time during the war.", $height0, $int2, $width1, 0);
+	if (%varcint246 = 15 & %varcint247 = 0) {
+		$height0 = calc($height0 + 7);
+		$height0, $int2 = ~clanwars_updateside_textbox("This war has no time limit or kill target, so it might go on for ages!", $height0, $int2, $width1, 0);
+	}
+}
+$height0 = calc($height0 + 7);
+$height0, $int2 = ~clanwars_updateside_textbox("~ Item loss ~", $height0, $int2, $width1, 1);
+if (%varcint249 = false) {
+	$height0, $int2 = ~clanwars_updateside_textbox("On death, players keep their items.", $height0, $int2, $width1, 0);
+} else {
+	$height0, $int2 = ~clanwars_updateside_textbox("<col=ff0000>On death, players DROP their items.</col><br>Players may not teleport.", $height0, $int2, $width1, 0);
+}
+$height0 = calc($height0 + 7);
+$height0, $int2 = ~clanwars_updateside_textbox("~ Combat rules ~", $height0, $int2, $width1, 1);
+if (%varcint250 = false) {
+	$height0, $int2 = ~clanwars_updateside_textbox("Melee combat is allowed.", $height0, $int2, $width1, 0);
+} else {
+	$height0, $int2 = ~clanwars_updateside_textbox("<col=ff0000>Melee combat</col> is forbidden.", $height0, $int2, $width1, 0);
+}
+switch_int (%varcint252) {
+	case 0 :
+		$height0, $int2 = ~clanwars_updateside_textbox("Magical combat is allowed.", $height0, $int2, $width1, 0);
+	case 1 :
+		$height0, $int2 = ~clanwars_updateside_textbox("Spells from the <col=ff0000>standard spellbook</col> are allowed.", $height0, $int2, $width1, 0);
+	case 2 :
+		if (map_members = ^true) {
+			$height0, $int2 = ~clanwars_updateside_textbox("The <col=ff0000>Bind</col>, <col=ff0000>Snare</col> and <col=ff0000>Entangle</col> spells are allowed.", $height0, $int2, $width1, 0);
+		} else {
+			$height0, $int2 = ~clanwars_updateside_textbox("The <col=ff0000>Bind</col> spell is allowed.", $height0, $int2, $width1, 0);
+		}
+	case 3 :
+		$height0, $int2 = ~clanwars_updateside_textbox("<col=ff0000>Magical combat</col> is forbidden.", $height0, $int2, $width1, 0);
+}
+if (%varcint251 = false) {
+	$height0, $int2 = ~clanwars_updateside_textbox("Ranged combat is allowed.", $height0, $int2, $width1, 0);
+} else {
+	$height0, $int2 = ~clanwars_updateside_textbox("<col=ff0000>Ranged combat</col> is forbidden.", $height0, $int2, $width1, 0);
+}
+if (%varcint256 = false) {
+	$height0, $int2 = ~clanwars_updateside_textbox("Prayer is allowed.", $height0, $int2, $width1, 0);
+} else {
+	$height0, $int2 = ~clanwars_updateside_textbox("<col=ff0000>Prayer</col> is forbidden.", $height0, $int2, $width1, 0);
+}
+if (map_members = ^true) {
+	if (%varcint253 = false) {
+		$height0, $int2 = ~clanwars_updateside_textbox("Summoning is allowed.", $height0, $int2, $width1, 0);
+	} else {
+		$height0, $int2 = ~clanwars_updateside_textbox("<col=ff0000>Summoning</col> is forbidden.<br>Familiars will be dismissed.", $height0, $int2, $width1, 0);
+	}
+}
+if (%varcint254 = false) {
+	$height0, $int2 = ~clanwars_updateside_textbox("Food is allowed.", $height0, $int2, $width1, 0);
+} else {
+	$height0, $int2 = ~clanwars_updateside_textbox("<col=ff0000>Food</col> is forbidden.", $height0, $int2, $width1, 0);
+}
+if (%varcint255 = false) {
+	$height0, $int2 = ~clanwars_updateside_textbox("Potions are allowed.", $height0, $int2, $width1, 0);
+} else {
+	$height0, $int2 = ~clanwars_updateside_textbox("<col=ff0000>Potions</col> are forbidden.<br>Boosted stats will be reset (excluding Prayer boosts).", $height0, $int2, $width1, 0);
+}
+$height0 = calc($height0 + 7);
+$height0, $int2 = ~clanwars_updateside_textbox("~ Arena ~", $height0, $int2, $width1, 1);
+$height0, $int2 = ~clanwars_updateside_textbox(struct_param(enum(int, struct, enum_1604, %varcint257), param_555), $height0, $int2, $width1, 0);
+if ($height0 > if_getheight(clanwars_setup_side:contents)) {
+	if_sethide(false, clanwars_setup_side:scrollbar);
+	if_setposition(7, 46, ^setpos_abs_left, ^setpos_abs_top, clanwars_setup_side:contents);
+	if_setscrollsize(0, $height0, clanwars_setup_side:contents);
+	~scrollbar_vertical(clanwars_setup_side:scrollbar, clanwars_setup_side:contents, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if (cc_find(clanwars_setup_side:scrollbar, 1) = ^true) {
+		~scrollbar_vertical_doscroll(clanwars_setup_side:scrollbar, clanwars_setup_side:contents, if_getscrolly(clanwars_setup_side:contents), true);
+	}
+} else {
+	cc_deleteall(clanwars_setup_side:scrollbar);
+	if_sethide(true, clanwars_setup_side:scrollbar);
+	if_setposition(15, 46, ^setpos_abs_left, ^setpos_abs_top, clanwars_setup_side:contents);
+	if_setscrollsize(0, 0, clanwars_setup_side:contents);
+	if_setscrollpos(0, 0, clanwars_setup_side:contents);
+}

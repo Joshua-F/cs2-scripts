@@ -12,8 +12,8 @@ def_int $int5 = 0;
 while ($int1 = 0 & %varcint194 <= 11) {
 	if (%varcint194 = 0) {
 		$int5 = calc($int5 + 1);
-		if_sethide(false, interface_765:2);
-		if_setposition(1, $int4, ^setpos_abs_left, ^setpos_abs_top, interface_765:2);
+		if_sethide(false, tutorial2_switch_task:com_2);
+		if_setposition(1, $int4, ^setpos_abs_left, ^setpos_abs_top, tutorial2_switch_task:com_2);
 		$int4 = calc($int4 + 16);
 	} else {
 		$int2, $component3 = ~script1530(%varcint194);
@@ -34,16 +34,16 @@ while ($int1 = 0 & %varcint194 <= 11) {
 	if (%varcint195 = 1 & $int5 = 5 & $int0 = 4 | %varcint195 = 2 & $int5 = 5 & $int0 = 8) {
 		$int1 = 1;
 	} else if (%varcint195 = 1 & $int5 = 4 & $int0 > 4 | %varcint195 = 2 & $int5 = 4 & $int0 > 8) {
-		if_sethide(false, interface_765:9);
-		if_setposition(1, $int4, ^setpos_abs_left, ^setpos_abs_top, interface_765:9);
-		if_settext("More.", interface_765:9);
+		if_sethide(false, tutorial2_switch_task:more);
+		if_setposition(1, $int4, ^setpos_abs_left, ^setpos_abs_top, tutorial2_switch_task:more);
+		if_settext("More.", tutorial2_switch_task:more);
 		$int5 = calc($int5 + 1);
 		$int1 = 1;
 	}
 	if (%varcint195 > 1 & %varcint194 >= 11 & $int5 < 5) {
-		if_sethide(false, interface_765:9);
-		if_settext("Back.", interface_765:9);
-		if_setposition(1, $int4, ^setpos_abs_left, ^setpos_abs_top, interface_765:9);
+		if_sethide(false, tutorial2_switch_task:more);
+		if_settext("Back.", tutorial2_switch_task:more);
+		if_setposition(1, $int4, ^setpos_abs_left, ^setpos_abs_top, tutorial2_switch_task:more);
 		$int1 = 1;
 	}
 	%varcint194 = calc(%varcint194 + 1);

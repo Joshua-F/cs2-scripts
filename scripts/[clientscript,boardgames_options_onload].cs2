@@ -1,0 +1,18 @@
+// 1405
+[clientscript,boardgames_options_onload]
+if (%varbit61 = 0) {
+	if_settext("Draughts: Options", boardgames_options:com_10);
+	~script1406(boardgames_options:com_3);
+} else if (%varbit61 = 1) {
+	if_settext("Runelink: Options", boardgames_options:com_10);
+	~script1406(boardgames_options:com_4);
+} else if (%varbit61 = 2) {
+	if_settext("Runesquares: Options", boardgames_options:com_10);
+	~script1406(boardgames_options:com_8);
+} else if (%varbit61 = 3) {
+	if_settext("Runeversi: Options", boardgames_options:com_10);
+	~script1406(boardgames_options:com_6);
+}
+~boardgames_options_ranked;
+~boardgames_options_time;
+~boardgames_options_pick_piece;

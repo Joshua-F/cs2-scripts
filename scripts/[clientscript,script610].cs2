@@ -1,7 +1,7 @@
 // 610
 [clientscript,script610]
 if (%varcint83 <= 0) {
-	if_setontimer(null, interface_105:155);
+	if_setontimer(null, stockmarket:offerprice);
 	~script621;
 }
 %varcint83 = calc(%varcint83 - 1);

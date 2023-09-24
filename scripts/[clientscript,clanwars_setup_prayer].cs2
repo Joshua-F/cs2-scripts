@@ -1,0 +1,11 @@
+// 1829
+[clientscript,clanwars_setup_prayer](int $int0)
+if (~clanwars_setup_clicktest($int0) = 0) {
+	return;
+}
+if (%varcint256 = false) {
+	%varcint256 = true;
+} else {
+	%varcint256 = false;
+}
+~clanwars_resynch_prayer;

@@ -2,45 +2,45 @@
 [proc,script1186]
 def_int $int0 = 0;
 if (getwindowmode >= ^windowmode_resizable) {
-	if (if_hassub(interface_752:12) = true) {
-		if_sethide(false, interface_752:1);
-		if_setalpha(true, interface_752:1);
+	if (if_hassub(chattop:chatmodallarge) = true) {
+		if_sethide(false, chattop:chat_graphic);
+		if_setalpha(true, chattop:chat_graphic);
 		if (%varbit542 = 0) {
-			if_setgraphic("chat_window", interface_752:1);
-			if_sethide(false, interface_752:2);
+			if_setgraphic("chat_window", chattop:chat_graphic);
+			if_sethide(false, chattop:chat_border);
 		} else {
-			if_setgraphic("graphic_1205", interface_752:1);
-			if_sethide(true, interface_752:2);
+			if_setgraphic("graphic_1205", chattop:chat_graphic);
+			if_sethide(true, chattop:chat_border);
 		}
-	} else if (if_hassub(interface_752:11) = true) {
-		if_sethide(false, interface_752:1);
-		if_setalpha(true, interface_752:1);
+	} else if (if_hassub(chattop:chatmodal) = true) {
+		if_sethide(false, chattop:chat_graphic);
+		if_setalpha(true, chattop:chat_graphic);
 		if (%varbit542 = 0) {
-			if_setgraphic("chat_window", interface_752:1);
-			if_sethide(false, interface_752:2);
+			if_setgraphic("chat_window", chattop:chat_graphic);
+			if_sethide(false, chattop:chat_border);
 		} else {
-			if_setgraphic("graphic_1205", interface_752:1);
-			if_sethide(true, interface_752:2);
+			if_setgraphic("graphic_1205", chattop:chat_graphic);
+			if_sethide(true, chattop:chat_border);
 		}
-	} else if (if_hassub(interface_752:10) = true) {
-		if_sethide(false, interface_752:1);
-		if_setalpha(true, interface_752:1);
+	} else if (if_hassub(chattop:chatoverlaylarge) = true) {
+		if_sethide(false, chattop:chat_graphic);
+		if_setalpha(true, chattop:chat_graphic);
 		if (%varbit542 = 0) {
-			if_setgraphic("chat_window", interface_752:1);
-			if_sethide(false, interface_752:2);
+			if_setgraphic("chat_window", chattop:chat_graphic);
+			if_sethide(false, chattop:chat_border);
 		} else {
-			if_setgraphic("graphic_1205", interface_752:1);
-			if_sethide(true, interface_752:2);
+			if_setgraphic("graphic_1205", chattop:chat_graphic);
+			if_sethide(true, chattop:chat_border);
 		}
-	} else if (if_hassub(interface_752:9) = true) {
-		if_sethide(false, interface_752:1);
-		if_setalpha(true, interface_752:1);
+	} else if (if_hassub(chattop:chatoverlay) = true) {
+		if_sethide(false, chattop:chat_graphic);
+		if_setalpha(true, chattop:chat_graphic);
 		if (%varbit542 = 0) {
-			if_setgraphic("chat_window", interface_752:1);
-			if_sethide(false, interface_752:2);
+			if_setgraphic("chat_window", chattop:chat_graphic);
+			if_sethide(false, chattop:chat_border);
 		} else {
-			if_setgraphic("graphic_1205", interface_752:1);
-			if_sethide(true, interface_752:2);
+			if_setgraphic("graphic_1205", chattop:chat_graphic);
+			if_sethide(true, chattop:chat_border);
 		}
 	}
 }

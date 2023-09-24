@@ -1,0 +1,12 @@
+// 783
+[clientscript,quickchat_tutorial_loadcontent]
+if (%varbit4762 ! %varcint155) {
+	%varcint155 = %varbit4762;
+	if (%varbit4762 = 1) {
+		~script1029(enum_1484, 9);
+	} else if (%varbit4762 = 2) {
+		~quickchat_tutorial_showpage(enum_1486, 0, 7);
+	} else if (%varbit4762 = 3) {
+		~script1030(1485);
+	}
+}

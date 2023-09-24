@@ -1,9 +1,0 @@
-// 1762
-[clientscript,script1762](component $component0)
-if (%varcint231 > 6) {
-	if_settext("Time Left : <tostring(calc(%varcint231 - 5))> mins", $component0);
-} else if (%varcint231 = 6) {
-	if_settext("Time Left : 1 min", $component0);
-} else {
-	if_settext("Time Left : 0 mins", $component0);
-}

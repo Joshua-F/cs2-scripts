@@ -1,17 +1,17 @@
 // 820
 [clientscript,script820]
 if (%varbit4286 ! 101) {
-	if_settext("<tostring(%varbit4286)>%", interface_663:19);
+	if_settext("<tostring(%varbit4286)>%", lore_cats_side:com_19);
 	if (%varbit4286 > 74) {
-		if_setcolour(^red, interface_663:19);
+		if_setcolour(^red, lore_cats_side:com_19);
 	} else {
-		if_setcolour(^white, interface_663:19);
+		if_setcolour(^white, lore_cats_side:com_19);
 	}
 } else {
-	if_settext("NA", interface_663:19);
+	if_settext("NA", lore_cats_side:com_19);
 }
 if (%varbit4285 ! 101) {
-	if_settext("<tostring(%varbit4285)>%", interface_663:17);
+	if_settext("<tostring(%varbit4285)>%", lore_cats_side:com_17);
 } else {
-	if_settext("NA", interface_663:17);
+	if_settext("NA", lore_cats_side:com_17);
 }

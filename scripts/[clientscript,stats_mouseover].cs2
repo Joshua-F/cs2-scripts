@@ -1,0 +1,4 @@
+// 545
+[clientscript,stats_mouseover](component $component0, stat $stat1, component $component2)
+%varcint80 = stat_base($stat1);
+~stats_mouseover_create($component0, $stat1, $component2);

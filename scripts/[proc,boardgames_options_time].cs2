@@ -1,0 +1,15 @@
+// 1408
+[proc,boardgames_options_time]
+if_setgraphic("miscgraphics,10", boardgames_options:com_12);
+if_setgraphic("miscgraphics,10", boardgames_options:com_13);
+if_setgraphic("miscgraphics,10", boardgames_options:com_15);
+if_setgraphic("miscgraphics,10", boardgames_options:com_16);
+if (%varbit49 = 0) {
+	if_setgraphic("miscgraphics,11", boardgames_options:com_12);
+} else if (%varbit49 = 1) {
+	if_setgraphic("miscgraphics,11", boardgames_options:com_13);
+} else if (%varbit49 = 2) {
+	if_setgraphic("miscgraphics,11", boardgames_options:com_15);
+} else if (%varbit49 = 3) {
+	if_setgraphic("miscgraphics,11", boardgames_options:com_16);
+}

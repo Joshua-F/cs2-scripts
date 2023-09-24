@@ -9,24 +9,24 @@ if (%varcint126 = 1) {
 } else {
 	$string0 = "<col=0000ff><$string0>";
 }
-if_sethide(true, interface_137:50);
-if_setonkey(null, interface_137:51);
-if_sethide(false, interface_137:0);
-if_sethide(true, interface_137:7);
-if_sethide(false, interface_137:9);
-if_sethide(true, interface_137:13);
-if_sethide(true, interface_137:17);
-if_sethide(true, interface_137:1);
-if_sethide(false, interface_137:3);
-if_setcolour(^black, interface_137:3);
-if_settextfont(p12_full, interface_137:3);
-if_settextalign(^settextalign_left, ^settextalign_centre, 0, interface_137:3);
-if_settext($string0, interface_137:3);
-if_settextshadow(false, interface_137:3);
-cc_deleteall(interface_137:12);
+if_sethide(true, chatdefault:chat);
+if_setonkey(null, chatdefault:input);
+if_sethide(false, chatdefault:quickchat);
+if_sethide(true, chatdefault:com_7);
+if_sethide(false, chatdefault:com_9);
+if_sethide(true, chatdefault:com_13);
+if_sethide(true, chatdefault:quickchat_menu);
+if_sethide(true, chatdefault:com_1);
+if_sethide(false, chatdefault:quickchat_title);
+if_setcolour(^black, chatdefault:quickchat_title);
+if_settextfont(p12_full, chatdefault:quickchat_title);
+if_settextalign(^settextalign_left, ^settextalign_centre, 0, chatdefault:quickchat_title);
+if_settext($string0, chatdefault:quickchat_title);
+if_settextshadow(false, chatdefault:quickchat_title);
+cc_deleteall(chatdefault:com_12);
 def_enum $enum1 = chatphrase_getdynamiccommandparam_enum($chatphrase0, %varcint134, 0);
-cc_create(interface_137:12, ^iftype_rectangle, 0);
-def_int $width2 = if_getwidth(interface_137:12);
+cc_create(chatdefault:com_12, ^iftype_rectangle, 0);
+def_int $width2 = if_getwidth(chatdefault:com_12);
 def_int $width3 = calc($width2 - 8);
 def_int $int4 = 1;
 def_int $int5 = 0;
@@ -34,15 +34,15 @@ def_int $intarray0(250);
 def_int $int6 = 0;
 $string0 = enum(int, string, $enum1, 0);
 while (compare("", $string0) ! 0 & $int4 < 250) {
-	cc_create(interface_137:12, ^iftype_text, $int4);
+	cc_create(chatdefault:com_12, ^iftype_text, $int4);
 	cc_setposition(4, calc(14 * $int5), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($width3, 14, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(^black);
 	cc_settext($string0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(false);
-	cc_setonmouseover("script1045($int4, interface_137:12, $int5)");
-	cc_setonclick("script1073(interface_137:1, $chatphrase0, calc($int4 - 1))");
+	cc_setonmouseover("script1045($int4, chatdefault:com_12, $int5)");
+	cc_setonclick("quickchat_phrase_int(chatdefault:com_1, $chatphrase0, calc($int4 - 1))");
 	$intarray0($int5) = $int5;
 	$string0 = enum(int, string, $enum1, $int4);
 	$int4 = calc($int4 + 1);
@@ -53,9 +53,9 @@ if (compare(enum(int, string, $enum1, 1000), "non-alpha") ! 0) {
 	~script520(intarray0, 0, $int6, $enum1);
 	$int5 = 0;
 	while ($int5 <= $int6) {
-		if (cc_find(interface_137:12, calc($intarray0($int5) + 1)) = ^true) {
+		if (cc_find(chatdefault:com_12, calc($intarray0($int5) + 1)) = ^true) {
 			cc_setposition(4, calc(14 * $int5), ^setpos_abs_left, ^setpos_abs_top);
-			cc_setonmouseover("script1045(calc($intarray0($int5) + 1), interface_137:12, $int5)");
+			cc_setonmouseover("script1045(calc($intarray0($int5) + 1), chatdefault:com_12, $int5)");
 		}
 		$int5 = calc($int5 + 1);
 	}
@@ -65,7 +65,7 @@ while ($int5 < 250) {
 	~script1384($int5, $intarray0($int5));
 	$int5 = calc($int5 + 1);
 }
-if_setonkey("script1046(event_keycode, event_keychar, interface_137:1, interface_137:12, interface_137:11, $chatphrase0, calc($int4 - 1))", interface_137:12);
-if_setscrollsize(0, calc(14 * ($int4 - 1)), interface_137:12);
-~script31(interface_137:11, interface_137:12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script72(interface_137:11, interface_137:12, 0);
+if_setonkey("script1046(event_keycode, event_keychar, chatdefault:com_1, chatdefault:com_12, chatdefault:com_11, $chatphrase0, calc($int4 - 1))", chatdefault:com_12);
+if_setscrollsize(0, calc(14 * ($int4 - 1)), chatdefault:com_12);
+~scrollbar_vertical(chatdefault:com_11, chatdefault:com_12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize(chatdefault:com_11, chatdefault:com_12, 0);

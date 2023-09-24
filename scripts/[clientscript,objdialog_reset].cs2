@@ -1,0 +1,16 @@
+// 570
+[clientscript,objdialog_reset](string $text0)
+if_sethide(true, chattop:mes_layer_hide);
+if_sethide(true, chattop:mes_layer);
+if_sethide(false, chattop:mes_layer_large);
+if_setonkey("objdialog_onkey(event_keycode, event_keychar)", objdialog:searchtext);
+if_settext($text0, objdialog:objdialog_title);
+if_sethide(false, objdialog:com_5);
+if_setobject(null, -1, objdialog:objgraphic);
+~script1188;
+%varcstring22 = "";
+if_settext("*", objdialog:searchtext);
+cc_deleteall(objdialog:resultlist);
+if_setscrollsize(0, 15, objdialog:resultlist);
+~scrollbar_vertical(objdialog:resultscrollbar, objdialog:resultlist, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setondialogabort("objdialog_ondialogabort", objdialog:searchtext);

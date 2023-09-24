@@ -1,0 +1,9 @@
+// 49
+[clientscript,prayer_varupdate](component $component0, component $component1)
+if (~script51($component0) = 0) {
+	if_sethide(true, $component1);
+	if_setop(1, "Activate", $component0);
+} else {
+	if_sethide(false, $component1);
+	if_setop(1, "Deactivate", $component0);
+}

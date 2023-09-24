@@ -1,0 +1,27 @@
+// 1072
+[proc,quickchat_phrase_setup](component $component0, chatphrase $chatphrase1)
+def_int $count2 = chatphrase_getdynamiccommandcount($chatphrase1);
+def_int $int3 = 0;
+if ($count2 > 0) {
+	while (%varcint134 < $count2 & %varcint134 < 10) {
+		$int3 = chatphrase_getdynamiccommand($chatphrase1, %varcint134);
+		if ($int3 = 0) {
+			~script1044($chatphrase1);
+			return;
+		}
+		if ($int3 = 1) {
+			~quickchat_phrase_objdialog($chatphrase1, false);
+			return;
+		}
+		if ($int3 = 10) {
+			~quickchat_phrase_objdialog($chatphrase1, true);
+			return;
+		}
+		if ($int3 = 2) {
+			~quickchat_phrase_countdialog($chatphrase1);
+			return;
+		}
+		%varcint134 = calc(%varcint134 + 1);
+	}
+}
+~quickchat_phrase_send($chatphrase1);

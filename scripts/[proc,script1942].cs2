@@ -11,19 +11,19 @@ if (%varcint560 = 0) {
 		%varcint560 = 0;
 	}
 }
-if_settrans(%varcint559, interface_809:14);
+if_settrans(%varcint559, interface_809:com_14);
 if (%varcint561 < 4) {
-	if (if_gethide(interface_809:18) = true) {
+	if (if_gethide(interface_809:com_18) = true) {
 		%varcint562 = min(20, calc(%varcint562 + 1));
 		if (%varcint562 = 20) {
 			%varcint562 = 0;
-			if_sethide(false, interface_809:18);
+			if_sethide(false, interface_809:com_18);
 		}
 	} else {
 		%varcint562 = min(35, calc(%varcint562 + 1));
 		if (%varcint562 = 35) {
 			%varcint562 = 0;
-			if_sethide(true, interface_809:18);
+			if_sethide(true, interface_809:com_18);
 			%varcint561 = min(4, calc(%varcint561 + 1));
 		}
 	}

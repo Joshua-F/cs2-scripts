@@ -1,13 +1,13 @@
 // 1131
 [proc,script1131]
 if (getwindowmode >= ^windowmode_fixed) {
-	if_setcolour(0x996600, interface_742:40);
-	~script1355("Always `All'", interface_742:89, interface_742:90, interface_742:91, null, "tradebacking_dark", ^white, p11_full);
+	if_setcolour(0x996600, graphics_options:com_40);
+	~dropdownbox_refuse("Always `All'", graphics_options:com_89, graphics_options:com_90, graphics_options:com_91, null, "tradebacking_dark", ^white, p11_full);
 	return;
 }
 def_int $int0 = 0;
 if (_6102 = true) {
 	$int0 = 1;
 }
-if_setcolour(0xe1981f, interface_742:40);
-~script1435(enum_1578, $int0, 1, interface_742:89, interface_742:90, interface_742:91, null, "tradebacking_dark", "scrollbar_v2,1", 788, "tradebacking_light", 0xcf0000, ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setcolour(0xe1981f, graphics_options:com_40);
+~script1435(enum_1578, $int0, 1, graphics_options:com_89, graphics_options:com_90, graphics_options:com_91, null, "tradebacking_dark", "scrollbar_v2,1", 788, "tradebacking_light", 0xcf0000, ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

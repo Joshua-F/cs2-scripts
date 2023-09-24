@@ -1,0 +1,10 @@
+// 1780
+[proc,clanwars_resynch_potions]
+if (%varcint255 = false) {
+	if_setgraphic("options_radio_buttons,2", clanwars_setup:potions_indicator);
+	if_settrans(0, clanwars_setup:potions);
+} else {
+	if_setgraphic("options_radio_buttons,1", clanwars_setup:potions_indicator);
+	if_settrans(225, clanwars_setup:potions);
+}
+~clanwars_updateside;

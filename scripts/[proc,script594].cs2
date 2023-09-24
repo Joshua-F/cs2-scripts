@@ -1,130 +1,130 @@
 // 594
 [proc,script594](int $int0, obj $obj1, int $int2, int $int3)
-if_setobject($obj1, -1, interface_105:138);
+if_setobject($obj1, -1, stockmarket:com_138);
 def_string $text0 = "null";
 def_string $string1 = "null";
 def_string $string2 = "null";
 if ($int0 = 0) {
-	if_settext("Buy Offer", interface_105:133);
-	if_setgraphic("graphic_1157", interface_105:134);
-	if_settext("+1", interface_105:162);
-	if_setop(1, "Add 1", interface_105:162);
+	if_settext("Buy Offer", stockmarket:com_133);
+	if_setgraphic("graphic_1157", stockmarket:com_134);
+	if_settext("+1", stockmarket:offercount_1);
+	if_setop(1, "Add 1", stockmarket:offercount_1);
 	$string2 = "Add 1 to quantity";
-	if_setonmouserepeat("script649(event_com, interface_105:213, $string2, 25, 300)", interface_105:162);
-	if_settext("+10", interface_105:164);
-	if_setop(1, "Add 10", interface_105:164);
+	if_setonmouserepeat("script649(event_com, stockmarket:offertooltip, $string2, 25, 300)", stockmarket:offercount_1);
+	if_settext("+10", stockmarket:offercount_10);
+	if_setop(1, "Add 10", stockmarket:offercount_10);
 	$string2 = "Add 10 to quantity";
-	if_setonmouserepeat("script649(event_com, interface_105:213, $string2, 25, 300)", interface_105:164);
-	if_settext("+100", interface_105:166);
-	if_setop(1, "Add 100", interface_105:166);
+	if_setonmouserepeat("script649(event_com, stockmarket:offertooltip, $string2, 25, 300)", stockmarket:offercount_10);
+	if_settext("+100", stockmarket:offercount_100);
+	if_setop(1, "Add 100", stockmarket:offercount_100);
 	$string2 = "Add 100 to quantity";
-	if_setonmouserepeat("script649(event_com, interface_105:213, $string2, 25, 300)", interface_105:166);
-	if_settext("+1K", interface_105:168);
-	if_setop(1, "Add 1000", interface_105:168);
+	if_setonmouserepeat("script649(event_com, stockmarket:offertooltip, $string2, 25, 300)", stockmarket:offercount_100);
+	if_settext("+1K", stockmarket:com_168);
+	if_setop(1, "Add 1000", stockmarket:com_168);
 	$string2 = "Add 1,000 to quantity";
-	if_setonmouserepeat("script649(event_com, interface_105:213, $string2, 25, 300)", interface_105:168);
+	if_setonmouserepeat("script649(event_com, stockmarket:offertooltip, $string2, 25, 300)", stockmarket:com_168);
 } else {
-	if_settext("Sell Offer", interface_105:133);
-	if_setgraphic("graphic_1156", interface_105:134);
-	if_settext("1", interface_105:162);
-	if_setop(1, "Sell 1", interface_105:162);
+	if_settext("Sell Offer", stockmarket:com_133);
+	if_setgraphic("graphic_1156", stockmarket:com_134);
+	if_settext("1", stockmarket:offercount_1);
+	if_setop(1, "Sell 1", stockmarket:offercount_1);
 	$string2 = "Sell 1";
-	if_setonmouserepeat("script649(event_com, interface_105:213, $string2, 25, 300)", interface_105:162);
-	if_settext("10", interface_105:164);
-	if_setop(1, "Sell 10", interface_105:164);
+	if_setonmouserepeat("script649(event_com, stockmarket:offertooltip, $string2, 25, 300)", stockmarket:offercount_1);
+	if_settext("10", stockmarket:offercount_10);
+	if_setop(1, "Sell 10", stockmarket:offercount_10);
 	$string2 = "Sell 10";
-	if_setonmouserepeat("script649(event_com, interface_105:213, $string2, 25, 300)", interface_105:164);
-	if_settext("100", interface_105:166);
-	if_setop(1, "Sell 100", interface_105:166);
+	if_setonmouserepeat("script649(event_com, stockmarket:offertooltip, $string2, 25, 300)", stockmarket:offercount_10);
+	if_settext("100", stockmarket:offercount_100);
+	if_setop(1, "Sell 100", stockmarket:offercount_100);
 	$string2 = "Sell 100";
-	if_setonmouserepeat("script649(event_com, interface_105:213, $string2, 25, 300)", interface_105:166);
-	if_settext("ALL", interface_105:168);
-	if_setop(1, "Sell All", interface_105:168);
+	if_setonmouserepeat("script649(event_com, stockmarket:offertooltip, $string2, 25, 300)", stockmarket:offercount_100);
+	if_settext("ALL", stockmarket:com_168);
+	if_setop(1, "Sell All", stockmarket:com_168);
 	$string2 = "Sell all";
-	if_setonmouserepeat("script649(event_com, interface_105:213, $string2, 25, 300)", interface_105:168);
+	if_setonmouserepeat("script649(event_com, stockmarket:offertooltip, $string2, 25, 300)", stockmarket:com_168);
 }
 if ($obj1 = null) {
-	if_settext("Choose an item to exchange", interface_105:141);
-	if_settext("N/A", interface_105:140);
-	if_settext("N/A", interface_105:145);
-	if_settext("", interface_105:142);
+	if_settext("Choose an item to exchange", stockmarket:com_141);
+	if_settext("N/A", stockmarket:com_140);
+	if_settext("N/A", stockmarket:com_145);
+	if_settext("", stockmarket:com_142);
 	if (%var1113 = 0) {
-		if (if_gettrans(interface_105:137) = 255) {
-			if_setontimer("script634(interface_105:137, 0, 255, 5)", interface_105:137);
+		if (if_gettrans(stockmarket:com_137) = 255) {
+			if_setontimer("script634(stockmarket:com_137, 0, 255, 5)", stockmarket:com_137);
 		}
 	} else if (%var1113 = 1) {
-		if_sethide(false, interface_107:0);
-		if_settrans(255, interface_105:137);
-		if_setontimer(null, interface_105:137);
-		if (if_gettrans(interface_107:1) = 245) {
-			if_setontimer("script634(interface_107:1, 155, 255, 2)", interface_107:1);
-			if_setontimer("script634(interface_107:2, 155, 255, 2)", interface_107:2);
-			if_setontimer("script634(interface_107:3, 155, 255, 2)", interface_107:3);
-			if_setontimer("script634(interface_107:4, 155, 255, 2)", interface_107:4);
-			if_setontimer("script634(interface_107:5, 145, 245, 2)", interface_107:5);
-			if_setontimer("script634(interface_107:6, 145, 245, 2)", interface_107:6);
-			if_setontimer("script634(interface_107:7, 145, 245, 2)", interface_107:7);
-			if_setontimer("script634(interface_107:8, 135, 235, 2)", interface_107:8);
-			if_setontimer("script634(interface_107:9, 135, 235, 2)", interface_107:9);
-			if_setontimer("script634(interface_107:10, 135, 235, 2)", interface_107:10);
-			if_setontimer("script634(interface_107:11, 125, 225, 2)", interface_107:11);
-			if_setontimer("script634(interface_107:12, 125, 225, 2)", interface_107:12);
-			if_setontimer("script634(interface_107:13, 125, 225, 2)", interface_107:13);
-			if_setontimer("script634(interface_107:14, 115, 215, 2)", interface_107:14);
-			if_setontimer("script634(interface_107:15, 115, 215, 2)", interface_107:15);
-			if_setontimer("script634(interface_107:16, 115, 215, 2)", interface_107:16);
-			if_setontimer("script634(interface_107:17, 110, 210, 2)", interface_107:17);
+		if_sethide(false, stockside:com_0);
+		if_settrans(255, stockmarket:com_137);
+		if_setontimer(null, stockmarket:com_137);
+		if (if_gettrans(stockside:com_1) = 245) {
+			if_setontimer("script634(stockside:com_1, 155, 255, 2)", stockside:com_1);
+			if_setontimer("script634(stockside:com_2, 155, 255, 2)", stockside:com_2);
+			if_setontimer("script634(stockside:com_3, 155, 255, 2)", stockside:com_3);
+			if_setontimer("script634(stockside:com_4, 155, 255, 2)", stockside:com_4);
+			if_setontimer("script634(stockside:com_5, 145, 245, 2)", stockside:com_5);
+			if_setontimer("script634(stockside:com_6, 145, 245, 2)", stockside:com_6);
+			if_setontimer("script634(stockside:com_7, 145, 245, 2)", stockside:com_7);
+			if_setontimer("script634(stockside:com_8, 135, 235, 2)", stockside:com_8);
+			if_setontimer("script634(stockside:com_9, 135, 235, 2)", stockside:com_9);
+			if_setontimer("script634(stockside:com_10, 135, 235, 2)", stockside:com_10);
+			if_setontimer("script634(stockside:com_11, 125, 225, 2)", stockside:com_11);
+			if_setontimer("script634(stockside:com_12, 125, 225, 2)", stockside:com_12);
+			if_setontimer("script634(stockside:com_13, 125, 225, 2)", stockside:com_13);
+			if_setontimer("script634(stockside:com_14, 115, 215, 2)", stockside:com_14);
+			if_setontimer("script634(stockside:com_15, 115, 215, 2)", stockside:com_15);
+			if_setontimer("script634(stockside:com_16, 115, 215, 2)", stockside:com_16);
+			if_setontimer("script634(stockside:com_17, 110, 210, 2)", stockside:com_17);
 		}
 	}
 } else {
-	if_settext(oc_name($obj1), interface_105:141);
+	if_settext(oc_name($obj1), stockmarket:com_141);
 	if (%var1109 ! null) {
-		$text0 = ~script46(%var1114, ",");
-		if_settext("<$text0> gp", interface_105:140);
-		$text0 = ~script46(%var1115, ",");
-		$string1 = ~script46(%var1116, ",");
-		if_settext("<$text0> gp - <$string1> gp", interface_105:145);
+		$text0 = ~tostring_spacer(%var1114, ",");
+		if_settext("<$text0> gp", stockmarket:com_140);
+		$text0 = ~tostring_spacer(%var1115, ",");
+		$string1 = ~tostring_spacer(%var1116, ",");
+		if_settext("<$text0> gp - <$string1> gp", stockmarket:com_145);
 	} else {
-		if_settext("Retrieving details...", interface_105:142);
-		if_settext("N/A", interface_105:140);
-		if_settext("N/A", interface_105:145);
+		if_settext("Retrieving details...", stockmarket:com_142);
+		if_settext("N/A", stockmarket:com_140);
+		if_settext("N/A", stockmarket:com_145);
 	}
-	if_settrans(255, interface_105:137);
-	if_setontimer(null, interface_105:137);
-	if_sethide(true, interface_107:0);
+	if_settrans(255, stockmarket:com_137);
+	if_setontimer(null, stockmarket:com_137);
+	if_sethide(true, stockside:com_0);
 }
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
-if (if_find(interface_105:140) = true & .if_find(interface_105:139) = true) {
+if (if_find(stockmarket:com_140) = true & .if_find(stockmarket:com_139) = true) {
 	$int5 = cc_getwidth;
 	$int6 = parawidth(cc_gettext, $int5, p11_full);
 	$int7 = .cc_getwidth;
 	$int4 = calc(52 + ($int5 - $int6) / 2 - ($int7 - 5));
 	.cc_setposition($int4, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 }
-if (if_find(interface_105:145) = true) {
+if (if_find(stockmarket:com_145) = true) {
 	$int4 = cc_getx;
 	$int5 = cc_getwidth;
 	$int6 = parawidth(cc_gettext, $int5, p11_full);
-	if (.if_find(interface_105:143) = true) {
+	if (.if_find(stockmarket:com_143) = true) {
 		$int7 = .cc_getwidth;
 		$int4 = calc($int4 + ($int5 - $int6) / 2 - $int7 - 1);
 		.cc_setposition($int4, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (.if_find(interface_105:144) = true) {
+	if (.if_find(stockmarket:com_144) = true) {
 		$int4 = calc($int4 + $int7 + $int6 + 5);
 		.cc_setposition($int4, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 	}
 }
 if (%varcint82 <= 0) {
-	$text0 = ~script46($int2, ",");
-	if_settext($text0, interface_105:150);
+	$text0 = ~tostring_spacer($int2, ",");
+	if_settext($text0, stockmarket:offercount);
 	%varcint84 = %var1110;
 }
 if (%varcint83 <= 0) {
-	$text0 = ~script46($int3, ",");
-	if_settext("<$text0> gp", interface_105:155);
+	$text0 = ~tostring_spacer($int3, ",");
+	if_settext("<$text0> gp", stockmarket:offerprice);
 	%varcint85 = %var1111;
 }

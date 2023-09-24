@@ -1,21 +1,21 @@
 // 1564
 [proc,script1564]
-~script1561(interface_771:14, "bank_tabs,1", interface_771:403);
-~script1562(interface_771:16, "bank_tabs,0", "bank_tabs,3", interface_771:403);
-~script1562(interface_771:18, "bank_tabs,0", "bank_tabs,3", interface_771:403);
-~script1562(interface_771:20, "bank_tabs,0", "bank_tabs,3", interface_771:403);
-if_settext("Mouse", interface_771:13);
-if_sethide(false, interface_771:22);
-if_sethide(true, interface_771:23);
-if_sethide(true, interface_771:24);
-if_sethide(true, interface_771:25);
-if_sethide(true, interface_771:26);
-if_sethide(true, interface_771:28);
-if_sethide(true, interface_771:29);
+~script1561(interface_771:com_14, "bank_tabs,1", interface_771:com_403);
+~script1562(interface_771:com_16, "bank_tabs,0", "bank_tabs,3", interface_771:com_403);
+~script1562(interface_771:com_18, "bank_tabs,0", "bank_tabs,3", interface_771:com_403);
+~script1562(interface_771:com_20, "bank_tabs,0", "bank_tabs,3", interface_771:com_403);
+if_settext("Mouse", interface_771:title);
+if_sethide(false, interface_771:com_22);
+if_sethide(true, interface_771:com_23);
+if_sethide(true, interface_771:com_24);
+if_sethide(true, interface_771:com_25);
+if_sethide(true, interface_771:confirm_layer);
+if_sethide(true, interface_771:com_28);
+if_sethide(true, interface_771:com_29);
 if (%var170 = 0) {
-	if_setgraphic("graphic_833", interface_771:40);
-	if_setgraphic("graphic_834", interface_771:37);
+	if_setgraphic("graphic_833", interface_771:com_40);
+	if_setgraphic("graphic_834", interface_771:com_37);
 } else {
-	if_setgraphic("graphic_834", interface_771:40);
-	if_setgraphic("graphic_833", interface_771:37);
+	if_setgraphic("graphic_834", interface_771:com_40);
+	if_setgraphic("graphic_833", interface_771:com_37);
 }

@@ -1,0 +1,19 @@
+// 548
+[clientscript,stats_update](int $comsubid0, int $comsubid1, int $comsubid2, stat $stat3, component $component4, component $component5)
+if (%varcint80 = 0) {
+	return;
+}
+def_string $string0 = "<enum(stat, string, enum_680, $stat3)>: <tostring(stat($stat3))>/<tostring(stat_base($stat3))>";
+if (cc_find($component5, $comsubid0) = ^true & parawidth($string0, 190, p12_full) < cc_getwidth & %varcint80 = stat_base($stat3)) {
+	cc_settext($string0);
+	if (cc_find($component5, $comsubid1) = ^true) {
+		cc_settext(~tostring_spacer(stat_xp($stat3), ","));
+	}
+	if (stat_base($stat3) < 99 & cc_find($component5, $comsubid2) = ^true) {
+		cc_settext(~tostring_spacer(calc(enum(int, int, enum_716, calc(stat_base($stat3) + 1)) - stat_xp($stat3)), ","));
+	}
+	return;
+}
+cc_deleteall($component5);
+%varcint80 = stat_base($stat3);
+~stats_mouseover_create($component4, $stat3, $component5);

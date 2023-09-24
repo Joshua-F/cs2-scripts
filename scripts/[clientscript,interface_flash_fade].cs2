@@ -1,0 +1,15 @@
+// 144
+[clientscript,interface_flash_fade](component $component0, int $comsubid1, int $int2, int $clock3)
+def_int $int4 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (clientclock >= $clock3) {
+		cc_delete;
+		return;
+	} else if (calc(clientclock % 40) < 20) {
+		$int4 = calc(clientclock - $int2);
+		$int4 = calc($int4 * 255);
+		$int4 = calc($int4 / ($clock3 - $int2));
+		cc_settrans($int4);
+	}
+	cc_settrans(255);
+}

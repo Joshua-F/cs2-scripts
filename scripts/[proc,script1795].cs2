@@ -5,15 +5,15 @@ def_graphic $graphic3 = "options_radio_buttons,2";
 if (%varbit5279 = 1) {
 	if (%varbit5295 = 1) {
 		if_setgraphic($graphic3, $component1);
-		if_setonop("script44($component1, $graphic2)", $component0);
+		if_setonop("graphic_swapper($component1, $graphic2)", $component0);
 	} else {
 		if_setgraphic($graphic2, $component1);
-		if_setonop("script44($component1, $graphic3)", $component0);
+		if_setonop("graphic_swapper($component1, $graphic3)", $component0);
 	}
 } else if (%varbit5294 = 1) {
 	if_setgraphic($graphic3, $component1);
-	if_setonop("script44($component1, $graphic2)", $component0);
+	if_setonop("graphic_swapper($component1, $graphic2)", $component0);
 } else {
 	if_setgraphic($graphic2, $component1);
-	if_setonop("script44($component1, $graphic3)", $component0);
+	if_setonop("graphic_swapper($component1, $graphic3)", $component0);
 }

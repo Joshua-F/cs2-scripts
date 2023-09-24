@@ -1,0 +1,10 @@
+// 1774
+[proc,clanwars_resynch_melee]
+if (%varcint250 = false) {
+	if_setgraphic("options_radio_buttons,2", clanwars_setup:melee_indicator);
+	if_settrans(0, clanwars_setup:melee);
+} else {
+	if_setgraphic("options_radio_buttons,1", clanwars_setup:melee_indicator);
+	if_settrans(225, clanwars_setup:melee);
+}
+~clanwars_updateside;

@@ -1,6 +1,6 @@
 // 1846
 [clientscript,script1846](component $component0, int $int1)
-%varcint178 = ~script1345($int1, $component0);
+%varcint178 = ~dropdownbox_getselected($int1, $component0);
 if (getwindowmode = ^windowmode_fullscreen) {
 	if (playermember = false) {
 		setwindowmode(getdefaultwindowmode);

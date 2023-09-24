@@ -1,0 +1,16 @@
+// 117
+[clientscript,flashside_vartransmit]
+if (%varbit3756 < 1 | %varbit3756 > 15 | ~getsidehidden(calc(%varbit3756 - 1)) = false) {
+	if_setontimer(null, toplevel_fullscreen:stones_on);
+	if_setontimer(null, toplevel:com_36);
+	~arrow_set(null, -1);
+	~subchanged;
+	return;
+}
+if (%varbit3756 = calc(14 + 1)) {
+	~arrow_set(toplevel_fullscreen:topstat_run, -1);
+} else {
+	~arrow_set(~script1742(calc(%varbit3756 - 1)), -1);
+}
+if_setontimer("flashside_timer", toplevel_fullscreen:stones_on);
+if_setontimer("flashside_timer", toplevel:com_36);

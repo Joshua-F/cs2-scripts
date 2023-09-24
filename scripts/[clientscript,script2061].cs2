@@ -5,7 +5,7 @@ def_int $int2 = enum(component, int, struct_param($struct1, param_664), $compone
 def_component $component3 = struct_param($struct1, param_661);
 def_string $string0 = enum(int, string, struct_param($struct1, param_665), $int2);
 if ($component3 ! null) {
-	~script39($component0, $component3, $string0, 25, 300);
+	~addtooltip_action($component0, $component3, $string0, 25, 300);
 }
 if ($int2 ! %varcint631) {
 	if_setgraphic("graphic_1701", $component0);

@@ -1,6 +1,6 @@
 // 942
 [proc,script942](int $comsubid0, int $int1, int $int2, int $int3)
-if (cc_find(interface_727:29, $comsubid0) = ^true) {
+if (cc_find(carpet_draughts:board, $comsubid0) = ^true) {
 	if ($int2 = 1) {
 		cc_sethide(true);
 		return;

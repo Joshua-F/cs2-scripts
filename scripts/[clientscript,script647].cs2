@@ -3,11 +3,11 @@
 def_int $int4 = 0;
 if (%varcint2 = 1) {
 	while ($int4 < 6) {
-		~script41(~script626($int4));
+		~deltooltip_action(~script626($int4));
 		$int4 = calc($int4 + 1);
 	}
 }
-if (if_gethide(interface_105:16) = true) {
+if (if_gethide(stockmarket:com_16) = true) {
 	return;
 }
-~script39($component0, $component1, $string0, $int2, $width3);
+~addtooltip_action($component0, $component1, $string0, $int2, $width3);

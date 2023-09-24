@@ -5,6 +5,6 @@ if ($obj6 = bronze_bull_rush_scroll_12461) {
 }
 if_setopbase("<col=00ff00><$string0>", $component0);
 $string0 = append($string0, " (<tostring(%varbit4288)> Special Move points)");
-~script773($component0, interface_662:68, $graphic3, $graphic4, $int5, $obj6, $int7, $obj8, $int9, $obj10, $int11, $obj12, $int13);
-if_setonmouserepeat("script10($component0, interface_662:68, $int5, $string0, $string1, $obj6, $int7, $obj8, $int9, $obj10, $int11, $obj12, $int13)", $component0);
-if_setonmouseleave("script778(interface_662:68)", $component0);
+~lore_updateicon($component0, lore_stats_side:build_layer, $graphic3, $graphic4, $int5, $obj6, $int7, $obj8, $int9, $obj10, $int11, $obj12, $int13);
+if_setonmouserepeat("magic_addtooltip($component0, lore_stats_side:build_layer, $int5, $string0, $string1, $obj6, $int7, $obj8, $int9, $obj10, $int11, $obj12, $int13)", $component0);
+if_setonmouseleave("lore_deltooltip(lore_stats_side:build_layer)", $component0);

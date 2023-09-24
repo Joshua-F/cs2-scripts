@@ -1,9 +1,0 @@
-// 1041
-[proc,script1041](component $component0, component $component1, component $component2, chatphrase $chatphrase3)
-cc_deleteall($component1);
-if (string_length(%varcstring30) > 0) {
-	~script1039($component0, $component1, $component2, $chatphrase3);
-} else {
-	if_setscrollsize(0, 0, $component1);
-	~script1042($component1, $component2);
-}

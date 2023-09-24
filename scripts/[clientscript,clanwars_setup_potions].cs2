@@ -1,0 +1,11 @@
+// 1832
+[clientscript,clanwars_setup_potions](int $int0)
+if (~clanwars_setup_clicktest($int0) = 0) {
+	return;
+}
+if (%varcint255 = false) {
+	%varcint255 = true;
+} else {
+	%varcint255 = false;
+}
+~clanwars_resynch_potions;

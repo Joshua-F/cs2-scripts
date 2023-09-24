@@ -1,0 +1,162 @@
+// 1062
+[proc,quickchat_menu_add](component $component0, int $int1, chatcat $chatcat2, chatcat $chatcat3, int $int4)
+def_component $component5 = enum(int, component, enum_1550, $int1);
+def_component $component6 = enum(int, component, enum_1551, $int1);
+cc_deleteall($component5);
+cc_deleteall($component6);
+if ($component5 = null) {
+	return;
+}
+cc_create($component0, ^iftype_text, $int1);
+cc_setcolour(^black);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_string $string0 = chatcat_getdesc($chatcat2);
+cc_setopbase($string0);
+cc_setonop("quickchat_return($component0, $int1)");
+cc_setop(1, "Return to: ");
+if ($int1 > 0) {
+	$string0 = " <col=0000ff><$string0> <img=2>";
+} else if (%varcint126 = 1) {
+	$string0 = " To <%varcstring27>: <col=800000><$string0> <img=2>";
+} else if (%varcint126 = 2) {
+	$string0 = " [<col=0000ff><clan_getchatdisplayname><col=000000>]: <col=800000><$string0> <img=2>";
+} else {
+	$string0 = " <col=0000ff><$string0> <img=2>";
+}
+cc_settext($string0);
+cc_settextshadow(false);
+cc_setsize(calc(parawidth($string0, if_getwidth($component0), p12_full) + 4), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_setonmouseover("script1080(chatdefault:com_2, $int1)");
+cc_setonmouseleave("script1081(chatdefault:com_2, $int1)");
+.cc_create(chatdefault:com_2, ^iftype_rectangle, $int1);
+.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+.cc_setcolour(0x577e45);
+.cc_setfill(true);
+.cc_sethide(true);
+if_sethide(false, $component5);
+def_int $int7 = chatcat_getsubcatcount($chatcat2);
+def_int $count8 = chatcat_getphrasecount($chatcat2);
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_chatcat $chatcat13 = null;
+def_chatphrase $chatphrase14 = null;
+def_char $char15 = null;
+def_int $int16 = 0;
+while ($int9 < $int7) {
+	cc_create($component5, ^iftype_text, $int10);
+	cc_setcolour(^black);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	$chatcat13 = chatcat_getsubcat($chatcat2, $int9);
+	$string0 = chatcat_getdesc($chatcat13);
+	cc_setonop("quickchat_menu_select($component5, $component6, $int10, $component0, calc($int1 + 1), $chatcat13)");
+	cc_setopbase($string0);
+	cc_setop(1, "Select: ");
+	cc_setonmouseover("script1082($int1, $component6, $int10)");
+	cc_setonmouseleave("script1083($int1, $component6, $int10)");
+	$char15 = char_touppercase(chatcat_getsubcatshortcut($chatcat2, $int9));
+	if (char_isalphanumeric($char15) = true) {
+		$string0 = "<col=555555><append_char("", $char15)>. <col=000000><$string0> <img=2>";
+	} else {
+		$string0 = "<$string0> <img=2>";
+	}
+	cc_settext($string0);
+	cc_settextshadow(false);
+	$int11 = parawidth($string0, if_getwidth($component0), p12_full);
+	if ($int11 > $int12) {
+		$int12 = $int11;
+	}
+	$int9 = calc($int9 + 1);
+	$int10 = calc($int10 + 1);
+}
+$int9 = 0;
+while ($int9 < $count8) {
+	cc_create($component5, ^iftype_text, $int10);
+	cc_setcolour(^black);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	$chatphrase14 = chatcat_getphrase($chatcat2, $int9);
+	$string0 = chatphrase_gettext($chatphrase14);
+	cc_setonop("quickchat_phrase($component0, $chatphrase14, $int1)");
+	cc_setopbase($string0);
+	cc_setop(1, "Send: ");
+	cc_setonmouseover("script1082($int1, $component6, $int10)");
+	cc_setonmouseleave("script1083($int1, $component6, $int10)");
+	if ($int9 < 10) {
+		$string0 = "<col=555555><tostring(calc(($int9 + 1) % 10))>. <col=000000><$string0>";
+	}
+	cc_settext($string0);
+	cc_settextshadow(false);
+	$int11 = parawidth($string0, if_getwidth($component0), p12_full);
+	if ($int11 > $int12) {
+		$int12 = $int11;
+	}
+	$int9 = calc($int9 + 1);
+	$int10 = calc($int10 + 1);
+}
+if ($chatcat3 ! null) {
+	cc_create($component5, ^iftype_text, $int10);
+	cc_setcolour(^black);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	$string0 = chatcat_getdesc($chatcat3);
+	cc_setonop("quickchat_menu_select($component5, $component6, $int10, $component0, calc($int1 + 1), $chatcat3)");
+	cc_setopbase($string0);
+	cc_setop(1, "Select: ");
+	cc_setonmouseover("script1082($int1, $component6, $int10)");
+	cc_setonmouseleave("script1083($int1, $component6, $int10)");
+	$string0 = "<col=555555>X. <col=000000><$string0> <img=2>";
+	cc_settext($string0);
+	cc_settextshadow(false);
+	$int11 = parawidth($string0, if_getwidth($component0), p12_full);
+	if ($int11 > $int12) {
+		$int12 = $int11;
+	}
+	$int10 = calc($int10 + 1);
+}
+if ($int4 = 1) {
+	cc_create($component5, ^iftype_text, $int10);
+	cc_setcolour(^black);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setonop("quickchat_enter_search($component5, $component6, $int10, $int1)");
+	cc_setopbase("Search phrases");
+	cc_setop(1, "Select: ");
+	cc_setonmouseover("script1082($int1, $component6, $int10)");
+	cc_setonmouseleave("script1083($int1, $component6, $int10)");
+	cc_settext("<col=555555>Enter. <col=000000>Search <img=2>");
+	cc_settextshadow(false);
+	$int11 = parawidth($string0, if_getwidth($component0), p12_full);
+	if ($int11 > $int12) {
+		$int12 = $int11;
+	}
+	$int10 = calc($int10 + 1);
+}
+if_setonkey("quickchat_onkey(event_keycode, event_keychar, $component0, $int1, $chatcat2, null, $int10)", $component5);
+$int9 = 0;
+def_int $int17 = 0;
+while (cc_find($component5, $int9) = ^true) {
+	if (calc($int16 * 14 + 14) > if_getheight($component5)) {
+		$int17 = calc($int17 + $int12 + 4);
+		$int16 = 0;
+	}
+	cc_setsize($int12, 14, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int17 + 2), calc($int16 * 14), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_create($component6, ^iftype_rectangle, $int9);
+	.cc_setsize(calc(cc_getwidth + 4), cc_getheight, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(calc(cc_getx - 2), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setcolour(0x577e45);
+	.cc_setfill(true);
+	.cc_sethide(true);
+	$int9 = calc($int9 + 1);
+	$int16 = calc($int16 + 1);
+}
+$int17 = calc($int17 + $int12 + 4);
+def_component $layer18 = if_getlayer($component5);
+if_setsize($int17, if_getheight($layer18), ^setsize_abs, ^setsize_abs, $component5);
+if_setsize($int17, if_getheight($layer18), ^setsize_abs, ^setsize_abs, $component6);
+if_setposition(calc(if_getx($component5) + $int17), 0, ^setpos_abs_left, ^setpos_abs_top, enum(int, component, enum_1550, calc($int1 + 1)));
+~quickchat_return($component0, $int1);

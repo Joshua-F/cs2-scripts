@@ -1,6 +1,0 @@
-// 1451
-[clientscript,script1451]
-if (%varcint193 < clientclock) {
-	if_setontimer("script1452(%varcint193)", interface_762:73);
-	%varcint193 = calc(clientclock + 10);
-}

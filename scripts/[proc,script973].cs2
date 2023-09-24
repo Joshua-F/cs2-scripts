@@ -16,9 +16,9 @@ if ($int0 ! 0) {
 		$text0 = "You've just advanced 3 Summoning levels!";
 	}
 }
-if_settext($text0, interface_741:4);
-if_settext("You have now reached level <tostring(stat_base($stat1))>.", interface_741:6);
-if_setgraphic($graphic2, interface_741:7);
+if_settext($text0, lvl_scroll:title);
+if_settext("You have now reached level <tostring(stat_base($stat1))>.", lvl_scroll:subsection_title);
+if_setgraphic($graphic2, lvl_scroll:icons);
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
@@ -26,8 +26,8 @@ def_string $string1 = "";
 def_int $int7 = 0;
 def_namedobj $namedobj8 = null;
 def_int $int9 = 0;
-cc_deleteall(interface_741:2);
-cc_deleteall(interface_741:3);
+cc_deleteall(lvl_scroll:info);
+cc_deleteall(lvl_scroll:info_scrollbar);
 if (%var281 < 1000 & stat_base($stat1) = 3) {
 	$string1 = "<col=000080>You've now reached the highest skill level that you can achieve during the tutorial. Once you finish the tutorial, you can advance this skill even further!";
 	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
@@ -56,7 +56,7 @@ if ($int0 = 1 | $int0 = 2 | $int0 = 5 | $int0 = 3 | $int0 = 7 | $int0 = 4 | $int
 	if (%varbit5395 = 1) {
 		while ($namedobj8 ! null) {
 			$int9, $namedobj8, $string1 = ~script976($int7);
-			if ($int9 = ~script1432) {
+			if ($int9 = ~comlevel) {
 				$int6 = ~script974($int4, $int5, $namedobj8, $string1);
 				cc_settext($string1);
 				$int5 = ~script975($int5, $int6);
@@ -113,8 +113,8 @@ if ($int3 = 1) {
 	cc_settext($string1);
 	$int5 = ~script975($int5, $int6);
 }
-if_setscrollpos(0, 0, interface_741:2);
-if_setscrollsize(296, $int5, interface_741:2);
+if_setscrollpos(0, 0, lvl_scroll:info);
+if_setscrollsize(296, $int5, lvl_scroll:info);
 if ($int5 > 160) {
-	~script31(interface_741:3, interface_741:2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+	~scrollbar_vertical(lvl_scroll:info_scrollbar, lvl_scroll:info, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 }

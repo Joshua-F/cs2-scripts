@@ -45,7 +45,7 @@ while ($chatphrase7 ! null) {
 		cc_settextfont(p12_full);
 		cc_settextshadow(false);
 		cc_setonmouseover("script1906($int6, $component1)");
-		cc_setonclick("script1070($component0, $chatphrase7, 0)");
+		cc_setonclick("quickchat_phrase($component0, $chatphrase7, 0)");
 		$int6 = calc($int6 + 1);
 	}
 	$chatphrase7 = chatphrase_findnext;
@@ -63,6 +63,6 @@ if ($int6 = 1) {
 	~script1905($component1, $component2);
 	return;
 }
-if_setonkey("script1901(event_keycode, event_keychar, interface_137:1, interface_137:14, interface_137:16, interface_137:15, calc($int6 - 1))", interface_137:13);
+if_setonkey("script1901(event_keycode, event_keychar, chatdefault:com_1, chatdefault:com_14, chatdefault:com_16, chatdefault:com_15, calc($int6 - 1))", chatdefault:com_13);
 if_setscrollsize(0, calc(14 * ($int6 - 1)), $component1);
 ~script1905($component1, $component2);

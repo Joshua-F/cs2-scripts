@@ -5,11 +5,11 @@ def_int $int1 = 0;
 if_sethide(true, enum(int, component, enum_1355, %varbit4398));
 if_sethide(true, enum(int, component, enum_1358, %varbit4398));
 if ($int0 = 0) {
-	if_sethide(false, interface_681:9);
-	if_sethide(true, interface_681:12);
+	if_sethide(false, interface_681:left_side);
+	if_sethide(true, interface_681:right_side);
 } else {
-	if_sethide(false, interface_681:12);
-	if_sethide(true, interface_681:9);
+	if_sethide(false, interface_681:right_side);
+	if_sethide(true, interface_681:left_side);
 }
 while ($int1 < 10) {
 	if (~script855($int1) = $int0) {

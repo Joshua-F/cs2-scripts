@@ -1,0 +1,52 @@
+// 1900
+[proc,quickchat_enter_search](component $component0, component $component1, int $int2, int $int3)
+%varcint159 = 0;
+%varcint158 = 0;
+def_int $int4 = 0;
+while (cc_find($component0, $int4) = ^true) {
+	if ($int4 = $int2) {
+		cc_setonmouseover(null);
+		cc_setonmouseleave(null);
+		if (.cc_find($component1, $int4) = ^true) {
+			.cc_sethide(false);
+			.cc_setcolour(0x969777);
+		}
+	} else {
+		cc_setonmouseover("script1082(calc($int3 - 1), $component1, $int4)");
+		cc_setonmouseleave("script1083(calc($int3 - 1), $component1, $int4)");
+		if (.cc_find($component1, $int4) = ^true) {
+			.cc_sethide(true);
+		}
+	}
+	$int4 = calc($int4 + 1);
+}
+%varcint128 = -1;
+%varcint129 = 0;
+%varcstring30 = "";
+def_string $text0 = "Search phrases...";
+if (%varcint126 = 1) {
+	$text0 = "To <%varcstring27>: <col=800000><$text0>";
+} else if (%varcint126 = 2) {
+	$text0 = "[<col=0000ff><clan_getchatdisplayname><col=000000>]: <col=800000><$text0>";
+} else {
+	$text0 = "<col=0000ff><$text0>";
+}
+if_sethide(true, chatdefault:chat);
+if_setonkey(null, chatdefault:input);
+if_sethide(false, chatdefault:quickchat);
+if_sethide(true, chatdefault:com_7);
+if_sethide(true, chatdefault:com_9);
+if_sethide(false, chatdefault:com_13);
+if_sethide(true, chatdefault:quickchat_menu);
+if_sethide(true, chatdefault:com_1);
+if_sethide(false, chatdefault:quickchat_title);
+if_setcolour(^black, chatdefault:quickchat_title);
+if_settextfont(p12_full, chatdefault:quickchat_title);
+if_settextalign(^settextalign_left, ^settextalign_centre, 0, chatdefault:quickchat_title);
+if_settext($text0, chatdefault:quickchat_title);
+if_settextshadow(false, chatdefault:quickchat_title);
+cc_deleteall(chatdefault:com_16);
+if_settext("Search for: *", chatdefault:com_14);
+if_setonkey("script1901(event_keycode, event_keychar, chatdefault:com_1, chatdefault:com_14, chatdefault:com_16, chatdefault:com_15, 0)", chatdefault:com_13);
+if_setscrollsize(0, 0, chatdefault:com_16);
+~scrollbar_resize(chatdefault:com_15, chatdefault:com_16, 0);

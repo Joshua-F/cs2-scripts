@@ -2,23 +2,23 @@
 [clientscript,script1908]
 def_int $int0 = 12;
 def_string $string0 = "";
-if_setsize(16, calc(%varcint564 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:138);
-if_setsize(16, calc(%varcint565 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:139);
-if_setsize(16, calc(%varcint566 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:140);
-if_setsize(16, calc(%varcint567 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:144);
-if_setsize(16, calc(%varcint568 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:148);
-if_setsize(16, calc(%varcint569 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:82);
-if_setsize(16, calc(%varcint570 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:86);
-if_setsize(16, calc(%varcint571 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:90);
-if_setsize(16, calc(%varcint572 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:94);
-if_setsize(16, calc(%varcint573 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:61);
-if_setsize(16, calc(%varcint574 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:65);
-if_setsize(16, calc(%varcint575 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:69);
-if_setsize(16, calc(%varcint576 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:73);
-if_setsize(16, calc(%varcint577 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:103);
-if_setsize(16, calc(%varcint578 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:107);
-if_setsize(16, calc(%varcint579 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:111);
-if_setsize(16, calc(%varcint580 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, interface_806:115);
+if_setsize(16, calc(%varcint564 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_138);
+if_setsize(16, calc(%varcint565 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_139);
+if_setsize(16, calc(%varcint566 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_140);
+if_setsize(16, calc(%varcint567 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_144);
+if_setsize(16, calc(%varcint568 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_148);
+if_setsize(16, calc(%varcint569 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_82);
+if_setsize(16, calc(%varcint570 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_86);
+if_setsize(16, calc(%varcint571 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_90);
+if_setsize(16, calc(%varcint572 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_94);
+if_setsize(16, calc(%varcint573 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_61);
+if_setsize(16, calc(%varcint574 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_65);
+if_setsize(16, calc(%varcint575 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_69);
+if_setsize(16, calc(%varcint576 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_73);
+if_setsize(16, calc(%varcint577 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_103);
+if_setsize(16, calc(%varcint578 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_107);
+if_setsize(16, calc(%varcint579 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_111);
+if_setsize(16, calc(%varcint580 * 100 / $int0 * 16384 / 100), ^setsize_abs, ^setsize_2, sc_remaining_clay:com_115);
 if (%varcint564 = 0) {
 	$string0 = "There are no class 1 clay locations in the area.";
 } else if (%varcint564 = 1) {
@@ -26,7 +26,7 @@ if (%varcint564 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint564)> class 1 clay locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:138);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_138);
 if (%varcint565 = 0) {
 	$string0 = "There are no class 2 fishing locations in the area.";
 } else if (%varcint565 = 1) {
@@ -34,7 +34,7 @@ if (%varcint565 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint565)> class 2 fishing locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:139);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_139);
 if (%varcint566 = 0) {
 	$string0 = "There are no class 3 fishing locations in the area.";
 } else if (%varcint566 = 1) {
@@ -42,7 +42,7 @@ if (%varcint566 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint566)> class 3 fishing locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:140);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_140);
 if (%varcint567 = 0) {
 	$string0 = "There are no class 4 fishing locations in the area.";
 } else if (%varcint567 = 1) {
@@ -50,7 +50,7 @@ if (%varcint567 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint567)> class 4 fishing locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:144);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_144);
 if (%varcint568 = 0) {
 	$string0 = "There are no class 5 fishing locations in the area.";
 } else if (%varcint568 = 1) {
@@ -58,7 +58,7 @@ if (%varcint568 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint568)> class 5 fishing locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:148);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_148);
 if (%varcint569 = 0) {
 	$string0 = "There are no class 2 mining locations in the area.";
 } else if (%varcint569 = 1) {
@@ -66,7 +66,7 @@ if (%varcint569 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint569)> class 2 mining locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:82);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_82);
 if (%varcint570 = 0) {
 	$string0 = "There are no class 3 mining locations in the area.";
 } else if (%varcint570 = 1) {
@@ -74,7 +74,7 @@ if (%varcint570 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint570)> class 3 mining locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:86);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_86);
 if (%varcint571 = 0) {
 	$string0 = "There are no class 4 mining locations in the area.";
 } else if (%varcint571 = 1) {
@@ -82,7 +82,7 @@ if (%varcint571 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint571)> class 4 mining locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:90);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_90);
 if (%varcint572 = 0) {
 	$string0 = "There are no class 5 mining locations in the area.";
 } else if (%varcint572 = 1) {
@@ -90,7 +90,7 @@ if (%varcint572 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint572)> class 5 mining locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:94);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_94);
 if (%varcint573 = 0) {
 	$string0 = "There are no class 2 woodcutting locations in the area.";
 } else if (%varcint573 = 1) {
@@ -98,7 +98,7 @@ if (%varcint573 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint573)> class 2 woodcutting locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:61);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_61);
 if (%varcint574 = 0) {
 	$string0 = "There are no class 3 woodcutting locations in the area.";
 } else if (%varcint574 = 1) {
@@ -106,7 +106,7 @@ if (%varcint574 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint574)> class 3 woodcutting locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:65);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_65);
 if (%varcint575 = 0) {
 	$string0 = "There are no class 4 woodcutting locations in the area.";
 } else if (%varcint575 = 1) {
@@ -114,7 +114,7 @@ if (%varcint575 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint575)> class 4 woodcutting locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:69);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_69);
 if (%varcint576 = 0) {
 	$string0 = "There are no class 5 woodcutting locations in the area.";
 } else if (%varcint576 = 1) {
@@ -122,7 +122,7 @@ if (%varcint576 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint576)> class 5 woodcutting locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:73);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_73);
 if (%varcint577 = 0) {
 	$string0 = "There are no class 2 hunting locations in the area.";
 } else if (%varcint577 = 1) {
@@ -130,7 +130,7 @@ if (%varcint577 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint577)> class 2 hunting locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:103);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_103);
 if (%varcint578 = 0) {
 	$string0 = "There are no class 3 hunting locations in the area.";
 } else if (%varcint578 = 1) {
@@ -138,7 +138,7 @@ if (%varcint578 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint578)> class 3 hunting locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:107);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_107);
 if (%varcint579 = 0) {
 	$string0 = "There are no class 4 hunting locations in the area.";
 } else if (%varcint579 = 1) {
@@ -146,7 +146,7 @@ if (%varcint579 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint579)> class 4 hunting locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:111);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_111);
 if (%varcint580 = 0) {
 	$string0 = "There are no class 5 hunting locations in the area.";
 } else if (%varcint580 = 1) {
@@ -154,4 +154,4 @@ if (%varcint580 = 0) {
 } else {
 	$string0 = "There are <tostring(%varcint580)> class 5 hunting locations in the area.";
 }
-if_setonmouserepeat("script38(event_com, interface_806:49, $string0, 25, 100)", interface_806:115);
+if_setonmouserepeat("addtooltip(event_com, sc_remaining_clay:tooltip_layer, $string0, 25, 100)", sc_remaining_clay:com_115);

@@ -1,0 +1,16 @@
+// 574
+[clientscript,objdialog_onkey](int $key0, char $keychar1)
+if ($key0 = ^key_return) {
+	%varcint81 = 0;
+	if_setontimer(null, objdialog:searchtext);
+	~objdialog_refreshsearch;
+	return;
+}
+def_string $string0 = ~add_to_inputstring(%varcstring22, 0, $key0, $keychar1);
+if (compare(%varcstring22, $string0) = 0) {
+	return;
+}
+%varcstring22 = $string0;
+if_settext("<escape(%varcstring22)>*", objdialog:searchtext);
+%varcint81 = 50;
+if_setontimer("objdialog_delay_timer", objdialog:searchtext);

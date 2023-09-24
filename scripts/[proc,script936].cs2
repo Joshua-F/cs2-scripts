@@ -5,25 +5,25 @@ def_int $int4 = calc(($int0 - 112) / 8);
 def_int $flags5 = 0;
 if ($int4 = 0) {
 	$flags5 = setbit($flags5, 0);
-} else if (cc_find(interface_724:27, calc($int0 + 48)) = ^true & cc_gethide = true) {
+} else if (cc_find(carpet_runesquares:board, calc($int0 + 48)) = ^true & cc_gethide = true) {
 	$flags5 = setbit($flags5, 0);
 }
 if ($int4 = 7) {
 	$flags5 = setbit($flags5, 1);
-} else if (cc_find(interface_724:27, calc($int0 + 56)) = ^true & cc_gethide = true) {
+} else if (cc_find(carpet_runesquares:board, calc($int0 + 56)) = ^true & cc_gethide = true) {
 	$flags5 = setbit($flags5, 1);
 }
 if ($int3 = 0) {
 	$flags5 = setbit($flags5, 2);
-} else if (cc_find(interface_724:27, calc($int0 - 1 - $int4)) = ^true & cc_gethide = true) {
+} else if (cc_find(carpet_runesquares:board, calc($int0 - 1 - $int4)) = ^true & cc_gethide = true) {
 	$flags5 = setbit($flags5, 2);
 }
 if ($int3 = 7) {
 	$flags5 = setbit($flags5, 3);
-} else if (cc_find(interface_724:27, calc($int0 - $int4)) = ^true & cc_gethide = true) {
+} else if (cc_find(carpet_runesquares:board, calc($int0 - $int4)) = ^true & cc_gethide = true) {
 	$flags5 = setbit($flags5, 3);
 }
-if ($flags5 = 15 & cc_find(interface_724:27, calc($int0 + 112)) = ^true) {
+if ($flags5 = 15 & cc_find(carpet_runesquares:board, calc($int0 + 112)) = ^true) {
 	if (calc($int1 % 2) = 1) {
 		cc_setobject(death_rune_560, -1);
 	} else {

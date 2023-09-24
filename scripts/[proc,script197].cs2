@@ -61,7 +61,7 @@ while ($count2 < $count1) {
 	cc_create($component0, ^iftype_graphic, calc($int5 + 2));
 	cc_setposition(1, calc($count2 * 15 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic(~script198(clan_getchatuserrank($count2)));
+	cc_setgraphic(~getclanicon(clan_getchatuserrank($count2)));
 	cc_setonop("script199(clan_getchatusername($count2), event_op)");
 	if (clan_isself($count2) = false) {
 		if (friend_test(clan_getchatusername($count2)) = true) {
@@ -79,18 +79,18 @@ while ($count2 < $count1) {
 	$count2 = calc($count2 + 1);
 }
 if ($count1 > 0) {
-	if_settext("<col=ff9b00>Talking in: <col=ffff64><clan_getchatdisplayname>", interface_589:0);
-	if_settext("<col=ff9b00>Owner: <col=ffffff><clan_getchatownername>", interface_589:1);
-	if_settext("Leave Chat", interface_589:8);
-	if_setop(1, "Leave Chat", interface_589:8);
+	if_settext("<col=ff9b00>Talking in: <col=ffff64><clan_getchatdisplayname>", clanjoin:com_0);
+	if_settext("<col=ff9b00>Owner: <col=ffffff><clan_getchatownername>", clanjoin:com_1);
+	if_settext("Leave Chat", clanjoin:com_8);
+	if_setop(1, "Leave Chat", clanjoin:com_8);
 } else {
-	if_settext("<col=ff9b00>Talking in: Not in chat", interface_589:0);
-	if_settext("<col=ff9b00>Owner: None", interface_589:1);
-	if_settext("Join Chat", interface_589:8);
-	if_setop(1, "Join Chat", interface_589:8);
+	if_settext("<col=ff9b00>Talking in: Not in chat", clanjoin:com_0);
+	if_settext("<col=ff9b00>Owner: None", clanjoin:com_1);
+	if_settext("Join Chat", clanjoin:com_8);
+	if_setop(1, "Join Chat", clanjoin:com_8);
 }
 def_int $int7 = calc(15 * $count1);
-def_int $height8 = if_getheight(interface_589:5);
+def_int $height8 = if_getheight(clanjoin:clanlist);
 if ($int7 < 15) {
 	$int7 = 15;
 }
@@ -98,13 +98,13 @@ def_int $int9 = calc($int7 - $height8);
 if ($int9 < 0) {
 	$int9 = 0;
 }
-def_int $int10 = if_getscrolly(interface_589:5);
+def_int $int10 = if_getscrolly(clanjoin:clanlist);
 if ($int10 > $int9) {
 	$int10 = $int9;
 }
 if ($count1 > 0) {
-	if_setscrollsize(0, $int7, interface_589:5);
+	if_setscrollsize(0, $int7, clanjoin:clanlist);
 } else {
-	if_setscrollsize(0, 15, interface_589:5);
+	if_setscrollsize(0, 15, clanjoin:clanlist);
 }
-~script72(interface_589:6, interface_589:5, $int10);
+~scrollbar_resize(clanjoin:clanlistscrollbar, clanjoin:clanlist, $int10);

@@ -1,11 +1,11 @@
 // 752
 [clientscript,script752]
 if (%varbit4534 = 0 & %varbit4290 = 0) {
-	if_settext("---", interface_662:45);
+	if_settext("---", lore_stats_side:animal_time_left);
 	return;
 }
 if (%varbit4290 = 0) {
-	if_settext("<tostring(%varbit4534)>.00", interface_662:45);
+	if_settext("<tostring(%varbit4534)>.00", lore_stats_side:animal_time_left);
 } else {
-	if_settext("<tostring(%varbit4534)>.30", interface_662:45);
+	if_settext("<tostring(%varbit4534)>.30", lore_stats_side:animal_time_left);
 }

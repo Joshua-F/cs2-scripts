@@ -2,95 +2,95 @@
 [clientscript,script1946]
 def_int $int0 = 0;
 def_string $string0 = "";
-if_setonmouseleave("script40(interface_810:5)", interface_810:10);
+if_setonmouseleave("deltooltip(sc_scores:com_5)", sc_scores:com_10);
 if (%varcint589 = 99999992) {
-	if_settext("You abandon the game!", interface_810:81);
-	if_settext("You abandon the game.<br><br>The mystics don't seem happy and scowl at you, muttering unpleasant sentiments under their breath.<br><br>You notice that you received no score as a result.", interface_810:17);
-	if_settext("-100%", interface_810:58);
-	if_settext("", interface_810:32);
-	if_settext("", interface_810:33);
+	if_settext("You abandon the game!", sc_scores:com_81);
+	if_settext("You abandon the game.<br><br>The mystics don't seem happy and scowl at you, muttering unpleasant sentiments under their breath.<br><br>You notice that you received no score as a result.", sc_scores:com_17);
+	if_settext("-100%", sc_scores:com_58);
+	if_settext("", sc_scores:com_32);
+	if_settext("", sc_scores:com_33);
 	$string0 = "The awards tab is not available when you leave a game early.";
-	if_setonmouserepeat("script38(interface_810:10, interface_810:5, $string0, 25, 189)", interface_810:10);
+	if_setonmouserepeat("addtooltip(sc_scores:com_10, sc_scores:com_5, $string0, 25, 189)", sc_scores:com_10);
 } else {
 	if (%varcint588 = 1) {
-		if_settext(tostring(%varcint597), interface_810:32);
-		if_settext(tostring(%varcint598), interface_810:33);
+		if_settext(tostring(%varcint597), sc_scores:com_32);
+		if_settext(tostring(%varcint598), sc_scores:com_33);
 	} else {
-		if_settext(tostring(%varcint598), interface_810:32);
-		if_settext(tostring(%varcint597), interface_810:33);
+		if_settext(tostring(%varcint598), sc_scores:com_32);
+		if_settext(tostring(%varcint597), sc_scores:com_33);
 	}
 	if (%varcint588 = %varcint589) {
-		if_settext("Your valiant team takes the victory!", interface_810:81);
+		if_settext("Your valiant team takes the victory!", sc_scores:com_81);
 		if ($int0 = 1) {
-			if_settext("With the heroic conquest of all resources and facilities, your team have ripped success from the feeble fingers of your unworthy foes.<br><br>The mystics stand in awe of your power, and you hear them praising you in excited whispers.<br><br>You notice that they have increased your score as a reward.", interface_810:17);
+			if_settext("With the heroic conquest of all resources and facilities, your team have ripped success from the feeble fingers of your unworthy foes.<br><br>The mystics stand in awe of your power, and you hear them praising you in excited whispers.<br><br>You notice that they have increased your score as a reward.", sc_scores:com_17);
 		} else {
-			if_settext("The heroic, skillful and brave deeds of your team have ripped success from the feeble fingers of your unworthy foes.<br><br>The mystics stand in awe of your power, and you hear them praising you in excited whispers.<br><br>You notice that they have increased your score as a reward.", interface_810:17);
+			if_settext("The heroic, skillful and brave deeds of your team have ripped success from the feeble fingers of your unworthy foes.<br><br>The mystics stand in awe of your power, and you hear them praising you in excited whispers.<br><br>You notice that they have increased your score as a reward.", sc_scores:com_17);
 		}
-		if_settext("+10%", interface_810:58);
+		if_settext("+10%", sc_scores:com_58);
 	} else if (%varcint589 = 0) {
-		if_settext("The game was a draw!", interface_810:81);
-		if_settext("As if ordained by fate, the teams were equally brave and skillful, resulting in a draw.<br><br>The mystics nod knowingly, and you hear them discussing how the balance of the universe is reflected beautifully in the conflict's outcome.<br><br>", interface_810:17);
-		if_settext("+0%", interface_810:58);
+		if_settext("The game was a draw!", sc_scores:com_81);
+		if_settext("As if ordained by fate, the teams were equally brave and skillful, resulting in a draw.<br><br>The mystics nod knowingly, and you hear them discussing how the balance of the universe is reflected beautifully in the conflict's outcome.<br><br>", sc_scores:com_17);
+		if_settext("+0%", sc_scores:com_58);
 	} else {
-		if_settext("The enemy team has defeated you!", interface_810:81);
+		if_settext("The enemy team has defeated you!", sc_scores:com_81);
 		if ($int0 = 1) {
-			if_settext("Despite your best efforts, your team was beaten; the victory snatched away as the enemy took control of all resources and facilities.<br><br>The mystics frown at you, and shake their heads sadly.<br><br>You hear them arguing over whether they overestimated you, or if you were just unlucky.", interface_810:17);
+			if_settext("Despite your best efforts, your team was beaten; the victory snatched away as the enemy took control of all resources and facilities.<br><br>The mystics frown at you, and shake their heads sadly.<br><br>You hear them arguing over whether they overestimated you, or if you were just unlucky.", sc_scores:com_17);
 		}
-		if_settext("Despite your best efforts, your team was beaten; the victory snatched away by your fearsome foes.<br><br>The mystics frown at you, and shake their heads sadly.<br><br>You hear them arguing over whether they overestimated you, or if you were just unlucky.", interface_810:17);
-		if_settext("+0%", interface_810:58);
+		if_settext("Despite your best efforts, your team was beaten; the victory snatched away by your fearsome foes.<br><br>The mystics frown at you, and shake their heads sadly.<br><br>You hear them arguing over whether they overestimated you, or if you were just unlucky.", sc_scores:com_17);
+		if_settext("+0%", sc_scores:com_58);
 	}
 }
-if_settext(tostring(%varcint590), interface_810:59);
-if_settext(tostring(%varcint590), interface_810:59);
-if_settext(tostring(%varcint591), interface_810:60);
-if_settext(tostring(%varcint592), interface_810:61);
-if_settext(tostring(%varcint593), interface_810:62);
-if_settext(tostring(%varcint594), interface_810:23);
-if_settext(tostring(%varcint595), interface_810:25);
+if_settext(tostring(%varcint590), sc_scores:com_59);
+if_settext(tostring(%varcint590), sc_scores:com_59);
+if_settext(tostring(%varcint591), sc_scores:com_60);
+if_settext(tostring(%varcint592), sc_scores:com_61);
+if_settext(tostring(%varcint593), sc_scores:com_62);
+if_settext(tostring(%varcint594), sc_scores:com_23);
+if_settext(tostring(%varcint595), sc_scores:com_25);
 if (%varcint589 ! 99999992) {
-	if_settext(tostring(%varcint596), interface_810:63);
+	if_settext(tostring(%varcint596), sc_scores:com_63);
 } else {
-	if_settext(tostring(0), interface_810:63);
+	if_settext(tostring(0), sc_scores:com_63);
 }
 if (%varcint600 > 0 | %varcint603 > 0) {
-	if_settext(tostring(%varcint599), interface_810:136);
-	if_settext(tostring(%varcint600), interface_810:135);
-	if_settext(tostring(%varcint601), interface_810:139);
-	if_settext(tostring(%varcint602), interface_810:140);
-	if_settext(tostring(%varcint603), interface_810:138);
-	if_settext(tostring(%varcint604), interface_810:137);
-	if_settext(tostring(%varcint605), interface_810:141);
-	if_settext(tostring(%varcint606), interface_810:142);
-	if_settext(%varcstring44, interface_810:118);
-	if_settext(%varcstring45, interface_810:117);
-	if_settext(%varcstring46, interface_810:121);
-	if_settext(%varcstring47, interface_810:122);
-	if_settext(%varcstring48, interface_810:120);
-	if_settext(%varcstring49, interface_810:119);
-	if_settext(%varcstring50, interface_810:123);
-	if_settext(%varcstring51, interface_810:124);
+	if_settext(tostring(%varcint599), sc_scores:com_136);
+	if_settext(tostring(%varcint600), sc_scores:com_135);
+	if_settext(tostring(%varcint601), sc_scores:com_139);
+	if_settext(tostring(%varcint602), sc_scores:com_140);
+	if_settext(tostring(%varcint603), sc_scores:com_138);
+	if_settext(tostring(%varcint604), sc_scores:com_137);
+	if_settext(tostring(%varcint605), sc_scores:com_141);
+	if_settext(tostring(%varcint606), sc_scores:com_142);
+	if_settext(%varcstring44, sc_scores:com_118);
+	if_settext(%varcstring45, sc_scores:com_117);
+	if_settext(%varcstring46, sc_scores:com_121);
+	if_settext(%varcstring47, sc_scores:com_122);
+	if_settext(%varcstring48, sc_scores:com_120);
+	if_settext(%varcstring49, sc_scores:com_119);
+	if_settext(%varcstring50, sc_scores:com_123);
+	if_settext(%varcstring51, sc_scores:com_124);
 	if (%varcint607 > 0) {
-		if_settext(tostring(%varcint607), interface_810:127);
+		if_settext(tostring(%varcint607), sc_scores:com_127);
 	}
 	if (%varcint608 > 0) {
-		if_settext(tostring(%varcint608), interface_810:126);
+		if_settext(tostring(%varcint608), sc_scores:com_126);
 	}
 	if (%varcint609 > 0) {
-		if_settext(tostring(%varcint609), interface_810:130);
+		if_settext(tostring(%varcint609), sc_scores:com_130);
 	}
 	if (%varcint610 > 0) {
-		if_settext(tostring(%varcint610), interface_810:131);
+		if_settext(tostring(%varcint610), sc_scores:com_131);
 	}
 	if (%varcint611 > 0) {
-		if_settext(tostring(%varcint611), interface_810:129);
+		if_settext(tostring(%varcint611), sc_scores:com_129);
 	}
 	if (%varcint612 > 0) {
-		if_settext(tostring(%varcint612), interface_810:128);
+		if_settext(tostring(%varcint612), sc_scores:com_128);
 	}
 	if (%varcint613 > 0) {
-		if_settext(tostring(%varcint613), interface_810:132);
+		if_settext(tostring(%varcint613), sc_scores:com_132);
 	}
 	if (%varcint614 > 0) {
-		if_settext(tostring(%varcint614), interface_810:133);
+		if_settext(tostring(%varcint614), sc_scores:com_133);
 	}
 }

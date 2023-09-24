@@ -3,7 +3,7 @@
 def_int $int11 = -1;
 def_int $int12 = -1;
 def_int $int13 = calc(clientclock - $clock1);
-if (cc_find(interface_727:29, $comsubid0) = ^true) {
+if (cc_find(carpet_draughts:board, $comsubid0) = ^true) {
 	if ($int10 ! %varbit4538) {
 		~script943($int4, $int5, $int6, $int7, $int8, $int9);
 		cc_setontimer(null);
@@ -26,7 +26,7 @@ if (cc_find(interface_727:29, $comsubid0) = ^true) {
 			return;
 		}
 		cc_setontimer(null);
-		.cc_create(interface_727:29, ^iftype_model, 24);
+		.cc_create(carpet_draughts:board, ^iftype_model, 24);
 		.cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setmodel(model_4611);

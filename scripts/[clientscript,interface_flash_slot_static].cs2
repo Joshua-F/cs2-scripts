@@ -1,0 +1,8 @@
+// 714
+[clientscript,interface_flash_slot_static](component $component0)
+cc_create($component0, ^iftype_graphic, 4);
+cc_setgraphic("exclamation_mark");
+cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_sethide(false);
+cc_setontimer("interface_flash_fade($component0, 4, clientclock, calc(clientclock + 750))");

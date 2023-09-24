@@ -1,0 +1,11 @@
+// 736
+[proc,arrow_set](component $component0, int $comsubid1)
+if ($component0 = null) {
+	if_sethide(true, toplevel_fullscreen:arrow);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, toplevel_fullscreen:arrow);
+	if_setontimer(null, toplevel_fullscreen:stones_off);
+	return;
+}
+if_sethide(false, toplevel_fullscreen:arrow);
+~arrow_update($component0, $comsubid1);
+if_setontimer("arrow_update($component0, $comsubid1)", toplevel_fullscreen:stones_off);

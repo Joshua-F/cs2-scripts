@@ -1,0 +1,6 @@
+// 28
+[clientscript,loot_toggle_client]
+if (%var281 < 1000 & %varbit4895 = 2) {
+	return;
+}
+if_setgraphic("loot_icon,2", clanjoin:loot_button);

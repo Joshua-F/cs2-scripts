@@ -1,7 +1,0 @@
-// 1804
-[clientscript,script1804](component $component0, int $comsubid1, component $component2)
-if (map_members = ^true) {
-	~script1163($component0, $comsubid1, $component2, "You may choose:<br>- Allow all spells<br>- Standard spellbook only<br>- Bind/Snare/Entangle only<br>- No Magic", 25, 250);
-} else {
-	~script1163($component0, $comsubid1, $component2, "You may choose:<br>- Standard spellbook<br>- Bind only<br>- No Magic", 25, 250);
-}

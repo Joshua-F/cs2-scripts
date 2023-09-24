@@ -11,9 +11,9 @@ if (stat($stat0) >= stat_base($stat0)) {
 	$height2 = calc($int1 - $int1 * stat($stat0) / stat_base($stat0));
 }
 if ($stat0 = hitpoints) {
-	if_setsize($width3, $height2, ^setsize_abs, ^setsize_abs, interface_748:3);
+	if_setsize($width3, $height2, ^setsize_abs, ^setsize_abs, topstat_hitpoints:com_3);
 } else if ($stat0 = prayer) {
-	if_setsize($width3, $height2, ^setsize_abs, ^setsize_abs, interface_749:3);
+	if_setsize($width3, $height2, ^setsize_abs, ^setsize_abs, topstat_prayer:com_3);
 } else if ($stat0 = summoning) {
-	if_setsize($width3, $height2, ^setsize_abs, ^setsize_abs, interface_747:3);
+	if_setsize($width3, $height2, ^setsize_abs, ^setsize_abs, topstat_lore:com_3);
 }

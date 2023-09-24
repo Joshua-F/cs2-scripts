@@ -1,0 +1,25 @@
+// 1033
+[proc,quickchat_tutorial_displaydata](string $string0)
+def_string $string1 = "";
+def_int $int0 = 0;
+$int0 = string_indexof_string($string0, "|", 0);
+if ($int0 ! -1) {
+	$string1 = substring($string0, calc($int0 + 1), string_length($string0));
+} else {
+	$string1 = $string0;
+}
+if_settext(substring($string0, 0, $int0), quickchat_tutorial:title);
+def_int $int1 = 0;
+def_int $int2 = 0;
+$int1 = calc(paraheight($string1, 400, p12_full) * 12);
+$int2 = if_getheight(quickchat_tutorial:text);
+$int2 = calc(if_getheight(quickchat_tutorial:text) / 2 - $int1 / 2);
+~quickchat_tutorial_addtext(0, 35, $int2, 400, 100, $string1, ^white);
+cc_create(quickchat_tutorial:text, ^iftype_graphic, 1);
+cc_setgraphic("v2_borders_slim,11");
+cc_setposition(35, calc($int2 - 25), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(400, 32, ^setsize_abs, ^setsize_abs);
+cc_create(quickchat_tutorial:text, ^iftype_graphic, 2);
+cc_setgraphic("v2_borders_slim,11");
+cc_setposition(35, calc($int2 + $int1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(400, 32, ^setsize_abs, ^setsize_abs);

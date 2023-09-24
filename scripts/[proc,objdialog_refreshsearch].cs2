@@ -1,0 +1,12 @@
+// 576
+[proc,objdialog_refreshsearch]
+if_setobject(null, -1, objdialog:objgraphic);
+cc_deleteall(objdialog:resultlist);
+if (string_length(%varcstring22) > 0) {
+	if_sethide(true, objdialog:com_5);
+	~objdialog_dosearch(%varcstring22);
+} else {
+	if_sethide(false, objdialog:com_5);
+	if_setscrollsize(0, 15, objdialog:resultlist);
+	~objdialog_doscrollbar;
+}

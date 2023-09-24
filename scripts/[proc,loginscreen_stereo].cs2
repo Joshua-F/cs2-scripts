@@ -1,0 +1,9 @@
+// 1220
+[proc,loginscreen_stereo]
+if (detailget_stereo = true) {
+	if_setgraphic("graphic_1258", loginscreen:stereo_button);
+	if_setgraphic("graphic_1257", loginscreen:mono_button);
+} else {
+	if_setgraphic("graphic_1258", loginscreen:mono_button);
+	if_setgraphic("graphic_1257", loginscreen:stereo_button);
+}

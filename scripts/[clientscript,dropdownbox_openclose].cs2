@@ -1,0 +1,8 @@
+// 1347
+[clientscript,dropdownbox_openclose](enum $enum0, int $int1, component $component2, graphic $graphic3, component $component4, component $component5, component $component6, int $colour7, int $colour8, int $colour9, graphic $graphic10, int $comsubid11, int $comsubid12, graphic $graphic13, graphic $graphic14, graphic $graphic15, graphic $graphic16, graphic $graphic17, graphic $graphic18)
+if (if_gethide($component2) = true) {
+	if_setscrollpos(0, 0, $component4);
+	~dropdownbox_open($enum0, $int1, $component2, $graphic3, $component4, $component5, $component6, $colour7, $colour8, $colour9, $graphic10, $comsubid11, $comsubid12, $graphic13, $graphic14, $graphic15, $graphic16, $graphic17, $graphic18);
+} else {
+	~dropdownbox_close($component6, $component2, $component4, $component5, $comsubid12);
+}

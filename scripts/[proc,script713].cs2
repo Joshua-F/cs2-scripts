@@ -22,9 +22,9 @@ if ($obj7 ! null) {
 		if_setop(2, "Edit", $component2);
 	}
 	if_setopbase("<col=ff9040>Duration</col>", $component2);
-	~script679($component3);
-	if_setonmouserepeat("script94($component3)", $component3);
-	if_setonmouseleave("script92($component3)", $component3);
+	~v2_stone_button($component3);
+	if_setonmouserepeat("v2_stone_button_in($component3)", $component3);
+	if_setonmouseleave("v2_stone_button($component3)", $component3);
 } else {
 	if_setobject_nonum(null, 0, $component1);
 	if_settext("", $component2);

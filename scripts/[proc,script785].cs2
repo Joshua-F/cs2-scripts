@@ -1,13 +1,13 @@
 // 785
 [proc,script785]
 if (getwindowmode = 0) {
-	if_setcolour(0x996600, interface_742:49);
-	~script1355("High Detail only", interface_742:62, interface_742:63, interface_742:64, null, "tradebacking_dark", 0xcf0000, p11_full);
+	if_setcolour(0x996600, graphics_options:com_49);
+	~dropdownbox_refuse("High Detail only", graphics_options:com_62, graphics_options:com_63, graphics_options:com_64, null, "tradebacking_dark", 0xcf0000, p11_full);
 	return;
 }
 def_int $int0 = 0;
 if (detailget_lightdetail_high = true) {
 	$int0 = 1;
 }
-if_setcolour(0xe1981f, interface_742:49);
-~script1435(enum_1581, $int0, 1, interface_742:62, interface_742:63, interface_742:64, null, "tradebacking_dark", "scrollbar_v2,1", 788, "tradebacking_light", 0xcf0000, ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setcolour(0xe1981f, graphics_options:com_49);
+~script1435(enum_1581, $int0, 1, graphics_options:com_62, graphics_options:com_63, graphics_options:com_64, null, "tradebacking_dark", "scrollbar_v2,1", 788, "tradebacking_light", 0xcf0000, ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

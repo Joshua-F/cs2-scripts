@@ -1,8 +1,8 @@
 // 400
 [clientscript,script400]
-def_int $int0 = paraheight(if_gettext(interface_378:193), if_getwidth(interface_378:193), p12_full);
+def_int $int0 = paraheight(if_gettext(welcome_screen:com_193), if_getwidth(welcome_screen:com_193), p12_full);
 if ($int0 < 2) {
 	$int0 = 2;
 }
-if_setsize(if_getwidth(interface_378:150), calc($int0 * 15 + 110), ^setsize_abs, ^setsize_abs, interface_378:150);
-if_setontimer(null, interface_378:193);
+if_setsize(if_getwidth(welcome_screen:com_150), calc($int0 * 15 + 110), ^setsize_abs, ^setsize_abs, welcome_screen:com_150);
+if_setontimer(null, welcome_screen:com_193);

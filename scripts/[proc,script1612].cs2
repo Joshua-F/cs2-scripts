@@ -1,7 +1,7 @@
 // 1612
 [proc,script1612](component $component0, int $int1, int $int2)
 if_setgraphic("graphic_1439", $component0);
-if_setonmouseleave("script40(interface_771:400)", $component0);
+if_setonmouseleave("deltooltip(interface_771:com_400)", $component0);
 if_setonmouseover(null, $component0);
 basecolour($int1, $int2);
 %varcint94 = $int2;

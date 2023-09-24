@@ -1,13 +1,13 @@
 // 48
 [clientscript,script48]
 if (%varbit4072 = 1 | %varbit4073 = 1) {
-	if_setgraphic("loot_icon,2", interface_589:14);
+	if_setgraphic("loot_icon,2", clanjoin:loot_button);
 } else if (%varbit4071 = 1) {
 	if (%varbit4465 = 1) {
-		if_setgraphic("loot_icon,3", interface_589:14);
+		if_setgraphic("loot_icon,3", clanjoin:loot_button);
 	} else {
-		if_setgraphic("loot_icon,0", interface_589:14);
+		if_setgraphic("loot_icon,0", clanjoin:loot_button);
 	}
 } else {
-	if_setgraphic("loot_icon,1", interface_589:14);
+	if_setgraphic("loot_icon,1", clanjoin:loot_button);
 }

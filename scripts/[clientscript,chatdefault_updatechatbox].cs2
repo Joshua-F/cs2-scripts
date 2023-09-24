@@ -1,0 +1,8 @@
+// 81
+[clientscript,chatdefault_updatechatbox]
+if ((if_hassub(chattop:chatoverlay) = true | if_hassub(chattop:chatoverlaylarge) = true) & chat_gethistorytype(0) = ^chattype_gamemessage) {
+	~meslayer_mode1(chat_gethistorymessage(0));
+}
+~rebuildchatbox;
+~rebuildpmbox;
+~chatalerts;

@@ -1,0 +1,6 @@
+// 17
+[clientscript,magic_entertargetmode](component $component0)
+if_setoutline(2, $component0);
+if (if_gettargetmask($component0) = 16) {
+	~if_switchside(3);
+}

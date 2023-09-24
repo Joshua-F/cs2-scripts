@@ -3,7 +3,7 @@
 if (_6121 = false | getwindowmode < ^windowmode_fixed) {
 	return;
 }
-def_int $windowmode2 = ~script1345($int0, $component1);
+def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
 if ($windowmode2 = detailget_antialiasing) {
 	return;
 }
@@ -12,5 +12,5 @@ if ($windowmode2 = 0) {
 	detail_antialiasing_default(0);
 	return;
 }
-if_setonclick("script1890(interface_744:138)", interface_744:238);
-~script1174(interface_744:237);
+if_setonclick("script1890(loginscreen:com_138)", loginscreen:windowmode_confirm_yes);
+~loginscreen_setactivemenu(loginscreen:windowmode_confirm);

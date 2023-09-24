@@ -1,0 +1,3 @@
+// 755
+[clientscript,lore_points_update]
+if_settext("<tostring(stat(summoning))>/<tostring(stat_base(summoning))>", lore_stats_side:points_left);

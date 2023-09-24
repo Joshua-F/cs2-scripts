@@ -1,8 +1,8 @@
 // 1188
 [proc,script1188]
 if (getwindowmode >= ^windowmode_resizable) {
-	if_setgraphic("chat_background", interface_752:1);
-	if_setalpha(true, interface_752:1);
-	if_sethide(false, interface_752:1);
-	if_sethide(false, interface_752:2);
+	if_setgraphic("chat_background", chattop:chat_graphic);
+	if_setalpha(true, chattop:chat_graphic);
+	if_sethide(false, chattop:chat_graphic);
+	if_sethide(false, chattop:chat_border);
 }

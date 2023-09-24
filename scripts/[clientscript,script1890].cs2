@@ -4,5 +4,5 @@ if (getwindowmode ! ^windowmode_fullscreen) {
 	setdefaultwindowmode(getwindowmode);
 }
 detail_antialiasing_default(detailget_antialiasing);
-if_setontimer(null, interface_744:237);
-~script1174($component0);
+if_setontimer(null, loginscreen:windowmode_confirm);
+~loginscreen_setactivemenu($component0);

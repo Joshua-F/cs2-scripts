@@ -17,11 +17,11 @@ if ($height5 <= if_getheight($component0)) {
 	if_setsize(170, $height5, ^setsize_abs, ^setsize_abs, $component2);
 	if_setscrollsize(0, $height5, $component0);
 	if_setscrollpos(0, 0, $component0);
-	~script31($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	~script72($component1, $component0, 0);
+	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~scrollbar_resize($component1, $component0, 0);
 }
 if_settext(%varcstring25, $component2);
-~script680($component3);
+~v2_stone_button_filled($component3);
 %varcint2 = 0;
 if_setcolour(0xcc9900, $component4);
 if (string_length(%varcstring26) > 0) {

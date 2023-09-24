@@ -16,5 +16,5 @@ if (%var1113 = 0) {
 		%varcint84 = calc(%varcint84 + $int1);
 	}
 }
-if_settext(~script46(%varcint84, ","), interface_105:150);
+if_settext(~tostring_spacer(%varcint84, ","), stockmarket:offercount);
 ~script602;

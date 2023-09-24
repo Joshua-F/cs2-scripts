@@ -1,0 +1,9 @@
+// 1475
+[proc,bank_v2_search_update]
+if (clientclock > %varcint191) {
+	~bank_v2_show_search(%varcstring22);
+	if_setontimer(null, bank_v2_main:com_20);
+	%varcint191 = calc(clientclock + 10);
+} else {
+	if_setontimer("bank_v2_search_delayed(%varcint191)", bank_v2_main:com_20);
+}

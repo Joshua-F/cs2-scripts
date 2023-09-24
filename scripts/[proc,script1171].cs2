@@ -30,13 +30,13 @@ while ($windowmode16 < fullscreen_modecount) {
 	cc_setsize(calc(if_getwidth($component2) - 16), 15, ^setsize_abs, ^setsize_abs);
 	cc_settextshadow(false);
 	cc_settextfont($graphic7);
-	cc_setonmouseover("script1353($component2, $comsubid17, $colour6)");
-	cc_setonmouseleave("script1354($component2, $comsubid17, $colour5)");
-	cc_setonclick("script1350($component0, $component2, $component3, $component4, $comsubid8, $comsubid9, $text0, $colour5)");
+	cc_setonmouseover("dropdownbox_mouseoverelement($component2, $comsubid17, $colour6)");
+	cc_setonmouseleave("dropdownbox_mouseoutelement($component2, $comsubid17, $colour5)");
+	cc_setonclick("dropdownbox_selectelement($component0, $component2, $component3, $component4, $comsubid8, $comsubid9, $text0, $colour5)");
 	$windowmode16 = calc($windowmode16 + 1);
 }
 if ($component3 ! null) {
-	~script31($component3, $component2, $graphic10, $graphic11, $graphic12, $graphic13, $graphic14, $graphic15);
+	~scrollbar_vertical($component3, $component2, $graphic10, $graphic11, $graphic12, $graphic13, $graphic14, $graphic15);
 	if_sethide(false, $component3);
 }
 if_sethide(false, $component0);
