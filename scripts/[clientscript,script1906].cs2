@@ -1,0 +1,11 @@
+// 1906
+[clientscript,script1906](int $int0)
+if ($int0 = %varcint1173) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+%varcint1173 = $int0;
+def_component $component1 = interface_860:0;
+def_component $component2 = interface_860:8;
+if_callonresize($component1);
+if_setscrollpos(0, 0, $component2);

@@ -1,5 +1,11 @@
 // 661
 [proc,skill_guide_data](int $int0, int $int1, int $int2)(int, namedobj, string)
+def_string $string0 = "";
+if (%varbit15321 = 0) {
+	$string0 = "<col=6f0000>";
+} else {
+	$string0 = "<col=ffffff>";
+}
 switch_int ($int0) {
 	case 1 :
 		return(~skill_guide_data_attack($int1, $int2));
@@ -760,7 +766,7 @@ switch_int ($int0) {
 			case 3 :
 				switch_int ($int2) {
 					case 0 :
-						return(-1, obj_7620, "Potions may be <col=6f0000>strong</col>, <col=6f0000>standard</col> or <col=6f0000>weak</col>, depending on your Herblore level.");
+						return(-1, obj_7620, "Potions may be <$string0>strong</col>, <$string0>standard</col> or <$string0>weak</col>, depending on your Herblore level.");
 					case 1 :
 						return(47, golpar_20905, "Weak Golpar potions:");
 					case 2 :
@@ -802,7 +808,7 @@ switch_int ($int0) {
 				}
 			case 4 :
 				if ($int2 = 0) {
-					return(31, herbiboar_21511, "Harvest herbs from the <col=6f0000>Herbiboar</col> on <col=6f0000>Fossil Island</col> (with 80 Hunter).");
+					return(31, herbiboar_21511, "Harvest herbs from the <$string0>Herbiboar</col> on <$string0>Fossil Island</col> (with 80 Hunter).");
 				}
 				if ($int2 = 1) {
 					return(58, herb_sack_13226, "Use the Herb Sack reward item, purchased from the Tithe Farm or Slayer Masters.");
@@ -1576,26 +1582,28 @@ switch_int ($int0) {
 				case 22 :
 					return(60, daeyalt_essence_24704, "Members: Daeyalt essence<br>(after Sins of the Father)");
 				case 23 :
-					return(65, lovakite_ore_13356, "Members: Lovakite ore");
+					return(64, tainted_essence_chunk_28591, "Members: Tainted essence chunk");
 				case 24 :
-					return(70, adamantite_ore_449, "Adamantite ore");
+					return(65, lovakite_ore_13356, "Members: Lovakite ore");
 				case 25 :
-					return(70, soft_clay_1761, "Members: Soft clay");
+					return(70, adamantite_ore_449, "Adamantite ore");
 				case 26 :
-					return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
+					return(70, soft_clay_1761, "Members: Soft clay");
 				case 27 :
-					return(72, te_salt_22593, "Members: Te Salt");
+					return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
 				case 28 :
-					return(72, efh_salt_22595, "Members: Efh Salt");
+					return(72, te_salt_22593, "Members: Te Salt");
 				case 29 :
-					return(72, urt_salt_22597, "Members: Urt Salt");
+					return(72, efh_salt_22595, "Members: Efh Salt");
 				case 30 :
-					return(72, basalt_22603, "Members: Basalt");
+					return(72, urt_salt_22597, "Members: Urt Salt");
 				case 31 :
-					return(75, ancient_essence_50_27619, "Members: Ancient essence<br>(after Secrets of the North)");
+					return(72, basalt_22603, "Members: Basalt");
 				case 32 :
-					return(85, runite_ore_451, "Runite ore");
+					return(75, ancient_essence_50_27619, "Members: Ancient essence<br>(after Secrets of the North)");
 				case 33 :
+					return(85, runite_ore_451, "Runite ore");
+				case 34 :
 					return(92, amethyst_21347, "Members: Amethyst");
 				case default :
 					return(-1, null, "");

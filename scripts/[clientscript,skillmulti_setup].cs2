@@ -26,101 +26,110 @@ if ($obj2 = null) {
 def_string $string1 = "";
 $string1, $string0 = ~script632($string0);
 if_settext($string1, interface_270:5);
-if_settext("Choose a quantity, then <~text_device("click", "tap")> an item to begin.", interface_270:4);
-if (enum(int, boolean, enum_1810, $int0) = true) {
-	$int1 = ~max(1, ~min(28, $int1));
-	$int12 = ~max(1, ~min($int1, $int12));
-} else if ($int1 > 5) {
-	$int1 = 10;
-	if ($int12 > 5) {
-		$int12 = 10;
-	} else if ($int12 > 1) {
-		$int12 = 5;
-	} else {
-		$int12 = 1;
-	}
-} else if ($int1 > 1) {
-	$int1 = 5;
-	if ($int12 > 1) {
-		$int12 = 5;
-	} else {
-		$int12 = 1;
-	}
+def_boolean $boolean13 = enum(int, boolean, enum_5178, $int0);
+if ($boolean13 = true) {
+	if_settext("Choose a quantity, then <~text_device("click", "tap")> an item to begin.", interface_270:4);
 } else {
-	$int1, $int12 = 1, 1;
+	if_settext("<~text_device("Click", "Tap")> an item to begin.", interface_270:4);
+	if_sethide(true, interface_270:6);
+	if_setsize(480, 30, ^setsize_abs, ^setsize_abs, interface_270:3);
 }
-%varcint200, %varcint201 = $int12, $int12;
-~skillmulti_quantitybuttons_set($int0, $int1);
-def_int $int13 = 10;
+if ($boolean13 = true) {
+	if (enum(int, boolean, enum_1810, $int0) = true) {
+		$int1 = ~max(1, ~min(28, $int1));
+		$int12 = ~max(1, ~min($int1, $int12));
+	} else if ($int1 > 5) {
+		$int1 = 10;
+		if ($int12 > 5) {
+			$int12 = 10;
+		} else if ($int12 > 1) {
+			$int12 = 5;
+		} else {
+			$int12 = 1;
+		}
+	} else if ($int1 > 1) {
+		$int1 = 5;
+		if ($int12 > 1) {
+			$int12 = 5;
+		} else {
+			$int12 = 1;
+		}
+	} else {
+		$int1, $int12 = 1, 1;
+	}
+	%varcint200, %varcint201 = $int12, $int12;
+	~skillmulti_quantitybuttons_set($int0, $int1);
+}
+def_int $int14 = 10;
 if ($obj3 = null) {
-	$int13 = 1;
+	$int14 = 1;
 } else if ($obj4 = null) {
-	$int13 = 2;
+	$int14 = 2;
 } else if ($obj5 = null) {
-	$int13 = 3;
+	$int14 = 3;
 } else if ($obj6 = null) {
-	$int13 = 4;
+	$int14 = 4;
 } else if ($obj7 = null) {
-	$int13 = 5;
+	$int14 = 5;
 } else if ($obj8 = null) {
-	$int13 = 6;
+	$int14 = 6;
 } else if ($obj9 = null) {
-	$int13 = 7;
+	$int14 = 7;
 } else if ($obj10 = null) {
-	$int13 = 8;
+	$int14 = 8;
 } else if ($obj11 = null) {
-	$int13 = 9;
+	$int14 = 9;
 }
-def_int $int14 = calc(if_getwidth(interface_270:0) - 20);
-def_int $int15 = 100;
-def_int $int16 = 20;
-def_int $int17 = calc($int13 - 1);
-def_int $int18 = 4;
-def_int $int19 = 0;
-def_int $y20 = 0;
-def_int $setposv21 = ^setpos_abs_centre;
-def_int $int22 = 75;
+def_int $int15 = calc(if_getwidth(interface_270:0) - 20);
+def_int $int16 = 100;
+def_int $int17 = 20;
+def_int $int18 = calc($int14 - 1);
+def_int $int19 = 4;
+def_int $int20 = 0;
+def_int $y21 = 0;
+def_int $setposv22 = ^setpos_abs_centre;
+def_int $int23 = 75;
 cc_deleteall(interface_270:13);
-def_int $int23 = 0;
-if ($int13 > 1) {
-	if (calc($int15 * $int13 + $int16 * $int17) > $int14) {
-		$int16 = calc(($int14 - $int15 * $int13) / $int17);
-		$int18 = calc($int18 + 2 * ~max(0, calc(7 - $int13)));
-		if ($int16 < $int18) {
-			$int15, $int16 = calc(($int14 - $int18 * $int17) / $int13), $int18;
+def_int $int24 = 0;
+if ($int14 > 1) {
+	if (calc($int16 * $int14 + $int17 * $int18) > $int15) {
+		$int17 = calc(($int15 - $int16 * $int14) / $int18);
+		$int19 = calc($int19 + 2 * ~max(0, calc(7 - $int14)));
+		if ($int17 < $int19) {
+			$int16, $int17 = calc(($int15 - $int19 * $int18) / $int14), $int19;
 		}
 	}
-	$int19 = calc($int15 + $int16);
-	$y20, $setposv21, $int22 = 14, ^setpos_abs_bottom, calc(75 - 3);
-	while ($int23 < $int13) {
-		cc_create(interface_270:13, ^iftype_text, $int23);
-		cc_setposition(calc($int23 * $int19), 0, ^setpos_abs_left, ^setpos_abs_bottom);
-		cc_setsize($int15, 14, ^setsize_abs, ^setsize_abs);
+	$int20 = calc($int16 + $int17);
+	$y21, $setposv22, $int23 = 14, ^setpos_abs_bottom, calc(75 - 3);
+	while ($int24 < $int14) {
+		cc_create(interface_270:13, ^iftype_text, $int24);
+		cc_setposition(calc($int24 * $int20), 0, ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setsize($int16, 14, ^setsize_abs, ^setsize_abs);
 		cc_setcolour(0x403020);
 		cc_settextfont(p11_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(false);
-		if ($int23 = %var2673 & ~on_mobile = false) {
+		if ($int24 = %var2673 & ~on_mobile = false) {
 			cc_settext(enum(int, string, enum_1812, 36));
 		} else {
-			cc_settext(enum(int, string, enum_1812, $int23));
+			cc_settext(enum(int, string, enum_1812, $int24));
 		}
-		$int23 = calc($int23 + 1);
+		$int24 = calc($int24 + 1);
 	}
 } else {
-	$int19 = $int15;
+	$int20 = $int16;
 }
-if_setposition(calc(0 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:14);
-if_setposition(calc(1 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:15);
-if_setposition(calc(2 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:16);
-if_setposition(calc(3 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:17);
-if_setposition(calc(4 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:18);
-if_setposition(calc(5 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:19);
-if_setposition(calc(6 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:20);
-if_setposition(calc(7 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:21);
-if_setposition(calc(8 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:22);
-if_setposition(calc(9 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:23);
-if_setsize(calc($int13 * $int15 + $int17 * $int16), 50, ^setsize_abs, ^setsize_minus, interface_270:13);
+if_setposition(calc(0 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:14);
+if_setposition(calc(1 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:15);
+if_setposition(calc(2 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:16);
+if_setposition(calc(3 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:17);
+if_setposition(calc(4 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:18);
+if_setposition(calc(5 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:19);
+if_setposition(calc(6 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:20);
+if_setposition(calc(7 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:21);
+if_setposition(calc(8 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:22);
+if_setposition(calc(9 * $int20), $y21, ^setpos_abs_left, $setposv22, interface_270:23);
+if_setsize(calc($int14 * $int16 + $int18 * $int17), 50, ^setsize_abs, ^setsize_minus, interface_270:13);
 def_int $intarray0(10);
 $intarray0(0) = -1;
 $intarray0(1) = -1;
@@ -132,36 +141,36 @@ $intarray0(6) = -1;
 $intarray0(7) = -1;
 $intarray0(8) = -1;
 $intarray0(9) = -1;
-if ($int13 >= 1) {
+if ($int14 >= 1) {
 	$intarray0(%var2673) = 83;
 	$string1, $string0 = ~script632($string0);
-	~skillmulti_itembutton_init(0, $obj2, $string1, interface_270:14, $intarray0(0), $int0, $int15, $int22);
-	if ($int13 >= 2) {
+	~skillmulti_itembutton_init(0, $obj2, $string1, interface_270:14, $intarray0(0), $int0, $int16, $int23);
+	if ($int14 >= 2) {
 		$string1, $string0 = ~script632($string0);
-		~skillmulti_itembutton_init(1, $obj3, $string1, interface_270:15, $intarray0(1), $int0, $int15, $int22);
-		if ($int13 >= 3) {
+		~skillmulti_itembutton_init(1, $obj3, $string1, interface_270:15, $intarray0(1), $int0, $int16, $int23);
+		if ($int14 >= 3) {
 			$string1, $string0 = ~script632($string0);
-			~skillmulti_itembutton_init(2, $obj4, $string1, interface_270:16, $intarray0(2), $int0, $int15, $int22);
-			if ($int13 >= 4) {
+			~skillmulti_itembutton_init(2, $obj4, $string1, interface_270:16, $intarray0(2), $int0, $int16, $int23);
+			if ($int14 >= 4) {
 				$string1, $string0 = ~script632($string0);
-				~skillmulti_itembutton_init(3, $obj5, $string1, interface_270:17, $intarray0(3), $int0, $int15, $int22);
-				if ($int13 >= 5) {
+				~skillmulti_itembutton_init(3, $obj5, $string1, interface_270:17, $intarray0(3), $int0, $int16, $int23);
+				if ($int14 >= 5) {
 					$string1, $string0 = ~script632($string0);
-					~skillmulti_itembutton_init(4, $obj6, $string1, interface_270:18, $intarray0(4), $int0, $int15, $int22);
-					if ($int13 >= 6) {
+					~skillmulti_itembutton_init(4, $obj6, $string1, interface_270:18, $intarray0(4), $int0, $int16, $int23);
+					if ($int14 >= 6) {
 						$string1, $string0 = ~script632($string0);
-						~skillmulti_itembutton_init(5, $obj7, $string1, interface_270:19, $intarray0(5), $int0, $int15, $int22);
-						if ($int13 >= 7) {
+						~skillmulti_itembutton_init(5, $obj7, $string1, interface_270:19, $intarray0(5), $int0, $int16, $int23);
+						if ($int14 >= 7) {
 							$string1, $string0 = ~script632($string0);
-							~skillmulti_itembutton_init(6, $obj8, $string1, interface_270:20, $intarray0(6), $int0, $int15, $int22);
-							if ($int13 >= 8) {
+							~skillmulti_itembutton_init(6, $obj8, $string1, interface_270:20, $intarray0(6), $int0, $int16, $int23);
+							if ($int14 >= 8) {
 								$string1, $string0 = ~script632($string0);
-								~skillmulti_itembutton_init(7, $obj9, $string1, interface_270:21, $intarray0(7), $int0, $int15, $int22);
-								if ($int13 >= 9) {
+								~skillmulti_itembutton_init(7, $obj9, $string1, interface_270:21, $intarray0(7), $int0, $int16, $int23);
+								if ($int14 >= 9) {
 									$string1, $string0 = ~script632($string0);
-									~skillmulti_itembutton_init(8, $obj10, $string1, interface_270:22, $intarray0(8), $int0, $int15, $int22);
-									if ($int13 >= 10) {
-										~skillmulti_itembutton_init(9, $obj11, $string0, interface_270:23, $intarray0(9), $int0, $int15, $int22);
+									~skillmulti_itembutton_init(8, $obj10, $string1, interface_270:22, $intarray0(8), $int0, $int16, $int23);
+									if ($int14 >= 10) {
+										~skillmulti_itembutton_init(9, $obj11, $string0, interface_270:23, $intarray0(9), $int0, $int16, $int23);
 									}
 								}
 							}

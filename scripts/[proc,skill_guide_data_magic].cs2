@@ -12,7 +12,7 @@ switch_int ($int0) {
 				$string1 = "you can see what each spell does by activating the spellbook's Info mode, then tapping the spells.";
 				$string2 = "Click a spell icon below to see the required runes to cast each spell.<br><br>";
 				$string3 = "Tap a spell icon below to see the required runes to cast each spell.<br><br>";
-				return(-1, battlestaff_1391, "<~text_device($string2, $string3)>By opening the spellbook icon on the side interface,<~text_device($string0, $string1)>");
+				return(-1, battlestaff_1391, "<~text_device($string2, $string3)>By opening the spellbook icon on the side interface, <~text_device($string0, $string1)>");
 			case 1 :
 				if (~league_world = 1 & %varbit10032 = 1) {
 					return(-1, kourend_home_teleport_24369, "Home teleport (Kourend)");

@@ -1,0 +1,61 @@
+// 1902
+[clientscript,script1902](int $int0, int $int1)
+def_component $component2 = interface_860:0;
+def_component $component3 = interface_860:1;
+def_int $int4 = 56360963;
+def_int $int5 = 56360964;
+def_int $int6 = 56360965;
+def_component $component7 = interface_860:2;
+def_component $component8 = interface_860:8;
+if (%varcint1172 ! $int0 | %varcint1173 ! $int1) {
+	if_setscrollpos(0, 0, $component8);
+}
+%varcint1172 = $int0;
+%varcint1173 = $int1;
+def_enum $enum9 = ~toplevel_getcomponents;
+def_component $component10 = enum(component, component, $enum9, toplevel_osrs_stretch:16);
+if (~on_mobile = true) {
+	if_setontimer("script3833($component2, $component3, 0)", $component2);
+} else {
+	if (%varcint1170 = 0 & %varcint1171 = 0 & %varcint1168 = 0 & %varcint1169 = 0) {
+		%varcint1168 = if_getwidth($component10);
+		%varcint1169 = if_getheight($component10);
+		%varcint1170 = if_getx($component10);
+		%varcint1171 = if_gety($component10);
+	}
+	if_setontimer("script6110($component2, -1)", $component2);
+}
+if_setonresize("script1903", $component2);
+if_sethide(false, $component3);
+if_sethide(true, $component7);
+if ($enum9 = enum_1132) {
+	if_setposition(6, 6, ^setpos_abs_centre, ^setpos_abs_centre, $component3);
+	if_setsize(12, 12, ^setsize_minus, ^setsize_minus, $component3);
+	~script1904;
+	return;
+}
+cc_deleteall($component2);
+def_int $int11 = 0;
+while ($int11 < 9) {
+	cc_create($component2, ^iftype_graphic, $int11);
+	cc_settiling(true);
+	cc_settrans(255);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+	cc_setdraggable($component2, -1);
+	cc_setdragdeadzone(1);
+	cc_setdragdeadtime(5);
+	$int11 = calc($int11 + 1);
+}
+cc_deleteall($component7);
+$int11 = 0;
+while ($int11 < 4) {
+	cc_create($component7, ^iftype_rectangle, $int11);
+	cc_setsize(calc($int11 * 2), calc($int11 * 2), ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x9f9f9f);
+	cc_setfill(false);
+	cc_settrans(calc(100 + $int11 * 10));
+	$int11 = calc($int11 + 1);
+}
+~script1911(-1, -1, $component2, $component3);

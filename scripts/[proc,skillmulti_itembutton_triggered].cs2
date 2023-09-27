@@ -1,12 +1,18 @@
 // 2052
-[proc,skillmulti_itembutton_triggered](obj $obj0, component $component1, string $string0, int $int2, int $int3, int $int4)
-~skillmulti_itembutton_draw(true, null, $component1, $int3, $int4);
+[proc,skillmulti_itembutton_triggered](obj $obj0, component $component1, string $string0, int $int2, int $int3, int $int4, int $int5)
+~skillmulti_itembutton_draw(true, null, $component1, $int4, $int5);
 if_setonmouseover(null, $component1);
 if_setonmouseleave("deltooltip(interface_270:24)", $component1);
 if_setonop(null, $component1);
 if_setonkey(null, $component1);
-if_setontimer("skillmulti_itembutton_reset(calc(clientclock + 40), $obj0, $component1, $string0, $int2, $int3, $int4)", $component1);
-if (%varcint200 >= 1 & %varcint200 <= 28) {
+if_setontimer("skillmulti_itembutton_reset(calc(clientclock + 40), $obj0, $component1, $string0, $int2, $int3, $int4, $int5)", $component1);
+def_boolean $boolean6 = enum(int, boolean, enum_5178, $int3);
+if ($boolean6 = false) {
+	sound_synth(interface_select1, 1, 0);
+	if (cc_find($component1, 0) = ^true) {
+		cc_resume_pausebutton;
+	}
+} else if (%varcint200 >= 1 & %varcint200 <= 28) {
 	sound_synth(interface_select1, 1, 0);
 	if (cc_find($component1, %varcint200) = ^true) {
 		cc_resume_pausebutton;
