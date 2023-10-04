@@ -1,0 +1,23 @@
+// 1918
+[clientscript,script1918](boolean $boolean0, component $component1, int $comsubid2, int $comsubid3, int $comsubid4)
+if ($boolean0 = true) {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_setgraphic("tabs_tall,0");
+	}
+	if (cc_find($component1, $comsubid3) = ^true) {
+		cc_setgraphic("tabs_tall,0");
+	}
+	if (cc_find($component1, $comsubid4) = ^true) {
+		cc_setgraphic("tabs_tall,1");
+	}
+} else {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_setgraphic("tabs_tall,2");
+	}
+	if (cc_find($component1, $comsubid3) = ^true) {
+		cc_setgraphic("tabs_tall,2");
+	}
+	if (cc_find($component1, $comsubid4) = ^true) {
+		cc_setgraphic("tabs_tall,3");
+	}
+}

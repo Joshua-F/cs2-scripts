@@ -6,11 +6,11 @@ if ($opindex0 > 4 | %varbit542 = 1 | %varbit4606 ! 0) {
 sound_synth(interface_select1, 1, 0);
 switch_int ($opindex0) {
 	case 1 :
-		cam_forceangle(calc(225 + randominc(5)), 0);
+		cam_forceangle(cam_getangle_xa, 0);
 	case 2 :
-		cam_forceangle(calc(225 + randominc(5)), 1536);
+		cam_forceangle(cam_getangle_xa, 1536);
 	case 3 :
-		cam_forceangle(calc(225 + randominc(5)), 1024);
+		cam_forceangle(cam_getangle_xa, 1024);
 	case 4 :
-		cam_forceangle(calc(225 + randominc(5)), 512);
+		cam_forceangle(cam_getangle_xa, 512);
 }

@@ -1139,16 +1139,6 @@
 [**1136**](scripts/[clientscript,script1136].cs2)  
 [**1137**](scripts/[clientscript,script1137].cs2)  
 [**1138**](scripts/[proc,deadman_world].cs2) `[proc,deadman_world]`  
-[**1139**](scripts/[clientscript,deadmanprotect_onload].cs2) `[clientscript,deadmanprotect_onload]`  
-[**1140**](scripts/[clientscript,deadman_stats_init].cs2) `[clientscript,deadman_stats_init]`  
-[**1141**](scripts/[clientscript,deadman_stats_vartransmit].cs2) `[clientscript,deadman_stats_vartransmit]`  
-[**1142**](scripts/[clientscript,deadman_stats_click].cs2) `[clientscript,deadman_stats_click]`  
-[**1143**](scripts/[proc,script1143].cs2)  
-[**1144**](scripts/[proc,script1144].cs2)  
-[**1145**](scripts/[proc,deadman_stats_set_protect].cs2) `[proc,deadman_stats_set_protect]`  
-[**1146**](scripts/[proc,deadman_stats_set_unprotect].cs2) `[proc,deadman_stats_set_unprotect]`  
-[**1147**](scripts/[proc,deadmanprotect_xp_counts].cs2) `[proc,deadmanprotect_xp_counts]`  
-[**1148**](scripts/[clientscript,deadmanprotect_bank_transmit].cs2) `[clientscript,deadmanprotect_bank_transmit]`  
 [**1149**](scripts/[clientscript,deadman_delay].cs2) `[clientscript,deadman_delay]`  
 [**1150**](scripts/[clientscript,deadman_delay_timer].cs2) `[clientscript,deadman_delay_timer]`  
 [**1151**](scripts/[clientscript,script1151].cs2)  
@@ -1275,12 +1265,6 @@
 [**1272**](scripts/[proc,script1272].cs2)  
 [**1273**](scripts/[clientscript,script1273].cs2)  
 [**1274**](scripts/[proc,deadmanprotect_createtab].cs2) `[proc,deadmanprotect_createtab]`  
-[**1275**](scripts/[clientscript,deadmanprotect_settab].cs2) `[clientscript,deadmanprotect_settab]`  
-[**1276**](scripts/[proc,deadmanprotect_settab].cs2) `[proc,deadmanprotect_settab]`  
-[**1277**](scripts/[proc,deadmanprotect_stats_refresh_all].cs2) `[proc,deadmanprotect_stats_refresh_all]`  
-[**1278**](scripts/[proc,deadmanprotect_stats_refresh].cs2) `[proc,deadmanprotect_stats_refresh]`  
-[**1279**](scripts/[proc,script1279].cs2)  
-[**1280**](scripts/[proc,script1280].cs2)  
 [**1281**](scripts/[clientscript,burgh_set_hover].cs2) `[clientscript,burgh_set_hover]`  
 [**1282**](scripts/[proc,script1282].cs2)  
 [**1283**](scripts/[clientscript,script1283].cs2)  
@@ -1913,6 +1897,12 @@
 [**1910**](scripts/[clientscript,script1910].cs2)  
 [**1911**](scripts/[proc,script1911].cs2)  
 [**1912**](scripts/[proc,script1912].cs2)  
+[**1913**](scripts/[clientscript,script1913].cs2)  
+[**1914**](scripts/[clientscript,script1914].cs2)  
+[**1915**](scripts/[clientscript,script1915].cs2)  
+[**1916**](scripts/[clientscript,script1916].cs2)  
+[**1917**](scripts/[proc,script1917].cs2)  
+[**1918**](scripts/[clientscript,script1918].cs2)  
 [**1926**](scripts/[clientscript,script1926].cs2)  
 [**1934**](scripts/[proc,script1934].cs2)  
 [**1935**](scripts/[proc,instance_check].cs2) `[proc,instance_check]`  
@@ -4834,7 +4824,6 @@
 [**5221**](scripts/[clientscript,summary_sidepanel_timer_draw].cs2) `[clientscript,summary_sidepanel_timer_draw]`  
 [**5222**](scripts/[proc,entity_highlight_active_loc_linked_tree].cs2) `[proc,entity_highlight_active_loc_linked_tree]`  
 [**5224**](scripts/[clientscript,pvp_icons_comlevelrange].cs2) `[clientscript,pvp_icons_comlevelrange]`  
-[**5225**](scripts/[proc,script5225].cs2)  
 [**5226**](scripts/[proc,script5226].cs2)  
 [**5227**](scripts/[proc,script5227].cs2)  
 [**5228**](scripts/[clientscript,deadman_sigils_init].cs2) `[clientscript,deadman_sigils_init]`  

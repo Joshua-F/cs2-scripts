@@ -1,12 +1,54 @@
 // 1274
-[proc,deadmanprotect_createtab](int $int0, graphic $graphic1, string $op0)
-cc_create(interface_226:4, ^iftype_graphic, calc($int0 * 2));
-cc_setposition(calc($int0 * 39), 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(39, 29, ^setsize_abs, ^setsize_abs);
-cc_setgraphic("banktabs_small,1");
-cc_setop(1, $op0);
-cc_setonop("deadmanprotect_settab($int0)");
-cc_create(interface_226:4, ^iftype_graphic, calc($int0 * 2 + 1));
-cc_setposition(calc($int0 * 39 + 7), 3, ^setpos_abs_left, ^setpos_abs_top);
+[proc,deadmanprotect_createtab](int $int0, graphic $graphic1, string $op0, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7)(int, int)
+cc_create($component5, ^iftype_graphic, $int2);
+def_int $comsubid8 = $int2;
+$int2 = calc($int2 + 1);
+.cc_create($component5, ^iftype_graphic, $int2);
+def_int $comsubid9 = $int2;
+$int2 = calc($int2 + 1);
+cc_setsize(20, 26, ^setsize_abs, ^setsize_abs);
+.cc_setsize(20, 26, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition(calc($int3 + 51 - 20), 0, ^setpos_abs_left, ^setpos_abs_bottom);
+if ($int0 = $int4) {
+	cc_setgraphic("tabs_tall,0");
+	.cc_setgraphic("tabs_tall,0");
+} else {
+	cc_setgraphic("tabs_tall,2");
+	.cc_setgraphic("tabs_tall,2");
+}
+cc_sethflip(false);
+.cc_sethflip(true);
+cc_create($component5, ^iftype_graphic, $int2);
+def_int $comsubid10 = $int2;
+$int2 = calc($int2 + 1);
+cc_setsize(calc(51 - 40), 26, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int3 + 20), 0, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_settiling(true);
+if ($int0 = $int4) {
+	cc_setgraphic("tabs_tall,1");
+} else {
+	cc_setgraphic("tabs_tall,3");
+}
+cc_create($component5, ^iftype_graphic, $int2);
+$int2 = calc($int2 + 1);
+cc_setposition(calc($int3 + (51 - 25) / 2), 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(25, 20, ^setsize_abs, ^setsize_abs);
 cc_setgraphic($graphic1);
+cc_create($component5, ^iftype_rectangle, $int2);
+$int2 = calc($int2 + 1);
+cc_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(51, 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(255);
+cc_setop(1, $op0);
+cc_setonop("script1916(true, $int0, $component5, $component6, $component7)");
+if ($int0 = $int4 | ~on_mobile = true) {
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+} else {
+	cc_setonmouserepeat("script1918(true, event_com, $comsubid8, $comsubid9, $comsubid10)");
+	cc_setonmouseleave("script1918(false, event_com, $comsubid8, $comsubid9, $comsubid10)");
+}
+return($int2, calc($int3 + 51 + 1));
