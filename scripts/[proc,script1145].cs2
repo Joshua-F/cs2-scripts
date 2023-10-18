@@ -1,0 +1,13 @@
+// 1145
+[proc,script1145]
+def_string $text0 = "";
+if (%varbit1777 ! 0) {
+	if (~is_group_iron = 1) {
+		$text0 = "For <col=ffffff><~tostring_spacer(%var263, ",")> coins</col>, you can convert <col=ffffff>untradeable bonds</col> into <col=ffffff>tradeable bonds</col>.<br><br>You can then trade them to other members of your group.";
+	} else {
+		$text0 = "<col=ffffff>Untradeable bonds</col> can be converted into <col=ffffff>tradeable bonds</col> for <col=ffffff><~tostring_spacer(%var263, ",")> coins</col>.<br><br>However, <col=ff0000>Iron</col> players <col=ff0000>cannot</col> sell bonds, nor give them as gifts, even if they are <col=ff0000>tradeable</col>, so <col=ff0000>do not proceed</col> unless you are <col=ff0000>sure</col>.";
+	}
+} else {
+	$text0 = "For <col=ffffff><~tostring_spacer(%var263, ",")> coins</col>, you can convert <col=ffffff>untradeable bonds</col> into <col=ffffff>tradeable bonds</col>.<br><br>You can then sell them to other players, such as on the <col=ffffff>Grand Exchange</col>, or <col=ffffff>use them on players</col> to give as free gifts.";
+}
+cc_settext($text0);

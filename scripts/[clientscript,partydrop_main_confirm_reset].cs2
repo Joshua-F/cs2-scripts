@@ -4,5 +4,5 @@ if (clientclock < $clock0) {
 	return;
 }
 if_setontimer(null, $component1);
-~clan_stonebutton_init("Confirm", $component1, "p12_full");
+~script2425("Confirm", $component1, "p12_full", 0);
 if_setonop("partydrop_main_confirm_op(event_op, event_com)", $component1);

@@ -1,0 +1,5 @@
+// 1925
+[clientscript,script1925](graphic $graphic0, coord $coord1, component $component2, string $string0)
+~script4206(interface_289:1, interface_289:2, interface_289:3, 0, $component2);
+def_int $width3 = ~script1928($string0, $graphic0, $coord1, $component2);
+if_setontimer("script1927($width3, event_com, $string0, $graphic0, $coord1, $component2)", interface_289:3);

@@ -1,0 +1,6 @@
+// 2415
+[clientscript,script2415](int $clock0, boolean $boolean1, component $component2)
+if (clientclock >= $clock0) {
+	if_setontimer(null, $component2);
+	~script2416(false, $boolean1, $component2);
+}

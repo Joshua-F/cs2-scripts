@@ -1,0 +1,17 @@
+// 1924
+[clientscript,script1924]
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:16)) = false) {
+	return;
+}
+if_setscrollpos(0, 0, interface_861:11);
+%varcint63 = 0;
+if (%varcint179 > 0) {
+	%varcint179 = calc(%varcint179 + 1);
+}
+if (%varcint179 > if_getheight(interface_861:11)) {
+	if_setscrollsize(0, %varcint179, interface_861:11);
+} else {
+	if_setscrollsize(0, 0, interface_861:11);
+}
+cc_deleteall(interface_861:27);
+~scrollbar_vertical(interface_861:27, interface_861:11, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

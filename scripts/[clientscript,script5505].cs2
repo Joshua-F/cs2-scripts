@@ -2,7 +2,7 @@
 [clientscript,script5505](component $component0)
 cc_deleteall($component0);
 if (%varbit13126 = 1) {
-	~clan_stonebutton_init("<col=ff0000>Cancel Leave</col>", $component0, "p12_full");
+	~script2425("<col=ff0000>Cancel Leave</col>", $component0, "p12_full", 0);
 } else {
-	~clan_stonebutton_init("<col=ff0000>Leave Group</col>", $component0, "p12_full");
+	~script2425("<col=ff0000>Leave Group</col>", $component0, "p12_full", 0);
 }

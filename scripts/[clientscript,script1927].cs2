@@ -1,0 +1,6 @@
+// 1927
+[clientscript,script1927](int $width0, component $component1, string $string0, graphic $graphic2, coord $coord3, component $component4)
+if (if_getwidth($component4) ! $width0) {
+	$width0 = ~script1928($string0, $graphic2, $coord3, $component4);
+	if_setontimer("script1927($width0, event_com, $string0, $graphic2, $coord3, $component4)", $component1);
+}

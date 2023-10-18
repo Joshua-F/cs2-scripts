@@ -114,10 +114,12 @@ if (string_indexof_string($string0, "yes", 0) = 0 | string_indexof_string($strin
 	$comsubid0 = 50;
 } else if (string_indexof_string($string0, "party", 0) = 0) {
 	$comsubid0 = 51;
-} else if (string_indexof_string($string0, "crab", 0) = 0) {
+} else if (string_indexof_string($string0, "trick", 0) = 0 | string_indexof_string($string0, "bats", 0) = 0) {
 	$comsubid0 = 52;
-} else if (string_indexof_string($string0, "sit", 0) = 0) {
+} else if (string_indexof_string($string0, "crab", 0) = 0) {
 	$comsubid0 = 53;
+} else if (string_indexof_string($string0, "sit", 0) = 0) {
+	$comsubid0 = 54;
 }
 if (cc_find(interface_216:2, $comsubid0) = ^true) {
 	cc_triggerop(1);

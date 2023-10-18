@@ -1,0 +1,7 @@
+// 1275
+[clientscript,script1275](int $int0, int $height1, int $height2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8)
+def_int $height9 = if_getheight($component4);
+def_int $height10 = if_getheight($component6);
+if ($height9 ! $height2 | $height10 ! $height1 | $int3 ! %varcint179) {
+	~script1148($int0, $height10, $height9, $component4, $component5, $component6, $component7, $component8);
+}

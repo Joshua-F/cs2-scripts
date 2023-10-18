@@ -2,7 +2,7 @@
 [proc,script6197](component $component0, component $component1)
 if (%varbit14028 >= 2) {
 	if_settext("Now you've agreed on a combat style, customise your <col=ffb83f>load-out</col> and check your opponent's.", $component0);
-	~clan_stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", $component1);
+	~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component1);
 	if_clearops($component1);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);
@@ -10,7 +10,7 @@ if (%varbit14028 >= 2) {
 	if_setonop(null, $component1);
 } else if (%varbit14026 = 1) {
 	if_settext("Please <col=ffb83f>wait</col> while your opponent considers your choice.", $component0);
-	~clan_stonebutton_draw(true, "<col=9f9f9f>Confirmed</col>", "p12_full", $component1);
+	~script2428(true, "<col=9f9f9f>Confirmed</col>", "p12_full", 0, $component1);
 	if_clearops($component1);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);
@@ -18,6 +18,6 @@ if (%varbit14028 >= 2) {
 	if_setonop(null, $component1);
 } else {
 	if_settext("When you are satisfied with the combat style, select <col=ffb83f>Confirm</col>.", $component0);
-	~clan_stonebutton_init("<col=0dc10d>Confirm</col>", $component1, "p12_full");
+	~script2425("<col=0dc10d>Confirm</col>", $component1, "p12_full", 0);
 	if_setonop("script6198(event_op, $component0, $component1)", $component1);
 }

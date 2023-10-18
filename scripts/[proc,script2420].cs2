@@ -1,0 +1,26 @@
+// 2420
+[proc,script2420](component $component0, component $component1, component $component2, component $component3)
+def_int $int4 = -1;
+def_string $string0 = "";
+switch_int (%varbit11795) {
+	case default :
+		~script2423("1", $component0);
+		~script2421("5", $component1, 1, $component0, $component1, $component2, $component3);
+		~script2421("X", $component2, 3, $component0, $component1, $component2, $component3);
+		~script2421("All", $component3, 2, $component0, $component1, $component2, $component3);
+	case 1 :
+		~script2421("1", $component0, 0, $component0, $component1, $component2, $component3);
+		~script2423("5", $component1);
+		~script2421("X", $component2, 3, $component0, $component1, $component2, $component3);
+		~script2421("All", $component3, 2, $component0, $component1, $component2, $component3);
+	case 3 :
+		~script2421("1", $component0, 0, $component0, $component1, $component2, $component3);
+		~script2421("5", $component1, 1, $component0, $component1, $component2, $component3);
+		~script2423("X", $component2);
+		~script2421("All", $component3, 2, $component0, $component1, $component2, $component3);
+	case 2 :
+		~script2421("1", $component0, 0, $component0, $component1, $component2, $component3);
+		~script2421("5", $component1, 1, $component0, $component1, $component2, $component3);
+		~script2421("X", $component2, 3, $component0, $component1, $component2, $component3);
+		~script2423("All", $component3);
+}

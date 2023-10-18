@@ -4,7 +4,7 @@
 if_setonvartransmit("script6180($component1, $component2, $component3, $component4, event_com){var286}", $component5);
 ~script6186($component6);
 if_setonvartransmit("script6185(event_com){var3465}", $component6);
-~clan_stonebutton_init("<col=ff0000>Decline</col>", $component7, "p12_full");
+~script2425("<col=ff0000>Decline</col>", $component7, "p12_full", 0);
 if_setonop("closebutton_click", $component7);
 def_component $component9 = null;
 def_int $int10 = 0;

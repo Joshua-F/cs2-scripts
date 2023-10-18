@@ -1,0 +1,41 @@
+// 1280
+[proc,script1280](component $component0, int $int1, string $text0, int $int2, graphic $graphic3, coord $coord4)(int)
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(60, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_centre);
+~script1920($int2);
+cc_setonvartransmit("script1919(event_com, event_comsubid, $int2){var261, var262}");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if ($int2 > 1) {
+	cc_settext("<tostring($int2)> bonds");
+} else if ($int2 = 1) {
+	cc_settext("1 bond");
+} else {
+	cc_settext("---");
+}
+cc_create($component0, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(67, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setobject_always_num(old_school_bond_13190, $int2);
+cc_create($component0, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(coordx($coord4), coordz($coord4), ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setgraphic($graphic3);
+def_int $int5 = calc(5 + coordx($coord4) + 2);
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(calc($int5 + 2 + 36 + 67), 0, ^setsize_minus, ^setsize_minus);
+cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settext($text0);
+return($int1);

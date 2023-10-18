@@ -2,8 +2,8 @@
 [proc,script6210](component $component0, component $component1, component $component2)
 if (%varbit14029 = 1) {
 	if_settext("Please <col=ffb83f>wait</col> while your opponent considers your load-out.", $component0);
-	~clan_stonebutton_draw(true, "<col=9f9f9f>Confirmed</col>", "p12_full", $component1);
-	~clan_stonebutton_draw(true, "<col=9f9f9f>Copy Load-out</col>", "p12_full", $component2);
+	~script2428(true, "<col=9f9f9f>Confirmed</col>", "p12_full", 0, $component1);
+	~script2428(true, "<col=9f9f9f>Copy Load-out</col>", "p12_full", 0, $component2);
 	if_clearops($component1);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);
@@ -16,8 +16,8 @@ if (%varbit14029 = 1) {
 	if_setonop(null, $component2);
 } else {
 	if_settext("Don't forget to <col=ffb83f>check your load-out</col> for <img=11> warnings!<br><br>When you are satisfied with it, and with <col=ffb83f>your opponent's load-out</col>, select <col=ffb83f>Confirm</col>.", $component0);
-	~clan_stonebutton_init("<col=0dc10d>Confirm</col>", $component1, "p12_full");
+	~script2425("<col=0dc10d>Confirm</col>", $component1, "p12_full", 0);
 	if_setonop("script6420(event_op, $component0, $component1, $component2)", $component1);
-	~clan_stonebutton_init("<col=0dc10d>Copy Load-out</col>", $component2, "p12_full");
+	~script2425("<col=0dc10d>Copy Load-out</col>", $component2, "p12_full", 0);
 	if_setonop("script6420(event_op, $component0, $component1, $component2)", $component1);
 }

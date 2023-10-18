@@ -1,0 +1,8 @@
+// 1933
+[clientscript,script1933](boolean $boolean0, boolean $boolean1, component $component2)
+~script2416($boolean0, $boolean1, $component2);
+if ($boolean0 = true) {
+	if_setontimer("script2415(calc(clientclock + 2), $boolean1, event_com)", $component2);
+} else {
+	if_setontimer(null, $component2);
+}

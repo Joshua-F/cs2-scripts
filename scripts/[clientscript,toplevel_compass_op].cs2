@@ -4,13 +4,22 @@ if ($opindex0 > 4 | %varbit542 = 1 | %varbit4606 ! 0) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
+def_int $int1 = 0;
+if (%varbit15323 = 1) {
+	$int1 = calc(225 + randominc(5));
+	if ($int1 = cam_getangle_xa) {
+		$int1 = calc($int1 + 1);
+	}
+} else {
+	$int1 = cam_getangle_xa;
+}
 switch_int ($opindex0) {
 	case 1 :
-		cam_forceangle(cam_getangle_xa, 0);
+		cam_forceangle($int1, 0);
 	case 2 :
-		cam_forceangle(cam_getangle_xa, 1536);
+		cam_forceangle($int1, 1536);
 	case 3 :
-		cam_forceangle(cam_getangle_xa, 1024);
+		cam_forceangle($int1, 1024);
 	case 4 :
-		cam_forceangle(cam_getangle_xa, 512);
+		cam_forceangle($int1, 512);
 }

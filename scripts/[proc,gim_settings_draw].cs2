@@ -11,20 +11,20 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 	if_sethide(false, $component5);
 	~gim_icon_draw;
 	if (%varbit12165 = 1) {
-		~clan_stonebutton_init("<col=0dc10d>Hiscores</col>", $component6, "p12_full");
-		~clan_stonebutton_init("<col=9f9f9f>Group Storage</col>", $component7, "p12_full");
-		~clan_stonebutton_init("<col=9f9f9f>Options</col>", $component8, "p12_full");
-		~clan_stonebutton_init("<col=9f9f9f>Raffle</col>", $component9, "p12_full");
-		~clan_stonebutton_init("<col=9f9f9f>Leave Group</col>", $component10, "p12_full");
+		~script2425("<col=0dc10d>Hiscores</col>", $component6, "p12_full", 0);
+		~script2425("<col=9f9f9f>Group Storage</col>", $component7, "p12_full", 0);
+		~script2425("<col=9f9f9f>Options</col>", $component8, "p12_full", 0);
+		~script2425("<col=9f9f9f>Raffle</col>", $component9, "p12_full", 0);
+		~script2425("<col=9f9f9f>Leave Group</col>", $component10, "p12_full", 0);
 	} else {
-		~clan_stonebutton_init("<col=0dc10d>Hiscores</col>", $component6, "p12_full");
-		~clan_stonebutton_init("<col=0dc10d>Group Storage</col>", $component7, "p12_full");
-		~clan_stonebutton_init("<col=0dc10d>Options</col>", $component8, "p12_full");
-		~clan_stonebutton_init("<col=0dc10d>Raffle</col>", $component9, "p12_full");
+		~script2425("<col=0dc10d>Hiscores</col>", $component6, "p12_full", 0);
+		~script2425("<col=0dc10d>Group Storage</col>", $component7, "p12_full", 0);
+		~script2425("<col=0dc10d>Options</col>", $component8, "p12_full", 0);
+		~script2425("<col=0dc10d>Raffle</col>", $component9, "p12_full", 0);
 		if (%varbit13126 = 1) {
-			~clan_stonebutton_init("<col=ff0000>Cancel Leave</col>", $component10, "p12_full");
+			~script2425("<col=ff0000>Cancel Leave</col>", $component10, "p12_full", 0);
 		} else {
-			~clan_stonebutton_init("<col=ff0000>Leave Group</col>", $component10, "p12_full");
+			~script2425("<col=ff0000>Leave Group</col>", $component10, "p12_full", 0);
 		}
 		if_setonvartransmit("script5505($component10){var3171}", $component10);
 	}

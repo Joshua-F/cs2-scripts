@@ -1,0 +1,11 @@
+// 1920
+[proc,script1920](int $int0)
+def_int $int1 = ^max_32bit_int;
+if (calc(^max_32bit_int - %var261) >= %var262) {
+	$int1 = calc(%var261 + %var262);
+}
+if ($int1 >= $int0) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(^red);
+}

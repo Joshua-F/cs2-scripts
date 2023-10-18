@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-~clan_stonebutton_draw(true, "<col=9f9f9f>Copy Load-out</col>", "p12_full", $component3);
+~script2428(true, "<col=9f9f9f>Copy Load-out</col>", "p12_full", 0, $component3);
 if_clearops($component3);
 if_setonmouserepeat(null, $component3);
 if_setonmouseleave(null, $component3);

@@ -1,0 +1,57 @@
+// 1930
+[proc,script1930](component $component0, component $component1, component $component2, string $text0, int $x3, int $width4, int $x5, component $component6, component $component7)
+cc_deleteall($component0);
+def_int $int8 = 0;
+cc_create($component0, ^iftype_text, $int8);
+$int8 = calc($int8 + 1);
+cc_setsize(80, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settextshadow(true);
+cc_settext($text0);
+cc_create($component0, ^iftype_graphic, $int8);
+def_int $comsubid9 = $int8;
+$int8 = calc($int8 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(80, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_create($component0, ^iftype_graphic, $int8);
+def_int $comsubid10 = $int8;
+$int8 = calc($int8 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($x3, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_create($component0, ^iftype_graphic, $int8);
+def_int $comsubid11 = $int8;
+$int8 = calc($int8 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+~script1932($component0, $comsubid9, $comsubid10, $comsubid11, $component6, $component7);
+if_setonvartransmit("script1931($component0, $comsubid9, $comsubid10, $comsubid11, $component6, $component7){var261, var262}", $component0);
+if_setoninvtransmit("script1931($component0, $comsubid9, $comsubid10, $comsubid11, $component6, $component7){inv, inv_536}", $component0);
+if_setposition($x5, 2, ^setpos_abs_left, ^setpos_abs_top, $component1);
+if_setposition($x5, 2, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
+if_setsize($width4, if_getheight($component1), ^setsize_minus, ^setsize_abs, $component1);
+if_setsize($width4, if_getheight($component2), ^setsize_minus, ^setsize_abs, $component2);
+~script2416(false, false, $component1);
+~script2416(false, true, $component2);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script1933(true, false, event_com)", $component1);
+	if_setonmouserepeat("script1933(true, true, event_com)", $component2);
+}
+if_setonmouseleave("script1933(false, false, event_com)", $component1);
+if_setonmouseleave("script1933(false, true, event_com)", $component2);
+if_setop(1, "Move to Inventory", $component1);
+if_setop(1, "Move to Pouch", $component2);
+if_setopbase("<col=ff9040><$text0></col>", $component1);
+if_setopbase("<col=ff9040><$text0></col>", $component2);
+if_setonop("opsound(event_op, 2)", $component1);
+if_setonop("opsound(event_op, 2)", $component2);
+if_setontimer(null, $component1);
+if_setontimer(null, $component2);

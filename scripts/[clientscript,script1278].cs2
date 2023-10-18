@@ -1,0 +1,17 @@
+// 1278
+[clientscript,script1278](string $string0)
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:16)) = false) {
+	return;
+}
+%varcint179 = calc(%varcint179 + 5);
+def_int $int0 = calc(paraheight($string0, if_getwidth(interface_861:11), b12_full) * 12 + 5);
+cc_create(interface_861:11, ^iftype_text, %varcint178);
+%varcint178 = calc(%varcint178 + 1);
+cc_setsize(0, $int0, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, %varcint179, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xffb83f);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+%varcint179 = calc(%varcint179 + $int0);

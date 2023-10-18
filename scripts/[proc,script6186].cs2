@@ -1,13 +1,13 @@
 // 6186
 [proc,script6186](component $component0)
 if (%varbit14030 = 1) {
-	~clan_stonebutton_draw(true, "<col=9f9f9f>Accepted</col>", "p12_full", $component0);
+	~script2428(true, "<col=9f9f9f>Accepted</col>", "p12_full", 0, $component0);
 	if_clearops($component0);
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);
 	if_setonop(null, $component0);
 	if_setontimer(null, $component0);
 } else {
-	~clan_stonebutton_init("<col=0dc10d>Accept</col>", $component0, "p12_full");
+	~script2425("<col=0dc10d>Accept</col>", $component0, "p12_full", 0);
 	if_setonop("script6187(event_op, event_com)", $component0);
 }

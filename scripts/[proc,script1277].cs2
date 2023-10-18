@@ -1,0 +1,32 @@
+// 1277
+[proc,script1277](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $width4, int $width5, component $component6, component $component7, component $component8)(int)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setobject_always_num(old_school_bond_13190, %var261);
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	cc_setobject_always_num(old_school_bond_untradeable_13192, %var262);
+}
+def_int $int9 = 0;
+def_string $string0 = "";
+def_int $int10 = 0;
+%var261, %var262 = max(%var261, 0), max(%var262, 0);
+if (cc_find($component0, $comsubid3) = ^true) {
+	if (calc(^max_32bit_int - %var261) < %var262) {
+		$int9 = ^max_32bit_int;
+	} else {
+		$int9 = calc(%var261 + %var262);
+	}
+	if ($int9 > 1) {
+		$string0 = "You have <col=ffffff><~tostring_spacer($int9, ",")></col> bonds in your <col=ffffff>inventory</col>, <col=ffffff>bank</col> & <col=ffffff>bond pouch</col>.<br>You can <col=ffffff>redeem</col> them below.";
+	} else if ($int9 = 1) {
+		$string0 = "You have <col=ffffff>one</col> bond in your <col=ffffff>inventory</col>, <col=ffffff>bank</col> & <col=ffffff>bond pouch</col>.<br>You can <col=ffffff>redeem</col> it below.";
+	} else {
+		$string0 = "You have <col=ffffff><~tostring_spacer(0, ",")></col> bonds in your <col=ffffff>inventory</col>, <col=ffffff>bank</col> & <col=ffffff>bond pouch</col>. Visit the <col=ffffff>store</col> or buy bonds from <col=ffffff>other players</col>.";
+	}
+	cc_settext($string0);
+	$int10 = calc(paraheight($string0, $width5, p12_full) * 14 + 12);
+	if_setsize($width4, $int10, ^setsize_minus, ^setsize_abs, $component0);
+	if_setsize($width4, calc($int10 - 1), ^setsize_minus, ^setsize_minus, $component6);
+	~scrollbar_resize($component8, $component7, %varcint63);
+}
+return($int10);
