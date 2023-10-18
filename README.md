@@ -2399,7 +2399,7 @@
 [**2422**](scripts/[clientscript,script2422].cs2)  
 [**2423**](scripts/[proc,script2423].cs2)  
 [**2424**](scripts/[clientscript,script2424].cs2)  
-[**2425**](scripts/[proc,script2425].cs2)  
+[**2425**](scripts/[proc,stonebutton_init].cs2) `[proc,stonebutton_init]`  
 [**2426**](scripts/[clientscript,script2426].cs2)  
 [**2427**](scripts/[clientscript,script2427].cs2)  
 [**2428**](scripts/[proc,script2428].cs2)  

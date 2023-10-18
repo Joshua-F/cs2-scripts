@@ -1,21 +1,21 @@
 // 4406
 [clientscript,clan_events_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 ~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script2425("<col=ff0000>Back</col>", $component4, "p12_full", 0);
+~stonebutton_init("<col=ff0000>Back</col>", $component4, "p12_full", 0);
 def_int $int7 = %varbit12200;
 if_setonop("opsound(event_op, 2)", $component4);
 if (%varbit12200 = 1) {
-	~script2425("<col=ff0000>Finished</col>", $component5, "p12_full", 0);
+	~stonebutton_init("<col=ff0000>Finished</col>", $component5, "p12_full", 0);
 } else if (~clan_events_has_permission(chat_playername) = 1) {
-	~script2425("<col=0dc10d>Edit Mode</col>", $component5, "p12_full", 0);
+	~stonebutton_init("<col=0dc10d>Edit Mode</col>", $component5, "p12_full", 0);
 } else {
-	~script2425("<col=9f9f9f>Edit Mode</col>", $component5, "p12_full", 0);
+	~stonebutton_init("<col=9f9f9f>Edit Mode</col>", $component5, "p12_full", 0);
 }
 if_setonop("opsound(event_op, 2)", $component5);
 if ($int7 = 1) {
-	~script2425("<col=0dc10d>Create</col>", $component6, "p12_full", 0);
+	~stonebutton_init("<col=0dc10d>Create</col>", $component6, "p12_full", 0);
 } else {
-	~script2425("<col=9f9f9f>Create</col>", $component6, "p12_full", 0);
+	~stonebutton_init("<col=9f9f9f>Create</col>", $component6, "p12_full", 0);
 }
 if_setonop("opsound(event_op, 2)", $component6);
 def_int $comsubid8 = ~steelborder($component1, "", 0);

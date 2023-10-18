@@ -227,7 +227,7 @@ if ($int37 > $int33) {
 	if_setscrollsize(0, $int43, $component14);
 	~scrollbar_resize($component16, $component14, if_getscrolly($component14));
 }
-~script2425("<col=ff981f>Cancel</col>", interface_288:12, "p12_full", 0);
+~stonebutton_init("<col=ff981f>Cancel</col>", interface_288:12, "p12_full", 0);
 if_setonop("script4208(^max_32bit_int, interface_288:1, interface_288:2, interface_288:3, $component0)", interface_288:12);
-~script2425("<col=0dc10d>Save</col>", interface_288:13, "p12_full", 0);
+~stonebutton_init("<col=0dc10d>Save</col>", interface_288:13, "p12_full", 0);
 if_setonop("script4208(%varcint459, interface_288:1, interface_288:2, interface_288:3, $component0)", interface_288:13);

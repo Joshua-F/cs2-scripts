@@ -1,7 +1,7 @@
 // 6421
 [clientscript,script6421](component $component0, int $int1, int $int2, obj $obj3, obj $obj4)
 ~script4206(interface_389:1, interface_389:2, interface_389:3, 0, $component0);
-~script2425("<col=0dc10d>Okay</col>", interface_389:10, "p12_full", 0);
+~stonebutton_init("<col=0dc10d>Okay</col>", interface_389:10, "p12_full", 0);
 if_setonop("script4208(1, interface_389:1, interface_389:2, interface_389:3, $component0)", interface_389:10);
 def_int $int5 = ~max(1, calc((21 + (6 - 1)) / 6));
 def_int $int6 = calc(if_getwidth(interface_389:6) - 4);

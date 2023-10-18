@@ -60,7 +60,7 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 14);
 ~script2418($width17, $int21, $height22, $component15);
 if_setonvartransmit("script2417(event_com, $int16, $width17, $int21, $height22, $component15){var263, var499}", $component14);
-~script2425("<col=0dc10d>Convert</col>", $component15, "b12_full", 1);
+~stonebutton_init("<col=0dc10d>Convert</col>", $component15, "b12_full", 1);
 if_setonop("opsound(event_op, 2)", $component15);
 def_int $x23 = calc(5 + 36 + 5);
 def_int $int24 = calc((36 - 30) / 2);

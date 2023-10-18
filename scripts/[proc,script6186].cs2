@@ -8,6 +8,6 @@ if (%varbit14030 = 1) {
 	if_setonop(null, $component0);
 	if_setontimer(null, $component0);
 } else {
-	~script2425("<col=0dc10d>Accept</col>", $component0, "p12_full", 0);
+	~stonebutton_init("<col=0dc10d>Accept</col>", $component0, "p12_full", 0);
 	if_setonop("script6187(event_op, event_com)", $component0);
 }

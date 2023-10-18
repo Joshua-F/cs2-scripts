@@ -1,10 +1,10 @@
 // 5257
 [proc,gim_sidepanel_draw](component $component0, int $comsubid1, int $comsubid2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, component $component8, component $component9, component $component10)
 if (%varbit13063 = 1) {
-	~script2425("<col=0dc10d>Inviting</col>", $component9, "p12_full", 0);
+	~stonebutton_init("<col=0dc10d>Inviting</col>", $component9, "p12_full", 0);
 	if_setonop("opsound(event_op, 2)", $component9);
 } else if (%varbit13063 = 2) {
-	~script2425("<col=ff0000>Not inviting</col>", $component9, "p12_full", 0);
+	~stonebutton_init("<col=ff0000>Not inviting</col>", $component9, "p12_full", 0);
 	if_setonop("opsound(event_op, 2)", $component9);
 } else {
 	if_setonmouserepeat(null, $component9);
@@ -14,7 +14,7 @@ if (%varbit13063 = 1) {
 	if_setop(1, "Invite", $component9);
 	if_setonop("opsound(0, 0)", $component9);
 }
-~script2425("<col=ff981f>Settings</col>", $component10, "p12_full", 0);
+~stonebutton_init("<col=ff981f>Settings</col>", $component10, "p12_full", 0);
 if_setonop("opsound(event_op, 2)", $component10);
 cc_deleteall($component8);
 def_int $int11 = 0;

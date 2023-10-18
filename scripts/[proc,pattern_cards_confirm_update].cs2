@@ -39,6 +39,6 @@ if ($int3 = -1) {
 	if_clearops($component0);
 	return;
 }
-~script2425("Confirm", $component0, "p12_full", 0);
+~stonebutton_init("Confirm", $component0, "p12_full", 0);
 if_setonop("pattern_cards_confirm_op(event_op, $component0)", $component0);
 if_setontimer(null, $component0);

@@ -1,5 +1,5 @@
 // 2425
-[proc,script2425](string $string0, component $component0, graphic $graphic1, int $flags2)
+[proc,stonebutton_init](string $string0, component $component0, graphic $graphic1, int $flags2)
 ~script2428(false, $string0, $graphic1, $flags2, $component0);
 if (~on_mobile = false) {
 	if_setonmouserepeat("script2426(true, $string0, event_com, $graphic1, $flags2)", $component0);
