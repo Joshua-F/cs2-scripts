@@ -1,3 +1,9 @@
 // 1303
 [clientscript,switchside_op](int $int0)
+%varcint10 = 0;
 ~if_switchside_op($int0);
+if (%varcint168 = $int0) {
+	%varcint168 = -1;
+} else {
+	%varcint168 = $int0;
+}

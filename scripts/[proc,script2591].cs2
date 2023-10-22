@@ -1,0 +1,118 @@
+// 2591
+[proc,script2591]
+~script2590;
+def_obj $obj0 = null;
+switch_int (%varcint929) {
+	case 0 :
+		$obj0 = inv_getobj(inv, %varcint930);
+	case 1 :
+		$obj0 = inv_getobj(inv, %varcint931);
+	case 2 :
+		$obj0 = inv_getobj(inv, %varcint932);
+	case 3 :
+		$obj0 = inv_getobj(inv, %varcint933);
+	case 4 :
+		$obj0 = inv_getobj(inv, %varcint934);
+	case 5 :
+		$obj0 = inv_getobj(inv, %varcint935);
+	case 6 :
+		$obj0 = inv_getobj(inv, %varcint936);
+	case 7 :
+		$obj0 = inv_getobj(inv, %varcint937);
+	case 8 :
+		$obj0 = inv_getobj(inv, %varcint938);
+	case 9 :
+		$obj0 = inv_getobj(inv, %varcint939);
+}
+if ($obj0 = null) {
+	return;
+}
+def_int $int1 = oc_param($obj0, param_806);
+switch_int (%varcint929) {
+	case 0 :
+		if (%varbit6415 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 1 :
+		if (%varbit6416 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 2 :
+		if (%varbit6417 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 3 :
+		if (%varbit6418 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 4 :
+		if (%varbit6419 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 5 :
+		if (%varbit6420 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 6 :
+		if (%varbit6421 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 7 :
+		if (%varbit6422 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 8 :
+		if (%varbit6423 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+	case 9 :
+		if (%varbit6424 = 1) {
+			if ($int1 = 0) {
+				$int1 = 1;
+			} else {
+				$int1 = 0;
+			}
+		}
+}
+switch_int ($int1) {
+	case 0 :
+		if_setgraphic("radio_buttons,1", interface_292:com_110);
+	case 1 :
+		if_setgraphic("radio_buttons,1", interface_292:com_111);
+}

@@ -1,3 +1,43 @@
 // 1394
 [clientscript,barrows_killcount_update]
-if_settext("Kill Count : <tostring(%varbit464)>", barrows_overlay:com_0);
+def_string $string0 = "";
+def_int $int0 = 0;
+def_int $int1 = 0;
+if (%varbit457 = 1) {
+	$string0 = append($string0, "Ahrim<br>");
+	$int0 = calc($int0 + 1);
+	$int1 = calc($int1 + 1);
+}
+if (%varbit458 = 1) {
+	$string0 = append($string0, "Dharok<br>");
+	$int0 = calc($int0 + 1);
+	$int1 = calc($int1 + 1);
+}
+if (%varbit459 = 1) {
+	$string0 = append($string0, "Guthan<br>");
+	$int0 = calc($int0 + 1);
+	$int1 = calc($int1 + 1);
+}
+if (%varbit460 = 1) {
+	$string0 = append($string0, "Karil<br>");
+	$int0 = calc($int0 + 1);
+	$int1 = calc($int1 + 1);
+}
+if (%varbit461 = 1) {
+	$string0 = append($string0, "Torag<br>");
+	$int0 = calc($int0 + 1);
+	$int1 = calc($int1 + 1);
+}
+if (%varbit462 = 1) {
+	$string0 = append($string0, "Verac<br>");
+	$int0 = calc($int0 + 1);
+	$int1 = calc($int1 + 1);
+}
+if (compare($string0, "") = 0) {
+	$string0 = "None";
+	$int0 = 1;
+}
+def_int $height2 = calc(52 + $int0 * 12);
+if_setsize(if_getwidth(barrows_overlay:kills_layer), $height2, ^setsize_abs, ^setsize_abs, barrows_overlay:kills_layer);
+if_settext($string0, barrows_overlay:brother_kills);
+if_settext(tostring(max(0, calc(%varbit464 - $int1))), barrows_overlay:creature_kills);

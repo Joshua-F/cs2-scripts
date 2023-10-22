@@ -1,10 +1,11 @@
 // 1478
 [proc,bank_v2_confirmsearch]
-def_int $int0 = ~bank_v2_show_search(%varcstring22);
+%varcstring138 = %varcstring22;
+def_int $int0 = ~bank_v2_show_search(%varcstring138);
 if ($int0 > 1) {
-	mes("Search for '<escape(%varcstring22)>' returned <tostring($int0)> results.");
+	mes("Search for '<escape(%varcstring138)>' returned <tostring($int0)> results.");
 } else if ($int0 = 1) {
-	mes("Search for '<escape(%varcstring22)>' returned <tostring($int0)> result.");
+	mes("Search for '<escape(%varcstring138)>' returned <tostring($int0)> result.");
 } else {
-	mes("Search for '<escape(%varcstring22)>' returned 0 results.");
+	mes("Search for '<escape(%varcstring138)>' returned 0 results.");
 }

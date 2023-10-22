@@ -1,0 +1,18 @@
+// 2373
+[proc,script2373](component $component0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+if ($component0 = interface_309:com_4) {
+	$int1 = enum_getoutputcount(enum_2343);
+} else if ($component0 = interface_729:com_79) {
+	$int1 = enum_getoutputcount(enum_2347);
+}
+$int2 = calc(2 * $int1);
+while ($int1 < $int2) {
+	if (cc_find($component0, $int1) = ^true) {
+		cc_setgraphic("graphic_1041");
+		cc_setonmouserepeat("script2368($component0, $int1)");
+		cc_setonmouseleave("script2369($component0, $int1)");
+	}
+	$int1 = calc($int1 + 1);
+}

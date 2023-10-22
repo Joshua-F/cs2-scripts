@@ -1,0 +1,5 @@
+// 1594
+[proc,script1594]
+~script197(clanjoin:clanlist, if_getx(clanjoin:com_7));
+~scrollbar_vertical(clanjoin:clanlistscrollbar, clanjoin:clanlist, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize(clanjoin:clanlistscrollbar, clanjoin:clanlist, if_getscrolly(clanjoin:clanlist));

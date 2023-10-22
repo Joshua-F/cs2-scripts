@@ -1,24 +1,3 @@
 // 1856
-[proc,script1856](int $flags0)
-def_int $world1 = _6505;
-if (testbit($flags0, 0) = ^true) {
-	$world1 = setbit($world1, 4);
-} else {
-	$world1 = clearbit($world1, 4);
-}
-if (testbit($flags0, 1) = ^true) {
-	$world1 = setbit($world1, 5);
-} else {
-	$world1 = clearbit($world1, 5);
-}
-if (testbit($flags0, 2) = ^true) {
-	$world1 = setbit($world1, 6);
-} else {
-	$world1 = clearbit($world1, 6);
-}
-if (testbit($flags0, 3) = ^true) {
-	$world1 = setbit($world1, 7);
-} else {
-	$world1 = clearbit($world1, 7);
-}
-_6504($world1);
+[proc,script1856](int $world0)
+%varcint997 = $world0;

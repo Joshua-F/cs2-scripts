@@ -1,0 +1,20 @@
+// 1124
+[clientscript,script1124](component $component0)
+def_int $int1 = if_gettrans($component0);
+if (%varcint992 = 1) {
+	$int1 = calc($int1 + 1);
+	if ($int1 >= 255) {
+		%varcint992 = 0;
+	}
+} else {
+	$int1 = calc($int1 - 1);
+	if ($int1 <= 0) {
+		%varcint992 = 1;
+	}
+}
+if ($int1 > 255) {
+	$int1 = 255;
+} else if ($int1 < 0) {
+	$int1 = 0;
+}
+if_settrans($int1, $component0);

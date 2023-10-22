@@ -1,0 +1,39 @@
+// 1563
+[proc,script1563](coord $coord0, coord $coord1, boolean $boolean2, int $colour3, int $int4, component $component5, int $int6, int $int7, int $int8, int $int9, int $int10)(int)
+def_int $int11 = 0;
+def_int $int12 = 0;
+$int11, $int12 = ~worldmap_elements_chooseposition($coord0, $boolean2, $component5, $int6, $int7, $int8, $int9);
+def_int $int13 = 0;
+def_int $int14 = 0;
+$int13, $int14 = ~worldmap_elements_chooseposition($coord1, $boolean2, $component5, $int6, $int7, $int8, $int9);
+def_int $x15 = calc($int11 + ($int13 - $int11) / 2);
+def_int $y16 = calc($int12 + ($int14 - $int12) / 2);
+def_int $int17 = calc($int13 - $int11);
+def_int $int18 = calc($int14 - $int12);
+$int17, $int18 = max($int17, calc(0 - $int17)), max($int18, calc(0 - $int18));
+if (cc_find($component5, $int10) = ^true) {
+	cc_setposition($x15, $y16, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int17, $int18, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_create($component5, ^iftype_rectangle, $int10);
+	cc_setposition($x15, $y16, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int17, $int18, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour3);
+	cc_setfill(false);
+	cc_settrans(0);
+}
+$int10 = calc($int10 + 1);
+$int17 = calc($int17 + 2 * $int4);
+$int18 = calc($int18 + 2 * $int4);
+if (cc_find($component5, $int10) = ^true) {
+	cc_setposition($x15, $y16, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int17, $int18, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_create($component5, ^iftype_rectangle, $int10);
+	cc_setposition($x15, $y16, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int17, $int18, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour3);
+	cc_setfill(false);
+	cc_settrans(0);
+}
+return(calc($int10 + 1));

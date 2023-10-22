@@ -1,0 +1,28 @@
+// 2741
+[clientscript,script2741](int $height0, int $height1)
+def_int $height2 = if_getheight(interface_900:com_65);
+if ($height2 >= $height0 | $height2 >= $height1) {
+	if ($height0 > $height1) {
+		~script2742;
+	}
+	if_setontimer(null, interface_900:com_65);
+	return;
+}
+def_int $int3 = min(calc($height0 - $height2), 8);
+def_int $y4 = if_gety(interface_900:com_65);
+def_int $int5 = calc($height1 - ($y4 + $height2));
+def_int $int6 = 0;
+if ($int5 <= 0) {
+	$int6 = min($y4, $int3);
+} else {
+	$int6 = min($y4, calc($int3 / 2));
+}
+def_int $int7 = calc($y4 - $int6);
+$int3 = calc($int3 - $int6);
+def_int $int8 = min($int3, $int5);
+def_int $int9 = calc($y4 + $height2 + $int8);
+if_setposition(if_getx(interface_900:com_65), $int7, ^setpos_abs_left, ^setpos_abs_top, interface_900:com_65);
+if_setsize(if_getwidth(interface_900:com_65), calc($int9 - $int7), ^setsize_abs, ^setsize_abs, interface_900:com_65);
+if ($height0 > $height1) {
+	~script2742;
+}

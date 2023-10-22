@@ -1,0 +1,14 @@
+// 2346
+[clientscript,script2346]
+%varcint769 = calc(%varcint769 + 1);
+if (%varcint769 >= calc(spline_length(0) - 1)) {
+	%varcint769 = 0;
+	if_setoncamfinished(null, interface_582:com_0);
+	return;
+}
+if (%varcint769 = calc(spline_length(0) - 2)) {
+	cam_movealong(0, %varcint769, 200, 75, 1, %varcint769);
+} else {
+	cam_movealong(0, %varcint769, 200, 200, 1, %varcint769);
+}
+if_setoncamfinished("script2346", interface_582:com_0);

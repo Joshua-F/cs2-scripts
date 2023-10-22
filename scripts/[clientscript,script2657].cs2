@@ -1,0 +1,101 @@
+// 2657
+[clientscript,script2657]
+%varbit6302 = 0;
+if (%varbit6290 = 0) {
+	if_sethide(false, interface_876:com_4);
+	if_sethide(true, interface_876:com_5);
+}
+if (%varbit6290 = 1) {
+	if_sethide(true, interface_876:com_4);
+	spline_new(0, 2);
+	spline_new(1, 2);
+	spline_addpoint(0, 0, 0_51_156_10_60, 1450, 0_51_156_15_62, 1385, 0);
+	spline_addpoint(1, 0, 0_51_156_16_61, 700, 0_51_156_16_61, 700, 0);
+	spline_addpoint(0, 1, 0_51_156_17_60, 1125, 0_51_156_18_59, 1000, 0);
+	spline_addpoint(1, 1, 0_51_156_17_54, 600, 0_51_156_17_54, 600, 0);
+	cam_movealong(0, 0, 250, 350, 1, 0);
+}
+if (%varbit6290 = 2) {
+	spline_new(0, 3);
+	spline_new(1, 3);
+	spline_addpoint(0, 0, 0_51_156_19_61, 1065, 0_51_156_19_62, 1130, 0);
+	spline_addpoint(1, 0, 0_51_156_18_54, 600, 0_51_156_18_54, 600, 0);
+	spline_addpoint(0, 1, 0_51_156_21_60, 1140, 0_51_156_24_61, 1105, 0);
+	spline_addpoint(1, 1, 0_51_156_26_59, 600, 0_51_156_28_58, 600, 0);
+	spline_addpoint(0, 2, 0_51_156_25_59, 825, 0_51_156_26_60, 565, 0);
+	spline_addpoint(1, 2, 0_51_156_25_55, 600, 0_51_156_23_55, 600, 0);
+	cam_movealong(0, 0, 250, 350, 1, 0);
+	if_setoncamfinished("script2658", interface_876:com_0);
+}
+if (%varbit6290 = 3) {
+	if_sethide(true, interface_876:com_4);
+	spline_new(0, 4);
+	spline_new(1, 4);
+	spline_addpoint(0, 0, 0_52_156_30_48, 805, 0_52_156_27_47, 650, 0);
+	spline_addpoint(1, 0, 0_52_156_30_41, 620, 0_52_156_30_41, 580, 0);
+	spline_addpoint(0, 1, 0_52_156_31_42, 725, 0_52_156_34_42, 650, 0);
+	spline_addpoint(1, 1, 0_52_156_35_38, 555, 0_52_156_35_38, 505, 0);
+	spline_addpoint(0, 2, 0_52_156_40_39, 800, 0_52_156_41_37, 740, 0);
+	spline_addpoint(1, 2, 0_52_156_41_35, 525, 0_52_156_41_34, 505, 0);
+	spline_addpoint(0, 3, 0_52_156_42_34, 745, 0_52_156_42_32, 650, 0);
+	spline_addpoint(1, 3, 0_52_156_42_28, 600, 0_52_156_43_27, 670, 0);
+	cam_movealong(0, 0, 300, 400, 1, 0);
+	if_setoncamfinished("script2658", interface_876:com_0);
+}
+if (%varbit6290 = 4) {
+	if_sethide(true, interface_876:com_4);
+	spline_new(0, 3);
+	spline_new(1, 3);
+	spline_addpoint(0, 0, 0_51_156_18_55, 1125, 0_51_156_19_54, 1085, 0);
+	spline_addpoint(1, 0, 0_51_156_18_50, 750, 0_51_156_18_51, 750, 0);
+	spline_addpoint(0, 1, 0_51_156_19_47, 1015, 0_51_156_18_46, 865, 0);
+	spline_addpoint(1, 1, 0_51_156_15_45, 750, 0_51_156_15_47, 750, 0);
+	spline_addpoint(0, 2, 0_51_156_12_47, 980, 0_51_156_10_47, 865, 0);
+	spline_addpoint(1, 2, 0_51_156_10_41, 620, 0_51_156_10_40, 540, 0);
+	cam_movealong(0, 0, 300, 400, 1, 0);
+	if_setoncamfinished("script2658", interface_876:com_0);
+}
+if (%varbit6290 = 5) {
+	if_sethide(false, interface_876:com_5);
+}
+if (%varbit6290 = 6) {
+	spline_new(0, 6);
+	spline_new(0, 6);
+	spline_new(1, 6);
+	spline_addpoint(0, 0, 0_51_156_12_47, 980, 0_51_156_10_47, 1185, 0);
+	spline_addpoint(1, 0, 0_51_156_10_41, 620, 0_51_156_10_40, 540, 0);
+	spline_addpoint(0, 1, 0_51_156_16_47, 1190, 0_51_156_17_47, 1165, 0);
+	spline_addpoint(1, 1, 0_51_156_19_46, 750, 0_51_156_22_46, 750, 0);
+	spline_addpoint(0, 2, 0_51_156_20_47, 1220, 0_51_156_22_46, 1190, 0);
+	spline_addpoint(1, 2, 0_51_156_23_45, 750, 0_51_156_24_44, 750, 0);
+	spline_addpoint(0, 3, 0_51_156_23_46, 1160, 0_51_156_25_45, 1135, 0);
+	spline_addpoint(1, 3, 0_51_156_25_41, 750, 0_51_156_26_39, 750, 0);
+	spline_addpoint(0, 4, 0_51_156_25_43, 1045, 0_51_156_26_42, 1005, 0);
+	spline_addpoint(1, 4, 0_51_156_27_38, 750, 0_51_156_28_37, 750, 0);
+	spline_addpoint(0, 5, 0_51_156_26_39, 975, 0_51_156_26_40, 920, 0);
+	spline_addpoint(1, 5, 0_51_156_30_39, 725, 0_51_156_30_40, 725, 0);
+	cam_movealong(0, 0, 500, 600, 1, 0);
+	if_setoncamfinished("script2658", interface_876:com_0);
+}
+if (%varbit6290 = 7) {
+	if_sethide(true, interface_876:com_5);
+	spline_new(0, 2);
+	spline_new(1, 2);
+	spline_addpoint(0, 0, 0_51_156_26_39, 975, 0_51_156_27_39, 1410, 0);
+	spline_addpoint(1, 0, 0_51_156_30_39, 725, 0_51_156_32_39, 725, 0);
+	spline_addpoint(0, 1, 0_51_156_30_39, 915, 0_51_156_31_39, 800, 0);
+	spline_addpoint(1, 1, 0_51_156_35_39, 650, 0_51_156_35_39, 725, 0);
+	cam_movealong(0, 0, 400, 200, 1, 0);
+	if_setoncamfinished("script2658", interface_876:com_0);
+}
+if (%varbit6290 = 8) {
+	if_sethide(true, interface_876:com_5);
+	spline_new(0, 2);
+	spline_new(1, 2);
+	spline_addpoint(0, 0, 0_51_156_30_39, 915, 0_51_156_31_39, 960, 0);
+	spline_addpoint(1, 0, 0_51_156_35_39, 650, 0_51_156_35_39, 725, 0);
+	spline_addpoint(0, 1, 0_51_156_37_38, 985, 0_51_156_37_38, 950, 0);
+	spline_addpoint(1, 1, 0_51_156_40_39, 800, 0_51_156_40_39, 800, 0);
+	cam_movealong(0, 0, 400, 200, 1, 0);
+	if_setoncamfinished("script2658", interface_876:com_0);
+}

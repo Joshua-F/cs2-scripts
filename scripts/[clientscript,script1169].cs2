@@ -1,0 +1,4 @@
+// 1169
+[clientscript,script1169](int $comsubid0, int $int1, string $text0)
+def_component $component2 = enum(int, component, enum_737, $int1);
+if_setontimer("script1168($comsubid0, $text0, $component2)", $component2);

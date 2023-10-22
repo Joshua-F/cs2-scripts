@@ -1,23 +1,28 @@
 // 948
-[clientscript,script948]
-if (%varbit4538 >= 61) {
-	mes("The game has ended.");
-	if_close;
-	return;
-}
-if (%varcint185 = %varbit4538) {
-	return;
-}
-if (%varcint185 = -1) {
-	while (%varcint185 < %varbit4538) {
-		%varcint185 = calc(%varcint185 + 1);
-		~script949(%varcint185, 0);
-	}
-	~script928(%varbit4538, "Teapotspout", "Hotwater", carpet_runeversi:text_1);
-	return;
-}
-%varcint185 = %varbit4538;
-~script949(%varbit4538, 1);
-if (%varbit4538 < calc(61 - 1)) {
-	~script928(%varbit4538, "Teapotspout", "Hotwater", carpet_runeversi:text_1);
+[clientscript,script948](component $component0)
+switch_component ($component0) {
+	case interface_513:model1 :
+		if (%varcint755 ! null) {
+			if_setobject_wearcol(%varcint755, 0, $component0);
+		}
+	case interface_513:model2 :
+		if (%varcint756 ! null) {
+			if_setobject_wearcol(%varcint756, 0, $component0);
+		}
+	case interface_513:model3 :
+		if (%varcint757 ! null) {
+			if_setobject_wearcol(%varcint757, 0, $component0);
+		}
+	case interface_513:model4 :
+		if (%varcint758 ! null) {
+			if_setobject_wearcol(%varcint758, 0, $component0);
+		}
+	case interface_513:model5 :
+		if (%varcint759 ! null) {
+			if_setobject_wearcol(%varcint759, 0, $component0);
+		}
+	case interface_513:model6 :
+		if (%varcint760 ! null) {
+			if_setobject_wearcol(%varcint760, 0, $component0);
+		}
 }

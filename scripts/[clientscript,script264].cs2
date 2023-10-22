@@ -1,4 +1,10 @@
 // 264
-[clientscript,script264]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_162);
+[clientscript,script264](component $component0, int $int1)
+def_int $int2 = 0;
+while (cc_find($component0, $int2) = ^true) {
+	cc_setcolour(0x663300);
+	$int2 = calc($int2 + 1);
+}
+if (cc_find($component0, ~script270($int1)) = ^true) {
+	cc_setcolour(0xffe1be);
+}

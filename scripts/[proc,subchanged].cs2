@@ -1,17 +1,7 @@
 // 1364
 [proc,subchanged]
 def_int $int0 = 0;
-if (if_hassubmodal(toplevel_full:full2, welcome_screen) = false) {
-	if (map_members = ^false) {
-		if_sethide(true, banner_security:com_5);
-	} else {
-		if_sethide(true, interface_17:com_4);
-	}
-} else if (map_members = ^false) {
-	if_sethide(false, banner_security:com_5);
-} else {
-	if_sethide(false, interface_17:com_4);
-}
+def_int $int1 = 0;
 if (getwindowmode >= ^windowmode_resizable) {
 	if (if_gethide(chattop:mes_layer_hide) = true & (if_gethide(chattop:mes_layer) = false | if_gethide(chattop:mes_layer_large) = false)) {
 		if_sethide(false, toplevel_fullscreen:chattop);
@@ -86,8 +76,10 @@ if (getwindowmode >= ^windowmode_resizable) {
 	} else if (if_hassub(chattop:chatdefault) = true) {
 		if (%varcint41 = -1) {
 			if_sethide(true, toplevel_fullscreen:chattop);
+			if_sethide(true, toplevel_fullscreen:com_21);
 		} else {
 			if_sethide(false, toplevel_fullscreen:chattop);
+			if_sethide(false, toplevel_fullscreen:com_21);
 		}
 		if_sethide(true, chattop:chatmodallarge);
 		if_sethide(true, chattop:chatmodal);
@@ -103,9 +95,10 @@ if (getwindowmode >= ^windowmode_resizable) {
 			if_sethide(true, chattop:chat_border);
 			if_setgraphic("graphic_1247", chattop:chat_graphic);
 			if_setalpha(true, chattop:chat_graphic);
+			if_settiling(false, chattop:chat_graphic);
 			if_sethide(true, chatdefault:divider_line);
 			if_sethide(false, chatdefault:divider_graphic);
-			if_sethide(false, chatdefault:com_55);
+			if_sethide(false, chatdefault:com_57);
 			~script1301(chatdefault:scrollbar, chatdefault:scrollarea);
 			while ($int0 < 100) {
 				if_settextshadow(true, enum(int, component, enum_579, $int0));
@@ -114,129 +107,78 @@ if (getwindowmode >= ^windowmode_resizable) {
 			}
 			if_settextshadow(true, chatdefault:input);
 			if_setcolour(^white, chatdefault:input);
-			if_settext("<chat_playername><img=3>: <col=7fa9ff><escape(%varcstring1)>*", chatdefault:input);
+			~script1558(0);
 			~rebuildchatbox;
 		}
 	}
-	~window_resize;
 	if (if_hassub(toplevel_fullscreen:sidemodal) = true) {
 		if_sethide(true, toplevel_fullscreen:stones_on);
 		if_sethide(true, toplevel_fullscreen:icons);
+		if_sethide(true, toplevel_fullscreen:com_17);
+		if_sethide(false, toplevel_fullscreen:sidemodal);
+		if_sethide(true, toplevel_fullscreen:com_31);
+		if_sethide(false, toplevel_fullscreen:side_border);
 		if_sethide(true, toplevel_fullscreen:side_hide);
 		if_sethide(true, toplevel_fullscreen:logoutbutton);
-		if_sethide(false, toplevel_fullscreen:sidemodal);
-		if_sethide(false, toplevel_fullscreen:side_border);
 	} else {
 		if_sethide(false, toplevel_fullscreen:stones_on);
 		if_sethide(false, toplevel_fullscreen:icons);
+		if (%varbit6448 = 0) {
+			if_sethide(false, toplevel_fullscreen:com_17);
+		}
 		if_sethide(false, toplevel_fullscreen:side_hide);
 		if_sethide(false, toplevel_fullscreen:logoutbutton);
-		if_sethide(true, toplevel_fullscreen:sidemodal);
-		if (if_gethide(toplevel_fullscreen:side0) = false | if_gethide(toplevel_fullscreen:side1) = false | if_gethide(toplevel_fullscreen:side2) = false | if_gethide(toplevel_fullscreen:side3) = false | if_gethide(toplevel_fullscreen:side4) = false | if_gethide(toplevel_fullscreen:side5) = false | if_gethide(toplevel_fullscreen:side6) = false | if_gethide(toplevel_fullscreen:side7) = false | if_gethide(toplevel_fullscreen:side8) = false | if_gethide(toplevel_fullscreen:side9) = false | if_gethide(toplevel_fullscreen:side10) = false | if_gethide(toplevel_fullscreen:side11) = false | if_gethide(toplevel_fullscreen:side12) = false | if_gethide(toplevel_fullscreen:side13) = false | if_gethide(toplevel_fullscreen:side99) = false) {
+		if (if_hassub(toplevel_fullscreen:com_31) = false) {
+			if_sethide(true, toplevel_fullscreen:sidemodal);
+		}
+		~if_switchside(%varcint168);
+		if (if_gethide(toplevel_fullscreen:side0) = false | if_gethide(toplevel_fullscreen:side1) = false | if_gethide(toplevel_fullscreen:side2) = false | if_gethide(toplevel_fullscreen:side3) = false | if_gethide(toplevel_fullscreen:side4) = false | if_gethide(toplevel_fullscreen:side5) = false | if_gethide(toplevel_fullscreen:side6) = false | if_gethide(toplevel_fullscreen:side7) = false | if_gethide(toplevel_fullscreen:side8) = false | if_gethide(toplevel_fullscreen:side9) = false | if_gethide(toplevel_fullscreen:side10) = false | if_gethide(toplevel_fullscreen:side11) = false | if_gethide(toplevel_fullscreen:side12) = false | if_gethide(toplevel_fullscreen:side13) = false | if_gethide(toplevel_fullscreen:com_47) = false | if_gethide(toplevel_fullscreen:com_48) = false | if_gethide(toplevel_fullscreen:com_50) = false | if_gethide(toplevel_fullscreen:side99) = false) {
 			if_sethide(false, toplevel_fullscreen:side_border);
 		} else {
 			if_sethide(true, toplevel_fullscreen:side_border);
 		}
+		if_setontimer("script2464(clientclock, event_com)", toplevel_fullscreen:chattop);
 	}
-	if (if_hassub(toplevel_fullscreen:side0) = true) {
-		if_sethide(false, toplevel_fullscreen:icon0);
-		if_sethide(false, toplevel_fullscreen:stone0);
+	if_sethide(true, toplevel:com_148);
+	$int1 = 0;
+	while ($int1 <= 15) {
+		if (if_hassub(~script8($int1)) = true) {
+			if_sethide(false, ~getsideicon($int1));
+			if_sethide(false, ~script2458($int1));
+		} else {
+			if_sethide(true, ~getsideicon($int1));
+			if_sethide(true, ~script2458($int1));
+		}
+		$int1 = calc($int1 + 1);
+	}
+	if (if_hassub(~script8(95)) = true & %varbit4280 = 1) {
+		if_sethide(false, topstat_lore:com_8);
 	} else {
-		if_sethide(true, toplevel_fullscreen:icon0);
-		if_sethide(true, toplevel_fullscreen:stone0);
+		if_sethide(true, topstat_lore:com_8);
 	}
-	if (if_hassub(toplevel_fullscreen:side1) = true) {
-		if_sethide(false, toplevel_fullscreen:icon1);
-		if_sethide(false, toplevel_fullscreen:stone1);
+	$int1 = 0;
+	if (if_gethide(toplevel_fullscreen:icons) = true) {
+		while ($int1 <= 15) {
+			if_setonmouseover(null, ~script2459($int1));
+			if_setonmouseleave(null, ~script2459($int1));
+			if_setgraphic("graphic_1835", ~script2459($int1));
+			$int1 = calc($int1 + 1);
+		}
 	} else {
-		if_sethide(true, toplevel_fullscreen:icon1);
-		if_sethide(true, toplevel_fullscreen:stone1);
+		while ($int1 <= 15) {
+			if (if_gethide(~getsideicon($int1)) = true) {
+				if_setonmouseover(null, ~script2459($int1));
+				if_setonmouseleave(null, ~script2459($int1));
+				if_setgraphic("graphic_1835", ~script2459($int1));
+			} else {
+				if_setonmouseover("script2462(event_com, true)", ~script2459($int1));
+				if_setonmouseleave("script2462(event_com, false)", ~script2459($int1));
+			}
+			$int1 = calc($int1 + 1);
+		}
 	}
-	if (if_hassub(toplevel_fullscreen:side2) = true) {
-		if_sethide(false, toplevel_fullscreen:icon2);
-		if_sethide(false, toplevel_fullscreen:stone2);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon2);
-		if_sethide(true, toplevel_fullscreen:stone2);
-	}
-	if (if_hassub(toplevel_fullscreen:side3) = true) {
-		if_sethide(false, toplevel_fullscreen:icon3);
-		if_sethide(false, toplevel_fullscreen:stone3);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon3);
-		if_sethide(true, toplevel_fullscreen:stone3);
-	}
-	if (if_hassub(toplevel_fullscreen:side4) = true) {
-		if_sethide(false, toplevel_fullscreen:icon4);
-		if_sethide(false, toplevel_fullscreen:stone4);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon4);
-		if_sethide(true, toplevel_fullscreen:stone4);
-	}
-	if (if_hassub(toplevel_fullscreen:side5) = true) {
-		if_sethide(false, toplevel_fullscreen:icon5);
-		if_sethide(false, toplevel_fullscreen:stone5);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon5);
-		if_sethide(true, toplevel_fullscreen:stone5);
-	}
-	if (if_hassub(toplevel_fullscreen:side6) = true) {
-		if_sethide(false, toplevel_fullscreen:icon6);
-		if_sethide(false, toplevel_fullscreen:stone6);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon6);
-		if_sethide(true, toplevel_fullscreen:stone6);
-	}
-	if (if_hassub(toplevel_fullscreen:side7) = true) {
-		if_sethide(false, toplevel_fullscreen:icon7);
-		if_sethide(false, toplevel_fullscreen:stone7);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon7);
-		if_sethide(true, toplevel_fullscreen:stone7);
-	}
-	if (if_hassub(toplevel_fullscreen:side8) = true) {
-		if_sethide(false, toplevel_fullscreen:icon8);
-		if_sethide(false, toplevel_fullscreen:stone8);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon8);
-		if_sethide(true, toplevel_fullscreen:stone8);
-	}
-	if (if_hassub(toplevel_fullscreen:side9) = true) {
-		if_sethide(false, toplevel_fullscreen:icon9);
-		if_sethide(false, toplevel_fullscreen:stone9);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon9);
-		if_sethide(true, toplevel_fullscreen:stone9);
-	}
-	if (if_hassub(toplevel_fullscreen:side10) = true) {
-		if_sethide(false, toplevel_fullscreen:icon10);
-		if_sethide(false, toplevel_fullscreen:stone10);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon10);
-		if_sethide(true, toplevel_fullscreen:stone10);
-	}
-	if (if_hassub(toplevel_fullscreen:side11) = true) {
-		if_sethide(false, toplevel_fullscreen:icon11);
-		if_sethide(false, toplevel_fullscreen:stone11);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon11);
-		if_sethide(true, toplevel_fullscreen:stone11);
-	}
-	if (if_hassub(toplevel_fullscreen:side12) = true) {
-		if_sethide(false, toplevel_fullscreen:icon12);
-		if_sethide(false, toplevel_fullscreen:stone12);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon12);
-		if_sethide(true, toplevel_fullscreen:stone12);
-	}
-	if (if_hassub(toplevel_fullscreen:side13) = true) {
-		if_sethide(false, toplevel_fullscreen:icon13);
-		if_sethide(false, toplevel_fullscreen:stone13);
-	} else {
-		if_sethide(true, toplevel_fullscreen:icon13);
-		if_sethide(true, toplevel_fullscreen:stone13);
-	}
-	if_sethide(false, toplevel_fullscreen:com_7);
+	~window_resize;
+	if_sethide(false, toplevel_fullscreen:com_9);
 	~script1313;
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, statusicons:statusicons);
 	if_setsize(115, 35, ^setsize_abs, ^setsize_abs, statusicons:statusicons);
@@ -269,6 +211,7 @@ if (getwindowmode >= ^windowmode_resizable) {
 	if_sethide(false, chattop:chat_graphic);
 	if_sethide(false, chattop:chat_border);
 	if_setalpha(false, chattop:chat_graphic);
+	if_settiling(true, chattop:chat_graphic);
 	if (if_hassub(chattop:chatmodallarge) = true) {
 		if_sethide(false, chattop:chatmodallarge);
 		if_sethide(true, chattop:chatmodal);
@@ -301,7 +244,7 @@ if (getwindowmode >= ^windowmode_resizable) {
 		if_sethide(false, chattop:chatdefault);
 		if_sethide(false, chatdefault:divider_line);
 		if_sethide(true, chatdefault:divider_graphic);
-		if_sethide(true, chatdefault:com_55);
+		if_sethide(true, chatdefault:com_57);
 		~script1301(chatdefault:scrollbar, chatdefault:scrollarea);
 		while ($int0 < 100) {
 			if_settextshadow(false, enum(int, component, enum_579, $int0));
@@ -310,118 +253,70 @@ if (getwindowmode >= ^windowmode_resizable) {
 		}
 		if_settextshadow(false, chatdefault:input);
 		if_setcolour(^black, chatdefault:input);
-		if_settext("<chat_playername><img=3>: <col=0000ff><escape(%varcstring1)>*", chatdefault:input);
+		~script1558(0);
 		~rebuildchatbox;
 	}
 	if (if_hassub(toplevel:sidemodal) = true) {
-		if_sethide(true, toplevel:com_18);
-		if_sethide(true, toplevel:com_36);
+		if_sethide(true, toplevel:com_33);
+		if_sethide(true, toplevel:com_34);
+		if_sethide(true, toplevel:com_80);
+		if_sethide(true, toplevel:com_97);
+		if_sethide(false, toplevel:sidemodal);
+		if_sethide(true, toplevel:com_148);
 		if_sethide(true, toplevel:side_hide);
 		if_sethide(true, toplevel:logoutbutton);
 	} else {
-		if_sethide(false, toplevel:com_18);
-		if_sethide(false, toplevel:com_36);
+		if_sethide(false, toplevel:com_33);
+		if_sethide(false, toplevel:com_34);
+		if_sethide(false, toplevel:com_80);
+		if_sethide(false, toplevel:com_97);
 		if_sethide(false, toplevel:side_hide);
 		if_sethide(false, toplevel:logoutbutton);
+		if_sethide(true, toplevel_fullscreen:sidemodal);
+		if (if_hassub(toplevel:com_148) = false) {
+			if_sethide(true, toplevel:com_148);
+		}
+		~if_switchside(%varcint168);
+		if_setontimer("script2464(clientclock, event_com)", toplevel:chattop);
 	}
-	if (if_hassub(toplevel:side0) = true) {
-		if_sethide(false, toplevel:icon0);
-		if_sethide(false, toplevel:stone0);
+	$int1 = 0;
+	while ($int1 <= 15) {
+		if (if_hassub(~script8($int1)) = true) {
+			if_sethide(false, ~getsideicon($int1));
+			if_sethide(false, ~script2458($int1));
+		} else {
+			if_sethide(true, ~getsideicon($int1));
+			if_sethide(true, ~script2458($int1));
+		}
+		$int1 = calc($int1 + 1);
+	}
+	if (if_hassub(~script8(95)) = true & %varbit4280 = 1) {
+		if_sethide(false, topstat_lore:com_8);
 	} else {
-		if_sethide(true, toplevel:icon0);
-		if_sethide(true, toplevel:stone0);
+		if_sethide(true, topstat_lore:com_8);
 	}
-	if (if_hassub(toplevel:side1) = true) {
-		if_sethide(false, toplevel:icon1);
-		if_sethide(false, toplevel:stone1);
+	$int1 = 0;
+	if (if_gethide(toplevel:com_33) = true & if_gethide(toplevel:com_80) = true) {
+		while ($int1 <= 15) {
+			if_setonmouseover(null, ~script2459($int1));
+			if_setonmouseleave(null, ~script2459($int1));
+			if_setgraphic("graphic_1835", ~script2459($int1));
+			$int1 = calc($int1 + 1);
+		}
 	} else {
-		if_sethide(true, toplevel:icon1);
-		if_sethide(true, toplevel:stone1);
+		while ($int1 <= 15) {
+			if (if_gethide(~getsideicon($int1)) = true) {
+				if_setonmouseover(null, ~script2459($int1));
+				if_setonmouseleave(null, ~script2459($int1));
+				if_setgraphic("graphic_1835", ~script2459($int1));
+			} else {
+				if_setonmouseover("script2462(event_com, true)", ~script2459($int1));
+				if_setonmouseleave("script2462(event_com, false)", ~script2459($int1));
+			}
+			$int1 = calc($int1 + 1);
+		}
 	}
-	if (if_hassub(toplevel:side2) = true) {
-		if_sethide(false, toplevel:icon2);
-		if_sethide(false, toplevel:stone2);
-	} else {
-		if_sethide(true, toplevel:icon2);
-		if_sethide(true, toplevel:stone2);
-	}
-	if (if_hassub(toplevel:side3) = true) {
-		if_sethide(false, toplevel:icon3);
-		if_sethide(false, toplevel:stone3);
-	} else {
-		if_sethide(true, toplevel:icon3);
-		if_sethide(true, toplevel:stone3);
-	}
-	if (if_hassub(toplevel:side4) = true) {
-		if_sethide(false, toplevel:icon4);
-		if_sethide(false, toplevel:stone4);
-	} else {
-		if_sethide(true, toplevel:icon4);
-		if_sethide(true, toplevel:stone4);
-	}
-	if (if_hassub(toplevel:side5) = true) {
-		if_sethide(false, toplevel:icon5);
-		if_sethide(false, toplevel:stone5);
-	} else {
-		if_sethide(true, toplevel:icon5);
-		if_sethide(true, toplevel:stone5);
-	}
-	if (if_hassub(toplevel:side6) = true) {
-		if_sethide(false, toplevel:icon6);
-		if_sethide(false, toplevel:stone6);
-	} else {
-		if_sethide(true, toplevel:icon6);
-		if_sethide(true, toplevel:stone6);
-	}
-	if (if_hassub(toplevel:side7) = true) {
-		if_sethide(false, toplevel:icon7);
-		if_sethide(false, toplevel:stone7);
-	} else {
-		if_sethide(true, toplevel:icon7);
-		if_sethide(true, toplevel:stone7);
-	}
-	if (if_hassub(toplevel:side8) = true) {
-		if_sethide(false, toplevel:icon8);
-		if_sethide(false, toplevel:stone8);
-	} else {
-		if_sethide(true, toplevel:icon8);
-		if_sethide(true, toplevel:stone8);
-	}
-	if (if_hassub(toplevel:side9) = true) {
-		if_sethide(false, toplevel:icon9);
-		if_sethide(false, toplevel:stone9);
-	} else {
-		if_sethide(true, toplevel:icon9);
-		if_sethide(true, toplevel:stone9);
-	}
-	if (if_hassub(toplevel:side10) = true) {
-		if_sethide(false, toplevel:icon10);
-		if_sethide(false, toplevel:stone10);
-	} else {
-		if_sethide(true, toplevel:icon10);
-		if_sethide(true, toplevel:stone10);
-	}
-	if (if_hassub(toplevel:side11) = true) {
-		if_sethide(false, toplevel:icon11);
-		if_sethide(false, toplevel:stone11);
-	} else {
-		if_sethide(true, toplevel:icon11);
-		if_sethide(true, toplevel:stone11);
-	}
-	if (if_hassub(toplevel:side12) = true) {
-		if_sethide(false, toplevel:icon12);
-		if_sethide(false, toplevel:stone12);
-	} else {
-		if_sethide(true, toplevel:icon12);
-		if_sethide(true, toplevel:stone12);
-	}
-	if (if_hassub(toplevel:side13) = true) {
-		if_sethide(false, toplevel:icon13);
-		if_sethide(false, toplevel:stone13);
-	} else {
-		if_sethide(true, toplevel:icon13);
-		if_sethide(true, toplevel:stone13);
-	}
+	~script1658;
 	~script1337;
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, statusicons:statusicons);
 	if_setsize(82, 25, ^setsize_abs, ^setsize_abs, statusicons:statusicons);
@@ -442,19 +337,4 @@ if (getwindowmode >= ^windowmode_resizable) {
 	if_setgraphic("graphic_1576", statusicons:pvpw_safe);
 	if_setgraphic("graphic_1578", statusicons:pvpw_safe_countdown);
 	if_setgraphic("graphic_1577", statusicons:com_6);
-	if (if_hassuboverlay(toplevel:mainmodal, overlayinterface_759) = true) {
-		if_sethide(false, toplevel:minimap_disable);
-		if_sethide(false, toplevel:filterbuttons_disable);
-		if_sethide(false, toplevel:chat_disable);
-		if_sethide(false, toplevel:side_disable);
-		if_sethide(false, toplevel:com_37);
-		if_sethide(false, toplevel:com_19);
-	} else {
-		if_sethide(true, toplevel:minimap_disable);
-		if_sethide(true, toplevel:filterbuttons_disable);
-		if_sethide(true, toplevel:chat_disable);
-		if_sethide(true, toplevel:side_disable);
-		if_sethide(true, toplevel:com_37);
-		if_sethide(true, toplevel:com_19);
-	}
 }

@@ -1,4 +1,14 @@
 // 1677
 [clientscript,script1677]
-~script1720;
-~script1612(interface_771:button_65, 2, 23);
+if_setontimer("script1688", interface_85:main_layer);
+%varcint1046 = 0;
+%varcint1045 = 0;
+%varcint1051 = 0;
+%varcint1048 = 0;
+%varcint1049 = 255;
+%varcint1044 = 0;
+spline_new(0, 0);
+spline_new(1, 0);
+~script1678;
+cam_movealong(0, 0, 200, 200, 1, 0);
+if_setoncamfinished("script1679", interface_85:main_layer);

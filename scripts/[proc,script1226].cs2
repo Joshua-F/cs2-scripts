@@ -1,0 +1,103 @@
+// 1226
+[proc,script1226](int $int0)
+if_sethide(true, interface_308:com_15);
+if_sethide(true, interface_308:com_14);
+if_setgraphic("radio_buttons,0", interface_308:com_35);
+if_sethide(true, interface_308:com_13);
+if_sethide(true, interface_308:com_12);
+if_setgraphic("radio_buttons,0", interface_308:com_34);
+if_sethide(true, interface_308:com_11);
+if_sethide(true, interface_308:com_10);
+if_setgraphic("radio_buttons,0", interface_308:com_33);
+if_sethide(true, interface_308:com_9);
+if_sethide(true, interface_308:com_8);
+if_setgraphic("radio_buttons,0", interface_308:com_39);
+if_sethide(true, interface_308:com_7);
+if_sethide(true, interface_308:com_6);
+if_setgraphic("radio_buttons,0", interface_308:com_37);
+if_sethide(true, interface_308:com_5);
+if_sethide(true, interface_308:com_4);
+if_setgraphic("radio_buttons,0", interface_308:com_36);
+if_sethide(true, interface_308:com_3);
+if_sethide(true, interface_308:com_2);
+if_setgraphic("radio_buttons,0", interface_308:com_38);
+if (gender = 1) {
+	switch_int ($int0) {
+		case 0 :
+			if_sethide(false, interface_308:com_15);
+			if_setgraphic("radio_buttons,1", interface_308:com_35);
+		case 1 :
+			if_sethide(false, interface_308:com_13);
+			if_setgraphic("radio_buttons,1", interface_308:com_34);
+		case 2 :
+			if_sethide(false, interface_308:com_11);
+			if_setgraphic("radio_buttons,1", interface_308:com_33);
+		case 3 :
+			if_sethide(false, interface_308:com_9);
+			if_setgraphic("radio_buttons,1", interface_308:com_39);
+		case 4 :
+			if_sethide(false, interface_308:com_7);
+			if_setgraphic("radio_buttons,1", interface_308:com_37);
+		case 5 :
+			if_sethide(false, interface_308:com_5);
+			if_setgraphic("radio_buttons,1", interface_308:com_36);
+		case 6 :
+			if_sethide(false, interface_308:com_3);
+			if_setgraphic("radio_buttons,1", interface_308:com_38);
+	}
+} else {
+	switch_int ($int0) {
+		case 0 :
+			if_sethide(false, interface_308:com_14);
+			if_setgraphic("radio_buttons,1", interface_308:com_35);
+		case 1 :
+			if_sethide(false, interface_308:com_12);
+			if_setgraphic("radio_buttons,1", interface_308:com_34);
+		case 2 :
+			if_sethide(false, interface_308:com_10);
+			if_setgraphic("radio_buttons,1", interface_308:com_33);
+		case 3 :
+			if_sethide(false, interface_308:com_8);
+			if_setgraphic("radio_buttons,1", interface_308:com_39);
+		case 4 :
+			if_sethide(false, interface_308:com_6);
+			if_setgraphic("radio_buttons,1", interface_308:com_37);
+		case 5 :
+			if_sethide(false, interface_308:com_4);
+			if_setgraphic("radio_buttons,1", interface_308:com_36);
+		case 6 :
+			if_sethide(false, interface_308:com_2);
+			if_setgraphic("radio_buttons,1", interface_308:com_38);
+	}
+}
+if (gender = 1) {
+	if_sethide(false, interface_308:com_20);
+	if_sethide(false, interface_308:com_22);
+	if_sethide(false, interface_308:com_24);
+	if_sethide(false, interface_308:com_26);
+	if_sethide(false, interface_308:com_28);
+	if_sethide(false, interface_308:com_30);
+	if_sethide(false, interface_308:com_32);
+	if_sethide(true, interface_308:com_19);
+	if_sethide(true, interface_308:com_21);
+	if_sethide(true, interface_308:com_23);
+	if_sethide(true, interface_308:com_25);
+	if_sethide(true, interface_308:com_27);
+	if_sethide(true, interface_308:com_29);
+	if_sethide(true, interface_308:com_31);
+} else {
+	if_sethide(true, interface_308:com_20);
+	if_sethide(true, interface_308:com_22);
+	if_sethide(true, interface_308:com_24);
+	if_sethide(true, interface_308:com_26);
+	if_sethide(true, interface_308:com_28);
+	if_sethide(true, interface_308:com_30);
+	if_sethide(true, interface_308:com_32);
+	if_sethide(false, interface_308:com_19);
+	if_sethide(false, interface_308:com_21);
+	if_sethide(false, interface_308:com_23);
+	if_sethide(false, interface_308:com_25);
+	if_sethide(false, interface_308:com_27);
+	if_sethide(false, interface_308:com_29);
+	if_sethide(false, interface_308:com_31);
+}

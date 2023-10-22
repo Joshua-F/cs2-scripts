@@ -1,0 +1,22 @@
+// 2747
+[proc,script2747](component $component0, int $comsubid1, int $int2)
+def_int $int3 = 0;
+def_int $int4 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int3 = cc_getmodelangle_y;
+	if ($int3 = $int2) {
+		return;
+	}
+	if ($int3 < $int2) {
+		if ($int3 < 512 & $int2 >= 1556) {
+			$int4 = ~script686(calc($int3 - 15), 2048);
+		} else {
+			$int4 = min(calc($int3 + 15), $int2);
+		}
+	} else if ($int2 < 512 & $int3 >= 1556) {
+		$int4 = calc(($int3 + 15) % 2048);
+	} else {
+		$int4 = max(calc($int3 - 15), $int2);
+	}
+	cc_setmodelangle(cc_getmodelxof, cc_getmodelyof, cc_getmodelangle_x, $int4, cc_getmodelangle_z, cc_getmodelzoom);
+}

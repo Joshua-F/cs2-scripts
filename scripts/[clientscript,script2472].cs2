@@ -1,0 +1,10 @@
+// 2472
+[clientscript,script2472](component $component0, component $component1, component $component2, int $int3, obj $obj4, int $int5, obj $obj6, int $int7, obj $obj8, int $int9, obj $obj10, int $int11, string $string0, string $string1)
+~script2474($component0, $component1, $component2, $int3, $string0, $string1, $obj4, $int5, $obj6, $int7, $obj8, $int9, $obj10, $int11);
+if (if_gettargetmask($component0) ! 0) {
+	if_setontargetenter("magic_entertargetmode(topstat_lore:com_6)", $component0);
+	if_setontargetleave("magic_leavetargetmode(topstat_lore:com_6)", $component0);
+}
+if_setoninvtransmit("script2473($component0, $component1, $component2, $int3, $string0, $string1, $obj4, $int5, $obj6, $int7, $obj8, $int9, $obj10, $int11){inv}", $component0);
+if_setonstattransmit("script2473($component0, $component1, $component2, $int3, $string0, $string1, $obj4, $int5, $obj6, $int7, $obj8, $int9, $obj10, $int11){summoning}", $component0);
+if_setonvartransmit("script2473($component0, $component1, $component2, $int3, $string0, $string1, $obj4, $int5, $obj6, $int7, $obj8, $int9, $obj10, $int11){var1175, var448}", $component0);

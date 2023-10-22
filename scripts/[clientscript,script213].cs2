@@ -1,4 +1,63 @@
 // 213
-[clientscript,script213]
-~script224;
-if_setgraphic("miscgraphics,11", interface_595:com_83);
+[clientscript,script213](int $int0)
+def_string $string0 = "";
+def_int $int1 = 0;
+def_int $int2 = 10;
+$int2 = max($int2, $int0);
+while ($int1 < 25) {
+	$string0 = "::setstat ";
+	switch_int ($int1) {
+		case 0 :
+			$string0 = append($string0, "summoning <tostring($int0)>");
+		case 1 :
+			$string0 = append($string0, "strength <tostring($int0)>");
+		case 2 :
+			$string0 = append($string0, "defence <tostring($int0)>");
+		case 3 :
+			$string0 = append($string0, "ranged <tostring($int0)>");
+		case 4 :
+			$string0 = append($string0, "prayer <tostring($int0)>");
+		case 5 :
+			$string0 = append($string0, "magic <tostring($int0)>");
+		case 6 :
+			$string0 = append($string0, "runecraft <tostring($int0)>");
+		case 7 :
+			$string0 = append($string0, "construction <tostring($int0)>");
+		case 8 :
+			$string0 = append($string0, "hitpoints <tostring($int2)>");
+		case 9 :
+			$string0 = append($string0, "agility <tostring($int0)>");
+		case 10 :
+			$string0 = append($string0, "herblore <tostring($int0)>");
+		case 11 :
+			$string0 = append($string0, "thieving <tostring($int0)>");
+		case 12 :
+			$string0 = append($string0, "crafting <tostring($int0)>");
+		case 13 :
+			$string0 = append($string0, "fletching <tostring($int0)>");
+		case 14 :
+			$string0 = append($string0, "slayer <tostring($int0)>");
+		case 15 :
+			$string0 = append($string0, "hunter <tostring($int0)>");
+		case 16 :
+			$string0 = append($string0, "mining <tostring($int0)>");
+		case 17 :
+			$string0 = append($string0, "smithing <tostring($int0)>");
+		case 18 :
+			$string0 = append($string0, "fishing <tostring($int0)>");
+		case 19 :
+			$string0 = append($string0, "cooking <tostring($int0)>");
+		case 20 :
+			$string0 = append($string0, "firemaking <tostring($int0)>");
+		case 21 :
+			$string0 = append($string0, "woodcutting <tostring($int0)>");
+		case 22 :
+			$string0 = append($string0, "farming <tostring($int0)>");
+		case 23 :
+			$string0 = "::setstat attack 1";
+		case 24 :
+			$string0 = append("::advancestat ", "attack <tostring($int0)>");
+	}
+	chat_sendpublic($string0);
+	$int1 = calc($int1 + 1);
+}

@@ -1,73 +1,99 @@
 // 112
 [clientscript,meslayer_onkey](int $key0, char $keychar1)
-if ($key0 = ^key_return) {
-	if (%varcint5 = 12) {
-		~script1806(%varcstring22);
-		return;
-	}
-	if (string_length(%varcstring22) > 0) {
-		if (%varcint5 = 4 | %varcint5 = 5) {
-			if (ignore_count < 0) {
-				mes("Unable to update Ignore List: system busy");
-			} else if (%varcint5 = 4) {
-				ignore_add(%varcstring22);
-			} else if (%varcint5 = 5) {
-				ignore_del(%varcstring22);
-			}
-		} else if (%varcint5 < 7) {
-			if (friend_count < 0) {
-				mes("Unable to complete action - system busy");
-			} else if (%varcint5 = 2) {
-				friend_add(%varcstring22);
-			} else if (%varcint5 = 3) {
-				friend_del(%varcstring22);
-			} else if (%varcint5 = 6) {
-				if (chat_getfilter_private = ^chatfilter_off) {
-					chat_setfilter(chat_getfilter_public, ^chatfilter_friends, chat_getfilter_trade);
-					~redraw_chat_buttons;
-					~rebuildchatbox;
-					~rebuildpmbox;
-				}
-				chat_sendprivate(%varcstring23, %varcstring22);
-			}
-		} else if (%varcint5 = 11) {
-			~bank_v2_confirmsearch;
-		} else if (%varcint5 = 7) {
-			resume_countdialog(%varcstring22);
-		} else if (%varcint5 = 8) {
-			resume_namedialog(%varcstring22);
-		} else if (%varcint5 = 9) {
-			if (compare(lowercase(%varcstring22), lowercase(%varcstring33)) ! 0) {
-				resume_stringdialog(%varcstring22);
-			} else {
-				mes("Please do not enter your password here!");
-			}
-		} else if (%varcint5 = 10) {
-			clan_joinchat(%varcstring22);
+switch_int ($key0) {
+	case ^key_return :
+		if (%varcint5 = 12) {
+			~script1806(%varcstring22);
+			return;
 		}
-	}
-	if_sethide(true, chattop:mes_layer);
-	if_sethide(true, chattop:mes_layer_large);
-	if_sethide(false, chattop:mes_layer_hide);
-	%varcint5 = 0;
-	if (getwindowmode >= ^windowmode_resizable) {
-		~subchanged;
-	}
-	return;
+		if (string_length(%varcstring22) > 0) {
+			if (%varcint5 = 13) {
+				resume_stringdialog(%varcstring22);
+			} else if (%varcint5 = 4 | %varcint5 = 5) {
+				if (ignore_count < 0) {
+					mes("Unable to update Ignore List: system busy");
+				} else if (%varcint5 = 4) {
+					ignore_add(%varcstring22);
+				} else if (%varcint5 = 5) {
+					ignore_del(%varcstring22);
+				}
+			} else if (%varcint5 < 7) {
+				if (friend_count < 0) {
+					mes("Unable to complete action - system busy");
+				} else if (%varcint5 = 2) {
+					friend_add(%varcstring22);
+				} else if (%varcint5 = 3) {
+					friend_del(%varcstring22);
+				} else if (%varcint5 = 6) {
+					if (chat_getfilter_private = ^chatfilter_off) {
+						chat_setfilter(chat_getfilter_public, ^chatfilter_friends, chat_getfilter_trade);
+						~redraw_chat_buttons;
+						~rebuildchatbox;
+						~rebuildpmbox;
+					}
+					chat_sendprivate(%varcstring23, %varcstring22);
+				}
+			} else if (%varcint5 = 11) {
+				~bank_v2_confirmsearch;
+			} else if (%varcint5 = 7) {
+				%varcstring22 = ~script2332(%varcstring22, "K", "000");
+				%varcstring22 = ~script2332(%varcstring22, "k", "000");
+				%varcstring22 = ~script2332(%varcstring22, "M", "000000");
+				%varcstring22 = ~script2332(%varcstring22, "m", "000000");
+				if (map_lang = 1) {
+					%varcstring22 = ~script2332(%varcstring22, "T", "000");
+					%varcstring22 = ~script2332(%varcstring22, "t", "000");
+				}
+				resume_countdialog(%varcstring22);
+			} else if (%varcint5 = 8) {
+				%varcstring201 = escape(%varcstring22);
+				%varcint1026 = 1;
+				resume_namedialog(%varcstring22);
+			} else if (%varcint5 = 9) {
+				if (compare(lowercase(%varcstring22), lowercase(%varcstring33)) ! 0) {
+					resume_stringdialog(%varcstring22);
+				} else {
+					mes("Please do not enter your password here!");
+				}
+			} else if (%varcint5 = 10) {
+				%varcstring202 = escape(%varcstring22);
+				%varcint1027 = 1;
+				clan_joinchat(%varcstring22);
+			}
+		}
+		if_sethide(true, chattop:mes_layer);
+		if_sethide(true, chattop:mes_layer_large);
+		if_sethide(false, chattop:mes_layer_hide);
+		%varcint5 = 0;
+		if (getwindowmode >= ^windowmode_resizable) {
+			~subchanged;
+		}
+		return;
+	case ^key_escape :
+		if (%varcint5 = 12) {
+			~script1806(%varcstring38);
+			~meslayer_close(0);
+		}
+		return;
+	case ^key_left, ^key_right, ^key_up, ^key_down, ^key_home, ^key_end :
+		if (keyheld_shift = false) {
+			return;
+		}
+		%varcint1029 = ~script1553($key0, %varcint1029, %varcstring22);
+	case default :
+		switch_int (%varcint5) {
+			case 6, 9, 11 :
+				%varcstring22, %varcint1029 = ~script802(%varcint1029, %varcstring22, 0, $key0, $keychar1);
+			case 7 :
+				%varcstring22, %varcint1029 = ~script802(%varcint1029, %varcstring22, 6, $key0, $keychar1);
+			case 13 :
+				%varcstring22, %varcint1029 = ~script802(%varcint1029, %varcstring22, 5, $key0, $keychar1);
+			case default :
+				%varcstring22, %varcint1029 = ~script802(%varcint1029, %varcstring22, 2, $key0, $keychar1);
+		}
 }
-if ($key0 = ^key_escape & %varcint5 = 12) {
-	~script1806(%varcstring38);
-	~meslayer_close(0);
-	return;
-}
-if (%varcint5 = 6 | %varcint5 = 9 | %varcint5 = 11) {
-	%varcstring22 = ~add_to_inputstring(%varcstring22, 0, $key0, $keychar1);
-} else if (%varcint5 = 7) {
-	%varcstring22 = ~add_to_inputstring(%varcstring22, 1, $key0, $keychar1);
-} else {
-	%varcstring22 = ~add_to_inputstring(%varcstring22, 2, $key0, $keychar1);
-}
-if_settext("<escape(%varcstring22)>*", chattop:mes_text2);
+if_settext(escape(%varcstring22), chattop:mes_text2);
+~script1557;
 if (%varcint5 = 11) {
 	~bank_v2_search_update;
 }

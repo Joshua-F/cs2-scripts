@@ -1,4 +1,10 @@
 // 222
 [clientscript,script222]
-~script224;
-if_setgraphic("miscgraphics,11", interface_595:com_110);
+if (friend_test(%varcstring24) = true) {
+	mes("Sorry, you cannot ignore players in your Friends List.");
+} else {
+	ignore_add_temp(%varcstring24);
+	mes("You are ignoring <%varcstring24> until you log out.");
+}
+%varcint11 = 0;
+~script675;

@@ -1,0 +1,7 @@
+// 2144
+[clientscript,script2144](component $component0)
+if (%var1442 = 0) {
+	if_settext("No Prefix", $component0);
+} else {
+	if_settext(enum(int, string, enum_1093, %var1442), $component0);
+}

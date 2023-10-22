@@ -1,0 +1,7 @@
+// 1624
+[proc,script1624](component $component0, int $int1, string $text0)
+if (cc_find($component0, $int1) = ^true) {
+	cc_settext($text0);
+} else {
+	mes("Cannot find component.<tostring($int1)>");
+}

@@ -1,0 +1,12 @@
+// 2748
+[clientscript,script2748](component $component0, int $comsubid1, int $int2)
+def_int $int3 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int3 = calc(cc_getwidth / 2);
+	$int2 = calc($int2 - $int3);
+	if ($int2 >= 0) {
+		cc_setontimer("script2746(event_com, event_comsubid, calc(2048 - scale($int2, $int3, 256)))");
+	} else {
+		cc_setontimer("script2746(event_com, event_comsubid, calc(0 - scale($int2, $int3, 256)))");
+	}
+}

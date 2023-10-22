@@ -1,3 +1,9 @@
 // 397
 [clientscript,script397]
-~script399;
+if (%varcint743 = null & %var1109 ! null) {
+	if (calc(%var1111 * %var1110) > inv_total(inv, coins_995)) {
+		if_setcolour(^red, interface_449:com_25);
+	} else {
+		if_setcolour(0xff9900, interface_449:com_25);
+	}
+}

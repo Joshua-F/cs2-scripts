@@ -1,0 +1,18 @@
+// 2464
+[clientscript,script2464](int $clock0, component $component1)
+if ($clock0 > calc(clientclock - 5)) {
+	return;
+}
+if_setontimer(null, $component1);
+if (~script2465(~current_side_if) = 0) {
+	if (getwindowmode >= ^windowmode_resizable) {
+		~if_switchside(-1);
+		return;
+	} else if (~script2465(4) = 1) {
+		~if_switchside(4);
+	} else if (~script2465(9) = 1) {
+		~if_switchside(9);
+	} else if (~script2465(12) = 1 & %var281 > 3) {
+		~if_switchside(12);
+	}
+}

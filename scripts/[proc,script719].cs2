@@ -1,7 +1,8 @@
 // 719
 [proc,script719](component $component0, component $component1, component $component2, graphic $graphic3, graphic $graphic4, int $int5, string $string0, string $string1, obj $obj6, int $int7, obj $obj8, int $int9, obj $obj10, int $int11, obj $obj12, int $int13)
-if ($obj6 = bronze_bull_rush_scroll_12461) {
-	$int5, $string0, $obj6 = ~script775($obj6);
+switch_obj ($obj6) {
+	case bronze_bull_rush_scroll_12461 :
+		$int5, $string0, $obj6 = ~script775;
 }
 if_setopbase("<col=00ff00><$string0>", $component0);
 $string0 = append($string0, " (<tostring(%varbit4288)> Special Move points)");

@@ -1,0 +1,32 @@
+// 1673
+[proc,script1673]
+cc_deleteall(interface_84:com_20);
+cc_deleteall(interface_84:com_22);
+cc_deleteall(interface_84:com_21);
+def_int $y0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 264;
+def_int $y3 = 0;
+if_setposition(if_getx(interface_84:com_20), $y0, ^setpos_abs_left, ^setpos_abs_top, interface_84:com_20);
+$int1, $y3 = ~script1674(%varbit6768);
+if_setscrollsize(0, $int1, interface_84:com_22);
+if_setscrollpos(0, $y3, interface_84:com_22);
+$int1 = calc($int1 + 4);
+if ($int1 > $int2) {
+	if_setsize(16, 4, ^setsize_abs, ^setsize_minus, interface_84:com_21);
+	if_setsize(20, 4, ^setsize_minus, ^setsize_minus, interface_84:com_22);
+	if (cc_find(interface_84:com_21, 0) = ^false) {
+		~scrollbar_vertical(interface_84:com_21, interface_84:com_22, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	}
+	~scrollbar_resize(interface_84:com_21, interface_84:com_22, if_getscrolly(interface_84:com_22));
+} else {
+	if_setsize(0, 4, ^setsize_abs, ^setsize_minus, interface_84:com_21);
+	if_setsize(4, 4, ^setsize_minus, ^setsize_minus, interface_84:com_22);
+}
+if ($int1 < 111) {
+	if_setsize(350, calc(111 + 68), ^setsize_abs, ^setsize_abs, interface_84:com_0);
+} else if ($int1 < $int2) {
+	if_setsize(350, calc($int1 + 70), ^setsize_abs, ^setsize_abs, interface_84:com_0);
+} else {
+	if_setsize(350, calc($int2 + 70), ^setsize_abs, ^setsize_abs, interface_84:com_0);
+}

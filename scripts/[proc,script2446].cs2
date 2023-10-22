@@ -1,0 +1,52 @@
+// 2446
+[proc,script2446](string $string0)(string)
+def_string $string1 = lowercase($string0);
+if (compare($string1, "all your base are belong to us") = 0) {
+	return("orly?");
+}
+if (compare($string1, "orly") = 0) {
+	return("yarly");
+}
+if (compare($string1, "bangin'") = 0) {
+	return("donk");
+}
+if (compare($string1, "murder") = 0 | compare($string1, "redrum") = 0) {
+	return("All rest and no play makes Guthix a dull boy.");
+}
+if (compare($string1, "humperdinck") = 0 | compare($string1, "humperdink") = 0) {
+	return("Have fun storming the castle!");
+}
+if (compare($string1, "i am your father") = 0) {
+	return("Nooooooooooooooooooooooooo!");
+}
+if (compare($string1, "i'll be back") = 0) {
+	return("Come with me if you want to live.");
+}
+if (compare($string1, "there is no spoon") = 0) {
+	return("Then you will see, it is not the spoon that bends, it is only yourself.");
+}
+if (compare($string1, "milton waddams") = 0) {
+	return("The ratio of people to cake is too big.");
+}
+if (compare($string1, "you fight like a dairy farmer") = 0) {
+	return("How appropriate. You fight like a cow.");
+}
+if (compare($string1, "finish the fight") = 0) {
+	return("They must love the smell of hero.");
+}
+if (compare($string1, "r.i.p runescape") = 0) {
+	return("Totgesagte leben länger.");
+}
+if (compare($string1, "penso, logo existo") = 0) {
+	return("Borboletas salpicadas de goiabada...");
+}
+if (compare($string1, "le temps passe") = 0) {
+	return("L'œuf dur.");
+}
+if (compare($string1, "paul") = 0) {
+	return("Rargh, I'm a lava monster!");
+}
+if (compare($string1, "andrew") = 0) {
+	return("Cabbage.");
+}
+return($string0);

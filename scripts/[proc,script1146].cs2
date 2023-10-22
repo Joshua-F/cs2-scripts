@@ -1,0 +1,9 @@
+// 1146
+[proc,script1146](int $int0)(int)
+if ($int0 >= 10000000) {
+	return(0x00ff80);
+}
+if ($int0 >= 100000) {
+	return(^white);
+}
+return(^yellow);

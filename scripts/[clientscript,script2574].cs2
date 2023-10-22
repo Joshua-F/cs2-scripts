@@ -1,0 +1,31 @@
+// 2574
+[clientscript,script2574]
+def_int $y0 = 0;
+def_int $height1 = 0;
+def_int $int2 = scale(%varbit6457, 1000, 100);
+if ($int2 < 1) {
+	$int2 = 1;
+}
+if ($int2 > 100) {
+	$int2 = 100;
+}
+$y0 = enum(int, int, enum_197, $int2);
+$height1 = enum(int, int, enum_198, $int2);
+if (%varbit5095 = 1) {
+	if_setposition(481, $y0, ^setpos_abs_left, ^setpos_abs_top, rcguild_overlay:com_46);
+	if_setsize(16, $height1, ^setsize_abs, ^setsize_abs, rcguild_overlay:com_46);
+} else if (%varbit5095 = 2) {
+	if_setposition(481, $y0, ^setpos_abs_left, ^setpos_abs_top, rcguild_overlay:com_37);
+	if_setsize(16, $height1, ^setsize_abs, ^setsize_abs, rcguild_overlay:com_37);
+}
+if ($int2 < 25) {
+	if (%varbit5095 = 1) {
+		if_setcolour(0xff9900, rcguild_overlay:com_46);
+	} else if (%varbit5095 = 2) {
+		if_setcolour(0xff9900, rcguild_overlay:com_37);
+	}
+} else if (%varbit5095 = 1) {
+	if_setcolour(0x666600, rcguild_overlay:com_46);
+} else if (%varbit5095 = 2) {
+	if_setcolour(0x284605, rcguild_overlay:com_37);
+}

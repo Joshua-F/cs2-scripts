@@ -16,9 +16,13 @@ if ($int0 = 0) {
 }
 if ($int0 = 1) {
 	if ($int1 = 0) {
-		return(70, oak_door_8122, "Members: Zamorak's Fortress in the God Wars Dungeon", "Members can now access the <col=000080>Zamorak Fortress</col> in the <col=000080>God Wars Dungeon</col>.");
+		return(35, agile_top_14936, "Members: Agile top (with 35 Defence)", "Members now have the Hitpoints level required to wear <col=000080>Agile tops</col>. (They also need level 35 Defence.)");
 	} else if ($int1 = 1) {
-		return(99, hitpoints_cape_9768, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Hitpoints<col=000080>. Why not visit <col=800000>Nurse Tafani<col=000080> at the <col=800000>Duel Arena Hospital<col=000080>? She has something special that is only available to true masters of the <col=800000>Hitpoints<col=000080> skill!");
+		return(35, agile_legs_14938, "Members: Agile legs (with 35 Defence)", "Members now have the Hitpoints level required to wear <col=000080>Agile legs</col>. (They also need level 35 Defence.)");
+	} else if ($int1 = 2) {
+		return(70, oak_door_8122, "Members: Zamorak's Fortress in the God Wars Dungeon", "Members can now access the <col=000080>Zamorak Fortress</col> in the <col=000080>God Wars Dungeon</col>.");
+	} else if ($int1 = 3) {
+		return(99, hitpoints_cape_9768, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Hitpoints<col=000080>. Members can visit <col=800000>Surgeon General Tafani<col=000080> at the <col=800000>Duel Arena Hospital<col=000080>. She has something special that is only available to true masters of the <col=800000>Hitpoints<col=000080> skill!");
 	}
 }
 return(0, null, "", "");

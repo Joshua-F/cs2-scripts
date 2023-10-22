@@ -2,22 +2,22 @@
 [clientscript,lore_pouch_counter]
 def_obj $obj0 = enum(obj, obj, enum_1283, %var448);
 if ($obj0 = bones_526) {
-	if_settext("0", lore_stats_side:com_61);
+	if_settext("0", lore_stats_side:com_66);
 	return;
 }
 def_int $int1 = inv_total(inv, $obj0);
 if ($int1 > 0) {
 	if ($int1 > 1000000) {
 		$int1 = calc($int1 / 1000000);
-		if_settext("<tostring($int1)>M", lore_stats_side:com_61);
+		if_settext("<tostring($int1)>M", lore_stats_side:com_66);
 		return;
 	}
 	if ($int1 > 1000) {
 		$int1 = calc($int1 / 1000);
-		if_settext("<tostring($int1)>K", lore_stats_side:com_61);
+		if_settext("<tostring($int1)>K", lore_stats_side:com_66);
 		return;
 	}
-	if_settext(tostring(inv_total(inv, $obj0)), lore_stats_side:com_61);
+	if_settext(tostring(inv_total(inv, $obj0)), lore_stats_side:com_66);
 	return;
 }
-if_settext("0", lore_stats_side:com_61);
+if_settext("0", lore_stats_side:com_66);

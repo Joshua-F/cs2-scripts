@@ -1,0 +1,82 @@
+// 802
+[proc,script802](int $int0, string $string0, int $int1, int $key2, char $keychar3)(string, int)
+def_int $length4 = string_length($string0);
+if ($int0 <= -1) {
+	$int0 = $length4;
+} else {
+	$int0 = min($int0, $length4);
+}
+def_string $string1 = "";
+if ($int0 > 0) {
+	$string1 = substring($string0, 0, $int0);
+}
+def_string $string2 = "";
+if ($int0 < $length4) {
+	$string2 = substring($string0, $int0, $length4);
+}
+def_int $int5 = 0;
+if ($key2 = ^key_backspace) {
+	$int5 = string_length($string1);
+	if ($int5 > 1) {
+		$string1 = substring($string1, 0, calc($int5 - 1));
+	} else {
+		$string1 = "";
+	}
+	$string0 = append($string1, $string2);
+	$int0 = max(calc($int0 - 1), 0);
+} else if ($key2 = ^key_del) {
+	$int5 = string_length($string2);
+	if ($int5 > 1) {
+		$string2 = substring($string2, 1, $int5);
+	} else {
+		$string2 = "";
+	}
+	$string0 = append($string1, $string2);
+} else if (char_isprintable($keychar3) = true) {
+	switch_int ($int1) {
+		case 0 :
+			if ($length4 < 80) {
+				$string0 = append(append_char($string1, $keychar3), $string2);
+				$int0 = calc($int0 + 1);
+			}
+		case 1 :
+			if (char_isnumeric($keychar3) = true & $length4 < 10) {
+				$string0 = append(append_char($string1, $keychar3), $string2);
+				$int0 = calc($int0 + 1);
+			}
+		case 2 :
+			if ($length4 < 20) {
+				$string0 = append(append_char($string1, $keychar3), $string2);
+				$int0 = calc($int0 + 1);
+			}
+		case 3 :
+			if ($length4 < 320) {
+				$string0 = append(append_char($string1, $keychar3), $string2);
+				$int0 = calc($int0 + 1);
+			}
+		case 4 :
+			if ((char_isalphanumeric($keychar3) = true | string_indexof_char(" '&,.!-àÀáÁâÂãÃäÄåÅçÇèÈéÉêÊëËìÌíÍîÎïÏñÑòÒóÓôÔõÕöÖùÙúÚûÛüÜýÝÿ", $keychar3, 0) ! -1) & $length4 < 50) {
+				$string0 = append(append_char($string1, $keychar3), $string2);
+				$int0 = calc($int0 + 1);
+			}
+		case 5 :
+			if ($length4 < 50) {
+				$string0 = append(append_char($string1, $keychar3), $string2);
+				$int0 = calc($int0 + 1);
+			}
+		case 6 :
+			switch_int (map_lang) {
+				case 1 :
+					if ((char_isnumeric($keychar3) = true | string_indexof_char("KkMmTt", $keychar3, 0) ! -1) & $length4 < 10 & string_indexof_string($string0, "K", 0) = -1 & string_indexof_string($string0, "k", 0) = -1 & string_indexof_string($string0, "M", 0) = -1 & string_indexof_string($string0, "m", 0) = -1 & string_indexof_string($string0, "T", 0) = -1 & string_indexof_string($string0, "t", 0) = -1) {
+						$string0 = append(append_char($string1, $keychar3), $string2);
+						$int0 = calc($int0 + 1);
+					}
+				case default :
+					if ((char_isnumeric($keychar3) = true | string_indexof_char("KkMm", $keychar3, 0) ! -1) & $length4 < 10 & string_indexof_string($string0, "K", 0) = -1 & string_indexof_string($string0, "k", 0) = -1 & string_indexof_string($string0, "M", 0) = -1 & string_indexof_string($string0, "m", 0) = -1) {
+						$string0 = append(append_char($string1, $keychar3), $string2);
+						$int0 = calc($int0 + 1);
+					}
+			}
+	}
+}
+return($string0, $int0);

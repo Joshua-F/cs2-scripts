@@ -1,0 +1,21 @@
+// 304
+[proc,script304](coord $coord0)
+if ($coord0 = null) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+def_wma $wma1 = worldmap_getmap($coord0);
+$wma1 = ~script2785($wma1);
+if ($wma1 = null) {
+	return;
+}
+~worldmap_overlay_clear(worldmap:worldmap_overlay);
+%varcstring31 = "";
+~script308(worldmap:findbox_text);
+if_settext(worldmap_getmapname($wma1), worldmap:com_20);
+~deltooltip_action(worldmap:tooltip);
+worldmap_setmap_coord_override($wma1, $coord0);
+worldmap_jumptosourcecoord($coord0);
+%varcint172 = worldmap_getconfigzoom($wma1);
+~worldmap_setzoom;
+~script307;

@@ -1,0 +1,7 @@
+// 287
+[proc,script287](int $comsubid0, boolean $boolean1, component $component2, int $int3)
+.cc_create($component2, ^iftype_graphic, $comsubid0);
+.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+.cc_setposition(4, calc($int3 + 4), ^setpos_abs_left, ^setpos_abs_top);
+.cc_sethide($boolean1);
+.cc_setgraphic("graphic_1726");

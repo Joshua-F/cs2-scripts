@@ -1,0 +1,16 @@
+// 2197
+[proc,script2197](component $component0, int $comsubid1, string $text0)
+def_int $int2 = 0;
+if ($comsubid1 = -1 & if_find($component0) = true | cc_find($component0, $comsubid1) = ^true) {
+	if (%varcint198 ! 1) {
+		cc_setontimer(null);
+		cc_settext($text0);
+		return;
+	} else if (calc(clientclock % 20) > 9) {
+		cc_settext("");
+		if (calc(clientclock % 20) = 10) {
+			sound_synth(synth_5009, 1, 0);
+		}
+	}
+	cc_settext($text0);
+}

@@ -1,0 +1,8 @@
+// 2691
+[clientscript,script2691](component $component0, int $comsubid1, int $trans2, int $comsubid3, int $colour4)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans($trans2);
+}
+if (cc_find($component0, $comsubid3) = ^true) {
+	cc_setcolour($colour4);
+}

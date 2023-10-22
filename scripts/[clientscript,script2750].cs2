@@ -1,0 +1,14 @@
+// 2750
+[clientscript,script2750](component $component0, int $comsubid1, int $comsubid2, int $clock3)
+~script2747($component0, $comsubid1, 0);
+if (clientclock < calc($clock3 + 146)) {
+	return;
+}
+if (cc_find(interface_900:chathead, $comsubid2) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find(interface_900:com_74, $comsubid1) = ^true) {
+	cc_setmodelanim(seq_12284);
+	cc_setontimer("script2746(event_com, event_comsubid, 0)");
+	cc_setonhold("script2748(event_com, event_comsubid, event_mousex)");
+}

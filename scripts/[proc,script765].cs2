@@ -1,71 +1,72 @@
 // 765
-[proc,script765](component $component0, int $int1, int $int2, string $op0, string $op1, string $op2, string $op3, string $op4)
+[proc,script765](component $component0, int $int1, int $int2, string $op0, string $op1, string $op2, string $op3, string $op4, int $int3, int $int4)
 cc_deleteall($component0);
-def_int $int3 = 0;
-def_int $int4 = 0;
-if (if_getscrollwidth($component0) > 0) {
-	$int3 = calc((if_getscrollwidth($component0) - 36 * $int1) / ($int1 - 1));
-} else {
-	$int3 = calc((if_getwidth($component0) - 36 * $int1) / ($int1 - 1));
-}
-if (if_getscrollheight($component0) > 0) {
-	$int4 = calc((if_getscrollheight($component0) - 64 * $int2) / ($int2 - 1));
-} else {
-	$int4 = calc((if_getheight($component0) - 64 * $int2) / ($int2 - 1));
-}
 def_int $int5 = 0;
-def_int $int6 = 1;
+def_int $int6 = 0;
+if_setscrollsize(0, calc((($int4 - $int3) / $int1 + 1) * 57), $component0);
 def_int $int7 = 0;
-def_int $int8 = 0;
-def_int $int9 = -1;
-def_obj $obj10 = null;
-def_obj $obj11 = null;
+def_int $int8 = $int3;
+def_int $int9 = 0;
+def_int $int10 = $int4;
+def_int $int11 = 0;
+def_int $int12 = -1;
+def_obj $obj13 = null;
+def_obj $obj14 = null;
 def_string $string5 = "hello";
-def_int $int12 = 0;
-while ($int5 < 78) {
-	$obj10 = enum(int, obj, enum_1277, $int6);
-	$int8 = calc($int5 % $int1);
-	cc_create($component0, ^iftype_graphic, $int5);
+def_int $int15 = 0;
+def_int $int16 = 0;
+while ($int7 <= calc($int4 - $int3)) {
+	$int5 = calc(16 + $int7 % $int1 * 48 + $int7 % $int1 * 5);
+	$int6 = calc($int7 / $int1 * 52 + $int7 / $int1 * 5);
+	cc_create($component0, ^iftype_graphic, $int16);
+	$int16 = calc($int16 + 1);
+	cc_setsize(48, 52, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_2205");
+	cc_setonmouseover("script2724(event_com, $int16, false)");
+	cc_setonmouseleave("script2724(event_com, $int16, true)");
+	cc_create($component0, ^iftype_graphic, $int16);
+	$int16 = calc($int16 + 1);
+	cc_setsize(48, 52, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_2206");
+	cc_sethide(true);
+	cc_create($component0, ^iftype_graphic, $int16);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(~script761($int8), calc($int5 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
-	$obj11 = enum(int, obj, enum_1188, $int6);
-	if ($obj11 = scroll_12421) {
-		~script760($obj11, $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
-	} else if (~lore_magic_pouch_checker($obj11, $obj10) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj10)) {
-		~script760($obj11, $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
+	cc_setposition(calc($int5 + 6), calc($int6 + 4), ^setpos_abs_left, ^setpos_abs_top);
+	$obj13 = enum(int, obj, enum_1277, $int8);
+	$obj14 = enum(int, obj, enum_1188, $int8);
+	if ($obj14 = scroll_12421) {
+		~script760($obj14, $obj14, $component0, $int16, $op0, $op1, $op2, $op3, $op4, "");
+	} else if (~lore_magic_pouch_checker($obj14, $obj13) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj13)) {
+		~script760($obj14, $obj14, $component0, $int16, $op0, $op1, $op2, $op3, $op4, "");
 	} else {
-		~script760(enum(int, obj, enum_1184, $int6), $obj11, $component0, $int5, $op0, $op1, $op2, $op3, $op4, "");
+		~script760(enum(int, obj, enum_1184, $int8), $obj14, $component0, $int16, $op0, $op1, $op2, $op3, $op4, "");
 	}
-	if ($obj11 = scroll_12421) {
-		cc_setonmouserepeat("lore_blanktip(event_comsubid, interface_673:com_22, interface_673:scroll_icons, $int12, $string5)");
-		cc_setonmouseleave("deltooltip(interface_673:com_22)");
+	if ($obj14 = scroll_12421) {
+		cc_setonmouserepeat("lore_blanktip(event_comsubid, interface_79:com_29, interface_79:com_17, $int15, $string5)");
+		cc_setonmouseleave("deltooltip(interface_79:com_29)");
 	} else {
-		$string5 = enum(obj, string, enum_1187, $obj11);
-		$int12 = enum(obj, int, enum_1185, $obj10);
-		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_673:com_22, interface_673:scroll_icons, $int12, $string5, $obj10, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1)");
-		cc_setonmouseleave("deltooltip(interface_673:com_22)");
+		$string5 = enum(obj, string, enum_1187, $obj14);
+		$int15 = enum(obj, int, enum_1185, $obj13);
+		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_79:com_29, interface_79:com_17, $int15, $string5, $obj13, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1)");
+		cc_setonmouseleave("deltooltip(interface_79:com_29)");
 	}
-	$int5 = calc($int5 + 1);
-	$int6 = calc($int6 + 1);
-}
-$int6 = 1;
-while ($int7 < 78) {
-	$int8 = calc($int7 % $int1);
-	cc_create($component0, ^iftype_text, $int5);
-	cc_setposition(~script762($int8), calc(32 + $int7 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
-	$obj10 = enum(int, obj, enum_1277, $int6);
-	$obj11 = enum(int, obj, enum_1188, $int6);
-	cc_settext(enum(obj, string, enum_1187, $obj11));
-	cc_settextfont(b12_full);
-	cc_setsize(90, 50, ^setsize_abs, ^setsize_abs);
-	if (~lore_magic_pouch_checker($obj11, $obj10) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj10)) {
-		cc_setcolour(0xffff64);
-	} else {
-		cc_setcolour(0x111111);
-	}
+	$int16 = calc($int16 + 1);
+	cc_create($component0, ^iftype_graphic, $int16);
+	$int16 = calc($int16 + 1);
+	cc_setsize(12, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 2), calc($int6 + 38), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum($obj13, 1);
+	cc_create($component0, ^iftype_text, $int16);
+	$int16 = calc($int16 + 1);
+	cc_setsize(31, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 13), calc($int6 + 39), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p11_full);
+	cc_setcolour(^white);
+	cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+	cc_settext("1");
 	cc_settextshadow(true);
-	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	$int7 = calc($int7 + 1);
-	$int5 = calc($int5 + 1);
-	$int6 = calc($int6 + 1);
+	$int8 = calc($int8 + 1);
 }

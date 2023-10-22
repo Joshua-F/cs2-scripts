@@ -1,8 +1,5 @@
 // 1212
-[clientscript,script1212](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	detail_lightdetail_high(false);
-} else {
-	detail_lightdetail_high(true);
-}
+[clientscript,script1212]
+if_setontimer(null, interface_894:title);
+if_sethide(true, interface_894:com_7);
+if_setgraphic(null, interface_894:com_4);

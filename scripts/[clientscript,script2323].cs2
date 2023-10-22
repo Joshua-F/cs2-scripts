@@ -1,0 +1,10 @@
+// 2323
+[clientscript,script2323](component $component0)
+if (if_getx($component0) < calc(if_getwidth(interface_306:content) - 1)) {
+	if (if_getx($component0) = calc(140 + if_getwidth($component0))) {
+		if_setontimer("script399(interface_306:model1)", interface_306:com_14);
+	}
+	if_setposition(calc(1 + if_getx($component0)), if_gety($component0), ^setpos_abs_left, ^setpos_abs_top, $component0);
+} else {
+	~script2324;
+}

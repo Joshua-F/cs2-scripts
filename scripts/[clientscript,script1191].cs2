@@ -1,8 +1,5 @@
 // 1191
-[clientscript,script1191](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	detail_grounddecor_on(false);
-} else {
-	detail_grounddecor_on(true);
+[clientscript,script1191](component $component0, fontmetrics $fontmetrics1)
+if (map_lang ! 0) {
+	if_settextfont($fontmetrics1, $component0);
 }

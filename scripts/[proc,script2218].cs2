@@ -1,0 +1,100 @@
+// 2218
+[proc,script2218](int $key0, char $keychar1)
+if (create_reply = -3) {
+	return;
+}
+if ($key0 = ^key_escape) {
+	~script2206;
+	return;
+}
+switch_int (%varcint174) {
+	case 3 :
+		if ($key0 = ^key_return | $key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2230(9);
+			} else {
+				~script2230(4);
+			}
+			return;
+		}
+		if (string_length(%varcstring122) >= 12 & $key0 ! ^key_backspace) {
+			return;
+		}
+		if (string_indexof_char("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_ ", $keychar1, 0) ! -1 | $key0 = ^key_backspace) {
+			%varcstring122 = removetags(~add_to_inputstring(%varcstring122, 0, $key0, $keychar1));
+			if_settext(%varcstring122, loginscreen:com_158);
+			if_settext("", loginscreen:com_153);
+			if_setgraphic(null, loginscreen:com_159);
+			%varcint734 = -1;
+			%varcstring123 = "";
+		}
+		return;
+	case 4 :
+		if ($key0 = ^key_return | $key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2230(3);
+			} else {
+				~script2230(5);
+			}
+			return;
+		}
+		if (string_length(%varcstring124) >= 20 & $key0 ! ^key_backspace) {
+			return;
+		}
+		%varcstring124 = ~add_to_inputstring(%varcstring124, 0, $key0, $keychar1);
+		if_settext(~script2200(%varcstring124), loginscreen:com_149);
+		if_setgraphic(null, loginscreen:com_150);
+		if_settext("", loginscreen:com_135);
+		%varcint735 = -1;
+		return;
+	case 5 :
+		if ($key0 = ^key_return | $key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2230(4);
+			} else {
+				~script2230(6);
+			}
+			return;
+		}
+		if (string_length(%varcstring125) >= 20 & $key0 ! ^key_backspace) {
+			return;
+		}
+		%varcstring125 = ~add_to_inputstring(%varcstring125, 0, $key0, $keychar1);
+		if_settext(~script2200(%varcstring125), loginscreen:com_143);
+		if_setgraphic(null, loginscreen:com_144);
+		if_settext("", loginscreen:com_138);
+		%varcint1039 = -1;
+		return;
+	case 8 :
+		if ($key0 = ^key_return | $key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2230(7);
+			} else {
+				~script2230(9);
+			}
+			return;
+		}
+		if (string_length(%varcstring126) >= 4 & $key0 ! ^key_backspace) {
+			return;
+		}
+		if (string_indexof_char("0123456789", $keychar1, 0) ! -1 | $key0 = ^key_backspace) {
+			%varcstring126 = ~add_to_inputstring(%varcstring126, 0, $key0, $keychar1);
+			if_settext(%varcstring126, loginscreen:com_124);
+			if_settext("", loginscreen:com_117);
+		}
+		return;
+	case default :
+		return;
+}

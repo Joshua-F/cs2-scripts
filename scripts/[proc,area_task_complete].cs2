@@ -17,7 +17,7 @@ switch_int ($int0) {
 			return(0);
 		}
 		return(1);
-	case 3 :
+	case 2 :
 		if (calc(%varbit4942 + %varbit4944 + %varbit4945) = 3) {
 			return(2);
 		}
@@ -25,7 +25,7 @@ switch_int ($int0) {
 			return(0);
 		}
 		return(1);
-	case 4 :
+	case 3 :
 		if (~script1987 = 1) {
 			return(2);
 		}
@@ -33,7 +33,7 @@ switch_int ($int0) {
 			return(0);
 		}
 		return(1);
-	case 5 :
+	case 4 :
 		if (calc(%varbit5688 + %varbit5689 + %varbit5690) = 3) {
 			return(2);
 		}
@@ -41,7 +41,7 @@ switch_int ($int0) {
 			return(0);
 		}
 		return(1);
-	case 6 :
+	case 5 :
 		if (calc(%varbit5779 + %varbit5780 + %varbit5781) = 3) {
 			return(2);
 		}
@@ -49,8 +49,14 @@ switch_int ($int0) {
 			return(0);
 		}
 		return(1);
-	case 2 :
-		return(0);
+	case 6 :
+		if (calc(%varbit6621 + %varbit6638 + %varbit6656 + %varbit6663) = 4) {
+			return(2);
+		}
+		if (%varbit6597 = 0) {
+			return(0);
+		}
+		return(1);
 	case default :
 		return(-1);
 }

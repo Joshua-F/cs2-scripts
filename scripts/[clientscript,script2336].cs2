@@ -1,0 +1,6 @@
+// 2336
+[clientscript,script2336](component $component0, int $windowmode1)
+if (getwindowmode ! $windowmode1) {
+	if_setontimer("script2336($component0, getwindowmode)", $component0);
+	~script2337($component0);
+}

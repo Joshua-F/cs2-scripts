@@ -1,0 +1,9 @@
+// 217
+[proc,script217]
+if_settext("Reporting: <%varcstring24>", interface_594:com_106);
+if_settext(%varcstring24, interface_594:com_71);
+if (compare(%varcstring24, "") ! 0) {
+	if_sethide(true, interface_594:com_81);
+} else {
+	if_sethide(false, interface_594:com_81);
+}

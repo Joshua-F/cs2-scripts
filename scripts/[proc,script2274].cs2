@@ -1,0 +1,38 @@
+// 2274
+[proc,script2274](int $int0)
+def_int $int1 = %varcint174;
+%varcint174 = $int0;
+%varcint175 = clientclock;
+~script2278($int0, $int1);
+if_sethide(false, loginscreen:com_282);
+if_sethide(false, loginscreen:com_275);
+~script2269;
+switch_int ($int0) {
+	case 12 :
+		if (if_getgraphic(loginscreen:com_282) = "graphic_1726") {
+			if_sethide(true, loginscreen:com_282);
+		}
+		if_setontimer("script2270", loginscreen:com_163);
+	case 13 :
+		if (if_getgraphic(loginscreen:com_275) = "graphic_1726") {
+			if_sethide(true, loginscreen:com_275);
+		}
+		if_setontimer("script2270", loginscreen:com_163);
+	case 19 :
+		if_sethide(false, loginscreen:com_229);
+		~script2271;
+	case 20 :
+		if_sethide(false, loginscreen:com_232);
+		~script2271;
+	case default :
+		~script2271;
+}
+if ($int1 = 12 & $int0 ! 12) {
+	~script2287(loginscreen:com_269, loginscreen:com_282);
+	if ($int0 = 13 & compare(%varcstring128, %varcstring129) ! 0) {
+		%varcstring129 = "";
+		~script2255(%varcstring129, loginscreen:com_276, 13, 0);
+	}
+} else if ($int1 = 13 & $int0 ! 13) {
+	~script2288(loginscreen:com_269, loginscreen:com_275);
+}

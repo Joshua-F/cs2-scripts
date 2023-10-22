@@ -1,0 +1,61 @@
+// 2244
+[proc,script2244]
+if_sethide(false, loginscreen:com_28);
+if_sethide(false, loginscreen:com_29);
+if_sethide(false, loginscreen:com_30);
+if_setontimer("script276(loginscreen:com_29)", loginscreen:com_27);
+if_setonmouserepeat("script274(event_mousex, event_mousey)", loginscreen:com_29);
+%varcint804 = 0;
+if (cc_find(loginscreen:com_27, 1) = ^true) {
+	cc_setonmouseover(null);
+	cc_setonmouseleave(null);
+	cc_setcolour(0x663300);
+}
+if (cc_find(loginscreen:com_27, 0) = ^true) {
+	cc_setvflip(true);
+}
+cc_create(loginscreen:com_28, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth(loginscreen:com_28), if_getheight(loginscreen:com_28), ^setsize_abs, ^setsize_abs);
+cc_setgraphic("graphic_1402");
+cc_settiling(true);
+cc_create(loginscreen:com_28, ^iftype_rectangle, 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth(loginscreen:com_28), if_getheight(loginscreen:com_28), ^setsize_abs, ^setsize_abs);
+cc_setcolour(^black);
+def_int $count0 = enum_getoutputcount(enum_1626);
+if_setscrollsize(if_getwidth(loginscreen:com_29), calc($count0 * 15 + 15), loginscreen:com_29);
+def_int $int1 = 0;
+def_string $string0 = "";
+$string0 = "Select one";
+cc_create(loginscreen:com_29, ^iftype_text, $int1);
+cc_settext($string0);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setposition(5, calc($int1 * 15), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth(loginscreen:com_29), 15, ^setsize_abs, ^setsize_abs);
+cc_settextshadow(false);
+cc_settextfont(p11_full);
+cc_setcolour(0x663300);
+cc_setonmouserepeat("script2249($int1)");
+cc_setonclick("script2245($string0)");
+def_int $count2 = 0;
+$int1 = calc($int1 + 1);
+while ($count2 < $count0) {
+	$string0 = "  <enum(int, string, enum_1626, $count2)>";
+	cc_create(loginscreen:com_29, ^iftype_text, $int1);
+	cc_settext($string0);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setposition(-1, calc($int1 * 15), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(-1, 15, ^setsize_minus, ^setsize_abs);
+	cc_settextshadow(false);
+	cc_settextfont(p11_full);
+	cc_setcolour(0x663300);
+	cc_setonmouserepeat("script2249($int1)");
+	cc_setonclick("script2245($string0)");
+	$count2 = calc($count2 + 1);
+	$int1 = calc($int1 + 1);
+}
+~scrollbar_vertical(loginscreen:com_30, loginscreen:com_29, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+if (cc_find(loginscreen:com_30, 1) = ^true) {
+	~scrollbar_vertical_doscroll(loginscreen:com_30, loginscreen:com_29, calc(15 * %varcint195), true);
+}

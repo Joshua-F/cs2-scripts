@@ -1,0 +1,14 @@
+// 2709
+[proc,script2709](int $int0, int $int1, int $y2)
+def_int $setsize3 = ^setsize_abs;
+if ($int0 < 0) {
+	$setsize3 = ^setsize_minus;
+	$int0 = calc(0 - $int0);
+}
+def_int $setsize4 = ^setsize_abs;
+if ($int1 < 0) {
+	$setsize4 = ^setsize_minus;
+	$int1 = calc(0 - $int1);
+}
+if_setsize($int0, $int1, $setsize3, $setsize4, loginscreen:com_8);
+if_setposition(0, $y2, ^setpos_abs_centre, ^setpos_abs_centre, loginscreen:com_8);

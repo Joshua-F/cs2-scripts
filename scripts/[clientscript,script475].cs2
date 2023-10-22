@@ -1,6 +1,4 @@
 // 475
-[clientscript,script475]
-~script504;
-if_setgraphic("graphic_1043", interface_591:com_254);
-if_setonmouseleave("deltooltip(interface_591:com_299)", interface_591:com_254);
-if_setonmouseover(null, interface_591:com_254);
+[clientscript,script475](component $component0, component $component1)
+~v2_stone_button($component0);
+~deltooltip_action($component1);

@@ -1,0 +1,10 @@
+// 2757
+[clientscript,script2757](int $opindex0)
+if (%varcint173 = 1 | %varbit542 = 1 | $opindex0 ! 1) {
+	return;
+}
+if (cam_getangle_xa < 150) {
+	cam_forceangle(150, 0);
+} else {
+	cam_forceangle(149, 0);
+}

@@ -1,4 +1,4 @@
 // 323
-[clientscript,script323]
-~script365;
-if_setgraphic("miscgraphics,11", interface_592:com_33);
+[clientscript,script323](component $component0, component $component1)
+if_settext("Room:<br><tostring(%varbit2377)> / 8", $component0);
+if_settext("Level:<br><tostring(%varbit2376)>", $component1);

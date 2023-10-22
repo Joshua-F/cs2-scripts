@@ -1,12 +1,3 @@
 // 1132
-[clientscript,script1132](int $int0, component $component1)
-if (getwindowmode >= ^windowmode_fixed) {
-	return;
-}
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	_6002(false);
-} else if ($windowmode2 = ^windowmode_fixed) {
-	_6002(true);
-}
-~script1130;
+[clientscript,script1132](component $component0)
+~script1133($component0);

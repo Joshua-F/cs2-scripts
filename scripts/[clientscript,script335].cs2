@@ -1,4 +1,20 @@
 // 335
 [clientscript,script335]
-~script365;
-if_setgraphic("miscgraphics,11", interface_592:com_57);
+if_sethide(false, interface_729:com_85);
+if_sethide(false, interface_729:com_86);
+if_sethide(true, interface_729:com_83);
+if_sethide(true, interface_729:com_84);
+if_sethide(true, interface_729:com_81);
+if_sethide(true, interface_729:com_82);
+if_setgraphic("graphic_1046", interface_729:com_93);
+if_setgraphic("graphic_1053", interface_729:com_92);
+if_setgraphic("graphic_1052", interface_729:com_91);
+%varcint778 = 2;
+if (gender = 1) {
+	%varcint773 = 450;
+} else {
+	%varcint773 = 325;
+}
+~script339(interface_729:com_85);
+~script2364(interface_729:com_86, interface_729:com_85);
+~script2366(interface_729:com_85, %varcint781, ~script336(2));

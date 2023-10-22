@@ -1,0 +1,9 @@
+// 2159
+[proc,script2159](int $int0, int $int1, int $int2, int $int3)(int)
+if ($int0 = 0 & $int2 = 0) {
+	return(0);
+}
+if ($int0 < $int1 & $int2 < $int3) {
+	return(1);
+}
+return(2);

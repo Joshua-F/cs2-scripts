@@ -1,0 +1,38 @@
+// 2347
+[clientscript,script2347](int $int0)
+if ($int0 = 1) {
+	if (%varbit6048 >= 250) {
+		if_setcolour(^green, interface_723:com_6);
+	} else if (%varbit6048 = 0) {
+		if_setcolour(^red, interface_723:com_6);
+	} else {
+		if_setcolour(^yellow, interface_723:com_6);
+	}
+}
+if ($int0 = 2) {
+	if (%varbit6112 >= 60) {
+		if_setcolour(^green, interface_723:com_7);
+	} else if (%varbit6112 = 0) {
+		if_setcolour(^red, interface_723:com_7);
+	} else {
+		if_setcolour(^yellow, interface_723:com_7);
+	}
+}
+if ($int0 = 3) {
+	if (%varbit6289 >= 240) {
+		if_setcolour(^green, interface_723:com_8);
+	} else if (%varbit6289 = 0) {
+		if_setcolour(^red, interface_723:com_8);
+	} else {
+		if_setcolour(^yellow, interface_723:com_8);
+	}
+}
+if ($int0 = 4) {
+	if (%varbit6775 >= 100) {
+		if_setcolour(^green, interface_723:com_9);
+	} else if (%varbit6775 = 0) {
+		if_setcolour(^red, interface_723:com_9);
+	} else {
+		if_setcolour(^yellow, interface_723:com_9);
+	}
+}

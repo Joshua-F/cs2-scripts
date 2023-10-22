@@ -1,0 +1,5 @@
+// 1860
+[clientscript,script1860](int $comsubid0, seq $seq1)
+if (cc_find(interface_88:com_22, $comsubid0) = ^true) {
+	cc_setmodelanim($seq1);
+}

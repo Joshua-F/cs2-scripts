@@ -1,0 +1,9 @@
+// 2324
+[proc,script2324]
+def_component $component0 = interface_306:model4;
+%varcint764 = enum(int, model, enum_208, random(enum_getoutputcount(enum_208)));
+if (%varcint764 ! null) {
+	if_setmodel(%varcint764, $component0);
+}
+if_setposition(calc(0 - if_getwidth($component0)), 120, ^setpos_abs_left, ^setpos_abs_top, $component0);
+if_setontimer(null, interface_306:com_17);

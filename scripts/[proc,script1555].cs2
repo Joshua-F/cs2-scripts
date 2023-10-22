@@ -1,0 +1,10 @@
+// 1555
+[proc,script1555](int $int0)
+if_setposition(~script1551(%varcint1028, %varcstring1, p12_full, $int0), if_gety(chatdefault:com_53), ^setpos_abs_left, ^setpos_abs_top, chatdefault:com_53);
+if (string_length(%varcstring1) <= 0) {
+	if_sethide(true, chatdefault:com_53);
+	if_setontimer(null, chatdefault:input);
+} else {
+	if_sethide(false, chatdefault:com_53);
+	if_setontimer("script1400(clientclock, chatdefault:com_53)", chatdefault:input);
+}

@@ -1,26 +1,15 @@
 // 935
-[proc,script935](int $int0, int $int1, int $int2)
-if (cc_find(carpet_runesquares:board, 288) = ^true) {
-	cc_delete;
+[proc,script935](obj $obj0)(int)
+switch_int (oc_param($obj0, param_762)) {
+	case 1 :
+		if (%var322 < 10) {
+			return(0);
+		}
+	case 2 :
+		if (%varbit4310 < 10) {
+			return(0);
+		}
+	case default :
+		return(1);
 }
-if (cc_find(carpet_runesquares:board, calc($int0 + 112)) = ^true) {
-	cc_sethide(true);
-	if ($int2 = 0) {
-		.cc_create(carpet_runesquares:board, ^iftype_rectangle, 288);
-		.cc_setcolour(^green);
-		.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_sethide(false);
-		.cc_setontimer("script937(event_comsubid, clientclock)");
-	}
-}
-if ($int0 <= 55) {
-	~script936(calc($int0 + 112 + $int0 / 7), $int1, $int2);
-	~script936(calc($int0 + 113 + $int0 / 7), $int1, $int2);
-	return;
-}
-if ($int0 <= 111) {
-	~script936(calc($int0 + 56), $int1, $int2);
-	~script936(calc($int0 + 64), $int1, $int2);
-	return;
-}
+return(-1);

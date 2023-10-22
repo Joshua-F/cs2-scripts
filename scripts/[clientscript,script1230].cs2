@@ -1,3 +1,32 @@
 // 1230
-[clientscript,script1230](int $int0)
-%varcint180 = ~dropdownbox_getselected($int0, loginscreen:com_379);
+[clientscript,script1230]
+def_obj $obj0 = null;
+def_model $model1 = null;
+def_component $component2 = null;
+def_int $int3 = 0;
+while ($int3 < 16) {
+	$obj0 = inv_getobj(inv_308, $int3);
+	switch_obj ($obj0) {
+		case air_rune_556, air_rune_6422 :
+			$model1 = model_8975;
+		case water_rune_555, water_rune_6424 :
+			$model1 = model_8987;
+		case earth_rune_557, earth_rune_6426 :
+			$model1 = model_8979;
+		case fire_rune_554, fire_rune_6428 :
+			$model1 = model_8980;
+		case default :
+			$model1 = null;
+	}
+	$component2 = enum(int, component, enum_2273, $int3);
+	if (if_find($component2) = true) {
+		cc_setmodel($model1);
+	}
+	if ($obj0 = air_rune_6422 | $obj0 = air_rune_6422 | $obj0 = water_rune_6424 | $obj0 = earth_rune_6426 | $obj0 = fire_rune_6428) {
+		$component2 = enum(int, component, enum_2276, $int3);
+		if (if_find($component2) = true) {
+			cc_setcolour(0x440000);
+		}
+	}
+	$int3 = calc($int3 + 1);
+}

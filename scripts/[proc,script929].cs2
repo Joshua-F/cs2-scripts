@@ -1,0 +1,46 @@
+// 929
+[proc,script929](obj $obj0)(int)
+def_int $flags1 = oc_param($obj0, param_823);
+def_stat $stat2 = oc_param($obj0, param_749);
+if ($stat2 = null) {
+	return(1);
+}
+if (testbit($flags1, 0) = ^false & stat_base($stat2) < oc_param($obj0, param_750) | testbit($flags1, 0) = ^true & stat($stat2) < oc_param($obj0, param_750)) {
+	return(0);
+}
+$stat2 = oc_param($obj0, param_751);
+if ($stat2 = null) {
+	return(1);
+}
+if (testbit($flags1, 1) = ^false & stat_base($stat2) < oc_param($obj0, param_752) | testbit($flags1, 1) = ^true & stat($stat2) < oc_param($obj0, param_752)) {
+	return(0);
+}
+$stat2 = oc_param($obj0, param_753);
+if ($stat2 = null) {
+	return(1);
+}
+if (testbit($flags1, 2) = ^false & stat_base($stat2) < oc_param($obj0, param_754) | testbit($flags1, 2) = ^true & stat($stat2) < oc_param($obj0, param_754)) {
+	return(0);
+}
+$stat2 = oc_param($obj0, param_755);
+if ($stat2 = null) {
+	return(1);
+}
+if (testbit($flags1, 3) = ^false & stat_base($stat2) < oc_param($obj0, param_756) | testbit($flags1, 3) = ^true & stat($stat2) < oc_param($obj0, param_756)) {
+	return(0);
+}
+$stat2 = oc_param($obj0, param_757);
+if ($stat2 = null) {
+	return(1);
+}
+if (testbit($flags1, 4) = ^false & stat_base($stat2) < oc_param($obj0, param_758) | testbit($flags1, 4) = ^true & stat($stat2) < oc_param($obj0, param_758)) {
+	return(0);
+}
+$stat2 = oc_param($obj0, param_759);
+if ($stat2 = null) {
+	return(1);
+}
+if (testbit($flags1, 5) = ^false & stat_base($stat2) < oc_param($obj0, param_760) | testbit($flags1, 5) = ^true & stat($stat2) < oc_param($obj0, param_760)) {
+	return(0);
+}
+return(1);

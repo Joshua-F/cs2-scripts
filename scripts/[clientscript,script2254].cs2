@@ -1,0 +1,146 @@
+// 2254
+[clientscript,script2254](boolean $boolean0)
+def_int $int1 = create_reply;
+if ($int1 = -3) {
+	return;
+}
+if_setontimer(null, loginscreen:com_162);
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_component $component5 = loginscreen:com_377;
+def_component $component6 = loginscreen:com_390;
+def_component $component7 = loginscreen:com_304;
+if ($boolean0 = true) {
+	$component5 = loginscreen:com_269;
+	$component6 = loginscreen:com_282;
+	$component7 = loginscreen:com_236;
+}
+if ($int1 = 2) {
+	if_sethide(true, loginscreen:com_162);
+	if_sethide(true, loginscreen:com_163);
+	~script2223($boolean0);
+} else {
+	if_setgraphic(null, loginscreen:com_159);
+	if_setgraphic(null, loginscreen:com_144);
+	if_setgraphic(null, loginscreen:com_150);
+	if_setgraphic(null, loginscreen:com_390);
+	if_setgraphic(null, loginscreen:com_383);
+	if_setgraphic(null, loginscreen:com_282);
+	if_setgraphic(null, loginscreen:com_275);
+	if_settext("", loginscreen:com_153);
+	if_settext("", loginscreen:com_135);
+	if_settext("", loginscreen:com_117);
+	if_settext("", loginscreen:com_110);
+	if_settext("", loginscreen:com_377);
+	if_settext("", loginscreen:com_269);
+	if_settext("", loginscreen:com_236);
+	switch_int ($int1) {
+		case -4, -1 :
+			if_settext("There was an error contacting the server. Please try using a different world.", $component7);
+		case -5 :
+			if_settext("There was no response from the server. Please try using a different world.", $component7);
+		case 3 :
+			if_settext("There was an error contacting the account creation server. Please try again.", $component7);
+		case 7 :
+			if_settext("The server is currently very busy. Please try again shortly.", $component7);
+		case 9, 38 :
+			if_settext("You cannot create an account at this time. Please try again later.", $component7);
+		case 10 :
+			if_settext("Please make sure you have provided a valid date of birth.", loginscreen:com_117);
+			$int3 = 1;
+		case 11 :
+			if_settext("The date of birth is invalid, as it is in the future.", loginscreen:com_117);
+			$int3 = 1;
+		case 12 :
+			if_settext("The date of birth is invalid, as it is this year.", loginscreen:com_117);
+			$int3 = 1;
+		case 13 :
+			if_settext("The date of birth is invalid, as it was last year.", loginscreen:com_117);
+			$int3 = 1;
+		case 14 :
+			if_settext("Please make sure you have provided a valid country.", loginscreen:com_110);
+			$int3 = 1;
+		case 20 :
+			if_setgraphic("graphic_1726", loginscreen:com_159);
+			if_settext("Sorry, that username is not available. Please choose again.", loginscreen:com_153);
+			$int3 = 1;
+			$int4 = 1;
+		case 21 :
+			if_setgraphic("graphic_1726", loginscreen:com_159);
+			if_settext("Sorry, that username is not available. Please choose again.", loginscreen:com_153);
+			$string0, $string1, $string2, $string3, $string4 = _5610;
+			if (compare($string4, "") ! 0) {
+				%varcstring127 = "<col=673400>Sorry, that username is not available. Possible alternatives: <$string0>, <$string1>, <$string2>, <$string3>, <$string4>.</col><br><br>";
+			} else if (compare($string3, "") ! 0) {
+				%varcstring127 = "<col=673400>Sorry, that username is not available. Possible alternatives: <$string0>, <$string1>, <$string2>, <$string3>.</col><br><br>";
+			} else if (compare($string2, "") ! 0) {
+				%varcstring127 = "<col=673400>Sorry, that username is not available. Possible alternatives: <$string0>, <$string1>, <$string2>.</col><br><br>";
+			} else if (compare($string1, "") ! 0) {
+				%varcstring127 = "<col=673400>Sorry, that username is not available. Possible alternatives: <$string0>, <$string1>.</col><br><br>";
+			} else if (compare($string0, "") ! 0) {
+				%varcstring127 = "<col=673400>Sorry, that username is not available. Possible alternative: <$string0>.</col><br><br>";
+			} else {
+				%varcstring127 = "<col=673400>Sorry, that username is not available. We could not suggest a suitable alternative account name. Please choose again.</col><br><br>";
+			}
+			$int3 = 1;
+		case 22 :
+			if_setgraphic("graphic_1726", loginscreen:com_159);
+			if_settext("Please supply a valid username.", loginscreen:com_153);
+			$int3 = 1;
+			$int4 = 1;
+		case 30 :
+			$int2 = string_length(%varcstring124);
+			if ($int2 < 5) {
+				if_settext("Password is too short, it must be at least 5 characters long.", loginscreen:com_135);
+			} else if ($int2 > 20) {
+				if_settext("Password is too long, it must be no more than 20 characters.", loginscreen:com_135);
+			} else {
+				if_settext("Please supply a valid password.", loginscreen:com_135);
+			}
+			if_setgraphic("graphic_1726", loginscreen:com_150);
+			%varcint735 = 5;
+			$int3 = 1;
+		case 31 :
+			if_settext("Passwords may only contain letters and numbers.", loginscreen:com_135);
+			if_setgraphic("graphic_1726", loginscreen:com_150);
+			%varcint735 = 5;
+			$int3 = 1;
+		case 32, 33 :
+			if_settext("Your password is too easy to guess.", loginscreen:com_135);
+			if_setgraphic("graphic_1726", loginscreen:com_150);
+			$int3 = 1;
+		case 34, 35, 36 :
+			if_settext("Your password is too similar to your username.", loginscreen:com_135);
+			if_setgraphic("graphic_1726", loginscreen:com_150);
+			$int3 = 1;
+		case 41, 42, 43 :
+			if_settext("Please supply a valid email address.", $component5);
+			if_setgraphic("graphic_1726", $component6);
+		case 37 :
+			if_settext("RuneScape has been updated. Please reload this page.", $component7);
+		case default :
+			if_settext("Unexpected server response. Please try again.", $component7);
+	}
+}
+if ($boolean0 = false) {
+	~script2258(0);
+} else {
+	~script2275(0);
+}
+if ($int3 = 1) {
+	~script2215;
+	if ($int4 = 1) {
+		%varcstring123 = "";
+		~script2283;
+	}
+} else if ($boolean0 = false) {
+	~script2257(%varcint174);
+} else {
+	~script2274(%varcint174);
+}

@@ -1,0 +1,7 @@
+// 284
+[proc,script284](coord $coord0)(coord)
+def_int $int1 = coordx($coord0);
+def_int $int2 = coordz($coord0);
+$int1 = calc($int1 - $int1 % 64);
+$int2 = calc($int2 - $int2 % 64);
+return(movecoord(0_0_0_0_0, $int1, 0, $int2));

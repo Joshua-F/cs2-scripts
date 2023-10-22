@@ -1,16 +1,17 @@
 // 126
 [clientscript,friend_op](int $opindex0, string $opbase0, int $index1)
 def_string $string1 = removetags($opbase0);
-if ($opindex0 = 1) {
-	~meslayer_mode6($string1);
-} else if ($opindex0 = 2) {
-	if (friend_platform($index1) = true) {
-		~quickchat_open(1, $string1);
-	} else {
-		~quickchat_open(3, $string1);
-	}
-} else if ($opindex0 = 3 | $opindex0 = 4) {
-	mes("That player is currently offline.");
-} else if ($opindex0 = 5) {
-	friend_del($string1);
+switch_int ($opindex0) {
+	case 1 :
+		~meslayer_mode6($string1);
+	case 2 :
+		if (friend_platform($index1) = true) {
+			~quickchat_open(1, $string1);
+		} else {
+			~quickchat_open(3, $string1);
+		}
+	case 3, 4 :
+		mes("That player is currently offline.");
+	case 5 :
+		friend_del($string1);
 }

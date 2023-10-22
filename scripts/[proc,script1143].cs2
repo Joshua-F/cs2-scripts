@@ -1,0 +1,52 @@
+// 1143
+[proc,script1143](string $string0, graphic $graphic0, string $string1, string $string2, graphic $graphic1, string $string3, string $string4, graphic $graphic2, string $string5, string $string6, graphic $graphic3, string $string7)
+if (compare($string0, "") ! 0 & $graphic0 ! null) {
+	if_setgraphic($graphic0, interface_884:icon1);
+	if_settext($string0, interface_884:text1);
+	if_sethide(false, interface_884:button1);
+	if_setop(1, $string0, interface_884:button1);
+	if_setonmouserepeat("addtooltip(interface_884:button1, interface_884:tooltip, $string1, 25, 190)", interface_884:button1);
+	if_setonmouseleave("deltooltip(interface_884:tooltip)", interface_884:button1);
+} else {
+	if_clearops(interface_884:button1);
+	if_sethide(true, interface_884:button1);
+}
+if (compare($string2, "") ! 0 & $graphic1 ! null) {
+	if_setgraphic($graphic1, interface_884:icon2);
+	if_settext($string2, interface_884:text2);
+	if_sethide(false, interface_884:button2);
+	if_setop(1, $string2, interface_884:button2);
+	if_setonmouserepeat("addtooltip(interface_884:button2, interface_884:tooltip, $string3, 25, 190)", interface_884:button2);
+	if_setonmouseleave("deltooltip(interface_884:tooltip)", interface_884:button2);
+} else {
+	if_clearops(interface_884:button2);
+	if_sethide(true, interface_884:button2);
+}
+if (compare($string4, "") ! 0 & $graphic2 ! null) {
+	if_setgraphic($graphic2, interface_884:icon3);
+	if_settext($string4, interface_884:text3);
+	if_sethide(false, interface_884:button3);
+	if_setop(1, $string4, interface_884:button3);
+	if_setonmouserepeat("addtooltip(interface_884:button3, interface_884:tooltip, $string5, 25, 190)", interface_884:button3);
+	if_setonmouseleave("deltooltip(interface_884:tooltip)", interface_884:button3);
+} else {
+	if_clearops(interface_884:button3);
+	if_sethide(true, interface_884:button3);
+}
+if (compare($string6, "") ! 0 & $graphic3 ! null) {
+	if_setgraphic($graphic3, interface_884:icon4);
+	if_settext($string6, interface_884:text4);
+	if_sethide(false, interface_884:button4);
+	if_setop(1, $string6, interface_884:button4);
+	if_setonmouserepeat("addtooltip(interface_884:button4, interface_884:tooltip, $string7, 25, 190)", interface_884:button4);
+	if_setonmouseleave("deltooltip(interface_884:tooltip)", interface_884:button4);
+} else {
+	if_clearops(interface_884:button4);
+	if_sethide(true, interface_884:button4);
+}
+def_string $string8 = "When active, you will automatically fight back if attacked.";
+if_setonmouserepeat("addtooltip(interface_884:com_15, interface_884:tooltip, $string8, 25, 190)", interface_884:com_15);
+if_setonmouseleave("deltooltip(interface_884:tooltip)", interface_884:com_15);
+$string8 = "Select to perform a special attack.";
+if_setonmouserepeat("addtooltip(interface_884:com_3, interface_884:tooltip, $string8, 25, 190)", interface_884:com_3);
+if_setonmouseleave("deltooltip(interface_884:tooltip)", interface_884:com_3);

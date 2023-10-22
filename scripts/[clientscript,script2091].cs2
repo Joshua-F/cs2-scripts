@@ -1,0 +1,37 @@
+// 2091
+[clientscript,script2091](component $component0, component $component1)
+def_string $string0 = "";
+if (%varbit5835 = 1) {
+	return;
+}
+switch_component ($component0) {
+	case interface_836:com_9, interface_836:com_13, interface_836:com_28 :
+		$string0 = "The number of times that the avatar has been killed.";
+	case interface_836:com_10, interface_836:com_14, interface_836:com_25 :
+		$string0 = "The Slayer level required to attack each avatar.";
+	case interface_836:com_11, interface_836:com_15, interface_836:com_24 :
+		$string0 = "The remaining health of each avatar.";
+	case interface_836:com_26, interface_836:time_left :
+		$string0 = "How much time the game has remaining.";
+	case interface_836:com_8 :
+		$string0 = "This column displays the blue team's statistics.";
+	case interface_836:com_12 :
+		$string0 = "This column displays the red team's statistics.";
+	case interface_836:com_29 :
+		$string0 = "Shows which team controls the soul obelisk.";
+	case interface_836:com_30 :
+		$string0 = "Shows which team controls the western graveyard.";
+	case interface_836:com_31 :
+		$string0 = "Shows which team controls the eastern graveyard.";
+	case interface_836:com_6 :
+		$string0 = "Shows how much control a team has over the soul obelisk.";
+	case interface_836:com_69 :
+		$string0 = "Shows how much control a team has over the eastern graveyard.";
+	case interface_836:com_62 :
+		$string0 = "Shows how much control a team has over the western graveyard.";
+	case interface_836:com_56 :
+		$string0 = "Shows how active you have been during the game.";
+	case default :
+		return;
+}
+~addtooltip_action($component0, $component1, $string0, 25, if_getwidth(if_getlayer($component1)));

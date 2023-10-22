@@ -1,0 +1,44 @@
+// 2414
+[clientscript,script2414]
+if (%varbit6180 = 120) {
+	if_sethide(false, interface_765:com_4);
+	if_sethide(true, interface_765:com_3);
+	if (inv_total(inv, swordfish_14831) = 0) {
+		if_sethide(true, interface_765:com_33);
+	}
+	if (inv_total(inv, octopus_14824) = 0 & inv_total(worn, octopus_14824) = 0) {
+		if_sethide(true, interface_765:com_39);
+	}
+	if (inv_total(inv, seaweed_14830) = 0) {
+		if_sethide(true, interface_765:com_37);
+	}
+	if (inv_total(inv, puffer_14823) = 0 & inv_total(worn, puffer_14823) = 0) {
+		if_sethide(true, interface_765:com_38);
+	}
+	if (inv_total(inv, electric_eel_14829) = 0) {
+		if_sethide(true, interface_765:com_36);
+	}
+	if (inv_total(inv, shark_tooth_14828) = 0) {
+		if_sethide(true, interface_765:com_35);
+	}
+	if (inv_total(inv, crab_claw_14827) = 0) {
+		if_sethide(true, interface_765:com_34);
+	}
+} else {
+	if_sethide(true, interface_765:com_4);
+	if_sethide(false, interface_765:com_3);
+}
+if_setmodelanim(null, interface_765:com_10);
+if_sethide(false, interface_765:com_11);
+if_setmodel(model_46967, interface_765:com_5);
+if_setmodelanim(seq_11762, interface_765:com_10);
+if_sethide(true, interface_765:com_19);
+if_sethide(false, interface_765:com_20);
+if_sethide(true, interface_765:com_6);
+if_sethide(false, interface_765:com_18);
+if_setmodelanim(null, interface_765:com_20);
+if_sethide(true, interface_765:com_41);
+if_sethide(true, interface_765:com_40);
+if_sethide(true, interface_765:com_7);
+%varcint805 = 0;
+%varcint806 = 0;

@@ -1,0 +1,17 @@
+// 2224
+[clientscript,script2224]
+if (calc(clientclock % 40) < 20 & create_reply ! -3) {
+	~script2226;
+	switch_int (%varcint174) {
+		case 3 :
+			if_settext("<%varcstring122>|", loginscreen:com_158);
+		case 4 :
+			if_settext("<~script2200(%varcstring124)>|", loginscreen:com_149);
+		case 5 :
+			if_settext("<~script2200(%varcstring125)>|", loginscreen:com_143);
+		case 8 :
+			if_settext("<%varcstring126>|", loginscreen:com_124);
+	}
+} else {
+	~script2226;
+}

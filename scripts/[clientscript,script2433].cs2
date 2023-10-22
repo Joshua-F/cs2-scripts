@@ -1,0 +1,10 @@
+// 2433
+[clientscript,script2433]
+if (~script1431 = 0 | compare(%varcstring148, "null") = 0) {
+	return;
+}
+if (getwindowmode < ^windowmode_resizable) {
+	if_settext(%varcstring148, toplevel:com_8);
+} else {
+	if_settext(%varcstring148, toplevel_fullscreen:com_156);
+}

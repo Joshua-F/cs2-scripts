@@ -1,0 +1,86 @@
+// 2599
+[proc,script2599]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_obj $obj3 = null;
+def_obj $objarray0(10);
+def_int $intarray1(10);
+def_int $intarray2(10);
+def_int $int4 = 0;
+while ($int1 < 28 & $int2 < 10) {
+	$obj3 = inv_getobj(inv, $int1);
+	if ($obj3 ! null & (oc_param($obj3, param_802) = 1 | oc_param($obj3, param_803) = 1)) {
+		$objarray0($int2) = $obj3;
+		$int2 = calc($int2 + 1);
+	}
+	$int1 = calc($int1 + 1);
+}
+$obj3 = null;
+$intarray1(0) = %varbit6405;
+$intarray1(1) = %varbit6406;
+$intarray1(2) = %varbit6407;
+$intarray1(3) = %varbit6408;
+$intarray1(4) = %varbit6409;
+$intarray1(5) = %varbit6410;
+$intarray1(6) = %varbit6411;
+$intarray1(7) = %varbit6412;
+$intarray1(8) = %varbit6413;
+$intarray1(9) = %varbit6414;
+$int1 = 0;
+while ($int1 < 10) {
+	if ($objarray0($int1) ! null) {
+		if (oc_param($obj3, param_803) = 1) {
+			$intarray2($int1) = calc(%varbit6405 * 50);
+		}
+		if (oc_param($objarray0($int1), param_803) = 1 & $intarray1($int1) = 1) {
+			$intarray2($int1) = 50;
+			$int4 = calc($int4 + $intarray2($int1));
+		}
+		if_settext("Cost: <tostring($intarray2($int1))>", enum(int, component, enum_2424, $int1));
+	}
+	$int1 = calc($int1 + 1);
+}
+if_settext(tostring($intarray2(%varcint929)), interface_292:com_101);
+%varcint928 = $int4;
+if_settext(tostring(%varcint928), interface_292:com_126);
+if_settext("Remaining investment credits: <tostring(calc(%varbit6351 - %varcint928))>", interface_292:com_128);
+if (%varcint928 <= %varbit6351) {
+	if_setgraphic("graphic_1870", interface_292:com_123);
+	if_setonop("script2605", interface_292:com_122);
+	if_setop(1, "Apply changes", interface_292:com_122);
+	if_setonmouseover("v2_stone_button_in(event_com)", interface_292:com_122);
+	if_setcolour(0xff9935, interface_292:com_126);
+	if_setonclick(null, interface_292:com_122);
+} else {
+	if_setgraphic("graphic_1871", interface_292:com_123);
+	if_setonop(null, interface_292:com_122);
+	if_clearops(interface_292:com_122);
+	if_setonmouseover(null, interface_292:com_122);
+	if_setcolour(0xff1111, interface_292:com_126);
+	if_setonclick("script2606(event_com)", interface_292:com_122);
+}
+$int1 = 0;
+while ($int1 < 10) {
+	if ($objarray0($int1) ! null & oc_param($objarray0($int1), param_803) = 1) {
+		$int0 = calc($int0 + 50);
+	}
+	$int1 = calc($int1 + 1);
+}
+if ($int0 > 0) {
+	if_settext("Resupply all<br>(<tostring($int0)>)", interface_292:com_124);
+}
+if (%varbit6351 >= $int0 & $int0 > 0) {
+	if_setcolour(0xff9935, interface_292:com_124);
+	if_setonop("script2603", interface_292:com_119);
+	if_setop(1, "Resupply all", interface_292:com_119);
+	if_setonmouseover("v2_stone_button_in(event_com)", interface_292:com_119);
+	if_setonclick(null, interface_292:com_119);
+} else {
+	if_settext("Resupply all", interface_292:com_124);
+	if_setcolour(0x666666, interface_292:com_124);
+	if_setonop(null, interface_292:com_119);
+	if_clearops(interface_292:com_119);
+	if_setonmouseover(null, interface_292:com_119);
+	if_setonclick("script2606(event_com)", interface_292:com_119);
+}

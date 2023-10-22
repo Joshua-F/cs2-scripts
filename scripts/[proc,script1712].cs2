@@ -1,12 +1,46 @@
 // 1712
-[proc,script1712]
-~script1710;
-baseidkit(0, enum(int, idkit, enum_701, %varcint87));
-baseidkit(1, enum(int, idkit, enum_703, %varcint88));
-basecolour(0, %varbit4215);
-basecolour(4, %varbit4219);
-~script1717;
-~script1718;
-~script1719;
-~script1720;
-~script1721;
+[proc,script1712](stat $stat0)(int)
+switch_stat ($stat0) {
+	case attack :
+		if (%varbit6852 > 0) {
+			return(calc(0 - ~script1714(attack, ~script1718(attack, 10))));
+		}
+		if (%varbit6847 > 0) {
+			return(calc(0 - ~script1714(attack, ~script1718(attack, 10))));
+		}
+		return(0);
+	case strength :
+		if (%varbit6853 > 0) {
+			return(calc(0 - ~script1714(strength, ~script1718(strength, 10))));
+		}
+		if (%varbit6848 > 0) {
+			return(calc(0 - ~script1714(strength, ~script1718(strength, 10))));
+		}
+		return(0);
+	case defence :
+		if (%varbit6854 > 0) {
+			return(calc(0 - ~script1714(defence, ~script1718(defence, 10))));
+		}
+		if (%varbit6849 > 0) {
+			return(calc(0 - ~script1714(defence, ~script1718(defence, 10))));
+		}
+		return(0);
+	case ranged :
+		if (%varbit6855 > 0) {
+			return(calc(0 - ~script1714(ranged, ~script1718(ranged, 10))));
+		}
+		if (%varbit6850 > 0) {
+			return(calc(0 - ~script1714(ranged, ~script1718(ranged, 10))));
+		}
+		return(0);
+	case magic :
+		if (%varbit6856 > 0) {
+			return(calc(0 - ~script1714(magic, ~script1718(attack, 10))));
+		}
+		if (%varbit6851 > 0) {
+			return(calc(0 - ~script1714(magic, ~script1718(attack, 10))));
+		}
+		return(0);
+	case default :
+		return(0);
+}

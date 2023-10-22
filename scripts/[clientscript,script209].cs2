@@ -1,6 +1,21 @@
 // 209
 [clientscript,script209]
-if_sethide(true, interface_595:com_115);
-if_sethide(false, interface_595:com_116);
-if_setgraphic("graphic_1057", interface_595:com_120);
-if_setgraphic("graphic_1049", interface_595:com_121);
+if (%varbit6101 < 8) {
+	if_setgraphic("graphic_1785", interface_591:target_icon);
+} else if (%varbit6101 < 15) {
+	if_setgraphic("graphic_1786", interface_591:target_icon);
+} else if (%varbit6101 < 23) {
+	if_setgraphic("graphic_1787", interface_591:target_icon);
+} else if (%varbit6101 < 30) {
+	if_setgraphic("graphic_1788", interface_591:target_icon);
+} else if (%varbit6101 < 38) {
+	if_setgraphic("graphic_1789", interface_591:target_icon);
+} else if (%varbit6101 < 45) {
+	if_setgraphic("graphic_1790", interface_591:target_icon);
+} else if (%varbit6101 < 53) {
+	if_setgraphic("graphic_1791", interface_591:target_icon);
+} else if (%varbit6101 < 60) {
+	if_setgraphic("graphic_1792", interface_591:target_icon);
+} else {
+	if_setgraphic("graphic_1793", interface_591:target_icon);
+}

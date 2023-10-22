@@ -1,0 +1,35 @@
+// 2567
+[clientscript,script2567]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_enum $enum4 = null;
+def_int $int5 = 5;
+$int1 = calc((if_getwidth(interface_842:content) - 36 * $int5) / ($int5 - 1));
+$int2 = calc((if_getheight(interface_842:content) - 128) / 3);
+if (inv_total(inv, quest_kit_basic_15001) > 0) {
+	$enum4 = enum_1991;
+} else if (inv_total(inv, quest_kit_medium_15002) > 0) {
+	$enum4 = enum_1995;
+} else if (inv_total(inv, quest_kit_advanced_15003) > 0) {
+	$enum4 = enum_1998;
+} else if (inv_total(inv, quest_kit_elite_15004) > 0) {
+	$enum4 = enum_1999;
+}
+while ($int3 = 0) {
+	if (enum(int, namedobj, $enum4, $int0) ! logs_1511) {
+		cc_create(interface_842:content, ^iftype_graphic, $int0);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((36 + $int1) * ($int0 % $int5)), calc($int0 / $int5 * (32 + $int2)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject(enum(int, namedobj, $enum4, $int0), -1);
+		cc_setopbase("<col=ff981f><oc_name(enum(int, namedobj, $enum4, $int0))>");
+		cc_setop(1, "Withdraw");
+		cc_setop(2, "Examine");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		$int0 = calc($int0 + 1);
+	} else {
+		$int3 = 1;
+	}
+}

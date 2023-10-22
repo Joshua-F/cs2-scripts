@@ -1,8 +1,4 @@
 // 1211
-[clientscript,script1211](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	detail_fog_on(false);
-} else {
-	detail_fog_on(true);
-}
+[clientscript,script1211]
+if_setontimer("script1213", interface_894:title);
+if_sethide(false, interface_894:com_7);

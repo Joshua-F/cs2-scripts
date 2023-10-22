@@ -1,0 +1,16 @@
+// 208
+[proc,script208]()(int)
+def_int $world0 = map_world;
+def_int $flags1 = 0;
+def_string $string0 = "";
+def_int $int2 = 0;
+def_string $string1 = "";
+def_int $int3 = 0;
+def_int $int4 = 0;
+if ($world0 ! -1) {
+	$flags1, $string0, $int2, $string1, $int3, $int4 = worldlist_specific($world0);
+}
+if (testbit($flags1, 5) = ^true) {
+	return(1);
+}
+return(0);

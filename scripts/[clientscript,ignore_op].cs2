@@ -1,4 +1,4 @@
 // 130
-[clientscript,ignore_op](string $opbase0)
-def_string $username1 = removetags($opbase0);
-ignore_del($username1);
+[clientscript,ignore_op](string $string0)
+$string0 = removetags($string0);
+ignore_del($string0);

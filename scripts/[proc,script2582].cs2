@@ -1,0 +1,81 @@
+// 2582
+[proc,script2582](struct $struct0, int $int1, int $int2)(int)
+switch_struct ($struct0) {
+	case struct_829 :
+		_6002(~int_to_bool($int1));
+	case struct_830 :
+		detail_removeroofs_option(~int_to_bool($int1));
+	case struct_831 :
+		detail_grounddecor_on(~int_to_bool($int1));
+	case struct_832 :
+		_6006(~int_to_bool($int1));
+	case struct_833 :
+		detail_idleanims($int1);
+	case struct_834 :
+		detail_flickering_on(~int_to_bool($int1));
+	case struct_835 :
+		_6009(~int_to_bool($int1));
+	case struct_836 :
+		_6010(~int_to_bool($int1));
+	case struct_837 :
+		_6011($int1);
+	case struct_838 :
+		detail_lightdetail_high(~int_to_bool($int1));
+	case struct_839 :
+		detail_waterdetail_high(~int_to_bool($int1));
+	case struct_840 :
+		if ($int1 = 0 & detailget_toolkit = 0) {
+			detail_waterdetail_high(false);
+			detail_fog_on(false);
+		} else {
+			detail_fog_on(~int_to_bool($int1));
+		}
+	case struct_841 :
+		if (_6121 = true) {
+			detail_antialiasing($int1);
+			if ($int1 > 0) {
+				~script2700(4, $int2);
+				return(2);
+			}
+			detail_antialiasing_default($int1);
+		} else {
+			return(0);
+		}
+	case struct_842 :
+		return(~bool_to_int(detail_particles($int1)));
+	case struct_734 :
+		if (_6126 = true) {
+			detail_bloom($int1);
+			if ($int1 > 0) {
+				~script2700(8, $int2);
+				return(2);
+			}
+		} else {
+			return(0);
+		}
+	case struct_843 :
+		if ($int1 = 0 & detailget_toolkit = 0) {
+			detail_waterdetail_high(false);
+			detail_fog_on(false);
+			detail_groundblending(false);
+		} else {
+			detail_groundblending(~int_to_bool($int1));
+		}
+	case struct_844 :
+		%varcint987 = ~int_to_bool($int1);
+		detail_customcursors(%varcint987);
+	case struct_845 :
+		%varcint178 = $int1;
+		if (getwindowmode = ^windowmode_fullscreen) {
+			if (fullscreen_enter(fullscreen_getmode($int1)) = true) {
+				~script2700(2, $int2);
+				return(2);
+			}
+			return(0);
+		}
+	case struct_908 :
+		detail_cpuusage($int1);
+	case default :
+		return(0);
+}
+return(1);

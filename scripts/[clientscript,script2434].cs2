@@ -1,0 +1,16 @@
+// 2434
+[clientscript,script2434](int $int0)
+%varcint815 = calc($int0 * 300 / 10);
+if (%varcint815 > 0) {
+	if (getwindowmode < ^windowmode_resizable) {
+		if_setontimer("script2435", toplevel:com_9);
+		if_sethide(false, toplevel:com_10);
+		if_sethide(false, toplevel:com_11);
+	} else {
+		if_setontimer("script2435", toplevel_fullscreen:com_10);
+		if_sethide(false, toplevel_fullscreen:com_161);
+		if_sethide(false, toplevel_fullscreen:com_160);
+	}
+} else {
+	~script2436;
+}

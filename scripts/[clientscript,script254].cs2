@@ -1,4 +1,9 @@
 // 254
-[clientscript,script254]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_132);
+[clientscript,script254](component $component0, int $comsubid1, boolean $boolean2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if ($boolean2 = true) {
+		cc_setcolour(0xffe1be);
+	} else {
+		cc_setcolour(0x663300);
+	}
+}

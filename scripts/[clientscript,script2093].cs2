@@ -1,0 +1,12 @@
+// 2093
+[clientscript,script2093]
+if (%varcint654 < 100) {
+	%varcint654 = calc(%varcint654 + 1);
+}
+if (%varcint654 = 50) {
+	if_sethide(true, interface_834:com_60);
+}
+if (%varcint654 = 100) {
+	if_sethide(false, interface_834:com_60);
+	%varcint654 = 0;
+}

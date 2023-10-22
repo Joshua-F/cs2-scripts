@@ -1,9 +1,20 @@
 // 1227
-[clientscript,script1227]
-if (calc(clientclock % 40) < 20 & create_reply ! -3) {
-	if (%varcint174 = 3) {
-		if_settext(append(%varcstring34, "|"), loginscreen:com_394);
-	}
-} else {
-	if_settext(%varcstring34, loginscreen:com_394);
+[clientscript,script1227](component $component0, component $component1, component $component2)
+if (%varbit1549 < 1 | %varbit1549 > 63) {
+	if_sethide(true, $component1);
+	if_sethide(true, $component2);
+	return;
 }
+if (%varbit1549 = 63) {
+	if_settext("Final<br>Challenge", $component2);
+} else {
+	if_settext("Wave <tostring(%varbit1549)>", $component2);
+}
+def_int $y3 = calc(0 - if_getheight($component0));
+if_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_centre, $component1);
+if_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_centre, $component2);
+if_sethide(false, $component1);
+if_sethide(false, $component2);
+if_setontimer("script1228($component0, $component1, $component2, clientclock)", $component0);
+if_setop(1, "Dismiss", $component1);
+if_setonop("script1229(event_op, $component0, $component1, $component2)", $component1);

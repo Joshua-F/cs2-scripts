@@ -1,7 +1,7 @@
 // 1436
 [proc,dropdownbox_init](enum $enum0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, graphic $graphic7, graphic $graphic8, graphic $graphic9, graphic $graphic10, int $colour11, int $colour12, int $colour13, graphic $graphic14, graphic $graphic15, graphic $graphic16, graphic $graphic17, graphic $graphic18, graphic $graphic19, graphic $graphic20)
 cc_deleteall($component3);
-cc_create($component3, ^iftype_graphic, if_getnextsubid($component3));
+cc_create($component3, ^iftype_graphic, 0);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(if_getwidth($component3), if_getheight($component3), ^setsize_abs, ^setsize_abs);
 cc_setgraphic($graphic7);
@@ -10,7 +10,7 @@ cc_create($component3, ^iftype_rectangle, if_getnextsubid($component3));
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(if_getwidth($component3), if_getheight($component3), ^setsize_abs, ^setsize_abs);
 cc_setcolour(^black);
-def_int $comsubid21 = if_getnextsubid($component3);
+def_int $comsubid21 = 1;
 cc_create($component3, ^iftype_graphic, $comsubid21);
 cc_setposition(calc(if_getwidth($component3) - 16), 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(16, if_getheight($component3), ^setsize_abs, ^setsize_abs);

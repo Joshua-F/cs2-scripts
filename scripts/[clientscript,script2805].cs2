@@ -1,0 +1,8 @@
+// 2805
+[clientscript,script2805](component $component0, int $int1, int $int2, int $trans3, int $trans4)
+def_int $trans5 = if_gettrans($component0);
+def_int $trans6 = min(max(calc($trans5 + $int1), $trans3), $trans4);
+if ($trans6 = $trans3 | $trans6 = $trans4) {
+	if_setontimer("script2805($component0, $int2, $int1, $trans3, $trans4)", $component0);
+}
+if_settrans($trans6, $component0);

@@ -1,0 +1,8 @@
+// 2151
+[proc,script2151](int $int0, int $int1)(int)
+def_struct $struct2 = enum(int, struct, enum_169, $int0);
+%varcint699 = enum(int, struct, struct_param($struct2, param_61), $int1);
+if (~comlevel < struct_param(%varcint699, param_896)) {
+	return(0);
+}
+return(1);

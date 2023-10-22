@@ -1,6 +1,7 @@
 // 71
 [proc,if_switchside](int $int0)
 def_int $int1 = ~current_side_if;
+%varcint168 = $int0;
 if ($int0 = -1) {
 	if (getwindowmode >= ^windowmode_resizable) {
 		~side_if_closeall;

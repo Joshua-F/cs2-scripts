@@ -1,0 +1,9 @@
+// 2200
+[proc,script2200](string $string0)(string)
+def_string $string1 = "";
+def_int $int0 = string_length($string0);
+while ($int0 > 0) {
+	$string1 = append($string1, "*");
+	$int0 = calc($int0 - 1);
+}
+return($string1);

@@ -1,0 +1,18 @@
+// 2073
+[clientscript,script2073](int $int0)
+switch_int ($int0) {
+	case 18087988, 18087940 :
+		if_sethide(false, interface_276:com_79);
+		if_sethide(true, interface_276:com_80);
+		if_sethide(true, interface_276:com_78);
+	case 18087987, 18087957 :
+		if_sethide(true, interface_276:com_79);
+		if_sethide(true, interface_276:com_80);
+		if_sethide(false, interface_276:com_78);
+	case 18087958, 18087941 :
+		if_sethide(true, interface_276:com_79);
+		if_sethide(false, interface_276:com_80);
+		if_sethide(true, interface_276:com_78);
+	case default :
+		return;
+}

@@ -1,7 +1,7 @@
 // 1375
-[clientscript,script1375](component $component0)
-if (if_gethide(worldmap:com_27) = true) {
-	~script1376(1, $component0);
+[clientscript,script1375](component $component0, component $component1)
+if (if_gethide(worldmap:com_60) = true) {
+	~script1376(1, $component0, $component1);
 } else {
-	~script1376(0, $component0);
+	~script1376(0, $component0, $component1);
 }

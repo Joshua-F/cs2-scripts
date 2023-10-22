@@ -1,0 +1,6 @@
+// 2808
+[proc,script2808](coord $coord0, coord $coord1, coord $coord2)(coord)
+def_coord $coord3 = movecoord(0_0_0_0_0, calc(8 * (coordx($coord1) / 8)), coordy($coord1), calc(8 * (coordz($coord1) / 8)));
+def_int $x4 = calc(coordx($coord2) - coordx($coord3));
+def_int $z5 = calc(coordz($coord2) - coordz($coord3));
+return(movecoord($coord0, $x4, 0, $z5));

@@ -1,0 +1,32 @@
+// 2116
+[clientscript,script2116](component $component0, component $component1, component $component2, component $component3, component $component4)
+cc_deleteall($component0);
+cc_deleteall($component3);
+if_settext("", $component4);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = calc((if_getwidth($component0) - 320) / 3);
+while ($int5 < inv_size(inv_307)) {
+	if (inv_getnum(inv_307, $int5) > 0) {
+		~script2117($int5, $int6, $int7, $component0, $component3, $component4);
+		$int6 = calc($int6 + 1);
+	} else {
+		~script2118($int5, $component0);
+	}
+	$int5 = calc($int5 + 1);
+}
+$int5 = calc($int7 + ($int6 + 1) / 2 * ($int7 + 64));
+if_setscrollpos(0, 0, $component0);
+if ($int5 > if_getheight($component0)) {
+	if_setscrollsize(0, $int5, $component0);
+	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if_setposition(392, if_gety($component4), ^setpos_abs_left, ^setpos_abs_top, $component4);
+	if_setposition(392, if_gety($component3), ^setpos_abs_left, ^setpos_abs_top, $component3);
+	if_sethide(false, $component2);
+} else {
+	if_setscrollsize(0, 0, $component0);
+	cc_deleteall($component1);
+	if_setposition(384, if_gety($component3), ^setpos_abs_left, ^setpos_abs_top, $component3);
+	if_setposition(384, if_gety($component4), ^setpos_abs_left, ^setpos_abs_top, $component4);
+	if_sethide(true, $component2);
+}

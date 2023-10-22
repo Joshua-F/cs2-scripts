@@ -1,8 +1,28 @@
 // 1199
-[clientscript,script1199](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	_6009(false);
-} else {
-	_6009(true);
+[clientscript,script1199](component $component0)
+switch_component ($component0) {
+	case interface_890:model1 :
+		if (%varcint755 ! null) {
+			if_setobject_wearcol(%varcint755, 0, $component0);
+		}
+	case interface_890:model2 :
+		if (%varcint756 ! null) {
+			if_setobject_wearcol(%varcint756, 0, $component0);
+		}
+	case interface_890:model3 :
+		if (%varcint757 ! null) {
+			if_setobject_wearcol(%varcint757, 0, $component0);
+		}
+	case interface_890:model4 :
+		if (%varcint758 ! null) {
+			if_setobject_wearcol(%varcint758, 0, $component0);
+		}
+	case interface_890:model5 :
+		if (%varcint759 ! null) {
+			if_setobject_wearcol(%varcint759, 0, $component0);
+		}
+	case interface_890:model6 :
+		if (%varcint760 ! null) {
+			if_setobject_wearcol(%varcint760, 0, $component0);
+		}
 }

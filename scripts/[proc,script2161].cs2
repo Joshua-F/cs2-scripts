@@ -1,0 +1,10 @@
+// 2161
+[proc,script2161](int $int0, int $int1, component $component2)
+if (map_members = ^false) {
+	mes("More advanced grouping options are available on a members' world.");
+} else if (%var281 < 1000) {
+	mes("More advanced grouping options will be available when you've finished the Tutorial.");
+} else {
+	%varcint693 = ~dropdownbox_getselected($int1, $component2);
+	~script2162($int0, %varcint693, %varcint694, %varcint692);
+}

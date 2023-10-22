@@ -1,0 +1,93 @@
+// 2738
+[proc,script2738]
+if_setonop("script2737(event_op, event_com, 0)", interface_900:com_33);
+if_setonop("script2737(event_op, event_com, 1)", interface_900:com_37);
+if_setonop("script2737(event_op, event_com, 2)", interface_900:com_41);
+if_setonop("script2737(event_op, event_com, 3)", interface_900:com_45);
+if_setonop("script2737(event_op, event_com, 4)", interface_900:com_49);
+if_setonop("script2737(event_op, event_com, 5)", interface_900:com_53);
+if_setonop("script2737(event_op, event_com, 6)", interface_900:com_57);
+if_setonop("script2737(event_op, event_com, 7)", interface_900:com_61);
+switch_int (%varcint1020) {
+	case 0 :
+		~script1166(interface_900:com_33);
+		~script1151(interface_900:com_37);
+		~script1151(interface_900:com_41);
+		~script1151(interface_900:com_45);
+		~script1151(interface_900:com_49);
+		~script1151(interface_900:com_53);
+		~script1151(interface_900:com_57);
+		~script1151(interface_900:com_61);
+	case 1 :
+		~script1151(interface_900:com_33);
+		~script1166(interface_900:com_37);
+		~script1151(interface_900:com_41);
+		~script1151(interface_900:com_45);
+		~script1151(interface_900:com_49);
+		~script1151(interface_900:com_53);
+		~script1151(interface_900:com_57);
+		~script1151(interface_900:com_61);
+	case 2 :
+		~script1151(interface_900:com_33);
+		~script1151(interface_900:com_37);
+		~script1166(interface_900:com_41);
+		~script1151(interface_900:com_45);
+		~script1151(interface_900:com_49);
+		~script1151(interface_900:com_53);
+		~script1151(interface_900:com_57);
+		~script1151(interface_900:com_61);
+	case 3 :
+		~script1151(interface_900:com_33);
+		~script1151(interface_900:com_37);
+		~script1151(interface_900:com_41);
+		~script1166(interface_900:com_45);
+		~script1151(interface_900:com_49);
+		~script1151(interface_900:com_53);
+		~script1151(interface_900:com_57);
+		~script1151(interface_900:com_61);
+	case 4 :
+		~script1151(interface_900:com_33);
+		~script1151(interface_900:com_37);
+		~script1151(interface_900:com_41);
+		~script1151(interface_900:com_45);
+		~script1166(interface_900:com_49);
+		~script1151(interface_900:com_53);
+		~script1151(interface_900:com_57);
+		~script1151(interface_900:com_61);
+	case 5 :
+		~script1151(interface_900:com_33);
+		~script1151(interface_900:com_37);
+		~script1151(interface_900:com_41);
+		~script1151(interface_900:com_45);
+		~script1151(interface_900:com_49);
+		~script1166(interface_900:com_53);
+		~script1151(interface_900:com_57);
+		~script1151(interface_900:com_61);
+	case 6 :
+		~script1151(interface_900:com_33);
+		~script1151(interface_900:com_37);
+		~script1151(interface_900:com_41);
+		~script1151(interface_900:com_45);
+		~script1151(interface_900:com_49);
+		~script1151(interface_900:com_53);
+		~script1166(interface_900:com_57);
+		~script1151(interface_900:com_61);
+	case 7 :
+		~script1151(interface_900:com_33);
+		~script1151(interface_900:com_37);
+		~script1151(interface_900:com_41);
+		~script1151(interface_900:com_45);
+		~script1151(interface_900:com_49);
+		~script1151(interface_900:com_53);
+		~script1151(interface_900:com_57);
+		~script1166(interface_900:com_61);
+	case default :
+		~script1151(interface_900:com_33);
+		~script1151(interface_900:com_37);
+		~script1151(interface_900:com_41);
+		~script1151(interface_900:com_45);
+		~script1151(interface_900:com_49);
+		~script1151(interface_900:com_53);
+		~script1151(interface_900:com_57);
+		~script1151(interface_900:com_61);
+}

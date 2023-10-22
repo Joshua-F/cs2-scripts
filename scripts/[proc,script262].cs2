@@ -1,0 +1,17 @@
+// 262
+[proc,script262](component $component0, component $component1, component $component2, component $component3, component $component4)
+if (cc_find($component0, 0) = ^true) {
+	cc_setvflip(false);
+}
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+if_sethide(true, $component1);
+if_sethide(true, $component2);
+if_sethide(true, $component3);
+if_setonmouserepeat(null, $component2);
+if_setontimer(null, $component4);
+if (cc_find($component0, 1) = ^true) {
+	cc_setonmouseover("script254($component0, 1, true)");
+	cc_setonmouseleave("script254($component0, 1, false)");
+}

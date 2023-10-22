@@ -1,8 +1,5 @@
 // 1607
 [clientscript,script1607]
-if_sethide(true, interface_771:com_29);
-if (gender = 1) {
-	~script1715;
-} else {
-	~script1712;
-}
+def_seq $seq0 = seq_12411;
+if_setmodelanim($seq0, interface_549:chathead);
+if_setplayerhead_self(interface_549:chathead);

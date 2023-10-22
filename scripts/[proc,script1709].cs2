@@ -1,0 +1,64 @@
+// 1709
+[proc,script1709](stat $stat0)(int)
+def_int $int1 = 0;
+switch_stat ($stat0) {
+	case attack :
+		if (%varbit5944 = 1) {
+			$int1 = calc($int1 + 5);
+		} else if (%varbit5947 = 1) {
+			$int1 = calc($int1 + 10);
+		} else if (%varbit5953 = 1) {
+			$int1 = calc($int1 + 15);
+		}
+		if (%varbit5967 = 1) {
+			$int1 = calc($int1 + 15);
+		}
+		if (%varbit5968 = 1) {
+			$int1 = calc($int1 + 20);
+		}
+	case strength :
+		if (%varbit5943 = 1) {
+			$int1 = calc($int1 + 5);
+		} else if (%varbit5946 = 1) {
+			$int1 = calc($int1 + 10);
+		} else if (%varbit5952 = 1) {
+			$int1 = calc($int1 + 15);
+		}
+		if (%varbit5967 = 1) {
+			$int1 = calc($int1 + 18);
+		}
+		if (%varbit5968 = 1) {
+			$int1 = calc($int1 + 23);
+		}
+	case defence :
+		if (%varbit5942 = 1) {
+			$int1 = calc($int1 + 5);
+		} else if (%varbit5945 = 1) {
+			$int1 = calc($int1 + 10);
+		} else if (%varbit5951 = 1) {
+			$int1 = calc($int1 + 15);
+		}
+		if (%varbit5967 = 1) {
+			$int1 = calc($int1 + 20);
+		}
+		if (%varbit5968 = 1) {
+			$int1 = calc($int1 + 25);
+		}
+	case ranged :
+		if (%varbit5960 = 1) {
+			$int1 = calc($int1 + 5);
+		} else if (%varbit5962 = 1) {
+			$int1 = calc($int1 + 10);
+		} else if (%varbit5964 = 1) {
+			$int1 = calc($int1 + 15);
+		}
+	case magic :
+		if (%varbit5961 = 1) {
+			$int1 = calc($int1 + 5);
+		} else if (%varbit5963 = 1) {
+			$int1 = calc($int1 + 10);
+		} else if (%varbit5965 = 1) {
+			$int1 = calc($int1 + 15);
+		}
+}
+return($int1);

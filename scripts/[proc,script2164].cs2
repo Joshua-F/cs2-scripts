@@ -1,0 +1,13 @@
+// 2164
+[proc,script2164](int $int0)
+def_struct $struct1 = enum(int, struct, enum_169, $int0);
+def_enum $enum2 = struct_param($struct1, param_61);
+def_component $component3 = struct_param($struct1, param_152);
+def_int $int4 = 0;
+while ($int4 < calc(%varcint273 + 10)) {
+	if (cc_find($component3, $int4) = ^true) {
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_sethide(true);
+	}
+	$int4 = calc($int4 + 1);
+}

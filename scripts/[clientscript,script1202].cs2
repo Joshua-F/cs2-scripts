@@ -1,0 +1,82 @@
+// 1202
+[clientscript,script1202]
+~script1204;
+~script1203;
+switch_int (%varcint754) {
+	case 100 :
+		if_sethide(false, interface_890:layer1);
+		if_setposition(0, if_gety(interface_890:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer1);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_890:layer1);
+		if_clearops(interface_890:com_27);
+		if_setpausetext("Sell All", interface_890:com_27);
+		if_settextfont(q8_full, interface_890:text1);
+	case 1 :
+		if_sethide(false, interface_890:layer1);
+		if_setposition(0, if_gety(interface_890:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer1);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_890:layer1);
+	case 2 :
+		if_sethide(false, interface_890:layer1);
+		if_sethide(false, interface_890:layer2);
+		if_setposition(-130, if_gety(interface_890:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer1);
+		if_setposition(130, if_gety(interface_890:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer2);
+		if_setsize(150, 105, ^setsize_abs, ^setsize_abs, interface_890:layer1);
+		if_setsize(150, 105, ^setsize_abs, ^setsize_abs, interface_890:layer2);
+	case 3 :
+		if_sethide(false, interface_890:layer1);
+		if_sethide(false, interface_890:layer2);
+		if_sethide(false, interface_890:layer3);
+		if_setposition(-150, if_gety(interface_890:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer1);
+		if_setposition(0, if_gety(interface_890:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer2);
+		if_setposition(150, if_gety(interface_890:layer3), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer3);
+		if_setsize(120, 105, ^setsize_abs, ^setsize_abs, interface_890:layer1);
+		if_setsize(120, 105, ^setsize_abs, ^setsize_abs, interface_890:layer2);
+		if_setsize(120, 105, ^setsize_abs, ^setsize_abs, interface_890:layer3);
+	case 4 :
+		if_sethide(false, interface_890:layer1);
+		if_sethide(false, interface_890:layer2);
+		if_sethide(false, interface_890:layer3);
+		if_sethide(false, interface_890:layer4);
+		if_setposition(-180, if_gety(interface_890:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer1);
+		if_setposition(-60, if_gety(interface_890:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer2);
+		if_setposition(60, if_gety(interface_890:layer3), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer3);
+		if_setposition(180, if_gety(interface_890:layer4), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer4);
+		if_setsize(100, 105, ^setsize_abs, ^setsize_abs, interface_890:layer1);
+		if_setsize(100, 105, ^setsize_abs, ^setsize_abs, interface_890:layer2);
+		if_setsize(100, 105, ^setsize_abs, ^setsize_abs, interface_890:layer3);
+		if_setsize(100, 105, ^setsize_abs, ^setsize_abs, interface_890:layer4);
+	case 5 :
+		if_sethide(false, interface_890:layer1);
+		if_sethide(false, interface_890:layer2);
+		if_sethide(false, interface_890:layer3);
+		if_sethide(false, interface_890:layer4);
+		if_sethide(false, interface_890:layer5);
+		if_setposition(-200, if_gety(interface_890:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer1);
+		if_setposition(-100, if_gety(interface_890:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer2);
+		if_setposition(0, if_gety(interface_890:layer3), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer3);
+		if_setposition(100, if_gety(interface_890:layer4), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer4);
+		if_setposition(200, if_gety(interface_890:layer5), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer5);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_890:layer1);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_890:layer2);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_890:layer3);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_890:layer4);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_890:layer5);
+	case 6 :
+		if_sethide(false, interface_890:layer1);
+		if_sethide(false, interface_890:layer2);
+		if_sethide(false, interface_890:layer3);
+		if_sethide(false, interface_890:layer4);
+		if_sethide(false, interface_890:layer5);
+		if_sethide(false, interface_890:com_8);
+		if_setposition(-210, if_gety(interface_890:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer1);
+		if_setposition(-124, if_gety(interface_890:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer2);
+		if_setposition(-42, if_gety(interface_890:layer3), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer3);
+		if_setposition(42, if_gety(interface_890:layer4), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer4);
+		if_setposition(124, if_gety(interface_890:layer5), ^setpos_abs_centre, ^setpos_abs_top, interface_890:layer5);
+		if_setposition(210, if_gety(interface_890:com_8), ^setpos_abs_centre, ^setpos_abs_top, interface_890:com_8);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_890:layer1);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_890:layer2);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_890:layer3);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_890:layer4);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_890:layer5);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_890:com_8);
+}

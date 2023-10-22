@@ -1,4 +1,27 @@
 // 1618
 [clientscript,script1618]
-~script1717;
-~script1612(interface_771:button_6, 0, 5);
+def_inv $inv0 = null;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+if_sethide(false, reinitialisation_puzzle:inv_layer);
+if (%varcint1032 = 1) {
+	$inv0 = inv_221;
+} else {
+	$inv0 = inv_222;
+}
+$int1 = inv_size($inv0);
+if ($int1 ! calc(5 * 5)) {
+	mes("Nothing happens, as if something is wrong.");
+	return;
+}
+while ($int4 < $int1) {
+	~script1619($int2, $int3, inv_getobj($inv0, $int4));
+	$int2 = calc($int2 + 1);
+	if ($int2 >= 5) {
+		$int2 = 0;
+		$int3 = calc($int3 + 1);
+	}
+	$int4 = calc($int4 + 1);
+}

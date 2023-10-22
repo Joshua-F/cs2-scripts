@@ -1,0 +1,9 @@
+// 1887
+[clientscript,script1887](component $component0, string $string0)
+def_string $text1 = "<u=88ffff><$string0></u>";
+def_string $text2 = "<u=64c8fa><$string0></u>";
+if_setop(1, "Open link", $component0);
+if_setonop("script1897", $component0);
+if_setopcursor(1, cursor_146, $component0);
+if_setonmouseover("script2381($component0, 0x88ffff, $text1)", $component0);
+if_setonmouseleave("script2381($component0, 0x64c8fa, $text2)", $component0);

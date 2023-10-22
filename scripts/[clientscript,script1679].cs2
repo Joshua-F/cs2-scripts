@@ -1,4 +1,9 @@
 // 1679
 [clientscript,script1679]
-~script1720;
-~script1612(interface_771:button_67, 2, 22);
+~script1678;
+switch_int (%varcint1044) {
+	case 0 :
+		~script1687;
+	case default :
+		if_setoncamfinished(null, interface_85:main_layer);
+}

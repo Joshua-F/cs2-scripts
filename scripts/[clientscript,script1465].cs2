@@ -1,4 +1,32 @@
 // 1465
 [clientscript,script1465]
-if_settext(tostring(%varcint192), bank_v2_main:com_97);
-if_settext(tostring(~bank_v2_get_size), bank_v2_main:bank_space);
+def_string $string0 = "Total number of <col=ba1626>free</col> bank slots used";
+def_string $string1 = "Total number of <col=ba1626>member</col> bank slots used";
+def_int $int0 = calc(496 - 429 + 1);
+def_int $int1 = %varcint1038;
+def_int $int2 = calc(%varcint192 - $int1);
+def_int $int3 = calc(($int0 - $int1) * -1);
+def_int $int4 = calc($int2 - (429 - 1));
+if ($int4 > 0) {
+	$int1 = calc($int1 + $int4);
+	$int2 = calc(429 - 1);
+	if ($int4 = 1) {
+		$string0 = "Total number of <col=ba1626>free</col> bank slots used<br><col=ba1626>Note: this includes an overflow of <tostring($int4)> member items</col>";
+	} else {
+		$string0 = "Total number of <col=ba1626>free</col> bank slots used<br><col=ba1626>Note: this includes an overflow of <tostring($int4)> member items</col>";
+	}
+	$string1 = "Total number of <col=ba1626>member</col> bank slots used";
+} else if ($int3 > 0) {
+	$int2 = calc($int2 + $int3);
+	$int1 = $int0;
+	$string0 = "Total number of <col=ba1626>free</col> bank slots used";
+	if ($int3 = 1) {
+		$string1 = "Total number of <col=ba1626>member</col> bank slots used<br><col=ba1626>Note: this includes an overflow of <tostring($int3)> free item</col>";
+	} else {
+		$string1 = "Total number of <col=ba1626>member</col> bank slots used<br><col=ba1626>Note: this includes an overflow of <tostring($int3)> free items</col>";
+	}
+}
+if_settext(tostring($int1), bank_v2_main:com_23);
+if_settext(tostring($int2), bank_v2_main:com_25);
+if_setonmouserepeat("script1160(event_com, -1, bank_v2_main:tooltip, $string0, 25, 150)", bank_v2_main:com_23);
+if_setonmouserepeat("script1160(event_com, -1, bank_v2_main:tooltip, $string1, 25, 150)", bank_v2_main:com_25);

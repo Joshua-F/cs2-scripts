@@ -1,6 +1,3 @@
 // 1508
-[clientscript,script1508]
-if_setsize(490, 93, ^setsize_abs, ^setsize_abs, tutorial2_mesbox:textbox);
-if_setposition(10, 20, ^setpos_abs_left, ^setpos_abs_top, tutorial2_mesbox:textbox);
-if_sethide(true, tutorial2_mesbox:com_1);
-if_sethide(false, tutorial2_mesbox:textbox);
+[clientscript,script1508](int $int0, int $int1)
+~script311(struct_param(struct_454, param_596), $int0, $int1);

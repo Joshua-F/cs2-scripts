@@ -1,0 +1,19 @@
+// 2354
+[clientscript,script2354](component $component0)
+if (%varcint772 = 1) {
+	if_settext("Saving your game and loading QuestHelp", $component0);
+	%varcint772 = calc(%varcint772 + 1);
+} else if (%varcint772 = 20) {
+	if_settext("Saving your game and loading QuestHelp.", $component0);
+	%varcint772 = calc(%varcint772 + 1);
+} else if (%varcint772 = 40) {
+	if_settext("Saving your game and loading QuestHelp..", $component0);
+	%varcint772 = calc(%varcint772 + 1);
+} else if (%varcint772 = 60) {
+	if_settext("Saving your game and loading QuestHelp.", $component0);
+	%varcint772 = calc(%varcint772 + 1);
+} else if (%varcint772 = 80) {
+	%varcint772 = 1;
+} else {
+	%varcint772 = calc(%varcint772 + 1);
+}

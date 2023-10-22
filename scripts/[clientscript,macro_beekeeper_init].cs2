@@ -1,0 +1,16 @@
+// 2124
+[clientscript,macro_beekeeper_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+%varcint681 = random(2048);
+%varcint684 = random(2048);
+%varcint687 = random(2048);
+%varcint690 = random(2048);
+%varcint680 = calc(25 - randominc(50));
+%varcint682 = calc(25 - randominc(50));
+%varcint683 = calc(25 - randominc(50));
+%varcint685 = calc(25 - randominc(50));
+%varcint686 = calc(25 - randominc(50));
+%varcint688 = calc(25 - randominc(50));
+%varcint689 = calc(25 - randominc(50));
+%varcint691 = calc(25 - randominc(50));
+~macro_beekeeper_update($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+if_setontimer("macro_beekeeper_timer($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component0);

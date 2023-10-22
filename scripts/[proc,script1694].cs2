@@ -1,0 +1,12 @@
+// 1694
+[proc,script1694](int $int0)(int)
+if ($int0 < 32) {
+	return(testbit(%varcint1040, $int0));
+}
+if ($int0 < 64) {
+	return(testbit(%varcint1041, calc($int0 % 32)));
+}
+if ($int0 < 96) {
+	return(testbit(%varcint1042, calc($int0 % 32)));
+}
+return(0);

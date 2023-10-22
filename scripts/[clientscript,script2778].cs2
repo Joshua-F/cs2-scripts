@@ -1,0 +1,76 @@
+// 2778
+[clientscript,script2778](component $component0, component $component1, component $component2)
+def_string $string0 = %varcstring194;
+if (string_length(%varcstring195) > 0 & %var170 = 1) {
+	$string0 = %varcstring195;
+}
+def_obj $obj3 = null;
+if (cc_find($component0, 0) = ^true) {
+	$obj3 = cc_getinvobject;
+}
+def_graphic $graphic4 = null;
+if (cc_find($component0, 1) = ^true) {
+	$graphic4 = cc_getgraphic;
+}
+if (cc_find($component1, 0) = ^true & compare($string0, cc_gettext) = 0 & $obj3 = %varcint1003 & $graphic4 = %varcint1004) {
+	return;
+}
+cc_deleteall($component0);
+cc_deleteall($component1);
+cc_deleteall($component2);
+def_int $int5 = if_getwidth($component0);
+def_int $int6 = 0;
+def_int $x7 = 0;
+if (%varcint1003 ! null) {
+	cc_create($component0, ^iftype_model, 0);
+	cc_setsize(%varcint1005, %varcint1006, ^setsize_abs, ^setsize_abs);
+	if (%varcint1005 < 70) {
+		$x7 = calc((70 - %varcint1005) / 2);
+	}
+	cc_setposition($x7, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setobject_nonum(%varcint1003, 1);
+	$int6 = calc(max(%varcint1005, 70) + 5);
+	$int5 = calc($int5 - $int6);
+	cc_create($component0, ^iftype_rectangle, 1);
+	cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_sethide(true);
+} else if (%varcint1004 ! null) {
+	cc_create($component0, ^iftype_rectangle, 0);
+	cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_sethide(true);
+	cc_create($component0, ^iftype_graphic, 1);
+	cc_setsize(%varcint1005, %varcint1006, ^setsize_abs, ^setsize_abs);
+	if (%varcint1005 < 70) {
+		$x7 = calc((70 - %varcint1005) / 2);
+	}
+	cc_setposition($x7, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setgraphic(%varcint1004);
+	$int6 = calc(max(%varcint1005, 70) + 5);
+	$int5 = calc($int5 - $int6);
+}
+if_setscrollpos(0, 0, $component1);
+if_setposition($int6, 0, ^setpos_abs_left, ^setpos_abs_centre, $component1);
+def_int $height8 = calc(paraheight($string0, $int5, tutorial_font) * 12 + 3);
+if ($height8 > if_getheight($component0)) {
+	$int5 = calc($int5 - (if_getwidth($component2) + 5));
+	if_setsize($int5, 0, ^setsize_abs, ^setsize_minus, $component1);
+	$height8 = calc(paraheight($string0, $int5, tutorial_font) * 12 + 3);
+	if_setscrollsize(0, $height8, $component1);
+	if_sethide(false, $component2);
+	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+} else {
+	$height8 = if_getheight($component0);
+	if_setsize($int5, 0, ^setsize_abs, ^setsize_minus, $component1);
+	if_setscrollsize(0, 0, $component1);
+	if_sethide(true, $component2);
+}
+cc_create($component1, ^iftype_text, 0);
+cc_setsize(0, $height8, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextfont(tutorial_font);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(^black);
+cc_settextshadow(false);
+cc_settext($string0);

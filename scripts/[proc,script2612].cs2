@@ -1,0 +1,15 @@
+// 2612
+[proc,script2612](coord $coord0, int $int1)
+cam_followcoord(movecoord($coord0, 16, 0, 16));
+switch_int ($int1) {
+	case 0 :
+		viewport_setzoom(144, 180);
+	case 1 :
+		viewport_setzoom(176, 220);
+	case 2 :
+		viewport_setzoom(208, 260);
+	case 3 :
+		viewport_setzoom(240, 300);
+	case 4 :
+		viewport_setzoom(272, 340);
+}

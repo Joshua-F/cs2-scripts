@@ -1,3 +1,5 @@
 // 1302
 [clientscript,switchside_varc]
+def_int $int0 = ~current_side_if;
 ~if_switchside(%varcint168);
+%varcint10 = calc($int0 + 100);

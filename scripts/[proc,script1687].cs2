@@ -1,0 +1,7 @@
+// 1687
+[proc,script1687]
+if (%varcint1044 < calc(spline_length(0) - 1)) {
+	%varcint1044 = calc(%varcint1044 + 1);
+	cam_movealong(0, %varcint1044, 200, 200, 1, %varcint1044);
+	if_setoncamfinished("script1679", interface_85:main_layer);
+}

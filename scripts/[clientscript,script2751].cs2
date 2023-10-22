@@ -1,0 +1,9 @@
+// 2751
+[clientscript,script2751](component $component0, int $comsubid1, int $clock2)
+if (clientclock < calc($clock2 + 74)) {
+	return;
+}
+if (cc_find(interface_900:com_74, $comsubid1) = ^true) {
+	cc_setmodelanim(seq_12287);
+	cc_setontimer(null);
+}

@@ -1,0 +1,149 @@
+// 2723
+[proc,script2723](component $component0, component $component1, inv $inv2, inv $inv3)
+cc_deleteall($component0);
+def_int $int4 = 1;
+if (if_getscrollheight($component0) > 0) {
+	$int4 = 0;
+}
+def_int $int5 = -1;
+def_int $size6 = 0;
+def_int $size7 = inv_size($inv2);
+def_int $int8 = 4;
+if ($inv3 ! null) {
+	while ($size6 < $size7) {
+		if (inv_getobj($inv2, $size6) ! null) {
+			$int5 = $size6;
+		}
+		$size6 = calc($size6 + 1);
+	}
+	if ($int5 > 26) {
+		if_setscrollsize(0, calc(63 * ($int5 / 9 + 1)), $component0);
+		if ($int4 = 1) {
+			~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+		} else {
+			~scrollbar_resize($component1, $component0, if_getscrolly($component0));
+		}
+		~script2718($component0, 1, $component1);
+		$int8 = 2;
+	} else {
+		if_setscrollsize(0, 0, $component0);
+		if_setscrollpos(0, 0, $component0);
+		cc_deleteall($component1);
+		~script2718($component0, 0, $component1);
+		$int8 = 4;
+	}
+} else {
+	~script2719($component0, $component1);
+	while ($size6 < $size7) {
+		if (inv_getobj($inv2, $size6) ! null) {
+			$int5 = $size6;
+		}
+		$size6 = calc($size6 + 1);
+	}
+	if ($int5 > 35) {
+		if_setscrollsize(0, calc(63 * ($int5 / 9 + 1)), $component0);
+		if ($int4 = 1) {
+			~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+		} else {
+			~scrollbar_resize($component1, $component0, if_getscrolly($component0));
+		}
+		$int8 = 2;
+	} else {
+		if_setscrollsize(0, 0, $component0);
+		if_setscrollpos(0, 0, $component0);
+		cc_deleteall($component1);
+		$int8 = 4;
+	}
+}
+$size6 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_obj $obj12 = null;
+def_int $int13 = 0;
+def_string $string0 = "";
+def_int $int14 = 0;
+def_int $int15 = 0;
+while ($size6 < $size7) {
+	$obj12 = inv_getobj($inv2, $size6);
+	if ($obj12 ! null) {
+		if (oc_param($obj12, param_258) = 1 | oc_param($obj12, param_259) = 1) {
+			$int15 = 1;
+		} else {
+			$int15 = 0;
+		}
+		$int10 = calc($size6 % 9 * 48 + $size6 % 9 * $int8);
+		$int11 = calc($size6 / 9 * 52 + $size6 / 9 * 13);
+		cc_create($component0, ^iftype_graphic, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setsize(48, 52, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("graphic_2205");
+		cc_setopbase("<col=ff981f><oc_name($obj12)></col>");
+		cc_setop(1, "Info");
+		cc_setop(2, "Buy 1");
+		cc_setop(10, "Examine");
+		if ($int15 = 0) {
+			cc_setop(3, "Buy 5");
+			cc_setop(4, "Buy 10");
+			cc_setop(5, "Buy 50");
+			cc_setop(6, "Buy 500");
+		}
+		cc_setonmouseover("script2724(event_com, $int9, false)");
+		cc_setonmouseleave("script2724(event_com, $int9, true)");
+		cc_create($component0, ^iftype_graphic, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setsize(48, 52, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("graphic_2206");
+		cc_sethide(true);
+		cc_create($component0, ^iftype_graphic, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int10 + 6), calc($int11 + 4), ^setpos_abs_left, ^setpos_abs_top);
+		if ($int15 = 1) {
+			cc_setobject_nonum($obj12, inv_getnum($inv2, $size6));
+		} else {
+			cc_setobject_alwaysnum($obj12, inv_getnum($inv2, $size6));
+		}
+		cc_setgraphicshadow(0x302020);
+		cc_setoutline(1);
+		cc_create($component0, ^iftype_graphic, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setsize(12, 12, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int10 + 2), calc($int11 + 38), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic(enum(obj, graphic, enum_200, %var532));
+		cc_create($component0, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setsize(31, 12, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int10 + 13), calc($int11 + 39), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p11_full);
+		cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+		$int14 = ~script2720($obj12, $size6);
+		if ($int14 = -1) {
+			cc_settext("N/A");
+		} else {
+			cc_settext(~script940($int14));
+		}
+		cc_setcolour(~script1146($int14));
+		cc_settextshadow(true);
+		cc_create($component0, ^iftype_graphic, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setsize(12, 12, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int10 + 33), calc($int11 + 4), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("graphic_2180");
+		~script812($obj12);
+		$string0 = ~script2706($obj12);
+		cc_setonmouserepeat("script2707(event_com, event_comsubid, shop_template:tooltip, $string0, 25, 200, event_mousex, event_mousey)");
+		cc_setonmouseleave("deltooltip(shop_template:tooltip)");
+	} else {
+		$int13 = 0;
+		while ($int13 < 6) {
+			cc_create($component0, ^iftype_rectangle, $int9);
+			cc_sethide(true);
+			$int9 = calc($int9 + 1);
+			$int13 = calc($int13 + 1);
+		}
+	}
+	$size6 = calc($size6 + 1);
+}

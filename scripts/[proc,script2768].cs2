@@ -1,0 +1,9 @@
+// 2768
+[proc,script2768](int $int0, component $component1)
+if (cc_find($component1, 0) = ^true) {
+	cc_setfill(true);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settrans(0);
+	cc_setontimer("script2769(calc(clientclock + $int0), $component1)");
+}

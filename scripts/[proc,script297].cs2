@@ -1,0 +1,91 @@
+// 297
+[proc,script297](coord $coord0, coord $coord1, boolean $boolean2, int $colour3, int $int4, component $component5, int $int6, int $int7, int $int8, int $int9, int $int10)(int)
+if (%varbit6175 = 1) {
+	return($int10);
+}
+$colour3 = ^yellow;
+def_int $comsubid11 = calc($int10 + 1);
+def_int $comsubid12 = calc($int10 + 2);
+def_int $comsubid13 = calc($int10 + 3);
+def_int $int14 = calc($int10 + 4);
+def_int $int15 = 0;
+def_int $int16 = 0;
+$int15, $int16 = ~worldmap_elements_chooseposition($coord0, $boolean2, $component5, $int6, $int7, $int8, $int9);
+def_int $int17 = 0;
+def_int $int18 = 0;
+$int17, $int18 = ~worldmap_elements_chooseposition($coord1, $boolean2, $component5, $int6, $int7, $int8, $int9);
+def_int $x19 = calc($int15 + ($int17 - $int15) / 2);
+def_int $y20 = calc($int16 + ($int18 - $int16) / 2);
+def_int $int21 = calc($int17 - $int15);
+def_int $int22 = calc($int18 - $int16);
+def_boolean $boolean23 = false;
+if ($int21 < 0) {
+	if ($int22 < 0) {
+		$int21 = calc(0 - $int21);
+		$int22 = calc(0 - $int22);
+	} else {
+		$int21 = calc(0 - $int21);
+		$boolean23 = true;
+	}
+} else if ($int22 < 0) {
+	$int22 = calc(0 - $int22);
+	$boolean23 = true;
+}
+if (cc_find($component5, $int10) = ^true & .cc_find($component5, $comsubid11) = ^true) {
+	cc_setposition(calc($int15 + 1), calc($int16 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setposition(calc($int17 + 1), calc($int18 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component5, ^iftype_rectangle, $int10);
+	.cc_create($component5, ^iftype_rectangle, $comsubid11);
+	cc_setposition(calc($int15 + 1), calc($int16 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setposition(calc($int17 + 1), calc($int18 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int4, $int4, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($int4, $int4, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(^black);
+	.cc_setcolour(^black);
+	cc_setfill(true);
+	.cc_setfill(true);
+}
+def_int $int24 = 0;
+def_int $int25 = 0;
+def_int $int26 = 0;
+def_int $colour27 = ^black;
+if (cc_find($component5, $comsubid12) = ^true & .cc_find($component5, $comsubid13) = ^true) {
+	cc_setposition($int15, $int16, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setposition($int17, $int18, ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	$int24, $int25, $int26 = ~hex_to_rgb($colour3);
+	$int24, $int25, $int26 = max(calc($int24 - 48), 0), max(calc($int25 - 48), 0), max(calc($int26 - 48), 0);
+	$colour27 = ~rgb_to_hex($int24, $int25, $int26);
+	cc_create($component5, ^iftype_rectangle, $comsubid12);
+	.cc_create($component5, ^iftype_rectangle, $comsubid13);
+	cc_setposition($int15, $int16, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setposition($int17, $int18, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int4, $int4, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($int4, $int4, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour27);
+	.cc_setcolour($colour27);
+	cc_setfill(true);
+	.cc_setfill(true);
+	cc_setonmouseover("script301(true, $component5, $comsubid12, $comsubid13, $int14, $colour3)");
+	.cc_setonmouseover("script301(true, $component5, $comsubid12, $comsubid13, $int14, $colour3)");
+	cc_setonmouseleave("script301(false, $component5, $comsubid12, $comsubid13, $int14, $colour27)");
+	.cc_setonmouseleave("script301(false, $component5, $comsubid12, $comsubid13, $int14, $colour27)");
+	cc_setop(1, "Scroll map");
+	.cc_setop(1, "Scroll map");
+	cc_setonop("script302(event_op, $coord1, $boolean2)");
+	.cc_setonop("script302(event_op, $coord0, $boolean2)");
+}
+if (cc_find($component5, $int14) = ^true) {
+	cc_setposition($x19, $y20, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int21, $int22, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_create($component5, ^iftype_line, $int14);
+	cc_setposition($x19, $y20, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int21, $int22, ^setsize_abs, ^setsize_abs);
+	cc_setlinedirection($boolean23);
+	cc_setlinewid(calc(1 + $int4 / 5));
+	cc_setcolour($colour3);
+	cc_sethide(true);
+}
+return(calc($int14 + 1));

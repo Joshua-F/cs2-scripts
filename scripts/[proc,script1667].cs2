@@ -1,0 +1,12 @@
+// 1667
+[proc,script1667]()(string)
+def_int $int0 = scale(60, 100, nc_param(enum(int, npc, enum_1098, %varbit4190), param_356));
+def_int $int1 = calc($int0 / 60);
+def_int $int2 = calc($int0 % 60);
+if ($int2 >= 10) {
+	return("<br><br>Gravestone:<br><enum(int, string, enum_1099, %varbit4190)><br>Initial duration:<br><tostring($int1)>:<tostring($int2)>");
+}
+if ($int2 > 0) {
+	return("<br><br>Gravestone:<br><enum(int, string, enum_1099, %varbit4190)><br>Initial duration:<br><tostring($int1)>:0<tostring($int2)>s");
+}
+return("<br><br>Gravestone:<br><enum(int, string, enum_1099, %varbit4190)><br>Initial duration:<br><tostring($int1)>:00");

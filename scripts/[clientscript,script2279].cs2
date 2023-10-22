@@ -1,0 +1,10 @@
+// 2279
+[clientscript,script2279](int $int0)
+%varcint739 = 1;
+def_int $int1 = calc(~script2246($int0) - 1);
+if ($int1 ! -1) {
+	%varcint733 = enum(int, int, enum_1669, $int1);
+} else {
+	%varcint733 = -1;
+}
+if_settext("", loginscreen:com_110);

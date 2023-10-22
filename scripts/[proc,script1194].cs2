@@ -1,16 +1,14 @@
 // 1194
 [proc,script1194]
-if (_6103 = false & getwindowmode >= ^windowmode_fixed) {
-	if_settext("Roofs<br>(in-game only)", loginscreen:com_68);
-} else {
-	if_settext("Remove roofs", loginscreen:com_68);
-}
-if (_6102 = false) {
-	~dropdownbox_refuse("Must be `Always'", loginscreen:com_290, loginscreen:com_291, loginscreen:com_292, null, "graphic_884", 0x7f0000, p11_full);
+if (%varcint1002 = null) {
 	return;
 }
-def_int $int0 = 0;
-if (_6103 = true) {
-	$int0 = 1;
+def_int $int0 = calc(coordx(%varcint1002) - coordx(coord));
+if ($int0 > 10 | $int0 < -10) {
+	return;
 }
-~script1435(enum_1579, $int0, 1, loginscreen:com_290, loginscreen:com_291, loginscreen:com_292, null, "graphic_884", "graphic_1248", 1250, "graphic_1402", 0x7f0000, ^white, 0xffc61a, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+def_int $int1 = calc(coordz(%varcint1002) - coordz(coord));
+if ($int1 > 10 | $int1 < -10) {
+	return;
+}
+cam_followcoord(%varcint1002);

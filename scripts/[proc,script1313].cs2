@@ -1,19 +1,10 @@
 // 1313
 [proc,script1313]
-if_setgraphic("graphic_1207", topstat_hitpoints:com_1);
-if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_2);
-if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_3);
-if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_4);
-if_setposition(31, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_5);
-if_setgraphic("graphic_1207", topstat_lore:com_1);
-if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_lore:com_2);
+~script2654;
+if_setgraphic("graphic_1207", topstat_lore:com_2);
 if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_lore:com_3);
-if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_lore:com_4);
-if_setposition(31, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_lore:com_5);
-if_setgraphic("graphic_1207", topstat_prayer:com_1);
-if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_2);
-if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_3);
-if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_4);
-if_setposition(31, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_5);
-~topstat_run_button_update(topstat_run:button);
-if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_run:text);
+if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_lore:com_4);
+if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_lore:com_5);
+if_setposition(31, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_lore:com_6);
+~topstat_prayer_button_update;
+~topstat_run_button_update(topstat_run:com_1);

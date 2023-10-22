@@ -1,48 +1,63 @@
 // 24
-[proc,script24](int $int0, namedobj $namedobj1, string $string0, int $int2, int $y3)(int)
-cc_create(skill_guide_v2:info, ^iftype_text, calc($int2 * 3));
+[proc,script24](int $int0, namedobj $namedobj1, graphic $graphic2, string $string0, int $int3, int $y4)(int)
+cc_create(skill_guide_v2:info, ^iftype_text, calc($int3 * 3));
 cc_setsize(26, 32, ^setsize_abs, ^setsize_abs);
 if ($int0 > 0) {
 	cc_settext(tostring($int0));
 } else {
 	cc_settext(" ");
 }
-cc_setposition(0, $y3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, $y4, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_right, ^settextalign_top, 0);
 cc_setcolour(0x46320a);
 cc_settextfont(q8_full);
 cc_settextshadow(false);
-cc_create(skill_guide_v2:info, ^iftype_graphic, calc($int2 * 3 + 1));
+cc_create(skill_guide_v2:info, ^iftype_graphic, calc($int3 * 3 + 1));
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setoutline(1);
-cc_setgraphicshadow(0x604e32);
-if ($namedobj1 ! null) {
-	cc_setobject($namedobj1, -1);
-	if (%varbit3288 = 21) {
-		cc_setop(1, "Check protection price");
-		cc_setonop("script1865(event_op, $namedobj1)");
-		cc_setonmouseover("script1862(event_com, event_comsubid)");
-		cc_setonmouseleave("script1863(event_com, event_comsubid)");
-	} else if (%varbit3288 = 22 & %varbit3289 ! 13 & %varbit3289 ! 14) {
-		cc_setop(1, "Check materials");
-		cc_setonop("construction_materials(event_op, $namedobj1, %varbit3289, $int2)");
-		cc_setonmouseover("script1862(event_com, event_comsubid)");
-		cc_setonmouseleave("script1863(event_com, event_comsubid)");
+if (~script1566(%varbit3288, %varbit3289) = 1) {
+	if (%varbit3288 = 7) {
+		cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+	} else if (%varbit3288 = 4) {
+		cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, $y4, ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	cc_setoutline(0);
+	if ($graphic2 ! null) {
+		cc_setgraphic($graphic2);
+	} else {
+		cc_setgraphic("graphic_2287");
 	}
 } else {
-	cc_setobject(silvthrill_rod_7620, -1);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x604e32);
+	if ($namedobj1 ! null) {
+		cc_setobject($namedobj1, -1);
+		if (%varbit3288 = 21) {
+			cc_setop(1, "Check protection price");
+			cc_setonop("script1865(event_op, $namedobj1)");
+			cc_setonmouseover("script1862(event_com, event_comsubid)");
+			cc_setonmouseleave("script1863(event_com, event_comsubid)");
+		} else if (%varbit3288 = 22 & %varbit3289 ! 14 & %varbit3289 ! 15) {
+			cc_setop(1, "Check materials");
+			cc_setonop("construction_materials(event_op, $namedobj1, %varbit3289, $int3)");
+			cc_setonmouseover("script1862(event_com, event_comsubid)");
+			cc_setonmouseleave("script1863(event_com, event_comsubid)");
+		}
+	} else {
+		cc_setobject(silvthrill_rod_7620, -1);
+	}
 }
-cc_setposition(28, $y3, ^setpos_abs_left, ^setpos_abs_top);
-cc_create(skill_guide_v2:info, ^iftype_text, calc($int2 * 3 + 2));
-def_int $height4 = paraheight($string0, 228, p12_full);
-cc_setsize(228, calc($height4 * 15), ^setsize_abs, ^setsize_abs);
+cc_setposition(28, $y4, ^setpos_abs_left, ^setpos_abs_top);
+cc_create(skill_guide_v2:info, ^iftype_text, calc($int3 * 3 + 2));
+def_int $height5 = paraheight($string0, 228, p12_full);
+cc_setsize(228, calc($height5 * 15), ^setsize_abs, ^setsize_abs);
 cc_settext($string0);
-cc_setposition(66, $y3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(66, $y4, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_setcolour(0x46320a);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
-if (calc($height4 * 15) < 32) {
+if (calc($height5 * 15) < 32) {
 	return(32);
 }
-return(calc($height4 * 15 + 5));
+return(calc($height5 * 15 + 5));

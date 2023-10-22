@@ -1,4 +1,13 @@
 // 1671
-[clientscript,script1671]
-~script1719;
-~script1612(interface_771:button_59, 1, 18);
+[clientscript,script1671](component $component0, int $int1)
+def_string $string0 = "Empty display";
+switch_int ($int1) {
+	case 0 :
+		if_setonmouserepeat("addtooltip(event_com, interface_81:tooltip, $string0, 25, 180)", $component0);
+	case 1 :
+		if_setonmouserepeat("addtooltip(event_com, interface_83:tooltip, $string0, 25, 180)", $component0);
+	case 2 :
+		if_setonmouserepeat("addtooltip(event_com, interface_80:tooltip, $string0, 25, 180)", $component0);
+	case 3 :
+		if_setonmouserepeat("addtooltip(event_com, interface_82:tooltip, $string0, 25, 180)", $component0);
+}

@@ -1,0 +1,25 @@
+// 2278
+[proc,script2278](int $int0, int $int1)
+if ($int0 = 12 | $int0 = 13) {
+	%varcint738 = $int0;
+}
+if_sethide(true, loginscreen:com_238);
+if_sethide(true, loginscreen:com_239);
+if_setcolour(0x9d845c, loginscreen:com_277);
+if_setcolour(0x9d845c, loginscreen:com_270);
+if ($int0 = 12) {
+	if_sethide(false, loginscreen:com_238);
+	if_setcolour(0x9c7b48, loginscreen:com_277);
+} else if ($int0 = 13) {
+	if_sethide(false, loginscreen:com_239);
+	if_setcolour(0x9c7b48, loginscreen:com_270);
+} else {
+	if (%varcint738 = 12) {
+		if_sethide(false, loginscreen:com_238);
+		if_setcolour(0x9c7b48, loginscreen:com_277);
+	}
+	if (%varcint738 = 13) {
+		if_sethide(false, loginscreen:com_239);
+		if_setcolour(0x9c7b48, loginscreen:com_270);
+	}
+}

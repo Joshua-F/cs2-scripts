@@ -16,7 +16,7 @@ while ($int5 <= 9) {
 		if_setposition(calc($int3 - 2), calc($height4 - 2), ^setpos_abs_left, ^setpos_abs_top, enum(int, component, enum_1611, $int5));
 	}
 	while ($int0 < $int2) {
-		if (cc_find(bank_v2_main:com_73, $int0) = ^true) {
+		if (cc_find(bank_v2_main:com_87, $int0) = ^true) {
 			if (inv_getnum(bank, $int0) ! 0) {
 				cc_setposition($int3, $height4, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(false);
@@ -53,10 +53,10 @@ while ($int5 <= 9) {
 		$int3 = 0;
 	}
 }
-if_setscrollsize(if_getwidth(bank_v2_main:com_73), $height4, bank_v2_main:com_73);
-if_setscrollpos(0, %varcint203, bank_v2_main:com_73);
+if_setscrollsize(if_getwidth(bank_v2_main:com_87), $height4, bank_v2_main:com_87);
+if_setscrollpos(0, %varcint203, bank_v2_main:com_87);
 cc_deleteall(bank_v2_main:scrollbar);
-if ($height4 > if_getheight(bank_v2_main:com_73)) {
-	~scrollbar_vertical(bank_v2_main:scrollbar, bank_v2_main:com_73, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	~scrollbar_ondrag_doscroll(bank_v2_main:scrollbar, bank_v2_main:com_73, if_getscrolly(bank_v2_main:com_73), 1);
+if ($height4 > if_getheight(bank_v2_main:com_87)) {
+	~scrollbar_vertical(bank_v2_main:scrollbar, bank_v2_main:com_87, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~scrollbar_ondrag_doscroll(bank_v2_main:scrollbar, bank_v2_main:com_87, if_getscrolly(bank_v2_main:com_87), 1);
 }

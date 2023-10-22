@@ -1,0 +1,18 @@
+// 2486
+[proc,script2486]
+if (%varcint882 ! -1) {
+	if_settext("Players: <tostring(%varcint882)>", interface_655:com_42);
+}
+if (%varcint887 ! -1) {
+	if_settext("Players: <tostring(%varcint887)>", interface_655:com_31);
+}
+if (%varcint892 ! -1) {
+	if_settext("Players: <tostring(%varcint892)>", interface_655:com_38);
+}
+if (%varcint897 ! -1) {
+	if_settext("Players: <tostring(%varcint897)>", interface_655:com_26);
+}
+if_setcolour(0xe1981f, interface_655:com_42);
+if_setcolour(0xe1981f, interface_655:com_31);
+if_setcolour(0xe1981f, interface_655:com_38);
+if_setcolour(0xe1981f, interface_655:com_26);

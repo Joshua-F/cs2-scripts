@@ -1,0 +1,42 @@
+// 2250
+[proc,script2250](int $key0, char $keychar1)
+if (char_isprintable($keychar1) = false) {
+	return;
+}
+%varcint194 = clientclock;
+def_int $count2 = enum_getoutputcount(enum_1626);
+def_int $count3 = 0;
+def_int $int4 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+if (compare(%varcstring141, "") ! 0) {
+	%varcstring141 = lowercase(append_char(%varcstring141, $keychar1));
+} else {
+	%varcstring141 = lowercase(append_char("", $keychar1));
+}
+def_int $length5 = string_length(%varcstring141);
+def_int $int6 = -1;
+while ($count3 < $count2) {
+	$string0 = enum(int, string, enum_1626, $count3);
+	if (string_length($string0) >= $length5 & compare($string0, "") ! 0) {
+		$string0 = lowercase(substring($string0, 0, $length5));
+		$string1 = lowercase(%varcstring141);
+		if (compare($string1, $string0) = 0) {
+			$int6 = $count3;
+			$count3 = $count2;
+		}
+	}
+	$count3 = calc($count3 + 1);
+}
+def_string $string2 = "Select one";
+if ($int6 ! -1) {
+	if (if_gethide(loginscreen:com_29) = false) {
+		if (cc_find(loginscreen:com_30, 1) = ^true) {
+			~scrollbar_vertical_doscroll(loginscreen:com_30, loginscreen:com_29, calc(15 * ($int6 + 1)), true);
+		}
+	} else {
+		$string2 = enum(int, string, enum_1626, $int6);
+		~script275($string2, 1, calc($int6 + 1));
+	}
+	%varcint195 = calc($int6 + 1);
+}

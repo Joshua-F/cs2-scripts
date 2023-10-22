@@ -1,0 +1,76 @@
+// 2642
+[proc,script2642]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+%varcint842 = 1;
+def_obj $obj4 = null;
+~script2645(interface_860:com_24);
+cc_deleteall(interface_860:main_stock);
+if_settext("A list of items you can trade with Mal for investment credit.<br>Items highlighted with a green rectangle are present in your bank or inventory.", interface_860:title_1);
+$int1 = calc((if_getwidth(interface_860:main_stock) - 36 * 10) / 10);
+$int2 = calc((if_getheight(interface_860:main_stock) - 128) / 3);
+def_int $int5 = 3;
+def_int $int6 = 3;
+def_int $int7 = 0;
+while ($int3 = 0 & $int0 < 900) {
+	$obj4 = enum(int, obj, enum_1939, $int0);
+	if ($obj4 ! logs_11760 & $obj4 ! null) {
+		cc_create(interface_860:main_stock, ^iftype_graphic, $int0);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int5 + (36 + $int1) * ($int0 % 10)), calc($int6 + $int0 / 10 * (32 + $int2)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($obj4, -1);
+		cc_setopbase("<col=ff981f><oc_name($obj4)>");
+		cc_setop(1, "Examine");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		$int7 = cc_gety;
+		$int0 = calc($int0 + 1);
+	} else {
+		$int3 = 1;
+	}
+}
+def_int $size8 = 0;
+def_int $comsubid9 = 9999;
+def_int $int10 = 0;
+def_int $int11 = 0;
+while ($size8 <= inv_size(inv)) {
+	if (inv_getobj(inv, $size8) ! null) {
+		$comsubid9 = enum(obj, int, enum_1941, inv_getobj(inv, $size8));
+		if ($comsubid9 ! 9999 & $comsubid9 < 900 & cc_find(interface_860:main_stock, $comsubid9) = ^true) {
+			$int10 = cc_getx;
+			$int11 = cc_gety;
+			cc_setoutline(2);
+			cc_create(interface_860:main_stock, ^iftype_rectangle, $int0);
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(calc($int10 - 1), calc($int11 - 1), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setcolour(0x66ff66);
+			cc_settrans(150);
+			$int0 = calc($int0 + 1);
+		}
+	}
+	$size8 = calc($size8 + 1);
+}
+$size8 = 0;
+$comsubid9 = 9999;
+while ($size8 <= inv_size(bank)) {
+	if (inv_getobj(bank, $size8) ! null) {
+		$comsubid9 = enum(obj, int, enum_1941, inv_getobj(bank, $size8));
+		if ($comsubid9 ! 9999 & $comsubid9 < 900 & cc_find(interface_860:main_stock, $comsubid9) = ^true) {
+			$int10 = cc_getx;
+			$int11 = cc_gety;
+			cc_setoutline(2);
+			cc_create(interface_860:main_stock, ^iftype_rectangle, $int0);
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(calc($int10 - 1), calc($int11 - 1), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setcolour(0x66ff66);
+			cc_settrans(150);
+			$int0 = calc($int0 + 1);
+		}
+	}
+	$size8 = calc($size8 + 1);
+}
+if_setscrollsize(if_getwidth(interface_860:main_stock), calc($int7 + 32), interface_860:main_stock);
+if_setscrollpos(0, 0, interface_860:main_stock);
+~scrollbar_vertical(interface_860:scrollbar, interface_860:main_stock, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

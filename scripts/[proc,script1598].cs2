@@ -1,0 +1,39 @@
+// 1598
+[proc,script1598](component $component0, string $username0, int $mousex1, int $mousey2, component $component3, component $component4, component $component5)
+def_int $int6 = 0;
+def_int $y7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+if (%varcint1 < calc(clientclock + 25)) {
+	if (%varcint1 < clientclock) {
+		%varcint1 = clientclock;
+	}
+	%varcint1 = calc(%varcint1 + 2);
+	return;
+}
+%varcint1 = calc(clientclock + 25 + 10);
+if (%varcint2 ! 1) {
+	$int8 = calc(parawidth($username0, ^max_32bit_int, friendslist_font) + 8);
+	$int9 = paraheight($username0, $int8, friendslist_font);
+	if ($int9 > 1) {
+		$int9 = calc($int9 * 15);
+	} else {
+		$int9 = 17;
+	}
+	if (if_find($component0) = true) {
+		$int6 = calc(cc_getx + $mousex1 + 3);
+		$y7 = calc(cc_gety + $mousey2 - $int9);
+		if ($int6 < 0) {
+			$int6 = 0;
+		} else if (calc($int6 + $int8) > if_getwidth($component3)) {
+			$int6 = calc($int6 - ($int6 + $int8 - if_getwidth($component3)));
+		}
+		if_sethide(false, $component4);
+		if_setsize($int8, $int9, ^setsize_abs, ^setsize_abs, $component4);
+		if_setposition($int6, $y7, ^setpos_abs_left, ^setpos_abs_top, $component4);
+		if_settext($username0, $component5);
+		%varcint2 = 1;
+	} else {
+		return;
+	}
+}

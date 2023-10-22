@@ -1,0 +1,11 @@
+// 2070
+[proc,script2070](int $int0, int $int1, component $component2, component $component3, component $component4)
+if ($int0 ! 1) {
+	return;
+}
+if ($int1 >= %varcint657 | $int1 < 0) {
+	return;
+}
+%varcint656 = $int1;
+sound_synth(synth_2417, 1, 0);
+~script1439($component2, $component3, $component4);

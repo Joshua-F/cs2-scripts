@@ -1,0 +1,35 @@
+// 2713
+[clientscript,script2713](component $component0, component $component1, component $component2, component $component3, component $component4)
+if_sethide(true, $component4);
+def_coord $coord5 = null;
+def_int $int6 = 0;
+if (%varcint986 = 1) {
+	if_settrans(0, $component1);
+	if_setcolour(^black, $component1);
+	if_sethide(false, $component1);
+	if_setontimer(null, $component1);
+	if_setontimer(null, $component3);
+	%varcint176 = calc(%varcint176 - %varcint176 % 10);
+	$coord5, $int6 = ~script1239(0);
+	cam_moveto($coord5, 1000, 100, 100);
+	cam_lookat($coord5, 0, 100, 100);
+	if_sethide(false, $component0);
+	if_setontimer("script2714($component0, $component1, $component2, $component3, $component4, calc(clientclock + 30))", $component0);
+	%varcint986 = 0;
+	%varcint994 = 2;
+} else {
+	if_setoncamfinished(null, $component0);
+	if (if_gethide($component1) = true) {
+		if_settrans(255, $component1);
+		if_sethide(false, $component1);
+	}
+	if_setcolour(^black, $component1);
+	if_setontimer("script1253(event_com)", $component1);
+	if (if_gethide($component3) = true) {
+		if_settrans(255, $component3);
+		if_sethide(false, $component3);
+	}
+	if_setontimer("script1253(event_com)", $component3);
+	if_setontimer("script2715($component0, $component1, $component2, $component3, $component4, calc(clientclock + 30))", $component0);
+	%varcint986 = 1;
+}

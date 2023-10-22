@@ -1,14 +1,3 @@
 // 1586
-[clientscript,script1586]
-if (gender = 1) {
-	mes("This cannot be changed on female characters.");
-	return;
-}
-def_int $int0 = 19;
-def_enum $enum1 = enum_703;
-if (%varcint88 = $int0) {
-	%varcint88 = 1;
-} else {
-	%varcint88 = calc(%varcint88 + 1);
-}
-baseidkit(1, enum(int, idkit, $enum1, %varcint88));
+[clientscript,script1586](component $component0, component $component1, fontmetrics $fontmetrics2)
+~script1587(%varcstring219, $component0, $component1, $fontmetrics2);

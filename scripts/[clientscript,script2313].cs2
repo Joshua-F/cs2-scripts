@@ -1,0 +1,12 @@
+// 2313
+[clientscript,script2313](component $component0)
+if (if_gethide(welcome_screen:com_86) = true) {
+	if_setvflip(true, welcome_screen:com_93);
+	if_sethide(false, welcome_screen:com_86);
+} else {
+	if ($component0 = welcome_screen:com_89 | $component0 = welcome_screen:com_90) {
+		if_settext(if_gettext($component0), welcome_screen:com_94);
+	}
+	if_setvflip(false, welcome_screen:com_93);
+	if_sethide(true, welcome_screen:com_86);
+}

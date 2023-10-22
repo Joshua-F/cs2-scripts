@@ -1,4 +1,5 @@
 // 302
-[clientscript,script302]
-~script316;
-if_setgraphic("miscgraphics,11", interface_593:com_74);
+[clientscript,script302](int $opindex0, coord $coord1, boolean $boolean2)
+if ($opindex0 = 1 & $coord1 ! null) {
+	~script303($coord1, $boolean2);
+}

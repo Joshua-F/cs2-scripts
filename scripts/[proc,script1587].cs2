@@ -1,0 +1,16 @@
+// 1587
+[proc,script1587](string $string0, component $component0, component $component1, fontmetrics $fontmetrics2)
+def_string $string1 = $string0;
+def_int $width3 = if_getwidth($component0);
+if (parawidth("<$string1> ", $width3, $fontmetrics2) > $width3) {
+	while (parawidth("<$string1>... ", ^max_32bit_int, $fontmetrics2) > $width3) {
+		$string1 = substring($string1, 0, calc(string_length($string1) - 1));
+	}
+	$string1 = "<$string1>...";
+	if_setonmouserepeat("addtooltip(event_com, $component1, $string0, 25, 5000)", $component0);
+	if_setonmouseleave("deltooltip($component1)", $component0);
+} else {
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+}
+if_settext($string1, $component0);

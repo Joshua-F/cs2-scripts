@@ -1,4 +1,5 @@
 // 1662
-[clientscript,script1662]
-~script1719;
-~script1612(interface_771:button_50, 1, 21);
+[clientscript,script1662](component $component0, int $comsubid1, component $layer2)
+if (cc_find($layer2, 0) = ^true) {
+	~script1663($component0, $comsubid1, $layer2);
+}

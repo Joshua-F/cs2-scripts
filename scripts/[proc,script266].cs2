@@ -1,0 +1,42 @@
+// 266
+[proc,script266](component $component0, component $component1, component $component2, component $component3, component $component4, int $key5, char $keychar6, enum $enum7, int $int8)
+if (char_isprintable($keychar6) = false) {
+	return;
+}
+%varcint194 = clientclock;
+def_int $count9 = enum_getoutputcount($enum7);
+def_int $count10 = 0;
+def_int $int11 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+if (compare(%varcstring141, "") ! 0) {
+	%varcstring141 = lowercase(append_char(%varcstring141, $keychar6));
+} else {
+	%varcstring141 = lowercase(append_char("", $keychar6));
+}
+def_int $length12 = string_length(%varcstring141);
+def_int $int13 = -1;
+while ($count10 < $count9) {
+	$string0 = enum(int, string, $enum7, $count10);
+	if (string_length($string0) >= $length12 & compare($string0, "") ! 0) {
+		$string0 = lowercase(substring($string0, 0, $length12));
+		$string1 = lowercase(%varcstring141);
+		if (compare($string1, $string0) = 0) {
+			$int13 = $count10;
+			$count10 = $count9;
+		}
+	}
+	$count10 = calc($count10 + 1);
+}
+def_string $string2 = enum(int, string, $enum7, 0);
+if ($int13 ! -1) {
+	if (if_gethide($component2) = false) {
+		if (cc_find($component3, 1) = ^true) {
+			~scrollbar_vertical_doscroll($component3, $component2, calc(15 * $int13), true);
+		}
+	} else {
+		$string2 = enum(int, string, $enum7, $int13);
+		~script260($component0, $component1, $component2, $component3, $component4, $string2, 1, $int13, $int8);
+	}
+	~script271($int8, $int13);
+}

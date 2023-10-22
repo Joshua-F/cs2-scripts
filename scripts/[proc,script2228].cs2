@@ -1,0 +1,19 @@
+// 2228
+[proc,script2228](string $string0)
+cc_deleteall(loginscreen:com_60);
+if_setscrollpos(0, 0, loginscreen:com_59);
+if_setscrollsize(0, 0, loginscreen:com_59);
+if_settext($string0, loginscreen:com_61);
+def_int $height0 = paraheight($string0, 254, b12_full);
+def_int $height1 = 0;
+if ($height0 > 16) {
+	$height0 = paraheight($string0, 238, b12_full);
+	$height1 = calc(15 * $height0 + 5);
+	if_setsize(238, $height1, ^setsize_abs, ^setsize_abs, loginscreen:com_61);
+	if_setsize(238, 243, ^setsize_abs, ^setsize_abs, loginscreen:com_59);
+	if_setscrollsize(0, $height1, loginscreen:com_59);
+	~scrollbar_vertical(loginscreen:com_60, loginscreen:com_59, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+} else {
+	if_setsize(254, calc(15 * $height0 + 5), ^setsize_abs, ^setsize_abs, loginscreen:com_61);
+	if_setsize(254, 243, ^setsize_abs, ^setsize_abs, loginscreen:com_59);
+}

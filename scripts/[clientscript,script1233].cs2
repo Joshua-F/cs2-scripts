@@ -1,7 +1,19 @@
 // 1233
-[clientscript,script1233]
-if_sethide(true, loginscreen:com_364);
-if_settext("Please wait...", loginscreen:com_365);
-if_setonclick(null, loginscreen:com_365);
-_5603(%varcint179, %varcint180, %varcint181, %varcint182);
-if_setontimer("script1234", loginscreen:com_404);
+[clientscript,script1233](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, component $drop4, component $drop5)
+def_int $x6 = 0;
+def_int $y7 = 0;
+if (cc_find($drop0, $comsubid1) = ^true) {
+	if ($drop2 = $drop0) {
+		if (.cc_find($drop2, $dropsubid3) = ^true) {
+			$x6, $y7 = cc_getx, cc_gety;
+			cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition($x6, $y7, ^setpos_abs_left, ^setpos_abs_top);
+		}
+		return;
+	}
+	if ($drop2 = $drop4 | $drop2 = $drop5) {
+		cc_sethide(true);
+		return;
+	}
+	cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+}

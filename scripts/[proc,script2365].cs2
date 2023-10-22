@@ -1,0 +1,9 @@
+// 2365
+[proc,script2365](component $component0, int $int1)
+def_int $int2 = 0;
+while ($int2 < $int1) {
+	if (cc_find($component0, $int2) = ^true) {
+		cc_setgraphic("miscgraphics,10");
+	}
+	$int2 = calc($int2 + 1);
+}

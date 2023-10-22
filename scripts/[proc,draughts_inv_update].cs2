@@ -3,16 +3,8 @@
 cc_deleteall($component0);
 def_int $int4 = 0;
 def_int $int5 = 0;
-if (if_getscrollwidth($component0) > 0) {
-	$int4 = calc((if_getscrollwidth($component0) - 36 * $int2) / ($int2 - 1));
-} else {
-	$int4 = calc((if_getwidth($component0) - 36 * $int2) / ($int2 - 1));
-}
-if (if_getscrollheight($component0) > 0) {
-	$int5 = calc((if_getscrollheight($component0) - 32 * $int3) / ($int3 - 1));
-} else {
-	$int5 = calc((if_getheight($component0) - 32 * $int3) / ($int3 - 1));
-}
+$int4 = calc((if_getwidth($component0) - 36 * $int2) / ($int2 - 1));
+$int5 = calc((if_getheight($component0) - 32 * $int3) / ($int3 - 1));
 def_int $int6 = 0;
 while ($int6 <= calc($int2 * $int3)) {
 	cc_create($component0, ^iftype_graphic, $int6);

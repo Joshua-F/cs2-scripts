@@ -1,21 +1,6 @@
 // 74
 [proc,add_to_inputstring](string $string0, int $int0, int $key1, char $keychar2)(string)
-def_int $length3 = string_length($string0);
-if ($key1 = ^key_backspace) {
-	if ($length3 > 0) {
-		$string0 = substring($string0, 0, calc($length3 - 1));
-	}
-} else if (char_isprintable($keychar2) = true) {
-	if ($int0 = 0) {
-		if ($length3 < 80) {
-			$string0 = append_char($string0, $keychar2);
-		}
-	} else if ($int0 = 1) {
-		if (char_isnumeric($keychar2) = true & $length3 < 10) {
-			$string0 = append_char($string0, $keychar2);
-		}
-	} else if ($int0 = 2 & (char_isalphanumeric($keychar2) = true | string_indexof_char(" _", $keychar2, 0) ! -1) & $length3 < 12) {
-		$string0 = append_char($string0, $keychar2);
-	}
-}
-return($string0);
+def_string $string1 = "";
+def_int $int3 = -1;
+$string1, $int3 = ~script802($int3, $string0, $int0, $key1, $keychar2);
+return($string1);

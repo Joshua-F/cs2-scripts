@@ -1,18 +1,18 @@
 // 828
 [clientscript,script828]
-def_int $intarray0(calc(646 + 1));
+def_int $intarray0(calc(767 + 1));
 def_int $int0 = 0;
-while ($int0 <= 646) {
+while ($int0 <= 767) {
 	$intarray0($int0) = $int0;
 	cc_create(music_v3:com_1, ^iftype_text, $int0);
 	$int0 = calc($int0 + 1);
 }
-~script520(intarray0, 0, 646, enum_1347);
+~script520(intarray0, 0, 767, enum_1347);
 $int0 = 0;
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 0;
-while ($int1 <= 646) {
+while ($int1 <= 767) {
 	$int0 = $intarray0($int1);
 	if (cc_find(music_v3:com_1, $int0) = ^true) {
 		if (enum(int, midi, enum_1351, $int0) = silence | enum(int, int, enum_1350, $int0) = 1) {

@@ -1,0 +1,57 @@
+// 2367
+[clientscript,script2367](component $component0, component $component1)
+def_int $int2 = 0;
+def_enum $enum3 = null;
+def_enum $enum4 = null;
+if ($component0 = interface_309:com_4) {
+	$int2 = enum_getoutputcount(enum_2343);
+	$enum3 = enum_2344;
+	$enum4 = enum_2343;
+} else if ($component0 = interface_729:com_79) {
+	$int2 = enum_getoutputcount(enum_2347);
+	$enum3 = enum_2348;
+	$enum4 = enum_2347;
+}
+cc_deleteall($component0);
+def_int $int5 = 4;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = calc($int2 * 2);
+def_int $int9 = 0;
+def_int $int10 = 0;
+while ($int6 < $int2) {
+	cc_create($component0, ^iftype_rectangle, $int6);
+	cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(enum(int, int, $enum4, $int6));
+	cc_setonmouserepeat("addtooltip_dynamic(event_com, event_comsubid, $component1, enum(int, string, $enum3, $int6), 25, 80)");
+	cc_setonmouseleave("deltooltip($component1)");
+	$int6 = calc($int6 + 1);
+	if (calc($int6 % $int5) = 0) {
+		$int9 = 2;
+		$int10 = calc($int10 + 24);
+	} else {
+		$int9 = calc($int9 + 23);
+	}
+}
+$int9 = 0;
+$int10 = 0;
+while ($int6 < $int8) {
+	cc_create($component0, ^iftype_graphic, $int6);
+	cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_1041");
+	cc_setop(1, "Select<col=ff9040>");
+	cc_setonop("script2371(event_com, event_comsubid)");
+	cc_setonmouserepeat("script2368(event_com, event_comsubid)");
+	cc_setonmouseleave("script2369(event_com, event_comsubid)");
+	$int6 = calc($int6 + 1);
+	$int7 = calc($int7 + 1);
+	if (calc($int7 % $int5) = 0) {
+		$int9 = 2;
+		$int10 = calc($int10 + 24);
+	} else {
+		$int9 = calc($int9 + 23);
+	}
+}

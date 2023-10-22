@@ -1,39 +1,17 @@
 // 1234
-[clientscript,script1234]
-if (create_reply = -3) {
+[clientscript,script1234](int $int0)
+if (keyheld_shift = true) {
 	return;
 }
-if_setontimer(null, loginscreen:com_404);
-if_sethide(false, loginscreen:com_364);
-if_settext("Next", loginscreen:com_365);
-if_setonclick("script1233", loginscreen:com_365);
-if (create_reply = 2) {
-	~loginscreen_setactivemenu(loginscreen:com_405);
-	return;
-}
-if_setcolour(0x8c320a, loginscreen:com_361);
-if (create_reply = -4) {
-	if_settext("There was an error contacting the server.<br>Please try using a different world.", loginscreen:com_361);
-} else if (create_reply = -5) {
-	if_settext("Connection timed out.<br>Please try using a different world.", loginscreen:com_361);
-} else if (create_reply = -5) {
-	if_settext("No response from server.<br>Please try using a different world.", loginscreen:com_361);
-} else if (create_reply = 3) {
-	if_settext("There was an error contacting the create system.<br>Please try again.", loginscreen:com_361);
-} else if (create_reply = 7) {
-	if_settext("The server is very busy.<br>Please try again in a minute.", loginscreen:com_361);
-} else if (create_reply = 9) {
-	if_settext("You cannot create an account at this time.<br>Please try again later.", loginscreen:com_361);
-} else if (create_reply = 10) {
-	if_settext("The date of birth you entered<br>was invalid!", loginscreen:com_361);
-} else if (create_reply = 11) {
-	if_settext("The date of birth you entered<br>is in the future!", loginscreen:com_361);
-} else if (create_reply = 12) {
-	if_settext("The date of birth you entered<br>was this year!", loginscreen:com_361);
-} else if (create_reply = 13) {
-	if_settext("The date of birth you entered<br>was last year!", loginscreen:com_361);
-} else if (create_reply = 14) {
-	if_settext("The country you entered was invalid!", loginscreen:com_361);
-} else {
-	if_settext("Unexpected server response.<br>Please try again.", loginscreen:com_361);
+if (%varcint173 ! 1) {
+	switch_int ($int0) {
+		case 1 :
+			cam_inc_x;
+		case 2 :
+			cam_dec_x;
+		case 3 :
+			cam_inc_y;
+		case 4 :
+			cam_dec_y;
+	}
 }

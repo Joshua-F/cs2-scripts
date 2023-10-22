@@ -1,24 +1,44 @@
 // 1369
-[clientscript,worldmap_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+[clientscript,worldmap_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 ~script1088($component0, 0);
-~worldmap_overlay_clear;
-def_string $string0 = "null";
+def_wma $wma10 = null;
 if (%varcint622 ! null) {
-	$string0 = worldmap_getmap(%varcint622);
-	if (string_length($string0) <= 0) {
-		$string0 = "main";
+	$wma10 = worldmap_getmap(%varcint622);
+	if ($wma10 = null) {
+		$wma10 = main;
 	}
 }
-_5205($string0);
-%varcstring52 = $string0;
-%varcint172 = worldmap_getconfigzoom;
+$wma10 = ~script2785($wma10);
+if (worldmap_coordinmap(%varcint622, $wma10) = true) {
+	worldmap_setmap_coord_override($wma10, %varcint622);
+} else {
+	_5205($wma10);
+}
+%varcint172 = worldmap_getconfigzoom($wma10);
 ~worldmap_setzoom;
 ~worldmap_showoverview(0);
-~script1376(0, $component5);
-~script1378(0);
+~script1376(0, $component5, $component9);
+~script291(false, $component6, $component7, $component8, $component4, $component5);
 ~worldmap_key_build(%varbit5367, $component1, $component2, $component3);
-if_setonkey("worldmap_onkey(event_keycode, event_keychar, $component4)", $component4);
+if_setonvarctransmit("worldmap_init($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9){varcint622}", $component0);
+if_setonvartransmit("worldmap_vartransmit($component1, $component2, $component3, $component5, $component0, %varbit6175){var463}", $component0);
+if_setonkey("worldmap_onkey(event_keycode, event_keychar, $component4, null)", $component4);
 %varcstring31 = "";
-if (%varcint622 ! null & _5215(%varcint622, $string0) = true) {
-	if_setontimer("script2054(calc(clientclock + 5), $component0, %varcint622)", $component0);
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_coord $coord13 = %varcint622;
+if ($coord13 ! null) {
+	$int11, $int12 = worldmap_getdisplaycoord($coord13);
+	if ($int11 < 0 | $int12 < 0) {
+		$coord13 = movecoord(0_0_0_0_0, coordx($coord13), ~script686(calc(coordy($coord13) - 1), 4), coordz($coord13));
+		$int11, $int12 = worldmap_getdisplaycoord($coord13);
+		if ($int11 < 0 | $int12 < 0) {
+			$coord13 = movecoord(0_0_0_0_0, coordx($coord13), ~script686(calc(coordy($coord13) - 1), 4), coordz($coord13));
+			$int11, $int12 = worldmap_getdisplaycoord($coord13);
+			if ($int11 < 0 | $int12 < 0) {
+				return;
+			}
+		}
+	}
+	if_setontimer("script2054(calc(clientclock + 4), $component0, $coord13)", $component0);
 }

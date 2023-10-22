@@ -1,0 +1,13 @@
+// 2728
+[proc,script2728]()(int)
+if (~script2761 > 100) {
+	return(0);
+}
+def_int $int0 = enum_getoutputcount(enum_681);
+while ($int0 > 0) {
+	if (stat_base(enum(int, stat, enum_681, $int0)) > 20) {
+		return(0);
+	}
+	$int0 = calc($int0 - 1);
+}
+return(1);

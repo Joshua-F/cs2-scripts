@@ -1,4 +1,8 @@
 // 257
-[clientscript,script257]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_141);
+[clientscript,script257](int $mousex0, int $mousey1)
+if (%varcint802 = $mousex0 & %varcint803 = $mousey1) {
+	return;
+}
+%varcint804 = 1;
+%varcint802 = $mousex0;
+%varcint803 = $mousey1;

@@ -1,6 +1,8 @@
 // 185
 [proc,chat_get_filter](int $int0)(int)
 switch_int ($int0) {
+	case 1 :
+		return(%varbit6161);
 	case 2 :
 		return(chat_getfilter_public);
 	case 3 :

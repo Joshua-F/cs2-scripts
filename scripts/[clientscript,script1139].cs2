@@ -1,8 +1,7 @@
 // 1139
-[clientscript,script1139](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	_6010(false);
-} else if ($windowmode2 = ^windowmode_fixed) {
-	_6010(true);
+[clientscript,script1139](component $component0)
+if (%var172 = 1) {
+	if_settext("Auto Retaliate <br>(Off)", $component0);
+} else {
+	if_settext("Auto Retaliate <br>(On)", $component0);
 }

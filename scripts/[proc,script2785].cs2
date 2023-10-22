@@ -1,0 +1,14 @@
+// 2785
+[proc,script2785](wma $wma0)(wma)
+switch_wma ($wma0) {
+	case tutorial3_1, tutorial3_2, tutorial3_3 :
+		if (%var281 < 93) {
+			return(tutorial3_1);
+		}
+		if (%var281 < 120) {
+			return(tutorial3_2);
+		}
+		return(tutorial3_3);
+	case default :
+		return($wma0);
+}

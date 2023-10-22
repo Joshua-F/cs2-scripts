@@ -1,0 +1,53 @@
+// 785
+[clientscript,script785](component $component0)
+%varcint988 = 0;
+%varcint989 = 0;
+%varcint990 = 0;
+%varcint991 = 0;
+switch_component ($component0) {
+	case magic:com_7 :
+		%varcint988 = 1;
+		if (%varbit6459 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+	case magic:com_9 :
+		%varcint989 = 1;
+		if (%varbit6462 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+	case magic:com_11 :
+		%varcint990 = 1;
+		if (%varbit6461 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+	case magic:com_13 :
+		%varcint991 = 1;
+		if (%varbit6460 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+	case magic_lunar:com_5 :
+		%varcint988 = 1;
+		if (%varbit6463 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+	case magic_lunar:com_9 :
+		%varcint990 = 1;
+		if (%varbit6464 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+	case magic_lunar:com_7 :
+		%varcint989 = 1;
+		if (%varbit6465 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+	case magic_zaros:com_5 :
+		%varcint988 = 1;
+		if (%varbit6466 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+	case magic_zaros:com_7 :
+		%varcint989 = 1;
+		if (%varbit6467 = 1) {
+			if_setgraphic("graphic_1702", $component0);
+		}
+}

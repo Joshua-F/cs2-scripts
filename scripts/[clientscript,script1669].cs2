@@ -1,4 +1,13 @@
 // 1669
-[clientscript,script1669]
-~script1719;
-~script1612(interface_771:button_57, 1, 3);
+[clientscript,script1669](int $mousey0)
+if (create_reply = -3) {
+	return;
+}
+switch_int (%varcint174) {
+	case 9 :
+		~script277(-1, $mousey0);
+	case 6 :
+		~script268(loginscreen:com_38, loginscreen:com_39, loginscreen:com_40, loginscreen:com_41, loginscreen:com_38, -1, $mousey0, 0, enum_1601);
+	case 7 :
+		~script268(loginscreen:com_33, loginscreen:com_34, loginscreen:com_35, loginscreen:com_36, loginscreen:com_33, -1, $mousey0, 1, enum_1602);
+}

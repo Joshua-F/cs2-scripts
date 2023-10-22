@@ -1,0 +1,6 @@
+// 1653
+[proc,script1653]()(int)
+if (if_gethide(chattop:mes_layer_hide) = true & (if_gethide(chattop:mes_layer) = false | if_gethide(chattop:mes_layer_large) = false) | (if_hassub(chattop:chatmodallarge) = true | if_hassub(chattop:chatmodal) = true | if_hassub(chattop:chatoverlaylarge) = true | if_hassub(chattop:chatoverlay) = true)) {
+	return(1);
+}
+return(0);

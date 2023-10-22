@@ -1,0 +1,55 @@
+// 2123
+[proc,script2123](int $int0, int $int1, component $component2, int $int3)
+cc_create($component2, ^iftype_graphic, $int0);
+cc_setposition(calc(5 + (36 + 20) * $int1), calc($int3 + 22), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+def_namedobj $namedobj4 = enum(int, namedobj, enum_2240, $int0);
+if ($namedobj4 ! null) {
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x302020);
+	cc_setobject($namedobj4, -1);
+	cc_setop(1, "Claim");
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff9040><oc_name($namedobj4)></col>");
+	if (calc(inv_total(inv, $namedobj4) + inv_total(worn, $namedobj4) + inv_total(bank, $namedobj4) + inv_total(inv_530, $namedobj4)) > 0) {
+		cc_settrans(200);
+	} else if (calc($int0 / 10) = calc(1 / 10)) {
+		if (%varbit2698 > 0) {
+			cc_settrans(200);
+		} else {
+			cc_settrans(0);
+		}
+	} else if ($int0 = 11) {
+		if (%varbit2776 > 0) {
+			cc_settrans(200);
+		} else {
+			cc_settrans(0);
+		}
+	} else if (calc($int0 / 10) = calc(11 / 10)) {
+		if (%varbit2699 > 0) {
+			cc_settrans(200);
+		} else {
+			cc_settrans(0);
+		}
+	} else if (calc($int0 / 10) = calc(21 / 10)) {
+		if (%varbit2700 > 0) {
+			cc_settrans(200);
+		} else {
+			cc_settrans(0);
+		}
+	} else if (calc($int0 / 10) = calc(31 / 10)) {
+		if (%varbit2701 > 0) {
+			cc_settrans(200);
+		} else {
+			cc_settrans(0);
+		}
+	} else if (calc($int0 / 10) = calc(41 / 10)) {
+		if (%varbit2702 > 0) {
+			cc_settrans(200);
+		} else {
+			cc_settrans(0);
+		}
+	} else {
+		cc_settrans(0);
+	}
+}

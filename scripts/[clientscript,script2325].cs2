@@ -1,0 +1,25 @@
+// 2325
+[clientscript,script2325]
+if (%varcint766 = 1 | %varcint766 = 2) {
+	mes("You can't do that right now.");
+	return;
+}
+sound_synth(synth_6421, 1, 0);
+if (if_getx(interface_306:model1) >= if_getx(interface_306:com_13) & if_getx(interface_306:model1) < calc(if_getx(interface_306:com_13) + if_getwidth(interface_306:com_13))) {
+	%varcint765 = 1;
+	~script2326(%varcint761);
+}
+if (if_getx(interface_306:model2) >= if_getx(interface_306:com_13) & if_getx(interface_306:model2) < calc(if_getx(interface_306:com_13) + if_getwidth(interface_306:com_13))) {
+	%varcint765 = 2;
+	~script2326(%varcint762);
+}
+if (if_getx(interface_306:model3) >= if_getx(interface_306:com_13) & if_getx(interface_306:model3) < calc(if_getx(interface_306:com_13) + if_getwidth(interface_306:com_13))) {
+	%varcint765 = 3;
+	~script2326(%varcint763);
+}
+if (if_getx(interface_306:model4) >= if_getx(interface_306:com_13) & if_getx(interface_306:model4) < calc(if_getx(interface_306:com_13) + if_getwidth(interface_306:com_13))) {
+	%varcint765 = 4;
+	~script2326(%varcint764);
+}
+%varcint766 = 1;
+if_setontimer("script2328(event_com)", interface_306:com_10);

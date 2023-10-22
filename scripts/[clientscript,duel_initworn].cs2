@@ -3,40 +3,40 @@
 def_int $int0 = 0;
 def_int $slot1 = 0;
 while ($int0 < 11) {
-	cc_create(interface_631:com_90, ^iftype_graphic, $int0);
+	cc_create(interface_631:com_89, ^iftype_graphic, $int0);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	if ($int0 = 0) {
-		cc_setposition(~script788(interface_631:com_68, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_67, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 0;
 	} else if ($int0 = 1) {
-		cc_setposition(~script788(interface_631:com_69, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_68, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 1;
 	} else if ($int0 = 2) {
-		cc_setposition(~script788(interface_631:com_70, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_69, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 2;
 	} else if ($int0 = 3) {
-		cc_setposition(~script788(interface_631:com_71, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_70, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 13;
 	} else if ($int0 = 4) {
-		cc_setposition(~script788(interface_631:com_72, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_71, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 3;
 	} else if ($int0 = 5) {
-		cc_setposition(~script788(interface_631:com_73, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_72, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 4;
 	} else if ($int0 = 6) {
-		cc_setposition(~script788(interface_631:com_74, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_73, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 5;
 	} else if ($int0 = 7) {
-		cc_setposition(~script788(interface_631:com_75, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_74, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 7;
 	} else if ($int0 = 8) {
-		cc_setposition(~script788(interface_631:com_78, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_77, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 9;
 	} else if ($int0 = 9) {
-		cc_setposition(~script788(interface_631:com_77, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_76, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 10;
 	} else if ($int0 = 10) {
-		cc_setposition(~script788(interface_631:com_76, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(~script788(interface_631:com_75, 0, 0), ^setpos_abs_left, ^setpos_abs_top);
 		$slot1 = 12;
 	}
 	if (inv_getobj(worn, $slot1) ! null) {
@@ -45,27 +45,27 @@ while ($int0 < 11) {
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 		if ($slot1 = 0) {
-			if_setgraphic(null, interface_631:com_68);
+			if_setgraphic(null, interface_631:com_67);
 		} else if ($slot1 = 1) {
-			if_setgraphic(null, interface_631:com_69);
+			if_setgraphic(null, interface_631:com_68);
 		} else if ($slot1 = 2) {
-			if_setgraphic(null, interface_631:com_70);
+			if_setgraphic(null, interface_631:com_69);
 		} else if ($slot1 = 13) {
-			if_setgraphic(null, interface_631:com_71);
+			if_setgraphic(null, interface_631:com_70);
 		} else if ($slot1 = 3) {
-			if_setgraphic(null, interface_631:com_72);
+			if_setgraphic(null, interface_631:com_71);
 		} else if ($slot1 = 4) {
-			if_setgraphic(null, interface_631:com_73);
+			if_setgraphic(null, interface_631:com_72);
 		} else if ($slot1 = 5) {
-			if_setgraphic(null, interface_631:com_74);
+			if_setgraphic(null, interface_631:com_73);
 		} else if ($slot1 = 7) {
-			if_setgraphic(null, interface_631:com_75);
+			if_setgraphic(null, interface_631:com_74);
 		} else if ($slot1 = 9) {
-			if_setgraphic(null, interface_631:com_78);
-		} else if ($slot1 = 10) {
 			if_setgraphic(null, interface_631:com_77);
-		} else if ($slot1 = 12) {
+		} else if ($slot1 = 10) {
 			if_setgraphic(null, interface_631:com_76);
+		} else if ($slot1 = 12) {
+			if_setgraphic(null, interface_631:com_75);
 		}
 	}
 	$int0 = calc($int0 + 1);

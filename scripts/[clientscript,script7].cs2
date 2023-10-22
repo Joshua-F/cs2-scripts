@@ -1,38 +1,15 @@
 // 7
 [clientscript,script7]
-if_settext("Quest Points: <tostring(%var101)>", questjournal_v2:com_2);
-def_int $int0 = 0;
-def_int $int1 = 0;
-while ($int0 <= 17) {
-	$int1 = ~script4($int0);
-	if ($int1 = 2) {
-		if_setcolour(^green, enum(int, component, enum_208, $int0));
-	} else if ($int1 = 1) {
-		if_setcolour(^yellow, enum(int, component, enum_208, $int0));
-	} else {
-		if_setcolour(^red, enum(int, component, enum_208, $int0));
-	}
-	$int0 = calc($int0 + 1);
+def_int $int0 = calc(%varcint10 - 100);
+%varcint10 = 0;
+if ($int0 < -1 | $int0 = ~current_side_if) {
+	return;
 }
-$int0 = 0;
-$int1 = 0;
-while ($int0 <= 130) {
-	$int1 = ~script5($int0);
-	if ($int1 = 2) {
-		if_setcolour(^green, enum(int, component, enum_209, $int0));
-	} else if ($int1 = 1) {
-		if_setcolour(^yellow, enum(int, component, enum_209, $int0));
-	} else {
-		if_setcolour(^red, enum(int, component, enum_209, $int0));
-	}
-	$int0 = calc($int0 + 1);
+def_component $component1 = ~script8($int0);
+if ($component1 = null) {
+	return;
 }
-if (%var281 = 1000) {
-	if_setcolour(^green, questjournal_v2:tutorial);
-} else if (%var281 > 0) {
-	if_setcolour(^yellow, questjournal_v2:tutorial);
-} else {
-	if_setcolour(^red, questjournal_v2:tutorial);
+if (if_hassub($component1) = false) {
+	return;
 }
-~script398;
-~script399;
+~if_switchside($int0);

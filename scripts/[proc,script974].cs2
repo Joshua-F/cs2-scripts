@@ -1,17 +1,34 @@
 // 974
-[proc,script974](int $int0, int $y1, namedobj $namedobj2, string $string0)(int)
-def_int $int3 = 0;
+[proc,script974](int $int0, int $y1, namedobj $namedobj2, graphic $graphic3, string $string0, int $int4, int $int5)(int)
+def_int $int6 = 0;
+def_graphic $graphic7 = "graphic_2287";
 cc_create(lvl_scroll:info, ^iftype_graphic, $int0);
-cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setoutline(1);
-cc_setgraphicshadow(0x604e32);
-if ($namedobj2 ! null) {
-	cc_setobject($namedobj2, -1);
+if (~script1566($int4, $int5) = 1) {
+	if ($int4 = 7) {
+		cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+	} else if ($int4 = 4) {
+		cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
+	} else {
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	}
+	cc_setoutline(0);
+	if ($graphic3 ! null) {
+		cc_setgraphic($graphic3);
+	} else {
+		cc_setgraphic($graphic7);
+	}
 } else {
-	cc_setobject(silvthrill_rod_7620, -1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x604e32);
+	if ($namedobj2 ! null) {
+		cc_setobject($namedobj2, -1);
+	} else {
+		cc_setobject(silvthrill_rod_7620, -1);
+	}
 }
 cc_setposition(0, $y1, ^setpos_abs_left, ^setpos_abs_top);
 cc_create(lvl_scroll:info, ^iftype_text, calc($int0 + 1));
-$int3 = paraheight($string0, 300, p12_full);
-cc_setsize(300, calc($int3 * 16), ^setsize_abs, ^setsize_abs);
-return($int3);
+$int6 = paraheight($string0, 300, p12_full);
+cc_setsize(300, calc($int6 * 16), ^setsize_abs, ^setsize_abs);
+return($int6);

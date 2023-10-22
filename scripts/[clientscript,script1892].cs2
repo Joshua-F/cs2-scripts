@@ -1,13 +1,4 @@
 // 1892
-[clientscript,script1892]
-%varcint183 = calc(%varcint183 - 1);
-if (%varcint183 <= 0) {
-	~script1893(1);
-	return;
-}
-def_int $int0 = calc(%varcint183 / 50 + 1);
-if ($int0 = 1) {
-	if_settext("Reverting in 1 second...", loginscreen:windowmode_confirm_countdown_text);
-} else {
-	if_settext("Reverting in <tostring($int0)> seconds...", loginscreen:windowmode_confirm_countdown_text);
-}
+[clientscript,script1892](component $component0, component $component1)
+if_setgraphic("graphic_2263", $component0);
+if_setcolour(^white, $component1);

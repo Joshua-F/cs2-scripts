@@ -1,4 +1,30 @@
 // 1622
 [clientscript,script1622]
-~script1717;
-~script1612(interface_771:button_10, 0, 6);
+def_int $size0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+while ($size0 <= inv_size(inv_509)) {
+	cc_create(trek_follower_inv:com_13, ^iftype_graphic, $size0);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(5 + 70 * $int1), calc(40 * $int2), ^setpos_abs_left, ^setpos_abs_top);
+	if (inv_getobj(inv_509, $size0) ! null) {
+		cc_setobject(inv_getobj(inv_509, $size0), 1);
+		cc_setopbase(oc_name(inv_getobj(inv_509, $size0)));
+		cc_setop(1, "Take-back 1");
+		cc_setop(2, "Take-back 5");
+		cc_setop(3, "Take-back 10");
+		cc_setop(4, "Take-back All");
+		cc_setop(5, "Take-back X");
+	}
+	cc_create(trek_follower_inv:com_14, ^iftype_text, $size0);
+	cc_settextfont(p11_full);
+	cc_setcolour(^yellow);
+	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(5 + 70 * $int1), calc(40 * $int2), ^setpos_abs_left, ^setpos_abs_top);
+	$size0 = calc($size0 + 1);
+	$int1 = calc($int1 + 1);
+	if ($int1 > 4) {
+		$int1 = 0;
+		$int2 = calc($int2 + 1);
+	}
+}

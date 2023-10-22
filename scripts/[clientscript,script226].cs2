@@ -1,4 +1,12 @@
 // 226
 [clientscript,script226]
-if_setscrollsize(200, 290, interface_594:com_175);
-~scrollbar_vertical(interface_594:com_176, interface_594:com_175, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script231;
+~script232;
+if_sethide(false, interface_594:com_149);
+if (map_lang = 1) {
+	if_sethide(false, interface_594:com_210);
+	if_sethide(true, interface_594:com_212);
+} else {
+	if_sethide(true, interface_594:com_210);
+	if_sethide(false, interface_594:com_212);
+}

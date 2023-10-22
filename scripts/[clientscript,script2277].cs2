@@ -1,0 +1,22 @@
+// 2277
+[clientscript,script2277](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5)
+if (if_find($component5) = true) {
+	$int0 = calc(~script1743 + $int0);
+	$int1 = calc(~script1744 + $int1);
+}
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+if (if_find($component2) = true) {
+	$int6 = ~script1743;
+	$int7 = ~script1744;
+	$int8 = calc(cc_getwidth + $int6);
+	$int9 = calc(cc_getheight + $int7);
+	if ($int0 < $int6 | $int0 > $int8 | $int1 < $int7 | $int1 > $int9) {
+		cc_setcolour(0x663300);
+		cc_setonmouserepeat("script2276($component2, $component3, $component4)");
+		if_setonmouserepeat(null, $component3);
+		if_setonmouserepeat(null, $component4);
+	}
+}

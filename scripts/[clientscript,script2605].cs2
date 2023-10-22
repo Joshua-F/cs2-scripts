@@ -1,0 +1,8 @@
+// 2605
+[clientscript,script2605]
+sound_synth(synth_6784, 1, 0);
+if_sethide(false, interface_292:confirm_layer);
+if_settext("Are you sure you wish to apply the selected changes?", interface_292:confirm_text);
+if_sethide(true, interface_292:com_135);
+if_sethide(false, interface_292:com_137);
+if_sethide(true, interface_292:com_134);

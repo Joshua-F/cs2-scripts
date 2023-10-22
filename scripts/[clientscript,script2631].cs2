@@ -1,0 +1,7 @@
+// 2631
+[clientscript,script2631](component $component0, graphic $graphic1, graphic $graphic2)
+if (calc(clientclock % 20) < 10) {
+	if_setgraphic($graphic2, $component0);
+} else {
+	if_setgraphic($graphic1, $component0);
+}

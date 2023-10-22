@@ -1,0 +1,38 @@
+// 277
+[proc,script277](int $int0, int $int1)
+def_int $int2 = %varcint195;
+def_int $int3 = -1;
+def_int $count4 = enum_getoutputcount(enum_1626);
+def_string $string0 = "Select one";
+def_int $int5 = 0;
+def_int $int6 = 0;
+if ($int0 = 98 | $int0 = 96 | $int0 = 104) {
+	$int2 = calc($int2 - $int1);
+} else if ($int0 = 99 | $int0 = 97 | $int0 = 105) {
+	$int2 = calc($int2 + $int1);
+} else if ($int0 = -1) {
+	$int2 = calc($int2 + $int1);
+} else {
+	return;
+}
+if ($int2 < 0) {
+	$int2 = 0;
+} else if ($int2 > $count4) {
+	$int2 = $count4;
+}
+if (if_gethide(loginscreen:com_29) = true) {
+	$int3 = calc($int2 - 1);
+	if ($int3 ! -1) {
+		$string0 = enum(int, string, enum_1626, $int3);
+	}
+	~script275($string0, 1, $int2);
+} else if (cc_find(loginscreen:com_30, 1) = ^true) {
+	$int6 = if_getscrolly(loginscreen:com_29);
+	$int5 = calc(15 * $int2);
+	if (($int0 = 98 | $int0 = 96 | $int0 = 104 | $int0 = -1 & $int1 < 0) & $int5 < $int6) {
+		~scrollbar_vertical_doscroll(loginscreen:com_30, loginscreen:com_29, $int5, true);
+	} else if (($int0 = 99 | $int0 = 97 | $int0 = 105 | $int0 = -1 & $int1 > 0) & $int5 > calc($int6 + 60)) {
+		~scrollbar_vertical_doscroll(loginscreen:com_30, loginscreen:com_29, calc($int5 - 60), true);
+	}
+}
+%varcint195 = $int2;

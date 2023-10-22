@@ -1,4 +1,14 @@
 // 1631
 [clientscript,script1631]
-~script1717;
-~script1612(interface_771:button_19, 0, 23);
+if (%varcint1033 <= spline_length(0)) {
+	%varcint1033 = calc(%varcint1033 + 1);
+	switch_int (%varcint1033) {
+		case default :
+			if_setoncamfinished(null, interface_75:com_0);
+		case 2, 4 :
+			if_setoncamfinished("script1631", interface_75:com_0);
+			cam_movealong(0, %varcint1033, 200, 200, 1, %varcint1033);
+	}
+} else {
+	%varcint1033 = 0;
+}

@@ -1,65 +1,6 @@
 // 1004
 [proc,script1004](int $int0, int $int1)(int, namedobj, string, string)
 switch_int ($int0) {
-	case 0 :
-		switch_int ($int1) {
-			case 0 :
-				return(-1, silvthrill_rod_7620, "You can see what each of these prayers does by selecting the Prayer icon on your side interface. Move your mouse over the icon of the prayer you want and a description will be available.", "");
-			case 1 :
-				return(1, obj_13253, "Thick Skin", "You can now use the <col=000080>Thick Skin</col> prayer.");
-			case 2 :
-				return(4, obj_13253, "Burst of Strength", "You can now use the <col=000080>Burst of Strength</col> prayer.");
-			case 3 :
-				return(7, obj_13253, "Clarity of Thought", "You can now use the <col=000080>Clarity of Thought</col> prayer.");
-			case 4 :
-				return(8, obj_13253, "Sharp Eye", "You can now use the <col=000080>Sharp Eye</col> prayer.");
-			case 5 :
-				return(9, obj_13253, "Mystic Will", "You can now use the <col=000080>Mystic Will</col> prayer.");
-			case 6 :
-				return(10, obj_13253, "Rock Skin", "You can now use the <col=000080>Rock Skin</col> prayer.");
-			case 7 :
-				return(13, obj_13253, "Superhuman Strength", "You can now use the <col=000080>Superhuman Strength</col> prayer.");
-			case 8 :
-				return(16, obj_13253, "Improved Reflexes", "You can now use the <col=000080>Improved Reflexes</col> prayer.");
-			case 9 :
-				return(19, obj_13253, "Rapid Restore", "You can now use the <col=000080>Rapid Restore</col> prayer.");
-			case 10 :
-				return(22, obj_13253, "Rapid Heal", "You can now use the <col=000080>Rapid Heal</col> prayer.");
-			case 11 :
-				return(25, obj_13253, "Protect Item", "You can now use the <col=000080>Protect Item</col> prayer.");
-			case 12 :
-				return(26, obj_13253, "Hawk Eye", "You can now use the <col=000080>Hawk Eye</col> prayer.");
-			case 13 :
-				return(27, obj_13253, "Mystic Lore", "You can now use the <col=000080>Mystic Lore</col> prayer.");
-			case 14 :
-				return(28, obj_13253, "Steel Skin", "You can now use the <col=000080>Steel Skin</col> prayer.");
-			case 15 :
-				return(31, obj_13253, "Ultimate Strength", "You can now use the <col=000080>Ultimate Strength</col> prayer.");
-			case 16 :
-				return(34, obj_13253, "Incredible Reflexes", "You can now use the <col=000080>Incredible Reflexes</col> prayer.");
-			case 17 :
-				return(35, obj_13253, "Members: Protect from Summoning", "Members can now use the <col=000080>Protect from Summoning</col> prayer.");
-			case 18 :
-				return(37, obj_13253, "Protect from Magic", "You can now use the <col=000080>Protect from Magic</col> prayer.");
-			case 19 :
-				return(40, obj_13253, "Protect from Missiles", "You can now use the <col=000080>Protect from Missiles</col> prayer.");
-			case 20 :
-				return(43, obj_13253, "Protect from Melee", "You can now use the <col=000080>Protect from Melee</col> prayer.");
-			case 21 :
-				return(44, obj_13253, "Eagle Eye", "You can now use the <col=000080>Eagle Eye</col> prayer.");
-			case 22 :
-				return(45, obj_13253, "Mystic Might", "You can now use the <col=000080>Mystic Might</col> prayer.");
-			case 23 :
-				return(46, obj_13253, "Members: Retribution", "Members can now use the <col=000080>Retribution</col> prayer.");
-			case 24 :
-				return(49, obj_13253, "Members: Redemption", "Members can now use the <col=000080>Redemption</col> prayer.");
-			case 25 :
-				return(52, obj_13253, "Members: Smite", "Members can now use the <col=000080>Smite</col> prayer.");
-			case 26 :
-				return(60, obj_13253, "Members: Chivalry<br> (after King's Ransom)", "Members now have the Prayer level required to use the <col=000080>Chivalry</col> prayer (after King's Ransom).");
-			case 27 :
-				return(70, obj_13253, "Members: Piety<br> (after King's Ransom)", "Members now have the Prayer level required to use the <col=000080>Piety</col> prayer (after King's Ransom).");
-		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
@@ -93,15 +34,15 @@ switch_int ($int0) {
 			case 14 :
 				return(40, guthix_cloak_10448, "Guthix cloak", "Members can now wear <col=000080>Guthix cloaks</col>.");
 			case 15 :
-				return(40, guthix_mitre_10454, "Guthix mitre<br> (with level 40 Magic)", "Members now have the Prayer level required to wield <col=000080>Guthix mitres</col> (with level 40 Magic).");
+				return(40, guthix_mitre_10454, "Guthix mitre<br> (with level 40 Magic)", "Members now have the Prayer level required to wear <col=000080>Guthix mitres</col> (with level 40 Magic).");
 			case 16 :
 				return(40, saradomin_cloak_10446, "Saradomin cloak", "Members can now wear <col=000080>Saradomin cloaks</col>.");
 			case 17 :
-				return(40, saradomin_mitre_10452, "Saradomin mitre<br> (with level 40 Magic)", "Members now have the Prayer level required to wield <col=000080>Saradomin mitres</col> (with level 40 Magic).");
+				return(40, saradomin_mitre_10452, "Saradomin mitre<br> (with level 40 Magic)", "Members now have the Prayer level required to wear <col=000080>Saradomin mitres</col> (with level 40 Magic).");
 			case 18 :
 				return(40, zamorak_cloak_10450, "Zamorak cloak", "Members can now wear <col=000080>Zamorak cloaks</col>.");
 			case 19 :
-				return(40, zamorak_mitre_10456, "Zamorak mitre<br> (with level 40 Magic)", "Members now have the Prayer level required to wield <col=000080>Zamorak mitres</col> (with level 40 Magic).");
+				return(40, zamorak_mitre_10456, "Zamorak mitre<br> (with level 40 Magic)", "Members now have the Prayer level required to wear <col=000080>Zamorak mitres</col> (with level 40 Magic).");
 			case 20 :
 				return(50, unblessed_symbol_1716, "Use completed Prayer books<br>to bless holy and unholy symbols<br>(after Horror from the Deep)", "Members now have the Prayer level required to use completed prayer books to bless <col=000080>holy</col> and <col=000080>unholy symbols</col> (after Horror from the Deep).");
 			case 21 :
@@ -134,25 +75,21 @@ switch_int ($int0) {
 			case 0 :
 				return(2, dummy_gravestone_11948, "Repair somebody else's gravestone", "You can now <col=000080>repair</col> somebody else's <col=000080>gravestone</col>!");
 			case 1 :
-				return(12, obj_5079, "Prayer Tutor - new info available", "There is new information available from the <col=000080>Prayer Tutor</col> in <col=000080>Lumbridge Chapel</col>.");
-			case 2 :
 				return(31, obj_13253, "Monastery", "Abbot Langley will now let you enter the <col=000080>Monastery</col> west of <col=000080>Edgeville</col>.");
-			case 3 :
-				return(43, obj_5079, "Prayer Tutor - new info available", "There is new information available from the <col=000080>Prayer Tutor</col> in <col=000080>Lumbridge Chapel</col>.");
-			case 4 :
+			case 2 :
 				return(70, dummy_gravestone_11948, "Bless somebody else's gravestone", "You can now <col=000080>bless somebody else's <col=000080>gravestone</col>!");
-			case 5 :
+			case 3 :
 				return(85, holy_elixir_13754, "Members: Bless spirit shields<br> (after Summer's End)", "Members can now <col=000080>bless spirit shields</col> (after Summer's End).");
-			case 6 :
+			case 4 :
 				return(90, arcane_sigil_13746, "Members: Create arcane spirit shields<br> (after Summer's End and with 85 Smithing)", "Members can now create <col=000080>arcane spirit shields</col> (after Summer's End, with level 85 Smithing).");
-			case 7 :
+			case 5 :
 				return(90, divine_sigil_13748, "Members: Create divine spirit shields<br> (after Summer's End and with 85 Smithing)", "Members can now create <col=000080>divine spirit shields</col> (after Summer's End, with level 85 Smithing).");
-			case 8 :
+			case 6 :
 				return(90, elysian_sigil_13750, "Members: Create elysian spirit shields<br> (after Summer's End and with 85 Smithing)", "Members can now create <col=000080>elysian spirit shields</col> (after Summer's End, with level 85 Smithing).");
-			case 9 :
+			case 7 :
 				return(90, spectral_sigil_13752, "Members: Create spectral spirit shields<br> (after Summer's End and with 85 Smithing)", "Members can now create <col=000080>spectral spirit shields</col> (after Summer's End, with level 85 Smithing).");
-			case 10 :
-				return(99, prayer_cape_9759, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Prayer<col=000080>. Why not visit <col=800000>Brother Jared<col=000080> upstairs at the <col=800000>Monastery<col=000080>? He has something special that is only available to true masters of the <col=800000>Prayer<col=000080> skill!");
+			case 8 :
+				return(99, prayer_cape_9759, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Prayer<col=000080>. Members can visit <col=800000>Brother Jared<col=000080> upstairs at the <col=800000>Monastery<col=000080>. He has something special that is only available to true masters of the <col=800000>Prayer<col=000080> skill!");
 		}
 }
 return(0, null, "", "");

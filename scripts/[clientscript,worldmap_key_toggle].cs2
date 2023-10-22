@@ -1,0 +1,22 @@
+// 286
+[clientscript,worldmap_key_toggle](int $opindex0, component $component1, int $comsubid2, int $comsubid3, int $comsubid4, string $op0, boolean $boolean5)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_setop(1, $op0);
+}
+if (cc_find($component1, $comsubid3) = ^true) {
+	cc_setop(1, $op0);
+}
+if (cc_find($component1, $comsubid4) = ^true) {
+	if ($boolean5 = true) {
+		cc_sethide(false);
+	} else {
+		cc_sethide(true);
+	}
+}
+if ($comsubid2 = 11) {
+	worldmap_disableelementcategory(category_950, $boolean5);
+}
+sound_synth(synth_2266, 1, 0);

@@ -1,0 +1,50 @@
+// 2227
+[proc,script2227](int $int0, string $string0, int $int1)
+if_sethide(true, loginscreen:com_54);
+if_sethide(true, loginscreen:com_55);
+if_sethide(true, loginscreen:com_56);
+if_sethide(true, loginscreen:com_57);
+if_sethide(true, loginscreen:com_58);
+if_setcolour(0x9d845c, loginscreen:com_154);
+if_setcolour(0x9d845c, loginscreen:com_145);
+if_setcolour(0x9d845c, loginscreen:com_141);
+if_setcolour(0x9d845c, loginscreen:com_111);
+if_setcolour(0x9d845c, loginscreen:com_128);
+if_setcolour(0x9d845c, loginscreen:com_125);
+if_setcolour(0x9d845c, loginscreen:com_121);
+if_setonclick(null, loginscreen:com_61);
+switch_int ($int0) {
+	case 0 :
+		if_sethide(false, loginscreen:com_54);
+		if_setonclick("script2186", loginscreen:com_61);
+		if_setcolour(0x9c7b48, loginscreen:com_154);
+	case 3 :
+		if_sethide(false, loginscreen:com_55);
+		if_setcolour(0x9c7b48, loginscreen:com_145);
+	case 4 :
+		if_sethide(false, loginscreen:com_56);
+		if_setcolour(0x9c7b48, loginscreen:com_141);
+	case 6 :
+		if_sethide(true, loginscreen:com_70);
+		switch_int ($int1) {
+			case 0 :
+				if_setcolour(0x9c7b48, loginscreen:com_128);
+				if_sethide(false, loginscreen:com_70);
+			case 1 :
+				if_setcolour(0x9c7b48, loginscreen:com_125);
+				if_sethide(false, loginscreen:com_70);
+			case 2 :
+				if_setcolour(0x9c7b48, loginscreen:com_121);
+		}
+		if_sethide(false, loginscreen:com_57);
+		if_setonclick("script2187", loginscreen:com_61);
+	case 7 :
+		if_sethide(false, loginscreen:com_58);
+		if_setonclick("script2187", loginscreen:com_61);
+		if_setcolour(0x9c7b48, loginscreen:com_111);
+	case default :
+		if_sethide(false, loginscreen:com_54);
+		if_setonclick("script2186", loginscreen:com_61);
+		if_setcolour(0x9c7b48, loginscreen:com_154);
+}
+~script2228($string0);

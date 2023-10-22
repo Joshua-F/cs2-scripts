@@ -1,4 +1,45 @@
 // 1691
-[clientscript,script1691]
-~script1720;
-~script1612(interface_771:button_79, 2, 21);
+[clientscript,script1691](component $component0, component $component1)
+cc_deleteall($component0);
+def_int $int2 = 0;
+def_int $intarray0(96);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_struct $struct5 = null;
+while ($int4 = 0 & $int2 < 96) {
+	$struct5 = enum(int, struct, enum_845, $int2);
+	if ($struct5 = struct_345) {
+		$int4 = 1;
+	} else {
+		cc_create($component0, ^iftype_rectangle, $int2);
+		if (~script1694($int2) = 1 & $struct5 ! null) {
+			$intarray0($int3) = $int2;
+			$int3 = calc($int3 + 1);
+		} else {
+			cc_sethide(true);
+		}
+	}
+	$int2 = calc($int2 + 1);
+}
+~script1693(intarray0, 0, calc($int3 - 1));
+def_int $height6 = 0;
+def_int $comsubid7 = -1;
+$int2 = 0;
+while ($int2 < $int3) {
+	if (cc_find($component0, $intarray0($int2)) = ^true) {
+		$height6, $comsubid7 = ~script1692($component0, $height6, $intarray0($int2));
+	}
+	$int2 = calc($int2 + 1);
+}
+if ($height6 <= if_getheight($component0)) {
+	if_setscrollsize(0, 0, $component0);
+	cc_deleteall($component1);
+	if_sethide(true, $component1);
+} else {
+	if ($comsubid7 ! -1 & cc_find($component0, $comsubid7) = ^true) {
+		cc_delete;
+	}
+	if_setscrollsize(0, $height6, $component0);
+	if_sethide(false, $component1);
+	~scrollbar_vertical($component1, $component0, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+}

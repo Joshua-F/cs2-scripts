@@ -1,0 +1,11 @@
+// 2315
+[clientscript,script2315](int $int0)
+if ($int0 = 1) {
+	if_setgraphic("graphic_1597", welcome_screen:com_97);
+	if_setgraphic("graphic_1598", welcome_screen:com_98);
+	if_setgraphic("graphic_1597", welcome_screen:com_99);
+} else {
+	if_setgraphic("graphic_1595", welcome_screen:com_97);
+	if_setgraphic("graphic_1596", welcome_screen:com_98);
+	if_setgraphic("graphic_1595", welcome_screen:com_99);
+}

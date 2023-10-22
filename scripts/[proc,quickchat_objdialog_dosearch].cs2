@@ -35,7 +35,7 @@ def_obj $obj8 = oc_findnext;
 def_string $string0 = "";
 cc_create($component1, ^iftype_rectangle, 0);
 while ($obj8 ! null) {
-	if (compare($string0, oc_name($obj8)) ! 0 & enum(obj, int, enum_1547, $obj8) = 0) {
+	if (compare($string0, oc_name($obj8)) ! 0 & enum(obj, int, enum_1547, $obj8) = 0 & compare(lowercase(oc_name($obj8)), "null") ! 0) {
 		$string0 = oc_name($obj8);
 		cc_create($component1, ^iftype_text, $int7);
 		cc_setposition(4, calc(14 * ($int7 - 1)), ^setpos_abs_left, ^setpos_abs_top);

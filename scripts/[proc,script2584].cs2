@@ -1,0 +1,12 @@
+// 2584
+[proc,script2584]
+if_setcolour(0xff9935, interface_292:com_117);
+if_setop(1, "Select dwarf", interface_292:com_102);
+if_setop(1, "Select goblin", interface_292:com_104);
+if_setop(1, "Select elf", interface_292:com_103);
+if_setonop("script2586(event_com)", interface_292:com_102);
+if_setonop("script2586(event_com)", interface_292:com_104);
+if_setonop("script2586(event_com)", interface_292:com_103);
+if_setonclick(null, interface_292:com_102);
+if_setonclick(null, interface_292:com_104);
+if_setonclick(null, interface_292:com_103);

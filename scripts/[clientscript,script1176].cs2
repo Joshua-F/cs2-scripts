@@ -1,15 +1,7 @@
 // 1176
-[clientscript,script1176]
-if (%varcint543 = ^windowmode_fullscreen & getwindowmode ! ^windowmode_fullscreen) {
-	if (%varcint174 = 6) {
-		~script1893(1);
-		return;
-	}
-	~script1888;
-	if (if_gethide(loginscreen:com_226) = false) {
-		~loginscreen_setactivemenu(loginscreen:com_226);
-	} else if (if_gethide(loginscreen:com_138) = false) {
-		~loginscreen_setactivemenu(loginscreen:com_138);
-	}
-	%varcint543 = getwindowmode;
+[clientscript,script1176](component $component0, component $component1)
+if (%varcint986 = 1) {
+	if_setsize(~script2711($component0, $component1), ^setsize_abs, ^setsize_abs, $component0);
+} else {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
 }

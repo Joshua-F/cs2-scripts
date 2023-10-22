@@ -1,0 +1,11 @@
+// 2113
+[clientscript,script2113](component $component0)
+if_setmodelangle(0, 0, random(2048), random(2048), random(2048), if_getmodelzoom($component0), $component0);
+switch_int (random(3)) {
+	case 0 :
+		if_setontimer("spinner(calc(random(3) + 9), 0, calc(random(3) + 9), $component0)", $component0);
+	case 1 :
+		if_setontimer("spinner(calc(random(3) + 9), calc(random(3) + 9), 0, $component0)", $component0);
+	case default :
+		if_setontimer("spinner(0, calc(random(3) + 9), calc(random(3) + 9), $component0)", $component0);
+}

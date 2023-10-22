@@ -61,14 +61,14 @@ if (%varcint600 > 0 | %varcint603 > 0) {
 	if_settext(tostring(%varcint604), sc_scores:com_137);
 	if_settext(tostring(%varcint605), sc_scores:com_141);
 	if_settext(tostring(%varcint606), sc_scores:com_142);
-	if_settext(%varcstring44, sc_scores:com_118);
-	if_settext(%varcstring45, sc_scores:com_117);
-	if_settext(%varcstring46, sc_scores:com_121);
-	if_settext(%varcstring47, sc_scores:com_122);
-	if_settext(%varcstring48, sc_scores:com_120);
-	if_settext(%varcstring49, sc_scores:com_119);
-	if_settext(%varcstring50, sc_scores:com_123);
-	if_settext(%varcstring51, sc_scores:com_124);
+	~script1587(%varcstring44, sc_scores:com_118, sc_scores:tooltip, p12_full);
+	~script1587(%varcstring45, sc_scores:com_117, sc_scores:tooltip, p12_full);
+	~script1587(%varcstring46, sc_scores:com_121, sc_scores:tooltip, p12_full);
+	~script1587(%varcstring47, sc_scores:com_122, sc_scores:tooltip, p12_full);
+	~script1587(%varcstring48, sc_scores:com_120, sc_scores:tooltip, p12_full);
+	~script1587(%varcstring49, sc_scores:com_119, sc_scores:tooltip, p12_full);
+	~script1587(%varcstring50, sc_scores:com_123, sc_scores:tooltip, p12_full);
+	~script1587(%varcstring51, sc_scores:com_124, sc_scores:tooltip, p12_full);
 	if (%varcint607 > 0) {
 		if_settext(tostring(%varcint607), sc_scores:com_127);
 	}

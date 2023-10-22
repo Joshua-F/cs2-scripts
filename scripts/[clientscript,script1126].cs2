@@ -1,0 +1,20 @@
+// 1126
+[clientscript,script1126](component $component0)
+%varcint993 = 0;
+switch_component ($component0) {
+	case magic:com_2 :
+		~deltooltip_action(magic:tooltip2);
+		if (%varbit2668 = 0) {
+			if_setgraphic("graphic_1701", $component0);
+		}
+	case magic_zaros:com_18 :
+		~deltooltip_action(magic_zaros:tooltip2);
+		if (%varbit2668 = 0) {
+			if_setgraphic("graphic_1701", $component0);
+		}
+	case magic_lunar:com_20 :
+		~deltooltip_action(magic_lunar:tooltip2);
+		if (%varbit2668 = 0) {
+			if_setgraphic("graphic_1701", $component0);
+		}
+}

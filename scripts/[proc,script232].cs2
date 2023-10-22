@@ -1,0 +1,15 @@
+// 232
+[proc,script232]
+if_sethide(true, interface_594:com_62);
+if_sethide(true, interface_594:com_117);
+if_sethide(true, interface_594:com_121);
+if_sethide(true, interface_594:com_34);
+if (if_gethide(interface_594:com_61) = false) {
+	if_sethide(false, interface_594:com_62);
+} else if (if_gethide(interface_594:com_104) = false) {
+	if_sethide(false, interface_594:com_117);
+} else if (if_gethide(interface_594:com_120) = false) {
+	if_sethide(false, interface_594:com_121);
+} else if (if_gethide(interface_594:com_33) = false) {
+	if_sethide(false, interface_594:com_34);
+}

@@ -1,0 +1,7 @@
+// 2119
+[clientscript,script2119](component $component0, component $component1)
+if (if_getscrollheight($component0) > 0 & if_getscrolly($component0) < 35) {
+	if_sethide(false, $component1);
+} else {
+	if_sethide(true, $component1);
+}

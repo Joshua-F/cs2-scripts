@@ -1,0 +1,8 @@
+// 2251
+[clientscript,script2251]
+if (calc(%varcint194 + 50) > clientclock) {
+	return;
+}
+if (compare(%varcstring141, "") ! 0) {
+	%varcstring141 = "";
+}

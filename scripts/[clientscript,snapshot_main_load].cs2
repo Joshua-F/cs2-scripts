@@ -1,14 +1,22 @@
 // 508
 [clientscript,snapshot_main_load]
-if_setonkey("snapshot_onkey(event_keycode, event_keychar)", snapshot_main:name);
-if_setonkey(null, chatdefault:input);
-if_settext("<escape(%varcstring24)><col=ffff00>|", snapshot_main:name);
 %varcint6 = 0;
-if_settext("Moderator option: Mute player for 48 hours: <lt>OFF<gt>", snapshot_main:com_16);
-%varcint11 = 1;
-if (if_gethide(chattop:mes_layer) = false) {
-	if_sethide(true, chattop:mes_layer);
-	if_sethide(false, chattop:mes_layer_hide);
-	%varcint5 = 0;
-	%varcstring22 = "";
+if (playermodlevel = 5 | playermodlevel = 6) {
+	if_settext("Suggest to mute this player for 48 hours", interface_594:com_83);
+	if_settext("Suggest to mute this player for 48 hours", interface_594:com_10);
+	if_settext("Suggest to mute this player for 48 hours", interface_594:com_60);
+} else {
+	if_settext("Mute this player for 48 hours", interface_594:com_83);
+	if_settext("Mute this player for 48 hours", interface_594:com_10);
+	if_settext("Mute this player for 48 hours", interface_594:com_60);
 }
+%varcint11 = 1;
+if (map_lang ! 1) {
+	~script216;
+	~script246;
+	return;
+}
+if_setonvarcstrtransmit("script218{varcstring24}", interface_594:control_layer);
+%varcint792 = -1;
+~script224;
+~script216;

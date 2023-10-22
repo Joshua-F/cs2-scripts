@@ -1,0 +1,11 @@
+// 2416
+[clientscript,script2416](component $component0)
+if (%varcint805 = 2 | %varcint805 = 8) {
+	if_setop(1, "Cut wire", $component0);
+} else if (%varcint805 = 3 | %varcint805 = 9) {
+	if_setop(1, "Replace wire", $component0);
+} else if (%varcint805 = 4 | %varcint805 = 10) {
+	if_setop(1, "Repair wire", $component0);
+} else {
+	if_setop(1, "Inspect", $component0);
+}

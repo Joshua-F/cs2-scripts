@@ -1,0 +1,58 @@
+// 2731
+[proc,script2731]
+def_int $comsubid0 = -1;
+def_int $comsubid1 = -1;
+def_int $comsubid2 = -1;
+if (cc_find(interface_900:com_74, 0) = ^false | cc_find(interface_900:chathead, 0) = ^false) {
+	cc_deleteall(interface_900:com_74);
+	cc_create(interface_900:com_74, ^iftype_model, if_getnextsubid(interface_900:com_74));
+	cc_setsize(0, 30, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setmodelangle(0, scale(3, 8, cc_getheight), 0, 0, 0, 400);
+	cc_setplayermodel_self;
+	cc_setmodelanim(seq_12284);
+	cc_setontimer("script2746(event_com, event_comsubid, 0)");
+	cc_setonhold("script2748(event_com, event_comsubid, event_mousex)");
+	$comsubid0 = cc_getid;
+	cc_create(interface_900:com_74, ^iftype_model, if_getnextsubid(interface_900:com_74));
+	cc_setsize(0, 20, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setmodelangle(0, scale(9, 32, cc_getheight), 0, 0, 0, 449);
+	_1121(-150, 449);
+	cc_setmodel(model_49335);
+	cc_setmodelanim(seq_12287);
+	$comsubid1 = cc_getid;
+	~script2786(interface_900:com_74, calc(if_getheight(interface_900:com_74) - 30), 0, 0);
+	cc_deleteall(interface_900:chathead);
+	cc_create(interface_900:chathead, ^iftype_model, if_getnextsubid(interface_900:chathead));
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setmodelangle(0, 0, 0, 0, 0, 2600);
+	cc_setplayerhead_self;
+	cc_setmodelanim(seq_9804);
+	cc_sethide(false);
+	cc_setontimer("script2746(event_com, event_comsubid, 0)");
+	cc_setonhold("script2748(event_com, event_comsubid, event_mousex)");
+	$comsubid2 = cc_getid;
+	~script2647(interface_900:chathead);
+	if_setonop("script2736(event_op, event_com, $comsubid0, $comsubid1, $comsubid2)", interface_900:com_15);
+	if_setonop("script2736(event_op, event_com, $comsubid0, $comsubid1, $comsubid2)", interface_900:com_20);
+	if_setonop("script2736(event_op, event_com, $comsubid0, $comsubid1, $comsubid2)", interface_900:com_27);
+	if_setonclickrepeat("script2749($comsubid0, $comsubid2, 20)", interface_900:rotate_left);
+	if_setonclickrepeat("script2749($comsubid0, $comsubid2, -20)", interface_900:rotate_right);
+}
+~script1298(interface_900:com_12, 15, 0, 0);
+if (gender = 1) {
+	~script1151(interface_900:com_15);
+	~script1166(interface_900:com_20);
+} else {
+	~script1166(interface_900:com_15);
+	~script1151(interface_900:com_20);
+}
+~script1298(interface_900:com_24, 15, 0, 0);
+~script1151(interface_900:com_27);
+~script1298(interface_900:com_30, 15, 0, 0);
+~script2733;
+~script1298(interface_900:com_70, 15, 0, 0);
+if_setonvartransmit("script2732{var1158}", interface_900:contents);
+if_setonvarctransmit("script2732{varcint1008, varcint1009, varcint1010, varcint1011, varcint1012, varcint1013, varcint1014, varcint1015, varcint1016, varcint1017, varcint1018, varcint1019}", interface_900:contents);

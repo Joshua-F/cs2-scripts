@@ -1,0 +1,31 @@
+// 812
+[proc,script812](obj $obj0)
+cc_sethide(true);
+if ($obj0 = null) {
+	return;
+}
+if (oc_param($obj0, param_740) > 1) {
+	if (~script925($obj0) = 1 & ~script926($obj0) = 1) {
+		return;
+	}
+	cc_sethide(false);
+	return;
+}
+if (oc_param($obj0, param_740) = 1) {
+	if (~script925($obj0) = 1) {
+		return;
+	}
+	cc_sethide(false);
+	return;
+}
+if (~script928($obj0) = 1) {
+	if (~script926($obj0) = 1) {
+		return;
+	}
+	cc_sethide(false);
+	return;
+}
+if (~script925($obj0) = 1) {
+	return;
+}
+cc_sethide(false);

@@ -1,0 +1,11 @@
+// 292
+[proc,script292](struct $struct0, component $component1, int $y2, int $int3)(int)
+if ($struct0 = null) {
+	$struct0 = struct_280;
+}
+.cc_create($component1, ^iftype_graphic, if_getnextsubid($component1));
+.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_abs_top);
+.cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+.cc_settiling(false);
+.cc_setgraphic(struct_param($struct0, param_130));
+return(calc($int3 + 10));

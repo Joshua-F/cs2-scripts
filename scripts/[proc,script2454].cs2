@@ -1,0 +1,14 @@
+// 2454
+[proc,script2454](int $int0)(int)
+def_int $colour1 = ^white;
+switch_int ($int0) {
+	case 0 :
+		$colour1 = ^white;
+	case 1 :
+		$colour1 = ^green;
+	case 2 :
+		$colour1 = 0xd69c00;
+	case 3 :
+		$colour1 = 0xff3f3f;
+}
+return($colour1);

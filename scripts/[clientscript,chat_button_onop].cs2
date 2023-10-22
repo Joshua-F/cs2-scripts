@@ -1,62 +1,41 @@
 // 175
 [clientscript,chat_button_onop](int $int0, int $int1)
-if (%var281 < 1000 & %varbit4895 = 2 & %varbit4925 < 3) {
-	if (%varbit4925 = 0) {
-		mes("You will be taught about the chat filter buttons later in the tutorial.");
-		return;
-	}
-	if (%varbit4925 = 1) {
-		if ($int1 ! 3 | $int0 ! 3) {
-			mes("Set your Private chat filter to Friends.");
-			return;
+switch_int ($int0) {
+	case 1 :
+		if (%varcint41 = $int1 & getwindowmode >= ^windowmode_resizable & %var281 >= 1000) {
+			%varcint41 = -1;
+			~subchanged;
+		} else if (%varcint41 = -1) {
+			%varcint41 = $int1;
+			~subchanged;
+		} else {
+			%varcint41 = $int1;
+		}
+		~chat_alert_reset(%varcint41);
+		~redraw_chat_buttons;
+		~rebuildchatbox;
+		~rebuildpmbox;
+	case 2 :
+		~chat_set_filter($int1, ^chatfilter_on);
+		~redraw_chat_buttons;
+		~rebuildchatbox;
+		~rebuildpmbox;
+	case 3 :
+		if ($int1 = 3 & friend_count < 0) {
+			mes("The friends list is still loading, your selection won't take effect immediately.");
 		}
 		~chat_set_filter($int1, ^chatfilter_friends);
 		~redraw_chat_buttons;
 		~rebuildchatbox;
 		~rebuildpmbox;
-	} else if (%varbit4925 = 2) {
-		if ($int1 ! 2 | $int0 ! 2) {
-			mes("Set your Public chat filter to On.");
-			return;
-		}
-		~chat_set_filter($int1, ^chatfilter_on);
+	case 4 :
+		~chat_set_filter($int1, ^chatfilter_off);
 		~redraw_chat_buttons;
 		~rebuildchatbox;
 		~rebuildpmbox;
-		if_setonvartransmit("script1532{var1252}", filterbuttons:chat_private_graphic);
-	}
-} else if ($int0 = 1) {
-	if (%varcint41 = $int1 & getwindowmode >= ^windowmode_resizable & %var281 >= 1000) {
-		%varcint41 = -1;
-		~subchanged;
-	} else if (%varcint41 = -1) {
-		%varcint41 = $int1;
-		~subchanged;
-	} else {
-		%varcint41 = $int1;
-	}
-	~chat_alert_reset(%varcint41);
-	~redraw_chat_buttons;
-	~rebuildchatbox;
-	~rebuildpmbox;
-} else if ($int0 = 2) {
-	~chat_set_filter($int1, ^chatfilter_on);
-	~redraw_chat_buttons;
-	~rebuildchatbox;
-	~rebuildpmbox;
-} else if ($int0 = 3) {
-	~chat_set_filter($int1, ^chatfilter_friends);
-	~redraw_chat_buttons;
-	~rebuildchatbox;
-	~rebuildpmbox;
-} else if ($int0 = 4) {
-	~chat_set_filter($int1, ^chatfilter_off);
-	~redraw_chat_buttons;
-	~rebuildchatbox;
-	~rebuildpmbox;
-} else if ($int0 = 5) {
-	~chat_set_filter($int1, ^chatfilter_hide);
-	~redraw_chat_buttons;
-	~rebuildchatbox;
-	~rebuildpmbox;
+	case 5 :
+		~chat_set_filter($int1, ^chatfilter_hide);
+		~redraw_chat_buttons;
+		~rebuildchatbox;
+		~rebuildpmbox;
 }

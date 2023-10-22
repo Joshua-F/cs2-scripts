@@ -1,7 +1,10 @@
 // 2046
-[proc,worldmap_overlay_clear]
-cc_deleteall(worldmap:com_6);
+[proc,worldmap_overlay_clear](component $component0)
+if_setontimer("worldmap_overlay($component0, worldmap:worldmap, 0, 0, 0)", $component0);
+cc_deleteall($component0);
+cc_deleteall(worldmap:com_36);
 cc_deleteall(worldmap:arrow0);
 cc_deleteall(worldmap:arrow1);
 cc_deleteall(worldmap:arrow2);
 cc_deleteall(worldmap:arrow3);
+cc_deleteall(worldmap:com_41);

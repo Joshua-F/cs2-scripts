@@ -1,18 +1,20 @@
 // 819
 [clientscript,script819]
-def_seq $seq0 = null;
-if_setnpchead(%var1174, lore_cats_side:lore_chathead);
-def_string $text0 = oc_name(%var448);
+if (%var1174 ! null & %var1174 ! hans_0) {
+	if_setnpchead(%var1174, lore_cats_side:lore_chathead);
+} else {
+	if_setmodel(null, lore_cats_side:lore_chathead);
+}
 if (%varbit1049 = 1) {
 	if_settext(~script821, lore_cats_side:lore_name);
+} else if (%var448 ! null) {
+	if_settext(oc_name(%var448), lore_cats_side:lore_name);
 } else {
-	if_settext($text0, lore_cats_side:lore_name);
+	if_settext("", lore_cats_side:lore_name);
 }
 if (%varbit4282 > 50) {
 	%varbit4282 = calc(%varbit4282 - 50);
-	$seq0 = enum(int, seq, enum_1275, %varbit4282);
-	if_setmodelanim($seq0, lore_cats_side:lore_chathead);
+	if_setmodelanim(enum(int, seq, enum_1275, %varbit4282), lore_cats_side:lore_chathead);
 } else {
-	$seq0 = enum(int, seq, enum_1276, %varbit4282);
-	if_setmodelanim($seq0, lore_cats_side:lore_chathead);
+	if_setmodelanim(enum(int, seq, enum_1276, %varbit4282), lore_cats_side:lore_chathead);
 }

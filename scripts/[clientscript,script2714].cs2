@@ -1,0 +1,30 @@
+// 2714
+[clientscript,script2714](component $component0, component $component1, component $component2, component $component3, component $component4, int $clock5)
+if (clientclock >= $clock5) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component2);
+	%varcint176 = calc(%varcint176 + 2);
+	if_setontimer("loginscreen_camera_timer($component0, $component3, $component1)", $component0);
+	%varcint177 = 0;
+	if_sethide(false, $component4);
+	if_settrans(0, $component4);
+	if_setgraphic("graphic_2208", loginscreen:com_7);
+	%varcint986 = 0;
+	return;
+}
+def_int $int6 = 0;
+def_int $int7 = 0;
+$int6, $int7 = ~script2711($component2, $component3);
+def_component $layer8 = if_getlayer($component2);
+def_int $int9 = 0;
+def_int $int10 = 0;
+$int9, $int10 = if_getwidth($layer8), if_getheight($layer8);
+def_int $int11 = calc($clock5 - clientclock);
+def_int $int12 = scale($int11, 30, calc($int9 - $int6));
+def_int $int13 = scale($int11, 30, calc($int10 - $int7));
+if (calc($int12 % 2) = 1) {
+	$int12 = calc($int12 + 1);
+}
+if (calc($int13 % 2) = 1) {
+	$int13 = calc($int13 + 1);
+}
+if_setsize($int12, $int13, ^setsize_minus, ^setsize_minus, $component2);

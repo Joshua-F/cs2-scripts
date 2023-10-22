@@ -1,8 +1,5 @@
 // 1193
-[clientscript,script1193](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	_6006(false);
-} else {
-	_6006(true);
+[clientscript,script1193](boolean $boolean0)
+if ($boolean0 = true | calc(clientclock % 50) = 0) {
+	~script1194;
 }

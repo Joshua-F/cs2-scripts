@@ -1,0 +1,174 @@
+// 2739
+[proc,script2739](component $component0)
+cc_deleteall(interface_900:com_64);
+cc_deleteall(interface_900:com_65);
+cc_deleteall(interface_900:com_66);
+cc_deleteall(interface_900:com_67);
+def_int $int1 = 0;
+if ($component0 ! null) {
+	$component0 = if_getlayer($component0);
+	~script2647(interface_900:com_65);
+	$int1 = calc(if_gety($component0) + if_getheight($component0) / 2 - if_gety(interface_900:com_64));
+	cc_create(interface_900:com_64, ^iftype_line, 0);
+	cc_setsize(if_getx(interface_900:com_65), 0, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0x383023);
+	cc_setlinewid(2);
+}
+def_enum $enum2 = null;
+def_enum $enum3 = null;
+def_enum $enum4 = null;
+def_enum $enum5 = null;
+def_enum $enum6 = null;
+def_idkit $idkit7 = null;
+def_int $int8 = -1;
+switch_int (%varcint1020) {
+	case 0 :
+		$enum4 = enum_746;
+		$enum5 = enum_748;
+		$enum6 = enum_747;
+		$int8 = %varcint1019;
+	case 1 :
+		if (gender = 1) {
+			$enum2 = enum_2341;
+		} else {
+			$enum2 = enum_2338;
+		}
+		$enum3 = null;
+		$enum4 = enum_2343;
+		$enum5 = enum_2345;
+		$enum6 = enum_2344;
+		$idkit7 = %varcint1008;
+		$int8 = %varcint1015;
+	case 2 :
+		if (gender = 1) {
+			$enum2 = null;
+			$enum3 = null;
+		} else {
+			$enum2 = enum_703;
+			$enum3 = enum_2340;
+			$idkit7 = %varcint1009;
+		}
+	case 3 :
+		if (gender = 1) {
+			$enum2 = enum_1591;
+			$enum3 = enum_1590;
+		} else {
+			$enum2 = enum_690;
+			$enum3 = enum_689;
+		}
+		$enum4 = enum_2347;
+		$enum5 = enum_2349;
+		$enum6 = enum_2348;
+		$idkit7 = %varcint1010;
+		$int8 = %varcint1016;
+	case 4 :
+		if (gender = 1) {
+			$enum2 = enum_693;
+			$enum3 = enum_1593;
+		} else {
+			$enum2 = enum_711;
+			$enum3 = enum_702;
+		}
+		$idkit7 = %varcint1011;
+	case 5 :
+		if (gender = 1) {
+			$enum2 = enum_751;
+		} else {
+			$enum2 = enum_749;
+		}
+		$enum3 = enum_750;
+		$idkit7 = %varcint1012;
+	case 6 :
+		if (gender = 1) {
+			$enum2 = enum_1607;
+			$enum3 = enum_1606;
+		} else {
+			$enum2 = enum_1586;
+			$enum3 = enum_1585;
+		}
+		$enum4 = enum_2347;
+		$enum5 = enum_2351;
+		$enum6 = enum_2348;
+		$idkit7 = %varcint1013;
+		$int8 = %varcint1017;
+	case 7 :
+		if (gender = 1) {
+			$enum2 = enum_1137;
+			$enum3 = enum_752;
+		} else {
+			$enum2 = enum_1136;
+			$enum3 = enum_752;
+		}
+		$enum4 = enum_753;
+		$enum5 = null;
+		$enum6 = enum_1588;
+		$idkit7 = %varcint1014;
+		$int8 = %varcint1018;
+}
+def_int $height9 = 0;
+def_int $height10 = if_getheight(interface_900:com_64);
+def_int $y11 = 0;
+if ($enum2 ! null) {
+	if_setsize(if_getwidth(interface_900:com_65), 1, ^setsize_abs, ^setsize_abs, interface_900:com_65);
+	if_setposition(if_getx(interface_900:com_65), $int1, ^setpos_abs_left, ^setpos_abs_top, interface_900:com_65);
+	$height9, $y11 = ~script2740($enum2, $enum3, $idkit7);
+	if_setscrollsize(0, $height9, interface_900:com_66);
+	if_setscrollpos(0, $y11, interface_900:com_66);
+	$height9 = calc($height9 + 4);
+	if ($height9 > $height10) {
+		if_setsize(16, 4, ^setsize_abs, ^setsize_minus, interface_900:com_67);
+		if_setsize(20, 4, ^setsize_minus, ^setsize_minus, interface_900:com_66);
+	} else {
+		if_setsize(0, 4, ^setsize_abs, ^setsize_minus, interface_900:com_67);
+		if_setsize(4, 4, ^setsize_minus, ^setsize_minus, interface_900:com_66);
+	}
+	if_setontimer("script2741($height9, $height10)", interface_900:com_65);
+} else if (%varcint1020 ! -1) {
+	if_setsize(0, 4, ^setsize_abs, ^setsize_minus, interface_900:com_67);
+	if_setsize(4, 4, ^setsize_minus, ^setsize_minus, interface_900:com_66);
+	cc_create(interface_900:com_66, ^iftype_text, 0);
+	cc_settextfont(p11_full);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setposition(0, $height9, ^setpos_abs_right, ^setpos_abs_top);
+	if (%varcint1020 = 0) {
+		cc_settext("Choose a colour using the buttons on the right.");
+	} else {
+		cc_settext("Not applicable.");
+	}
+	cc_setsize(2, calc(paraheight(cc_gettext, calc(if_getwidth(interface_900:com_66) - 2), p11_full) * 10 + 4), ^setsize_minus, ^setsize_abs);
+	$height9 = cc_getheight;
+	if_setscrollsize(0, $height9, interface_900:com_66);
+	if_setscrollpos(0, 0, interface_900:com_66);
+	$height9 = calc($height9 + 4);
+	if_setsize(if_getwidth(interface_900:com_65), $height9, ^setsize_abs, ^setsize_abs, interface_900:com_65);
+	if_setposition(if_getx(interface_900:com_65), min(max(calc($int1 - $height9 / 2), 0), calc(if_getheight(interface_900:com_64) - $height9)), ^setpos_abs_left, ^setpos_abs_top, interface_900:com_65);
+	if_setontimer(null, interface_900:com_65);
+}
+cc_deleteall(interface_900:com_73);
+def_string $string0 = "";
+if ($enum4 ! null) {
+	~script2744($enum4, $enum5, $enum6, $int8);
+} else {
+	switch_int (%varcint1020) {
+		case 2 :
+			if (gender ! 1) {
+				$string0 = "Your beard will be the same colour as your hair.";
+			}
+		case 4 :
+			$string0 = "Your sleeves will be the same colour as your top.";
+		case 5 :
+			$string0 = "Your hands will be the same colour as your skin.<br><br>You may choose to wear a bracelet if you wish.";
+	}
+	if (string_length($string0) > 0) {
+		if_setsize(6, if_getheight(interface_900:com_73), ^setsize_minus, ^setsize_abs, interface_900:com_73);
+		cc_create(interface_900:com_73, ^iftype_text, 0);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_settextfont(p11_full);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_setcolour(0xff981f);
+		cc_settext($string0);
+	}
+}

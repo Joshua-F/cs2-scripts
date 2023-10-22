@@ -1,0 +1,190 @@
+// 252
+[proc,script252](int $key0, char $keychar1)
+if (create_reply = -3) {
+	return;
+}
+def_string $string0 = "";
+switch_int (%varcint174) {
+	case 9 :
+		$string0 = "Select one";
+		if ($key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if (cc_find(loginscreen:com_27, 1) = ^true) {
+				$string0 = cc_gettext;
+			}
+			if (compare($string0, "Select one") = 0) {
+				%varcint195 = 0;
+			} else {
+				%varcint195 = calc(~script278($string0) + 1);
+			}
+			~script275($string0, 1, %varcint195);
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2230(8);
+			} else {
+				~script2230(3);
+			}
+		} else if ($key0 = ^key_return) {
+			if (cc_find(loginscreen:com_29, %varcint195) = ^true) {
+				~script275(cc_gettext, 1, %varcint195);
+			}
+		} else if ($key0 = ^key_up | $key0 = ^key_left | $key0 = ^key_down | $key0 = ^key_right) {
+			~script277($key0, 1);
+		} else if ($key0 = ^key_page_up | $key0 = ^key_page_down) {
+			~script277($key0, 5);
+		} else if ($key0 = ^key_home | $key0 = ^key_end) {
+			if ($key0 = ^key_home) {
+				%varcint195 = 0;
+			} else {
+				%varcint195 = enum_getoutputcount(enum_1626);
+			}
+			if (if_gethide(loginscreen:com_29) = true) {
+				if ($key0 = ^key_end) {
+					$string0 = enum(int, string, enum_1626, calc(%varcint195 - 1));
+				}
+				~script275($string0, 1, %varcint195);
+			} else if (cc_find(loginscreen:com_30, 1) = ^true) {
+				~scrollbar_vertical_doscroll(loginscreen:com_30, loginscreen:com_29, calc(15 * %varcint195), true);
+			}
+		} else if ($key0 = ^key_escape) {
+			if (if_gethide(loginscreen:com_28) = false) {
+				if (cc_find(loginscreen:com_27, 1) = ^true) {
+					$string0 = cc_gettext;
+				}
+				if (compare($string0, "Select one") = 0) {
+					%varcint195 = 0;
+				} else {
+					%varcint195 = calc(~script278($string0) + 1);
+				}
+				~script275($string0, 1, %varcint195);
+			} else {
+				~script2206;
+			}
+		} else {
+			~script2250($key0, $keychar1);
+		}
+		return;
+	case 6 :
+		$string0 = enum(int, string, enum_1601, 0);
+		if ($key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if (cc_find(loginscreen:com_38, 1) = ^true) {
+				$string0 = cc_gettext;
+			}
+			if (compare($string0, enum(int, string, enum_1601, 0)) = 0) {
+				%varcint800 = 0;
+			} else {
+				%varcint800 = ~script269($string0, enum_1601);
+			}
+			~script260(loginscreen:com_38, loginscreen:com_39, loginscreen:com_40, loginscreen:com_41, loginscreen:com_38, $string0, 1, %varcint800, 0);
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2230(5);
+			} else {
+				~script2230(7);
+			}
+		} else if ($key0 = ^key_return) {
+			if (cc_find(loginscreen:com_40, %varcint800) = ^true) {
+				~script260(loginscreen:com_38, loginscreen:com_39, loginscreen:com_40, loginscreen:com_41, loginscreen:com_38, cc_gettext, 1, %varcint800, 0);
+			}
+		} else if ($key0 = ^key_up | $key0 = ^key_left | $key0 = ^key_down | $key0 = ^key_right) {
+			~script268(loginscreen:com_38, loginscreen:com_39, loginscreen:com_40, loginscreen:com_41, loginscreen:com_38, $key0, 1, 0, enum_1601);
+		} else if ($key0 = ^key_page_up | $key0 = ^key_page_down) {
+			~script268(loginscreen:com_38, loginscreen:com_39, loginscreen:com_40, loginscreen:com_41, loginscreen:com_38, $key0, 5, 0, enum_1601);
+		} else if ($key0 = ^key_home | $key0 = ^key_end) {
+			if ($key0 = ^key_home) {
+				%varcint800 = 0;
+			} else {
+				%varcint800 = calc(enum_getoutputcount(enum_1601) - 1);
+			}
+			if (if_gethide(loginscreen:com_40) = true) {
+				if ($key0 = ^key_end) {
+					$string0 = enum(int, string, enum_1601, %varcint800);
+				}
+				~script260(loginscreen:com_38, loginscreen:com_39, loginscreen:com_40, loginscreen:com_41, loginscreen:com_38, $string0, 1, %varcint800, 0);
+			} else if (cc_find(loginscreen:com_41, 1) = ^true) {
+				~scrollbar_vertical_doscroll(loginscreen:com_41, loginscreen:com_40, calc(15 * %varcint800), true);
+			}
+		} else if ($key0 = ^key_escape) {
+			if (if_gethide(loginscreen:com_39) = false) {
+				if (cc_find(loginscreen:com_38, 1) = ^true) {
+					$string0 = cc_gettext;
+				}
+				if (compare($string0, enum(int, string, enum_1601, 0)) = 0) {
+					%varcint800 = 0;
+				} else {
+					%varcint800 = ~script269($string0, enum_1601);
+				}
+				~script260(loginscreen:com_38, loginscreen:com_39, loginscreen:com_40, loginscreen:com_41, loginscreen:com_38, $string0, 1, %varcint800, 0);
+			} else {
+				~script2206;
+			}
+		} else {
+			~script266(loginscreen:com_38, loginscreen:com_39, loginscreen:com_40, loginscreen:com_41, loginscreen:com_38, $key0, $keychar1, enum_1601, 0);
+		}
+		return;
+	case 7 :
+		$string0 = enum(int, string, enum_1602, 0);
+		if ($key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if (cc_find(loginscreen:com_33, 1) = ^true) {
+				$string0 = cc_gettext;
+			}
+			if (compare($string0, enum(int, string, enum_1602, 0)) = 0) {
+				%varcint801 = 0;
+			} else {
+				%varcint801 = ~script269($string0, enum_1602);
+			}
+			~script260(loginscreen:com_33, loginscreen:com_34, loginscreen:com_35, loginscreen:com_36, loginscreen:com_33, $string0, 1, %varcint801, 1);
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2230(6);
+			} else {
+				~script2230(8);
+			}
+		} else if ($key0 = ^key_return) {
+			if (cc_find(loginscreen:com_35, %varcint801) = ^true) {
+				~script260(loginscreen:com_33, loginscreen:com_34, loginscreen:com_35, loginscreen:com_36, loginscreen:com_33, cc_gettext, 1, %varcint801, 1);
+			}
+		} else if ($key0 = ^key_up | $key0 = ^key_left | $key0 = ^key_down | $key0 = ^key_right) {
+			~script268(loginscreen:com_33, loginscreen:com_34, loginscreen:com_35, loginscreen:com_36, loginscreen:com_33, $key0, 1, 1, enum_1602);
+		} else if ($key0 = ^key_page_up | $key0 = ^key_page_down) {
+			~script268(loginscreen:com_33, loginscreen:com_34, loginscreen:com_35, loginscreen:com_36, loginscreen:com_33, $key0, 5, 1, enum_1602);
+		} else if ($key0 = ^key_home | $key0 = ^key_end) {
+			if ($key0 = ^key_home) {
+				%varcint801 = 0;
+			} else {
+				%varcint801 = calc(enum_getoutputcount(enum_1602) - 1);
+			}
+			if (if_gethide(loginscreen:com_35) = true) {
+				if ($key0 = ^key_end) {
+					$string0 = enum(int, string, enum_1602, %varcint801);
+				}
+				~script260(loginscreen:com_33, loginscreen:com_34, loginscreen:com_35, loginscreen:com_36, loginscreen:com_33, $string0, 1, %varcint801, 1);
+			} else if (cc_find(loginscreen:com_36, 1) = ^true) {
+				~scrollbar_vertical_doscroll(loginscreen:com_36, loginscreen:com_35, calc(15 * %varcint801), true);
+			}
+		} else if ($key0 = ^key_escape) {
+			if (if_gethide(loginscreen:com_34) = false) {
+				if (cc_find(loginscreen:com_33, 1) = ^true) {
+					$string0 = cc_gettext;
+				}
+				if (compare($string0, enum(int, string, enum_1602, 0)) = 0) {
+					%varcint801 = 0;
+				} else {
+					%varcint801 = ~script269($string0, enum_1602);
+				}
+				~script260(loginscreen:com_33, loginscreen:com_34, loginscreen:com_35, loginscreen:com_36, loginscreen:com_33, $string0, 1, %varcint801, 1);
+			} else {
+				~script2206;
+			}
+		} else {
+			~script266(loginscreen:com_33, loginscreen:com_34, loginscreen:com_35, loginscreen:com_36, loginscreen:com_33, $key0, $keychar1, enum_1602, 1);
+		}
+		return;
+	case default :
+		return;
+}

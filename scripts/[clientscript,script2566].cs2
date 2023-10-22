@@ -1,0 +1,17 @@
+// 2566
+[clientscript,script2566]
+if_settext(%varcstring182, interface_843:com_7);
+if_settext(%varcstring183, interface_843:com_8);
+if (%varcint945 = 0) {
+	if_setmodel(dwarf_squad_light_red_47798, interface_843:com_18);
+} else if (%varcint945 = 1) {
+	if_setmodel(goblin_squad_light_red_47794, interface_843:com_18);
+} else if (%varcint945 = 2) {
+	if_setmodel(elf_squad_light_red_47792, interface_843:com_18);
+} else if (%varcint945 = 3) {
+	if_setmodel(dwarf_squad_light_red_47786, interface_843:com_18);
+} else if (%varcint945 = 4) {
+	if_setmodel(goblin_squad_heavy_red_47787, interface_843:com_18);
+} else if (%varcint945 = 5) {
+	if_setmodel(elf_squad_heavy_red_47796, interface_843:com_18);
+}

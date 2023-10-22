@@ -1,0 +1,21 @@
+// 309
+[proc,script309](wma $wma0, component $component1, int $y2)
+def_int $int3 = 0;
+if (%varcint623 ! null & worldmap_getmap(%varcint623) = $wma0) {
+	$int3 = ~script292(%varcint624, $component1, $y2, $int3);
+}
+if (%varcint625 ! null & worldmap_getmap(%varcint625) = $wma0) {
+	$int3 = ~script292(%varcint626, $component1, $y2, $int3);
+}
+if (%varcint627 ! null & worldmap_getmap(%varcint627) = $wma0) {
+	$int3 = ~script292(%varcint628, $component1, $y2, $int3);
+}
+if (%varcint629 ! null & worldmap_getmap(%varcint629) = $wma0) {
+	$int3 = ~script292(%varcint630, $component1, $y2, $int3);
+}
+if (%varcint940 ! null & worldmap_getmap(%varcint940) = $wma0) {
+	$int3 = ~script292(%varcint941, $component1, $y2, $int3);
+}
+if (%varcint674 ! null & worldmap_getmap(%varcint674) = $wma0) {
+	$int3 = ~script292(struct_280, $component1, $y2, $int3);
+}

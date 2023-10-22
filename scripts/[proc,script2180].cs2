@@ -1,0 +1,7 @@
+// 2180
+[proc,script2180](int $int0)
+def_struct $struct1 = enum(int, struct, enum_2252, $int0);
+if (cc_find(interface_190:com_18, $int0) = ^true) {
+	cc_settext(struct_param($struct1, param_845));
+	cc_setontimer(null);
+}

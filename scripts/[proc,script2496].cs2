@@ -1,0 +1,28 @@
+// 2496
+[proc,script2496]
+def_int $int0 = 1;
+def_int $int1 = ~script2497;
+def_component $component2 = null;
+def_component $component3 = null;
+while ($int0 <= 9 | enum(int, component, enum_2400, $int0) ! interface_45:content_layer) {
+	if ($int0 <= $int1) {
+		$component2 = enum(int, component, enum_2400, $int0);
+		$component3 = enum(int, component, enum_2402, $int0);
+		if_setonclick("script2499(event_com)", $component2);
+		if_setonclick("script2499($component2)", $component3);
+		if_setcolour(0xe1981f, $component3);
+		if_setop(1, "Select", $component2);
+		if_setop(1, "Select", $component3);
+		if_settext(enum(int, string, enum_2403, $int0), $component3);
+	} else {
+		$component2 = enum(int, component, enum_2400, $int0);
+		$component3 = enum(int, component, enum_2402, $int0);
+		if_setonclick(null, $component2);
+		if_setonclick(null, $component3);
+		if_setcolour(0x996600, $component3);
+		if_clearops($component2);
+		if_clearops($component3);
+		if_settext("<enum(int, string, enum_2403, $int0)> - Locked", $component3);
+	}
+	$int0 = calc($int0 + 1);
+}

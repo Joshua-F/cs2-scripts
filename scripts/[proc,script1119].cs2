@@ -1,10 +1,69 @@
 // 1119
-[proc,script1119]
-if (getwindowmode = 0) {
-	if_setcolour(0x996600, graphics_options:com_48);
-	~dropdownbox_refuse("High Detail only", graphics_options:com_65, graphics_options:com_66, graphics_options:com_67, null, "tradebacking_dark", 0xcf0000, p11_full);
-	return;
+[proc,script1119]()(int)
+def_struct $struct0 = enum(int, struct, enum_2162, %varbit357);
+def_int $int1 = 0;
+def_int $intarray0(4);
+switch_int (%varbit357) {
+	case 0 :
+		$int1 = %varbit5822;
+		$intarray0(0) = %varbit6459;
+		$intarray0(1) = %varbit6460;
+		$intarray0(2) = %varbit6461;
+		$intarray0(3) = %varbit6462;
+	case 1 :
+		$int1 = %varbit5823;
+		$intarray0(0) = %varbit6466;
+		$intarray0(1) = 0;
+		$intarray0(2) = 0;
+		$intarray0(3) = %varbit6467;
+	case 2 :
+		$int1 = %varbit5824;
+		$intarray0(0) = %varbit6463;
+		$intarray0(1) = 0;
+		$intarray0(2) = %varbit6464;
+		$intarray0(3) = %varbit6465;
 }
-def_int $int0 = _6111;
-if_setcolour(0xe1981f, graphics_options:com_48);
-~script1435(enum_1582, $int0, 2, graphics_options:com_65, graphics_options:com_66, graphics_options:com_67, null, "tradebacking_dark", "scrollbar_v2,1", 788, "tradebacking_light", 0xcf0000, ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_enum $enum2 = enum(int, enum, struct_param($struct0, param_662), $int1);
+def_int $int3 = struct_param($struct0, param_654);
+def_int $int4 = struct_param($struct0, param_655);
+def_int $count5 = enum_getoutputcount($enum2);
+def_int $int6 = 0;
+def_int $count7 = 0;
+def_enum $enum8 = null;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_component $component12 = null;
+def_int $index13 = -1;
+while ($count7 < $count5) {
+	$enum8 = enum(int, enum, $enum2, $count7);
+	if ($enum8 ! null) {
+		$int6 = enum_getoutputcount($enum8);
+		$int9 = 0;
+		$int11 = 0;
+		while ($int9 < $int6) {
+			$component12 = enum(int, component, $enum8, $int11);
+			if ($component12 ! null) {
+				$int9 = calc($int9 + 1);
+				$index13 = enum(component, int, enum_727, $component12);
+				if ($index13 = -1 | $intarray0($index13) = 0 & (map_members = ^true | enum(component, int, enum_743, $component12) = 0)) {
+					$int10 = calc($int10 + 1);
+					$int4 = calc($int4 + (struct_param($struct0, param_657) + struct_param($struct0, param_658)));
+					if (calc($int10 % struct_param($struct0, param_660)) = 0) {
+						$int3 = calc($int3 + (struct_param($struct0, param_656) + struct_param($struct0, param_659)));
+						$int4 = struct_param($struct0, param_655);
+					}
+				}
+			}
+			$int11 = calc($int11 + 1);
+			if ($int11 > 997) {
+				return(1);
+			}
+		}
+	}
+	$count7 = calc($count7 + 1);
+}
+if (calc($int3 + struct_param($struct0, param_656)) >= 229) {
+	return(1);
+}
+return(0);

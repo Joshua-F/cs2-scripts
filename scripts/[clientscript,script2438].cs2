@@ -1,0 +1,17 @@
+// 2438
+[clientscript,script2438]
+def_int $y0 = 0;
+def_int $height1 = 0;
+def_int $int2 = scale(%varbit651, 1000, 100);
+if ($int2 > 100) {
+	$int2 = 100;
+}
+$y0 = enum(int, int, enum_1090, $int2);
+$height1 = enum(int, int, enum_1091, $int2);
+if_setposition(40, $y0, ^setpos_abs_right, ^setpos_abs_top, trawler_game_overlay:com_14);
+if_setsize(18, $height1, ^setsize_abs, ^setsize_abs, trawler_game_overlay:com_14);
+if ($int2 < 25) {
+	if_setcolour(0xff9900, trawler_game_overlay:com_14);
+} else {
+	if_setcolour(0x006600, trawler_game_overlay:com_14);
+}

@@ -1,0 +1,77 @@
+// 2597
+[proc,script2597]
+def_obj $obj0 = null;
+def_int $int1 = 0;
+switch_int (%varcint929) {
+	case 0 :
+		$obj0 = inv_getobj(inv, %varcint930);
+	case 1 :
+		$obj0 = inv_getobj(inv, %varcint931);
+	case 2 :
+		$obj0 = inv_getobj(inv, %varcint932);
+	case 3 :
+		$obj0 = inv_getobj(inv, %varcint933);
+	case 4 :
+		$obj0 = inv_getobj(inv, %varcint934);
+	case 5 :
+		$obj0 = inv_getobj(inv, %varcint935);
+	case 6 :
+		$obj0 = inv_getobj(inv, %varcint936);
+	case 7 :
+		$obj0 = inv_getobj(inv, %varcint937);
+	case 8 :
+		$obj0 = inv_getobj(inv, %varcint938);
+	case 9 :
+		$obj0 = inv_getobj(inv, %varcint939);
+}
+if ($obj0 = null | oc_param($obj0, param_803) ! 1) {
+	return;
+}
+switch_int (%varcint929) {
+	case 0 :
+		if (%varbit6405 = 1) {
+			$int1 = 1;
+		}
+	case 1 :
+		if (%varbit6406 = 1) {
+			$int1 = 1;
+		}
+	case 2 :
+		if (%varbit6407 = 1) {
+			$int1 = 1;
+		}
+	case 3 :
+		if (%varbit6408 = 1) {
+			$int1 = 1;
+		}
+	case 4 :
+		if (%varbit6409 = 1) {
+			$int1 = 1;
+		}
+	case 5 :
+		if (%varbit6410 = 1) {
+			$int1 = 1;
+		}
+	case 6 :
+		if (%varbit6411 = 1) {
+			$int1 = 1;
+		}
+	case 7 :
+		if (%varbit6412 = 1) {
+			$int1 = 1;
+		}
+	case 8 :
+		if (%varbit6413 = 1) {
+			$int1 = 1;
+		}
+	case 9 :
+		if (%varbit6414 = 1) {
+			$int1 = 1;
+		}
+}
+switch_int ($int1) {
+	case 0 :
+		if_setgraphic("warning_icons,1", interface_292:com_113);
+	case 1 :
+		if_setgraphic("warning_icons,2", interface_292:com_113);
+}

@@ -1,5 +1,9 @@
 // 1888
 [proc,script1888]
-if (%varcint543 >= ^windowmode_fixed & getwindowmode = 0 | %varcint543 = 0 & getwindowmode >= ^windowmode_fixed) {
-	~script1887(loginscreen:com_125, loginscreen:com_127, loginscreen:fader, loginscreen:com_128, loginscreen:com_129);
+if (~script2728 = 1 & %varbit6521 = 0) {
+	if (%var281 < 1000) {
+		return;
+	}
+	mes("Your hitpoints are low! Find a safe place away from your attacker");
+	mes("and speak to your advisor to find out what to do.");
 }

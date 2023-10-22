@@ -1,20 +1,25 @@
 // 1711
-[proc,script1711]
-~script1710;
-baseidkit(0, enum(int, idkit, enum_701, %varcint87));
-baseidkit(1, enum(int, idkit, enum_703, %varcint88));
-baseidkit(2, enum(int, idkit, enum_1128, %varcint89));
-baseidkit(3, enum(int, idkit, enum_1130, %varcint90));
-baseidkit(4, enum(int, idkit, enum_1132, %varcint91));
-baseidkit(5, enum(int, idkit, enum_1134, %varcint92));
-baseidkit(6, enum(int, idkit, enum_1136, %varcint93));
-basecolour(0, %varbit4215);
-basecolour(1, %varbit4216);
-basecolour(2, %varbit4217);
-basecolour(3, %varbit4218);
-basecolour(4, %varbit4219);
-~script1717;
-~script1718;
-~script1719;
-~script1720;
-~script1721;
+[proc,script1711](stat $stat0)(int)
+def_int $int1 = -25;
+def_int $int2 = 10;
+def_int $int3 = ~script1695($stat0);
+def_int $int4 = ~script1696($stat0);
+if ($int3 = 4) {
+	$int1 = calc(0 - 25);
+} else if ($int3 = 1) {
+	$int1 = calc(0 - 20);
+}
+def_int $int5 = ~script1714($stat0, ~script1697($stat0));
+def_int $int6 = ~script1713($stat0);
+def_int $int7 = ~script1712($stat0);
+if ($int6 < 5 & $int4 = 4) {
+	$int6 = 5;
+}
+if ($int7 < 10 & $int3 = 4) {
+	if (calc($int7 + $int5) > calc(0 - 10)) {
+		$int7 = calc(0 - 10);
+	}
+} else if ($int7 < 10 & $int3 = 1 & calc($int7 + $int5) > calc(0 - 10)) {
+	$int7 = calc(0 - 10);
+}
+return(min(max(calc($int5 + $int6 + $int7), $int1), $int2));

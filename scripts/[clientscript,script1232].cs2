@@ -1,3 +1,28 @@
 // 1232
-[clientscript,script1232](int $int0)
-%varcint182 = enum(int, int, enum_1669, ~dropdownbox_getselected($int0, loginscreen:com_371));
+[clientscript,script1232](component $component0, component $drop1, component $component2)
+if_setsize(if_getwidth($component2), calc(paraheight(if_gettext($component2), if_getwidth($component2), p11_full) * 12 + 3), ^setsize_abs, ^setsize_abs, $component2);
+cc_deleteall($component0);
+def_int $int3 = calc((if_getwidth($component0) - 36 * 8) / 7);
+def_int $int4 = calc((if_getheight($component0) - 32 * 5) / 4);
+def_int $size5 = 0;
+while ($size5 < inv_size(inv_0)) {
+	cc_create($component0, ^iftype_graphic, $size5);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc((36 + $int3) * ($size5 % 8)), calc($size5 / 8 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_sethide(false);
+	if (inv_getobj(inv_0, $size5) ! null) {
+		cc_setobject(inv_getobj(inv_0, $size5), inv_getnum(inv_0, $size5));
+		cc_setopbase("<col=ff981f><oc_name(inv_getobj(inv_0, $size5))>");
+		cc_setop(1, "Withdraw<col=ff9040>");
+		cc_setop(2, "Withdraw-All<col=ff9040>");
+		cc_setop(10, "Examine<col=ff9040>");
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(10);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_setondragcomplete("script1233($component0, event_comsubid, event_com2, event_comsubid2, $drop1, $component2)");
+	} else {
+		cc_setobject_nonum(null, 0);
+	}
+	$size5 = calc($size5 + 1);
+}

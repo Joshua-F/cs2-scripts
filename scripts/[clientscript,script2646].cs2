@@ -1,0 +1,74 @@
+// 2646
+[clientscript,script2646](component $component0)
+if (%varcint842 = 3) {
+	%varcint842 = 1;
+	if_settext("Check bank & inventory", $component0);
+	if_settext("Commodities", interface_860:title);
+	if_sethide(false, interface_860:com_20);
+	~script2645(interface_860:com_20);
+	~script2642;
+	return;
+}
+%varcint842 = 3;
+def_int $size1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+%varcint842 = 3;
+def_obj $obj6 = null;
+if_sethide(true, interface_860:com_20);
+if_settext("View all commodities", $component0);
+if_settext("Commodities in your bank & inventory", interface_860:title);
+cc_deleteall(interface_860:main_stock);
+if_settext("A list of items already in your inventory or bank that you can trade with Mal for investment credit.", interface_860:title_1);
+$int3 = calc((if_getwidth(interface_860:main_stock) - 36 * 10) / (10 - 1));
+$int4 = calc((if_getheight(interface_860:main_stock) - 128) / 3);
+def_int $int7 = 0;
+while ($size1 <= inv_size(bank)) {
+	$obj6 = inv_getobj(bank, $size1);
+	if ($obj6 ! null & enum_hasoutput(obj, enum_1939, $obj6) = true) {
+		cc_create(interface_860:main_stock, ^iftype_graphic, $int2);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((36 + $int3) * ($int2 % 10)), calc($int2 / 10 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($obj6, -1);
+		cc_setopbase("<col=ff981f><oc_name($obj6)>");
+		cc_setop(1, "Examine");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		$int2 = calc($int2 + 1);
+		$int7 = cc_gety;
+	}
+	$size1 = calc($size1 + 1);
+}
+def_int $size8 = 0;
+while ($size8 <= inv_size(inv)) {
+	$obj6 = inv_getobj(inv, $size8);
+	if ($obj6 ! null & enum_hasoutput(obj, enum_1939, $obj6) = true) {
+		cc_create(interface_860:main_stock, ^iftype_graphic, $int2);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((36 + $int3) * ($int2 % 10)), calc($int2 / 10 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($obj6, -1);
+		cc_setopbase("<col=ff981f><oc_name($obj6)>");
+		cc_setop(1, "Examine");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		$int2 = calc($int2 + 1);
+		$int7 = cc_gety;
+	}
+	$size8 = calc($size8 + 1);
+}
+if ($int2 = 0) {
+	cc_create(interface_860:main_stock, ^iftype_text, $int2);
+	cc_setsize(200, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_4);
+	cc_settext("No valid commodities were found in your bank or inventory.");
+	cc_settextfont(b12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(false);
+	cc_setcolour(0xff981f);
+	$int2 = 1;
+}
+if_setscrollsize(if_getwidth(interface_860:main_stock), calc($int7 + 32), interface_860:main_stock);
+if_setscrollpos(0, 0, interface_860:main_stock);
+~scrollbar_vertical(interface_860:scrollbar, interface_860:main_stock, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

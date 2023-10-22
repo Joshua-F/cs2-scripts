@@ -1,16 +1,25 @@
 // 1713
-[proc,script1713]
-~script1710;
-baseidkit(2, enum(int, idkit, enum_1128, %varcint89));
-baseidkit(3, enum(int, idkit, enum_1130, %varcint90));
-baseidkit(4, enum(int, idkit, enum_1132, %varcint91));
-baseidkit(5, enum(int, idkit, enum_1134, %varcint92));
-baseidkit(6, enum(int, idkit, enum_1136, %varcint93));
-basecolour(1, %varbit4216);
-basecolour(2, %varbit4217);
-basecolour(3, %varbit4218);
-~script1717;
-~script1718;
-~script1719;
-~script1720;
-~script1721;
+[proc,script1713](stat $stat0)(int)
+switch_stat ($stat0) {
+	case attack :
+		if (%varbit6830 = 1) {
+			return(~script1714(attack, ~script1718(attack, 5)));
+		}
+	case strength :
+		if (%varbit6834 = 1) {
+			return(~script1714(strength, ~script1718(strength, 5)));
+		}
+	case defence :
+		if (%varbit6833 = 1) {
+			return(~script1714(defence, ~script1718(defence, 5)));
+		}
+	case ranged :
+		if (%varbit6831 = 1) {
+			return(~script1714(ranged, ~script1718(ranged, 5)));
+		}
+	case magic :
+		if (%varbit6832 = 1) {
+			return(~script1714(magic, ~script1718(magic, 5)));
+		}
+}
+return(0);

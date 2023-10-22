@@ -1,0 +1,47 @@
+// 258
+[proc,script258](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, enum $enum6)
+if_sethide(false, $component1);
+if_sethide(false, $component2);
+if_sethide(false, $component3);
+if_setontimer("script264($component2, $int5)", $component4);
+if_setonmouserepeat("script257(event_mousex, event_mousey)", $component2);
+%varcint804 = 0;
+if (cc_find($component0, 1) = ^true) {
+	cc_setonmouseover(null);
+	cc_setonmouseleave(null);
+	cc_setcolour(0x663300);
+}
+if (cc_find($component0, 0) = ^true) {
+	cc_setvflip(true);
+}
+cc_create($component1, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component1), if_getheight($component1), ^setsize_abs, ^setsize_abs);
+cc_setgraphic("graphic_1402");
+cc_settiling(true);
+cc_create($component1, ^iftype_rectangle, 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component1), if_getheight($component1), ^setsize_abs, ^setsize_abs);
+cc_setcolour(^black);
+def_int $count7 = enum_getoutputcount($enum6);
+if_setscrollsize(if_getwidth($component2), calc($count7 * 15), $component2);
+def_int $count8 = 0;
+def_string $string0 = "";
+while ($count8 < $count7) {
+	$string0 = "  <enum(int, string, $enum6, $count8)>";
+	cc_create($component2, ^iftype_text, $count8);
+	cc_settext($string0);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setposition(-1, calc($count8 * 15), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(-1, 15, ^setsize_minus, ^setsize_abs);
+	cc_settextshadow(false);
+	cc_settextfont(p11_full);
+	cc_setcolour(0x663300);
+	cc_setonmouserepeat("script265($count8, $int5)");
+	cc_setonclick("script259($component0, $component1, $component2, $component3, $component4, $string0, $int5)");
+	$count8 = calc($count8 + 1);
+}
+~scrollbar_vertical($component3, $component2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+if (cc_find($component3, 1) = ^true) {
+	~scrollbar_vertical_doscroll($component3, $component2, calc(15 * ~script270($int5)), true);
+}

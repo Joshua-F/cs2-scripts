@@ -1,0 +1,13 @@
+// 2075
+[clientscript,script2075]
+def_int $int0 = 0;
+if (%varcint632 = 0) {
+	if (calc(10 - %varcint633) > 0) {
+		$int0 = calc(10 - %varcint633);
+	} else {
+		$int0 = 0;
+	}
+	if_settext(tostring($int0), interface_837:com_3);
+} else {
+	if_settext(tostring(%varcint637), interface_837:com_3);
+}

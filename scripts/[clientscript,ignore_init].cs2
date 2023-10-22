@@ -1,5 +1,7 @@
 // 127
 [clientscript,ignore_init]
 if_setonfriendtransmit("ignore_transmit", ignore2:ignorebox);
-~ignore_update;
 ~scrollbar_vertical(ignore2:ignorescroll, ignore2:ignorebox, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, 0, ignore2:ignorebox);
+if_setscrollpos(0, 0, ignore2:ignorebox);
+~ignore_update;

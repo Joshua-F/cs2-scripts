@@ -1,4 +1,5 @@
 // 212
-[clientscript,script212]
-~script224;
-if_setgraphic("miscgraphics,11", interface_595:com_80);
+[clientscript,script212](string $string0)
+if (compare($string0, "") ! 0) {
+	openurl_nologin($string0, true);
+}

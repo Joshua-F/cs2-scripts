@@ -1,0 +1,113 @@
+// 2690
+[proc,script2690](component $component0, stat $stat1, component $component2)
+def_string $string0 = "<enum(stat, string, enum_680, $stat1)>: <tostring(stat($stat1))>/<tostring(stat_base($stat1))>";
+def_string $string1 = ~tostring_spacer(stat_xp($stat1), ",");
+def_string $string2 = "";
+def_string $string3 = "";
+def_int $int3 = calc(%varcint1021 - stat_xp($stat1));
+if ($int3 < 0) {
+	$int3 = 0;
+}
+def_int $int4 = 2;
+if (stat_base($stat1) < 99) {
+	if (%varcint1023 = 100) {
+		$string2 = ~tostring_spacer(%varcint1021, ",");
+		$string3 = ~tostring_spacer(0, ",");
+		$int4 = 4;
+	} else {
+		$string2 = ~tostring_spacer(%varcint1021, ",");
+		$string3 = ~tostring_spacer($int3, ",");
+		$int4 = 4;
+	}
+}
+def_int $int5 = calc(parawidth($string0, 190, p12_full) + 10);
+def_int $int6 = parawidth("Current XP:", 190, p12_full);
+def_int $int7 = parawidth($string1, 190, p12_full);
+def_int $int8 = calc($int6 + 10 + $int7);
+$int5 = max($int5, $int8);
+if (stat_base($stat1) < 99) {
+	$int6 = parawidth("Goal XP:", 190, p12_full);
+	$int7 = parawidth($string2, 190, p12_full);
+	$int8 = calc($int6 + 3 + $int7);
+} else {
+	$int8 = 0;
+}
+$int5 = max($int5, $int8);
+if (stat_base($stat1) < 99) {
+	$int6 = parawidth("Remainder:", 190, p12_full);
+	$int7 = parawidth($string3, 190, p12_full);
+	$int8 = calc($int6 + 3 + $int7);
+} else {
+	$int8 = 0;
+}
+$int5 = max($int5, $int8);
+$int6 = calc(if_getx($component0) + 32);
+$int7 = calc(if_gety($component0) - if_getscrolly(if_getlayer($component0)) + 32);
+if (calc($int6 + $int5 + 4) > 190) {
+	$int6 = calc(190 - ($int5 + 4));
+}
+if (calc($int7 + $int4 * 16 + 4) > if_getheight($component2)) {
+	$int7 = calc(if_gety($component0) - if_getscrolly(if_getlayer($component0)) - ($int4 * 16 + 5));
+}
+cc_create($component2, ^iftype_rectangle, 0);
+cc_setsize(calc($int5 + 4), calc(4 + $int4 * 16), ^setsize_abs, ^setsize_abs);
+cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(0xffffa0);
+cc_setonstattransmit("script2727(2, 4, 8, $stat1, $component0, $component2){$stat1}");
+cc_create($component2, ^iftype_rectangle, 1);
+cc_setsize(calc($int5 + 4), calc(4 + $int4 * 16), ^setsize_abs, ^setsize_abs);
+cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(^black);
+cc_create($component2, ^iftype_text, 2);
+cc_setposition(calc($int6 + 2), calc($int7 + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int5, 16, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextshadow(false);
+cc_settext($string0);
+cc_create($component2, ^iftype_text, 3);
+cc_setposition(calc($int6 + 2), calc($int7 + 18), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int5, 16, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextshadow(false);
+cc_settext("Current XP:");
+cc_create($component2, ^iftype_text, 4);
+cc_setposition(calc($int6 + 2), calc($int7 + 18), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int5, 16, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_right, ^settextalign_top, 0);
+cc_settextshadow(false);
+cc_settext($string1);
+if (stat_base($stat1) < 99) {
+	cc_create($component2, ^iftype_text, 5);
+	cc_setposition(calc($int6 + 2), calc($int7 + 35), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int5, 16, ^setsize_abs, ^setsize_abs);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settextshadow(false);
+	cc_settext("Goal XP:");
+	cc_create($component2, ^iftype_text, 6);
+	cc_setposition(calc($int6 + 2), calc($int7 + 35), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int5, 16, ^setsize_abs, ^setsize_abs);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_right, ^settextalign_top, 0);
+	cc_settextshadow(false);
+	cc_settext($string2);
+	cc_create($component2, ^iftype_text, 7);
+	cc_setposition(calc($int6 + 2), calc($int7 + 52), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int5, 16, ^setsize_abs, ^setsize_abs);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settextshadow(false);
+	cc_settext("Remainder:");
+	cc_create($component2, ^iftype_text, 8);
+	cc_setposition(calc($int6 + 2), calc($int7 + 52), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int5, 16, ^setsize_abs, ^setsize_abs);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_right, ^settextalign_top, 0);
+	cc_settextshadow(false);
+	cc_settext($string3);
+}

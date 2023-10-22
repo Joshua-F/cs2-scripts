@@ -1,0 +1,27 @@
+// 2126
+[clientscript,macro_beekeeper_timer](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+%varcint681 = calc((%varcint681 + random(4) + 2) % 2048);
+%varcint684 = calc((%varcint684 + random(4) + 2) % 2048);
+%varcint687 = calc((%varcint687 + random(4) + 2) % 2048);
+%varcint690 = calc((%varcint690 + random(4) + 2) % 2048);
+if (%varcint680 < 20 & (%varcint680 < -20 | random(2) = 0)) {
+	%varcint680 = min(calc(%varcint680 + random(3) + 1), 25);
+} else {
+	%varcint680 = max(calc(%varcint680 - (random(3) + 1)), -25);
+}
+if (%varcint683 < 20 & (%varcint683 < -20 | random(2) = 0)) {
+	%varcint683 = min(calc(%varcint683 + random(3) + 1), 25);
+} else {
+	%varcint683 = max(calc(%varcint683 - (random(3) + 1)), -25);
+}
+if (%varcint686 < 20 & (%varcint686 < -20 | random(2) = 0)) {
+	%varcint686 = min(calc(%varcint686 + random(3) + 1), 25);
+} else {
+	%varcint686 = max(calc(%varcint686 - (random(3) + 1)), -25);
+}
+if (%varcint689 < 20 & (%varcint689 < -20 | random(2) = 0)) {
+	%varcint689 = min(calc(%varcint689 + random(3) + 1), 25);
+} else {
+	%varcint689 = max(calc(%varcint689 - (random(3) + 1)), -25);
+}
+~macro_beekeeper_update($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7);

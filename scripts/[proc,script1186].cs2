@@ -1,6 +1,5 @@
 // 1186
 [proc,script1186]
-def_int $int0 = 0;
 if (getwindowmode >= ^windowmode_resizable) {
 	if (if_hassub(chattop:chatmodallarge) = true) {
 		if_sethide(false, chattop:chat_graphic);
@@ -44,3 +43,15 @@ if (getwindowmode >= ^windowmode_resizable) {
 		}
 	}
 }
+def_boolean $boolean0 = ~int_to_bool(%varbit6448);
+if_sethide($boolean0, toplevel:statusicons);
+if_sethide($boolean0, toplevel:com_7);
+if_sethide($boolean0, toplevel_fullscreen:side);
+if_sethide($boolean0, toplevel_fullscreen:statusicons);
+if_sethide($boolean0, toplevel_fullscreen:com_13);
+if (~script1569 = 0) {
+	if_sethide($boolean0, toplevel_fullscreen:com_17);
+} else {
+	if_sethide(true, toplevel_fullscreen:com_17);
+}
+if_sethide($boolean0, toplevel_fullscreen:backbase2);

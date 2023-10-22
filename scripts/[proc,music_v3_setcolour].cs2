@@ -1,0 +1,9 @@
+// 831
+[proc,music_v3_setcolour](int $int0, component $component1)
+if (cc_find($component1, $int0) = ^true) {
+	if (~music_getvar($int0) = 1) {
+		cc_setcolour(^green);
+	} else {
+		cc_setcolour(^red);
+	}
+}

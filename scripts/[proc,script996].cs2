@@ -1,306 +1,47 @@
 // 996
 [proc,script996](int $int0, int $int1)(int, namedobj, string, string)
 switch_int ($int0) {
-	case 0 :
-		switch_int ($int1) {
-			case 0 :
-				return(-1, silvthrill_rod_7620, "You can see what each of these spells does by selecting the spellbook icon on your side interface. Move your mouse over the icon of the spell you want and a description will be available.", " ");
-			case 1 :
-				return(1, staff_1379, "Wind Strike", "You can now cast <col=000080>Wind Strike</col>.");
-			case 2 :
-				return(3, staff_1379, "Confuse", "You can now cast <col=000080>Confuse</col>.");
-			case 3 :
-				return(5, staff_1379, "Water Strike", "You can now cast <col=000080>Water Strike</col>.");
-			case 4 :
-				return(9, staff_1379, "Earth Strike", "You can now cast <col=000080>Earth Strike</col>.");
-			case 5 :
-				return(11, staff_1379, "Weaken", "You can now cast <col=000080>Weaken</col>.");
-			case 6 :
-				return(13, staff_1379, "Fire Strike", "You can now cast <col=000080>Fire Strike</col>.");
-			case 7 :
-				return(15, staff_1379, "Bones to Bananas", "You can now cast <col=000080>Bones to Bananas</col>.");
-			case 8 :
-				return(17, staff_1379, "Wind Bolt", "You can now cast <col=000080>Wind Bolt</col>.");
-			case 9 :
-				return(19, staff_1379, "Curse", "You can now cast <col=000080>Curse</col>.");
-			case 10 :
-				return(20, staff_1379, "Bind", "You can now cast <col=000080>Bind</col>.");
-			case 11 :
-				return(21, staff_1379, "Low Level Alchemy", "You can now cast <col=000080>Low Level Alchemy</col>.");
-			case 12 :
-				return(23, staff_1379, "Water Bolt", "You can now cast <col=000080>Water Bolt</col>.");
-			case 13 :
-				return(25, staff_1379, "Teleport to Varrock", "You can now cast <col=000080>Teleport to Varrock</col>.");
-			case 14 :
-				return(29, staff_1379, "Earth Bolt", "You can now cast <col=000080>Earth Bolt</col>.");
-			case 15 :
-				return(31, staff_1379, "Teleport to Lumbridge", "You can now cast <col=000080>Teleport to Lumbridge</col>.");
-			case 16 :
-				return(32, staff_1379, "Bounty Locate", "You can now cast <col=000080>Bounty Locate</col>.");
-			case 17 :
-				return(33, staff_1379, "Telekinetic Grab", "You can now cast <col=000080>Telekinetic Grab</col>.");
-			case 18 :
-				return(35, staff_1379, "Fire Bolt", "You can now cast <col=000080>Fire Bolt</col>.");
-			case 19 :
-				return(37, staff_1379, "Teleport to Falador", "You can now cast <col=000080>Teleport to Falador</col>.");
-			case 20 :
-				return(39, staff_1379, "Crumble Undead", "You can now cast <col=000080>Crumble Undead</col>.");
-			case 21 :
-				return(40, staff_1379, "Members: Teleport to House", "Members can now cast <col=000080>Teleport to House</col>.");
-			case 22 :
-				return(41, staff_1379, "Wind Blast", "You can now cast <col=000080>Wind Blast</col>.");
-			case 23 :
-				return(43, staff_1379, "Superheat Item", "You can now cast <col=000080>Superheat Item</col>.");
-			case 24 :
-				return(45, staff_1379, "Members: Teleport to Camelot", "Members can now cast <col=000080>Teleport to Camelot</col>.");
-			case 25 :
-				return(47, staff_1379, "Water Blast", "You can now cast <col=000080>Water Blast</col>.");
-			case 26 :
-				return(50, staff_1379, "Members: Snare", "Members can now cast <col=000080>Snare</col>.");
-			case 27 :
-				return(50, staff_1379, "Members: Magic Dart<br> (with 55 Slayer)", "Members now have the Magic level required to cast <col=000080>Magic Dart</col>. (They also need level 55 Slayer.)");
-			case 28 :
-				return(50, staff_1379, "Members: Iban's Blast<br> (after Underground Pass)", "Members now have the Magic level required to cast <col=000080>Iban's Blast</col> (after Underground Pass).");
-			case 29 :
-				return(51, staff_1379, "Members: Teleport to Ardougne", "Members can now cast <col=000080>Teleport to Ardougne</col>.");
-			case 30 :
-				return(53, staff_1379, "Earth Blast", "You can now cast <col=000080>Earth Blast</col>.");
-			case 31 :
-				return(55, staff_1379, "High-level Alchemy", "You can now cast <col=000080>High-level Alchemy</col>.");
-			case 32 :
-				return(58, staff_1379, "Members: Teleport to the Watchtower<br> (after Watchtower)", "Members now have the Magic level required to cast <col=000080>Teleport to the Watchtower</col> (after Watchtower).");
-			case 33 :
-				return(59, staff_1379, "Fire Blast", "You can now cast <col=000080>Fire Blast</col>.");
-			case 34 :
-				return(60, staff_1379, "Members: Bones to Peaches<br> (after Mage Training Arena minigame)", "Members can now learn <col=000080>Bones to Peaches</col> in the Mage Training Arena minigame.");
-			case 35 :
-				return(60, staff_1379, "Members: Saradomin Strike<br> (after Mage Arena minigame)", "Members can now learn <col=000080>Saradomin Strike</col> in the Mage Arena minigame.");
-			case 36 :
-				return(60, staff_1379, "Members: Claws of Guthix<br> (after Mage Arena minigame)", "Members can now learn <col=000080>Claws of Guthix</col> in the Mage Arena minigame.");
-			case 37 :
-				return(60, staff_1379, "Members: Flames of Zamorak<br> (after Mage Arena minigame)", "Members can now learn <col=000080>Flames of Zamorak</col> in the Mage Arena minigame.");
-			case 38 :
-				return(61, staff_1379, "Members: Teleport to Trollheim<br> (after Eadgar's Ruse)", "Members now have the Magic level required to cast <col=000080>Teleport to Trollheim</col> (after Eadgar's Ruse).");
-			case 39 :
-				return(62, staff_1379, "Members: Wind Wave", "Members can now cast <col=000080>Wind Wave</col>.");
-			case 40 :
-				return(64, staff_1379, "Members: Teleport to Ape Atoll<br> (after saving Awowogei in Recipe for Disaster)", "Members now have the Magic level required to cast <col=000080>Teleport to Ape Atoll</col> (after saving Awowogei in Recipe for Disaster).");
-			case 41 :
-				return(65, staff_1379, "Members: Water Wave", "Members can now cast <col=000080>Water Wave</col>.");
-			case 42 :
-				return(66, staff_1379, "Members: Vulnerability", "Members can now cast <col=000080>Vulnerability</col>.");
-			case 43 :
-				return(70, staff_1379, "Members: Earth Wave", "Members can now cast <col=000080>Earth Wave</col>.");
-			case 44 :
-				return(73, staff_1379, "Members: Enfeeble", "Members can now cast <col=000080>Enfeeble</col>.");
-			case 45 :
-				return(74, staff_1379, "Members: Tele-other Lumbridge", "Members can now cast <col=000080>Tele-other to Lumbridge</col>.");
-			case 46 :
-				return(75, staff_1379, "Members: Fire Wave", "Members can now cast <col=000080>Fire Wave</col>.");
-			case 47 :
-				return(79, staff_1379, "Members: Entangle", "Members can now cast <col=000080>Entangle</col>.");
-			case 48 :
-				return(80, staff_1379, "Members: Stun", "Members can now cast <col=000080>Stun</col>.");
-			case 49 :
-				return(80, staff_1379, "Members: Charge", "Members can now cast <col=000080>Charge</col>.");
-			case 50 :
-				return(82, staff_1379, "Members: Tele-other Falador", "Members can now cast <col=000080>Tele-other to Falador</col>.");
-			case 51 :
-				return(85, staff_1379, "Teleport Block", "You can now cast <col=000080>Teleport Block</col>.");
-			case 52 :
-				return(90, staff_1379, "Members: Tele-other to Camelot", "Members can now cast <col=000080>Tele-other to Camelot</col>.");
-		}
-	case 1 :
-		switch_int ($int1) {
-			case 0 :
-				return(-1, silvthrill_rod_7620, "Once you have completed Desert Treasure, you will be able to access the Ancient Magicks spellbook.", "");
-			case 1 :
-				return(-1, silvthrill_rod_7620, "Home teleport (to Edgeville)", "");
-			case 2 :
-				return(50, ancient_staff_4675, "Smoke Rush", "Members using the Ancient Magicks spellbook can now cast <col=000080>Smoke Rush</col>.");
-			case 3 :
-				return(52, ancient_staff_4675, "Shadow Rush", "Members using the Ancient Magicks spellbook can now cast <col=000080>Shadow Rush</col>.");
-			case 4 :
-				return(54, ancient_staff_4675, "Teleport to Paddewwa", "Members using the Ancient Magicks spellbook can now cast <col=000080>Teleport to Paddewwa</col>.");
-			case 5 :
-				return(56, ancient_staff_4675, "Blood Rush", "Members using the Ancient Magicks spellbook can now cast <col=000080>Blood Rush</col>.");
-			case 6 :
-				return(58, ancient_staff_4675, "Ice Rush", "Members using the Ancient Magicks spellbook can now cast <col=000080>Ice Rush</col>.");
-			case 7 :
-				return(60, ancient_staff_4675, "Teleport to Senntisten", "Members using the Ancient Magicks spellbook can now cast <col=000080>Teleport to Senntisten</col>.");
-			case 8 :
-				return(61, ancient_staff_4675, "Miasmic Rush", "Members using the Ancient Magicks spellbook can now cast <col=000080>Miasmic Rush</col>.");
-			case 9 :
-				return(62, ancient_staff_4675, "Smoke Burst", "Members using the Ancient Magicks spellbook can now cast <col=000080>Smoke Burst</col>.");
-			case 10 :
-				return(64, ancient_staff_4675, "Shadow Burst", "Members using the Ancient Magicks spellbook can now cast <col=000080>Shadow Burst</col>.");
-			case 11 :
-				return(66, ancient_staff_4675, "Teleport to Kharyrll", "Members using the Ancient Magicks spellbook can now cast <col=000080>Teleport to Kharyrll</col>.");
-			case 12 :
-				return(68, ancient_staff_4675, "Blood Burst", "Members using the Ancient Magicks spellbook can now cast <col=000080>Blood Burst</col>.");
-			case 13 :
-				return(70, ancient_staff_4675, "Ice Burst", "Members using the Ancient Magicks spellbook can now cast <col=000080>Ice Burst</col>.");
-			case 14 :
-				return(72, ancient_staff_4675, "Teleport to Lassar", "Members using the Ancient Magicks spellbook can now cast <col=000080>Teleport to Lassar</col>.");
-			case 15 :
-				return(73, ancient_staff_4675, "Miasmic Burst", "Members using the Ancient Magicks spellbook can now cast <col=000080>Miasmic Burst</col>.");
-			case 16 :
-				return(74, ancient_staff_4675, "Smoke Blitz", "Members using the Ancient Magicks spellbook can now cast <col=000080>Smoke Blitz</col>.");
-			case 17 :
-				return(76, ancient_staff_4675, "Shadow Blitz", "Members using the Ancient Magicks spellbook can now cast <col=000080>Shadow Blitz</col>.");
-			case 18 :
-				return(78, ancient_staff_4675, "Teleport to Dareeyak", "Members using the Ancient Magicks spellbook can now cast <col=000080>Teleport to Dareeyak</col>.");
-			case 19 :
-				return(80, ancient_staff_4675, "Blood Blitz", "Members using the Ancient Magicks spellbook can now cast <col=000080>Blood Blitz</col>.");
-			case 20 :
-				return(82, ancient_staff_4675, "Ice Blitz", "Members using the Ancient Magicks spellbook can now cast <col=000080>Ice Blitz</col>.");
-			case 21 :
-				return(84, ancient_staff_4675, "Teleport to Carrallangar", "Members using the Ancient Magicks spellbook can now cast <col=000080>Teleport to Carrallangar</col>.");
-			case 22 :
-				return(85, ancient_staff_4675, "Miasmic Blitz", "Members using the Ancient Magicks spellbook can now cast <col=000080>Miasmic Blitz</col>.");
-			case 23 :
-				return(86, ancient_staff_4675, "Smoke Barrage", "Members using the Ancient Magicks spellbook can now cast <col=000080>Smoke Barrage</col>.");
-			case 24 :
-				return(88, ancient_staff_4675, "Shadow Barrage", "Members using the Ancient Magicks spellbook can now cast <col=000080>Shadow Barrage</col>.");
-			case 25 :
-				return(90, ancient_staff_4675, "Teleport to Annakarl", "Members using the Ancient Magicks spellbook can now cast <col=000080>Teleport to Annakarl</col>.");
-			case 26 :
-				return(92, ancient_staff_4675, "Blood Barrage", "Members using the Ancient Magicks spellbook can now cast <col=000080>Blood Barrage</col>.");
-			case 27 :
-				return(94, ancient_staff_4675, "Ice Barrage", "Members using the Ancient Magicks spellbook can now cast <col=000080>Ice Barrage</col>.");
-			case 28 :
-				return(96, ancient_staff_4675, "Teleport to Ghorrock", "Members using the Ancient Magicks spellbook can now cast <col=000080>Teleport to Ghorrock</col>.");
-			case 29 :
-				return(97, ancient_staff_4675, "Miasmic Barrage", "Members using the Ancient Magicks spellbook can now cast <col=000080>Miasmic Barrage</col>.");
-		}
-	case 2 :
-		switch_int ($int1) {
-			case 0 :
-				return(-1, silvthrill_rod_7620, "Once you have completed Lunar Diplomacy, you will be able to access the Lunar spellbook.", "");
-			case 1 :
-				return(-1, silvthrill_rod_7620, "Home teleport (to Lunar Isle)", "");
-			case 2 :
-				return(65, lunar_staff_9084, "Bake Pie", "Members using the Lunar spellbook can now cast <col=000080>Bake Pie</col>.");
-			case 3 :
-				return(66, lunar_staff_9084, "Cure Plant", "Members using the Lunar spellbook can now cast <col=000080>Cure Plant</col>.");
-			case 4 :
-				return(66, lunar_staff_9084, "Monster Examine<br> (after Dream Mentor)", "Members using the Lunar spellbook now have the Magic level required to cast <col=000080>Monster Examine</col> (after Dream Mentor).");
-			case 5 :
-				return(67, lunar_staff_9084, "Contact", "Members using the Lunar spellbook now have the Magic level required to cast <col=000080>Contact</col> (after Dream Mentor).");
-			case 6 :
-				return(68, lunar_staff_9084, "Cure Other", "Members using the Lunar spellbook can now cast <col=000080>Cure Other</col>.");
-			case 7 :
-				return(68, lunar_staff_9084, "Humidify<br> (after Dream Mentor)", "Members using the Lunar spellbook now have the Magic level required to cast <col=000080>Humidify</col> (after Dream Mentor).");
-			case 8 :
-				return(69, lunar_staff_9084, "Teleport to Moonclan Island", "Members using the Lunar spellbook can now cast <col=000080>Teleport to Moonclan Island</col>.");
-			case 9 :
-				return(70, lunar_staff_9084, "Group Teleport to Moonclan Island", "Members using the Lunar spellbook can now cast <col=000080>Group Teleport to Moonclan Island</col>.");
-			case 10 :
-				return(71, lunar_staff_9084, "Cure Me", "Members using the Lunar spellbook can now cast <col=000080>Cure Me</col>.");
-			case 11 :
-				return(71, lunar_staff_9084, "Hunter Kit<br> (after Dream Mentor)", "Members using the Lunar spellbook now have the Magic level required to cast <col=000080>Hunter Kit</col> (after Dream Mentor).");
-			case 12 :
-				return(71, lunar_staff_9084, "Teleport to Ourania", "Members using the Lunar spellbook can now cast <col=000080>Teleport to Ourania</col>.");
-			case 13 :
-				return(72, lunar_staff_9084, "Teleport to Waterbirth", "Members using the Lunar spellbook can now cast <col=000080>Teleport to Waterbirth</col>.");
-			case 14 :
-				return(73, lunar_staff_9084, "Group Teleport to Waterbirth", "Members using the Lunar spellbook can now cast <col=000080>Group Teleport to Waterbirth</col>.");
-			case 15 :
-				return(74, lunar_staff_9084, "Cure Group", "Members using the Lunar spellbook can now cast <col=000080>Cure Group</col>.");
-			case 16 :
-				return(75, lunar_staff_9084, "Teleport to the Barbarian Outpost", "Members using the Lunar spellbook can now cast <col=000080>Teleport to the Barbarian Outpost</col>.");
-			case 17 :
-				return(75, lunar_staff_9084, "Stat Spy<br> (after Dream Mentor)", "Members using the Lunar spellbook now have the Magic level required to cast <col=000080>Stat Spy</col> (after Dream Mentor).");
-			case 18 :
-				return(76, lunar_staff_9084, "Group Teleport to the Barbarian Outpost", "Members using the Lunar spellbook can now cast <col=000080>Group Teleport to the Barbarian Outpost</col>.");
-			case 19 :
-				return(77, lunar_staff_9084, "Superglass Make", "Members using the Lunar spellbook can now cast <col=000080>Superglass Make</col>.");
-			case 20 :
-				return(78, lunar_staff_9084, "Teleport to Port Khazard", "Members using the Lunar spellbook can now cast <col=000080>Teleport to Port Khazard</col>.");
-			case 21 :
-				return(79, lunar_staff_9084, "Group Teleport to Port Khazard", "Members using the Lunar spellbook can now cast <col=000080>Group Teleport to Port Khazard</col>.");
-			case 22 :
-				return(79, lunar_staff_9084, "Dream<br> (after Dream Mentor)", "Members using the Lunar spellbook now have the Magic level required to cast <col=000080>Dream</col> (after Dream Mentor).");
-			case 23 :
-				return(80, lunar_staff_9084, "String Jewellery", "Members using the Lunar spellbook can now cast <col=000080>String Jewellery</col>.");
-			case 24 :
-				return(81, lunar_staff_9084, "Stat Restore Potion Share", "Members using the Lunar spellbook can now cast <col=000080>Stat Restore Potion Share</col>.");
-			case 25 :
-				return(82, lunar_staff_9084, "Magic Imbue", "Members using the Lunar spellbook can now cast <col=000080>Magic Imbue</col>.");
-			case 26 :
-				return(83, lunar_staff_9084, "Fertile Soil", "Members using the Lunar spellbook can now cast <col=000080>Fertile Soil</col>.");
-			case 27 :
-				return(84, lunar_staff_9084, "Boost Potion Share", "Members using the Lunar spellbook can now cast <col=000080>Boost Potion Share</col>.");
-			case 28 :
-				return(85, lunar_staff_9084, "Teleport to the Fishing Guild", "Members using the Lunar spellbook can now cast <col=000080>Teleport to the Fishing Guild</col>.");
-			case 29 :
-				return(86, lunar_staff_9084, "Group Teleport to the Fishing Guild", "Members using the Lunar spellbook can now cast <col=000080>Group Teleport to the Fishing Guild</col>.");
-			case 30 :
-				return(86, lunar_staff_9084, "Plank Make<br> (after Dream Mentor)", "Members using the Lunar spellbook now have the Magic level required to cast <col=000080>Plank Make</col> (after Dream Mentor).");
-			case 31 :
-				return(87, lunar_staff_9084, "Teleport to Catherby", "Members using the Lunar spellbook can now cast <col=000080>Teleport to Catherby</col>.");
-			case 32 :
-				return(88, lunar_staff_9084, "Group Teleport to Catherby", "Members using the Lunar spellbook can now cast <col=000080>Group Teleport to Catherby</col>.");
-			case 33 :
-				return(89, lunar_staff_9084, "Teleport to the Ice Plateau", "Members using the Lunar spellbook can now cast <col=000080>Teleport to the Ice Plateau</col>.");
-			case 34 :
-				return(90, lunar_staff_9084, "Group Teleport to the Ice Plateau", "Members using the Lunar spellbook can now cast <col=000080>Group Teleport to the Ice Plateau</col>.");
-			case 35 :
-				return(91, lunar_staff_9084, "Energy Transfer", "Members using the Lunar spellbook can now cast <col=000080>Energy Transfer</col>.");
-			case 36 :
-				return(92, lunar_staff_9084, "Heal Other", "Members using the Lunar spellbook can now cast <col=000080>Heal Other</col>.");
-			case 37 :
-				return(93, lunar_staff_9084, "Vengeance Other", "Members using the Lunar spellbook can now cast <col=000080>Vengeance Other</col>.");
-			case 38 :
-				return(94, lunar_staff_9084, "Vengeance", "Members using the Lunar spellbook can now cast <col=000080>Vengeance</col>.");
-			case 39 :
-				return(95, lunar_staff_9084, "Heal Group", "Members using the Lunar spellbook can now cast <col=000080>Heal Group</col>.");
-			case 40 :
-				return(96, lunar_staff_9084, "Spellbook Swap<br> (after Dream Mentor)", "Members using the Lunar spellbook now have the Magic level required to cast <col=000080>Spellbook Swap</col> (after Dream Mentor).");
-		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
 				return(4, opal_bolts_e_9236, "Members: Opal-tipped bronze crossbow bolt", "Members can now enchant <col=000080>opal-tipped bronze crossbow bolts</col>.");
 			case 1 :
-				return(7, staff_1379, "Lvl-1 Enchant", "You can now cast <col=000080>Lvl-1 Enchant</col>.");
+				return(7, sapphire_1607, "Sapphire items", "You can now enchant <col=000080>sapphire items</col>.");
 			case 2 :
-				return(7, sapphire_amulet_1694, "Sapphire jewellery", "You can now enchant <col=000080>sapphire jewellery</col>.");
-			case 3 :
 				return(7, sapphire_bolts_e_9240, "Members: Sapphire-tipped mithril crossbow bolt", "Members can now enchant <col=000080>sapphire-tipped crossbow bolts</col>.");
-			case 4 :
+			case 3 :
 				return(14, jade_bolts_e_9237, "Members: Jade-tipped blurite crossbow bolt", "Members can now enchant <col=000080>jade-tipped blurite crossbow bolts</col>.");
-			case 5 :
+			case 4 :
 				return(24, pearl_bolts_e_9238, "Members: Pearl-tipped iron crossbow bolt", "Members can now enchant <col=000080>pearl-tipped iron crossbow bolts</col>.");
+			case 5 :
+				return(27, emerald_1605, "Emerald items", "You can now enchant <col=000080>emerald items</col>.");
 			case 6 :
-				return(27, emerald_amulet_1696, "Emerald jewellery", "You can now enchant <col=000080>emerald jewellery</col>.");
-			case 7 :
 				return(27, emerald_bolts_e_9241, "Members: Emerald-tipped mithril crossbow bolt", "Members can now enchant <col=000080>emerald-tipped mithril crossbow bolts</col>.");
-			case 8 :
+			case 7 :
 				return(29, topaz_bolts_e_9239, "Members: Red topaz-tipped steel crossbow bolt", "Members can now enchant <col=000080>red topaz-tipped steel crossbow bolts</col>.");
+			case 8 :
+				return(49, ruby_1603, "Ruby items", "You can now enchant <col=000080>ruby items</col>.");
 			case 9 :
-				return(49, ruby_amulet_1698, "Ruby jewellery", "You can now enchant <col=000080>ruby jewellery</col>.");
-			case 10 :
 				return(49, ruby_bolts_e_9242, "Members: Ruby-tipped adamant crossbow bolt", "Members can now <col=000080>enchant ruby-tipped adamant crossbow bolts</col>.");
-			case 11 :
+			case 10 :
 				return(56, water_orb_571, "Members: Charge water orbs", "Members can now charge <col=000080>water orbs</col>.");
+			case 11 :
+				return(57, diamond_1601, "Diamond items", "You can now enchant <col=000080>diamond items</col>.");
 			case 12 :
-				return(57, diamond_amulet_1700, "Diamond jewellery", "You can now enchant <col=000080>diamond jewellery</col>.");
-			case 13 :
 				return(57, diamond_bolts_e_9243, "Members: Diamond-tipped adamant crossbow bolt", "Members can now enchant <col=000080>diamond-tipped adamant crossbow bolts</col>.");
-			case 14 :
+			case 13 :
 				return(60, earth_orb_575, "Members: Charge earth orbs", "Members can now charge <col=000080>earth orbs</col>.");
-			case 15 :
+			case 14 :
 				return(63, fire_orb_569, "Members: Charge fire orbs", "Members can now charge <col=000080>fire orbs</col>.");
-			case 16 :
+			case 15 :
 				return(66, air_orb_573, "Members: Charge air orbs", "Members can now charge <col=000080>air orbs</col>.");
+			case 16 :
+				return(68, dragonstone_1615, "Members: Dragonstone items", "Members can now enchant <col=000080>dragonstone items</col>.");
 			case 17 :
-				return(68, dragonstone_ammy_1702, "Members: Dragonstone jewellery", "Members can now enchant <col=000080>dragonstone jewellery</col>.");
-			case 18 :
 				return(68, dragon_bolts_e_9244, "Members: Dragonstone-tipped rune crossbow bolt", "Members can now enchant <col=000080>dragonstone-tipped rune crossbow bolts</col>.");
+			case 18 :
+				return(87, onyx_6573, "Members: Onyx items", "Members can now enchant <col=000080>onyx items</col>.");
 			case 19 :
-				return(87, onyx_amulet_6581, "Members: Onyx jewellery", "Members can now enchant <col=000080>onyx jewellery</col>.");
-			case 20 :
 				return(87, onyx_bolts_e_9245, "Members: Onyx-tipped rune crossbow bolt", "Members can now enchant <col=000080>onyx-tipped rune crossbow bolts</col>.");
 		}
 	case 4 :
@@ -398,52 +139,54 @@ switch_int ($int0) {
 			case 45 :
 				return(50, infinity_boots_6920, "Members: Infinity boots<br> (with 25 Defence)", "Members now have the Magic level required to wear <col=000080>infinity boots</col>. (They also need level 25 Defence.)");
 			case 46 :
-				return(60, guthix_cape_2413, "Members: Guthix cape", "Members can now wear <col=000080>Guthix capes.");
+				return(50, infinity_gloves_6922, "Members: Infinity gloves<br> (with 25 Defence)", "Members now have the Magic level required to wear <col=000080>infinity gloves</col>. (They also need level 25 Defence.)");
 			case 47 :
-				return(60, saradomin_cape_2412, "Members: Saradomin cape", "Members can now wear <col=000080>Saradomin capes.");
+				return(60, guthix_cape_2413, "Members: Guthix cape", "Members can now wear <col=000080>Guthix capes.");
 			case 48 :
-				return(60, zamorak_cape_2414, "Members: Zamorak cape", "Members can now wear <col=000080>Zamorak capes.");
+				return(60, saradomin_cape_2412, "Members: Saradomin cape", "Members can now wear <col=000080>Saradomin capes.");
 			case 49 :
-				return(60, battle_hood_100_12866, "Members: Battle hood<br> (with 50 Defence)", "Members now have the Magic level required to wear <col=000080>battle hoods</col>. (They also need level 50 Defence.)");
+				return(60, zamorak_cape_2414, "Members: Zamorak cape", "Members can now wear <col=000080>Zamorak capes.");
 			case 50 :
-				return(60, battle_robe_top_100_12873, "Members: Battle robe top<br> (with 50 Defence)", "Members now have the Magic level required to wear <col=000080>battle robe tops</col>. (They also need level 50 Defence.)");
+				return(60, battle_hood_100_12866, "Members: Battle hood<br> (with 50 Defence)", "Members now have the Magic level required to wear <col=000080>battle hoods</col>. (They also need level 50 Defence.)");
 			case 51 :
-				return(60, battle_robe_bottom_100_12880, "Members: Battle robe bottom<br> (with 50 Defence)", "Members now have the Magic level required to wear <col=000080>battle robe bottoms</col>. (They also need level 50 Defence.)");
+				return(60, battle_robe_top_100_12873, "Members: Battle robe top<br> (with 50 Defence)", "Members now have the Magic level required to wear <col=000080>battle robe tops</col>. (They also need level 50 Defence.)");
 			case 52 :
-				return(65, 3rd_age_mage_hat_10342, "Members: Third-Age mage hat<br> (with 30 Defence)", "Members now have the Magic level required to wear <col=000080>Third-Age mage hats</col>. (They also need level 30 Defence)");
+				return(60, battle_robe_bottom_100_12880, "Members: Battle robe bottom<br> (with 50 Defence)", "Members now have the Magic level required to wear <col=000080>battle robe bottoms</col>. (They also need level 50 Defence.)");
 			case 53 :
-				return(65, 3rd_age_robe_top_10338, "Members: Third-Age robe top<br> (with 30 Defence)", "Members now have the Magic level required to wear <col=000080>Third-Age robe tops</col>. (They also need level 30 Defence)");
+				return(65, 3rd_age_mage_hat_10342, "Members: Third-Age mage hat<br> (with 30 Defence)", "Members now have the Magic level required to wear <col=000080>Third-Age mage hats</col>. (They also need level 30 Defence)");
 			case 54 :
-				return(65, 3rd_age_robe_10340, "Members: Third-Age robe<br> (with 30 Defence)", "Members now have the Magic level required to wear <col=000080>Third-Age robes</col>. (They also need level 30 Defence)");
+				return(65, 3rd_age_robe_top_10338, "Members: Third-Age robe top<br> (with 30 Defence)", "Members now have the Magic level required to wear <col=000080>Third-Age robe tops</col>. (They also need level 30 Defence)");
 			case 55 :
-				return(65, 3rd_age_amulet_10344, "Members: Third-Age amulet<br> (with 30 Defence)", "Members now have the Magic level required to wear <col=000080>Third-Age amulets</col>. (They also need level 30 Defence)");
+				return(65, 3rd_age_robe_10340, "Members: Third-Age robe<br> (with 30 Defence)", "Members now have the Magic level required to wear <col=000080>Third-Age robes</col>. (They also need level 30 Defence)");
 			case 56 :
-				return(65, lunar_helm_9096, "Members: Lunar helm<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar helms</col>. (They also need level 40 Defence.)");
+				return(65, 3rd_age_amulet_10344, "Members: Third-Age amulet<br> (with 30 Defence)", "Members now have the Magic level required to wear <col=000080>Third-Age amulets</col>. (They also need level 30 Defence)");
 			case 57 :
-				return(65, lunar_torso_9097, "Members: Lunar torso<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar torsos</col>. (They also need level 40 Defence.)");
+				return(65, lunar_helm_9096, "Members: Lunar helm<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar helms</col>. (They also need level 40 Defence.)");
 			case 58 :
-				return(65, lunar_gloves_9099, "Members: Lunar gloves<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar gloves</col>. (They also need level 40 Defence.)");
+				return(65, lunar_torso_9097, "Members: Lunar torso<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar torsos</col>. (They also need level 40 Defence.)");
 			case 59 :
-				return(65, lunar_legs_9098, "Members: Lunar legs<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar legs</col>. (They also need level 40 Defence.)");
+				return(65, lunar_gloves_9099, "Members: Lunar gloves<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar gloves</col>. (They also need level 40 Defence.)");
 			case 60 :
-				return(65, lunar_boots_9100, "Members: Lunar boots<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar boots</col>. (They also need level 40 Defence.)");
+				return(65, lunar_legs_9098, "Members: Lunar legs<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar legs</col>. (They also need level 40 Defence.)");
 			case 61 :
-				return(65, lunar_cape_9101, "Members: Lunar cape<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar capes</col>. (They also need level 40 Defence.)");
+				return(65, lunar_boots_9100, "Members: Lunar boots<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar boots</col>. (They also need level 40 Defence.)");
 			case 62 :
-				return(65, arcane_spirit_shield_13738, "Members: Arcane spirit shield<br> (after Summer's End and with 70 Prayer and 75 Defence)", "Members now have the Magic level required to wield <col=000080>arcane spirit shields</col> (after Summer's End, with level 70 Prayer and 75 Defence).");
+				return(65, lunar_cape_9101, "Members: Lunar cape<br> (with 40 Defence)", "Members now have the Magic level required to wear <col=000080>lunar capes</col>. (They also need level 40 Defence.)");
 			case 63 :
-				return(65, spectral_spirit_shield_13744, "Members: Spectral spirit shield<br> (after Summer's End and with 70 Prayer and 75 Defence)", "Members now have the Magic level required to wield <col=000080>spectral spirit shields</col> (after Summer's End, with level 70 Prayer and 75 Defence).");
+				return(65, arcane_spirit_shield_13738, "Members: Arcane spirit shield<br> (after Summer's End and with 70 Prayer and 75 Defence)", "Members now have the Magic level required to wield <col=000080>arcane spirit shields</col> (after Summer's End, with level 70 Prayer and 75 Defence).");
 			case 64 :
-				return(70, ahrims_hood_4708, "Members: Ahrim's hood<br> (with 70 Defence)", "Members now have the Magic level required to wear <col=000080>Ahrim's hood</col>. (They also need level 70 Defence.)");
+				return(65, spectral_spirit_shield_13744, "Members: Spectral spirit shield<br> (after Summer's End and with 70 Prayer and 75 Defence)", "Members now have the Magic level required to wield <col=000080>spectral spirit shields</col> (after Summer's End, with level 70 Prayer and 75 Defence).");
 			case 65 :
-				return(70, ahrims_robetop_4712, "Members: Ahrim's robe top<br> (with 70 Defence)", "Members now have the Magic level required to wear <col=000080>Ahrim's robe top</col>. (They also need level 70 Defence.)");
+				return(70, ahrims_hood_4708, "Members: Ahrim's hood<br> (with 70 Defence)", "Members now have the Magic level required to wear <col=000080>Ahrim's hood</col>. (They also need level 70 Defence.)");
 			case 66 :
-				return(70, ahrims_robeskirt_4714, "Members: Ahrim's robe skirt<br> (with 70 Defence)", "Members now have the Magic level required to wear <col=000080>Ahrim's robe skirt</col>. (They also need level 70 Defence.)");
+				return(70, ahrims_robetop_4712, "Members: Ahrim's robe top<br> (with 70 Defence)", "Members now have the Magic level required to wear <col=000080>Ahrim's robe top</col>. (They also need level 70 Defence.)");
 			case 67 :
-				return(78, zuriels_hood_13864, "Members: Zuriel's hood<br> (with 78 Defence)", "Members now have the Magic level required to wear <col=000080>Zuriel's hood</col>. (They also need level 78 Defence.)");
+				return(70, ahrims_robeskirt_4714, "Members: Ahrim's robe skirt<br> (with 70 Defence)", "Members now have the Magic level required to wear <col=000080>Ahrim's robe skirt</col>. (They also need level 70 Defence.)");
 			case 68 :
-				return(78, zuriels_robe_top_13858, "Members: Zuriel's robe top<br> (with 78 Defence)", "Members now have the Magic level required to wear <col=000080>Zuriel's robe top</col>. (They also need level 78 Defence.)");
+				return(78, zuriels_hood_13864, "Members: Zuriel's hood<br> (with 78 Defence)", "Members now have the Magic level required to wear <col=000080>Zuriel's hood</col>. (They also need level 78 Defence.)");
 			case 69 :
+				return(78, zuriels_robe_top_13858, "Members: Zuriel's robe top<br> (with 78 Defence)", "Members now have the Magic level required to wear <col=000080>Zuriel's robe top</col>. (They also need level 78 Defence.)");
+			case 70 :
 				return(78, zuriels_robe_bottom_13861, "Members: Zuriel's robe bottom<br> (with 78 Defence)", "Members now have the Magic level required to wear <col=000080>Zuriel's robe bottom</col>. (They also need level 78 Defence.)");
 		}
 	case 5 :
@@ -491,11 +234,11 @@ switch_int ($int0) {
 			case 20 :
 				return(40, mystic_steam_staff_11738, "Members: Mystic steam staff<br> (with 40 Attack)", "Members now have the Magic level required to use <col=000080>mystic steam staves</col>. (They also need level 40 Attack.)");
 			case 21 :
-				return(40, sacred_clay_staff_14117, "Members: Sacred clay staff", "Members can now wield <col=000080>sacred Clay staves</col>.");
+				return(40, sacred_clay_staff_14117, "Members: Sacred clay staff", "Members can now wield <col=000080>sacred clay staves</col>.");
 			case 22 :
-				return(50, slayers_staff_4170, "Members: Slayer's staff<br> (with 55 Slayer)", "Members now have the Magic level required to use <col=000080>Slayer staves</col>, Magic weapons used for killing turoth and kurask. (They also need level 55 Slayer.)");
+				return(50, slayers_staff_4170, "Members: Slayer's staff<br> (with 55 Slayer)", "Members now have the Magic level required to use <col=000080>Slayer staves</col>, magic weapons used for killing turoth and kurask. (They also need level 55 Slayer.)");
 			case 23 :
-				return(50, ibans_staff_1409, "Members: Iban's Staff<br> (after Underground Pass and with 50 Attack)", "Members now have the Magic level required to use <col=000080>Iban's Staff</col> (after Underground Pass and with level50 Attack).");
+				return(50, ibans_staff_1409, "Members: Iban's Staff<br> (after Underground Pass and with 50 Attack)", "Members now have the Magic level required to use <col=000080>Iban's Staff</col> (after Underground Pass and with 50 Attack).");
 			case 24 :
 				return(50, ancient_staff_4675, "Members: Ancient Staff<br> (after Desert Treasure, with 50 Attack)", "Members now have the Magic level required to use the <col=000080>Ancient Staff</col> (after Desert Treasure and with 50 Attack).");
 			case 25 :
@@ -529,71 +272,65 @@ switch_int ($int0) {
 			case 0 :
 				return(30, swamp_lizard_10149, "Swamp lizard<br> (with 30 Attack and 30 Ranged)", "Members now have the Magic level required to use <col=000080>swamp lizards</col>. (They also need level 30 Attack and level 30 Ranged.)");
 			case 1 :
-				return(50, orange_salamander_10146, "Orange salamander<br> (with 50 Attack and 50 Ranged)", "Members now have the Magic level required to use <col=000080>orange salamanders</col>. (They also need levels 50 Attack and 50 Ranged.)");
+				return(50, orange_salamander_10146, "Orange salamander<br> (with 50 Attack and 50 Ranged)", "Members now have the Magic level required to use <col=000080>orange salamanders</col>. (They also need level 50 Attack and 50 Ranged.)");
 			case 2 :
-				return(60, red_salamander_10147, "Red salamander<br> (with 60 Attack and 60 Ranged)", "Members now have the Magic level required to use <col=000080>red salamanders</col>. (They also need levels 60 Attack and 60 Ranged.)");
+				return(60, red_salamander_10147, "Red salamander<br> (with 60 Attack and 60 Ranged)", "Members now have the Magic level required to use <col=000080>red salamanders</col>. (They also need level 60 Attack and 60 Ranged.)");
 			case 3 :
-				return(70, black_salamander_10148, "Black salamander<br> (with 70 Attack and 70 Ranged)", "Members now have the Magic level required to use <col=000080>black salamanders</col>. (They also need levels 70 Attack and 70 Ranged.)");
+				return(70, black_salamander_10148, "Black salamander<br> (with 70 Attack and 70 Ranged)", "Members now have the Magic level required to use <col=000080>black salamanders</col>. (They also need level 70 Attack and 70 Ranged.)");
 		}
 	case 8 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, staff_class_1_14377, "Stealing Creation - class 1 staff", "Members can now wield <col=000080>class 1 staves</col> in the Stealing Creation minigame.");
+				return(1, staff_class_1_14377, "Stealing Creation - class 1 staff", "Members can now wield <col=000080>class 1 staves</col> in Stealing Creation.");
 			case 1 :
-				return(1, hat_class_1_14337, "Stealing Creation - class 1 hat", "Members can now wear <col=000080>class 1 hats</col> in the Stealing Creation minigame.");
+				return(1, hat_class_1_14337, "Stealing Creation - class 1 hat", "Members can now wear <col=000080>class 1 hats</col> in Stealing Creation.");
 			case 2 :
-				return(1, robe_top_class_1_14317, "Stealing Creation - class 1 robe top", "Members can now wear <col=000080>class 1 robe tops</col> in the Stealing Creation minigame.");
+				return(1, robe_top_class_1_14317, "Stealing Creation - class 1 robe top", "Members can now wear <col=000080>class 1 robe tops</col> in Stealing Creation.");
 			case 3 :
-				return(1, robe_bottom_class_1_14327, "Stealing Creation - class 1 robe bottom", "Members can now wear <col=000080>class 1 robe bottoms</col> in the Stealing Creation minigame.");
+				return(1, robe_bottom_class_1_14327, "Stealing Creation - class 1 robe bottom", "Members can now wear <col=000080>class 1 robe bottoms</col> in Stealing Creation.");
 			case 4 :
-				return(20, staff_class_2_14379, "Stealing Creation - class 2 staff", "Members can now wield <col=000080>class 2 staves</col> in the Stealing Creation minigame.");
+				return(20, staff_class_2_14379, "Stealing Creation - class 2 staff", "Members can now wield <col=000080>class 2 staves</col> in Stealing Creation.");
 			case 5 :
-				return(20, hat_class_2_14339, "Stealing Creation - class 2 hat", "Members can now wear <col=000080>class 2 hats</col> in the Stealing Creation minigame.");
+				return(20, hat_class_2_14339, "Stealing Creation - class 2 hat", "Members can now wear <col=000080>class 2 hats</col> in Stealing Creation.");
 			case 6 :
-				return(20, robe_top_class_2_14319, "Stealing Creation - class 2 robe top", "Members can now wear <col=000080>class 2 robe tops</col> in the Stealing Creation minigame.");
+				return(20, robe_top_class_2_14319, "Stealing Creation - class 2 robe top", "Members can now wear <col=000080>class 2 robe tops</col> in Stealing Creation.");
 			case 7 :
-				return(20, robe_bottom_class_2_14329, "Stealing Creation - class 2 robe bottom", "Members can now wear <col=000080>class 2 robe bottoms</col> in the Stealing Creation minigame.");
+				return(20, robe_bottom_class_2_14329, "Stealing Creation - class 2 robe bottom", "Members can now wear <col=000080>class 2 robe bottoms</col> in Stealing Creation.");
 			case 8 :
-				return(40, staff_class_3_14381, "Stealing Creation - class 3 staff", "Members can now wield <col=000080>class 3 staves</col> in the Stealing Creation minigame.");
+				return(40, staff_class_3_14381, "Stealing Creation - class 3 staff", "Members can now wield <col=000080>class 3 staves</col> in Stealing Creation.");
 			case 9 :
-				return(40, hat_class_3_14341, "Stealing Creation - class 3 hat", "Members can now wear <col=000080>class 3 hats</col> in the Stealing Creation minigame.");
+				return(40, hat_class_3_14341, "Stealing Creation - class 3 hat", "Members can now wear <col=000080>class 3 hats</col> in Stealing Creation.");
 			case 10 :
-				return(40, robe_top_class_3_14321, "Stealing Creation - class 3 robe top", "Members can now wear <col=000080>class 3 robe tops</col> in the Stealing Creation minigame.");
+				return(40, robe_top_class_3_14321, "Stealing Creation - class 3 robe top", "Members can now wear <col=000080>class 3 robe tops</col> in Stealing Creation.");
 			case 11 :
-				return(40, robe_bottom_class_3_14331, "Stealing Creation - class 3 robe bottom", "Members can now wear <col=000080>class 3 robe bottoms</col> in the Stealing Creation minigame.");
+				return(40, robe_bottom_class_3_14331, "Stealing Creation - class 3 robe bottom", "Members can now wear <col=000080>class 3 robe bottoms</col> in Stealing Creation.");
 			case 12 :
-				return(60, staff_class_4_14383, "Stealing Creation - class 4 staff", "Members can now wield <col=000080>class 4 staves</col> in the Stealing Creation minigame.");
+				return(60, staff_class_4_14383, "Stealing Creation - class 4 staff", "Members can now wield <col=000080>class 4 staves</col> in Stealing Creation.");
 			case 13 :
-				return(60, hat_class_4_14343, "Stealing Creation - class 4 hat", "Members can now wear <col=000080>class 4 hats</col> in the Stealing Creation minigame.");
+				return(60, hat_class_4_14343, "Stealing Creation - class 4 hat", "Members can now wear <col=000080>class 4 hats</col> in Stealing Creation.");
 			case 14 :
-				return(60, robe_top_class_4_14323, "Stealing Creation - class 4 robe top", "Members can now wear <col=000080>class 4 robe tops</col> in the Stealing Creation minigame.");
+				return(60, robe_top_class_4_14323, "Stealing Creation - class 4 robe top", "Members can now wear <col=000080>class 4 robe tops</col> in Stealing Creation.");
 			case 15 :
-				return(60, robe_bottom_class_4_14333, "Stealing Creation - class 4 robe bottom", "Members can now wear <col=000080>class 4 robe bottoms</col> in the Stealing Creation minigame.");
+				return(60, robe_bottom_class_4_14333, "Stealing Creation - class 4 robe bottom", "Members can now wear <col=000080>class 4 robe bottoms</col> in Stealing Creation.");
 			case 16 :
-				return(80, staff_class_5_14385, "Stealing Creation - class 5 staff", "Members can now wield <col=000080>class 5 staves</col> in the Stealing Creation minigame.");
+				return(80, staff_class_5_14385, "Stealing Creation - class 5 staff", "Members can now wield <col=000080>class 5 staves</col> in Stealing Creation.");
 			case 17 :
-				return(80, hat_class_5_14345, "Stealing Creation - class 5 hat", "Members can now wear <col=000080>class 5 hats</col> in the Stealing Creation minigame.");
+				return(80, hat_class_5_14345, "Stealing Creation - class 5 hat", "Members can now wear <col=000080>class 5 hats</col> in Stealing Creation.");
 			case 18 :
-				return(80, robe_top_class_5_14325, "Stealing Creation - class 5 robe top", "Members can now wear <col=000080>class 5 robe tops</col> in the Stealing Creation minigame.");
+				return(80, robe_top_class_5_14325, "Stealing Creation - class 5 robe top", "Members can now wear <col=000080>class 5 robe tops</col> in Stealing Creation.");
 			case 19 :
-				return(80, robe_bottom_class_5_14335, "Stealing Creation - class 5 robe bottom", "Members can now wear <col=000080>class 5 robe bottoms</col> in the Stealing Creation minigame.");
+				return(80, robe_bottom_class_5_14335, "Stealing Creation - class 5 robe bottom", "Members can now wear <col=000080>class 5 robe bottoms</col> in Stealing Creation.");
 		}
 	case 9 :
 		switch_int ($int1) {
 			case 0 :
 				return(1, wizards_mind_bomb_1907, "Wizard's Mind Bomb<br> will temporarily increase your Magic level by 2 levels.", "<col=000080>Wizard's Mind Bomb</col> will now temporarily increase your Magic level by <col=000080>2 levels</col>.");
 			case 1 :
-				return(18, obj_5079, "Magic Tutor - new info available", "There is new information available from the <col=000080>Magic Tutor</col> in <col=000080>Lumbridge</col>.");
-			case 2 :
-				return(42, obj_5079, "Magic Tutor - new info available", "There is new information available from the <col=000080>Magic Tutor</col> in <col=000080>Lumbridge</col>.");
-			case 3 :
 				return(50, wizards_mind_bomb_1907, "Wizard's Mind Bomb<br> will temporarily increase your Magic level by 3 levels.", "<col=000080>Wizard's Mind Bomb</col> will now temporarily increase your Magic level by <col=000080>3 levels</col>.");
-			case 4 :
-				return(52, obj_5079, "Magic Tutor - new info available", "There is new information available from the <col=000080>Magic Tutor</col> in <col=000080>Lumbridge</col>.");
-			case 5 :
+			case 2 :
 				return(66, ancient_staff_4675, "Members: Magic Guild", "Members can now enter the <col=000080>Wizard's Guild</col>.");
-			case 6 :
-				return(99, magic_cape_9762, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Magic<col=000080>. Why not visit the <col=800000>robe store<col=000080> in the <col=800000>Wizards' Guild<col=000080>? They have something special that is only available to true masters of the <col=800000>Magic<col=000080> skill!");
+			case 3 :
+				return(99, magic_cape_9762, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Magic<col=000080>. Members can visit the <col=800000>robe store<col=000080> in the <col=800000>Wizards' Guild<col=000080>. They have something special that is only available to true masters of the <col=800000>Magic<col=000080> skill!");
 		}
 }
 return(0, null, "", "");

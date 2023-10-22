@@ -1,24 +1,13 @@
 // 759
-[proc,lore_interface_inv_update](component $component0, int $int1, int $int2, string $op0, string $op1, string $op2, string $op3, string $op4, string $op5)
+[proc,lore_interface_inv_update](component $component0, int $int1, int $int2, string $op0, string $op1, string $op2, string $op3, string $op4, string $op5, int $int3, int $int4)
 cc_deleteall($component0);
-def_int $int3 = 0;
-def_int $int4 = 0;
-if (if_getscrollwidth($component0) > 0) {
-	$int3 = calc((if_getscrollwidth($component0) - 36 * $int1) / ($int1 - 1));
-} else {
-	$int3 = calc((if_getwidth($component0) - 36 * $int1) / ($int1 - 1));
-}
-if (if_getscrollheight($component0) > 0) {
-	$int4 = calc((if_getscrollheight($component0) - 64 * $int2) / ($int2 - 1));
-} else {
-	$int4 = calc((if_getheight($component0) - 64 * $int2) / ($int2 - 1));
-}
+if_setscrollsize(0, calc((($int4 - $int3) / $int1 + 1) * 57), $component0);
 def_int $int5 = 0;
-def_int $int6 = 1;
+def_int $int6 = $int3;
 def_int $int7 = 0;
-def_int $int8 = 0;
-def_int $int9 = -1;
-def_namedobj $namedobj10 = pouch_12155;
+def_int $int8 = $int4;
+def_int $int9 = 0;
+def_int $int10 = -1;
 def_obj $obj11 = null;
 def_obj $obj12 = null;
 def_obj $obj13 = null;
@@ -28,7 +17,7 @@ def_obj $obj16 = null;
 def_obj $obj17 = null;
 def_obj $obj18 = null;
 def_obj $obj19 = null;
-def_int $int20 = 1;
+def_obj $obj20 = null;
 def_int $int21 = 0;
 def_int $int22 = 0;
 def_int $int23 = 0;
@@ -38,55 +27,66 @@ def_int $int26 = 0;
 def_int $int27 = 0;
 def_int $int28 = 0;
 def_int $int29 = 0;
-def_string $string6 = "hello";
 def_int $int30 = 0;
+def_string $string6 = "hello";
+def_int $int31 = 0;
 def_obj $objarray0(10);
-def_obj $obj31 = null;
-while ($int5 < 78) {
-	$int8 = calc($int5 % $int1);
-	cc_create($component0, ^iftype_graphic, $int5);
+def_obj $obj32 = null;
+def_int $int33 = 0;
+def_int $int34 = 0;
+def_int $int35 = 0;
+while ($int5 <= calc($int4 - $int3)) {
+	$int33 = calc(16 + $int5 % $int1 * 48 + $int5 % $int1 * 5);
+	$int34 = calc($int5 / $int1 * 52 + $int5 / $int1 * 5);
+	cc_create($component0, ^iftype_graphic, $int35);
+	$int35 = calc($int35 + 1);
+	cc_setsize(48, 52, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int33, $int34, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_2205");
+	cc_setonmouseover("script2724(event_com, $int35, false)");
+	cc_setonmouseleave("script2724(event_com, $int35, true)");
+	cc_create($component0, ^iftype_graphic, $int35);
+	$int35 = calc($int35 + 1);
+	cc_setsize(48, 52, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int33, $int34, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_2206");
+	cc_sethide(true);
+	cc_create($component0, ^iftype_graphic, $int35);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(~script761($int8), calc($int5 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
-	$obj31 = enum(int, obj, enum_1182, $int6);
-	if ($obj31 = pouch_12292) {
-		~script760($obj31, $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4, $op5);
-	} else if (~lore_pouch_checker($obj31) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj31)) {
-		~script760($obj31, $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4, $op5);
+	cc_setposition(calc($int33 + 6), calc($int34 + 4), ^setpos_abs_left, ^setpos_abs_top);
+	$obj32 = enum(int, obj, enum_1182, $int6);
+	if ($obj32 = pouch_12292) {
+		~script760($obj32, $obj32, $component0, $int35, $op0, $op1, $op2, $op3, $op4, $op5);
+	} else if (~lore_pouch_checker($obj32) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj32)) {
+		~script760($obj32, $obj32, $component0, $int35, $op0, $op1, $op2, $op3, $op4, $op5);
 	} else {
-		~script760(enum(int, obj, enum_1183, $int6), $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4, $op5);
+		~script760(enum(int, obj, enum_1183, $int6), $obj32, $component0, $int35, $op0, $op1, $op2, $op3, $op4, $op5);
 	}
-	if ($obj31 = pouch_12292) {
-		cc_setonmouserepeat("lore_blanktip(event_comsubid, interface_669:com_23, interface_669:scroll_icons, $int30, $string6)");
-		cc_setonmouseleave("deltooltip(interface_669:com_23)");
+	if ($obj32 = pouch_12292) {
+		cc_setonmouserepeat("lore_blanktip(event_comsubid, interface_79:com_29, interface_79:lore_pouch_layer, $int31, $string6)");
+		cc_setonmouseleave("deltooltip(interface_79:com_29)");
 	} else {
-		$string6 = enum(obj, string, enum_1187, $obj31);
-		$int30 = enum(obj, int, enum_1185, $obj31);
-		$obj11, $obj12, $obj13, $obj14, $obj15, $obj16, $obj17, $obj18, $obj19, $int21, $int22, $int23, $int24, $int25, $int26, $int27, $int28, $int29 = ~lore_obj_checker($obj31);
-		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_669:com_23, interface_669:scroll_icons, $int30, $string6, $namedobj10, 1, $obj11, $int21, $obj12, $int22, $obj13, $int23, $obj14, $int24, $obj15, $int25, $obj16, $int26, $obj17, $int27, $obj18, $int28, $obj19, $int29)");
-		cc_setonmouseleave("deltooltip(interface_669:com_23)");
+		$string6 = enum(obj, string, enum_1187, $obj32);
+		$int31 = enum(obj, int, enum_1185, $obj32);
+		$obj11, $obj12, $obj13, $obj14, $obj15, $obj16, $obj17, $obj18, $obj19, $obj20, $int21, $int22, $int23, $int24, $int25, $int26, $int27, $int28, $int29, $int30 = ~lore_obj_checker($obj32);
+		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_79:com_29, interface_79:lore_pouch_layer, $int31, $string6, $obj11, 1, $obj12, $int22, $obj13, $int23, $obj14, $int24, $obj15, $int25, $obj16, $int26, $obj17, $int27, $obj18, $int28, $obj19, $int29, $obj20, $int30)");
+		cc_setonmouseleave("deltooltip(interface_79:com_29)");
 	}
-	$int5 = calc($int5 + 1);
-	$int6 = calc($int6 + 1);
-}
-$int6 = 1;
-while ($int7 < 78) {
-	$int8 = calc($int7 % $int1);
-	cc_create($component0, ^iftype_text, $int5);
-	cc_setposition(~script762($int8), calc(32 + $int7 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont(b12_full);
-	cc_setsize(90, 50, ^setsize_abs, ^setsize_abs);
-	$obj31 = enum(int, obj, enum_1182, $int6);
-	cc_settext(enum(obj, string, enum_1187, $obj31));
-	if ($obj31 = pouch_12292) {
-		cc_setcolour(0x111111);
-	} else if (~lore_pouch_checker($obj31) = 1 & stat_base(summoning) >= enum(obj, int, enum_1185, $obj31)) {
-		cc_setcolour(0xffff64);
-	} else {
-		cc_setcolour(0x111111);
-	}
+	$int35 = calc($int35 + 1);
+	cc_create($component0, ^iftype_graphic, $int35);
+	$int35 = calc($int35 + 1);
+	cc_setsize(12, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int33 + 2), calc($int34 + 38), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum(spirit_shards_12183, 1);
+	cc_create($component0, ^iftype_text, $int35);
+	$int35 = calc($int35 + 1);
+	cc_setsize(31, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int33 + 13), calc($int34 + 39), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p11_full);
+	cc_setcolour(^white);
+	cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+	cc_settext(~script940(oc_param($obj32, param_541)));
 	cc_settextshadow(true);
-	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-	$int7 = calc($int7 + 1);
 	$int5 = calc($int5 + 1);
 	$int6 = calc($int6 + 1);
 }

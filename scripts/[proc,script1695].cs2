@@ -1,0 +1,46 @@
+// 1695
+[proc,script1695](stat $stat0)(int)
+switch_stat ($stat0) {
+	case attack :
+		if (%varbit6852 > 0) {
+			return(4);
+		}
+		if (%varbit6847 > 0) {
+			return(1);
+		}
+		return(0);
+	case strength :
+		if (%varbit6853 > 0) {
+			return(4);
+		}
+		if (%varbit6848 > 0) {
+			return(1);
+		}
+		return(0);
+	case defence :
+		if (%varbit6854 > 0) {
+			return(4);
+		}
+		if (%varbit6849 > 0) {
+			return(1);
+		}
+		return(0);
+	case ranged :
+		if (%varbit6855 > 0) {
+			return(4);
+		}
+		if (%varbit6850 > 0) {
+			return(1);
+		}
+		return(0);
+	case magic :
+		if (%varbit6856 > 0) {
+			return(4);
+		}
+		if (%varbit6851 > 0) {
+			return(1);
+		}
+		return(0);
+	case default :
+		return(0);
+}

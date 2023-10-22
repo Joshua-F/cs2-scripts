@@ -1,9 +1,9 @@
 // 727
 [clientscript,script727](component $component0, component $component1)
-if (if_hassub($component1) = true) {
+if (if_hassub($component1) = true & %varcint199 ! null) {
 	return;
 }
 cc_deleteall($component0);
 %varcint199 = null;
-if_setonsubchange(null, $component0);
+if_setontimer(null, $component0);
 if_setonresize(null, $component0);

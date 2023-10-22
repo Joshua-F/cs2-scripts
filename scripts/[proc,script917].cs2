@@ -1,0 +1,43 @@
+// 917
+[proc,script917]
+cc_deleteall(interface_449:info);
+%varcint742 = 0;
+def_int $int0 = 0;
+if (%varcint743 ! null) {
+	$int0 = inv_total(inv, %varcint743);
+	~script919;
+	if_sethide(false, interface_449:buy);
+	if_setsize(16384, 147, ^setsize_2, ^setsize_abs, interface_449:content);
+} else {
+	$int0 = inv_total(inv, coins_995);
+	if_setobject_nonum(null, -1, interface_449:com_23);
+	if_sethide(true, interface_449:buy);
+	if_setsize(16384, 187, ^setsize_2, ^setsize_abs, interface_449:content);
+	if (%var1109 ! null & calc(%var1111 * %var1110) > $int0) {
+		if_setcolour(^red, interface_449:com_25);
+	} else {
+		if_setcolour(0xff9900, interface_449:com_25);
+	}
+}
+if ($int0 = 0) {
+	if_settext("You have no <enum(obj, string, enum_62, %varcint743)>.", interface_449:com_25);
+} else if ($int0 = 1) {
+	if_settext("You have one <enum(obj, string, enum_923, %varcint743)>.", interface_449:com_25);
+} else {
+	if_settext("You have <~script940($int0)> <enum(obj, string, enum_62, %varcint743)>.", interface_449:com_25);
+}
+def_int $int1 = 181;
+def_int $height2 = ~script920($int1);
+if ($height2 > if_getheight(interface_449:info)) {
+	$int1 = 165;
+	cc_deleteall(interface_449:info);
+	$height2 = ~script920($int1);
+} else {
+	cc_deleteall(interface_449:scrollbar);
+}
+if_setscrollsize($int1, $height2, interface_449:info);
+if_setsize($int1, 6, ^setsize_abs, ^setsize_minus, interface_449:info);
+if_setscrollpos(0, 0, interface_449:info);
+if ($height2 > if_getheight(interface_449:info)) {
+	~scrollbar_vertical(interface_449:scrollbar, interface_449:info, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+}

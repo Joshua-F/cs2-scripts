@@ -1,0 +1,80 @@
+// 2588
+[proc,script2588]
+~script2587;
+def_obj $obj0 = null;
+switch_int (%varcint929) {
+	case 0 :
+		$obj0 = inv_getobj(inv, %varcint930);
+	case 1 :
+		$obj0 = inv_getobj(inv, %varcint931);
+	case 2 :
+		$obj0 = inv_getobj(inv, %varcint932);
+	case 3 :
+		$obj0 = inv_getobj(inv, %varcint933);
+	case 4 :
+		$obj0 = inv_getobj(inv, %varcint934);
+	case 5 :
+		$obj0 = inv_getobj(inv, %varcint935);
+	case 6 :
+		$obj0 = inv_getobj(inv, %varcint936);
+	case 7 :
+		$obj0 = inv_getobj(inv, %varcint937);
+	case 8 :
+		$obj0 = inv_getobj(inv, %varcint938);
+	case 9 :
+		$obj0 = inv_getobj(inv, %varcint939);
+}
+if ($obj0 = null) {
+	return;
+}
+def_int $int1 = oc_param($obj0, param_805);
+switch_int (%varcint929) {
+	case 0 :
+		if (%varbit6385 ! 0 & %varbit6385 ! $int1) {
+			$int1 = %varbit6385;
+		}
+	case 1 :
+		if (%varbit6386 ! 0 & %varbit6386 ! $int1) {
+			$int1 = %varbit6386;
+		}
+	case 2 :
+		if (%varbit6387 ! 0 & %varbit6387 ! $int1) {
+			$int1 = %varbit6387;
+		}
+	case 3 :
+		if (%varbit6388 ! 0 & %varbit6388 ! $int1) {
+			$int1 = %varbit6388;
+		}
+	case 4 :
+		if (%varbit6389 ! 0 & %varbit6389 ! $int1) {
+			$int1 = %varbit6389;
+		}
+	case 5 :
+		if (%varbit6390 ! 0 & %varbit6390 ! $int1) {
+			$int1 = %varbit6390;
+		}
+	case 6 :
+		if (%varbit6391 ! 0 & %varbit6391 ! $int1) {
+			$int1 = %varbit6391;
+		}
+	case 7 :
+		if (%varbit6392 ! 0 & %varbit6392 ! $int1) {
+			$int1 = %varbit6392;
+		}
+	case 8 :
+		if (%varbit6393 ! 0 & %varbit6393 ! $int1) {
+			$int1 = %varbit6393;
+		}
+	case 9 :
+		if (%varbit6394 ! 0 & %varbit6394 ! $int1) {
+			$int1 = %varbit6394;
+		}
+}
+switch_int ($int1) {
+	case 1 :
+		if_setgraphic("radio_buttons,1", interface_292:com_102);
+	case 2 :
+		if_setgraphic("radio_buttons,1", interface_292:com_104);
+	case 3 :
+		if_setgraphic("radio_buttons,1", interface_292:com_103);
+}

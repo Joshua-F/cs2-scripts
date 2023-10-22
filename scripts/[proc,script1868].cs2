@@ -3,14 +3,14 @@
 def_int $world0 = ~script1853;
 def_int $world1 = ~script1854;
 if ($world0 <= 0 & $world1 <= 0) {
-	if_sethide(true, loginscreen:com_260);
-	if_setonclick(null, loginscreen:com_235);
-	if_setonclick(null, loginscreen:com_236);
-	if_settext("(Click to switch)", loginscreen:com_259);
+	if_sethide(true, loginscreen:com_470);
+	if_setonclick(null, loginscreen:com_493);
+	if_setonclick(null, loginscreen:com_494);
+	if_settext("(Click to switch)", loginscreen:com_469);
 	return;
 }
-if_sethide(false, loginscreen:com_260);
-if_settext("", loginscreen:com_259);
+if_sethide(false, loginscreen:com_470);
+if_settext("", loginscreen:com_469);
 def_string $string0 = "";
 if ($world0 > 0 & $world1 > 0) {
 	$string0 = "Favourites:";
@@ -22,29 +22,29 @@ def_int $width2 = parawidth($string0, 512, p11_full);
 if_setsize($width2, 0, ^setsize_abs, ^setsize_minus, loginscreen:favourites);
 def_int $int3 = 0;
 if ($world0 > 0 & $world1 > 0) {
-	if_sethide(false, loginscreen:com_235);
-	if_sethide(false, loginscreen:com_236);
-	$int3 = calc(if_getwidth(loginscreen:com_260) - ($width2 + if_getwidth(loginscreen:com_235) + if_getwidth(loginscreen:com_236)));
+	if_sethide(false, loginscreen:com_493);
+	if_sethide(false, loginscreen:com_494);
+	$int3 = calc(if_getwidth(loginscreen:com_470) - ($width2 + if_getwidth(loginscreen:com_493) + if_getwidth(loginscreen:com_494)));
 	$int3 = calc($int3 / 6);
 	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_left, ^setpos_abs_top, loginscreen:favourites);
-	if_setposition(calc($int3 + $int3 + $width2 + $int3), 0, ^setpos_abs_left, ^setpos_abs_top, loginscreen:com_235);
-	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_right, ^setpos_abs_top, loginscreen:com_236);
+	if_setposition(calc($int3 + $int3 + $width2 + $int3), 0, ^setpos_abs_left, ^setpos_abs_top, loginscreen:com_493);
+	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_right, ^setpos_abs_top, loginscreen:com_494);
 	~script1869($world0);
 	~script1870($world1);
 } else if ($world0 > 0) {
-	if_sethide(false, loginscreen:com_235);
-	if_sethide(true, loginscreen:com_236);
-	$int3 = calc(if_getwidth(loginscreen:com_260) - ($width2 + if_getwidth(loginscreen:com_235)));
+	if_sethide(false, loginscreen:com_493);
+	if_sethide(true, loginscreen:com_494);
+	$int3 = calc(if_getwidth(loginscreen:com_470) - ($width2 + if_getwidth(loginscreen:com_493)));
 	$int3 = calc($int3 / 5);
 	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_left, ^setpos_abs_top, loginscreen:favourites);
-	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_right, ^setpos_abs_top, loginscreen:com_235);
+	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_right, ^setpos_abs_top, loginscreen:com_493);
 	~script1869($world0);
 } else {
-	if_sethide(true, loginscreen:com_235);
-	if_sethide(false, loginscreen:com_236);
-	$int3 = calc(if_getwidth(loginscreen:com_260) - ($width2 + if_getwidth(loginscreen:com_236)));
+	if_sethide(true, loginscreen:com_493);
+	if_sethide(false, loginscreen:com_494);
+	$int3 = calc(if_getwidth(loginscreen:com_470) - ($width2 + if_getwidth(loginscreen:com_494)));
 	$int3 = calc($int3 / 5);
 	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_left, ^setpos_abs_top, loginscreen:favourites);
-	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_right, ^setpos_abs_top, loginscreen:com_236);
+	if_setposition(calc($int3 + $int3), 0, ^setpos_abs_right, ^setpos_abs_top, loginscreen:com_494);
 	~script1870($world1);
 }

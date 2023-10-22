@@ -1,0 +1,14 @@
+// 2275
+[proc,script2275](int $int0)
+if ($int0 = 1) {
+	if_sethide(true, loginscreen:com_227);
+	if_settext("Please wait...", loginscreen:com_228);
+	if_setonclick(null, loginscreen:com_228);
+	if_setonmouserepeat(null, loginscreen:com_228);
+	if_setcolour(0x663300, loginscreen:com_228);
+} else {
+	if_sethide(false, loginscreen:com_227);
+	if_settext("Complete Account Creation", loginscreen:com_228);
+	if_setonclick("script2252", loginscreen:com_228);
+	if_setonmouserepeat("script2276(loginscreen:com_228, loginscreen:com_8, loginscreen:background_layer)", loginscreen:com_228);
+}

@@ -1,0 +1,23 @@
+// 253
+[proc,script253](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, enum $enum6)
+def_int $width7 = if_getwidth($component0);
+def_int $height8 = if_getheight($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setposition(calc($width7 - 16), 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(16, $height8, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("graphic_1248");
+cc_settiling(false);
+cc_setonmouseover("script263($component0, 0, true)");
+cc_setonmouseleave("script263($component0, 0, false)");
+cc_setonclick("script255($component0, $component1, $component2, $component3, $component4, $int5, $enum6)");
+cc_create($component0, ^iftype_text, 1);
+cc_settext(enum(int, string, $enum6, 0));
+cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($width7 - 22), $height8, ^setsize_abs, ^setsize_abs);
+cc_settextshadow(false);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setcolour(0x663300);
+cc_setonmouseover("script254($component0, 1, true)");
+cc_setonmouseleave("script254($component0, 1, false)");
+cc_setonclick("script255($component0, $component1, $component2, $component3, $component4, $int5, $enum6)");

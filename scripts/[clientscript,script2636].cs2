@@ -1,0 +1,11 @@
+// 2636
+[clientscript,script2636]
+if (%varbit6357 = 2) {
+	if_settargetverb("Attack wall", interface_859:button4);
+	if_settargetverb("Collect", interface_859:button5);
+} else if (%varbit6357 = 4) {
+	if_settargetverb("Rescue", interface_859:button4);
+	if_settargetverb("Steal", interface_859:button5);
+} else if (%varbit6357 = 3) {
+	if_settargetverb("Collect gold", interface_859:button4);
+}

@@ -1,4 +1,7 @@
 // 248
-[clientscript,script248]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_114);
+[clientscript,script248](int $int0)
+if (string_length(%varcstring24) > 0) {
+	chat_sendabusereport(%varcstring24, $int0, %varcint6, "");
+}
+~script675;
+%varcint11 = 0;

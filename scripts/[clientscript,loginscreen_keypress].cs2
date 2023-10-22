@@ -1,21 +1,21 @@
 // 1221
 [clientscript,loginscreen_keypress](int $key0, char $keychar1)
-if (%varcint174 = 6) {
+if (%varcint174 = 23) {
 	return;
 }
-if (%varcint174 = 7 & $key0 = ^key_escape) {
+if (%varcint174 = 24 & $key0 = ^key_escape) {
 	~script723(0);
 	return;
 }
 if (%varcint174 = 0) {
 	if ($key0 = ^key_return) {
-		if (if_gethide(loginscreen:com_226) = false) {
-			~loginscreen_setactivemenu(loginscreen:com_241);
+		if (if_gethide(loginscreen:com_392) = false) {
+			~loginscreen_setactivemenu(loginscreen:com_394);
 		}
 		return;
 	}
-	if ($key0 = ^key_escape & if_gethide(loginscreen:com_226) = true) {
-		~loginscreen_setactivemenu(loginscreen:com_226);
+	if ($key0 = ^key_escape & if_gethide(loginscreen:com_392) = true) {
+		~loginscreen_setactivemenu(loginscreen:com_392);
 	}
 	return;
 }
@@ -32,7 +32,7 @@ if (%varcint174 = 1) {
 		return;
 	}
 	if ($key0 = ^key_escape) {
-		~loginscreen_setactivemenu(loginscreen:com_226);
+		~loginscreen_setactivemenu(loginscreen:com_392);
 		return;
 	}
 	if (string_length(%varcstring32) >= 12 & $key0 ! ^key_backspace) {
@@ -40,21 +40,6 @@ if (%varcint174 = 1) {
 	}
 	%varcstring32 = removetags(~add_to_inputstring(%varcstring32, 0, $key0, $keychar1));
 	if_settext(%varcstring32, loginscreen:username);
-	return;
-}
-if (%varcint174 = 3) {
-	if (create_reply = -3) {
-		return;
-	}
-	if ($key0 = ^key_escape) {
-		~loginscreen_setactivemenu(loginscreen:com_226);
-		return;
-	}
-	if (string_length(%varcstring34) >= 12 & $key0 ! ^key_backspace) {
-		return;
-	}
-	%varcstring34 = removetags(~add_to_inputstring(%varcstring34, 0, $key0, $keychar1));
-	if_settext(%varcstring34, loginscreen:com_394);
 	return;
 }
 def_string $string0 = "";
@@ -80,7 +65,7 @@ if (%varcint174 = 2) {
 		return;
 	}
 	if ($key0 = ^key_escape) {
-		~loginscreen_setactivemenu(loginscreen:com_226);
+		~loginscreen_setactivemenu(loginscreen:com_392);
 		return;
 	}
 	if (string_length(%varcstring33) >= 20 & $key0 ! ^key_backspace) {
@@ -95,59 +80,25 @@ if (%varcint174 = 2) {
 	if_settext($string0, loginscreen:password);
 	return;
 }
-if (%varcint174 = 4) {
-	if (create_reply = -3) {
+switch_int (%varcint174) {
+	case 21 :
+		~script2221($key0, $keychar1);
 		return;
-	}
-	if ($key0 = ^key_return | $key0 = ^key_tab) {
-		if (%varcint175 >= clientclock) {
-			return;
-		}
-		%varcint175 = clientclock;
-		%varcint174 = 5;
+	case 22 :
+		~script2222($key0, $keychar1);
 		return;
-	}
-	if ($key0 = ^key_escape) {
-		~loginscreen_setactivemenu(loginscreen:com_226);
+	case 3, 4, 5, 8 :
+		~script2218($key0, $keychar1);
 		return;
-	}
-	if (string_length(%varcstring35) >= 20 & $key0 ! ^key_backspace) {
+	case 6, 7, 9 :
+		~script252($key0, $keychar1);
 		return;
-	}
-	%varcstring35 = ~add_to_inputstring(%varcstring35, 0, $key0, $keychar1);
-	$int2 = string_length(%varcstring35);
-	while ($int2 > 0) {
-		$string0 = append($string0, "*");
-		$int2 = calc($int2 - 1);
-	}
-	if_settext($string0, loginscreen:com_421);
-	return;
-}
-if (%varcint174 = 5) {
-	if (create_reply = -3) {
+	case 10, 11, 14, 15, 16, 17, 18 :
+		~script2219($key0, $keychar1);
 		return;
-	}
-	if ($key0 = ^key_tab) {
-		if (%varcint175 >= clientclock) {
-			return;
-		}
-		%varcint175 = clientclock;
-		%varcint174 = 4;
+	case 12, 13, 19, 20 :
+		~script2220($key0, $keychar1);
 		return;
-	}
-	if ($key0 = ^key_escape) {
-		~loginscreen_setactivemenu(loginscreen:com_226);
+	case default :
 		return;
-	}
-	if (string_length(%varcstring36) >= 20 & $key0 ! ^key_backspace) {
-		return;
-	}
-	%varcstring36 = ~add_to_inputstring(%varcstring36, 0, $key0, $keychar1);
-	$int2 = string_length(%varcstring36);
-	while ($int2 > 0) {
-		$string0 = append($string0, "*");
-		$int2 = calc($int2 - 1);
-	}
-	if_settext($string0, loginscreen:com_426);
-	return;
 }

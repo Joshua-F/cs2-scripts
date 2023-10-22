@@ -1,0 +1,44 @@
+// 2262
+[proc,script2262](int $int0, int $int1)
+if ($int0 = 10 | $int0 = 11) {
+	%varcint738 = $int0;
+}
+if_sethide(true, loginscreen:com_336);
+if_sethide(true, loginscreen:com_337);
+if_sethide(true, loginscreen:com_308);
+if_sethide(true, loginscreen:com_309);
+if_setcolour(0x9d845c, loginscreen:com_385);
+if_setcolour(0x9d845c, loginscreen:com_378);
+if (enum(int, boolean, enum_2253, affiliate) = false) {
+	if ($int0 = 10) {
+		if_sethide(false, loginscreen:com_336);
+		if_setcolour(0x9c7b48, loginscreen:com_385);
+	} else if ($int0 = 11) {
+		if_sethide(false, loginscreen:com_337);
+		if_setcolour(0x9c7b48, loginscreen:com_378);
+	} else {
+		if (%varcint738 = 10) {
+			if_sethide(false, loginscreen:com_336);
+			if_setcolour(0x9c7b48, loginscreen:com_385);
+		}
+		if (%varcint738 = 11) {
+			if_sethide(false, loginscreen:com_337);
+			if_setcolour(0x9c7b48, loginscreen:com_378);
+		}
+	}
+} else if ($int0 = 10) {
+	if_sethide(false, loginscreen:com_308);
+	if_setcolour(0x9c7b48, loginscreen:com_385);
+} else if ($int0 = 11) {
+	if_sethide(false, loginscreen:com_309);
+	if_setcolour(0x9c7b48, loginscreen:com_378);
+} else {
+	if (%varcint738 = 10) {
+		if_sethide(false, loginscreen:com_308);
+		if_setcolour(0x9c7b48, loginscreen:com_385);
+	}
+	if (%varcint738 = 11) {
+		if_sethide(false, loginscreen:com_309);
+		if_setcolour(0x9c7b48, loginscreen:com_378);
+	}
+}

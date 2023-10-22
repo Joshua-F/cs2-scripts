@@ -1,6 +1,7 @@
 // 1140
-[clientscript,script1140](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0 | $windowmode2 = ^windowmode_fixed | $windowmode2 = ^windowmode_resizable) {
-	_6011($windowmode2);
+[clientscript,script1140](component $component0)
+if (%var172 = 1) {
+	if_setgraphic("graphic_1409", $component0);
+} else {
+	if_setgraphic("combatboxes_very_large,1", $component0);
 }

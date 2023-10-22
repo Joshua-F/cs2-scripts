@@ -1,98 +1,95 @@
 // 793
-[proc,script793](component $component0, int $int1, int $int2, string $op0, string $op1, string $op2, string $op3, string $op4)
+[proc,script793](component $component0, int $int1, int $int2, string $op0, string $op1, string $op2, string $op3, string $op4, int $int3, int $int4)
 cc_deleteall($component0);
-def_int $int3 = 0;
-def_int $int4 = 0;
-if (if_getscrollwidth($component0) > 0) {
-	$int3 = calc((if_getscrollwidth($component0) - 36 * $int1) / ($int1 - 1));
-} else {
-	$int3 = calc((if_getwidth($component0) - 36 * $int1) / ($int1 - 1));
-}
-if (if_getscrollheight($component0) > 0) {
-	$int4 = calc((if_getscrollheight($component0) - 64 * $int2) / ($int2 - 1));
-} else {
-	$int4 = calc((if_getheight($component0) - 64 * $int2) / ($int2 - 1));
-}
 def_int $int5 = 0;
-def_int $int6 = 1;
+def_int $int6 = 0;
+if_setscrollsize(0, calc((($int4 - $int3) / $int1 + 1) * 57), $component0);
 def_int $int7 = 0;
-def_int $int8 = 0;
-def_int $int9 = -1;
-def_namedobj $namedobj10 = pouch_12525;
-def_namedobj $namedobj11 = spirit_shards_12530;
-def_namedobj $namedobj12 = wolf_bones_2859;
-def_namedobj $namedobj13 = gold_charm_12527;
-def_namedobj $namedobj14 = null;
-def_namedobj $namedobj15 = null;
+def_int $int8 = 1;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = -1;
+def_namedobj $namedobj12 = pouch_12525;
+def_namedobj $namedobj13 = spirit_shards_12530;
+def_namedobj $namedobj14 = wolf_bones_2859;
+def_namedobj $namedobj15 = gold_charm_12527;
 def_namedobj $namedobj16 = null;
 def_namedobj $namedobj17 = null;
 def_namedobj $namedobj18 = null;
 def_namedobj $namedobj19 = null;
-def_int $int20 = 1;
-def_int $int21 = 7;
+def_namedobj $namedobj20 = null;
+def_namedobj $namedobj21 = null;
 def_int $int22 = 1;
-def_int $int23 = 1;
-def_int $int24 = 0;
-def_int $int25 = 0;
+def_int $int23 = 7;
+def_int $int24 = 1;
+def_int $int25 = 1;
 def_int $int26 = 0;
 def_int $int27 = 0;
 def_int $int28 = 0;
 def_int $int29 = 0;
-def_string $string5 = "hello";
 def_int $int30 = 0;
+def_int $int31 = 0;
+def_string $string5 = "hello";
+def_int $int32 = 0;
 def_obj $objarray0(10);
-def_obj $obj31 = null;
-while ($int5 < 78) {
-	$int8 = calc($int5 % $int1);
-	cc_create($component0, ^iftype_graphic, $int5);
+def_obj $obj33 = null;
+def_int $int34 = 0;
+while ($int7 <= calc($int4 - $int3)) {
+	$int5 = calc(16 + $int7 % $int1 * 48 + $int7 % $int1 * 5);
+	$int6 = calc($int7 / $int1 * 52 + $int7 / $int1 * 5);
+	cc_create($component0, ^iftype_graphic, $int34);
+	$int34 = calc($int34 + 1);
+	cc_setsize(48, 52, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_2205");
+	cc_setonmouseover("script2724(event_com, $int34, false)");
+	cc_setonmouseleave("script2724(event_com, $int34, true)");
+	cc_create($component0, ^iftype_graphic, $int34);
+	$int34 = calc($int34 + 1);
+	cc_setsize(48, 52, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_2206");
+	cc_sethide(true);
+	cc_create($component0, ^iftype_graphic, $int34);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(~script761($int8), calc($int5 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
-	$obj31 = enum(int, obj, enum_1182, $int6);
-	if ($int6 = 1) {
-		if (~wolf_pouch_checker($obj31) = 1) {
-			~script794($obj31, $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4);
+	cc_setposition(calc($int5 + 6), calc($int6 + 4), ^setpos_abs_left, ^setpos_abs_top);
+	$obj33 = enum(int, obj, enum_1182, $int8);
+	if ($int8 = 1) {
+		if (~wolf_pouch_checker($obj33) = 1) {
+			~script794($obj33, $obj33, $component0, $int34, $op0, $op1, $op2, $op3, $op4);
 		} else {
-			~script794(enum(int, obj, enum_1183, $int6), $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4);
+			~script794(enum(int, obj, enum_1183, $int8), $obj33, $component0, $int34, $op0, $op1, $op2, $op3, $op4);
 		}
-	} else if ($obj31 = pouch_12292) {
-		~script794($obj31, $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4);
+	} else if ($obj33 = pouch_12292) {
+		~script794($obj33, $obj33, $component0, $int34, $op0, $op1, $op2, $op3, $op4);
 	} else {
-		~script794(enum(int, obj, enum_1183, $int6), $obj31, $component0, $int5, $op0, $op1, $op2, $op3, $op4);
+		~script794(enum(int, obj, enum_1183, $int8), $obj33, $component0, $int34, $op0, $op1, $op2, $op3, $op4);
 	}
-	$string5 = enum(obj, string, enum_1187, $obj31);
-	$int30 = enum(obj, int, enum_1185, $obj31);
-	if ($int6 = 1) {
-		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_672:com_24, interface_672:scroll_icons, $int30, $string5, $namedobj10, 1, $namedobj11, $int21, $namedobj12, $int22, $namedobj13, $int23, $namedobj14, $int24, $namedobj15, $int25, $namedobj16, $int26, $namedobj17, $int27, $namedobj18, $int28, $namedobj19, $int29)");
+	$string5 = enum(obj, string, enum_1187, $obj33);
+	$int32 = enum(obj, int, enum_1185, $obj33);
+	if ($int8 = 1) {
+		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_672:com_24, interface_672:scroll_icons, $int32, $string5, $namedobj12, 1, $namedobj13, $int23, $namedobj14, $int24, $namedobj15, $int25, $namedobj16, $int26, $namedobj17, $int27, $namedobj18, $int28, $namedobj19, $int29, $namedobj20, $int30, $namedobj21, $int31)");
 		cc_setonmouseleave("deltooltip(interface_672:com_24)");
 	} else {
 		$string5 = "You do not have access to this type of Summoning pouch.";
-		cc_setonmouserepeat("script800(event_comsubid, interface_672:com_24, interface_672:scroll_icons, $int30, $string5)");
+		cc_setonmouserepeat("script800(event_comsubid, interface_672:com_24, interface_672:scroll_icons, $int32, $string5)");
 		cc_setonmouseleave("deltooltip(interface_672:com_24)");
 	}
-	$int5 = calc($int5 + 1);
-	$int6 = calc($int6 + 1);
-}
-$int6 = 1;
-while ($int7 < 78) {
-	$int8 = calc($int7 % $int1);
-	cc_create($component0, ^iftype_text, $int5);
-	cc_setposition(~script762($int8), calc(32 + $int7 / $int1 * (64 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont(b12_full);
-	cc_setsize(90, 50, ^setsize_abs, ^setsize_abs);
-	$obj31 = enum(int, obj, enum_1182, $int6);
-	cc_settext(enum(obj, string, enum_1187, $obj31));
-	if ($int6 = 1) {
-		if (~wolf_pouch_checker($obj31) = 1) {
-			cc_setcolour(0xffff64);
-		} else {
-			cc_setcolour(0x111111);
-		}
-	} else {
-		cc_setcolour(0x111111);
-	}
+	$int34 = calc($int34 + 1);
+	cc_create($component0, ^iftype_graphic, $int34);
+	$int34 = calc($int34 + 1);
+	cc_setsize(12, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 2), calc($int6 + 38), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum(spirit_shards_12183, 1);
+	cc_create($component0, ^iftype_text, $int34);
+	$int34 = calc($int34 + 1);
+	cc_setsize(31, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 13), calc($int6 + 39), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p11_full);
+	cc_setcolour(^white);
+	cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+	cc_settext(~script940(oc_param($obj33, param_541)));
 	cc_settextshadow(true);
-	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	$int7 = calc($int7 + 1);
-	$int5 = calc($int5 + 1);
-	$int6 = calc($int6 + 1);
+	$int8 = calc($int8 + 1);
 }

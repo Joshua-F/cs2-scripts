@@ -30,8 +30,19 @@ if (getwindowmode >= ^windowmode_resizable) {
 			return(if_gethide(toplevel_fullscreen:side12));
 		case 13 :
 			return(if_gethide(toplevel_fullscreen:side13));
+		case 14 :
+			return(if_gethide(toplevel_fullscreen:com_47));
+		case 15 :
+			return(if_gethide(toplevel_fullscreen:com_48));
+		case 95 :
+			return(if_gethide(toplevel_fullscreen:com_50));
 		case 99 :
 			return(if_gethide(toplevel_fullscreen:side99));
+		case 98 :
+			if (if_hassub(toplevel_fullscreen:com_31) = true) {
+				return(if_gethide(toplevel_fullscreen:com_31));
+			}
+			return(true);
 	}
 } else {
 	switch_int ($int0) {
@@ -63,8 +74,19 @@ if (getwindowmode >= ^windowmode_resizable) {
 			return(if_gethide(toplevel:side12));
 		case 13 :
 			return(if_gethide(toplevel:side13));
+		case 14 :
+			return(if_gethide(toplevel:com_166));
+		case 15 :
+			return(if_gethide(toplevel:com_167));
+		case 95 :
+			return(if_gethide(toplevel:com_169));
 		case 99 :
 			return(if_gethide(toplevel:side99));
+		case 98 :
+			if (if_hassub(toplevel:com_148) = true) {
+				return(if_gethide(toplevel:com_148));
+			}
+			return(true);
 	}
 }
 return(null);

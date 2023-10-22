@@ -1,0 +1,79 @@
+// 2791
+[proc,script2791](int $count0)(model, string, int, int, seq)
+def_model $model1 = struct_param(enum(int, struct, enum_869, $count0), param_938);
+def_string $text0 = struct_param(enum(int, struct, enum_869, $count0), param_935);
+def_seq $seq2 = struct_param(enum(int, struct, enum_869, $count0), param_939);
+def_int $int3 = struct_param(enum(int, struct, enum_869, $count0), param_937);
+def_int $int4 = 1;
+def_int $int5 = 0;
+if (struct_param(enum(int, struct, enum_869, $count0), param_940) = 1) {
+	switch_int ($count0) {
+		case 0 :
+			if (stat_base(cooking) < 40) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			}
+		case 1 :
+			if (%varbit1527 < 160) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			}
+		case 2 :
+			if (%var359 < 100) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			}
+		case 3 :
+			if (%varbit5491 > 370) {
+				$int5 = 1;
+			}
+		case 5 :
+			if (%varbit418 < 26) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			}
+		case 6 :
+			if (%varbit5525 = 1) {
+				$int5 = 1;
+			}
+		case 7 :
+			if (%varbit5491 > 370) {
+				$int5 = 1;
+			}
+		case 9 :
+			if (stat_base(fishing) < 15) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			}
+		case 11 :
+			if (%varbit3618 < 16 | %varbit5550 = 1) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			}
+		case 12 :
+			if (%varbit3293 < 135) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			} else if (%varbit6180 = 140) {
+				$int5 = 1;
+			}
+		case 15 :
+			if (%varbit3618 < 28) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			}
+		case 14 :
+			if (%var492 < 4) {
+				$model1 = struct_param(enum(int, struct, enum_869, $count0), param_936);
+				$int4 = 0;
+			}
+	}
+	if ($int5 = 1) {
+		$model1 = struct_param(enum(int, struct, enum_869, $count0), param_942);
+		$int4 = 1;
+		$text0 = struct_param(enum(int, struct, enum_869, $count0), param_941);
+		$int3 = struct_param(enum(int, struct, enum_869, $count0), param_943);
+		$seq2 = struct_param(enum(int, struct, enum_869, $count0), param_944);
+	}
+}
+return($model1, $text0, $int4, $int3, $seq2);

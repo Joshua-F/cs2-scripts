@@ -1,9 +1,0 @@
-// 1504
-[clientscript,script1504]
-if (getwindowmode >= ^windowmode_resizable) {
-	if_sethide(false, interface_764:com_45);
-	if_sethide(true, interface_764:window_layer);
-} else {
-	if_sethide(true, interface_764:com_45);
-	if_sethide(false, interface_764:window_layer);
-}

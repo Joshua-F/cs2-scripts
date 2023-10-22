@@ -1,0 +1,11 @@
+// 939
+[proc,script939]
+def_int $size0 = 0;
+def_obj $obj1 = null;
+while ($size0 < inv_size(inv_90)) {
+	if (cc_find(trademain:com_33, $size0) = ^true) {
+		$obj1 = invother_getobj(inv_90, $size0);
+		~script812($obj1);
+	}
+	$size0 = calc($size0 + 1);
+}

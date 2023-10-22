@@ -8,15 +8,15 @@ switch_int ($int0) {
 			case 1 :
 				return(1, achey_tree_logs_2862, "Members: Achey tree", "Members can now chop down <col=000080>achey trees</col>.");
 			case 2 :
-				return(10, thatch_spar_light_6281, "Members: Light jungle<br> (after Jungle Potion)", "Members now have the Woodcutting level required to clear <col=000080>light jungle</col> in the Tai Bwo Wannai Clean-up minigame (after Jungle Potion).");
+				return(10, thatch_spar_light_6281, "Members: Light jungle<br> (after Jungle Potion)", "Members now have the Woodcutting level required to clear <col=000080>light jungle</col> in Tai Bwo Wannai Clean-up (after Jungle Potion).");
 			case 3 :
 				return(15, oak_logs_1521, "Oak tree", "You can now chop down <col=000080>oak trees</col>.");
 			case 4 :
-				return(20, thatch_spar_med_6283, "Members: Medium jungle<br> (after Jungle Potion)", "Members now have the Woodcutting level required to clear <col=000080>medium jungle</col> in the Tai Bwo Wannai Clean-up minigame (after Jungle Potion).");
+				return(20, thatch_spar_med_6283, "Members: Medium jungle<br> (after Jungle Potion)", "Members now have the Woodcutting level required to clear <col=000080>medium jungle</col> in Tai Bwo Wannai Clean-up (after Jungle Potion).");
 			case 5 :
 				return(30, willow_logs_1519, "Willow tree", "You can now chop down <col=000080>willow trees</col>.");
 			case 6 :
-				return(35, thatch_spar_dense_6285, "Members: Dense jungle<br> (after Jungle Potion)", "Members now have the Woodcutting level required to clear <col=000080>dense jungle</col> in the Tai Bwo Wannai Clean-up minigame (after Jungle Potion).");
+				return(35, thatch_spar_dense_6285, "Members: Dense jungle<br> (after Jungle Potion)", "Members now have the Woodcutting level required to clear <col=000080>dense jungle</col> in Tai Bwo Wannai Clean-up (after Jungle Potion).");
 			case 7 :
 				return(35, teak_logs_6333, "Members: Teak tree<br> (after Jungle Potion)", "Members now have the Woodcutting level required to chop down <col=000080>teak trees</col> (after Jungle Potion).");
 			case 8 :
@@ -34,34 +34,38 @@ switch_int ($int0) {
 			case 14 :
 				return(60, yew_logs_1515, "Yew tree", "You can now chop down <col=000080>yew trees</col>.");
 			case 15 :
-				return(75, magic_logs_1513, "Members: Magic tree", "Members can now chop down <col=000080>magic trees</col>.");
+				return(68, obj_15288, "Members: Choking ivy", "Members can now chop down <col=000080>choking ivy</col>.");
 			case 16 :
+				return(75, magic_logs_1513, "Members: Magic tree", "Members can now chop down <col=000080>magic trees</col>.");
+			case 17 :
+				return(80, saw_8794, "Members: Sawmill training", "Members can now participate in <col=000080>sawmill training</col>.");
+			case 18 :
 				return(82, cursed_magic_logs_13567, "Members: Cursed magic tree<br> (after Spirit of Summer)", "Members now have the Woodcutting level required to chop down <col=000080>cursed magic trees</col> (after Spirit of Summer).");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, bronze_axe_1351, "Bronze axe", "You can now use <col=000080>bronze axes</col>.");
+				return(1, bronze_hatchet_1351, "Bronze hatchet", "You can now use <col=000080>bronze hatchets</col>.");
 			case 1 :
-				return(1, iron_axe_1349, "Iron axe", "You can now use <col=000080>iron axes</col>.");
+				return(1, iron_hatchet_1349, "Iron hatchet", "You can now use <col=000080>iron hatchets</col>.");
 			case 2 :
-				return(6, steel_axe_1353, "Steel axe", "You can now use <col=000080>steel axes</col>.");
+				return(6, steel_hatchet_1353, "Steel hatchet", "You can now use <col=000080>steel hatchets</col>.");
 			case 3 :
-				return(6, black_axe_1361, "Black axe", "You can now use <col=000080>black axes</col>.");
+				return(6, black_hatchet_1361, "Black hatchet", "You can now use <col=000080>black hatchets</col>.");
 			case 4 :
-				return(21, mithril_axe_1355, "Mithril axe", "You can now use <col=000080>mithril axes</col>.");
+				return(21, mithril_hatchet_1355, "Mithril hatchet", "You can now use <col=000080>mithril hatchets</col>.");
 			case 5 :
-				return(31, adamant_axe_1357, "Adamant axe", "You can now use <col=000080>adamant axes</col>.");
+				return(31, adamant_hatchet_1357, "Adamant hatchet", "You can now use <col=000080>adamant hatchets</col>.");
 			case 6 :
-				return(40, sacred_clay_hatchet_14108, "Members: Sacred clay hatchet", "Members can now use <col=000080>Sacred clay hatchets</col>");
+				return(40, sacred_clay_hatchet_14108, "Members: Sacred clay hatchet", "Members can now use <col=000080>sacred clay hatchets</col>");
 			case 7 :
-				return(40, volatile_clay_hatchet_14100, "Members: Volatile hatchet", "Members can now use <col=000080>Volatile hatchets</col>");
+				return(40, volatile_clay_hatchet_14100, "Members: Volatile hatchet", "Members can now use <col=000080>volatile hatchets</col>");
 			case 8 :
-				return(41, rune_axe_1359, "Rune axe", "You can now use <col=000080>rune axes</col>.");
+				return(41, rune_hatchet_1359, "Rune hatchet", "You can now use <col=000080>rune hatchets</col>.");
 			case 9 :
-				return(61, dragon_axe_6739, "Members: Dragon axe", "Members can now use <col=000080>dragon axes</col>.");
+				return(61, dragon_hatchet_6739, "Members: Dragon hatchet", "Members can now use <col=000080>dragon hatchets</col>.");
 			case 10 :
-				return(61, inferno_adze_13661, "Members: Inferno Adze<br> (after All Fired Up, with 92 Firemaking)", "Members can now use the <col=000080>Inferno Adze</col> to chop down trees with (after All Fired Up and with level 92 Firemaking).");
+				return(61, inferno_adze_13661, "Members: Inferno Adze<br> (after All Fired Up, with 92 Firemaking)", "Members can now use the <col=000080>Inferno Adze</col> to chop down trees (after All Fired Up and with level 92 Firemaking).");
 		}
 	case 2 :
 		switch_int ($int1) {
@@ -78,38 +82,48 @@ switch_int ($int0) {
 		if ($int1 = 0) {
 			return(44, lumberjack_top_10939, "Lumberjack clothing", "Members can now wear the <col=000080>undead lumberjack</col> clothing.");
 		} else if ($int1 = 1) {
-			return(56, fremennik_round_shield_10826, "Fremennik round shield", "Members can now make <col=000080>Fremennik round shields</col>.");
+			return(54, fremennik_round_shield_10826, "Fremennik round shield", "Members can now make <col=000080>Fremennik round shields</col>.");
 		} else if ($int1 = 2) {
-			return(56, split_log_10812, "Split arctic pine logs", "Members can now split <col=000080>arctic pine logs</col>.");
+			return(54, split_log_10812, "Split arctic pine logs", "Members can now split <col=000080>arctic pine logs</col>.");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, hatchet_class_1_14132, "Stealing Creation - class 1 hatchet", "Members can now use <col=000080>class 1 hatchets</col> in the Stealing Creation minigame.");
+				return(1, obj_14667, "Chop basic evil tree", "Members can now chop <col=000080>basic evil trees</col>");
 			case 1 :
-				return(20, sacred_clay_class_2_14184, "Stealing Creation - woodcut class 2 sacred clay", "Members can now woodcut <col=000080>class 2 sacred clay</col> in the Stealing Creation minigame.");
+				return(1, hatchet_class_1_14132, "Stealing Creation - class 1 hatchet", "Members can now use <col=000080>class 1 hatchets</col> in Stealing Creation.");
 			case 2 :
-				return(20, hatchet_class_2_14134, "Stealing Creation - class 2 hatchet", "Members can now use <col=000080>class 2 hatchets</col> in the Stealing Creation minigame.");
+				return(15, obj_14667, "Chop evil oak tree", "Members can now chop <col=000080>evil oak trees</col>");
 			case 3 :
-				return(40, sacred_clay_class_3_14186, "Stealing Creation - woodcut class 3 sacred clay", "Members can now woodcut <col=000080>class 3 sacred clay</col> in the Stealing Creation minigame.");
+				return(20, sacred_clay_class_2_14184, "Stealing Creation - woodcut class 2 sacred clay", "Members can now woodcut <col=000080>class 2 sacred clay</col> in Stealing Creation.");
 			case 4 :
-				return(40, hatchet_class_3_14136, "Stealing Creation - class 3 hatchet", "Members can now use <col=000080>class 3 hatchets</col> in the Stealing Creation minigame.");
+				return(20, hatchet_class_2_14134, "Stealing Creation - class 2 hatchet", "Members can now use <col=000080>class 2 hatchets</col> in Stealing Creation.");
 			case 5 :
-				return(60, sacred_clay_class_4_14188, "Stealing Creation - woodcut class 4 sacred clay", "Members can now woodcut <col=000080>class 4 sacred clay</col> in the Stealing Creation minigame.");
+				return(30, obj_14667, "Chop evil willow tree", "Members can now chop <col=000080>evil willow trees</col>");
 			case 6 :
-				return(60, hatchet_class_4_14138, "Stealing Creation - class 4 hatchet", "Members can now use <col=000080>class 4 hatchets</col> in the Stealing Creation minigame.");
+				return(40, sacred_clay_class_3_14186, "Stealing Creation - woodcut class 3 sacred clay", "Members can now woodcut <col=000080>class 3 sacred clay</col> in Stealing Creation.");
 			case 7 :
-				return(80, sacred_clay_class_5_14190, "Stealing Creation - woodcut class 5 sacred clay", "Members can now woodcut <col=000080>class 5 sacred clay</col> in the Stealing Creation minigame.");
+				return(40, hatchet_class_3_14136, "Stealing Creation - class 3 hatchet", "Members can now use <col=000080>class 3 hatchets</col> in Stealing Creation.");
 			case 8 :
-				return(80, hatchet_class_5_14140, "Stealing Creation - class 5 hatchet", "Members can now use <col=000080>class 5 hatchets</col> in the Stealing Creation minigame.");
+				return(45, obj_14667, "Chop evil maple tree", "Members can now chop <col=000080>evil maple trees</col>");
+			case 9 :
+				return(60, obj_14667, "Chop evil yew tree", "Members can now chop <col=000080>evil yew trees</col>");
+			case 10 :
+				return(60, sacred_clay_class_4_14188, "Stealing Creation - woodcut class 4 sacred clay", "Members can now woodcut <col=000080>class 4 sacred clay</col> in Stealing Creation.");
+			case 11 :
+				return(60, hatchet_class_4_14138, "Stealing Creation - class 4 hatchet", "Members can now use <col=000080>class 4 hatchets</col> in Stealing Creation.");
+			case 12 :
+				return(75, obj_14667, "Chop evil magic tree", "Members can now chop <col=000080>evil magic trees</col>");
+			case 13 :
+				return(80, sacred_clay_class_5_14190, "Stealing Creation - woodcut class 5 sacred clay", "Members can now woodcut <col=000080>class 5 sacred clay</col> in Stealing Creation.");
+			case 14 :
+				return(80, hatchet_class_5_14140, "Stealing Creation - class 5 hatchet", "Members can now use <col=000080>class 5 hatchets</col> in Stealing Creation.");
+			case 15 :
+				return(85, obj_14667, "Chop elder evil tree", "Members can now chop <col=000080>elder evil trees</col>");
 		}
 	case 5 :
 		if ($int1 = 0) {
-			return(19, obj_5079, "Woodcutting Tutor - new info", "There is new information available from the <col=000080>Woodcutting Tutor</col> in <col=000080>Lumbridge</col>.");
-		} else if ($int1 = 1) {
-			return(29, obj_5079, "Woodcutting Tutor - new info", "There is new information available from the <col=000080>Woodcutting Tutor</col> in <col=000080>Lumbridge</col>.");
-		} else if ($int1 = 2) {
-			return(99, woodcutting_cape_9807, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Woodcutting<col=000080>. Why not visit <col=800000>Wilfred<col=000080>, near <col=800000>Lumbridge<col=000080>. He has something special that is only available to true masters of the <col=800000>Woodcutting<col=000080> skill!");
+			return(99, woodcutting_cape_9807, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Woodcutting<col=000080>. Members can visit <col=800000>Wilfred<col=000080>, just to the north of <col=800000>Falador<col=000080>. He has something special that is only available to true masters of the <col=800000>Woodcutting<col=000080> skill!");
 		}
 }
 return(0, null, "", "");

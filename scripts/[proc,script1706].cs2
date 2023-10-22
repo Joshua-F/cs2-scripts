@@ -1,0 +1,33 @@
+// 1706
+[proc,script1706]
+def_stat $stat0 = attack;
+def_int $int1 = 0;
+def_int $int2 = 10;
+while ($stat0 ! null & $int2 > 0) {
+	$int1 = ~script1708($stat0);
+	if (if_find(~script1707($stat0)) = true) {
+		if ($int1 > 0) {
+			cc_setcolour(0x32ff32);
+			cc_settext(append(append_num("+", $int1), "%"));
+		} else if ($int1 < 0) {
+			cc_setcolour(0xff3232);
+			cc_settext(append(tostring($int1), "%"));
+		} else {
+			cc_setcolour(0xff981f);
+			cc_settext(append(tostring($int1), "%"));
+		}
+	}
+	switch_stat ($stat0) {
+		case attack :
+			$stat0 = strength;
+		case strength :
+			$stat0 = defence;
+		case defence :
+			$stat0 = ranged;
+		case ranged :
+			$stat0 = magic;
+		case magic :
+			$stat0 = null;
+	}
+	$int2 = calc($int2 - 1);
+}

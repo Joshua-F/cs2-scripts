@@ -1,0 +1,25 @@
+// 934
+[proc,script934](obj $obj0)(string)
+def_string $string0 = "";
+def_int $int1 = oc_param($obj0, param_742);
+switch_int (oc_param($obj0, param_741)) {
+	case 1 :
+		if ($int1 = 1) {
+			$string0 = "Rescued 1 dignitary in Recipe for Disaster";
+		} else {
+			$string0 = "Rescued <tostring($int1)> dignitaries in Recipe for Disaster";
+		}
+		return(~script913(%varbit1852, oc_param($obj0, param_742), $string0));
+	case 2 :
+		return(~script913(%varbit3763, 2, "Barbarian spearmaking"));
+	case 3 :
+		return(~script913(%varbit4310, 10, "Complete: Chaos Tunnels"));
+	case 4 :
+		return(~script913(%varbit1990, 280, "Part of quest: In Aid of the Myreque"));
+	case 5 :
+		return(~script913(%varbit1850, 4, "Part of quest: Recipe for Disaster"));
+	case 6 :
+		return(~script913(%varbit3550, 8, "Part of quest: Another Slice of H.A.M."));
+	case default :
+		return("");
+}

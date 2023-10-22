@@ -1,3 +1,72 @@
 // 1117
-[clientscript,script1117]
-~script1845;
+[clientscript,script1117](component $component0)
+def_component $component1 = null;
+def_string $string0 = "";
+switch_component ($component0) {
+	case magic:com_7 :
+		if (%varbit6459 = 0) {
+			$string0 = "Hide combat spells.";
+		} else {
+			$string0 = "Show combat spells.";
+		}
+		$component1 = magic:tooltip2;
+	case magic:com_9 :
+		if (%varbit6462 = 0) {
+			$string0 = "Hide teleport spells.";
+		} else {
+			$string0 = "Show teleport spells.";
+		}
+		$component1 = magic:tooltip2;
+	case magic:com_11 :
+		if (%varbit6461 = 0) {
+			$string0 = "Hide miscellaneous spells.";
+		} else {
+			$string0 = "Show miscellaneous spells.";
+		}
+		$component1 = magic:tooltip2;
+	case magic:com_13 :
+		if (%varbit6460 = 0) {
+			$string0 = "Hide skill spells.";
+		} else {
+			$string0 = "Show skill spells.";
+		}
+		$component1 = magic:tooltip2;
+	case magic_lunar:com_5 :
+		if (%varbit6463 = 0) {
+			$string0 = "Hide combat spells.";
+		} else {
+			$string0 = "Show combat spells.";
+		}
+		$component1 = magic_lunar:tooltip2;
+	case magic_lunar:com_9 :
+		if (%varbit6464 = 0) {
+			$string0 = "Hide miscellaneous spells.";
+		} else {
+			$string0 = "Show miscellaneous spells.";
+		}
+		$component1 = magic_lunar:tooltip2;
+	case magic_lunar:com_7 :
+		if (%varbit6465 = 0) {
+			$string0 = "Hide teleport spells.";
+		} else {
+			$string0 = "Show teleport spells.";
+		}
+		$component1 = magic_lunar:tooltip2;
+	case magic_zaros:com_5 :
+		if (%varbit6466 = 0) {
+			$string0 = "Hide combat spells.";
+		} else {
+			$string0 = "Show combat spells.";
+		}
+		$component1 = magic_zaros:tooltip2;
+	case magic_zaros:com_7 :
+		if (%varbit6467 = 0) {
+			$string0 = "Hide teleport spells.";
+		} else {
+			$string0 = "Show teleport spells.";
+		}
+		$component1 = magic_zaros:tooltip2;
+	case default :
+		return;
+}
+~addtooltip_action($component0, $component1, $string0, 25, if_getwidth(if_getlayer($component1)));

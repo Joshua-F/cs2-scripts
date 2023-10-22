@@ -1,0 +1,7 @@
+// 2609
+[clientscript,script2609](component $component0)
+if (%varbit6357 = 1 | %varbit6357 = 4 | %varbit6357 = 3) {
+	if_setposition(0, 5, ^setpos_abs_left, ^setpos_abs_top, $component0);
+} else {
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component0);
+}

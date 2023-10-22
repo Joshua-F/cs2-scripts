@@ -1,8 +1,3 @@
 // 1201
-[clientscript,script1201](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	_6010(false);
-} else {
-	_6010(true);
-}
+[clientscript,script1201](component $component0)
+if_settext(%varcstring131, $component0);

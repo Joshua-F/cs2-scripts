@@ -1,10 +1,7 @@
 // 1886
-[proc,script1886]
-if (%varcint176 = 0) {
-	%varcint176 = calc((random(13) + 1) * 10);
+[proc,script1886](component $component0)
+if (%varbit4895 = 3 & %var281 < 125) {
+	if_sethide(true, $component0);
+} else {
+	if_sethide(false, $component0);
 }
-def_coord $coord0 = null;
-def_int $int1 = 0;
-$coord0, $int1 = ~script1239(0);
-cam_moveto($coord0, 1000, 100, 100);
-cam_lookat($coord0, 0, 100, 100);

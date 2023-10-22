@@ -1,6 +1,8 @@
 // 771
 [proc,lore_itemcount](obj $obj0)(int)
-if ($obj0 = snake_hide_6287) {
-	return(calc(inv_total(inv, snake_hide_6287) + inv_total(inv, snake_hide_7801)));
+switch_obj ($obj0) {
+	case snake_hide_6287 :
+		return(calc(inv_total(inv, snake_hide_6287) + inv_total(inv, snake_hide_7801)));
+	case default :
+		return(~inv_total_available(inv, $obj0));
 }
-return(~inv_total_available(inv, $obj0));

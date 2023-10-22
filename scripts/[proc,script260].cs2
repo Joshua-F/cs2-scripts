@@ -1,0 +1,9 @@
+// 260
+[proc,script260](component $component0, component $component1, component $component2, component $component3, component $component4, string $string0, int $int5, int $int6, int $int7)
+if (cc_find($component0, 1) = ^true) {
+	cc_settext(~script1668($string0));
+}
+~script262($component0, $component1, $component2, $component3, $component4);
+if ($int5 = 1) {
+	~script272($int7, $int6);
+}

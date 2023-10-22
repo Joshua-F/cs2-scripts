@@ -1,4 +1,7 @@
 // 235
 [clientscript,script235]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_75);
+if (compare(%varcstring24, "") ! 0) {
+	~script220;
+} else {
+	mes("You must first select a name from the list.");
+}

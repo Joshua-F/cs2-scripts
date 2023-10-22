@@ -3,7 +3,7 @@
 def_int $int0 = 0;
 def_int $int1 = 0;
 def_int $int2 = 0;
-while ($int0 <= 646) {
+while ($int0 <= 767) {
 	if (cc_find(music_v3:com_1, $int0) = ^true & string_length(cc_gettext) > 0) {
 		if (~music_getvar($int0) = 1) {
 			cc_setcolour(^green);

@@ -2,3 +2,6 @@
 [clientscript,script1178]
 %varcint548 = max(0, calc(%varcint548 - 1));
 if_settext(tostring(calc(%varcint548 * 2 / 100)), statusicons:pvpw_countdown);
+if (%varcint548 <= 0) {
+	if_setontimer(null, statusicons:pvpw_countdown);
+}

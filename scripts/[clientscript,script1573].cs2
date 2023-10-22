@@ -1,11 +1,3 @@
 // 1573
-[clientscript,script1573]
-if (%var170 = 0) {
-	return;
-}
-~v2_stone_button_in_filled_proc(interface_771:com_40);
-if_setonmouseleave("deltooltip(interface_771:com_399)", interface_771:com_40);
-if_setonmouseover(null, interface_771:com_40);
-if_setonmouseleave("v2_stone_button_filled_deltooltip(interface_771:com_399, event_com)", interface_771:com_37);
-if_setonmouseover("v2_stone_button_out_filled(event_com)", interface_771:com_37);
-~v2_stone_button_filled(interface_771:com_37);
+[clientscript,script1573](component $component0, component $component1)
+~script1575($component0, $component1, %varcstring207);

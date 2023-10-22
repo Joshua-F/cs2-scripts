@@ -1,0 +1,97 @@
+// 2490
+[proc,script2490]
+if (%varcint826 < 0) {
+	%varcint826 = 0;
+}
+if (%varcint827 < 0) {
+	%varcint827 = 1;
+}
+if_settext("Charges left: <tostring(%varcint826)>", interface_844:com_47);
+if_setobject_nonum(copper_ore_436, 1, interface_844:com_29);
+if_setobject_nonum(tin_ore_438, 1, interface_844:com_30);
+if_setobject_nonum(iron_ore_440, 1, interface_844:com_31);
+if_setobject_nonum(silver_ore_442, 1, interface_844:com_32);
+if_setobject_nonum(clay_434, 1, interface_844:com_33);
+if_setobject_nonum(gold_ore_444, 1, interface_844:com_34);
+if_setobject_nonum(mithril_ore_447, 1, interface_844:com_35);
+if_setobject_nonum(adamantite_ore_449, 1, interface_844:com_36);
+if_setobject_nonum(runite_ore_451, 1, interface_844:com_37);
+if_settext(oc_name(copper_ore_436), interface_844:com_38);
+if_settext(oc_name(tin_ore_438), interface_844:com_39);
+if_settext(oc_name(iron_ore_440), interface_844:com_40);
+if_settext(oc_name(silver_ore_442), interface_844:com_41);
+if_settext(oc_name(clay_434), interface_844:com_42);
+if_settext(oc_name(gold_ore_444), interface_844:com_43);
+if_settext(oc_name(mithril_ore_447), interface_844:com_44);
+if_settext(oc_name(adamantite_ore_449), interface_844:com_45);
+if_settext(oc_name(runite_ore_451), interface_844:com_46);
+if_setcolour(0xe1981f, interface_844:com_38);
+if_setcolour(0xe1981f, interface_844:com_39);
+if_setcolour(0xe1981f, interface_844:com_40);
+if_setcolour(0x996600, interface_844:com_41);
+if_setcolour(0x996600, interface_844:com_42);
+if_setcolour(0x996600, interface_844:com_43);
+if_setcolour(0x996600, interface_844:com_44);
+if_setcolour(0x996600, interface_844:com_45);
+if_setcolour(0x996600, interface_844:com_46);
+if (%varcint827 >= 2) {
+	if_setcolour(0xe1981f, interface_844:com_41);
+	if_setcolour(0xe1981f, interface_844:com_42);
+}
+if (%varcint827 >= 3) {
+	if_setcolour(0xe1981f, interface_844:com_43);
+	if_setcolour(0xe1981f, interface_844:com_44);
+}
+if (%varcint827 >= 4) {
+	if_setcolour(0xe1981f, interface_844:com_45);
+	if_setcolour(0xe1981f, interface_844:com_46);
+}
+if_setobject_nonum(oak_logs_1521, 1, interface_844:com_13);
+if_setobject_nonum(willow_logs_1519, 1, interface_844:wood2);
+if_setobject_nonum(maple_logs_1517, 1, interface_844:com_15);
+if_setobject_nonum(eucalyptus_logs_12581, 1, interface_844:com_16);
+if_setobject_nonum(yew_logs_1515, 1, interface_844:com_17);
+if_setobject_nonum(magic_logs_1513, 1, interface_844:com_18);
+if_settext(oc_name(oak_logs_1521), interface_844:com_21);
+if_settext(oc_name(willow_logs_1519), interface_844:com_22);
+if_settext(oc_name(maple_logs_1517), interface_844:com_23);
+if_settext("Special logs", interface_844:com_24);
+if_settext(oc_name(yew_logs_1515), interface_844:com_25);
+if_settext(oc_name(magic_logs_1513), interface_844:com_26);
+if_setcolour(0xe1981f, interface_844:com_21);
+if_setcolour(0xe1981f, interface_844:com_22);
+if_setcolour(0x996600, interface_844:com_23);
+if_setcolour(0x996600, interface_844:com_24);
+if_setcolour(0x996600, interface_844:com_25);
+if_setcolour(0x996600, interface_844:com_26);
+if (%varcint827 >= 2) {
+	if_setcolour(0xe1981f, interface_844:com_23);
+	if_setcolour(0xe1981f, interface_844:com_24);
+}
+if (%varcint827 >= 3) {
+	if_setcolour(0xe1981f, interface_844:com_25);
+}
+if (%varcint827 >= 4) {
+	if_setcolour(0xe1981f, interface_844:com_26);
+}
+if_setobject_nonum(raw_shrimps_317, 1, interface_844:com_6);
+if_setobject_nonum(raw_lobster_377, 1, interface_844:com_8);
+if_settext("Fish 1", interface_844:com_7);
+if_settext("Fish 2", interface_844:com_9);
+if_setcolour(0xe1981f, interface_844:com_7);
+if (%varcint827 >= 3) {
+	if_setcolour(0xe1981f, interface_844:com_9);
+} else {
+	if_setcolour(0x996600, interface_844:com_9);
+}
+if_setobject_nonum(toads_legs_2152, 1, interface_844:com_2);
+if_setobject_nonum(white_berries_239, 1, interface_844:com_4);
+if_settext("Herblore<br>secondaries 1", interface_844:com_3);
+if_settext("Herblore<br>secondaries 2", interface_844:com_5);
+if_setcolour(0xe1981f, interface_844:com_3);
+if_setcolour(0xe1981f, interface_844:com_5);
+if (%varcint827 >= 3) {
+	if_setcolour(0xe1981f, interface_844:com_5);
+} else {
+	if_setcolour(0x996600, interface_844:com_5);
+}

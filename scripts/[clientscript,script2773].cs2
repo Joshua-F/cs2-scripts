@@ -1,0 +1,31 @@
+// 2773
+[clientscript,script2773](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+def_component $component9 = null;
+def_component $component10 = null;
+def_graphic $graphic11 = null;
+def_graphic $graphic12 = null;
+switch_int ($int0) {
+	case 1 :
+		cam_dec_y;
+		$component9, $component10 = $component1, $component5;
+		$graphic11, $graphic12 = "graphic_2273", "graphic_2278";
+	case 2 :
+		cam_inc_y;
+		$component9, $component10 = $component2, $component6;
+		$graphic11, $graphic12 = "graphic_2272", "graphic_2277";
+	case 3 :
+		cam_inc_x;
+		$component9, $component10 = $component3, $component7;
+		$graphic11, $graphic12 = "graphic_2274", "graphic_2279";
+	case 4 :
+		cam_dec_x;
+		$component9, $component10 = $component4, $component8;
+		$graphic11, $graphic12 = "graphic_2275", "graphic_2280";
+	case default :
+		return;
+}
+if_setgraphic("graphic_2276", $component9);
+def_graphic $graphic13 = "graphic_2271";
+if_setontimer("script1723(event_com, event_comsubid, $graphic13, calc(clientclock + 10))", $component9);
+if_setgraphic($graphic12, $component10);
+if_setontimer("script1723(event_com, event_comsubid, $graphic11, calc(clientclock + 10))", $component10);

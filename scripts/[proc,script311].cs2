@@ -1,0 +1,7 @@
+// 311
+[proc,script311](string $string0, int $int0, int $int1)
+if (%varbit6177 = 1) {
+	cc_deleteall(worldmap:tooltip);
+	return;
+}
+~script312($string0, calc($int0 + 3), calc($int1 + 3));

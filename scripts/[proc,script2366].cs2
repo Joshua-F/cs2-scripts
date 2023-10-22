@@ -1,0 +1,6 @@
+// 2366
+[proc,script2366](component $component0, int $comsubid1, int $int2)
+~script2365($component0, $int2);
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setgraphic("miscgraphics,11");
+}

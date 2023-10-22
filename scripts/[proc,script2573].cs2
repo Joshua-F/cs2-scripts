@@ -1,0 +1,45 @@
+// 2573
+[proc,script2573]
+def_obj $obj0 = null;
+switch_int (%varcint929) {
+	case 0 :
+		$obj0 = inv_getobj(inv, %varcint930);
+	case 1 :
+		$obj0 = inv_getobj(inv, %varcint931);
+	case 2 :
+		$obj0 = inv_getobj(inv, %varcint932);
+	case 3 :
+		$obj0 = inv_getobj(inv, %varcint933);
+	case 4 :
+		$obj0 = inv_getobj(inv, %varcint934);
+	case 5 :
+		$obj0 = inv_getobj(inv, %varcint935);
+	case 6 :
+		$obj0 = inv_getobj(inv, %varcint936);
+	case 7 :
+		$obj0 = inv_getobj(inv, %varcint937);
+	case 8 :
+		$obj0 = inv_getobj(inv, %varcint938);
+	case 9 :
+		$obj0 = inv_getobj(inv, %varcint939);
+}
+if ($obj0 = null | oc_param($obj0, param_802) ! 1 & oc_param($obj0, param_803) ! 1) {
+	return;
+}
+~script2575;
+if_settext(oc_name($obj0), interface_292:com_99);
+if_setobject($obj0, -1, interface_292:com_112);
+if (oc_param($obj0, param_802) = 1) {
+	~script2578;
+	~script2584;
+	~script2585;
+	~script2588;
+	~script2591;
+} else if (oc_param($obj0, param_803) = 1) {
+	~script2590;
+	~script2587;
+	~script2579;
+	~script2580;
+	~script2583;
+	~script2597;
+}

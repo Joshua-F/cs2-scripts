@@ -4,7 +4,7 @@ switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, silvthrill_rod_7620, "To begin Runecrafting, you must have started Rune Mysteries.", "");
+				return(-1, silvthrill_rod_7620, "To mine Rune Essence, you must have started Rune Mysteries.", "");
 			case 1 :
 				return(1, air_rune_556, "Air runes", "You can now craft <col=000080>air runes</col>.");
 			case 2 :
@@ -40,7 +40,7 @@ switch_int ($int0) {
 			case 17 :
 				return(54, law_rune_563, "Members: Law runes", "Members can now craft <col=000080>law runes</col>.");
 			case 18 :
-				return(65, death_rune_560, "Members: Death runes<br> (after Mourning's End Part II)", "Members now have the Runecrafting level required to craft <col=000080>death runes</col> (after Mourning's End Part II).");
+				return(65, death_rune_560, "Members: Death runes<br> (after Mourning's Ends Part II)", "Members now have the Runecrafting level required to craft <col=000080>death runes</col> (after Mourning's Ends Part II).");
 			case 19 :
 				return(77, blood_rune_565, "Members: Blood runes<br> (after Legacy of Seergaze)", "Members now have the Runecrafting level required to craft <col=000080>blood runes</col> (after Legacy of Seergaze).");
 		}
@@ -135,9 +135,22 @@ switch_int ($int0) {
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
+				return(1, catalytic_rune_12851, "Members: Stealing Creation - class 1 sacred clay", "Members can now craft runes from class 1 sacred clay in the Stealing Creation minigame.");
+			case 1 :
+				return(20, catalytic_rune_12851, "Members: Stealing Creation - class 2 sacred clay", "Members can now craft runes from class 2 sacred clay in the Stealing Creation minigame.");
+			case 2 :
+				return(40, catalytic_rune_12851, "Members: Stealing Creation - class 3 sacred clay", "Members can now craft runes from class 3 sacred clay in the Stealing Creation minigame.");
+			case 3 :
+				return(60, catalytic_rune_12851, "Members: Stealing Creation - class 4 sacred clay", "Members can now craft runes from class 4 sacred clay in the Stealing Creation minigame.");
+			case 4 :
+				return(80, catalytic_rune_12851, "Members: Stealing Creation - class 5 sacred clay", "Members can now craft runes from class 5 sacred clay in the Stealing Creation minigame.");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
 				return(50, runecrafter_hat_13625, "Runecrafting Guild", "You can now enter the prestigious <col=000080>Runecrafting Guild</col> and play the <col=000080>minigame</col> there.");
 			case 1 :
-				return(99, runecraft_cape_9765, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Runecrafting<col=000080>. Why not visit <col=800000>Aubury<col=000080>, who runs the <col=800000>rune shop<col=000080> in <col=800000>Varrock<col=000080>. He has something special that is only available to true masters of the <col=800000>Runecrafting<col=000080> skill!");
+				return(99, runecraft_cape_9765, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Runecrafting<col=000080>. Members can visit <col=800000>Aubury<col=000080>, who runs the <col=800000>rune shop<col=000080> in <col=800000>Varrock<col=000080>. He has something special that is only available to true masters of the <col=800000>Runecrafting<col=000080> skill!");
 		}
 }
 return(0, null, "", "");

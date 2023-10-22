@@ -1,4 +1,21 @@
 // 249
 [clientscript,script249]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_117);
+%varcint799 = calc(%varcint799 + 1);
+if (%varcint799 >= 30) {
+	%varcint799 = 0;
+	if (%varcint798 = 1) {
+		%varcint798 = 0;
+	} else {
+		%varcint798 = 1;
+	}
+}
+if (%varcint798 = 1) {
+	if_settext("<escape(%varcstring24)><col=ffff00> ", interface_594:name);
+} else {
+	if_settext("<escape(%varcstring24)><col=ffff00>|", interface_594:name);
+}
+if (compare(%varcstring24, "") = 0) {
+	if_setcolour(0xbbbbbb, interface_594:com_58);
+} else {
+	if_setcolour(^white, interface_594:com_58);
+}

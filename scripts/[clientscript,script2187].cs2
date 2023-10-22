@@ -1,0 +1,7 @@
+// 2187
+[clientscript,script2187]
+if (%varcint733 ! -1) {
+	openurl_nologin("privacy/privacy.ws?cty=<tostring(%varcint733)>", true);
+} else {
+	openurl_nologin("privacy/privacy.ws", true);
+}

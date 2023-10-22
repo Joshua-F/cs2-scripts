@@ -1,0 +1,30 @@
+// 2303
+[proc,topstat_prayer_button_update]
+if (~bool_to_int(%varcint182) = 1) {
+	if_setgraphic("graphic_782", topstat_prayer:com_2);
+	if (%varbit6840 = 1) {
+		if_setop(1, "Turn curses off", topstat_prayer:com_1);
+	} else {
+		if_setop(1, "Turn prayers off", topstat_prayer:com_1);
+	}
+} else {
+	if_setgraphic("graphic_1209", topstat_prayer:com_2);
+	if (%varbit6840 = 1) {
+		if_setop(1, "Turn quick curses on", topstat_prayer:com_1);
+	} else {
+		if_setop(1, "Turn quick prayers on", topstat_prayer:com_1);
+	}
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setgraphic("graphic_1207", topstat_prayer:com_1);
+	if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_2);
+	if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_3);
+	if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_4);
+	if_setposition(31, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_5);
+} else {
+	if_setgraphic("graphic_1206", topstat_prayer:com_1);
+	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_2);
+	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_3);
+	if_setposition(31, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_4);
+	if_setposition(7, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_prayer:com_5);
+}

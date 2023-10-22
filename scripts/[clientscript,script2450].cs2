@@ -1,0 +1,36 @@
+// 2450
+[clientscript,script2450](component $component0, int $comsubid1, int $mousey2)
+def_int $int3 = 0;
+def_int $int4 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	if_sethide(true, interface_34:com_14);
+	if_sethide(false, interface_34:com_10);
+	$int4 = cc_getheight;
+	if_setposition(cc_getx, $mousey2, ^setpos_abs_left, ^setpos_abs_top, interface_34:com_10);
+	if_setsize(cc_getwidth, $int4, ^setsize_abs, ^setsize_abs, interface_34:com_10);
+	$int3 = calc($mousey2 + $int4 / 2);
+}
+def_int $y5 = if_gety(interface_34:com_11);
+def_int $int6 = calc($y5 + if_getheight(interface_34:com_11));
+if ($int3 >= $y5 & $int3 <= $int6) {
+	if_setgraphic("graphic_1846", interface_34:com_8);
+} else {
+	if_setgraphic("graphic_1845", interface_34:com_8);
+}
+def_int $int7 = 0;
+def_int $y8 = if_gety(interface_34:main);
+def_int $int9 = calc($y8 + $int4);
+def_int $int10 = calc($y8 + if_getheight(interface_34:main));
+def_int $int11 = calc($int10 - $int4);
+if ($int3 >= $y8 & $int3 <= $int9) {
+	$int7 = -4;
+} else if ($int3 >= $int11 & $int3 <= $int10) {
+	$int7 = 4;
+} else {
+	%varcint821 = 0;
+	return;
+}
+%varcint821 = calc(%varcint821 + 1);
+if (%varcint821 > 5) {
+	~scrollbar_ondrag_doscroll(interface_34:scrollbar, interface_34:main, calc(if_getscrolly(interface_34:main) + $int7), 1);
+}

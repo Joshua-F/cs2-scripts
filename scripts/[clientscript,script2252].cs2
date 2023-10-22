@@ -1,0 +1,61 @@
+// 2252
+[clientscript,script2252]
+def_boolean $boolean0 = false;
+if (if_gethide(loginscreen:com_163) = false) {
+	$boolean0 = true;
+}
+if ($boolean0 = false) {
+	~script2258(1);
+	~script2264;
+} else {
+	~script2275(1);
+	~script2271;
+}
+def_int $int1 = 1;
+def_component $component2 = loginscreen:com_304;
+def_component $component3 = loginscreen:com_301;
+def_component $component4 = loginscreen:com_298;
+if ($boolean0 = true) {
+	$component2 = loginscreen:com_236;
+	$component3 = loginscreen:com_233;
+	$component4 = loginscreen:com_230;
+}
+if_settext("", $component2);
+if (if_getgraphic($component3) = "graphic_1717" | if_getgraphic($component4) = "graphic_1717") {
+	if_settext("You must agree to our Privacy Policy and Terms & Conditions in order to create an account.", $component2);
+	$int1 = 0;
+}
+def_int $int5 = 1;
+def_component $component6 = loginscreen:com_377;
+def_component $component7 = loginscreen:com_390;
+def_component $component8 = loginscreen:com_383;
+if ($boolean0 = true) {
+	$component6 = loginscreen:com_269;
+	$component7 = loginscreen:com_282;
+	$component8 = loginscreen:com_275;
+}
+if_settext("", $component6);
+if_setgraphic(null, $component7);
+if_setgraphic(null, $component8);
+if (compare(%varcstring128, "") ! 0 | compare(%varcstring129, "") ! 0) {
+	if (~script2204(%varcstring128) = 0) {
+		if_settext("Please supply a valid email address.", $component6);
+		if_setgraphic("graphic_1726", $component7);
+		$int5 = 0;
+	} else if (~script2204(%varcstring129) = 0) {
+		if_settext("Please supply a valid email address.", $component6);
+		if_setgraphic("graphic_1726", $component8);
+		$int5 = 0;
+	} else if (compare(%varcstring128, %varcstring129) ! 0) {
+		if_settext("Please make sure both email addresses match.", $component6);
+		if_setgraphic("graphic_1726", $component8);
+		$int5 = 0;
+	}
+}
+if ($int1 = 1 & $int5 = 1) {
+	~script2253($boolean0);
+} else if ($boolean0 = false) {
+	~script2258(0);
+} else {
+	~script2275(0);
+}

@@ -1,0 +1,8 @@
+// 303
+[proc,script303](coord $coord0, boolean $boolean1)
+sound_synth(synth_2266, 1, 0);
+if ($boolean1 = false) {
+	worldmap_jumptosourcecoord($coord0);
+} else {
+	worldmap_jumptodisplaycoord($coord0);
+}

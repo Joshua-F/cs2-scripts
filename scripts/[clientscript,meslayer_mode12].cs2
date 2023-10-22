@@ -19,9 +19,8 @@ if (string_length(%varcstring38) > 0) {
 } else {
 	if_settext("Enter the name of your caller:", chattop:mes_text);
 }
-if_settext("<%varcstring38>*", chattop:mes_text2);
 %varcint5 = 12;
-%varcstring22 = %varcstring38;
+~script1564(%varcstring38);
 if_setonclick("script1805", chattop:mes_layer);
 ~script2026;
 if_setonkey("meslayer_onkey(event_keycode, event_keychar)", chattop:mes_text2);

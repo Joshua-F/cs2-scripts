@@ -15,7 +15,7 @@ if ($int0 > %varcint43) {
 		$chattype1 = chat_gethistorytype($int0);
 		if (~filtertest($int0, 0) = 1 & ~partnercheck($int0) = 0) {
 			switch_int ($chattype1) {
-				case ^chattype_gamemessage :
+				case ^chattype_gamemessage, 22, 23 :
 					~chat_alert_enable(1);
 				case ^chattype_modchat, ^chattype_publicchat, 17 :
 					~chat_alert_enable(2);

@@ -1,0 +1,18 @@
+// 2128
+[proc,macro_beekeeper_setcomponent](component $component0, int $int1)
+switch_int ($int1) {
+	case 1 :
+		if_setmodel(beehive_part_16036, $component0);
+		if_setmodelangle(0, 0, ~script686(%varcint680, 2048), %varcint681, ~script686(%varcint682, 2048), 800, $component0);
+	case 2 :
+		if_setmodel(model_16025, $component0);
+		if_setmodelangle(0, 17, ~script686(%varcint683, 2048), %varcint684, ~script686(%varcint685, 2048), 800, $component0);
+	case 3 :
+		if_setmodel(model_16022, $component0);
+		if_setmodelangle(0, 0, ~script686(%varcint686, 2048), %varcint687, ~script686(%varcint688, 2048), 800, $component0);
+	case 4 :
+		if_setmodel(beehive_part_16034, $component0);
+		if_setmodelangle(0, 0, ~script686(%varcint689, 2048), %varcint690, ~script686(%varcint691, 2048), 800, $component0);
+	case default :
+		if_setmodel(null, $component0);
+}

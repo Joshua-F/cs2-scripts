@@ -1,6 +1,6 @@
 // 289
-[clientscript,script289]
-~script366;
-if_setgraphic("graphic_1043", interface_594:com_274);
-if_setonmouseleave("deltooltip(interface_594:com_300)", interface_594:com_274);
-if_setonmouseover(null, interface_594:com_274);
+[clientscript,script289](component $component0, int $comsubid1, int $colour2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setcolour($colour2);
+}
+~deltooltip_action(worldmap:tooltip);

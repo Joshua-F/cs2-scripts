@@ -1,3 +1,23 @@
 // 1949
-[clientscript,script1949](int $int0, int $int1, component $component2)
-if_setmodelangle(0, 0, calc(if_getmodelangle_x($component2) + $int0 & 2047), calc(if_getmodelangle_y($component2) + $int1 & 2047), if_getmodelangle_z($component2), 512, $component2);
+[clientscript,script1949](int $int0, int $comsubid1, int $int2)
+def_struct $struct3 = enum(int, struct, enum_169, $int0);
+def_component $component4 = struct_param($struct3, param_152);
+def_component $component5 = struct_param($struct3, param_670);
+def_int $comsubid6 = calc(%varbit697 - 1000 * ($int0 - 1));
+if (struct_param($struct3, param_693) > 0) {
+	$comsubid6 = calc(%varbit697 - 1000 * (struct_param($struct3, param_693) - 1));
+}
+if (cc_find($component4, $comsubid1) = ^true) {
+	if ($comsubid6 = $comsubid1) {
+		cc_setcolour(^cyan);
+	} else if ($int2 = 0) {
+		cc_setcolour(^red);
+	} else if ($int2 = 1) {
+		cc_setcolour(^yellow);
+	} else {
+		cc_setcolour(^green);
+	}
+	if ($component5 ! null) {
+		~deltooltip_action($component5);
+	}
+}

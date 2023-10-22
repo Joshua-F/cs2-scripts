@@ -53,7 +53,7 @@ switch_int ($int0) {
 			}
 			return(0);
 		}
-	case 3 :
+	case 2 :
 		if ($int1 = 0) {
 			if (~script1541 = ~script1542) {
 				return(2);
@@ -79,7 +79,7 @@ switch_int ($int0) {
 			}
 			return(0);
 		}
-	case 4 :
+	case 3 :
 		if ($int1 = 0) {
 			if (~script1981 = ~script1984) {
 				return(2);
@@ -105,7 +105,7 @@ switch_int ($int0) {
 			}
 			return(0);
 		}
-	case 5 :
+	case 4 :
 		if ($int1 = 0) {
 			if (~script1975 = ~script1976) {
 				return(2);
@@ -131,7 +131,7 @@ switch_int ($int0) {
 			}
 			return(0);
 		}
-	case 6 :
+	case 5 :
 		if ($int1 = 0) {
 			if (~script2034 = ~script2035) {
 				return(2);
@@ -153,6 +153,40 @@ switch_int ($int0) {
 				return(2);
 			}
 			if (~script2038 > 0) {
+				return(1);
+			}
+			return(0);
+		}
+	case 6 :
+		if ($int1 = 0) {
+			if (~script1641 = ~script1642) {
+				return(2);
+			}
+			if (~script1641 > 0) {
+				return(1);
+			}
+			return(0);
+		} else if ($int1 = 1) {
+			if (~script1643 = ~script1644) {
+				return(2);
+			}
+			if (~script1643 > 0) {
+				return(1);
+			}
+			return(0);
+		} else if ($int1 = 2) {
+			if (~script1645 = ~script1646) {
+				return(2);
+			}
+			if (~script1645 > 0) {
+				return(1);
+			}
+			return(0);
+		} else if ($int1 = 3) {
+			if (~script1647 = ~script1648) {
+				return(2);
+			}
+			if (%varbit6657 > 0) {
 				return(1);
 			}
 			return(0);

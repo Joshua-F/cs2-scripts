@@ -1,0 +1,10 @@
+// 399
+[clientscript,script399](component $component0)
+if (if_getx($component0) < calc(if_getwidth(interface_306:content) - 1) | calc(if_gety($component0) - if_getheight($component0)) > 110) {
+	if (if_getx($component0) = calc(140 + if_getwidth($component0))) {
+		if_setontimer("script1550(interface_306:model2)", interface_306:com_15);
+	}
+	if_setposition(calc(1 + if_getx($component0)), if_gety($component0), ^setpos_abs_left, ^setpos_abs_top, $component0);
+} else {
+	~script1411;
+}

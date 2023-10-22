@@ -1,72 +1,111 @@
 // 2059
 [proc,script2059](int $int0)
-def_struct $struct1 = enum(int, struct, enum_2162, %varbit357);
+def_struct $struct1 = null;
 def_int $int2 = 0;
+if (~script1119 = 1) {
+	$struct1 = enum(int, struct, enum_728, %varbit357);
+	$int2 = 1;
+} else {
+	$struct1 = enum(int, struct, enum_2162, %varbit357);
+}
+def_int $int3 = 0;
+def_int $intarray0(4);
 switch_int (%varbit357) {
 	case 0 :
-		$int2 = %varbit5822;
+		$int3 = %varbit5822;
+		$intarray0(0) = %varbit6459;
+		$intarray0(1) = %varbit6460;
+		$intarray0(2) = %varbit6461;
+		$intarray0(3) = %varbit6462;
 	case 1 :
-		$int2 = %varbit5823;
+		$int3 = %varbit5823;
+		$intarray0(0) = %varbit6466;
+		$intarray0(1) = 0;
+		$intarray0(2) = 0;
+		$intarray0(3) = %varbit6467;
 	case 2 :
-		$int2 = %varbit5824;
+		$int3 = %varbit5824;
+		$intarray0(0) = %varbit6463;
+		$intarray0(1) = 0;
+		$intarray0(2) = %varbit6464;
+		$intarray0(3) = %varbit6465;
 }
 if ($int0 ! -1) {
-	if ($int2 ! $int0) {
+	if ($int3 ! $int0) {
 		sound_synth(synth_5845, 1, 0);
 	}
-	$int2 = $int0;
+	$int3 = $int0;
 }
-%varcint631 = $int2;
-def_enum $enum3 = enum(int, enum, struct_param($struct1, param_662), $int2);
-def_int $int4 = struct_param($struct1, param_654);
-def_int $int5 = struct_param($struct1, param_655);
-def_int $count6 = enum_getoutputcount($enum3);
-def_int $int7 = 0;
-def_int $count8 = 0;
-def_enum $enum9 = null;
-def_int $int10 = 0;
+%varcint631 = $int3;
+def_enum $enum4 = enum(int, enum, struct_param($struct1, param_662), $int3);
+def_int $int5 = struct_param($struct1, param_654);
+def_int $int6 = struct_param($struct1, param_655);
+def_int $count7 = enum_getoutputcount($enum4);
+def_int $int8 = 0;
+def_int $count9 = 0;
+def_enum $enum10 = null;
 def_int $int11 = 0;
 def_int $int12 = 0;
-def_component $component13 = null;
-def_int $int14 = -1;
-def_int $int15 = -1;
-while ($count8 < $count6) {
-	$enum9 = enum(int, enum, $enum3, $count8);
-	if ($enum9 ! null) {
-		$int7 = enum_getoutputcount($enum9);
-		$int10 = 0;
-		$int12 = 0;
-		while ($int10 < $int7) {
-			$component13 = enum(int, component, $enum9, $int12);
-			if ($component13 ! null) {
-				if_setposition($int5, $int4, ^setpos_abs_left, ^setpos_abs_top, $component13);
-				$int5 = calc($int5 + (struct_param($struct1, param_657) + struct_param($struct1, param_658)));
-				$int10 = calc($int10 + 1);
+def_int $int13 = 0;
+def_component $component14 = null;
+def_int $index15 = -1;
+def_cursor $cursor16 = null;
+while ($count9 < $count7) {
+	$enum10 = enum(int, enum, $enum4, $count9);
+	if ($enum10 ! null) {
+		$int8 = enum_getoutputcount($enum10);
+		$int11 = 0;
+		$int13 = 0;
+		while ($int11 < $int8) {
+			$component14 = enum(int, component, $enum10, $int13);
+			if ($component14 ! null) {
 				$int11 = calc($int11 + 1);
-				if (calc($int11 % struct_param($struct1, param_660)) = 0) {
-					$int4 = calc($int4 + (struct_param($struct1, param_656) + struct_param($struct1, param_659)));
-					$int5 = struct_param($struct1, param_655);
+				$index15 = enum(component, int, enum_727, $component14);
+				if (($index15 = -1 | $intarray0($index15) = 0) & (map_members = ^true | enum(component, int, enum_743, $component14) = 0)) {
+					$int12 = calc($int12 + 1);
+					if_setposition($int6, $int5, ^setpos_abs_left, ^setpos_abs_top, $component14);
+					if_sethide(false, $component14);
+					$int6 = calc($int6 + (struct_param($struct1, param_657) + struct_param($struct1, param_658)));
+					if (calc($int12 % struct_param($struct1, param_660)) = 0) {
+						$int5 = calc($int5 + (struct_param($struct1, param_656) + struct_param($struct1, param_659)));
+						$int6 = struct_param($struct1, param_655);
+					}
+					$cursor16 = enum(component, cursor, enum_209, $component14);
+					if ($cursor16 ! null) {
+						if_settargetcursors($cursor16, cursor_36, $component14);
+					}
+				} else {
+					if_sethide(true, $component14);
 				}
 			}
-			$int12 = calc($int12 + 1);
-			if ($int12 > 997) {
+			$int13 = calc($int13 + 1);
+			if ($int13 > 997) {
 				return;
 			}
 		}
 	}
-	$count8 = calc($count8 + 1);
+	$count9 = calc($count9 + 1);
 }
-def_enum $enum16 = struct_param($struct1, param_663);
-def_int $int17 = 0;
-if ($enum16 ! null) {
-	$int17 = enum_getoutputcount($enum16);
-	$int12 = 0;
-	while ($int12 < $int17) {
-		if ($int12 = $int2) {
-			if_setgraphic("graphic_1703", enum(int, component, $enum16, $int12));
+if ($int2 = 1) {
+	if_setscrollsize(if_getwidth(struct_param($struct1, param_316)), calc($int5 + struct_param($struct1, param_656) + struct_param($struct1, param_654)), struct_param($struct1, param_316));
+	~scrollbar_vertical(struct_param($struct1, param_684), struct_param($struct1, param_316), "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+} else if (if_find(struct_param($struct1, param_316)) = true) {
+	cc_setscrollpos(0, 0);
+	cc_deleteall(struct_param($struct1, param_684));
+}
+def_enum $enum17 = struct_param($struct1, param_663);
+def_int $int18 = 0;
+if ($enum17 ! null) {
+	$int18 = enum_getoutputcount($enum17);
+	$int13 = 0;
+	while ($int13 < $int18) {
+		if ($int13 = $int3) {
+			if_setgraphic("graphic_1703", enum(int, component, $enum17, $int13));
 		} else {
-			if_setgraphic("graphic_1702", enum(int, component, $enum16, $int12));
+			if_setgraphic("graphic_1701", enum(int, component, $enum17, $int13));
 		}
-		$int12 = calc($int12 + 1);
+		$int13 = calc($int13 + 1);
 	}
 }
+~script1121;
+cc_deleteall(struct_param($struct1, param_688));

@@ -1,0 +1,19 @@
+// 1206
+[clientscript,script1206](component $component0)
+if (if_gethide($component0) = true) {
+	return;
+}
+switch_component ($component0) {
+	case interface_890:layer1 :
+		if_setcolour(^white, interface_890:text1);
+	case interface_890:layer2 :
+		if_setcolour(^white, interface_890:text2);
+	case interface_890:layer3 :
+		if_setcolour(^white, interface_890:text3);
+	case interface_890:layer4 :
+		if_setcolour(^white, interface_890:text4);
+	case interface_890:layer5 :
+		if_setcolour(^white, interface_890:text5);
+	case interface_890:com_8 :
+		if_setcolour(^white, interface_890:com_20);
+}

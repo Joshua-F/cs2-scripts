@@ -1,0 +1,8 @@
+// 2310
+[clientscript,script2310]
+def_int $int0 = paraheight(if_gettext(welcome_screen:com_84), if_getwidth(welcome_screen:com_84), p12_full);
+if ($int0 < 2) {
+	$int0 = 2;
+}
+if_setsize(if_getwidth(welcome_screen:com_80), calc($int0 * 15 + 110), ^setsize_abs, ^setsize_abs, welcome_screen:com_80);
+if_setontimer(null, welcome_screen:com_84);

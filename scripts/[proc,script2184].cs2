@@ -1,0 +1,84 @@
+// 2184
+[proc,script2184](component $component0, component $component1, component $component2, component $component3)
+cc_deleteall($component0);
+def_int $int4 = calc((if_getwidth($component0) - 5 * 36) / 6);
+def_int $size5 = 0;
+def_obj $obj6 = null;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $height9 = 0;
+if (inv_freespace(inv_90) < inv_size(inv_90)) {
+	while ($size5 < inv_size(inv_90)) {
+		$int7 = inv_getnum(inv_90, $size5);
+		cc_create($component0, ^iftype_graphic, calc($size5 * 2));
+		.cc_create($component0, ^iftype_text, calc($size5 * 2 + 1));
+		if ($int7 > 0) {
+			$obj6 = inv_getobj(inv_90, $size5);
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			$height9 = calc($size5 / 5 * (32 + 40) + 2);
+			cc_setposition(calc($size5 % 5 * (36 + $int4) + $int4), $height9, ^setpos_abs_left, ^setpos_abs_top);
+			cc_sethide(false);
+			cc_setobject($obj6, $int7);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			cc_setop(1, "Remove-1");
+			cc_setop(2, "Remove-5");
+			cc_setop(3, "Remove-10");
+			cc_setop(4, "Remove-All");
+			cc_setop(5, "Remove-X");
+			cc_setop(10, "Examine");
+			cc_setopbase("<col=ff9040><oc_name($obj6)>");
+			.cc_setsize(calc(36 + $int4 - 6), 40, ^setsize_abs, ^setsize_abs);
+			.cc_setposition(calc($size5 % 5 * (36 + $int4) + $int4 / 2 + 3), calc($height9 + 32), ^setpos_abs_left, ^setpos_abs_top);
+			.cc_sethide(false);
+			.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+			.cc_settextfont(p11_full);
+			.cc_setcolour(^white);
+			.cc_settextshadow(true);
+			$int8 = ~script2185($size5);
+			if ($int7 > 1) {
+				.cc_settext("<tostring_localised($int7, true)> x <tostring_localised($int8, true)><br>= <tostring_localised(calc($int7 * $int8), true)>");
+			} else {
+				.cc_settext(tostring_localised($int8, true));
+			}
+		} else {
+			cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+			cc_sethide(true);
+			.cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+			.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_sethide(true);
+		}
+		$size5 = calc($size5 + 1);
+	}
+} else {
+	cc_create($component0, ^iftype_text, 0);
+	cc_setsize(0, if_getheight($component0), ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settext("Click on items in your inventory to check their values.");
+}
+$height9 = calc($height9 + 32 + 40);
+if ($height9 > if_getheight($component0)) {
+	if_setscrollsize(0, $height9, $component0);
+	if_setposition(-8, if_gety($component0), ^setpos_abs_centre, ^setpos_abs_top, $component0);
+	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if (cc_find($component1, 1) = ^true) {
+		~scrollbar_vertical_doscroll($component1, $component0, if_getscrolly($component0), true);
+	}
+} else {
+	if_setscrollsize(0, 0, $component0);
+	if_setscrollpos(0, 0, $component0);
+	cc_deleteall($component1);
+	if_setposition(0, if_gety($component0), ^setpos_abs_centre, ^setpos_abs_top, $component0);
+}
+if_settext("Total value:<br><tostring_localised(%varcint728, true)>", $component2);
+if_settext("Current trade limit:<br><tostring_localised(%varcint729, true)>", $component3);
+if (%varcint728 > %varcint729) {
+	if_setcolour(^red, $component3);
+} else {
+	if_setcolour(^white, $component3);
+}

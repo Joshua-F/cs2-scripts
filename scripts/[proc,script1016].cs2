@@ -53,15 +53,28 @@ switch_int ($int0) {
 			case 4 :
 				return(31, adamant_pickaxe_1271, "Adamant pickaxe", "You can now use <col=000080>adamant pickaxes</col>.");
 			case 5 :
-				return(41, rune_pickaxe_1275, "Rune pickaxe", "You can now use <col=000080>rune pickaxes</col>.");
+				return(40, sacred_clay_pickaxe_14107, "Members: Sacred clay pickaxe", "Members can now use <col=000080>sacred clay pickaxes</col>.");
 			case 6 :
+				return(40, volatile_clay_pickaxe_14099, "Members: Volatile pickaxe", "Members can now use <col=000080>volatile pickaxes</col>.");
+			case 7 :
+				return(41, rune_pickaxe_1275, "Rune pickaxe", "You can now use <col=000080>rune pickaxes</col>.");
+			case 8 :
 				return(41, inferno_adze_13661, "Members: Inferno Adze<br> (after All Fired Up, with 92 Firemaking)", "Members can now use the <col=000080>Inferno Adze</col> to mine with (after All Fired Up and with level 92 Firemaking).");
+			case 9 :
+				return(61, dragon_pickaxe_15259, "Members: Dragon pickaxe", "Members can now use <col=000080>dragon pickaxes</col>.");
 		}
 	case 2 :
-		if ($int1 = 0) {
-			return(40, ruby_1603, "Gem rocks<br> (after Shilo Village)", "Members now have the Mining level required to mine <col=000080>gem rocks</col> (after Shilo Village).");
-		} else if ($int1 = 1) {
-			return(41, stone_slab_13245, "Stone slab<br> (with rune pickaxe, after starting TokTz-Ket-Dill)", "Members now have the Mining level required to mine <col=000080>stone slabs</col> with rune pickaxes (after starting TokTz-Ket-Dill).");
+		switch_int ($int1) {
+			case 0 :
+				return(40, ruby_1603, "Gem rocks<br> (after Shilo Village)", "Members now have the Mining level required to mine <col=000080>gem rocks</col> (after Shilo Village).");
+			case 1 :
+				return(41, stone_slab_13245, "Stone slab<br> (with rune pickaxe, after starting TokTz-Ket-Dill)", "Members now have the Mining level required to mine <col=000080>stone slabs</col> with rune pickaxes (after starting TokTz-Ket-Dill).");
+			case 2 :
+				return(73, living_minerals_15263, "Living rock remains", "Members now have the Mining level required to mine <col=000080>living rock remains</col>.");
+			case 3 :
+				return(77, coal_453, "Concentrated coal deposits", "Members now have the Mining level required to mine <col=000080>concentrated coal deposits</col>.");
+			case 4 :
+				return(80, gold_ore_444, "Concentrated gold deposits", "Members now have the Mining level required to mine <col=000080>concentrated gold deposits</col>.");
 		}
 	case 3 :
 		switch_int ($int1) {
@@ -87,13 +100,30 @@ switch_int ($int0) {
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(25, obj_5079, "Mining Tutor - new info", "There is new information available from the <col=000080>Mining Tutor</col> south of <col=000080>Lumbridge</col>.");
+				return(1, pickaxe_class_1_14122, "Stealing Creation - class 1 pickaxe", "Members can now use <col=000080>class 1 pickaxes</col> in Stealing Creation.");
 			case 1 :
-				return(39, obj_5079, "Mining Tutor - new info", "There is new information available from the <col=000080>Mining Tutor</col> south of <col=000080>Lumbridge</col>.");
+				return(20, sacred_clay_class_2_14184, "Stealing Creation - mine class 2 sacred clay", "Members can now mine <col=000080>class 2 sacred clay</col> in Stealing Creation.");
 			case 2 :
-				return(60, mithril_ore_447, "Mining Guild", "You can now enter the world-famous <col=000080>Mining Guild</col>.");
+				return(20, pickaxe_class_2_14124, "Stealing Creation - class 2 pickaxe", "Members can now use <col=000080>class 2 pickaxes</col> in Stealing Creation.");
 			case 3 :
-				return(99, mining_cape_9792, "Skill mastery", "<col=000080>Congratulations! You are now a master miner. Why not visit the <col=800000>dwarf<col=000080> who guards the entrance to the <col=800000>Mining Guild<col=000080>? He has something special that is only available to true masters of the <col=800000>Mining<col=000080> skill!");
+				return(40, sacred_clay_class_3_14186, "Stealing Creation - mine class 3 sacred clay", "Members can now mine <col=000080>class 3 sacred clay</col> in Stealing Creation.");
+			case 4 :
+				return(40, pickaxe_class_3_14126, "Stealing Creation - class 3 pickaxe", "Members can now use <col=000080>class 3 pickaxes</col> in Stealing Creation.");
+			case 5 :
+				return(60, sacred_clay_class_4_14188, "Stealing Creation - mine class 4 sacred clay", "Members can now mine <col=000080>class 4 sacred clay</col> in Stealing Creation.");
+			case 6 :
+				return(60, pickaxe_class_4_14128, "Stealing Creation - class 4 pickaxe", "Members can now use <col=000080>class 4 pickaxes</col> in Stealing Creation.");
+			case 7 :
+				return(80, sacred_clay_class_5_14190, "Stealing Creation - mine class 5 sacred clay", "Members can now mine <col=000080>class 5 sacred clay</col> in Stealing Creation.");
+			case 8 :
+				return(80, pickaxe_class_5_14130, "Stealing Creation - class 5 pickaxe", "Members can now use <col=000080>class 5 pickaxes</col> in Stealing Creation.");
+		}
+	case 5 :
+		switch_int ($int1) {
+			case 0 :
+				return(60, mithril_ore_447, "Mining Guild", "You can now enter the world-famous <col=000080>Mining Guild</col>.");
+			case 1 :
+				return(99, mining_cape_9792, "Skill mastery", "<col=000080>Congratulations! You are now a master miner. Members can visit the <col=800000>dwarf<col=000080> who guards the entrance to the <col=800000>Mining Guild<col=000080>. He has something special that is only available to true masters of the <col=800000>Mining<col=000080> skill!");
 		}
 }
 return(0, null, "", "");

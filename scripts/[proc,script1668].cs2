@@ -1,0 +1,13 @@
+// 1668
+[proc,script1668](string $string0)(string)
+def_int $length0 = string_length($string0);
+def_int $length1 = 0;
+while ($length1 < $length0) {
+	if (compare(substring($string0, $length1, calc($length1 + 1)), " ") = 0) {
+		$length1 = calc($length1 + 1);
+	} else {
+		$string0 = substring($string0, $length1, string_length($string0));
+		$length1 = $length0;
+	}
+}
+return($string0);

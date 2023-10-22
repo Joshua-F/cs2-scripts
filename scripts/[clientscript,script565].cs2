@@ -5,9 +5,9 @@ def_int $int1 = 45;
 def_string $string0 = ~magic_tostring(%varbit4138);
 if (%varbit4140 > 0) {
 	if_sethide(false, interface_635:text);
-	if_settext(tostring(%varbit4140), interface_635:com_29);
-	if_settext(tostring(%varbit4143), interface_635:com_34);
-	if_settext("<$string0> Coins", interface_635:com_33);
+	if_settext(tostring(%varbit4140), interface_635:com_35);
+	if_settext(tostring(%varbit4143), interface_635:com_32);
+	if_settext("<$string0> Coins", interface_635:com_30);
 	if (%varbit4144 = 0) {
 		if_setgraphic("staticons2,8", interface_635:com_15);
 		if_setposition($x0, $int1, ^setpos_abs_left, ^setpos_abs_top, interface_635:com_15);
@@ -101,8 +101,8 @@ if (%varbit4140 > 0) {
 	if_setgraphic(null, interface_635:magic);
 	if_setgraphic(null, interface_635:melee);
 	if_setgraphic(null, interface_635:com_19);
-	if_settext(" ", interface_635:com_34);
-	if_settext(" ", interface_635:com_33);
+	if_settext(" ", interface_635:com_32);
+	if_settext(" ", interface_635:com_30);
 	if_settext(" ", interface_635:warn);
 	if_sethide(true, interface_635:text);
 }

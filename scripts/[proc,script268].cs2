@@ -1,0 +1,34 @@
+// 268
+[proc,script268](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, int $int6, int $int7, enum $enum8)
+def_int $int9 = ~script270($int7);
+def_int $int10 = calc(enum_getoutputcount($enum8) - 1);
+def_string $string0 = enum(int, string, $enum8, 0);
+def_int $int11 = 0;
+def_int $int12 = 0;
+if ($int5 = 98 | $int5 = 96 | $int5 = 104) {
+	$int9 = calc($int9 - $int6);
+} else if ($int5 = 99 | $int5 = 97 | $int5 = 105) {
+	$int9 = calc($int9 + $int6);
+} else if ($int5 = -1) {
+	$int9 = calc($int9 + $int6);
+} else {
+	return;
+}
+if ($int9 < 0) {
+	$int9 = 0;
+} else if ($int9 > $int10) {
+	$int9 = $int10;
+}
+if (if_gethide($component2) = true) {
+	$string0 = enum(int, string, $enum8, $int9);
+	~script260($component0, $component1, $component2, $component3, $component4, $string0, 1, $int9, $int7);
+} else if (cc_find($component3, 1) = ^true) {
+	$int12 = if_getscrolly($component2);
+	$int11 = calc(15 * $int9);
+	if (($int5 = 98 | $int5 = 96 | $int5 = 104 | $int5 = -1 & $int6 < 0) & $int11 < $int12) {
+		~scrollbar_vertical_doscroll($component3, $component2, $int11, true);
+	} else if (($int5 = 99 | $int5 = 97 | $int5 = 105 | $int5 = -1 & $int6 > 0) & $int11 > calc($int12 + 60)) {
+		~scrollbar_vertical_doscroll($component3, $component2, calc($int11 - 60), true);
+	}
+}
+~script271($int7, $int9);

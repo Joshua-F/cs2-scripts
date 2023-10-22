@@ -1,7 +1,15 @@
 // 135
 [clientscript,snapshot_report](int $int0)
+def_int $int1 = -1;
 if (string_length(%varcstring24) > 0) {
-	chat_sendabusereport(%varcstring24, $int0, %varcint6);
+	chat_sendabusereport(%varcstring24, $int0, %varcint6, "");
 }
-if_close;
-%varcint11 = 0;
+if (compare(%varcstring24, chat_playername_unfiltered) = 0) {
+	~script675;
+	return;
+}
+if (ignore_test(%varcstring24) = false & compare(%varcstring24, chat_playername_unfiltered) ! 0) {
+	~script221;
+} else {
+	~script675;
+}

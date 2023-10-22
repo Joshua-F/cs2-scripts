@@ -1,10 +1,12 @@
 // 1471
 [clientscript,bank_v2_search]
-if_clearops(bank_v2_main:com_20);
-if_setonop(null, bank_v2_main:com_20);
+if_clearops(bank_v2_main:com_17);
+if_setonop(null, bank_v2_main:com_17);
 %varcint190 = 0;
 if (%varcint188 = 0) {
+	%varbit4893 = 0;
 	~script1473;
 } else {
+	%varbit4893 = 1;
 	~script1474;
 }

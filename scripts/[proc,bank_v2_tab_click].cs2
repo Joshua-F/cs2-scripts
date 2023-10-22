@@ -8,8 +8,9 @@ if (~bank_v2_get_tab_size($int1) > 0) {
 		~bank_v2_hide_all;
 		~bank_v2_show_range(~bank_v2_get_tab_range($int1));
 		~bank_v2_tab_highlight($int1);
-		if_setscrollpos(0, ~bank_v2_get_tab_scrollpos($int1), bank_v2_main:com_73);
-		~scrollbar_ondrag_doscroll(bank_v2_main:scrollbar, bank_v2_main:com_73, if_getscrolly(bank_v2_main:com_73), 1);
+		if_setscrollpos(0, ~bank_v2_get_tab_scrollpos($int1), bank_v2_main:com_87);
+		~scrollbar_ondrag_doscroll(bank_v2_main:scrollbar, bank_v2_main:com_87, if_getscrolly(bank_v2_main:com_87), 1);
+		%varbit4893 = $int1;
 	} else if ($int0 = 2) {
 		if ($int1 = 2) {
 			%varcint204 = %varcint205;

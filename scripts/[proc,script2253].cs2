@@ -1,0 +1,28 @@
+// 2253
+[proc,script2253](boolean $boolean0)
+def_int $int1 = 1;
+if (if_getgraphic(loginscreen:com_370) = "graphic_1716") {
+	$int1 = 0;
+}
+def_int $int2 = 1;
+if (if_getgraphic(loginscreen:com_367) = "graphic_1716") {
+	$int2 = 0;
+}
+def_int $int3 = 0;
+if (if_getgraphic(loginscreen:com_364) = "graphic_1716") {
+	$int3 = 1;
+}
+if ($boolean0 = true) {
+	$int1 = 0;
+	$int2 = 0;
+	$int3 = 0;
+}
+if (if_gethide(loginscreen:com_289) = true) {
+	$int3 = 0;
+}
+_5605(%varcstring122, %varcstring124, %varcint730, %varcint731, %varcint732, %varcint733, %varcstring128, $int1, $int2, $int3);
+if ($boolean0 = false) {
+	if_setontimer("script2254($boolean0)", loginscreen:com_162);
+} else {
+	if_setontimer("script2254($boolean0)", loginscreen:com_163);
+}

@@ -4,7 +4,7 @@ def_string $string0 = "";
 if (login_reply = -3) {
 	if_settext("Performing login...", $component0);
 	if_sethide(true, loginscreen:login_button);
-	if_sethide(true, loginscreen:com_348);
+	if_sethide(true, loginscreen:com_459);
 	return;
 }
 if (login_reply = 21) {
@@ -18,7 +18,7 @@ if (login_reply = 21) {
 	}
 	if_settext("You have only just left another world. Your profile will be transferred in <tostring(calc(%varcint200 / 50))> seconds.", $component0);
 	if_sethide(true, loginscreen:login_button);
-	if_sethide(true, loginscreen:com_348);
+	if_sethide(true, loginscreen:com_459);
 	return;
 }
 if (login_reply = 1) {
@@ -30,7 +30,7 @@ if (login_reply = 1) {
 		}
 	}
 	if_sethide(true, loginscreen:login_button);
-	if_sethide(true, loginscreen:com_348);
+	if_sethide(true, loginscreen:com_459);
 	if (%varcint202 = 0) {
 		if_settext("Could not display video advertisement. Login will continue in <tostring(calc((500 - %varcint201) / 50))> seconds.", $component0);
 	} else if (%varcint201 < 500) {
@@ -46,7 +46,7 @@ if (login_reply = 1) {
 	return;
 }
 if_sethide(false, loginscreen:login_button);
-if_sethide(false, loginscreen:com_348);
+if_sethide(false, loginscreen:com_459);
 switch_int (login_reply) {
 	case -2 :
 		if_settext("Enter your username and password.", $component0);
@@ -116,6 +116,12 @@ switch_int (login_reply) {
 		if_settext("This is not a member's account; please choose the 'Free Users' option from the <shad=-1><u=0000ff><col=0000ff>website</col></u><shad> to play on this account.", $component0);
 		$string0 = "index.ws";
 		if_setonclick("openurl_nologin($string0, false)", $component0);
+	case 31 :
+		if_settext("Please update your account's display name. <shad=-1><u=0000ff><col=0000ff>Click here</col></u><shad> to make the change.", $component0);
+		$string0 = "loginapplet/loginapplet.ws?mod=displaynames&ssl=1&dest=name.ws";
+		if_setonclick("openurl_nologin($string0, true)", $component0);
+	case 32 :
+		if_settext("Your account has negative membership credit. Please log into the billing system to add credit to your account.", $component0);
 	case default :
 		if_settext("Unexpected server response. Please try using a different world.", $component0);
 }

@@ -1,0 +1,13 @@
+// 2504
+[clientscript,script2504]
+def_int $height0 = 0;
+if_settext(%varcstring180, interface_291:text);
+if_settext(%varcstring181, interface_291:com_28);
+$height0 = calc(paraheight(%varcstring180, 207, q8_full) * 17 + 5);
+if_setsize(207, $height0, ^setsize_abs, ^setsize_abs, interface_291:text);
+if_setscrollsize(0, $height0, interface_291:text_layer);
+~scrollbar_resize(interface_291:scroll_bar, interface_291:text_layer, 0);
+$height0 = calc(paraheight(%varcstring181, 207, q8_full) * 17 + 5);
+if_setsize(207, $height0, ^setsize_abs, ^setsize_abs, interface_291:com_28);
+if_setscrollsize(0, $height0, interface_291:com_68);
+~scrollbar_resize(interface_291:com_70, interface_291:com_68, 0);

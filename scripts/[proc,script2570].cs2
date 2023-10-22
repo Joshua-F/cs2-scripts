@@ -1,0 +1,80 @@
+// 2570
+[proc,script2570]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_obj $obj2 = null;
+%varcint930 = -1;
+%varcint931 = -1;
+%varcint932 = -1;
+%varcint933 = -1;
+%varcint934 = -1;
+%varcint935 = -1;
+%varcint936 = -1;
+%varcint937 = -1;
+%varcint938 = -1;
+%varcint939 = -1;
+if (%varbit6429 > 0 & %varbit6429 < 11) {
+	%varcint929 = calc(%varbit6429 - 1);
+} else {
+	%varcint929 = 0;
+}
+while ($int1 < 10 & $int0 < 28) {
+	$obj2 = inv_getobj(inv, $int0);
+	if (oc_param($obj2, param_802) = 1 | oc_param($obj2, param_803) = 1) {
+		if_settext("Squad <tostring(calc($int1 + 1))>", enum(int, component, enum_2423, $int1));
+		if (oc_param($obj2, param_806) = 0) {
+			if_setgraphic("graphic_2023", enum(int, component, enum_2427, $int1));
+		} else if (oc_param($obj2, param_806) = 1) {
+			if_setgraphic("graphic_2022", enum(int, component, enum_2427, $int1));
+		}
+		if (oc_param($obj2, param_805) = 1) {
+			if_setgraphic("graphic_2016", enum(int, component, enum_2426, $int1));
+		} else if (oc_param($obj2, param_805) = 2) {
+			if_setgraphic("graphic_2018", enum(int, component, enum_2426, $int1));
+		} else if (oc_param($obj2, param_805) = 3) {
+			if_setgraphic("graphic_2017", enum(int, component, enum_2426, $int1));
+		}
+		if (oc_param($obj2, param_803) = 1) {
+			if_setcolour(0xcc0000, enum(int, component, enum_2429, $int1));
+		} else {
+			if_setcolour(^black, enum(int, component, enum_2429, $int1));
+		}
+		switch_int ($int1) {
+			case 0 :
+				%varcint930 = $int0;
+			case 1 :
+				%varcint931 = $int0;
+			case 2 :
+				%varcint932 = $int0;
+			case 3 :
+				%varcint933 = $int0;
+			case 4 :
+				%varcint934 = $int0;
+			case 5 :
+				%varcint935 = $int0;
+			case 6 :
+				%varcint936 = $int0;
+			case 7 :
+				%varcint937 = $int0;
+			case 8 :
+				%varcint938 = $int0;
+			case 9 :
+				%varcint939 = $int0;
+		}
+		$int1 = calc($int1 + 1);
+	}
+	$int0 = calc($int0 + 1);
+}
+if ($int1 < 10) {
+	while ($int1 < 10) {
+		if_settext("No squad", enum(int, component, enum_2423, $int1));
+		if_settext("", enum(int, component, enum_2424, $int1));
+		if_setgraphic(null, enum(int, component, enum_2427, $int1));
+		if_setgraphic(null, enum(int, component, enum_2426, $int1));
+		if_setonop(null, enum(int, component, enum_2422, $int1));
+		if_clearops(enum(int, component, enum_2422, $int1));
+		$int1 = calc($int1 + 1);
+	}
+}
+~script2599;
+~script2573;

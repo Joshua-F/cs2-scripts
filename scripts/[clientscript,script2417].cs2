@@ -1,0 +1,7 @@
+// 2417
+[clientscript,script2417](component $component0)
+if (%varcint805 = 5 | %varcint805 = 11) {
+	if_setop(1, "Pump", $component0);
+} else {
+	if_setop(1, "Inspect", $component0);
+}

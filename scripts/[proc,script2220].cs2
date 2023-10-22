@@ -1,0 +1,87 @@
+// 2220
+[proc,script2220](int $key0, char $keychar1)
+if (create_reply = -3) {
+	return;
+}
+if ($key0 = ^key_escape) {
+	~script2215;
+	return;
+}
+switch_int (%varcint174) {
+	case 12 :
+		if ($key0 = ^key_return | $key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2274(20);
+			} else {
+				~script2274(13);
+			}
+			return;
+		}
+		if (string_length(%varcstring128) >= 320 & $key0 ! ^key_backspace) {
+			return;
+		}
+		if (string_indexof_char("()[],:;\", $keychar1, 0) = -1 | $key0 = ^key_backspace) {
+			%varcstring128 = removetags(~add_to_inputstring(%varcstring128, 3, $key0, $keychar1));
+			~script2255(%varcstring128, loginscreen:com_283, 12, 0);
+			if_settext("", loginscreen:com_269);
+		}
+		return;
+	case 13 :
+		if ($key0 = ^key_return | $key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2274(12);
+			} else {
+				~script2274(19);
+			}
+			return;
+		}
+		if (string_length(%varcstring129) >= 320 & $key0 ! ^key_backspace) {
+			return;
+		}
+		if (string_indexof_char("()[],:;\", $keychar1, 0) = -1 | $key0 = ^key_backspace) {
+			%varcstring129 = removetags(~add_to_inputstring(%varcstring129, 3, $key0, $keychar1));
+			~script2255(%varcstring129, loginscreen:com_276, 13, 0);
+			if_settext("", loginscreen:com_269);
+		}
+		return;
+	case 19 :
+		if ($key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2274(13);
+			} else {
+				~script2274(20);
+			}
+			return;
+		}
+		if ($key0 = ^key_return | $key0 = ^key_space) {
+			~script2267(loginscreen:com_230);
+		}
+		return;
+	case 20 :
+		if ($key0 = ^key_tab) {
+			if (%varcint175 >= clientclock) {
+				return;
+			}
+			if ($key0 = ^key_tab & keyheld_shift = true) {
+				~script2274(19);
+			} else {
+				~script2274(12);
+			}
+			return;
+		}
+		if ($key0 = ^key_return | $key0 = ^key_space) {
+			~script2267(loginscreen:com_233);
+		}
+		return;
+	case default :
+		return;
+}

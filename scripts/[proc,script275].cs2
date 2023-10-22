@@ -1,0 +1,9 @@
+// 275
+[proc,script275](string $string0, int $int0, int $int1)
+if (cc_find(loginscreen:com_27, 1) = ^true) {
+	cc_settext(~script1668($string0));
+}
+~script2247;
+if ($int0 = 1) {
+	~script279($int1);
+}

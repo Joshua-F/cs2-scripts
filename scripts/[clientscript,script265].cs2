@@ -1,4 +1,6 @@
 // 265
-[clientscript,script265]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_165);
+[clientscript,script265](int $count0, int $int1)
+if (%varcint804 = 1) {
+	~script271($int1, $count0);
+	%varcint804 = 0;
+}

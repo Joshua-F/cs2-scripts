@@ -1,7 +1,10 @@
 // 204
-[clientscript,clansetrank](int $count0, int $opindex1)
+[clientscript,clansetrank](int $int0, int $opindex1)
 def_int $rank2 = calc($opindex1 - 1);
-friend_setrank(friend_getname($count0), $rank2);
-if (cc_find(clansetup:com_13, calc($count0 + $count0 + 1)) = ^true) {
+def_string $username0 = "";
+def_string $string1 = "";
+$username0, $string1 = friend_getname($int0);
+friend_setrank($username0, $rank2);
+if (cc_find(clansetup:com_13, calc($int0 * 2 + 1)) = ^true) {
 	cc_settext(~script203($rank2));
 }

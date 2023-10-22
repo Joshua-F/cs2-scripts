@@ -1,27 +1,3 @@
 // 938
 [clientscript,script938]
-if (%varbit4538 >= 91) {
-	return;
-}
-if_settext("Lapsang (1000)", carpet_draughts:com_21);
-if_settext("Souchong (1000)", carpet_draughts:com_23);
-def_int $int0 = 0;
-while ($int0 < 12) {
-	cc_create(carpet_draughts:board, ^iftype_graphic, $int0);
-	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(~script946(calc($int0 + 1)), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject(soul_rune_566, -1);
-	cc_setoutline(1);
-	cc_setgraphicshadow(^black);
-	$int0 = calc($int0 + 1);
-}
-while ($int0 < 24) {
-	cc_create(carpet_draughts:board, ^iftype_graphic, $int0);
-	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(~script946(calc($int0 + 9)), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject(chaos_rune_562, -1);
-	cc_setoutline(1);
-	cc_setgraphicshadow(^black);
-	$int0 = calc($int0 + 1);
-}
-%varcint185 = 0;
+~script939;

@@ -1,0 +1,15 @@
+// 925
+[proc,script925](obj $obj0)(int)
+if (~script929($obj0) = 0) {
+	return(0);
+}
+if (~script930($obj0) = 0) {
+	return(0);
+}
+if (~script933($obj0) = 0) {
+	return(0);
+}
+if (~comlevel < oc_param($obj0, param_761)) {
+	return(0);
+}
+return(1);

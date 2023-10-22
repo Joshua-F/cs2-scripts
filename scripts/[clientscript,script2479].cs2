@@ -1,0 +1,9 @@
+// 2479
+[clientscript,script2479]
+if (%varcint825 < 1) {
+	%varcint825 = 6;
+}
+if (%varcint825 > 0) {
+	%varcint825 = calc(%varcint825 - 1);
+}
+if_settext(tostring(%varcint825), interface_37:com_35);

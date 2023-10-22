@@ -1,4 +1,7 @@
 // 1620
-[clientscript,script1620]
-~script1717;
-~script1612(interface_771:button_8, 0, 7);
+[clientscript,script1620](component $component0, int $comsubid1, int $trans2, int $trans3, int $int4)
+$int4 = calc($int4 + clientclock);
+if (cc_find($component0, $comsubid1) = ^true | $comsubid1 = -1 & if_find($component0) = true) {
+	cc_settrans($trans2);
+	cc_setontimer("script1621($component0, $comsubid1, $trans3, $int4)");
+}

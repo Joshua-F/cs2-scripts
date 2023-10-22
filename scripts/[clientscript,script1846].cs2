@@ -1,19 +1,7 @@
 // 1846
-[clientscript,script1846](component $component0, int $int1)
-%varcint178 = ~dropdownbox_getselected($int1, $component0);
-if (getwindowmode = ^windowmode_fullscreen) {
-	if (playermember = false) {
-		setwindowmode(getdefaultwindowmode);
-		%varcint543 = getwindowmode;
-		mes("Fullscreen mode is only available to members.");
-		return;
-	} else if (fullscreen_lastmode ! %varcint178) {
-		if (fullscreen_enter(fullscreen_getmode(%varcint178)) = true) {
-		} else {
-			setwindowmode(getdefaultwindowmode);
-			%varcint543 = getwindowmode;
-			mes("That resolution didn't seem to work.");
-			mes("Please try a different resolution.");
-		}
-	}
+[clientscript,script1846]
+if (~current_side_if ! 8 & ~script1569 = 0 & if_hassub(~script8(8)) = true & %varbit6521 ! 3 & %varbit6521 ! 10) {
+	~arrow_set(~script1742(8), -1, ~getsideicon(8), -1);
+	if_setontimer("script1847", toplevel_fullscreen:stones_on);
+	if_setontimer("script1847", toplevel:com_80);
 }

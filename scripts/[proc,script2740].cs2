@@ -1,0 +1,64 @@
+// 2740
+[proc,script2740](enum $enum0, enum $enum1, idkit $idkit2)(int, int)
+def_int $count3 = 0;
+def_int $int4 = 0;
+def_string $op0 = "";
+def_idkit $idkit5 = null;
+def_int $int6 = 0;
+def_int $int7 = 0;
+if (%varcint1020 = 1 & inv_getobj(worn, 0) ! null) {
+	if (oc_param(inv_getobj(worn, 0), param_624) ! 0) {
+		$int7 = 1;
+	} else if (oc_param(inv_getobj(worn, 0), param_625) ! 0) {
+		$int7 = 2;
+	}
+}
+while ($count3 < enum_getoutputcount($enum0)) {
+	if (%varcint1020 = 1) {
+		$op0 = struct_param(enum(int, struct, $enum0, $count3), param_792);
+		if ($int7 = 1) {
+			$idkit5 = struct_param(enum(int, struct, $enum0, $count3), param_790);
+		} else if ($int7 = 2) {
+			$idkit5 = struct_param(enum(int, struct, $enum0, $count3), param_791);
+		} else {
+			$idkit5 = struct_param(enum(int, struct, $enum0, $count3), param_788);
+		}
+	} else {
+		if ($enum1 ! null) {
+			$op0 = enum(int, string, $enum1, $count3);
+		} else {
+			$op0 = "Generic";
+		}
+		$idkit5 = enum(int, idkit, $enum0, $count3);
+	}
+	cc_create(interface_900:com_66, ^iftype_graphic, calc($count3 * 3));
+	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, $int4, ^setpos_abs_left, ^setpos_abs_top);
+	if ($idkit5 = $idkit2) {
+		cc_setgraphic("options_radio_buttons,2");
+		$int6 = $int4;
+	} else {
+		cc_setgraphic("options_radio_buttons,0");
+	}
+	.cc_create(interface_900:com_66, ^iftype_text, calc($count3 * 3 + 1));
+	.cc_settextfont(p11_full);
+	.cc_setcolour(0xff981f);
+	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	.cc_setsize(23, 16, ^setsize_minus, ^setsize_abs);
+	.cc_setposition(2, $int4, ^setpos_abs_right, ^setpos_abs_top);
+	.cc_settext($op0);
+	cc_create(interface_900:com_66, ^iftype_rectangle, calc($count3 * 3 + 2));
+	cc_setsize(0, 16, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settrans(255);
+	cc_setfill(true);
+	if ($idkit5 ! $idkit2) {
+		cc_setop(1, $op0);
+		cc_setonmouseover("cc_text_colour_swapper(event_com, .cc_getid, ^white)");
+		cc_setonmouseleave("cc_text_colour_swapper(event_com, .cc_getid, 0xff981f)");
+		cc_setonop("script2743(event_op, %varcint1020, $idkit5, $idkit2, $enum0, $enum1)");
+	}
+	$int4 = calc($int4 + cc_getheight);
+	$count3 = calc($count3 + 1);
+}
+return($int4, max(calc($int6 - 8), 0));

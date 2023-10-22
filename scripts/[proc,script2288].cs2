@@ -1,0 +1,17 @@
+// 2288
+[proc,script2288](component $component0, component $component1)
+if_settext("", $component0);
+if_setgraphic(null, $component1);
+if (compare(%varcstring129, "") = 0) {
+	return;
+}
+if (~script2204(%varcstring128) = 0 | ~script2204(%varcstring129) = 0) {
+	if_settext("Please supply a valid email address.", $component0);
+	if_setgraphic("graphic_1726", $component1);
+	return;
+}
+if (compare(%varcstring128, %varcstring129) ! 0) {
+	if_settext("Please make sure both email addresses match.", $component0);
+	if_setgraphic("graphic_1726", $component1);
+	return;
+}

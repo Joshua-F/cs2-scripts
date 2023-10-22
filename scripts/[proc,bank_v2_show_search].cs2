@@ -1,37 +1,37 @@
 // 1479
 [proc,bank_v2_show_search](string $string0)(int)
 $string0 = escape($string0);
-~deltooltip_action(bank_v2_main:com_74);
+~deltooltip_action(bank_v2_main:com_88);
 %varcint1 = 0;
 ~script1464;
-if_sethide(true, bank_v2_main:com_99);
+if_sethide(true, bank_v2_main:com_110);
 if (string_length($string0) = 0) {
 	if_settext("Bank of RuneScape (no search entered)", bank_v2_main:title);
-	if_sethide(false, bank_v2_main:com_100);
+	if_sethide(false, bank_v2_main:com_111);
 	~bank_v2_hide_all;
 	return(0);
 }
 if_settext("Bank of RuneScape (search: '<$string0>')", bank_v2_main:title);
-if_sethide(true, bank_v2_main:com_100);
+if_sethide(true, bank_v2_main:com_111);
 def_int $size0 = inv_size(bank);
 def_int $size1 = 0;
 def_int $int2 = 0;
-if_setscrollpos(0, 0, bank_v2_main:com_73);
+if_setscrollpos(0, 0, bank_v2_main:com_87);
 while ($size1 < $size0) {
 	if (string_indexof_string(lowercase(oc_name(inv_getobj(bank, $size1))), lowercase($string0), 0) ! -1) {
-		if (cc_find(bank_v2_main:com_73, $size1) = ^true) {
+		if (cc_find(bank_v2_main:com_87, $size1) = ^true) {
 			cc_setposition(calc(44 * ($int2 % 10) + 8), calc($int2 / 10 * 44 + 5), ^setpos_abs_left, ^setpos_abs_top);
 			cc_sethide(false);
 			$int2 = calc($int2 + 1);
 		}
-	} else if (cc_find(bank_v2_main:com_73, $size1) = ^true) {
+	} else if (cc_find(bank_v2_main:com_87, $size1) = ^true) {
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_sethide(true);
 	}
 	$size1 = calc($size1 + 1);
 }
 if ($int2 = 0) {
-	if_sethide(false, bank_v2_main:com_99);
+	if_sethide(false, bank_v2_main:com_110);
 }
 ~bank_v2_build_scrollbar($int2);
 return($int2);

@@ -10,7 +10,7 @@ if (invother_getobj(inv_90, 13) ! null | invother_getobj(inv_90, 14) ! null | in
 while ($int0 < 28) {
 	$int1 = ~script148($int0);
 	if ($int1 ! 0) {
-		if_sethide(false, tradeconfirm:com_46);
+		if_sethide(false, tradeconfirm:com_47);
 	}
 	if ($int1 ! 0 & $int1 > calc(clientclock - 750)) {
 		if ($int0 = -1) {

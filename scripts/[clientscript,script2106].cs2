@@ -1,0 +1,6 @@
+// 2106
+[clientscript,script2106](component $component0, component $component1, int $x2, int $y3, int $int4, int $int5)
+$int4 = max(min(calc($int4 + randominc(1) - randominc(1)), 5), -5);
+$int5 = max(min(calc($int5 + randominc(1) - randominc(1)), 5), -5);
+if_setposition(calc($x2 + $int4), calc($y3 + $int5), ^setpos_abs_left, ^setpos_abs_top, $component1);
+if_setontimer("script2106($component0, $component1, $x2, $y3, $int4, $int5)", $component0);

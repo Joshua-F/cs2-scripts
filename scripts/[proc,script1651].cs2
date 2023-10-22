@@ -1,0 +1,23 @@
+// 1651
+[proc,script1651](int $int0, int $int1)
+if (~script1653 = 1) {
+	$int0 = calc(if_getheight(toplevel_fullscreen:maingame) - 172);
+	if_sethide(true, toplevel_fullscreen:com_21);
+} else if (%varcint41 ! -1) {
+	if_sethide(false, toplevel_fullscreen:com_21);
+}
+def_int $int2 = calc(if_getheight(toplevel_fullscreen:maingame) - 87 - $int0 - 30);
+$int2 = calc($int2 - $int2 % 14);
+if ($int2 < 142) {
+	$int2 = 142;
+}
+%varcint7 = calc(%varcint7 - ($int2 - if_getheight(toplevel_fullscreen:chattop)));
+if_setsize(519, $int2, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:chattop);
+if_setposition(0, 23, ^setpos_abs_left, ^setpos_abs_bottom, toplevel_fullscreen:chattop);
+if ($int1 = 1) {
+	%varcint1037 = $int2;
+}
+if_setposition(0, calc(if_gety(toplevel_fullscreen:chattop) - 94), ^setpos_abs_left, ^setpos_abs_top, toplevel_fullscreen:com_21);
+if_setposition(0, calc(if_gety(toplevel_fullscreen:chattop) - 69), ^setpos_abs_left, ^setpos_abs_top, toplevel_fullscreen:pmchat);
+~script1301(chatdefault:scrollbar, chatdefault:scrollarea);
+~rebuildchatbox;

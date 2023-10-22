@@ -1,5 +1,9 @@
 // 89
 [proc,rebuildpmbox]
+if (minimenuopen(pmchat:pmchat, -1) = true) {
+	if_setontimer("script1562", pmchat:pmchat);
+	return;
+}
 def_int $int0 = 0;
 def_component $component1 = null;
 def_int $int2 = 0;
@@ -13,6 +17,8 @@ if (reboottimer > 0) {
 		if_settext("<col=ffff00>System update in: <tostring($int3)>:<tostring($int2)>", pmchat:pm5);
 	}
 	$int0 = 1;
+	if_clearops(pmchat:pm5);
+	if_setonop(null, pmchat:pm5);
 }
 def_int $int4 = 0;
 def_int $chattype5 = ^chattype_gamemessage;
@@ -30,20 +36,45 @@ if (%var287 = 1 & (getwindowmode < ^windowmode_resizable | %varcint41 ! -1)) {
 					if_settext("To <chat_gethistoryname($int4)>: <chat_gethistorymessage($int4)>", $component1);
 			}
 			if_clearops($component1);
+			if_setonop("private_op(event_op, _5019($int4), $int4)", $component1);
 			switch_int ($chattype5) {
-				case ^chattype_privatechat, ^chattype_loginlogoutnotification, ^chattype_privatechatout, ^chattype_modprivatechat, 18, 19 :
-					if_setopbase("<col=ffffff><chat_gethistoryname($int4)>", $component1);
-					if (compare(removetags(chat_playername), removetags(chat_gethistoryname($int4))) ! 0) {
-						if (friend_test(chat_gethistoryname($int4)) = true) {
+				case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat :
+					if_setopbase("<col=ffffff><removetags(chat_gethistoryname($int4))>", $component1);
+					if (compare(removetags(chat_playername_unfiltered), removetags(chat_gethistoryname($int4))) ! 0) {
+						if (friend_test(_5019($int4)) = true) {
 							if (map_quickchat = false & _3328 = false) {
-								if_setop(8, "Message", $component1);
+								if_setop(7, "Message", $component1);
 							}
 						} else {
-							if_setop(8, "Add friend", $component1);
-							if_setop(9, "Add ignore", $component1);
+							if_setop(7, "Add friend", $component1);
+							if_setop(8, "Add ignore", $component1);
 						}
 						if (staffmodlevel > 0 | playermod > ^false) {
 							if_setop(10, "Report abuse", $component1);
+						}
+					}
+				case 18, 19 :
+					if_setopbase("<col=ffffff><removetags(chat_gethistoryname($int4))>", $component1);
+					if (compare(removetags(chat_playername_unfiltered), removetags(chat_gethistoryname($int4))) ! 0) {
+						if (friend_test(_5019($int4)) = true) {
+							if (map_quickchat = false & _3328 = false) {
+								if_setop(7, "Message", $component1);
+							}
+						} else {
+							if_setop(7, "Add friend", $component1);
+							if_setop(8, "Add ignore", $component1);
+						}
+						if ($chattype5 = 18 & chatphrase_getautoresponsecount(chat_gethistoryphrase($int4)) > 0) {
+							if (%varcint132 = null) {
+								%varcint132 = chat_gethistoryphrase($int4);
+								%varcstring29 = chat_gethistoryname($int4);
+								%varcint133 = 5;
+								if (friend_test(_5019($int4)) = true) {
+									if_setop(9, "Quick Response", $component1);
+								}
+							} else {
+								if_setop(9, "Quick Response", $component1);
+							}
 						}
 					}
 			}

@@ -1,3 +1,10 @@
 // 564
-[clientscript,script564](component $component0)
-if_settext(tostring(%var1105), $component0);
+[clientscript,script564]
+if (%varcint1037 > calc(if_getheight(toplevel_fullscreen:maingame) - 117)) {
+	~script1652(1);
+} else {
+	~script1650;
+}
+if_setdraggable(toplevel_fullscreen:com_20, -1, toplevel_fullscreen:com_21);
+if_setondrag("script1649(event_mousey, false)", toplevel_fullscreen:com_21);
+if_setondragcomplete("script1649(event_mousey, true)", toplevel_fullscreen:com_21);

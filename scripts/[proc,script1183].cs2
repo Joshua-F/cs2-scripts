@@ -9,17 +9,20 @@ if (string_length(%varcstring33) = 0) {
 	return;
 }
 if (~script1431 = 1 & %varcint547 = 0) {
-	%varcint174 = 7;
-	if_sethide(false, loginscreen:com_132);
-	if_sethide(true, loginscreen:com_131);
-	if_sethide(false, loginscreen:com_242);
+	%varcint174 = 24;
+	~script2709(430, 337, 49);
+	if_sethide(false, loginscreen:com_395);
 	sound_jingle(349, 0);
-	if_sethide(true, loginscreen:com_241);
+	if (~script208 = 1) {
+		if_settext("Bounty World", loginscreen:com_437);
+		if_settext("Warning: This is a Bounty World. Players can attack you throughout the Wilderness.<br><br>If you die, you may lose all of your items.<br><br>You have been warned.", loginscreen:com_438);
+	}
+	if_sethide(true, loginscreen:com_394);
 	return;
 }
 %varcint200 = 0;
 %varcint201 = 0;
-if_settext("Performing login...", loginscreen:com_334);
+if_settext("Performing login...", loginscreen:com_445);
 if_sethide(true, loginscreen:login_button);
-if_sethide(true, loginscreen:com_348);
+if_sethide(true, loginscreen:com_459);
 login_request(%varcstring32, %varcstring33, 0);

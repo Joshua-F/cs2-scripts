@@ -1,4 +1,28 @@
 // 1636
-[clientscript,script1636]
-~script1717;
-~script1612(interface_771:button_24, 0, 13);
+[clientscript,script1636](component $component0, component $component1)
+cc_deleteall($component0);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+while ($int4 < 50) {
+	$int3, $int2 = ~script1637($component0, $int3, ~script1638($int4), $int2);
+	$int4 = calc($int4 + 1);
+}
+if ($int3 = 0) {
+	~script1637($component0, 0, "Loading...", 0);
+}
+def_int $int5 = 0;
+def_int $int6 = 0;
+if ($int2 > 15) {
+	$int5 = if_getscrolly($component0);
+	$int6 = calc($int2 * 15 + 8);
+	if_setscrollsize(0, $int6, $component0);
+	if ($int5 > $int6) {
+		$int5 = $int6;
+	}
+	~scrollbar_resize($component1, $component0, $int5);
+} else {
+	if_setscrollsize(0, 0, $component0);
+	if_setscrollpos(0, 0, $component0);
+	~scrollbar_resize($component1, $component0, 0);
+}

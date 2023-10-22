@@ -1,4 +1,9 @@
 // 707
 [clientscript,script707]
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setposition(220, 11, ^setpos_abs_right, ^setpos_abs_top, interface_680:close_button);
+} else {
+	if_setposition(12, 11, ^setpos_abs_right, ^setpos_abs_top, interface_680:close_button);
+}
 %varcint215 = 255;
 %varcint216 = 0;

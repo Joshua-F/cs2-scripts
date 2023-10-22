@@ -1,4 +1,21 @@
 // 210
 [clientscript,script210]
-~script224;
-if_setgraphic("miscgraphics,11", interface_595:com_74);
+if (%varbit6101 < 8) {
+	if_setgraphic("graphic_1785", wilderness_overlay:target_icon);
+} else if (%varbit6101 < 15) {
+	if_setgraphic("graphic_1786", wilderness_overlay:target_icon);
+} else if (%varbit6101 < 23) {
+	if_setgraphic("graphic_1787", wilderness_overlay:target_icon);
+} else if (%varbit6101 < 30) {
+	if_setgraphic("graphic_1788", wilderness_overlay:target_icon);
+} else if (%varbit6101 < 38) {
+	if_setgraphic("graphic_1789", wilderness_overlay:target_icon);
+} else if (%varbit6101 < 45) {
+	if_setgraphic("graphic_1790", wilderness_overlay:target_icon);
+} else if (%varbit6101 < 53) {
+	if_setgraphic("graphic_1791", wilderness_overlay:target_icon);
+} else if (%varbit6101 < 60) {
+	if_setgraphic("graphic_1792", wilderness_overlay:target_icon);
+} else {
+	if_setgraphic("graphic_1793", wilderness_overlay:target_icon);
+}

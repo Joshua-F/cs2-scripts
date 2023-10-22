@@ -1,7 +1,9 @@
 // 52
-[clientscript,prayer_statupdate](int $lvl0, graphic $graphic1, graphic $graphic2, component $component3)
-if (stat_base(prayer) < $lvl0) {
-	if_setgraphic($graphic1, $component3);
-} else {
-	if_setgraphic($graphic2, $component3);
+[clientscript,prayer_statupdate](int $lvl0, graphic $graphic1, graphic $graphic2, component $component3, int $comsubid4)
+if (cc_find($component3, $comsubid4) = ^true) {
+	if (stat_base(prayer) < $lvl0) {
+		cc_setgraphic($graphic1);
+	} else {
+		cc_setgraphic($graphic2);
+	}
 }

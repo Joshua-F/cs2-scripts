@@ -1,6 +1,3 @@
 // 501
-[clientscript,script501]
-~script504;
-if_setgraphic("graphic_1043", interface_591:com_280);
-if_setonmouseleave("deltooltip(interface_591:com_299)", interface_591:com_280);
-if_setonmouseover(null, interface_591:com_280);
+[clientscript,script501](int $int0, int $int1)
+~script311(struct_param(struct_436, param_596), $int0, $int1);

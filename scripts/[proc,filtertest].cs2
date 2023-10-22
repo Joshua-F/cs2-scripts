@@ -3,13 +3,18 @@
 switch_int (chat_gethistorytype($int0)) {
 	case null :
 		return(0);
-	case ^chattype_gamemessage, ^chattype_modchat :
+	case ^chattype_gamemessage, ^chattype_modchat, 23 :
+		return(1);
+	case 22 :
+		if (%varbit6161 = ^chatfilter_friends) {
+			return(0);
+		}
 		return(1);
 	case ^chattype_publicchat, 17 :
 		if (chat_getfilter_public = ^chatfilter_on) {
 			return(1);
 		}
-		if (chat_getfilter_public = ^chatfilter_friends & friend_test(chat_gethistoryname($int0)) = true) {
+		if (chat_getfilter_public = ^chatfilter_friends & friend_test(_5019($int0)) = true) {
 			return(1);
 		}
 		return(0);
@@ -20,7 +25,7 @@ switch_int (chat_gethistorytype($int0)) {
 		if (chat_getfilter_private = ^chatfilter_on) {
 			return(1);
 		}
-		if (chat_getfilter_private = ^chatfilter_friends & friend_test(chat_gethistoryname($int0)) = true) {
+		if (chat_getfilter_private = ^chatfilter_friends & friend_test(_5019($int0)) = true) {
 			return(1);
 		}
 		return(0);
@@ -28,7 +33,7 @@ switch_int (chat_gethistorytype($int0)) {
 		if (chat_getfilter_trade = ^chatfilter_on) {
 			return(1);
 		}
-		if (chat_getfilter_trade = ^chatfilter_friends & friend_test(chat_gethistoryname($int0)) = true) {
+		if (chat_getfilter_trade = ^chatfilter_friends & friend_test(_5019($int0)) = true) {
 			return(1);
 		}
 		return(0);
@@ -49,7 +54,7 @@ switch_int (chat_gethistorytype($int0)) {
 		if (%var1054 = ^chatfilter_on) {
 			return(1);
 		}
-		if (%var1054 = ^chatfilter_friends & friend_test(chat_gethistoryname($int0)) = true) {
+		if (%var1054 = ^chatfilter_friends & friend_test(_5019($int0)) = true) {
 			return(1);
 		}
 		return(0);
@@ -57,7 +62,7 @@ switch_int (chat_gethistorytype($int0)) {
 		if (%var1055 = ^chatfilter_on) {
 			return(1);
 		}
-		if (%var1055 = ^chatfilter_friends & friend_test(chat_gethistoryname($int0)) = true) {
+		if (%var1055 = ^chatfilter_friends & friend_test(_5019($int0)) = true) {
 			return(1);
 		}
 		return(0);

@@ -1,0 +1,26 @@
+// 1663
+[proc,script1663](component $component0, int $comsubid1, component $layer2)
+def_int $int3 = 0;
+if (.cc_find($component0, $comsubid1) = ^true & .cc_gethide = false) {
+	cc_sethide(false);
+	if (calc(.cc_gety + .cc_getheight) < if_getscrolly($component0)) {
+		cc_setmodelangle(0, 0, 512, 1024, 0, 1500);
+		cc_setposition(0, if_gety($component0), ^setpos_abs_centre, ^setpos_abs_top);
+		return;
+	}
+	if (.cc_gety >= calc(if_getscrolly($component0) + if_getheight($component0))) {
+		cc_setmodelangle(0, 0, 512, 0, 0, 1500);
+		cc_setposition(0, calc(if_gety($component0) + if_getheight($component0) - cc_getheight), ^setpos_abs_centre, ^setpos_abs_top);
+		return;
+	}
+	$int3 = calc(.cc_gety - if_getscrolly($component0) + if_gety($component0));
+	if ($int3 > calc(if_getheight($layer2) - cc_getheight)) {
+		cc_setmodelangle(0, 0, 512, 256, 0, 1500);
+		cc_setposition(0, calc($int3 - cc_getheight), ^setpos_abs_centre, ^setpos_abs_top);
+	} else {
+		cc_setmodelangle(0, 0, 512, 768, 0, 1500);
+		cc_setposition(0, calc($int3 + .cc_getheight), ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	return;
+}
+cc_sethide(true);

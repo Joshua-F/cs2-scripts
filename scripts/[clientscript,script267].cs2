@@ -1,4 +1,8 @@
 // 267
 [clientscript,script267]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_171);
+if (calc(%varcint194 + 50) > clientclock) {
+	return;
+}
+if (compare(%varcstring141, "") ! 0) {
+	%varcstring141 = "";
+}

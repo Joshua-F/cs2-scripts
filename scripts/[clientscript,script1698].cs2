@@ -1,4 +1,25 @@
 // 1698
 [clientscript,script1698]
-~script1720;
-~script1612(interface_771:button_86, 2, 4);
+if_setonvartransmit("script1699{var1583, var1584, var1582, var1395}", prayer:com_9);
+if_setscrollsize(if_getwidth(prayer:com_8), if_getheight(prayer:com_8), prayer:com_5);
+if_setonop("script1701", prayer:com_12);
+def_string $string0 = "This is the effect that prayers and curses have during combat. It includes curses that have used against you. The adjustment has no effect outside of combat. The percentage shown is relative to your skill level and may vary depending on the enemy you are fighting, and the prayers or curses used. Partial percentages are not shown.";
+if (%varcint1052 = 1) {
+	if_setsize(16384, 63, ^setsize_2, ^setsize_abs, prayer:com_9);
+	if_setsize(16384, calc(63 + if_getheight(prayer:com_0)), ^setsize_2, ^setsize_minus, prayer:com_5);
+	if_setsize(16, calc(63 + if_getheight(prayer:com_0) + 2), ^setsize_abs, ^setsize_minus, prayer:scrollbar_layer);
+	if_sethide(false, prayer:com_24);
+	~script1700;
+	~script1704;
+	if_setonmouserepeat("addtooltip(prayer:com_13, prayer:tooltips, $string0, 25, 190)", prayer:com_13);
+	if_setonmouseleave("deltooltip(prayer:tooltips)", prayer:com_13);
+} else {
+	if_setsize(16384, 19, ^setsize_2, ^setsize_abs, prayer:com_9);
+	if_setsize(16384, calc(19 + if_getheight(prayer:com_0)), ^setsize_2, ^setsize_minus, prayer:com_5);
+	if_setsize(16, calc(19 + if_getheight(prayer:com_0) + 2), ^setsize_abs, ^setsize_minus, prayer:scrollbar_layer);
+	if_sethide(true, prayer:com_24);
+	~script1700;
+	~script1704;
+	if_setonmouserepeat(null, prayer:com_13);
+	if_setonmouseleave(null, prayer:com_13);
+}

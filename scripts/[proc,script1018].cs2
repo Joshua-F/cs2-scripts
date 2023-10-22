@@ -84,7 +84,11 @@ switch_int ($int0) {
 			case 39 :
 				return(82, sea_turtle_397, "Members: Sea turtle", "Members can now cook <col=000080>sea turtles</col>.");
 			case 40 :
+				return(88, cavefish_15266, "Members: Cavefish", "Members can now cook <col=000080>cavefish</col>.");
+			case 41 :
 				return(91, manta_ray_391, "Members: Manta ray", "Members can now cook <col=000080>manta rays</col>.");
+			case 42 :
+				return(93, rocktail_15272, "Members: Rocktail", "Members can now cook <col=000080>rocktails</col>.");
 		}
 	case 1 :
 		switch_int ($int1) {
@@ -153,7 +157,7 @@ switch_int ($int0) {
 			case 6 :
 				return(-1, silvthrill_rod_7620, "4. Cook the stew by using it with a stove or fire.", "");
 			case 7 :
-				return(-1, silvthrill_rod_7620, "After completing Evil Dave's miniquest from Recipe for Disaster, I can add spices to cooked stew.", "");
+				return(-1, silvthrill_rod_7620, "After completing Evil Dave's subquest from Recipe for Disaster, I can add spices to cooked stew.", "");
 			case 8 :
 				return(-1, silvthrill_rod_7620, "To make curry: make uncooked stew as above. Before cooking, add some spices or 3 curry leaves.", "");
 		}
@@ -208,7 +212,7 @@ switch_int ($int0) {
 			case 4 :
 				return(-1, silvthrill_rod_7620, "3. Wait until the wine ferments.", "");
 			case 5 :
-				return(-1, silvthrill_rod_7620, "The wine will ferment when left in your inventory or the bank.", "");
+				return(-1, silvthrill_rod_7620, "The wine will ferment while left in your inventory or the bank.", "");
 		}
 	case 7 :
 		switch_int ($int1) {
@@ -368,26 +372,22 @@ switch_int ($int0) {
 	case 12 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, food_class_1_14162, "Stealing Creation - class 1 food", "Members can now cook <col=000080>class 1 food</col> in the Stealing Creation minigame.");
+				return(1, food_class_1_14162, "Stealing Creation - class 1 food", "Members can now cook <col=000080>class 1 food</col> in Stealing Creation.");
 			case 1 :
-				return(20, food_class_2_14164, "Stealing Creation - class 2 food", "Members can now cook <col=000080>class 2 food</col> in the Stealing Creation minigame.");
+				return(20, food_class_2_14164, "Stealing Creation - class 2 food", "Members can now cook <col=000080>class 2 food</col> in Stealing Creation.");
 			case 2 :
-				return(40, food_class_3_14166, "Stealing Creation - class 3 food", "Members can now cook <col=000080>class 3 food</col> in the Stealing Creation minigame.");
+				return(40, food_class_3_14166, "Stealing Creation - class 3 food", "Members can now cook <col=000080>class 3 food</col> in Stealing Creation.");
 			case 3 :
-				return(60, food_class_4_14168, "Stealing Creation - class 4 food", "Members can now cook <col=000080>class 4 food</col> in the Stealing Creation minigame.");
+				return(60, food_class_4_14168, "Stealing Creation - class 4 food", "Members can now cook <col=000080>class 4 food</col> in Stealing Creation.");
 			case 4 :
-				return(80, food_class_5_14170, "Stealing Creation - class 5 food", "Members can now cook <col=000080>class 5 food</col> in the Stealing Creation minigame.");
+				return(80, food_class_5_14170, "Stealing Creation - class 5 food", "Members can now cook <col=000080>class 5 food</col> in Stealing Creation.");
 		}
 	case 13 :
 		switch_int ($int1) {
 			case 0 :
-				return(26, obj_5079, "Cooking Tutor - new info", "There is new information available from the <col=000080>Cooking Tutor</col> in <col=000080>Lumbridge</col>.");
-			case 1 :
 				return(32, chefs_hat_1949, "Chefs' Guild", "You are now qualified to enter the prestigious <col=000080>Chefs' Guild</col>.");
-			case 2 :
-				return(36, obj_5079, "Cooking Tutor - new info", "There is new information available from the <col=000080>Cooking Tutor</col> in <col=000080>Lumbridge</col>.");
-			case 3 :
-				return(99, cooking_cape_9801, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Cooking<col=000080>. Why not visit the <col=800000>head chef<col=000080> at the <col=800000>Cooking Guild<col=000080>? He has something special that is only available to true masters of the <col=800000>Cooking<col=000080> skill!");
+			case 1 :
+				return(99, cooking_cape_9801, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Cooking<col=000080>. Members can visit the <col=800000>head chef<col=000080> at the <col=800000>Cooking Guild<col=000080>. He has something special that is only available to true masters of the <col=800000>Cooking<col=000080> skill!");
 		}
 }
 return(0, null, "", "");

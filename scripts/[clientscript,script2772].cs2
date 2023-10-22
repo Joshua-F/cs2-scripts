@@ -1,0 +1,19 @@
+// 2772
+[clientscript,script2772](component $component0, int $int1)
+def_int $int2 = calc(spline_length(0) - 1);
+if (%varcint1007 ! 2 | $int1 > $int2) {
+	if_setoncamfinished(null, $component0);
+	return;
+}
+switch_int (randominc(2)) {
+	case 0 :
+		sound_synth(synth_6645, 1, 0);
+	case 1 :
+		sound_synth(synth_6644, 1, 0);
+	case 2 :
+		sound_synth(synth_6643, 1, 0);
+}
+cam_movealong(0, $int1, 2500, 2400, 1, $int1);
+if ($int1 < $int2) {
+	if_setoncamfinished("script2772($component0, calc($int1 + 1))", $component0);
+}

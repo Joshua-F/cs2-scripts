@@ -1,0 +1,9 @@
+// 2439
+[clientscript,script2439]
+if (%varcint818 = 1) {
+	if_settext("Net: Ripped!", trawler_game_overlay:net_text);
+	if_setcolour(0xe12323, trawler_game_overlay:net_text);
+} else {
+	if_settext("Net: OK", trawler_game_overlay:net_text);
+	if_setcolour(0xff9900, trawler_game_overlay:net_text);
+}

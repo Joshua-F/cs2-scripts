@@ -1,0 +1,60 @@
+// 2743
+[clientscript,script2743](int $opindex0, int $int1, idkit $idkit2, idkit $idkit3, enum $enum4, enum $enum5)
+if ($opindex0 ! 1) {
+	return;
+}
+if ($int1 ! %varcint1020) {
+	return;
+}
+if ($idkit2 = $idkit3) {
+	return;
+}
+sound_synth(synth_7259, 1, 0);
+def_int $int6 = -1;
+switch_int ($int1) {
+	case 1 :
+		if (gender = 1) {
+			$int6 = 7;
+		} else {
+			$int6 = 0;
+		}
+	case 2 :
+		if (gender ! 1) {
+			$int6 = 1;
+		}
+	case 3 :
+		if (gender = 1) {
+			$int6 = 9;
+		} else {
+			$int6 = 2;
+		}
+	case 4 :
+		if (gender = 1) {
+			$int6 = 10;
+		} else {
+			$int6 = 3;
+		}
+	case 5 :
+		if (gender = 1) {
+			$int6 = 11;
+		} else {
+			$int6 = 4;
+		}
+	case 6 :
+		if (gender = 1) {
+			$int6 = 12;
+		} else {
+			$int6 = 5;
+		}
+	case 7 :
+		if (gender = 1) {
+			$int6 = 13;
+		} else {
+			$int6 = 6;
+		}
+}
+if ($int6 ! -1 & $idkit2 ! null) {
+	baseidkit($int6, $idkit2);
+}
+cc_deleteall(interface_900:com_66);
+~script2740($enum4, $enum5, $idkit2);

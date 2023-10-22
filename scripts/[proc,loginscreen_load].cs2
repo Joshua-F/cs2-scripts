@@ -1,0 +1,13 @@
+// 2708
+[proc,loginscreen_load](component $component0, component $component1, component $component2, component $component3, component $component4)
+%varcstring32 = "";
+%varcstring33 = "";
+%varcint547 = 0;
+if (%varcint176 <= 0) {
+	%varcint176 = calc((random(14) + 1) * 10);
+}
+if_setonkey("loginscreen_keypress(event_keycode, event_keychar)", loginscreen:com_9);
+if_setonresize("script1176($component2, $component3)", loginscreen:background_layer);
+~script2710($component0, $component1, $component2, $component3, $component4);
+~loginscreen_setactivemenu(loginscreen:com_392);
+~script1129;

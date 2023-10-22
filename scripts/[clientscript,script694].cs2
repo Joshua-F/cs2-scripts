@@ -1,10 +1,25 @@
 // 694
-[clientscript,script694](string $string0, string $string1, string $string2)
-if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string0, 25, 180)", trademain:com_41);
-if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string0, 25, 180)", trademain:com_73);
-if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string0, 25, 180)", trademain:com_74);
-if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string1, 25, 180)", trademain:com_40);
-if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string1, 25, 180)", trademain:com_75);
-if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string2, 25, 180)", trademain:com_42);
-if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string2, 25, 180)", trademain:com_76);
+[clientscript,script694](string $string0, string $string1, string $string2, string $string3)
+if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string0, 25, 180)", trademain:com_75);
+if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string0, 25, 180)", trademain:com_76);
+if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string1, 25, 180)", trademain:com_42);
+if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string1, 25, 180)", trademain:com_77);
+if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string2, 25, 180)", trademain:com_44);
+if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string2, 25, 180)", trademain:com_78);
+def_string $string4 = $string3;
+def_string $string5 = "";
+def_int $index0 = 0;
+def_int $width1 = if_getwidth(trademain:com_43);
+if ($width1 > 0 & parawidth($string4, ^max_32bit_int, p11_full) > $width1) {
+	while (parawidth("<$string4>...", ^max_32bit_int, p11_full) > $width1) {
+		$index0 = calc(string_length($string4) - 1);
+		$string4 = substring($string4, 0, $index0);
+	}
+	$string4 = "<$string4>...";
+	$string5 = "...<substring($string3, $index0, string_length($string3))><br><$string0>";
+	if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string5, 25, 180)", trademain:com_43);
+} else {
+	if_setonmouserepeat("addtooltip(event_com, trademain:tooltip_layer, $string0, 25, 180)", trademain:com_43);
+}
+if_settext($string4, trademain:com_43);
 %varcint2 = 0;

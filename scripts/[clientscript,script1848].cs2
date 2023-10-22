@@ -1,13 +1,3 @@
 // 1848
-[clientscript,script1848](component $component0, int $clock1)
-def_int $int2 = calc(clientclock - $clock1);
-if ($int2 > 500) {
-	~script1849($component0);
-	return;
-}
-def_int $int3 = calc(10 - $int2 / 50);
-if ($int3 = 1) {
-	if_settext("Reverting in 1 second...", $component0);
-} else {
-	if_settext("Reverting in <tostring($int3)> seconds...", $component0);
-}
+[clientscript,script1848]
+~script1849;

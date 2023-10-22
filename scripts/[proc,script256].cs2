@@ -1,0 +1,8 @@
+// 256
+[proc,script256](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, enum $enum6)
+if (if_gethide($component1) = true) {
+	if_setscrollpos(0, 0, $component2);
+	~script258($component0, $component1, $component2, $component3, $component4, $int5, $enum6);
+} else {
+	~script262($component0, $component1, $component2, $component3, $component4);
+}

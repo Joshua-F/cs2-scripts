@@ -1,0 +1,19 @@
+// 2432
+[clientscript,script2432](component $component0)
+if_setonclick(null, $component0);
+switch_int (%varcint768) {
+	case 0 :
+		if_settext("You do not currently have an email address registered. Click <col=0557ab><u=0557ab>here</u></col> to register.", $component0);
+		if_setonclick("script2334", $component0);
+	case 1 :
+		if_settext("You have registered your email address. We are currently waiting for your parent to confirm their email address.", $component0);
+	case 2 :
+		if_settext("Your email address is currently pending confirmation.", $component0);
+	case 3 :
+		if_settext("Your email address is now registered.", $component0);
+	case 4 :
+		if_settext("Your account no longer has a registered email address.", $component0);
+	case default :
+		if_settext("You do not currently have an email address registered. Click <col=0557ab><u=0557ab>here</u></col> to register.", $component0);
+		if_setonclick("script2334", $component0);
+}

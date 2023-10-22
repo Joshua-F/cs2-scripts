@@ -1,5 +1,7 @@
 // 196
 [clientscript,script196](component $component0)
-~script197(clanjoin:clanlist);
-~scrollbar_vertical(clanjoin:clanlistscrollbar, clanjoin:clanlist, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_resize(clanjoin:clanlistscrollbar, clanjoin:clanlist, if_getscrolly(clanjoin:clanlist));
+if (minimenuopen(clanjoin:clanlist, -1) = true) {
+	if_setontimer("script1593", clanjoin:clanlist);
+	return;
+}
+~script1594;

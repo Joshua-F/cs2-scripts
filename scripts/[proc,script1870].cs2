@@ -1,17 +1,17 @@
 // 1870
 [proc,script1870](int $world0)
 if (%varcint546 = 1) {
-	if_settext("<col=7f0000>N/A</col>", loginscreen:com_256);
-	if_setgraphic("graphic_1555", loginscreen:com_255);
-	if_setonclick(null, loginscreen:com_236);
-	if_setonmouseover(null, loginscreen:com_236);
-	if_setonmouseleave(null, loginscreen:com_236);
+	if_settext("<col=7f0000>N/A</col>", loginscreen:com_497);
+	if_setgraphic("graphic_1555", loginscreen:com_496);
+	if_setonclick(null, loginscreen:com_494);
+	if_setonmouseover(null, loginscreen:com_494);
+	if_setonmouseleave(null, loginscreen:com_494);
 	return;
 }
 def_graphic $graphic1 = "graphic_1551";
 def_graphic $graphic2 = "graphic_1552";
-if_settext(tostring($world0), loginscreen:com_256);
-if_setgraphic($graphic1, loginscreen:com_255);
-if_setonclick("script1871($world0, 2)", loginscreen:com_236);
-if_setonmouseover("script1872(loginscreen:com_255, $graphic2, loginscreen:com_256, 0xffe1be)", loginscreen:com_236);
-if_setonmouseleave("script1872(loginscreen:com_255, $graphic1, loginscreen:com_256, 0x461e00)", loginscreen:com_236);
+if_settext(tostring($world0), loginscreen:com_497);
+if_setgraphic($graphic1, loginscreen:com_496);
+if_setonclick("script1871($world0, 2)", loginscreen:com_494);
+if_setonmouseover("script1872(loginscreen:com_496, $graphic2, loginscreen:com_497, 0xffe1be)", loginscreen:com_494);
+if_setonmouseleave("script1872(loginscreen:com_496, $graphic1, loginscreen:com_497, 0x461e00)", loginscreen:com_494);

@@ -1,0 +1,9 @@
+// 1614
+[proc,script1614](int $int0, int $int1, obj $obj2)
+def_cursor $cursor3 = null;
+$cursor3 = oc_icursor($obj2, $int0);
+if ($cursor3 ! null) {
+	cc_setopcursor($int1, $cursor3);
+} else {
+	cc_setopcursor($int1, cursor_36);
+}

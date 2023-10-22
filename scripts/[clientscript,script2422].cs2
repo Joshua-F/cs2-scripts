@@ -1,0 +1,23 @@
+// 2422
+[clientscript,script2422]
+if_sethide(true, interface_768:draughts_board);
+if_sethide(true, interface_768:runelink_board);
+if_sethide(true, interface_768:com_2);
+if_sethide(true, interface_768:com_3);
+if (%varcint808 = 1) {
+	if_sethide(false, interface_768:draughts_board);
+	if_settext("Draughts", interface_768:com_4);
+	if_settext(tostring(%var354), interface_768:rank);
+} else if (%varcint808 = 2) {
+	if_sethide(false, interface_768:runelink_board);
+	if_settext("Runelink", interface_768:com_4);
+	if_settext(tostring(%var353), interface_768:rank);
+} else if (%varcint808 = 3) {
+	if_sethide(false, interface_768:com_2);
+	if_settext("Runesquares", interface_768:com_4);
+	if_settext(tostring(%var648), interface_768:rank);
+} else if (%varcint808 = 4) {
+	if_sethide(false, interface_768:com_3);
+	if_settext("Runeversi", interface_768:com_4);
+	if_settext(tostring(%var649), interface_768:rank);
+}

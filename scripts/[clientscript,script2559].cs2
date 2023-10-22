@@ -1,0 +1,10 @@
+// 2559
+[clientscript,script2559](component $component0, component $component1)
+if (if_getgraphic($component0) = "graphic_1951") {
+	if_setgraphic("graphic_1946", $component0);
+} else if (if_getgraphic($component0) = "graphic_1952") {
+	if_setgraphic("graphic_1947", $component0);
+} else if (if_getgraphic($component0) = "graphic_1954") {
+	if_setgraphic("graphic_1949", $component0);
+}
+~deltooltip_action($component1);

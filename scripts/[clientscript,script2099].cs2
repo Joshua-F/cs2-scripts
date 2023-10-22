@@ -1,0 +1,15 @@
+// 2099
+[clientscript,script2099]
+def_int $x0 = 0;
+def_int $width1 = 0;
+$x0 = enum(int, int, enum_723, %varcint645);
+$width1 = enum(int, int, enum_2196, %varcint645);
+if (%varcint645 < 15) {
+	if_setcolour(0x3366ff, interface_834:com_5);
+} else if (%varcint645 > 15) {
+	if_setcolour(0xe12323, interface_834:com_5);
+} else {
+	if_setcolour(0x666666, interface_834:com_5);
+}
+if_setposition($x0, 66, ^setpos_abs_right, ^setpos_abs_top, interface_834:com_5);
+if_setsize($width1, 8, ^setsize_abs, ^setsize_abs, interface_834:com_5);

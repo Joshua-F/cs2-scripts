@@ -1,9 +1,19 @@
 // 1235
-[clientscript,script1235]
-if_sethide(true, loginscreen:com_388);
-if_settext("Please wait...", loginscreen:com_389);
-if_setonclick(null, loginscreen:com_389);
-_5604(if_gettext(loginscreen:com_394));
-if_settext("Usernames can be a maximum of 12 characters long and may contain letters, numbers and underscores. Note: first letters will be capitalised and underscores will be converted into spaces. For example, the username red_rooster would display in the game as Red Rooster.", loginscreen:com_386);
-if_setcolour(0x461e00, loginscreen:com_386);
-if_setontimer("script1236", loginscreen:com_405);
+[clientscript,script1235](component $component0)
+if_sethide(false, interface_181:com_1);
+switch_int (%varcint180) {
+	case 1 :
+		if_setmodelangle(0, 0, 510, 762, 0, 410, $component0);
+	case 2 :
+		if_setmodelangle(0, 0, 514, 1241, 0, 410, $component0);
+	case 3 :
+		if_setmodelangle(0, 0, 512, 1536, 1250, 410, $component0);
+	case 4 :
+		if_setmodelangle(0, 0, 512, 0, 1250, 410, $component0);
+	case 5 :
+		if_setmodelangle(0, 0, 512, 512, 1250, 410, $component0);
+	case 6 :
+		if_setmodelangle(0, 0, 512, 1024, 1250, 410, $component0);
+	case default :
+		if_sethide(true, interface_181:com_1);
+}

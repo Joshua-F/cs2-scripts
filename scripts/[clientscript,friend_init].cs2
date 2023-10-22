@@ -2,5 +2,16 @@
 [clientscript,friend_init]
 if_settext("Friends List - RuneScape <tostring(map_world)>", friends2:friends_title);
 if_setonfriendtransmit("friend_transmit", friends2:com_2);
-~friend_update;
+if_setscrollsize(0, 0, friends2:com_2);
+if_setscrollpos(0, 0, friends2:com_2);
 ~scrollbar_vertical(friends2:com_1, friends2:com_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (%varcint1036 = -1) {
+	%varcint1036 = if_getx(friends2:com_4);
+}
+def_int $int0 = calc(if_getwidth(friends2:com_2) - 30);
+if (%varcint1036 < 25) {
+	%varcint1036 = 25;
+} else if (%varcint1036 > $int0) {
+	%varcint1036 = $int0;
+}
+~friend_update(%varcint1036);

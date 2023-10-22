@@ -1,8 +1,7 @@
 // 1593
 [clientscript,script1593]
-if_sethide(true, interface_771:com_188);
-if_sethide(true, interface_771:com_247);
-if_sethide(false, interface_771:com_306);
-if_setgraphic("tabs,1", interface_771:com_178);
-if_setgraphic("tabs,1", interface_771:com_176);
-if_setgraphic("tabs,0", interface_771:com_174);
+if (minimenuopen(clanjoin:clanlist, -1) = true) {
+	return;
+}
+if_setontimer(null, clanjoin:clanlist);
+~script1594;

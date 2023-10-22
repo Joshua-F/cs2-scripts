@@ -1,0 +1,8 @@
+// 1504
+[proc,script1504](int $mousex0, string $string0, fontmetrics $fontmetrics1, component $component2, int $comsubid3)(int)
+def_int $int4 = 0;
+if (cc_find($component2, $comsubid3) = ^true | $comsubid3 = -1 & if_find($component2) = true) {
+	$int4 = calc((cc_getwidth - stringwidth(~script1602($string0), $fontmetrics1)) / 2);
+	return(~script1401($mousex0, $string0, $fontmetrics1, $int4));
+}
+return(string_length($string0));

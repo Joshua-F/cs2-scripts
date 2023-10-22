@@ -1,9 +1,0 @@
-// 1510
-[proc,script1510]
-if (getwindowmode >= ^windowmode_resizable) {
-	if_setgraphic("chat_window", interface_768:chatback);
-	if_setalpha(true, interface_768:chatback);
-} else {
-	if_setgraphic("chat_background", interface_768:chatback);
-	if_setalpha(false, interface_768:chatback);
-}

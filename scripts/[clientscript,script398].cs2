@@ -1,0 +1,43 @@
+// 398
+[clientscript,script398]
+if_clearops(interface_306:com_24);
+%varcint767 = 0;
+%varcint761 = null;
+%varcint762 = null;
+%varcint763 = null;
+%varcint764 = null;
+%varcint765 = 0;
+%varcint766 = 0;
+if_setontimer(null, interface_306:com_14);
+if_setontimer(null, interface_306:com_15);
+if_setontimer(null, interface_306:com_16);
+if_setontimer(null, interface_306:com_17);
+if_setontimer(null, interface_306:com_10);
+if_setontimer(null, interface_306:com_20);
+if_settext("Correct: <tostring(%varcint767)>/<tostring(10)>", interface_306:com_3);
+%varcint761 = enum(int, model, enum_208, 1);
+if (%varcint761 ! null) {
+	if_setmodel(%varcint761, interface_306:model1);
+	if_setmodelangle(0, 0, 512, 0, 0, 800, interface_306:model1);
+}
+%varcint762 = enum(int, model, enum_208, 2);
+if (%varcint762 ! null) {
+	if_setmodel(%varcint762, interface_306:model2);
+	if_setmodelangle(0, 0, 512, 0, 0, 800, interface_306:model2);
+}
+%varcint763 = enum(int, model, enum_208, 3);
+if (%varcint763 ! null) {
+	if_setmodel(%varcint763, interface_306:model3);
+	if_setmodelangle(0, 0, 512, 0, 0, 800, interface_306:model3);
+}
+%varcint764 = enum(int, model, enum_208, 4);
+if (%varcint764 ! null) {
+	if_setmodel(%varcint764, interface_306:model4);
+	if_setmodelangle(0, 0, 512, 0, 0, 800, interface_306:model4);
+}
+if_setposition(calc(0 - if_getwidth(interface_306:model1)), if_gety(interface_306:model1), ^setpos_abs_left, ^setpos_abs_top, interface_306:model1);
+if_setposition(calc(0 - if_getwidth(interface_306:model2)), if_gety(interface_306:model2), ^setpos_abs_left, ^setpos_abs_top, interface_306:model2);
+if_setposition(calc(0 - if_getwidth(interface_306:model3)), if_gety(interface_306:model3), ^setpos_abs_left, ^setpos_abs_top, interface_306:model3);
+if_setposition(calc(0 - if_getwidth(interface_306:model4)), if_gety(interface_306:model4), ^setpos_abs_left, ^setpos_abs_top, interface_306:model4);
+if_setposition(if_getx(interface_306:com_5), 200, ^setpos_abs_left, ^setpos_abs_top, interface_306:com_10);
+if_setontimer("script399(interface_306:model1)", interface_306:com_14);

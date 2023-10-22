@@ -1,7 +1,7 @@
 // 1730
-[proc,script1730](component $component0)
-if (%varcint198 ! 1) {
-	if_sethide(false, $component0);
+[proc,script1730](component $component0, int $comsubid1)
+if (($comsubid1 = -1 & if_find($component0) = true | cc_find($component0, $comsubid1) = ^true) & %varcint198 ! 1) {
+	cc_sethide(false);
 	%varcint198 = 1;
-	if_setontimer("script1731($component0, if_gettext($component0))", $component0);
+	cc_setontimer("script2196($component0, $comsubid1, cc_gettext)");
 }

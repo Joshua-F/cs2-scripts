@@ -1,23 +1,23 @@
 // 1410
-[clientscript,script1410]
-def_int $int0 = 5;
-def_int $int1 = 5;
+[clientscript,script1410](component $component0)
+def_int $trans1 = 255;
 def_int $int2 = 0;
-def_int $int3 = 0;
-def_int $int4 = 0;
-while ($int0 < 450) {
-	while ($int1 < 120) {
-		cc_create(boardgames_runelink_view:runelink_inv, ^iftype_graphic, $int2);
-		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int1, $int0, ^setpos_abs_left, ^setpos_abs_top);
-		if (invother_getobj(inv_215, $int2) ! null) {
-			cc_setobject(invother_getobj(inv_215, $int2), invother_getnum(inv_215, $int2));
-			cc_setopbase("<col=ff981f><oc_name(invother_getobj(inv_134, $int2))>");
-			cc_setop(1, "Examine");
-		}
-		$int1 = calc($int1 + 40);
-		$int2 = calc($int2 + 1);
-	}
-	$int0 = calc($int0 + 45);
-	$int1 = 5;
+if (%varcint814 < 256) {
+	$trans1 = calc(255 - %varcint814);
+} else if (%varcint814 < 510) {
+	$trans1 = calc(%varcint814 % 255);
+} else {
+	$trans1 = 255;
+}
+if (%varcint119 = 4) {
+	$int2 = 8;
+} else if (%varcint119 = 3) {
+	$int2 = 4;
+} else {
+	$trans1 = 255;
+}
+if_settrans($trans1, $component0);
+%varcint814 = calc(%varcint814 + $int2);
+if (%varcint814 > 510) {
+	%varcint814 = 0;
 }

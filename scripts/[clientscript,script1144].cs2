@@ -1,8 +1,61 @@
 // 1144
-[clientscript,script1144](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	detail_fog_on(false);
-} else if ($windowmode2 = ^windowmode_fixed) {
-	detail_fog_on(true);
+[clientscript,script1144](graphic $graphic0, graphic $graphic1, graphic $graphic2, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8, string $string9)
+if (compare($string0, "") ! 0 & $graphic0 ! null) {
+	if_setgraphic($graphic0, interface_759:icon1);
+	if_settext($string0, interface_759:text1);
+	if_sethide(false, interface_759:button1);
+	if_setop(1, $string0, interface_759:button1);
+	if_setonmouserepeat("addtooltip(interface_759:button1, interface_759:tooltip, $string1, 25, 190)", interface_759:button1);
+	if_setonmouseleave("deltooltip(interface_759:tooltip)", interface_759:button1);
+} else {
+	if_clearops(interface_759:button1);
+	if_sethide(true, interface_759:button1);
 }
+if (compare($string2, "") ! 0 & $graphic1 ! null) {
+	if_setgraphic($graphic1, interface_759:icon2);
+	if_settext($string2, interface_759:text2);
+	if_sethide(false, interface_759:button2);
+	if_setop(1, $string2, interface_759:button2);
+	if_setonmouserepeat("addtooltip(interface_759:button2, interface_759:tooltip, $string3, 25, 190)", interface_759:button2);
+	if_setonmouseleave("deltooltip(interface_759:tooltip)", interface_759:button2);
+} else {
+	if_clearops(interface_759:button2);
+	if_sethide(true, interface_759:button2);
+}
+if (compare($string4, "") ! 0 & $graphic2 ! null) {
+	if_setgraphic($graphic2, interface_759:icon3);
+	if_settext($string4, interface_759:text3);
+	if_sethide(false, interface_759:button3);
+	if_setop(1, $string4, interface_759:button3);
+	if_setonmouserepeat("addtooltip(interface_759:button3, interface_759:tooltip, $string5, 25, 190)", interface_759:button3);
+	if_setonmouseleave("deltooltip(interface_759:tooltip)", interface_759:button3);
+} else {
+	if_clearops(interface_759:button3);
+	if_sethide(true, interface_759:button3);
+}
+if (compare($string6, "") ! 0) {
+	if_settext($string6, interface_759:text4);
+	if_sethide(false, interface_759:button4);
+	if_setop(1, $string6, interface_759:button4);
+	if_setonmouserepeat("addtooltip(interface_759:button4, interface_759:tooltip, $string7, 25, 190)", interface_759:button4);
+	if_setonmouseleave("deltooltip(interface_759:tooltip)", interface_759:button4);
+} else {
+	if_clearops(interface_759:button4);
+	if_sethide(true, interface_759:button4);
+}
+if (compare($string6, "") ! 0) {
+	if_settext($string6, interface_759:text5);
+	if_sethide(false, interface_759:button5);
+	if_setop(1, $string6, interface_759:button5);
+	if_setonmouserepeat("addtooltip(interface_759:button5, interface_759:tooltip, $string9, 25, 190)", interface_759:button5);
+	if_setonmouseleave("deltooltip(interface_759:tooltip)", interface_759:button5);
+} else {
+	if_clearops(interface_759:button5);
+	if_sethide(true, interface_759:button5);
+}
+def_string $string10 = "When active, you will automatically fight back if attacked.";
+if_setonmouserepeat("addtooltip(interface_759:com_16, interface_759:tooltip, $string10, 25, 190)", interface_759:com_16);
+if_setonmouseleave("deltooltip(interface_759:tooltip)", interface_759:com_16);
+$string10 = "Select to perform a special attack.";
+if_setonmouserepeat("addtooltip(interface_759:com_3, interface_759:tooltip, $string10, 25, 190)", interface_759:com_3);
+if_setonmouseleave("deltooltip(interface_759:tooltip)", interface_759:com_3);

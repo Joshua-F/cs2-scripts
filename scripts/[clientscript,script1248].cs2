@@ -1,12 +1,5 @@
 // 1248
-[clientscript,script1248](component $component0, component $component1, component $component2)
-if (clientclock < %varcint177) {
-	return;
-}
-%varcint176 = calc(%varcint176 + 2);
-if (calc(%varcint176 % 10) ! 2) {
-	%varcint176 = calc(%varcint176 - %varcint176 % 10 + 2);
-}
-if_sethide(false, $component0);
-if_setontimer("loginscreen_camera_timer($component0, $component1, $component2)", $component0);
-if_setontimer(null, $component1);
+[clientscript,script1248]
+if_setontimer(null, interface_894:title);
+if_sethide(true, interface_894:com_7);
+if_setgraphic(null, interface_894:com_4);

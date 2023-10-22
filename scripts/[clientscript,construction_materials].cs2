@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 switch_int ($int2) {
-	case 12 :
+	case 13 :
 		switch_int ($int3) {
 			case 0 :
 				mes("Rick: <tostring(enum(int, int, enum_238, 1))> coins.");
@@ -61,7 +61,7 @@ switch_int ($int2) {
 		}
 		mes("<oc_name($obj1)>: <tostring(oc_cost($obj1))> coins.");
 		return;
-	case 13, 14 :
+	case 14, 15 :
 		return;
 	case default :
 		def_obj $objarray0(6);
@@ -99,20 +99,38 @@ switch_int ($int2) {
 		}
 		switch_int ($int4) {
 			case 1 :
-				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>.");
+				mes("<oc_name($obj1)>:");
+				mes("<tostring($intarray1(0))> x <oc_name($objarray0(0))>");
 			case 2 :
-				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))> and <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))>.");
+				mes("<oc_name($obj1)>:");
+				mes("<tostring($intarray1(0))> x <oc_name($objarray0(0))>");
+				mes("<tostring($intarray1(1))> x <oc_name($objarray0(1))>");
 			case 3 :
-				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>, <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))> and <tostring($intarray1(2))> x <lowercase(oc_name($objarray0(2)))>.");
+				mes("<oc_name($obj1)>:");
+				mes("<tostring($intarray1(0))> x <oc_name($objarray0(0))>");
+				mes("<tostring($intarray1(1))> x <oc_name($objarray0(1))>");
+				mes("<tostring($intarray1(2))> x <oc_name($objarray0(2))>");
 			case 4 :
-				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>, <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))>,");
-				mes("<tostring($intarray1(2))> x <lowercase(oc_name($objarray0(2)))> and <tostring($intarray1(3))> x <lowercase(oc_name($objarray0(3)))>.");
+				mes("<oc_name($obj1)>:");
+				mes("<tostring($intarray1(0))> x <oc_name($objarray0(0))>");
+				mes("<tostring($intarray1(1))> x <oc_name($objarray0(1))>");
+				mes("<tostring($intarray1(2))> x <oc_name($objarray0(2))>");
+				mes("<tostring($intarray1(3))> x <oc_name($objarray0(3))>");
 			case 5 :
-				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>, <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))>,");
-				mes("<tostring($intarray1(2))> x <lowercase(oc_name($objarray0(2)))>, <tostring($intarray1(3))> x <lowercase(oc_name($objarray0(3)))> and <tostring($intarray1(4))> x <lowercase(oc_name($objarray0(4)))>.");
+				mes("<oc_name($obj1)>:");
+				mes("<tostring($intarray1(0))> x <oc_name($objarray0(0))>");
+				mes("<tostring($intarray1(1))> x <oc_name($objarray0(1))>");
+				mes("<tostring($intarray1(2))> x <oc_name($objarray0(2))>");
+				mes("<tostring($intarray1(3))> x <oc_name($objarray0(3))>");
+				mes("<tostring($intarray1(4))> x <oc_name($objarray0(4))>");
 			case 6 :
-				mes("<oc_name($obj1)>: <tostring($intarray1(0))> x <lowercase(oc_name($objarray0(0)))>, <tostring($intarray1(1))> x <lowercase(oc_name($objarray0(1)))>, <tostring($intarray1(2))> x <lowercase(oc_name($objarray0(2)))>,");
-				mes("<tostring($intarray1(3))> x <lowercase(oc_name($objarray0(3)))>, <tostring($intarray1(4))> x <lowercase(oc_name($objarray0(4)))> and <tostring($intarray1(5))> x <lowercase(oc_name($objarray0(5)))>.");
+				mes("<oc_name($obj1)>:");
+				mes("<tostring($intarray1(0))> x <oc_name($objarray0(0))>");
+				mes("<tostring($intarray1(1))> x <oc_name($objarray0(1))>");
+				mes("<tostring($intarray1(2))> x <oc_name($objarray0(2))>");
+				mes("<tostring($intarray1(3))> x <oc_name($objarray0(3))>");
+				mes("<tostring($intarray1(4))> x <oc_name($objarray0(4))>");
+				mes("<tostring($intarray1(5))> x <oc_name($objarray0(5))>");
 			case default :
 				mes(oc_name($obj1));
 		}

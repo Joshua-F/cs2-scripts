@@ -1,0 +1,30 @@
+// 2615
+[clientscript,script2615]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_coord $coord2 = 0_0_0_0_0;
+switch_int (~script2617) {
+	case 0 :
+		$coord2 = movecoord(%varcint834, -5, 0, 0);
+	case 7 :
+		$coord2 = movecoord(%varcint834, -4, 0, -4);
+	case 6 :
+		$coord2 = movecoord(%varcint834, 0, 0, -5);
+	case 5 :
+		$coord2 = movecoord(%varcint834, 4, 0, -4);
+	case 4 :
+		$coord2 = movecoord(%varcint834, 5, 0, 0);
+	case 3 :
+		$coord2 = movecoord(%varcint834, 4, 0, 4);
+	case 2 :
+		$coord2 = movecoord(%varcint834, 0, 0, 5);
+	case 1 :
+		$coord2 = movecoord(%varcint834, -4, 0, 4);
+}
+$int0 = calc(coordx($coord2) / 64);
+$int1 = calc(coordz($coord2) / 64);
+if (%varcint835 ! $int0 | %varcint836 ! $int1) {
+	return;
+}
+%varcint834 = $coord2;
+~script2612(%varcint834, %varcint833);

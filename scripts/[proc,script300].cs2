@@ -1,0 +1,146 @@
+// 300
+[proc,script300](coord $coord0, boolean $boolean1, string $string0, struct $struct2, component $component3, int $int4, int $int5, int $int6, int $int7, int $int8)(int)
+def_int $int9 = 0;
+def_int $int10 = 0;
+$int9, $int10 = ~worldmap_elements_chooseposition($coord0, $boolean1, $component3, $int4, $int5, $int6, $int7);
+def_int $int11 = struct_param($struct2, param_650);
+def_int $int12 = struct_param($struct2, param_651);
+def_int $int13 = calc(parawidth($string0, 512, menu_font_small) + $int11 + $int11);
+def_int $int14 = calc(paraheight($string0, if_getwidth($component3), menu_font_small) * 13 + 2 + $int12 + $int12);
+def_graphic $graphic15 = struct_param($struct2, param_647);
+def_graphic $graphic16 = struct_param($struct2, param_648);
+def_graphic $graphic17 = struct_param($struct2, param_649);
+def_int $colour18 = struct_param($struct2, param_652);
+def_int $int19 = calc(($int13 - $int11) / 2);
+def_int $int20 = calc(($int14 - $int12) / 2);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition($int9, $int10, ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition($int9, $int10, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(calc($int13 - $int11 * 2), calc($int14 - $int12 * 2), ^setsize_abs, ^setsize_abs);
+	cc_setgraphic(struct_param($struct2, param_646));
+	cc_settiling(true);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition($int9, calc($int10 - $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition($int9, calc($int10 - $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(calc($int13 - $int11 * 2), $int12, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic16);
+	cc_settiling(true);
+	cc_setvflip(false);
+	cc_sethflip(false);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition($int9, calc($int10 + $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition($int9, calc($int10 + $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(calc($int13 - $int11 * 2), $int12, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic16);
+	cc_settiling(true);
+	cc_setvflip(true);
+	cc_sethflip(false);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition(calc($int9 - $int19), $int10, ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition(calc($int9 - $int19), $int10, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int11, calc($int14 - $int12 * 2), ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic17);
+	cc_settiling(true);
+	cc_setvflip(false);
+	cc_sethflip(false);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition(calc($int9 + $int19), $int10, ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition(calc($int9 + $int19), $int10, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int11, calc($int14 - $int12 * 2), ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic17);
+	cc_settiling(true);
+	cc_setvflip(false);
+	cc_sethflip(true);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition(calc($int9 - $int19), calc($int10 - $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition(calc($int9 - $int19), calc($int10 - $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int11, $int12, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic15);
+	cc_settiling(false);
+	cc_setvflip(false);
+	cc_sethflip(false);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition(calc($int9 + $int19), calc($int10 - $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition(calc($int9 + $int19), calc($int10 - $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int11, $int12, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic15);
+	cc_settiling(false);
+	cc_setvflip(false);
+	cc_sethflip(true);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition(calc($int9 - $int19), calc($int10 + $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition(calc($int9 - $int19), calc($int10 + $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int11, $int12, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic15);
+	cc_settiling(false);
+	cc_setvflip(true);
+	cc_sethflip(false);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition(calc($int9 + $int19), calc($int10 + $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_graphic, $int8);
+	cc_setposition(calc($int9 + $int19), calc($int10 + $int20), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int11, $int12, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic15);
+	cc_settiling(false);
+	cc_setvflip(true);
+	cc_sethflip(true);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition(calc($int9 + 1), calc($int10 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_text, $int8);
+	cc_setposition(calc($int9 + 1), calc($int10 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int13, $int14, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(struct_param($struct2, param_653));
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+	cc_settextfont(menu_font_small);
+	cc_settext($string0);
+}
+$int8 = calc($int8 + 1);
+if (cc_find($component3, $int8) = ^true) {
+	cc_setposition($int9, $int10, ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component3, ^iftype_text, $int8);
+	cc_setposition($int9, $int10, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int13, $int14, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour18);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+	cc_settextfont(menu_font_small);
+	cc_settext($string0);
+}
+$int8 = calc($int8 + 1);
+return($int8);

@@ -1,0 +1,30 @@
+// 2475
+[clientscript,script2475]
+def_int $count0 = 1;
+cc_create(interface_865:com_9, ^iftype_text, 0);
+cc_setcolour(0x11ff00);
+cc_settext("No Prefix");
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(165, 17, ^setsize_abs, ^setsize_abs);
+cc_settextshadow(false);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setop(1, "Select");
+cc_setonclick("script2143(event_comsubid)");
+while ($count0 <= enum_getoutputcount(enum_1093)) {
+	cc_create(interface_865:com_9, ^iftype_text, $count0);
+	cc_settext(enum(int, string, enum_1093, $count0));
+	cc_setposition(0, calc(2 + 17 * $count0), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(165, 17, ^setsize_abs, ^setsize_abs);
+	cc_settextshadow(false);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setop(1, "Select");
+	cc_setonclick("script2143(event_comsubid)");
+	if (~script2476($count0) = 1) {
+		cc_setcolour(0x11ff00);
+	} else {
+		cc_setcolour(0xff1100);
+	}
+	$count0 = calc(1 + $count0);
+}

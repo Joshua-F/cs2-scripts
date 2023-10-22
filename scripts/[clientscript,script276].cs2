@@ -1,6 +1,10 @@
 // 276
-[clientscript,script276]
-~script366;
-if_setgraphic("graphic_1043", interface_594:com_261);
-if_setonmouseleave("deltooltip(interface_594:com_300)", interface_594:com_261);
-if_setonmouseover(null, interface_594:com_261);
+[clientscript,script276](component $component0)
+def_int $int1 = 0;
+while (cc_find($component0, $int1) = ^true) {
+	cc_setcolour(0x663300);
+	$int1 = calc($int1 + 1);
+}
+if (cc_find($component0, %varcint195) = ^true) {
+	cc_setcolour(0xffe1be);
+}

@@ -1,16 +1,11 @@
 // 1213
-[clientscript,script1213](int $int0, component $component1)
-if (_6121 = false | getwindowmode < ^windowmode_fixed) {
-	return;
+[clientscript,script1213]
+if (~current_side_if = 7) {
+	if_settext("To cast Wind Strike, click on the flashing spell icon, then click on a chicken. You can hover over spell icons to read a brief description of the spell and the runes required to cast it.", interface_894:com_7);
+	if_settext("", interface_894:body);
+	if_setgraphic("magicon,0", interface_894:com_4);
+} else {
+	if_settext("Click on the Magic icon to open your magic spellbook.", interface_894:com_7);
+	if_settext("", interface_894:body);
+	if_setgraphic("graphic_1824", interface_894:com_4);
 }
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = detailget_antialiasing) {
-	return;
-}
-detail_antialiasing($windowmode2);
-if ($windowmode2 = 0) {
-	detail_antialiasing_default(0);
-	return;
-}
-if_setonclick("script1890(loginscreen:com_138)", loginscreen:windowmode_confirm_yes);
-~loginscreen_setactivemenu(loginscreen:windowmode_confirm);

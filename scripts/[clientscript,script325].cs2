@@ -1,4 +1,8 @@
 // 325
 [clientscript,script325]
-~script365;
-if_setgraphic("miscgraphics,11", interface_592:com_37);
+if_sethide(true, interface_725:com_86);
+if_sethide(false, interface_725:com_85);
+if_setgraphic("graphic_1057", interface_725:com_88);
+if_setgraphic("graphic_1051", interface_725:com_87);
+%varcint783 = 0;
+~script328(interface_725:com_85);

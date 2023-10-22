@@ -1,0 +1,6 @@
+// 2327
+[clientscript,script2327](int $clock0)
+if (clientclock >= calc(100 + $clock0)) {
+	if_setontimer(null, interface_306:com_20);
+	if_sethide(true, interface_306:com_20);
+}

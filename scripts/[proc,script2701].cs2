@@ -1,0 +1,23 @@
+// 2701
+[proc,script2701](int $flags0)
+if (getwindowmode = ^windowmode_fixed) {
+	if_opensubclient(toplevel:com_17, clientinterface_883);
+} else {
+	if_opensubclient(toplevel_fullscreen:com_27, clientinterface_883);
+}
+if_sethide(false, toplevel_fullscreen:com_27);
+if_sethide(false, toplevel:com_17);
+~script1151(interface_883:com_18);
+~script1151(interface_883:com_21);
+if_setonmouseover("script2702(true, interface_883:com_18, interface_883:confirm_text)", interface_883:confirm_button);
+if_setonmouseleave("script2702(false, interface_883:com_18, interface_883:confirm_text)", interface_883:confirm_button);
+if_setonmouseover("script2702(true, interface_883:com_21, interface_883:com_22)", interface_883:cancel_button);
+if_setonmouseleave("script2702(false, interface_883:com_21, interface_883:com_22)", interface_883:cancel_button);
+if_setonclick("script2704(true, $flags0, 2)", interface_883:confirm_button);
+if_setonclick("script2704(false, $flags0, 2)", interface_883:cancel_button);
+if_sethide(false, toplevel:minimap_disable);
+if_sethide(false, toplevel:filterbuttons_disable);
+if_sethide(false, toplevel:chat_disable);
+if_sethide(false, toplevel:side_disable);
+if_sethide(false, toplevel:com_114);
+if_sethide(false, toplevel:com_67);

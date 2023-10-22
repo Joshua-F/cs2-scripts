@@ -1,0 +1,26 @@
+// 2715
+[clientscript,script2715](component $component0, component $component1, component $component2, component $component3, component $component4, int $clock5)
+if (clientclock >= $clock5) {
+	if_setsize(~script2711($component2, $component3), ^setsize_abs, ^setsize_abs, $component2);
+	if_setontimer(null, $component0);
+	if_sethide(true, $component0);
+	if_sethide(false, $component4);
+	if_settrans(0, $component4);
+	if_setgraphic("graphic_2210", loginscreen:com_7);
+	%varcint986 = 1;
+	return;
+}
+def_int $int6 = 0;
+def_int $int7 = 0;
+$int6, $int7 = ~script2711($component2, $component3);
+def_component $layer8 = if_getlayer($component2);
+def_int $int9 = calc($clock5 - clientclock);
+def_int $int10 = calc($int6 - scale($int9, 30, calc($int6 - if_getwidth($layer8))));
+def_int $int11 = calc($int7 - scale($int9, 30, calc($int7 - if_getheight($layer8))));
+if (calc($int10 % 2) ! calc($int6 % 2)) {
+	$int10 = calc($int10 - 1);
+}
+if (calc($int11 % 2) ! calc($int7 % 2)) {
+	$int11 = calc($int11 - 1);
+}
+if_setsize($int10, $int11, ^setsize_abs, ^setsize_abs, $component2);

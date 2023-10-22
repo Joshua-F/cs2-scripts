@@ -1,4 +1,10 @@
 // 234
-[clientscript,script234]
-~script298;
-if_setgraphic("miscgraphics,11", interface_594:com_72);
+[clientscript,script234](int $comsubid0)
+def_string $string0 = "";
+def_int $int1 = -1;
+if (cc_find(interface_594:build_layer, $comsubid0) = ^true) {
+	%varcstring24 = cc_getopbase;
+	%varcint792 = %varcint791;
+	~script240;
+	~script217;
+}

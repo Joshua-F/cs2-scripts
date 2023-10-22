@@ -1,0 +1,241 @@
+// 295
+[proc,worldmap_elements_update](component $component0, int $int1, int $int2, int $int3, int $int4)
+if (worldmap_getdisableelements = true) {
+	cc_deleteall($component0);
+	return;
+}
+def_int $int5 = 0;
+switch_wma (worldmap_getcurrentmap) {
+	case misthalin_underground :
+		$int5 = ~script297(2_50_148_19_61, 0_50_149_26_6, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case zanaris :
+		$int5 = ~script297(0_37_68_33_27, 0_37_68_27_27, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case dorgeshkaan :
+		$int5 = ~script300(0_0_2_0_15, true, "Lower level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_1_3_32_15, true, "Middle level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_3_4_0_15, true, "Upper level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_82_48_30, 1_42_82_48_30, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_82_35_44, 1_42_82_36_44, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_83_17_52, 1_42_83_17_52, false, ^cyan, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_83_11_16, 1_42_83_11_16, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_83_32_48, 1_42_83_32_48, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_83_43_37, 1_42_83_43_37, false, 0x007fff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_83_51_13, 1_42_83_51_13, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_82_42_57, 1_42_82_42_57, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_82_35_16, 1_42_82_36_16, false, ^cyan, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_42_82_14_57, 1_42_82_14_57, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_42_83_49_45, 2_42_83_49_45, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_42_83_13_50, 2_42_83_13_50, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_42_82_8_55, 2_42_82_8_55, false, ^cyan, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_42_82_9_44, 2_42_82_9_44, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_42_82_34_5, 2_42_82_34_5, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_42_82_53_10, 2_42_82_53_10, false, 0x007fff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_42_82_52_44, 2_42_82_52_44, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case keldagrim :
+		$int5 = ~script298(0_44_158_23_18, 0_44_158_21_29, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_44_158_39_31, 0_44_158_42_21, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_44_158_27_18, 0_45_159_7_47, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_44_158_22_11, 0_43_158_28_49, false, ^cyan, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case kalphite :
+		$int5 = ~script297(2_54_148_54_25, 0_54_148_54_22, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case asgarnia_ice_dungeon :
+		$int5 = ~script297(0_47_149_48_25, 0_47_149_48_20, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case yanille_dungeon :
+		$int5 = ~script298(0_40_148_38_19, 0_40_149_39_19, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_40_149_18_49, 0_40_148_7_52, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_40_148_19_44, 0_40_149_18_44, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_40_148_61_25, 0_40_149_60_27, false, ^cyan, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_40_149_56_35, 0_40_148_56_32, false, 0x007fff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_40_148_18_34, 0_40_148_12_34, false, 0x007fff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case miscellania_underground :
+		$int5 = ~script297(0_39_160_12_49, 0_39_160_18_51, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case troll_stronghold :
+		$int5 = ~script297(2_44_157_27_61, 1_44_157_27_61, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_44_157_27_3, 1_44_157_27_3, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_44_157_37_14, 0_44_157_37_14, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_44_157_36_59, 0_44_157_36_59, false, ^cyan, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_0_1_0_15, true, "Lower level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_1_1_32_15, true, "Middle level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_3_1_0_15, true, "Upper level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+	case wilderness_dungeons :
+		$int5 = ~script297(0_47_160_59_12, 0_35_73_31_8, false, 0x007fff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_39_73_47_51, 0_39_73_13_15, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case sos :
+		$int5 = ~script300(0_0_2_32_48, true, "War", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_29_81_7_54, 0_29_81_58_38, false, 0x007fff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_29_81_25_48, 0_29_81_3_59, false, 0x007fff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_29_81_46_38, 0_31_81_58_61, false, 0x007fff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_1_2_56_32, true, "Famine", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_31_81_55_56, 0_31_81_37_39, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_31_81_33_26, 0_31_81_58_61, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_31_81_56_24, 0_31_81_58_61, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_31_81_27_8, 0_31_81_58_61, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_31_81_47_5, 0_31_81_58_61, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_31_81_42_34, 0_33_82_11_4, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_0_1_40_24, true, "Pestilence", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_33_82_8_10, 0_33_82_34_39, false, 0xff007f, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_33_82_38_30, 0_33_82_11_4, false, 0xff007f, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_33_82_36_35, 0_36_81_54_31, false, 0xff007f, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_2_1_0_8, true, "Death", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script298(0_36_81_61_28, 0_36_81_37_35, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case sops :
+		$int5 = ~script300(0_1_3_32_40, true, "Jail", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_0_2_32_16, true, "Lower level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_1_2_40_16, true, "Middle level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_2_2_48_16, true, "Upper level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_1_1_40_0, true, "Secure sector", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_48_66_5_11, 2_49_66_3_6, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_49_66_17_24, 1_49_66_17_24, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_49_66_35_49, 3_49_66_36_49, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_49_66_42_45, 0_49_66_42_42, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_66_5_48, 0_49_66_6_46, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case godwars :
+		$int5 = ~script297(2_45_82_33_52, 1_45_82_33_52, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_45_82_40_27, 0_45_82_40_26, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case karamja_underground :
+		$int5 = ~script300(0_0_3_32_8, true, "Upper level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_41_149_25_56, 2_41_149_20_59, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_41_148_12_44, 2_41_148_12_39, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case pollnivneach_well :
+		$int5 = ~script297(0_52_146_50_25, 0_51_67_56_52, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_52_147_50_19, 0_51_68_56_13, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_52_147_13_19, 0_51_68_15_16, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_52_146_13_25, 0_51_67_10_52, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case waterbirth :
+		$int5 = ~script300(0_0_8_32_10, true, "Sub-level 1", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_39_158_51_31, 3_28_68_6_54, false, ^yellow, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_1_6_32_43, true, "Sub-level 2", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(3_28_68_17_53, 2_28_68_17_53, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(3_28_68_31_52, 2_28_68_31_52, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(3_28_68_42_37, 2_28_68_42_37, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(3_28_68_32_29, 2_28_68_32_29, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(3_28_68_46_24, 2_28_68_46_24, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(3_30_68_41_40, 2_30_68_41_40, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_1_5_32_10, true, "Sub-level 3", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_28_68_18_42, 1_28_68_18_42, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_28_68_7_35, 1_28_68_7_35, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_28_68_6_30, 1_28_68_6_30, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_28_68_10_17, 1_28_68_10_17, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_28_68_34_10, 1_28_68_34_10, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_28_68_58_33, 1_28_68_58_33, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_29_68_8_36, 1_29_68_8_36, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_29_68_7_20, 1_29_68_7_20, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_30_68_12_27, 1_30_68_12_27, false, 0x7f00ff, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_1_3_32_43, true, "Sub-level 4", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_29_68_34_56, 0_29_68_34_56, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_30_68_37_20, 0_30_68_37_20, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_2_2_32_10, true, "Sub-level 5", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_29_68_55_15, 0_45_69_19_33, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_3_0_20_55, true, "Sub-level 6", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+	case undead_dungeon :
+		$int5 = ~script300(0_0_1_32_50, true, "Lower level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_2_1_0_24, true, "Middle level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(0_3_1_32_24, true, "Upper level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_27_16, 0_49_71_27_21, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_19_15, 0_49_71_25_15, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_5_21, 2_49_71_5_16, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_49_71_8_27, 1_49_71_8_22, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_8_38, 2_49_71_8_33, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_15_39, 1_49_71_10_39, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_30_33, 0_49_71_25_33, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_48_27, 1_49_71_48_22, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_48_41, 0_49_71_48_35, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_34_33, 1_49_71_39_33, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_38_17, 0_49_71_43_17, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_59_31, 0_49_71_59_26, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(2_49_71_53_33, 1_49_71_58_33, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_50_41, 2_49_71_50_34, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_32_42, 0_49_71_32_35, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_25_45, 0_49_71_30_45, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_9_50, 1_49_71_9_45, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_24_54, 0_49_71_13_54, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_32_48, 0_49_71_32_53, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_15_53, 1_49_71_19_53, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_43_54, 1_49_71_39_54, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_11_4, 1_49_71_8_4, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_22_9, 1_49_71_22_12, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_32_25, 1_49_71_35_25, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_48_9, 1_49_71_48_12, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_54_54, 1_49_71_57_54, false, 0x007f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_5_7, 2_49_71_5_10, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_22_20, 2_49_71_22_23, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_49_71_41_33, 2_49_71_44_33, false, 0xff7f00, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_71_49_58, 0_49_72_13_35, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_72_13_51, 0_49_72_13_55, false, ^red, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case chaos_tunnels :
+		$int5 = ~script297(0_49_85_58_50, 0_49_85_55_55, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_55_42, 0_49_85_49_38, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_50_32, 0_49_85_56_32, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_53_4, 0_49_85_51_20, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_42_20, 0_49_85_32_16, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_19_9, 0_49_85_7_3, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_18_22, 0_49_85_6_22, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_31_31, 0_49_85_35_33, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_35_38, 0_49_85_31_38, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_85_5_40, 0_49_85_6_49, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_44_55, 0_50_85_39_58, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_33_30, 0_50_85_41_29, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_18_57, 0_50_85_22_48, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_24_39, 0_50_85_22_34, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_29_14, 0_50_85_35_17, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_41_5, 0_50_85_33_5, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_12_12, 0_50_85_14_16, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_18_38, 0_50_85_15_35, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_8_31, 0_50_85_10_37, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_50_8, 0_50_85_54_11, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_85_4_5, 0_49_85_61_8, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_43_56, 0_51_85_53_56, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_35_44, 0_51_85_39_37, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_54_41, 0_51_85_58_40, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_38_29, 0_51_85_26_23, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_32_15, 0_51_85_35_10, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_23_8, 0_51_85_19_8, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_22_30, 0_51_85_21_34, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_9_20, 0_51_85_16_20, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_2_6, 0_50_85_60_51, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_85_1_51, 0_50_85_59_6, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_86_18_27, 0_51_86_21_23, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_86_24_32, 0_51_86_25_29, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_86_21_52, 0_51_86_27_51, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_86_33_32, 0_51_86_35_29, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_86_57_50, 0_51_86_51_48, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_86_59_27, 0_51_86_61_14, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_86_36_10, 0_51_86_33_6, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_51_86_21_4, 0_51_85_16_61, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_11_19, 0_50_86_8_23, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_4_42, 0_50_86_6_49, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_11_29, 0_50_86_14_29, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_30_43, 0_50_86_24_49, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_41_25, 0_50_86_43_22, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_52_39, 0_50_86_49_42, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_53_57, 0_50_86_56_57, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_62_48, 0_51_86_2_48, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_61_32, 0_51_86_4_30, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_50_86_38_3, 0_50_85_32_61, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_11_37, 0_49_86_7_31, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_22_57, 0_49_86_26_53, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_26_41, 0_49_86_30_49, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_17_33, 0_49_86_12_29, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_32_37, 0_49_86_35_38, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_38_54, 0_49_86_44_53, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_54_50, 0_49_86_54_45, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_20_19, 0_49_86_16_16, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_37_26, 0_49_86_29_11, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_46_26, 0_49_86_51_27, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_45_13, 0_49_86_49_14, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_54_15, 0_49_86_54_11, false, ^magenta, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_60_8, 0_50_86_2_11, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_61_25, 0_50_86_1_27, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_49_86_33_6, 0_49_85_23_61, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case tutorial3_1, tutorial3_2, tutorial3_3 :
+		$int5 = ~script300(0_0_0_0_15, true, "The world map screen<br>shows you where you are,<br>and where important<br>features may be found.", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+	case ancient_cavern :
+		$int5 = ~script300(0_27_83_0_63, false, "Lower level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script300(1_27_83_0_63, false, "Upper level", struct_280, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_27_83_41_54, 0_27_83_45_54, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_27_83_50_34, 1_27_83_50_31, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(0_27_83_16_13, 1_27_83_16_9, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script297(1_27_83_7_1, 0_25_82_61_9, false, ^green, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+	case default :
+		cc_deleteall($component0);
+}

@@ -1,0 +1,11 @@
+// 2825
+[proc,script2825](int $int0)
+if (%varcint1064 = calc(spline_length(0) - 1)) {
+	if ($int0 = 1) {
+		cam_smoothreset;
+	}
+	if_setoncamfinished(null, fade2:com_0);
+	return;
+}
+cam_movealong(0, %varcint1064, enum(int, int, %varcint1067, %varcint1064), enum(int, int, %varcint1067, calc(%varcint1064 + 1)), 1, %varcint1064);
+%varcint1064 = calc(%varcint1064 + 1);

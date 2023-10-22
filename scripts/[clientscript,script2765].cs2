@@ -1,0 +1,19 @@
+// 2765
+[clientscript,script2765](component $component0)
+if (%varcint1007 <= 0) {
+	cam_smoothreset;
+	return;
+}
+if (%varcint1007 <= 100) {
+	~script2770($component0, ~script284(coord));
+	return;
+}
+if (%varcint1007 <= 200) {
+	~script2762($component0, ~script284(coord));
+	return;
+}
+if (%varcint1007 <= 300) {
+	~script2763($component0, ~script284(coord));
+	return;
+}
+~script2826($component0, ~script284(coord));

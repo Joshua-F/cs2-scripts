@@ -1,0 +1,9 @@
+// 2737
+[clientscript,script2737](int $opindex0, component $component1, int $int2)
+if ($opindex0 ! 1 | %varcint1020 = $int2) {
+	return;
+}
+sound_synth(synth_7259, 1, 0);
+%varcint1020 = $int2;
+~script2738;
+~script2739($component1);

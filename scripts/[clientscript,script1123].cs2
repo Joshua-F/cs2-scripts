@@ -1,4 +1,14 @@
 // 1123
-[clientscript,script1123]
-%varcstring32 = %varcstring34;
-~loginscreen_setactivemenu(loginscreen:com_241);
+[clientscript,script1123](component $component0)
+switch_int (%varbit804) {
+	case 1 :
+		if_setobject(red_toad_6090, 300, $component0);
+	case 2 :
+		if_setobject(green_toad_6092, 300, $component0);
+	case 3 :
+		if_setobject(blue_toad_6089, 300, $component0);
+	case 4 :
+		if_setobject(yellow_toad_6091, 300, $component0);
+	case default :
+		if_setobject(null, 300, $component0);
+}

@@ -1,0 +1,24 @@
+// 2676
+[clientscript,script2676](component $component0, int $int1)
+def_int $int2 = 0;
+switch_int ($int1) {
+	case 1 :
+		$int2 = %var1485;
+	case 2 :
+		$int2 = %var1486;
+	case 3 :
+		$int2 = %var1487;
+	case 4 :
+		$int2 = %var1488;
+	case 5 :
+		$int2 = %var1489;
+	case 6 :
+		$int2 = %var1490;
+	case 7 :
+		$int2 = %var1491;
+}
+if ($int2 = 1) {
+	if_sethide(true, $component0);
+} else {
+	if_sethide(false, $component0);
+}

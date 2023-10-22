@@ -6,7 +6,7 @@ switch_int ($int0) {
 			case 0 :
 				return(1, bronze_dagger_1205, "Bronze dagger", "You can now wield <col=000080>bronze daggers</col>.");
 			case 1 :
-				return(1, bronze_axe_1351, "Bronze axe", "You can now wield <col=000080>bronze axes</col>.");
+				return(1, bronze_hatchet_1351, "Bronze hatchet", "You can now wield <col=000080>bronze hatchets</col>.");
 			case 2 :
 				return(1, bronze_mace_1422, "Bronze mace", "You can now wield <col=000080>bronze maces</col>.");
 			case 3 :
@@ -35,7 +35,7 @@ switch_int ($int0) {
 			case 0 :
 				return(1, iron_dagger_1203, "Iron dagger", "You can now wield <col=000080>iron daggers</col>.");
 			case 1 :
-				return(1, iron_axe_1349, "Iron axe", "You can now wield <col=000080>iron axes</col>.");
+				return(1, iron_hatchet_1349, "Iron hatchet", "You can now wield <col=000080>iron hatchets</col>.");
 			case 2 :
 				return(1, iron_mace_1420, "Iron mace", "You can now wield <col=000080>iron maces</col>.");
 			case 3 :
@@ -64,7 +64,7 @@ switch_int ($int0) {
 			case 0 :
 				return(5, steel_dagger_1207, "Steel dagger", "You can now wield <col=000080>steel daggers</col>.");
 			case 1 :
-				return(5, steel_axe_1353, "Steel axe", "You can now wield <col=000080>steel axes</col>.");
+				return(5, steel_hatchet_1353, "Steel hatchet", "You can now wield <col=000080>steel hatchets</col>.");
 			case 2 :
 				return(5, steel_mace_1424, "Steel mace", "You can now wield <col=000080>steel maces</col>.");
 			case 3 :
@@ -93,7 +93,7 @@ switch_int ($int0) {
 			case 0 :
 				return(10, black_dagger_1217, "Black dagger", "You can now wield <col=000080>black daggers</col>.");
 			case 1 :
-				return(10, black_axe_1361, "Black axe", "You can now wield <col=000080>black axes</col>.");
+				return(10, black_hatchet_1361, "Black hatchet", "You can now wield <col=000080>black hatchets</col>.");
 			case 2 :
 				return(10, black_mace_1426, "Black mace", "You can now wield <col=000080>black maces</col>.");
 			case 3 :
@@ -147,7 +147,7 @@ switch_int ($int0) {
 			case 0 :
 				return(20, mithril_dagger_1209, "Mithril dagger", "You can now wield mithril daggers</col>.");
 			case 1 :
-				return(20, mithril_axe_1355, "Mithril axe", "You can now wield mithril axes</col>.");
+				return(20, mithril_hatchet_1355, "Mithril hatchet", "You can now wield mithril hatchets</col>.");
 			case 2 :
 				return(20, mithril_mace_1428, "Mithril mace", "You can now wield mithril maces</col>.");
 			case 3 :
@@ -176,7 +176,7 @@ switch_int ($int0) {
 			case 0 :
 				return(30, adamant_dagger_1211, "Adamant dagger", "You can now wield <col=000080>adamant daggers</col>.");
 			case 1 :
-				return(30, adamant_axe_1357, "Adamant axe", "You can now wield <col=000080>adamant axes</col>.");
+				return(30, adamant_hatchet_1357, "Adamant hatchet", "You can now wield <col=000080>adamant hatchets</col>.");
 			case 2 :
 				return(30, adamant_mace_1430, "Adamant mace", "You can now wield <col=000080>adamant maces</col>.");
 			case 3 :
@@ -205,7 +205,7 @@ switch_int ($int0) {
 			case 0 :
 				return(40, rune_dagger_1213, "Rune dagger", "You can now wield <col=000080>rune daggers</col>.");
 			case 1 :
-				return(40, rune_axe_1359, "Rune axe", "You can now wield <col=000080>rune axes</col>.");
+				return(40, rune_hatchet_1359, "Rune hatchet", "You can now wield <col=000080>rune hatchets</col>.");
 			case 2 :
 				return(40, rune_mace_1432, "Rune mace", "You can now wield <col=000080>rune maces</col>.");
 			case 3 :
@@ -234,7 +234,7 @@ switch_int ($int0) {
 			case 0 :
 				return(60, dragon_dagger_1215, "Members: Dragon dagger<br> (after Lost City)", "Members can now wield <col=000080>dragon daggers</col> (after Lost City).");
 			case 1 :
-				return(60, dragon_axe_6739, "Members: Dragon axe", "Members can now wield <col=000080>dragon axes</col>.");
+				return(60, dragon_hatchet_6739, "Members: Dragon hatchet", "Members can now wield <col=000080>dragon hatchets</col>.");
 			case 2 :
 				return(60, dragon_mace_1434, "Members: Dragon mace<br> (after Heroes' Quest)", "Members can now wield <col=000080>dragon maces</col> (after Heroes' Quest).");
 			case 3 :
@@ -252,16 +252,18 @@ switch_int ($int0) {
 			case 9 :
 				return(60, dragon_halberd_3204, "Members: Dragon halberd<br> (after Regicide)", "Members can now wield <col=000080>dragon halberds</col> (after Regicide).");
 			case 10 :
-				return(60, corrupt_dragon_dagger_13976, "Corrupt dragon dagger", "You can now wield <col=000080>corrupt dragon daggers</col>.");
+				return(60, dragon_pickaxe_15259, "Members: Dragon pickaxe", "Members can now wield <col=000080>dragon pickaxes</col>.");
 			case 11 :
-				return(60, corrupt_dragon_mace_13985, "Corrupt dragon mace", "You can now wield <col=000080>corrupt dragon maces</col>.");
+				return(60, corrupt_dragon_dagger_13976, "Corrupt dragon dagger", "You can now wield <col=000080>corrupt dragon daggers</col>.");
 			case 12 :
-				return(60, corrupt_dragon_longsword_13982, "Corrupt dragon longsword", "You can now wield <col=000080>corrupt dragon longswords</col>.");
+				return(60, corrupt_dragon_mace_13985, "Corrupt dragon mace", "You can now wield <col=000080>corrupt dragon maces</col>.");
 			case 13 :
-				return(60, corrupt_dragon_scimitar_13979, "Corrupt dragon scimitar", "You can now wield <col=000080>corrupt dragon scimitars</col>.");
+				return(60, corrupt_dragon_longsword_13982, "Corrupt dragon longsword", "You can now wield <col=000080>corrupt dragon longswords</col>.");
 			case 14 :
-				return(60, corrupt_dragon_spear_13988, "Corrupt dragon spear", "You can now wield <col=000080>corrupt dragon spears</col>.");
+				return(60, corrupt_dragon_scimitar_13979, "Corrupt dragon scimitar", "You can now wield <col=000080>corrupt dragon scimitars</col>.");
 			case 15 :
+				return(60, corrupt_dragon_spear_13988, "Corrupt dragon spear", "You can now wield <col=000080>corrupt dragon spears</col>.");
+			case 16 :
 				return(60, corrupt_dragon_battleaxe_13973, "Corrupt dragon battleaxe", "You can now wield <col=000080>corrupt dragon battleaxes</col>.");
 		}
 	case 9 :
@@ -306,96 +308,108 @@ switch_int ($int0) {
 			case 12 :
 				return(1, gadderhammer_7668, "Members: Gadderhammer<br> (after starting In Aid of the Myreque)", "Members can now wield the <col=000080>Gadderhammer</col> (after starting In Aid of the Myreque).");
 			case 13 :
-				return(1, blessed_axe_10491, "Members: Blessed Axe<br> (after starting Animal Magnetism)", "Members can now wield the <col=000080>Blessed Axe</col> (after starting Animal Magnetism).");
+				return(1, blessed_hatchet_10491, "Members: Blessed Axe<br> (after starting Animal Magnetism)", "Members can now wield the <col=000080>Blessed Axe</col> (after starting Animal Magnetism).");
 			case 14 :
 				return(1, inferno_adze_13661, "Members: Inferno Adze<br> (after All Fired Up and with 92 Firemaking)", "Members can now wield the <col=000080>Inferno Adze</col> (after All Fired Up).");
 			case 15 :
-				return(5, ogre_club_12570, "Members: Ogre club", "Members can now wield <col=000080>ogre clubs</col>.");
+				return(5, decorative_sword_4068, "Members: Red decorative sword", "Members can now wield <col=000080>red decorative swords</col>.");
 			case 16 :
-				return(15, ancient_mace_11061, "Members: Ancient mace<br> (after Another Slice of H.A.M. and with 25 Prayer)", "Members now have the Attack level required to wield the <col=000080>Ancient Mace</col> (after Another Slice of H.A.M. and with level 25 Prayer).");
+				return(5, ogre_club_12570, "Members: Ogre club", "Members can now wield <col=000080>ogre clubs</col>.");
 			case 17 :
-				return(20, excalibur_35, "Members: Excalibur<br> (after starting Merlin's Crystal)", "Members can now wield <col=000080>Excalibur</col> (after starting Merlin's Crystal).");
+				return(15, ancient_mace_11061, "Members: Ancient Mace<br> (after Another Slice of H.A.M. and with 25 Prayer)", "Members now have the Attack level required to wield the <col=000080>Ancient Mace</col> (after Another Slice of H.A.M. and with level 25 Prayer).");
 			case 18 :
-				return(20, corrupt_statiuss_warhammer_13926, "Members: Corrupt Statius's warhammer", "Members now have the Attack level required to wield <col=000080>corrupt Statius's warhammer</col>.");
+				return(20, excalibur_35, "Members: Excalibur<br> (after starting Merlin's Crystal)", "Members can now wield <col=000080>Excalibur</col> (after starting Merlin's Crystal).");
 			case 19 :
-				return(20, corrupt_vestas_longsword_13923, "Members: Corrupt Vesta's longsword", "Members now have the Attack level required to wield <col=000080>corrupt Vesta's longsword</col>.");
+				return(20, decorative_sword_4503, "Members: White decorative sword", "Members can now wield <col=000080>white decorative swords</col>.");
 			case 20 :
-				return(20, corrupt_vestas_spear_13929, "Members: Corrupt Vesta's spear", "Members now have the Attack level required to wield <col=000080>corrupt Vesta's spear</col>.");
+				return(20, corrupt_statiuss_warhammer_13926, "Members: Corrupt Statius's warhammer", "Members now have the Attack level required to wield <col=000080>corrupt Statius's warhammer</col>.");
 			case 21 :
-				return(20, corrupt_zuriels_staff_13941, "Members: Corrupt Zuriel's staff<br> (with 20 Magic)", "Members now have the Attack level required to wield <col=000080>corrupt Zuriel's staff</col> (with level 20 Magic).");
+				return(20, corrupt_vestas_longsword_13923, "Members: Corrupt Vesta's longsword", "Members now have the Attack level required to wield <col=000080>corrupt Vesta's longsword</col>.");
 			case 22 :
-				return(30, air_battlestaff_1397, "Members: Air battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>air battlestaves</col>. (They also need level 30 Magic.)");
+				return(20, corrupt_vestas_spear_13929, "Members: Corrupt Vesta's spear", "Members now have the Attack level required to wield <col=000080>corrupt Vesta's spear</col>.");
 			case 23 :
-				return(30, earth_battlestaff_1399, "Members: Earth battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>earth battlestaves</col>. (They also need level 30 Magic.)");
+				return(20, corrupt_zuriels_staff_13941, "Members: Corrupt Zuriel's staff<br> (with 20 Magic)", "Members now have the Attack level required to wield <col=000080>corrupt Zuriel's staff</col> (with level 20 Magic).");
 			case 24 :
-				return(30, fire_battlestaff_1393, "Members: Fire battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>fire battlestaves</col>. (They also need level 30 Magic.)");
+				return(30, air_battlestaff_1397, "Members: Air battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>air battlestaves</col>. (They also need level 30 Magic.)");
 			case 25 :
-				return(30, water_battlestaff_1395, "Members: Water battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>water battlestaves</col>. (They also need level 30 Magic.)");
+				return(30, earth_battlestaff_1399, "Members: Earth battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>earth battlestaves</col>. (They also need level 30 Magic.)");
 			case 26 :
-				return(30, lava_battlestaff_3053, "Members: Lava battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>lava battlestaves</col>. (They also need level 30 Magic.)");
+				return(30, fire_battlestaff_1393, "Members: Fire battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>fire battlestaves</col>. (They also need level 30 Magic.)");
 			case 27 :
-				return(30, mud_battlestaff_6562, "Members: Mud battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>mud battlestaves</col>. (They also need level 30 Magic.)");
+				return(30, water_battlestaff_1395, "Members: Water battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>water battlestaves</col>. (They also need level 30 Magic.)");
 			case 28 :
-				return(30, fremennik_blade_3757, "Members: Fremennik blade", "Members can now wield <col=000080>Fremennik blades</col>.");
+				return(30, lava_battlestaff_3053, "Members: Lava battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>lava battlestaves</col>. (They also need level 30 Magic.)");
 			case 29 :
-				return(40, mystic_air_staff_1405, "Members: Mystic air staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic air staves</col>. (They also need level 40 Magic.)");
+				return(30, mud_battlestaff_6562, "Members: Mud battlestaff<br> (with 30 Magic)", "Members now have the Attack level required to wield <col=000080>mud battlestaves</col>. (They also need level 30 Magic.)");
 			case 30 :
-				return(40, mystic_earth_staff_1407, "Members: Mystic earth staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic earth staves</col>. (They also need level 40 Magic.)");
+				return(30, decorative_sword_4508, "Members: Gold decorative sword", "Members can now wield <col=000080>gold decorative swords</col>.");
 			case 31 :
-				return(40, mystic_fire_staff_1401, "Members: Mystic fire staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic fire staves</col>. (They also need level 40 Magic.)");
+				return(30, fremennik_blade_3757, "Members: Fremennik blade", "Members can now wield <col=000080>Fremennik blades</col>.");
 			case 32 :
-				return(40, mystic_water_staff_1403, "Members: Mystic water staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic water staves</col>. (They also need level 40 Magic.)");
+				return(40, mystic_air_staff_1405, "Members: Mystic air staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic air staves</col>. (They also need level 40 Magic.)");
 			case 33 :
-				return(40, mystic_lava_staff_3054, "Members: Mystic lava staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic lava staves</col>. (They also need level 40 Magic.)");
+				return(40, mystic_earth_staff_1407, "Members: Mystic earth staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic earth staves</col>. (They also need level 40 Magic.)");
 			case 34 :
-				return(40, mystic_mud_staff_6563, "Members: Mystic mud staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic mud staves</col>. (They also need level 40 Magic.)");
+				return(40, mystic_fire_staff_1401, "Members: Mystic fire staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic fire staves</col>. (They also need level 40 Magic.)");
 			case 35 :
-				return(40, brine_sabre_11037, "Members: Brine sabre<br> (after Olaf's Quest)", "Members can now wield <col=000080>brine sabres</col> (after Olaf's Quest).");
+				return(40, mystic_water_staff_1403, "Members: Mystic water staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic water staves</col>. (They also need level 40 Magic.)");
 			case 36 :
-				return(40, sacred_clay_scimitar_14097, "Sacred clay sword", "Members can now wield <col=000080>sacred clay swords</col>.");
+				return(40, mystic_lava_staff_3054, "Members: Mystic lava staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic lava staves</col>. (They also need level 40 Magic.)");
 			case 37 :
-				return(50, leaf_bladed_spear_4158, "Members: Leaf-bladed spear<br> (with 55 Slayer)", "Members now have the Attack level required to wield <col=000080>leaf-bladed spears</col>: melee weapons used for killing turoth and kurask. (They also need level 55 Slayer.)");
+				return(40, mystic_mud_staff_6563, "Members: Mystic mud staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic mud staves</col>. (They also need level 40 Magic.)");
 			case 38 :
-				return(50, ancient_staff_4675, "Members: Ancient Staff<br> (after Desert Treasure and with 50 Magic)", "Members now have the Attack level required to wield the <col=000080>Ancient Staff</col> (after Desert Treasure and with level 50 Magic).");
+				return(40, mystic_steam_staff_11738, "Members: Mystic steam staff<br> (with 40 Magic)", "Members now have the Attack level required to wield <col=000080>mystic steam staves</col>. (They also need level 40 Magic.)");
 			case 39 :
-				return(50, ibans_staff_1409, "Members: Iban's Staff<br> (after Underground Pass and with 50 Magic)", "Members now have the Attack level required to wield <col=000080>Iban's Staff</col> (after Underground Pass and with level 50 Magic).");
+				return(40, brine_sabre_11037, "Members: Brine sabre", "Members can now wield <col=000080>brine sabres</col>.");
 			case 40 :
-				return(50, granite_maul_4153, "Members: Granite maul<br> (with 50 Strength)", "Members can now wield <col=000080>granite mauls</col>. (They also need level 50 Strength.)");
+				return(40, sacred_clay_scimitar_14097, "Members: Sacred clay sword", "Members can now wield <col=000080>sacred clay swords</col>.");
 			case 41 :
-				return(50, keris_10581, "Members: Keris<br> (after Contact!)", "Members can now wield <col=000080>Keris</col> (after Contact!).");
+				return(50, leaf_bladed_spear_4158, "Members: Leaf-bladed spear<br> (with 55 Slayer)", "Members now have the Attack level required to wield <col=000080>leaf-bladed spears</col>: melee weapons used for killing turoth and kurask. (They also need level 55 Slayer.)");
 			case 42 :
-				return(50, leaf_bladed_sword_13290, "Members: Leaf bladed swords<br> (after Smoking Kills and with 55 Slayer)", "Members can now wield <col=000080>leaf bladed swords</col> (after Smoking Kills and with level 55 Slayer).");
+				return(50, ancient_staff_4675, "Members: Ancient Staff<br> (after Desert Treasure and with 50 Magic)", "Members now have the Attack level required to wield the <col=000080>Ancient Staff</col> (after Desert Treasure and with level 50 Magic).");
 			case 43 :
-				return(60, barrelchest_anchor_10887, "Members: Barrelchest Anchor<br> (after Great Brain Robbery and with 40 Strength)", "Members now have the Attack level required to wield the <col=000080>Barrelchest Anchor</col> (after Great Brain Robbery, with level 40 Strength.");
+				return(50, ibans_staff_1409, "Members: Iban's Staff<br> (after Underground Pass and with 50 Magic)", "Members now have the Attack level required to wield <col=000080>Iban's Staff</col> (after Underground Pass and with level 50 Magic).");
 			case 44 :
-				return(60, toktz_xil_ak_6523, "Members: TokTz-Xil-Ak", "Members can now wield <col=000080>TokTz-Xil-Ak</col>.");
+				return(50, granite_maul_4153, "Members: Granite maul<br> (with 50 Strength)", "Members can now wield <col=000080>granite mauls</col>. (They also need level 50 Strength.)");
 			case 45 :
-				return(60, tzhaar_ket_em_6527, "Members: TzHaar-Ket-Em", "Members can now wield <col=000080>TzHaar-Ket-Em</col>.");
+				return(50, granite_mace_14679, "Members: Granite mace<br> (with 50 Strength)", "Members can now wield <col=000080>granite maces</col>. (They also need level 50 Strength.)");
 			case 46 :
-				return(60, toktz_xil_ek_6525, "Members: TokTz-Xil-Ek", "Members can now wield <col=000080>TokTz-Xil-Ek</col>.");
+				return(50, keris_10581, "Members: Keris<br> (after Contact!)", "Members can now wield <col=000080>Keris</col> (after Contact!).");
 			case 47 :
-				return(60, toktz_mej_tal_6526, "Members: Toktz-Mej-Tal<br> (with 60 Magic)", "Members now have the Attack level required to wield <col=000080>Toktz-Mej-Tal</col>. (They also need level 60 Magic.)");
+				return(50, leaf_bladed_sword_13290, "Members: Leaf-bladed swords<br> (with 55 Slayer)", "Members can now wield <col=000080>leaf-bladed swords</col>. (They also need level 55 Slayer).");
 			case 48 :
-				return(70, abyssal_whip_4151, "Members: Abyssal whip", "Members can now wield <col=000080>abyssal whips</col>.");
+				return(60, barrelchest_anchor_10887, "Members: Barrelchest Anchor<br> (after Great Brain Robbery and with 40 Strength)", "Members now have the Attack level required to wield the <col=000080>Barrelchest Anchor</col> (after Great Brain Robbery, with level 40 Strength).");
 			case 49 :
-				return(70, saradomin_sword_11730, "Members: Saradomin sword", "Members can now wield  <col=000080>Saradomin swords</col>.");
+				return(60, toktz_xil_ak_6523, "Members: TokTz-Xil-Ak", "Members can now wield <col=000080>TokTz-Xil-Ak</col>.");
 			case 50 :
-				return(70, zamorakian_spear_11716, "Members: Zamorakian spear", "Members can now wield <col=000080>Zamorakian spears</col>.");
+				return(60, tzhaar_ket_em_6527, "Members: TzHaar-Ket-Em", "Members can now wield <col=000080>TzHaar-Ket-Em</col>.");
 			case 51 :
-				return(75, armadyl_godsword_11694, "Members: Armadyl godsword", "Members can now wield the <col=000080>Armadyl godsword</col>.");
+				return(60, toktz_xil_ek_6525, "Members: TokTz-Xil-Ek", "Members can now wield <col=000080>TokTz-Xil-Ek</col>.");
 			case 52 :
-				return(75, bandos_godsword_11696, "Members: Bandos godsword", "Members can now wield the <col=000080>Bandos godsword</col>.");
+				return(60, toktz_mej_tal_6526, "Members: Toktz-Mej-Tal<br> (with 60 Magic)", "Members now have the Attack level required to wield <col=000080>Toktz-Mej-Tal</col>. (They also need level 60 Magic.)");
 			case 53 :
-				return(75, saradomin_godsword_11698, "Members: Saradomin godsword", "Members can now wield the <col=000080>Saradomin godsword</col>.");
+				return(70, abyssal_whip_4151, "Members: Abyssal whip", "Members can now wield <col=000080>abyssal whips</col>.");
 			case 54 :
-				return(75, zamorak_godsword_11700, "Members: Zamorak godsword", "Members can now wield the <col=000080>Zamorak godsword</col>.");
+				return(70, saradomin_sword_11730, "Members: Saradomin sword", "Members can now wield  <col=000080>Saradomin swords</col>.");
 			case 55 :
-				return(78, statiuss_warhammer_13902, "Members: Statius's warhammer", "Members now have the Attack level required to wield <col=000080>Statius's warhammer</col>.");
+				return(70, zamorakian_spear_11716, "Members: Zamorakian spear", "Members can now wield <col=000080>Zamorakian spears</col>.");
 			case 56 :
-				return(78, vestas_longsword_13899, "Members: Vesta's longsword", "Members now have the Attack level required to wield <col=000080>Vesta's longsword</col>.");
+				return(75, armadyl_godsword_11694, "Members: Armadyl godsword", "Members can now wield the <col=000080>Armadyl godsword</col>.");
 			case 57 :
-				return(78, vestas_spear_13905, "Members: Vesta's spear", "Members now have the Attack level required to wield <col=000080>Vesta's spear</col>.");
+				return(75, bandos_godsword_11696, "Members: Bandos godsword", "Members can now wield the <col=000080>Bandos godsword</col>.");
 			case 58 :
+				return(75, saradomin_godsword_11698, "Members: Saradomin godsword", "Members can now wield the <col=000080>Saradomin godsword</col>.");
+			case 59 :
+				return(75, zamorak_godsword_11700, "Members: Zamorak godsword", "Members can now wield the <col=000080>Zamorak godsword</col>.");
+			case 60 :
+				return(75, balmung_15403, "Members: Balmung (after Blood Runs Deep and with 75 Strength)", "Members can now wield <col=000080>Balmung</col> (after Blood Runs Deep, with 75 Strength).");
+			case 61 :
+				return(78, statiuss_warhammer_13902, "Members: Statius's warhammer", "Members now have the Attack level required to wield <col=000080>Statius's warhammer</col>.");
+			case 62 :
+				return(78, vestas_longsword_13899, "Members: Vesta's longsword", "Members now have the Attack level required to wield <col=000080>Vesta's longsword</col>.");
+			case 63 :
+				return(78, vestas_spear_13905, "Members: Vesta's spear", "Members now have the Attack level required to wield <col=000080>Vesta's spear</col>.");
+			case 64 :
 				return(78, zuriels_staff_13867, "Members: Zuriel's staff<br> (with 78 Magic)", "Members now have the Attack level required to wield <col=000080>Zuriel's staff</col> (with level 78 Magic).");
 		}
 	case 11 :
@@ -412,46 +426,42 @@ switch_int ($int0) {
 	case 12 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, dagger_class_1_14297, "Stealing Creation - class 1 dagger", "Members can now wield <col=000080>class 1 daggers</col> in the Stealing Creation minigame.");
+				return(1, dagger_class_1_14297, "Stealing Creation - class 1 dagger", "Members can now wield <col=000080>class 1 daggers</col> in Stealing Creation.");
 			case 1 :
-				return(1, scimitar_class_1_14287, "Stealing Creation - class 1 scimitar", "Members can now wield <col=000080>class 1 scimitars</col> in the Stealing Creation minigame.");
+				return(1, scimitar_class_1_14287, "Stealing Creation - class 1 scimitar", "Members can now wield <col=000080>class 1 scimitars</col> in Stealing Creation.");
 			case 2 :
-				return(1, warhammer_class_1_14307, "Stealing Creation - class 1 warhammer", "Members can now wield <col=000080>class 1 warhammers</col> in the Stealing Creation minigame.");
+				return(1, warhammer_class_1_14307, "Stealing Creation - class 1 warhammer", "Members can now wield <col=000080>class 1 warhammers</col> in Stealing Creation.");
 			case 3 :
-				return(20, dagger_class_2_14299, "Stealing Creation - class 2 dagger", "Members can now wield <col=000080>class 2 daggers</col> in the Stealing Creation minigame.");
+				return(20, dagger_class_2_14299, "Stealing Creation - class 2 dagger", "Members can now wield <col=000080>class 2 daggers</col> in Stealing Creation.");
 			case 4 :
-				return(20, scimitar_class_2_14289, "Stealing Creation - class 2 scimitar", "Members can now wield <col=000080>class 2 scimitars</col> in the Stealing Creation minigame.");
+				return(20, scimitar_class_2_14289, "Stealing Creation - class 2 scimitar", "Members can now wield <col=000080>class 2 scimitars</col> in Stealing Creation.");
 			case 5 :
-				return(20, warhammer_class_2_14309, "Stealing Creation - class 2 warhammer", "Members can now wield <col=000080>class 2 warhammers</col> in the Stealing Creation minigame.");
+				return(20, warhammer_class_2_14309, "Stealing Creation - class 2 warhammer", "Members can now wield <col=000080>class 2 warhammers</col> in Stealing Creation.");
 			case 6 :
-				return(40, dagger_class_3_14301, "Stealing Creation - class 3 dagger", "Members can now wield <col=000080>class 3 daggers</col> in the Stealing Creation minigame.");
+				return(40, dagger_class_3_14301, "Stealing Creation - class 3 dagger", "Members can now wield <col=000080>class 3 daggers</col> in Stealing Creation.");
 			case 7 :
-				return(40, scimitar_class_3_14291, "Stealing Creation - class 3 scimitar", "Members can now wield <col=000080>class 3 scimitars</col> in the Stealing Creation minigame.");
+				return(40, scimitar_class_3_14291, "Stealing Creation - class 3 scimitar", "Members can now wield <col=000080>class 3 scimitars</col> in Stealing Creation.");
 			case 8 :
-				return(40, warhammer_class_3_14311, "Stealing Creation - class 3 warhammer", "Members can now wield <col=000080>class 3 warhammers</col> in the Stealing Creation minigame.");
+				return(40, warhammer_class_3_14311, "Stealing Creation - class 3 warhammer", "Members can now wield <col=000080>class 3 warhammers</col> in Stealing Creation.");
 			case 9 :
-				return(60, dagger_class_4_14303, "Stealing Creation - class 4 dagger", "Members can now wield <col=000080>class 4 daggers</col> in the Stealing Creation minigame.");
+				return(60, dagger_class_4_14303, "Stealing Creation - class 4 dagger", "Members can now wield <col=000080>class 4 daggers</col> in Stealing Creation.");
 			case 10 :
-				return(60, scimitar_class_4_14293, "Stealing Creation - class 4 scimitar", "Members can now wield <col=000080>class 4 scimitars</col> in the Stealing Creation minigame.");
+				return(60, scimitar_class_4_14293, "Stealing Creation - class 4 scimitar", "Members can now wield <col=000080>class 4 scimitars</col> in Stealing Creation.");
 			case 11 :
-				return(60, warhammer_class_4_14313, "Stealing Creation - class 4 warhammer", "Members can now wield <col=000080>class 4 warhammers</col> in the Stealing Creation minigame.");
+				return(60, warhammer_class_4_14313, "Stealing Creation - class 4 warhammer", "Members can now wield <col=000080>class 4 warhammers</col> in Stealing Creation.");
 			case 12 :
-				return(80, dagger_class_5_14305, "Stealing Creation - class 5 dagger", "Members can now wield <col=000080>class 5 daggers</col> in the Stealing Creation minigame.");
+				return(80, dagger_class_5_14305, "Stealing Creation - class 5 dagger", "Members can now wield <col=000080>class 5 daggers</col> in Stealing Creation.");
 			case 13 :
-				return(80, scimitar_class_5_14295, "Stealing Creation - class 5 scimitar", "Members can now wield <col=000080>class 5 scimitars</col> in the Stealing Creation minigame.");
+				return(80, scimitar_class_5_14295, "Stealing Creation - class 5 scimitar", "Members can now wield <col=000080>class 5 scimitars</col> in Stealing Creation.");
 			case 14 :
-				return(80, warhammer_class_5_14315, "Stealing Creation - class 5 warhammer", "Members can now wield <col=000080>class 5 warhammers</col> in the Stealing Creation minigame.");
+				return(80, warhammer_class_5_14315, "Stealing Creation - class 5 warhammer", "Members can now wield <col=000080>class 5 warhammers</col> in Stealing Creation.");
 		}
 	case 13 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, warrior_guild_token_5_8855, "You can enter the Warriors' Guild when your Attack and Strength levels add up to 130 or more.", "");
+				return(-1, warrior_guild_token_5_8855, "You can enter the Warriors' Guild when your Attack and Strength levels add up to 130 or more, or when you reach level 99 in either Attack or Strength.", "");
 			case 1 :
-				return(19, obj_5079, "Melee Combat Tutor - new info", "There is new information available from the <col=000080>Melee Combat Tutor</col> in <col=000080>Lumbridge</col>.");
-			case 2 :
-				return(29, obj_5079, "Melee Combat Tutor - new info", "There is new information available from the <col=000080>Melee Combat Tutor</col> in <col=000080>Lumbridge</col>.");
-			case 3 :
-				return(99, attack_cape_9747, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Attack<col=000080>. Why not visit <col=800000>Ajjat<col=000080> at the <col=800000>Warriors' Guild<col=000080>? He has something special that is only available to true masters of the <col=800000>Attack<col=000080> skill!");
+				return(99, attack_cape_9747, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Attack<col=000080>. Members can visit <col=800000>Ajjat<col=000080> at the <col=800000>Warriors' Guild<col=000080>. He has something special that is only available to true masters of the <col=800000>Attack<col=000080> skill!");
 		}
 }
 return(0, null, "", "");

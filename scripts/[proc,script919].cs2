@@ -1,0 +1,36 @@
+// 919
+[proc,script919]
+def_int $total0 = inv_total(inv, %varcint743);
+def_string $text0 = "Cost:";
+def_int $num1 = -1;
+if (%varcint744 = 0) {
+	$text0 = "None available";
+} else if (%varcint744 = -1) {
+	$text0 = "Free sample!";
+} else {
+	$num1 = %varcint744;
+}
+if_settext($text0, interface_449:com_24);
+if ($num1 > $total0) {
+	if_setcolour(^red, interface_449:com_25);
+} else {
+	if_setcolour(0xff9900, interface_449:com_25);
+}
+if ($num1 > -1) {
+	if_setobject_alwaysnum(%varcint743, $num1, interface_449:com_23);
+} else {
+	if_setobject_nonum(null, -1, interface_449:com_23);
+}
+if (%varcint744 = -1) {
+	if_settext("Take", interface_449:com_22);
+	if_setop(1, "Take 1", interface_449:com_21);
+	if_setop(2, "Take 5", interface_449:com_21);
+	if_setop(3, "Take 10", interface_449:com_21);
+	if_setop(4, "Take 50", interface_449:com_21);
+} else {
+	if_settext("Buy", interface_449:com_22);
+	if_setop(1, "Buy 1", interface_449:com_21);
+	if_setop(2, "Buy 5", interface_449:com_21);
+	if_setop(3, "Buy 10", interface_449:com_21);
+	if_setop(4, "Buy 50", interface_449:com_21);
+}

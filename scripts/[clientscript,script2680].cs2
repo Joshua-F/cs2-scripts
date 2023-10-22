@@ -1,0 +1,9 @@
+// 2680
+[clientscript,script2680]
+if (%varbit2176 = 1) {
+	if_setgraphic("miscgraphics,9", poh_house_options:com_15);
+	if_setgraphic("miscgraphics,0", poh_house_options:com_1);
+} else {
+	if_setgraphic("miscgraphics,0", poh_house_options:com_15);
+	if_setgraphic("miscgraphics,9", poh_house_options:com_1);
+}

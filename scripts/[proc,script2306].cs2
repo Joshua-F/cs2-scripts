@@ -1,0 +1,11 @@
+// 2306
+[proc,script2306]
+def_int $int0 = 31;
+def_int $height1 = 0;
+def_int $width2 = 31;
+if (runenergy_visible >= 100) {
+	$height1 = 0;
+} else {
+	$height1 = calc($int0 - $int0 * runenergy_visible / 100);
+}
+if_setsize($width2, $height1, ^setsize_abs, ^setsize_abs, topstat_run:com_4);

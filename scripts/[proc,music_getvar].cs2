@@ -60,4 +60,16 @@ if ($int0 < 608) {
 if ($int0 < 640) {
 	return(testbit(%var1202, calc($int0 & 31)));
 }
+if ($int0 < 672) {
+	return(testbit(%var1381, calc($int0 & 31)));
+}
+if ($int0 < 704) {
+	return(testbit(%var1394, calc($int0 & 31)));
+}
+if ($int0 < 736) {
+	return(testbit(%var1434, calc($int0 & 31)));
+}
+if ($int0 < 768) {
+	return(testbit(%var1596, calc($int0 & 31)));
+}
 return(-1);

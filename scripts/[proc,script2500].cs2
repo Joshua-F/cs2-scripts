@@ -1,0 +1,15 @@
+// 2500
+[proc,script2500](component $component0)
+def_int $int1 = 1;
+while ($int1 <= 9 | enum(int, component, enum_2400, $int1) ! interface_45:content_layer) {
+	if (enum(int, component, enum_2400, $int1) ! $component0) {
+		if_setgraphic("radio_buttons,0", enum(int, component, enum_2400, $int1));
+	} else {
+		if_setgraphic("radio_buttons,1", $component0);
+		%varcint837 = $int1;
+	}
+	$int1 = calc($int1 + 1);
+}
+if (%varcint837 > 0 & %varcint837 <= 9) {
+	if_setmodel(enum(int, model, enum_2399, %varcint837), interface_45:com_39);
+}

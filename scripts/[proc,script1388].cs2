@@ -1,19 +1,36 @@
 // 1388
-[proc,script1388]
-%varcstring34 = "";
-%varcstring35 = "";
-%varcstring36 = "";
-%varcint179 = 1;
-%varcint180 = 0;
-%varcint181 = 2009;
-if_settext(%varcstring34, loginscreen:com_394);
-if_settext(%varcstring35, loginscreen:com_421);
-if_settext(%varcstring36, loginscreen:com_426);
-~dropdownbox(enum_1601, 0, 31, loginscreen:com_381, loginscreen:com_382, loginscreen:com_383, loginscreen:com_384, "graphic_884", "graphic_1248", "graphic_1250", "graphic_1402", 0x663300, 0xffe1be, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-~dropdownbox(enum_1602, 0, 12, loginscreen:com_377, loginscreen:com_378, loginscreen:com_379, loginscreen:com_380, "graphic_884", "graphic_1248", "graphic_1250", "graphic_1402", 0x663300, 0xffe1be, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-~dropdownbox(enum_1603, 0, 120, loginscreen:com_373, loginscreen:com_374, loginscreen:com_375, loginscreen:com_376, "graphic_884", "graphic_1248", "graphic_1250", "graphic_1402", 0x663300, 0xffe1be, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-~dropdownbox(enum_1626, 0, 241, loginscreen:com_369, loginscreen:com_370, loginscreen:com_371, loginscreen:com_372, "graphic_884", "graphic_1248", "graphic_1250", "graphic_1402", 0x663300, 0xffe1be, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-%varcint182 = enum(int, int, enum_1669, 0);
-if_settext("Please note that your account has been locked into Quick Chat until you are of suitable age - please review our Terms & Conditions for more information.", loginscreen:com_412);
-if_setcolour(0x461e00, loginscreen:com_412);
-if_sethide(true, loginscreen:com_430);
+[proc,script1388](component $component0)
+cc_deleteall($component0);
+cc_deleteall(prayer:scrollbar_layer);
+def_int $int1 = 5;
+def_int $width2 = 15;
+def_int $height3 = 15;
+def_int $int4 = 0;
+def_int $int5 = 6;
+def_int $int6 = 28;
+def_int $int7 = 27;
+if (%varbit6840 = 1) {
+	$int7 = 20;
+}
+while ($int4 < $int7) {
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize($width2, $height3, ^setsize_abs, ^setsize_abs);
+	cc_settiling(true);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	if (~script2297($int4) = 0) {
+		cc_setop(1, "Select<col=ff9040>");
+		cc_setgraphic("miscgraphics,10");
+	} else {
+		cc_setop(1, "Deselect<col=ff9040>");
+		cc_setgraphic("miscgraphics,11");
+	}
+	cc_setonop("script2290(event_com, event_comsubid)");
+	cc_setonvartransmit("script2291(event_com, event_comsubid){var1397, var1587}");
+	$int4 = calc($int4 + 1);
+	if (calc($int4 % $int1) = 0) {
+		$int5 = 6;
+		$int6 = calc($int6 + 35);
+	} else {
+		$int5 = calc($int5 + 37);
+	}
+}

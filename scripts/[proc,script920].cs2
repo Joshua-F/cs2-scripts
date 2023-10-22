@@ -1,0 +1,51 @@
+// 920
+[proc,script920](int $int0)(int)
+%varcint742 = 0;
+def_string $string0 = "";
+def_int $int1 = 0;
+if (%varcint741 ! null) {
+	if (compare(oc_iop(%varcint741, 2), "Wear") = 0 | compare(oc_iop(%varcint741, 2), "Wield") = 0) {
+		$int1 = 1;
+	}
+	if_setobject_nonum(%varcint741, -1, interface_449:com_13);
+	if_setobject_nonum(%varcint741, -1, interface_449:com_14);
+	if (map_members = ^false & oc_members(%varcint741) = ^true) {
+		~script922("This is a members item. Additional information is not available on this world.", ^settextalign_centre, $int0);
+	} else {
+		$string0 = ~script914;
+		if (compare($string0, "") ! 0) {
+			~script922($string0, ^settextalign_centre, $int0);
+			%varcint742 = calc(%varcint742 + 1);
+		}
+		~script921(%varcstring25, ^settextalign_centre, $int0);
+		if (compare(oc_param(%varcint741, param_690), "") ! 0) {
+			~script921(" ", ^settextalign_centre, $int0);
+			~script921(oc_param(%varcint741, param_690), ^settextalign_centre, $int0);
+		}
+		if (calc(oc_param(%varcint741, param_740) % 2) = 1) {
+			if (compare(%varcstring26, "") ! 0 & $int1 = 1) {
+				~script921(%varcstring26, ^settextalign_left, $int0);
+			}
+			if (compare(%varcstring34, "") ! 0) {
+				~script921(%varcstring34, ^settextalign_left, $int0);
+			}
+		} else {
+			if (compare(%varcstring34, "") ! 0) {
+				~script921(%varcstring34, ^settextalign_left, $int0);
+			}
+			if (compare(%varcstring26, "") ! 0 & $int1 = 1) {
+				~script921(%varcstring26, ^settextalign_left, $int0);
+			}
+		}
+		$string0 = ~script912(%varcint741);
+		if (compare($string0, "") ! 0) {
+			~script921($string0, ^settextalign_left, $int0);
+		}
+		if (compare(%varcstring35, "") ! 0 & $int1 = 1) {
+			~script923(%varcstring35, %varcstring36, %varcstring52, $int0);
+		}
+	}
+} else {
+	~script921("Select an item to see its information.", ^settextalign_centre, $int0);
+}
+return(calc(6 * 2 + %varcint742 * 11));

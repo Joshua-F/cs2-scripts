@@ -1,13 +1,3 @@
 // 1519
-[clientscript,script1519](int $comsubid0)
-def_int $int1 = 0;
-if (cc_find(shop_template:main_stock, $comsubid0) = ^true) {
-	if (calc(clientclock % 50) > 25) {
-		cc_settrans(0);
-		if (calc(clientclock % 50) = 26) {
-			sound_synth(synth_5009, 1, 0);
-		}
-	} else {
-		cc_settrans(255);
-	}
-}
+[clientscript,script1519](int $int0, int $int1)
+~script311(struct_param(struct_463, param_596), $int0, $int1);

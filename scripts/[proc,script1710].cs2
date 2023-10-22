@@ -1,16 +1,17 @@
 // 1710
-[proc,script1710]
-%varcint87 = %varbit4208;
-if (gender < 1) {
-	%varcint88 = %varbit4209;
+[proc,script1710](stat $stat0)(int)
+def_int $int1 = ~script1711($stat0);
+if (%varbit6839 > 0) {
+	switch_stat ($stat0) {
+		case attack :
+			$int1 = calc($int1 + 15);
+			$int1 = calc($int1 + ~script1714($stat0, %varbit6844));
+		case strength :
+			$int1 = calc($int1 + 23);
+			$int1 = calc($int1 + ~script1714($stat0, %varbit6845));
+		case defence :
+			$int1 = calc($int1 + 15);
+			$int1 = calc($int1 + ~script1714($stat0, %varbit6846));
+	}
 }
-%varcint89 = %varbit4210;
-%varcint90 = %varbit4211;
-%varcint91 = %varbit4212;
-%varcint92 = %varbit4213;
-%varcint93 = %varbit4214;
-%varcint94 = %varbit4215;
-%varcint95 = %varbit4216;
-%varcint96 = %varbit4217;
-%varcint97 = %varbit4218;
-%varcint98 = %varbit4219;
+return($int1);

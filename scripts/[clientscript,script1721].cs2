@@ -1,0 +1,55 @@
+// 1721
+[clientscript,script1721]
+def_int $count0 = 0;
+def_int $int1 = 84;
+def_int $int2 = 5;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 125;
+def_int $width6 = 64;
+def_int $height7 = 32;
+def_int $int8 = 10;
+def_model $model9 = null;
+def_int $int10 = 2200;
+def_string $text0 = "";
+def_int $int11 = 0;
+def_seq $seq12 = null;
+def_int $height13 = 0;
+if (calc(enum_getoutputcount(enum_869) % $int2) = 0) {
+	$height13 = calc(enum_getoutputcount(enum_869) / $int2 * $int5);
+} else {
+	$height13 = calc(enum_getoutputcount(enum_869) / $int2 * $int5 + $int5);
+}
+cc_deleteall(interface_88:com_22);
+cc_deleteall(interface_88:com_23);
+if_setscrollsize(calc($int2 * $int1), $height13, interface_88:com_21);
+while ($count0 < enum_getoutputcount(enum_869)) {
+	cc_create(interface_88:com_22, ^iftype_model, $count0);
+	cc_setsize($int1, $int5, ^setsize_abs, ^setsize_abs);
+	$model9, $text0, $int11, $int10, $seq12 = ~script2791($count0);
+	cc_setmodel($model9);
+	cc_setmodelangle(1, 20, 5, 1950, 0, $int10);
+	cc_setposition(calc($int3 * $int1), calc($int4 * $int5), ^setpos_abs_left, ^setpos_abs_top);
+	if ($int11 = 1) {
+		cc_setop(1, "Speak-to");
+		cc_setonmouserepeat("script1860(event_comsubid, $seq12)");
+		cc_setonmouseleave("script2607(event_comsubid)");
+	}
+	cc_create(interface_88:com_23, ^iftype_text, $count0);
+	cc_setsize($width6, $height7, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xff9935);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_settext($text0);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setposition(calc($int3 * $int1 + $int8), calc($int4 * $int5 + $int8), ^setpos_abs_left, ^setpos_abs_top);
+	$int3 = calc($int3 + 1);
+	if ($int3 >= $int2) {
+		$int3 = 0;
+		$int4 = calc($int4 + 1);
+	}
+	$count0 = calc($count0 + 1);
+}
+if (if_getscrolly(interface_88:com_22) = 0) {
+	~scrollbar_vertical(interface_88:scrollbar_layer, interface_88:com_21, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+}

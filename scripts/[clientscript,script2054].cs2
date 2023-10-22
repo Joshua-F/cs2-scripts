@@ -1,6 +1,6 @@
 // 2054
 [clientscript,script2054](int $clock0, component $component1, coord $coord2)
 if (clientclock >= $clock0) {
-	_5214($coord2);
+	worldmap_jumptosourcecoord($coord2);
 	if_setontimer(null, $component1);
 }

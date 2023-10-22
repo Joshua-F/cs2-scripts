@@ -1,0 +1,61 @@
+// 2239
+[clientscript,script2239](boolean $boolean0, boolean $boolean1, boolean $boolean2, boolean $boolean3, boolean $boolean4, boolean $boolean5, boolean $boolean6)
+def_int $int7 = create_reply;
+if ($int7 = -3) {
+	return;
+}
+if_setontimer(null, loginscreen:com_46);
+if ($int7 = 2 | $int7 = 15) {
+	if ($int7 = 15) {
+		$boolean5 = true;
+	}
+	if_settext("", loginscreen:com_117);
+	if_settext("", loginscreen:com_110);
+	$boolean4 = true;
+	$boolean6 = true;
+} else {
+	switch_int ($int7) {
+		case -4, -1 :
+			if_settext("Error contacting server. Please try a different world.", loginscreen:com_110);
+			%varcstring123 = "";
+			$boolean4, $boolean6 = false, false;
+		case -5 :
+			if_settext("No response from server. Please try a different world.", loginscreen:com_110);
+			%varcstring123 = "";
+			$boolean4, $boolean6 = false, false;
+		case 3 :
+			if_settext("Error contacting server. Please try again.", loginscreen:com_110);
+			%varcstring123 = "";
+			$boolean4, $boolean6 = false, false;
+		case 7 :
+			if_settext("The server is currently very busy. Please try again shortly.", loginscreen:com_110);
+			%varcstring123 = "";
+			$boolean4, $boolean6 = false, false;
+		case 9, 38 :
+			if_settext("You cannot create an account at this time. Please try again later.", loginscreen:com_110);
+			$boolean4, $boolean6 = false, false;
+		case 10 :
+			if_settext("Please make sure you have provided a valid date of birth.", loginscreen:com_117);
+			$boolean4 = false;
+		case 11 :
+			if_settext("The date of birth is invalid, as it is in the future.", loginscreen:com_117);
+			$boolean4 = false;
+		case 12 :
+			if_settext("The date of birth is invalid, as it is this year.", loginscreen:com_117);
+			$boolean4 = false;
+		case 13 :
+			if_settext("The date of birth is invalid, as it was last year.", loginscreen:com_117);
+			$boolean4 = false;
+		case 14 :
+			if_settext("Please make sure that you have provided a valid country.", loginscreen:com_110);
+			$boolean6 = false;
+		case 37 :
+			if_settext("RuneScape has been updated. Please reload this page.", loginscreen:com_110);
+			$boolean4, $boolean6 = false, false;
+		case default :
+			if_settext("Unexpected server response. Please try again.", loginscreen:com_110);
+			%varcstring123 = "";
+			$boolean4, $boolean6 = false, false;
+	}
+}
+~script2240($boolean0, $boolean1, $boolean2, $boolean3, $boolean4, $boolean5, $boolean6);

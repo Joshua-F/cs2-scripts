@@ -8,6 +8,8 @@ if (getwindowmode >= ^windowmode_resizable) {
 	if_setalpha(false, chattop:chat_graphic);
 	if_sethide(false, chattop:chat_graphic);
 	if_sethide(false, chattop:chat_border);
+	~script1652(0);
+	if_sethide(true, toplevel_fullscreen:com_21);
 }
 if_sethide(true, chatdefault:chat);
 if_setonkey(null, chatdefault:input);

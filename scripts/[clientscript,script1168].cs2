@@ -1,3 +1,8 @@
 // 1168
-[clientscript,script1168](component $component0, component $component1, component $component2, component $component3, graphic $graphic4, graphic $graphic5, graphic $graphic6, graphic $graphic7, int $colour8, int $colour9, graphic $graphic10, graphic $graphic11, graphic $graphic12, graphic $graphic13, graphic $graphic14, graphic $graphic15, graphic $graphic16)
-~script1169($component0, $component1, $component2, $component3, $graphic4, $graphic5, $graphic6, $graphic7, $colour8, $colour9, $graphic10, $graphic11, $graphic12, $graphic13, $graphic14, $graphic15, $graphic16);
+[clientscript,script1168](int $comsubid0, string $text0, component $component1)
+if (calc(clientclock % 50) ! 0) {
+	return;
+}
+if (cc_find(interface_885:content, $comsubid0) = ^true) {
+	cc_settext($text0);
+}

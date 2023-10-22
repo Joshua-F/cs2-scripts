@@ -4,7 +4,13 @@ def_int $int0 = 0;
 if (~getsidehidden(99) = false) {
 	return(99);
 }
-while ($int0 < 14) {
+if (~getsidehidden(95) = false) {
+	return(95);
+}
+if (~getsidehidden(98) = false) {
+	return(98);
+}
+while ($int0 < 16) {
 	if (~getsidehidden($int0) = false) {
 		return($int0);
 	}

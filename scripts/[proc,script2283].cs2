@@ -1,0 +1,25 @@
+// 2283
+[proc,script2283]
+if (compare(%varcstring122, "") = 0) {
+	if_setgraphic(null, loginscreen:com_159);
+	if_settext("", loginscreen:com_153);
+	return;
+}
+if (compare(%varcstring122, %varcstring123) = 0) {
+	return;
+}
+%varcstring123 = %varcstring122;
+if_settext("", loginscreen:com_153);
+if_setgraphic(null, loginscreen:com_159);
+%varcint734 = -1;
+if (~script2203(%varcstring122) = 0) {
+	if_setgraphic("graphic_1726", loginscreen:com_159);
+	if_settext("Please supply a valid username.", loginscreen:com_153);
+	%varcint734 = 1;
+	~script2230(%varcint174);
+	return;
+}
+~script2231(1);
+~script2225;
+_5604(%varcstring122);
+if_setontimer("script2284", loginscreen:com_44);

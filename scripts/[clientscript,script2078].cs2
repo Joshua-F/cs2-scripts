@@ -1,0 +1,9 @@
+// 2078
+[clientscript,script2078]
+def_int $int0 = 0;
+$int0 = calc(20 - %varcint636);
+if ($int0 = 1) {
+	if_settext("<tostring($int0)> min", interface_836:time_left);
+} else {
+	if_settext("<tostring($int0)> mins", interface_836:time_left);
+}

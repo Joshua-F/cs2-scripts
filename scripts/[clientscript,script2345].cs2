@@ -1,0 +1,21 @@
+// 2345
+[clientscript,script2345]
+%varcint769 = 0;
+def_int $x0 = calc(coordx(coord) - coordx(coord) % 64);
+def_int $z1 = calc(coordz(coord) - coordz(coord) % 64);
+def_coord $coord2 = movecoord(0_0_0_0_0, $x0, 0, $z1);
+def_coord $coord3 = movecoord($coord2, coordx(0_0_0_31_40), 0, coordz(0_0_0_31_40));
+spline_new(0, 5);
+spline_addpoint(0, 0, movecoord($coord3, 0, 0, -5), 800, movecoord($coord3, 0, 0, -5), 900, 0);
+spline_addpoint(0, 1, movecoord($coord3, -5, 0, -1), 800, movecoord($coord3, -5, 0, 0), 900, 0);
+spline_addpoint(0, 2, movecoord($coord3, -1, 0, 5), 800, movecoord($coord3, 0, 0, 5), 900, 0);
+spline_addpoint(0, 3, movecoord($coord3, 5, 0, 1), 800, movecoord($coord3, 5, 0, 0), 900, 0);
+spline_addpoint(0, 4, movecoord($coord3, 0, 0, -3), 800, movecoord($coord3, 0, 0, -3), 900, 0);
+spline_new(1, 5);
+spline_addpoint(1, 0, $coord3, 400, $coord3, 400, 0);
+spline_addpoint(1, 1, $coord3, 400, $coord3, 400, 0);
+spline_addpoint(1, 2, $coord3, 400, $coord3, 400, 0);
+spline_addpoint(1, 3, $coord3, 400, $coord3, 400, 0);
+spline_addpoint(1, 4, $coord3, 500, $coord3, 500, 0);
+cam_movealong(0, 0, 200, 200, 1, 0);
+if_setoncamfinished("script2346", interface_582:com_0);

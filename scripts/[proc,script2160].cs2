@@ -1,0 +1,88 @@
+// 2160
+[proc,script2160](int $int0)
+def_struct $struct1 = enum(int, struct, enum_169, $int0);
+if ($struct1 = null) {
+	return;
+}
+def_enum $enum2 = struct_param($struct1, param_61);
+if ($enum2 = null) {
+	return;
+}
+def_component $component3 = struct_param($struct1, param_152);
+def_component $component4 = struct_param($struct1, param_153);
+def_int $int5 = 0;
+def_int $count6 = 0;
+def_struct $struct7 = null;
+def_int $comsubid8 = -1;
+if (map_members = ^true) {
+	%varcint693 = %varbit4536;
+} else {
+	%varcint693 = 0;
+}
+%varcint694 = %varbit4538;
+%varcint692 = %varbit4537;
+%varcint272 = enum_getoutputcount($enum2);
+while ($count6 < %varcint272) {
+	$struct7 = enum(int, struct, $enum2, $int5);
+	cc_create($component3, ^iftype_text, $int5);
+	if ($struct7 ! null) {
+		$count6 = calc($count6 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
+		cc_setcolour(0x222222);
+		cc_settextfont(p11_full);
+		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+		cc_settextshadow(true);
+		if (struct_param($struct1, param_692) = 0) {
+			if (struct_param($struct7, param_694) = 1) {
+				if (~script2193($int5) = 0) {
+					cc_setop(1, "View Quest Overview");
+					cc_setop(2, "View Quest Journal");
+					cc_setop(3, "Set Objective");
+				} else {
+					cc_setop(1, "View Quest Journal");
+					cc_setop(2, "View Quest Overview");
+					cc_setop(3, "Set Objective");
+				}
+			} else {
+				cc_setop(1, "View Quest Journal");
+				cc_setop(2, "Set Objective");
+			}
+		}
+		cc_settext(struct_param($struct7, param_845));
+		if ($comsubid8 = -1 & $struct7 = struct_510 & $int0 = 1) {
+			$comsubid8 = cc_getid;
+		}
+	} else {
+		cc_sethide(true);
+	}
+	$int5 = calc($int5 + 1);
+}
+%varcint273 = calc($int5 - 1);
+while ($int5 < calc(%varcint273 + 10)) {
+	cc_create($component3, ^iftype_text, $int5);
+	cc_settextfont(b12_full);
+	cc_setsize(0, 30, ^setsize_minus, ^setsize_abs);
+	if (struct_param($struct1, param_692) = 0) {
+		cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	} else {
+		cc_setsize(0, 30, ^setsize_minus, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	}
+	cc_settext("");
+	cc_setcolour(0xff9900);
+	cc_sethide(true);
+	cc_settextshadow(true);
+	$int5 = calc($int5 + 1);
+}
+if (struct_param($struct1, param_692) = 0) {
+	~script2162($int0, %varcint693, %varcint694, %varcint692);
+} else if (struct_param($struct1, param_692) = 1) {
+	~script2162($int0, 1, 0, 0);
+	if_setonvartransmit("script2780($int0, 1, 0, 0){var1384, var1402}", $component3);
+}
+~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if ($comsubid8 ! -1) {
+	~script214($component3, $comsubid8);
+}

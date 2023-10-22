@@ -1,6 +1,19 @@
 // 1429
-[clientscript,script1429](int $int0, component $component1)
-if ($int0 ! 1) {
-	return;
+[clientscript,script1429](component $component0, int $comsubid1)
+def_int $int2 = calc(clientclock % 32);
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (%varcint1024 = %varbit6521 & %varcint1024 ! 0) {
+		if ($int2 < 8) {
+			cc_settrans(0);
+		} else if ($int2 < 16) {
+			cc_settrans(85);
+		} else if ($int2 < 24) {
+			cc_settrans(255);
+		} else {
+			cc_settrans(85);
+		}
+	} else {
+		cc_setontimer(null);
+		cc_settrans(0);
+	}
 }
-~script1849($component1);

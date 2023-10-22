@@ -401,6 +401,46 @@ switch_int ($int0) {
 		if (stat_base(firemaking) >= 55 & stat_base(fletching) >= 53 & stat_base(crafting) >= 52) {
 			return(1);
 		}
+	case 100 :
+		if (stat_base(thieving) >= 46 & stat_base(agility) >= 46 & stat_base(strength) >= 46) {
+			return(1);
+		}
+	case 101 :
+		if (stat_base(hunter) >= 41 & stat_base(agility) >= 50 & stat_base(magic) >= 57 & stat_base(herblore) >= 43) {
+			return(1);
+		}
+	case 102 :
+		if (stat_base(woodcutting) >= 10 & stat_base(magic) >= 10 & stat_base(mining) >= 8 & stat_base(firemaking) >= 6) {
+			return(1);
+		}
+	case 103 :
+		if (stat_base(construction) >= 35 & stat_base(cooking) >= 35 & stat_base(crafting) >= 35 & stat_base(prayer) >= 35 & stat_base(magic) >= 35) {
+			return(1);
+		}
+	case 104 :
+		if (stat_base(thieving) >= 38 & stat_base(construction) >= 45 & stat_base(hunter) >= 45) {
+			return(1);
+		}
+	case 105 :
+		if (stat_base(summoning) >= 41 & stat_base(slayer) >= 37 & stat_base(agility) >= 61 & stat_base(strength) >= 64 & stat_base(ranged) >= 64 & stat_base(thieving) >= 66) {
+			return(1);
+		}
+	case 106 :
+		if (stat_base(hunter) >= 61 & stat_base(firemaking) >= 61 & stat_base(strength) >= 69) {
+			return(1);
+		}
+	case 107 :
+		if (stat_base(agility) >= 69 & stat_base(fletching) >= 70 & stat_base(ranged) >= 75 & stat_base(woodcutting) >= 75) {
+			return(1);
+		}
+	case 108 :
+		if (stat_base(prayer) >= 50) {
+			return(1);
+		}
+	case 109 :
+		if (stat_base(attack) >= 75 & stat_base(strength) >= 75 & stat_base(slayer) >= 65) {
+			return(1);
+		}
 	case default :
 		return(0);
 }

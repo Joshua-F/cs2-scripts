@@ -1,0 +1,10 @@
+// 2658
+[clientscript,script2658]
+%varbit6302 = calc(%varbit6302 + 1);
+if (%varbit6302 >= calc(spline_length(0) - 1)) {
+	%varbit6302 = 0;
+	if_setoncamfinished(null, interface_876:com_0);
+	return;
+}
+cam_movealong(0, %varbit6302, 600, 400, 1, %varbit6302);
+if_setoncamfinished("script2658", interface_876:com_0);

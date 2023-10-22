@@ -1,0 +1,42 @@
+// 2286
+[proc,script2286]
+if_settext("", loginscreen:com_138);
+if_setgraphic(null, loginscreen:com_144);
+%varcint1039 = -1;
+if (compare(%varcstring125, "") = 0) {
+	return;
+}
+def_int $length0 = string_length(%varcstring125);
+if ($length0 < 5) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Password is too short, it must be at least 5 characters long.", loginscreen:com_138);
+	%varcint1039 = 5;
+	~script2230(%varcint174);
+	return;
+}
+if ($length0 > 20) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Password is too long, it must be no more than 20 characters.", loginscreen:com_138);
+	%varcint1039 = 5;
+	~script2230(%varcint174);
+	return;
+}
+if (~script2202(%varcstring125) = 1) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Passwords may only contain letters and numbers.", loginscreen:com_138);
+	%varcint1039 = 5;
+	~script2230(%varcint174);
+	return;
+}
+if (compare(%varcstring125, %varcstring122) = 0) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Your password is too similar to your username.", loginscreen:com_138);
+	~script2230(%varcint174);
+	return;
+}
+if (compare(%varcstring124, %varcstring125) ! 0 & compare(%varcstring124, "") ! 0 & compare(%varcstring125, "") ! 0) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Please make sure both passwords match.", loginscreen:com_138);
+	~script2230(%varcint174);
+	return;
+}

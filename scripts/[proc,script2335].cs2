@@ -1,0 +1,52 @@
+// 2335
+[proc,script2335](component $component0, component $component1, component $component2, component $component3, component $component4, int $width5, int $width6, int $width7, int $width8, int $width9, component $component10, component $component11, component $component12, component $component13)
+if (%varbit3939 < 4000) {
+	if_settext(tostring(%varbit3939), $component10);
+} else {
+	if_settext("Max", $component10);
+}
+if (%varbit3941 < 4000) {
+	if_settext(tostring(%varbit3941), $component11);
+} else {
+	if_settext("Max", $component11);
+}
+if (%varbit3938 < 4000) {
+	if_settext(tostring(%varbit3938), $component12);
+} else {
+	if_settext("Max", $component12);
+}
+if (%varbit3942 < 4000) {
+	if_settext(tostring(%varbit3942), $component13);
+} else {
+	if_settext("Max", $component13);
+}
+def_int $width14 = parawidth(if_gettext($component10), 512, p11_full);
+def_int $width15 = parawidth(if_gettext($component11), 512, p11_full);
+def_int $width16 = parawidth(if_gettext($component12), 512, p11_full);
+def_int $width17 = parawidth(if_gettext($component13), 512, p11_full);
+def_int $int18 = $width5;
+$int18 = max($int18, calc($width6 + 10 + $width14));
+$int18 = max($int18, calc($width7 + 10 + $width15));
+$int18 = max($int18, calc($width8 + 10 + $width16));
+$int18 = max($int18, calc($width9 + 10 + $width17));
+if_setsize($int18, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+if (%varbit3939 < 40) {
+	if_setcolour(0xff981f, $component1);
+} else {
+	if_setcolour(0x66ffff, $component1);
+}
+if (%varbit3941 < 40) {
+	if_setcolour(0xff981f, $component2);
+} else {
+	if_setcolour(0x66ffff, $component2);
+}
+if (%varbit3938 < 40) {
+	if_setcolour(0xff981f, $component3);
+} else {
+	if_setcolour(0x66ffff, $component3);
+}
+if (%varbit3942 < 40) {
+	if_setcolour(0xff981f, $component4);
+} else {
+	if_setcolour(0x66ffff, $component4);
+}

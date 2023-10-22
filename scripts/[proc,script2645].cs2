@@ -1,0 +1,9 @@
+// 2645
+[proc,script2645](component $component0)
+if (%varcint842 = 1) {
+	if_settext("Next page", $component0);
+	if_setonop("script2641", interface_860:com_20);
+} else if (%varcint842 = 2) {
+	if_settext("Previous page", $component0);
+	if_setonop("script2640", interface_860:com_20);
+}

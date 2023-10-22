@@ -1,0 +1,9 @@
+// 1700
+[proc,script1700]
+if (%varcint1052 = 1) {
+	if_settext("Hide stat adjustments.", prayer:com_12);
+	if_setop(1, "Hide stat adjustments", prayer:com_12);
+} else {
+	if_settext("Show stat adjustments.", prayer:com_12);
+	if_setop(1, "Show stat adjustments", prayer:com_12);
+}

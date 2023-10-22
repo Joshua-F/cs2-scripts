@@ -1,0 +1,99 @@
+// 2145
+[proc,script2145](stat $stat0, int $int1, int $int2)(string, int, int)
+def_struct $struct3 = enum(int, struct, enum_169, $int1);
+def_struct $struct4 = enum(int, struct, struct_param($struct3, param_61), $int2);
+def_int $lvl5 = stat_base($stat0);
+def_string $string0 = "null";
+def_int $int6 = -1;
+def_int $int7 = 0;
+if ($struct4 = null) {
+	return($string0, $int6, 0);
+}
+if ($int1 = 1 & ~script2193($int2) = 2) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_871) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_871) = $stat0 & $lvl5 = struct_param($struct4, param_872)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_873) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_873) = $stat0 & $lvl5 = struct_param($struct4, param_874)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_875) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_875) = $stat0 & $lvl5 = struct_param($struct4, param_876)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_877) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_877) = $stat0 & $lvl5 = struct_param($struct4, param_878)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_879) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_879) = $stat0 & $lvl5 = struct_param($struct4, param_880)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_881) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_881) = $stat0 & $lvl5 = struct_param($struct4, param_882)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_883) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_883) = $stat0 & $lvl5 = struct_param($struct4, param_884)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_885) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_885) = $stat0 & $lvl5 = struct_param($struct4, param_886)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_887) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_887) = $stat0 & $lvl5 = struct_param($struct4, param_888)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_889) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_889) = $stat0 & $lvl5 = struct_param($struct4, param_890)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_891) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_891) = $stat0 & $lvl5 = struct_param($struct4, param_892)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+if (struct_param($struct4, param_893) = null) {
+	return($string0, $int6, 0);
+}
+if (struct_param($struct4, param_893) = $stat0 & $lvl5 = struct_param($struct4, param_894)) {
+	$string0, $int6, $int7 = ~script2146($stat0, $int1, $lvl5, $int2, struct_param($struct4, param_845));
+	return($string0, $int6, $int7);
+}
+return("", -1, 0);

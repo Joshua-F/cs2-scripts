@@ -1,0 +1,22 @@
+// 2826
+[proc,script2826](component $component0, coord $coord1)
+switch_int (%varcint1007) {
+	case 301 :
+		spline_new(0, 4);
+		spline_new(1, 4);
+		spline_addpoint(0, 0, ~script2764(0_57_77_29_29, $coord1), 565, ~script2764(0_57_77_28_32, $coord1), 820, 0);
+		spline_addpoint(1, 0, ~script2764(0_57_77_29_36, $coord1), 295, ~script2764(0_57_77_31_41, $coord1), 378, 0);
+		spline_addpoint(0, 1, ~script2764(0_57_77_34_42, $coord1), 700, ~script2764(0_57_77_36_46, $coord1), 705, 0);
+		spline_addpoint(1, 1, ~script2764(0_57_77_43_43, $coord1), 335, ~script2764(0_57_77_46_43, $coord1), 305, 0);
+		spline_addpoint(0, 2, ~script2764(0_57_77_31_35, $coord1), 740, ~script2764(0_57_77_25_34, $coord1), 755, 0);
+		spline_addpoint(1, 2, ~script2764(0_57_77_31_53, $coord1), 315, ~script2764(0_57_78_30_1, $coord1), 270, 0);
+		spline_addpoint(0, 3, ~script2764(0_57_77_31_31, $coord1), 554, ~script2764(0_57_77_32_29, $coord1), 554, 0);
+		spline_addpoint(1, 3, ~script2764(0_57_77_19_36, $coord1), 305, ~script2764(0_57_77_2_36, $coord1), 215, 0);
+		cam_movealong(0, 0, 500, 300, 1, 0);
+	case 302 :
+		cam_movealong(0, 1, 600, 300, 1, 1);
+	case 303 :
+		cam_movealong(0, 2, 600, 300, 1, 2);
+	case default :
+		cam_smoothreset;
+}

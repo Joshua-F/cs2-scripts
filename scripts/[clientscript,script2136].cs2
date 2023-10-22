@@ -1,0 +1,81 @@
+// 2136
+[clientscript,script2136](component $component0)
+cc_deleteall($component0);
+def_int $x1 = calc(118 + %varbit5855 + %varbit5855);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(200, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($x1, 36, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(q8_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setcolour(0x342e10);
+cc_settextshadow(false);
+cc_settext(enum(int, string, enum_2224, %varbit5856));
+cc_setonmouseover("cc_text_colour_swapper(event_com, event_comsubid, ^white)");
+cc_setonmouseleave("cc_text_colour_swapper(event_com, event_comsubid, 0x342e10)");
+cc_setop(1, "Select");
+cc_create($component0, ^iftype_text, 1);
+cc_setsize(200, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($x1, 70, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(q8_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setcolour(0x342e10);
+cc_settextshadow(false);
+cc_settext(enum(int, string, enum_2224, %varbit5858));
+cc_setonmouseover("cc_text_colour_swapper(event_com, event_comsubid, ^white)");
+cc_setonmouseleave("cc_text_colour_swapper(event_com, event_comsubid, 0x342e10)");
+cc_setop(1, "Select");
+cc_create($component0, ^iftype_text, 2);
+cc_setsize(200, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($x1, 104, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(q8_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setcolour(0x342e10);
+cc_settextshadow(false);
+cc_settext(enum(int, string, enum_2224, %varbit5860));
+cc_setonmouseover("cc_text_colour_swapper(event_com, event_comsubid, ^white)");
+cc_setonmouseleave("cc_text_colour_swapper(event_com, event_comsubid, 0x342e10)");
+cc_setop(1, "Select");
+.cc_create($component0, ^iftype_model, 3);
+.cc_setsize(226, 144, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 147, ^setpos_abs_centre, ^setpos_abs_top);
+switch_int (%varbit5857) {
+	case 0 :
+		.cc_setmodel(enum(int, model, enum_2225, %varbit5862));
+	case 1 :
+		.cc_setmodel(enum(int, model, enum_2226, %varbit5862));
+	case 2 :
+		.cc_setmodel(enum(int, model, enum_2227, %varbit5862));
+	case default :
+		.cc_setmodel(enum(int, model, enum_2228, %varbit5862));
+}
+def_int $int2 = calc((%varbit5855 - 5) * 4);
+def_int $int3 = calc((%varbit5859 - 4) * 4);
+.cc_setmodelangle($int2, $int3, pow(%varbit5861, 2), pow(%varbit5861, 2), pow(%varbit5861, 2), calc(400 + %varbit5863 + %varbit5863));
+def_int $int4 = %varbit5855;
+def_int $int5 = calc(%varbit5859 / 2);
+def_int $int6 = 0;
+switch_int (%varbit5863) {
+	case 0 :
+		$int4, $int5, $int6 = $int5, $int6, $int4;
+	case 1 :
+		$int4, $int5, $int6 = $int6, $int4, $int5;
+	case 2 :
+		$int4, $int5, $int6 = $int4, $int6, $int5;
+}
+.cc_setontimer("script2137($int4, $int5, $int6, $int2, $int3, event_com, event_comsubid)");
+cc_create($component0, ^iftype_rectangle, 4);
+cc_setsize(226, 144, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 147, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(~rgb_to_hex(calc(%varbit5861 + 95), calc(%varbit5859 + 85), calc(%varbit5855 + 29)));
+cc_setfill(true);
+cc_settrans(0);
+cc_setontimer("script2138(event_com, event_comsubid, 0)");
+cc_create($component0, ^iftype_graphic, 5);
+cc_setsize(19, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(349, calc(%varbit5859 + 148), ^setpos_abs_left, ^setpos_abs_top);
+cc_sethflip(true);
+cc_setgraphic("graphic_1538");
+cc_setonmouseover("cc_settrans(event_com, event_comsubid, 125)");
+cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0)");
+cc_setop(1, "Change spin");
+cc_setonop("script2139(event_op, $component0, .cc_getid, $int2, $int3)");

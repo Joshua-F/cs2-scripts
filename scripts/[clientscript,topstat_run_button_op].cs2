@@ -3,9 +3,9 @@
 if ($opindex1 ! 1) {
 	return;
 }
-if (~bool_to_int(%varcint214) = 1) {
-	%varcint214 = false;
+if (%varcint119 = 1) {
+	%varcint119 = 0;
 } else {
-	%varcint214 = true;
+	%varcint119 = 1;
 }
 ~topstat_run_button_update($component0);

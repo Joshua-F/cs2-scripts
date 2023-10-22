@@ -1,0 +1,9 @@
+// 2129
+[clientscript,script2129](component $component0, component $component1, component $component2)
+switch_component ($component1) {
+	case beehive:com_12, beehive:com_13, beehive:com_14, beehive:com_15, beehive:com_16, beehive:com_17, beehive:com_18, beehive:com_19 :
+		if_setposition(if_getx($component1), if_gety($component1), ^setpos_abs_left, ^setpos_abs_top, $component0);
+		sound_synth(synth_5507, 1, 0);
+	case default :
+		if_setposition(if_getx($component2), if_gety($component2), ^setpos_abs_left, ^setpos_abs_top, $component0);
+}

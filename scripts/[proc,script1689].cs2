@@ -1,0 +1,28 @@
+// 1689
+[proc,script1689]
+%varcint1047 = calc(%varcint1047 + 1);
+if (%varcint1047 >= calc(2 - 1)) {
+	%varcint1047 = 0;
+	if (%varcint1045 = 0) {
+		%varcint1046 = min(calc(%varcint1046 + 2), 255);
+	} else if (%varcint1045 = 1) {
+		%varcint1046 = max(calc(%varcint1046 - 2), 0);
+	}
+	if_settrans(%varcint1046, interface_85:com_2);
+}
+%varcint1050 = calc(%varcint1050 + 1);
+if (%varcint1050 >= calc(6 - 1)) {
+	%varcint1050 = 0;
+	if (%varcint1048 = 0) {
+		%varcint1049 = min(calc(%varcint1049 + 1), 255);
+		if (%varcint1049 >= 255) {
+			%varcint1048 = 1;
+		}
+	} else if (%varcint1048 = 1 & %varcint1051 = 1) {
+		%varcint1049 = max(calc(%varcint1049 - 3), 192);
+		if (%varcint1049 <= 192) {
+			%varcint1048 = 0;
+		}
+	}
+	if_settrans(%varcint1049, interface_85:com_1);
+}

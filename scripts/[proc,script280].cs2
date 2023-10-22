@@ -1,0 +1,8 @@
+// 280
+[proc,script280](int $int0)
+if ($int0 >= 1 & $int0 <= 31) {
+	%varcint730 = $int0;
+} else {
+	%varcint730 = -1;
+}
+if_settext("", loginscreen:com_117);

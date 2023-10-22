@@ -1,13 +1,28 @@
 // 1121
 [proc,script1121]
-if (getwindowmode = 0) {
-	if_setcolour(0x996600, graphics_options:com_50);
-	~dropdownbox_refuse("High Detail only", graphics_options:com_59, graphics_options:com_60, graphics_options:com_61, null, "tradebacking_dark", 0xcf0000, p11_full);
+def_component $component0 = enum(int, component, enum_729, %varbit276);
+def_int $x1 = 0;
+def_int $y2 = 0;
+def_component $component3 = null;
+def_component $component4 = null;
+switch_int (%varbit357) {
+	case 0 :
+		$component3 = magic:com_93;
+		$component4 = magic:com_92;
+	case 1 :
+		$component3 = magic_zaros:com_50;
+		$component4 = magic_zaros:com_49;
+	case default :
+		return;
+}
+if ($component0 ! null & %varbit275 = 1) {
+	$x1 = calc(if_getx($component0) - 2);
+	$y2 = calc(if_gety($component0) - 2);
+	if_setposition($x1, $y2, ^setpos_abs_left, ^setpos_abs_top, $component3);
+	if_setposition($x1, $y2, ^setpos_abs_left, ^setpos_abs_top, $component4);
+	if_sethide(false, $component3);
+	if_sethide(false, $component4);
 	return;
 }
-def_int $int0 = 0;
-if (detailget_waterdetail_high = true) {
-	$int0 = 1;
-}
-if_setcolour(0xe1981f, graphics_options:com_50);
-~script1435(enum_1581, $int0, 1, graphics_options:com_59, graphics_options:com_60, graphics_options:com_61, null, "tradebacking_dark", "scrollbar_v2,1", 788, "tradebacking_light", 0xcf0000, ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_sethide(true, $component3);
+if_sethide(true, $component4);

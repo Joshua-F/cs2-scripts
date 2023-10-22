@@ -1,7 +1,7 @@
 // 1480
 [clientscript,script1480](component $component0, int $size1)
 if (%varcint188 = 0) {
-	~deltooltip_action(bank_v2_main:com_74);
+	~deltooltip_action(bank_v2_main:com_88);
 	return;
 }
-~addtooltip_action_dynamic($component0, $size1, bank_v2_main:com_74, "Item is in tab <tostring(~bank_v2_get_tab($size1))>", 25, 150);
+~addtooltip_action_dynamic($component0, $size1, bank_v2_main:com_88, "Item is in tab <tostring(~bank_v2_get_tab($size1))>", 25, 150);

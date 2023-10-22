@@ -1,9 +1,17 @@
 // 49
-[clientscript,prayer_varupdate](component $component0, component $component1)
-if (~script51($component0) = 0) {
-	if_sethide(true, $component1);
-	if_setop(1, "Activate", $component0);
+[clientscript,prayer_varupdate](component $component0, component $component1, int $int2)
+if (~script2296($int2) = 1) {
+	if (cc_find($component0, $int2) = ^true) {
+		cc_setop(1, "Deactivate");
+	}
+	if (cc_find($component1, $int2) = ^true) {
+		cc_setgraphic("prayerglow");
+	}
 } else {
-	if_sethide(false, $component1);
-	if_setop(1, "Deactivate", $component0);
+	if (cc_find($component0, $int2) = ^true) {
+		cc_setop(1, "Activate");
+	}
+	if (cc_find($component1, $int2) = ^true) {
+		cc_setgraphic(null);
+	}
 }

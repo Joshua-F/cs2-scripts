@@ -1,0 +1,43 @@
+// 2736
+[clientscript,script2736](int $opindex0, component $component1, int $comsubid2, int $comsubid3, int $comsubid4)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_7259, 1, 0);
+if ($component1 = interface_900:com_27) {
+	~script1166(interface_900:com_27);
+	~script1151(interface_900:com_15);
+	~script1151(interface_900:com_20);
+} else if (gender = 1) {
+	if ($component1 = interface_900:com_20) {
+		return;
+	}
+	~script1166(interface_900:com_15);
+	~script1151(interface_900:com_20);
+} else {
+	if ($component1 = interface_900:com_15) {
+		return;
+	}
+	~script1151(interface_900:com_15);
+	~script1166(interface_900:com_20);
+}
+if (cc_find(interface_900:chathead, $comsubid4) = ^true & cc_gethide = false) {
+	cc_setontimer("script2746(event_com, event_comsubid, 0)");
+	cc_sethide(true);
+	cc_setmodelangle(0, 0, 0, 0, 0, 2600);
+	if (cc_find(interface_900:com_74, $comsubid2) = ^true) {
+		cc_setonhold(null);
+		cc_setontimer("script2750(event_com, event_comsubid, $comsubid4, clientclock)");
+		cc_setmodelanim(seq_12285);
+	}
+	if (cc_find(interface_900:com_74, $comsubid3) = ^true) {
+		sound_synth(synth_7281, 1, 0);
+		sound_synth(synth_7281, 1, 30);
+		cc_setmodelanim(seq_12286);
+		cc_setontimer("script2751(event_com, event_comsubid, clientclock)");
+	}
+}
+%varcint1020 = -1;
+~script2738;
+~script2739(null);
+if_setonvarctransmit("script2730{varcint1008, varcint1009, varcint1010, varcint1011, varcint1012, varcint1013, varcint1014, varcint1015, varcint1016, varcint1017, varcint1018, varcint1019}", interface_900:contents);

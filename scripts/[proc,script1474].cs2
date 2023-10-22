@@ -1,13 +1,15 @@
 // 1474
 [proc,script1474]
-if_sethide(true, bank_v2_main:com_99);
-if_sethide(true, bank_v2_main:com_100);
-if_setgraphic("graphic_1423", bank_v2_main:com_21);
-if_setgraphic("graphic_1431", bank_v2_main:com_20);
+if_sethide(true, bank_v2_main:com_110);
+if_sethide(true, bank_v2_main:com_111);
+if_setgraphic("graphic_1423", bank_v2_main:com_18);
+if_setgraphic("graphic_1431", bank_v2_main:com_17);
 if (%varbit4893 = 0) {
 	~bank_v2_show_all;
 }
 ~bank_v2_tab_highlight(1);
+%varcstring138 = "";
 ~meslayer_close(11);
 %varcint188 = 0;
 if_settext("Bank of RuneScape", bank_v2_main:title);
+if_setontimer(null, bank_v2_main:com_17);

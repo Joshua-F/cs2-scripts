@@ -1,0 +1,71 @@
+// 291
+[proc,script291](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if_settext(worldmap_getmapname(worldmap_getcurrentmap), worldmap:com_20);
+cc_deleteall($component2);
+cc_deleteall($component3);
+if ($boolean0 = false) {
+	if_sethide(true, $component1);
+	if_setgraphic("scrollbar_v2,0", worldmap:com_21);
+	if_setonclick("script290(true, $component1, $component2, $component3, $component4, $component5)", worldmap:com_21);
+	if_setonclick("script290(true, $component1, $component2, $component3, $component4, $component5)", worldmap:com_20);
+	return;
+}
+if_sethide(false, $component1);
+if_setgraphic("scrollbar_v2,1", worldmap:com_21);
+if_setonclick("script290(false, $component1, $component2, $component3, $component4, $component5)", worldmap:com_21);
+if_setonclick("script290(false, $component1, $component2, $component3, $component4, $component5)", worldmap:com_20);
+def_int $intarray0(calc(35 + 1));
+$intarray0(0) = 0;
+def_int $int6 = 1;
+def_int $int7 = 1;
+def_wma $wma8 = null;
+while ($int6 <= 35) {
+	$wma8 = enum(int, wma, enum_708, $int6);
+	if ($wma8 ! null) {
+		$intarray0($int7) = $int6;
+		$int7 = calc($int7 + 1);
+	}
+	$int6 = calc($int6 + 1);
+}
+~script293(intarray0, 1, calc($int7 - 1));
+cc_create($component2, ^iftype_text, if_getnextsubid($component2));
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setcolour(^white);
+cc_setonmouseover("cc_text_colour_swapper(event_com, event_comsubid, 0xafafaf)");
+cc_setonmouseleave("cc_text_colour_swapper(event_com, event_comsubid, ^white)");
+$wma8 = enum(int, wma, enum_708, $intarray0(0));
+cc_settext(worldmap_getmapname($wma8));
+cc_setonclick("script294($wma8, $component1, $component2, $component3, $component4, $component5)");
+~script309($wma8, $component2, 0);
+def_int $int9 = cc_getheight;
+def_int $int10 = 0;
+$int6 = 1;
+while ($int6 < $int7) {
+	cc_create($component2, ^iftype_text, if_getnextsubid($component2));
+	cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setcolour(^white);
+	cc_setonmouseover("cc_text_colour_swapper(event_com, event_comsubid, 0xafafaf)");
+	cc_setonmouseleave("cc_text_colour_swapper(event_com, event_comsubid, ^white)");
+	$wma8 = enum(int, wma, enum_708, $intarray0($int6));
+	cc_settext(worldmap_getmapname($wma8));
+	cc_setonclick("script294($wma8, $component1, $component2, $component3, $component4, $component5)");
+	if ($wma8 = worldmap_getcurrentmap) {
+		$int10 = $int9;
+	}
+	~script309($wma8, $component2, $int9);
+	$int9 = calc($int9 + cc_getheight);
+	$int6 = calc($int6 + 1);
+}
+if_setscrollsize(0, $int9, $component2);
+$int9 = max($int9, 20);
+$int9 = calc($int9 + 3);
+$int9 = min($int9, 150);
+if_setsize(if_getwidth($component1), $int9, ^setsize_abs, ^setsize_abs, $component1);
+~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_ondrag_doscroll($component3, $component2, $int10, 1);

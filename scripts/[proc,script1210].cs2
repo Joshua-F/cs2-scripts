@@ -1,11 +1,12 @@
 // 1210
-[proc,script1210]
-if (getwindowmode = 0) {
-	~dropdownbox_refuse("High Detail only", loginscreen:com_9, loginscreen:com_10, loginscreen:com_11, null, "graphic_884", 0x7f0000, p11_full);
-	return;
+[proc,script1210](int $int0, int $int1, int $clock2, int $int3)(int)
+def_int $int4 = calc((clientclock + $int3 - $clock2) % $int1);
+def_int $int5 = calc($int1 / 2);
+def_int $int6 = calc($int5 - $int4);
+if ($int6 = 0) {
+	return($int0);
 }
-def_int $int0 = 0;
-if (detailget_lightdetail_high = true) {
-	$int0 = 1;
+if ($int6 > 0) {
+	return(calc($int0 - scale($int6, $int5, $int0)));
 }
-~script1435(enum_1581, $int0, 1, loginscreen:com_9, loginscreen:com_10, loginscreen:com_11, null, "graphic_884", "graphic_1248", 1250, "graphic_1402", 0x7f0000, ^white, 0xffc61a, "p11_full", "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+return(calc($int0 + scale($int6, $int5, $int0)));

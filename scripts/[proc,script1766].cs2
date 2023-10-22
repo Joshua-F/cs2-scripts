@@ -1,61 +1,113 @@
 // 1766
 [proc,script1766]
 if (%varcint232 = 0) {
-	if_setgraphic("side_icons,0", toplevel:icon0);
-	if_setgraphic("side_icons,0", toplevel_fullscreen:icon0);
+	if_setgraphic("graphic_1817", toplevel:icon0);
+	if_setgraphic("graphic_1817", toplevel_fullscreen:icon0);
+	if_setop(1, "Combat Styles", toplevel:stone0);
+	if_setop(1, "Combat Styles", toplevel_fullscreen:stone0);
 }
 if (%varcint233 = 0) {
-	if_setgraphic("side_icons,1", toplevel:icon1);
-	if_setgraphic("side_icons,1", toplevel_fullscreen:icon1);
+	if_setgraphic("graphic_1818", toplevel:icon1);
+	if_setgraphic("graphic_1818", toplevel_fullscreen:icon1);
+	if_setop(1, "Stats", toplevel:stone1);
+	if_setop(1, "Stats", toplevel_fullscreen:stone1);
+} else if (%varcint233 = 1) {
+	if_setgraphic("graphic_1812", toplevel:icon1);
+	if_setgraphic("graphic_1812", toplevel_fullscreen:icon1);
+	if_setop(1, "Camera", toplevel:stone1);
+	if_setop(1, "Camera", toplevel_fullscreen:stone1);
 }
 if (%varcint234 = 0) {
-	if_setgraphic("side_icons,2", toplevel:icon2);
-	if_setgraphic("side_icons,2", toplevel_fullscreen:icon2);
+	if_setgraphic("graphic_1819", toplevel:icon2);
+	if_setgraphic("graphic_1819", toplevel_fullscreen:icon2);
+	if_setop(1, "Quest List", toplevel:stone2);
+	if_setop(1, "Quest List", toplevel_fullscreen:stone2);
+} else if (%varcint234 = 1) {
+	if_setgraphic("graphic_1815", toplevel:icon2);
+	if_setgraphic("graphic_1815", toplevel_fullscreen:icon2);
+	if_setop(1, "Squad Commands", toplevel:stone2);
+	if_setop(1, "Squad Commands", toplevel_fullscreen:stone2);
+} else if (%varcint234 = 2) {
+	if_setgraphic("graphic_1834", toplevel:icon2);
+	if_setgraphic("graphic_1834", toplevel_fullscreen:icon2);
+	if_setop(1, "Book", toplevel:stone2);
+	if_setop(1, "Book", toplevel_fullscreen:stone2);
+}
+if (%varcint822 = 0) {
+	if_setgraphic("graphic_1820", toplevel:icon3);
+	if_setgraphic("graphic_1820", toplevel_fullscreen:icon3);
+	if_setop(1, "Achievement Diaries", toplevel:stone3);
+	if_setop(1, "Achievement Diaries", toplevel_fullscreen:stone3);
+} else if (%varcint822 = 1) {
+	if_setgraphic("graphic_1813", toplevel:icon3);
+	if_setgraphic("graphic_1813", toplevel_fullscreen:icon3);
+	if_setop(1, "Special Units", toplevel:stone3);
+	if_setop(1, "Special Units", toplevel_fullscreen:stone3);
 }
 if (%varcint235 = 0) {
-	if_setgraphic("side_icons,3", toplevel:icon3);
-	if_setgraphic("side_icons,3", toplevel_fullscreen:icon3);
+	if_setgraphic("graphic_1821", toplevel:icon4);
+	if_setgraphic("graphic_1821", toplevel_fullscreen:icon4);
+	if_setop(1, "Inventory", toplevel:stone4);
+	if_setop(1, "Inventory", toplevel_fullscreen:stone4);
+} else if (%varcint235 = 1) {
+	if_setgraphic("graphic_1814", toplevel:icon4);
+	if_setgraphic("graphic_1814", toplevel_fullscreen:icon4);
+	if_setop(1, "My Squads", toplevel:stone4);
+	if_setop(1, "My Squads", toplevel_fullscreen:stone4);
 }
 if (%varcint236 = 0) {
-	if_setgraphic("side_icons,4", toplevel:icon4);
-	if_setgraphic("side_icons,4", toplevel_fullscreen:icon4);
+	if_setgraphic("graphic_1822", toplevel:icon5);
+	if_setgraphic("graphic_1822", toplevel_fullscreen:icon5);
+	if_setop(1, "Worn Equipment", toplevel:stone5);
+	if_setop(1, "Worn Equipment", toplevel_fullscreen:stone5);
 } else if (%varcint236 = 1) {
-	if_setgraphic("side_icons,16", toplevel:icon4);
-	if_setgraphic("side_icons,16", toplevel_fullscreen:icon4);
+	if_setgraphic("graphic_1833", toplevel:icon5);
+	if_setgraphic("graphic_1833", toplevel_fullscreen:icon5);
+	if_setop(1, "Acrobat Emotes", toplevel:stone5);
+	if_setop(1, "Acrobat Emotes", toplevel_fullscreen:stone5);
+} else if (%varcint236 = 2) {
+	if_setgraphic("graphic_1816", toplevel:icon5);
+	if_setgraphic("graphic_1816", toplevel_fullscreen:icon5);
+	if_setop(1, "Forfeit", toplevel:stone5);
+	if_setop(1, "Forfeit", toplevel_fullscreen:stone5);
 }
 if (%varcint237 = 0) {
-	if_setgraphic("side_icons,5", toplevel:icon5);
-	if_setgraphic("side_icons,5", toplevel_fullscreen:icon5);
+	if_setgraphic("graphic_1823", toplevel:icon6);
+	if_setgraphic("graphic_1823", toplevel_fullscreen:icon6);
 }
 if (%varcint238 = 0) {
-	if_setgraphic("side_icons,6", toplevel:icon6);
-	if_setgraphic("side_icons,6", toplevel_fullscreen:icon6);
+	if_setgraphic("graphic_1824", toplevel:icon7);
+	if_setgraphic("graphic_1824", toplevel_fullscreen:icon7);
 }
-if (%varcint239 = 0) {
-	if_setgraphic("side_icons,15", toplevel:icon7);
-	if_setgraphic("side_icons,15", toplevel_fullscreen:icon7);
+if (%varcint823 = 0) {
+	if_setgraphic("graphic_1825", toplevel:icon8);
+	if_setgraphic("graphic_1825", toplevel_fullscreen:icon8);
 }
 if (%varcint240 = 0) {
-	if_setgraphic("side_icons,7", toplevel:icon8);
-	if_setgraphic("side_icons,7", toplevel_fullscreen:icon8);
+	if_setgraphic("graphic_1826", toplevel:icon9);
+	if_setgraphic("graphic_1826", toplevel_fullscreen:icon9);
 }
 if (%varcint241 = 0) {
-	if_setgraphic("side_icons,8", toplevel:icon9);
-	if_setgraphic("side_icons,8", toplevel_fullscreen:icon9);
+	if_setgraphic("graphic_1827", toplevel:icon10);
+	if_setgraphic("graphic_1827", toplevel_fullscreen:icon10);
 }
 if (%varcint242 = 0) {
-	if_setgraphic("side_icons,14", toplevel:icon10);
-	if_setgraphic("side_icons,14", toplevel_fullscreen:icon10);
+	if_setgraphic("graphic_1828", toplevel:icon11);
+	if_setgraphic("graphic_1828", toplevel_fullscreen:icon11);
 }
 if (%varcint243 = 0) {
-	if_setgraphic("side_icons,10", toplevel:icon11);
-	if_setgraphic("side_icons,10", toplevel_fullscreen:icon11);
+	if_setgraphic("graphic_1829", toplevel:icon12);
+	if_setgraphic("graphic_1829", toplevel_fullscreen:icon12);
 }
 if (%varcint244 = 0) {
-	if_setgraphic("side_icons,11", toplevel:icon12);
-	if_setgraphic("side_icons,11", toplevel_fullscreen:icon12);
+	if_setgraphic("graphic_1830", toplevel:icon13);
+	if_setgraphic("graphic_1830", toplevel_fullscreen:icon13);
 }
 if (%varcint245 = 0) {
-	if_setgraphic("side_icons,12", toplevel:icon13);
-	if_setgraphic("side_icons,12", toplevel_fullscreen:icon13);
+	if_setgraphic("graphic_1831", toplevel:com_65);
+	if_setgraphic("graphic_1831", toplevel_fullscreen:com_122);
+}
+if (%varcint824 = 0) {
+	if_setgraphic("graphic_1832", toplevel:com_66);
+	if_setgraphic("graphic_1832", toplevel_fullscreen:com_123);
 }

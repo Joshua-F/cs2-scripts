@@ -1,18 +1,20 @@
 // 810
 [proc,script810]
 if (map_members = ^true & %varbit4280 = 1) {
-	if_sethide(false, topstat_lore:com_1);
 	if_sethide(false, topstat_lore:com_2);
-	if_sethide(false, topstat_lore:com_5);
 	if_sethide(false, topstat_lore:com_3);
-	~script817(summoning);
+	if_sethide(false, topstat_lore:com_6);
 	if_sethide(false, topstat_lore:com_4);
-	if_setcolour(~script805(summoning), topstat_lore:com_4);
-	if_settext(tostring(stat(summoning)), topstat_lore:com_4);
+	if_sethide(false, topstat_lore:com_7);
+	~script817(summoning);
+	if_sethide(false, topstat_lore:com_5);
+	if_setcolour(~script805(summoning), topstat_lore:com_5);
+	if_settext(tostring(stat(summoning)), topstat_lore:com_5);
 } else {
-	if_sethide(true, topstat_lore:com_1);
 	if_sethide(true, topstat_lore:com_2);
-	if_sethide(true, topstat_lore:com_4);
-	if_sethide(true, topstat_lore:com_5);
 	if_sethide(true, topstat_lore:com_3);
+	if_sethide(true, topstat_lore:com_5);
+	if_sethide(true, topstat_lore:com_6);
+	if_sethide(true, topstat_lore:com_4);
+	if_sethide(true, topstat_lore:com_7);
 }

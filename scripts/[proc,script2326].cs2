@@ -1,0 +1,27 @@
+// 2326
+[proc,script2326](model $model0)
+def_int $clock1 = clientclock;
+switch_model ($model0) {
+	case model_32826, model_32828 :
+		%varcint767 = 0;
+		if_sethide(false, interface_306:com_20);
+		if_settext("Incorrect", interface_306:com_21);
+		sound_synth(synth_6424, 1, 0);
+		if_setcolour(^red, interface_306:com_21);
+		if_setontimer("script2327($clock1)", interface_306:com_20);
+	case default :
+		%varcint767 = calc(%varcint767 + 1);
+		if (%varcint767 = 10) {
+			if_sethide(false, interface_306:com_22);
+			if_setop(1, "Train", interface_306:com_24);
+			if_setonclick(null, interface_306:com_18);
+		} else {
+			if_sethide(false, interface_306:com_20);
+			if_settext("Correct", interface_306:com_21);
+			sound_synth(synth_6423, 1, 0);
+			if_setcolour(^green, interface_306:com_21);
+			if_setontimer("script2327($clock1)", interface_306:com_20);
+		}
+}
+if_settext("Correct: <tostring(%varcint767)>/<tostring(10)>", interface_306:com_3);
+sound_synth(synth_6423, 1, 0);

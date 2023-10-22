@@ -1,4 +1,10 @@
 // 330
-[clientscript,script330]
-~script365;
-if_setgraphic("miscgraphics,11", interface_592:com_47);
+[clientscript,script330](component $component0)
+def_int $int1 = 0;
+if (gender = 1) {
+	$int1 = enum_getoutputcount(enum_2363);
+} else {
+	$int1 = enum_getoutputcount(enum_2132);
+}
+~script332(%varcint784);
+~script2366($component0, %varcint784, $int1);

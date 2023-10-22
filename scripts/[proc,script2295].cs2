@@ -1,0 +1,26 @@
+// 2295
+[proc,script2295](int $int0)(int)
+if (map_members = ^false & ~script2294($int0) = 1) {
+	return(0);
+}
+if (stat(prayer) = 0) {
+	sound_synth(synth_2673, 1, 0);
+	return(0);
+}
+def_enum $enum1 = enum_2279;
+if (%varbit6840 = 1) {
+	$enum1 = enum_863;
+}
+if (stat_base(prayer) < struct_param(enum(int, struct, $enum1, $int0), param_737)) {
+	sound_synth(synth_2673, 1, 0);
+	return(0);
+}
+if ($int0 = 25 & (stat_base(defence) < 55 | %varbit3909 ! 8)) {
+	sound_synth(synth_2673, 1, 0);
+	return(0);
+}
+if ($int0 = 26 & (stat_base(defence) < 70 | %varbit3909 ! 8)) {
+	sound_synth(synth_2673, 1, 0);
+	return(0);
+}
+return(1);

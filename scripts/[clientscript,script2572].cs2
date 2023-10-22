@@ -1,0 +1,11 @@
+// 2572
+[clientscript,script2572]
+if (calc(inv_totalparam(inv, param_803) + inv_totalparam(inv, param_802)) < %varbit6429) {
+	return;
+}
+if (%varbit6429 > 0 & %varbit6429 < 11) {
+	%varcint929 = calc(%varbit6429 - 1);
+} else {
+	%varcint929 = 0;
+}
+~script2573;

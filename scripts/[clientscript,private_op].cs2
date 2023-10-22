@@ -1,16 +1,19 @@
 // 88
-[clientscript,private_op](int $int0, string $string0)
-def_string $string1 = removetags($string0);
-if ($int0 = 8) {
-	if (friend_test($string1) = true) {
-		if (map_quickchat = false & _3328 = false) {
-			~meslayer_mode6($string1);
+[clientscript,private_op](int $opindex0, string $string0, int $int1)
+$string0 = removetags($string0);
+switch_int ($opindex0) {
+	case 7 :
+		if (friend_test($string0) = true) {
+			if (map_quickchat = false & _3328 = false) {
+				~meslayer_mode6($string0);
+			}
+		} else {
+			friend_add($string0);
 		}
-	} else {
-		friend_add($string1);
-	}
-} else if ($int0 = 9) {
-	ignore_add($string1);
-} else if ($int0 = 10) {
-	%varcstring24 = $string1;
+	case 8 :
+		ignore_add($string0);
+	case 9 :
+		~quickchat_respond(5, $string0, chat_gethistoryphrase($int1));
+	case 10 :
+		%varcstring24 = $string0;
 }

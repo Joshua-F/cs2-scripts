@@ -1,0 +1,89 @@
+// 2236
+[proc,script2236]
+~script2217;
+~script2231(1);
+~script2225;
+~script2282;
+def_boolean $boolean0 = true;
+if_settext("", loginscreen:com_135);
+if_setgraphic(null, loginscreen:com_150);
+%varcint735 = -1;
+def_int $length1 = string_length(%varcstring124);
+if (compare(%varcstring124, "") = 0) {
+	if_settext("Please supply a password.", loginscreen:com_135);
+	$boolean0 = false;
+} else if ($length1 < 5) {
+	if_setgraphic("graphic_1726", loginscreen:com_150);
+	if_settext("Password is too short, it must be at least 5 characters long.", loginscreen:com_135);
+	%varcint735 = 5;
+	$boolean0 = false;
+} else if ($length1 > 20) {
+	if_setgraphic("graphic_1726", loginscreen:com_150);
+	if_settext("Password is too long, it must be no more than 20 characters.", loginscreen:com_135);
+	%varcint735 = 5;
+	$boolean0 = false;
+} else if (~script2202(%varcstring124) = 1) {
+	if_setgraphic("graphic_1726", loginscreen:com_150);
+	if_settext("Passwords may only contain letters and numbers.", loginscreen:com_135);
+	%varcint735 = 5;
+	$boolean0 = false;
+} else if (compare(%varcstring124, %varcstring122) = 0) {
+	if_setgraphic("graphic_1726", loginscreen:com_150);
+	if_settext("Your password is too similar to your username.", loginscreen:com_135);
+	$boolean0 = false;
+}
+def_boolean $boolean2 = true;
+if_settext("", loginscreen:com_138);
+if_setgraphic(null, loginscreen:com_144);
+%varcint1039 = -1;
+$length1 = string_length(%varcstring125);
+if (compare(%varcstring125, "") = 0) {
+	if_settext("Please supply a password.", loginscreen:com_138);
+	$boolean2 = false;
+} else if ($length1 < 5) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Password is too short, it must be at least 5 characters long.", loginscreen:com_138);
+	%varcint1039 = 5;
+	$boolean2 = false;
+} else if ($length1 > 20) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Password is too long, it must be no more than 20 characters.", loginscreen:com_138);
+	%varcint1039 = 5;
+	$boolean2 = false;
+} else if (~script2202(%varcstring125) = 1) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Passwords may only contain letters and numbers.", loginscreen:com_138);
+	%varcint1039 = 5;
+	$boolean2 = false;
+} else if (compare(%varcstring125, %varcstring122) = 0) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Your password is too similar to your username.", loginscreen:com_138);
+	$boolean2 = false;
+}
+def_boolean $boolean3 = true;
+if (compare(%varcstring124, %varcstring125) ! 0 & compare(%varcstring124, "") ! 0 & compare(%varcstring125, "") ! 0) {
+	if_setgraphic("graphic_1726", loginscreen:com_144);
+	if_settext("Please make sure both passwords match.", loginscreen:com_138);
+	$boolean3 = false;
+}
+def_boolean $boolean4 = true;
+if_settext("", loginscreen:com_153);
+if_setgraphic(null, loginscreen:com_159);
+%varcint734 = -1;
+if (compare(%varcstring122, "") = 0) {
+	if_settext("Please supply a username.", loginscreen:com_153);
+	if_setgraphic(null, loginscreen:com_159);
+	$boolean4 = false;
+} else if (~script2203(%varcstring122) = 0) {
+	if_setgraphic("graphic_1726", loginscreen:com_159);
+	if_settext("Please supply a valid username.", loginscreen:com_153);
+	%varcint734 = 1;
+	$boolean4 = false;
+}
+if ($boolean4 = true) {
+	_5604(%varcstring122);
+	%varcstring123 = %varcstring122;
+	if_setontimer("script2237($boolean4, $boolean0, $boolean2, $boolean3)", loginscreen:com_44);
+} else {
+	~script2238($boolean4, $boolean0, $boolean2, $boolean3);
+}

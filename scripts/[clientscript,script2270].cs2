@@ -1,0 +1,12 @@
+// 2270
+[clientscript,script2270]
+if (calc(clientclock % 40) < 20 & create_reply ! -3) {
+	~script2272;
+	if (%varcint174 = 12) {
+		~script2255(%varcstring128, loginscreen:com_283, 12, 1);
+	} else if (%varcint174 = 13) {
+		~script2255(%varcstring129, loginscreen:com_276, 13, 1);
+	}
+} else {
+	~script2272;
+}

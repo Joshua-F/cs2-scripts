@@ -1,0 +1,40 @@
+// 2744
+[proc,script2744](enum $enum0, enum $enum1, enum $enum2, int $int3)(int)
+def_int $int4 = calc(if_getwidth(interface_900:com_70) / 21);
+def_int $int5 = min(enum_getoutputcount($enum0), calc($int4 * (if_getheight(interface_900:com_73) / 21)));
+if_setsize(calc($int4 * 21), if_getheight(interface_900:com_73), ^setsize_abs, ^setsize_abs, interface_900:com_73);
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_graphic $graphic8 = "graphic_2289";
+def_graphic $graphic9 = "graphic_2288";
+def_string $string0 = "";
+while ($int6 < $int5) {
+	if ($enum1 = null) {
+		$int7 = $int6;
+	} else {
+		$int7 = enum(int, int, $enum1, $int6);
+	}
+	$string0 = enum(int, string, $enum2, $int6);
+	cc_create(interface_900:com_73, ^iftype_rectangle, calc($int6 * 2));
+	cc_setsize(19, 19, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(enum(int, int, $enum0, $int6));
+	cc_setfill(true);
+	cc_setposition(calc($int6 % $int4 * 21), calc($int6 / $int4 * 21), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_create(interface_900:com_73, ^iftype_graphic, calc($int6 * 2 + 1));
+	.cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	if ($int7 = $int3) {
+		.cc_setgraphic($graphic8);
+		.cc_setonmouserepeat("script1160(event_com, event_comsubid, interface_900:tooltip, $string0, 25, 150)");
+		.cc_setonmouseleave("deltooltip(interface_900:tooltip)");
+	} else {
+		.cc_setgraphic($graphic9);
+		.cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic8)");
+		.cc_setonmouserepeat("script1160(event_com, event_comsubid, interface_900:tooltip, $string0, 25, 150)");
+		.cc_setonmouseleave("script735(interface_900:tooltip, event_com, event_comsubid, $graphic9)");
+		.cc_setop(1, $string0);
+		.cc_setonop("script2745(event_op, %varcint1020, $int7, $int3, $enum0, $enum1, $enum2)");
+	}
+	$int6 = calc($int6 + 1);
+}
+return(0);

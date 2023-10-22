@@ -6,9 +6,12 @@ def_string $string0 = "";
 def_int $int2 = 0;
 def_string $string1 = "";
 def_int $int3 = 0;
+def_int $int4 = 0;
 if ($world0 ! -1) {
-	$flags1, $string0, $int2, $string1, $int3 = worldlist_specific($world0);
-	if (testbit($flags1, 2) = ^true) {
+	$flags1, $string0, $int2, $string1, $int3, $int4 = worldlist_specific($world0);
+	if (testbit($flags1, 5) = ^true) {
+		return(1);
+	} else if (testbit($flags1, 2) = ^true) {
 		return(1);
 	}
 }

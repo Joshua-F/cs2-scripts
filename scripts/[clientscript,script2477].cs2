@@ -1,0 +1,35 @@
+// 2477
+[clientscript,script2477]
+if (%varbit6348 = 28) {
+	if_setcolour(0xffff33, interface_854:com_1);
+} else {
+	if_setcolour(^green, interface_854:com_1);
+}
+if (%varbit6348 < 30) {
+	if_setcolour(^red, interface_854:com_2);
+} else if (%varbit6348 = 30) {
+	if_setcolour(0xffff33, interface_854:com_2);
+} else {
+	if_setcolour(^green, interface_854:com_2);
+}
+if (%varbit6348 < 32) {
+	if_setcolour(^red, interface_854:com_3);
+} else if (%varbit6348 = 32) {
+	if_setcolour(0xffff33, interface_854:com_3);
+} else {
+	if_setcolour(^green, interface_854:com_3);
+}
+if (%varbit6348 < 34) {
+	if_setcolour(^red, interface_854:com_4);
+} else if (%varbit6348 = 34) {
+	if_setcolour(0xffff33, interface_854:com_4);
+} else {
+	if_setcolour(^green, interface_854:com_4);
+}
+if (%varbit6348 < 36) {
+	if_setcolour(^red, interface_854:com_5);
+} else if (%varbit6348 = 36) {
+	if_setcolour(0xffff33, interface_854:com_5);
+} else {
+	if_setcolour(^green, interface_854:com_5);
+}

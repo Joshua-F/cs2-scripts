@@ -1,0 +1,9 @@
+// 2370
+[clientscript,script2370](component $component0)
+def_int $int1 = 0;
+if ($component0 = interface_309:com_4) {
+	$int1 = enum_getoutputcount(enum_2343);
+} else if ($component0 = interface_729:com_79) {
+	$int1 = enum_getoutputcount(enum_2347);
+}
+~script2372($component0, calc($int1 + %varcint777));

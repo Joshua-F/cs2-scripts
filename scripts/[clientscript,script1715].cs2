@@ -1,0 +1,26 @@
+// 1715
+[clientscript,script1715]
+def_component $component0 = null;
+if (%varcint1043 = null) {
+	return;
+}
+switch_obj (%varcint1043) {
+	case obj_4761, obj_4762 :
+		$component0 = barrows_overlay:barrows_ahrim;
+	case obj_4763, obj_4764 :
+		$component0 = barrows_overlay:barrows_dharok;
+	case obj_4765, obj_4766 :
+		$component0 = barrows_overlay:barrows_guthan;
+	case obj_4767, obj_4768 :
+		$component0 = barrows_overlay:barrows_karil;
+	case obj_4769, obj_4770 :
+		$component0 = barrows_overlay:barrows_torag;
+	case obj_4771, obj_4772 :
+		$component0 = barrows_overlay:barrows_verac;
+}
+if ($component0 = null) {
+	return;
+}
+if_setobject(%varcint1043, -1, $component0);
+if_setmodelzoom(1600, $component0);
+if_setmodelanim(seq_12554, $component0);

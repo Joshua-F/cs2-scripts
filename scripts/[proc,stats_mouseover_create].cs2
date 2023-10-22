@@ -1,23 +1,23 @@
 // 547
 [proc,stats_mouseover_create](component $component0, stat $stat1, component $component2)
-def_string $string0 = "<enum(stat, string, enum_680, $stat1)>: <tostring(stat($stat1))>/<tostring(stat_base($stat1))>";
-def_string $string1 = ~tostring_spacer(stat_xp($stat1), ",");
-def_string $string2 = "";
-def_string $string3 = "";
+def_string $string0 = "";
+def_string $string1 = "";
 def_int $int3 = 2;
 if (stat_base($stat1) < 99) {
-	$string2 = ~tostring_spacer(enum(int, int, enum_716, calc(stat_base($stat1) + 1)), ",");
-	$string3 = ~tostring_spacer(calc(enum(int, int, enum_716, calc(stat_base($stat1) + 1)) - stat_xp($stat1)), ",");
+	$string0 = ~tostring_spacer(enum(int, int, enum_716, calc(stat_base($stat1) + 1)), ",");
+	$string1 = ~tostring_spacer(calc(enum(int, int, enum_716, calc(stat_base($stat1) + 1)) - stat_xp($stat1)), ",");
 	$int3 = 4;
 }
-def_int $int4 = calc(parawidth($string0, 190, p12_full) + 10);
+def_string $string2 = "<enum(stat, string, enum_680, $stat1)>: <tostring(stat($stat1))>/<tostring(stat_base($stat1))>";
+def_string $string3 = ~tostring_spacer(stat_xp($stat1), ",");
+def_int $int4 = calc(parawidth($string2, 190, p12_full) + 10);
 def_int $int5 = parawidth("Current Xp:", 190, p12_full);
-def_int $int6 = parawidth($string1, 190, p12_full);
+def_int $int6 = parawidth($string3, 190, p12_full);
 def_int $int7 = calc($int5 + 10 + $int6);
 $int4 = max($int4, $int7);
 if (stat_base($stat1) < 99) {
 	$int5 = parawidth("Next level:", 190, p12_full);
-	$int6 = parawidth($string2, 190, p12_full);
+	$int6 = parawidth($string0, 190, p12_full);
 	$int7 = calc($int5 + 3 + $int6);
 } else {
 	$int7 = 0;
@@ -25,7 +25,7 @@ if (stat_base($stat1) < 99) {
 $int4 = max($int4, $int7);
 if (stat_base($stat1) < 99) {
 	$int5 = parawidth("Remainder:", 190, p12_full);
-	$int6 = parawidth($string3, 190, p12_full);
+	$int6 = parawidth($string1, 190, p12_full);
 	$int7 = calc($int5 + 3 + $int6);
 } else {
 	$int7 = 0;
@@ -56,7 +56,7 @@ cc_setsize($int4, 16, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextshadow(false);
-cc_settext($string0);
+cc_settext($string2);
 cc_create($component2, ^iftype_text, 3);
 cc_setposition(calc($int5 + 2), calc($int6 + 18), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int4, 16, ^setsize_abs, ^setsize_abs);
@@ -70,7 +70,7 @@ cc_setsize($int4, 16, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_right, ^settextalign_top, 0);
 cc_settextshadow(false);
-cc_settext($string1);
+cc_settext($string3);
 if (stat_base($stat1) < 99) {
 	cc_create($component2, ^iftype_text, 5);
 	cc_setposition(calc($int5 + 2), calc($int6 + 35), ^setpos_abs_left, ^setpos_abs_top);
@@ -85,7 +85,7 @@ if (stat_base($stat1) < 99) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_right, ^settextalign_top, 0);
 	cc_settextshadow(false);
-	cc_settext($string2);
+	cc_settext($string0);
 	cc_create($component2, ^iftype_text, 7);
 	cc_setposition(calc($int5 + 2), calc($int6 + 52), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int4, 16, ^setsize_abs, ^setsize_abs);
@@ -99,5 +99,5 @@ if (stat_base($stat1) < 99) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_right, ^settextalign_top, 0);
 	cc_settextshadow(false);
-	cc_settext($string3);
+	cc_settext($string1);
 }

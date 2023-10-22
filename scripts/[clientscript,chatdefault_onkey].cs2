@@ -53,25 +53,37 @@ if (staffmodlevel > 0) {
 	}
 	return;
 }
-if ($key0 = ^key_return) {
-	if (string_length(%varcstring1) <= 0) {
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+switch_int ($key0) {
+	case ^key_return :
+		if (string_length(%varcstring1) <= 0) {
+			%varcstring1 = "";
+			~quickchat_open(0, "");
+			return;
+		}
+		if (compare("/", %varcstring1) = 0) {
+			%varcstring1 = "";
+			~quickchat_open(2, "");
+			return;
+		}
+		if (staffmodlevel > 0 & string_indexof_string(%varcstring1, "::", 0) = 0) {
+			mes("<col=ff7f7f>Use the reverse apostrophe (`) key to open the console to enter that command.");
+			mes("<col=ff7f7f>It is usually located under the ESC key.");
+			%varcstring1 = "";
+			~script1558(0);
+			return;
+		}
+		chat_sendpublic(%varcstring1);
+		~chatout_add(%varcstring1);
 		%varcstring1 = "";
-		~quickchat_open(0, "");
-		return;
-	}
-	if (compare("/", %varcstring1) = 0) {
-		%varcstring1 = "";
-		~quickchat_open(2, "");
-		return;
-	}
-	chat_sendpublic(%varcstring1);
-	~chatout_add(%varcstring1);
-	%varcstring1 = "";
-} else {
-	%varcstring1 = ~add_to_inputstring(%varcstring1, 0, $key0, $keychar1);
+	case ^key_left, ^key_right, ^key_up, ^key_down, ^key_home, ^key_end :
+		if (keyheld_shift = false) {
+			return;
+		}
+		%varcint1028 = ~script1553($key0, %varcint1028, %varcstring1);
+	case default :
+		%varcstring1, %varcint1028 = ~script802(%varcint1028, %varcstring1, 0, $key0, $keychar1);
 }
-if (getwindowmode >= ^windowmode_resizable) {
-	if_settext("<chat_playername><img=3>: <col=7fa9ff><escape(%varcstring1)>*", chatdefault:input);
-} else {
-	if_settext("<chat_playername><img=3>: <col=0000ff><escape(%varcstring1)>*", chatdefault:input);
-}
+~script1558(0);

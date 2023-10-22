@@ -1,0 +1,6 @@
+// 735
+[clientscript,script735](component $component0, component $component1, int $comsubid2, graphic $graphic3)
+~deltooltip_action($component0);
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_setgraphic($graphic3);
+}

@@ -1,0 +1,5 @@
+// 1557
+[proc,script1557]
+if_setposition(~script1552(%varcint1029, %varcstring22, b12_full, chattop:mes_text2, -1), if_gety(chattop:com_6), ^setpos_abs_left, ^setpos_abs_top, chattop:com_6);
+if_sethide(false, chattop:com_6);
+if_setontimer("script1400(clientclock, chattop:com_6)", chattop:mes_text2);

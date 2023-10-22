@@ -1,0 +1,15 @@
+// 269
+[proc,script269](string $string0, enum $enum0)(int)
+def_int $count1 = enum_getoutputcount($enum0);
+def_int $count2 = 0;
+def_string $string1 = "";
+def_int $int3 = -1;
+while ($count2 < $count1) {
+	$string1 = enum(int, string, $enum0, $count2);
+	if (compare($string0, $string1) = 0) {
+		$int3 = $count2;
+		$count2 = $count1;
+	}
+	$count2 = calc($count2 + 1);
+}
+return($int3);

@@ -1,0 +1,16 @@
+// 1707
+[proc,script1707](stat $stat0)(component)
+switch_stat ($stat0) {
+	case attack :
+		return(prayer:com_34);
+	case strength :
+		return(prayer:com_33);
+	case defence :
+		return(prayer:com_32);
+	case ranged :
+		return(prayer:com_31);
+	case magic :
+		return(prayer:magic_txt);
+	case default :
+		return(null);
+}

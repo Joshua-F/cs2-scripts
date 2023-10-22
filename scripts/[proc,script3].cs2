@@ -24,22 +24,24 @@ switch_int ($int0) {
 			case 9 :
 				return(35, marble_spiral_8259, "Hall (quest trophies)", "You can now build a <col=000080>hall</col> for your house, in which you can display your <col=000080>quest trophies</col>.");
 			case 10 :
-				return(40, mahogany_demon_8340, "Study", "You can now build a <col=000080>study</col> for your house.");
+				return(37, menagerie_15221, "Menagerie", "You can now build a <col=000080>menagerie</col> for your house.");
 			case 11 :
-				return(42, magical_cape_rack_9822, "Costume room", "You can now build a <col=000080>costume room</col> for your house.");
+				return(40, mahogany_demon_8340, "Study", "You can now build a <col=000080>study</col> for your house.");
 			case 12 :
-				return(45, gilded_altar_8068, "Chapel", "You can now build a <col=000080>chapel</col> for your house.");
+				return(42, magical_cape_rack_9822, "Costume room", "You can now build a <col=000080>costume room</col> for your house.");
 			case 13 :
-				return(50, scrying_pool_8333, "Portal chamber", "You can now build a <col=000080>portal chamber</col> for your house.");
+				return(45, gilded_altar_8068, "Chapel", "You can now build a <col=000080>chapel</col> for your house.");
 			case 14 :
-				return(55, posh_fountain_8195, "Formal garden", "You can now build a <col=000080>formal garden</col> for your house.");
+				return(50, scrying_pool_8333, "Portal chamber", "You can now build a <col=000080>portal chamber</col> for your house.");
 			case 15 :
-				return(60, demonic_throne_8363, "Throne room", "You can now build a <col=000080>throne room</col> for your house.");
+				return(55, posh_fountain_8195, "Formal garden", "You can now build a <col=000080>formal garden</col> for your house.");
 			case 16 :
-				return(65, spikes_8302, "Oubliette", "You can now build an <col=000080>oubliette</col> for your house.");
+				return(60, demonic_throne_8363, "Throne room", "You can now build a <col=000080>throne room</col> for your house.");
 			case 17 :
-				return(70, steel_plated_door_8123, "Dungeon", "You can now build a <col=000080>dungeon</col> for your house.");
+				return(65, spikes_8302, "Oubliette", "You can now build an <col=000080>oubliette</col> for your house.");
 			case 18 :
+				return(70, steel_plated_door_8123, "Dungeon", "You can now build a <col=000080>dungeon</col> for your house.");
+			case 19 :
 				return(75, mahogany_chest_8151, "Treasure room", "You can now build a <col=000080>treasure room</col> for your house.");
 		}
 	case 1 :
@@ -49,7 +51,7 @@ switch_int ($int0) {
 			case 1 :
 				return(5, firepit_8216, "Firepit", "You can now construct <col=000080>firepits</col> for your house.");
 			case 2 :
-				return(7, pump_and_drain_8230, "Pump and drain", "You can now construct <col=000080>pump and drains</col> for your house.");
+				return(7, pump_and_drain_8230, "Pump and drain", "You can now construct <col=000080>pumps and drains</col> for your house.");
 			case 3 :
 				return(11, firepit_with_hook_8217, "Firepit with hook", "You can now construct <col=000080>firepits with hooks</col> for your house.");
 			case 4 :
@@ -67,7 +69,7 @@ switch_int ($int0) {
 			case 10 :
 				return(25, crafting_table_2_8381, "Crafting table 2", "You can now construct <col=000080>crafting table 2</col> for your house, at which you can craft <col=000080>toy horsies</col> and <col=000080>clockwork mechanisms</col>.");
 			case 11 :
-				return(27, pump_and_tub_8231, "Pump and tub", "You can now construct <col=000080>pump and tubs</col> for your house.");
+				return(27, pump_and_tub_8231, "Pump and tub", "You can now construct <col=000080>pumps and tubs</col> for your house.");
 			case 12 :
 				return(29, large_oven_8220, "Large oven", "You can now construct <col=000080>large ovens</col> for your house.");
 			case 13 :
@@ -241,7 +243,7 @@ switch_int ($int0) {
 			case 28 :
 				return(51, teak_drawers_8041, "Teak chest of drawers", "You can now construct <col=000080>teak chests of drawers</col> for your house.");
 			case 29 :
-				return(55, tool_store_5_8388, "Tool store 5", "You can now construct <col=000080>tool store 5</col> for your house, which provide <col=000080>rakes</col>, <col=000080>spades</col>, <col=000080>trowels</col>, <col=000080>seed dibbers</col> and <col=000080>watering cans</col>).");
+				return(55, tool_store_5_8388, "Tool store 5", "You can now construct <col=000080>tool store 5</col> for your house, which provide <col=000080>rakes</col>, <col=000080>spades</col>, <col=000080>trowels</col>, <col=000080>seed dibbers</col> and <col=000080>watering cans</col>.");
 			case 30 :
 				return(56, fancy_teak_dresser_8049, "Fancy teak dresser", "You can now construct <col=000080>fancy teak dressers</col> for your house.");
 			case 31 :
@@ -772,6 +774,39 @@ switch_int ($int0) {
 	case 12 :
 		switch_int ($int1) {
 			case 0 :
+				return(37, garden_habitat_15222, "Garden habitat", "You can now construct <col=000080>garden habitats</col> for your <col=000080>menagerie</col>.");
+			case 1 :
+				return(37, oak_pet_house_15227, "Oak pet house", "You can now construct <col=000080>oak pet houses</col> for your <col=000080>menagerie</col>.");
+			case 2 :
+				return(37, oak_pet_feeder_15233, "Oak pet feeder", "You can now construct <col=000080>oak pet feeders</col> for your <col=000080>menagerie</col>.");
+			case 3 :
+				return(41, mini_obelisk_15236, "Mini obelisk", "You can now construct <col=000080>mini obelisks</col> for your <col=000080>menagerie</col>.");
+			case 4 :
+				return(47, jungle_habitat_15223, "Jungle habitat", "You can now construct <col=000080>jungle habitats</col> for your <col=000080>menagerie</col>.");
+			case 5 :
+				return(52, teak_pet_house_15228, "Teak pet house", "You can now construct <col=000080>teak pet houses</col> for your <col=000080>menagerie</col>.");
+			case 6 :
+				return(52, teak_pet_feeder_15234, "Teak pet feeder", "You can now construct <col=000080>teak pet feeders</col> for your <col=000080>menagerie</col>.");
+			case 7 :
+				return(57, desert_habitat_15224, "Desert habitat", "You can now construct <col=000080>desert habitats</col> for your <col=000080>menagerie</col>.");
+			case 8 :
+				return(67, mahogany_pet_house_15229, "Mahogany pet house", "You can now construct <col=000080>mahogany pet houses</col> for your <col=000080>menagerie</col>.");
+			case 9 :
+				return(67, mahogany_pet_feeder_15235, "Mahogany pet feeder", "You can now construct <col=000080>mahogany pet feeders</col> for your <col=000080>menagerie</col>.");
+			case 10 :
+				return(67, polar_habitat_15225, "Polar habitat", "You can now construct <col=000080>polar habitats</col> for your <col=000080>menagerie</col>.");
+			case 11 :
+				return(77, volcanic_habitat_15226, "Volcanic habitat", "You can now construct <col=000080>volcanic habitats</col> for your <col=000080>menagerie</col>.");
+			case 12 :
+				return(92, consecrated_pet_house_15230, "Consecrated pet house", "You can now construct <col=000080>consecrated pet houses</col> for your <col=000080>menagerie</col>.");
+			case 13 :
+				return(92, desecrated_pet_house_15231, "Desecrated pet house", "You can now construct <col=000080>desecrated pet houses</col> for your <col=000080>menagerie</col>.");
+			case 14 :
+				return(92, natural_pet_house_15232, "Natural pet house", "You can now construct <col=000080>natural pet houses</col> for your <col=000080>menagerie</col>.");
+		}
+	case 13 :
+		switch_int ($int1) {
+			case 0 :
 				return(20, servant_bell_7974, "Rick", "You can now hire <col=000080>Rick</col>.");
 			case 1 :
 				return(25, servant_bell_7974, "Maid", "You can now hire <col=000080>maids</col>.");
@@ -782,20 +817,20 @@ switch_int ($int0) {
 			case 4 :
 				return(50, servant_bell_7974, "Demon butler", "You can now hire <col=000080>demon butlers</col>.");
 		}
-	case 13 :
+	case 14 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, barrier_class_1_14172, "Stealing Creation - class 1 barriers", "You can now make <col=000080>class 1 barriers</col> in the Stealing Creation minigame.");
+				return(1, barrier_class_1_14172, "Stealing Creation - class 1 barriers", "You can now make <col=000080>class 1 barriers</col> in Stealing Creation.");
 			case 1 :
-				return(20, barrier_class_2_14174, "Stealing Creation - class 2 barriers", "You can now make <col=000080>class 2 barriers</col> in the Stealing Creation minigame.");
+				return(20, barrier_class_2_14174, "Stealing Creation - class 2 barriers", "You can now make <col=000080>class 2 barriers</col> in Stealing Creation.");
 			case 2 :
-				return(40, barrier_class_3_14176, "Stealing Creation - class 3 barriers", "You can now make <col=000080>class 3 barriers</col> in the Stealing Creation minigame.");
+				return(40, barrier_class_3_14176, "Stealing Creation - class 3 barriers", "You can now make <col=000080>class 3 barriers</col> in Stealing Creation.");
 			case 3 :
-				return(60, barrier_class_4_14178, "Stealing Creation - class 4 barriers", "You can now make <col=000080>class 4 barriers</col> in the Stealing Creation minigame.");
+				return(60, barrier_class_4_14178, "Stealing Creation - class 4 barriers", "You can now make <col=000080>class 4 barriers</col> in Stealing Creation.");
 			case 4 :
-				return(80, barrier_class_5_14180, "Stealing Creation - class 5 barriers", "You can now make <col=000080>class 5 barriers</col> in the Stealing Creation minigame.");
+				return(80, barrier_class_5_14180, "Stealing Creation - class 5 barriers", "You can now make <col=000080>class 5 barriers</col> in Stealing Creation.");
 		}
-	case 14 :
+	case 15 :
 		switch_int ($int1) {
 			case 0 :
 				return(1, hammer_2347, "Maximum rooms: 20", "You can now have a maximum of <col=000080>20 rooms</col> in your house.");
@@ -806,30 +841,34 @@ switch_int ($int0) {
 			case 3 :
 				return(30, saw_8794, "Maximum dimensions: 5x5", "Your house can now have maximum dimensions of <col=000080>5 rooms wide by 5 rooms long</col>.");
 			case 4 :
-				return(45, saw_8794, "Maximum dimensions: 6x6", "Your house can now have maximum dimensions of <col=000080>6 rooms wide by 6 rooms long</col>.");
+				return(38, hammer_2347, "Maximum rooms: 21", "You can now have a maximum of <col=000080>21 rooms</col> in your house.");
 			case 5 :
-				return(50, hammer_2347, "Maximum rooms: 21", "You can now have a maximum of <col=000080>21 rooms</col> in your house.");
+				return(44, hammer_2347, "Maximum rooms: 22", "You can now have a maximum of <col=000080>22 rooms</col> in your house.");
 			case 6 :
-				return(56, hammer_2347, "Maximum rooms: 22", "You can now have a maximum of <col=000080>22 rooms</col> in your house.");
+				return(45, saw_8794, "Maximum dimensions: 6x6", "Your house can now have maximum dimensions of <col=000080>6 rooms wide by 6 rooms long</col>.");
 			case 7 :
-				return(60, saw_8794, "Maximum dimensions: 7x7", "Your house can now have maximum dimensions of <col=000080>7 rooms wide by 7 rooms long</col>.");
+				return(50, hammer_2347, "Maximum rooms: 23", "You can now have a maximum of <col=000080>23 rooms</col> in your house.");
 			case 8 :
-				return(62, hammer_2347, "Maximum rooms: 23", "You can now have a maximum of <col=000080>23 rooms</col> in your house.");
+				return(56, hammer_2347, "Maximum rooms: 24", "You can now have a maximum of <col=000080>24 rooms</col> in your house.");
 			case 9 :
-				return(68, hammer_2347, "Maximum rooms: 24", "You can now have a maximum of <col=000080>24 rooms</col> in your house.");
+				return(60, saw_8794, "Maximum dimensions: 7x7", "Your house can now have maximum dimensions of <col=000080>7 rooms wide by 7 rooms long</col>.");
 			case 10 :
-				return(74, hammer_2347, "Maximum rooms: 25", "You can now have a maximum of <col=000080>25 rooms</col> in your house.");
+				return(62, hammer_2347, "Maximum rooms: 25", "You can now have a maximum of <col=000080>25 rooms</col> in your house.");
 			case 11 :
-				return(80, hammer_2347, "Maximum rooms: 26", "You can now have a maximum of <col=000080>26 rooms</col> in your house.");
+				return(68, hammer_2347, "Maximum rooms: 26", "You can now have a maximum of <col=000080>26 rooms</col> in your house.");
 			case 12 :
-				return(86, hammer_2347, "Maximum rooms: 27", "You can now have a maximum of <col=000080>27 rooms</col> in your house.");
+				return(74, hammer_2347, "Maximum rooms: 27", "You can now have a maximum of <col=000080>27 rooms</col> in your house.");
 			case 13 :
-				return(92, hammer_2347, "Maximum rooms: 28", "You can now have a maximum of <col=000080>28 rooms</col> in your house.");
+				return(80, hammer_2347, "Maximum rooms: 28", "You can now have a maximum of <col=000080>28 rooms</col> in your house.");
 			case 14 :
-				return(96, hammer_2347, "Maximum rooms: 29", "You can now have a maximum of <col=000080>29 rooms</col> in your house.");
+				return(86, hammer_2347, "Maximum rooms: 29", "You can now have a maximum of <col=000080>29 rooms</col> in your house.");
 			case 15 :
-				return(99, hammer_2347, "Maximum rooms: 30", "You can now have a maximum of <col=000080>30 rooms</col> in your house.");
+				return(92, hammer_2347, "Maximum rooms: 30", "You can now have a maximum of <col=000080>30 rooms</col> in your house.");
 			case 16 :
+				return(96, hammer_2347, "Maximum rooms: 31", "You can now have a maximum of <col=000080>31 rooms</col> in your house.");
+			case 17 :
+				return(99, hammer_2347, "Maximum rooms: 32", "You can now have a maximum of <col=000080>32 rooms</col> in your house.");
+			case 18 :
 				return(99, construct_cape_9789, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Construction<col=000080>. Why not visit the <col=800000>Estate Agent<col=000080>? He has something special that is only available to true masters of the <col=800000>Construction<col=000080> skill!");
 		}
 }

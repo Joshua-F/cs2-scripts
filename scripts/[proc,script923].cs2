@@ -1,0 +1,14 @@
+// 923
+[proc,script923](string $string0, string $string1, string $string2, int $width0)
+def_int $height1 = paraheight($string0, $width0, p11_full);
+def_int $height2 = paraheight($string1, $width0, p11_full);
+if ($height2 > $height1) {
+	$height1 = $height2;
+}
+$height2 = paraheight($string2, $width0, p11_full);
+if ($height2 > $height1) {
+	$height1 = $height2;
+}
+~script924($string0, $height1, ^settextalign_left, 0, p11_full);
+~script924($string1, $height1, ^settextalign_centre, 0, p11_full);
+~script924($string2, $height1, ^settextalign_right, 1, p11_full);

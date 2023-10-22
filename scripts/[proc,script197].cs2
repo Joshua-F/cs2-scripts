@@ -1,110 +1,141 @@
 // 197
-[proc,script197](component $component0)
+[proc,script197](component $component0, int $int1)
+def_int $int2 = calc(if_getwidth($component0) - 25);
+if ($int1 < 25) {
+	$int1 = 25;
+} else if ($int1 > $int2) {
+	$int1 = $int2;
+}
+%varcint1035 = $int1;
+if_setposition($int1, if_gety(clanjoin:com_7), ^setpos_abs_left, ^setpos_abs_top, clanjoin:com_7);
 cc_deleteall($component0);
-def_int $count1 = clan_getchatcount;
-def_int $count2 = 0;
-def_int $rank3 = clan_getchatminkick;
-def_int $rank4 = clan_getchatrank;
-def_int $int5 = 0;
-def_int $world6 = 0;
-while ($count2 < $count1) {
-	$int5 = calc($count2 + $count2 + $count2);
-	cc_create($component0, ^iftype_text, $int5);
+if_setposition(25, 41, ^setpos_abs_left, ^setpos_abs_top, clanjoin:com_1);
+if_setsize(121, 14, ^setsize_abs, ^setsize_abs, clanjoin:com_1);
+if_setonmouserepeat(null, clanjoin:com_1);
+if_setonmouseleave(null, clanjoin:com_1);
+def_int $int3 = 0;
+def_int $width4 = parawidth(" ", ^max_32bit_int, friendslist_font);
+def_int $width5 = calc(if_getx(clanjoin:com_8) + if_getx(clanjoin:com_7) - $width4);
+def_int $width6 = calc(if_getwidth(clanjoin:clanlist) - ($width5 + $width4) - $width4 * 2);
+def_string $string0 = "";
+def_int $int7 = 0;
+def_int $count8 = clan_getchatcount;
+def_int $int9 = 0;
+def_string $string1 = "";
+def_string $username2 = "";
+def_string $string3 = "";
+def_int $rank10 = 0;
+def_int $y11 = 0;
+while ($int3 < $count8) {
+	$int9 = calc($int3 * 3);
+	$y11 = calc($int3 * 15);
+	$string1 = clan_getchatusername($int3);
+	$username2 = clan_getchatusername_unfiltered($int3);
+	$string3 = clan_getchatuserworldname($int3);
+	$rank10 = clan_getchatuserrank($int3);
+	cc_create($component0, ^iftype_text, $int9);
 	cc_settextfont(friendslist_font);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	cc_settext(clan_getchatusername($count2));
-	cc_setposition(11, calc($count2 * 15), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(85, 15, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $y11, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($width5, 15, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(^white);
 	cc_settextshadow(false);
-	cc_setonop("script199(clan_getchatusername($count2), event_op)");
-	if (clan_isself($count2) = false) {
-		if (friend_test(clan_getchatusername($count2)) = true) {
-			cc_setop(9, "Remove friend <clan_getchatusername($count2)>");
-		} else if (ignore_test(clan_getchatusername($count2)) = true) {
-			cc_setop(10, "Remove ignore <clan_getchatusername($count2)>");
-		} else {
-			cc_setop(7, "Add friend <clan_getchatusername($count2)>");
-			cc_setop(8, "Add ignore <clan_getchatusername($count2)>");
+	cc_setonop("script199($string1, event_op)");
+	$string0 = "    <$string1>";
+	if (parawidth($string0, ^max_32bit_int, friendslist_font) > $width5) {
+		while (parawidth("<$string0>...", ^max_32bit_int, friendslist_font) > $width5) {
+			$string0 = substring($string0, 0, calc(string_length($string0) - 1));
 		}
+		cc_settext("<$string0>...");
+		cc_setonmouserepeat("script2467(event_com, event_comsubid, $string1, event_mousex, event_mousey, clanjoin:clanlist, clanjoin:tooltip, clanjoin:com_22, friendslist_font)");
+		cc_setonmouseleave("script2469(clanjoin:tooltip, clanjoin:com_22)");
+	} else {
+		cc_settext($string0);
 	}
-	if ($rank4 >= $rank3 & $rank4 > clan_getchatuserrank($count2)) {
-		cc_setop(6, "Kick user <clan_getchatusername($count2)>");
-	}
-	$world6 = clan_getchatuserworld($count2);
-	cc_create($component0, ^iftype_text, calc($int5 + 1));
+	~script1596($int3, $string1, $username2);
+	cc_create($component0, ^iftype_text, calc($int9 + 1));
 	cc_settextfont(friendslist_font);
-	cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-	cc_settext(clan_getchatuserworldname($count2));
-	cc_setposition(108, calc($count2 * 15), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(50, 15, ^setsize_abs, ^setsize_abs);
-	if ($world6 = map_world) {
+	cc_setposition(0, $y11, ^setpos_abs_right, ^setpos_abs_top);
+	cc_setsize($width6, 15, ^setsize_abs, ^setsize_abs);
+	if (clan_getchatuserworld($int3) = map_world) {
 		cc_setcolour(^green);
 	} else {
 		cc_setcolour(0xffff64);
 	}
 	cc_settextshadow(false);
-	cc_setonop("script199(clan_getchatusername($count2), event_op)");
-	if (clan_isself($count2) = false) {
-		if (friend_test(clan_getchatusername($count2)) = true) {
-			cc_setop(9, "Remove friend <clan_getchatusername($count2)>");
-		} else if (ignore_test(clan_getchatusername($count2)) = true) {
-			cc_setop(10, "Remove ignore <clan_getchatusername($count2)>");
-		} else {
-			cc_setop(7, "Add friend <clan_getchatusername($count2)>");
-			cc_setop(8, "Add ignore <clan_getchatusername($count2)>");
+	cc_setonop("script199($string1, event_op)");
+	$string0 = $string3;
+	if (parawidth($string0, ^max_32bit_int, friendslist_font) > $width6) {
+		while (parawidth("<$string0>...", ^max_32bit_int, friendslist_font) > $width6) {
+			$string0 = substring($string0, 0, calc(string_length($string0) - 1));
 		}
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settext("<$string0>...");
+		cc_setonmouserepeat("script2467(event_com, event_comsubid, $string3, event_mousex, event_mousey, clanjoin:clanlist, clanjoin:tooltip, clanjoin:com_22, friendslist_font)");
+		cc_setonmouseleave("script2469(clanjoin:tooltip, clanjoin:com_22)");
+	} else {
+		cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+		cc_settext($string3);
 	}
-	if ($rank4 >= $rank3 & $rank4 > clan_getchatuserrank($count2)) {
-		cc_setop(6, "Kick user <clan_getchatusername($count2)>");
-	}
-	cc_create($component0, ^iftype_graphic, calc($int5 + 2));
-	cc_setposition(1, calc($count2 * 15 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	~script1596($int3, $string1, $username2);
+	cc_create($component0, ^iftype_graphic, calc($int9 + 2));
+	cc_setposition(1, calc($int3 * 15 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic(~getclanicon(clan_getchatuserrank($count2)));
-	cc_setonop("script199(clan_getchatusername($count2), event_op)");
-	if (clan_isself($count2) = false) {
-		if (friend_test(clan_getchatusername($count2)) = true) {
-			cc_setop(9, "Remove friend <clan_getchatusername($count2)>");
-		} else if (ignore_test(clan_getchatusername($count2)) = true) {
-			cc_setop(10, "Remove ignore <clan_getchatusername($count2)>");
-		} else {
-			cc_setop(7, "Add friend <clan_getchatusername($count2)>");
-			cc_setop(8, "Add ignore <clan_getchatusername($count2)>");
-		}
-	}
-	if ($rank4 >= $rank3 & $rank4 > clan_getchatuserrank($count2)) {
-		cc_setop(6, "Kick user <clan_getchatusername($count2)>");
-	}
-	$count2 = calc($count2 + 1);
+	cc_setgraphic(~getclanicon($rank10));
+	cc_setonop("script199($string1, event_op)");
+	$int3 = calc($int3 + 1);
 }
-if ($count1 > 0) {
+def_int $width12 = 0;
+if ($count8 > 0) {
 	if_settext("<col=ff9b00>Talking in: <col=ffff64><clan_getchatdisplayname>", clanjoin:com_0);
-	if_settext("<col=ff9b00>Owner: <col=ffffff><clan_getchatownername>", clanjoin:com_1);
-	if_settext("Leave Chat", clanjoin:com_8);
-	if_setop(1, "Leave Chat", clanjoin:com_8);
+	$string0 = clan_getchatownername;
+	$width12 = if_getwidth(clanjoin:com_1);
+	if (parawidth("Owner: <$string0>", ^max_32bit_int, p11_full) > $width12) {
+		if_setposition(10, 41, ^setpos_abs_left, ^setpos_abs_top, clanjoin:com_1);
+		if_setsize(136, 14, ^setsize_abs, ^setsize_abs, clanjoin:com_1);
+		$width12 = if_getwidth(clanjoin:com_1);
+		if (parawidth("Owner: <$string0>", ^max_32bit_int, p11_full) > $width12) {
+			while (parawidth("Owner: <$string0>...", ^max_32bit_int, p11_full) > $width12) {
+				$string0 = substring($string0, 0, calc(string_length($string0) - 1));
+			}
+			if_settext("<col=ff9b00>Owner: <col=ffffff><$string0>...", clanjoin:com_1);
+			if_setonmouserepeat("script1597(event_com, clan_getchatownername, event_mousex, event_mousey, clanjoin:com_18, clanjoin:tooltip, clanjoin:com_22)", clanjoin:com_1);
+			if_setonmouseleave("script1599(clanjoin:tooltip, clanjoin:com_22)", clanjoin:com_1);
+		} else {
+			if_settext("<col=ff9b00>Owner: <col=ffffff><clan_getchatownername>", clanjoin:com_1);
+		}
+	} else {
+		if_settext("<col=ff9b00>Owner: <col=ffffff><clan_getchatownername>", clanjoin:com_1);
+	}
+	if_settext("Leave Chat", clanjoin:com_11);
+	if_setop(1, "Leave Chat", clanjoin:com_11);
+	if_sethide(false, clanjoin:com_7);
+	if (detailget_customcursors = true) {
+		if_setop(1, "Drag", clanjoin:com_7);
+		if_setonop("script1601", clanjoin:com_7);
+	} else {
+		if_clearops(clanjoin:com_7);
+	}
 } else {
 	if_settext("<col=ff9b00>Talking in: Not in chat", clanjoin:com_0);
 	if_settext("<col=ff9b00>Owner: None", clanjoin:com_1);
-	if_settext("Join Chat", clanjoin:com_8);
-	if_setop(1, "Join Chat", clanjoin:com_8);
+	if_settext("Join Chat", clanjoin:com_11);
+	if_setop(1, "Join Chat", clanjoin:com_11);
+	if_sethide(true, clanjoin:com_7);
+	if_clearops(clanjoin:com_7);
 }
-def_int $int7 = calc(15 * $count1);
-def_int $height8 = if_getheight(clanjoin:clanlist);
-if ($int7 < 15) {
-	$int7 = 15;
-}
-def_int $int9 = calc($int7 - $height8);
-if ($int9 < 0) {
-	$int9 = 0;
-}
-def_int $int10 = if_getscrolly(clanjoin:clanlist);
-if ($int10 > $int9) {
-	$int10 = $int9;
-}
-if ($count1 > 0) {
-	if_setscrollsize(0, $int7, clanjoin:clanlist);
+def_int $int13 = 0;
+def_int $int14 = 0;
+if ($int3 > 10) {
+	$int13 = if_getscrolly(clanjoin:clanlist);
+	$int14 = calc($int3 * 15 + 2);
+	if_setscrollsize(0, $int14, clanjoin:clanlist);
+	if ($int13 > $int14) {
+		$int13 = $int14;
+	}
+	~scrollbar_resize(clanjoin:clanlistscrollbar, clanjoin:clanlist, $int13);
 } else {
-	if_setscrollsize(0, 15, clanjoin:clanlist);
+	if_setscrollsize(0, 0, clanjoin:clanlist);
+	if_setscrollpos(0, 0, clanjoin:clanlist);
+	~scrollbar_resize(clanjoin:clanlistscrollbar, clanjoin:clanlist, 0);
 }
-~scrollbar_resize(clanjoin:clanlistscrollbar, clanjoin:clanlist, $int10);

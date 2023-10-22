@@ -1,0 +1,48 @@
+// 947
+[proc,script947](int $int0, int $int1, component $component2, graphic $graphic3, component $component4, component $component5, component $component6, int $colour7, int $colour8, int $colour9, graphic $graphic10, int $comsubid11, int $comsubid12, graphic $graphic13, graphic $graphic14, graphic $graphic15, graphic $graphic16, graphic $graphic17, graphic $graphic18)
+if (cc_find($component6, $comsubid12) = ^true) {
+	cc_setvflip(true);
+}
+cc_create($component2, ^iftype_graphic, if_getnextsubid($component2));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component2), if_getheight($component2), ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic3);
+cc_settiling(true);
+cc_create($component2, ^iftype_rectangle, if_getnextsubid($component2));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component2), if_getheight($component2), ^setsize_abs, ^setsize_abs);
+cc_setcolour(^black);
+if_setscrollsize(if_getwidth($component4), calc($int1 * 15), $component4);
+def_int $int19 = 0;
+def_int $comsubid20 = -1;
+def_string $string0 = "";
+def_enum $enum21 = struct_param(enum(int, struct, enum_169, $int0), param_782);
+while ($int19 <= $int1) {
+	$comsubid20 = if_getnextsubid($component4);
+	$string0 = enum(int, string, $enum21, $int19);
+	cc_create($component4, ^iftype_text, $comsubid20);
+	cc_settext($string0);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setposition(5, calc($int19 * 15), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(if_getwidth($component4) - 16), 15, ^setsize_abs, ^setsize_abs);
+	cc_settextshadow(false);
+	cc_settextfont($graphic10);
+	cc_setop(1, "Select");
+	cc_setopbase($string0);
+	cc_setonop("script943($int0, event_comsubid, event_op, $colour7)");
+	if ($int19 >= $int1) {
+		cc_setcolour($colour8);
+		cc_setonmouseleave("dropdownbox_mouseoutelement($component4, $comsubid20, $colour8)");
+	} else {
+		cc_setcolour($colour7);
+		cc_setonmouseleave("dropdownbox_mouseoutelement($component4, $comsubid20, $colour7)");
+	}
+	cc_setonmouseover("dropdownbox_mouseoverelement($component4, $comsubid20, $colour9)");
+	$int19 = calc($int19 + 1);
+}
+if ($component5 ! null) {
+	~scrollbar_vertical($component5, $component4, $graphic13, $graphic14, $graphic15, $graphic16, $graphic17, $graphic18);
+	if_sethide(false, $component5);
+}
+if_sethide(false, $component2);
+if_sethide(false, $component4);

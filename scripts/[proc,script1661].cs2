@@ -1,0 +1,13 @@
+// 1661
+[proc,script1661](component $component0, int $comsubid1, component $layer2)
+cc_deleteall($layer2);
+if (%varbit4895 ! 3 | %var281 ! 55) {
+	if_setontimer(null, $layer2);
+	return;
+}
+cc_create($layer2, ^iftype_model, 0);
+cc_setmodel(model_41760);
+cc_setmodelanim(seq_10221);
+cc_setsize(43, 43, ^setsize_abs, ^setsize_abs);
+~script1663($component0, $comsubid1, $layer2);
+if_setontimer("script1662($component0, $comsubid1, $layer2)", $layer2);

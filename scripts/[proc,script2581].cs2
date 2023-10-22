@@ -1,0 +1,62 @@
+// 2581
+[proc,script2581](struct $struct0)(int)
+switch_struct ($struct0) {
+	case struct_829 :
+		return(~bool_to_int(_6102));
+	case struct_830 :
+		if (_6102 = true | detailget_toolkit ! 0) {
+			return(~bool_to_int(detailget_removeroofs_option));
+		}
+		return(-1);
+	case struct_831 :
+		return(~bool_to_int(detailget_grounddecor_on));
+	case struct_832 :
+		return(~bool_to_int(_6106));
+	case struct_833 :
+		return(detailget_idleanims);
+	case struct_834 :
+		return(~bool_to_int(detailget_flickering_on));
+	case struct_835 :
+		return(~bool_to_int(_6109));
+	case struct_836 :
+		return(~bool_to_int(_6110));
+	case struct_837 :
+		return(_6111);
+	case struct_838 :
+		return(~bool_to_int(detailget_lightdetail_high));
+	case struct_839 :
+		if (detailget_toolkit = 0 & ~script2581(struct_840) ! 1) {
+			return(-1);
+		}
+		return(~bool_to_int(detailget_waterdetail_high));
+	case struct_840 :
+		if (detailget_toolkit = 0 & ~script2581(struct_843) ! 1) {
+			return(-1);
+		}
+		return(~bool_to_int(detailget_fog_on));
+	case struct_841 :
+		if (_6121 = true) {
+			return(detailget_antialiasing);
+		}
+		return(-1);
+	case struct_842 :
+		return(detailget_particles);
+	case struct_734 :
+		if (_6126 = true) {
+			return(detailget_bloom);
+		}
+		return(-1);
+	case struct_843 :
+		return(~bool_to_int(detailget_groundblending));
+	case struct_844 :
+		if (_6133 = true) {
+			return(~bool_to_int(%varcint987));
+		}
+		return(-1);
+	case struct_845 :
+		return(%varcint178);
+	case struct_908 :
+		return(detailget_cpuusage);
+	case default :
+		return(-1);
+}

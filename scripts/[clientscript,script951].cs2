@@ -1,0 +1,113 @@
+// 951
+[clientscript,script951]
+~script953;
+~script952;
+switch_int (%varcint754) {
+	case 1 :
+		if_sethide(false, interface_513:layer1);
+		if_setposition(0, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_sethide(true, interface_513:com_21);
+	case 2 :
+		if_sethide(false, interface_513:layer1);
+		if_sethide(false, interface_513:layer2);
+		if_setposition(-130, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setposition(130, if_gety(interface_513:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer2);
+		if_setsize(150, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setsize(150, 105, ^setsize_abs, ^setsize_abs, interface_513:layer2);
+	case 3 :
+		if_sethide(false, interface_513:layer1);
+		if_sethide(false, interface_513:layer2);
+		if_sethide(false, interface_513:layer3);
+		if_setposition(-150, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setposition(0, if_gety(interface_513:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer2);
+		if_setposition(150, if_gety(interface_513:layer3), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer3);
+		if_setsize(120, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setsize(120, 105, ^setsize_abs, ^setsize_abs, interface_513:layer2);
+		if_setsize(120, 105, ^setsize_abs, ^setsize_abs, interface_513:layer3);
+	case 4 :
+		if_sethide(false, interface_513:layer1);
+		if_sethide(false, interface_513:layer2);
+		if_sethide(false, interface_513:layer3);
+		if_sethide(false, interface_513:layer4);
+		if_setposition(-180, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setposition(-60, if_gety(interface_513:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer2);
+		if_setposition(60, if_gety(interface_513:layer3), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer3);
+		if_setposition(180, if_gety(interface_513:layer4), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer4);
+		if_setsize(100, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setsize(100, 105, ^setsize_abs, ^setsize_abs, interface_513:layer2);
+		if_setsize(100, 105, ^setsize_abs, ^setsize_abs, interface_513:layer3);
+		if_setsize(100, 105, ^setsize_abs, ^setsize_abs, interface_513:layer4);
+	case 5 :
+		if_sethide(false, interface_513:layer1);
+		if_sethide(false, interface_513:layer2);
+		if_sethide(false, interface_513:layer3);
+		if_sethide(false, interface_513:layer4);
+		if_sethide(false, interface_513:layer5);
+		if_setposition(-200, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setposition(-100, if_gety(interface_513:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer2);
+		if_setposition(0, if_gety(interface_513:layer3), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer3);
+		if_setposition(100, if_gety(interface_513:layer4), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer4);
+		if_setposition(200, if_gety(interface_513:layer5), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer5);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_513:layer2);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_513:layer3);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_513:layer4);
+		if_setsize(90, 105, ^setsize_abs, ^setsize_abs, interface_513:layer5);
+	case 6 :
+		if_sethide(false, interface_513:layer1);
+		if_sethide(false, interface_513:layer2);
+		if_sethide(false, interface_513:layer3);
+		if_sethide(false, interface_513:layer4);
+		if_sethide(false, interface_513:layer5);
+		if_sethide(false, interface_513:com_8);
+		if_setposition(-210, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setposition(-124, if_gety(interface_513:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer2);
+		if_setposition(-42, if_gety(interface_513:layer3), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer3);
+		if_setposition(42, if_gety(interface_513:layer4), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer4);
+		if_setposition(124, if_gety(interface_513:layer5), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer5);
+		if_setposition(210, if_gety(interface_513:com_8), ^setpos_abs_centre, ^setpos_abs_top, interface_513:com_8);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_513:layer2);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_513:layer3);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_513:layer4);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_513:layer5);
+		if_setsize(85, 105, ^setsize_abs, ^setsize_abs, interface_513:com_8);
+	case 100 :
+		if_sethide(false, interface_513:layer1);
+		if_setposition(0, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_clearops(interface_513:com_27);
+		if_setpausetext("Make All", interface_513:com_27);
+	case 101 :
+		if_sethide(false, interface_513:layer1);
+		if_setposition(0, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setpausetext("Cook 1", interface_513:com_39);
+		if_setpausetext("Cook 5", interface_513:com_33);
+		if_setpausetext("Cook All", interface_513:com_27);
+		if_setpausetext("Cook X", interface_513:com_21);
+	case 102 :
+		if_sethide(false, interface_513:layer1);
+		if_sethide(false, interface_513:layer2);
+		if_setposition(-100, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setposition(100, if_gety(interface_513:layer2), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer2);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_513:layer2);
+	case 103 :
+		if_sethide(false, interface_513:layer1);
+		if_setposition(0, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setpausetext("Roast 1", interface_513:com_39);
+		if_setpausetext("Roast 5", interface_513:com_33);
+		if_setpausetext("Roast All", interface_513:com_27);
+		if_setpausetext("Roast X", interface_513:com_21);
+	case 104 :
+		if_sethide(false, interface_513:layer1);
+		if_setposition(0, if_gety(interface_513:layer1), ^setpos_abs_centre, ^setpos_abs_top, interface_513:layer1);
+		if_setsize(200, 105, ^setsize_abs, ^setsize_abs, interface_513:layer1);
+		if_setpausetext("Offer 1", interface_513:com_39);
+		if_setpausetext("Offer 5", interface_513:com_33);
+		if_setpausetext("Offer All", interface_513:com_27);
+		if_setpausetext("Offer X", interface_513:com_21);
+}

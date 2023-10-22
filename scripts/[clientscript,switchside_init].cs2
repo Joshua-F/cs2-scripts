@@ -1,11 +1,12 @@
 // 114
 [clientscript,switchside_init]
-if_setonvarctransmit("switchside_varc{varcint168}", toplevel:side);
-if_setonvarctransmit("switchside_varc{varcint168}", toplevel_fullscreen:side);
+if_setonvarctransmit("switchside_varc{varcint168, varcint747}", toplevel:side);
+if_setonvarctransmit("switchside_varc{varcint168, varcint747}", toplevel_fullscreen:side);
 if (getwindowmode >= ^windowmode_resizable) {
 	if_setonvartransmit("flashside_vartransmit{var1021}", toplevel_fullscreen:stones_on);
 	~script1309(1);
 } else {
-	if_setonvartransmit("flashside_vartransmit{var1021}", toplevel:com_36);
+	if_setonvartransmit("flashside_vartransmit{var1021}", toplevel:com_80);
+	~script2756;
 	~script1312(1);
 }

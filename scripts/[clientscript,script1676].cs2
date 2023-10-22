@@ -1,4 +1,12 @@
 // 1676
-[clientscript,script1676]
-~script1720;
-~script1612(interface_771:button_64, 2, 24);
+[clientscript,script1676](int $opindex0, int $int1, int $int2)
+if ($opindex0 ! 1) {
+	return;
+}
+if ($int1 = $int2) {
+	return;
+}
+~script1675($int1);
+%varbit6768 = $int1;
+cc_deleteall(interface_84:com_22);
+~script1674($int1);

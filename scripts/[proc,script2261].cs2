@@ -1,0 +1,11 @@
+// 2261
+[proc,script2261]
+if_sethide(true, loginscreen:com_305);
+if_sethide(true, loginscreen:com_306);
+if_sethide(true, loginscreen:com_289);
+if (enum(int, boolean, enum_2253, affiliate) = true) {
+	if_sethide(false, loginscreen:com_306);
+	if_sethide(false, loginscreen:com_289);
+} else {
+	if_sethide(false, loginscreen:com_305);
+}

@@ -1,5 +1,19 @@
 // 1477
-[clientscript,script1477](component $component0)
-if (compare(substring(if_gettext($component0), calc(string_length(if_gettext($component0)) - 1), string_length(if_gettext($component0))), "*") = 0) {
-	if_settext(substring(if_gettext($component0), 0, calc(string_length(if_gettext($component0)) - 1)), $component0);
+[clientscript,script1477]
+if (%varbit5007 = 0) {
+	if_settext("Quick task:", interface_766:title);
+} else {
+	if_settext("Large task:", interface_766:title);
 }
+if_settext(tostring(%varbit4216), interface_766:a1);
+if_settext(tostring(calc((%varbit4208 + 1) * 5)), interface_766:a2);
+if_settext(tostring(%varbit4217), interface_766:b1);
+if_settext(tostring(calc((%varbit4209 + 1) * 5)), interface_766:b2);
+if_settext(tostring(%varbit4218), interface_766:c1);
+if_settext(tostring(calc((%varbit4210 + 1) * 5)), interface_766:c2);
+if_settext(tostring(%varbit4219), interface_766:d1);
+if_settext(tostring(calc((%varbit4211 + 1) * 5)), interface_766:d2);
+if_settext(tostring(%varbit4220), interface_766:e1);
+if_settext(tostring(calc((%varbit4212 + 1) * 5)), interface_766:e2);
+if_settext(tostring(%varbit5008), interface_766:f1);
+if_settext(tostring(calc((%varbit4213 + 1) * 5)), interface_766:f2);

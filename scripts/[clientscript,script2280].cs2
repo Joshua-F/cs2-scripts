@@ -1,0 +1,9 @@
+// 2280
+[clientscript,script2280](int $int0)
+def_int $int1 = ~dropdownbox_getselected($int0, loginscreen:com_40);
+if ($int1 >= 1 & $int1 <= 31) {
+	%varcint730 = $int1;
+} else {
+	%varcint730 = -1;
+}
+if_settext("", loginscreen:com_117);

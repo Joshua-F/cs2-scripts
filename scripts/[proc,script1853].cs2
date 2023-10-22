@@ -1,32 +1,3 @@
 // 1853
 [proc,script1853]()(int)
-def_int $world0 = _6505;
-def_int $world1 = 0;
-if (testbit($world0, 14) = ^true) {
-	$world1 = setbit($world1, 0);
-}
-if (testbit($world0, 15) = ^true) {
-	$world1 = setbit($world1, 1);
-}
-if (testbit($world0, 16) = ^true) {
-	$world1 = setbit($world1, 2);
-}
-if (testbit($world0, 17) = ^true) {
-	$world1 = setbit($world1, 3);
-}
-if (testbit($world0, 18) = ^true) {
-	$world1 = setbit($world1, 4);
-}
-if (testbit($world0, 19) = ^true) {
-	$world1 = setbit($world1, 5);
-}
-if (testbit($world0, 20) = ^true) {
-	$world1 = setbit($world1, 6);
-}
-if (testbit($world0, 21) = ^true) {
-	$world1 = setbit($world1, 7);
-}
-if (testbit($world0, 22) = ^true) {
-	$world1 = setbit($world1, 8);
-}
-return($world1);
+return(%varcint998);

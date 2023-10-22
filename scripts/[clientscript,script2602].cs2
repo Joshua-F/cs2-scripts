@@ -1,0 +1,14 @@
+// 2602
+[clientscript,script2602]
+def_int $width0 = if_getwidth(interface_891:com_24);
+if (%varbit6503 = 1) {
+	if (%varcint1023 = 0) {
+		%varcint1023 = 1;
+		if_settext("0%", interface_891:status);
+	} else {
+		if_settext("<tostring(%varcint1023)>%", interface_891:status);
+	}
+	if_setsize(%varcint1023, 20, ^setsize_abs, ^setsize_abs, interface_891:com_24);
+} else if (%varbit6503 = 2) {
+	if_setsize(100, 20, ^setsize_abs, ^setsize_abs, interface_891:com_24);
+}

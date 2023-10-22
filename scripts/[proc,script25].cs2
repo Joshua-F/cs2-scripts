@@ -1,0 +1,92 @@
+// 25
+[proc,script25]
+def_int $world0 = _6505;
+def_int $world1 = 0;
+if ($world0 ! 0) {
+	if (testbit($world0, 0) = ^true) {
+		$world1 = setbit($world1, 0);
+	}
+	if (testbit($world0, 1) = ^true) {
+		$world1 = setbit($world1, 1);
+	}
+	if (testbit($world0, 2) = ^true) {
+		$world1 = setbit($world1, 2);
+	}
+	if (testbit($world0, 3) = ^true) {
+		$world1 = setbit($world1, 3);
+	}
+	%varcint996 = $world1;
+	$world1 = 0;
+	if (testbit($world0, 4) = ^true) {
+		$world1 = setbit($world1, 0);
+	}
+	if (testbit($world0, 5) = ^true) {
+		$world1 = setbit($world1, 1);
+	}
+	if (testbit($world0, 6) = ^true) {
+		$world1 = setbit($world1, 2);
+	}
+	if (testbit($world0, 7) = ^true) {
+		$world1 = setbit($world1, 3);
+	}
+	%varcint997 = $world1;
+	$world1 = 0;
+	if (testbit($world0, 14) = ^true) {
+		$world1 = setbit($world1, 0);
+	}
+	if (testbit($world0, 15) = ^true) {
+		$world1 = setbit($world1, 1);
+	}
+	if (testbit($world0, 16) = ^true) {
+		$world1 = setbit($world1, 2);
+	}
+	if (testbit($world0, 17) = ^true) {
+		$world1 = setbit($world1, 3);
+	}
+	if (testbit($world0, 18) = ^true) {
+		$world1 = setbit($world1, 4);
+	}
+	if (testbit($world0, 19) = ^true) {
+		$world1 = setbit($world1, 5);
+	}
+	if (testbit($world0, 20) = ^true) {
+		$world1 = setbit($world1, 6);
+	}
+	if (testbit($world0, 21) = ^true) {
+		$world1 = setbit($world1, 7);
+	}
+	if (testbit($world0, 22) = ^true) {
+		$world1 = setbit($world1, 8);
+	}
+	%varcint998 = $world1;
+	$world1 = 0;
+	if (testbit($world0, 23) = ^true) {
+		$world1 = setbit($world1, 0);
+	}
+	if (testbit($world0, 24) = ^true) {
+		$world1 = setbit($world1, 1);
+	}
+	if (testbit($world0, 25) = ^true) {
+		$world1 = setbit($world1, 2);
+	}
+	if (testbit($world0, 26) = ^true) {
+		$world1 = setbit($world1, 3);
+	}
+	if (testbit($world0, 27) = ^true) {
+		$world1 = setbit($world1, 4);
+	}
+	if (testbit($world0, 28) = ^true) {
+		$world1 = setbit($world1, 5);
+	}
+	if (testbit($world0, 29) = ^true) {
+		$world1 = setbit($world1, 6);
+	}
+	if (testbit($world0, 30) = ^true) {
+		$world1 = setbit($world1, 7);
+	}
+	if (testbit($world0, 31) = ^true) {
+		$world1 = setbit($world1, 8);
+	}
+	%varcint999 = $world1;
+	_6504(0);
+}

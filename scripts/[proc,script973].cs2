@@ -25,19 +25,21 @@ def_int $int6 = 0;
 def_string $string1 = "";
 def_int $int7 = 0;
 def_namedobj $namedobj8 = null;
-def_int $int9 = 0;
+def_graphic $graphic9 = "graphic_2287";
+def_graphic $graphic10 = $graphic9;
+def_int $int11 = 0;
 cc_deleteall(lvl_scroll:info);
 cc_deleteall(lvl_scroll:info_scrollbar);
 if (%var281 < 1000 & stat_base($stat1) = 3) {
 	$string1 = "<col=000080>You've now reached the highest skill level that you can achieve during the tutorial. Once you finish the tutorial, you can advance this skill even further!";
-	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
+	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $graphic9, $string1, 0, 0);
 	cc_settext($string1);
 	$int5 = ~script975($int5, $int6);
 	$int4 = calc(2 + $int4);
 }
 if (%varbit4730 = 1) {
 	$string1 = "<col=800000>Well done! You've reached the total level <tostring(enum(int, int, enum_1475, %varbit4728))> milestone!";
-	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
+	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $graphic9, $string1, 0, 0);
 	cc_settext($string1);
 	$int5 = ~script975($int5, $int6);
 	$int4 = calc(2 + $int4);
@@ -48,16 +50,16 @@ $namedobj8 = silvthrill_rod_7620;
 if ($int0 = 1 | $int0 = 2 | $int0 = 5 | $int0 = 3 | $int0 = 7 | $int0 = 4 | $int0 = 6 | $int0 = 24) {
 	if (%varbit4731 = 1) {
 		$string1 = "<col=800000>Well done! You've reached the Combat level <tostring(enum(int, int, enum_1473, %varbit4727))> milestone!";
-		$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
+		$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $graphic9, $string1, 0, 0);
 		cc_settext($string1);
 		$int5 = ~script975($int5, $int6);
 		$int4 = calc(2 + $int4);
 	}
 	if (%varbit5395 = 1) {
 		while ($namedobj8 ! null) {
-			$int9, $namedobj8, $string1 = ~script976($int7);
-			if ($int9 = ~comlevel) {
-				$int6 = ~script974($int4, $int5, $namedobj8, $string1);
+			$int11, $namedobj8, $string1 = ~script976($int7);
+			if ($int11 = ~comlevel) {
+				$int6 = ~script974($int4, $int5, $namedobj8, $graphic9, $string1, 0, 0);
 				cc_settext($string1);
 				$int5 = ~script975($int5, $int6);
 				$int4 = calc(2 + $int4);
@@ -68,13 +70,13 @@ if ($int0 = 1 | $int0 = 2 | $int0 = 5 | $int0 = 3 | $int0 = 7 | $int0 = 4 | $int
 }
 $string1 = "";
 $namedobj8 = silvthrill_rod_7620;
-def_int $int10 = 0;
+def_int $int12 = 0;
 $int7 = 0;
-while ($int10 ! -1) {
-	$int10 = 0;
-	$string1, $namedobj8, $int10 = ~script1023($stat1, $int7);
-	if ($int10 = 1) {
-		$int6 = ~script974($int4, $int5, $namedobj8, $string1);
+while ($int12 ! -1) {
+	$int12 = 0;
+	$string1, $namedobj8, $int12 = ~script1023($stat1, $int7);
+	if ($int12 = 1) {
+		$int6 = ~script974($int4, $int5, $namedobj8, $graphic9, $string1, 0, 0);
 		cc_settext($string1);
 		$int5 = ~script975($int5, $int6);
 		$int4 = calc(2 + $int4);
@@ -82,34 +84,51 @@ while ($int10 ! -1) {
 	}
 	$int7 = calc($int7 + 1);
 }
+$graphic10 = $graphic9;
 $namedobj8 = silvthrill_rod_7620;
 $string1 = "";
 $int7 = 0;
-def_int $int11 = 0;
-def_int $int12 = 0;
 def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
 def_string $string2 = "";
-$text0, $int11 = ~script12($int0);
-while ($int7 < $int11) {
-	$text0, $int12 = ~script13($int0, $int7);
-	$int13 = 0;
+$text0, $int13 = ~script12($int0);
+while ($int7 < $int13) {
+	$text0, $int14 = ~script13($int0, $int7);
+	$int15 = 0;
 	$namedobj8 = silvthrill_rod_7620;
-	while ($namedobj8 ! null) {
-		$int9, $namedobj8, $string2, $string1 = ~script14($int0, $int7, $int13);
-		if ($int9 = stat_base($stat1)) {
-			$int6 = ~script974($int4, $int5, $namedobj8, $string1);
-			cc_settext($string1);
-			$int5 = ~script975($int5, $int6);
-			$int4 = calc(2 + $int4);
-			$int3 = 0;
+	$graphic10 = $graphic9;
+	if (~script1566($int0, $int7) = 1) {
+		while ($graphic10 ! null) {
+			$int11, $graphic10, $string2, $string1 = ~script1567($int0, $int7, $int15);
+			if ($int11 = stat_base($stat1)) {
+				$int6 = ~script974($int4, $int5, $namedobj8, $graphic10, $string1, $int0, $int7);
+				cc_settext($string1);
+				$int5 = ~script975($int5, $int6);
+				$int4 = calc(2 + $int4);
+				$int3 = 0;
+			}
+			$int15 = calc($int15 + 1);
 		}
-		$int13 = calc($int13 + 1);
+		$int7 = calc($int7 + 1);
+	} else {
+		while ($namedobj8 ! null) {
+			$int11, $namedobj8, $string2, $string1 = ~script14($int0, $int7, $int15);
+			if ($int11 = stat_base($stat1)) {
+				$int6 = ~script974($int4, $int5, $namedobj8, $graphic10, $string1, $int0, $int7);
+				cc_settext($string1);
+				$int5 = ~script975($int5, $int6);
+				$int4 = calc(2 + $int4);
+				$int3 = 0;
+			}
+			$int15 = calc($int15 + 1);
+		}
+		$int7 = calc($int7 + 1);
 	}
-	$int7 = calc($int7 + 1);
 }
 if ($int3 = 1) {
 	$string1 = "Check out the skill advance guide to see what you'll be able to do when you reach even higher levels...";
-	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $string1);
+	$int6 = ~script974($int4, $int5, silvthrill_rod_7620, $graphic9, $string1, 0, 0);
 	cc_settext($string1);
 	$int5 = ~script975($int5, $int6);
 }

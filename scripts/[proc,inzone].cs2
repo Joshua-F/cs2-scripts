@@ -1,0 +1,6 @@
+// 133
+[proc,inzone](coord $coord0, coord $coord1, coord $coord2)(int)
+if (coordx(coord) >= coordx($coord0) & coordx(coord) <= coordx($coord1) & coordy(coord) >= coordy($coord0) & coordy(coord) <= coordy($coord1) & coordz(coord) >= coordz($coord0) & coordz(coord) <= coordz($coord1)) {
+	return(1);
+}
+return(0);

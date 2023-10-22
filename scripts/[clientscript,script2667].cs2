@@ -1,0 +1,52 @@
+// 2667
+[clientscript,script2667]
+def_component $component0 = enum(int, component, enum_2566, %varbit6297);
+def_component $component1 = enum(int, component, enum_2565, %varbit6297);
+if (if_getx($component0) < 17 | if_getx($component0) > 57) {
+	return;
+}
+if (if_gety($component0) > 12 & if_gety($component0) < 32) {
+	if_setposition(37, 22, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 22, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+if (if_gety($component0) > 38 & if_gety($component0) < 58) {
+	if_setposition(37, 48, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 48, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+if (if_gety($component0) > 70 & if_gety($component0) < 90) {
+	if_setposition(37, 80, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 80, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+if (if_gety($component0) > 98 & if_gety($component0) < 118) {
+	if_setposition(37, 108, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 108, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+if (if_gety($component0) > 128 & if_gety($component0) < 148) {
+	if_setposition(37, 138, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 138, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+if (if_gety($component0) > 156 & if_gety($component0) < 176) {
+	if_setposition(37, 166, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 166, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+if (if_gety($component0) > 184 & if_gety($component0) < 204) {
+	if_setposition(37, 194, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 194, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+if (if_gety($component0) > 214 & if_gety($component0) < 234) {
+	if_setposition(37, 224, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 224, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}
+if (if_gety($component0) > 242 & if_gety($component0) < 262) {
+	if_setposition(37, 252, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(37, 252, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return;
+}

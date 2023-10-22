@@ -1,0 +1,23 @@
+// 2241
+[proc,script2241](string $text0)
+def_int $width0 = if_getwidth(loginscreen:com_27);
+def_int $height1 = if_getheight(loginscreen:com_27);
+cc_create(loginscreen:com_27, ^iftype_graphic, 0);
+cc_setposition(calc($width0 - 16), 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(16, $height1, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("graphic_1248");
+cc_settiling(false);
+cc_setonmouseover("script2248(0, true)");
+cc_setonmouseleave("script2248(0, false)");
+cc_setonclick("script2242");
+cc_create(loginscreen:com_27, ^iftype_text, 1);
+cc_settext($text0);
+cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($width0 - 22), $height1, ^setsize_abs, ^setsize_abs);
+cc_settextshadow(false);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_setcolour(0x663300);
+cc_setonmouseover("script273(loginscreen:com_27, 1, true)");
+cc_setonmouseleave("script273(loginscreen:com_27, 1, false)");
+cc_setonclick("script2242");

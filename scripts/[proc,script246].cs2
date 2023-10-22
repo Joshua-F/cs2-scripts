@@ -1,0 +1,12 @@
+// 246
+[proc,script246]
+if_setonkey("script247(event_keycode, event_keychar)", interface_594:name);
+if_setonkey(null, chatdefault:input);
+%varcint6 = 0;
+%varcint11 = 1;
+if (if_gethide(chattop:mes_layer) = false) {
+	if_sethide(true, chattop:mes_layer);
+	if_sethide(false, chattop:mes_layer_hide);
+	%varcint5 = 0;
+	%varcstring22 = "";
+}

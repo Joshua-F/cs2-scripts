@@ -4,6 +4,7 @@ def_int $int0 = 0;
 def_string $text0 = "";
 $text0, $int0 = ~script12(%varbit3288);
 if_settext($text0, skill_guide_v2:title_text);
+if_setonop("script212(enum(int, string, enum_696, %varbit3288))", skill_guide_v2:com_28);
 def_string $string1 = "";
 def_int $int1 = 0;
 if ($int0 > 1) {
@@ -202,12 +203,21 @@ def_int $int2 = 0;
 def_int $int3 = 3;
 def_int $int4 = 0;
 def_namedobj $namedobj5 = silvthrill_rod_7620;
+def_graphic $graphic6 = "graphic_2287";
 def_string $string2 = "";
 def_string $string3 = "";
-while ($namedobj5 ! null) {
-	$int4, $namedobj5, $string2, $string3 = ~script14(%varbit3288, %varbit3289, $int2);
-	$int3 = calc($int3 + ~script24($int4, $namedobj5, $string2, $int2, $int3));
-	$int2 = calc($int2 + 1);
+if (~script1566(%varbit3288, %varbit3289) = 1) {
+	while ($graphic6 ! null) {
+		$int4, $graphic6, $string2, $string3 = ~script1567(%varbit3288, %varbit3289, $int2);
+		$int3 = calc($int3 + ~script24($int4, $namedobj5, $graphic6, $string2, $int2, $int3));
+		$int2 = calc($int2 + 1);
+	}
+} else {
+	while ($namedobj5 ! null) {
+		$int4, $namedobj5, $string2, $string3 = ~script14(%varbit3288, %varbit3289, $int2);
+		$int3 = calc($int3 + ~script24($int4, $namedobj5, $graphic6, $string2, $int2, $int3));
+		$int2 = calc($int2 + 1);
+	}
 }
 if_setscrollpos(0, 0, skill_guide_v2:info);
 if_setscrollsize(296, $int3, skill_guide_v2:info);

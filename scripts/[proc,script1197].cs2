@@ -1,0 +1,15 @@
+// 1197
+[proc,script1197](int $int0)
+if ($int0 >= 6) {
+	return;
+}
+if ($int0 = 0) {
+	cam_movealong(0, $int0, 100, 400, 1, $int0);
+	if_setoncamfinished("script1196(calc($int0 + 1), clientclock)", interface_888:com_0);
+} else if ($int0 = 5) {
+	cam_movealong(0, $int0, 400, 10, 1, $int0);
+	if_setoncamfinished("script1196(calc($int0 + 1), clientclock)", interface_888:com_0);
+} else {
+	cam_movealong(0, $int0, 400, 400, 1, $int0);
+	if_setoncamfinished("script1196(calc($int0 + 1), clientclock)", interface_888:com_0);
+}

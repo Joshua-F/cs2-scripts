@@ -1,0 +1,20 @@
+// 912
+[proc,script912](obj $obj0)(string)
+def_string $string0 = enum(obj, string, enum_1440, $obj0);
+if (compare($string0, "") ! 0) {
+	return("<br><$string0>");
+}
+switch_int (%varcint746) {
+	case 0 :
+		return("<br><enum(int, string, enum_1437, oc_param($obj0, param_23))>");
+	case 1 :
+		return("<br><enum(int, string, enum_1439, oc_param($obj0, param_23))>");
+	case 2, 5 :
+		return("<br><enum(int, string, enum_1436, oc_param($obj0, param_23))>");
+	case 3 :
+		return("<br><enum(int, string, enum_1438, oc_param($obj0, param_23))>");
+	case 4 :
+		return("<br>Requires an ogre composite bow.");
+	case default :
+		return("");
+}

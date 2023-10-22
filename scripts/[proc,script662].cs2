@@ -24,10 +24,15 @@ if (($component10 = null | if_gethide($component10) = true) & cc_find($component
 	cc_setonmouseleave("script665(event_com, event_comsubid)");
 	if ($obj8 ! null) {
 		if (oc_cert($obj8) ! $obj8) {
-			cc_setop(1, "Collect-notes");
-			cc_setop(2, "Collect-items");
+			if (inv_getnum($inv3, 0) > 1) {
+				cc_setop(1, "Collect-notes");
+				cc_setop(2, "Collect-items");
+			} else {
+				cc_setop(1, "Collect-items");
+				cc_setop(2, "Collect-notes");
+			}
 		} else {
-			cc_setop(2, "Collect");
+			cc_setop(1, "Collect");
 		}
 		cc_setopbase(oc_name($obj8));
 	}
@@ -44,10 +49,15 @@ if (($component10 = null | if_gethide($component10) = true) & cc_find($component
 	cc_setonmouseleave("script665(event_com, event_comsubid)");
 	if ($obj9 ! null) {
 		if (oc_cert($obj9) ! $obj9) {
-			cc_setop(1, "Collect-notes");
-			cc_setop(2, "Collect-items");
+			if (inv_getnum($inv3, 1) > 1) {
+				cc_setop(1, "Collect-notes");
+				cc_setop(2, "Collect-items");
+			} else {
+				cc_setop(1, "Collect-items");
+				cc_setop(2, "Collect-notes");
+			}
 		} else {
-			cc_setop(2, "Collect");
+			cc_setop(1, "Collect");
 		}
 		cc_setopbase(oc_name($obj9));
 	}
@@ -71,6 +81,7 @@ if (stockmarket_isofferempty($int0) = false) {
 	cc_setposition($int6, 11, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(18, 16, ^setsize_abs, ^setsize_abs);
 	cc_setobject($obj11, 0);
+	_1121(100, 0);
 	cc_setonmouserepeat("addtooltip_dynamic($component1, 10, $component2, oc_name($obj11), 25, 106)");
 	cc_setonmouseleave("deltooltip($component2)");
 }

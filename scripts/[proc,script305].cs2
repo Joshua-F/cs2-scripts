@@ -1,0 +1,8 @@
+// 305
+[proc,script305](int $int0)
+if ($int0 = 1) {
+	if_setcolour(0xff981f, worldmap:com_14);
+} else {
+	if_setcolour(^red, worldmap:com_14);
+}
+if_setontimer("script306(clientclock, event_com)", worldmap:com_14);

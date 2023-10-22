@@ -1,0 +1,15 @@
+// 2356
+[clientscript,script2356]
+if (gender ! 1) {
+	if_sethide(false, interface_309:com_6);
+	if_sethide(false, interface_309:com_13);
+	if_sethide(true, interface_309:com_7);
+	if_sethide(true, interface_309:scrollbar);
+	if_setgraphic("graphic_1056", interface_309:com_16);
+	if_setgraphic("graphic_1047", interface_309:com_15);
+	%varcint776 = 1;
+	%varcint773 = 700;
+	~script2358(interface_309:com_6);
+	~script2364(interface_309:com_13, interface_309:com_6);
+	~script2366(interface_309:com_6, %varcint775, ~script2362);
+}

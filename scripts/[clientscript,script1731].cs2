@@ -1,16 +1,3 @@
 // 1731
 [clientscript,script1731](component $component0, string $text0)
-def_int $int1 = 0;
-if (%varcint198 ! 1) {
-	if_setontimer(null, $component0);
-	if_settext($text0, $component0);
-	return;
-}
-if (calc(clientclock % 20) > 9) {
-	if_settext("", $component0);
-	if (calc(clientclock % 20) = 10) {
-		sound_synth(synth_5009, 1, 0);
-	}
-} else {
-	if_settext($text0, $component0);
-}
+~script2197($component0, -1, $text0);

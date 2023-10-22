@@ -1,4 +1,13 @@
 // 1615
-[clientscript,script1615]
-~script1717;
-~script1612(interface_771:button_3, 0, 10);
+[clientscript,script1615](boolean $boolean0, component $component1, int $comsubid2)
+if ($boolean0 = true) {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_setoutline(2);
+	}
+	%varcint1031 = calc(1 + $comsubid2);
+} else {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_setoutline(1);
+	}
+	%varcint1031 = 0;
+}

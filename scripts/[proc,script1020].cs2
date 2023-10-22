@@ -207,7 +207,7 @@ switch_int ($int0) {
 			case 21 :
 				return(43, petrifying_gaze_scroll_12458, "Petrifying Gaze", "You can now use <col=000080>Petrifying Gaze scrolls</col>.");
 			case 22 :
-				return(46, bronze_bull_rush_scroll_12461, "Iron Bull Rush", "You can now use <col=000080>Iron Bull Rush scrolls</col>.");
+				return(46, iron_bull_rush_scroll_12462, "Iron Bull Rush", "You can now use <col=000080>Iron Bull Rush scrolls</col>.");
 			case 23 :
 				return(46, immense_heat_scroll_12829, "Immense Heat", "You can now use <col=000080>Immense Heat scrolls</col>.");
 			case 24 :
@@ -221,7 +221,7 @@ switch_int ($int0) {
 			case 28 :
 				return(55, dissolve_scroll_12453, "Dissolve", "You can now use <col=000080>Dissolve scrolls</col>.");
 			case 29 :
-				return(56, bronze_bull_rush_scroll_12461, "Steel Bull Rush", "You can now use <col=000080>Steel Bull Rush scrolls</col>.");
+				return(56, steel_bull_rush_scroll_12463, "Steel Bull Rush", "You can now use <col=000080>Steel Bull Rush scrolls</col>.");
 			case 30 :
 				return(56, fish_rain_scroll_12424, "Fish Rain", "You can now use <col=000080>Fish Rain scrolls</col>.");
 			case 31 :
@@ -241,7 +241,7 @@ switch_int ($int0) {
 			case 38 :
 				return(64, poisonous_blast_scroll_12467, "Poisonous Blast", "You can now use <col=000080>Poisonous Blast scrolls</col>.");
 			case 39 :
-				return(66, bronze_bull_rush_scroll_12461, "Mithril Bull Rush", "You can now use <col=000080>Mithril Bull Rush scrolls</col>.");
+				return(66, mith_bull_rush_scroll_12464, "Mithril Bull Rush", "You can now use <col=000080>Mithril Bull Rush scrolls</col>.");
 			case 40 :
 				return(66, toad_bark_scroll_12452, "Toad Bark", "You can now use <col=000080>Toad Bark scrolls</col>.");
 			case 41 :
@@ -265,7 +265,7 @@ switch_int ($int0) {
 			case 50 :
 				return(76, inferno_scroll_12841, "Inferno", "You can now use <col=000080>Inferno scrolls</col>.");
 			case 51 :
-				return(76, bronze_bull_rush_scroll_12461, "Adamant Bull Rush", "You can now use <col=000080>Adamant Bull Rush scrolls</col>.");
+				return(76, addy_bull_rush_scroll_12465, "Adamant Bull Rush", "You can now use <col=000080>Adamant Bull Rush scrolls</col>.");
 			case 52 :
 				return(77, deadly_claw_scroll_12831, "Deadly Claw", "You can now use <col=000080>Deadly Claw scrolls</col>.");
 			case 53 :
@@ -281,7 +281,7 @@ switch_int ($int0) {
 			case 58 :
 				return(85, swamp_plague_scroll_12832, "Swamp Plague", "You can now use <col=000080>Swamp Plague scrolls</col>.");
 			case 59 :
-				return(86, bronze_bull_rush_scroll_12461, "Rune Bull Rush", "You can now use <col=000080>Rune Bull Rush scrolls</col>.");
+				return(86, rune_bull_rush_scroll_12466, "Rune Bull Rush", "You can now use <col=000080>Rune Bull Rush scrolls</col>.");
 			case 60 :
 				return(88, healing_aura_scroll_12434, "Healing Aura", "You can now use <col=000080>Healing Aura scrolls</col>.");
 			case 61 :
@@ -312,40 +312,50 @@ switch_int ($int0) {
 			case 5 :
 				return(4, terrier_puppy_12191, "Terrier", "You can now raise <col=000080>terriers</col>.");
 			case 6 :
-				return(10, baby_gecko_12488, "Gecko", "You can now raise <col=000080>geckos</col>.");
+				return(4, creeping_hand_14652, "Creeping hand", "You can now keep <col=000080>creeping hands</col>.");
 			case 7 :
-				return(10, platypus_12547, "Platypus<br> (after As a First Resort...)", "You can now raise <col=000080>platypodes</col> (after As a First Resort...).");
+				return(4, minitrice_14653, "Minitrice", "You can now keep <col=000080>minitrices</col>.");
 			case 8 :
-				return(20, broav_14533, "Broav<br> (after While Guthix Sleeps...)", "You can now raise <col=000080>broavs</col> <br> (after While Guthix Sleeps...).");
+				return(4, baby_basilisk_14654, "Baby basilisk", "You can now keep <col=000080>baby basilisks</col>.");
 			case 9 :
-				return(30, penguin_12188, "Penguin", "You can now raise <col=000080>penguins</col>.");
+				return(4, baby_kurask_14655, "Baby kurask", "You can now keep <col=000080>baby kurasks</col>.");
 			case 10 :
-				return(40, baby_giant_crab_12198, "Giant crab", "You can now raise <col=000080>giant crabs</col>.");
+				return(4, abyssal_minion_14651, "Abyssal minion", "You can now keep <col=000080>abyssal minions</col>.");
 			case 11 :
-				return(50, raven_12485, "Raven", "You can now raise <col=000080>ravens</col>.");
+				return(10, baby_gecko_12488, "Gecko", "You can now raise <col=000080>geckos</col>.");
 			case 12 :
-				return(60, squirrel_12200, "Squirrel", "You can now raise <col=000080>squirrels</col>.");
+				return(10, platypus_12547, "Platypus<br> (after As a First Resort...)", "You can now raise <col=000080>platypodes</col> (after As a First Resort...).");
 			case 13 :
-				return(70, saradomin_owl_12185, "Saradomin owl", "You can now raise <col=000080>Saradomin owls</col>.");
+				return(23, broav_14533, "Broav<br> (after While Guthix Sleeps...)", "You can now raise <col=000080>broavs</col> <br> (after While Guthix Sleeps...).");
 			case 14 :
-				return(70, guthix_raptor_12187, "Guthix raptor", "You can now raise <col=000080>Guthix raptors</col>.");
+				return(30, penguin_12188, "Penguin", "You can now raise <col=000080>penguins</col>.");
 			case 15 :
-				return(70, zamorak_hawk_12186, "Zamorak hawk", "You can now raise <col=000080>Zamorak hawks</col>.");
+				return(40, baby_giant_crab_12198, "Giant crab", "You can now raise <col=000080>giant crabs</col>.");
 			case 16 :
-				return(71, ex_ex_parrot_13336, "Ex-Ex-Parrot<br> (after Rocking Out...)", "You can now raise <col=000080>ex-ex-parrots</col> (after Rocking Out...).");
+				return(50, raven_12485, "Raven", "You can now raise <col=000080>ravens</col>.");
 			case 17 :
-				return(72, phoenix_eggling_14627, "Cute phoenix eggling<br> (after In Pyre Need)", "You can now raise <col=000080>cute phoenix egglings</col> (after In Pyre Need).");
+				return(60, squirrel_12200, "Squirrel", "You can now raise <col=000080>squirrels</col>.");
 			case 18 :
-				return(72, phoenix_eggling_14626, "Mean phoenix eggling<br> (after In Pyre Need)", "You can now raise <col=000080>mean phoenix egglings</col> (after In Pyre Need).");
+				return(70, saradomin_owl_12185, "Saradomin owl", "You can now raise <col=000080>Saradomin owls</col>.");
 			case 19 :
-				return(80, baby_raccoon_12199, "Raccoon", "You can now raise <col=000080>raccoons</col>.");
+				return(70, guthix_raptor_12187, "Guthix raptor", "You can now raise <col=000080>Guthix raptors</col>.");
 			case 20 :
-				return(85, vulture_12190, "Vulture", "You can now raise <col=000080>vultures</col>.");
+				return(70, zamorak_hawk_12186, "Zamorak hawk", "You can now raise <col=000080>Zamorak hawks</col>.");
 			case 21 :
-				return(90, chameleon_12203, "Chameleon", "You can now raise <col=000080>chameleons</col>.");
+				return(71, ex_ex_parrot_13336, "Ex-Ex-Parrot<br> (after Rocking Out...)", "You can now raise <col=000080>ex-ex-parrots</col> (after Rocking Out...).");
 			case 22 :
-				return(95, monkey_12201, "Monkey", "You can now raise <col=000080>monkeys</col>.");
+				return(72, phoenix_eggling_14627, "Cute phoenix eggling<br> (after In Pyre Need)", "You can now raise <col=000080>cute phoenix egglings</col> (after In Pyre Need).");
 			case 23 :
+				return(72, phoenix_eggling_14626, "Mean phoenix eggling<br> (after In Pyre Need)", "You can now raise <col=000080>mean phoenix egglings</col> (after In Pyre Need).");
+			case 24 :
+				return(80, baby_raccoon_12199, "Raccoon", "You can now raise <col=000080>raccoons</col>.");
+			case 25 :
+				return(85, vulture_12190, "Vulture", "You can now raise <col=000080>vultures</col>.");
+			case 26 :
+				return(90, chameleon_12203, "Chameleon", "You can now raise <col=000080>chameleons</col>.");
+			case 27 :
+				return(95, monkey_12201, "Monkey", "You can now raise <col=000080>monkeys</col>.");
+			case 28 :
 				return(99, dragon_hatchling_12197, "Dragon", "You can now raise <col=000080>dragons</col>.");
 		}
 	case 3 :

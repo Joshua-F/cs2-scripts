@@ -3,11 +3,11 @@
 def_component $component0 = null;
 def_component $component1 = null;
 if (getwindowmode < ^windowmode_resizable) {
-	$component0 = toplevel:com_8;
-	$component1 = toplevel:com_100;
+	$component0 = toplevel:com_13;
+	$component1 = toplevel:com_173;
 } else {
-	$component0 = toplevel_fullscreen:com_18;
-	$component1 = toplevel_fullscreen:com_22;
+	$component0 = toplevel_fullscreen:com_12;
+	$component1 = toplevel_fullscreen:com_159;
 }
 if_settext("", $component1);
 if_sethide(true, $component0);

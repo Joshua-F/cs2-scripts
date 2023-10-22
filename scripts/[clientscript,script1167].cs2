@@ -1,3 +1,68 @@
 // 1167
-[clientscript,script1167](component $component0, component $component1, component $component2, component $component3, graphic $graphic4, graphic $graphic5, graphic $graphic6, graphic $graphic7, int $colour8, int $colour9, graphic $graphic10)
-~script1169($component0, $component1, $component2, $component3, $graphic4, $graphic5, $graphic6, $graphic7, $colour8, $colour9, $graphic10, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+[clientscript,script1167]
+def_enum $enum0 = null;
+switch_int (%varcint1001) {
+	case 1 :
+		$enum0 = enum_738;
+	case 2 :
+		$enum0 = enum_739;
+	case 3 :
+		$enum0 = enum_740;
+	case 4 :
+		$enum0 = enum_741;
+	case 5 :
+		$enum0 = enum_742;
+	case default :
+		return;
+}
+if_settext(enum(int, string, enum_205, %varcint1001), interface_885:title);
+def_int $count1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 16;
+def_int $int4 = 16;
+def_int $int5 = 56;
+def_int $int6 = 50;
+def_int $count7 = enum_getoutputcount($enum0);
+def_int $int8 = 5;
+def_obj $obj9 = null;
+cc_deleteall(interface_885:content);
+while ($count1 < $count7) {
+	$obj9 = enum(int, obj, $enum0, $count1);
+	if ($obj9 ! null) {
+		cc_create(interface_885:content, ^iftype_graphic, $int2);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject_wearcol(enum(int, obj, $enum0, $count1), -1);
+		cc_setposition(calc(11 + ($int3 + (36 + $int5) * ($count1 % $int8))), calc(6 + ($int4 + $count1 / $int8 * (32 + $int6))), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setop(1, "Examine");
+		cc_setopbase("<col=ff9040><oc_name($obj9)>");
+		cc_create(interface_885:content, ^iftype_text, calc($int2 + 1));
+		cc_setsize(56, 10, ^setsize_abs, ^setsize_abs);
+		cc_settextfont(p11_full);
+		cc_setcolour(0xcc9900);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+		if (compare(cc_gettext, "") = 0) {
+			cc_settext("Getting data...");
+		}
+		cc_setposition(calc($int3 + ($int5 + 36) * ($count1 % $int8)), calc(47 + ($int4 + $count1 / $int8 * (32 + $int6))), ^setpos_abs_left, ^setpos_abs_top);
+		if_sethide(false, enum(int, component, enum_737, $count1));
+		if_setposition(calc($int3 + (36 + $int5) * ($count1 % $int8)), calc($int4 + $count1 / $int8 * (32 + $int6)), ^setpos_abs_left, ^setpos_abs_top, enum(int, component, enum_737, $count1));
+		$int2 = calc($int2 + 2);
+	}
+	$count1 = calc($count1 + 1);
+}
+while ($count1 < enum_getoutputcount(enum_737)) {
+	if_sethide(true, enum(int, component, enum_737, $count1));
+	$count1 = calc($count1 + 1);
+}
+if ($count7 <= 15) {
+	if_setscrollpos(0, 0, interface_885:content);
+	if_setscrollsize(0, 0, interface_885:content);
+	cc_deleteall(interface_885:scrollbar);
+	if_sethide(true, interface_885:scrollbar);
+} else {
+	if_sethide(false, interface_885:scrollbar);
+	if_setscrollpos(0, 0, interface_885:content);
+	if_setscrollsize(if_getwidth(interface_885:content), calc(60 + ($int4 + $count7 / $int8 * (32 + $int6))), interface_885:content);
+	~scrollbar_vertical(interface_885:scrollbar, interface_885:content, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+}

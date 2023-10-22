@@ -1,0 +1,14 @@
+// 2176
+[clientscript,script2176](int $int0)
+def_string $string0 = "";
+switch_int ($int0) {
+	case 12451849, 12451850 :
+		if (%varcint692 = 1) {
+			$string0 = "Click to hide the quests you cannot start.<br><br>Some recommended stats and abilities (such as Combat Levels) are left for you to decide.";
+		} else {
+			$string0 = "Click to show all quests.";
+		}
+	case 12451851, 12451852 :
+		$string0 = "Click to reverse the order of groups.";
+}
+~addtooltip_action_dynamic(interface_190:com_19, -1, interface_190:tooltip, $string0, 25, 450);

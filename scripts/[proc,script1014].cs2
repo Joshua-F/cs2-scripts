@@ -116,18 +116,20 @@ switch_int ($int0) {
 			case 8 :
 				return(44, clean_irit_259, "Irit", "You can now plant <col=000080>irit</col>.");
 			case 9 :
-				return(50, clean_avantoe_261, "Avantoe", "You can now plant <col=000080>avantoe</col>.");
+				return(46, clean_wergali_14854, "Wergali", "You can now plant <col=000080>wergali</col>.");
 			case 10 :
-				return(56, clean_kwuarm_263, "Kwuarm", "You can now plant <col=000080>kwuarm</col>.");
+				return(50, clean_avantoe_261, "Avantoe", "You can now plant <col=000080>avantoe</col>.");
 			case 11 :
-				return(62, clean_snapdragon_3000, "Snapdragon", "You can now plant <col=000080>snapdragon</col>.");
+				return(56, clean_kwuarm_263, "Kwuarm", "You can now plant <col=000080>kwuarm</col>.");
 			case 12 :
-				return(67, clean_cadantine_265, "Cadantine", "You can now plant <col=000080>cadantine</col>.");
+				return(62, clean_snapdragon_3000, "Snapdragon", "You can now plant <col=000080>snapdragon</col>.");
 			case 13 :
-				return(73, clean_lantadyme_2481, "Lantadyme", "You can now plant <col=000080>lantadyme</col>.");
+				return(67, clean_cadantine_265, "Cadantine", "You can now plant <col=000080>cadantine</col>.");
 			case 14 :
-				return(79, clean_dwarf_weed_267, "Dwarf weed", "You can now plant <col=000080>dwarf weed</col>.");
+				return(73, clean_lantadyme_2481, "Lantadyme", "You can now plant <col=000080>lantadyme</col>.");
 			case 15 :
+				return(79, clean_dwarf_weed_267, "Dwarf weed", "You can now plant <col=000080>dwarf weed</col>.");
+			case 16 :
 				return(85, clean_torstol_269, "Torstol", "You can now plant <col=000080>torstol</col>.");
 		}
 	case 7 :
@@ -165,6 +167,25 @@ switch_int ($int0) {
 				return(-1, silvthrill_rod_7620, "4. Stand the scarecrow in an empty flower patch.", "");
 		}
 	case 9 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, flag_12625, "Vine Sweeper", "You can now play <col=000080>Vine Sweeper</col>.");
+			case 1 :
+				return(1, obj_14667, "Nurture basic evil tree saplings", "You can now nurture <col=000080>basic evil tree saplings</col>.");
+			case 2 :
+				return(7, obj_14667, "Nurture evil oak tree saplings", "You can now nurture <col=000080>evil oak tree saplings</col>.");
+			case 3 :
+				return(15, obj_14667, "Nurture evil willow tree saplings", "You can now nurture <col=000080>evil willow tree saplings</col>.");
+			case 4 :
+				return(22, obj_14667, "Nurture evil maple tree saplings", "You can now nurture <col=000080>evil maple tree saplings</col>.");
+			case 5 :
+				return(30, obj_14667, "Nurture evil yew tree saplings", "You can now nurture <col=000080>evil yew tree saplings</col>.");
+			case 6 :
+				return(37, obj_14667, "Nurture evil magic tree saplings", "You can now nurture <col=000080>evil magic tree saplings</col>.");
+			case 7 :
+				return(42, obj_14667, "Nurture elder evil tree saplings", "You can now nurture <col=000080>elder evil tree saplings</col>.");
+		}
+	case 10 :
 		if ($int1 = 0) {
 			return(99, farming_cape_9810, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Farming<col=000080>. Why not visit <col=800000>Martin the Master Gardener<col=000080> in <col=800000>Draynor Village<col=000080>? He has something special that is only available to true masters of the <col=800000>Farming<col=000080> skill!");
 		}

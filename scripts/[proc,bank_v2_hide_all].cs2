@@ -2,7 +2,7 @@
 [proc,bank_v2_hide_all]
 def_int $size0 = 0;
 while ($size0 < inv_size(bank)) {
-	if (cc_find(bank_v2_main:com_73, $size0) = ^true) {
+	if (cc_find(bank_v2_main:com_87, $size0) = ^true) {
 		cc_sethide(true);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}

@@ -1,0 +1,8 @@
+// 2742
+[proc,script2742]
+if (if_getheight(interface_900:com_65) > 32) {
+	if (cc_find(interface_900:com_67, 0) = ^false) {
+		~scrollbar_vertical(interface_900:com_67, interface_900:com_66, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	}
+	~scrollbar_resize(interface_900:com_67, interface_900:com_66, if_getscrolly(interface_900:com_66));
+}

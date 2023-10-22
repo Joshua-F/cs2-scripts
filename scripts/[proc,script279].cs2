@@ -1,0 +1,10 @@
+// 279
+[proc,script279](int $int0)
+%varcint739 = 1;
+$int0 = calc($int0 - 1);
+if ($int0 ! -1) {
+	%varcint733 = enum(int, int, enum_1669, $int0);
+} else {
+	%varcint733 = -1;
+}
+if_settext("", loginscreen:com_110);

@@ -1,0 +1,9 @@
+// 2248
+[clientscript,script2248](int $comsubid0, boolean $boolean1)
+if (cc_find(loginscreen:com_27, $comsubid0) = ^true) {
+	if ($boolean1 = true) {
+		cc_setgraphic("graphic_1250");
+	} else {
+		cc_setgraphic("graphic_1248");
+	}
+}

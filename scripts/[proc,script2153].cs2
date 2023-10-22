@@ -1,0 +1,90 @@
+// 2153
+[proc,script2153]()(int)
+def_stat $stat0 = struct_param(%varcint699, param_871);
+if (struct_param(%varcint699, param_897) = 1 & calc(stat_base(attack) + stat_base(strength)) < 130) {
+	return(0);
+}
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_872)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_873);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_874)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_875);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_876)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_877);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_878)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_879);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_880)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_881);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_882)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_883);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_884)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_885);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_886)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_887);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_888)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_889);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_890)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_891);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_892)) {
+	return(0);
+}
+$stat0 = struct_param(%varcint699, param_893);
+if ($stat0 = null) {
+	return(1);
+}
+if (stat_base($stat0) < struct_param(%varcint699, param_894)) {
+	return(0);
+}
+return(1);

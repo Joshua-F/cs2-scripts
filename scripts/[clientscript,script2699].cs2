@@ -1,0 +1,15 @@
+// 2699
+[clientscript,script2699](int $int0, struct $struct1, int $int2, int $int3, int $int4, int $int5, int $int6)
+def_int $int7 = ~script2582($struct1, $int0, $int6);
+if ($int7 = 0) {
+	if ($struct1 = struct_845) {
+		$int5 = getdefaultwindowmode;
+		setwindowmode($int5);
+		~script2694($int6, "RuneScape was unable to change to that resolution.<br><br>Please visit our Knowledge Base for more information.", "Consult Knowledge Base", "kbase/view.ws?guid=controls_display_options");
+	} else {
+		~script2694($int6, "RuneScape was unable to implement that setting.<br><br>Please visit our Knowledge Base for more information.", "Consult Knowledge Base", "kbase/view.ws?guid=controls_display_options");
+	}
+}
+if ($int6 = 2 | $int7 = 1) {
+	~script2596($int4, $int5, $int2, $int3, $int6);
+}

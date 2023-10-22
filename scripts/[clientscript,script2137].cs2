@@ -1,0 +1,5 @@
+// 2137
+[clientscript,script2137](int $int0, int $int1, int $int2, int $int3, int $int4, component $component5, int $comsubid6)
+if (cc_find($component5, $comsubid6) = ^true) {
+	cc_setmodelangle($int3, $int4, calc(cc_getmodelangle_x + $int0 & 2047), calc(cc_getmodelangle_y + $int1 & 2047), calc(cc_getmodelangle_z + $int2 & 2047), cc_getmodelzoom);
+}

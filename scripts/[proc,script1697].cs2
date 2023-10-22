@@ -1,0 +1,16 @@
+// 1697
+[proc,script1697](stat $stat0)(int)
+switch_stat ($stat0) {
+	case attack :
+		return(calc(%varbit6857 - 30));
+	case strength :
+		return(calc(%varbit6858 - 30));
+	case defence :
+		return(calc(%varbit6859 - 30));
+	case ranged :
+		return(calc(%varbit6860 - 30));
+	case magic :
+		return(calc(%varbit6861 - 30));
+	case default :
+		return(0);
+}

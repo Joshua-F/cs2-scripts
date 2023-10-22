@@ -1,13 +1,3 @@
 // 1533
 [clientscript,topstat_run_button_mouseover](component $component0)
-if (~bool_to_int(%varcint214) = 1) {
-	if (getwindowmode >= ^windowmode_resizable) {
-		if_setgraphic("graphic_1462", $component0);
-	} else {
-		if_setgraphic("graphic_1458", $component0);
-	}
-} else if (getwindowmode >= ^windowmode_resizable) {
-	if_setgraphic("graphic_1460", $component0);
-} else {
-	if_setgraphic("graphic_1456", $component0);
-}
+~script2308($component0, %varcint119);

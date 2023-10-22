@@ -1,6 +1,14 @@
 // 283
 [clientscript,script283]
-~script366;
-if_setgraphic("graphic_1043", interface_594:com_268);
-if_setonmouseleave("deltooltip(interface_594:com_300)", interface_594:com_268);
-if_setonmouseover(null, interface_594:com_268);
+def_int $y0 = 0;
+def_int $height1 = 0;
+def_int $int2 = scale(%var1380, 1000, 100);
+$y0 = enum(int, int, enum_706, $int2);
+$height1 = enum(int, int, enum_707, $int2);
+if_setposition(15, $y0, ^setpos_abs_right, ^setpos_abs_top, interface_834:com_74);
+if_setsize(14, $height1, ^setsize_abs, ^setsize_abs, interface_834:com_74);
+if ($int2 < 25) {
+	if_setcolour(0xff9623, interface_834:com_74);
+} else {
+	if_setcolour(0x048306, interface_834:com_74);
+}

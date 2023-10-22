@@ -1,0 +1,36 @@
+// 2745
+[clientscript,script2745](int $opindex0, int $int1, int $int2, int $int3, enum $enum4, enum $enum5, enum $enum6)
+if ($opindex0 ! 1) {
+	return;
+}
+if ($int1 ! %varcint1020) {
+	return;
+}
+if ($int2 = $int3) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+def_int $int7 = -1;
+switch_int ($int1) {
+	case 0 :
+		$int7 = 4;
+	case 1 :
+		$int7 = 0;
+	case 2 :
+		$int7 = 0;
+	case 3 :
+		$int7 = 1;
+	case 4 :
+		$int7 = 1;
+	case 5 :
+		$int7 = 4;
+	case 6 :
+		$int7 = 2;
+	case 7 :
+		$int7 = 3;
+}
+if ($int7 ! -1 & $int2 ! -1) {
+	basecolour($int7, $int2);
+}
+cc_deleteall(interface_900:com_73);
+~script2744($enum4, $enum5, $enum6, $int2);

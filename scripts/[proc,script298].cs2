@@ -1,39 +1,73 @@
 // 298
-[proc,script298]
-if_setgraphic("miscgraphics,10", interface_594:com_63);
-if_setgraphic("miscgraphics,10", interface_594:com_65);
-if_setgraphic("miscgraphics,10", interface_594:com_69);
-if_setgraphic("miscgraphics,10", interface_594:com_72);
-if_setgraphic("miscgraphics,10", interface_594:com_75);
-if_setgraphic("miscgraphics,10", interface_594:com_78);
-if_setgraphic("miscgraphics,10", interface_594:com_81);
-if_setgraphic("miscgraphics,10", interface_594:com_84);
-if_setgraphic("miscgraphics,10", interface_594:com_87);
-if_setgraphic("miscgraphics,10", interface_594:com_90);
-if_setgraphic("miscgraphics,10", interface_594:com_93);
-if_setgraphic("miscgraphics,10", interface_594:com_96);
-if_setgraphic("miscgraphics,10", interface_594:com_99);
-if_setgraphic("miscgraphics,10", interface_594:com_102);
-if_setgraphic("miscgraphics,10", interface_594:com_105);
-if_setgraphic("miscgraphics,10", interface_594:com_108);
-if_setgraphic("miscgraphics,10", interface_594:com_111);
-if_setgraphic("miscgraphics,10", interface_594:com_114);
-if_setgraphic("miscgraphics,10", interface_594:com_117);
-if_setgraphic("miscgraphics,10", interface_594:com_120);
-if_setgraphic("miscgraphics,10", interface_594:com_123);
-if_setgraphic("miscgraphics,10", interface_594:com_126);
-if_setgraphic("miscgraphics,10", interface_594:com_129);
-if_setgraphic("miscgraphics,10", interface_594:com_132);
-if_setgraphic("miscgraphics,10", interface_594:com_135);
-if_setgraphic("miscgraphics,10", interface_594:com_138);
-if_setgraphic("miscgraphics,10", interface_594:com_141);
-if_setgraphic("miscgraphics,10", interface_594:com_144);
-if_setgraphic("miscgraphics,10", interface_594:com_147);
-if_setgraphic("miscgraphics,10", interface_594:com_150);
-if_setgraphic("miscgraphics,10", interface_594:com_153);
-if_setgraphic("miscgraphics,10", interface_594:com_156);
-if_setgraphic("miscgraphics,10", interface_594:com_159);
-if_setgraphic("miscgraphics,10", interface_594:com_162);
-if_setgraphic("miscgraphics,10", interface_594:com_165);
-if_setgraphic("miscgraphics,10", interface_594:com_168);
-if_setgraphic("miscgraphics,10", interface_594:com_171);
+[proc,script298](coord $coord0, coord $coord1, boolean $boolean2, int $colour3, int $int4, component $component5, int $int6, int $int7, int $int8, int $int9, int $int10)(int)
+if (%varbit6175 = 1) {
+	return($int10);
+}
+$colour3 = ^yellow;
+def_int $comsubid11 = calc($int10 + 1);
+def_int $int12 = calc($int10 + 2);
+def_int $int13 = 0;
+def_int $int14 = 0;
+$int13, $int14 = ~worldmap_elements_chooseposition($coord0, $boolean2, $component5, $int6, $int7, $int8, $int9);
+def_int $int15 = 0;
+def_int $int16 = 0;
+$int15, $int16 = ~worldmap_elements_chooseposition($coord1, $boolean2, $component5, $int6, $int7, $int8, $int9);
+def_int $x17 = calc($int13 + ($int15 - $int13) / 2);
+def_int $y18 = calc($int14 + ($int16 - $int14) / 2);
+def_int $int19 = calc($int15 - $int13);
+def_int $int20 = calc($int16 - $int14);
+def_boolean $boolean21 = false;
+if ($int19 < 0) {
+	if ($int20 < 0) {
+		$int19 = calc(0 - $int19);
+		$int20 = calc(0 - $int20);
+	} else {
+		$int19 = calc(0 - $int19);
+		$boolean21 = true;
+	}
+} else if ($int20 < 0) {
+	$int20 = calc(0 - $int20);
+	$boolean21 = true;
+}
+if (cc_find($component5, $int10) = ^true) {
+	cc_setposition(calc($int13 + 1), calc($int14 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	cc_create($component5, ^iftype_rectangle, $int10);
+	cc_setposition(calc($int13 + 1), calc($int14 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int4, $int4, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(^black);
+	cc_setfill(true);
+}
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $colour25 = ^black;
+if (cc_find($component5, $comsubid11) = ^true) {
+	cc_setposition($int13, $int14, ^setpos_abs_centre, ^setpos_abs_centre);
+} else {
+	$int22, $int23, $int24 = ~hex_to_rgb($colour3);
+	$int22, $int23, $int24 = max(calc($int22 - 48), 0), max(calc($int23 - 48), 0), max(calc($int24 - 48), 0);
+	$colour25 = ~rgb_to_hex($int22, $int23, $int24);
+	cc_create($component5, ^iftype_rectangle, $comsubid11);
+	cc_setposition($int13, $int14, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int4, $int4, ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour25);
+	cc_setfill(true);
+	cc_setonmouseover("script301(true, $component5, $comsubid11, -1, $int12, $colour3)");
+	cc_setonmouseleave("script301(false, $component5, $comsubid11, -1, $int12, $colour25)");
+	cc_setop(1, "Scroll map");
+	cc_setonop("script302(event_op, $coord1, $boolean2)");
+}
+if (cc_find($component5, $int12) = ^true) {
+	cc_setposition($x17, $y18, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int19, $int20, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_create($component5, ^iftype_line, $int12);
+	cc_setposition($x17, $y18, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize($int19, $int20, ^setsize_abs, ^setsize_abs);
+	cc_setlinedirection($boolean21);
+	cc_setlinewid(calc(1 + $int4 / 5));
+	cc_setcolour($colour3);
+	cc_sethide(true);
+}
+return(calc($int12 + 1));

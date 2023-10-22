@@ -1,0 +1,6 @@
+// 2276
+[clientscript,script2276](component $component0, component $component1, component $component2)
+if_setcolour(0xffe1be, $component0);
+if_setonmouserepeat(null, $component0);
+if_setonmouserepeat("script2277(event_mousex, event_mousey, $component0, $component1, $component2, event_com)", $component1);
+if_setonmouserepeat("script2277(event_mousex, event_mousey, $component0, $component1, $component2, event_com)", $component2);

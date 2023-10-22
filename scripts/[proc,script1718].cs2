@@ -1,28 +1,3 @@
 // 1718
-[proc,script1718]
-def_graphic $graphic0 = "graphic_1438";
-def_graphic $graphic1 = "graphic_1437";
-if_setgraphic("graphic_1437", interface_771:button_26);
-if_setgraphic("graphic_1437", interface_771:button_27);
-if_setgraphic("graphic_1437", interface_771:button_28);
-if_setgraphic("graphic_1437", interface_771:button_29);
-if_setgraphic("graphic_1437", interface_771:button_30);
-if_setgraphic("graphic_1437", interface_771:button_31);
-if_setgraphic("graphic_1437", interface_771:button_32);
-if_setgraphic("graphic_1437", interface_771:button_33);
-if_setonmouseover("graphic_swapper(event_com, $graphic0)", interface_771:button_26);
-if_setonmouseover("graphic_swapper(event_com, $graphic0)", interface_771:button_27);
-if_setonmouseover("graphic_swapper(event_com, $graphic0)", interface_771:button_28);
-if_setonmouseover("graphic_swapper(event_com, $graphic0)", interface_771:button_29);
-if_setonmouseover("graphic_swapper(event_com, $graphic0)", interface_771:button_30);
-if_setonmouseover("graphic_swapper(event_com, $graphic0)", interface_771:button_31);
-if_setonmouseover("graphic_swapper(event_com, $graphic0)", interface_771:button_32);
-if_setonmouseover("graphic_swapper(event_com, $graphic0)", interface_771:button_33);
-if_setonmouseleave("deltooltip_graphic_swapper(interface_771:com_400, event_com, $graphic1)", interface_771:button_26);
-if_setonmouseleave("deltooltip_graphic_swapper(interface_771:com_400, event_com, $graphic1)", interface_771:button_27);
-if_setonmouseleave("deltooltip_graphic_swapper(interface_771:com_400, event_com, $graphic1)", interface_771:button_28);
-if_setonmouseleave("deltooltip_graphic_swapper(interface_771:com_400, event_com, $graphic1)", interface_771:button_29);
-if_setonmouseleave("deltooltip_graphic_swapper(interface_771:com_400, event_com, $graphic1)", interface_771:button_30);
-if_setonmouseleave("deltooltip_graphic_swapper(interface_771:com_400, event_com, $graphic1)", interface_771:button_31);
-if_setonmouseleave("deltooltip_graphic_swapper(interface_771:com_400, event_com, $graphic1)", interface_771:button_32);
-if_setonmouseleave("deltooltip_graphic_swapper(interface_771:com_400, event_com, $graphic1)", interface_771:button_33);
+[proc,script1718](stat $stat0, int $int1)(int)
+return(calc(stat_base($stat0) * $int1 / 100));

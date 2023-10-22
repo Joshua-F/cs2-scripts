@@ -1,0 +1,6 @@
+// 2719
+[proc,script2719](component $component0, component $component1)
+if_setposition(if_getx($component0), 46, ^setpos_abs_left, ^setpos_abs_top, $component0);
+if_setsize(464, 255, ^setsize_abs, ^setsize_abs, $component0);
+if_setposition(474, 46, ^setpos_abs_left, ^setpos_abs_top, $component1);
+if_setsize(16, 255, ^setsize_abs, ^setsize_abs, $component1);

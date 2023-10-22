@@ -1,0 +1,190 @@
+// 2596
+[proc,script2596](int $int0, int $int1, int $int2, int $int3, int $int4)
+def_int $int5 = 2189;
+if ($int4 = 0) {
+	~script1147(0, $int0, loginscreen:com_472, loginscreen:com_474, null, $int4);
+	~script1147(1, $int0, loginscreen:com_475, loginscreen:com_477, null, $int4);
+	return;
+}
+def_component $component6 = null;
+def_component $component7 = null;
+def_component $component8 = null;
+def_component $component9 = null;
+def_int $int10 = 0;
+if ($int4 = 2) {
+	$component6 = graphics_options:com_1;
+	$component7 = graphics_options:com_48;
+	$component8 = graphics_options:com_31;
+	$component9 = graphics_options:com_27;
+	~script1147(0, $int0, graphics_options:com_8, graphics_options:com_10, graphics_options:com_9, $int4);
+	~script1147(1, $int0, graphics_options:com_11, graphics_options:com_13, graphics_options:com_12, $int4);
+	~script1149(1, $int1, graphics_options:com_17, graphics_options:com_18, graphics_options:com_19, $int2, $int3, $int0, $int4);
+	~script1149(2, $int1, graphics_options:com_20, graphics_options:com_21, graphics_options:com_22, $int2, $int3, $int0, $int4);
+	~script1149(3, $int1, graphics_options:com_23, graphics_options:com_24, graphics_options:com_25, $int2, $int3, $int0, $int4);
+	if_setposition(calc(if_getx($component8) + 224 - (if_getwidth(graphics_options:com_32) + 1)), calc(if_gety($component8) + $int10 + (16 - if_getheight(graphics_options:com_32)) / 2), ^setpos_abs_left, ^setpos_abs_top, graphics_options:com_32);
+	~loginscreen_brightness(graphics_options:com_35, graphics_options:com_36);
+} else {
+	$component6 = interface_882:com_0;
+	$component7 = interface_882:com_46;
+	$component8 = interface_882:com_36;
+	$component9 = interface_882:com_30;
+	~script1147(0, $int0, interface_882:com_10, interface_882:com_12, interface_882:com_11, $int4);
+	~script1147(1, $int0, interface_882:com_13, interface_882:com_15, interface_882:com_14, $int4);
+	~script1149(1, $int1, interface_882:com_21, interface_882:com_22, interface_882:com_23, $int2, $int3, $int0, $int4);
+	~script1149(2, $int1, interface_882:com_24, interface_882:com_25, interface_882:com_26, $int2, $int3, $int0, $int4);
+	~script1149(3, $int1, interface_882:com_27, interface_882:com_28, interface_882:com_29, $int2, $int3, $int0, $int4);
+	if_setposition(calc(if_getx(interface_882:com_36) + 224 - (if_getwidth(interface_882:com_37) + 1)), calc(if_gety(interface_882:com_36) + $int10 + (16 - if_getheight(interface_882:com_37)) / 2), ^setpos_abs_left, ^setpos_abs_top, interface_882:com_37);
+	~loginscreen_brightness(interface_882:com_40, interface_882:com_41);
+	if_setdraggable(interface_882:com_40, -1, interface_882:com_41);
+}
+if_sethide(true, $component7);
+if_setonclick(null, $component6);
+cc_deleteall($component9);
+cc_create($component9, ^iftype_rectangle, if_getnextsubid($component9));
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setcolour(^black);
+.cc_create($component9, ^iftype_rectangle, if_getnextsubid($component9));
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setfill(false);
+.cc_setcolour(0x3f2407);
+def_int $comsubid11 = .cc_getid;
+.cc_create($component9, ^iftype_text, if_getnextsubid($component9));
+.cc_settextfont(p11_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if (fullscreen_modecount <= 0) {
+	.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setcolour(0xff981f);
+	.cc_settext("N/A");
+} else {
+	.cc_setsize(21, 0, ^setsize_minus, ^setsize_minus);
+	.cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	if (%varcint178 < calc(fullscreen_modecount - 1)) {
+		.cc_setcolour(0xff981f);
+	} else {
+		.cc_setcolour(^white);
+	}
+	.cc_settext(~script2693(%varcint178));
+	.cc_create($component9, ^iftype_graphic, if_getnextsubid($component9));
+	.cc_setsize(16, 14, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_centre);
+	.cc_setgraphic("graphic_2213");
+	cc_setonmouseover("script2691(event_com, .cc_getid, 100, $comsubid11, 0x7f490f)");
+	cc_setonmouseleave("script2691(event_com, .cc_getid, 0, $comsubid11, 0x3f2407)");
+	cc_setonclick("script2695(event_com, event_comsubid, .cc_getid, $comsubid11, -1, struct_845, $int2, $int3, $int0, $int1, $int4)");
+}
+cc_deleteall($component8);
+~script2601("Brightness", 0, $int10, $component8);
+def_int $int12 = 1;
+def_int $int13 = calc($int3 + 21);
+def_int $int14 = -1;
+def_struct $struct15 = null;
+def_enum $enum16 = null;
+def_int $int17 = 0;
+def_int $int18 = 0;
+while ($int18 < calc(enum_getoutputcount(enum_201) + 2)) {
+	if ($int18 < enum_getoutputcount(enum_201)) {
+		$struct15 = enum(int, struct, enum_201, $int18);
+		if (testbit(struct_param($struct15, param_682), $int0) = ^true) {
+			$int14 = ~script2601(struct_param($struct15, param_845), $int12, $int10, $component8);
+			cc_create($component8, ^iftype_rectangle, if_getnextsubid($component8));
+			cc_setsize($int13, 16, ^setsize_abs, ^setsize_abs);
+			if ($int12 = 1) {
+				cc_setposition(0, $int10, ^setpos_abs_right, ^setpos_abs_top);
+			} else {
+				cc_setposition(calc(224 - $int13), $int10, ^setpos_abs_left, ^setpos_abs_top);
+			}
+			cc_setfill(true);
+			cc_setcolour(^black);
+			.cc_create($component8, ^iftype_rectangle, if_getnextsubid($component8));
+			.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+			.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setfill(false);
+			.cc_setcolour(0x3f2407);
+			$comsubid11 = .cc_getid;
+			.cc_create($component8, ^iftype_text, if_getnextsubid($component8));
+			.cc_settextfont(p11_full);
+			.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			$int17 = ~script2581($struct15);
+			if ($int17 = -1) {
+				.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+				.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+				.cc_setcolour(0xff981f);
+				.cc_settext("N/A");
+			} else {
+				.cc_setsize($int3, cc_getheight, ^setsize_abs, ^setsize_abs);
+				.cc_setposition(calc(cc_getx + 2), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+				$enum16 = struct_param($struct15, param_683);
+				if ($int17 < calc(enum_getoutputcount($enum16) - 1)) {
+					.cc_setcolour(0xff981f);
+				} else {
+					.cc_setcolour(^white);
+				}
+				.cc_settext(enum(int, string, $enum16, $int17));
+				.cc_create($component8, ^iftype_graphic, if_getnextsubid($component8));
+				.cc_setsize(16, 14, ^setsize_abs, ^setsize_abs);
+				.cc_setposition(calc(cc_getx + cc_getwidth - (.cc_getwidth + 1)), calc($int10 + (16 - .cc_getheight) / 2), ^setpos_abs_left, ^setpos_abs_top);
+				.cc_setgraphic("graphic_2213");
+				cc_setonmouseover("script2691(event_com, .cc_getid, 100, $comsubid11, 0x7f490f)");
+				cc_setonmouseleave("script2691(event_com, .cc_getid, 0, $comsubid11, 0x3f2407)");
+				cc_setonclick("script2695(event_com, event_comsubid, .cc_getid, $comsubid11, $int14, $struct15, $int2, $int3, $int0, $int1, $int4)");
+			}
+			if ($int12 = 1) {
+				$int12 = 0;
+				$int10 = calc($int10 + 16);
+			} else {
+				$int12 = 1;
+			}
+		}
+	} else {
+		cc_create($component8, ^iftype_graphic, if_getnextsubid($component8));
+		cc_setsize(224, 1, ^setsize_abs, ^setsize_abs);
+		if ($int12 = 1) {
+			cc_setposition(0, $int10, ^setpos_abs_right, ^setpos_abs_top);
+		} else {
+			cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
+		}
+		cc_settiling(false);
+		cc_setgraphic("graphic_2218");
+		if ($int12 = 1) {
+			$int12 = 0;
+			$int10 = calc($int10 + 16);
+		} else {
+			$int12 = 1;
+		}
+	}
+	$int18 = calc($int18 + 1);
+}
+if ($int12 = 1) {
+	$int10 = calc($int10 + 1);
+} else {
+	$int10 = calc($int10 - 14);
+}
+if_setsize(if_getwidth($component8), $int10, ^setsize_abs, ^setsize_abs, $component8);
+if ($int4 = 1) {
+	if_setsize(if_getwidth(interface_882:com_31), calc(30 + $int10), ^setsize_abs, ^setsize_abs, interface_882:com_31);
+	if_setsize(if_getwidth(interface_882:contents), calc(250 + $int10), ^setsize_abs, ^setsize_abs, interface_882:contents);
+	~script2709(582, calc($int10 + 334), 0);
+	return;
+}
+def_int $int19 = calc(334 - 8);
+def_int $int20 = 66;
+def_int $int21 = 65;
+def_int $int22 = calc($int10 + 28);
+def_int $int23 = calc(20 + $int20 + $int21 + $int22 + 4);
+def_int $int24 = min(calc($int19 - $int23 - 10), 40);
+if ($int24 > 0) {
+	$int20 = calc($int20 + $int24 / 2);
+	$int21 = calc($int21 + $int24 / 2);
+	$int23 = calc(20 + $int20 + $int21 + $int22 + 4);
+}
+if_setsize(if_getwidth(graphics_options:com_5), $int20, ^setsize_abs, ^setsize_abs, graphics_options:com_5);
+if_setposition(0, calc(if_gety(graphics_options:com_5) + $int20), ^setpos_abs_centre, ^setpos_abs_top, graphics_options:com_14);
+if_setsize(if_getwidth(graphics_options:com_14), $int21, ^setsize_abs, ^setsize_abs, graphics_options:com_14);
+if_setposition(0, calc(if_gety(graphics_options:com_14) + $int21), ^setpos_abs_centre, ^setpos_abs_top, graphics_options:com_28);
+if_setsize(if_getwidth(graphics_options:com_28), $int22, ^setsize_abs, ^setsize_abs, graphics_options:com_28);
+if_setsize(if_getwidth(graphics_options:com_1), $int23, ^setsize_abs, ^setsize_abs, graphics_options:com_1);
+if_setsize(if_getwidth(graphics_options:com_1), $int23, ^setsize_abs, ^setsize_abs, graphics_options:shadow);

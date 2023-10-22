@@ -1,12 +1,12 @@
 // 2021
 [clientscript,script2021](component $component0)
-if (if_gethide(welcome_screen:com_195) = true) {
-	if_setvflip(true, welcome_screen:com_198);
-	if_sethide(false, welcome_screen:com_195);
+if (if_gethide(welcome_screen:com_31) = true) {
+	if_setvflip(true, welcome_screen:com_38);
+	if_sethide(false, welcome_screen:com_31);
 } else {
-	if ($component0 = welcome_screen:com_202 | $component0 = welcome_screen:com_203) {
-		if_settext(if_gettext($component0), welcome_screen:com_199);
+	if ($component0 = welcome_screen:com_34 | $component0 = welcome_screen:com_35) {
+		if_settext(if_gettext($component0), welcome_screen:com_39);
 	}
-	if_setvflip(false, welcome_screen:com_198);
-	if_sethide(true, welcome_screen:com_195);
+	if_setvflip(false, welcome_screen:com_38);
+	if_sethide(true, welcome_screen:com_31);
 }

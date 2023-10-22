@@ -1,0 +1,7 @@
+// 2186
+[clientscript,script2186]
+if (%varcint733 ! -1) {
+	openurl_nologin("terms/terms.ws?cty=<tostring(%varcint733)>", true);
+} else {
+	openurl_nologin("terms/terms.ws", true);
+}

@@ -1,0 +1,18 @@
+// 2688
+[clientscript,script2688](component $component0, component $component1)
+def_string $string0 = "Not Started";
+def_int $int2 = 0;
+if (%varbit6503 = 1) {
+	%varcint80 = stat_base(enum(int, stat, enum_681, %varbit6505));
+	~script2690($component0, enum(int, stat, enum_681, %varbit6505), $component1);
+} else if (%varbit6503 = 2) {
+	$int2 = ~script2193(%varbit6505);
+	if ($int2 = 0) {
+		$string0 = "Not Started";
+	} else if ($int2 = 1) {
+		$string0 = "Started";
+	} else if ($int2 = 2) {
+		$string0 = "Completed";
+	}
+	~script2689($component0, $component1, $string0);
+}

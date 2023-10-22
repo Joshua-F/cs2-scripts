@@ -1,0 +1,6 @@
+// 1192
+[clientscript,script1192](component $component0, component $component1)
+if_setsize(calc(parawidth(if_gettext($component1), 512, p12_full) + 34), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+if_setonvarctransmit("script1193(true){varcint1002}", $component0);
+if_setontimer("script1193(false)", $component0);
+~script1194;

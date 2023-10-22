@@ -1,8 +1,7 @@
 // 1136
-[clientscript,script1136](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	detail_idleanims_many(false);
-} else if ($windowmode2 = ^windowmode_fixed) {
-	detail_idleanims_many(true);
+[clientscript,script1136](component $component0)
+if (map_members = ^true & oc_param(inv_getobj(worn, 3), param_687) ! 0) {
+	if_sethide(false, $component0);
+	return;
 }
+if_sethide(true, $component0);

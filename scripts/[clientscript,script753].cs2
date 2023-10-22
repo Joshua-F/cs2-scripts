@@ -1,17 +1,19 @@
 // 753
 [clientscript,script753]
 if (%varbit4286 ! 101) {
-	if_settext("<tostring(%varbit4286)>%", lore_stats_side:com_49);
+	if_settext("<tostring(%varbit4286)>%", lore_stats_side:com_48);
 	if (%varbit4286 > 74) {
-		if_setcolour(^red, lore_stats_side:com_49);
+		if_setcolour(^red, lore_stats_side:com_48);
 	} else {
-		if_setcolour(^white, lore_stats_side:com_49);
+		if_setcolour(^white, lore_stats_side:com_48);
 	}
 } else {
-	if_settext("NA", lore_stats_side:com_49);
+	if_settext("NA", lore_stats_side:com_48);
 }
 if (%varbit4285 ! 101) {
-	if_settext("<tostring(%varbit4285)>%", lore_stats_side:com_47);
+	if_settext("<tostring(%varbit4285)>%", lore_stats_side:com_45);
+	if_settext("<tostring(%varbit4285)>%", lore_stats_side:com_46);
 } else {
-	if_settext("NA", lore_stats_side:com_47);
+	if_settext("NA", lore_stats_side:com_45);
+	if_settext("NA", lore_stats_side:com_46);
 }

@@ -20,12 +20,12 @@ if (%varcint1 < calc(clientclock + 25)) {
 if (%varcint2 ! 1) {
 	$int5 = calc(parawidth($string0, 1000, p12_full) + 8);
 	if (getwindowmode < ^windowmode_resizable) {
-		$component6 = toplevel:com_8;
-		$component8 = toplevel:com_100;
+		$component6 = toplevel:com_13;
+		$component8 = toplevel:com_173;
 		$component7 = toplevel:statusicons;
 	} else {
-		$component6 = toplevel_fullscreen:com_18;
-		$component8 = toplevel_fullscreen:com_22;
+		$component6 = toplevel_fullscreen:com_12;
+		$component8 = toplevel_fullscreen:com_159;
 		$component7 = toplevel_fullscreen:statusicons;
 	}
 	$x3 = calc(if_getx($component7) + if_getx($component0) + $int1 - $int5);

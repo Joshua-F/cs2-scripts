@@ -1,5 +1,0 @@
-// 945
-[clientscript,script945](int $comsubid0, int $clock1, int $int2)
-if ((clientclock >= $clock1 | $int2 ! %varbit4538) & cc_find(carpet_draughts:board, $comsubid0) = ^true) {
-	cc_sethide(true);
-}

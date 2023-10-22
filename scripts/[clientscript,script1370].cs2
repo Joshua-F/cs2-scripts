@@ -1,8 +1,12 @@
 // 1370
 [clientscript,script1370](int $int0)
+if (worldmap_isloaded = false) {
+	return;
+}
+def_int $int1 = 1;
 if ($int0 > 0) {
 	switch_int (%varcint172) {
-		case default :
+		case 50 :
 			%varcint172 = 37;
 		case 75 :
 			%varcint172 = 50;
@@ -10,6 +14,9 @@ if ($int0 > 0) {
 			%varcint172 = 75;
 		case 200 :
 			%varcint172 = 100;
+		case default :
+			%varcint172 = 37;
+			$int1 = 0;
 	}
 } else {
 	switch_int (%varcint172) {
@@ -19,8 +26,12 @@ if ($int0 > 0) {
 			%varcint172 = 75;
 		case 75 :
 			%varcint172 = 100;
+		case 100 :
+			%varcint172 = 200;
 		case default :
 			%varcint172 = 200;
+			$int1 = 0;
 	}
 }
 ~worldmap_setzoom;
+~script305($int1);

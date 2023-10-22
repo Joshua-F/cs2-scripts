@@ -1,0 +1,8 @@
+// 2812
+[clientscript,script2812](int $int0, component $component1)
+def_int $trans2 = if_gettrans($component1);
+def_int $trans3 = min(max(calc($trans2 + $int0 * 1), 225), 255);
+if ($trans3 = 225 | $trans3 = 255) {
+	if_setontimer("script2812(calc(0 - $int0), $component1)", $component1);
+}
+if_settrans($trans3, $component1);

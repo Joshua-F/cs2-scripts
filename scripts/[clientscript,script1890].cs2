@@ -1,8 +1,8 @@
 // 1890
-[clientscript,script1890](component $component0)
-if (getwindowmode ! ^windowmode_fullscreen) {
-	setdefaultwindowmode(getwindowmode);
-}
-detail_antialiasing_default(detailget_antialiasing);
-if_setontimer(null, loginscreen:windowmode_confirm);
-~loginscreen_setactivemenu($component0);
+[clientscript,script1890](int $int0, component $component1)
+if_setcolour(0xffcd3e, enum(int, component, enum_762, $int0));
+if_setcolour(^white, enum(int, component, enum_763, $int0));
+def_int $x2 = if_getx($component1);
+def_int $y3 = if_gety($component1);
+if_sethide(false, interface_764:com_38);
+if_setposition($x2, $y3, ^setpos_abs_left, ^setpos_abs_top, interface_764:com_38);

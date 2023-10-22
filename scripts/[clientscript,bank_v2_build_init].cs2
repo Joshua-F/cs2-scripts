@@ -1,6 +1,5 @@
 // 1449
 [clientscript,bank_v2_build_init]
-if_setonvartransmit("script1502{var1253}", bank_v2_main:all);
 %varcint188 = 0;
 ~bank_cert_button;
 ~bank_sort_button;
@@ -9,7 +8,7 @@ if_setonvartransmit("script1502{var1253}", bank_v2_main:all);
 ~bank_v2_hide_all;
 ~bank_v2_build_tabs;
 ~bank_v2_tab_highlight(%varbit4893);
-if_setonvarctransmit("script1472{varcint190}", bank_v2_main:com_20);
-if_setonvarctransmit("script1465{varcint192}", bank_v2_main:com_97);
-if_setscrollpos(0, ~bank_v2_get_tab_scrollpos(%varbit4893), bank_v2_main:com_73);
-~scrollbar_ondrag_doscroll(bank_v2_main:scrollbar, bank_v2_main:com_73, if_getscrolly(bank_v2_main:com_73), 1);
+if_setonvarctransmit("script1472{varcint190}", bank_v2_main:com_17);
+if_setonvarctransmit("script1465{varcint192, varcint1038}", bank_v2_main:bank_space);
+if_setscrollpos(0, ~bank_v2_get_tab_scrollpos(%varbit4893), bank_v2_main:com_87);
+~scrollbar_ondrag_doscroll(bank_v2_main:scrollbar, bank_v2_main:com_87, if_getscrolly(bank_v2_main:com_87), 1);

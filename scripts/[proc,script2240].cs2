@@ -1,0 +1,19 @@
+// 2240
+[proc,script2240](boolean $boolean0, boolean $boolean1, boolean $boolean2, boolean $boolean3, boolean $boolean4, boolean $boolean5, boolean $boolean6)
+~script2231(0);
+def_int $int7 = 0;
+if ($boolean0 = true & $boolean1 = true & $boolean2 = true & $boolean3 = true & $boolean4 = true & $boolean6 = true) {
+	if_sethide(true, loginscreen:com_10);
+	if ($boolean5 = false) {
+		if_sethide(false, loginscreen:com_162);
+		~script2709(754, 483, 0);
+		~script2261;
+		~script2257(10);
+	} else {
+		if_sethide(false, loginscreen:com_163);
+		~script2709(754, 415, 0);
+		~script2274(12);
+	}
+} else {
+	~script2230(%varcint174);
+}

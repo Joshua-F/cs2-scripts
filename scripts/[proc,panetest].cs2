@@ -9,7 +9,7 @@ if ($chattype1 = null) {
 }
 switch_int (%varcint41) {
 	case 1 :
-		if ($chattype1 = ^chattype_gamemessage) {
+		if ($chattype1 = ^chattype_gamemessage | $chattype1 = 22 | $chattype1 = 23) {
 			return(1);
 		}
 	case 2 :

@@ -1,6 +1,17 @@
 // 1847
-[clientscript,script1847](component $component0)
-if_setontimer("script1848($component0, clientclock)", $component0);
-if (getwindowmode <= ^windowmode_fixed) {
-	if_setonsubchange("script1850(getwindowmode, detailget_antialiasing, toplevel:mainmodal, $component0)", toplevel:mainmodal);
+[clientscript,script1847]
+def_component $component0 = ~getsideicon(8);
+if (~current_side_if ! 8 & ~script1569 = 0 & if_hassub(~script8(8)) = true) {
+	if ($component0 ! null) {
+		if (calc(clientclock % 40) > 20) {
+			if_sethide(false, $component0);
+			if (calc(clientclock % 40) = 21) {
+				sound_synth(synth_5009, 1, 0);
+			}
+		} else {
+			if_sethide(true, $component0);
+		}
+	}
+} else {
+	~script1849;
 }

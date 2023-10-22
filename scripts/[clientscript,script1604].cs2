@@ -1,14 +1,79 @@
 // 1604
 [clientscript,script1604]
-def_int $int0 = 1;
-def_enum $enum1 = enum_1136;
-if (gender = 1) {
-	$int0 = 1;
-	$enum1 = enum_1137;
+cc_deleteall(interface_549:com_110);
+if_sethide(true, interface_549:com_15);
+def_int $int0 = 0;
+while ($int0 < 14) {
+	cc_create(interface_549:com_110, ^iftype_graphic, $int0);
+	if ($int0 ! 6 & $int0 ! 8 & $int0 ! 11) {
+		if (inv_getobj(worn, $int0) ! null) {
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			if ($int0 = 0) {
+				cc_setposition(~script788(interface_549:headslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 1) {
+				cc_setposition(~script788(interface_549:capeslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 2) {
+				cc_setposition(~script788(interface_549:necklaceslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 3) {
+				cc_setposition(~script788(interface_549:weaponslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 4) {
+				cc_setposition(~script788(interface_549:bodyslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 5) {
+				cc_setposition(~script788(interface_549:shieldslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 7) {
+				cc_setposition(~script788(interface_549:legslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 9) {
+				cc_setposition(~script788(interface_549:handslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 10) {
+				cc_setposition(~script788(interface_549:footslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 12) {
+				cc_setposition(~script788(interface_549:ringslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int0 = 13) {
+				cc_setposition(~script788(interface_549:arrowslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+			}
+			cc_setobject(inv_getobj(worn, $int0), inv_getnum(worn, $int0));
+			cc_setopbase(oc_name(inv_getobj(worn, $int0)));
+			cc_setop(1, "Remove<col=ff9040>");
+			cc_setop(10, "Examine<col=ff9040>");
+			cc_setgraphicshadow(0x111111);
+			cc_setoutline(1);
+		} else {
+			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+			if ($int0 = 0) {
+				cc_setposition(~script788(interface_549:headslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,0");
+			} else if ($int0 = 1) {
+				cc_setposition(~script788(interface_549:capeslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,1");
+			} else if ($int0 = 2) {
+				cc_setposition(~script788(interface_549:necklaceslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,2");
+			} else if ($int0 = 3) {
+				cc_setposition(~script788(interface_549:weaponslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,3");
+			} else if ($int0 = 4) {
+				cc_setposition(~script788(interface_549:bodyslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,5");
+			} else if ($int0 = 5) {
+				cc_setposition(~script788(interface_549:shieldslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,6");
+			} else if ($int0 = 7) {
+				cc_setposition(~script788(interface_549:legslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,7");
+			} else if ($int0 = 9) {
+				cc_setposition(~script788(interface_549:handslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,8");
+			} else if ($int0 = 10) {
+				cc_setposition(~script788(interface_549:footslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,9");
+			} else if ($int0 = 12) {
+				cc_setposition(~script788(interface_549:ringslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,4");
+			} else if ($int0 = 13) {
+				cc_setposition(~script788(interface_549:arrowslot, 2, 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setgraphic("wornicons,10");
+			}
+		}
+	}
+	$int0 = calc($int0 + 1);
 }
-if (%varcint93 = $int0) {
-	%varcint93 = 0;
-} else {
-	%varcint93 = calc(%varcint93 + 1);
-}
-baseidkit(6, enum(int, idkit, $enum1, %varcint93));

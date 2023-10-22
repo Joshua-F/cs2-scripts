@@ -1,0 +1,22 @@
+// 1678
+[proc,script1678]
+def_int $x0 = 0;
+def_int $z1 = 0;
+def_coord $coord2 = null;
+if (spline_length(0) = 0) {
+	$x0 = calc(coordx(coord) - coordx(coord) % 64);
+	$z1 = calc(coordz(coord) - coordz(coord) % 64);
+	$coord2 = movecoord(0_0_0_0_0, $x0, 0, $z1);
+	spline_new(0, 5);
+	spline_new(1, 5);
+	spline_addpoint(0, 0, movecoord($coord2, 51, 0, 39), 400, movecoord($coord2, 51, 0, 39), 400, 0);
+	spline_addpoint(1, 0, movecoord($coord2, 50, 0, 25), 225, movecoord($coord2, 50, 0, 25), 225, 0);
+	spline_addpoint(0, 1, movecoord($coord2, 51, 0, 29), 325, movecoord($coord2, 51, 0, 29), 225, 0);
+	spline_addpoint(1, 1, movecoord($coord2, 50, 0, 19), 175, movecoord($coord2, 50, 0, 19), 175, 0);
+	spline_addpoint(0, 2, movecoord($coord2, 57, 0, 23), 1200, movecoord($coord2, 57, 0, 23), 1200, 0);
+	spline_addpoint(1, 2, movecoord($coord2, 47, 0, 18), 25, movecoord($coord2, 47, 0, 18), 25, 0);
+	spline_addpoint(0, 3, movecoord($coord2, 46, 0, 5), 600, movecoord($coord2, 46, 0, 5), 600, 0);
+	spline_addpoint(1, 3, movecoord($coord2, 46, 0, 16), 250, movecoord($coord2, 46, 0, 16), 250, 0);
+	spline_addpoint(0, 4, movecoord($coord2, 41, 0, 27), 1125, movecoord($coord2, 41, 0, 27), 1125, 0);
+	spline_addpoint(1, 4, movecoord($coord2, 44, 0, 19), 275, movecoord($coord2, 44, 0, 19), 275, 0);
+}

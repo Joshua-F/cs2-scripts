@@ -1,0 +1,11 @@
+// 2191
+[clientscript,script2191](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+def_int $width10 = parawidth(if_gettext($component1), 512, p11_full);
+def_int $width11 = parawidth(if_gettext($component2), 512, p11_full);
+def_int $width12 = parawidth(if_gettext($component3), 512, p11_full);
+def_int $width13 = parawidth(if_gettext($component4), 512, p11_full);
+def_int $width14 = parawidth(if_gettext($component5), 512, p11_full);
+~script2337($component0);
+if_setontimer("script2336($component0, getwindowmode)", $component0);
+~script2335($component0, $component2, $component3, $component4, $component5, $width10, $width11, $width12, $width13, $width14, $component6, $component7, $component8, $component9);
+if_setonvartransmit("script2333($component0, $component2, $component3, $component4, $component5, $width10, $width11, $width12, $width13, $width14, $component6, $component7, $component8, $component9){var1048, var1058}", $component0);

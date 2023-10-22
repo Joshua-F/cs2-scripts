@@ -1,4 +1,11 @@
 // 1701
 [clientscript,script1701]
-~script1720;
-~script1612(interface_771:button_89, 2, 17);
+if (%varcint1052 = 1) {
+	sound_synth(synth_8123, 1, 0);
+	%varcint1052 = 0;
+} else {
+	sound_synth(synth_8096, 1, 0);
+	%varcint1052 = 1;
+}
+if_setontimer("script1702(0)", prayer:com_9);
+~script1700;

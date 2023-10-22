@@ -1,0 +1,24 @@
+// 2647
+[proc,script2647](component $component0)
+cc_create($component0, ^iftype_graphic, if_getnextsubid($component0));
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
+cc_setgraphic("v2_borders_slim,13");
+cc_settiling(true);
+cc_create($component0, ^iftype_graphic, if_getnextsubid($component0));
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
+cc_setgraphic("v2_borders_slim,13");
+cc_settiling(true);
+cc_setvflip(true);
+cc_create($component0, ^iftype_graphic, if_getnextsubid($component0));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(32, 2, ^setsize_abs, ^setsize_minus);
+cc_setgraphic("v2_borders_slim,14");
+cc_settiling(true);
+cc_create($component0, ^iftype_graphic, if_getnextsubid($component0));
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(32, 2, ^setsize_abs, ^setsize_minus);
+cc_setgraphic("v2_borders_slim,14");
+cc_settiling(true);
+cc_sethflip(true);

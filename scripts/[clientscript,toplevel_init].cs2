@@ -6,3 +6,11 @@ if (getwindowmode >= ^windowmode_fixed) {
 }
 if_setonvarctransmit("meslayer_varc_update{varcint5}", chattop:mes_layer);
 if_setonresize("window_resize", toplevel_fullscreen:maingame);
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setonvartransmit("script1850(toplevel_fullscreen:com_167){var281, var1255}", toplevel_fullscreen:com_9);
+	~script1886(toplevel_fullscreen:com_167);
+} else {
+	if_setonvartransmit("script1850(toplevel:com_135){var281, var1255}", toplevel:minimap);
+	~script1886(toplevel:com_135);
+}
+formatminimenu(0x2b271c, 0, 0x6f695d, 0, "graphic_2026", "graphic_2027", "graphic_2029", "graphic_2028", "graphic_2030", 0xc6b895, 0xeee5c6);

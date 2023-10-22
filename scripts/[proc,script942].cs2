@@ -1,9 +1,36 @@
 // 942
-[proc,script942](int $comsubid0, int $int1, int $int2, int $int3)
-if (cc_find(carpet_draughts:board, $comsubid0) = ^true) {
-	if ($int2 = 1) {
-		cc_sethide(true);
-		return;
-	}
-	cc_setontimer("script945(event_comsubid, calc(clientclock + $int1), $int3)");
+[proc,script942](int $int0)(int, string)
+if (%var1469 = enum(int, coord, enum_2536, $int0)) {
+	return(0, "null");
 }
+switch_int ($int0) {
+	case 0 :
+		return(1, enum(int, string, enum_2535, 0));
+	case 1 :
+		return(1, enum(int, string, enum_2535, 1));
+	case 2 :
+		return(1, enum(int, string, enum_2535, 2));
+	case 3 :
+		return(1, enum(int, string, enum_2535, 3));
+	case 4 :
+		return(1, enum(int, string, enum_2535, 4));
+	case 5 :
+		if (%varbit720 = 20) {
+			return(1, enum(int, string, enum_2535, 5));
+		}
+	case 6 :
+		if (%varbit722 = 20) {
+			return(1, enum(int, string, enum_2535, 6));
+		}
+	case 7 :
+		if (%varbit724 = 20) {
+			return(1, enum(int, string, enum_2535, 7));
+		}
+	case 8 :
+		if (%varbit3959 >= 3) {
+			return(1, enum(int, string, enum_2535, 8));
+		}
+	case default :
+		return(-1, "null");
+}
+return(0, "null");

@@ -1,0 +1,24 @@
+// 2437
+[clientscript,script2437]
+def_int $y0 = 0;
+def_int $height1 = 0;
+def_int $int2 = 0;
+switch_int (%varcint816) {
+	case 0 :
+		return;
+	case 1 :
+		$int2 = %varcint817;
+	case 2 :
+		$int2 = scale(%varcint817, 125, 100);
+	case 3 :
+		$int2 = scale(%varcint817, 150, 100);
+	case default :
+		$int2 = scale(%varcint817, 175, 100);
+}
+if ($int2 > 100) {
+	$int2 = 100;
+}
+$y0 = enum(int, int, enum_1090, $int2);
+$height1 = enum(int, int, enum_1091, $int2);
+if_setposition(91, $y0, ^setpos_abs_right, ^setpos_abs_top, trawler_game_overlay:com_11);
+if_setsize(18, $height1, ^setsize_abs, ^setsize_abs, trawler_game_overlay:com_11);

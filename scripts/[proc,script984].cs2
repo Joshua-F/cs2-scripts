@@ -18,11 +18,15 @@ switch_int ($int0) {
 			case 6 :
 				return(50, granite_maul_4153, "Granite maul<br> (with 50 Attack)", "Members now have the Strength level required to wield <col=000080>granite mauls</col>. (They also need level 50 Attack.)");
 			case 7 :
-				return(60, tzhaar_ket_om_6528, "Tzhaar-Ket-Om", "Members can now wield <col=000080>Tzhaar-Ket-Om</col>.");
+				return(50, granite_mace_14679, "Granite mace<br> (with 50 Attack)", "Members now have the Strength level required to wield <col=000080>granite maces</col>. (They also need level 50 Attack.)");
 			case 8 :
-				return(70, dharoks_greataxe_4718, "Dharok's greataxe<br> (with 70 Attack)", "Members now have the Strength level required to wield <col=000080>Dharok's greataxe</col>. (They also need level 70 Attack.)");
+				return(60, tzhaar_ket_om_6528, "Tzhaar-Ket-Om", "Members can now wield <col=000080>Tzhaar-Ket-Om</col>.");
 			case 9 :
+				return(70, dharoks_greataxe_4718, "Dharok's greataxe<br> (with 70 Attack)", "Members now have the Strength level required to wield <col=000080>Dharok's greataxe</col>. (They also need level 70 Attack.)");
+			case 10 :
 				return(70, torags_hammers_4747, "Torag's hammers<br> (with 70 Attack)", "Members now have the Strength level required to wield <col=000080>Torag's hammers</col>. (They also need level 70 Attack.)");
+			case 11 :
+				return(75, balmung_15403, "Members: Balmung (after Blood Runs Deep and with 75 Attack)", "Members can now wield <col=000080>Balmung</col> (after Blood Runs Deep, with 75 Attack).");
 		}
 	case 1 :
 		switch_int ($int1) {
@@ -50,7 +54,9 @@ switch_int ($int0) {
 			case 5 :
 				return(38, agility_climb_6517, "Yanille wall<br> (with 39 Agility and 21 Ranged)", "You now have the Strength level required to scale <col=000080>Yanille wall</col>. (You also need level 39 Agility and level 21 Ranged.)");
 			case 6 :
-				return(70, agility_balance_6515, "Cross cave, south of Dorgesh-Kaan <br> (after Death to the Dorgeshuun, with 70 Agility and 70 Ranged)", "You now have the Strength level required to <col=000080>cross the cave, south of Dorgesh-Kaan</col> (after Death to the Dorgeshuun, with 70 Agility and 70 Ranged).");
+				return(60, agility_balance_6515, "Cross Bandos's Throne Room <br> (after The Chosen Commander and with 60 Agility and 60 Ranged)", "Members now have the Strength level required to cross <col=000080>Bandos's throne room</col> (after The Chosen Commander and with 60 Agility and 60 Ranged).");
+			case 7 :
+				return(80, agility_balance_6515, "Cross cave, south of Dorgesh-Kaan <br> (after Death to the Dorgeshuun, with 80 Agility and 80 Ranged)", "You now have the Strength level required to <col=000080>cross the cave, south of Dorgesh-Kaan</col> (after Death to the Dorgeshuun, with 80 Agility and 80 Ranged).");
 		}
 	case 3 :
 		if ($int1 = 0) {
@@ -63,23 +69,23 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, silvthrill_rod_7620, "To start fishing like a barbarian, talk to Otto Godblessed when you have at least level 48 Fishing and level 15 Agility.", "");
 			case 1 :
-				return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Agility  and 48 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>leaping trout</col>. (They also need level 15 Agility and level 48 Fishing.)");
+				return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Agility and 48 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>leaping trout</col>. (They also need level 15 Agility and level 48 Fishing.)");
 			case 2 :
 				return(30, leaping_salmon_11330, "Leaping salmon<br> (with 30 Agility and 58 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>leaping salmon</col>. (They also need level 30 Agility and level 58 Fishing.)");
 			case 3 :
-				return(35, tuna_361, "Tuna<br> (with 55 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>tuna</col> without a harpoon. (They also need level 55 Fishing.)");
+				return(35, obj_11322, "Tuna<br> (with 55 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>tuna</col> without a harpoon. (They also need level 55 Fishing.)");
 			case 4 :
 				return(45, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility and 70 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>leaping sturgeon</col>. (They also need level 45 Agility and level 70 Fishing.)");
 			case 5 :
-				return(50, swordfish_373, "Swordfish<br> (with 70 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>swordfish</col> without a harpoon. (They also need level 70 Fishing.)");
+				return(50, obj_11321, "Swordfish<br> (with 70 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>swordfish</col> without a harpoon. (They also need level 70 Fishing.)");
 			case 6 :
-				return(76, shark_385, "Shark<br> (with 96 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>shark</col> without a harpoon. (They also need level 96 Fishing.)");
+				return(76, obj_11320, "Shark<br> (with 96 Fishing)", "Members versed in the art of barbarian fishing now have the Strength level required to catch <col=000080>shark</col> without a harpoon. (They also need level 96 Fishing.)");
 		}
 	case 5 :
 		if ($int1 = 0) {
-			return(-1, warrior_guild_token_5_8855, "You can enter the Warriors' Guild when your Attack and Strength levels add up to 130 or more.", "");
+			return(-1, warrior_guild_token_5_8855, "You can enter the Warriors' Guild when your Attack and Strength levels add up to 130 or more, or when you reach level 99 in either Attack or Strength.", "");
 		} else if ($int1 = 1) {
-			return(99, strength_cape_9750, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Strength<col=000080>. Why not visit <col=800000>the guard of the strength training area<col=000080> at the <col=800000>Warriors' Guild<col=000080>? He has something special that is only available to true masters of the <col=800000>Strength<col=000080> skill!");
+			return(99, strength_cape_9750, "Skill mastery", "<col=000080>Congratulations! You are now a master of <col=800000>Strength<col=000080>. Members can visit <col=800000>the guard of the Strength training area<col=000080> at the <col=800000>Warriors' Guild<col=000080>. He has something special that is only available to true masters of the <col=800000>Strength<col=000080> skill!");
 		}
 }
 return(0, null, "", "");

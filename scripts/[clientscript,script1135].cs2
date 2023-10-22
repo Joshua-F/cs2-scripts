@@ -1,8 +1,13 @@
 // 1135
-[clientscript,script1135](int $int0, component $component1)
-def_int $windowmode2 = ~dropdownbox_getselected($int0, $component1);
-if ($windowmode2 = 0) {
-	_6006(false);
-} else if ($windowmode2 = ^windowmode_fixed) {
-	_6006(true);
+[clientscript,script1135](component $component0, int $int1)
+if (%var43 = $int1) {
+	if ($int1 = 3 & %varbit2668 = 0) {
+		if_setgraphic("combatboxes_large,0", $component0);
+	} else {
+		if_setgraphic("combatboxes_large,1", $component0);
+	}
+} else if ($int1 = 4 & %varbit276 > 0 & %varbit2668 = 0) {
+	if_setgraphic("combatboxes_large,1", $component0);
+} else {
+	if_setgraphic("combatboxes_large,0", $component0);
 }

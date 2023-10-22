@@ -1,0 +1,54 @@
+// 2733
+[proc,script2733]
+switch_int (%varbit6501) {
+	case default :
+		if (%varcint1020 ! 0) {
+			if (%varcint1020 ! -1) {
+				%varcint1020 = 0;
+			}
+			~script2739(interface_900:com_33);
+		}
+		~script2738;
+	case 1 :
+		if (%varcint1020 ! 1) {
+			%varcint1020 = 1;
+			~script2739(interface_900:com_37);
+		}
+		~script2738;
+	case 2 :
+		if (%varcint1020 ! 2) {
+			%varcint1020 = 2;
+			~script2739(interface_900:com_41);
+		}
+		~script2738;
+	case 3 :
+		if (%varcint1020 ! 3) {
+			%varcint1020 = 3;
+			~script2739(interface_900:com_45);
+		}
+		~script2738;
+	case 4 :
+		if (%varcint1020 ! 4) {
+			%varcint1020 = 4;
+			~script2739(interface_900:com_49);
+		}
+		~script2738;
+	case 5 :
+		if (%varcint1020 ! 5) {
+			%varcint1020 = 5;
+			~script2739(interface_900:com_53);
+		}
+		~script2738;
+	case 6 :
+		if (%varcint1020 ! 6) {
+			%varcint1020 = 6;
+			~script2739(interface_900:com_57);
+		}
+		~script2738;
+	case 7 :
+		if (%varcint1020 ! 7) {
+			%varcint1020 = 7;
+			~script2739(interface_900:com_61);
+		}
+		~script2738;
+}

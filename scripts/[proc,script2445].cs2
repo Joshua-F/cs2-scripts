@@ -1,0 +1,25 @@
+// 2445
+[proc,script2445](string $string0, int $int0, int $comsubid1, int $colour2)(int)
+def_int $width3 = if_getwidth(interface_34:main);
+$string0 = escape(~script2446($string0));
+cc_create(interface_34:main, ^iftype_text, $comsubid1);
+cc_setposition(0, calc($int0 * 15 + 5), ^setpos_abs_left, ^setpos_abs_top);
+def_int $height4 = paraheight($string0, $width3, p11_full);
+cc_setsize(0, calc($height4 * 14), ^setsize_minus, ^setsize_abs);
+cc_setcolour($colour2);
+cc_settext($string0);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+cc_settextshadow(true);
+cc_setondrag("script2450(event_com, event_comsubid, event_mousey)");
+cc_setondragcomplete("script2451(event_com2)");
+if (%var1439 = $comsubid1) {
+	cc_setop(1, "Unselect");
+} else {
+	cc_setop(1, "Select");
+}
+cc_setop(2, "Edit");
+cc_setop(3, "Colour");
+cc_setop(4, "Delete");
+cc_setdragdeadzone(14);
+return(calc($int0 + $height4));

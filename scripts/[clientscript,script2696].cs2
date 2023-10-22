@@ -1,0 +1,28 @@
+// 2696
+[clientscript,script2696](component $component0, int $comsubid1, int $int2, int $int3, int $int4, struct $struct5, int $int6, int $int7, int $int8, int $int9, int $int10)
+if ($int10 = 2) {
+	cc_deleteall(graphics_options:com_53);
+	cc_deleteall(graphics_options:com_54);
+	if_sethide(true, graphics_options:com_48);
+	if_setonclick(null, graphics_options:com_1);
+} else {
+	cc_deleteall(interface_882:com_51);
+	cc_deleteall(interface_882:com_52);
+	if_sethide(true, interface_882:com_46);
+	if_setonclick(null, interface_882:com_0);
+}
+if (cc_find($component0, $int2) = ^true) {
+	cc_setgraphic("graphic_2213");
+}
+if ($int4 ! -1 & cc_find($component0, $int4) = ^true) {
+	cc_setcolour(0xff981f);
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setonclick("script2695(event_com, event_comsubid, $int2, $int3, $int4, $struct5, $int6, $int7, $int8, $int9, $int10)");
+	cc_setonmouseover("script2691(event_com, $int2, 100, $int3, 0x7f490f)");
+	cc_setonmouseleave("script2691(event_com, $int2, 0, $int3, 0x3f2407)");
+	if (.cc_find($component0, $int3) = ^true) {
+		.cc_setcolour(0x3f2407);
+		.cc_setsize(.cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+	}
+}

@@ -1,9 +1,0 @@
-// 1514
-[proc,script1514]
-if (%var170 = 1 & string_length(if_gettext(tutorial2_text:textbox2)) > 0) {
-	if_sethide(false, tutorial2_text:textbox2);
-	if_sethide(true, tutorial2_text:textbox);
-	return;
-}
-if_sethide(false, tutorial2_text:textbox);
-if_sethide(true, tutorial2_text:textbox2);

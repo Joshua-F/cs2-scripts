@@ -1,0 +1,8 @@
+// 2209
+[proc,script2209]
+if_sethide(true, loginscreen:com_13);
+if_sethide(true, loginscreen:com_14);
+if (%varcint736 ! -1) {
+	~script2230(%varcint736);
+	%varcint736 = -1;
+}

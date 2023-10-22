@@ -1,0 +1,43 @@
+// 2138
+[clientscript,script2138](component $component0, int $comsubid1, int $int2)
+def_int $int3 = calc(%varbit5861 + 95);
+def_int $int4 = calc(%varbit5859 + 85);
+def_int $int5 = calc(%varbit5855 + 29);
+def_int $int6 = 0;
+def_int $int7 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	if ($int2 < 150) {
+		$int2 = calc($int2 + 10);
+		cc_settrans($int2);
+		cc_setontimer("script2138(event_com, event_comsubid, $int2)");
+	} else if ($int2 <= 225) {
+		$int2 = calc($int2 + 2);
+		cc_settrans($int2);
+		cc_setontimer("script2138(event_com, event_comsubid, $int2)");
+	} else if ($int2 < 300) {
+		$int2 = calc($int2 + 2);
+		cc_settrans(calc(450 - $int2));
+		cc_setontimer("script2138(event_com, event_comsubid, $int2)");
+	} else {
+		$int2 = 150;
+		cc_settrans(150);
+		cc_setontimer("script2138(event_com, event_comsubid, $int2)");
+	}
+	$int6 = scale(cc_gettrans, 255, 100);
+	$int7 = calc($int6 / 2);
+	switch_int (%varbit5863) {
+		case 0 :
+			$int4 = calc($int4 + $int6);
+			$int3 = calc($int3 + $int7);
+		case 1 :
+			$int5 = calc($int5 + $int6);
+			$int3 = calc($int3 + $int7);
+		case 2 :
+			$int5 = calc($int5 + $int6);
+			$int4 = calc($int4 + $int7);
+		case default :
+			$int4 = calc($int4 + $int6);
+			$int5 = calc($int5 + $int7);
+	}
+	cc_setcolour(~rgb_to_hex($int3, $int4, $int5));
+}

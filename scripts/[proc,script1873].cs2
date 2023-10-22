@@ -1,16 +1,16 @@
 // 1873
 [proc,script1873]
-cc_deleteall(loginscreen:com_224);
+cc_deleteall(loginscreen:com_177);
 ~script1875;
-if_settext("Loading...", loginscreen:com_223);
-if_sethide(false, loginscreen:com_223);
+%varcint995 = calc(clientclock + 50);
+if_settext("Loading...", loginscreen:com_179);
+if_sethide(false, loginscreen:com_179);
 ~script1874;
-if_setposition(min(calc((if_getwidth(loginscreen:com_194) + parawidth(if_gettext(loginscreen:com_197), 512, b12_full)) / 2 + 8), calc(if_getwidth(loginscreen:com_194) - if_getwidth(loginscreen:com_198))), 0, ^setpos_abs_left, ^setpos_abs_centre, loginscreen:com_198);
-if_setposition(min(calc((if_getwidth(loginscreen:com_211) + parawidth(if_gettext(loginscreen:com_214), 512, b12_full)) / 2 + 8), calc(if_getwidth(loginscreen:com_211) - if_getwidth(loginscreen:com_215))), 0, ^setpos_abs_left, ^setpos_abs_centre, loginscreen:com_215);
+if_setposition(min(calc((if_getwidth(loginscreen:com_175) + parawidth(if_gettext(loginscreen:com_185), 512, b12_full)) / 2 + 8), calc(if_getwidth(loginscreen:com_175) - if_getwidth(loginscreen:com_186))), 0, ^setpos_abs_left, ^setpos_abs_centre, loginscreen:com_186);
 if (map_lang = 0) {
-	if_settext("Location", loginscreen:com_193);
+	if_settext("Activity / Location", loginscreen:com_192);
 } else {
-	if_settext("Language", loginscreen:com_193);
+	if_settext("Language", loginscreen:com_192);
 }
-if_setonresize("script1880", loginscreen:com_224);
+if_setonresize("script1880", loginscreen:com_177);
 ~script1299;

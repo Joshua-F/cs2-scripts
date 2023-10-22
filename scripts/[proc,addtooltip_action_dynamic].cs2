@@ -26,7 +26,7 @@ if ($comsubid1 = -1 & if_find($component0) = true | cc_find($component0, $comsub
 			$width4 = if_getwidth($component13);
 		}
 		$int11 = calc(4 + parawidth($string0, calc($width4 - 4), p12_full));
-		$int12 = calc(4 + 13 * paraheight($string0, calc($width4 - 4), p12_full));
+		$int12 = calc(4 + 16 * paraheight($string0, calc($width4 - 4), p12_full));
 		if ($component13 ! null) {
 			$int7 = calc($int5 - if_getscrollx($component13));
 			$int8 = calc($int6 - if_getscrolly($component13));
@@ -72,7 +72,7 @@ if ($comsubid1 = -1 & if_find($component0) = true | cc_find($component0, $comsub
 		cc_setsize(calc($width4 - 4), if_getheight($component2), ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext($string0);
-		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 16);
 		cc_settextfont(p12_full);
 		cc_setcolour(^black);
 		%varcint2 = 1;

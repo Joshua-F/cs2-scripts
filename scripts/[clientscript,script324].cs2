@@ -1,4 +1,64 @@
 // 324
-[clientscript,script324]
-~script365;
-if_setgraphic("miscgraphics,11", interface_592:com_35);
+[clientscript,script324](component $component0, component $component1, component $component2)
+def_int $int3 = min(%varbit2375, 500);
+if_setsize(0, scale(calc(500 - $int3), 500, 16384), ^setsize_minus, ^setsize_2, $component0);
+def_int $flags4 = calc(164 + scale($int3, 500, 91));
+def_int $flags5 = calc(164 - scale($int3, 500, 164));
+def_int $flags6 = calc(41 - scale($int3, 500, 41));
+def_int $colour7 = ~rgb_to_hex($flags4, $flags5, $flags6);
+if_setcolour($colour7, $component0);
+if_setcolour($colour7, $component1);
+switch_int (scale(calc($int3 + 5), 500, 25)) {
+	case 0 :
+		if_setmodel(model_16353, $component2);
+	case 1 :
+		if_setmodel(model_16354, $component2);
+	case 2 :
+		if_setmodel(model_16355, $component2);
+	case 3 :
+		if_setmodel(model_16356, $component2);
+	case 4 :
+		if_setmodel(model_16357, $component2);
+	case 5 :
+		if_setmodel(model_16358, $component2);
+	case 6 :
+		if_setmodel(model_16359, $component2);
+	case 7 :
+		if_setmodel(model_16360, $component2);
+	case 8 :
+		if_setmodel(model_16361, $component2);
+	case 9 :
+		if_setmodel(model_16362, $component2);
+	case 10 :
+		if_setmodel(model_16363, $component2);
+	case 11 :
+		if_setmodel(model_16364, $component2);
+	case 12 :
+		if_setmodel(model_16365, $component2);
+	case 13 :
+		if_setmodel(model_16366, $component2);
+	case 14 :
+		if_setmodel(model_16367, $component2);
+	case 15 :
+		if_setmodel(model_16368, $component2);
+	case 16 :
+		if_setmodel(model_16369, $component2);
+	case 17 :
+		if_setmodel(model_16370, $component2);
+	case 18 :
+		if_setmodel(model_16371, $component2);
+	case 19 :
+		if_setmodel(model_16372, $component2);
+	case 20 :
+		if_setmodel(model_16373, $component2);
+	case 21 :
+		if_setmodel(model_16374, $component2);
+	case 22 :
+		if_setmodel(model_16375, $component2);
+	case 23 :
+		if_setmodel(model_16376, $component2);
+	case 24 :
+		if_setmodel(model_16377, $component2);
+	case default :
+		if_setmodel(model_16378, $component2);
+}

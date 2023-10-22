@@ -1,0 +1,9 @@
+// 2291
+[clientscript,script2291](component $component0, int $comsubid1)
+if (~script2297($comsubid1) = 1) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_setgraphic("miscgraphics,11");
+	}
+} else if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setgraphic("miscgraphics,10");
+}

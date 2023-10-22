@@ -1,0 +1,42 @@
+// 2478
+[clientscript,script2478](component $component0)
+switch_component ($component0) {
+	case interface_854:com_1 :
+		if (%varbit6348 = 28) {
+			if_setcolour(0xffff33, $component0);
+		} else {
+			if_setcolour(^green, $component0);
+		}
+	case interface_854:com_2 :
+		if (%varbit6348 < 30) {
+			if_setcolour(^red, $component0);
+		} else if (%varbit6348 = 30) {
+			if_setcolour(0xffff33, $component0);
+		} else {
+			if_setcolour(^green, $component0);
+		}
+	case interface_854:com_3 :
+		if (%varbit6348 < 32) {
+			if_setcolour(^red, $component0);
+		} else if (%varbit6348 = 32) {
+			if_setcolour(0xffff33, $component0);
+		} else {
+			if_setcolour(^green, $component0);
+		}
+	case interface_854:com_4 :
+		if (%varbit6348 < 34) {
+			if_setcolour(^red, $component0);
+		} else if (%varbit6348 = 34) {
+			if_setcolour(0xffff33, $component0);
+		} else {
+			if_setcolour(^green, $component0);
+		}
+	case interface_854:com_5 :
+		if (%varbit6348 < 36) {
+			if_setcolour(^red, $component0);
+		} else if (%varbit6348 = 36) {
+			if_setcolour(0xffff33, $component0);
+		} else {
+			if_setcolour(^green, $component0);
+		}
+}

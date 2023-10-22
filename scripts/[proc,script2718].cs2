@@ -1,0 +1,10 @@
+// 2718
+[proc,script2718](component $component0, int $int1, component $component2)
+def_int $width3 = 464;
+if ($int1 = 1) {
+	$width3 = 448;
+}
+if_setposition(if_getx($component0), 118, ^setpos_abs_left, ^setpos_abs_top, $component0);
+if_setsize($width3, 181, ^setsize_abs, ^setsize_abs, $component0);
+if_setposition(474, 120, ^setpos_abs_left, ^setpos_abs_top, $component2);
+if_setsize(16, 181, ^setsize_abs, ^setsize_abs, $component2);

@@ -6,10 +6,15 @@ if_setobject($obj2, inv_getnum($inv1, 0), stockmarket:com_209);
 if_clearops(stockmarket:com_209);
 if ($obj2 ! null) {
 	if (oc_cert($obj2) ! $obj2) {
-		if_setop(1, "Collect-notes", stockmarket:com_209);
-		if_setop(2, "Collect-items", stockmarket:com_209);
+		if (inv_getnum($inv1, 0) > 1) {
+			if_setop(1, "Collect-notes", stockmarket:com_209);
+			if_setop(2, "Collect-items", stockmarket:com_209);
+		} else {
+			if_setop(1, "Collect-items", stockmarket:com_209);
+			if_setop(2, "Collect-notes", stockmarket:com_209);
+		}
 	} else {
-		if_setop(2, "Collect", stockmarket:com_209);
+		if_setop(1, "Collect", stockmarket:com_209);
 	}
 	if_setopbase(oc_name($obj2), stockmarket:com_209);
 } else {
@@ -20,10 +25,15 @@ if_setobject($obj3, inv_getnum($inv1, 1), stockmarket:com_211);
 if_clearops(stockmarket:com_211);
 if ($obj3 ! null) {
 	if (oc_cert($obj3) ! $obj3) {
-		if_setop(1, "Collect-notes", stockmarket:com_211);
-		if_setop(2, "Collect-items", stockmarket:com_211);
+		if (inv_getnum($inv1, 1) > 1) {
+			if_setop(1, "Collect-notes", stockmarket:com_211);
+			if_setop(2, "Collect-items", stockmarket:com_211);
+		} else {
+			if_setop(1, "Collect-items", stockmarket:com_211);
+			if_setop(2, "Collect-notes", stockmarket:com_211);
+		}
 	} else {
-		if_setop(2, "Collect", stockmarket:com_211);
+		if_setop(1, "Collect", stockmarket:com_211);
 	}
 	if_setopbase(oc_name($obj3), stockmarket:com_211);
 } else {

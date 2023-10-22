@@ -1,5 +1,3 @@
 // 1532
-[clientscript,script1532]
-chat_setfilter(^chatfilter_on, ^chatfilter_friends, ^chatfilter_on);
-if_setonvartransmit(null, filterbuttons:chat_private_graphic);
-~redraw_chat_buttons;
+[clientscript,script1532](int $int0, int $int1)
+~script311(struct_param(struct_467, param_596), $int0, $int1);

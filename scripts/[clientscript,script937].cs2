@@ -1,10 +1,29 @@
 // 937
-[clientscript,script937](int $comsubid0, int $clock1)
-def_int $int2 = calc(clientclock - $clock1);
-if (cc_find(carpet_runesquares:board, $comsubid0) = ^true) {
-	$int2 = calc($int2 % 10);
-	if (calc($int2 / 5) >= 1) {
-		$int2 = calc(10 - $int2);
-	}
-	cc_settrans(calc($int2 * 40));
+[clientscript,script937]
+cc_deleteall(trademain:com_33);
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 4;
+def_int $int3 = 7;
+if (if_getscrollwidth(trademain:com_33) > 0) {
+	$int0 = calc((if_getscrollwidth(trademain:com_33) - 36 * $int2) / ($int2 - 1));
+} else {
+	$int0 = calc((if_getwidth(trademain:com_33) - 36 * $int2) / ($int2 - 1));
 }
+if (if_getscrollheight(trademain:com_33) > 0) {
+	$int1 = calc((if_getscrollheight(trademain:com_33) - 32 * $int3) / ($int3 - 1));
+} else {
+	$int1 = calc((if_getheight(trademain:com_33) - 32 * $int3) / ($int3 - 1));
+}
+def_int $size4 = 0;
+def_int $int5 = -1;
+while ($size4 < inv_size(inv_90)) {
+	cc_create(trademain:com_33, ^iftype_rectangle, $size4);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc((36 + $int0) * ($size4 % $int2)), calc($size4 / $int2 * (32 + $int1)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^red);
+	cc_settrans(255);
+	$size4 = calc($size4 + 1);
+}
+if_setoninvtransmit("script938{inv_90}", trademain:com_33);
