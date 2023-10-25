@@ -378,5 +378,22 @@ switch_struct ($struct0) {
 		}
 	case buff_escape_crystal_auto_activation_is_on_4498 :
 		return(~script1784);
+	case buff_shooting_star_discovery_bonus_4695 :
+		if (%varcint1174 > 0) {
+			return(%varbit15351);
+		}
+	case struct_4693 :
+		if (%var4007 = 96 & %varbit15348 > 0) {
+			return(%varbit15348);
+		}
+		return(0);
+	case struct_4694 :
+		if (%varbit15350 = 0 & ~axe_checker = null) {
+			return(0);
+		}
+		if (%varbit15344 >= 5) {
+			return(calc(%varbit15344 / 5));
+		}
+		return(0);
 }
 return(struct_param($struct0, param_1540));

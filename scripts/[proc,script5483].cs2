@@ -4,7 +4,7 @@ switch_int (%varbit13086) {
 	case 0 :
 		return(1);
 	case 1 :
-		if (~axe_checker ! -1) {
+		if (~axe_checker ! null) {
 			return(1);
 		}
 		return(0);

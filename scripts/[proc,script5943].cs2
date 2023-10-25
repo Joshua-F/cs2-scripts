@@ -26,4 +26,11 @@ if ($int1 > $int2) {
 	$string1 = "<col=0xff0000>";
 	$string2 = "</col>";
 }
+if (struct_param($struct0, param_1277) = 7) {
+	if ($int1 < 0) {
+		$string0 = "-<$string0>";
+	} else {
+		$string0 = "+<$string0>";
+	}
+}
 return("<$string1><$string0><$string2>");

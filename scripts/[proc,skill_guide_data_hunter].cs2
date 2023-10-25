@@ -356,18 +356,21 @@ if ($int0 = 13) {
 		return(15, sandworms_13431, "Dig for sandworms (Piscarillius Beach)");
 	}
 	if ($int1 = 1) {
-		return(27, giant_eagle_9974, "Giant eagles(various)");
+		return(16, trap_disarmer_28665, "Trap disarmer (with 15 Woodcutting)");
 	}
 	if ($int1 = 2) {
-		return(27, rabbit_9975, "White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole");
+		return(27, giant_eagle_9974, "Giant eagles(various)");
 	}
 	if ($int1 = 3) {
-		return(44, pufferfish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
+		return(27, rabbit_9975, "White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole");
 	}
 	if ($int1 = 4) {
-		return(50, bee_on_a_stick_28184, "Bee on a stick (with 35 Woodcutting)");
+		return(44, pufferfish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
 	}
 	if ($int1 = 5) {
+		return(50, bee_on_a_stick_28184, "Bee on a stick (with 35 Woodcutting)");
+	}
+	if ($int1 = 6) {
 		return(71, imp_9952, "Imps (worldwide)<br>Preferred bait: Magical beads");
 	}
 	return(-1, null, "");

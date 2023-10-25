@@ -6,9 +6,6 @@ def_enum $enum3 = enum_4213;
 def_int $count4 = enum_getoutputcount($enum3);
 def_int $int5 = 0;
 def_int $int6 = 0;
-if (if_gethide($component0) = true) {
-	mes("container hidden!");
-}
 cc_deleteall($component0);
 while ($count1 < $count4) {
 	cc_create($component0, ^iftype_text, $count1);

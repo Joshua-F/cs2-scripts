@@ -807,13 +807,16 @@ switch_int ($int0) {
 						return(-1, null, "");
 				}
 			case 4 :
-				if ($int2 = 0) {
-					return(31, herbiboar_21511, "Harvest herbs from the <$string0>Herbiboar</col> on <$string0>Fossil Island</col> (with 80 Hunter).");
+				switch_int ($int2) {
+					case 0 :
+						return(31, herbiboar_21511, "Harvest herbs from the <$string0>Herbiboar</col> on <$string0>Fossil Island</col> (with 80 Hunter).");
+					case 1 :
+						return(37, smoker_canister_28646, "Smoker canister<br>(with 53 Woodcutting and 53 Smithing)");
+					case 2 :
+						return(58, herb_sack_13226, "Use the Herb Sack reward item, purchased from the Tithe Farm or Slayer Masters.");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(58, herb_sack_13226, "Use the Herb Sack reward item, purchased from the Tithe Farm or Slayer Masters.");
-				}
-				return(-1, null, "");
 			case default :
 				return(-1, null, "");
 		}
@@ -837,102 +840,104 @@ switch_int ($int0) {
 					case 0 :
 						return(1, leather_gloves_1059, "Leather gloves");
 					case 1 :
-						return(7, leather_boots_1061, "Leather boots");
+						return(2, pheasant_hat_28620, "Members: Pheasant clothing");
 					case 2 :
-						return(9, leather_cowl_1167, "Leather cowl");
+						return(7, leather_boots_1061, "Leather boots");
 					case 3 :
-						return(11, leather_vambraces_1063, "Leather vambraces");
+						return(9, leather_cowl_1167, "Leather cowl");
 					case 4 :
-						return(14, leather_body_1129, "Leather body");
+						return(11, leather_vambraces_1063, "Leather vambraces");
 					case 5 :
-						return(14, xerician_hat_13385, "Members: Xerician hat");
+						return(14, leather_body_1129, "Leather body");
 					case 6 :
-						return(15, myre_snelm_3327, "Members: Snail helmet");
+						return(14, xerician_hat_13385, "Members: Xerician hat");
 					case 7 :
-						return(15, crab_helmet_7539, "Members: Crab shell armour");
+						return(15, myre_snelm_3327, "Members: Snail helmet");
 					case 8 :
-						return(17, xerician_robe_13389, "Members: Xerician robe");
+						return(15, crab_helmet_7539, "Members: Crab shell armour");
 					case 9 :
-						return(18, leather_chaps_1095, "Leather chaps");
+						return(17, xerician_robe_13389, "Members: Xerician robe");
 					case 10 :
-						return(22, xerician_top_13387, "Members: Xerician top");
+						return(18, leather_chaps_1095, "Leather chaps");
 					case 11 :
-						return(28, hardleather_body_1131, "Hard leather body");
+						return(22, xerician_top_13387, "Members: Xerician top");
 					case 12 :
-						return(32, spiky_vambraces_10077, "Members: Spiked vambraces");
+						return(28, hardleather_body_1131, "Hard leather body");
 					case 13 :
-						return(35, broodoo_shield_10_6259, "Members: Broodoo shield");
+						return(32, spiky_vambraces_10077, "Members: Spiked vambraces");
 					case 14 :
-						return(38, coif_1169, "Members: Coif");
+						return(35, broodoo_shield_10_6259, "Members: Broodoo shield");
 					case 15 :
-						return(41, studded_body_1133, "Members: Studded body");
+						return(38, coif_1169, "Members: Coif");
 					case 16 :
-						return(41, hard_leather_shield_22269, "Members: Leather shield");
+						return(41, studded_body_1133, "Members: Studded body");
 					case 17 :
-						return(43, yak_hide_armour_10824, "Members: Yak-hide leg armour");
+						return(41, hard_leather_shield_22269, "Members: Leather shield");
 					case 18 :
-						return(44, studded_chaps_1097, "Members: Studded chaps");
+						return(43, yak_hide_armour_10824, "Members: Yak-hide leg armour");
 					case 19 :
-						return(45, snakeskin_boots_6328, "Members: Snakeskin boots");
+						return(44, studded_chaps_1097, "Members: Studded chaps");
 					case 20 :
-						return(46, yak_hide_armour_10822, "Members: Yak-hide body armour");
+						return(45, snakeskin_boots_6328, "Members: Snakeskin boots");
 					case 21 :
-						return(47, snakeskin_vambraces_6330, "Members: Snakeskin vambraces");
+						return(46, yak_hide_armour_10822, "Members: Yak-hide body armour");
 					case 22 :
-						return(48, snakeskin_bandana_6326, "Members: Snakeskin bandana");
+						return(47, snakeskin_vambraces_6330, "Members: Snakeskin vambraces");
 					case 23 :
-						return(51, snakeskin_chaps_6324, "Members: Snakeskin chaps");
+						return(48, snakeskin_bandana_6326, "Members: Snakeskin bandana");
 					case 24 :
-						return(52, serpentine_helm_12931, "Members: Serpentine helm");
+						return(51, snakeskin_chaps_6324, "Members: Snakeskin chaps");
 					case 25 :
-						return(53, snakeskin_body_6322, "Members: Snakeskin body");
+						return(52, serpentine_helm_12931, "Members: Serpentine helm");
 					case 26 :
-						return(55, slayer_helmet_11864, "Members: Slayer helm");
+						return(53, snakeskin_body_6322, "Members: Snakeskin body");
 					case 27 :
-						return(56, snakeskin_shield_22272, "Members: Snakeskin shield");
+						return(55, slayer_helmet_11864, "Members: Slayer helm");
 					case 28 :
-						return(57, green_dhide_vambraces_1065, "Members: Green dragonhide vambraces");
+						return(56, snakeskin_shield_22272, "Members: Snakeskin shield");
 					case 29 :
-						return(60, green_dhide_chaps_1099, "Members: Green dragonhide chaps");
+						return(57, green_dhide_vambraces_1065, "Members: Green dragonhide vambraces");
 					case 30 :
-						return(60, splitbark_gauntlets_3391, "Members: Splitbark gauntlets");
+						return(60, green_dhide_chaps_1099, "Members: Green dragonhide chaps");
 					case 31 :
-						return(60, splitbark_boots_3393, "Members: Splitbark boots");
+						return(60, splitbark_gauntlets_3391, "Members: Splitbark gauntlets");
 					case 32 :
-						return(61, splitbark_helm_3385, "Members: Splitbark helm");
+						return(60, splitbark_boots_3393, "Members: Splitbark boots");
 					case 33 :
-						return(62, green_dhide_shield_22275, "Members: Green dragonhide shield");
+						return(61, splitbark_helm_3385, "Members: Splitbark helm");
 					case 34 :
-						return(62, splitbark_body_3387, "Members: Splitbark body");
+						return(62, green_dhide_shield_22275, "Members: Green dragonhide shield");
 					case 35 :
-						return(62, splitbark_legs_3389, "Members: Splitbark legs");
+						return(62, splitbark_body_3387, "Members: Splitbark body");
 					case 36 :
-						return(63, green_dhide_body_1135, "Members: Green dragonhide body");
+						return(62, splitbark_legs_3389, "Members: Splitbark legs");
 					case 37 :
-						return(66, blue_dhide_vambraces_2487, "Members: Blue dragonhide vambraces");
+						return(63, green_dhide_body_1135, "Members: Green dragonhide body");
 					case 38 :
-						return(68, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
+						return(66, blue_dhide_vambraces_2487, "Members: Blue dragonhide vambraces");
 					case 39 :
-						return(69, blue_dhide_shield_22278, "Members: Blue dragonhide shield");
+						return(68, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
 					case 40 :
-						return(71, blue_dhide_body_2499, "Members: Blue dragonhide body");
+						return(69, blue_dhide_shield_22278, "Members: Blue dragonhide shield");
 					case 41 :
-						return(73, red_dhide_vambraces_2489, "Members: Red dragonhide vambraces");
+						return(71, blue_dhide_body_2499, "Members: Blue dragonhide body");
 					case 42 :
-						return(75, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
+						return(73, red_dhide_vambraces_2489, "Members: Red dragonhide vambraces");
 					case 43 :
-						return(76, red_dhide_shield_22281, "Members: Red dragonhide shield");
+						return(75, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
 					case 44 :
-						return(77, red_dhide_body_2501, "Members: Red dragonhide body");
+						return(76, red_dhide_shield_22281, "Members: Red dragonhide shield");
 					case 45 :
-						return(79, black_dhide_vambraces_2491, "Members: Black dragonhide vambraces");
+						return(77, red_dhide_body_2501, "Members: Red dragonhide body");
 					case 46 :
-						return(82, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
+						return(79, black_dhide_vambraces_2491, "Members: Black dragonhide vambraces");
 					case 47 :
-						return(83, black_dhide_shield_22284, "Members: Black dragonhide shield");
+						return(82, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
 					case 48 :
-						return(84, black_dhide_body_2503, "Members: Black dragonhide body");
+						return(83, black_dhide_shield_22284, "Members: Black dragonhide shield");
 					case 49 :
+						return(84, black_dhide_body_2503, "Members: Black dragonhide body");
+					case 50 :
 						return(90, masori_body_f_27238, "Members: Break down armadylean armour and fortify Masori armour");
 					case default :
 						return(-1, null, "");
@@ -1232,24 +1237,26 @@ switch_int ($int0) {
 					case 5 :
 						return(76, crystal_axe_23673, "Crystal axe<br>(with 76 Smithing)");
 					case 6 :
-						return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Smithing)");
+						return(76, crystal_felling_axe_28220, "Crystal felling axe<br>(with 76 Smithing)");
 					case 7 :
-						return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Smithing)");
+						return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Smithing)");
 					case 8 :
-						return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Smithing)");
+						return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Smithing)");
 					case 9 :
-						return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Smithing)");
+						return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Smithing)");
 					case 10 :
-						return(80, enhanced_crystal_key_23951, "Enhanced crystal key<br>(with 80 Smithing)");
+						return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Smithing)");
 					case 11 :
-						return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
+						return(80, enhanced_crystal_key_23951, "Enhanced crystal key<br>(with 80 Smithing)");
 					case 12 :
-						return(82, blade_of_saeldor_23995, "Blade of Saeldor<br>(with 82 Smithing)");
+						return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
 					case 13 :
-						return(82, blade_of_saeldor_c_24551, "Blade of Saeldor (c)<br>(with 82 Smithing)");
+						return(82, blade_of_saeldor_23995, "Blade of Saeldor<br>(with 82 Smithing)");
 					case 14 :
-						return(82, bow_of_faerdhinen_25865, "Bow of Faerdhinen<br>(with 82 Smithing)");
+						return(82, blade_of_saeldor_c_24551, "Blade of Saeldor (c)<br>(with 82 Smithing)");
 					case 15 :
+						return(82, bow_of_faerdhinen_25865, "Bow of Faerdhinen<br>(with 82 Smithing)");
+					case 16 :
 						return(82, bow_of_faerdhinen_c_25867, "Bow of Faerdhinen (c)<br>(with 82 Smithing)");
 					case default :
 						return(-1, null, "");
@@ -1526,10 +1533,14 @@ switch_int ($int0) {
 			}
 		}
 		if ($int1 = 7) {
-			if ($int2 = 0) {
-				return(40, battlestaff_1391, "Battlestaves");
+			switch_int ($int2) {
+				case 0 :
+					return(40, battlestaff_1391, "Battlestaves");
+				case 1 :
+					return(50, petal_circlet_28653, "Petal circlet<br>(with 50 Woodcutting)");
+				case default :
+					return(-1, null, "");
 			}
-			return(-1, null, "");
 		}
 		return(-1, null, "");
 	case 13 :
@@ -1626,20 +1637,22 @@ switch_int ($int0) {
 				case 6 :
 					return(31, adamant_pickaxe_1271, "Adamant pickaxe");
 				case 7 :
-					return(41, rune_pickaxe_1275, "Rune pickaxe");
+					return(35, padded_spoon_28657, "Members: Padded spoon<br>(with 25 Woodcutting)");
 				case 8 :
-					return(41, gilded_pickaxe_23276, "Gilded pickaxe");
+					return(41, rune_pickaxe_1275, "Rune pickaxe");
 				case 9 :
-					return(55, superior_mining_gloves_21345, "Members: Superior mining gloves");
+					return(41, gilded_pickaxe_23276, "Gilded pickaxe");
 				case 10 :
-					return(61, dragon_pickaxe_11920, "Members: Dragon pickaxe");
+					return(55, superior_mining_gloves_21345, "Members: Superior mining gloves");
 				case 11 :
-					return(61, 3rd_age_pickaxe_20014, "Members: 3rd age pickaxe");
+					return(61, dragon_pickaxe_11920, "Members: Dragon pickaxe");
 				case 12 :
-					return(61, infernal_pickaxe_13243, "Members: Infernal pickaxe<br>(with 85 Smithing)");
+					return(61, 3rd_age_pickaxe_20014, "Members: 3rd age pickaxe");
 				case 13 :
-					return(70, expert_mining_gloves_21392, "Members: Expert mining gloves");
+					return(61, infernal_pickaxe_13243, "Members: Infernal pickaxe<br>(with 85 Smithing)");
 				case 14 :
+					return(70, expert_mining_gloves_21392, "Members: Expert mining gloves");
+				case 15 :
 					return(71, crystal_pickaxe_23680, "Members: Crystal pickaxe<br>(after Song of the Elves)");
 				case default :
 					return(-1, null, "");
@@ -2389,27 +2402,47 @@ switch_int ($int0) {
 				case 0 :
 					return(1, bronze_axe_1351, "Bronze axe");
 				case 1 :
-					return(1, iron_axe_1349, "Iron axe");
+					return(1, bronze_felling_axe_28196, "Members: Bronze felling axe");
 				case 2 :
-					return(6, steel_axe_1353, "Steel axe");
+					return(1, iron_axe_1349, "Iron axe");
 				case 3 :
-					return(11, black_axe_1361, "Black axe");
+					return(1, iron_felling_axe_28199, "Members: Iron feeling axe");
 				case 4 :
-					return(21, mithril_axe_1355, "Mithril axe");
+					return(6, steel_axe_1353, "Steel axe");
 				case 5 :
-					return(31, adamant_axe_1357, "Adamant axe");
+					return(6, steel_felling_axe_28202, "Members: Steel felling axe");
 				case 6 :
-					return(41, rune_axe_1359, "Rune axe");
+					return(11, black_axe_1361, "Black axe");
 				case 7 :
-					return(41, gilded_axe_23279, "Gilded axe");
+					return(11, black_felling_axe_28205, "Members: Black felling axe");
 				case 8 :
-					return(61, dragon_axe_6739, "Members: Dragon axe");
+					return(21, mithril_axe_1355, "Mithril axe");
 				case 9 :
-					return(61, 3rd_age_axe_20011, "Members: 3rd age axe");
+					return(21, mithril_felling_axe_28208, "Members: Mithril felling axe");
 				case 10 :
-					return(61, infernal_axe_13241, "Members: Infernal axe<br>(with 85 Firemaking)");
+					return(31, adamant_axe_1357, "Adamant axe");
 				case 11 :
+					return(31, adamant_felling_axe_28211, "Members: Adamant felling axe");
+				case 12 :
+					return(41, rune_axe_1359, "Rune axe");
+				case 13 :
+					return(41, rune_felling_axe_28214, "Members: Rune felling axe");
+				case 14 :
+					return(41, gilded_axe_23279, "Gilded axe");
+				case 15 :
+					return(61, dragon_axe_6739, "Members: Dragon axe");
+				case 16 :
+					return(61, dragon_felling_axe_28217, "Members: Dragon felling axe");
+				case 17 :
+					return(61, 3rd_age_axe_20011, "Members: 3rd age axe");
+				case 18 :
+					return(61, 3rd_age_felling_axe_28226, "Members: 3rd age felling axe");
+				case 19 :
+					return(61, infernal_axe_13241, "Members: Infernal axe<br>(with 85 Firemaking)");
+				case 20 :
 					return(71, crystal_axe_23673, "Members: Crystal axe<br>(after Song of the Elves)");
+				case 21 :
+					return(71, crystal_felling_axe_28220, "Members: Crystal felling axe<br>(after Song of the Elves)");
 				case default :
 					return(-1, null, "");
 			}
@@ -2419,18 +2452,26 @@ switch_int ($int0) {
 				case 0 :
 					return(1, forestry_kit_28136, "Forestry kit");
 				case 1 :
-					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Cooking)");
+					return(15, trap_disarmer_28665, "Members: Trap disarmer<br>(with 16 Hunter)");
 				case 2 :
-					return(35, secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Smithing)");
+					return(25, padded_spoon_28657, "Members: Padded spoon<br>(with 35 Mining)");
 				case 3 :
-					return(35, bee_on_a_stick_28184, "Members: Bee on a Stick<br>(with 50 Hunter)");
+					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Cooking)");
 				case 4 :
-					return(50, clothes_pouch_28163, "Members: Clothes Pouch<br>(with 50 Crafting)");
+					return(35, secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Smithing)");
 				case 5 :
-					return(68, nature_offerings_28152, "Members: Nature Offerings<br>(with 50 Farming)");
+					return(35, bee_on_a_stick_28184, "Members: Bee on a Stick<br>(with 50 Hunter)");
 				case 6 :
-					return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 70 Crafting and 35 Farming)");
+					return(50, clothes_pouch_28163, "Members: Clothes Pouch<br>(with 50 Crafting)");
 				case 7 :
+					return(50, petal_circlet_28653, "Members: Petal circlet<br>(with 50 Fletching)");
+				case 8 :
+					return(53, smoker_canister_28646, "Members: Smoker canister<br>(with 53 Smithing and 37 Herblore)");
+				case 9 :
+					return(68, nature_offerings_28152, "Members: Nature Offerings<br>(with 50 Farming)");
+				case 10 :
+					return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 70 Crafting and 35 Farming)");
+				case 11 :
 					return(75, sturdy_harness_28149, "Members: Sturdy Harness<br>(with 75 Smithing)");
 				case default :
 					return(-1, null, "");
