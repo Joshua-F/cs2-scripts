@@ -1,7 +1,7 @@
 // 1359
 [clientscript,script1359](component $component0)
 if (%varcint1024 = %varbit6521 & %varcint1024 ! 0) {
-	if_setontimer("script1427($component0)", $component0);
+	if_setontimer("advisor_flash_icon($component0)", $component0);
 } else {
 	if_setontimer(null, $component0);
 }

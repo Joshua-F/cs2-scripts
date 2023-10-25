@@ -1,0 +1,12 @@
+// 1676
+[clientscript,champions_onop](int $opindex0, int $int1, int $int2)
+if ($opindex0 ! 1) {
+	return;
+}
+if ($int1 = $int2) {
+	return;
+}
+~updatemodel($int1);
+%varbit6768 = $int1;
+cc_deleteall(interface_84:listbox_text);
+~script1674($int1);

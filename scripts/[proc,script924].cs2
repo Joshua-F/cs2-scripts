@@ -2,7 +2,7 @@
 [proc,script924](string $string0, int $height0, int $settextalignh1, int $int2, fontmetrics $fontmetrics3)
 def_int $y4 = calc(6 + %varcint742 * 11);
 if (compare($string0, "") ! 0) {
-	cc_create(interface_449:info, ^iftype_text, if_getnextsubid(interface_449:info));
+	cc_create(obj_info:info, ^iftype_text, if_getnextsubid(obj_info:info));
 	cc_setposition(0, $y4, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(16384, calc(11 * $height0), ^setsize_2, ^setsize_abs);
 	cc_settextfont($fontmetrics3);

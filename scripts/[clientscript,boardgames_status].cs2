@@ -1,0 +1,5 @@
+// 2426
+[clientscript,boardgames_status](component $component0, component $component1, component $component2, component $component3)
+if_settext(%varcstring143, $component0);
+if_settext(%varcstring144, $component1);
+~boardgames_status_output($component2, %varcstring145, $component3);

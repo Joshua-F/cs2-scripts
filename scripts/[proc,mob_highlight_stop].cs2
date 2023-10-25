@@ -1,0 +1,19 @@
+// 2635
+[proc,mob_highlight_stop]
+%varcint904 = 0;
+if_setontimer(null, mob_side_command:attack);
+if_setgraphic("graphic_1914", mob_side_command:attack);
+if_setontimer(null, mob_side_command:com_8);
+if_setgraphic("graphic_1915", mob_side_command:com_8);
+if_setontimer(null, mob_side_command:com_7);
+if_setgraphic("graphic_1916", mob_side_command:com_7);
+if_setontimer(null, mob_side_command:com_22);
+if_setgraphic("graphic_1917", mob_side_command:com_22);
+if_setontimer(null, mob_side_command:com_23);
+if_setgraphic("graphic_1921", mob_side_command:com_23);
+if_setontimer(null, mob_side_command:com_6);
+if_setgraphic("graphic_1918", mob_side_command:com_6);
+if_setontimer(null, mob_side_command:com_20);
+if_setgraphic("graphic_1919", mob_side_command:com_20);
+if_setontimer(null, mob_side_command:com_21);
+if_setgraphic("graphic_1920", mob_side_command:com_21);

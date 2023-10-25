@@ -1,0 +1,23 @@
+// 1717
+[proc,prayer_init_buttons]
+if (%varcint181 = 1) {
+	cc_deleteall(prayer:com_7);
+	cc_deleteall(prayer:prayer_buttons);
+	if_sethide(false, prayer:customise);
+	if_sethide(true, prayer:com_0);
+	~prayer_load_customise(prayer:customise);
+	~prayer_load_buttons(prayer:prayer_buttons);
+	if_sethide(true, prayer:stats_layer);
+	cc_deleteall(prayer:scrollbar_layer);
+	if_setscrollpos(0, 0, prayer:com_5);
+	if_setsize(16384, 16384, ^setsize_2, ^setsize_2, prayer:com_5);
+} else {
+	cc_deleteall(prayer:customise);
+	if_sethide(true, prayer:customise);
+	if_sethide(false, prayer:com_0);
+	~prayer_load_buttons(prayer:prayer_buttons);
+	~prayer_load_glow(prayer:com_7);
+	if_sethide(false, prayer:stats_layer);
+	if_setsize(16384, calc(if_getheight(prayer:stats_layer) + if_getheight(prayer:com_0)), ^setsize_2, ^setsize_minus, prayer:com_5);
+	~prayer_refresh_scrollbar;
+}

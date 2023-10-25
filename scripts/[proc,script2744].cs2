@@ -1,6 +1,6 @@
 // 2744
 [proc,script2744](enum $enum0, enum $enum1, enum $enum2, int $int3)(int)
-def_int $int4 = calc(if_getwidth(interface_900:com_70) / 21);
+def_int $int4 = calc(if_getwidth(interface_900:colours_container) / 21);
 def_int $int5 = min(enum_getoutputcount($enum0), calc($int4 * (if_getheight(interface_900:com_73) / 21)));
 if_setsize(calc($int4 * 21), if_getheight(interface_900:com_73), ^setsize_abs, ^setsize_abs, interface_900:com_73);
 def_int $int6 = 0;
@@ -31,7 +31,7 @@ while ($int6 < $int5) {
 		.cc_setgraphic($graphic9);
 		.cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic8)");
 		.cc_setonmouserepeat("script1160(event_com, event_comsubid, interface_900:tooltip, $string0, 25, 150)");
-		.cc_setonmouseleave("script735(interface_900:tooltip, event_com, event_comsubid, $graphic9)");
+		.cc_setonmouseleave("deltooltip_cc_graphic_swapper(interface_900:tooltip, event_com, event_comsubid, $graphic9)");
 		.cc_setop(1, $string0);
 		.cc_setonop("script2745(event_op, %varcint1020, $int7, $int3, $enum0, $enum1, $enum2)");
 	}

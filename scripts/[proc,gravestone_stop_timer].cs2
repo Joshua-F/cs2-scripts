@@ -1,0 +1,13 @@
+// 2436
+[proc,gravestone_stop_timer]
+%varcint815 = 0;
+~statusicons_deltooltip;
+if (getwindowmode < ^windowmode_resizable) {
+	if_setontimer(null, toplevel:gravestone_layer);
+	if_sethide(true, toplevel:gravestone_timer);
+	if_sethide(true, toplevel:gravestone_background);
+} else {
+	if_setontimer(null, toplevel_fullscreen:gravestone_layer);
+	if_sethide(true, toplevel_fullscreen:gravestone_timer);
+	if_sethide(true, toplevel_fullscreen:gravestone_background);
+}

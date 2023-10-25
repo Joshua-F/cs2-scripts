@@ -1,0 +1,13 @@
+// 2700
+[proc,graphics_options_startcountdown](int $flags0, int $int1)
+def_int $int2 = calc(clientclock + 500);
+if ($int1 = 2) {
+	if_setontimer("graphics_options_countdown($int2, $flags0, $int1)", toplevel_fullscreen:graphics_confirm_layer);
+	if_setontimer("graphics_options_countdown($int2, $flags0, $int1)", toplevel:graphics_confirm_layer);
+	~graphics_options_opencountdown($flags0);
+} else {
+	if_setontimer("graphics_options_countdown($int2, $flags0, $int1)", loginscreen:background_layer);
+	~loginscreen_setactivemenu(loginscreen:windowmode_confirm);
+	if_setonclick("graphics_options_decision(true, $flags0, $int1)", loginscreen:windowmode_confirm_yes);
+	if_setonclick("graphics_options_decision(false, $flags0, $int1)", loginscreen:windowmode_confirm_no);
+}

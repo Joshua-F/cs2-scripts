@@ -1,0 +1,22 @@
+// 195
+[clientscript,clanjoin_onload](component $component0)
+%varcint53 = 0;
+if_setonclantransmit("clanjoin_onclantransmit(event_com)", $component0);
+if_setonfriendtransmit("clanjoin_onclantransmit(event_com)", $component0);
+if_setscrollsize(0, 0, $component0);
+if_setscrollpos(0, 0, $component0);
+~scrollbar_vertical(clanjoin:clanlistscrollbar, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setopcursor(1, cursor_149, clanjoin:drag_layer);
+if (%varcint1035 = -1) {
+	%varcint1035 = if_getx(clanjoin:drag_layer);
+}
+def_int $int1 = calc(if_getwidth($component0) - 25);
+if (%varcint1035 < 25) {
+	%varcint1035 = 25;
+} else if (%varcint1035 > $int1) {
+	%varcint1035 = $int1;
+}
+~script197($component0, %varcint1035);
+~script1633;
+if_setonvarcstrtransmit("script1632(event_com){varcstring202}", $component0);
+if_setonvarctransmit("script1632(event_com){varcint1027, varcint1034}", $component0);

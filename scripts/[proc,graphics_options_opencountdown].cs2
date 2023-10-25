@@ -1,0 +1,23 @@
+// 2701
+[proc,graphics_options_opencountdown](int $flags0)
+if (getwindowmode = ^windowmode_fixed) {
+	if_opensubclient(toplevel:graphics_confirm_layer, graphics_confirm);
+} else {
+	if_opensubclient(toplevel_fullscreen:graphics_confirm_layer, graphics_confirm);
+}
+if_sethide(false, toplevel_fullscreen:graphics_confirm_layer);
+if_sethide(false, toplevel:graphics_confirm_layer);
+~script1151(graphics_confirm:confirm_graphics);
+~script1151(graphics_confirm:cancel_graphics);
+if_setonmouseover("graphics_options_countdownmouseover(true, graphics_confirm:confirm_graphics, graphics_confirm:confirm_text)", graphics_confirm:confirm_button);
+if_setonmouseleave("graphics_options_countdownmouseover(false, graphics_confirm:confirm_graphics, graphics_confirm:confirm_text)", graphics_confirm:confirm_button);
+if_setonmouseover("graphics_options_countdownmouseover(true, graphics_confirm:cancel_graphics, graphics_confirm:com_22)", graphics_confirm:cancel_button);
+if_setonmouseleave("graphics_options_countdownmouseover(false, graphics_confirm:cancel_graphics, graphics_confirm:com_22)", graphics_confirm:cancel_button);
+if_setonclick("graphics_options_decision(true, $flags0, 2)", graphics_confirm:confirm_button);
+if_setonclick("graphics_options_decision(false, $flags0, 2)", graphics_confirm:cancel_button);
+if_sethide(false, toplevel:minimap_disable);
+if_sethide(false, toplevel:filterbuttons_disable);
+if_sethide(false, toplevel:chat_disable);
+if_sethide(false, toplevel:side_disable);
+if_sethide(false, toplevel:com_114);
+if_sethide(false, toplevel:com_67);

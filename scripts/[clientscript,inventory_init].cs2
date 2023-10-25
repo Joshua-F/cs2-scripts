@@ -29,17 +29,17 @@ while ($int6 < $size2) {
 		$string0 = oc_iop($obj7, 1);
 		if (string_length($string0) > 0) {
 			cc_setop(1, $string0);
-			~script1614(1, 1, $obj7);
+			~inventory_setcursor(1, 1, $obj7);
 		}
 		$string0 = oc_iop($obj7, 2);
 		if (string_length($string0) > 0) {
 			cc_setop(2, $string0);
-			~script1614(2, 2, $obj7);
+			~inventory_setcursor(2, 2, $obj7);
 		}
 		$string0 = oc_iop($obj7, 3);
 		if (string_length($string0) > 0) {
 			cc_setop(3, $string0);
-			~script1614(3, 3, $obj7);
+			~inventory_setcursor(3, 3, $obj7);
 		}
 		cc_settargetverb("Use");
 		cc_settargetopcursor(cursor_46);
@@ -47,22 +47,22 @@ while ($int6 < $size2) {
 		$string0 = oc_iop($obj7, 4);
 		if (string_length($string0) > 0) {
 			cc_setop(7, $string0);
-			~script1614(4, 7, $obj7);
+			~inventory_setcursor(4, 7, $obj7);
 		}
 		$string0 = oc_iop($obj7, 5);
 		if (string_length($string0) > 0) {
 			cc_setop(8, $string0);
-			~script1614(5, 8, $obj7);
+			~inventory_setcursor(5, 8, $obj7);
 		}
 		cc_setop(10, "Examine");
 		cc_setopbase("<col=ff9040><oc_name($obj7)>");
-		cc_setontargetenter("script1615(true, event_com, event_comsubid)");
-		cc_setontargetleave("script1615(false, event_com, event_comsubid)");
+		cc_setontargetenter("inventory_targetmode(true, event_com, event_comsubid)");
+		cc_setontargetleave("inventory_targetmode(false, event_com, event_comsubid)");
 		cc_setdraggable($component0, -1);
 		cc_setdraggablebehavior(2);
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);
-		cc_setondragcomplete("script1616(event_com, event_comsubid, event_com2, event_comsubid2)");
+		cc_setondragcomplete("inventory_drag(event_com, event_comsubid, event_com2, event_comsubid2)");
 		cc_setonop("script1620(event_com, event_comsubid, 100, 0, 8)");
 	} else {
 		cc_sethide(true);

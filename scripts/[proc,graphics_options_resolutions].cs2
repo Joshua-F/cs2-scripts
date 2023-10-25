@@ -1,0 +1,6 @@
+// 2693
+[proc,graphics_options_resolutions](int $windowmode0)(string)
+def_int $int1 = 0;
+def_int $int2 = 0;
+$int1, $int2 = fullscreen_getmode($windowmode0);
+return("<tostring($int1)>x<tostring($int2)>");

@@ -4,25 +4,25 @@ if (%varcint806 > 0) {
 	if_sethide(true, interface_765:com_11);
 }
 if (%varcint806 > 1) {
-	if_setmodel(model_46964, interface_765:com_5);
+	if_setmodel(model_46964, interface_765:wirebox);
 }
 if (%varcint806 > 2) {
 	if (%varbit6180 = 75) {
-		if_setmodel(model_46956, interface_765:com_5);
+		if_setmodel(model_46956, interface_765:wirebox);
 		if_sethide(true, interface_765:com_15);
 	} else {
-		if_setmodel(model_46966, interface_765:com_5);
+		if_setmodel(model_46966, interface_765:wirebox);
 		if_sethide(true, interface_765:com_36);
 	}
 }
 if (%varcint806 > 3) {
 	if (%varbit6180 = 75) {
-		if_setmodel(model_46965, interface_765:com_5);
-		if_sethide(true, interface_765:com_17);
+		if_setmodel(model_46965, interface_765:wirebox);
+		if_sethide(true, interface_765:tape);
 	} else {
-		if_setmodel(model_46957, interface_765:com_5);
+		if_setmodel(model_46957, interface_765:wirebox);
 		if_sethide(true, interface_765:com_37);
-		if_setop(1, "Inspect", interface_765:com_5);
+		if_setop(1, "Inspect", interface_765:wirebox);
 	}
 }
 if (%varbit6194 = 0) {

@@ -1,7 +1,7 @@
 // 1560
 [proc,chatdefault_updatechatbox](boolean $boolean0)
 if ($boolean0 = true & (if_hassub(chattop:chatoverlay) = true | if_hassub(chattop:chatoverlaylarge) = true) & chat_gethistorytype(0) = ^chattype_gamemessage) {
-	~script1561;
+	~chatdefault_openmeslayer;
 }
 ~rebuildchatbox;
 ~rebuildpmbox;

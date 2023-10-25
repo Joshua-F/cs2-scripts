@@ -1,0 +1,5 @@
+// 2804
+[proc,fade2_flash_generic](component $component0, int $int1, int $int2, int $trans3, int $trans4, int $colour5)
+if_setcolour($colour5, $component0);
+if_settrans($trans4, $component0);
+if_setontimer("fade2_flash_timer($component0, calc(0 - $int2), $int1, $trans3, $trans4)", $component0);

@@ -8,18 +8,18 @@ if_sethide(true, chattop:mes_layer_large);
 if_sethide(true, chattop:mes_layer_hide);
 if_settext($text0, chattop:mes_text);
 %varcint5 = 8;
-~script1564("");
+~meslayer_setupinput("");
 if_setonclick(null, chattop:mes_layer);
 ~script2026;
 if_setonkey("meslayer_onkey(event_keycode, event_keychar)", chattop:mes_text2);
 if_setondialogabort("meslayer_ondialogabort", chattop:mes_text2);
 if (%varcint1026 = 1 & string_length(%varcstring201) > 0) {
 	cc_create(chattop:mes_layer, ^iftype_text, 0);
-	~script2752;
+	~meslayer_setupdynamicbutton;
 	cc_settext("Last name entered: <%varcstring201>");
 	cc_setop(1, "Use:");
 	cc_setopbase("<col=ff9040><removetags(%varcstring201)></col>");
-	cc_setonop("script2753(%varcint5, event_op, event_com, event_comsubid, %varcstring201)");
+	cc_setonop("meslayer_lastname(%varcint5, event_op, event_com, event_comsubid, %varcstring201)");
 } else {
 	%varcstring201 = "";
 	%varcint1026 = 1;

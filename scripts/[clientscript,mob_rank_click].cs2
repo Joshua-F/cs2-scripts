@@ -1,0 +1,69 @@
+// 2561
+[clientscript,mob_rank_click]
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+if (%varcint844 = 0) {
+	if_setgraphic("radio_buttons,1", mob_squad_buy:button_light);
+	if_setgraphic("radio_buttons,0", mob_squad_buy:com_28);
+} else {
+	if_setgraphic("radio_buttons,0", mob_squad_buy:button_light);
+	if_setgraphic("radio_buttons,1", mob_squad_buy:com_28);
+}
+if (%varcint844 = 0) {
+	if (%varcint845 = 1) {
+		if_settext("Dwarf", mob_squad_buy:race_field);
+		$int0 = 175;
+		$int1 = 530;
+		$int2 = 60;
+	} else if (%varcint845 = 2) {
+		if_settext("Goblin", mob_squad_buy:race_field);
+		$int0 = 175;
+		$int1 = 480;
+		$int2 = 110;
+	} else if (%varcint845 = 3) {
+		if_settext("Elf", mob_squad_buy:race_field);
+		$int0 = 225;
+		$int1 = 480;
+		$int2 = 60;
+	}
+} else if (%varcint844 = 1) {
+	if (%varcint845 = 1) {
+		if_settext("Dwarf", mob_squad_buy:race_field);
+		$int0 = 350;
+		$int1 = 1010;
+		$int2 = 60;
+	} else if (%varcint845 = 2) {
+		if_settext("Goblin", mob_squad_buy:race_field);
+		$int0 = 350;
+		$int1 = 960;
+		$int2 = 110;
+	} else if (%varcint845 = 3) {
+		if_settext("Elf", mob_squad_buy:race_field);
+		$int0 = 400;
+		$int1 = 960;
+		$int2 = 60;
+	}
+}
+$int3 = 100;
+if_settext(~tostring_spacer($int3, ","), mob_squad_buy:cost_field);
+if_settext(tostring($int0), mob_squad_buy:combat_field);
+if_settext(tostring($int1), mob_squad_buy:hitpoints_field);
+if_settext(tostring($int2), mob_squad_buy:com_9);
+if_settext(enum(int, string, enum_2386, %varcint845), mob_squad_buy:desc_field);
+if (%varcint845 = 1 & %varcint844 = 0) {
+	if_setmodel(dwarf_squad_light_red_47798, mob_squad_buy:squad_model);
+} else if (%varcint845 = 2 & %varcint844 = 0) {
+	if_setmodel(goblin_squad_light_red_47794, mob_squad_buy:squad_model);
+} else if (%varcint845 = 3 & %varcint844 = 0) {
+	if_setmodel(elf_squad_light_red_47792, mob_squad_buy:squad_model);
+} else if (%varcint845 = 1 & %varcint844 = 1) {
+	if_setmodel(dwarf_squad_light_red_47786, mob_squad_buy:squad_model);
+} else if (%varcint845 = 2 & %varcint844 = 1) {
+	if_setmodel(goblin_squad_heavy_red_47787, mob_squad_buy:squad_model);
+} else if (%varcint845 = 3 & %varcint844 = 1) {
+	if_setmodel(elf_squad_heavy_red_47796, mob_squad_buy:squad_model);
+}
+%varcint839 = %varbit6351;
+%varcint846 = %varbit6380;

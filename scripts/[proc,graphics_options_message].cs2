@@ -1,0 +1,19 @@
+// 2694
+[proc,graphics_options_message](int $int0, string $string0, string $text1, string $string2)
+def_int $index1 = 0;
+if ($int0 = 2) {
+	if (string_length($string0) > 0) {
+		$index1 = string_indexof_string($string0, "<br>", 0);
+		if ($index1 = -1) {
+			mes($string0);
+			return;
+		}
+		mes(substring($string0, 0, $index1));
+	}
+	return;
+}
+if_settext($string0, loginscreen:general_messages_text);
+if_setonclick("loginscreen_setactivemenu(loginscreen_graphics_options:com_0)", loginscreen:general_messages_continue);
+if_settext($text1, loginscreen:com_399);
+if_setonclick("openurl_nologin($string2, true)", loginscreen:com_399);
+~loginscreen_setactivemenu(loginscreen:general_messages);

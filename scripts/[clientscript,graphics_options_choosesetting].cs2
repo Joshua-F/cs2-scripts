@@ -1,0 +1,15 @@
+// 2699
+[clientscript,graphics_options_choosesetting](int $int0, struct $struct1, int $int2, int $int3, int $int4, int $int5, int $int6)
+def_int $int7 = ~graphics_options_detailset($struct1, $int0, $int6);
+if ($int7 = 0) {
+	if ($struct1 = struct_845) {
+		$int5 = getdefaultwindowmode;
+		setwindowmode($int5);
+		~graphics_options_message($int6, "RuneScape was unable to change to that resolution.<br><br>Please visit our Knowledge Base for more information.", "Consult Knowledge Base", "kbase/view.ws?guid=controls_display_options");
+	} else {
+		~graphics_options_message($int6, "RuneScape was unable to implement that setting.<br><br>Please visit our Knowledge Base for more information.", "Consult Knowledge Base", "kbase/view.ws?guid=controls_display_options");
+	}
+}
+if ($int6 = 2 | $int7 = 1) {
+	~graphics_options_rebuild($int4, $int5, $int2, $int3, $int6);
+}

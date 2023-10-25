@@ -1,0 +1,20 @@
+// 2289
+[clientscript,prayer_client_op](component $component0, component $component1, int $int2)
+if (~prayer_client_getvar($int2) = 0) {
+	if (~script2295($int2) = 0) {
+		return;
+	}
+	if (cc_find($component0, $int2) = ^true) {
+		cc_setop(1, "Deactivate");
+	}
+	if (cc_find($component1, $int2) = ^true) {
+		cc_setgraphic("prayerglow");
+	}
+} else {
+	if (cc_find($component0, $int2) = ^true) {
+		cc_setop(1, "Activate");
+	}
+	if (cc_find($component1, $int2) = ^true) {
+		cc_setgraphic(null);
+	}
+}

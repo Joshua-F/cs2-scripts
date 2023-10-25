@@ -1,0 +1,81 @@
+// 2117
+[proc,ame_reward_createbutton](int $int0, int $int1, int $int2, component $component3, component $component4, component $component5)
+def_int $int6 = calc($int2 + $int1 / 2 * (64 + $int2));
+def_int $int7 = calc($int2 + $int1 % 2 * (160 + $int2));
+cc_create($component3, ^iftype_rectangle, calc($int0 * 7));
+cc_setsize(160, 64, ^setsize_abs, ^setsize_abs);
+cc_setposition($int7, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^black);
+cc_settrans(200);
+cc_setfill(true);
+cc_setop(1, "Choose");
+if ($int0 = 26) {
+	cc_setop(10, "Explain");
+	cc_setopbase("<col=ff9040>Emote</col>");
+} else if ($int0 = 27) {
+	cc_setop(10, "Explain");
+	cc_setopbase("<col=ff9040>Costume point</col>");
+} else {
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff9040><oc_name(inv_getobj(inv_307, $int0))></col>");
+}
+cc_setonop("ame_rewards_select(event_op, $component3, $int0, $component4, $component5)");
+cc_create($component3, ^iftype_graphic, calc($int0 * 7 + 1));
+cc_setsize(159, 32, ^setsize_abs, ^setsize_abs);
+cc_settiling(true);
+cc_setgraphic("v2_borders_slim,11");
+cc_setposition($int7, calc($int6 - 17), ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component3, ^iftype_graphic, calc($int0 * 7 + 2));
+cc_setsize(160, 32, ^setsize_abs, ^setsize_abs);
+cc_settiling(true);
+cc_setgraphic("v2_borders_slim,11");
+cc_setvflip(true);
+cc_setposition($int7, calc($int6 + 49), ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component3, ^iftype_graphic, calc($int0 * 7 + 3));
+cc_setsize(32, 63, ^setsize_abs, ^setsize_abs);
+cc_settiling(true);
+cc_setgraphic("v2_borders_slim,12");
+cc_setposition(calc($int7 - 14), $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component3, ^iftype_graphic, calc($int0 * 7 + 4));
+cc_setsize(32, 63, ^setsize_abs, ^setsize_abs);
+cc_settiling(true);
+cc_setgraphic("v2_borders_slim,12");
+cc_sethflip(true);
+cc_setposition(calc($int7 + 142), $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component3, ^iftype_graphic, calc($int0 * 7 + 5));
+if ($int0 = 26) {
+	cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int7 + 15), calc($int6 + 20), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setoutline(0);
+	cc_setgraphic("graphic_1830");
+} else if ($int0 = 27) {
+	cc_setsize(42, 42, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int7 + 5), calc($int6 + 12), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setoutline(0);
+	cc_setgraphic("graphic_1044");
+} else {
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int7 + 8), calc($int6 + 16), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x302020);
+	if (inv_getnum(inv_307, $int0) > 1 & oc_stackable(inv_getobj(inv_307, $int0)) = true) {
+		cc_setobject(inv_getobj(inv_307, $int0), inv_getnum(inv_307, $int0));
+	} else {
+		cc_setobject(inv_getobj(inv_307, $int0), -1);
+	}
+}
+.cc_create($component3, ^iftype_text, calc($int0 * 7 + 6));
+.cc_settextfont(b12_full);
+.cc_setcolour(0xff981f);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_setsize(calc(160 - (cc_getx - $int7 + cc_getwidth + 4)), 64, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc($int7 + 160 - .cc_getwidth - 2), $int6, ^setpos_abs_left, ^setpos_abs_top);
+if ($int0 = 26) {
+	.cc_settext("Unlock emote!");
+} else if ($int0 = 27) {
+	.cc_settext("Save up for a costume!");
+} else if (inv_getnum(inv_307, $int0) = 1) {
+	.cc_settext("<enum(int, string, enum_2238, $int0)>:<br><oc_name(inv_getobj(inv_307, $int0))>");
+} else {
+	.cc_settext("<enum(int, string, enum_2238, $int0)>:<br><tostring(inv_getnum(inv_307, $int0))> x <oc_name(inv_getobj(inv_307, $int0))>");
+}

@@ -1,0 +1,58 @@
+// 1142
+[clientscript,combat_side_setup]
+def_obj $obj0 = inv_getobj(worn, 3);
+if ($obj0 = null | oc_members($obj0) = ^true & map_members = ^false) {
+	~combat_side_button("Punch", "combaticons,14", "Accurate<br>Crush<br>Attack XP", "Kick", "combaticons,15", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons,16", "Defensive<br>Crush<br>Defence XP", "", null, "");
+	return;
+}
+def_int $int1 = oc_param($obj0, param_686);
+switch_int ($int1) {
+	case 1 :
+		~combat_side_button("Bash", "combaticons2,13", "Accurate<br>Crush<br>Attack XP", "Pound", "combaticons2,14", "Aggressive<br>Crush<br>Strength XP", "Focus", "combaticons,19", "Defensive<br>Crush<br>Defence XP", "", null, "");
+	case 23 :
+		~combat_side_button("Slash", "combaticons2,13", "Accurate<br>Slash<br>Attack XP", "Crush", "combaticons2,14", "Aggressive<br>Crush<br>Strength XP", "Slash", "combaticons,19", "Defensive<br>Slash<br>Defence XP", "", null, "");
+	case 2 :
+		~combat_side_button("Chop", "combaticons,1", "Accurate<br>Slash<br>Attack XP", "Hack", "combaticons,2", "Aggressive<br>Slash<br>Strength XP", "Smash", "combaticons,3", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons,0", "Defensive<br>Slash<br>Defence XP");
+	case 3 :
+		~combat_side_button("Bash", "combaticons2,13", "Accurate<br>Crush<br>Attack XP", "Pound", "combaticons2,14", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons,19", "Defensive<br>Crush<br>Defence XP", "", null, "");
+	case 4 :
+		~combat_side_button("Spike", "combaticons3,1", "Accurate<br>Stab<br>Attack XP", "Impale", "combaticons3,3", "Aggressive<br>Stab<br>Strength XP", "Smash", "combaticons3,2", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons3,0", "Defensive<br>Stab<br>Defence XP");
+	case 5 :
+		~combat_side_button("Stab", "combaticons,7", "Accurate<br>Stab<br>Attack XP", "Lunge", "combaticons,6", "Aggressive<br>Stab<br>Strength XP", "Slash", "combaticons,5", "Aggressive<br>Slash<br>Strength XP", "Block", "combaticons,4", "Defensive<br>Stab<br>Defence XP");
+	case 6 :
+		~combat_side_button("Chop", "combaticons,6", "Accurate<br>Slash<br>Attack XP", "Slash", "combaticons,5", "Aggressive<br>Slash<br>Strength XP", "Lunge", "combaticons,7", "Controlled<br>Stab<br>Shared XP", "Block", "combaticons,4", "Defensive<br>Slash<br>Defence XP");
+	case 7 :
+		~combat_side_button("Chop", "combaticons,6", "Accurate<br>Slash<br>Attack XP", "Slash", "combaticons,5", "Aggressive<br>Slash<br>Strength XP", "Smash", "combaticons,5", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons,4", "Defensive<br>Slash<br>Defence XP");
+	case 8 :
+		~combat_side_button("Pound", "combaticons,13", "Accurate<br>Crush<br>Attack XP", "Pummel", "combaticons,11", "Aggressive<br>Crush<br>Strength XP", "Spike", "combaticons,12", "Controlled<br>Stab<br>Shared XP", "Block", "combaticons,10", "Defensive<br>Crush<br>Defence XP");
+	case 9 :
+		~combat_side_button("Chop", "combaticons3,6", "Accurate<br>Slash<br>Attack XP", "Slash", "combaticons3,5", "Aggressive<br>Slash<br>Strength XP", "Lunge", "combaticons3,4", "Controlled<br>Stab<br>Shared XP", "Block", "combaticons3,7", "Defensive<br>Slash<br>Defence XP");
+	case 10 :
+		~combat_side_button("Pound", "combaticons2,2", "Accurate<br>Crush<br>Attack XP", "Pummel", "combaticons2,3", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons2,0", "Defensive<br>Crush<br>Defence XP", "", null, "");
+	case 11 :
+		~combat_side_button("Flick", "combaticons3,13", "Accurate<br>Slash<br>Attack XP", "Lash", "combaticons3,14", "Controlled<br>Slash<br>Shared XP", "Deflect", "combaticons3,13", "Defensive<br>Slash<br>Defence XP", "", null, "");
+	case 12 :
+		~combat_side_button("Pound", "combaticons2,2", "Accurate<br>Crush<br>Attack XP", "Pummel", "combaticons2,3", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons2,0", "Defensive<br>Crush<br>Defence XP", "", null, "");
+	case 13 :
+		~combat_side_button("Accurate", "combaticons2,10", "Accurate<br>Ranged XP", "Rapid", "combaticons2,11", "Rapid<br>Ranged XP", "Long range", "combaticons2,12", "Long range<br>Ranged XP<br>Defence XP", "", null, "");
+	case 14 :
+		~combat_side_button("Lunge", "combaticons,8", "Controlled<br>Stab<br>Shared XP", "Swipe", "combaticons,18", "Controlled<br>Slash<br>Shared XP", "Pound", "combaticons,9", "Controlled<br>Crush<br>Shared XP", "Block", "combaticons,17", "Defensive<br>Stab<br>Defence XP");
+	case 15 :
+		~combat_side_button("Jab", "combaticons3,11", "Controlled<br>Stab<br>Shared XP", "Swipe", "combaticons3,12", "Aggressive<br>Slash<br>Strength XP", "Fend", "combaticons3,10", "Defensive<br>Stab<br>Defence XP", "", null, "");
+	case 16 :
+		~combat_side_button("Accurate", "combaticons2,15", "Accurate<br>Ranged XP", "Rapid", "combaticons2,16", "Rapid<br>Ranged XP", "Long range", "combaticons2,17", "Long range<br>Ranged XP<br>Defence XP", "", null, "");
+	case 17 :
+		~combat_side_button("Accurate", "combaticons2,5", "Accurate<br>Ranged XP", "Rapid", "combaticons2,6", "Rapid<br>Ranged XP", "Long range", "combaticons2,7", "Long range<br>Ranged XP<br>Defence XP", "", null, "");
+	case 18 :
+		~combat_side_button("Accurate", "combaticons2,10", "Accurate<br>Ranged XP", "Rapid", "combaticons2,11", "Rapid<br>Ranged XP", "Long range", "combaticons2,12", "Long range<br>Ranged XP<br>Defence XP", "", null, "");
+	case 19 :
+		~combat_side_button("Short fuse", "combaticons3,15", "Short fuse<br>Ranged XP", "Medium fuse", "combaticons3,9", "Medium fuse<br>Ranged XP", "Long fuse", "combaticons3,8", "Long fuse<br>Ranged XP<br>Defence XP", "", null, "");
+	case 20 :
+		~combat_side_button("Aim and fire", "prayeron,13", "Aim and fire", "Kick", "combaticons,15", "Aggressive<br>Crush<br>Strength XP", "", null, "", "", null, "");
+	case 21 :
+		~combat_side_button("Scorch", "combaticons3,16", "Aggressive<br>Slash<br>Strength XP", "Flare", "combaticons3,17", "Accurate<br>Ranged<br>Ranged XP", "Blaze", "combaticons3,18", "Defensive<br>Magic<br>Magic XP", "", null, "");
+	case 22 :
+		~combat_side_button("Reap", "combaticons2,19", "Accurate<br>Slash<br>Attack XP", "Chop", "combaticons2,9", "Aggressive<br>Stab<br>Strength XP", "Jab", "combaticons2,18", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons2,8", "Defensive<br>Slash<br>Defence XP");
+	case default :
+		~combat_side_button("Punch", "combaticons,14", "Accurate<br>Crush<br>Attack XP", "Kick", "combaticons,15", "Aggressive<br>Crush<br>Strength XP", "Block", "combaticons,16", "Defensive<br>Crush<br>Defence XP", "", null, "");
+}

@@ -1,0 +1,16 @@
+// 1873
+[proc,worldswitcher_init]
+cc_deleteall(loginscreen:com_177);
+~script1875;
+%varcint995 = calc(clientclock + 50);
+if_settext("Loading...", loginscreen:com_179);
+if_sethide(false, loginscreen:com_179);
+~script1874;
+if_setposition(min(calc((if_getwidth(loginscreen:com_175) + parawidth(if_gettext(loginscreen:com_185), 512, b12_full)) / 2 + 8), calc(if_getwidth(loginscreen:com_175) - if_getwidth(loginscreen:com_186))), 0, ^setpos_abs_left, ^setpos_abs_centre, loginscreen:com_186);
+if (map_lang = 0) {
+	if_settext("Activity / Location", loginscreen:com_192);
+} else {
+	if_settext("Language", loginscreen:com_192);
+}
+if_setonresize("script1880", loginscreen:com_177);
+~script1299;

@@ -1,9 +1,0 @@
-// 251
-[proc,script251](component $component0)
-if (~inzone(0_41_81_0_0, 3_41_81_63_63, coord) = 1 & detailget_flickering_on = true) {
-	if (if_gethide($component0) = true) {
-		if_sethide(false, $component0);
-	}
-} else if (if_gethide($component0) = false) {
-	if_sethide(true, $component0);
-}

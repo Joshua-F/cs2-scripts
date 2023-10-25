@@ -1,0 +1,13 @@
+// 698
+[clientscript,bankpin_instructions](component $component0)
+if (%varbit1010 = 0) {
+	if_settext("First click the FIRST digit.", $component0);
+} else if (%varbit1010 = 1) {
+	if_settext("Now click the SECOND digit.", $component0);
+} else if (%varbit1010 = 2) {
+	if_settext("Time for the THIRD digit.", $component0);
+} else if (%varbit1010 = 3) {
+	if_settext("Finally, the FOURTH digit.", $component0);
+} else {
+	if_settext("Thanks!", $component0);
+}

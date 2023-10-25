@@ -74,7 +74,7 @@ if (compare(%varcstring122, "") = 0) {
 	if_settext("Please supply a username.", loginscreen:com_153);
 	if_setgraphic(null, loginscreen:com_159);
 	$boolean4 = false;
-} else if (~script2203(%varcstring122) = 0) {
+} else if (~create_check_username(%varcstring122) = 0) {
 	if_setgraphic("graphic_1726", loginscreen:com_159);
 	if_settext("Please supply a valid username.", loginscreen:com_153);
 	%varcint734 = 1;

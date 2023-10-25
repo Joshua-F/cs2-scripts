@@ -1,0 +1,7 @@
+// 196
+[clientscript,clanjoin_onclantransmit](component $component0)
+if (minimenuopen(clanjoin:clanlist, -1) = true) {
+	if_setontimer("script1593", clanjoin:clanlist);
+	return;
+}
+~script1594;

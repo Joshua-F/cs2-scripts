@@ -3,9 +3,9 @@
 def_string $string0 = "Empty display";
 switch_int ($int1) {
 	case 0 :
-		if_setonmouserepeat("addtooltip(event_com, interface_81:tooltip, $string0, 25, 180)", $component0);
+		if_setonmouserepeat("addtooltip(event_com, vm_map_basement:tooltip, $string0, 25, 180)", $component0);
 	case 1 :
-		if_setonmouserepeat("addtooltip(event_com, interface_83:tooltip, $string0, 25, 180)", $component0);
+		if_setonmouserepeat("addtooltip(event_com, vm_map_digsite:tooltip, $string0, 25, 180)", $component0);
 	case 2 :
 		if_setonmouserepeat("addtooltip(event_com, interface_80:tooltip, $string0, 25, 180)", $component0);
 	case 3 :

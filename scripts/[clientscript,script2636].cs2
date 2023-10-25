@@ -1,11 +1,11 @@
 // 2636
 [clientscript,script2636]
 if (%varbit6357 = 2) {
-	if_settargetverb("Attack wall", interface_859:button4);
-	if_settargetverb("Collect", interface_859:button5);
+	if_settargetverb("Attack wall", mob_side_command:button4);
+	if_settargetverb("Collect", mob_side_command:button5);
 } else if (%varbit6357 = 4) {
-	if_settargetverb("Rescue", interface_859:button4);
-	if_settargetverb("Steal", interface_859:button5);
+	if_settargetverb("Rescue", mob_side_command:button4);
+	if_settargetverb("Steal", mob_side_command:button5);
 } else if (%varbit6357 = 3) {
-	if_settargetverb("Collect gold", interface_859:button4);
+	if_settargetverb("Collect gold", mob_side_command:button4);
 }

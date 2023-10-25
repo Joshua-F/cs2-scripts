@@ -1,0 +1,41 @@
+// 2508
+[clientscript,mob_invest_add](component $component0)
+switch_component ($component0) {
+	case interface_852:com_47 :
+		%varcint840 = 0;
+	case interface_852:offercount_10 :
+		if (%varcint840 < calc(^max_32bit_int - 10) & %varcint839 >= 10 & ~script2509(10) = 1) {
+			%varcint840 = calc(%varcint840 + 10);
+			%varcint839 = calc(%varcint839 - 10);
+		}
+	case interface_852:offercount_100 :
+		if (%varcint840 < calc(^max_32bit_int - 100) & %varcint839 >= 100 & ~script2509(100) = 1) {
+			%varcint840 = calc(%varcint840 + 100);
+			%varcint839 = calc(%varcint839 - 100);
+		}
+	case interface_852:offercount_500 :
+		if (%varcint840 < calc(^max_32bit_int - 500) & %varcint839 >= 500 & ~script2509(500) = 1) {
+			%varcint840 = calc(%varcint840 + 500);
+			%varcint839 = calc(%varcint839 - 500);
+		}
+	case interface_852:offercount_1k :
+		if (%varcint840 < calc(^max_32bit_int - 1000) & %varcint839 >= 1000 & ~script2509(1000) = 1) {
+			%varcint840 = calc(%varcint840 + 1000);
+			%varcint839 = calc(%varcint839 - 1000);
+		}
+	case interface_852:com_53 :
+		if (%varcint840 < calc(^max_32bit_int - 10000) & %varcint839 >= 10000 & ~script2509(10000) = 1) {
+			%varcint840 = calc(%varcint840 + 10000);
+			%varcint839 = calc(%varcint839 - 10000);
+		}
+	case interface_852:offercount_all :
+		if (%varcint839 < ~script2687) {
+			%varcint840 = %varcint839;
+			%varcint839 = 0;
+		} else if (%varcint840 < ~script2687) {
+			%varcint840 = ~script2687;
+			%varcint839 = calc(%varcint839 - ~script2687);
+		}
+}
+if_settext(~tostring_spacer(%varcint840, ","), interface_852:com_63);
+if_settext(~tostring_spacer(%varcint839, ","), interface_852:com_62);

@@ -1,0 +1,36 @@
+// 1388
+[proc,prayer_load_customise](component $component0)
+cc_deleteall($component0);
+cc_deleteall(prayer:scrollbar_layer);
+def_int $int1 = 5;
+def_int $width2 = 15;
+def_int $height3 = 15;
+def_int $int4 = 0;
+def_int $int5 = 6;
+def_int $int6 = 28;
+def_int $int7 = 27;
+if (%varbit6840 = 1) {
+	$int7 = 20;
+}
+while ($int4 < $int7) {
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize($width2, $height3, ^setsize_abs, ^setsize_abs);
+	cc_settiling(true);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	if (~script2297($int4) = 0) {
+		cc_setop(1, "Select<col=ff9040>");
+		cc_setgraphic("miscgraphics,10");
+	} else {
+		cc_setop(1, "Deselect<col=ff9040>");
+		cc_setgraphic("miscgraphics,11");
+	}
+	cc_setonop("prayer_custom_op(event_com, event_comsubid)");
+	cc_setonvartransmit("prayer_custom_varupdate(event_com, event_comsubid){var1397, var1587}");
+	$int4 = calc($int4 + 1);
+	if (calc($int4 % $int1) = 0) {
+		$int5 = 6;
+		$int6 = calc($int6 + 35);
+	} else {
+		$int5 = calc($int5 + 37);
+	}
+}

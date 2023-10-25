@@ -2,9 +2,9 @@
 [clientscript,script234](int $comsubid0)
 def_string $string0 = "";
 def_int $int1 = -1;
-if (cc_find(interface_594:build_layer, $comsubid0) = ^true) {
+if (cc_find(snapshot_main_v2:build_layer, $comsubid0) = ^true) {
 	%varcstring24 = cc_getopbase;
 	%varcint792 = %varcint791;
-	~script240;
+	~snapshot_selected_highlight;
 	~script217;
 }

@@ -1,8 +1,8 @@
 // 2414
 [clientscript,script2414]
 if (%varbit6180 = 120) {
-	if_sethide(false, interface_765:com_4);
-	if_sethide(true, interface_765:com_3);
+	if_sethide(false, interface_765:fish_tools);
+	if_sethide(true, interface_765:normal_tools);
 	if (inv_total(inv, swordfish_14831) = 0) {
 		if_sethide(true, interface_765:com_33);
 	}
@@ -25,12 +25,12 @@ if (%varbit6180 = 120) {
 		if_sethide(true, interface_765:com_34);
 	}
 } else {
-	if_sethide(true, interface_765:com_4);
-	if_sethide(false, interface_765:com_3);
+	if_sethide(true, interface_765:fish_tools);
+	if_sethide(false, interface_765:normal_tools);
 }
 if_setmodelanim(null, interface_765:com_10);
 if_sethide(false, interface_765:com_11);
-if_setmodel(model_46967, interface_765:com_5);
+if_setmodel(model_46967, interface_765:wirebox);
 if_setmodelanim(seq_11762, interface_765:com_10);
 if_sethide(true, interface_765:com_19);
 if_sethide(false, interface_765:com_20);

@@ -18,7 +18,7 @@ if (worldmap_coordinmap(%varcint622, $wma10) = true) {
 ~worldmap_setzoom;
 ~worldmap_showoverview(0);
 ~script1376(0, $component5, $component9);
-~script291(false, $component6, $component7, $component8, $component4, $component5);
+~worldmap_showmenu(false, $component6, $component7, $component8, $component4, $component5);
 ~worldmap_key_build(%varbit5367, $component1, $component2, $component3);
 if_setonvarctransmit("worldmap_init($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9){varcint622}", $component0);
 if_setonvartransmit("worldmap_vartransmit($component1, $component2, $component3, $component5, $component0, %varbit6175){var463}", $component0);

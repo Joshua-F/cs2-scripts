@@ -1,20 +1,20 @@
 // 334
 [clientscript,script334]
-if_sethide(true, interface_729:com_85);
-if_sethide(true, interface_729:com_86);
-if_sethide(false, interface_729:com_83);
-if_sethide(false, interface_729:com_84);
-if_sethide(true, interface_729:com_81);
-if_sethide(true, interface_729:com_82);
-if_setgraphic("graphic_1054", interface_729:com_93);
-if_setgraphic("graphic_1045", interface_729:com_92);
-if_setgraphic("graphic_1052", interface_729:com_91);
+if_sethide(true, player_kit_tailor:com_85);
+if_sethide(true, player_kit_tailor:com_86);
+if_sethide(false, player_kit_tailor:com_83);
+if_sethide(false, player_kit_tailor:com_84);
+if_sethide(true, player_kit_tailor:torso_layer);
+if_sethide(true, player_kit_tailor:com_82);
+if_setgraphic("graphic_1054", player_kit_tailor:legs_tab);
+if_setgraphic("graphic_1045", player_kit_tailor:arms_tab);
+if_setgraphic("graphic_1052", player_kit_tailor:torso_tab);
 %varcint778 = 1;
 if (gender = 1) {
 	%varcint773 = 350;
 } else {
 	%varcint773 = 350;
 }
-~script339(interface_729:com_83);
-~script2364(interface_729:com_84, interface_729:com_83);
-~script2366(interface_729:com_83, %varcint780, ~script336(1));
+~script339(player_kit_tailor:com_83);
+~player_kit_scroll(player_kit_tailor:com_84, player_kit_tailor:com_83);
+~player_kit_select(player_kit_tailor:com_83, %varcint780, ~script336(1));

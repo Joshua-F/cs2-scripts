@@ -168,9 +168,9 @@ while ($int2 = 0 & $int21 < $count16 | $int2 = 1 & $int21 >= 0) {
 }
 if ($int0 = 1) {
 	if ($count23 = %varcint272) {
-		if_settext("Showing all <tostring(%varcint272)> items", interface_190:com_8);
+		if_settext("Showing all <tostring(%varcint272)> items", questlist_tr:com_8);
 	} else {
-		if_settext("Showing <tostring($count23)> of <tostring(%varcint272)> items", interface_190:com_8);
+		if_settext("Showing <tostring($count23)> of <tostring(%varcint272)> items", questlist_tr:com_8);
 	}
 }
 if (%varcint695 = 1 | $int18 ! calc($int22 + 5) | $int2 = 1 & %varcint694 = 0 | $int2 = 0 & %varcint694 = 1) {
@@ -185,14 +185,14 @@ if ($int0 = 1) {
 	%varcint692 = $int3;
 	%varcint694 = $int2;
 	if (%varcint692 = 0) {
-		if_setgraphic("options_radio_buttons,2", interface_190:com_10);
+		if_setgraphic("options_radio_buttons,2", questlist_tr:radio_filter);
 	} else {
-		if_setgraphic("options_radio_buttons,0", interface_190:com_10);
+		if_setgraphic("options_radio_buttons,0", questlist_tr:radio_filter);
 	}
 	if (%varcint694 = 1) {
-		if_setgraphic("options_radio_buttons,2", interface_190:com_12);
+		if_setgraphic("options_radio_buttons,2", questlist_tr:com_12);
 	} else {
-		if_setgraphic("options_radio_buttons,0", interface_190:com_12);
+		if_setgraphic("options_radio_buttons,0", questlist_tr:com_12);
 	}
 }
 %varcint695 = 0;

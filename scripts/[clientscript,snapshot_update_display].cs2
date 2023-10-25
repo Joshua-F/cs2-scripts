@@ -1,0 +1,21 @@
+// 249
+[clientscript,snapshot_update_display]
+%varcint799 = calc(%varcint799 + 1);
+if (%varcint799 >= 30) {
+	%varcint799 = 0;
+	if (%varcint798 = 1) {
+		%varcint798 = 0;
+	} else {
+		%varcint798 = 1;
+	}
+}
+if (%varcint798 = 1) {
+	if_settext("<escape(%varcstring24)><col=ffff00> ", snapshot_main_v2:name);
+} else {
+	if_settext("<escape(%varcstring24)><col=ffff00>|", snapshot_main_v2:name);
+}
+if (compare(%varcstring24, "") = 0) {
+	if_setcolour(0xbbbbbb, snapshot_main_v2:com_58);
+} else {
+	if_setcolour(^white, snapshot_main_v2:com_58);
+}

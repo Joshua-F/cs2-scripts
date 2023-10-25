@@ -2,14 +2,14 @@
 [proc,side_if_open](int $int0)
 if (getwindowmode >= ^windowmode_resizable) {
 	if (if_hassub(toplevel_fullscreen:sidemodal) = true) {
-		if ($int0 ! 98 | if_hassub(toplevel_fullscreen:com_31) = false) {
+		if ($int0 ! 98 | if_hassub(toplevel_fullscreen:sidemodal2) = false) {
 			if_sethide(false, toplevel_fullscreen:sidemodal);
-			if_sethide(true, toplevel_fullscreen:com_31);
+			if_sethide(true, toplevel_fullscreen:sidemodal2);
 			if_sethide(false, toplevel_fullscreen:side_border);
 			if_sethide(true, toplevel_fullscreen:side_hide);
 		} else {
 			if_sethide(true, toplevel_fullscreen:sidemodal);
-			if_sethide(false, toplevel_fullscreen:com_31);
+			if_sethide(false, toplevel_fullscreen:sidemodal2);
 			if_sethide(false, toplevel_fullscreen:side_border);
 			if_sethide(true, toplevel_fullscreen:side_hide);
 		}
@@ -24,104 +24,104 @@ if (getwindowmode >= ^windowmode_resizable) {
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone0);
 				if_sethide(false, toplevel_fullscreen:side0);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_73);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_74);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight0);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 1 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone1);
 				if_sethide(false, toplevel_fullscreen:side1);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_75);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_76);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight1);
 				if_sethide(false, toplevel_fullscreen:side_border);
 				~script1658;
 			case 2 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone2);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_77);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_78);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight2);
 				if_sethide(false, toplevel_fullscreen:side2);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 3 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone3);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_79);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_80);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight3);
 				if_sethide(false, toplevel_fullscreen:side3);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 4 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone4);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_81);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_82);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight4);
 				if_sethide(false, toplevel_fullscreen:side4);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 5 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone5);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_83);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_84);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight5);
 				if_sethide(false, toplevel_fullscreen:side5);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 6 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone6);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_85);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_86);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight6);
 				if_sethide(false, toplevel_fullscreen:side6);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 7 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone7);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_87);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_88);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight7);
 				if_sethide(false, toplevel_fullscreen:side7);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 8 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone8);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_89);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_90);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight8);
 				if_sethide(false, toplevel_fullscreen:side8);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 9 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone9);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_91);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_92);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight9);
 				if_sethide(false, toplevel_fullscreen:side9);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 10 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone10);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_93);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_94);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight10);
 				if_sethide(false, toplevel_fullscreen:side10);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 11 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone11);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_95);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_96);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight11);
 				if_sethide(false, toplevel_fullscreen:side11);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 12 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone12);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_97);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_98);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight12);
 				if_sethide(false, toplevel_fullscreen:side12);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 13 :
 				if_setgraphic("graphic_1836", toplevel_fullscreen:stone13);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_99);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_100);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight13);
 				if_sethide(false, toplevel_fullscreen:side13);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 14 :
-				if_setgraphic("graphic_1836", toplevel_fullscreen:com_138);
+				if_setgraphic("graphic_1836", toplevel_fullscreen:stone14);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_101);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_102);
-				if_sethide(false, toplevel_fullscreen:com_47);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight14);
+				if_sethide(false, toplevel_fullscreen:side14);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 15 :
-				if_setgraphic("graphic_1836", toplevel_fullscreen:com_139);
+				if_setgraphic("graphic_1836", toplevel_fullscreen:stone15);
 				if_setgraphic("graphic_1841", toplevel_fullscreen:com_103);
-				if_setgraphic("graphic_1840", toplevel_fullscreen:com_104);
-				if_sethide(false, toplevel_fullscreen:com_48);
+				if_setgraphic("graphic_1840", toplevel_fullscreen:stonehighlight15);
+				if_sethide(false, toplevel_fullscreen:side15);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 98 :
-				if_sethide(false, toplevel_fullscreen:com_31);
+				if_sethide(false, toplevel_fullscreen:sidemodal2);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 95 :
-				if_sethide(false, toplevel_fullscreen:com_50);
+				if_sethide(false, toplevel_fullscreen:side95);
 				if_sethide(false, toplevel_fullscreen:side_border);
 			case 99 :
 				if_sethide(false, toplevel_fullscreen:side99);
@@ -129,13 +129,13 @@ if (getwindowmode >= ^windowmode_resizable) {
 		}
 	}
 } else if (if_hassub(toplevel:sidemodal) = true) {
-	if ($int0 ! 98 | if_hassub(toplevel:com_148) = false) {
+	if ($int0 ! 98 | if_hassub(toplevel:sidemodal2) = false) {
 		if_sethide(false, toplevel:sidemodal);
-		if_sethide(true, toplevel:com_148);
+		if_sethide(true, toplevel:sidemodal2);
 		if_sethide(true, toplevel:side_hide);
 	} else {
 		if_sethide(true, toplevel:sidemodal);
-		if_sethide(false, toplevel:com_148);
+		if_sethide(false, toplevel:sidemodal2);
 		if_sethide(true, toplevel:side_hide);
 	}
 } else {
@@ -145,88 +145,88 @@ if (getwindowmode >= ^windowmode_resizable) {
 		case 0 :
 			if_setgraphic("graphic_1836", toplevel:stone0);
 			if_setgraphic("graphic_1841", toplevel:com_98);
-			if_setgraphic("graphic_1840", toplevel:com_99);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight0);
 			if_sethide(false, toplevel:side0);
 		case 1 :
 			if_setgraphic("graphic_1836", toplevel:stone1);
 			if_setgraphic("graphic_1841", toplevel:com_100);
-			if_setgraphic("graphic_1840", toplevel:com_101);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight1);
 			if_sethide(false, toplevel:side1);
 			~script1659;
 		case 2 :
 			if_setgraphic("graphic_1836", toplevel:stone2);
 			if_setgraphic("graphic_1841", toplevel:com_102);
-			if_setgraphic("graphic_1840", toplevel:com_103);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight2);
 			if_sethide(false, toplevel:side2);
 		case 3 :
 			if_setgraphic("graphic_1836", toplevel:stone3);
 			if_setgraphic("graphic_1841", toplevel:com_104);
-			if_setgraphic("graphic_1840", toplevel:com_105);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight3);
 			if_sethide(false, toplevel:side3);
 		case 4 :
 			if_setgraphic("graphic_1836", toplevel:stone4);
 			if_setgraphic("graphic_1841", toplevel:com_106);
-			if_setgraphic("graphic_1840", toplevel:com_107);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight4);
 			if_sethide(false, toplevel:side4);
 		case 5 :
 			if_setgraphic("graphic_1836", toplevel:stone5);
 			if_setgraphic("graphic_1841", toplevel:com_108);
-			if_setgraphic("graphic_1840", toplevel:com_109);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight5);
 			if_sethide(false, toplevel:side5);
 		case 6 :
 			if_setgraphic("graphic_1836", toplevel:stone6);
 			if_setgraphic("graphic_1841", toplevel:com_110);
-			if_setgraphic("graphic_1840", toplevel:com_111);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight6);
 			if_sethide(false, toplevel:side6);
 		case 7 :
 			if_setgraphic("graphic_1836", toplevel:stone7);
 			if_setgraphic("graphic_1841", toplevel:com_112);
-			if_setgraphic("graphic_1840", toplevel:com_113);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight7);
 			if_sethide(false, toplevel:side7);
 		case 8 :
 			if_setgraphic("graphic_1836", toplevel:stone8);
 			if_setgraphic("graphic_1841", toplevel:com_35);
-			if_setgraphic("graphic_1840", toplevel:com_36);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight8);
 			if_sethide(false, toplevel:side8);
 		case 9 :
 			if_setgraphic("graphic_1836", toplevel:stone9);
 			if_setgraphic("graphic_1841", toplevel:com_37);
-			if_setgraphic("graphic_1840", toplevel:com_38);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight9);
 			if_sethide(false, toplevel:side9);
 		case 10 :
 			if_setgraphic("graphic_1836", toplevel:stone10);
 			if_setgraphic("graphic_1841", toplevel:com_39);
-			if_setgraphic("graphic_1840", toplevel:com_40);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight10);
 			if_sethide(false, toplevel:side10);
 		case 11 :
 			if_setgraphic("graphic_1836", toplevel:stone11);
 			if_setgraphic("graphic_1841", toplevel:com_41);
-			if_setgraphic("graphic_1840", toplevel:com_42);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight11);
 			if_sethide(false, toplevel:side11);
 		case 12 :
 			if_setgraphic("graphic_1836", toplevel:stone12);
 			if_setgraphic("graphic_1841", toplevel:com_43);
-			if_setgraphic("graphic_1840", toplevel:com_44);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight12);
 			if_sethide(false, toplevel:side12);
 		case 13 :
 			if_setgraphic("graphic_1836", toplevel:stone13);
 			if_setgraphic("graphic_1841", toplevel:com_45);
-			if_setgraphic("graphic_1840", toplevel:com_46);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight13);
 			if_sethide(false, toplevel:side13);
 		case 14 :
-			if_setgraphic("graphic_1836", toplevel:com_57);
+			if_setgraphic("graphic_1836", toplevel:stone14);
 			if_setgraphic("graphic_1841", toplevel:com_47);
-			if_setgraphic("graphic_1840", toplevel:com_48);
-			if_sethide(false, toplevel:com_166);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight14);
+			if_sethide(false, toplevel:side14);
 		case 15 :
-			if_setgraphic("graphic_1836", toplevel:com_58);
+			if_setgraphic("graphic_1836", toplevel:stone15);
 			if_setgraphic("graphic_1841", toplevel:com_49);
-			if_setgraphic("graphic_1840", toplevel:com_50);
-			if_sethide(false, toplevel:com_167);
+			if_setgraphic("graphic_1840", toplevel:stonehighlight15);
+			if_sethide(false, toplevel:side15);
 		case 98 :
-			if_sethide(false, toplevel:com_148);
+			if_sethide(false, toplevel:sidemodal2);
 		case 95 :
-			if_sethide(false, toplevel:com_169);
+			if_sethide(false, toplevel:side95);
 		case 99 :
 			if_sethide(false, toplevel:side99);
 	}

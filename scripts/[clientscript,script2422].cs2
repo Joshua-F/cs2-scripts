@@ -1,23 +1,23 @@
 // 2422
 [clientscript,script2422]
-if_sethide(true, interface_768:draughts_board);
-if_sethide(true, interface_768:runelink_board);
-if_sethide(true, interface_768:com_2);
-if_sethide(true, interface_768:com_3);
+if_sethide(true, boardgames_rank_overlay:draughts_board);
+if_sethide(true, boardgames_rank_overlay:runelink_board);
+if_sethide(true, boardgames_rank_overlay:runesquares_board);
+if_sethide(true, boardgames_rank_overlay:runeversi_board);
 if (%varcint808 = 1) {
-	if_sethide(false, interface_768:draughts_board);
-	if_settext("Draughts", interface_768:com_4);
-	if_settext(tostring(%var354), interface_768:rank);
+	if_sethide(false, boardgames_rank_overlay:draughts_board);
+	if_settext("Draughts", boardgames_rank_overlay:game_name);
+	if_settext(tostring(%var354), boardgames_rank_overlay:rank);
 } else if (%varcint808 = 2) {
-	if_sethide(false, interface_768:runelink_board);
-	if_settext("Runelink", interface_768:com_4);
-	if_settext(tostring(%var353), interface_768:rank);
+	if_sethide(false, boardgames_rank_overlay:runelink_board);
+	if_settext("Runelink", boardgames_rank_overlay:game_name);
+	if_settext(tostring(%var353), boardgames_rank_overlay:rank);
 } else if (%varcint808 = 3) {
-	if_sethide(false, interface_768:com_2);
-	if_settext("Runesquares", interface_768:com_4);
-	if_settext(tostring(%var648), interface_768:rank);
+	if_sethide(false, boardgames_rank_overlay:runesquares_board);
+	if_settext("Runesquares", boardgames_rank_overlay:game_name);
+	if_settext(tostring(%var648), boardgames_rank_overlay:rank);
 } else if (%varcint808 = 4) {
-	if_sethide(false, interface_768:com_3);
-	if_settext("Runeversi", interface_768:com_4);
-	if_settext(tostring(%var649), interface_768:rank);
+	if_sethide(false, boardgames_rank_overlay:runeversi_board);
+	if_settext("Runeversi", boardgames_rank_overlay:game_name);
+	if_settext(tostring(%var649), boardgames_rank_overlay:rank);
 }

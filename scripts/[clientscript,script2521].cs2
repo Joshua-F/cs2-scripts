@@ -6,28 +6,28 @@ def_int $int2 = 0;
 def_int $num3 = 0;
 def_int $int4 = -1;
 def_namedobj $namedobj5 = null;
-$int1 = calc((if_getwidth(interface_848:spoils) - 180) / 4);
-$int2 = calc((if_getheight(interface_848:spoils) - 128) / 3);
+$int1 = calc((if_getwidth(mob_reward_spoils:spoils) - 180) / 4);
+$int2 = calc((if_getheight(mob_reward_spoils:spoils) - 128) / 3);
 while ($int0 < 5 & enum(int, namedobj, %varcint875, $int0) ! logs_11760) {
 	$namedobj5 = enum(int, namedobj, %varcint875, $int0);
 	switch_int ($int0) {
 		case 0 :
-			if_settext(oc_name(oc_uncert($namedobj5)), interface_848:text1);
+			if_settext(oc_name(oc_uncert($namedobj5)), mob_reward_spoils:text1);
 			$num3 = %varcint876;
 		case 1 :
-			if_settext(oc_name(oc_uncert($namedobj5)), interface_848:text2);
+			if_settext(oc_name(oc_uncert($namedobj5)), mob_reward_spoils:text2);
 			$num3 = %varcint877;
 		case 2 :
-			if_settext(oc_name(oc_uncert($namedobj5)), interface_848:text3);
+			if_settext(oc_name(oc_uncert($namedobj5)), mob_reward_spoils:text3);
 			$num3 = %varcint878;
 		case 3 :
-			if_settext(oc_name(oc_uncert($namedobj5)), interface_848:text4);
+			if_settext(oc_name(oc_uncert($namedobj5)), mob_reward_spoils:text4);
 			$num3 = %varcint879;
 		case 4 :
-			if_settext(oc_name(oc_uncert($namedobj5)), interface_848:text5);
+			if_settext(oc_name(oc_uncert($namedobj5)), mob_reward_spoils:text5);
 			$num3 = %varcint880;
 	}
-	cc_create(interface_848:spoils, ^iftype_graphic, $int0);
+	cc_create(mob_reward_spoils:spoils, ^iftype_graphic, $int0);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc((36 + $int1) * ($int0 % 5)), calc($int0 / 5 * (32 + $int2)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setobject(oc_uncert($namedobj5), $num3);

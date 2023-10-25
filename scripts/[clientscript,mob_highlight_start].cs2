@@ -1,0 +1,8 @@
+// 2629
+[clientscript,mob_highlight_start](component $component0)
+if (%varcint905 = $component0 & %varcint904 = 1) {
+	~mob_highlight_stop;
+	return;
+}
+~mob_highlight_stop;
+~mob_highlight_start($component0);

@@ -1,17 +1,17 @@
 // 2355
 [clientscript,script2355]
-if_sethide(true, interface_309:com_6);
-if_sethide(true, interface_309:com_13);
-if_sethide(false, interface_309:com_7);
-if_sethide(false, interface_309:scrollbar);
-if_setgraphic("graphic_1048", interface_309:com_16);
-if_setgraphic("graphic_1055", interface_309:com_15);
+if_sethide(true, player_kit_hair:com_6);
+if_sethide(true, player_kit_hair:com_13);
+if_sethide(false, player_kit_hair:com_7);
+if_sethide(false, player_kit_hair:scrollbar);
+if_setgraphic("graphic_1048", player_kit_hair:com_16);
+if_setgraphic("graphic_1055", player_kit_hair:beard_tab);
 %varcint776 = 0;
-~script2358(interface_309:com_7);
+~script2358(player_kit_hair:com_7);
 if (gender = 1) {
 	%varcint773 = 1250;
 } else {
 	%varcint773 = 900;
 }
-~script2364(interface_309:scrollbar, interface_309:com_7);
-~script2366(interface_309:com_7, %varcint774, ~script2362);
+~player_kit_scroll(player_kit_hair:scrollbar, player_kit_hair:com_7);
+~player_kit_select(player_kit_hair:com_7, %varcint774, ~script2362);

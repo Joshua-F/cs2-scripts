@@ -17,9 +17,9 @@ if (~getsidehidden(1) = true | if_hassub(toplevel_fullscreen:sidemodal) = true) 
 	if_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top, toplevel_fullscreen:side_hide);
 	if_setsize(190, 293, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:side1);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, toplevel_fullscreen:side1);
-	if_setsize(190, 261, ^setsize_abs, ^setsize_abs, stats:com_0);
+	if_setsize(190, 261, ^setsize_abs, ^setsize_abs, stats:bg_rect);
 	if_setsize(190, 273, ^setsize_abs, ^setsize_abs, stats:tips);
-	if_setposition(0, 269, ^setpos_abs_left, ^setpos_abs_top, stats:com_149);
+	if_setposition(0, 269, ^setpos_abs_left, ^setpos_abs_top, stats:border_bottom);
 	if_setsize(182, 258, ^setsize_abs, ^setsize_abs, stats:com_147);
 	cc_deleteall(stats:com_2);
 	if_setscrollpos(0, 0, stats:com_147);

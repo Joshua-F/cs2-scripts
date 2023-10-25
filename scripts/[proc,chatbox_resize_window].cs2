@@ -1,0 +1,22 @@
+// 1650
+[proc,chatbox_resize_window]
+if (~script1653 = 1) {
+	~chatbox_resize_reset(0);
+	if_sethide(true, toplevel_fullscreen:chatbox_resize_dragger);
+	return;
+}
+if (%varcint41 ! -1) {
+	if_sethide(false, toplevel_fullscreen:chatbox_resize_dragger);
+}
+if (%varcint1037 < 142) {
+	%varcint1037 = 142;
+} else if (%varcint1037 > calc(if_getheight(toplevel_fullscreen:maingame) - 117)) {
+	~chatbox_resize(0, 1);
+	return;
+}
+if_setsize(519, %varcint1037, ^setsize_abs, ^setsize_abs, toplevel_fullscreen:chattop);
+if_setposition(0, 23, ^setpos_abs_left, ^setpos_abs_bottom, toplevel_fullscreen:chattop);
+if_setposition(0, calc(if_gety(toplevel_fullscreen:chattop) - 94), ^setpos_abs_left, ^setpos_abs_top, toplevel_fullscreen:chatbox_resize_dragger);
+if_setposition(0, calc(if_gety(toplevel_fullscreen:chattop) - 69), ^setpos_abs_left, ^setpos_abs_top, toplevel_fullscreen:pmchat);
+~script1301(chatdefault:scrollbar, chatdefault:scrollarea);
+~rebuildchatbox;

@@ -1,0 +1,10 @@
+// 564
+[clientscript,chatbox_resize_load]
+if (%varcint1037 > calc(if_getheight(toplevel_fullscreen:maingame) - 117)) {
+	~chatbox_resize_reset(1);
+} else {
+	~chatbox_resize_window;
+}
+if_setdraggable(toplevel_fullscreen:chatbox_resize, -1, toplevel_fullscreen:chatbox_resize_dragger);
+if_setondrag("chatbox_resize_drag(event_mousey, false)", toplevel_fullscreen:chatbox_resize_dragger);
+if_setondragcomplete("chatbox_resize_drag(event_mousey, true)", toplevel_fullscreen:chatbox_resize_dragger);

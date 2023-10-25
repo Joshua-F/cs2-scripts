@@ -1,5 +1,5 @@
 // 1608
 [clientscript,script1608]
 def_seq $seq0 = bas_getanim_ready(oc_param(inv_getobj(worn, 3), param_644));
-if_setmodelanim($seq0, interface_549:com_82);
-if_setplayermodel_self(interface_549:com_82);
+if_setmodelanim($seq0, boothpreview:playermodel);
+if_setplayermodel_self(boothpreview:playermodel);

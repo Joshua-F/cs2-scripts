@@ -2,11 +2,11 @@
 [clientscript,script2657]
 %varbit6302 = 0;
 if (%varbit6290 = 0) {
-	if_sethide(false, interface_876:com_4);
+	if_sethide(false, interface_876:blackout);
 	if_sethide(true, interface_876:com_5);
 }
 if (%varbit6290 = 1) {
-	if_sethide(true, interface_876:com_4);
+	if_sethide(true, interface_876:blackout);
 	spline_new(0, 2);
 	spline_new(1, 2);
 	spline_addpoint(0, 0, 0_51_156_10_60, 1450, 0_51_156_15_62, 1385, 0);
@@ -28,7 +28,7 @@ if (%varbit6290 = 2) {
 	if_setoncamfinished("script2658", interface_876:com_0);
 }
 if (%varbit6290 = 3) {
-	if_sethide(true, interface_876:com_4);
+	if_sethide(true, interface_876:blackout);
 	spline_new(0, 4);
 	spline_new(1, 4);
 	spline_addpoint(0, 0, 0_52_156_30_48, 805, 0_52_156_27_47, 650, 0);
@@ -43,7 +43,7 @@ if (%varbit6290 = 3) {
 	if_setoncamfinished("script2658", interface_876:com_0);
 }
 if (%varbit6290 = 4) {
-	if_sethide(true, interface_876:com_4);
+	if_sethide(true, interface_876:blackout);
 	spline_new(0, 3);
 	spline_new(1, 3);
 	spline_addpoint(0, 0, 0_51_156_18_55, 1125, 0_51_156_19_54, 1085, 0);

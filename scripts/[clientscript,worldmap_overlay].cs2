@@ -31,12 +31,12 @@ if ($int12 ! $int2 | $int13 ! $int3 | $int7 ! $int4) {
 	~worldmap_elements_update($component0, $int8, $int9, $int10, $int11);
 }
 if (%varbit6174 = 0) {
-	~script4(worldmap:com_36, %varcint674, "You are here", struct_280, $component0, $int8, $int9, $int10, $int11);
+	~worldmap_arrow_update(worldmap:com_36, %varcint674, "You are here", struct_280, $component0, $int8, $int9, $int10, $int11);
 } else {
 	cc_deleteall(worldmap:com_36);
 }
-~script4(worldmap:arrow0, %varcint623, %varcstring53, %varcint624, $component0, $int8, $int9, $int10, $int11);
-~script4(worldmap:arrow1, %varcint625, %varcstring54, %varcint626, $component0, $int8, $int9, $int10, $int11);
-~script4(worldmap:arrow2, %varcint627, %varcstring55, %varcint628, $component0, $int8, $int9, $int10, $int11);
-~script4(worldmap:arrow3, %varcint629, %varcstring56, %varcint630, $component0, $int8, $int9, $int10, $int11);
-~script4(worldmap:com_41, %varcint940, %varcstring190, %varcint941, $component0, $int8, $int9, $int10, $int11);
+~worldmap_arrow_update(worldmap:arrow0, %varcint623, %varcstring53, %varcint624, $component0, $int8, $int9, $int10, $int11);
+~worldmap_arrow_update(worldmap:arrow1, %varcint625, %varcstring54, %varcint626, $component0, $int8, $int9, $int10, $int11);
+~worldmap_arrow_update(worldmap:arrow2, %varcint627, %varcstring55, %varcint628, $component0, $int8, $int9, $int10, $int11);
+~worldmap_arrow_update(worldmap:arrow3, %varcint629, %varcstring56, %varcint630, $component0, $int8, $int9, $int10, $int11);
+~worldmap_arrow_update(worldmap:arrow_gravestone, %varcint940, %varcstring190, %varcint941, $component0, $int8, $int9, $int10, $int11);

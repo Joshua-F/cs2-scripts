@@ -1,0 +1,11 @@
+// 200
+[clientscript,clansetup_onload](component $component0, component $component1)
+if_setonfriendtransmit("clansetup_onfriendtransmit($component0, $component1)", $component0);
+if_setscrollsize(0, 0, $component0);
+if_setscrollpos(0, 0, $component0);
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script202($component0, $component1);
+if (_3328 = true) {
+	if_settext("Clan channel:", clansetup:com_27);
+	if_setop(1, "Enable", clansetup:com_22);
+}

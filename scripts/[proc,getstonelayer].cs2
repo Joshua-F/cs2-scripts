@@ -1,0 +1,74 @@
+// 2458
+[proc,getstonelayer](int $int0)(component)
+if (getwindowmode >= ^windowmode_resizable) {
+	switch_int ($int0) {
+		case 0 :
+			return(toplevel_fullscreen:stone0);
+		case 1 :
+			return(toplevel_fullscreen:stone1);
+		case 2 :
+			return(toplevel_fullscreen:stone2);
+		case 3 :
+			return(toplevel_fullscreen:stone3);
+		case 4 :
+			return(toplevel_fullscreen:stone4);
+		case 5 :
+			return(toplevel_fullscreen:stone5);
+		case 6 :
+			return(toplevel_fullscreen:stone6);
+		case 7 :
+			return(toplevel_fullscreen:stone7);
+		case 8 :
+			return(toplevel_fullscreen:stone8);
+		case 9 :
+			return(toplevel_fullscreen:stone9);
+		case 10 :
+			return(toplevel_fullscreen:stone10);
+		case 11 :
+			return(toplevel_fullscreen:stone11);
+		case 12 :
+			return(toplevel_fullscreen:stone12);
+		case 13 :
+			return(toplevel_fullscreen:stone13);
+		case 14 :
+			return(toplevel_fullscreen:stone14);
+		case 15 :
+			return(toplevel_fullscreen:stone15);
+	}
+} else {
+	switch_int ($int0) {
+		case 0 :
+			return(toplevel:stone0);
+		case 1 :
+			return(toplevel:stone1);
+		case 2 :
+			return(toplevel:stone2);
+		case 3 :
+			return(toplevel:stone3);
+		case 4 :
+			return(toplevel:stone4);
+		case 5 :
+			return(toplevel:stone5);
+		case 6 :
+			return(toplevel:stone6);
+		case 7 :
+			return(toplevel:stone7);
+		case 8 :
+			return(toplevel:stone8);
+		case 9 :
+			return(toplevel:stone9);
+		case 10 :
+			return(toplevel:stone10);
+		case 11 :
+			return(toplevel:stone11);
+		case 12 :
+			return(toplevel:stone12);
+		case 13 :
+			return(toplevel:stone13);
+		case 14 :
+			return(toplevel:stone14);
+		case 15 :
+			return(toplevel:stone15);
+	}
+}
+return(null);

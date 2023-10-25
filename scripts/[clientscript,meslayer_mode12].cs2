@@ -20,7 +20,7 @@ if (string_length(%varcstring38) > 0) {
 	if_settext("Enter the name of your caller:", chattop:mes_text);
 }
 %varcint5 = 12;
-~script1564(%varcstring38);
+~meslayer_setupinput(%varcstring38);
 if_setonclick("script1805", chattop:mes_layer);
 ~script2026;
 if_setonkey("meslayer_onkey(event_keycode, event_keychar)", chattop:mes_text2);

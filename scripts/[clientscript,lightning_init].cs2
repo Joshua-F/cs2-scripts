@@ -1,0 +1,4 @@
+// 137
+[clientscript,lightning_init](component $component0, component $component1)
+if_setontimer("lightning_update($component1)", $component0);
+~lightning_update($component1);

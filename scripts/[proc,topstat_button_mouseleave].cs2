@@ -1,0 +1,7 @@
+// 2309
+[proc,topstat_button_mouseleave](component $component0, int $int1)
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setgraphic("graphic_1207", $component0);
+} else {
+	if_setgraphic("graphic_1206", $component0);
+}

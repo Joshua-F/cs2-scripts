@@ -2,13 +2,13 @@
 [proc,script1707](stat $stat0)(component)
 switch_stat ($stat0) {
 	case attack :
-		return(prayer:com_34);
+		return(prayer:attack_txt);
 	case strength :
-		return(prayer:com_33);
+		return(prayer:strength_txt);
 	case defence :
-		return(prayer:com_32);
+		return(prayer:defence_txt);
 	case ranged :
-		return(prayer:com_31);
+		return(prayer:ranged_txt);
 	case magic :
 		return(prayer:magic_txt);
 	case default :

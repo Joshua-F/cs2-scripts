@@ -1,12 +1,12 @@
 // 2357
 [clientscript,script2357](component $component0)
 if (gender = 1) {
-	if_sethide(true, interface_309:com_15);
+	if_sethide(true, player_kit_hair:beard_tab);
 } else {
 	%varcint776 = 0;
-	if_sethide(false, interface_309:com_15);
-	if_setgraphic("graphic_1055", interface_309:com_15);
-	if_setop(1, "View Hairstyles", interface_309:com_16);
-	if_setop(1, "View Beards", interface_309:com_15);
+	if_sethide(false, player_kit_hair:beard_tab);
+	if_setgraphic("graphic_1055", player_kit_hair:beard_tab);
+	if_setop(1, "View Hairstyles", player_kit_hair:com_16);
+	if_setop(1, "View Beards", player_kit_hair:beard_tab);
 }
 ~script2358($component0);

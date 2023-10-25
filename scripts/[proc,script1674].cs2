@@ -7,7 +7,7 @@ def_string $op0 = "";
 def_int $int4 = 0;
 def_int $int5 = 0;
 $op0 = enum(int, string, $enum1, 0);
-cc_create(interface_84:com_22, ^iftype_graphic, 0);
+cc_create(interface_84:listbox_text, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, $int3, ^setpos_abs_left, ^setpos_abs_top);
 if ($int0 = 0) {
@@ -16,14 +16,14 @@ if ($int0 = 0) {
 } else {
 	cc_setgraphic("options_radio_buttons,0");
 }
-.cc_create(interface_84:com_22, ^iftype_text, 1);
+.cc_create(interface_84:listbox_text, ^iftype_text, 1);
 .cc_settextfont(p11_full);
 .cc_setcolour(0xff981f);
 .cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 .cc_setsize(23, 16, ^setsize_minus, ^setsize_abs);
 .cc_setposition(0, calc($int3 + 2), ^setpos_abs_right, ^setpos_abs_top);
 .cc_settext($op0);
-cc_create(interface_84:com_22, ^iftype_rectangle, 2);
+cc_create(interface_84:listbox_text, ^iftype_rectangle, 2);
 cc_setsize(0, 17, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
 cc_settrans(255);
@@ -32,14 +32,14 @@ if ($int0 ! 0) {
 	cc_setop(1, $op0);
 	cc_setonmouseover("cc_text_colour_swapper(event_com, .cc_getid, ^white)");
 	cc_setonmouseleave("cc_text_colour_swapper(event_com, .cc_getid, 0xff981f)");
-	cc_setonop("script1676(event_op, 0, $int0)");
+	cc_setonop("champions_onop(event_op, 0, $int0)");
 }
 $int3 = calc($int3 + cc_getheight);
 $int5 = 1;
 while ($int2 < enum_getoutputcount($enum1)) {
 	if (testbit(%var617, calc($int2 - 1)) = ^true) {
 		$op0 = enum(int, string, $enum1, $int2);
-		cc_create(interface_84:com_22, ^iftype_graphic, calc($int5 * 3));
+		cc_create(interface_84:listbox_text, ^iftype_graphic, calc($int5 * 3));
 		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, $int3, ^setpos_abs_left, ^setpos_abs_top);
 		if ($int2 = $int0) {
@@ -48,14 +48,14 @@ while ($int2 < enum_getoutputcount($enum1)) {
 		} else {
 			cc_setgraphic("options_radio_buttons,0");
 		}
-		.cc_create(interface_84:com_22, ^iftype_text, calc($int5 * 3 + 1));
+		.cc_create(interface_84:listbox_text, ^iftype_text, calc($int5 * 3 + 1));
 		.cc_settextfont(p11_full);
 		.cc_setcolour(0xff981f);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_setsize(23, 16, ^setsize_minus, ^setsize_abs);
 		.cc_setposition(0, calc($int3 + 2), ^setpos_abs_right, ^setpos_abs_top);
 		.cc_settext($op0);
-		cc_create(interface_84:com_22, ^iftype_rectangle, calc($int5 * 3 + 2));
+		cc_create(interface_84:listbox_text, ^iftype_rectangle, calc($int5 * 3 + 2));
 		cc_setsize(0, 17, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settrans(255);
@@ -64,7 +64,7 @@ while ($int2 < enum_getoutputcount($enum1)) {
 			cc_setop(1, $op0);
 			cc_setonmouseover("cc_text_colour_swapper(event_com, .cc_getid, ^white)");
 			cc_setonmouseleave("cc_text_colour_swapper(event_com, .cc_getid, 0xff981f)");
-			cc_setonop("script1676(event_op, $int2, $int0)");
+			cc_setonop("champions_onop(event_op, $int2, $int0)");
 		}
 		$int3 = calc($int3 + cc_getheight);
 		$int5 = calc($int5 + 1);

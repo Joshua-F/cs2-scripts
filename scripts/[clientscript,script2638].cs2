@@ -1,9 +1,9 @@
 // 2638
 [clientscript,script2638]
 if (%varcint903 = 0) {
-	if_setgraphic("graphic_2023", interface_859:com_26);
-	if_settext("Light", interface_859:com_10);
+	if_setgraphic("graphic_2023", mob_side_command:com_26);
+	if_settext("Light", mob_side_command:com_10);
 } else if (%varcint903 = 1) {
-	if_setgraphic("graphic_2022", interface_859:com_26);
-	if_settext("Heavy", interface_859:com_10);
+	if_setgraphic("graphic_2022", mob_side_command:com_26);
+	if_settext("Heavy", mob_side_command:com_10);
 }

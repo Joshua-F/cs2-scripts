@@ -1,0 +1,9 @@
+// 2801
+[proc,fade2_generic](component $component0, int $int1, int $colour2)
+if_setcolour($colour2, $component0);
+if ($int1 > 0) {
+	if_settrans(0, $component0);
+} else {
+	if_settrans(255, $component0);
+}
+if_setontimer("fade2_timer($int1, $component0)", $component0);

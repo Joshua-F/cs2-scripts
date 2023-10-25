@@ -9,16 +9,16 @@ switch_int ($key0) {
 		~script308($component2);
 		return;
 	case ^key_left :
-		~script1603(-1, 0);
+		~worldmap_arrowkey(-1, 0);
 		return;
 	case ^key_right :
-		~script1603(1, 0);
+		~worldmap_arrowkey(1, 0);
 		return;
 	case ^key_up :
-		~script1603(0, 1);
+		~worldmap_arrowkey(0, 1);
 		return;
 	case ^key_down :
-		~script1603(0, -1);
+		~worldmap_arrowkey(0, -1);
 		return;
 	case default :
 		def_string $string0 = removetags(~add_to_inputstring(%varcstring31, 4, $key0, $keychar1));

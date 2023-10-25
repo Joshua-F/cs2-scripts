@@ -1,0 +1,40 @@
+// 1293
+[proc,prayer_load_glow](component $component0)
+cc_deleteall($component0);
+def_int $int1 = 5;
+def_int $width2 = 34;
+def_int $height3 = 34;
+def_int $int4 = 0;
+def_int $int5 = 6;
+def_int $int6 = $int5;
+def_int $int7 = 3;
+def_int $int8 = calc(34 + 3);
+if (%varcint1052 = 1 & %varbit6840 = 0) {
+	$int5 = 3;
+	$int6 = $int5;
+	$int8 = calc(34 + 0);
+}
+def_int $int9 = calc(34 + 2);
+if (%varcint181 = 1) {
+	$int5 = 6;
+	$int6 = $int5;
+	$int7 = 28;
+	$int8 = calc(34 + 5);
+	$int9 = calc(34 + 3);
+}
+def_int $int10 = 27;
+if (%varbit6840 = 1) {
+	$int10 = 20;
+}
+while ($int4 < $int10) {
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize($width2, $height3, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	$int4 = calc($int4 + 1);
+	if (calc($int4 % $int1) = 0) {
+		$int6 = $int5;
+		$int7 = calc($int7 + $int9);
+	} else {
+		$int6 = calc($int6 + $int8);
+	}
+}

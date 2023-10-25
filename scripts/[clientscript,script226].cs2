@@ -1,12 +1,12 @@
 // 226
 [clientscript,script226]
-~script231;
+~snapshot_hide_help;
 ~script232;
-if_sethide(false, interface_594:com_149);
+if_sethide(false, snapshot_main_v2:com_149);
 if (map_lang = 1) {
-	if_sethide(false, interface_594:com_210);
-	if_sethide(true, interface_594:com_212);
+	if_sethide(false, snapshot_main_v2:com_210);
+	if_sethide(true, snapshot_main_v2:com_212);
 } else {
-	if_sethide(true, interface_594:com_210);
-	if_sethide(false, interface_594:com_212);
+	if_sethide(true, snapshot_main_v2:com_210);
+	if_sethide(false, snapshot_main_v2:com_212);
 }

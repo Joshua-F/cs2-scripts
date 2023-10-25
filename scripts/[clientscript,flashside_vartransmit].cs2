@@ -7,6 +7,6 @@ if (%varbit3756 < 1 | %varbit3756 > 20 | ~getsidehidden(calc(%varbit3756 - 1)) =
 	~subchanged;
 	return;
 }
-~script2756;
+~flashside_arrow;
 if_setontimer("flashside_timer", toplevel_fullscreen:stones_on);
 if_setontimer("flashside_timer", toplevel:com_80);

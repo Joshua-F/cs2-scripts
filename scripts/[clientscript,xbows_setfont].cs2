@@ -1,0 +1,9 @@
+// 2352
+[clientscript,xbows_setfont]
+if (map_lang = 2 | map_lang = 3) {
+	if_settextfont(p11_full, xbows_pouch:text1);
+	if_settextfont(p11_full, xbows_pouch:text2);
+	if_settextfont(p11_full, xbows_pouch:text3);
+	if_settextfont(p11_full, xbows_pouch:text4);
+	if_settextfont(p11_full, xbows_pouch:text5);
+}

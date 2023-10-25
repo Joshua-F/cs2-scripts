@@ -11,7 +11,7 @@ if_sethide(true, chattop:mes_layer_large);
 if_sethide(true, chattop:mes_layer_hide);
 if_settext("Enter name of friend to delete from list", chattop:mes_text);
 %varcint5 = 3;
-~script1564("");
+~meslayer_setupinput("");
 if_setonclick(null, chattop:mes_layer);
 ~script2026;
 if_setonkey("meslayer_onkey(event_keycode, event_keychar)", chattop:mes_text2);

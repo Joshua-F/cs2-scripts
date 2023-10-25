@@ -1,0 +1,15 @@
+// 1616
+[clientscript,inventory_drag](component $drop0, int $int1, component $drop2, int $int3)
+if ($drop0 ! $drop2) {
+	return;
+}
+def_int $size4 = inv_size(inv);
+$int1 = calc($int1 % $size4);
+$int3 = calc($int3 % $size4);
+def_int $x5 = 0;
+def_int $y6 = 0;
+if (cc_find($drop0, $int1) = ^true & .cc_find($drop2, $int3) = ^true) {
+	$x5, $y6 = cc_getx, cc_gety;
+	cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition($x5, $y6, ^setpos_abs_left, ^setpos_abs_top);
+}

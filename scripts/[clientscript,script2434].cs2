@@ -3,14 +3,14 @@
 %varcint815 = calc($int0 * 300 / 10);
 if (%varcint815 > 0) {
 	if (getwindowmode < ^windowmode_resizable) {
-		if_setontimer("script2435", toplevel:com_9);
-		if_sethide(false, toplevel:com_10);
-		if_sethide(false, toplevel:com_11);
+		if_setontimer("gravestone_update_timer", toplevel:gravestone_layer);
+		if_sethide(false, toplevel:gravestone_background);
+		if_sethide(false, toplevel:gravestone_timer);
 	} else {
-		if_setontimer("script2435", toplevel_fullscreen:com_10);
-		if_sethide(false, toplevel_fullscreen:com_161);
-		if_sethide(false, toplevel_fullscreen:com_160);
+		if_setontimer("gravestone_update_timer", toplevel_fullscreen:gravestone_layer);
+		if_sethide(false, toplevel_fullscreen:gravestone_timer);
+		if_sethide(false, toplevel_fullscreen:gravestone_background);
 	}
 } else {
-	~script2436;
+	~gravestone_stop_timer;
 }

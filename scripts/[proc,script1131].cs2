@@ -1,7 +1,0 @@
-// 1131
-[proc,script1131](component $component0)
-if (%varcint1000 > comlevel_active) {
-	if_settext("Combat Lvl: <tostring(comlevel_active)>+<tostring(calc(%varcint1000 - comlevel_active))>", $component0);
-} else {
-	if_settext("Combat Lvl: <tostring(comlevel_active)>", $component0);
-}

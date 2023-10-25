@@ -1,9 +1,0 @@
-// 2624
-[clientscript,script2624]
-def_int $int0 = 1;
-def_component $component1 = null;
-while (enum(int, component, enum_2450, $int0) ! interface_850:com_24) {
-	$component1 = enum(int, component, enum_2450, $int0);
-	if_settext("<col=800000><enum(component, string, enum_2449, $component1)>  <col=000000><enum(component, string, enum_2448, $component1)>", $component1);
-	$int0 = calc($int0 + 1);
-}

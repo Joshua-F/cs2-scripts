@@ -1,0 +1,7 @@
+// 2562
+[clientscript,mob_buy_add]
+if (%varcint846 < 10) {
+	%varcint846 = calc(%varcint846 + 1);
+}
+if_settext(tostring(%varcint846), mob_squad_buy:quantity_field);
+~script2565;

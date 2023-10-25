@@ -1,28 +1,28 @@
 // 1741
 [proc,topstat_run_button_update](component $component0)
 if (%varcint119 = 1) {
-	if_setgraphic("graphic_781", topstat_run:com_6);
-	if_setgraphic("graphic_783", topstat_run:com_3);
+	if_setgraphic("topstat_icon,4", topstat_run:run_graphic);
+	if_setgraphic("graphic_783", topstat_run:run_circle);
 	if_setop(1, "Turn run mode off", $component0);
 } else if (%varcint119 = 0) {
-	if_setgraphic("topstat_icon,2", topstat_run:com_6);
-	if_setgraphic("graphic_1210", topstat_run:com_3);
+	if_setgraphic("topstat_icon,2", topstat_run:run_graphic);
+	if_setgraphic("graphic_1210", topstat_run:run_circle);
 	if_setop(1, "Turn run mode on", $component0);
 } else if (%varcint119 = 3) {
-	if_setgraphic("graphic_1794", topstat_run:com_6);
+	if_setgraphic("topstat_icon,5", topstat_run:run_graphic);
 } else if (%varcint119 = 4) {
-	if_setgraphic("graphic_1795", topstat_run:com_6);
+	if_setgraphic("topstat_icon,6", topstat_run:run_graphic);
 }
 if (getwindowmode >= ^windowmode_resizable) {
 	if_setgraphic("graphic_1207", $component0);
-	if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_run:com_3);
-	if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_run:com_4);
-	if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_run:com_5);
-	if_setposition(31, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_run:com_6);
+	if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_run:run_circle);
+	if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_run:run_hide);
+	if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_run:run_text);
+	if_setposition(31, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_run:run_graphic);
 } else {
 	if_setgraphic("graphic_1206", $component0);
-	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_run:com_3);
-	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_run:com_4);
-	if_setposition(29, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_run:com_5);
-	if_setposition(7, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_run:com_6);
+	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_run:run_circle);
+	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_run:run_hide);
+	if_setposition(29, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_run:run_text);
+	if_setposition(7, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_run:run_graphic);
 }

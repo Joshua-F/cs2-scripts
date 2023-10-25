@@ -13,8 +13,8 @@ if ($component0 = loginscreen:com_392) {
 	}
 	~script1868;
 	%varcint547 = 0;
-	if_setonclick("loginscreen_setactivemenu(interface_882:com_0)", loginscreen:graphics_options);
-	~script2596(detailget_toolkit, getwindowmode, -1, -1, 0);
+	if_setonclick("loginscreen_setactivemenu(loginscreen_graphics_options:com_0)", loginscreen:graphics_options);
+	~graphics_options_rebuild(detailget_toolkit, getwindowmode, -1, -1, 0);
 	~loginscreen_musicvol(loginscreen:com_491, loginscreen:music_slider);
 	if_sethide(false, loginscreen:com_392);
 	~script2709(290, 338, 49);
@@ -83,15 +83,15 @@ if ($component0 = loginscreen:general_messages) {
 if ($component0 = loginscreen:com_10) {
 	if_sethide(false, loginscreen:com_10);
 	~script2709(754, 425, 10);
-	~script2213;
+	~create_setup;
 } else {
 	if_sethide(true, loginscreen:com_10);
 }
-if ($component0 = interface_882:com_0) {
+if ($component0 = loginscreen_graphics_options:com_0) {
 	if_sethide(false, loginscreen:com_165);
-	if_opensubclient(loginscreen:com_165, clientinterface_882);
-	~script2595(1);
-	if_setonclick("loginscreen_setactivemenu(loginscreen:com_392)", interface_882:cancel);
+	if_opensubclient(loginscreen:com_165, loginscreen_graphics_options);
+	~graphics_options_init(1);
+	if_setonclick("loginscreen_setactivemenu(loginscreen:com_392)", loginscreen_graphics_options:cancel);
 } else {
 	if_closesubclient(loginscreen:com_165);
 	if_sethide(true, loginscreen:com_165);
@@ -107,7 +107,7 @@ if ($component0 = loginscreen:com_396) {
 	if_sethide(true, loginscreen:com_396);
 }
 if ($component0 = loginscreen:com_166) {
-	~script1873;
+	~worldswitcher_init;
 	if_sethide(false, loginscreen:com_166);
 	if_sethide(true, loginscreen:com_165);
 	~script2709(754, -10, 0);
@@ -116,10 +116,10 @@ if ($component0 = loginscreen:com_166) {
 	if_sethide(true, loginscreen:com_166);
 	worldlist_pingworlds(false);
 }
-if ($component0 = loginscreen:com_164) {
+if ($component0 = loginscreen:create_success) {
 	%varcint174 = 22;
-	if_sethide(false, loginscreen:com_164);
+	if_sethide(false, loginscreen:create_success);
 	~script2709(754, 440, 0);
 } else {
-	if_sethide(true, loginscreen:com_164);
+	if_sethide(true, loginscreen:create_success);
 }

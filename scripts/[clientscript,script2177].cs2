@@ -1,5 +1,5 @@
 // 2177
 [clientscript,script2177](int $comsubid0)
-if (cc_find(interface_190:com_18, $comsubid0) = ^true) {
+if (cc_find(questlist_tr:quests, $comsubid0) = ^true) {
 	cc_setontimer("script2178($comsubid0, cc_gettext)");
 }

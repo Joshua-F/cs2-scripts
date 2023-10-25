@@ -1,0 +1,8 @@
+// 2495
+[clientscript,mob_formation_onload]
+def_int $int0 = 1;
+%varcint837 = %varbit6350;
+~script2496;
+if (%varcint837 > 0 & %varcint837 <= 9) {
+	~mob_formation_click(enum(int, component, enum_2400, %varcint837));
+}

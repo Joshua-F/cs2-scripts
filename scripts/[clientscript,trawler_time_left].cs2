@@ -1,0 +1,7 @@
+// 2441
+[clientscript,trawler_time_left]
+if (%varcint820 < 2) {
+	if_settext("Time Left: ~1 Min", trawler_game_overlay:time_text);
+} else {
+	if_settext("Time Left: <tostring(%varcint820)> Mins", trawler_game_overlay:time_text);
+}

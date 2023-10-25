@@ -1,0 +1,21 @@
+// 1884
+[clientscript,worldswitcher_mouserepeat](component $component0, int $comsubid1, int $comsubid2, int $colour3, graphic $graphic4, graphic $graphic5, int $int6, int $mousex7)
+if ($mousex7 < 24) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_setcolour($colour3);
+	}
+	if (cc_find($component0, $comsubid2) = ^true) {
+		cc_setgraphic($graphic4);
+	}
+} else {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		if ($int6 ! -1) {
+			cc_setcolour(0x776442);
+		} else {
+			cc_setcolour($colour3);
+		}
+	}
+	if (cc_find($component0, $comsubid2) = ^true) {
+		cc_setgraphic($graphic5);
+	}
+}

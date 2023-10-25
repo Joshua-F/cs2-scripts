@@ -1,0 +1,64 @@
+// 1237
+[proc,prayer_load_buttons](component $component0)
+cc_deleteall($component0);
+def_int $int1 = 5;
+def_int $width2 = 30;
+def_int $height3 = 30;
+def_int $int4 = 0;
+def_int $int5 = 8;
+def_int $int6 = $int5;
+def_int $int7 = 6;
+def_int $int8 = calc(30 + 7);
+if (%varcint1052 = 1 & %varbit6840 = 0) {
+	$int5 = 5;
+	$int6 = $int5;
+	$int8 = calc(30 + 4);
+}
+def_int $int9 = calc(30 + 6);
+if (%varcint181 = 1) {
+	$int5 = 8;
+	$int6 = $int5;
+	$int7 = 30;
+	$int8 = calc(30 + 7);
+	$int9 = calc(30 + 5);
+}
+def_struct $struct10 = null;
+def_graphic $graphic11 = null;
+def_graphic $graphic12 = null;
+def_string $string0 = "";
+def_int $lvl13 = 0;
+def_int $int14 = 27;
+if (%varbit6840 = 1) {
+	$int14 = 20;
+}
+while ($int4 < $int14) {
+	$struct10 = enum(int, struct, enum_2279, $int4);
+	if (%varbit6840 = 1) {
+		$struct10 = enum(int, struct, enum_863, $int4);
+	}
+	$graphic12 = struct_param($struct10, param_736);
+	$graphic11 = struct_param($struct10, param_735);
+	$string0 = struct_param($struct10, param_734);
+	$lvl13 = struct_param($struct10, param_737);
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize($width2, $height3, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic12);
+	if (%varcint181 = 0) {
+		cc_setop(1, "Activate<col=ff9040>");
+		cc_setonvartransmit("prayer_varupdate(event_com, prayer:com_7, $int4){var1395, var1582}");
+		cc_setonmouserepeat("addtooltip_dynamic(event_com, event_comsubid, prayer:tooltips, $string0, 25, 190)");
+		if ($int4 = 0 & %varbit6521 = 10) {
+			cc_setonvarctransmit("script1428(event_com, event_comsubid){varcint1024}");
+		}
+	}
+	cc_setonstattransmit("prayer_statupdate($lvl13, $graphic12, $graphic11, event_com, event_comsubid){prayer}");
+	cc_setonmouseleave("deltooltip(prayer:tooltips)");
+	$int4 = calc($int4 + 1);
+	if (calc($int4 % $int1) = 0) {
+		$int6 = $int5;
+		$int7 = calc($int7 + $int9);
+	} else {
+		$int6 = calc($int6 + $int8);
+	}
+}

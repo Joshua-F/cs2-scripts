@@ -1,0 +1,49 @@
+// 1581
+[clientscript,barbassault_name_transmit](component $component0)
+def_string $string0 = "";
+def_fontmetrics $fontmetrics1 = p11_full;
+def_component $component2 = interface_492:tooltip;
+switch_component ($component0) {
+	case interface_492:com_15, interface_493:com_27, barbassault_over_heal:com_3 :
+		$string0 = %varcstring212;
+	case interface_492:com_16, interface_493:com_28, barbassault_over_heal:com_9 :
+		$string0 = %varcstring213;
+	case interface_492:com_17, interface_493:com_29, barbassault_over_heal:com_14 :
+		$string0 = %varcstring214;
+	case interface_492:com_18, interface_493:com_30, barbassault_over_heal:com_19 :
+		$string0 = %varcstring215;
+	case interface_492:com_19, interface_493:com_31 :
+		$string0 = %varcstring216;
+}
+switch_component ($component0) {
+	case interface_493:com_27, interface_493:com_28, interface_493:com_29, interface_493:com_30, interface_493:com_31 :
+		$fontmetrics1 = p12_full;
+		$component2 = interface_493:tooltip;
+	case barbassault_over_heal:com_3, barbassault_over_heal:com_9, barbassault_over_heal:com_14, barbassault_over_heal:com_19 :
+		$fontmetrics1 = p12_full;
+		$component2 = barbassault_over_heal:tooltip;
+}
+def_string $string1 = $string0;
+def_int $width3 = if_getwidth($component0);
+if (parawidth("<$string1> ", ^max_32bit_int, $fontmetrics1) > $width3) {
+	while (parawidth("<$string1>... ", ^max_32bit_int, $fontmetrics1) > $width3) {
+		$string1 = substring($string1, 0, calc(string_length($string1) - 1));
+	}
+	if_setonmouserepeat("addtooltip(event_com, $component2, $string0, 25, 5000)", $component0);
+	if_setonmouseleave("deltooltip($component2)", $component0);
+	$string0 = "<$string1>...";
+} else {
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+}
+switch_component ($component0) {
+	case interface_492:com_15, interface_492:com_16, interface_492:com_17, interface_492:com_18, interface_492:com_19, interface_493:com_27, interface_493:com_28, interface_493:com_29, interface_493:com_30, interface_493:com_31 :
+		if (compare($string0, "") = 0) {
+			$string0 = "none set";
+		}
+	case barbassault_over_heal:com_3, barbassault_over_heal:com_9, barbassault_over_heal:com_14, barbassault_over_heal:com_19 :
+		if (compare($string0, "") = 0) {
+			$string0 = "---";
+		}
+}
+if_settext($string0, $component0);

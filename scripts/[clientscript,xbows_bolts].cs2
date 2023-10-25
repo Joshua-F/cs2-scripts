@@ -1,4 +1,4 @@
 // 539
 [clientscript,xbows_bolts](component $component0, obj $obj1)
-if_setoninvtransmit("script2350($component0, $obj1){inv}", $component0);
-~script2351($component0, $obj1);
+if_setoninvtransmit("xbows_bolts_update($component0, $obj1){inv}", $component0);
+~xbows_bolts_update($component0, $obj1);

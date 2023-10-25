@@ -1,0 +1,38 @@
+// 2698
+[clientscript,graphics_options_setwindowmode](int $windowmode0, int $int1, int $int2, int $int3, int $int4)
+if ($windowmode0 = getwindowmode) {
+	return;
+}
+def_int $int5 = -1;
+if ($windowmode0 ! ^windowmode_fullscreen) {
+	setwindowmode($windowmode0);
+	$int5 = getwindowmode;
+	setdefaultwindowmode($int5);
+	if ($windowmode0 ! $int5) {
+		~graphics_options_message($int4, "RuneScape was unable to enter that display mode.<br><br>Please visit our Knowledge Base for more information.", "Consult Knowledge Base", "kbase/view.ws?guid=controls_display_options");
+		if ($int4 = 2) {
+			~graphics_options_rebuild($int3, $int5, $int1, $int2, $int4);
+		}
+		return;
+	}
+	~graphics_options_rebuild($int3, $int5, $int1, $int2, $int4);
+	if ($windowmode0 >= ^windowmode_resizable & $int5 >= 2) {
+		%varcint994 = 2;
+	}
+	return;
+}
+if (playermember = false) {
+	~graphics_options_message($int4, "Fullscreen mode is only available to RuneScape members.<br><br>Please visit the RuneScape website to learn about other benefits of membership.", "Members' benefits", "members/members.ws");
+	return;
+}
+if (fullscreen_modecount > %varcint178 & fullscreen_enter(fullscreen_getmode(%varcint178)) = true) {
+	~graphics_options_rebuild($int3, $windowmode0, $int1, $int2, $int4);
+	~graphics_options_startcountdown(2, $int4);
+	return;
+}
+$windowmode0 = getdefaultwindowmode;
+setwindowmode($windowmode0);
+if ($int4 = 2) {
+	mes("Unable to enter fullscreen mode at that resolution.");
+}
+~graphics_options_rebuild($int3, $windowmode0, $int1, $int2, $int4);

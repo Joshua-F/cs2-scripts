@@ -1,0 +1,9 @@
+// 310
+[clientscript,worldmap_tooltip_key](string $string0, component $component0, int $comsubid1)
+def_int $int2 = 0;
+def_int $int3 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int2, $int3 = calc(cc_getx + cc_getheight + 1), calc(cc_gety + cc_getheight + 1);
+	$int3 = calc($int3 - if_getscrolly($component0));
+	~worldmap_tooltip($string0, $int2, $int3);
+}

@@ -41,24 +41,24 @@ while ($int1 < 10) {
 	}
 	$int1 = calc($int1 + 1);
 }
-if_settext(tostring($intarray2(%varcint929)), interface_292:com_101);
+if_settext(tostring($intarray2(%varcint929)), mob_squad_exchange:total);
 %varcint928 = $int4;
-if_settext(tostring(%varcint928), interface_292:com_126);
-if_settext("Remaining investment credits: <tostring(calc(%varbit6351 - %varcint928))>", interface_292:com_128);
+if_settext(tostring(%varcint928), mob_squad_exchange:com_126);
+if_settext("Remaining investment credits: <tostring(calc(%varbit6351 - %varcint928))>", mob_squad_exchange:com_128);
 if (%varcint928 <= %varbit6351) {
-	if_setgraphic("graphic_1870", interface_292:com_123);
-	if_setonop("script2605", interface_292:com_122);
-	if_setop(1, "Apply changes", interface_292:com_122);
-	if_setonmouseover("v2_stone_button_in(event_com)", interface_292:com_122);
-	if_setcolour(0xff9935, interface_292:com_126);
-	if_setonclick(null, interface_292:com_122);
+	if_setgraphic("graphic_1870", mob_squad_exchange:com_123);
+	if_setonop("script2605", mob_squad_exchange:com_122);
+	if_setop(1, "Apply changes", mob_squad_exchange:com_122);
+	if_setonmouseover("v2_stone_button_in(event_com)", mob_squad_exchange:com_122);
+	if_setcolour(0xff9935, mob_squad_exchange:com_126);
+	if_setonclick(null, mob_squad_exchange:com_122);
 } else {
-	if_setgraphic("graphic_1871", interface_292:com_123);
-	if_setonop(null, interface_292:com_122);
-	if_clearops(interface_292:com_122);
-	if_setonmouseover(null, interface_292:com_122);
-	if_setcolour(0xff1111, interface_292:com_126);
-	if_setonclick("script2606(event_com)", interface_292:com_122);
+	if_setgraphic("graphic_1871", mob_squad_exchange:com_123);
+	if_setonop(null, mob_squad_exchange:com_122);
+	if_clearops(mob_squad_exchange:com_122);
+	if_setonmouseover(null, mob_squad_exchange:com_122);
+	if_setcolour(0xff1111, mob_squad_exchange:com_126);
+	if_setonclick("script2606(event_com)", mob_squad_exchange:com_122);
 }
 $int1 = 0;
 while ($int1 < 10) {
@@ -68,19 +68,19 @@ while ($int1 < 10) {
 	$int1 = calc($int1 + 1);
 }
 if ($int0 > 0) {
-	if_settext("Resupply all<br>(<tostring($int0)>)", interface_292:com_124);
+	if_settext("Resupply all<br>(<tostring($int0)>)", mob_squad_exchange:com_124);
 }
 if (%varbit6351 >= $int0 & $int0 > 0) {
-	if_setcolour(0xff9935, interface_292:com_124);
-	if_setonop("script2603", interface_292:com_119);
-	if_setop(1, "Resupply all", interface_292:com_119);
-	if_setonmouseover("v2_stone_button_in(event_com)", interface_292:com_119);
-	if_setonclick(null, interface_292:com_119);
+	if_setcolour(0xff9935, mob_squad_exchange:com_124);
+	if_setonop("script2603", mob_squad_exchange:com_119);
+	if_setop(1, "Resupply all", mob_squad_exchange:com_119);
+	if_setonmouseover("v2_stone_button_in(event_com)", mob_squad_exchange:com_119);
+	if_setonclick(null, mob_squad_exchange:com_119);
 } else {
-	if_settext("Resupply all", interface_292:com_124);
-	if_setcolour(0x666666, interface_292:com_124);
-	if_setonop(null, interface_292:com_119);
-	if_clearops(interface_292:com_119);
-	if_setonmouseover(null, interface_292:com_119);
-	if_setonclick("script2606(event_com)", interface_292:com_119);
+	if_settext("Resupply all", mob_squad_exchange:com_124);
+	if_setcolour(0x666666, mob_squad_exchange:com_124);
+	if_setonop(null, mob_squad_exchange:com_119);
+	if_clearops(mob_squad_exchange:com_119);
+	if_setonmouseover(null, mob_squad_exchange:com_119);
+	if_setonclick("script2606(event_com)", mob_squad_exchange:com_119);
 }

@@ -24,7 +24,7 @@ if ($boolean0 = true) {
 if ($int1 = 2) {
 	if_sethide(true, loginscreen:com_162);
 	if_sethide(true, loginscreen:com_163);
-	~script2223($boolean0);
+	~create_complete($boolean0);
 } else {
 	if_setgraphic(null, loginscreen:com_159);
 	if_setgraphic(null, loginscreen:com_144);

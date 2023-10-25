@@ -1,0 +1,32 @@
+// 2654
+[proc,topstat_hitpoints_update]
+if (%var102 > 0) {
+	if_setgraphic("graphic_1801", topstat_hitpoints:com_3);
+	if_sethide(true, topstat_hitpoints:background);
+	if_sethide(false, topstat_hitpoints:background_op);
+	if_setop(1, "Use cure (p)", topstat_hitpoints:background_op);
+} else if (%var456 > 0) {
+	if_setgraphic("graphic_1800", topstat_hitpoints:com_3);
+	if_sethide(true, topstat_hitpoints:background);
+	if_sethide(false, topstat_hitpoints:background_op);
+	if_setop(1, "Use cure (d)", topstat_hitpoints:background_op);
+} else {
+	if_setgraphic("graphic_1208", topstat_hitpoints:com_3);
+	if_sethide(false, topstat_hitpoints:background);
+	if_sethide(true, topstat_hitpoints:background_op);
+}
+if (getwindowmode >= ^windowmode_resizable) {
+	if_setgraphic("graphic_1207", topstat_hitpoints:background);
+	if_setgraphic("graphic_1207", topstat_hitpoints:background_op);
+	if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_3);
+	if_setposition(25, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_4);
+	if_setposition(3, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_5);
+	if_setposition(31, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_6);
+} else {
+	if_setgraphic("graphic_1206", topstat_hitpoints:background);
+	if_setgraphic("graphic_1206", topstat_hitpoints:background_op);
+	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_3);
+	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_4);
+	if_setposition(31, 15, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_5);
+	if_setposition(7, 7, ^setpos_abs_left, ^setpos_abs_top, topstat_hitpoints:com_6);
+}

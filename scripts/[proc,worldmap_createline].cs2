@@ -23,8 +23,8 @@ if ($category4 ! null) {
 	.cc_setopbase("<col=ff9040><$text0></col>");
 	cc_setop(1, "Highlight");
 	.cc_setop(1, "Highlight");
-	cc_setonop("script288($category4)");
-	.cc_setonop("script288($category4)");
+	cc_setonop("worldmap_flashelementcategory($category4)");
+	.cc_setonop("worldmap_flashelementcategory($category4)");
 	cc_setonmouseover("cc_text_colour_swapper($component0, .cc_getid, ^white)");
 	.cc_setonmouseover("cc_text_colour_swapper($component0, .cc_getid, ^white)");
 	cc_setonmouseleave("cc_text_colour_swapper($component0, .cc_getid, 0xafafaf)");

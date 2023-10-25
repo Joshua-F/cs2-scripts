@@ -1,0 +1,19 @@
+// 113
+[clientscript,gravedigger_spin](component $component0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+if (random(2) = 0) {
+	$int1 = calc(5 + random(12));
+} else {
+	$int1 = calc(-5 - random(12));
+}
+if (random(2) = 0) {
+	$int2 = calc(5 + random(12));
+} else {
+	$int2 = calc(-5 - random(12));
+}
+if (random(2) = 0) {
+	if_setontimer("spinner($int1, $int2, 0, $component0)", $component0);
+} else {
+	if_setontimer("spinner($int1, 0, $int2, $component0)", $component0);
+}

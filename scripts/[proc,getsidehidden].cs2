@@ -31,16 +31,16 @@ if (getwindowmode >= ^windowmode_resizable) {
 		case 13 :
 			return(if_gethide(toplevel_fullscreen:side13));
 		case 14 :
-			return(if_gethide(toplevel_fullscreen:com_47));
+			return(if_gethide(toplevel_fullscreen:side14));
 		case 15 :
-			return(if_gethide(toplevel_fullscreen:com_48));
+			return(if_gethide(toplevel_fullscreen:side15));
 		case 95 :
-			return(if_gethide(toplevel_fullscreen:com_50));
+			return(if_gethide(toplevel_fullscreen:side95));
 		case 99 :
 			return(if_gethide(toplevel_fullscreen:side99));
 		case 98 :
-			if (if_hassub(toplevel_fullscreen:com_31) = true) {
-				return(if_gethide(toplevel_fullscreen:com_31));
+			if (if_hassub(toplevel_fullscreen:sidemodal2) = true) {
+				return(if_gethide(toplevel_fullscreen:sidemodal2));
 			}
 			return(true);
 	}
@@ -75,16 +75,16 @@ if (getwindowmode >= ^windowmode_resizable) {
 		case 13 :
 			return(if_gethide(toplevel:side13));
 		case 14 :
-			return(if_gethide(toplevel:com_166));
+			return(if_gethide(toplevel:side14));
 		case 15 :
-			return(if_gethide(toplevel:com_167));
+			return(if_gethide(toplevel:side15));
 		case 95 :
-			return(if_gethide(toplevel:com_169));
+			return(if_gethide(toplevel:side95));
 		case 99 :
 			return(if_gethide(toplevel:side99));
 		case 98 :
-			if (if_hassub(toplevel:com_148) = true) {
-				return(if_gethide(toplevel:com_148));
+			if (if_hassub(toplevel:sidemodal2) = true) {
+				return(if_gethide(toplevel:sidemodal2));
 			}
 			return(true);
 	}

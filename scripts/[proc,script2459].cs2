@@ -31,44 +31,44 @@ if (getwindowmode >= ^windowmode_resizable) {
 		case 13 :
 			return(toplevel_fullscreen:off13);
 		case 14 :
-			return(toplevel_fullscreen:com_154);
+			return(toplevel_fullscreen:off14);
 		case 15 :
-			return(toplevel_fullscreen:com_155);
+			return(toplevel_fullscreen:off15);
 	}
 } else {
 	switch_int ($int0) {
 		case 0 :
-			return(toplevel:com_72);
+			return(toplevel:bg_stone0);
 		case 1 :
-			return(toplevel:com_73);
+			return(toplevel:bg_stone1);
 		case 2 :
-			return(toplevel:com_74);
+			return(toplevel:bg_stone2);
 		case 3 :
-			return(toplevel:com_75);
+			return(toplevel:bg_stone3);
 		case 4 :
-			return(toplevel:com_76);
+			return(toplevel:bg_stone4);
 		case 5 :
-			return(toplevel:com_77);
+			return(toplevel:bg_stone5);
 		case 6 :
-			return(toplevel:com_78);
+			return(toplevel:bg_stone6);
 		case 7 :
-			return(toplevel:com_79);
+			return(toplevel:bg_stone7);
 		case 8 :
-			return(toplevel:com_25);
+			return(toplevel:bg_stone8);
 		case 9 :
-			return(toplevel:com_26);
+			return(toplevel:bg_stone9);
 		case 10 :
-			return(toplevel:com_27);
+			return(toplevel:bg_stone10);
 		case 11 :
-			return(toplevel:com_28);
+			return(toplevel:bg_stone11);
 		case 12 :
-			return(toplevel:com_29);
+			return(toplevel:bg_stone12);
 		case 13 :
-			return(toplevel:com_30);
+			return(toplevel:bg_stone13);
 		case 14 :
-			return(toplevel:com_31);
+			return(toplevel:bg_stone14);
 		case 15 :
-			return(toplevel:com_32);
+			return(toplevel:bg_stone15);
 	}
 }
 return(null);

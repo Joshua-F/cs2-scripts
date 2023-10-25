@@ -12,7 +12,7 @@ if ($wma1 = null) {
 ~worldmap_overlay_clear(worldmap:worldmap_overlay);
 %varcstring31 = "";
 ~script308(worldmap:findbox_text);
-if_settext(worldmap_getmapname($wma1), worldmap:com_20);
+if_settext(worldmap_getmapname($wma1), worldmap:mapname);
 ~deltooltip_action(worldmap:tooltip);
 worldmap_setmap_coord_override($wma1, $coord0);
 worldmap_jumptosourcecoord($coord0);

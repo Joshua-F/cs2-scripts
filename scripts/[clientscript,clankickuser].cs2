@@ -1,0 +1,14 @@
+// 199
+[clientscript,clankickuser](string $username0, int $opindex0)
+switch_int ($opindex0) {
+	case 6 :
+		clan_kickuser($username0);
+	case 7 :
+		friend_add($username0);
+	case 8 :
+		ignore_add($username0);
+	case 9 :
+		friend_del($username0);
+	case 10 :
+		ignore_del($username0);
+}

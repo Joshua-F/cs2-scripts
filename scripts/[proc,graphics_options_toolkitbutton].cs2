@@ -1,0 +1,19 @@
+// 1147
+[proc,graphics_options_toolkitbutton](int $int0, int $int1, component $component2, component $component3, component $component4, int $int5)
+if ($int1 = $int0) {
+	if_setgraphic(enum(int, graphic, enum_204, $int0), $component3);
+	if ($component4 ! null) {
+		if_setcolour(0xffff7f, $component4);
+	}
+	if_setonmouseover(null, $component2);
+	if_setonmouseleave(null, $component2);
+	if_setonclick(null, $component2);
+} else {
+	if_setgraphic(enum(int, graphic, enum_202, $int0), $component3);
+	if ($component4 ! null) {
+		if_setcolour(0xff981f, $component4);
+	}
+	if_setonmouseover("script1148($int0, $component3, $component4, true)", $component2);
+	if_setonmouseleave("script1148($int0, $component3, $component4, false)", $component2);
+	if_setonclick("graphics_options_settoolkit($int0, $int5)", $component2);
+}

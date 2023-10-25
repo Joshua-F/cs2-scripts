@@ -1,0 +1,48 @@
+// 2630
+[proc,mob_highlight_start](component $component0)
+def_graphic $graphic1 = null;
+def_graphic $graphic2 = null;
+%varcint905 = $component0;
+%varcint904 = 1;
+switch_component ($component0) {
+	case mob_side_command:button1 :
+		$component0 = mob_side_command:attack;
+		$graphic1 = "graphic_1914";
+		$graphic2 = "graphic_1922";
+	case mob_side_command:button2 :
+		$component0 = mob_side_command:com_8;
+		$graphic1 = "graphic_1915";
+		$graphic2 = "graphic_1923";
+	case mob_side_command:button3 :
+		$component0 = mob_side_command:com_7;
+		$graphic1 = "graphic_1916";
+		$graphic2 = "graphic_1924";
+	case mob_side_command:button4 :
+		if (%varbit6357 = 2) {
+			$component0 = mob_side_command:com_22;
+			$graphic1 = "graphic_1917";
+			$graphic2 = "graphic_1925";
+		}
+		if (%varbit6357 = 3) {
+			$component0 = mob_side_command:com_6;
+			$graphic1 = "graphic_1918";
+			$graphic2 = "graphic_1926";
+		}
+		if (%varbit6357 = 4) {
+			$component0 = mob_side_command:com_23;
+			$graphic1 = "graphic_1921";
+			$graphic2 = "graphic_1929";
+		}
+	case mob_side_command:button5 :
+		if (%varbit6357 = 2) {
+			$component0 = mob_side_command:com_21;
+			$graphic1 = "graphic_1920";
+			$graphic2 = "graphic_1928";
+		}
+		if (%varbit6357 = 4) {
+			$component0 = mob_side_command:com_20;
+			$graphic1 = "graphic_1919";
+			$graphic2 = "graphic_1927";
+		}
+}
+if_setontimer("mob_highlight_timer($component0, $graphic1, $graphic2)", $component0);

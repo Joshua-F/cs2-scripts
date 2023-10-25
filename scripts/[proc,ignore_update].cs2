@@ -55,8 +55,8 @@ while ($int1 < $count0) {
 		} else {
 			$string3 = "Last known as: <$string1>";
 		}
-		cc_setonmouserepeat("script2467(event_com, event_comsubid, $string3, event_mousex, event_mousey, ignore2:ignorebox, ignore2:tooltip, ignore2:com_14, friendslist_font)");
-		cc_setonmouseleave("script2469(ignore2:tooltip, ignore2:com_14)");
+		cc_setonmouserepeat("friend_tooltip(event_com, event_comsubid, $string3, event_mousex, event_mousey, ignore2:ignorebox, ignore2:tooltip, ignore2:tooltip_text, friendslist_font)");
+		cc_setonmouseleave("friend_deltooltip(ignore2:tooltip, ignore2:tooltip_text)");
 	}
 	cc_create(ignore2:ignorebox, ^iftype_graphic, calc($int4 + 1));
 	cc_setgraphic("friends_changed_name");

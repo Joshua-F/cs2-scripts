@@ -1,6 +1,6 @@
 // 2295
 [proc,script2295](int $int0)(int)
-if (map_members = ^false & ~script2294($int0) = 1) {
+if (map_members = ^false & ~prayer_members_check($int0) = 1) {
 	return(0);
 }
 if (stat(prayer) = 0) {

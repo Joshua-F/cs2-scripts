@@ -1,0 +1,12 @@
+// 240
+[proc,snapshot_selected_highlight]
+def_int $comsubid0 = 0;
+while ($comsubid0 < if_getnextsubid(snapshot_main_v2:com_92)) {
+	if (cc_find(snapshot_main_v2:com_92, $comsubid0) = ^true) {
+		cc_settrans(255);
+	}
+	$comsubid0 = calc($comsubid0 + 1);
+}
+if (cc_find(snapshot_main_v2:com_92, %varcint792) = ^true) {
+	cc_settrans(110);
+}

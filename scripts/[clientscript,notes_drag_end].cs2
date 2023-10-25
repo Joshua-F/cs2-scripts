@@ -1,0 +1,9 @@
+// 2451
+[clientscript,notes_drag_end](component $drop0)
+if_sethide(true, notes:dragger);
+if_setgraphic("graphic_1845", notes:com_8);
+%varcint821 = 0;
+~notes_click(0);
+if ($drop0 ! null) {
+	if_sethide(false, notes:noclick);
+}

@@ -10,7 +10,7 @@ if (map_members = ^true) {
 ~script2162(1, %varcint693, %varcint694, %varcint692);
 def_int $int0 = 0;
 if (map_members = ^true & %var281 >= 1000) {
-	~script944(1, %varcint693, 2, interface_190:com_16, interface_190:com_14, interface_190:com_15, null, "tradebacking_dark", "scrollbar_v2,1", "scrollbar_v2,1", "tradebacking_light", ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~script944(1, %varcint693, 2, questlist_tr:com_16, questlist_tr:com_14, questlist_tr:com_15, null, "tradebacking_dark", "scrollbar_v2,1", "scrollbar_v2,1", "tradebacking_light", ^white, ^yellow, "p11_full", "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 } else {
-	~dropdownbox_refuse("Free/Members", interface_190:com_16, interface_190:com_14, interface_190:com_15, null, "tradebacking_dark", ^yellow, p11_full);
+	~dropdownbox_refuse("Free/Members", questlist_tr:com_16, questlist_tr:com_14, questlist_tr:com_15, null, "tradebacking_dark", ^yellow, p11_full);
 }

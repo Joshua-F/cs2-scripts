@@ -119,7 +119,7 @@ while ($size6 < $size7) {
 		cc_setposition(calc($int10 + 13), calc($int11 + 39), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p11_full);
 		cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-		$int14 = ~script2720($obj12, $size6);
+		$int14 = ~buyprice($obj12, $size6);
 		if ($int14 = -1) {
 			cc_settext("N/A");
 		} else {

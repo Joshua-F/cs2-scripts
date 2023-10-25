@@ -5,7 +5,7 @@ if_setgraphic(null, $component1);
 if (compare(%varcstring128, "") = 0) {
 	return;
 }
-if (~script2204(%varcstring128) = 0) {
+if (~create_check_email(%varcstring128) = 0) {
 	if_settext("Please supply a valid email address.", $component0);
 	if_setgraphic("graphic_1726", $component1);
 	return;

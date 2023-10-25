@@ -1,0 +1,14 @@
+// 2300
+[clientscript,topstat_prayer_button_op](int $int0)
+if ($int0 ! 1) {
+	return;
+}
+if (%var1397 = 0) {
+	return;
+}
+if (~bool_to_int(%varcint182) = 1) {
+	%varcint182 = false;
+} else {
+	%varcint182 = true;
+}
+~topstat_prayer_button_update;

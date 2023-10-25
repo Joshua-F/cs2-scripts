@@ -1,0 +1,6 @@
+// 2376
+[clientscript,makeover_gender_force](int $int0, int $int1, component $component2, component $component3)
+if ($int0 ! 1) {
+	return;
+}
+~makeover_gender($int1, $component2, $component3);

@@ -1,0 +1,7 @@
+// 1138
+[clientscript,combat_side_special_highlight](component $component0)
+if (%var301 > 0) {
+	if_setcolour(^yellow, $component0);
+} else {
+	if_setcolour(^black, $component0);
+}

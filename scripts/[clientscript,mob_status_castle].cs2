@@ -1,0 +1,87 @@
+// 2610
+[clientscript,mob_status_castle](component $component0)
+def_string $string0 = "";
+if (%varbit6357 = 2) {
+	if_sethide(false, $component0);
+	if (%varbit6372 = 15) {
+		if (%varbit6373 > 0) {
+			$string0 = "Collected <tostring(%varbit6373)> out of 4 rocks";
+			if_setgraphic("graphic_1985", mob_status_overlay:graphic1);
+		} else {
+			$string0 = "Send a squad to collect rocks";
+			if_setgraphic("graphic_1990", mob_status_overlay:graphic1);
+		}
+		if_setonmouserepeat("addtooltip(mob_status_overlay:layer1, mob_status_overlay:tooltip, $string0, 50, 150)", mob_status_overlay:layer1);
+		if_setonmouseleave("deltooltip(mob_status_overlay:tooltip)", mob_status_overlay:layer1);
+		if (%varbit6373 > 1) {
+			$string0 = "Collected <tostring(%varbit6373)> out of 4 rocks";
+			if_setgraphic("graphic_1985", mob_status_overlay:graphic2);
+		} else {
+			$string0 = "Send a squad to collect rocks.";
+			if_setgraphic("graphic_1990", mob_status_overlay:graphic2);
+		}
+		if_setonmouserepeat("addtooltip(mob_status_overlay:layer2, mob_status_overlay:tooltip, $string0, 50, 150)", mob_status_overlay:layer2);
+		if_setonmouseleave("deltooltip(mob_status_overlay:tooltip)", mob_status_overlay:layer2);
+		if (%varbit6373 > 2) {
+			$string0 = "Collected <tostring(%varbit6373)> out of 4 rocks";
+			if_setgraphic("graphic_1985", mob_status_overlay:graphic3);
+		} else {
+			$string0 = "Send a squad to collect rocks.";
+			if_setgraphic("graphic_1990", mob_status_overlay:graphic3);
+		}
+		if_setonmouserepeat("addtooltip(mob_status_overlay:layer3, mob_status_overlay:tooltip, $string0, 50, 150)", mob_status_overlay:layer3);
+		if_setonmouseleave("deltooltip(mob_status_overlay:tooltip)", mob_status_overlay:layer3);
+		if (%varbit6373 > 3) {
+			$string0 = "Collected <tostring(%varbit6373)> out of 4 rocks";
+			if_setgraphic("graphic_1985", mob_status_overlay:graphic4);
+		} else {
+			$string0 = "Send a squad to collect rocks.";
+			if_setgraphic("graphic_1990", mob_status_overlay:graphic4);
+		}
+		if_setonmouserepeat("addtooltip(mob_status_overlay:layer4, mob_status_overlay:tooltip, $string0, 50, 150)", mob_status_overlay:layer4);
+		if_setonmouseleave("deltooltip(mob_status_overlay:tooltip)", mob_status_overlay:layer4);
+	} else {
+		if (%varbit6368 > 0) {
+			$string0 = "Collected wheels";
+			if_setgraphic("graphic_1981", mob_status_overlay:graphic1);
+		} else {
+			$string0 = "Send a squad to collect wheels.";
+			if_setgraphic("graphic_1986", mob_status_overlay:graphic1);
+		}
+		if_setonmouserepeat("addtooltip(mob_status_overlay:layer1, mob_status_overlay:tooltip, $string0, 50, 150)", mob_status_overlay:layer1);
+		if_setonmouseleave("deltooltip(mob_status_overlay:tooltip)", mob_status_overlay:layer1);
+		if (%varbit6370 > 0) {
+			$string0 = "Collected logs";
+			if_setgraphic("graphic_1982", mob_status_overlay:graphic2);
+		} else {
+			$string0 = "Send a squad to collect logs.";
+			if_setgraphic("graphic_1987", mob_status_overlay:graphic2);
+		}
+		if_setonmouserepeat("addtooltip(mob_status_overlay:layer2, mob_status_overlay:tooltip, $string0, 50, 150)", mob_status_overlay:layer2);
+		if_setonmouseleave("deltooltip(mob_status_overlay:tooltip)", mob_status_overlay:layer2);
+		if (%varbit6371 > 0) {
+			$string0 = "Collected rope";
+			if_setgraphic("graphic_1983", mob_status_overlay:graphic3);
+		} else {
+			$string0 = "Send a squad to collect rope.";
+			if_setgraphic("graphic_1988", mob_status_overlay:graphic3);
+		}
+		if_setonmouserepeat("addtooltip(mob_status_overlay:layer3, mob_status_overlay:tooltip, $string0, 50, 150)", mob_status_overlay:layer3);
+		if_setonmouseleave("deltooltip(mob_status_overlay:tooltip)", mob_status_overlay:layer3);
+		if (%varbit6369 > 0) {
+			$string0 = "Collected metal limbs";
+			if_setgraphic("graphic_1984", mob_status_overlay:graphic4);
+		} else {
+			$string0 = "Send a squad to collect metal limbs.";
+			if_setgraphic("graphic_1989", mob_status_overlay:graphic4);
+		}
+		if_setonmouserepeat("addtooltip(mob_status_overlay:layer4, mob_status_overlay:tooltip, $string0, 50, 150)", mob_status_overlay:layer4);
+		if_setonmouseleave("deltooltip(mob_status_overlay:tooltip)", mob_status_overlay:layer4);
+	}
+} else if (%varbit6357 = 1) {
+	if_sethide(true, $component0);
+} else if (%varbit6357 = 3) {
+	if_sethide(true, $component0);
+} else if (%varbit6357 = 4) {
+	if_sethide(true, $component0);
+}

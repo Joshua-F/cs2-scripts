@@ -1,0 +1,21 @@
+// 1603
+[proc,worldmap_arrowkey](int $int0, int $int1)
+if (worldmap_isloaded = false) {
+	return;
+}
+def_int $int2 = calc(15 + max(calc(%varcint1030 - clientclock), 0));
+%varcint1030 = min(max(calc(%varcint1030 + 2), calc(clientclock + 2)), calc(clientclock + 25));
+switch_int (%varcint172) {
+	case 37 :
+		$int2 = calc($int2 * 5);
+	case 50 :
+		$int2 = calc($int2 * 4);
+	case 75 :
+		$int2 = calc($int2 * 3);
+	case 100 :
+		$int2 = calc($int2 * 2);
+}
+def_int $int3 = 0;
+def_int $int4 = 0;
+$int3, $int4 = worldmap_getdisplayposition;
+worldmap_jumptodisplaycoord(movecoord(0_0_0_0_0, max(calc($int3 + $int0 * $int2), 0), 0, max(calc($int4 + $int1 * $int2), 0)));

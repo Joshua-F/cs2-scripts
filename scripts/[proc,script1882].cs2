@@ -34,23 +34,23 @@ cc_setonclick("script1883($world1, event_mousex)");
 .cc_setposition(5, calc((18 - .cc_getheight) / 2 + $int0), ^setpos_abs_left, ^setpos_abs_top);
 switch_int ($int7) {
 	case 1 :
-		cc_setonmouserepeat("script1884(loginscreen:com_177, cc_getid, .cc_getid, 0x593d15, $graphic10, $graphic8, $int4, event_mousex)");
-		cc_setonmouseleave("script1885(loginscreen:com_177, cc_getid, .cc_getid, 0x593d15, $graphic8)");
+		cc_setonmouserepeat("worldswitcher_mouserepeat(loginscreen:com_177, cc_getid, .cc_getid, 0x593d15, $graphic10, $graphic8, $int4, event_mousex)");
+		cc_setonmouseleave("worldswitcher_mouseleave(loginscreen:com_177, cc_getid, .cc_getid, 0x593d15, $graphic8)");
 		cc_setcolour(0x593d15);
 		.cc_setgraphic($graphic8);
 	case 2 :
-		cc_setonmouserepeat("script1884(loginscreen:com_177, cc_getid, .cc_getid, 0x73521c, $graphic10, $graphic8, $int4, event_mousex)");
-		cc_setonmouseleave("script1885(loginscreen:com_177, cc_getid, .cc_getid, 0x73521c, $graphic8)");
+		cc_setonmouserepeat("worldswitcher_mouserepeat(loginscreen:com_177, cc_getid, .cc_getid, 0x73521c, $graphic10, $graphic8, $int4, event_mousex)");
+		cc_setonmouseleave("worldswitcher_mouseleave(loginscreen:com_177, cc_getid, .cc_getid, 0x73521c, $graphic8)");
 		cc_setcolour(0x73521c);
 		.cc_setgraphic($graphic8);
 	case 0 :
-		cc_setonmouserepeat("script1884(loginscreen:com_177, cc_getid, .cc_getid, 0x574423, $graphic11, $graphic9, $int4, event_mousex)");
-		cc_setonmouseleave("script1885(loginscreen:com_177, cc_getid, .cc_getid, 0x574423, $graphic9)");
+		cc_setonmouserepeat("worldswitcher_mouserepeat(loginscreen:com_177, cc_getid, .cc_getid, 0x574423, $graphic11, $graphic9, $int4, event_mousex)");
+		cc_setonmouseleave("worldswitcher_mouseleave(loginscreen:com_177, cc_getid, .cc_getid, 0x574423, $graphic9)");
 		cc_setcolour(0x574423);
 		.cc_setgraphic($graphic9);
 	case default :
-		cc_setonmouserepeat("script1884(loginscreen:com_177, cc_getid, .cc_getid, 0x45351b, $graphic11, $graphic9, $int4, event_mousex)");
-		cc_setonmouseleave("script1885(loginscreen:com_177, cc_getid, .cc_getid, 0x45351b, $graphic9)");
+		cc_setonmouserepeat("worldswitcher_mouserepeat(loginscreen:com_177, cc_getid, .cc_getid, 0x45351b, $graphic11, $graphic9, $int4, event_mousex)");
+		cc_setonmouseleave("worldswitcher_mouseleave(loginscreen:com_177, cc_getid, .cc_getid, 0x45351b, $graphic9)");
 		cc_setcolour(0x45351b);
 		.cc_setgraphic($graphic9);
 }

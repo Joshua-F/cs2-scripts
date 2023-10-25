@@ -1,0 +1,36 @@
+// 2450
+[clientscript,notes_drag](component $component0, int $comsubid1, int $mousey2)
+def_int $int3 = 0;
+def_int $int4 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	if_sethide(true, notes:selected);
+	if_sethide(false, notes:dragger);
+	$int4 = cc_getheight;
+	if_setposition(cc_getx, $mousey2, ^setpos_abs_left, ^setpos_abs_top, notes:dragger);
+	if_setsize(cc_getwidth, $int4, ^setsize_abs, ^setsize_abs, notes:dragger);
+	$int3 = calc($mousey2 + $int4 / 2);
+}
+def_int $y5 = if_gety(notes:del_button);
+def_int $int6 = calc($y5 + if_getheight(notes:del_button));
+if ($int3 >= $y5 & $int3 <= $int6) {
+	if_setgraphic("graphic_1846", notes:com_8);
+} else {
+	if_setgraphic("graphic_1845", notes:com_8);
+}
+def_int $int7 = 0;
+def_int $y8 = if_gety(notes:main);
+def_int $int9 = calc($y8 + $int4);
+def_int $int10 = calc($y8 + if_getheight(notes:main));
+def_int $int11 = calc($int10 - $int4);
+if ($int3 >= $y8 & $int3 <= $int9) {
+	$int7 = -4;
+} else if ($int3 >= $int11 & $int3 <= $int10) {
+	$int7 = 4;
+} else {
+	%varcint821 = 0;
+	return;
+}
+%varcint821 = calc(%varcint821 + 1);
+if (%varcint821 > 5) {
+	~scrollbar_ondrag_doscroll(notes:scrollbar, notes:main, calc(if_getscrolly(notes:main) + $int7), 1);
+}

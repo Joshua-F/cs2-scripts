@@ -1,6 +1,6 @@
 // 1235
 [clientscript,script1235](component $component0)
-if_sethide(false, interface_181:com_1);
+if_sethide(false, interface_181:mirror_layer);
 switch_int (%varcint180) {
 	case 1 :
 		if_setmodelangle(0, 0, 510, 762, 0, 410, $component0);
@@ -15,5 +15,5 @@ switch_int (%varcint180) {
 	case 6 :
 		if_setmodelangle(0, 0, 512, 1024, 1250, 410, $component0);
 	case default :
-		if_sethide(true, interface_181:com_1);
+		if_sethide(true, interface_181:mirror_layer);
 }

@@ -1,0 +1,40 @@
+// 1612
+[clientscript,wornitems_slot](component $component0, int $int1)
+def_obj $obj2 = inv_getobj(worn, $int1);
+if ($obj2 = null) {
+	if_setobject(null, 0, $component0);
+	if_setsize(32, 32, ^setsize_abs, ^setsize_abs, $component0);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
+	if_setgraphic(enum(int, graphic, enum_796, $int1), $component0);
+	if_setoutline(0, $component0);
+	if_setgraphicshadow(^black, $component0);
+	if_setonop(null, $component0);
+	if_clearops($component0);
+	return;
+}
+if_setsize(36, 32, ^setsize_abs, ^setsize_abs, $component0);
+if_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre, $component0);
+if_setobject($obj2, inv_getnum(worn, $int1), $component0);
+if_setoutline(1, $component0);
+if_setgraphicshadow(0x302020, $component0);
+if_setonop("script1620(event_com, -1, 100, 0, 8)", $component0);
+if_clearops($component0);
+if_setop(1, "Remove", $component0);
+def_string $string0 = oc_param($obj2, param_528);
+if (string_length($string0) > 0) {
+	if_setop(2, $string0, $component0);
+}
+$string0 = oc_param($obj2, param_529);
+if (string_length($string0) > 0) {
+	if_setop(3, $string0, $component0);
+}
+$string0 = oc_param($obj2, param_530);
+if (string_length($string0) > 0) {
+	if_setop(4, $string0, $component0);
+}
+$string0 = oc_param($obj2, param_531);
+if (string_length($string0) > 0) {
+	if_setop(5, $string0, $component0);
+}
+if_setop(10, "Examine", $component0);
+if_setopbase("<col=ff9040><oc_name($obj2)>", $component0);

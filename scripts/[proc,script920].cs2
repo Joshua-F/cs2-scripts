@@ -7,12 +7,12 @@ if (%varcint741 ! null) {
 	if (compare(oc_iop(%varcint741, 2), "Wear") = 0 | compare(oc_iop(%varcint741, 2), "Wield") = 0) {
 		$int1 = 1;
 	}
-	if_setobject_nonum(%varcint741, -1, interface_449:com_13);
-	if_setobject_nonum(%varcint741, -1, interface_449:com_14);
+	if_setobject_nonum(%varcint741, -1, obj_info:obj_graphic);
+	if_setobject_nonum(%varcint741, -1, obj_info:obj_name);
 	if (map_members = ^false & oc_members(%varcint741) = ^true) {
 		~script922("This is a members item. Additional information is not available on this world.", ^settextalign_centre, $int0);
 	} else {
-		$string0 = ~script914;
+		$string0 = ~obj_warning;
 		if (compare($string0, "") ! 0) {
 			~script922($string0, ^settextalign_centre, $int0);
 			%varcint742 = calc(%varcint742 + 1);

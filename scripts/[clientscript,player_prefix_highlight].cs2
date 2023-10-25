@@ -1,0 +1,16 @@
+// 2143
+[clientscript,player_prefix_highlight](int $comsubid0)
+def_int $count1 = 0;
+while ($count1 <= enum_getoutputcount(enum_1093)) {
+	if (cc_find(player_prefix:com_9, $count1) = ^true) {
+		if (~player_prefix_check($count1) = 1) {
+			cc_setcolour(0x11ff00);
+		} else {
+			cc_setcolour(0xff1100);
+		}
+	}
+	$count1 = calc(1 + $count1);
+}
+if (cc_find(player_prefix:com_9, $comsubid0) = ^true) {
+	cc_setcolour(^white);
+}

@@ -1,39 +1,39 @@
 // 1702
 [clientscript,script1702](int $int0)
-def_int $int1 = if_getheight(prayer:com_9);
+def_int $int1 = if_getheight(prayer:stats_layer);
 def_string $string0 = "This is the effect that prayers and curses have during combat. It includes curses that have been used against you. The adjustment has no effect outside of combat. The percentage shown is relative to your skill level, and may vary depending on the enemy you are fighting, and the prayers or curses used. Partial percentages are not shown.";
 if ($int0 >= 0) {
 	if (%varcint1052 = 1) {
 		if ($int1 < 63) {
 			$int1 = min(calc($int1 + 3), 63);
-			if_setontimer("script1702(0)", prayer:com_9);
-			if_setsize(16384, $int1, ^setsize_2, ^setsize_abs, prayer:com_9);
+			if_setontimer("script1702(0)", prayer:stats_layer);
+			if_setsize(16384, $int1, ^setsize_2, ^setsize_abs, prayer:stats_layer);
 			if_setsize(16384, calc($int1 + if_getheight(prayer:com_0)), ^setsize_2, ^setsize_minus, prayer:com_5);
 			if_setsize(16, calc($int1 + if_getheight(prayer:com_0) + 2), ^setsize_abs, ^setsize_minus, prayer:scrollbar_layer);
 		}
-		if (if_getheight(prayer:com_9) >= 63) {
-			if_setontimer(null, prayer:com_9);
-			~script1704;
-			if_sethide(false, prayer:com_24);
+		if (if_getheight(prayer:stats_layer) >= 63) {
+			if_setontimer(null, prayer:stats_layer);
+			~prayer_refresh_scrollbar;
+			if_sethide(false, prayer:stat_text_layer);
 			if_setonmouserepeat("addtooltip(prayer:com_13, prayer:tooltips, $string0, 25, 190)", prayer:com_13);
 			if_setonmouseleave("deltooltip(prayer:tooltips)", prayer:com_13);
 		}
 	} else {
 		if ($int1 > 19) {
 			$int1 = max(calc($int1 - 3), 19);
-			if_setontimer("script1702(0)", prayer:com_9);
-			if_setsize(16384, $int1, ^setsize_2, ^setsize_abs, prayer:com_9);
+			if_setontimer("script1702(0)", prayer:stats_layer);
+			if_setsize(16384, $int1, ^setsize_2, ^setsize_abs, prayer:stats_layer);
 			if_setsize(16384, calc($int1 + if_getheight(prayer:com_0)), ^setsize_2, ^setsize_minus, prayer:com_5);
 			if_setsize(16, calc($int1 + if_getheight(prayer:com_0) + 2), ^setsize_abs, ^setsize_minus, prayer:scrollbar_layer);
 			if_setonmouserepeat(null, prayer:com_13);
 			if_setonmouseleave(null, prayer:com_13);
 		}
-		if (if_getheight(prayer:com_9) <= 19) {
-			if_setontimer(null, prayer:com_9);
-			~script1704;
-			if_sethide(true, prayer:com_24);
+		if (if_getheight(prayer:stats_layer) <= 19) {
+			if_setontimer(null, prayer:stats_layer);
+			~prayer_refresh_scrollbar;
+			if_sethide(true, prayer:stat_text_layer);
 		}
 	}
 } else {
-	if_setontimer("script1702(calc($int0 + 1))", prayer:com_9);
+	if_setontimer("script1702(calc($int0 + 1))", prayer:stats_layer);
 }

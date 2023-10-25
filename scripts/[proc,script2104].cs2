@@ -2,8 +2,8 @@
 [proc,script2104](int $int0)
 if ($int0 = 1) {
 	if_sethide(false, sandwich_tray:key);
-	if_sethide(true, sandwich_tray:com_9);
+	if_sethide(true, sandwich_tray:offer);
 } else {
 	if_sethide(true, sandwich_tray:key);
-	if_sethide(false, sandwich_tray:com_9);
+	if_sethide(false, sandwich_tray:offer);
 }

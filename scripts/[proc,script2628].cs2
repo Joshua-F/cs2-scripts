@@ -1,38 +1,38 @@
 // 2628
 [proc,script2628]
 if (%varcint906 = 0) {
-	if_setgraphic("graphic_1868", interface_859:com_25);
-	if_settext("Idle", interface_859:com_11);
+	if_setgraphic("graphic_1868", mob_side_command:com_25);
+	if_settext("Idle", mob_side_command:com_11);
 } else if (%varcint906 = 2) {
-	if_setgraphic("graphic_1867", interface_859:com_25);
+	if_setgraphic("graphic_1867", mob_side_command:com_25);
 	switch_int (%varcint907) {
 		case 0 :
 			%varcint906 = 0;
-			if_setgraphic("graphic_1868", interface_859:com_25);
-			if_settext("Idle", interface_859:com_11);
+			if_setgraphic("graphic_1868", mob_side_command:com_25);
+			if_settext("Idle", mob_side_command:com_11);
 		case 1, 2 :
-			if_settext("Exploring", interface_859:com_11);
+			if_settext("Exploring", mob_side_command:com_11);
 		case 3, 4 :
-			if_settext("Attacking wall", interface_859:com_11);
+			if_settext("Attacking wall", mob_side_command:com_11);
 		case 5, 6, 7 :
-			if_settext("Rescuing TzHaar", interface_859:com_11);
+			if_settext("Rescuing TzHaar", mob_side_command:com_11);
 		case 8, 9 :
-			if_settext("Collecting gold", interface_859:com_11);
+			if_settext("Collecting gold", mob_side_command:com_11);
 		case 10, 11, 12 :
-			if_settext("Stealing TzHaar", interface_859:com_11);
+			if_settext("Stealing TzHaar", mob_side_command:com_11);
 		case 13, 14, 15 :
-			if_settext("Collecting parts", interface_859:com_11);
+			if_settext("Collecting parts", mob_side_command:com_11);
 		case 16, 17, 18 :
-			if_settext("Collecting Rocks", interface_859:com_11);
+			if_settext("Collecting Rocks", mob_side_command:com_11);
 		case 19, 20 :
-			if_settext("Attacking catapult", interface_859:com_11);
+			if_settext("Attacking catapult", mob_side_command:com_11);
 		case 21 :
-			if_settext("Retaliating", interface_859:com_11);
+			if_settext("Retaliating", mob_side_command:com_11);
 		case 22 :
-			if_settext("Moving to destination", interface_859:com_11);
+			if_settext("Moving to destination", mob_side_command:com_11);
 		case 23 :
-			if_settext("Attacking", interface_859:com_11);
+			if_settext("Attacking", mob_side_command:com_11);
 		case default :
-			if_settext("Busy", interface_859:com_11);
+			if_settext("Busy", mob_side_command:com_11);
 	}
 }

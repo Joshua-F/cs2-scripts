@@ -9,7 +9,7 @@ if ($int3 = 4) {
 } else if ($int3 = 1) {
 	$int1 = calc(0 - 20);
 }
-def_int $int5 = ~script1714($stat0, ~script1697($stat0));
+def_int $int5 = ~script1714($stat0, ~curse_get_stat($stat0));
 def_int $int6 = ~script1713($stat0);
 def_int $int7 = ~script1712($stat0);
 if ($int6 < 5 & $int4 = 4) {

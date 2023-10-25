@@ -8,6 +8,6 @@ if (%varcint176 <= 0) {
 }
 if_setonkey("loginscreen_keypress(event_keycode, event_keychar)", loginscreen:com_9);
 if_setonresize("script1176($component2, $component3)", loginscreen:background_layer);
-~script2710($component0, $component1, $component2, $component3, $component4);
+~loginscreen_initialisecamera($component0, $component1, $component2, $component3, $component4);
 ~loginscreen_setactivemenu(loginscreen:com_392);
-~script1129;
+~cursors_login;

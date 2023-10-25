@@ -1,8 +1,0 @@
-// 2802
-[clientscript,script2802](int $int0, component $component1)
-def_int $trans2 = if_gettrans($component1);
-def_int $trans3 = min(max(calc($trans2 + $int0), 0), 255);
-if_settrans($trans3, $component1);
-if ($trans3 = 0 | $trans3 = 255) {
-	if_setontimer(null, $component1);
-}

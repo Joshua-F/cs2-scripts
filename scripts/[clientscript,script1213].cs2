@@ -1,11 +1,11 @@
 // 1213
 [clientscript,script1213]
 if (~current_side_if = 7) {
-	if_settext("To cast Wind Strike, click on the flashing spell icon, then click on a chicken. You can hover over spell icons to read a brief description of the spell and the runes required to cast it.", interface_894:com_7);
-	if_settext("", interface_894:body);
-	if_setgraphic("magicon,0", interface_894:com_4);
+	if_settext("To cast Wind Strike, click on the flashing spell icon, then click on a chicken. You can hover over spell icons to read a brief description of the spell and the runes required to cast it.", advisor_tutorial_chat:graphic_text);
+	if_settext("", advisor_tutorial_chat:body);
+	if_setgraphic("magicon,0", advisor_tutorial_chat:graphic);
 } else {
-	if_settext("Click on the Magic icon to open your magic spellbook.", interface_894:com_7);
-	if_settext("", interface_894:body);
-	if_setgraphic("graphic_1824", interface_894:com_4);
+	if_settext("Click on the Magic icon to open your magic spellbook.", advisor_tutorial_chat:graphic_text);
+	if_settext("", advisor_tutorial_chat:body);
+	if_setgraphic("graphic_1824", advisor_tutorial_chat:graphic);
 }

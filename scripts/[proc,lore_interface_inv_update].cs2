@@ -63,14 +63,14 @@ while ($int5 <= calc($int4 - $int3)) {
 		~script760(enum(int, obj, enum_1183, $int6), $obj32, $component0, $int35, $op0, $op1, $op2, $op3, $op4, $op5);
 	}
 	if ($obj32 = pouch_12292) {
-		cc_setonmouserepeat("lore_blanktip(event_comsubid, interface_79:com_29, interface_79:lore_pouch_layer, $int31, $string6)");
-		cc_setonmouseleave("deltooltip(interface_79:com_29)");
+		cc_setonmouserepeat("lore_blanktip(event_comsubid, lore_pouch_creation_combined:com_29, lore_pouch_creation_combined:lore_pouch_layer, $int31, $string6)");
+		cc_setonmouseleave("deltooltip(lore_pouch_creation_combined:com_29)");
 	} else {
 		$string6 = enum(obj, string, enum_1187, $obj32);
 		$int31 = enum(obj, int, enum_1185, $obj32);
 		$obj11, $obj12, $obj13, $obj14, $obj15, $obj16, $obj17, $obj18, $obj19, $obj20, $int21, $int22, $int23, $int24, $int25, $int26, $int27, $int28, $int29, $int30 = ~lore_obj_checker($obj32);
-		cc_setonmouserepeat("lore_addtooltip(event_comsubid, interface_79:com_29, interface_79:lore_pouch_layer, $int31, $string6, $obj11, 1, $obj12, $int22, $obj13, $int23, $obj14, $int24, $obj15, $int25, $obj16, $int26, $obj17, $int27, $obj18, $int28, $obj19, $int29, $obj20, $int30)");
-		cc_setonmouseleave("deltooltip(interface_79:com_29)");
+		cc_setonmouserepeat("lore_addtooltip(event_comsubid, lore_pouch_creation_combined:com_29, lore_pouch_creation_combined:lore_pouch_layer, $int31, $string6, $obj11, 1, $obj12, $int22, $obj13, $int23, $obj14, $int24, $obj15, $int25, $obj16, $int26, $obj17, $int27, $obj18, $int28, $obj19, $int29, $obj20, $int30)");
+		cc_setonmouseleave("deltooltip(lore_pouch_creation_combined:com_29)");
 	}
 	$int35 = calc($int35 + 1);
 	cc_create($component0, ^iftype_graphic, $int35);

@@ -1,0 +1,12 @@
+// 2121
+[clientscript,ame_costumes_init](component $component0, component $component1)
+~script2122("Mime outfit", 1, $component0);
+~script2122("Frog kit", 11, $component0);
+~script2122("Zombie outfit (Gravedigger reward)", 21, $component0);
+~script2122("Camo kit (Drill Demon reward)", 31, $component0);
+~script2122("Lederhosen outfit (Freaky Forester reward)", 41, $component0);
+if_setscrollsize(0, 320, $component0);
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find($component1, 1) = ^true) {
+	~scrollbar_vertical_doscroll($component1, $component0, if_getscrolly($component0), true);
+}

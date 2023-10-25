@@ -3,13 +3,13 @@
 def_int $int0 = 0;
 $int0 = paraheight($string0, 325, p12_full);
 $int0 = calc($int0 * 15);
-if_setscrollsize(0, $int0, interface_178:com_33);
+if_setscrollsize(0, $int0, quest_intro:com_33);
 if ($int0 > 45) {
-	~scrollbar_vertical(interface_178:com_35, interface_178:com_33, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	if_setsize(332, 48, ^setsize_abs, ^setsize_abs, interface_178:com_33);
-	if_setsize(16384, $int0, ^setsize_2, ^setsize_abs, interface_178:com_40);
-	if_setsize(16384, $int0, ^setsize_2, ^setsize_abs, interface_178:com_41);
+	~scrollbar_vertical(quest_intro:scroll_layer, quest_intro:com_33, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if_setsize(332, 48, ^setsize_abs, ^setsize_abs, quest_intro:com_33);
+	if_setsize(16384, $int0, ^setsize_2, ^setsize_abs, quest_intro:com_40);
+	if_setsize(16384, $int0, ^setsize_2, ^setsize_abs, quest_intro:com_41);
 } else {
-	if_setsize(354, 48, ^setsize_abs, ^setsize_abs, interface_178:com_33);
+	if_setsize(354, 48, ^setsize_abs, ^setsize_abs, quest_intro:com_33);
 }
-if_setscrollsize(0, $int0, interface_178:com_33);
+if_setscrollsize(0, $int0, quest_intro:com_33);

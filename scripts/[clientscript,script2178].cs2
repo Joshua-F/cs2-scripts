@@ -1,6 +1,6 @@
 // 2178
 [clientscript,script2178](int $comsubid0, string $text0)
-if (cc_find(interface_190:com_18, $comsubid0) = ^true) {
+if (cc_find(questlist_tr:quests, $comsubid0) = ^true) {
 	if (calc(clientclock % 20) > 9) {
 		cc_settext("");
 		if (calc(clientclock % 20) = 10) {

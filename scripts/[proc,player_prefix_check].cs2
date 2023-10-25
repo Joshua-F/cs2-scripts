@@ -1,0 +1,21 @@
+// 2476
+[proc,player_prefix_check](int $count0)(int)
+switch_int ($count0) {
+	case 1 :
+		if (%var1447 < 1) {
+			return(0);
+		}
+	case 2 :
+		if (%var1447 < enum(int, int, enum_2461, 2)) {
+			return(0);
+		}
+	case 3 :
+		if (%var1447 < enum(int, int, enum_2461, 3)) {
+			return(0);
+		}
+	case 4 :
+		if (%var1447 < enum(int, int, enum_2461, 4)) {
+			return(0);
+		}
+}
+return(1);

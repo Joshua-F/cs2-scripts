@@ -2,10 +2,10 @@
 [clientscript,script943](int $int0, int $comsubid1, int $opindex2, int $colour3)
 %varcint693 = $comsubid1;
 ~script2162($int0, %varcint693, %varcint694, %varcint692);
-~dropdownbox_close(interface_190:com_16, interface_190:com_14, interface_190:com_15, null, 1);
+~dropdownbox_close(questlist_tr:com_16, questlist_tr:com_14, questlist_tr:com_15, null, 1);
 def_enum $enum4 = struct_param(enum(int, struct, enum_169, $int0), param_782);
-if (cc_find(interface_190:com_16, 2) = ^true) {
+if (cc_find(questlist_tr:com_16, 2) = ^true) {
 	cc_settext(enum(int, string, $enum4, $comsubid1));
 	cc_setcolour($colour3);
-	cc_setonmouseleave("dropdownbox_mouseoutelement(interface_190:com_16, 2, $colour3)");
+	cc_setonmouseleave("dropdownbox_mouseoutelement(questlist_tr:com_16, 2, $colour3)");
 }

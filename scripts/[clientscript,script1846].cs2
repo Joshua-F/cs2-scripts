@@ -1,6 +1,6 @@
 // 1846
 [clientscript,script1846]
-if (~current_side_if ! 8 & ~script1569 = 0 & if_hassub(~script8(8)) = true & %varbit6521 ! 3 & %varbit6521 ! 10) {
+if (~current_side_if ! 8 & ~script1569 = 0 & if_hassub(~getsidelayer(8)) = true & %varbit6521 ! 3 & %varbit6521 ! 10) {
 	~arrow_set(~script1742(8), -1, ~getsideicon(8), -1);
 	if_setontimer("script1847", toplevel_fullscreen:stones_on);
 	if_setontimer("script1847", toplevel:com_80);

@@ -11,12 +11,12 @@ if_sethide(true, chattop:mes_layer_large);
 if_sethide(true, chattop:mes_layer_hide);
 if_settext("Enter the player name whose channel you wish to join:", chattop:mes_text);
 %varcint5 = 10;
-~script1564("");
+~meslayer_setupinput("");
 if_setonclick(null, chattop:mes_layer);
 ~script2026;
 if_setonkey("meslayer_onkey(event_keycode, event_keychar)", chattop:mes_text2);
 cc_create(chattop:mes_layer, ^iftype_text, 0);
-~script2752;
+~meslayer_setupdynamicbutton;
 if (%varcint1027 = 1 & string_length(%varcstring202) > 0) {
 	cc_settext("Last name entered: <%varcstring202>");
 } else {
@@ -26,5 +26,5 @@ if (%varcint1027 = 1 & string_length(%varcstring202) > 0) {
 }
 cc_setop(1, "Use:");
 cc_setopbase("<col=ff9040><removetags(%varcstring202)></col>");
-cc_setonop("script2753(%varcint5, event_op, event_com, event_comsubid, %varcstring202)");
+cc_setonop("meslayer_lastname(%varcint5, event_op, event_com, event_comsubid, %varcstring202)");
 ~script1188;

@@ -1,7 +1,7 @@
 // 89
 [proc,rebuildpmbox]
 if (minimenuopen(pmchat:pmchat, -1) = true) {
-	if_setontimer("script1562", pmchat:pmchat);
+	if_setontimer("rebuildpmbox_timer", pmchat:pmchat);
 	return;
 }
 def_int $int0 = 0;

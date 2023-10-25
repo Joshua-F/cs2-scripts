@@ -76,10 +76,10 @@ if (getwindowmode >= ^windowmode_resizable) {
 	} else if (if_hassub(chattop:chatdefault) = true) {
 		if (%varcint41 = -1) {
 			if_sethide(true, toplevel_fullscreen:chattop);
-			if_sethide(true, toplevel_fullscreen:com_21);
+			if_sethide(true, toplevel_fullscreen:chatbox_resize_dragger);
 		} else {
 			if_sethide(false, toplevel_fullscreen:chattop);
-			if_sethide(false, toplevel_fullscreen:com_21);
+			if_sethide(false, toplevel_fullscreen:chatbox_resize_dragger);
 		}
 		if_sethide(true, chattop:chatmodallarge);
 		if_sethide(true, chattop:chatmodal);
@@ -114,9 +114,9 @@ if (getwindowmode >= ^windowmode_resizable) {
 	if (if_hassub(toplevel_fullscreen:sidemodal) = true) {
 		if_sethide(true, toplevel_fullscreen:stones_on);
 		if_sethide(true, toplevel_fullscreen:icons);
-		if_sethide(true, toplevel_fullscreen:com_17);
+		if_sethide(true, toplevel_fullscreen:stone_highlight);
 		if_sethide(false, toplevel_fullscreen:sidemodal);
-		if_sethide(true, toplevel_fullscreen:com_31);
+		if_sethide(true, toplevel_fullscreen:sidemodal2);
 		if_sethide(false, toplevel_fullscreen:side_border);
 		if_sethide(true, toplevel_fullscreen:side_hide);
 		if_sethide(true, toplevel_fullscreen:logoutbutton);
@@ -124,34 +124,34 @@ if (getwindowmode >= ^windowmode_resizable) {
 		if_sethide(false, toplevel_fullscreen:stones_on);
 		if_sethide(false, toplevel_fullscreen:icons);
 		if (%varbit6448 = 0) {
-			if_sethide(false, toplevel_fullscreen:com_17);
+			if_sethide(false, toplevel_fullscreen:stone_highlight);
 		}
 		if_sethide(false, toplevel_fullscreen:side_hide);
 		if_sethide(false, toplevel_fullscreen:logoutbutton);
-		if (if_hassub(toplevel_fullscreen:com_31) = false) {
+		if (if_hassub(toplevel_fullscreen:sidemodal2) = false) {
 			if_sethide(true, toplevel_fullscreen:sidemodal);
 		}
 		~if_switchside(%varcint168);
-		if (if_gethide(toplevel_fullscreen:side0) = false | if_gethide(toplevel_fullscreen:side1) = false | if_gethide(toplevel_fullscreen:side2) = false | if_gethide(toplevel_fullscreen:side3) = false | if_gethide(toplevel_fullscreen:side4) = false | if_gethide(toplevel_fullscreen:side5) = false | if_gethide(toplevel_fullscreen:side6) = false | if_gethide(toplevel_fullscreen:side7) = false | if_gethide(toplevel_fullscreen:side8) = false | if_gethide(toplevel_fullscreen:side9) = false | if_gethide(toplevel_fullscreen:side10) = false | if_gethide(toplevel_fullscreen:side11) = false | if_gethide(toplevel_fullscreen:side12) = false | if_gethide(toplevel_fullscreen:side13) = false | if_gethide(toplevel_fullscreen:com_47) = false | if_gethide(toplevel_fullscreen:com_48) = false | if_gethide(toplevel_fullscreen:com_50) = false | if_gethide(toplevel_fullscreen:side99) = false) {
+		if (if_gethide(toplevel_fullscreen:side0) = false | if_gethide(toplevel_fullscreen:side1) = false | if_gethide(toplevel_fullscreen:side2) = false | if_gethide(toplevel_fullscreen:side3) = false | if_gethide(toplevel_fullscreen:side4) = false | if_gethide(toplevel_fullscreen:side5) = false | if_gethide(toplevel_fullscreen:side6) = false | if_gethide(toplevel_fullscreen:side7) = false | if_gethide(toplevel_fullscreen:side8) = false | if_gethide(toplevel_fullscreen:side9) = false | if_gethide(toplevel_fullscreen:side10) = false | if_gethide(toplevel_fullscreen:side11) = false | if_gethide(toplevel_fullscreen:side12) = false | if_gethide(toplevel_fullscreen:side13) = false | if_gethide(toplevel_fullscreen:side14) = false | if_gethide(toplevel_fullscreen:side15) = false | if_gethide(toplevel_fullscreen:side95) = false | if_gethide(toplevel_fullscreen:side99) = false) {
 			if_sethide(false, toplevel_fullscreen:side_border);
 		} else {
 			if_sethide(true, toplevel_fullscreen:side_border);
 		}
 		if_setontimer("script2464(clientclock, event_com)", toplevel_fullscreen:chattop);
 	}
-	if_sethide(true, toplevel:com_148);
+	if_sethide(true, toplevel:sidemodal2);
 	$int1 = 0;
 	while ($int1 <= 15) {
-		if (if_hassub(~script8($int1)) = true) {
+		if (if_hassub(~getsidelayer($int1)) = true) {
 			if_sethide(false, ~getsideicon($int1));
-			if_sethide(false, ~script2458($int1));
+			if_sethide(false, ~getstonelayer($int1));
 		} else {
 			if_sethide(true, ~getsideicon($int1));
-			if_sethide(true, ~script2458($int1));
+			if_sethide(true, ~getstonelayer($int1));
 		}
 		$int1 = calc($int1 + 1);
 	}
-	if (if_hassub(~script8(95)) = true & %varbit4280 = 1) {
+	if (if_hassub(~getsidelayer(95)) = true & %varbit4280 = 1) {
 		if_sethide(false, topstat_lore:com_8);
 	} else {
 		if_sethide(true, topstat_lore:com_8);
@@ -262,7 +262,7 @@ if (getwindowmode >= ^windowmode_resizable) {
 		if_sethide(true, toplevel:com_80);
 		if_sethide(true, toplevel:com_97);
 		if_sethide(false, toplevel:sidemodal);
-		if_sethide(true, toplevel:com_148);
+		if_sethide(true, toplevel:sidemodal2);
 		if_sethide(true, toplevel:side_hide);
 		if_sethide(true, toplevel:logoutbutton);
 	} else {
@@ -273,24 +273,24 @@ if (getwindowmode >= ^windowmode_resizable) {
 		if_sethide(false, toplevel:side_hide);
 		if_sethide(false, toplevel:logoutbutton);
 		if_sethide(true, toplevel_fullscreen:sidemodal);
-		if (if_hassub(toplevel:com_148) = false) {
-			if_sethide(true, toplevel:com_148);
+		if (if_hassub(toplevel:sidemodal2) = false) {
+			if_sethide(true, toplevel:sidemodal2);
 		}
 		~if_switchside(%varcint168);
 		if_setontimer("script2464(clientclock, event_com)", toplevel:chattop);
 	}
 	$int1 = 0;
 	while ($int1 <= 15) {
-		if (if_hassub(~script8($int1)) = true) {
+		if (if_hassub(~getsidelayer($int1)) = true) {
 			if_sethide(false, ~getsideicon($int1));
-			if_sethide(false, ~script2458($int1));
+			if_sethide(false, ~getstonelayer($int1));
 		} else {
 			if_sethide(true, ~getsideicon($int1));
-			if_sethide(true, ~script2458($int1));
+			if_sethide(true, ~getstonelayer($int1));
 		}
 		$int1 = calc($int1 + 1);
 	}
-	if (if_hassub(~script8(95)) = true & %varbit4280 = 1) {
+	if (if_hassub(~getsidelayer(95)) = true & %varbit4280 = 1) {
 		if_sethide(false, topstat_lore:com_8);
 	} else {
 		if_sethide(true, topstat_lore:com_8);

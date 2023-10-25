@@ -1,4 +1,4 @@
 // 538
 [clientscript,xbows_init](component $component0, obj $obj1, int $int2)
-if_setoninvtransmit("script2348($component0, $obj1, $int2){inv}", $component0);
-~script2349($component0, $obj1, $int2);
+if_setoninvtransmit("xbows_rune_update($component0, $obj1, $int2){inv}", $component0);
+~xbows_rune_update($component0, $obj1, $int2);

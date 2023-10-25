@@ -1,7 +1,7 @@
 // 1847
 [clientscript,script1847]
 def_component $component0 = ~getsideicon(8);
-if (~current_side_if ! 8 & ~script1569 = 0 & if_hassub(~script8(8)) = true) {
+if (~current_side_if ! 8 & ~script1569 = 0 & if_hassub(~getsidelayer(8)) = true) {
 	if ($component0 ! null) {
 		if (calc(clientclock % 40) > 20) {
 			if_sethide(false, $component0);

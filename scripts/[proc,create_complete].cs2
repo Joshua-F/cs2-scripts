@@ -1,0 +1,52 @@
+// 2223
+[proc,create_complete](boolean $boolean0)
+%varcstring124 = "";
+%varcstring125 = "";
+~loginscreen_setactivemenu(loginscreen:create_success);
+def_string $string0 = "";
+def_int $width1 = 0;
+def_int $int2 = 0;
+def_int $y3 = 0;
+$string0 = "Your account <col=ffbb22><%varcstring122></col> has now been created with the password you have chosen. We recommend that you make a note of it on a bit of paper and keep it somewhere safe, in case you forget it.";
+if_settext($string0, loginscreen:com_210);
+$width1 = if_getwidth(loginscreen:com_210);
+$int2 = calc(paraheight($string0, $width1, b12_full) * 14);
+if_setsize($width1, $int2, ^setsize_abs, ^setsize_abs, loginscreen:com_210);
+if ($boolean0 = true) {
+	if_sethide(false, loginscreen:com_211);
+	$string0 = if_gettext(loginscreen:com_211);
+	$width1 = if_getwidth(loginscreen:com_211);
+	$int2 = calc(paraheight($string0, $width1, b12_full) * 14);
+	if_setsize($width1, $int2, ^setsize_abs, ^setsize_abs, loginscreen:com_211);
+	$y3 = calc(if_gety(loginscreen:com_210) + if_getheight(loginscreen:com_210) + 13);
+	if_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_top, loginscreen:com_211);
+	if_sethide(false, loginscreen:com_212);
+	$string0 = if_gettext(loginscreen:com_212);
+	$width1 = if_getwidth(loginscreen:com_212);
+	$int2 = calc(paraheight($string0, $width1, b12_full) * 14);
+	if_setsize($width1, $int2, ^setsize_abs, ^setsize_abs, loginscreen:com_212);
+	$y3 = calc(if_gety(loginscreen:com_211) + if_getheight(loginscreen:com_211) + 13);
+	if_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_top, loginscreen:com_212);
+	$string0 = if_gettext(loginscreen:com_213);
+	$width1 = if_getwidth(loginscreen:com_213);
+	$int2 = calc(paraheight($string0, $width1, b12_full) * 14);
+	if_setsize($width1, $int2, ^setsize_abs, ^setsize_abs, loginscreen:com_213);
+	$y3 = calc(if_gety(loginscreen:com_212) + if_getheight(loginscreen:com_212) + 13);
+	if_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_top, loginscreen:com_213);
+} else {
+	if_sethide(true, loginscreen:com_211);
+	if_sethide(true, loginscreen:com_212);
+	$string0 = if_gettext(loginscreen:com_213);
+	$width1 = if_getwidth(loginscreen:com_213);
+	$int2 = calc(paraheight($string0, $width1, b12_full) * 14);
+	if_setsize($width1, $int2, ^setsize_abs, ^setsize_abs, loginscreen:com_213);
+	$y3 = calc(if_gety(loginscreen:com_210) + if_getheight(loginscreen:com_210) + 13);
+	if_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_top, loginscreen:com_213);
+}
+$y3 = calc(if_gety(loginscreen:com_213) + if_getheight(loginscreen:com_213) + 13);
+if_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_top, loginscreen:com_214);
+$y3 = calc(if_gety(loginscreen:com_214) + if_getheight(loginscreen:com_214) + 13);
+if_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_top, loginscreen:com_215);
+$int2 = calc(if_gety(loginscreen:com_215) + if_getheight(loginscreen:com_215) + 4);
+if_setsize(if_getwidth(loginscreen:create_success), $int2, ^setsize_abs, ^setsize_abs, loginscreen:create_success);
+if_setsize(if_getwidth(loginscreen:com_8), calc($int2 + 85), ^setsize_abs, ^setsize_abs, loginscreen:com_8);

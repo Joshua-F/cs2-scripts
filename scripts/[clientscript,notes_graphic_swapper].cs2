@@ -1,0 +1,5 @@
+// 2455
+[clientscript,notes_graphic_swapper](component $component0, graphic $graphic1)
+if (if_gethide(notes:colours) = true & if_gethide(notes:noclick) = true) {
+	if_setgraphic($graphic1, $component0);
+}
