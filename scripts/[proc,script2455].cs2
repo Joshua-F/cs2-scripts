@@ -1,0 +1,9 @@
+// 2455
+[proc,script2455]()(int)
+if (~league_world = 0) {
+	return(0);
+}
+if (%varbit10032 ! 2 & %varbit10032 ! 4) {
+	return(0);
+}
+return(1);

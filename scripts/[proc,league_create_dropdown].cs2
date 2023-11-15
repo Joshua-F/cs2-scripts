@@ -6,13 +6,13 @@ if ($struct6 = null) {
 	return;
 }
 $colour5 = struct_param($struct6, param_1027);
-def_int $int7 = 92;
+def_int $int7 = 115;
 def_int $int8 = 81;
 if (~on_mobile = true) {
-	$int7 = 112;
+	$int7 = 140;
 	$int8 = 115;
 }
-def_int $int9 = calc($int7 / 4);
+def_int $int9 = calc($int7 / 5);
 def_int $int10 = 6;
 if_setsize($int8, calc($int7 + 12), ^setsize_abs, ^setsize_abs, $component1);
 cc_create($component1, ^iftype_graphic, $int3);
@@ -154,5 +154,37 @@ if ($int4 = 2) {
 	}
 }
 cc_setop(1, "View <$text0>");
+cc_setonop("league_menu_frame_click($component0, $component1, $component2)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int3 = calc($int3 + 1);
+$int10 = calc($int10 + $int9);
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(calc($int8 - 12), $int9, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int4 = 4) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int3 = calc($int3 + 1);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int8 - 12), $int9, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Rank");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int4 = 4) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour($colour5);
+	if (~on_mobile = false) {
+		cc_setonmouseover("league_info_mouseover($component1, $int3)");
+		cc_setonmouseleave("league_info_mouseleave($component1, $int3, $colour5)");
+	}
+}
+cc_setop(1, "View Rank");
 cc_setonop("league_menu_frame_click($component0, $component1, $component2)");
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

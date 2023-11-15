@@ -725,7 +725,16 @@
 [**722**](scripts/[proc,script722].cs2)  
 [**723**](scripts/[proc,script723].cs2)  
 [**724**](scripts/[proc,script724].cs2)  
+[**725**](scripts/[clientscript,league_areas_draw_interface].cs2) `[clientscript,league_areas_draw_interface]`  
+[**726**](scripts/[proc,script726].cs2)  
+[**727**](scripts/[clientscript,script727].cs2)  
+[**728**](scripts/[proc,script728].cs2)  
+[**729**](scripts/[clientscript,script729].cs2)  
+[**730**](scripts/[proc,script730].cs2)  
+[**731**](scripts/[proc,script731].cs2)  
 [**732**](scripts/[clientscript,script732].cs2)  
+[**733**](scripts/[clientscript,league_relics_draw_selections].cs2) `[clientscript,league_relics_draw_selections]`  
+[**734**](scripts/[clientscript,script734].cs2)  
 [**735**](scripts/[clientscript,inferno_hud_init].cs2) `[clientscript,inferno_hud_init]`  
 [**736**](scripts/[clientscript,inferno_hud_pos].cs2) `[clientscript,inferno_hud_pos]`  
 [**737**](scripts/[proc,inferno_hud_pos].cs2) `[proc,inferno_hud_pos]`  
@@ -1334,6 +1343,8 @@
 [**1340**](scripts/[clientscript,questlist_draw].cs2) `[clientscript,questlist_draw]`  
 [**1341**](scripts/[proc,quicksort_componenttext].cs2) `[proc,quicksort_componenttext]`  
 [**1342**](scripts/[proc,quicksort_componentenum].cs2) `[proc,quicksort_componentenum]`  
+[**1343**](scripts/[proc,script1343].cs2)  
+[**1344**](scripts/[clientscript,script1344].cs2)  
 [**1345**](scripts/[clientscript,br_fogcolour].cs2) `[clientscript,br_fogcolour]`  
 [**1346**](scripts/[proc,br_fogcolour].cs2) `[proc,br_fogcolour]`  
 [**1347**](scripts/[clientscript,br_hud_init].cs2) `[clientscript,br_hud_init]`  
@@ -2266,6 +2277,18 @@
 [**2274**](scripts/[proc,v2_stone_button_fadable].cs2) `[proc,v2_stone_button_fadable]`  
 [**2275**](scripts/[proc,script2275].cs2)  
 [**2276**](scripts/[proc,misc_collection_draw].cs2) `[proc,misc_collection_draw]`  
+[**2277**](scripts/[proc,script2277].cs2)  
+[**2278**](scripts/[proc,script2278].cs2)  
+[**2279**](scripts/[proc,script2279].cs2)  
+[**2280**](scripts/[proc,script2280].cs2)  
+[**2281**](scripts/[proc,script2281].cs2)  
+[**2282**](scripts/[proc,script2282].cs2)  
+[**2283**](scripts/[clientscript,script2283].cs2)  
+[**2284**](scripts/[proc,script2284].cs2)  
+[**2285**](scripts/[proc,script2285].cs2)  
+[**2286**](scripts/[clientscript,script2286].cs2)  
+[**2287**](scripts/[proc,script2287].cs2)  
+[**2288**](scripts/[proc,script2288].cs2)  
 [**2289**](scripts/[clientscript,raids_overlay_timer].cs2) `[clientscript,raids_overlay_timer]`  
 [**2290**](scripts/[clientscript,raids_challenge_build_list].cs2) `[clientscript,raids_challenge_build_list]`  
 [**2291**](scripts/[clientscript,raids_challenge_move_highlight].cs2) `[clientscript,raids_challenge_move_highlight]`  
@@ -2411,6 +2434,39 @@
 [**2431**](scripts/[proc,script2431].cs2)  
 [**2432**](scripts/[proc,script2432].cs2)  
 [**2433**](scripts/[clientscript,script2433].cs2)  
+[**2434**](scripts/[clientscript,script2434].cs2)  
+[**2435**](scripts/[clientscript,script2435].cs2)  
+[**2436**](scripts/[clientscript,script2436].cs2)  
+[**2437**](scripts/[proc,script2437].cs2)  
+[**2438**](scripts/[proc,script2438].cs2)  
+[**2439**](scripts/[clientscript,script2439].cs2)  
+[**2440**](scripts/[clientscript,script2440].cs2)  
+[**2441**](scripts/[proc,script2441].cs2)  
+[**2442**](scripts/[clientscript,script2442].cs2)  
+[**2443**](scripts/[clientscript,script2443].cs2)  
+[**2444**](scripts/[proc,script2444].cs2)  
+[**2445**](scripts/[clientscript,script2445].cs2)  
+[**2446**](scripts/[clientscript,script2446].cs2)  
+[**2447**](scripts/[clientscript,league_info_draw_interface].cs2) `[clientscript,league_info_draw_interface]`  
+[**2448**](scripts/[proc,script2448].cs2)  
+[**2449**](scripts/[proc,script2449].cs2)  
+[**2450**](scripts/[proc,script2450].cs2)  
+[**2451**](scripts/[proc,script2451].cs2)  
+[**2452**](scripts/[proc,script2452].cs2)  
+[**2453**](scripts/[clientscript,script2453].cs2)  
+[**2454**](scripts/[proc,script2454].cs2)  
+[**2455**](scripts/[proc,script2455].cs2)  
+[**2456**](scripts/[proc,script2456].cs2)  
+[**2457**](scripts/[proc,script2457].cs2)  
+[**2458**](scripts/[proc,script2458].cs2)  
+[**2459**](scripts/[proc,script2459].cs2)  
+[**2460**](scripts/[clientscript,script2460].cs2)  
+[**2461**](scripts/[proc,script2461].cs2)  
+[**2462**](scripts/[clientscript,script2462].cs2)  
+[**2463**](scripts/[clientscript,script2463].cs2)  
+[**2464**](scripts/[proc,script2464].cs2)  
+[**2465**](scripts/[clientscript,script2465].cs2)  
+[**2466**](scripts/[clientscript,script2466].cs2)  
 [**2467**](scripts/[proc,script2467].cs2)  
 [**2468**](scripts/[clientscript,script2468].cs2)  
 [**2469**](scripts/[proc,meslayer_button_draw].cs2) `[proc,meslayer_button_draw]`  
@@ -3228,7 +3284,6 @@
 [**3289**](scripts/[clientscript,league_reward_confirm_back].cs2) `[clientscript,league_reward_confirm_back]`  
 [**3290**](scripts/[proc,league_reward_shop_showpoints].cs2) `[proc,league_reward_shop_showpoints]`  
 [**3291**](scripts/[clientscript,league_reward_shop_showpoints].cs2) `[clientscript,league_reward_shop_showpoints]`  
-[**3292**](scripts/[proc,script3292].cs2)  
 [**3293**](scripts/[clientscript,boardgames_draughts_options_update_ranked].cs2) `[clientscript,boardgames_draughts_options_update_ranked]`  
 [**3294**](scripts/[proc,boardgames_draughts_options_update_ranked].cs2) `[proc,boardgames_draughts_options_update_ranked]`  
 [**3295**](scripts/[clientscript,boardgames_runeversi_options_init].cs2) `[clientscript,boardgames_runeversi_options_init]`  
@@ -4596,7 +4651,6 @@
 [**4672**](scripts/[proc,buff_bar_position_review].cs2) `[proc,buff_bar_position_review]`  
 [**4673**](scripts/[clientscript,gim_options_titlereset].cs2) `[clientscript,gim_options_titlereset]`  
 [**4674**](scripts/[proc,script4674].cs2)  
-[**4675**](scripts/[proc,script4675].cs2)  
 [**4676**](scripts/[proc,script4676].cs2)  
 [**4677**](scripts/[clientscript,script4677].cs2)  
 [**4678**](scripts/[proc,script4678].cs2)  
@@ -5359,7 +5413,6 @@
 [**5741**](scripts/[proc,script5741].cs2)  
 [**5742**](scripts/[proc,script5742].cs2)  
 [**5743**](scripts/[proc,script5743].cs2)  
-[**5744**](scripts/[proc,script5744].cs2)  
 [**5745**](scripts/[clientscript,league_3_fragments_init].cs2) `[clientscript,league_3_fragments_init]`  
 [**5746**](scripts/[proc,league_3_fragments_draw_interface].cs2) `[proc,league_3_fragments_draw_interface]`  
 [**5747**](scripts/[clientscript,league_3_fragment_loadout_background].cs2) `[clientscript,league_3_fragment_loadout_background]`  

@@ -9,6 +9,10 @@ if (map_members = ^true | oc_members($obj0) = ^false) {
 			} else {
 				$string0 = "<$string0> (Inactive)";
 			}
+		case bankers_note_28767 :
+			if (%var4034 ! null) {
+				$string0 = oc_name(%var4034);
+			}
 	}
 }
 return($string0);

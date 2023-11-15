@@ -4,10 +4,17 @@ def_int $count2 = 0;
 def_struct $struct3 = null;
 def_int $count4 = enum_getoutputcount(enum_4664);
 def_int $height5 = 0;
+def_int $int6 = ~league_world;
 cc_deleteall($component1);
 while ($count2 < $count4) {
 	$struct3 = enum(int, struct, enum_4664, $count2);
-	$height5 = ~script6610($count2, $struct3, $component1);
+	if (struct_param($struct3, param_1161) = 15) {
+		if ($int6 = 1) {
+			$height5 = ~script6610($count2, $struct3, $component1);
+		}
+	} else {
+		$height5 = ~script6610($count2, $struct3, $component1);
+	}
 	$count2 = calc($count2 + 1);
 }
 if_setscrollsize(0, $height5, $component1);

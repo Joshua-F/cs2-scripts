@@ -1,0 +1,27 @@
+// 2280
+[proc,script2280](int $int0, int $int1)(graphic)
+if ($int1 <= 0) {
+	return(null);
+}
+def_struct $struct2 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct2 = null) {
+	return(null);
+}
+def_enum $enum3 = struct_param($struct2, param_870);
+if ($enum3 = null) {
+	return(null);
+}
+def_struct $struct4 = enum(int, struct, $enum3, $int0);
+if ($struct4 = null) {
+	return(null);
+}
+def_enum $enum5 = struct_param($struct4, param_878);
+if ($enum5 = null) {
+	return(null);
+}
+def_struct $struct6 = enum(int, struct, $enum5, $int1);
+if ($struct6 = null) {
+	return(null);
+}
+def_graphic $graphic7 = struct_param($struct6, param_882);
+return($graphic7);

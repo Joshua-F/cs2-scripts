@@ -1,8 +1,9 @@
 // 3678
-[clientscript,league_area_back](component $component0, component $component1, component $component2, component $component3, component $component4)
+[clientscript,league_area_back](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
 sound_synth(interface_select1, 1, 0);
 if_sethide(false, $component1);
 if_sethide(false, $component0);
+if_sethide(false, $component5);
 if_sethide(false, $component2);
 if_sethide(true, $component3);
 ~stop_slideshow($component4);

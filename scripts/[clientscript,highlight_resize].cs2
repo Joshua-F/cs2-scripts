@@ -1,3 +1,7 @@
 // 3411
-[clientscript,highlight_resize](component $component0, int $int1, int $int2, int $int3, int $int4, int $setposh5, int $setposv6, int $int7, int $height8, boolean $boolean9)
-~highlight_screen($component0, $int1, $int2, $int3, $int4, $setposh5, $setposv6, $int7, $height8, $boolean9);
+[clientscript,highlight_resize](component $component0, component $component1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7, int $setposh8, int $setposv9, int $int10, int $height11, int $width12, boolean $boolean13)
+if ($component2 = null) {
+	~highlight_screen($component0, null, null, -1, $int4, $int5, $int6, $int7, $setposh8, $setposv9, $int10, $height11, $width12, $boolean13);
+} else {
+	~script2464($component0, $component1, $component2, $int3, $setposh8, $setposv9, $int10, $boolean13);
+}

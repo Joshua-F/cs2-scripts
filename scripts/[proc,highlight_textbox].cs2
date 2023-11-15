@@ -1,67 +1,75 @@
 // 3415
-[proc,highlight_textbox](string $string0, int $int0, boolean $boolean1, boolean $boolean2, component $component3, int $height4)
+[proc,highlight_textbox](string $string0, int $int0, boolean $boolean1, boolean $boolean2, component $component3, int $height4, int $width5, int $int6)
 if ($boolean2 = true) {
 	if_sethide(false, interface_664:29);
 } else {
 	if_sethide(true, interface_664:29);
 }
-def_int $height5 = if_getheight($component3);
-if ($height5 = $height4) {
+def_int $height7 = if_getheight($component3);
+def_int $width8 = if_getwidth($component3);
+if (calc(clientclock % 100) ! 0 & $height7 = $height4 & $width8 = $width5) {
 	return;
 }
-def_int $width6 = if_getwidth($component3);
 if ($int0 = -1) {
 	$int0 = 16750623;
 }
 if_setcolour($int0, interface_664:28);
 if_settext("<tostring(calc(1 + %varbit10308))>/<tostring(%varbit10309)>", interface_664:28);
-def_int $int7 = 0;
-def_int $int8 = 0;
-$int7, $int8 = ~script3416($string0, p12_full, 16);
-if_setsize($int7, $int8, ^setsize_abs, ^setsize_abs, interface_664:8);
+def_int $int9 = 0;
+def_int $int10 = 0;
+$int9, $int10 = ~script3416($string0, p12_full, 16);
+if_setsize($int9, $int10, ^setsize_abs, ^setsize_abs, interface_664:8);
 if_setcolour($int0, interface_664:27);
 if_settext($string0, interface_664:27);
-def_int $int9 = if_getx(interface_664:7);
-def_int $int10 = if_gety(interface_664:7);
-def_int $width11 = if_getwidth(interface_664:7);
-def_int $height12 = if_getheight(interface_664:7);
+def_int $int11 = if_getx(interface_664:7);
+def_int $int12 = if_gety(interface_664:7);
+def_int $width13 = if_getwidth(interface_664:7);
+def_int $height14 = if_getheight(interface_664:7);
 if (if_gethide(interface_664:7) = false) {
-	if (calc($int8 + 10) <= $int10) {
-		$int10 = calc($int10 - 10 - $int8);
-		$int9 = calc($int9 + if_getwidth(interface_664:7) / 2 - $int7 / 2);
-		if ($int9 <= 1) {
-			$int9 = 2;
-		} else if (calc($int9 + $int7) >= $width6) {
-			$int9 = calc($width6 - 2 - $int7);
+	if (calc($int10 + 10) <= $int12) {
+		$int12 = calc($int12 - 10 - $int10);
+		$int11 = calc($int11 + if_getwidth(interface_664:7) / 2 - $int9 / 2);
+		if ($int11 <= 1) {
+			$int11 = 2;
+		} else if (calc($int11 + $int9) >= $width8) {
+			$int11 = calc($width8 - 2 - $int9);
 		}
-		if_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
-	} else if (calc($int10 + $height12 + $int8 + 10) <= $height5) {
-		$int10 = calc($int10 + 10 + if_getheight(interface_664:7));
-		$int9 = calc($int9 + if_getwidth(interface_664:7) / 2 - $int7 / 2);
-		if ($int9 <= 1) {
-			$int9 = 2;
-		} else if (calc($int9 + $int7) >= $width6) {
-			$int9 = calc($width6 - 2 - $int7);
+		if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
+	} else if (calc($int12 + $height14 + $int10 + 10) <= $height7) {
+		$int12 = calc($int12 + 10 + if_getheight(interface_664:7));
+		$int11 = calc($int11 + if_getwidth(interface_664:7) / 2 - $int9 / 2);
+		if ($int11 <= 1) {
+			$int11 = 2;
+		} else if (calc($int11 + $int9) >= $width8) {
+			$int11 = calc($width8 - 2 - $int9);
 		}
-		if_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
-	} else if (calc($int7 + 10) <= $int9) {
-		$int9 = calc($int9 - 10 - $int7);
-		$int10 = calc($int10 + if_getheight(interface_664:7) / 2 - $int8 / 2);
-		if ($int10 <= 1) {
-			$int10 = 2;
-		} else if (calc($int10 + $int8) >= $height5) {
-			$int10 = calc($height5 - 2 - $int8);
+		if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
+	} else if (calc($int9 + 10) <= $int11) {
+		$int11 = calc($int11 - 10 - $int9);
+		$int12 = calc($int12 + if_getheight(interface_664:7) / 2 - $int10 / 2);
+		if ($int12 <= 1) {
+			$int12 = 2;
+		} else if (calc($int12 + $int10) >= $height7) {
+			$int12 = calc($height7 - 2 - $int10);
 		}
-		if_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
-	} else if (calc($int9 + $width11 + $int7 + 10) <= $width6) {
-		$int9 = calc($int9 + 10 + if_getwidth(interface_664:7));
-		$int10 = calc($int10 + if_getheight(interface_664:7) / 2 - $int8 / 2);
-		if ($int10 <= 1) {
-			$int10 = 2;
-		} else if (calc($int10 + $int8) >= $height5) {
-			$int10 = calc($height5 - 2 - $int8);
+		if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
+	} else if (calc($int11 + $width13 + $int9 + 10) <= $width8) {
+		$int11 = calc($int11 + 10 + if_getwidth(interface_664:7));
+		$int12 = calc($int12 + if_getheight(interface_664:7) / 2 - $int10 / 2);
+		if ($int12 <= 1) {
+			$int12 = 2;
+		} else if (calc($int12 + $int10) >= $height7) {
+			$int12 = calc($height7 - 2 - $int10);
 		}
-		if_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
+		if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
+	} else if ($int6 = 1) {
+		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, interface_664:8);
+	} else if ($int6 = 2) {
+		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, interface_664:8);
+	} else if ($int6 = 3) {
+		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, interface_664:8);
+	} else if ($int6 = 4) {
+		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, interface_664:8);
 	} else {
 		if_setposition(0, 50, ^setpos_abs_centre, ^setpos_abs_bottom, interface_664:8);
 	}
@@ -69,4 +77,4 @@ if (if_gethide(interface_664:7) = false) {
 	if_setposition(0, 50, ^setpos_abs_centre, ^setpos_abs_bottom, interface_664:8);
 }
 if_sethide(false, interface_664:8);
-if_setontimer("highlight_textbox_resize($string0, $int0, $boolean1, $boolean2, $component3, $height5)", interface_664:8);
+if_setontimer("highlight_textbox_resize($string0, $int0, $boolean1, $boolean2, $component3, $height7, $width8, $int6)", interface_664:0);

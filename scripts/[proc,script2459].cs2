@@ -1,0 +1,19 @@
+// 2459
+[proc,script2459](component $component0, int $int1)
+def_int $width2 = if_getwidth($component0);
+def_int $height3 = if_getheight($component0);
+def_int $int4 = 0;
+if ($width2 > 640 & $height3 > 480) {
+	$int4 = 1;
+}
+if ($width2 > 800 & $height3 > 600) {
+	$int4 = 2;
+}
+if ($width2 > 1024 & $height3 > 768) {
+	$int4 = 3;
+}
+%varcint988 = $int4;
+if ($int1 ! $int4) {
+	if_callonresize($component0);
+}
+if_setontimer("script6110($component0, $int4)", $component0);

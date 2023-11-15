@@ -1,7 +1,7 @@
 // 7145
 [clientscript,omnishop_main_list_item_select](dbrow $dbrow0, inv $inv1, int $int2, int $opindex3)
 def_component $component4 = interface_819:5;
-def_int $int5 = 53674013;
+def_int $int5 = 53674014;
 if ($opindex3 = 1) {
 	sound_synth(interface_select1, 1, 0);
 	~omnishop_main_list_setup($dbrow0, $inv1, $int2, 0);

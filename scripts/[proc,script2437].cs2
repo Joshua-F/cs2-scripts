@@ -1,0 +1,9 @@
+// 2437
+[proc,script2437](int $width0, int $height1, component $component2, component $component3)
+def_int $width4 = if_getwidth($component2);
+def_int $height5 = if_getheight($component2);
+if ($width0 = $width4 & $height1 = $height5) {
+	return;
+}
+if_setontimer("script2436($width4, $height5, $component2, $component3)", $component3);
+if_callonresize($component2);

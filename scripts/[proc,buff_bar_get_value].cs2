@@ -1,5 +1,6 @@
 // 5923
 [proc,buff_bar_get_value](struct $struct0)(int)
+def_int $int1 = 0;
 switch_struct ($struct0) {
 	case buff_abyssal_sire_stun_3091 :
 		if (%varcint475 > 0) {
@@ -84,6 +85,15 @@ switch_struct ($struct0) {
 	case buff_home_teleport_cooldown_3077 :
 		if (%var892 > 0) {
 			return(~script5941(%var892, 30));
+		}
+	case buff_last_recall_cooldown_5894 :
+		$int1 = max(0, calc(6 - 1 * (~stat_totallevel / 300)));
+		if (%var4030 > 0 & $int1 > 0) {
+			return(~script5941(%var4030, $int1));
+		}
+	case buff_undying_retribution_cooldown_5895 :
+		if (%varcint1185 > 0) {
+			return(~script5940(%varcint1185, calc(%varcint1186 - 3)));
 		}
 	case buff_minigame_teleport_cooldown_3078 :
 		if (%var888 > 0) {
@@ -177,6 +187,10 @@ switch_struct ($struct0) {
 		if (%varcint524 > 0) {
 			return(~script5940(%varcint524, calc(%varcint1147 - 3)));
 		}
+	case buff_guardian_5896 :
+		if (%varcint1183 > 0) {
+			return(~script5940(%varcint1183, calc(%varcint1184 - 3)));
+		}
 	case buff_resurrection_cooldown_3127 :
 		if (%varcint523 > 0) {
 			return(~script5942(%varcint523, %varbit12290, 17));
@@ -230,31 +244,63 @@ switch_struct ($struct0) {
 			return(~script5942(%varcint1088, %varbit14448, 25));
 		}
 	case buff_weapon_specialist_3773 :
-		if (~script4675(0) = 1) {
+		if (~script2278(0) = 1) {
 			return(1);
 		}
 	case buff_weapon_specialist_3774 :
-		if (~script4675(1) = 1) {
+		if (~script2278(1) = 1) {
 			return(1);
 		}
 	case buff_weapon_specialist_3775 :
-		if (~script4675(2) = 1) {
+		if (~script2278(2) = 1) {
 			return(1);
 		}
 	case buff_weapon_specialist_3776 :
-		if (~script4675(3) = 1) {
+		if (~script2278(3) = 1) {
 			return(1);
 		}
 	case buff_weapon_specialist_3777 :
-		if (~script4675(4) = 1) {
+		if (~script2278(4) = 1) {
 			return(1);
 		}
 	case buff_weapon_specialist_3778 :
-		if (~script4675(5) = 1) {
+		if (~script2278(5) = 1) {
 			return(1);
 		}
 	case buff_weapon_specialist_3779 :
-		if (~script4675(6) = 1) {
+		if (~script2278(6) = 1) {
+			return(1);
+		}
+	case buff_last_recall_5897 :
+		if (~script2277(0) = 1) {
+			return(1);
+		}
+	case buff_last_recall_5898 :
+		if (~script2277(1) = 1) {
+			return(1);
+		}
+	case buff_last_recall_5899 :
+		if (~script2277(2) = 1) {
+			return(1);
+		}
+	case buff_last_recall_5900 :
+		if (~script2277(3) = 1) {
+			return(1);
+		}
+	case buff_last_recall_5901 :
+		if (~script2277(4) = 1) {
+			return(1);
+		}
+	case buff_last_recall_5902 :
+		if (~script2277(5) = 1) {
+			return(1);
+		}
+	case buff_last_recall_5903 :
+		if (~script2277(6) = 1) {
+			return(1);
+		}
+	case buff_last_recall_5904 :
+		if (~script2277(7) = 1) {
 			return(1);
 		}
 	case buff_twin_strikes_4099 :

@@ -3,8 +3,6 @@
 switch_int ($int0) {
 	case 3 :
 		$int1 = calc($int1 * 3000);
-		$int1 = calc($int1 - scale(%varbit12392, 60, 3000));
-		$int1 = calc($int1 - scale(%varbit12391, 1000, 50));
 		return($int1);
 	case 4 :
 		$int1 = calc($int1 * 30);

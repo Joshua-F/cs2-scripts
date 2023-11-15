@@ -42,10 +42,12 @@ if_setcolour($colour6, interface_656:7);
 if_setcolour($colour6, interface_656:13);
 if_setcolour($colour6, interface_656:15);
 def_string $string0 = "Display Relics";
-def_component $component7 = interface_656:35;
+def_component $component7 = interface_656:36;
 def_component $component8 = interface_656:34;
+def_component $component9 = interface_656:35;
+def_int $int10 = calc(parawidth($string0, 190, p11_full) + 20);
 if_setopbase("<col=ff9040><$string0></col>", $component8);
-if_setsize(calc(parawidth($string0, 190, p11_full) + 20), if_getheight($component8), ^setsize_abs, ^setsize_abs, $component8);
+if_setsize($int10, if_getheight($component8), ^setsize_abs, ^setsize_abs, $component8);
 cc_create($component8, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 5, ^setpos_abs_left, ^setpos_abs_top);
@@ -63,6 +65,10 @@ if (~on_mobile = false) {
 	if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, $colour6)", $component8);
 }
 ~league_side_panel_hudtoggle($component8, $component7);
+def_int $int11 = ~script2452($component9, $component7, $colour6);
+def_int $int12 = calc((if_getwidth(interface_656:1) - $int10 - $int11) / 2 - 2);
+if_setposition(calc(0 - $int10 / 2 - 5 + $int12), 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component8);
+if_setposition(calc($int11 / 2 + 5 + $int12), 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component9);
 if_setonvartransmit("league_side_panel_hudtoggle($component8, cc_getid, .cc_getid, $component7){var1734}", $component8);
 if_setonop("league_side_panel_hudop(event_op, $component8, cc_getid, .cc_getid, $component7)", $component8);
 ~league_side_panel_update_bar(interface_656:11, %var2615);

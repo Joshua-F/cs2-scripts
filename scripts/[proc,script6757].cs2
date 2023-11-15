@@ -83,7 +83,11 @@ while ($count3 < $count8) {
 $int13 = ~script6758($int23, 500);
 $int14 = ~script6758($int23, 500);
 $int15 = ~script6758($int23, 500);
-$int16 = ~script6758($int23, 150);
+def_int $int24 = 150;
+if (~league_world = 1 & $int23 > 600) {
+	$int24 = 200;
+}
+$int16 = ~script6758($int23, $int24);
 def_string $string4 = "Attempts Allowed:";
 if ($int9 > 0) {
 	$string4 = "<$string4> <tostring($int9)>";
@@ -180,6 +184,6 @@ def_string $string18 = "<col=ffffff>Raid Modifiers:</col><br><br><$string4><br><
 def_string $string19 = "<col=ffffff>Stat Modifiers:</col><br><br><$string8><br><$string9><br><$string10><br><$string11><br><$string12>";
 def_string $string20 = "<col=ffffff>Combat Restrictions:</col><br><br><$string1><br><$string2><br><$string3>";
 def_string $string21 = "<col=ffffff>Room Modifiers:</col><br><br><$string13><br><$string14><br><$string15><br><$string16><br><$string17>";
-def_string $string22 = "<$string18><br><br><$string21>";
+def_string $string22 = "<$string18><br><br><$string21><br><br>";
 def_string $string23 = "<$string19><br><br><$string20>";
 return($string22, $string23);

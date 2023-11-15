@@ -1,6 +1,6 @@
 // 5745
 [clientscript,league_3_fragments_init](component $component0, component $component1, component $component2, component $component3, int $int4)
-~leagues_close_button($component3, false);
+~leagues_close_button($component3, false, 0);
 def_string $text0 = "League Fragments";
 def_int $comsubid5 = ~steelborder(interface_735:6, $text0, 1);
 ~league_3_fragments_draw_interface($component0, $component1, $component2, $component3, $comsubid5, $int4);

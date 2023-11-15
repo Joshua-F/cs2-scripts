@@ -20,6 +20,22 @@ switch_int ($int0) {
 		return("Group woodcutting bonus: +<tostring(%varbit15348)>");
 	case 97 :
 		return("Woodcutting leprechaun's luck: <tostring(%varbit15344)>/255<br>5 consumed per successful chop");
+	case 101 :
+		return(~script2281(0, %varbit10049));
+	case 102 :
+		return(~script2281(1, %varbit10050));
+	case 103 :
+		return(~script2281(2, %varbit10051));
+	case 104 :
+		return(~script2281(3, %varbit10052));
+	case 105 :
+		return(~script2281(4, %varbit10053));
+	case 106 :
+		return(~script2281(5, %varbit11696));
+	case 107 :
+		return(~script2281(6, %varbit17301));
+	case 108 :
+		return(~script2281(7, %varbit17302));
 	case default :
 		return("Buff");
 }

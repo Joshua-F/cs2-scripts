@@ -1,3 +1,6 @@
 // 3875
-[clientscript,searchbar_mouseleave](component $component0)
-if_setcolour(0xff981f, $component0);
+[clientscript,searchbar_mouseleave](component $component0, int $colour1)
+if ($colour1 = null) {
+	$colour1 = 0xff981f;
+}
+if_setcolour($colour1, $component0);

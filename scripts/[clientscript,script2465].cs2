@@ -1,0 +1,13 @@
+// 2465
+[clientscript,script2465](int $int0, boolean $boolean1, boolean $boolean2, component $component3, int $int4, string $string0)
+~highlight_textbox($string0, $int0, $boolean1, $boolean2, $component3, 0, 0, $int4);
+if (%varbit10308 >= calc(%varbit10309 - 1)) {
+	~highlight_button(interface_664:31, 0, "Finish", $boolean1);
+} else {
+	~highlight_button(interface_664:31, 0, "Continue", $boolean1);
+}
+if (%varbit10308 > 0) {
+	~highlight_button(interface_664:32, 0, "Previous", false);
+} else {
+	~highlight_button(interface_664:32, 1, "Previous", false);
+}

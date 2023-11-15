@@ -1,3 +1,6 @@
 // 3874
-[clientscript,searchbar_mouseover](component $component0)
-if_setcolour(^white, $component0);
+[clientscript,searchbar_mouseover](component $component0, int $colour1)
+if ($colour1 = null) {
+	$colour1 = ^white;
+}
+if_setcolour($colour1, $component0);

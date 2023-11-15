@@ -8,16 +8,20 @@ def_int $int7 = 0;
 def_int $width8 = if_getwidth($component0);
 def_int $width9 = calc($width8 - 4);
 def_int $int10 = -1;
-def_graphic $graphic11 = "graphic_4655";
-def_graphic $graphic12 = "graphic_4660";
-if ($int4 >= 300) {
-	$graphic11 = "graphic_4657";
-	$graphic12 = "graphic_4662";
-} else if ($int4 >= 150) {
-	$graphic11 = "graphic_4656";
-	$graphic12 = "graphic_4661";
+def_int $int11 = 600;
+if (~league_world = 1) {
+	$int11 = 1000;
 }
-if_setgraphic($graphic12, $component2);
+def_graphic $graphic12 = "graphic_4655";
+def_graphic $graphic13 = "graphic_4660";
+if ($int4 >= 300) {
+	$graphic12 = "graphic_4657";
+	$graphic13 = "graphic_4662";
+} else if ($int4 >= 150) {
+	$graphic12 = "graphic_4656";
+	$graphic13 = "graphic_4661";
+}
+if_setgraphic($graphic13, $component2);
 if (cc_find($component0, 0) = ^false) {
 	cc_create($component0, ^iftype_rectangle, $int7);
 	cc_setsize(calc($width8 - 2), 16, ^setsize_abs, ^setsize_abs);
@@ -40,7 +44,7 @@ if (cc_find($component0, 0) = ^false) {
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(1, 12, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 3, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic($graphic11);
+	cc_setgraphic($graphic12);
 	cc_settiling(true);
 	$int7 = calc($int7 + 1);
 	cc_create($component0, ^iftype_graphic, $int7);
@@ -50,13 +54,13 @@ if (cc_find($component0, 0) = ^false) {
 	$int7 = calc($int7 + 1);
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
-	$int10 = scale(150, 600, $width9);
+	$int10 = scale(150, $int11, $width9);
 	cc_setposition(calc($int10 - 2), 1, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("graphic_4659");
 	$int7 = calc($int7 + 1);
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
-	$int10 = scale(300, 600, $width9);
+	$int10 = scale(300, $int11, $width9);
 	cc_setposition(calc($int10 - 2), 1, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("graphic_4659");
 	$int7 = calc($int7 + 1);
@@ -66,106 +70,106 @@ if (cc_find($component0, 0) = ^false) {
 	cc_setgraphic("graphic_4659");
 	$int7 = calc($int7 + 1);
 }
-def_int $width13 = scale($int4, 600, $width9);
-if ($width13 > $width9) {
-	$width13 = calc($width9 - 1);
+def_int $width14 = scale($int4, $int11, $width9);
+if ($width14 > $width9) {
+	$width14 = calc($width9 - 1);
 }
 if (cc_find($component0, 3) = ^true) {
-	cc_setsize($width13, cc_getheight, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic($graphic11);
+	cc_setsize($width14, cc_getheight, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic12);
 }
 if_setonmouserepeat("cc_settrans(event_com, cc_getid, 0, null)", $component3);
 if_setonmouseleave("cc_settrans(event_com, cc_getid, 50, null)", $component3);
 if_setonop("opsound(event_op, 2)", $component3);
 if_setop(1, "Rewards Info", $component3);
-def_int $int14 = 1;
-def_int $int15 = 2;
-def_int $int16 = 4;
-def_int $count17 = 0;
-def_int $count18 = enum_getoutputcount(enum_4683);
-def_namedobj $namedobj19 = null;
-def_int $colour20 = ^black;
-def_int $colour21 = 0x212121;
-def_int $trans22 = 128;
+def_int $int15 = 1;
+def_int $int16 = 2;
+def_int $int17 = 4;
+def_int $count18 = 0;
+def_int $count19 = enum_getoutputcount(enum_4683);
+def_namedobj $namedobj20 = null;
+def_int $colour21 = ^black;
+def_int $colour22 = 0x212121;
+def_int $trans23 = 128;
 $int7 = 0;
-while ($count17 < $count18) {
-	$namedobj19 = enum(int, namedobj, enum_4683, $count17);
-	if ($int4 >= enum(namedobj, int, enum_4677, $namedobj19)) {
-		$colour20 = 0xfebf38;
-		$colour21 = 0x985101;
-		$trans22 = 0;
-	} else if (enum(namedobj, boolean, enum_4678, $namedobj19) = true) {
-		$colour20 = 0xa6180b;
-		$colour21 = 0x500b03;
-		$trans22 = 192;
+while ($count18 < $count19) {
+	$namedobj20 = enum(int, namedobj, enum_4683, $count18);
+	if ($int4 >= enum(namedobj, int, enum_4677, $namedobj20)) {
+		$colour21 = 0xfebf38;
+		$colour22 = 0x985101;
+		$trans23 = 0;
+	} else if (enum(namedobj, boolean, enum_4678, $namedobj20) = true) {
+		$colour21 = 0xa6180b;
+		$colour22 = 0x500b03;
+		$trans23 = 192;
 	} else {
-		$colour20 = ^black;
-		$colour21 = 0x212121;
-		$trans22 = 128;
+		$colour21 = ^black;
+		$colour22 = 0x212121;
+		$trans23 = 128;
 	}
 	cc_create($component1, ^iftype_rectangle, $int7);
-	cc_setposition($int14, $int15, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition($int15, $int16, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setcolour($colour20);
-	$int7 = calc($int7 + 1);
-	cc_create($component1, ^iftype_rectangle, $int7);
-	cc_setposition(calc($int14 + 1), calc($int15 + 1), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc(36 - 2), calc(32 - 2), ^setsize_abs, ^setsize_abs);
 	cc_setcolour($colour21);
 	$int7 = calc($int7 + 1);
 	cc_create($component1, ^iftype_rectangle, $int7);
-	cc_setposition(calc($int14 + 2), calc($int15 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int15 + 1), calc($int16 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(36 - 2), calc(32 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setcolour($colour22);
+	$int7 = calc($int7 + 1);
+	cc_create($component1, ^iftype_rectangle, $int7);
+	cc_setposition(calc($int15 + 2), calc($int16 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc(36 - 4), calc(32 - 4), ^setsize_abs, ^setsize_abs);
 	cc_setcolour(^black);
 	cc_setfill(true);
 	cc_settrans(180);
 	$int7 = calc($int7 + 1);
 	cc_create($component1, ^iftype_graphic, $int7);
-	cc_setposition(calc($int14 + 1), calc($int15 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int15 + 1), calc($int16 + 1), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setobject_nonum($namedobj19, 1);
+	cc_setobject_nonum($namedobj20, 1);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("script3092(oc_name($namedobj19), $int7, $component1, $component6, clientclock)");
+		cc_setonmouserepeat("script3092(oc_name($namedobj20), $int7, $component1, $component6, clientclock)");
 		cc_setonmouseleave("script6064($component6, clientclock)");
 	}
 	$int7 = calc($int7 + 1);
 	cc_create($component1, ^iftype_rectangle, $int7);
-	cc_setposition($int14, $int15, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition($int15, $int16, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(3, 3, ^setsize_abs, ^setsize_abs);
-	cc_setcolour($colour21);
+	cc_setcolour($colour22);
 	$int7 = calc($int7 + 1);
 	cc_create($component1, ^iftype_rectangle, $int7);
-	cc_setposition($int14, calc($int15 + 32 - 3), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition($int15, calc($int16 + 32 - 3), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(3, 3, ^setsize_abs, ^setsize_abs);
-	cc_setcolour($colour21);
+	cc_setcolour($colour22);
 	$int7 = calc($int7 + 1);
 	cc_create($component1, ^iftype_rectangle, $int7);
-	cc_setposition(calc($int14 + 36 - 3), $int15, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int15 + 36 - 3), $int16, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(3, 3, ^setsize_abs, ^setsize_abs);
-	cc_setcolour($colour21);
+	cc_setcolour($colour22);
 	$int7 = calc($int7 + 1);
 	cc_create($component1, ^iftype_rectangle, $int7);
-	cc_setposition(calc($int14 + 36 - 3), calc($int15 + 32 - 3), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int15 + 36 - 3), calc($int16 + 32 - 3), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(3, 3, ^setsize_abs, ^setsize_abs);
-	cc_setcolour($colour21);
+	cc_setcolour($colour22);
 	$int7 = calc($int7 + 1);
-	$count17 = calc($count17 + 1);
-	if (calc($count17 % $int16) = 0) {
-		$int15 = calc($int15 + 32 + 2);
-		switch_int (calc($count18 - $count17)) {
+	$count18 = calc($count18 + 1);
+	if (calc($count18 % $int17) = 0) {
+		$int16 = calc($int16 + 32 + 2);
+		switch_int (calc($count19 - $count18)) {
 			case 1 :
-				$int14 = calc(36 * 3 / 2);
+				$int15 = calc(36 * 3 / 2);
 			case 2 :
-				$int14 = calc(36 + 2);
+				$int15 = calc(36 + 2);
 			case 3 :
-				$int14 = calc(36 / 2);
+				$int15 = calc(36 / 2);
 			case default :
-				$int14 = 1;
+				$int15 = 1;
 		}
 	} else {
-		$int14 = calc($int14 + 36 + 2);
+		$int15 = calc($int15 + 36 + 2);
 	}
 }

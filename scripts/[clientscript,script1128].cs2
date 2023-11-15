@@ -16,11 +16,17 @@ def_namedobj $namedobj14 = null;
 def_int $int15 = 0;
 def_int $intarray0(30);
 def_int $int16 = 0;
+def_enum $enum17 = enum_2778;
+def_int $int18 = ~league_world;
+def_int $int19 = 0;
+if ($int18 = 1) {
+	$enum17 = enum_5238;
+}
 while ($int16 < 30) {
 	$intarray0($int16) = 1;
 	$int16 = calc($int16 + 1);
 }
-while ($int15 <= enum_getoutputcount(enum_2778)) {
+while ($int15 <= enum_getoutputcount($enum17)) {
 	if ($int15 < 32) {
 		if (testbit($flags0, $int15) = ^true) {
 			$int13 = 1;
@@ -54,13 +60,16 @@ while ($int15 <= enum_getoutputcount(enum_2778)) {
 	} else {
 		$int13 = 0;
 	}
-	$namedobj14 = enum(int, namedobj, enum_2778, $int15);
+	$namedobj14 = enum(int, namedobj, $enum17, $int15);
 	$int8 = oc_param($namedobj14, param_916);
-	if ($int8 ! $int9 & enum(int, namedobj, enum_2778, calc($int15 + 1)) ! null) {
+	if ($int8 ! $int9 & enum(int, namedobj, $enum17, calc($int15 + 1)) ! null) {
 		$int7 = 0;
 		$int9 = $int8;
 		if (oc_param($namedobj14, param_918) = 1) {
 			if (~script1129($namedobj14) = 1) {
+				if ($int18 = 1) {
+					$int19 = 1;
+				}
 				$intarray0($int8) = 0;
 				if ($int6 = 0) {
 					$int6 = calc($int6 + $int12 - 10);
@@ -106,12 +115,20 @@ if ($int6 <= if_getheight(interface_447:3)) {
 if_setscrollpos(0, 0, interface_447:3);
 ~scrollbar_vertical(interface_447:4, interface_447:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 $int6 = 0;
-def_struct $struct17 = leagues_i_twisted_723;
-def_int $int18 = 0;
+def_struct $struct20 = leagues_i_twisted_723;
+def_int $int21 = 0;
+if ($int18 = 1) {
+	if ($int19 = 1) {
+		~script2451($int15);
+	} else {
+		~script2450($int15);
+	}
+	return;
+}
 while ($int11 < $int10) {
 	if ($intarray0(calc($int11 + 1)) = 0) {
-		$int18 = 1;
-		$struct17 = enum(int, struct, enum_2670, calc($int11 + 1));
+		$int21 = 1;
+		$struct20 = enum(int, struct, enum_2670, calc($int11 + 1));
 		cc_create(interface_447:3, ^iftype_text, $int15);
 		cc_setsize(20, 15, ^setsize_minus, ^setsize_abs);
 		cc_setposition(10, calc($int6 + 5), ^setpos_abs_left, ^setpos_abs_top);
@@ -119,7 +136,7 @@ while ($int11 < $int10) {
 		cc_settextshadow(true);
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-		cc_settext(struct_param($struct17, param_858));
+		cc_settext(struct_param($struct20, param_858));
 		$int15 = calc($int15 + 1);
 		cc_create(interface_447:3, ^iftype_line, $int15);
 		cc_setsize(20, 0, ^setsize_minus, ^setsize_abs);
@@ -129,13 +146,6 @@ while ($int11 < $int10) {
 	}
 	$int11 = calc($int11 + 1);
 }
-if ($int18 = 0) {
-	cc_create(interface_447:3, ^iftype_text, $int15);
-	cc_setsize(20, 15, ^setsize_minus, ^setsize_abs);
-	cc_setposition(10, 10, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setcolour(0xff981f);
-	cc_settextshadow(true);
-	cc_settextfont(p12_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);
-	cc_settext("You have not earned enough League Points to qualify for<br>any of the trophies.");
+if ($int21 = 0) {
+	~script2450($int15);
 }

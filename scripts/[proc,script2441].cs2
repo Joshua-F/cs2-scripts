@@ -1,0 +1,30 @@
+// 2441
+[proc,script2441](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, int $int18, int $int19)
+if_setcolour($int18, interface_657:44);
+def_int $int20 = 0;
+if (%varbit17310 = 0) {
+	if_setop(1, "Search", $component16);
+	if_setonop("script2442($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $int18)", $component16);
+	if_setonmouseover("searchbar_mouseover($component17, $int18)", $component17);
+	if_setonmouseleave("searchbar_mouseleave($component17, $int18)", $component17);
+	if_settext("*", $component17);
+	if_setcolour($int18, $component17);
+	if ($int19 = 1) {
+		%varcstring1180 = "";
+	}
+	if_setonkey(null, $component17);
+	if_setontimer(null, $component17);
+	if (string_length(%varcstring1180) > 0) {
+		if_settext(%varcstring1180, $component17);
+	}
+} else {
+	if (~on_mobile = true) {
+		if_setop(1, "Show keyboard", $component16);
+		if_setonop("script2445", $component16);
+	}
+	if_setonmouseover(null, $component17);
+	if_setonmouseleave(null, $component17);
+	if_settext(append(%varcstring1180, "<col=f4f4f4>*</col>"), $component17);
+	if_setonkey("script2443(event_keycode, event_keychar, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17)", $component17);
+	if_setontimer("script2466(%varcstring1180, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17)", $component17);
+}

@@ -1,9 +1,8 @@
 // 3217
-[clientscript,league_info_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
-~leagues_close_button($component9, false);
+[clientscript,league_info_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+~leagues_close_button($component11, false, 0);
 def_string $text0 = "League Info";
-if (%varbit10032 = 2) {
-	$text0 = "Trailblazer Info";
-}
-def_int $comsubid10 = ~steelborder(interface_654:2, $text0, 1);
-~league_info_draw_interface($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, 0, 0, $comsubid10);
+def_int $comsubid12 = ~steelborder(interface_654:2, $text0, 1);
+def_component $component13 = interface_654:0;
+if_setontimer("script6110($component13, -1)", $component13);
+if_setonresize("league_info_draw_interface($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, 0, 0, $comsubid12)", $component13);

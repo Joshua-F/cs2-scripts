@@ -9,6 +9,8 @@ def_int $count12 = enum_getoutputcount(enum_4664);
 def_int $int13 = 4;
 def_int $int14 = 111;
 def_int $int15 = 6;
+def_int $int16 = ~league_world;
+def_int $int17 = 0;
 if (%varcint1086 = 0 | %varcint1086 = 1) {
 	$int13 = 3;
 	$int14 = 96;
@@ -18,14 +20,20 @@ cc_deleteall($component0);
 while ($count7 < $count12) {
 	$struct10 = enum(int, struct, enum_4664, $count7);
 	$boolean11 = ~script6755($struct10, $flags2, $flags3, $flags4);
-	if (calc($count7 % $int13) = 0) {
-		$int8 = $int15;
-	} else {
-		$int8 = calc($int8 + $int14);
+	if (struct_param($struct10, param_1161) = 15 & $int16 = 0) {
+		$int17 = 1;
 	}
-	$height9 = calc($count7 / $int13 * 74);
-	~script6750($count7, $int8, $height9, $struct10, $boolean11, $int5, $component0, $component6);
+	if ($int17 = 0) {
+		if (calc($count7 % $int13) = 0) {
+			$int8 = $int15;
+		} else {
+			$int8 = calc($int8 + $int14);
+		}
+		$height9 = calc($count7 / $int13 * 74);
+		~script6750($count7, $int8, $height9, $struct10, $boolean11, $int5, $component0, $component6);
+	}
 	$count7 = calc($count7 + 1);
+	$int17 = 0;
 }
 $height9 = calc($height9 + 73);
 if ($height9 > if_getheight($component0)) {

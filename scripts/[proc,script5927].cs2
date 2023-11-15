@@ -42,6 +42,7 @@ switch_struct ($struct0) {
 	case buff_godwars_altar_cooldown_3081 :
 		%varcint489 = $int1;
 	case buff_home_teleport_cooldown_3077 :
+	case buff_last_recall_cooldown_5894 :
 	case buff_minigame_teleport_cooldown_3078 :
 	case buff_teleport_block_3079 :
 	case buff_divine_attack_potion_3094 :
@@ -79,6 +80,10 @@ switch_struct ($struct0) {
 		%varcint1147 = ~script1934;
 	case buff_resurrection_cooldown_3127 :
 		%varcint523 = $int1;
+	case buff_guardian_5896 :
+		%varcint1183, %varcint1184 = $int1, 3000;
+	case buff_undying_retribution_cooldown_5895 :
+		%varcint1185, %varcint1186 = $int1, 300;
 	case buff_ammo_remaining_3659 :
 	case buff_ammo_remaining_3661 :
 	case buff_time_till_next_poison_hit_3740 :
@@ -105,6 +110,14 @@ switch_struct ($struct0) {
 	case buff_weapon_specialist_3777 :
 	case buff_weapon_specialist_3778 :
 	case buff_weapon_specialist_3779 :
+	case buff_last_recall_5897 :
+	case buff_last_recall_5898 :
+	case buff_last_recall_5899 :
+	case buff_last_recall_5900 :
+	case buff_last_recall_5901 :
+	case buff_last_recall_5902 :
+	case buff_last_recall_5903 :
+	case buff_last_recall_5904 :
 	case buff_twin_strikes_4099 :
 	case buff_double_tap_4100 :
 	case buff_chain_magic_4101 :

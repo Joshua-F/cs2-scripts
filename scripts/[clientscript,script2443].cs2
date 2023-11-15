@@ -1,0 +1,51 @@
+// 2443
+[clientscript,script2443](int $key0, char $keychar1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
+if (~keypress_permit(null, overlayinterface_134) = 0) {
+	return;
+}
+if (%varbit17311 = 0) {
+	return;
+}
+if (%varbit17310 = 0) {
+	return;
+}
+if ($key0 = ^key_del) {
+	if (compare("", %varcstring1180) = 0) {
+		return;
+	}
+	%varcstring1180 = "";
+	~script2444($component19);
+	~league_tasks_draw_list(-1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
+	if_setontimer("script2466(%varcstring1180, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19)", $component19);
+	return;
+}
+if ($key0 = ^key_return) {
+	if (~on_mobile = true) {
+		~keyboard_hide;
+		return;
+	}
+	~chatdefault_restoreinput;
+	%varbit17310 = 0;
+	%varbit17311 = 0;
+	if_settext(%varcstring1180, $component19);
+	~league_tasks_draw_list(-1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
+	if_setontimer("script2466(%varcstring1180, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19)", $component19);
+	return;
+}
+def_string $string0 = %varcstring1180;
+def_int $length20 = string_length($string0);
+if ($key0 = ^key_backspace) {
+	if ($length20 > 0) {
+		%varcstring1180 = substring($string0, 0, calc($length20 - 1));
+	}
+	~script2444($component19);
+	return;
+}
+if (char_isalphanumeric($keychar1) = false & string_indexof_char(" -/,", $keychar1) = -1) {
+	return;
+}
+if (string_length(append_char($string0, $keychar1)) > 50) {
+	return;
+}
+%varcstring1180 = append_char($string0, $keychar1);
+~script2444($component19);

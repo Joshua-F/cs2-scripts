@@ -1,0 +1,13 @@
+// 2458
+[proc,script2458](component $layer0)(int, int)
+def_int $x1 = cc_getx;
+def_int $y2 = cc_gety;
+def_int $int3 = $x1;
+def_int $int4 = $y2;
+def_component $layer5 = cc_getlayer;
+while ($layer5 ! null & $layer5 ! $layer0) {
+	$int3 = calc($int3 + if_getx($layer5));
+	$int4 = calc($int4 + if_gety($layer5));
+	$layer5 = if_getlayer($layer5);
+}
+return($int3, $int4);

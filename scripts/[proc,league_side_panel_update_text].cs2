@@ -5,7 +5,9 @@ if ($int5 ! -1 & $int4 ! -1) {
 	$int6 = calc($int5 - $int4);
 }
 if ($int6 <= 0 & if_find($component1) = true) {
-	if (%varbit11696 = 0) {
+	if (%varbit11696 = 0 & %varbit10032 = 2) {
+		cc_settext("<col=ffffff>You can unlock a new Relic!</col>");
+	} else if (%varbit17302 = 0 & %varbit10032 = 4) {
 		cc_settext("<col=ffffff>You can unlock a new Relic!</col>");
 	} else {
 		cc_settext("<col=ffffff>You have unlocked all Relics!</col>");

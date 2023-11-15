@@ -1,24 +1,24 @@
 // 1127
-[proc,script1127](int $int0, int $int1)(string)
-if ($int0 >= 20830 | $int1 >= 56310) {
+[proc,script1127](int $int0, int $int1, int $int2)(string)
+if ($int0 >= 20830 | $int1 >= 56310 | $int2 >= 52545) {
 	return("Dragon");
 }
-if ($int0 >= 10820 | $int1 >= 35680) {
+if ($int0 >= 10820 | $int1 >= 35680 | $int2 >= 31980) {
 	return("Rune");
 }
-if ($int0 >= 5270 | $int1 >= 18720) {
+if ($int0 >= 5270 | $int1 >= 18720 | $int2 >= 15575) {
 	return("Adamant");
 }
-if ($int0 >= 1770 | $int1 >= 6480) {
+if ($int0 >= 1770 | $int1 >= 6480 | $int2 >= 5475) {
 	return("Mithril");
 }
-if ($int0 >= 510 | $int1 >= 2000) {
+if ($int0 >= 510 | $int1 >= 2000 | $int2 >= 1660) {
 	return("Steel");
 }
-if ($int0 >= 80 | $int1 >= 510) {
+if ($int0 >= 80 | $int1 >= 510 | $int2 >= 480) {
 	return("Iron");
 }
-if ($int0 >= 10 | $int1 >= 100) {
+if ($int0 >= 10 | $int1 >= 100 | $int2 >= 100) {
 	return("Bronze");
 }
 return("-");

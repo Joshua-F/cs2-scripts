@@ -2,7 +2,7 @@
 [clientscript,shop_main_init](inv $inv0, string $text0, obj $obj1, int $int2, boolean $boolean3)
 cc_deleteall(interface_300:1);
 cc_deleteall(interface_300:16);
-cc_deleteall(interface_300:17);
+cc_deleteall(interface_300:18);
 ~steelborder(interface_300:1, $text0, 0);
 def_int $int4 = calc((if_getwidth(interface_300:16) - 8 * 36) / 7 + 36);
 def_int $size5 = inv_size($inv0);
@@ -24,6 +24,10 @@ while ($size6 < $size5) {
 	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 125, 0)");
 	$size6 = calc($size6 + 1);
 }
-~scrollbar_vertical(interface_300:17, interface_300:16, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical(interface_300:18, interface_300:16, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~shop_main_update(interface_300:16, $size5, $inv0, $obj1, $int2);
 if_setoninvtransmit("shop_main_update(event_com, $size5, $inv0, $obj1, $int2){$inv0}", interface_300:16);
+if (~script2288 = 1) {
+	~script2461(interface_300:17, false);
+	if_setposition(calc(if_getx(interface_300:19) - 30), if_gety(interface_300:19), ^setpos_abs_centre, ^setpos_abs_top, interface_300:19);
+}

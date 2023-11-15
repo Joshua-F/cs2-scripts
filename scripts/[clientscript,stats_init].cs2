@@ -49,6 +49,9 @@ if_setonvartransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .c
 if (~league_world = 0 & ($boolean6 = false | map_members = ^true | %varcint103 = 1)) {
 	return;
 }
+if (%varbit10032 ! 3) {
+	return;
+}
 if (%varbit10032 = 3 & $int5 = 1) {
 	return;
 }

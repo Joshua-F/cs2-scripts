@@ -1,0 +1,10 @@
+// 2450
+[proc,script2450](int $comsubid0)
+cc_create(interface_447:3, ^iftype_text, $comsubid0);
+cc_setsize(20, 15, ^setsize_minus, ^setsize_abs);
+cc_setposition(10, 10, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);
+cc_settext("You have not earned enough League Points to qualify for<br>any of the trophies.");

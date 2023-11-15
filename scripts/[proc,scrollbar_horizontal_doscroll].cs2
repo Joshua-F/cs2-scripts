@@ -3,6 +3,10 @@
 def_int $int4 = ~max(calc(if_getscrollwidth($component1) - if_getwidth($component1)), 1);
 $int2 = ~max(~min($int2, $int4), 0);
 if_setscrollpos($int2, if_getscrolly($component1), $component1);
+switch_component ($component1) {
+	case interface_655:14 :
+		%varcint1182 = if_getscrollx($component1);
+}
 if ($boolean3 = true) {
 	~scrollbar_horizontal_setdragger($component0, $component1);
 }

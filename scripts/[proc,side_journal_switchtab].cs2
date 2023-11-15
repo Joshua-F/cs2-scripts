@@ -10,6 +10,9 @@ if (%varbit9340 ! 0) {
 if (~deadman_world = 3) {
 	~side_journal_inactive($component21, $component22, $component23);
 }
+if (~league_world = 1 & %varbit10037 >= 3) {
+	~side_journal_inactive($component21, $component22, $component23);
+}
 switch_int (%varbit8168) {
 	case 0 :
 		~side_journal_active($component1, $component2, $component3);

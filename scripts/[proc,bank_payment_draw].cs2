@@ -22,6 +22,7 @@ def_namedobj $namedobj17 = null;
 .cc_create($component0, ^iftype_rectangle, 0);
 .cc_sethide(true);
 def_int $int18 = 0;
+def_int $int19 = ~league_relic_active(superior_sorcerer_4723);
 while ($int8 <= 14) {
 	$int16 = 0;
 	$component9 = enum(int, component, enum_1511, $int8);
@@ -49,6 +50,10 @@ while ($int8 <= 14) {
 			$int18 = calc($int18 + %varbit1626);
 		} else if ((inv_total(inv, divine_rune_pouch_27281) > 0 | inv_total(inv, divine_rune_pouch_l_27509) > 0) & %varbit14285 = $int8) {
 			$int18 = calc($int18 + %varbit14286);
+		} else if ($int19 = 1 & %varbit15373 = $int8) {
+			$int18 = calc($int18 + %varbit15375);
+		} else if ($int19 = 1 & %varbit15374 = $int8) {
+			$int18 = calc($int18 + %varbit15376);
 		}
 	}
 	if ($int18 >= 20 | $boolean2 = false) {

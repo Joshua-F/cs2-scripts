@@ -1,216 +1,292 @@
 // 3189
-[proc,league_relics_draw_selections](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, int $comsubid13)
-cc_deleteall($component1);
+[proc,league_relics_draw_selections](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $comsubid15, int $x16, component $component17, component $component18)
+~script2282(interface_655:1, interface_655:3);
+~league_points_progress_bar($component17, $component18, 0, 1);
 cc_deleteall($component2);
 cc_deleteall($component3);
 cc_deleteall($component4);
 cc_deleteall($component5);
+cc_deleteall($component6);
 cc_deleteall($component0);
-cc_deleteall($component10);
-cc_deleteall($component11);
-def_struct $struct14 = enum(int, struct, enum_2670, %varbit10032);
-def_int $colour15 = 0xff981f;
-def_enum $enum16 = null;
-def_struct $struct17 = null;
-def_int $int18 = 0;
-def_int $int19 = 0;
-def_enum $enum20 = null;
-if ($struct14 ! null) {
-	$enum16 = struct_param($struct14, param_870);
-	$colour15 = struct_param($struct14, param_1027);
+cc_deleteall($component1);
+cc_deleteall($component12);
+cc_deleteall($component13);
+cc_deleteall($component8);
+cc_deleteall(interface_655:16);
+def_struct $struct19 = enum(int, struct, enum_2670, %varbit10032);
+def_int $colour20 = 0xff981f;
+def_enum $enum21 = null;
+def_struct $struct22 = null;
+def_int $int23 = 0;
+def_enum $enum24 = null;
+if ($struct19 ! null) {
+	$enum21 = struct_param($struct19, param_870);
+	$colour20 = struct_param($struct19, param_1027);
 }
 cc_create($component0, ^iftype_graphic, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("tradebacking_light");
-if_sethide(false, $component6);
-if_sethide(true, $component7);
+if_sethide(false, $component7);
+if_sethide(false, $component8);
+if_sethide(false, $component1);
 if_sethide(true, $component9);
-if_sethide(true, $component8);
-if ($enum16 ! null) {
-	$int18 = enum_getoutputcount($enum16);
+if_sethide(true, $component11);
+if_sethide(true, $component10);
+if_sethide(true, interface_655:28);
+if ($enum21 ! null) {
+	$int23 = enum_getoutputcount($enum21);
 }
-def_int $int21 = 0;
-~leagues_menu_button($component10, $int21, $component11, $component12);
-$int21 = 0;
-~league_create_dropdown($component10, $component11, $component12, $int21, 2);
-if (cc_find(interface_655:2, $comsubid13) = ^true) {
-	cc_setcolour($colour15);
-}
-def_int $width22 = if_getwidth($component6);
-def_int $int23 = calc(if_getheight($component6) - 5);
-def_int $int24 = 0;
 def_int $int25 = 0;
+if (~in_league_tutorial = 0) {
+	~leagues_menu_button($component12, $int25, $component13, $component14);
+}
+$int25 = 0;
+~league_create_dropdown($component12, $component13, $component14, $int25, 2);
+if (cc_find(interface_655:2, $comsubid15) = ^true) {
+	cc_setcolour($colour20);
+}
 def_int $int26 = 0;
 def_int $int27 = 0;
 def_int $int28 = 0;
-if ($int18 > 0) {
-	$int24 = calc($width22 / $int18);
-	$int27 = calc(($width22 - $int24 * $int18) / 2);
-}
-def_int $int29 = -1;
-def_string $string0 = "";
+def_int $width29 = 0;
 def_int $int30 = 0;
-def_int $int31 = 0;
-def_int $colour32 = null;
-def_int $colour33 = null;
+def_int $int31 = -1;
+def_string $string0 = "";
+def_int $int32 = 0;
+def_int $int33 = 0;
 def_int $colour34 = null;
 def_int $colour35 = null;
-def_int $trans36 = 0;
-def_int $int37 = 0;
-def_struct $struct38 = null;
-def_graphic $graphic39 = null;
+def_int $colour36 = null;
+def_int $colour37 = null;
+def_int $trans38 = 0;
+def_int $int39 = 0;
+def_struct $struct40 = null;
+def_graphic $graphic41 = null;
+def_int $int42 = 34;
 def_string $text1 = "";
-def_int $int40 = -1;
-def_struct $struct41 = null;
-def_int $int42 = 0;
-def_int $int43 = 0;
-def_int $int44 = 0;
-while ($int42 < $int18) {
-	$struct17 = enum(int, struct, $enum16, $int42);
-	$enum20 = struct_param($struct17, param_878);
-	switch_int ($int42) {
+def_int $int43 = -1;
+def_struct $struct44 = null;
+def_int $int45 = 0;
+def_int $count46 = 0;
+def_int $int47 = 0;
+def_fontmetrics $fontmetrics48 = null;
+def_int $int49 = 6;
+switch_int (%varcint988) {
+	case 0 :
+		$fontmetrics48 = p11_full;
+		$int49 = 6;
+		if_setsize(0, 18, ^setsize_minus, ^setsize_minus, $component7);
+	case default :
+		$fontmetrics48 = p12_full;
+		$int49 = 8;
+		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component7);
+}
+if ($int23 > 0) {
+	$int26 = calc(if_getwidth($component7) / $int49);
+	$width29 = calc((if_getwidth($component7) - $int26 * $int49) / 2);
+}
+while ($int45 < $int23) {
+	$struct22 = enum(int, struct, $enum21, $int45);
+	$enum24 = struct_param($struct22, param_878);
+	switch_int ($int45) {
 		case 0 :
-			$int40 = %varbit10049;
+			$int43 = %varbit10049;
 		case 1 :
-			$int40 = %varbit10050;
+			$int43 = %varbit10050;
 		case 2 :
-			$int40 = %varbit10051;
+			$int43 = %varbit10051;
 		case 3 :
-			$int40 = %varbit10052;
+			$int43 = %varbit10052;
 		case 4 :
-			$int40 = %varbit10053;
+			$int43 = %varbit10053;
 		case 5 :
-			$int40 = %varbit11696;
+			$int43 = %varbit11696;
+		case 6 :
+			$int43 = %varbit17301;
+		case 7 :
+			$int43 = %varbit17302;
 		case default :
-			$int40 = 0;
+			$int43 = 0;
 	}
-	$struct41 = enum(int, struct, $enum20, $int40);
-	if ($enum20 ! null & $struct41 ! null) {
-		cc_create($component1, ^iftype_graphic, $int42);
-		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
-		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
+	$struct44 = enum(int, struct, $enum24, $int43);
+	if ($int45 > 0) {
+		cc_create(interface_655:20, ^iftype_line, calc($int45 - 1));
+		cc_setlinewid(1);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(0x544b40);
+	}
+	if ($enum24 ! null & $struct44 ! null) {
+		cc_create($component2, ^iftype_graphic, $int45);
+		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tradebacking_dark");
 		cc_settiling(true);
-		$int29, $string0, $int30, $int31, $int37, $colour33, $colour35 = 255, "", 1, 0, 1, 0xaaaaaa, 0xdddddd;
-	} else if ($int28 = 0 & $enum20 ! null & %var2615 >= struct_param($struct17, param_877)) {
-		cc_create($component1, ^iftype_graphic, $int42);
-		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
-		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
+		$int31, $string0, $int32, $int33, $int39, $colour35, $colour37 = 255, "", 1, 0, 1, 0xaaaaaa, 0xdddddd;
+	} else if ($int30 = 0 & $enum24 ! null & %var2615 >= struct_param($struct22, param_877)) {
+		cc_create($component2, ^iftype_graphic, $int45);
+		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tradebacking_light");
 		cc_settiling(true);
-		$int29, $string0, $int30, $int31, $int37, $colour33, $colour35 = 127, "", 1, 1, 1, null, null;
-		$int28 = 1;
+		$int31, $string0, $int32, $int33, $int39, $colour35, $colour37 = 127, "", 1, 1, 1, null, null;
+		$int30 = 1;
 	} else {
-		cc_create($component1, ^iftype_graphic, $int42);
-		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
-		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_create($component2, ^iftype_graphic, $int45);
+		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tradebacking_dark");
 		cc_settiling(true);
-		$int29, $string0, $int30, $int31, $int37, $colour33, $colour35 = 255, "", 1, 0, 1, null, null;
+		$int31, $string0, $int32, $int33, $int39, $colour35, $colour37 = 255, "", 1, 0, 1, null, null;
 	}
-	cc_create($component0, ^iftype_text, calc($int42 + 1));
-	cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
-	cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont(p11_full);
+	cc_create($component0, ^iftype_text, calc($int45 + 1));
+	cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
+	cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont($fontmetrics48);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_setcolour($colour15);
-	cc_settext("Tier <tostring(calc($int42 + 1))>");
-	if ($enum20 ! null) {
-		$int19 = enum_getoutputcount($enum20);
+	cc_setcolour($colour20);
+	cc_settext("Tier <tostring(calc($int45 + 1))>");
+	if (enum_getoutputcount($enum24) = 2) {
+		$int27 = calc((if_getheight($component7) - 5) / 3);
+		$int28 = calc($int27 / 2 + (if_getheight($component7) - 6 - $int27 * 3) / 2);
 	} else {
-		$int19 = 0;
+		$int27 = calc((if_getheight($component7) - 5) / 3);
+		$int28 = calc((if_getheight($component7) - 6 - $int27 * 3) / 2);
 	}
-	if ($int19 > 0) {
-		$int25 = calc($int23 / $int19);
-		$int26 = calc(($int23 - $int25 * $int19) / 2);
+	if (%varcint988 = 2 | %varcint988 = 3) {
+		$int28 = calc($int28 + 8);
 	}
-	$int43 = 0;
-	while ($int43 < $int19) {
-		$struct38 = enum(int, struct, $enum20, calc($int43 + 1));
-		cc_create($component4, ^iftype_text, $int44);
+	$count46 = 0;
+	while ($count46 < enum_getoutputcount($enum24)) {
+		$struct40 = enum(int, struct, $enum24, calc($count46 + 1));
+		cc_create($component5, ^iftype_text, $int47);
 		if (string_length($string0) > 0) {
 			$text1 = $string0;
 		} else {
-			$text1 = struct_param($struct38, param_879);
+			$text1 = struct_param($struct40, param_879);
 		}
-		cc_setsize(calc($int24 - 10), 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int27 + 5), calc($int26 + $int25 / 2 + 1), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(calc($int26 - 10), 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($width29 + 5), calc($int28 + $int27 / 2 + 1), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext($text1);
-		cc_settextfont(p11_full);
-		if ($struct38 ! $struct41) {
-			if ($colour33 ! null) {
-				$colour32 = $colour33;
-			} else {
-				$colour32 = $colour15;
-			}
+		cc_settextfont($fontmetrics48);
+		if ($struct40 ! $struct44) {
 			if ($colour35 ! null) {
 				$colour34 = $colour35;
 			} else {
-				$colour34 = ^white;
+				$colour34 = $colour20;
+			}
+			if ($colour37 ! null) {
+				$colour36 = $colour37;
+			} else {
+				$colour36 = ^white;
 			}
 		} else {
-			$colour32, $colour34 = $colour15, ^white;
+			$colour34, $colour36 = $colour20, ^white;
 		}
-		cc_setcolour($colour32);
+		cc_setcolour($colour34);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_create($component2, ^iftype_graphic, $int44);
-		cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int27 + $int24 / 2 - 15), calc($int26 + $int25 / 2 - 31), ^setpos_abs_left, ^setpos_abs_top);
-		if ($struct38 = $struct41) {
-			$graphic39, $trans36 = struct_param($struct38, param_881), 0;
+		if (%varcint988 = 2 | %varcint988 = 3) {
+			if ($struct40 = $struct44) {
+				$graphic41, $trans38 = struct_param($struct40, param_1853), 0;
+			} else {
+				$graphic41, $trans38 = struct_param($struct40, param_1854), calc($int31 - 128);
+			}
+			$int42 = 60;
 		} else {
-			$graphic39, $trans36 = struct_param($struct38, param_883), calc($int29 - 128);
+			if ($struct40 = $struct44) {
+				$graphic41, $trans38 = struct_param($struct40, param_881), 0;
+			} else {
+				$graphic41, $trans38 = struct_param($struct40, param_883), calc($int31 - 128);
+			}
+			$int42 = 30;
 		}
-		cc_setgraphic($graphic39);
-		cc_create($component3, ^iftype_graphic, $int44);
-		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int27 + $int24 / 2 - 17), calc($int26 + $int25 / 2 - 33), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic(struct_param($struct14, param_1026));
-		if ($int29 ! -1) {
-			cc_settrans($int29);
+		cc_create($component3, ^iftype_graphic, $int47);
+		cc_setsize($int42, $int42, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($width29 + $int26 / 2 - $int42 / 2), calc($int28 + $int27 / 2 - ($int42 + 1)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic($graphic41);
+		cc_create($component4, ^iftype_graphic, $int47);
+		$int42 = calc($int42 + 4);
+		cc_setsize($int42, $int42, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($width29 + $int26 / 2 - $int42 / 2), calc($int28 + $int27 / 2 - ($int42 - 1)), ^setpos_abs_left, ^setpos_abs_top);
+		if (%varcint988 = 2 | %varcint988 = 3) {
+			cc_setgraphic(struct_param($struct19, param_1856));
+		} else {
+			cc_setgraphic(struct_param($struct19, param_1026));
+		}
+		if ($int31 ! -1) {
+			cc_settrans($int31);
 		} else {
 			cc_settrans(255);
 		}
-		cc_create($component5, ^iftype_rectangle, $int44);
-		cc_setsize($int24, $int25, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int27, $int26, ^setpos_abs_left, ^setpos_abs_top);
+		cc_create($component6, ^iftype_rectangle, $int47);
+		cc_setsize($int26, $int27, ^setsize_abs, ^setsize_abs);
+		cc_setposition($width29, $int28, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setfill(true);
 		cc_settrans(255);
-		if ($int37 = 1) {
+		if ($int39 = 1) {
 			cc_setop(1, "View");
 			cc_setopbase("<col=ff981f><$text1></col>");
-			cc_setonop("league_relics_loading($component9, $int44, $component3, $int29, $component2, $graphic39, $component4, $colour32)");
+			cc_setonop("league_relics_loading($component11, $int47, $component4, $int31, $component3, $graphic41, $component5, $colour34)");
 		}
-		if ($int30 = 1 & ~on_mobile = false) {
-			if ($int31 = 1) {
-				cc_setonmouserepeat("league_relic_hover($component3, $trans36, $component2, struct_param($struct38, param_881), $component4, $colour34, $int44)");
+		if ($int32 = 1 & ~on_mobile = false) {
+			if ($int33 = 1) {
+				if (%varcint988 = 2 | %varcint988 = 3) {
+					cc_setonmouserepeat("league_relic_hover($component4, $trans38, $component3, struct_param($struct40, param_1853), $component5, $colour36, $int47)");
+				} else {
+					cc_setonmouserepeat("league_relic_hover($component4, $trans38, $component3, struct_param($struct40, param_881), $component5, $colour36, $int47)");
+				}
 			} else {
-				cc_setonmouserepeat("league_relic_hover($component3, $trans36, $component2, $graphic39, $component4, $colour34, $int44)");
+				cc_setonmouserepeat("league_relic_hover($component4, $trans38, $component3, $graphic41, $component5, $colour36, $int47)");
 			}
-			cc_setonmouseleave("league_relic_hover($component3, $int29, $component2, $graphic39, $component4, $colour32, $int44)");
+			cc_setonmouseleave("league_relic_hover($component4, $int31, $component3, $graphic41, $component5, $colour34, $int47)");
 		}
-		$int44 = calc($int44 + 1);
-		$int26 = calc($int26 + $int25);
-		$int43 = calc($int43 + 1);
+		$int47 = calc($int47 + 1);
+		$int28 = calc($int28 + $int27);
+		$count46 = calc($count46 + 1);
 	}
-	$int27 = calc($int27 + $int24);
-	$int42 = calc($int42 + 1);
+	$width29 = calc($width29 + $int26);
+	$int45 = calc($int45 + 1);
 }
-if ($int28 = 1) {
+cc_create(interface_655:16, ^iftype_rectangle, 0);
+cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_settrans(255);
+cc_create(interface_655:16, ^iftype_rectangle, 1);
+cc_setsize($int26, $int27, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_settrans(255);
+if ($int30 = 1) {
 	cc_deleteall($component0);
-	cc_create($component0, ^iftype_graphic, 0);
+	cc_create($component1, ^iftype_graphic, 0);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("tradebacking_light");
-	cc_create($component0, ^iftype_text, 1);
+	cc_create($component1, ^iftype_text, 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont(p11_full);
+	cc_settextfont($fontmetrics48);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_setcolour($colour15);
+	cc_setcolour($colour20);
 	cc_settext("You have a new Relic available for selection!");
+}
+if ($width29 > if_getwidth($component7)) {
+	if_setscrollsize($width29, 0, $component7);
+} else {
+	if_setscrollsize(0, 0, $component7);
+}
+$x16 = %varcint1182;
+if ($int49 < $int23) {
+	if ($x16 = -1) {
+		$x16 = if_getscrollx($component7);
+	}
+	if_setscrollpos($x16, 0, $component7);
+	cc_deleteall($component8);
+	~scrollbar_horizontal($component8, $component7, "graphic_4538", "graphic_4537", "graphic_4536", "graphic_4535", "scrollbar_v2,2", "scrollbar_v2,3");
+	~scrollbar_horizontal_rebuild($component8, $component7);
 }

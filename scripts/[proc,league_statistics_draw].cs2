@@ -89,7 +89,7 @@ cc_setposition($int11, $height12, ^setpos_abs_left, ^setpos_abs_top);
 $int6 = calc($int6 + 1);
 $height12 = calc($height12 + $int17);
 cc_create($component1, ^iftype_text, $int6);
-cc_settext(~script1127($int3, $int4));
+cc_settext(~script1127($int3, $int4, $int5));
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour($colour14);
@@ -154,7 +154,7 @@ while ($count10 <= $count9) {
 		$int6 = calc($int6 + 1);
 		$height12 = calc($height12 + $int17);
 		cc_create($component1, ^iftype_text, $int6);
-		cc_settext(~script1126($struct7, $int3, $int4));
+		cc_settext(~script1126($struct7, $int3, $int4, $int5));
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_setcolour($colour14);

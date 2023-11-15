@@ -9,7 +9,9 @@ if ($struct7 = null) {
 	return;
 }
 def_int $int8 = 0;
-~leagues_menu_button($component0, $int8, $component1, $component2);
+if (~in_league_tutorial = 0) {
+	~leagues_menu_button($component0, $int8, $component1, $component2);
+}
 $int8 = 0;
 ~league_create_dropdown($component0, $component1, $component2, $int8, 2);
 $int8 = 0;

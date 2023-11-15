@@ -4,8 +4,8 @@ def_dbrow $dbrow1 = db_getfield($dbrow0, dbtable_39:2, 0);
 def_component $component2 = interface_819:18;
 def_component $component3 = interface_819:22;
 def_component $component4 = interface_819:23;
-def_component $component5 = interface_819:39;
-def_component $component6 = interface_819:40;
+def_component $component5 = interface_819:40;
+def_component $component6 = interface_819:41;
 if ($dbrow1 = null) {
 	if_sethide(true, $component2);
 	return(0);

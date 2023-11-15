@@ -1,6 +1,10 @@
 // 3196
-[clientscript,league_relic_back](component $component0, component $component1, component $component2)
+[clientscript,league_relic_back](component $component0, component $component1, component $component2, component $component3, component $component4)
 sound_synth(interface_select1, 1, 0);
-if_sethide(true, $component2);
+~script2282(interface_655:1, interface_655:3);
+if_sethide(true, $component3);
 if_sethide(false, $component0);
-if_sethide(true, $component1);
+if_sethide(false, $component1);
+if_sethide(false, $component4);
+if_sethide(true, $component2);
+if_sethide(true, interface_655:28);

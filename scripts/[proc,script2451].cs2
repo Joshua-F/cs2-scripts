@@ -1,0 +1,23 @@
+// 2451
+[proc,script2451](int $int0)
+def_struct $struct1 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct1 = null) {
+	$struct1 = leagues_iv_4699;
+}
+cc_create(interface_447:3, ^iftype_text, $int0);
+cc_setsize(20, 15, ^setsize_minus, ^setsize_abs);
+cc_setposition(10, 5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext(struct_param($struct1, param_858));
+$int0 = calc($int0 + 1);
+cc_create(interface_447:3, ^iftype_text, $int0);
+cc_setsize(20, 15, ^setsize_minus, ^setsize_abs);
+cc_setposition(10, 150, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);
+cc_settext("You can only claim <struct_param($struct1, param_858)> trophies on a this world.<br>Hop to a Non-League world to claim them on your main game save.");

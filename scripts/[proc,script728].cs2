@@ -1,0 +1,6 @@
+// 728
+[proc,script728](component $component0, component $component1, component $component2)
+def_int $comsubid3 = 0;
+if (~in_league_tutorial = 0) {
+	~leagues_menu_button($component0, $comsubid3, $component1, $component2);
+}

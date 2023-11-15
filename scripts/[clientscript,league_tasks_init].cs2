@@ -1,10 +1,55 @@
 // 3202
-[clientscript,league_tasks_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
-~leagues_close_button($component14, false);
-def_string $text0 = "League Tasks";
-if (%varbit10032 = 2) {
-	$text0 = "Trailblazer Tasks";
+[clientscript,league_tasks_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18)
+~leagues_close_button($component14, false, 1);
+def_component $component19 = interface_657:0;
+def_component $component20 = interface_657:1;
+def_component $component21 = interface_657:41;
+def_enum $enum22 = ~toplevel_getcomponents;
+def_component $component23 = enum(component, component, $enum22, toplevel_osrs_stretch:16);
+if (~on_mobile = true) {
+	if_setontimer("script3833($component19, $component20, 0)", $component19);
+} else {
+	if (%varcint1177 = 0 & %varcint1178 = 0 & %varcint1175 = 0 & %varcint1176 = 0) {
+		%varcint1175 = if_getwidth($component23);
+		%varcint1176 = if_getheight($component23);
+		%varcint1177 = if_getx($component23);
+		%varcint1178 = if_gety($component23);
+	}
+	if_setontimer("script6110($component19, -1)", $component19);
 }
-def_int $comsubid15 = ~steelborder(interface_657:2, $text0, 1);
-if_setonvartransmit("league_tasks_draw_list(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, 0, $comsubid15){var2606, var2805}", $component1);
-~league_tasks_draw_list(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, 0, $comsubid15);
+if_setonresize("league_tasks_draw_list(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component15, $component16, $component17, $component18)", interface_657:0);
+if_setonvartransmit("script2434(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component15, $component16, $component17, $component18){var2614}", interface_657:0);
+if_setonvartransmit("script2435(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component15, $component16, $component17, $component18, %var2606, %var2805){var2606, var2805}", $component1);
+if_sethide(false, $component20);
+if_sethide(true, $component21);
+if ($enum22 = enum_1132) {
+	if_setposition(6, 6, ^setpos_abs_centre, ^setpos_abs_centre, $component20);
+	if_setsize(12, 12, ^setsize_minus, ^setsize_minus, $component20);
+	~league_tasks_draw_list(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component15, $component16, $component17, $component18);
+	return;
+}
+cc_deleteall($component19);
+def_int $int24 = 0;
+while ($int24 < 9) {
+	cc_create($component19, ^iftype_graphic, $int24);
+	cc_settiling(true);
+	cc_settrans(255);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+	cc_setdraggable($component19, -1);
+	cc_setdragdeadzone(1);
+	cc_setdragdeadtime(5);
+	$int24 = calc($int24 + 1);
+}
+cc_deleteall($component21);
+$int24 = 0;
+while ($int24 < 4) {
+	cc_create($component21, ^iftype_rectangle, $int24);
+	cc_setsize(calc($int24 * 2), calc($int24 * 2), ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x9f9f9f);
+	cc_setfill(false);
+	cc_settrans(calc(100 + $int24 * 10));
+	$int24 = calc($int24 + 1);
+}
+~script2437(-1, -1, $component19, $component20);

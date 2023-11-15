@@ -4,8 +4,8 @@ def_int $int4 = 0;
 if (%varbit12884 = 0) {
 	if_setop(1, "Search", $component1);
 	if_setonop("ca_searchbar_op($component0, $component1, $component2)", $component1);
-	if_setonmouseover("searchbar_mouseover($component2)", $component2);
-	if_setonmouseleave("searchbar_mouseleave($component2)", $component2);
+	if_setonmouseover("searchbar_mouseover($component2, null)", $component2);
+	if_setonmouseleave("searchbar_mouseleave($component2, null)", $component2);
 	if_setcolour(0xff981f, $component2);
 	if ($int3 = 1) {
 		%varcstring527 = "";

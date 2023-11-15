@@ -1,116 +1,136 @@
 // 3216
 [proc,league_task_is_completed](struct $struct0)(int)
-def_struct $struct1 = enum(int, struct, enum_2670, %varbit10032);
-if ($struct1 = null) {
+def_int $int1 = struct_param($struct0, league_task_id);
+if ($int1 = -1 | $int1 < 0) {
 	return(0);
 }
-def_enum $enum2 = struct_param($struct1, param_869);
-if ($enum2 = null | enum(struct, boolean, $enum2, $struct0) = false) {
-	return(0);
-}
-def_int $int3 = struct_param($struct0, league_task_id);
-if ($int3 = -1 | $int3 < 0) {
-	return(0);
-}
-def_int $index4 = calc($int3 % 32);
-def_int $int5 = calc($int3 / 32);
-switch_int ($int5) {
+def_int $index2 = calc($int1 % 32);
+def_int $int3 = calc($int1 / 32);
+switch_int ($int3) {
 	case 0 :
-		return(testbit(%var2616, $index4));
+		return(testbit(%var2616, $index2));
 	case 1 :
-		return(testbit(%var2617, $index4));
+		return(testbit(%var2617, $index2));
 	case 2 :
-		return(testbit(%var2618, $index4));
+		return(testbit(%var2618, $index2));
 	case 3 :
-		return(testbit(%var2619, $index4));
+		return(testbit(%var2619, $index2));
 	case 4 :
-		return(testbit(%var2620, $index4));
+		return(testbit(%var2620, $index2));
 	case 5 :
-		return(testbit(%var2621, $index4));
+		return(testbit(%var2621, $index2));
 	case 6 :
-		return(testbit(%var2622, $index4));
+		return(testbit(%var2622, $index2));
 	case 7 :
-		return(testbit(%var2623, $index4));
+		return(testbit(%var2623, $index2));
 	case 8 :
-		return(testbit(%var2624, $index4));
+		return(testbit(%var2624, $index2));
 	case 9 :
-		return(testbit(%var2625, $index4));
+		return(testbit(%var2625, $index2));
 	case 10 :
-		return(testbit(%var2626, $index4));
+		return(testbit(%var2626, $index2));
 	case 11 :
-		return(testbit(%var2627, $index4));
+		return(testbit(%var2627, $index2));
 	case 12 :
-		return(testbit(%var2628, $index4));
+		return(testbit(%var2628, $index2));
 	case 13 :
-		return(testbit(%var2629, $index4));
+		return(testbit(%var2629, $index2));
 	case 14 :
-		return(testbit(%var2630, $index4));
+		return(testbit(%var2630, $index2));
 	case 15 :
-		return(testbit(%var2631, $index4));
+		return(testbit(%var2631, $index2));
 	case 16 :
-		return(testbit(%var2808, $index4));
+		return(testbit(%var2808, $index2));
 	case 17 :
-		return(testbit(%var2809, $index4));
+		return(testbit(%var2809, $index2));
 	case 18 :
-		return(testbit(%var2810, $index4));
+		return(testbit(%var2810, $index2));
 	case 19 :
-		return(testbit(%var2811, $index4));
+		return(testbit(%var2811, $index2));
 	case 20 :
-		return(testbit(%var2812, $index4));
+		return(testbit(%var2812, $index2));
 	case 21 :
-		return(testbit(%var2813, $index4));
+		return(testbit(%var2813, $index2));
 	case 22 :
-		return(testbit(%var2814, $index4));
+		return(testbit(%var2814, $index2));
 	case 23 :
-		return(testbit(%var2815, $index4));
+		return(testbit(%var2815, $index2));
 	case 24 :
-		return(testbit(%var2816, $index4));
+		return(testbit(%var2816, $index2));
 	case 25 :
-		return(testbit(%var2817, $index4));
+		return(testbit(%var2817, $index2));
 	case 26 :
-		return(testbit(%var2818, $index4));
+		return(testbit(%var2818, $index2));
 	case 27 :
-		return(testbit(%var2819, $index4));
+		return(testbit(%var2819, $index2));
 	case 28 :
-		return(testbit(%var2820, $index4));
+		return(testbit(%var2820, $index2));
 	case 29 :
-		return(testbit(%var2821, $index4));
+		return(testbit(%var2821, $index2));
 	case 30 :
-		return(testbit(%var2822, $index4));
+		return(testbit(%var2822, $index2));
 	case 31 :
-		return(testbit(%var2823, $index4));
+		return(testbit(%var2823, $index2));
 	case 32 :
-		return(testbit(%var2824, $index4));
+		return(testbit(%var2824, $index2));
 	case 33 :
-		return(testbit(%var2825, $index4));
+		return(testbit(%var2825, $index2));
 	case 34 :
-		return(testbit(%var2826, $index4));
+		return(testbit(%var2826, $index2));
 	case 35 :
-		return(testbit(%var2827, $index4));
+		return(testbit(%var2827, $index2));
 	case 36 :
-		return(testbit(%var2828, $index4));
+		return(testbit(%var2828, $index2));
 	case 37 :
-		return(testbit(%var2829, $index4));
+		return(testbit(%var2829, $index2));
 	case 38 :
-		return(testbit(%var2830, $index4));
+		return(testbit(%var2830, $index2));
 	case 39 :
-		return(testbit(%var2831, $index4));
+		return(testbit(%var2831, $index2));
 	case 40 :
-		return(testbit(%var2832, $index4));
+		return(testbit(%var2832, $index2));
 	case 41 :
-		return(testbit(%var2833, $index4));
+		return(testbit(%var2833, $index2));
 	case 42 :
-		return(testbit(%var2834, $index4));
+		return(testbit(%var2834, $index2));
 	case 43 :
-		return(testbit(%var2835, $index4));
+		return(testbit(%var2835, $index2));
 	case 44 :
-		return(testbit(%var3339, $index4));
+		return(testbit(%var3339, $index2));
 	case 45 :
-		return(testbit(%var3340, $index4));
+		return(testbit(%var3340, $index2));
 	case 46 :
-		return(testbit(%var3341, $index4));
+		return(testbit(%var3341, $index2));
 	case 47 :
-		return(testbit(%var3342, $index4));
+		return(testbit(%var3342, $index2));
+	case 48 :
+		return(testbit(%var4036, $index2));
+	case 49 :
+		return(testbit(%var4037, $index2));
+	case 50 :
+		return(testbit(%var4038, $index2));
+	case 51 :
+		return(testbit(%var4039, $index2));
+	case 52 :
+		return(testbit(%var4040, $index2));
+	case 53 :
+		return(testbit(%var4041, $index2));
+	case 54 :
+		return(testbit(%var4042, $index2));
+	case 55 :
+		return(testbit(%var4043, $index2));
+	case 56 :
+		return(testbit(%var4044, $index2));
+	case 57 :
+		return(testbit(%var4045, $index2));
+	case 58 :
+		return(testbit(%var4046, $index2));
+	case 59 :
+		return(testbit(%var4047, $index2));
+	case 60 :
+		return(testbit(%var4048, $index2));
+	case 61 :
+		return(testbit(%var4049, $index2));
 	case default :
 		return(0);
 }
