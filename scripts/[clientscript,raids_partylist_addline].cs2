@@ -17,6 +17,8 @@ def_string $string6 = "";
 def_string $string7 = "";
 def_string $string8 = "";
 def_string $string9 = "";
+def_string $string10 = "";
+def_string $string11 = "";
 def_int $int2 = 0;
 def_int $int3 = 0;
 if (string_length($string0) > 0) {
@@ -25,7 +27,7 @@ if (string_length($string0) > 0) {
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setfill(true);
-	~raids_partylist_entry_init(%varcint178, $component1, $int0, $string1, interface_499:14);
+	~raids_partylist_entry_init(%varcint178, $component1, $int0, $string1, interface_499:15);
 	if_setop(1, "View party:", $component1);
 	if_setopbase("<col=ff9040><removetags($string1)></col>", $component1);
 	$string2, $string0 = ~script632($string0);
@@ -72,24 +74,9 @@ if (string_length($string0) > 0) {
 	cc_settextshadow(true);
 	cc_settext($string1);
 	$int2 = calc($int2 + $int3);
-	$string6, $string0 = ~script632($string0);
+	$string7, $string0 = ~script632($string0);
 	$int3 = if_getwidth(interface_499:10);
 	cc_create($component1, ^iftype_text, 4);
-	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
-	cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
-	cc_setcolour(0xff981f);
-	cc_settextfont(p12_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settextshadow(true);
-	if (compare($string6, "0") ! 0) {
-		cc_settext($string6);
-	} else {
-		cc_settext("<col=9f9f9f>-</col>");
-	}
-	$int2 = calc($int2 + $int3);
-	$string7, $string0 = ~script632($string0);
-	$int3 = if_getwidth(interface_499:11);
-	cc_create($component1, ^iftype_text, 5);
 	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
 	cc_setcolour(0xff981f);
@@ -103,67 +90,105 @@ if (string_length($string0) > 0) {
 	}
 	$int2 = calc($int2 + $int3);
 	$string8, $string0 = ~script632($string0);
+	$int3 = if_getwidth(interface_499:11);
+	cc_create($component1, ^iftype_text, 5);
+	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	if (compare($string8, "0") ! 0) {
+		cc_settext($string8);
+	} else {
+		cc_settext("<col=9f9f9f>-</col>");
+	}
+	$int2 = calc($int2 + $int3);
+	$string9, $string0 = ~script632($string0);
+	$string6 = ~string_prependzero($string3, 3);
 	$int3 = if_getwidth(interface_499:12);
-	cc_create($component1, ^iftype_graphic, 6);
+	cc_create($component1, ^iftype_text, 6);
+	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	if (compare($string9, "0") ! 0) {
+		cc_settext($string9);
+	} else {
+		cc_settext("<col=9f9f9f>-</col>");
+	}
+	$int2 = calc($int2 + $int3);
+	$string10, $string0 = ~script632($string0);
+	$int3 = if_getwidth(interface_499:13);
+	cc_create($component1, ^iftype_graphic, 7);
 	cc_setposition(calc($int2 + 2), 2, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
-	if (compare($string8, "0") = 0) {
+	if (compare($string10, "0") = 0) {
 		cc_setgraphic(null);
 	} else {
 		cc_setgraphic("raids_challenge_icon");
 	}
 	$int2 = calc($int2 + $int3);
-	$string9, $string0 = ~script632($string0);
-	cc_create($component1, ^iftype_text, 7);
+	$string11, $string0 = ~script632($string0);
+	cc_create($component1, ^iftype_text, 8);
 	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 	cc_setsize($int2, 0, ^setsize_minus, ^setsize_minus);
 	cc_setcolour(0x9f9f9f);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	~raids_partylist_age_init($string9, %varcint59);
-	cc_create($component1, ^iftype_text, 8);
-	cc_sethide(true);
-	cc_setcolour(0xff981f);
-	cc_settextfont(p11_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settextshadow(true);
-	cc_settext(append_num($string4, $int0));
+	~raids_partylist_age_init($string11, %varcint59);
 	cc_create($component1, ^iftype_text, 9);
 	cc_sethide(true);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext(append_num($string5, $int0));
+	cc_settext(append_num($string4, $int0));
 	cc_create($component1, ^iftype_text, 10);
 	cc_sethide(true);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext(append_num(~string_prependzero($string6, 3), $int0));
+	cc_settext(append_num($string5, $int0));
 	cc_create($component1, ^iftype_text, 11);
 	cc_sethide(true);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext(append_num(~string_prependzero($string7, 4), $int0));
+	cc_settext(append_num(~string_prependzero($string7, 3), $int0));
 	cc_create($component1, ^iftype_text, 12);
 	cc_sethide(true);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext($string8);
+	cc_settext(append_num(~string_prependzero($string8, 4), $int0));
 	cc_create($component1, ^iftype_text, 13);
 	cc_sethide(true);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext(~string_prependzero($string9, 10));
+	cc_settext(append_num(~string_prependzero($string9, 3), $int0));
+	cc_create($component1, ^iftype_text, 14);
+	cc_sethide(true);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext($string10);
+	cc_create($component1, ^iftype_text, 15);
+	cc_sethide(true);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext(~string_prependzero($string11, 10));
 	if_setsize(0, 18, ^setsize_minus, ^setsize_abs, $component1);
 	if_setposition(0, calc(%varcint178 * 18), ^setpos_abs_centre, ^setpos_abs_top, $component1);
 	%varcint178 = calc(%varcint178 + 1);
@@ -177,7 +202,7 @@ if_setontimer(null, $component1);
 def_component $component4 = null;
 def_int $height5 = 0;
 if ($int0 >= calc(40 - 1)) {
-	if (%varcint180 ! 0 & %varcint180 ! 1 & %varcint180 ! 2 & %varcint180 ! 3 & %varcint180 ! 4 & %varcint180 ! 5 & %varcint180 ! 6 & %varcint180 ! 7 & %varcint180 ! 8 & %varcint180 ! 9 & %varcint180 ! 10 & %varcint180 ! 11 & %varcint180 ! 12 & %varcint180 ! 13) {
+	if (%varcint180 ! 0 & %varcint180 ! 1 & %varcint180 ! 2 & %varcint180 ! 3 & %varcint180 ! 4 & %varcint180 ! 5 & %varcint180 ! 6 & %varcint180 ! 7 & %varcint180 ! 8 & %varcint180 ! 9 & %varcint180 ! 10 & %varcint180 ! 11 & %varcint180 ! 12 & %varcint180 ! 13 & %varcint180 ! 24 & %varcint180 ! 25) {
 		%varcint180 = 1;
 	}
 	~raids_partylist_setsort;
@@ -185,10 +210,10 @@ if ($int0 >= calc(40 - 1)) {
 	$height5 = calc(%varcint178 * 18);
 	if ($height5 > if_getheight($component4)) {
 		if_setscrollsize(0, $height5, $component4);
-		~scrollbar_resize(interface_499:55, $component4, %varcint179);
+		~scrollbar_resize(interface_499:56, $component4, %varcint179);
 	} else {
 		if_setscrollsize(0, 0, $component4);
-		~scrollbar_resize(interface_499:55, $component4, 0);
+		~scrollbar_resize(interface_499:56, $component4, 0);
 		%varcint179 = 0;
 	}
 	cc_deleteall($component4);
@@ -209,6 +234,6 @@ if ($int0 >= calc(40 - 1)) {
 		cc_settextshadow(true);
 		cc_settext("No parties are currently listed.");
 	}
-	if_sethide(false, interface_499:56);
-	if_sethide(false, interface_499:58);
+	if_sethide(false, interface_499:57);
+	if_sethide(false, interface_499:59);
 }

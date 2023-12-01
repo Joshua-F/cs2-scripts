@@ -1,6 +1,10 @@
 // 1540
 [proc,raids_sidepanel_data](component $component0, component $component1)
-cc_settext("Party size: <col=ffffff><tostring(%varbit5424)></col>  Combat level: <col=ffffff><tostring(%varbit12285)></col>");
+def_string $string0 = "Party size: <col=ffffff><tostring(%varbit5424)></col>  Combat level: <col=ffffff><tostring(%varbit12285)></col>";
+if (%varbit9540 > %varbit5424) {
+	$string0 = append($string0, "<br>Scaled party size: <col=ffffff><tostring(%varbit9540)></col>");
+}
+cc_settext($string0);
 if (%varbit5425 = 0) {
 	if (%varbit5423 = 1) {
 		.cc_settext("");
@@ -22,16 +26,16 @@ if (%varbit5425 = 0) {
 } else {
 	.cc_settext("Get out! Get out!<br>GET OUT!");
 }
-def_string $string0 = "Start raid";
+def_string $string1 = "Start raid";
 if (%varbit5423 = 1 & %varbit5425 = 0) {
-	if_setsize(calc(parawidth($string0, 190, p12_full) + 20), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+	if_setsize(calc(parawidth($string1, 190, p12_full) + 20), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
 	if_sethide(false, $component1);
-	~raids_sidepanel_drawbutton(false, $string0, $component1);
-	if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string0, $component1)", $component1);
-	if_setonmouseleave("raids_sidepanel_drawbutton(false, $string0, $component1)", $component1);
-	if_setonop("raids_sidepanel_opbutton(event_op, $string0, $component1)", $component1);
+	~raids_sidepanel_drawbutton(false, $string1, $component1);
+	if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string1, $component1)", $component1);
+	if_setonmouseleave("raids_sidepanel_drawbutton(false, $string1, $component1)", $component1);
+	if_setonop("raids_sidepanel_opbutton(event_op, $string1, $component1)", $component1);
 	if_setontimer(null, $component1);
-	if_setop(1, $string0, $component1);
+	if_setop(1, $string1, $component1);
 } else {
 	if_sethide(true, $component1);
 	cc_deleteall($component1);

@@ -143,8 +143,8 @@ while ($int36 < $count35) {
 		if ($int36 = $int0) {
 			$int45 = paraheight("Description: <$string1>", calc(if_getwidth($component2) - 10), p11_full);
 			cc_setsize(0, calc(40 + (10 * $int45 + 25)), ^setsize_minus, ^setsize_abs);
+			cc_settrans(210);
 			if ($boolean26 = false) {
-				cc_settrans(210);
 				cc_setonmouserepeat("league_task_hover(event_comsubid, $component2, $component8, 210, "open_buttons_small,3")");
 				if (calc($int31 % 2) = 1) {
 					cc_setonmouseleave("league_task_hover(event_comsubid, $component2, $component8, 230, "open_buttons_small,2")");
