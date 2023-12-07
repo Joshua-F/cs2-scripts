@@ -1,5 +1,5 @@
 // 1125
-[proc,league_points_earned](struct $struct0, int $int1, int $int2, int $int3)(int)
+[proc,league_points_earned](struct $struct0, int $int1, int $int2, int $int3, int $int4)(int)
 switch_struct ($struct0) {
 	case leagues_i_twisted_723 :
 		return($int1);
@@ -7,6 +7,8 @@ switch_struct ($struct0) {
 		return($int2);
 	case leagues_iii_shattered_relics_3771 :
 		return($int3);
+	case leagues_iv_4699 :
+		return($int4);
 	case default :
 		return(0);
 }

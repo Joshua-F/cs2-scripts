@@ -1,5 +1,5 @@
 // 1126
-[proc,script1126](struct $struct0, int $int1, int $int2, int $int3)(string)
+[proc,script1126](struct $struct0, int $int1, int $int2, int $int3, int $int4)(string)
 switch_struct ($struct0) {
 	case leagues_i_twisted_723 :
 		if ($int1 >= 20830) {
@@ -67,6 +67,29 @@ switch_struct ($struct0) {
 			return("Iron");
 		}
 		if ($int3 >= 100) {
+			return("Bronze");
+		}
+		return("-");
+	case leagues_iv_4699 :
+		if ($int4 >= 56000) {
+			return("Dragon");
+		}
+		if ($int4 >= 42000) {
+			return("Rune");
+		}
+		if ($int4 >= 28000) {
+			return("Adamant");
+		}
+		if ($int4 >= 18000) {
+			return("Mithril");
+		}
+		if ($int4 >= 10000) {
+			return("Steel");
+		}
+		if ($int4 >= 5000) {
+			return("Iron");
+		}
+		if ($int4 >= 2500) {
 			return("Bronze");
 		}
 		return("-");
