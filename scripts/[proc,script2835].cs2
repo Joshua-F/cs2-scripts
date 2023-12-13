@@ -1,0 +1,12 @@
+// 2835
+[proc,script2835](int $int0, int $int1, int $int2)(int)
+def_int $int3 = min($int0, $int1);
+def_int $int4 = max($int0, $int1);
+def_int $int5 = 0;
+if ($int3 = $int4) {
+	return($int3);
+}
+if ($int3 <= $int2 & $int2 <= $int4) {
+	return(calc((random(calc($int4 - $int3)) + $int2 - $int3 + 1) % ($int4 - $int3 + 1) + $int3));
+}
+return(calc(random(calc($int4 - $int3)) + $int3));

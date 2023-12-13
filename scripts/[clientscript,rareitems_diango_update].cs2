@@ -1,53 +1,59 @@
 // 474
-[clientscript,rareitems_diango_update](int $flags0, int $flags1, int $flags2, int $flags3, int $flags4, int $flags5)
-def_int $int6 = 0;
-def_namedobj $namedobj7 = null;
-def_int $int8 = 0;
-while ($int8 <= 191) {
-	if (cc_find(interface_78:3, $int8) = ^true) {
-		if ($int8 < 32) {
-			if (testbit($flags0, $int8) = ^true) {
-				$int6 = 1;
+[clientscript,rareitems_diango_update](int $flags0, int $flags1, int $flags2, int $flags3, int $flags4, int $flags5, int $flags6)
+def_int $int7 = 0;
+def_namedobj $namedobj8 = null;
+def_int $int9 = 0;
+while ($int9 <= 193) {
+	if (cc_find(interface_78:3, $int9) = ^true) {
+		if ($int9 < 32) {
+			if (testbit($flags0, $int9) = ^true) {
+				$int7 = 1;
 			} else {
-				$int6 = 0;
+				$int7 = 0;
 			}
-		} else if ($int8 < 64) {
-			if (testbit($flags1, calc($int8 - 32)) = ^true) {
-				$int6 = 1;
+		} else if ($int9 < 64) {
+			if (testbit($flags1, calc($int9 - 32)) = ^true) {
+				$int7 = 1;
 			} else {
-				$int6 = 0;
+				$int7 = 0;
 			}
-		} else if ($int8 < 96) {
-			if (testbit($flags2, calc($int8 - 64)) = ^true) {
-				$int6 = 1;
+		} else if ($int9 < 96) {
+			if (testbit($flags2, calc($int9 - 64)) = ^true) {
+				$int7 = 1;
 			} else {
-				$int6 = 0;
+				$int7 = 0;
 			}
-		} else if ($int8 < 128) {
-			if (testbit($flags3, calc($int8 - 96)) = ^true) {
-				$int6 = 1;
+		} else if ($int9 < 128) {
+			if (testbit($flags3, calc($int9 - 96)) = ^true) {
+				$int7 = 1;
 			} else {
-				$int6 = 0;
+				$int7 = 0;
 			}
-		} else if ($int8 < 160) {
-			if (testbit($flags4, calc($int8 - 128)) = ^true) {
-				$int6 = 1;
+		} else if ($int9 < 160) {
+			if (testbit($flags4, calc($int9 - 128)) = ^true) {
+				$int7 = 1;
 			} else {
-				$int6 = 0;
+				$int7 = 0;
 			}
-		} else if ($int8 < 192) {
-			if (testbit($flags5, calc($int8 - 160)) = ^true) {
-				$int6 = 1;
+		} else if ($int9 < 192) {
+			if (testbit($flags5, calc($int9 - 160)) = ^true) {
+				$int7 = 1;
 			} else {
-				$int6 = 0;
+				$int7 = 0;
+			}
+		} else if ($int9 < 224) {
+			if (testbit($flags6, calc($int9 - 192)) = ^true) {
+				$int7 = 1;
+			} else {
+				$int7 = 0;
 			}
 		} else {
-			$int6 = 0;
+			$int7 = 0;
 		}
-		if ($int6 = 1) {
-			$namedobj7 = enum(int, namedobj, enum_708, $int8);
-			if ($namedobj7 ! null) {
-				if (inv_total(inv, $namedobj7) = 0) {
+		if ($int7 = 1) {
+			$namedobj8 = enum(int, namedobj, enum_708, $int9);
+			if ($namedobj8 ! null) {
+				if (inv_total(inv, $namedobj8) = 0) {
 					cc_sethide(false);
 				} else {
 					cc_sethide(true);
@@ -59,5 +65,5 @@ while ($int8 <= 191) {
 			cc_sethide(true);
 		}
 	}
-	$int8 = calc($int8 + 1);
+	$int9 = calc($int9 + 1);
 }
