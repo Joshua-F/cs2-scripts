@@ -18,7 +18,7 @@ cc_settextshadow(true);
 .cc_setgraphic("ge_smallicons,0");
 ~shared_bank_drawcap($int23, $int24);
 if (~bankmain_searching = 1) {
-	~meslayer_close(1, 1, 1);
+	~meslayer_close(true, true, true);
 } else if (%varcint5 <= 0) {
 	%varcstring359 = "";
 }

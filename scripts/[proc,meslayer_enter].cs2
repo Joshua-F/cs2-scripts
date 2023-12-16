@@ -28,7 +28,7 @@ if ($length1 > 0) {
 				friend_del(%varcstring359);
 			} else if (%varcint5 = 6) {
 				if (%varbit8119 = 0) {
-					~meslayer_close(1, 1, 1);
+					~meslayer_close(true, true, true);
 					mes("You must set a name before you can chat.");
 					return;
 				}
@@ -77,7 +77,7 @@ if ($length1 > 0) {
 			%varcint5 = 0;
 		case 10 :
 			if (%varbit8119 = 0) {
-				~meslayer_close(1, 1, 1);
+				~meslayer_close(true, true, true);
 				mes("You must set a name before you can chat.");
 				return;
 			}
@@ -93,7 +93,7 @@ if ($length1 > 0) {
 			~rebuildchatbox(~script553);
 		case 13 :
 			if (%varbit8119 = 0) {
-				~meslayer_close(1, 1, 1);
+				~meslayer_close(true, true, true);
 				mes("You must set a name before you can chat.");
 				return;
 			}
@@ -101,7 +101,7 @@ if ($length1 > 0) {
 			~chat_autotyper_updateop;
 			if_setontimer("chat_autotyper(event_com, true)", interface_162:11);
 		case 11, 18 :
-			~meslayer_close(0, 1, 1);
+			~meslayer_close(false, true, true);
 			return;
 		case 16 :
 			~skillmulti_quantitybutton_x_receive(%varcstring359);
@@ -116,4 +116,4 @@ if ($length1 > 0) {
 			~script7330("");
 	}
 }
-~meslayer_close(1, 1, 1);
+~meslayer_close(true, true, true);

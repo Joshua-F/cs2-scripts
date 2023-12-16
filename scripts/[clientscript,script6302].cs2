@@ -61,7 +61,7 @@ def_string $string0 = "Drag items here to discard them.";
 cc_settext($string0);
 if_setonclick("mes($string0)", $component5);
 if (%varcint5 = 14) {
-	~meslayer_close(1, 1, 1);
+	~meslayer_close(true, true, true);
 }
 ~script6315(false, $component7);
 if_setop(1, "Seek", $component7);

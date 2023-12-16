@@ -1,9 +1,9 @@
 // 7096
 [clientscript,settings_meslayer_close](int $int0)
-def_int $int1 = 1;
+def_boolean $boolean1 = true;
 if (%varbit9647 = 1 | %varbit12284 = 1 | %varbit14816 = 1) {
-	$int1 = 0;
+	$boolean1 = false;
 }
 if (%varcint5 = $int0 | %varcint5 <= 0 | $int0 <= 0) {
-	~meslayer_close(1, 1, $int1);
+	~meslayer_close(true, true, $boolean1);
 }

@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 if (~bankmain_searching = 1) {
-	~meslayer_close(1, 1, 1);
+	~meslayer_close(true, true, true);
 	~shared_bank_search_setbutton($component1, $component2, $component3, $component4, $int5, $component6, $comsubid7, $component8);
 	~shared_bank_update($component2, $component3, $component4, $int5, $component6, $comsubid7, $component8);
 	return;

@@ -1,10 +1,10 @@
 // 299
-[proc,meslayer_close](int $int0, int $int1, int $int2)
+[proc,meslayer_close](boolean $boolean0, boolean $boolean1, boolean $boolean2)
 if_sethide(true, interface_162:37);
 if_sethide(false, interface_162:53);
 ~toplevel_chatbox_background;
 def_int $mesuid3 = 0;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	$mesuid3 = ~script553;
 	~rebuildchatbox($mesuid3);
 	~rebuildpmbox($mesuid3);
@@ -17,7 +17,7 @@ if ($int1 = 1) {
 if (~on_mobile = true) {
 	~mobile_chatbox_resize;
 }
-if ($int2 = 1) {
+if ($boolean2 = true) {
 	switch_int (%varcint5) {
 		case 7, 19 :
 			resume_countdialog("0");
@@ -28,7 +28,7 @@ if ($int2 = 1) {
 	}
 }
 %varcint5 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	%varcstring359 = "";
 }
 if_setposition(0, -8, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:41);
