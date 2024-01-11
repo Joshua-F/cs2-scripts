@@ -1,8 +1,0 @@
-// 1225
-[clientscript,zeah_overlay_shrink_it](component $component0)
-def_int $width1 = ~max(calc(if_getwidth($component0) - 5), 120);
-def_int $height2 = ~max(calc(if_getheight($component0) - 2), 60);
-if_setsize($width1, $height2, ^setsize_abs, ^setsize_abs, $component0);
-if ($width1 <= 120 & $height2 <= 60) {
-	if_setontimer(null, $component0);
-}

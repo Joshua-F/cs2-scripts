@@ -101,32 +101,5 @@ switch_struct ($struct0) {
 			$string0 = append($string0, "<$string1>Freeing Sir Amik Varze<br>");
 		}
 		$int8 = calc($int8 + 1);
-	case struct_4008 :
-		if (%varbit4896 < 1000) {
-			$string0 = append($string0, "<$string2>100% Arceuus favour<br>");
-		} else {
-			$string0 = append($string0, "<$string1>100% Arceuus favour<br>");
-		}
-		if (%varbit4895 < 1000) {
-			$string0 = append($string0, "<$string2>100% Hosidius favour<br>");
-		} else {
-			$string0 = append($string0, "<$string1>100% Hosidius favour<br>");
-		}
-		if (%varbit4898 < 1000) {
-			$string0 = append($string0, "<$string2>100% Lovagengj favour<br>");
-		} else {
-			$string0 = append($string0, "<$string1>100% Lovagengj favour<br>");
-		}
-		if (%varbit4894 < 1000) {
-			$string0 = append($string0, "<$string2>100% Shayzien favour<br>");
-		} else {
-			$string0 = append($string0, "<$string1>100% Shayzien favour<br>");
-		}
-		if (%varbit4899 < 1000) {
-			$string0 = append($string0, "<$string2>100% Piscarilius favour<br>");
-		} else {
-			$string0 = append($string0, "<$string1>100% Piscarilius favour<br>");
-		}
-		$int8 = calc($int8 + 5);
 }
 return($string0, $int8);

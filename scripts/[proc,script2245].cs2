@@ -1,6 +1,8 @@
 // 2245
 [proc,script2245](dbrow $dbrow0, int $int1, int $int2)(string)
 def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
 switch_int ($int2) {
 	case 0 :
 		return(tostring(~script3236($dbrow0)));
@@ -45,11 +47,12 @@ switch_int ($int2) {
 	case 7 :
 		return(tostring(calc(10000 + ~max(db_getfield($dbrow0, quest:comlevelreq, 0), db_getfield($dbrow0, quest:comlevelrec, 0)))));
 	case 8 :
-		$int3 = db_getfield($dbrow0, quest:year, 0);
-		if ($int3 < 2001) {
+		$int3, $int4, $int5 = db_getfield($dbrow0, quest:year, 0);
+		$int3, $int4 = calc(10 + $int3), calc(10 + $int4);
+		if ($int5 < 2001) {
 			return("**********");
 		}
-		return(tostring($int3));
+		return("<tostring($int5)><tostring($int4)><tostring($int3)>");
 	case 1 :
 		return(db_getfield($dbrow0, quest:sortname, 0));
 	case 11 :

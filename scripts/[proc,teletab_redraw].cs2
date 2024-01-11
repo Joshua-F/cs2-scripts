@@ -1,66 +1,75 @@
 // 3587
-[proc,teletab_redraw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
-~teletab_button_redraw(1, $component0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(2, $component1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(3, $component2, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(4, $component3, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(5, $component4, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(6, $component5, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(7, $component6, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(8, $component7, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(9, $component8, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(10, $component9, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-~teletab_button_redraw(11, $component10, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
-if (if_gethide($component9) = true & if_gethide($component10) = true) {
-	if_setsize(42, 95, ^setsize_minus, ^setsize_abs, $component11);
-} else {
-	if_setsize(167, 95, ^setsize_minus, ^setsize_abs, $component11);
-}
-cc_deleteall($component11);
-def_int $int14 = 0;
-def_int $int15 = -1;
-def_int $int16 = 0;
-def_int $int17 = 0;
+[proc,teletab_redraw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27)
+~teletab_button_redraw($component0, 1, $component1, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 2, $component2, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 3, $component3, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 4, $component4, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 5, $component5, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 6, $component6, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 7, $component7, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 8, $component8, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 9, $component9, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 10, $component10, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 11, $component11, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 12, $component12, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 13, $component13, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 14, $component14, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 15, $component15, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 16, $component16, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 17, $component17, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 18, $component18, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 19, $component19, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 20, $component20, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+~teletab_button_redraw($component0, 21, $component21, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27);
+cc_deleteall($component22);
+def_int $int28 = 0;
+def_int $int29 = -1;
+def_int $int30 = 0;
+def_int $int31 = 0;
 def_string $string0 = "Create";
-def_int $lvl18 = 0;
-def_enum $enum19 = enum(int, enum, enum_908, %varbit10599);
-def_enum $enum20 = enum(int, enum, enum_909, %varbit10599);
-def_namedobj $namedobj21 = null;
-if ($enum19 ! null) {
-	$namedobj21 = enum(int, namedobj, $enum19, %varbit10600);
+def_int $lvl32 = 0;
+def_enum $enum33 = %var4074;
+def_namedobj $namedobj34 = null;
+if ($enum33 ! null) {
+	$namedobj34 = enum(int, namedobj, $enum33, calc(%varbit10600 - 1));
 }
-def_obj $obj22 = null;
-if ($namedobj21 ! null) {
-	$obj22 = oc_param($namedobj21, param_608);
+def_obj $obj35 = null;
+if ($namedobj34 ! null) {
+	$obj35 = oc_param($namedobj34, param_608);
 }
-if ($obj22 = null) {
-	~teletab_confirm_draw(true, "<col=9f9f9f>---</col>", $component13);
-	if_setonmouserepeat(null, $component13);
-	if_setonmouseleave(null, $component13);
-	if_setonop(null, $component13);
-	if_clearops($component13);
-	if_settext("Select a tablet", $component12);
+def_string $string1 = enum(obj, string, enum_5272, $namedobj34);
+def_string $op2 = $string0;
+if (string_length($string1) > 0) {
+	$op2 = "Create <col=ff9040><$string1></col>";
+}
+if ($obj35 = null) {
+	~teletab_confirm_draw(true, "<col=9f9f9f>---</col>", $component24);
+	if_setonmouserepeat(null, $component24);
+	if_setonmouseleave(null, $component24);
+	if_setonop(null, $component24);
+	if_clearops($component24);
+	if_settext("Select a tablet", $component23);
 } else {
-	~teletab_confirm_draw(false, $string0, $component13);
-	if_setonmouserepeat("teletab_confirm_draw(true, $string0, $component13)", $component13);
-	if_setonmouseleave("teletab_confirm_draw(false, $string0, $component13)", $component13);
-	if_setonop("teletab_confirm_op(event_op, event_com, $string0)", $component13);
-	if_setop(1, $string0, $component13);
-	$lvl18 = oc_param($obj22, spell_levelreq);
-	if (stat(magic) >= $lvl18) {
-		if_settext("<enum(int, string, $enum20, %varbit10600)>:<br>Level <tostring($lvl18)>", $component12);
+	~teletab_confirm_draw(false, $string0, $component24);
+	if_setonmouserepeat("teletab_confirm_draw(true, $string0, $component24)", $component24);
+	if_setonmouseleave("teletab_confirm_draw(false, $string0, $component24)", $component24);
+	if_setonop("teletab_confirm_op(event_op, event_com, $string0)", $component24);
+	if_setop(1, $op2, $component24);
+	$lvl32 = oc_param($obj35, spell_levelreq);
+	if (stat(magic) >= $lvl32) {
+		if_settext("<$string1>: Level <tostring($lvl32)>", $component23);
 	} else {
-		if_settext("<enum(int, string, $enum20, %varbit10600)>:<br><col=ff0000>Level <tostring($lvl18)></col>", $component12);
+		if_settext("<$string1>: <col=ff0000>Level <tostring($lvl32)></col>", $component23);
 	}
-	$int14, $int17 = ~teletab_addingredient(~script3588, 1, $component11, $int14, $int17);
-	$int14, $int17 = ~teletab_addingredient(oc_param($obj22, magic_runetype_1), oc_param($obj22, magic_runecount_1), $component11, $int14, $int17);
-	$int14, $int17 = ~teletab_addingredient(oc_param($obj22, magic_runetype_2), oc_param($obj22, magic_runecount_2), $component11, $int14, $int17);
-	$int14, $int17 = ~teletab_addingredient(oc_param($obj22, magic_runetype_3), oc_param($obj22, magic_runecount_3), $component11, $int14, $int17);
-	$int14, $int17 = ~teletab_addingredient(oc_param($obj22, magic_runetype_4), oc_param($obj22, magic_runecount_4), $component11, $int14, $int17);
-	switch_int ($int17) {
+	$int28, $int31 = ~teletab_addingredient(~script3588, 1, $component22, $int28, $int31);
+	$int28, $int31 = ~teletab_addingredient(oc_param($obj35, magic_runetype_1), oc_param($obj35, magic_runecount_1), $component22, $int28, $int31);
+	$int28, $int31 = ~teletab_addingredient(oc_param($obj35, magic_runetype_2), oc_param($obj35, magic_runecount_2), $component22, $int28, $int31);
+	$int28, $int31 = ~teletab_addingredient(oc_param($obj35, magic_runetype_3), oc_param($obj35, magic_runecount_3), $component22, $int28, $int31);
+	$int28, $int31 = ~teletab_addingredient(oc_param($obj35, magic_runetype_4), oc_param($obj35, magic_runecount_4), $component22, $int28, $int31);
+	switch_int ($int31) {
 		case 0 :
-			cc_create($component11, ^iftype_text, $int14);
-			$int14 = calc($int14 + 1);
+			cc_create($component22, ^iftype_text, $int28);
+			$int28 = calc($int28 + 1);
 			cc_setsize(10, calc(32 + 12), ^setsize_minus, ^setsize_abs);
 			cc_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_top);
 			cc_setcolour(0xff981f);
@@ -69,26 +78,51 @@ if ($obj22 = null) {
 			cc_settextshadow(true);
 			cc_settext("Ingredient list unavailable.");
 		case 1 :
-			~teletab_placeingredient(0, 0, $component11);
+			~teletab_placeingredient(0, 0, $component22);
 		case 2 :
-			~teletab_placeingredient(0, -32, $component11);
-			~teletab_placeingredient(1, 32, $component11);
+			~teletab_placeingredient(0, -32, $component22);
+			~teletab_placeingredient(1, 32, $component22);
 		case 3 :
-			~teletab_placeingredient(0, -56, $component11);
-			~teletab_placeingredient(1, 0, $component11);
-			~teletab_placeingredient(2, 56, $component11);
+			~teletab_placeingredient(0, -56, $component22);
+			~teletab_placeingredient(1, 0, $component22);
+			~teletab_placeingredient(2, 56, $component22);
 		case 4 :
-			~teletab_placeingredient(0, -86, $component11);
-			~teletab_placeingredient(1, -28, $component11);
-			~teletab_placeingredient(2, 28, $component11);
-			~teletab_placeingredient(3, 86, $component11);
+			~teletab_placeingredient(0, -86, $component22);
+			~teletab_placeingredient(1, -28, $component22);
+			~teletab_placeingredient(2, 28, $component22);
+			~teletab_placeingredient(3, 86, $component22);
 		case default :
-			~teletab_placeingredient(0, -92, $component11);
-			~teletab_placeingredient(1, -46, $component11);
-			~teletab_placeingredient(2, 0, $component11);
-			~teletab_placeingredient(3, 46, $component11);
-			~teletab_placeingredient(4, 92, $component11);
+			~teletab_placeingredient(0, -92, $component22);
+			~teletab_placeingredient(1, -46, $component22);
+			~teletab_placeingredient(2, 0, $component22);
+			~teletab_placeingredient(3, 46, $component22);
+			~teletab_placeingredient(4, 92, $component22);
 	}
 }
-if_setontimer(null, $component13);
-$int14 = ~thinbox($component11, $int14);
+if_setontimer(null, $component24);
+$int28 = ~thinbox($component22, $int28);
+def_int $int36 = 339;
+if (if_gethide($component21) = true & if_gethide($component20) = true & if_gethide($component19) = true) {
+	$int36 = calc($int36 - 48);
+}
+if (if_gethide($component18) = true & if_gethide($component17) = true & if_gethide($component16) = true) {
+	$int36 = calc($int36 - 48);
+}
+if (if_gethide($component15) = true & if_gethide($component14) = true & if_gethide($component13) = true) {
+	$int36 = calc($int36 - 48);
+}
+if (if_gethide($component12) = true & if_gethide($component11) = true & if_gethide($component10) = true) {
+	$int36 = calc($int36 - 48);
+}
+if_setsize(0, $int36, ^setsize_minus, ^setsize_abs, $component27);
+if_setscrollsize(0, $int36, $component26);
+if_setscrollpos(0, %varcint1187, $component26);
+~scrollbar_vertical($component25, $component26, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component25, $component26, %varcint1187);
+if ($int36 <= 147) {
+	if_sethide(true, $component25);
+	if_setsize(440, 302, ^setsize_abs, ^setsize_abs, $component0);
+} else {
+	if_sethide(false, $component25);
+	if_setsize(456, 302, ^setsize_abs, ^setsize_abs, $component0);
+}

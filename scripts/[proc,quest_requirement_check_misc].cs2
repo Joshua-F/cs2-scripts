@@ -2,33 +2,23 @@
 [proc,quest_requirement_check_misc](dbrow $dbrow0)(int)
 switch_dbrow ($dbrow0) {
 	case dbrow_143 :
-		if (%varbit4894 < 200) {
-			return(0);
-		} else if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
 			return(0);
 		}
 	case dbrow_3 :
-		if (%varbit4896 < 200) {
-			return(0);
-		} else if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
 			return(0);
 		}
 	case dbrow_54 :
-		if (%varbit4898 < 200) {
-			return(0);
-		} else if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
 			return(0);
 		}
 	case dbrow_113 :
-		if (%varbit4899 < 200) {
-			return(0);
-		} else if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
 			return(0);
 		}
 	case dbrow_26 :
-		if (%varbit4895 < 200) {
-			return(0);
-		} else if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
 			return(0);
 		}
 	case dbrow_13 :
@@ -55,18 +45,6 @@ switch_dbrow ($dbrow0) {
 		}
 	case dbrow_67 :
 		if (%varbit1895 < 110) {
-			return(0);
-		}
-	case dbrow_2 :
-		if (%varbit4894 < 1000) {
-			return(0);
-		} else if (%varbit4896 < 1000) {
-			return(0);
-		} else if (%varbit4898 < 1000) {
-			return(0);
-		} else if (%varbit4899 < 1000) {
-			return(0);
-		} else if (%varbit4895 < 1000) {
 			return(0);
 		}
 	case dbrow_90 :

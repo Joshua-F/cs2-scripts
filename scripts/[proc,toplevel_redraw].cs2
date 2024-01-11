@@ -57,17 +57,9 @@ if ($component9 ! null & $component7 ! null) {
 			if_setop(1, "Achievement Diaries", $component9);
 			if_setgraphic("sideicons_interface,16", $component7);
 		case 3 :
-			if (~script6790 = 1 & %varbit14582 = 0) {
-				if_setop(1, "Adventure Paths", $component9);
-				if_setgraphic("sideicons_interface,23", $component7);
-			} else {
-				if_setop(1, "Kourend Tasks", $component9);
-				if_setgraphic("sideicons_interface,17", $component7);
-			}
-		case 4 :
 			if_setop(1, "Adventure Paths", $component9);
 			if_setgraphic("sideicons_interface,23", $component7);
-		case 5 :
+		case 4 :
 			if_setop(1, "Leagues", $component9);
 			if_setgraphic("sideicons_interface,26", $component7);
 	}
