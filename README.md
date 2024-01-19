@@ -403,6 +403,7 @@
 [**400**](scripts/[clientscript,fairyrings_confirm_expire].cs2) `[clientscript,fairyrings_confirm_expire]`  
 [**401**](scripts/[clientscript,fairyrings_sort_mouseeffect].cs2) `[clientscript,fairyrings_sort_mouseeffect]`  
 [**402**](scripts/[clientscript,fairyrings_sort_update].cs2) `[clientscript,fairyrings_sort_update]`  
+[**403**](scripts/[proc,script403].cs2)  
 [**404**](scripts/[clientscript,raids_storage_private_init].cs2) `[clientscript,raids_storage_private_init]`  
 [**405**](scripts/[clientscript,slayer_rewards_init].cs2) `[clientscript,slayer_rewards_init]`  
 [**406**](scripts/[clientscript,slayer_rewards_tabs].cs2) `[clientscript,slayer_rewards_tabs]`  
@@ -2139,7 +2140,6 @@
 [**2171**](scripts/[clientscript,script2171].cs2)  
 [**2172**](scripts/[clientscript,script2172].cs2)  
 [**2173**](scripts/[proc,script2173].cs2)  
-[**2174**](scripts/[proc,tournament_beta_world].cs2) `[proc,tournament_beta_world]`  
 [**2175**](scripts/[proc,nosavegame_world].cs2) `[proc,nosavegame_world]`  
 [**2176**](scripts/[clientscript,logout_layout_update].cs2) `[clientscript,logout_layout_update]`  
 [**2177**](scripts/[proc,script2177].cs2)  
