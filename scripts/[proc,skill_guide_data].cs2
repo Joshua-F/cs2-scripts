@@ -145,22 +145,24 @@ switch_int ($int0) {
 				case 6 :
 					return(50, magic_shortbow_861, "Members: Magic bows<br> Ammo: Arrows up to amethyst");
 				case 7 :
-					return(50, seercull_6724, "Members: Seerculls<br> Ammo: Arrows up to amethyst");
+					return(50, bone_shortbow_28794, "Members: Bone shortbow<br> Ammo: Arrows up to amethyst");
 				case 8 :
-					return(60, dark_bow_11235, "Members: Dark bows<br> Ammo: Arrows up to dragon");
+					return(50, seercull_6724, "Members: Seerculls<br> Ammo: Arrows up to amethyst");
 				case 9 :
-					return(60, craws_bow_22550, "Members: Craw's bow<br> Ammo: None");
+					return(60, dark_bow_11235, "Members: Dark bows<br> Ammo: Arrows up to dragon");
 				case 10 :
-					return(65, 3rd_age_bow_12424, "Members: 3rd age bow<br> Ammo: Arrows up to dragon");
+					return(60, craws_bow_22550, "Members: Craw's bow<br> Ammo: None");
 				case 11 :
-					return(70, crystal_bow_23983, "Members: Crystal bows (with 50 Agility)<br> Ammo: None");
+					return(65, 3rd_age_bow_12424, "Members: 3rd age bow<br> Ammo: Arrows up to dragon");
 				case 12 :
-					return(70, webweaver_bow_27655, "Members: Webweaver bow<br> Ammo: None");
+					return(70, crystal_bow_23983, "Members: Crystal bows (with 50 Agility)<br> Ammo: None");
 				case 13 :
-					return(80, bow_of_faerdhinen_25865, "Members: Bow of Faerdhinen (with 70 Agility)<br> Ammo: None");
+					return(70, webweaver_bow_27655, "Members: Webweaver bow<br> Ammo: None");
 				case 14 :
-					return(80, venator_bow_27610, "Members: Venator bow<br> Ammo: Arrows up to dragon");
+					return(80, bow_of_faerdhinen_25865, "Members: Bow of Faerdhinen (with 70 Agility)<br> Ammo: None");
 				case 15 :
+					return(80, venator_bow_27610, "Members: Venator bow<br> Ammo: Arrows up to dragon");
+				case 16 :
 					return(85, twisted_bow_20997, "Members: Twisted bow<br> Ammo: Arrows up to dragon");
 				case default :
 					return(-1, null, "");
@@ -1198,26 +1200,28 @@ switch_int ($int0) {
 					case 1 :
 						return(21, silver_bolts_unf_5_9414, "Silver crossbow bolts");
 					case 2 :
-						return(54, water_battlestaff_1395, "Water battlestaff");
+						return(35, bone_staff_28796, "Bone staff");
 					case 3 :
-						return(58, earth_battlestaff_1399, "Earth battlestaff");
+						return(54, water_battlestaff_1395, "Water battlestaff");
 					case 4 :
-						return(59, toxic_staff_of_the_dead_12904, "Toxic Staff of the Dead");
+						return(58, earth_battlestaff_1399, "Earth battlestaff");
 					case 5 :
-						return(59, trident_of_the_swamp_12899, "Trident of the Swamp");
+						return(59, toxic_staff_of_the_dead_12904, "Toxic Staff of the Dead");
 					case 6 :
-						return(62, fire_battlestaff_1393, "Fire battlestaff");
+						return(59, trident_of_the_swamp_12899, "Trident of the Swamp");
 					case 7 :
-						return(66, air_battlestaff_1397, "Air battlestaff");
+						return(62, fire_battlestaff_1393, "Fire battlestaff");
 					case 8 :
-						return(83, amethyst_bolt_tips_5_4768, "Amethyst bolt tips");
+						return(66, air_battlestaff_1397, "Air battlestaff");
 					case 9 :
-						return(85, amethyst_arrowtips_21350, "Amethyst arrowtips");
+						return(83, amethyst_bolt_tips_5_4768, "Amethyst bolt tips");
 					case 10 :
-						return(85, accursed_sceptre_27665, "Accursed Sceptre");
+						return(85, amethyst_arrowtips_21350, "Amethyst arrowtips");
 					case 11 :
-						return(87, amethyst_javelin_heads_5_13220, "Amethyst javelin heads");
+						return(85, accursed_sceptre_27665, "Accursed Sceptre");
 					case 12 :
+						return(87, amethyst_javelin_heads_5_13220, "Amethyst javelin heads");
+					case 13 :
 						return(89, amethyst_dart_tip_25853, "Amethyst dart tips");
 					case default :
 						return(-1, null, "");
@@ -1367,22 +1371,24 @@ switch_int ($int0) {
 				case 4 :
 					return(30, comp_ogre_bow_4827, "Ogre composite bows");
 				case 5 :
-					return(35, willow_shortbow_849, "Willow shortbows");
+					return(35, bone_shortbow_28794, "Bone shortbow");
 				case 6 :
-					return(40, willow_longbow_847, "Willow longbows");
+					return(35, willow_shortbow_849, "Willow shortbows");
 				case 7 :
-					return(50, maple_shortbow_853, "Maple shortbows");
+					return(40, willow_longbow_847, "Willow longbows");
 				case 8 :
-					return(55, maple_longbow_851, "Maple longbows");
+					return(50, maple_shortbow_853, "Maple shortbows");
 				case 9 :
-					return(65, yew_shortbow_857, "Yew shortbows");
+					return(55, maple_longbow_851, "Maple longbows");
 				case 10 :
-					return(70, yew_longbow_855, "Yew longbows");
+					return(65, yew_shortbow_857, "Yew shortbows");
 				case 11 :
-					return(80, magic_shortbow_861, "Magic shortbows");
+					return(70, yew_longbow_855, "Yew longbows");
 				case 12 :
-					return(85, magic_longbow_859, "Magic longbows");
+					return(80, magic_shortbow_861, "Magic shortbows");
 				case 13 :
+					return(85, magic_longbow_859, "Magic longbows");
+				case 14 :
 					return(85, webweaver_bow_27655, "Webweaver bow");
 				case default :
 					return(-1, null, "");

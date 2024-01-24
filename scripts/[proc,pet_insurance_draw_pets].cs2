@@ -1,27 +1,27 @@
 // 6138
-[proc,pet_insurance_draw_pets](int $int0, component $component1, int $int2, int $int3, int $int4, int $flags5, int $flags6, int $flags7, int $flags8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15)(int, int, int)
-def_int $int16 = 0;
+[proc,pet_insurance_draw_pets](int $int0, component $component1, int $int2, int $int3, int $int4, int $flags5, int $flags6, int $flags7, int $flags8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16)(int, int, int)
 def_int $int17 = 0;
 def_int $int18 = 0;
-def_namedobj $namedobj19 = null;
-def_int $int20 = 3;
-def_int $int21 = calc(32 + $int20 * 2);
-def_int $int22 = 0;
+def_int $int19 = 0;
+def_namedobj $namedobj20 = null;
+def_int $int21 = 3;
+def_int $int22 = calc(32 + $int21 * 2);
 def_int $int23 = 0;
-def_int $width24 = 233;
-def_int $int25 = 0;
-while ($int16 <= 55) {
-	$int22 = 0;
-	$int17, $int18 = ~pet_insurance_pets_get_flags($int16, $flags5, $flags6, $flags7, $flags8);
-	if ($int0 = 1 & $int18 = 0 & $int17 = 1 | $int0 = 0 & $int18 = 1 & $int17 = 1) {
+def_int $int24 = 0;
+def_int $width25 = 233;
+def_int $int26 = 0;
+while ($int17 <= 56) {
+	$int23 = 0;
+	$int18, $int19 = ~pet_insurance_pets_get_flags($int17, $flags5, $flags6, $flags7, $flags8);
+	if ($int0 = 1 & $int19 = 0 & $int18 = 1 | $int0 = 0 & $int19 = 1 & $int18 = 1) {
 		if ($int0 = 0) {
-			$int25 = ~pet_insurance_get_location($int9, $int10, $int11, $int12, $int13, $int14, $int15, $int16);
+			$int26 = ~pet_insurance_get_location($int9, $int10, $int11, $int12, $int13, $int14, $int15, $int16, $int17);
 		}
 		cc_create($component1, ^iftype_rectangle, $int2);
 		$int2 = calc($int2 + 1);
-		$namedobj19 = enum(int, namedobj, enum_985, $int16);
-		cc_setposition($int22, $int3, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize($width24, $int21, ^setsize_abs, ^setsize_abs);
+		$namedobj20 = enum(int, namedobj, enum_985, $int17);
+		cc_setposition($int23, $int3, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize($width25, $int22, ^setsize_abs, ^setsize_abs);
 		cc_setfill(true);
 		cc_setcolour(^white);
 		if (calc($int4 % 2) = 0) {
@@ -31,39 +31,39 @@ while ($int16 <= 55) {
 		}
 		cc_setonmouserepeat("script6147(cc_getid)");
 		cc_setonmouseleave("script6148(cc_getid, $int4)");
-		cc_setopbase("<col=ff981f><oc_name($namedobj19)></col>");
+		cc_setopbase("<col=ff981f><oc_name($namedobj20)></col>");
 		if ($int0 = 1) {
 			cc_setop(1, "Reclaim");
 			cc_setonop("script6139(cc_getid, cc_gettrans, 1)");
 		} else {
 			cc_setop(1, "Location");
-			cc_setonop("script6143(event_op, oc_name($namedobj19), $int25, cc_getid, cc_gettrans)");
+			cc_setonop("script6143(event_op, oc_name($namedobj20), $int26, cc_getid, cc_gettrans)");
 		}
 		cc_setop(10, "Examine");
 		cc_create($component1, ^iftype_graphic, $int2);
 		$int2 = calc($int2 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		$int22 = calc($int20 * 4);
-		$int23 = calc($int3 + $int20);
-		cc_setposition($int22, $int23, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setobject($namedobj19, 1);
+		$int23 = calc($int21 * 4);
+		$int24 = calc($int3 + $int21);
+		cc_setposition($int23, $int24, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($namedobj20, 1);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 		cc_create($component1, ^iftype_text, $int2);
 		$int2 = calc($int2 + 1);
-		$int22 = calc($int20 * 6 + 36);
-		cc_setposition($int22, $int23, ^setpos_abs_left, ^setpos_abs_top);
+		$int23 = calc($int21 * 6 + 36);
+		cc_setposition($int23, $int24, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_setcolour(0x9f9f9f);
-		cc_setsize(200, $int21, ^setsize_abs, ^setsize_abs);
+		cc_setsize(200, $int22, ^setsize_abs, ^setsize_abs);
 		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 		cc_settextshadow(true);
-		cc_settext(oc_name($namedobj19));
+		cc_settext(oc_name($namedobj20));
 		cc_create($component1, ^iftype_text, $int2);
 		$int2 = calc($int2 + 1);
-		cc_setposition($int22, calc($int23 - 7), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int23, calc($int24 - 7), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p11_full);
-		cc_setsize(200, $int21, ^setsize_abs, ^setsize_abs);
+		cc_setsize(200, $int22, ^setsize_abs, ^setsize_abs);
 		cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 		cc_settextshadow(true);
 		if ($int0 = 1) {
@@ -75,20 +75,20 @@ while ($int16 <= 55) {
 			cc_setcolour(0xff981f);
 			cc_settext("Location:");
 			cc_create($component1, ^iftype_text, $int2);
-			cc_setposition(calc($int22 + 50), calc($int23 - 7), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc($int23 + 50), calc($int24 - 7), ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);
 			cc_setcolour(^white);
-			cc_setsize(200, $int21, ^setsize_abs, ^setsize_abs);
+			cc_setsize(200, $int22, ^setsize_abs, ^setsize_abs);
 			cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 			cc_settextshadow(true);
-			cc_settext(enum(int, string, enum_169, $int25));
+			cc_settext(enum(int, string, enum_169, $int26));
 		}
 		$int2 = calc($int2 + 1);
-		$int3 = calc($int3 + $int21);
+		$int3 = calc($int3 + $int22);
 		$int4 = calc($int4 + 1);
 	} else {
 		$int2 = ~script6145($component1, $int2, 5);
 	}
-	$int16 = calc($int16 + 1);
+	$int17 = calc($int17 + 1);
 }
 return($int2, $int3, $int4);

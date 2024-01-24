@@ -1,20 +1,22 @@
 // 6146
-[proc,pet_insurance_get_location](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
-switch_int (calc($int7 / 8)) {
+[proc,pet_insurance_get_location](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)(int)
+switch_int (calc($int8 / 8)) {
 	case 0 :
-		return(getbit_range($int0, calc($int7 * 4), calc($int7 * 4 + 3)));
+		return(getbit_range($int0, calc($int8 * 4), calc($int8 * 4 + 3)));
 	case 1 :
-		return(getbit_range($int1, calc(($int7 - 8) * 4), calc(($int7 - 8) * 4 + 3)));
+		return(getbit_range($int1, calc(($int8 - 8) * 4), calc(($int8 - 8) * 4 + 3)));
 	case 2 :
-		return(getbit_range($int2, calc(($int7 - 16) * 4), calc(($int7 - 16) * 4 + 3)));
+		return(getbit_range($int2, calc(($int8 - 16) * 4), calc(($int8 - 16) * 4 + 3)));
 	case 3 :
-		return(getbit_range($int3, calc(($int7 - 24) * 4), calc(($int7 - 24) * 4 + 3)));
+		return(getbit_range($int3, calc(($int8 - 24) * 4), calc(($int8 - 24) * 4 + 3)));
 	case 4 :
-		return(getbit_range($int4, calc(($int7 - 32) * 4), calc(($int7 - 32) * 4 + 3)));
+		return(getbit_range($int4, calc(($int8 - 32) * 4), calc(($int8 - 32) * 4 + 3)));
 	case 5 :
-		return(getbit_range($int5, calc(($int7 - 40) * 4), calc(($int7 - 40) * 4 + 3)));
+		return(getbit_range($int5, calc(($int8 - 40) * 4), calc(($int8 - 40) * 4 + 3)));
 	case 6 :
-		return(getbit_range($int6, calc(($int7 - 48) * 4), calc(($int7 - 48) * 4 + 3)));
+		return(getbit_range($int6, calc(($int8 - 48) * 4), calc(($int8 - 48) * 4 + 3)));
+	case 7 :
+		return(getbit_range($int7, calc(($int8 - 56) * 4), calc(($int8 - 56) * 4 + 3)));
 	case default :
 		return(0);
 }
