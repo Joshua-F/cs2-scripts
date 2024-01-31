@@ -1,0 +1,8 @@
+// 1208
+[clientscript,script1208](struct $struct0, int $int1)
+sound_synth(interface_select1, 1, 0);
+if (struct_param($struct0, param_1871) <= -1) {
+	if_close;
+} else {
+	~script1188($struct0);
+}

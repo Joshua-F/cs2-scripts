@@ -1,0 +1,11 @@
+// 1204
+[clientscript,script1204](component $component0, int $comsubid1, struct $struct2)
+sound_synth(interface_select1, 1, 0);
+if (struct_param($struct2, param_1877) = true & cc_find($component0, $comsubid1) = ^true) {
+	cc_crmview_dismiss;
+}
+if (struct_param($struct2, param_1871) <= -1) {
+	if_close;
+} else {
+	~script1188($struct2);
+}

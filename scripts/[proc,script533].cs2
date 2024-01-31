@@ -1,7 +1,13 @@
 // 533
-[proc,script533]
-if (~on_mobile = false) {
-	cc_setonmouserepeat("comp_sethide(false, welcome_screen:84)");
-	cc_setonmouseleave("comp_sethide(true, welcome_screen:84)");
+[proc,script533]()(int)
+def_int $int0 = 0;
+if (~script6931(6) = 1) {
+	$int0 = 25;
+} else if (~script6931(5) = 1) {
+	$int0 = 15;
+} else if (~script6931(4) = 1) {
+	$int0 = 10;
+} else if (~script6931(3) = 1) {
+	$int0 = 5;
 }
-if_sethide(true, welcome_screen:84);
+return($int0);

@@ -1,0 +1,4 @@
+// 1226
+[clientscript,script1226](int $int0)
+~debug_mes("loottracker_debug_clear_source (<tostring($int0)>)");
+loottracker_lootdel_byid($int0);

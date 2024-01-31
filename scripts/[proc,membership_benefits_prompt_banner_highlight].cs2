@@ -1,7 +1,0 @@
-// 7035
-[proc,membership_benefits_prompt_banner_highlight]
-if (~on_mobile = false) {
-	cc_setonmouserepeat("comp_sethide(false, interface_284:6)");
-	cc_setonmouseleave("comp_sethide(true, interface_284:6)");
-}
-if_sethide(true, interface_284:6);

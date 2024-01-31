@@ -5,7 +5,7 @@ if (~on_mobile = false) {
 }
 def_int $height0 = if_getheight(interface_162:34);
 def_int $int1 = 0;
-if (if_hassub(interface_162:559) = true | if_hassub(interface_162:558) = true | if_gethide(interface_162:37) = false) {
+if (if_hassub(interface_162:565) = true | if_hassub(interface_162:564) = true | if_gethide(interface_162:37) = false | testbit(%varcint1189, 0) = ^true) {
 	$int1 = 1;
 }
 def_int $height2 = calc(165 - 23);

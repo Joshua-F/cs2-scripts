@@ -1186,6 +1186,10 @@
 [**1183**](scripts/[clientscript,clancup_hud_init].cs2) `[clientscript,clancup_hud_init]`  
 [**1184**](scripts/[clientscript,clancup_hud_update].cs2) `[clientscript,clancup_hud_update]`  
 [**1185**](scripts/[proc,clancup_hud_update].cs2) `[proc,clancup_hud_update]`  
+[**1186**](scripts/[clientscript,script1186].cs2)  
+[**1187**](scripts/[clientscript,script1187].cs2)  
+[**1188**](scripts/[proc,script1188].cs2)  
+[**1189**](scripts/[clientscript,script1189].cs2)  
 [**1190**](scripts/[clientscript,script1190].cs2)  
 [**1191**](scripts/[clientscript,thinstonebox].cs2) `[clientscript,thinstonebox]`  
 [**1192**](scripts/[proc,thinstonebox].cs2) `[proc,thinstonebox]`  
@@ -1198,8 +1202,38 @@
 [**1199**](scripts/[clientscript,script1199].cs2)  
 [**1200**](scripts/[clientscript,script1200].cs2)  
 [**1201**](scripts/[proc,script1201].cs2)  
+[**1202**](scripts/[clientscript,script1202].cs2)  
+[**1203**](scripts/[clientscript,script1203].cs2)  
+[**1204**](scripts/[clientscript,script1204].cs2)  
+[**1205**](scripts/[proc,script1205].cs2)  
+[**1206**](scripts/[clientscript,script1206].cs2)  
+[**1207**](scripts/[proc,script1207].cs2)  
+[**1208**](scripts/[clientscript,script1208].cs2)  
+[**1209**](scripts/[clientscript,script1209].cs2)  
+[**1210**](scripts/[proc,script1210].cs2)  
+[**1211**](scripts/[clientscript,script1211].cs2)  
+[**1212**](scripts/[clientscript,script1212].cs2)  
+[**1213**](scripts/[proc,script1213].cs2)  
+[**1214**](scripts/[clientscript,script1214].cs2)  
+[**1215**](scripts/[clientscript,script1215].cs2)  
 [**1216**](scripts/[clientscript,script1216].cs2)  
 [**1217**](scripts/[clientscript,script1217].cs2)  
+[**1218**](scripts/[clientscript,script1218].cs2)  
+[**1219**](scripts/[clientscript,script1219].cs2)  
+[**1220**](scripts/[clientscript,script1220].cs2)  
+[**1221**](scripts/[clientscript,script1221].cs2)  
+[**1222**](scripts/[clientscript,script1222].cs2)  
+[**1223**](scripts/[clientscript,script1223].cs2)  
+[**1224**](scripts/[clientscript,script1224].cs2)  
+[**1225**](scripts/[clientscript,script1225].cs2)  
+[**1226**](scripts/[clientscript,script1226].cs2)  
+[**1227**](scripts/[clientscript,script1227].cs2)  
+[**1228**](scripts/[clientscript,script1228].cs2)  
+[**1229**](scripts/[clientscript,script1229].cs2)  
+[**1230**](scripts/[clientscript,script1230].cs2)  
+[**1231**](scripts/[clientscript,script1231].cs2)  
+[**1232**](scripts/[clientscript,script1232].cs2)  
+[**1233**](scripts/[clientscript,script1233].cs2)  
 [**1234**](scripts/[proc,trade_tooltip].cs2) `[proc,trade_tooltip]`  
 [**1235**](scripts/[clientscript,script1235].cs2)  
 [**1236**](scripts/[clientscript,script1236].cs2)  
@@ -2140,6 +2174,7 @@
 [**2171**](scripts/[clientscript,script2171].cs2)  
 [**2172**](scripts/[clientscript,script2172].cs2)  
 [**2173**](scripts/[proc,script2173].cs2)  
+[**2174**](scripts/[clientscript,script2174].cs2)  
 [**2175**](scripts/[proc,nosavegame_world].cs2) `[proc,nosavegame_world]`  
 [**2176**](scripts/[clientscript,logout_layout_update].cs2) `[clientscript,logout_layout_update]`  
 [**2177**](scripts/[proc,script2177].cs2)  
@@ -2198,7 +2233,6 @@
 [**2230**](scripts/[proc,shop_quantity].cs2) `[proc,shop_quantity]`  
 [**2231**](scripts/[clientscript,shop_quantity_op].cs2) `[clientscript,shop_quantity_op]`  
 [**2232**](scripts/[clientscript,magic_flash].cs2) `[clientscript,magic_flash]`  
-[**2233**](scripts/[proc,welcome_screen_continue_text].cs2) `[proc,welcome_screen_continue_text]`  
 [**2234**](scripts/[clientscript,camera_do_zoom].cs2) `[clientscript,camera_do_zoom]`  
 [**2235**](scripts/[clientscript,script2235].cs2)  
 [**2236**](scripts/[clientscript,script2236].cs2)  
@@ -2801,6 +2835,7 @@
 [**2833**](scripts/[proc,script2833].cs2)  
 [**2834**](scripts/[clientscript,if_flash_component].cs2) `[clientscript,if_flash_component]`  
 [**2835**](scripts/[proc,script2835].cs2)  
+[**2836**](scripts/[proc,script2836].cs2)  
 [**2837**](scripts/[clientscript,script2837].cs2)  
 [**2838**](scripts/[clientscript,script2838].cs2)  
 [**2839**](scripts/[proc,script2839].cs2)  
@@ -2868,6 +2903,8 @@
 [**2901**](scripts/[clientscript,script2901].cs2)  
 [**2902**](scripts/[clientscript,script2902].cs2)  
 [**2903**](scripts/[clientscript,script2903].cs2)  
+[**2904**](scripts/[clientscript,script2904].cs2)  
+[**2905**](scripts/[proc,script2905].cs2)  
 [**2908**](scripts/[clientscript,gauntlet_map_init].cs2) `[clientscript,gauntlet_map_init]`  
 [**2909**](scripts/[proc,gauntlet_map_update].cs2) `[proc,gauntlet_map_update]`  
 [**2910**](scripts/[proc,gauntlet_map_start_update].cs2) `[proc,gauntlet_map_start_update]`  
@@ -5691,7 +5728,6 @@
 [**6063**](scripts/[clientscript,inventory_startdrag].cs2) `[clientscript,inventory_startdrag]`  
 [**6064**](scripts/[clientscript,script6064].cs2)  
 [**6065**](scripts/[proc,script6065].cs2)  
-[**6066**](scripts/[proc,script6066].cs2)  
 [**6067**](scripts/[proc,stonepanel_resizable].cs2) `[proc,stonepanel_resizable]`  
 [**6068**](scripts/[proc,script6068].cs2)  
 [**6069**](scripts/[proc,script6069].cs2)  
@@ -6171,14 +6207,6 @@
 [**6552**](scripts/[proc,skill_guide_data_agility].cs2) `[proc,skill_guide_data_agility]`  
 [**6553**](scripts/[proc,skill_guide_subsection_smithing].cs2) `[proc,skill_guide_subsection_smithing]`  
 [**6554**](scripts/[proc,skill_guide_data_smithing].cs2) `[proc,skill_guide_data_smithing]`  
-[**6555**](scripts/[clientscript,script6555].cs2)  
-[**6556**](scripts/[proc,script6556].cs2)  
-[**6557**](scripts/[clientscript,script6557].cs2)  
-[**6558**](scripts/[proc,script6558].cs2)  
-[**6559**](scripts/[proc,script6559].cs2)  
-[**6560**](scripts/[clientscript,script6560].cs2)  
-[**6561**](scripts/[clientscript,script6561].cs2)  
-[**6562**](scripts/[proc,script6562].cs2)  
 [**6563**](scripts/[proc,script6563].cs2)  
 [**6564**](scripts/[proc,script6564].cs2)  
 [**6565**](scripts/[proc,script6565].cs2)  
@@ -6634,14 +6662,6 @@
 [**7027**](scripts/[proc,script7027].cs2)  
 [**7028**](scripts/[proc,script7028].cs2)  
 [**7029**](scripts/[clientscript,script7029].cs2)  
-[**7030**](scripts/[proc,membership_benefits_prompt_close].cs2) `[proc,membership_benefits_prompt_close]`  
-[**7031**](scripts/[clientscript,membership_benefits_prompt_banner].cs2) `[clientscript,membership_benefits_prompt_banner]`  
-[**7033**](scripts/[clientscript,script7033].cs2)  
-[**7034**](scripts/[proc,script7034].cs2)  
-[**7035**](scripts/[proc,membership_benefits_prompt_banner_highlight].cs2) `[proc,membership_benefits_prompt_banner_highlight]`  
-[**7036**](scripts/[proc,membership_benefits_prompt_banner].cs2) `[proc,membership_benefits_prompt_banner]`  
-[**7037**](scripts/[proc,membership_benefits_prompt_button].cs2) `[proc,membership_benefits_prompt_button]`  
-[**7038**](scripts/[proc,script7038].cs2)  
 [**7039**](scripts/[clientscript,script7039].cs2)  
 [**7040**](scripts/[clientscript,script7040].cs2)  
 [**7041**](scripts/[clientscript,script7041].cs2)  

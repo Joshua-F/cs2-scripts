@@ -18,7 +18,7 @@ if (%varcint171 <= 0 & enum(enum, boolean, enum_1134, $enum1) = false) {
 	%varcint171 = 3;
 }
 %varcint172, %varcint173 = null, -1;
-$component3 = enum(component, component, $enum1, toplevel_osrs_stretch:30);
+$component3 = enum(component, component, $enum1, toplevel_osrs_stretch:31);
 if ($component3 ! null) {
 	cc_deleteall($component3);
 	cc_create($component3, ^iftype_text, 0);
@@ -59,7 +59,7 @@ if ($enum1 = enum_139) {
 }
 ~account_update_display;
 ~notification_init(enum(component, component, $enum1, toplevel_osrs_stretch:13));
-~gravestone_hud_init(enum(component, component, $enum1, toplevel_osrs_stretch:20));
+~gravestone_hud_init(enum(component, component, $enum1, toplevel_osrs_stretch:21));
 def_component $component4 = enum(component, component, $enum1, toplevel_osrs_stretch:11);
 def_component $component5 = enum(component, component, $enum1, toplevel_osrs_stretch:12);
 if ($component4 ! null & $component5 ! null) {

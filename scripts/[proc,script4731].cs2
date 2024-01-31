@@ -90,7 +90,7 @@ if (testbit($int2, 13) = ^true & $boolean23 = true & $layer13 ! null) {
 			.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 			.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
 		}
-		$component40 = enum(component, component, enum_1745, toplevel_osrs_stretch:19);
+		$component40 = enum(component, component, enum_1745, toplevel_osrs_stretch:20);
 		if ($component40 ! null) {
 			~script3506($component40);
 		}
@@ -143,12 +143,12 @@ if ($boolean23 = true & $enum25 = enum_1745) {
 		$int31 = 0;
 	}
 	if ($int28 = 1 & (testbit($int2, 4) = ^false | ~chatbox_open = 1)) {
-		$int15 = calc($int15 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:94)));
+		$int15 = calc($int15 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:96)));
 	}
 	if ($int29 = 1) {
-		$int37 = calc($int37 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:94)));
+		$int37 = calc($int37 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:96)));
 	} else if ($boolean5 = true & ~script2519 = 1) {
-		$int38 = calc($int38 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:94)));
+		$int38 = calc($int38 + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:96)));
 	}
 	if ($int30 = 1) {
 		if (%varbit6254 = 0) {

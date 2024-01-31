@@ -1,0 +1,8 @@
+// 1209
+[clientscript,script1209](component $component0, int $index1)
+if (testbit(%varcint1189, $index1) = ^true) {
+	return;
+}
+if_setontimer(null, $component0);
+if_setonsubchange(null, $component0);
+~script1210($index1);

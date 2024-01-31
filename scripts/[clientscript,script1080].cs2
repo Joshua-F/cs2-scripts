@@ -17,6 +17,6 @@ if (string_length($string0) > 0 & ~on_ios = 0) {
 	if_sethide(true, welcome_screen:7);
 	if_setonmouseover(null, welcome_screen:7);
 	if_setonmouseleave(null, welcome_screen:7);
-	if_setop(1, "", welcome_screen:7);
+	if_clearops(welcome_screen:7);
 	if_setonop(null, welcome_screen:7);
 }

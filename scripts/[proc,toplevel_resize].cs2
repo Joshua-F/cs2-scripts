@@ -1,7 +1,7 @@
 // 909
 [proc,toplevel_resize](component $component0, enum $enum1)
-def_component $component2 = enum(component, component, $enum1, toplevel_osrs_stretch:90);
-def_component $component3 = enum(component, component, $enum1, toplevel_osrs_stretch:92);
+def_component $component2 = enum(component, component, $enum1, toplevel_osrs_stretch:92);
+def_component $component3 = enum(component, component, $enum1, toplevel_osrs_stretch:94);
 def_component $component4 = enum(component, component, $enum1, toplevel_osrs_stretch:7);
 def_component $component5 = enum(component, component, $enum1, toplevel_osrs_stretch:15);
 def_component $component6 = null;
@@ -21,7 +21,7 @@ def_int $int19 = 0;
 if ($enum1 = enum_1745) {
 	$int15 = ~max(0, calc($width17 - if_getwidth(toplevel_osm:19)));
 	$int16 = ~max(0, calc($height18 - if_getheight(toplevel_osm:19)));
-	$component6 = enum(component, component, $enum1, toplevel_osrs_stretch:33);
+	$component6 = enum(component, component, $enum1, toplevel_osrs_stretch:34);
 	if ($component6 ! null & ~popout_available(-1) = 1) {
 		$int19 = calc(scale(%varcint381, 16384, if_getwidth($component6)) + 42);
 	}
@@ -96,7 +96,7 @@ if ($component20 ! null) {
 		if_setsize(512, 334, ^setsize_abs, ^setsize_abs, $component20);
 	}
 }
-$component20 = enum(component, component, $enum1, toplevel_osrs_stretch:18);
+$component20 = enum(component, component, $enum1, toplevel_osrs_stretch:19);
 def_int $x21 = 0;
 def_int $y22 = 0;
 if ($component20 ! null) {
@@ -132,4 +132,4 @@ if ($component20 ! null) {
 	}
 	if_setsize($x21, 0, ^setsize_minus, ^setsize_minus, $component20);
 }
-~toplevel_resize_customise(enum(component, component, $enum1, toplevel_osrs_stretch:33), $enum1);
+~toplevel_resize_customise(enum(component, component, $enum1, toplevel_osrs_stretch:34), $enum1);

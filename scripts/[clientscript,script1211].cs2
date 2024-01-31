@@ -1,0 +1,35 @@
+// 1211
+[clientscript,script1211](int $int0)
+def_enum $enum1 = ~toplevel_getcomponents;
+def_component $component2 = enum(component, component, $enum1, toplevel_osrs_stretch:18);
+if_setontimer(null, $component2);
+cc_deleteall($component2);
+cc_create($component2, ^iftype_crmview, 0);
+cc_setsize(480, 300, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+def_string $string0 = "https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/%deviceid%/?userHash=%userhash%";
+def_string $string1 = "https://crmintegration.development.rs.aws.jagex.network/";
+def_string $string2 = "welcome_screen";
+if ($int0 = 1) {
+	cc_crmview_init("https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", $string1, "chatbox_memberactivity_minigame_noncombat");
+} else if ($int0 = 2) {
+	cc_crmview_init("https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", $string1, "jon_test");
+} else if ($int0 = 3) {
+	cc_crmview_init("https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", $string1, "jon_mobile");
+} else if ($int0 = 4) {
+	cc_crmview_init("https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", $string1, "jon_android");
+} else if ($int0 = 5) {
+	cc_crmview_init("https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", $string1, "jon_ios");
+} else if ($int0 = 6) {
+	cc_crmview_init("https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", $string1, "jon_noend");
+} else if ($int0 = 7) {
+	cc_crmview_init("https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", $string1, "jon_frfr");
+} else if ($int0 = 8) {
+	cc_crmview_init("https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", $string1, "jon_web");
+} else {
+	cc_crmview_init($string0, $string1, $string2);
+}
+cc_crmview_settextfont(0, b12_full);
+cc_crmview_settextfont(1, p11_full);
+cc_crmview_setonupdated("script1212($component2, 0, $int0)");
+mes("Finished Jon's New crm flow!");

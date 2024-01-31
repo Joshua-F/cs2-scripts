@@ -1,0 +1,23 @@
+// 1212
+[clientscript,script1212](component $component0, int $comsubid1, int $int2)
+def_int $int3 = -1;
+if (cc_find($component0, $comsubid1) = ^true & cc_crmview_gethasresponse = true) {
+	if ($int2 = 1) {
+		cc_crmview_setservertargets("membership_prompt_custom_event", 1);
+		cc_crmview_setservertargets("membership_prompt_open_store", 2);
+		cc_crmview_setservertargets("membership_prompt_open_store_membership", 3);
+		cc_crmview_setservertargets("membership_prompt_open_store_bonds", 4);
+		cc_crmview_setservertargets("membership_prompt_bond_pouch", 5);
+		cc_crmview_setservertargets("membership_prompt_quest_list", 6);
+		cc_crmview_setservertargets("membership_prompt_world_map", 7);
+	}
+	if ($int2 = 6) {
+		cc_crmview_setservertargets("surprisepopup_open_store_bonds", 4);
+	}
+	if ($int2 = 7) {
+		cc_crmview_setservertargets("surprisepopup_open_store", 2);
+	}
+	$int3 = cc_crmview_getint("closebutton");
+	mes("Got CRM response. 'closebutton' is <tostring($int3)>.");
+}
+mes("We Finished Jon's Recieve!");

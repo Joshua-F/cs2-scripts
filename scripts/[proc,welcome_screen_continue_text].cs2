@@ -1,8 +1,0 @@
-// 2233
-[proc,welcome_screen_continue_text](component $component0)
-if (~on_mobile = false) {
-	return;
-}
-if (if_find($component0) = true) {
-	cc_settext("TAP HERE TO PLAY");
-}

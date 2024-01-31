@@ -1,0 +1,45 @@
+// 1188
+[proc,script1188](struct $struct0)
+def_int $index1 = struct_param($struct0, param_1871);
+if ($index1 ! -1) {
+	%varcint1189 = clearbit(%varcint1189, $index1);
+}
+def_component $component2 = struct_param($struct0, param_1872);
+if ($component2 ! null) {
+	if_clearops($component2);
+}
+$component2 = struct_param($struct0, param_1875);
+if ($component2 ! null) {
+	if_setnoclickthrough(false, $component2);
+	cc_deleteall($component2);
+	if_setonsubchange(null, $component2);
+}
+$component2 = struct_param($struct0, param_1879);
+if ($component2 ! null) {
+	if_clearops($component2);
+	if_setonop(null, $component2);
+	if_setonclick(null, $component2);
+	if_settrans(255, $component2);
+	if_sethide(true, $component2);
+}
+$component2 = struct_param($struct0, param_1878);
+if ($component2 ! null) {
+	if_setonsubchange(null, $component2);
+}
+$component2 = struct_param($struct0, param_1880);
+if ($component2 ! null) {
+	if_sethide(true, $component2);
+}
+$component2 = struct_param($struct0, param_1881);
+if ($component2 ! null) {
+	if_sethide(true, $component2);
+}
+$component2 = struct_param($struct0, param_1873);
+if ($component2 ! null) {
+	if_sethide(false, $component2);
+}
+$component2 = struct_param($struct0, param_1874);
+if ($component2 ! null) {
+	cc_deleteall($component2);
+	~loading_icon_init($component2, null, enum_3787, 10, 1000, 3000, 512, 1024, 0, 3, "");
+}

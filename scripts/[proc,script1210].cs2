@@ -1,0 +1,28 @@
+// 1210
+[proc,script1210](int $index0)
+def_int $mesuid1 = -1;
+def_enum $enum2 = null;
+switch_int ($index0) {
+	case 0 :
+		~toplevel_chatbox_background;
+		$mesuid1 = ~script553;
+		if (~on_mobile = true) {
+			~mobile_chatbox_resize;
+		} else {
+			~rebuildchatbox($mesuid1);
+		}
+		~rebuildpmbox($mesuid1);
+		~script223;
+	case 1 :
+		$enum2 = ~toplevel_getcomponents;
+		~script1213($enum2);
+		~toplevel_side_customise($enum2);
+	case 2 :
+		if (testbit(%varcint1189, $index0) = ^true) {
+			$enum2 = ~toplevel_getcomponents;
+			if ($enum2 = enum_1745) {
+				~toplevel_sidebutton_switch(-1, $enum2);
+				~toplevel_side_customise($enum2);
+			}
+		}
+}

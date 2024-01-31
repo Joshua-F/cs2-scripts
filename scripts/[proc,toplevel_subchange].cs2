@@ -1,16 +1,19 @@
 // 908
 [proc,toplevel_subchange](component $component0, enum $enum1)
-if (if_hassub(interface_162:559) = true) {
-	if_sethide(false, interface_162:559);
+if (if_hassub(interface_162:565) = true) {
+	if_sethide(false, interface_162:565);
+	if_sethide(true, interface_162:564);
 	if_sethide(true, interface_162:558);
 	if_sethide(true, interface_162:54);
-} else if (if_hassub(interface_162:558) = true) {
-	if_sethide(true, interface_162:559);
-	if_sethide(false, interface_162:558);
+} else if (if_hassub(interface_162:564) = true) {
+	if_sethide(true, interface_162:565);
+	if_sethide(false, interface_162:564);
+	if_sethide(true, interface_162:558);
 	if_sethide(true, interface_162:54);
 } else {
-	if_sethide(true, interface_162:559);
-	if_sethide(true, interface_162:558);
+	if_sethide(true, interface_162:565);
+	if_sethide(true, interface_162:564);
+	if_sethide(false, interface_162:558);
 	if_sethide(false, interface_162:54);
 }
 ~toplevel_sidebuttons_enable($enum1);
@@ -28,32 +31,6 @@ if (%varcint171 ! -1) {
 		}
 	}
 }
-if (if_hassub(enum(component, component, $enum1, toplevel_osrs_stretch:73)) = true) {
-	$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:74);
-	if ($component2 ! null) {
-		if_sethide(true, $component2);
-	}
-	$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:57);
-	if ($component2 ! null) {
-		if_sethide(true, $component2);
-	}
-	$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:41);
-	if ($component2 ! null) {
-		if_sethide(true, $component2);
-	}
-} else {
-	$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:74);
-	if ($component2 ! null) {
-		if_sethide(false, $component2);
-	}
-	$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:57);
-	if ($component2 ! null) {
-		if_sethide(false, $component2);
-	}
-	$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:41);
-	if ($component2 ! null) {
-		if_sethide(false, $component2);
-	}
-}
+~script1213($enum1);
 ~toplevel_resize($component0, $enum1);
 ~toplevel_side_customise($enum1);

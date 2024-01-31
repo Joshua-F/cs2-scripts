@@ -1,0 +1,31 @@
+// 1189
+[clientscript,script1189](struct $struct0, int $int1, graphic $graphic2, coord $coord3, coord $coord4, string $string0)
+def_string $string1 = "https://crmintegration.production.rs.aws.jagex.com/getlatestcampaign/%deviceid%/?userHash=%userhash%";
+def_string $string2 = "https://crmintegration.production.rs.aws.jagex.com/";
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $index7 = struct_param($struct0, param_1871);
+if ($index7 ! -1) {
+	%varcint1189 = clearbit(%varcint1189, $index7);
+	~debug_mes("Client is preparing a CRM overlay request for <tostring($int1)> at <tostring(clientclock)>.");
+}
+def_component $component8 = struct_param($struct0, param_1875);
+if ($component8 ! null) {
+	if_setnoclickthrough(false, $component8);
+	cc_deleteall($component8);
+	cc_create($component8, ^iftype_crmview, 0);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	if ($int1 < 0) {
+		$int1, $string1, $string2 = calc(0 - $int1), "https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", "https://crmintegration.development.rs.aws.jagex.network/";
+	}
+	cc_crmview_init($string1, $string2, enum(int, string, enum_1268, $int1));
+	$int5, $int6 = 0, enum_getoutputcount(enum_1269);
+	while ($int5 < $int6) {
+		cc_crmview_settextfont($int5, enum(int, graphic, enum_1269, $int5));
+		$int5 = calc($int5 + 1);
+	}
+	cc_crmview_setonupdated("script1202(-1, $struct0, event_com, event_comsubid, $graphic2, $string0, $coord3, $coord4)");
+	cc_setontimer("script1202(calc(clientclock + 250), $struct0, event_com, event_comsubid, $graphic2, $string0, $coord3, $coord4)");
+	cc_setonkey(null);
+}

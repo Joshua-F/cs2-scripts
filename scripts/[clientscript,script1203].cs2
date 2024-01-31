@@ -1,0 +1,10 @@
+// 1203
+[clientscript,script1203](component $component0, struct $struct1)
+def_component $component2 = null;
+def_enum $enum3 = ~toplevel_getcomponents;
+if ($enum3 ! null) {
+	$component2 = enum(component, component, $enum3, toplevel_osrs_stretch:16);
+	if ($component2 ! null & if_hassub($component2) = true) {
+		~script1188($struct1);
+	}
+}

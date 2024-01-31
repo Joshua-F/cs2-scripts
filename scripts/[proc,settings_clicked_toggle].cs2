@@ -142,6 +142,8 @@ switch_int ($setting0) {
 		%varbit13039 = calc(1 - %varbit13039);
 	case 183 :
 		%varbit13040 = calc(1 - %varbit13040);
+	case 365 :
+		%varbit9597 = calc(1 - %varbit9597);
 	case ^setting_precise_timing :
 		~settings_precise_timing;
 	case ^setting_separate_hours :

@@ -1,0 +1,73 @@
+// 1202
+[clientscript,script1202](int $int0, struct $struct1, component $component2, int $comsubid3, graphic $graphic4, string $string0, coord $coord5, coord $coord6)
+if ($int0 ! -1) {
+	if (clientclock < $int0) {
+		return;
+	}
+	if (struct_param($struct1, param_1871) ! -1) {
+		~debug_mes("CRM overlay request is timing out at <tostring(clientclock)>.");
+	}
+	~script1207($struct1, $graphic4, $string0, $coord5, $coord6);
+	return;
+}
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_enum $enum9 = null;
+def_component $component10 = null;
+def_component $component11 = null;
+def_int $index12 = -1;
+if (cc_find($component2, $comsubid3) = ^true) {
+	cc_setontimer(null);
+	if (cc_crmview_gethasresponse = true) {
+		$enum9 = struct_param($struct1, param_1876);
+		if ($enum9 ! null) {
+			$int7, $int8 = 1, enum_getoutputcount($enum9);
+			while ($int7 <= $int8) {
+				cc_crmview_setservertargets(enum(int, string, $enum9, $int7), $int7);
+				$int7 = calc($int7 + 1);
+			}
+		}
+		$component11 = struct_param($struct1, param_1879);
+		if ($component11 ! null) {
+			if_sethide(false, $component11);
+			if_settrans(255, $component11);
+			if (~on_mobile = false) {
+				cc_setonmouserepeat("settrans($component11, 230)");
+				cc_setonmouseleave("settrans($component11, 255)");
+			}
+			if_setonclick("opsound(1, 2)", $component11);
+		}
+		if_setnoclickthrough(true, $component2);
+		$component10 = struct_param($struct1, param_1880);
+		if ($component10 ! null) {
+			if_sethide(true, $component10);
+		}
+		$component10 = struct_param($struct1, param_1881);
+		if ($component10 ! null) {
+			if_sethide(false, $component10);
+			if_setposition(coordx($coord6), coordz($coord6), ^setpos_abs_left, ^setpos_abs_top, $component10);
+			if_setop(1, "Close", $component10);
+			if_setonop("script1204($component2, $comsubid3, $struct1)", $component10);
+		}
+		$component10 = struct_param($struct1, param_1873);
+		if ($component10 ! null) {
+			if_sethide(true, $component10);
+		}
+		$component10 = struct_param($struct1, param_1874);
+		if ($component10 ! null) {
+			cc_deleteall($component10);
+		}
+		$index12 = struct_param($struct1, param_1871);
+		if ($index12 ! -1) {
+			%varcint1189 = setbit(%varcint1189, $index12);
+			~script1210($index12);
+			if_setontimer("script1209(event_com, $index12)", $component2);
+			if_setonsubchange("script1203(event_com, $struct1)", $component2);
+			~debug_mes("CRM overlay request succeeded at <tostring(clientclock)>.");
+		}
+		return;
+	} else if (struct_param($struct1, param_1871) ! -1) {
+		~debug_mes("CRM overlay request failed at <tostring(clientclock)>.");
+	}
+}
+~script1207($struct1, $graphic4, $string0, $coord5, $coord6);
