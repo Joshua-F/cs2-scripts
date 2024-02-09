@@ -445,5 +445,13 @@ switch_struct ($struct0) {
 			return(calc(%varbit15344 / 5));
 		}
 		return(0);
+	case buff_dragonfire_ward_special_cooldown_839 :
+		if (%varcint1190 > 0) {
+			return(~script5942(%varcint1190, %varbit6540, 8));
+		}
+	case buff_ancient_wyvern_shield_special_cooldown_840 :
+		if (%varcint1191 > 0) {
+			return(~script4678(%varcint1191));
+		}
 }
 return(struct_param($struct0, param_1540));

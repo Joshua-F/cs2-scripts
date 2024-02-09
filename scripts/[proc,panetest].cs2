@@ -18,9 +18,6 @@ switch_int (%varcint41) {
 				return(1);
 			}
 		}
-		if ($chattype0 = ^chattype_clanchat & ~gim_notification_message($string1) = 1) {
-			return(1);
-		}
 	case 2 :
 		if ($chattype0 = ^chattype_modchat | $chattype0 = ^chattype_publicchat | $chattype0 = ^chattype_autotyper | $chattype0 = ^chattype_modautotyper) {
 			return(1);
