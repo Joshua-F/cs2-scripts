@@ -1220,20 +1220,20 @@
 [**1217**](scripts/[clientscript,script1217].cs2)  
 [**1218**](scripts/[clientscript,script1218].cs2)  
 [**1219**](scripts/[clientscript,script1219].cs2)  
-[**1220**](scripts/[clientscript,script1220].cs2)  
-[**1221**](scripts/[clientscript,script1221].cs2)  
+[**1220**](scripts/[clientscript,loottracker_debug_output_single_source].cs2) `[clientscript,loottracker_debug_output_single_source]`  
+[**1221**](scripts/[clientscript,loottracker_debug_ignore_items_output].cs2) `[clientscript,loottracker_debug_ignore_items_output]`  
 [**1222**](scripts/[proc,script1222].cs2)  
-[**1223**](scripts/[clientscript,script1223].cs2)  
-[**1224**](scripts/[clientscript,script1224].cs2)  
-[**1225**](scripts/[clientscript,script1225].cs2)  
+[**1223**](scripts/[clientscript,loottracker_debug_clear].cs2) `[clientscript,loottracker_debug_clear]`  
+[**1224**](scripts/[clientscript,loottracker_debug_clear_source_npc].cs2) `[clientscript,loottracker_debug_clear_source_npc]`  
+[**1225**](scripts/[clientscript,loottracker_debug_clear_source_loc].cs2) `[clientscript,loottracker_debug_clear_source_loc]`  
 [**1226**](scripts/[proc,script1226].cs2)  
-[**1227**](scripts/[clientscript,script1227].cs2)  
-[**1228**](scripts/[clientscript,script1228].cs2)  
-[**1229**](scripts/[clientscript,script1229].cs2)  
-[**1230**](scripts/[clientscript,script1230].cs2)  
+[**1227**](scripts/[clientscript,loottracker_debug_ignore_item_add].cs2) `[clientscript,loottracker_debug_ignore_item_add]`  
+[**1228**](scripts/[clientscript,loottracker_debug_ignore_item_remove].cs2) `[clientscript,loottracker_debug_ignore_item_remove]`  
+[**1229**](scripts/[clientscript,loottracker_debug_ignore_item_str_add].cs2) `[clientscript,loottracker_debug_ignore_item_str_add]`  
+[**1230**](scripts/[clientscript,loottracker_debug_ignore_item_str_remove].cs2) `[clientscript,loottracker_debug_ignore_item_str_remove]`  
 [**1231**](scripts/[clientscript,script1231].cs2)  
-[**1232**](scripts/[clientscript,script1232].cs2)  
-[**1233**](scripts/[clientscript,script1233].cs2)  
+[**1232**](scripts/[clientscript,loottracker_debug_ui_refresh_info_full].cs2) `[clientscript,loottracker_debug_ui_refresh_info_full]`  
+[**1233**](scripts/[clientscript,loottracker_debug_ui_redraw_display_full].cs2) `[clientscript,loottracker_debug_ui_redraw_display_full]`  
 [**1234**](scripts/[proc,trade_tooltip].cs2) `[proc,trade_tooltip]`  
 [**1235**](scripts/[clientscript,script1235].cs2)  
 [**1236**](scripts/[clientscript,script1236].cs2)  
@@ -2173,7 +2173,7 @@
 [**2171**](scripts/[clientscript,script2171].cs2)  
 [**2172**](scripts/[clientscript,script2172].cs2)  
 [**2173**](scripts/[proc,script2173].cs2)  
-[**2174**](scripts/[clientscript,script2174].cs2)  
+[**2174**](scripts/[clientscript,loottracker_debug_ui_output_info_components].cs2) `[clientscript,loottracker_debug_ui_output_info_components]`  
 [**2175**](scripts/[proc,nosavegame_world].cs2) `[proc,nosavegame_world]`  
 [**2176**](scripts/[clientscript,logout_layout_update].cs2) `[clientscript,logout_layout_update]`  
 [**2177**](scripts/[proc,script2177].cs2)  
@@ -2835,7 +2835,7 @@
 [**2833**](scripts/[proc,script2833].cs2)  
 [**2834**](scripts/[clientscript,if_flash_component].cs2) `[clientscript,if_flash_component]`  
 [**2835**](scripts/[proc,script2835].cs2)  
-[**2836**](scripts/[proc,script2836].cs2)  
+[**2836**](scripts/[proc,loottracker_debug_ui_output_info_components].cs2) `[proc,loottracker_debug_ui_output_info_components]`  
 [**2837**](scripts/[clientscript,script2837].cs2)  
 [**2838**](scripts/[clientscript,script2838].cs2)  
 [**2839**](scripts/[proc,script2839].cs2)  
@@ -2903,8 +2903,8 @@
 [**2901**](scripts/[clientscript,script2901].cs2)  
 [**2902**](scripts/[clientscript,script2902].cs2)  
 [**2903**](scripts/[clientscript,script2903].cs2)  
-[**2904**](scripts/[clientscript,script2904].cs2)  
-[**2905**](scripts/[proc,script2905].cs2)  
+[**2904**](scripts/[clientscript,loottracker_debug_ui_output_display_components].cs2) `[clientscript,loottracker_debug_ui_output_display_components]`  
+[**2905**](scripts/[proc,loottracker_debug_ui_output_display_components].cs2) `[proc,loottracker_debug_ui_output_display_components]`  
 [**2906**](scripts/[proc,script2906].cs2)  
 [**2907**](scripts/[proc,script2907].cs2)  
 [**2908**](scripts/[clientscript,gauntlet_map_init].cs2) `[clientscript,gauntlet_map_init]`  
@@ -3232,8 +3232,8 @@
 [**3230**](scripts/[clientscript,league_side_panel_hudtoggle].cs2) `[clientscript,league_side_panel_hudtoggle]`  
 [**3231**](scripts/[clientscript,league_side_panel_hudop].cs2) `[clientscript,league_side_panel_hudop]`  
 [**3232**](scripts/[proc,league_side_panel_hudtoggle].cs2) `[proc,league_side_panel_hudtoggle]`  
-[**3233**](scripts/[clientscript,script3233].cs2)  
-[**3234**](scripts/[clientscript,script3234].cs2)  
+[**3233**](scripts/[clientscript,loottracker_debug_output_drops].cs2) `[clientscript,loottracker_debug_output_drops]`  
+[**3234**](scripts/[clientscript,loottracker_debug_output_items_with_source_ids].cs2) `[clientscript,loottracker_debug_output_items_with_source_ids]`  
 [**3235**](scripts/[proc,update_diary_entry_grey].cs2) `[proc,update_diary_entry_grey]`  
 [**3236**](scripts/[proc,script3236].cs2)  
 [**3237**](scripts/[proc,script3237].cs2)  
@@ -3506,8 +3506,8 @@
 [**3504**](scripts/[clientscript,script3504].cs2)  
 [**3505**](scripts/[proc,inv_freespace].cs2) `[proc,inv_freespace]`  
 [**3506**](scripts/[proc,script3506].cs2)  
-[**3507**](scripts/[clientscript,script3507].cs2)  
-[**3508**](scripts/[clientscript,script3508].cs2)  
+[**3507**](scripts/[clientscript,loottracker_debug_output].cs2) `[clientscript,loottracker_debug_output]`  
+[**3508**](scripts/[clientscript,loottracker_debug_ui_output_drop_info_components].cs2) `[clientscript,loottracker_debug_ui_output_drop_info_components]`  
 [**3509**](scripts/[proc,adventurepath_voucher_init].cs2) `[proc,adventurepath_voucher_init]`  
 [**3510**](scripts/[proc,script3510].cs2)  
 [**3511**](scripts/[proc,script3511].cs2)  
@@ -3621,9 +3621,9 @@
 [**3619**](scripts/[proc,partydrop_side_build].cs2) `[proc,partydrop_side_build]`  
 [**3620**](scripts/[proc,partydrop_side_drawitem].cs2) `[proc,partydrop_side_drawitem]`  
 [**3621**](scripts/[clientscript,partydrop_side_reorder].cs2) `[clientscript,partydrop_side_reorder]`  
-[**3622**](scripts/[proc,script3622].cs2)  
-[**3623**](scripts/[clientscript,script3623].cs2)  
-[**3624**](scripts/[clientscript,script3624].cs2)  
+[**3622**](scripts/[proc,loottracker_debug_ui_output_drop_info_components].cs2) `[proc,loottracker_debug_ui_output_drop_info_components]`  
+[**3623**](scripts/[clientscript,loottracker_debug_ui_output_drop_display_components].cs2) `[clientscript,loottracker_debug_ui_output_drop_display_components]`  
+[**3624**](scripts/[proc,loottracker_debug_ui_output_drop_display_components].cs2) `[proc,loottracker_debug_ui_output_drop_display_components]`  
 [**3625**](scripts/[clientscript,imp_box_deposit_init].cs2) `[clientscript,imp_box_deposit_init]`  
 [**3626**](scripts/[clientscript,imp_box_text_update].cs2) `[clientscript,imp_box_text_update]`  
 [**3627**](scripts/[proc,imp_box_text_update].cs2) `[proc,imp_box_text_update]`  

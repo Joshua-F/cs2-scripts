@@ -1,4 +1,4 @@
 // 1224
-[clientscript,script1224](npc $npc0)
+[clientscript,loottracker_debug_clear_source_npc](npc $npc0)
 ~debug_mes("loottracker_debug_clear_source (<nc_name($npc0)>)");
 loottracker_lootdel_byname(nc_name($npc0));
