@@ -1,19 +1,28 @@
 // 7173
 [proc,script7173](component $component0, int $comsubid1)(obj, int, int, int, int, int, int)
 def_obj $obj2 = null;
-def_int $int3 = -1;
-def_int $int4 = -1;
-def_int $int5 = -1;
-def_int $int6 = -1;
-def_int $int7 = -1;
-def_int $int8 = -1;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
 if (cc_find($component0, $comsubid1) = ^true) {
 	$obj2 = cc_getinvobject;
 	$int3 = cc_getinvcount;
 	$int4 = cc_getcolour;
 	$int5 = cc_getgradientcolour;
-	$int6 = calc($int4 * $int3);
-	$int7 = calc($int5 * $int3);
 	$int8 = cc_getgradienttrans;
+	if ($int3 > 0) {
+		$int6 = ~script2906($int4, $int3);
+		$int7 = ~script2906($int5, $int3);
+	} else {
+		if ($int4 > 0) {
+			$int6 = ^max_32bit_int;
+		}
+		if ($int5 > 0) {
+			$int7 = ^max_32bit_int;
+		}
+	}
 }
 return($obj2, $int3, $int4, $int5, $int6, $int7, $int8);

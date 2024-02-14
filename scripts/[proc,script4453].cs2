@@ -1,0 +1,14 @@
+// 4453
+[proc,script4453](int $int0)(int)
+def_int $int1 = 0;
+def_component $component2 = null;
+def_int $int3 = 0;
+while ($int1 < 10) {
+	$component2 = ~script4032($int1);
+	$int3 = if_getscrollwidth($component2);
+	if ($int3 = $int0) {
+		return($int1);
+	}
+	$int1 = calc($int1 + 1);
+}
+return(-1);

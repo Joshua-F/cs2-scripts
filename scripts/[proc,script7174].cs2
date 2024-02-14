@@ -1,15 +1,19 @@
 // 7174
 [proc,script7174](obj $obj0, int $int1, int $int2, int $int3, int $int4, int $int5)(string)
 def_string $string0 = "null";
-if (oc_stockmarket($obj0) = true | $obj0 = coins_995) {
+if ($obj0 = coins_995 | $int3 > 0) {
 	$string0 = "<~magic_spacer_tostring_extended($int5, ".", 1)> (<~magic_spacer_tostring_extended($int3, ".", 2)> ea)";
 } else {
 	$string0 = "N/A";
 }
 def_string $string1 = "null";
-if ($int2 = 0) {
-	$string1 = "N/A";
-} else {
+if ($int2 > 0) {
 	$string1 = "<~magic_spacer_tostring_extended($int4, ".", 2)> (<~magic_spacer_tostring_extended($int2, ".", 2)> ea)";
+} else {
+	$string1 = "N/A";
 }
-return("<oc_name($obj0)> x <tostring($int1)><br>GE: <$string0><br>HA: <$string1>");
+def_string $string2 = "Lots!";
+if ($int1 > 0) {
+	$string2 = ~magic_spacer_tostring_extended($int1, ".", 2);
+}
+return("<oc_name($obj0)> x <$string2><br>GE: <$string0><br>HA: <$string1>");

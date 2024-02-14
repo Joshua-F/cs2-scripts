@@ -1,5 +1,5 @@
-// 7172
-[proc,script7172](component $component0, string $string0, int $width1, int $height2)
+// 4298
+[proc,script4298](component $component0, string $string0, int $width1, int $height2)
 def_int $int3 = 0;
 def_int $colour4 = ^black;
 def_int $colour5 = ^black;
@@ -8,10 +8,11 @@ def_int $num7 = 0;
 def_int $colour8 = ^black;
 def_int $colour9 = ^black;
 def_int $int10 = 0;
-def_int $int11 = 0;
-def_int $int12 = loottracker_ignorelootcount;
-def_string $string1 = "null";
 cc_deleteall($component0);
+if_settext("", $component0);
+if_setscrollsize(0, 0, $component0);
+if_setcolour(^black, $component0);
+if_setgradientcolour(^black, $component0);
 if_settext($string0, $component0);
 if_setscrollsize($width1, $height2, $component0);
 $colour4 = loottracker_lootcount_byname($string0);

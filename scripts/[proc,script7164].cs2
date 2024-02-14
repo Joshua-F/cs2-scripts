@@ -1,13 +1,13 @@
 // 7164
-[proc,script7164](component $component0, component $component1, obj $obj2, int $num3)
-def_int $colour4 = if_getcolour($component0);
-def_int $colour5 = ^black;
+[proc,script7164](component $component0, component $component1, obj $obj2, int $int3, int $num4)
+def_int $colour5 = if_getcolour($component0);
 def_int $colour6 = ^black;
-def_int $int7 = 0;
-$colour5, $colour6, $int7 = ~loottracker_value_item($obj2);
-if_setcolour(calc($colour4 + 1), $component0);
-cc_create($component0, ^iftype_rectangle, $colour4);
-cc_setobject($obj2, $num3);
-cc_setcolour($colour5);
-cc_setgradientcolour($colour6);
-cc_setgradienttrans(~bool_to_int(stringvector_contains(stringvector_2, oc_name($obj2), true, false)));
+def_int $colour7 = ^black;
+def_int $int8 = 0;
+$colour6, $colour7, $int8 = ~loottracker_value_item($obj2);
+if_setcolour(calc($colour5 + 1), $component0);
+cc_create($component0, ^iftype_rectangle, $colour5);
+cc_setobject($obj2, $num4);
+cc_setcolour($colour6);
+cc_setgradientcolour($colour7);
+cc_setgradienttrans($int3);

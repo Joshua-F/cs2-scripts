@@ -1,0 +1,25 @@
+// 3233
+[clientscript,script3233]
+~debug_mes("loottracker_debug_output_drops");
+def_int $int0 = loottracker_sourcequery_new(0, 10, 3);
+def_int $int1 = 0;
+def_string $string0 = "0";
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_obj $obj5 = null;
+def_int $int6 = 0;
+def_int $int7 = 0;
+while ($int4 < $int0) {
+	$int1 = loottracker_sourcequery_get($int4);
+	$string0 = loottracker_sourcedropname($int1);
+	$int7 = loottracker_lootcount_byid($int1);
+	~debug_mes("drop (<~script47($int1)> <$string0>) (<tostring($int7)> items)");
+	$int3 = 1;
+	while ($int3 <= $int7) {
+		$obj5, $int6 = loottracker_lootget_byid($int1, $int3);
+		~debug_mes(" - item (<~script47($int3)>) = <tostring($int6)> x <oc_name($obj5)>");
+		$int3 = calc($int3 + 1);
+	}
+	$int4 = calc($int4 + 1);
+}

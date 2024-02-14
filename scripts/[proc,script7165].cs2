@@ -8,9 +8,9 @@ def_int $int9 = -1;
 def_int $int10 = -1;
 def_int $int11 = -1;
 $obj5, $int6, $int7, $int8, $int9, $int10, $int11 = ~script7173($component0, $int3);
-def_component $component12 = interface_650:55;
+def_component $component12 = interface_650:67;
 def_string $string0 = ~script7174($obj5, $int6, $int7, $int8, $int9, $int10);
-def_int $int13 = calc(5 + (1 + 2 * $int3));
+def_int $int13 = calc(8 + (1 + 2 * $int3));
 if (cc_find($component1, $int13) = ^true) {
 	cc_setonmouserepeat("tooltip_mouserepeat($component1, $int13, $component12, $string0, 0, 512)");
 	cc_setonmouseleave("deltooltip($component12)");
@@ -21,9 +21,9 @@ while (cc_find($component0, $int14) = ^true) {
 	$obj5, $int6, $int7, $int8, $int9, $int10, $int11 = ~script7173($component0, $int14);
 	if ($int11 = 0 | %varbit14880 = 1) {
 		if (%varbit14881 = 0) {
-			$int15 = calc($int15 + $int10);
+			$int15 = ~script1226($int15, $int10);
 		} else {
-			$int15 = calc($int15 + $int9);
+			$int15 = ~script1226($int15, $int9);
 		}
 	}
 	$int14 = calc($int14 + 1);
@@ -34,9 +34,8 @@ if (cc_find($component1, 4) = ^true) {
 def_int $width16 = if_getscrollwidth(interface_650:2);
 def_int $int17 = if_getscrollheight(interface_650:2);
 if (%varbit14881 = 0) {
-	$int17 = calc($int17 + $int8);
+	$int17 = ~script1226($int17, $int8);
 } else {
-	$int17 = calc($int17 + $int7);
+	$int17 = ~script1226($int17, $int7);
 }
-if_setscrollsize($width16, $int17, interface_650:2);
-if_settext("<tostring($width16)><br><~magic_spacer_tostring_extended($int17, ".", 1)> gp", interface_650:31);
+~script3044($width16, $int17);

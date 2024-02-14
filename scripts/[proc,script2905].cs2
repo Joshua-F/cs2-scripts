@@ -9,7 +9,7 @@ def_int $int4 = -1;
 while ($int1 < 10) {
 	$component0 = ~script7167($int1);
 	~debug_mes("source (<~script47($int1)>)");
-	$int2 = calc(5 + (2 - 1));
+	$int2 = calc(8 + (2 - 1));
 	while (cc_find($component0, $int2) = ^true) {
 		$obj3 = cc_getinvobject;
 		$int4 = cc_getinvcount;

@@ -1,10 +1,16 @@
 // 7163
-[proc,script7163](component $component0, component $component1, int $comsubid2, int $int3, int $int4)
-def_int $num5 = 0;
+[proc,script7163](component $component0, component $component1, int $comsubid2, int $int3, int $int4, int $int5)
+def_int $int6 = 0;
 if (cc_find($component0, $comsubid2) = ^true) {
-	$num5 = calc(cc_getinvcount + $int4);
-	cc_setobject(cc_getinvobject, $num5);
-	if (cc_find($component1, calc(5 + (1 + 2 * $int3))) = ^true) {
-		cc_setobject(cc_getinvobject, $num5);
+	$int6 = cc_getinvcount;
+	if ($int6 <= 0 | $int6 = ^max_32bit_int) {
+		return;
+	}
+	$int6 = ~script1226($int6, $int5);
+	cc_setobject(cc_getinvobject, $int6);
+	if ($int4 = 1 & %varbit14880 = 0) {
+		return;
+	} else if (cc_find($component1, calc(8 + (1 + 2 * $int3))) = ^true) {
+		cc_setobject(cc_getinvobject, $int6);
 	}
 }

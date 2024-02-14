@@ -4,13 +4,15 @@ def_component $component2 = ~script7168($int0);
 def_component $component3 = ~script7167($int0);
 def_string $text0 = if_gettext($component2);
 def_int $int4 = if_getscrollheight($component2);
-$int4 = calc($int4 + $int1);
+if ($int4 <= 0 | $int4 = ^max_32bit_int) {
+	return;
+}
+$int4 = ~script1226($int4, $int1);
 if_setscrollsize(if_getscrollwidth($component2), $int4, $component2);
 if (cc_find($component3, 3) = ^true) {
 	cc_settext(~script7175($text0, $int4));
 }
 def_int $int5 = if_getscrollwidth(interface_650:2);
 def_int $height6 = if_getscrollheight(interface_650:2);
-$int5 = calc($int5 + $int1);
-if_setscrollsize($int5, $height6, interface_650:2);
-if_settext("<tostring($int5)><br><~magic_spacer_tostring_extended($height6, ".", 1)> gp", interface_650:31);
+$int5 = ~script1226($int5, $int1);
+~script3044($int5, $height6);

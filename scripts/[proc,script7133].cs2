@@ -2,195 +2,127 @@
 [proc,script7133]
 def_component $component0 = null;
 def_component $component1 = null;
-def_int $int2 = 42598424;
-def_component $component3 = interface_650:55;
-def_component $component4 = interface_650:21;
+def_int $int2 = 42598437;
+def_int $int3 = 42598467;
+def_component $component4 = interface_650:32;
 if_setsize(22, 4, ^setsize_minus, ^setsize_minus, $component4);
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
-def_string $string0 = "null";
-def_string $string1 = "null";
-def_int $int9 = -1;
+def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
+def_string $string0 = "null";
 def_int $int12 = 0;
 def_int $int13 = 0;
 def_int $int14 = 0;
-def_obj $obj15 = null;
+def_int $int15 = 0;
 def_int $int16 = 0;
-def_int $int17 = 0;
+def_obj $obj17 = null;
 def_int $int18 = 0;
 def_int $int19 = 0;
 def_int $int20 = 0;
 def_int $int21 = 0;
 def_int $int22 = 0;
-def_boolean $boolean23 = false;
-def_int $int24 = calc(42 + 2);
-def_int $int25 = 0;
-def_int $int26 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_boolean $boolean25 = false;
+def_int $int26 = 2;
 def_int $int27 = 0;
-def_int $int28 = calc((if_getwidth($component4) - 212) / 4);
-def_string $string2 = "null";
+def_int $comsubid28 = 0;
+def_int $comsubid29 = 0;
+def_int $comsubid30 = 0;
+def_int $int31 = 0;
+def_int $int32 = 0;
+def_int $int33 = calc((if_getwidth($component4) - 212) / 4);
+def_string $string1 = "null";
 ~script7169;
 ~script7188;
 ~script7185;
 ~script7182(-1);
-while ($int7 < 10) {
-	$component0 = ~script7168($int7);
-	$component1 = ~script7167($int7);
+switch_int (%varbit9607) {
+	case 0 :
+		$int7 = 10;
+		$int9 = 0;
+		$int10 = 1;
+	case 1 :
+		$int7 = 10;
+		$int9 = 2;
+		$int10 = 3;
+	case default :
+		return;
+}
+while ($int8 < $int7) {
+	$component0 = ~script4031($int9, $int8);
+	$component1 = ~script4031($int10, $int8);
 	$string0 = if_gettext($component0);
-	$int10 = if_getscrollwidth($component0);
-	$int11 = if_getscrollheight($component0);
-	$int12 = if_getcolour($component0);
+	$int11 = if_getscrollwidth($component0);
+	$int12 = if_getscrollheight($component0);
+	$int15 = if_getcolour($component0);
 	$int13 = if_getgradientcolour($component0);
 	$int14 = 0;
-	$int8 = 0;
-	$int21 = 0;
-	$int26 = 0;
+	$int16 = 0;
+	$int23 = 0;
+	$int31 = 0;
+	$int32 = 0;
 	$int27 = 0;
-	$int25 = 0;
-	$boolean23 = stringvector_contains(stringvector_1, $string0, true, false);
-	if (($boolean23 = false | %varbit14880 = 1) & $int11 > 0) {
-		$int24 = calc($int24 + 2);
-		$int25 = ~thinbox_specific($component1, $int25, 0, $int24, if_getwidth($component1), 33, ^setpos_abs_left, ^setpos_abs_top);
-		if (cc_find($component1, calc($int25 - 2)) = ^true) {
-			cc_setsize(0, cc_getheight, ^setsize_minus, ^setsize_abs);
-		}
-		if (cc_find($component1, calc($int25 - 1)) = ^true) {
-			cc_setsize(2, cc_getheight, ^setsize_minus, ^setsize_abs);
-		}
-		cc_create($component1, ^iftype_graphic, $int25);
-		$int25 = calc($int25 + 1);
-		cc_setposition(2, calc($int24 + 2), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(4, calc(33 - 4), ^setsize_minus, ^setsize_abs);
-		if ($boolean23 = false) {
-			cc_setgraphic("tradebacking_dark");
-		} else {
-			cc_setgraphic("graphic_4948");
-		}
-		cc_settiling(true);
-		if ($int13 = 1) {
-			cc_setop(1, "Collapse");
-		} else {
-			cc_setop(1, "Expand");
-		}
-		cc_setop(2, "Clear data");
-		if ($boolean23 = false) {
-			cc_setop(3, "Ignore");
-		} else {
-			cc_setop(3, "Stop ignoring");
-		}
-		cc_setopbase("<col=ff9040><$string0></col>");
-		cc_setonop("script7179(event_op, $int7)");
-		cc_create($component1, ^iftype_text, $int25);
-		$int25 = calc($int25 + 1);
-		cc_setposition(6, calc($int24 + 4), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(12, calc(33 - 8), ^setsize_minus, ^setsize_abs);
-		cc_settextfont(b12_full);
-		cc_settextshadow(true);
-		cc_setcolour(0xff981f);
-		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-		cc_settext(~script7175($string0, $int11));
-		cc_create($component1, ^iftype_text, $int25);
-		$int25 = calc($int25 + 1);
-		cc_setposition(6, calc($int24 + 4), ^setpos_abs_right, ^setpos_abs_top);
-		cc_setsize(12, calc(33 - 8), ^setsize_minus, ^setsize_abs);
-		cc_settextfont(b12_full);
-		cc_settextshadow(true);
-		cc_setcolour(0xff981f);
-		cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-		if ($int12 > 0) {
-			while ($int8 < $int12) {
-				if (cc_find($component0, $int8) = ^true) {
-					$obj15, $int16, $int17, $int19, $int18, $int20, $int22 = ~script7173($component0, $int8);
-					$int22 = ~bool_to_int(stringvector_contains(stringvector_2, oc_name($obj15), true, false));
-					~script1789($component0, $int8, $int22);
-					if ($int22 = 0 | %varbit14880 = 1) {
-						if ($int13 = 1) {
-							if ($int27 = 0 & $int26 ! 0) {
-								$int21 = calc($int21 + $int28);
-							}
-							cc_create($component1, ^iftype_graphic, $int25);
-							$int25 = calc($int25 + 1);
-							cc_setposition(0, calc($int24 + 33 + 5 + $int21), ^setpos_abs_left, ^setpos_abs_top);
-							cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
-							if ($int22 = 1) {
-								cc_setgraphic("graphic_155");
-							} else {
-								cc_setgraphic("graphic_1120");
-							}
-							.cc_create($component1, ^iftype_graphic, $int25);
-							$int25 = calc($int25 + 1);
-							.cc_setposition(calc(cc_getx + 2), calc(cc_gety + 2), ^setpos_abs_left, ^setpos_abs_top);
-							.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-							.cc_setoutline(1);
-							.cc_setobject($obj15, $int16);
-							$string2 = ~script7174($obj15, $int16, $int17, $int19, $int18, $int20);
-							.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component3, $string2, 0, 512)");
-							.cc_setonmouseleave("deltooltip($component3)");
-							.cc_setop(1, "Check");
-							if ($int22 = 1) {
-								.cc_setop(2, "Stop ignoring");
-							} else {
-								.cc_setop(2, "Ignore");
-							}
-							.cc_setopbase("<col=ff9040><oc_name($obj15)></col>");
-							.cc_setonop("script7180(event_op, $int7, $int8)");
-							$int26 = calc($int26 + 1);
-							$int27 = calc(($int27 + 1) % 5);
-							if ($int27 = 0) {
-								$int21 = calc($int21 + 36);
-							}
-						}
-						if (%varbit14881 = 0) {
-							$int14 = calc($int14 + $int20);
+	$boolean25 = stringvector_contains(stringvector_1, $string0, true, false);
+	if (($boolean25 = false | %varbit14880 = 1) & $int11 ! 0) {
+		$int27, $int26, $comsubid28, $comsubid29, $comsubid30 = ~script2907($component1, $int8, $string0, $int12, $boolean25, $int13, $int23, $int27, $int26);
+		while ($int16 < $int15) {
+			if (cc_find($component0, $int16) = ^true) {
+				$obj17, $int18, $int19, $int21, $int20, $int22, $int24 = ~script7173($component0, $int16);
+				if ($int24 = 0 | %varbit14880 = 1) {
+					if ($int13 = 1) {
+						$int27, $int26, $int31, $int32, $int23 = ~script3042($component4, $component1, $int8, $int16, $obj17, $int18, $int19, $int21, $int20, $int22, $int24, $int27, $int26, $int31, $int32, $int23);
+					}
+					if (%varbit14881 = 0) {
+						if ($int22 >= 0) {
+							$int14 = ~script1226($int14, $int22);
 						} else {
-							$int14 = calc($int14 + $int18);
+							$int14 = ^max_32bit_int;
 						}
+					} else if ($int20 >= 0) {
+						$int14 = ~script1226($int14, $int20);
+					} else {
+						$int14 = ^max_32bit_int;
 					}
 				}
-				$int8 = calc($int8 + 1);
 			}
-			if ($int26 ! 0) {
-				$int21 = calc($int21 + 2);
-				if ($int27 ! 0) {
-					$int21 = calc($int21 + 36);
-				}
+			$int16 = calc($int16 + 1);
+		}
+		if ($int31 ! 0) {
+			$int23 = calc($int23 + 2);
+			if ($int32 ! 0) {
+				$int23 = calc($int23 + 36);
 			}
 		}
-		if ($int13 = 1 & $int21 = 0) {
-			cc_create($component1, ^iftype_text, $int25);
-			$int25 = calc($int25 + 1);
-			cc_setposition(4, calc($int24 + 33 + 3), ^setpos_abs_left, ^setpos_abs_top);
-			cc_setsize(8, 12, ^setsize_minus, ^setsize_abs);
-			cc_settextfont(p11_full);
-			cc_settextshadow(true);
-			cc_setcolour(0xff981f);
-			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-			cc_settext("No loot to display.");
-			$int21 = 12;
+		if ($int13 = 1 & $int23 = 0) {
+			$int23, $int26 = ~script3043($component1, $comsubid30, $int26);
 		}
-		if ($int21 > 0) {
-			$int25 = ~thinbox_specific($component1, $int25, 0, calc($int24 + 33 - 1), if_getwidth($component1), calc($int21 + 8), ^setpos_abs_left, ^setpos_abs_top);
-			if (cc_find($component1, calc($int25 - 2)) = ^true) {
-				cc_setsize(0, cc_getheight, ^setsize_minus, ^setsize_abs);
+		if ($int23 > 0) {
+			if (cc_find($component1, $comsubid28) = ^true) {
+				cc_setsize(0, calc($int23 + 8), ^setsize_minus, ^setsize_abs);
 			}
-			if (cc_find($component1, calc($int25 - 1)) = ^true) {
-				cc_setsize(2, cc_getheight, ^setsize_minus, ^setsize_abs);
+			if (cc_find($component1, $comsubid29) = ^true) {
+				cc_setsize(2, calc($int23 + 8), ^setsize_minus, ^setsize_abs);
 			}
-			$int21 = calc($int21 + 7);
+			$int23 = calc($int23 + 7);
 		}
-		$int24 = calc($int24 + 33 + $int21 + 2);
+		$int26 = calc($int26 + 33 + $int23 + 2);
 		if (cc_find($component1, 4) = ^true) {
 			cc_settext("<~magic_spacer_tostring_extended($int14, ".", 1)> gp");
 		}
+		if (%varbit9607 = 0) {
+			$int5 = ~script1226($int5, $int12);
+		} else {
+			$int5 = ~script1226($int5, 1);
+		}
+		$int6 = ~script1226($int6, $int14);
 	}
-	$int5 = calc($int5 + $int11);
-	$int6 = calc($int6 + $int14);
-	$int7 = calc($int7 + 1);
+	$int8 = calc($int8 + 1);
 }
-if_setscrollsize($int5, $int6, interface_650:2);
-if_settext("<tostring($int5)><br><~magic_spacer_tostring_extended($int6, ".", 1)> gp", interface_650:31);
-~script7135($int24);
+$int26 = calc($int26 + 42);
+~script3044($int5, $int6);
+~script7135($int26);

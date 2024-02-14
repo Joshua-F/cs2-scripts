@@ -1,9 +1,11 @@
 // 7199
-[proc,script7199](component $component0, int $int1, obj $obj2)
-def_string $string0 = oc_name($obj2);
+[proc,script7199](obj $obj0)
+def_string $string0 = oc_name($obj0);
+def_int $int1 = 0;
 if (stringvector_contains(stringvector_2, $string0, false, false) = false) {
 	loottracker_ignorelootadd($string0);
 	stringvector_addunique(stringvector_2, $string0, false);
+	$int1 = 1;
 } else {
 	loottracker_ignorelootdel($string0);
 	stringvector_remove(stringvector_2, $string0, false);
@@ -12,4 +14,40 @@ if (stringvector_size(stringvector_2) > 0) {
 	%varbit14882 = 1;
 } else {
 	%varbit14882 = 0;
+}
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_component $component5 = null;
+def_obj $obj6 = null;
+while ($int2 < 10) {
+	$component5 = ~script7168($int2);
+	$int4 = if_getcolour($component5);
+	$int3 = 0;
+	while ($int3 < $int4) {
+		if (cc_find($component5, $int3) = ^true) {
+			$obj6 = cc_getinvobject;
+			if ($obj6 = $obj0) {
+				cc_setgradienttrans($int1);
+			}
+		}
+		$int3 = calc($int3 + 1);
+	}
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+while ($int2 < 10) {
+	$component5 = ~script4032($int2);
+	$int4 = if_getcolour($component5);
+	$int3 = 0;
+	while ($int3 < $int4) {
+		if (cc_find($component5, $int3) = ^true) {
+			$obj6 = cc_getinvobject;
+			if ($obj6 = $obj0) {
+				cc_setgradienttrans($int1);
+			}
+		}
+		$int3 = calc($int3 + 1);
+	}
+	$int2 = calc($int2 + 1);
 }

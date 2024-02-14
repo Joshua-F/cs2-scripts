@@ -1,22 +1,40 @@
 // 7158
-[proc,script7158](string $string0, obj $obj0, int $int1)
-if (stringvector_contains(stringvector_2, oc_name($obj0), true, false) = true & %varbit14880 = 0) {
-	return;
-}
-def_component $component2 = null;
+[proc,script7158](string $string0, obj $obj0, int $int1, int $int2)
 def_component $component3 = null;
-def_int $int4 = 0;
+def_component $component4 = null;
 def_int $int5 = 0;
-def_int $int6 = ~script7176($string0);
-if ($int6 >= 0) {
-	$component2 = ~script7168($int6);
-	$component3 = ~script7167($int6);
-	$int4, $int5 = ~script7177($component2, $obj0);
-	if ($int4 >= 0 & $int5 >= 0) {
-		~script7163($component2, $component3, $int4, $int5, $int1);
-		~script7165($component2, $component3, $int6, $int4, $int5);
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = ~script7176($string0);
+def_int $int9 = ~bool_to_int(stringvector_contains(stringvector_2, oc_name($obj0), true, false));
+if ($int8 >= 0) {
+	$component3 = ~script7168($int8);
+	$component4 = ~script7167($int8);
+	$int6, $int7 = ~script7177($component3, $obj0);
+	if ($int6 >= 0) {
+		~script7163($component3, $component4, $int6, $int7, $int9, $int1);
+		~script7165($component3, $component4, $int8, $int6, $int7);
 	} else {
-		~script7164($component2, $component3, $obj0, $int1);
-		~script7133;
+		~script7164($component3, $component4, $obj0, $int9, $int1);
+		if ($int9 = 0 & %varbit9607 = 0) {
+			$int5 = 1;
+		}
 	}
+}
+def_int $int10 = ~script4453($int2);
+if ($int10 >= 0) {
+	$component3 = ~script4032($int10);
+	$component4 = ~script4221($int10);
+	$int6, $int7 = ~script7177($component3, $obj0);
+	if ($int6 >= 0) {
+		~script7163($component3, $component4, $int6, $int7, $int9, $int1);
+	} else {
+		~script7164($component3, $component4, $obj0, $int9, $int1);
+		if ($int9 = 0 & %varbit9607 = 1) {
+			$int5 = 1;
+		}
+	}
+}
+if ($int5 = 1) {
+	~script7133;
 }

@@ -1,0 +1,9 @@
+// 2233
+[proc,script2233](int $int0, int $int1)(int)
+if (calc(^min_32bit_int + $int0 + $int1) >= 0) {
+	return(^min_32bit_int);
+}
+if ($int0 = ^min_32bit_int & $int1 = ^min_32bit_int) {
+	return(^min_32bit_int);
+}
+return(calc($int0 - $int1));

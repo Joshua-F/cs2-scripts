@@ -813,8 +813,6 @@ switch_int ($int0) {
 					case 0 :
 						return(31, herbiboar_21511, "Harvest herbs from the <$string0>Herbiboar</col> on <$string0>Fossil Island</col> (with 80 Hunter).");
 					case 1 :
-						return(37, smoker_canister_28646, "Smoker canister<br>(with 53 Woodcutting and 53 Smithing)");
-					case 2 :
 						return(58, herb_sack_13226, "Use the Herb Sack reward item, purchased from the Tithe Farm or Slayer Masters.");
 					case default :
 						return(-1, null, "");
@@ -1148,48 +1146,45 @@ switch_int ($int0) {
 					return(70, diamond_amulet_1700, "Diamond amulet");
 				}
 				if ($int2 = 49) {
-					return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 35 Farming and 70 Woodcutting)");
-				}
-				if ($int2 = 50) {
 					return(72, dragon_necklace_1664, "Members: Dragonstone necklace");
 				}
-				if ($int2 = 51) {
+				if ($int2 = 50) {
 					return(74, dragonstone_bracelet_11115, "Members: Dragonstone bracelet");
 				}
-				if ($int2 = 52) {
+				if ($int2 = 51) {
 					return(75, slayer_ring_8_11866, "Members: Slayer ring");
 				}
-				if ($int2 = 53) {
+				if ($int2 = 52) {
 					return(80, dragonstone_amulet_1702, "Members: Dragonstone amulet");
 				}
-				if ($int2 = 54) {
+				if ($int2 = 53) {
 					return(80, berserker_icon_28295, "Members: Icon Removal");
 				}
-				if ($int2 = 55) {
+				if ($int2 = 54) {
 					return(80, ultor_ring_28307, "Members: Ultor, Venator, Bellator, Magus rings");
 				}
-				if ($int2 = 56) {
+				if ($int2 = 55) {
 					return(82, onyx_necklace_6577, "Members: Onyx necklace");
 				}
-				if ($int2 = 57) {
+				if ($int2 = 56) {
 					return(84, onyx_bracelet_11130, "Members: Onyx bracelet");
 				}
-				if ($int2 = 58) {
+				if ($int2 = 57) {
 					return(89, zenyte_19493, "Members: Cut zenyte");
 				}
-				if ($int2 = 59) {
+				if ($int2 = 58) {
 					return(89, zenyte_ring_19538, "Members: Zenyte ring");
 				}
-				if ($int2 = 60) {
+				if ($int2 = 59) {
 					return(90, onyx_amulet_6581, "Members: Onyx amulet");
 				}
-				if ($int2 = 61) {
+				if ($int2 = 60) {
 					return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
 				}
-				if ($int2 = 62) {
+				if ($int2 = 61) {
 					return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
 				}
-				if ($int2 = 63) {
+				if ($int2 = 62) {
 					return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
 				}
 				return(-1, null, "");
@@ -1280,24 +1275,22 @@ switch_int ($int0) {
 					case 5 :
 						return(35, teak_bird_house_21521, "Craft a birdhouse trap from teak logs");
 					case 6 :
-						return(35, padded_spoon_28657, "Craft a padded spoon<br>(with 25 Woodcutting)");
-					case 7 :
 						return(38, dense_essence_block_13445, "Dense essence<br>(with 38 Mining)");
-					case 8 :
+					case 7 :
 						return(45, maple_bird_house_22192, "Craft a birdhouse trap from maple logs");
-					case 9 :
+					case 8 :
 						return(50, mahogany_bird_house_22195, "Craft a birdhouse trap from mahogany logs");
-					case 10 :
+					case 9 :
 						return(50, clothes_pouch_28163, "Craft a clothes pouch<br>(with 50 Woodcutting)");
-					case 11 :
+					case 10 :
 						return(56, colossal_pouch_26784, "Craft a colossal pouch from essence pouches");
-					case 12 :
+					case 11 :
 						return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
-					case 13 :
+					case 12 :
 						return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
-					case 14 :
+					case 13 :
 						return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
-					case 15 :
+					case 14 :
 						return(90, redwood_bird_house_22204, "Craft a birdhouse trap from redwood logs");
 					case default :
 						return(-1, null, "");
@@ -1544,8 +1537,6 @@ switch_int ($int0) {
 			switch_int ($int2) {
 				case 0 :
 					return(40, battlestaff_1391, "Battlestaves");
-				case 1 :
-					return(50, petal_circlet_28653, "Petal circlet<br>(with 50 Woodcutting)");
 				case default :
 					return(-1, null, "");
 			}
@@ -2456,26 +2447,14 @@ switch_int ($int0) {
 				case 0 :
 					return(1, forestry_kit_28136, "Forestry kit");
 				case 1 :
-					return(15, trap_disarmer_28665, "Members: Trap disarmer<br>(with 16 Hunter)");
-				case 2 :
-					return(25, padded_spoon_28657, "Members: Padded spoon<br>(with 35 Crafting)");
-				case 3 :
 					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Cooking)");
-				case 4 :
+				case 2 :
 					return(35, secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Smithing)");
-				case 5 :
-					return(35, bee_on_a_stick_28184, "Members: Bee on a Stick<br>(with 50 Hunter)");
-				case 6 :
+				case 3 :
 					return(50, clothes_pouch_28163, "Members: Clothes Pouch<br>(with 50 Crafting)");
-				case 7 :
-					return(50, petal_circlet_28653, "Members: Petal circlet<br>(with 50 Fletching)");
-				case 8 :
-					return(53, smoker_canister_28646, "Members: Smoker canister<br>(with 53 Smithing and 37 Herblore)");
-				case 9 :
+				case 4 :
 					return(68, nature_offerings_28152, "Members: Nature Offerings<br>(with 50 Farming)");
-				case 10 :
-					return(70, leprechaun_charm_28179, "Members: Leprechaun Charm<br>(with 70 Crafting and 35 Farming)");
-				case 11 :
+				case 5 :
 					return(75, sturdy_harness_28149, "Members: Sturdy Harness<br>(with 75 Smithing)");
 				case default :
 					return(-1, null, "");

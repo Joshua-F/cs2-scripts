@@ -1,41 +1,66 @@
 // 7179
 [clientscript,script7179](int $opindex0, int $int1)
-def_component $component2 = ~script7168($int1);
+def_int $int2 = 0;
+def_int $int3 = 0;
+switch_int (%varbit9607) {
+	case 0 :
+		$int2 = 0;
+		$int3 = 10;
+	case 1 :
+		$int2 = 2;
+		$int3 = 10;
+}
+def_component $component4 = ~script4031($int2, $int1);
 def_int $intarray0(10);
-def_int $int3 = -1;
-def_component $component4 = null;
+def_int $int5 = -1;
+def_component $component6 = null;
+def_int $int7 = 0;
+def_string $string0 = "null";
+def_string $string1 = "null";
+def_int $int8 = 0;
 switch_int ($opindex0) {
 	case 1 :
-		if_setgradientcolour(calc(1 - if_getgradientcolour($component2)), $component2);
+		if_setgradientcolour(calc(1 - if_getgradientcolour($component4)), $component4);
 		~script7133;
 	case 2 :
-		$int3 = 0;
-		while ($int3 < 10) {
-			if ($int3 >= $int1) {
-				$component4 = ~script7168(calc($int3 + 1));
+		$int5 = 0;
+		while ($int5 < $int3) {
+			if ($int5 >= $int1) {
+				$component6 = ~script4031($int2, calc($int5 + 1));
 			} else {
-				$component4 = ~script7168($int3);
+				$component6 = ~script4031($int2, $int5);
 			}
-			if ($component4 = null) {
-				$intarray0($int3) = 1;
+			if ($component6 = null) {
+				$intarray0($int5) = 1;
 			} else {
-				$intarray0($int3) = if_getgradientcolour($component4);
+				$intarray0($int5) = if_getgradientcolour($component6);
 			}
-			$int3 = calc($int3 + 1);
+			$int5 = calc($int5 + 1);
 		}
-		loottracker_lootdel_byname(if_gettext($component2));
-		~script7166;
-		$int3 = 0;
-		while ($int3 < 10) {
-			$component4 = ~script7168($int3);
-			if ($intarray0($int3) = -1) {
-				$intarray0($int3) = 0;
+		$string0 = if_gettext($component4);
+		loottracker_lootdel_byname($string0);
+		$int7 = loottracker_sourcequery_new(loottracker_sourceget(0), 2);
+		$int5 = 0;
+		while ($int5 < $int7) {
+			$int8 = loottracker_sourcequery_get($int5);
+			$string1 = loottracker_sourcedropname($int8);
+			if (compare($string1, $string0) = 0) {
+				loottracker_lootdel_byid($int8);
 			}
-			if_setgradientcolour($intarray0($int3), $component4);
-			$int3 = calc($int3 + 1);
+			$int5 = calc($int5 + 1);
+		}
+		~script7166;
+		$int5 = 0;
+		while ($int5 < $int3) {
+			$component6 = ~script4031($int2, $int5);
+			if ($intarray0($int5) = -1) {
+				$intarray0($int5) = 0;
+			}
+			if_setgradientcolour($intarray0($int5), $component6);
+			$int5 = calc($int5 + 1);
 		}
 		~script7133;
 	case 3 :
-		~script1791($component2, $int1, if_gettext($component2));
+		~script1791($component4, $int1, if_gettext($component4));
 		~script7133;
 }

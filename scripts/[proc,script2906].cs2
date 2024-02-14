@@ -1,0 +1,9 @@
+// 2906
+[proc,script2906](int $int0, int $int1)(int)
+if (calc(^max_32bit_int - $int0 * $int1) <= 0) {
+	return(^max_32bit_int);
+}
+if ($int0 = ^max_32bit_int & $int1 = ^max_32bit_int) {
+	return(^max_32bit_int);
+}
+return(calc($int0 * $int1));
