@@ -39,7 +39,7 @@ switch_int ($opindex0) {
 		}
 		$string0 = if_gettext($component4);
 		loottracker_lootdel_byname($string0);
-		$int7 = loottracker_sourcequery_new(loottracker_sourceget(0), 2);
+		$int7 = loottracker_sourcequery_new(0, loottracker_getdroplimit, 2);
 		$int5 = 0;
 		while ($int5 < $int7) {
 			$int8 = loottracker_sourcequery_get($int5);
