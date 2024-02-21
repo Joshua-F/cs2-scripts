@@ -9,13 +9,13 @@ if ($height1 <= 0) {
 	return;
 }
 def_component $component2 = interface_650:13;
-~script4298($component2, $string0, $width0, $height1);
+~script4937($component2, $string0, $width0, $height1);
 def_int $int3 = calc(10 - 1);
 while ($int3 > 0) {
-	~script4222(~script7168(calc($int3 - 1)), ~script7168($int3));
+	~script4935(~script7168(calc($int3 - 1)), ~script7168($int3));
 	$int3 = calc($int3 - 1);
 }
-~script4222($component2, ~script7168(0));
-if (%varbit9607 = 0) {
+~script4935($component2, ~script7168(0));
+if (%varbit9902 = 0) {
 	~script7133;
 }

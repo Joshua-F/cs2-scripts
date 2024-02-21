@@ -1,0 +1,9 @@
+// 4908
+[proc,script4908](inv $inv0)(int)
+if (enum(inv, boolean, enum_4299, $inv0) = true) {
+	return(0);
+}
+if (enum(inv, boolean, enum_5393, $inv0) = true) {
+	return(0);
+}
+return(1);

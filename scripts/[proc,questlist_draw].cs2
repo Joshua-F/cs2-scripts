@@ -1,5 +1,5 @@
 // 2633
-[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5)
+[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5)
 def_int $height6 = -3;
 if (%varbit13889 = 1) {
 	$height6 = 2;
@@ -123,7 +123,7 @@ if ($int18 <= 0) {
 	if_sethide(false, $component3);
 }
 def_int $int22 = %varcint10;
-if ($boolean5 = true) {
+if ($int5 = 1) {
 	$int22 = %varcint972;
 }
 if ($height6 > if_getheight($component2)) {
@@ -133,7 +133,7 @@ if ($height6 > if_getheight($component2)) {
 		~scrollbar_vertical_doscroll($component3, $component2, $int22, true);
 	}
 } else {
-	if ($boolean5 = true) {
+	if ($int5 = 1) {
 		%varcint972 = 0;
 	} else {
 		%varcint10 = 0;
@@ -144,4 +144,4 @@ if ($height6 > if_getheight($component2)) {
 		~scrollbar_vertical_doscroll($component3, $component2, 0, true);
 	}
 }
-~script4137($component0, $component1, $component2, $component3, $component4, $boolean5);
+~script4137($component0, $component1, $component2, $component3, $component4, $int5);

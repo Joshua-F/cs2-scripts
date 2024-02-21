@@ -1,7 +1,7 @@
 // 7181
 [clientscript,script7181]
 def_int $int0 = 0;
-switch_int (%varbit9607) {
+switch_int (%varbit9902) {
 	case 0 :
 		$int0 = 0;
 	case 1 :
@@ -11,7 +11,7 @@ def_component $component1 = null;
 def_int $int2 = 0;
 def_int $int3 = 0;
 while ($int3 < 10) {
-	$component1 = ~script4031($int0, $int3);
+	$component1 = ~script4932($int0, $int3);
 	if (string_length(if_gettext($component1)) > 0 & if_getgradientcolour($component1) = 0x000001) {
 		$int2 = 1;
 	}
@@ -20,7 +20,7 @@ while ($int3 < 10) {
 $int2 = calc(1 - $int2);
 $int3 = 0;
 while ($int3 < 10) {
-	$component1 = ~script4031($int0, $int3);
+	$component1 = ~script4932($int0, $int3);
 	if (string_length(if_gettext($component1)) > 0) {
 		if_setgradientcolour($int2, $component1);
 	}

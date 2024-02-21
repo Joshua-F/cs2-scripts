@@ -1,0 +1,13 @@
+// 4931
+[proc,script4931](string $text0, int $int0)
+def_component $component1 = interface_650:25;
+~script4938($component1, $text0, $int0);
+def_int $int2 = calc(10 - 1);
+while ($int2 > 0) {
+	~script4936(~script4933(calc($int2 - 1)), ~script4933($int2));
+	$int2 = calc($int2 - 1);
+}
+~script4936($component1, ~script4933(0));
+if (%varbit9902 = 1) {
+	~script7133;
+}

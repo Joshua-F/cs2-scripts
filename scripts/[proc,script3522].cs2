@@ -69,6 +69,11 @@ if (%varbit14494 = 1) {
 	$string0 = append($string0, "<br><col=ffffff>Keris Partisan of the Sun:</col><br><br>");
 	$string0 = append($string0, "While within the Tombs of Amascut:<br><br>- You have 25% increased accuracy against creatures below 25% health<br><br>- Killing a creature with the partisan restores <tostring(12)> hitpoints at the cost of <tostring(5)> prayer points.<br>    - This effect can overheal up to 20% above your hitpoints.");
 }
+if (%varbit9898 = 1) {
+	$int2 = 0;
+	$string0 = append($string0, "<br><col=ffffff>Dizana's Sunfire:</col><br><br>");
+	$string0 = append($string0, "Dizana's Quiver ranged strength is increased by 10 and Ranged attack is increased by 1.<br><col=ffffff>Only applies when using arrows and bolts.");
+}
 if (%varbit13800 > 0 & %varbit13800 < 4) {
 	$int2 = 0;
 	$string0 = append($string0, "<br><col=ffffff>Raiments of the Eye - Bonus runes crafted </col><br><br>");

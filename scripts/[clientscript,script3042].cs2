@@ -1,0 +1,11 @@
+// 3042
+[clientscript,script3042]
+if (%varbit9797 = 1) {
+	~options_button_on(interface_593:45, 0);
+	if_setgraphic("combat_autoretaliate,1", interface_593:46);
+	if_settext("Set Effect<br>(On)", interface_593:47);
+} else {
+	~options_button_off(interface_593:45, 0);
+	if_setgraphic("combat_autoretaliate,0", interface_593:46);
+	if_settext("Set Effect<br>(Off)", interface_593:47);
+}

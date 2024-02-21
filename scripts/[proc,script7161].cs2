@@ -2,13 +2,13 @@
 [proc,script7161](int $int0)
 def_component $component1 = ~script7168($int0);
 def_component $component2 = interface_650:13;
-~script4222($component1, $component2);
+~script4935($component1, $component2);
 def_int $int3 = $int0;
 while ($int3 > 0) {
-	~script4222(~script7168(calc($int3 - 1)), ~script7168($int3));
+	~script4935(~script7168(calc($int3 - 1)), ~script7168($int3));
 	$int3 = calc($int3 - 1);
 }
-~script4222($component2, ~script7168(0));
-if (%varbit9607 = 0) {
+~script4935($component2, ~script7168(0));
+if (%varbit9902 = 0) {
 	~script7133;
 }

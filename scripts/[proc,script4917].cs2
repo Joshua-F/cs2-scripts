@@ -1,0 +1,13 @@
+// 4917
+[proc,script4917]()(int)
+def_int $size0 = 0;
+def_int $size1 = inv_size(inv);
+def_obj $obj2 = null;
+while ($size0 < $size1) {
+	$obj2 = inv_getobj(inv, $size0);
+	if ($obj2 ! null & oc_param($obj2, param_1909) = 1) {
+		return(1);
+	}
+	$size0 = calc($size0 + 1);
+}
+return(0);

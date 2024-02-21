@@ -6,7 +6,7 @@ def_int $int5 = 0;
 def_int $height6 = 0;
 def_int $int7 = 0;
 def_int $int8 = calc(if_getwidth($component1) / 4);
-while ($int7 <= 52) {
+while ($int7 <= 53) {
 	cc_create($component1, ^iftype_rectangle, $int7);
 	if (enum(int, graphic, enum_1001, $int7) ! null) {
 		cc_sethide(false);
@@ -26,8 +26,8 @@ while ($int7 <= 52) {
 $int7 = 0;
 $height6 = 0;
 $int5 = 0;
-while ($int7 <= 52) {
-	cc_create($component1, ^iftype_graphic, calc(52 + $int7 + 1));
+while ($int7 <= 53) {
+	cc_create($component1, ^iftype_graphic, calc(53 + $int7 + 1));
 	if (enum(int, graphic, enum_1001, $int7) ! null) {
 		cc_sethide(false);
 		cc_setsize(48, 48, ^setsize_abs, ^setsize_abs);
@@ -50,5 +50,5 @@ if ($height6 > if_getheight($component2)) {
 }
 ~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~emote_update($component1, $component4);
-if_setonvartransmit("emote_update($component1, $component4){var313, var802, var465, var101, var904, var1336, var2886}", $component0);
+if_setonvartransmit("emote_update($component1, $component4){var313, var802, var465, var101, var904, var1336, var2886, var4105}", $component0);
 if_setonstattransmit("emote_update($component1, $component4)", $component0);

@@ -7,12 +7,12 @@ def_int $int4 = if_getscrollheight($component2);
 if ($int4 <= 0 | $int4 = ^max_32bit_int) {
 	return;
 }
-$int4 = ~script1226($int4, $int1);
+$int4 = ~script3233($int4, $int1);
 if_setscrollsize(if_getscrollwidth($component2), $int4, $component2);
 if (cc_find($component3, 3) = ^true) {
 	cc_settext(~script7175($text0, $int4));
 }
 def_int $int5 = if_getscrollwidth(interface_650:2);
 def_int $height6 = if_getscrollheight(interface_650:2);
-$int5 = ~script1226($int5, $int1);
-~script3044($int5, $height6);
+$int5 = ~script3233($int5, $int1);
+~script4924($int5, $height6);

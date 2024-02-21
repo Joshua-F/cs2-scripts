@@ -1,3 +1,13 @@
 // 4675
-[clientscript,script4675]
-~script4850;
+[clientscript,script4675](int $opindex0, component $component1, int $int2, int $comsubid3, int $int4, int $int5, int $int6, boolean $boolean7)
+if ($opindex0 ! 1) {
+	return;
+}
+if ($int2 = %varcint1194) {
+	%varcint1194 = 0;
+} else {
+	%varcint1194 = $int2;
+	sound_synth(interface_select1, 1, 0);
+}
+~script4222($boolean7);
+~script4298(interface_592:28, interface_592:27, $boolean7);

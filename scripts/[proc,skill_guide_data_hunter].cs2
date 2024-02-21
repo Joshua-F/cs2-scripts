@@ -52,6 +52,12 @@ if ($int0 = 2) {
 	if ($int1 = 3) {
 		return(45, butterfly_9973, "Black warlock butterflies (jungle)");
 	}
+	if ($int1 = 4) {
+		return(65, sunlight_moth_28841, "Sunlight moths (savannah)");
+	}
+	if ($int1 = 5) {
+		return(75, moonlight_moth_28842, "Moonlight moths (caverns)");
+	}
 	return(-1, null, "");
 }
 if ($int0 = 3) {
@@ -143,6 +149,9 @@ if ($int0 = 4) {
 		return(51, kebbit_9959, "Sabre-toothed kebbits (snow)<br>Preferred bait: Raw meat");
 	}
 	if ($int1 = 4) {
+		return(57, pyre_fox_28843, "Pyre foxes (savannah)<br>Preferred bait: Embertail jerboa tail");
+	}
+	if ($int1 = 5) {
 		return(60, monkey_19556, "Maniacal monkeys (Ape Atoll)<br>Preferred bait: Banana");
 	}
 	return(-1, null, "");
@@ -152,12 +161,15 @@ if ($int0 = 5) {
 		return(27, ferret_10092, "Ferrets (woodland)");
 	}
 	if ($int1 = 1) {
-		return(53, chinchompa_9976, "Chinchompas (woodland)<br>Preferred bait: Spicy chopped tomatoes");
+		return(39, embertail_jerboa_28844, "Embertail jerboa (savannah)");
 	}
 	if ($int1 = 2) {
-		return(63, red_chinchompa_9977, "Red chinchompas (jungle)<br>Preferred bait: Spicy minced meat");
+		return(53, chinchompa_9976, "Chinchompas (woodland)<br>Preferred bait: Spicy chopped tomatoes");
 	}
 	if ($int1 = 3) {
+		return(63, red_chinchompa_9977, "Red chinchompas (jungle)<br>Preferred bait: Spicy minced meat");
+	}
+	if ($int1 = 4) {
 		return(73, dummy_chinchompa_5091, "Black chinchompas (woodland)<br>Preferred bait: Spicy minced meat");
 	}
 	return(-1, null, "");
@@ -175,6 +187,9 @@ if ($int0 = 6) {
 	if ($int1 = 3) {
 		return(67, black_salamander_10148, "Black salamanders (lava)<br>Preferred bait: Harralander tar");
 	}
+	if ($int1 = 4) {
+		return(79, stony_salamander_28812, "Stony salamanders (mountain)<br>Preferred bait: Irit tar");
+	}
 	return(-1, null, "");
 }
 if ($int0 = 7) {
@@ -186,6 +201,12 @@ if ($int0 = 7) {
 	}
 	if ($int1 = 2) {
 		return(55, kyatt_hat_10039, "Sabre-toothed kyatts (snow)");
+	}
+	if ($int1 = 3) {
+		return(72, sunlight_antelope_28845, "Sunlight antelope (savannah)");
+	}
+	if ($int1 = 4) {
+		return(91, moonlight_antelope_28846, "Moonlight antelope (caverns)");
 	}
 	return(-1, null, "");
 }
@@ -365,7 +386,22 @@ if ($int0 = 13) {
 		return(44, pufferfish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
 	}
 	if ($int1 = 4) {
+		return(46, footprint_9951, "Access to the Hunter Guild & Tier 1 Hunters' Rumours");
+	}
+	if ($int1 = 5) {
+		return(50, hunters_sunlight_crossbow_28847, "Equip the Sunlight hunters' crossbow (with 66 Ranged)");
+	}
+	if ($int1 = 6) {
+		return(57, footprint_9951, "Tier 2 Hunters' Rumours");
+	}
+	if ($int1 = 7) {
 		return(71, imp_9952, "Imps (worldwide)<br>Preferred bait: Magical beads");
+	}
+	if ($int1 = 8) {
+		return(72, footprint_9951, "Tier 3 Hunters' Rumours");
+	}
+	if ($int1 = 9) {
+		return(91, footprint_9951, "Tier 4 Hunters' Rumours");
 	}
 	return(-1, null, "");
 }

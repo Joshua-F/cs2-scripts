@@ -1,31 +1,50 @@
 // 4298
-[proc,script4298](component $component0, string $string0, int $width1, int $height2)
-def_int $int3 = 0;
-def_int $colour4 = ^black;
-def_int $colour5 = ^black;
-def_obj $obj6 = null;
-def_int $num7 = 0;
-def_int $colour8 = ^black;
-def_int $colour9 = ^black;
-def_int $int10 = 0;
-cc_deleteall($component0);
-if_settext("", $component0);
-if_setscrollsize(0, 0, $component0);
-if_setcolour(^black, $component0);
-if_setgradientcolour(^black, $component0);
-if_settext($string0, $component0);
-if_setscrollsize($width1, $height2, $component0);
-$colour4 = loottracker_lootcount_byname($string0);
-if_setcolour($colour4, $component0);
-if_setgradientcolour(0x000001, $component0);
-while ($colour5 <= $colour4) {
-	$obj6, $num7 = loottracker_lootget_byname($string0, calc($colour5 + 1));
-	$colour8, $colour9, $int10 = ~loottracker_value_item($obj6);
-	cc_create($component0, ^iftype_rectangle, $int3);
-	$int3 = calc($int3 + 1);
-	cc_setobject($obj6, $num7);
-	cc_setcolour($colour8);
-	cc_setgradientcolour($colour9);
-	cc_setgradienttrans(~bool_to_int(stringvector_contains(stringvector_2, oc_name($obj6), true, false)));
-	$colour5 = calc($colour5 + 1);
+[proc,script4298](component $component0, component $component1, boolean $boolean2)
+def_int $comsubid3 = ~v2_stone_button($component0);
+def_string $op0 = "Continue";
+def_boolean $boolean4 = ~on_mobile;
+def_int $colour5 = 0x00f010;
+if (%varcint1194 = 0) {
+	$colour5 = 0x9f9f9f;
+}
+if_setop(1, $op0, $component0);
+cc_create($component0, ^iftype_text, $comsubid3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext($op0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour($colour5);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if (%varcint1194 = 0) {
+	if_settrans(190, $component0);
+}
+cc_sethide(false);
+if ($boolean4 = false & %varcint1194 ! 0) {
+	if_setonmouseleave("script3234($component0, false, $op0, $colour5)", $component0);
+	if_setonmouserepeat("script3234($component0, true, $op0, $colour5)", $component0);
+} else {
+	if_setonmouseleave(null, $component0);
+	if_setonmouserepeat(null, $component0);
+}
+if ($boolean2 = true) {
+	$op0 = "Claim";
+	$colour5 = 0xff981f;
+	if ($boolean4 = false) {
+		if_setonmouseleave("script3234($component1, false, $op0, $colour5)", $component1);
+		if_setonmouserepeat("script3234($component1, true, $op0, $colour5)", $component1);
+	}
+	if_setop(1, $op0, $component1);
+	if_setonop("script4864", $component1);
+	if_sethide(false, $component1);
+	$comsubid3 = 0;
+	$comsubid3 = ~v2_stone_button($component1);
+	cc_create($component1, ^iftype_text, $comsubid3);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settext($op0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour($colour5);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 }

@@ -16,21 +16,21 @@ if ($int8 >= 0) {
 		~script7165($component3, $component4, $int8, $int6, $int7);
 	} else {
 		~script7164($component3, $component4, $obj0, $int9, $int1);
-		if ($int9 = 0 & %varbit9607 = 0) {
+		if ($int9 = 0 & %varbit9902 = 0) {
 			$int5 = 1;
 		}
 	}
 }
-def_int $int10 = ~script4453($int2);
+def_int $int10 = ~script4939($int2);
 if ($int10 >= 0) {
-	$component3 = ~script4032($int10);
-	$component4 = ~script4221($int10);
+	$component3 = ~script4933($int10);
+	$component4 = ~script4934($int10);
 	$int6, $int7 = ~script7177($component3, $obj0);
 	if ($int6 >= 0) {
 		~script7163($component3, $component4, $int6, $int7, $int9, $int1);
 	} else {
 		~script7164($component3, $component4, $obj0, $int9, $int1);
-		if ($int9 = 0 & %varbit9607 = 1) {
+		if ($int9 = 0 & %varbit9902 = 1) {
 			$int5 = 1;
 		}
 	}

@@ -1,26 +1,54 @@
 // 4297
-[proc,script4297](component $component0, component $component1)
-cc_deleteall($component1);
-if_settext(if_gettext($component0), $component1);
-if_setscrollsize(if_getscrollwidth($component0), if_getscrollheight($component0), $component1);
-if_setcolour(if_getcolour($component0), $component1);
-if_setgradientcolour(if_getgradientcolour($component0), $component1);
-def_int $int2 = 0;
-def_obj $obj3 = null;
-def_int $num4 = 0;
-def_int $colour5 = ^black;
-def_int $colour6 = ^black;
-def_int $int7 = 0;
-while (cc_find($component0, $int2) = ^true) {
-	$obj3 = cc_getinvobject;
-	$num4 = cc_getinvcount;
-	$colour5 = cc_getcolour;
-	$colour6 = cc_getgradientcolour;
-	$int7 = cc_getgradienttrans;
-	cc_create($component1, ^iftype_rectangle, $int2);
-	cc_setobject($obj3, $num4);
-	cc_setcolour($colour5);
-	cc_setgradientcolour($colour6);
-	cc_setgradienttrans($int7);
-	$int2 = calc($int2 + 1);
+[proc,script4297](component $component0, struct $struct1, int $int2, boolean $boolean3)
+def_string $string0 = struct_param($struct1, param_1894);
+def_string $string1 = ~script3508($struct1);
+def_int $int4 = struct_param($struct1, param_1901);
+def_boolean $boolean5 = struct_param($struct1, param_1899);
+def_int $int6 = 0;
+if ($boolean5 = true) {
+	$int6 = ~script4877($struct1);
 }
+if ($int6 = 1) {
+	$string0 = append($string0, " (II)");
+} else if ($int6 = 2) {
+	$string0 = append($string0, " (III)");
+}
+def_enum $enum7 = enum(int, enum, enum_5360, calc($int6 + 1));
+def_graphic $graphic8 = enum(int, graphic, $enum7, struct_param($struct1, param_1912));
+def_graphic $graphic9 = enum(int, graphic, enum_5359, calc($int6 + 1));
+cc_deleteall($component0);
+def_int $int10 = 0;
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_dark");
+cc_settiling(true);
+cc_create($component0, ^iftype_rectangle, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+if (%varcint1194 = $int2) {
+	cc_settrans(200);
+	if_setonmouseover(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setontimer(null, $component0);
+} else {
+	~script4452($component0, $int2, cc_getid, 255, 225, 200, $boolean3);
+}
+if_setop(1, "Set", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);
+$int10 = ~thinbox($component0, $int10);
+.cc_create($component0, ^iftype_graphic, $int10);
+.cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setgraphic($graphic9);
+$int10 = calc($int10 + 1);
+.cc_create($component0, ^iftype_graphic, $int10);
+.cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setgraphic($graphic8);
+$int10 = calc($int10 + 1);

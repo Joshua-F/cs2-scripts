@@ -1,0 +1,27 @@
+// 4914
+[proc,script4914](component $component0, component $component1)
+cc_deleteall($component1);
+cc_deleteall($component0);
+if_setop(1, "", $component1);
+if_setop(2, "", $component1);
+if_setop(10, "", $component1);
+def_int $int2 = 0;
+def_int $trans3 = 100;
+if (~script4916 = 1) {
+	$int2 = 1;
+	$trans3 = 0;
+} else if (~script4917 = 0) {
+	return;
+} else if (%var904 = 1337 & ~rental_world = 1) {
+	return;
+}
+if (stat_base(ranged) < 75) {
+	$int2 = 0;
+	$trans3 = 100;
+}
+cc_create($component0, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,0");
+cc_settrans($trans3);
+~script4915($component1, $int2);

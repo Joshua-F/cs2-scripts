@@ -1,0 +1,26 @@
+// 4889
+[clientscript,script4889](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, int $comsubid4, component $component5)
+if ($comsubid1 < 0 | $comsubid1 >= $comsubid4) {
+	return;
+}
+if ($dropsubid3 < 0 | $dropsubid3 >= $comsubid4) {
+	return;
+}
+if ($drop0 ! $drop2) {
+	return;
+}
+def_obj $obj6 = inv_getobj(inv_873, $comsubid1);
+if ($obj6 = null) {
+	return;
+}
+def_obj $obj7 = inv_getobj(inv_873, $dropsubid3);
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~script4885($obj6, inv_getnum(inv_873, $comsubid1), $component5, $comsubid4);
+}
+if (cc_find($drop0, $comsubid1) = ^true) {
+	if ($obj7 ! null) {
+		~script4885($obj7, inv_getnum(inv_873, $dropsubid3), $component5, $comsubid4);
+	} else {
+		~script4887;
+	}
+}

@@ -34,7 +34,7 @@ if_setsize($int5, $height9, ^setsize_abs, ^setsize_abs, poh_jewellery_box:7);
 if_setposition(calc(10 + $int5 + 5), calc(40 + $int7 + $int8 + 5 + 5), ^setpos_abs_left, ^setpos_abs_top, poh_jewellery_box:7);
 def_int $int14 = ~script2455;
 def_int $int15 = ~poh_jewellery_box_prepbox(poh_jewellery_box:2, 1, "Ring of Dueling", ring_of_dueling_8_2552, $int0);
-$int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:2, 3);
+$int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:2, 4);
 def_string $string1 = "PvP Arena";
 if ($int14 = 1 & ~script3681(6) = 0) {
 	$string1 = "<str><$string1></str>";
@@ -50,85 +50,93 @@ if ($int14 = 1 & ~script3681(11) = 0) {
 	$string1 = "<str><$string1></str>";
 }
 $int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:2, 1, $string1, $int3, $int0, $int15, $int2, 2);
+$string1 = "Fortis Colosseum";
+if (testbit($flags1, 4) = ^false) {
+	$string1 = "<str><$string1></str>";
+}
+if ($int14 = 1 & ~script3681(21) = 0) {
+	$string1 = "<str><$string1></str>";
+}
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:2, 1, $string1, $int3, $int0, $int15, $int2, 3);
 $int15 = ~poh_jewellery_box_prepbox(poh_jewellery_box:3, 1, "Games Necklace", games_necklace_8_3853, $int0);
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:3, 5);
 $string1 = "Burthorpe";
 if ($int14 = 1 & ~script3681(3) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 3);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 4);
 $string1 = "Barbarian Outpost";
 if ($int14 = 1 & ~script3681(4) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 4);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 5);
 $string1 = "Corporeal Beast";
 if ($int14 = 1 & ~script3681(11) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 5);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 6);
 $string1 = "Tears of Guthix";
 if (testbit($flags1, 0) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 6);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 7);
 $string1 = "Wintertodt Camp";
 if (testbit($flags1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 } else if ($int14 = 1 & ~script3681(20) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 7);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int15, $int2, 8);
 $int15 = ~poh_jewellery_box_prepbox(poh_jewellery_box:4, 2, "Combat bracelet", combat_bracelet_6_11972, $int0);
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:4, 4);
 $string1 = "Warriors' Guild";
 if ($int14 = 1 & ~script3681(3) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:4, 2, $string1, $int3, $int0, $int15, $int2, 8);
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:4, 2, "Champions' Guild", $int3, $int0, $int15, $int2, 9);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:4, 2, $string1, $int3, $int0, $int15, $int2, 9);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:4, 2, "Champions' Guild", $int3, $int0, $int15, $int2, 10);
 $string1 = "Monastery";
 if ($int14 = 1 & ~script3681(3) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:4, 2, $string1, $int3, $int0, $int15, $int2, 10);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:4, 2, $string1, $int3, $int0, $int15, $int2, 11);
 $string1 = "Ranging Guild";
 if ($int14 = 1 & ~script3681(4) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:4, 2, $string1, $int3, $int0, $int15, $int2, 11);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:4, 2, $string1, $int3, $int0, $int15, $int2, 12);
 $int15 = ~poh_jewellery_box_prepbox(poh_jewellery_box:5, 2, "Skills necklace", skills_necklace_6_11968, $int0);
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:5, 6);
 $string1 = "Fishing Guild";
 if ($int14 = 1 & ~script3681(4) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 12);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 13);
 $string1 = "Mining Guild";
 if ($int14 = 1 & ~script3681(3) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 13);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 14);
 $string1 = "Crafting Guild";
 if ($int14 = 1 & ~script3681(3) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 14);
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, "Cooking Guild", $int3, $int0, $int15, $int2, 15);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 15);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, "Cooking Guild", $int3, $int0, $int15, $int2, 16);
 $string1 = "Woodcutting Guild";
 if (testbit($flags1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 } else if ($int14 = 1 & ~script3681(20) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 16);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 17);
 $string1 = "Farming Guild";
 if (testbit($flags1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 } else if ($int14 = 1 & ~script3681(20) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 17);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int15, $int2, 18);
 $int15 = ~poh_jewellery_box_prepbox(poh_jewellery_box:6, 3, "Ring of Wealth", ring_of_wealth_5_11980, $int0);
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:6, 4);
 $string1 = "Miscellania";
@@ -137,27 +145,27 @@ if (testbit($flags1, 2) = ^false) {
 } else if ($int14 = 1 & ~script3681(8) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, $string1, $int3, $int0, $int15, $int2, 18);
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, "Grand Exchange", $int3, $int0, $int15, $int2, 19);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, $string1, $int3, $int0, $int15, $int2, 19);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, "Grand Exchange", $int3, $int0, $int15, $int2, 20);
 $string1 = "Falador Park";
 if ($int14 = 1 & ~script3681(3) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, $string1, $int3, $int0, $int15, $int2, 20);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, $string1, $int3, $int0, $int15, $int2, 21);
 $string1 = "Dondakan's Rock";
 if (testbit($flags1, 3) = ^false) {
 	$string1 = "<str><$string1></str>";
 } else if ($int14 = 1 & ~script3681(8) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, $string1, $int3, $int0, $int15, $int2, 21);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, $string1, $int3, $int0, $int15, $int2, 22);
 $int15 = ~poh_jewellery_box_prepbox(poh_jewellery_box:7, 3, "Amulet of Glory", amulet_of_glory_6_11978, $int0);
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:7, 4);
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:7, 3, "Edgeville", $int3, $int0, $int15, $int2, 22);
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:7, 3, "Karamja", $int3, $int0, $int15, $int2, 23);
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:7, 3, "Draynor Village", $int3, $int0, $int15, $int2, 24);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:7, 3, "Edgeville", $int3, $int0, $int15, $int2, 23);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:7, 3, "Karamja", $int3, $int0, $int15, $int2, 24);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:7, 3, "Draynor Village", $int3, $int0, $int15, $int2, 25);
 $string1 = "Al Kharid";
 if ($int14 = 1 & ~script3681(6) = 0) {
 	$string1 = "<str><$string1></str>";
 }
-$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:7, 3, $string1, $int3, $int0, $int15, $int2, 25);
+$int15, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:7, 3, $string1, $int3, $int0, $int15, $int2, 26);

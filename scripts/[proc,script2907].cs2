@@ -1,61 +1,123 @@
 // 2907
-[proc,script2907](component $component0, int $int1, string $string0, int $int2, boolean $boolean3, int $int4, int $int5, int $int6, int $int7)(int, int, int, int, int)
-$int6 = 0;
-$int7 = calc($int7 + 2);
-$int6 = ~thinbox_specific($component0, $int6, 0, $int7, if_getwidth($component0), 33, ^setpos_abs_left, ^setpos_abs_top);
-if (cc_find($component0, calc($int6 - 2)) = ^true) {
-	cc_setsize(0, cc_getheight, ^setsize_minus, ^setsize_abs);
+[proc,script2907](int $int0, int $int1)(int, namedobj, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, bronze_warhammer_1337, "Bronze warhammer");
+			case 1 :
+				return(1, iron_warhammer_1335, "Iron warhammer");
+			case 2 :
+				return(5, steel_warhammer_1339, "Steel warhammer");
+			case 3 :
+				return(5, black_halberd_3196, "Members: Black halberd<br> (with 10 Attack)");
+			case 4 :
+				return(5, white_halberd_6599, "Members: White halberd<br> (with 10 Attack)");
+			case 5 :
+				return(10, black_warhammer_1341, "Black warhammer");
+			case 6 :
+				return(10, white_warhammer_6613, "Members: White warhammer<br> (with 10 Prayer)");
+			case 7 :
+				return(10, mithril_halberd_3198, "Members: Mithril halberd<br> (with 20 Attack)");
+			case 8 :
+				return(15, adamant_halberd_3200, "Members: Adamant halberd<br> (with 30 Attack)");
+			case 9 :
+				return(20, mithril_warhammer_1343, "Mithril warhammer");
+			case 10 :
+				return(20, rune_halberd_3202, "Members: Rune halberd<br> (with 40 Attack)");
+			case 11 :
+				return(30, adamant_warhammer_1345, "Adamant warhammer");
+			case 12 :
+				return(30, hunters_spear_29351, "Members: Hunter's spear");
+			case 13 :
+				return(30, dragon_halberd_3204, "Members: Dragon halberd<br> (with 60 Attack)");
+			case 14 :
+				return(40, rune_warhammer_1347, "Rune warhammer");
+			case 15 :
+				return(40, barrelchest_anchor_10887, "Members: Barrelchest Anchor<br> (with 60 Attack)");
+			case 16 :
+				return(42, void_knight_mace_8841, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+			case 17 :
+				return(50, granite_maul_4153, "Members: Granite maul<br> (with 50 Attack)");
+			case 18 :
+				return(50, granite_longsword_21646, "Members: Granite longsword<br> (with 50 Attack)");
+			case 19 :
+				return(60, tzhaar_ket_om_6528, "Members: TzHaar-Ket-Om");
+			case 20 :
+				return(60, dragon_warhammer_13576, "Members: Dragon warhammer");
+			case 21 :
+				return(60, ancient_sceptre_27624, "Members: Ancient sceptre<br> (requires Secrets of the North, 50 Attack and 70 Magic)");
+			case 22 :
+				return(70, dharoks_greataxe_4718, "Members: Dharok's greataxe<br> (with 70 Attack)");
+			case 23 :
+				return(70, torags_hammers_4747, "Members: Torag's hammers<br> (with 70 Attack)");
+			case 24 :
+				return(70, abyssal_bludgeon_13263, "Members: Abyssal bludgeon<br> (with 70 Attack)");
+			case 25 :
+				return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Attack)");
+			case 26 :
+				return(75, dual_macuahuitl_29000, "Members: Dual Macuahuitl<br> (with 70 Attack)");
+			case 27 :
+				return(80, soulreaper_axe_28338, "Members: Soulreaper axe<br> (with 80 Attack)");
+			case 28 :
+				return(90, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 80 Attack)");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+			case 1 :
+				return(50, granite_helm_10589, "Granite armour<br> (with 50 Defence)");
+			case 2 :
+				return(70, inquisitors_great_helm_24419, "Members: Inquisitor's armour<br> (with 30 Defence)");
+			case 3 :
+				return(75, primordial_boots_13239, "Primordial boots<br> (with 75 Defence)");
+			case 4 :
+				return(75, blood_moon_helm_29030, "Members: Bloodrager set<br> (with 70 Defence)");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(19, agility_balance_6515, "Cross the River Lum to Al Kharid<br> (with 8 Agility and 37 Ranged)");
+			case 1 :
+				return(21, agility_balance_6515, "Karamja<br> (with 53 Agility and 42 Ranged)");
+			case 2 :
+				return(22, agility_balance_6515, "Escape from the water obelisk island<br> (with 36 Agility and 39 Ranged)");
+			case 3 :
+				return(28, agility_balance_6515, "Scale the Observatory cliff<br> (with 23 Agility and 24 Ranged, after completing the Observatory quest)");
+			case 4 :
+				return(35, agility_climb_6517, "Scale the Catherby cliff<br> (with 32 Agility and 35 Ranged)");
+			case 5 :
+				return(37, agility_climb_6517, "Scale Falador wall<br> (with 11 Agility and 19 Ranged)");
+			case 6 :
+				return(38, agility_climb_6517, "Scale Yanille wall<br> (with 39 Agility and 21 Ranged)");
+			case 7 :
+				return(70, agility_balance_6515, "Cross cave, south of Dorgesh-Kaan <br> (with 70 Agility and 70 Strength, after completing Death to the Dorgeshuun)");
+		}
+	case 3 :
+		if ($int1 = 0) {
+			return(60, agility_jump_11793, "Access the God Wars Dungeon via the Strength route");
+		} else if ($int1 = 1) {
+			return(70, agility_jump_11793, "Enter the Bandos area of the God Wars Dungeon");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
+			case 1 :
+				return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Agility & 48 Fishing)");
+			case 2 :
+				return(30, leaping_salmon_11330, "Leaping salmon<br> (with 30 Agility & 58 Fishing)");
+			case 3 :
+				return(35, raw_tuna_359, "Tuna<br> (with 55 Fishing)");
+			case 4 :
+				return(35, raw_harpoonfish_25564, "Harpoonfish<br> (with 55 Fishing)");
+			case 5 :
+				return(45, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility & 70 Fishing)");
+			case 6 :
+				return(50, raw_swordfish_371, "Swordfish<br> (with 70 Fishing)");
+			case 7 :
+				return(76, raw_shark_383, "Shark<br> (with 96 Fishing)");
+		}
 }
-if (cc_find($component0, calc($int6 - 1)) = ^true) {
-	cc_setsize(2, cc_getheight, ^setsize_minus, ^setsize_abs);
-}
-cc_create($component0, ^iftype_graphic, $int6);
-$int6 = calc($int6 + 1);
-cc_setposition(2, calc($int7 + 2), ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(4, calc(33 - 4), ^setsize_minus, ^setsize_abs);
-if ($boolean3 = false) {
-	cc_setgraphic("tradebacking_dark");
-} else {
-	cc_setgraphic("graphic_4948");
-}
-cc_settiling(true);
-if ($int4 = 1) {
-	cc_setop(1, "Collapse");
-} else {
-	cc_setop(1, "Expand");
-}
-cc_setop(2, "Clear data");
-if ($boolean3 = false) {
-	cc_setop(3, "Ignore");
-} else {
-	cc_setop(3, "Stop ignoring");
-}
-cc_setopbase("<col=ff9040><$string0></col>");
-cc_setonop("script7179(event_op, $int1)");
-cc_create($component0, ^iftype_text, $int6);
-$int6 = calc($int6 + 1);
-cc_setposition(6, calc($int7 + 4), ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(12, calc(33 - 8), ^setsize_minus, ^setsize_abs);
-cc_settextfont(b12_full);
-cc_settextshadow(true);
-cc_setcolour(0xff981f);
-cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-if ($int2 = -1) {
-	$int2 = ^max_32bit_int;
-}
-cc_settext(~script7175($string0, $int2));
-cc_create($component0, ^iftype_text, $int6);
-$int6 = calc($int6 + 1);
-cc_setposition(6, calc($int7 + 4), ^setpos_abs_right, ^setpos_abs_top);
-cc_setsize(12, calc(33 - 8), ^setsize_minus, ^setsize_abs);
-cc_settextfont(b12_full);
-cc_settextshadow(true);
-cc_setcolour(0xff981f);
-cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-$int6 = ~thinbox_specific($component0, $int6, 0, calc($int7 + 33 - 1), if_getwidth($component0), calc($int5 + 8), ^setpos_abs_left, ^setpos_abs_top);
-def_int $comsubid8 = calc($int6 - 2);
-def_int $comsubid9 = calc($int6 - 1);
-cc_create($component0, ^iftype_text, $int6);
-def_int $comsubid10 = $int6;
-$int6 = calc($int6 + 1);
-return($int6, $int7, $comsubid8, $comsubid9, $comsubid10);
+return(-1, null, "");

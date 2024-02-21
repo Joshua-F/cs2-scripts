@@ -41,7 +41,7 @@ def_string $string1 = "null";
 ~script7188;
 ~script7185;
 ~script7182(-1);
-switch_int (%varbit9607) {
+switch_int (%varbit9902) {
 	case 0 :
 		$int7 = 10;
 		$int9 = 0;
@@ -54,8 +54,8 @@ switch_int (%varbit9607) {
 		return;
 }
 while ($int8 < $int7) {
-	$component0 = ~script4031($int9, $int8);
-	$component1 = ~script4031($int10, $int8);
+	$component0 = ~script4932($int9, $int8);
+	$component1 = ~script4932($int10, $int8);
 	$string0 = if_gettext($component0);
 	$int11 = if_getscrollwidth($component0);
 	$int12 = if_getscrollheight($component0);
@@ -69,22 +69,22 @@ while ($int8 < $int7) {
 	$int27 = 0;
 	$boolean25 = stringvector_contains(stringvector_1, $string0, true, false);
 	if (($boolean25 = false | %varbit14880 = 1) & $int11 ! 0) {
-		$int27, $int26, $comsubid28, $comsubid29, $comsubid30 = ~script2907($component1, $int8, $string0, $int12, $boolean25, $int13, $int23, $int27, $int26);
+		$int27, $int26, $comsubid28, $comsubid29, $comsubid30 = ~script4921($component1, $int8, $string0, $int12, $boolean25, $int13, $int23, $int27, $int26);
 		while ($int16 < $int15) {
 			if (cc_find($component0, $int16) = ^true) {
 				$obj17, $int18, $int19, $int21, $int20, $int22, $int24 = ~script7173($component0, $int16);
 				if ($int24 = 0 | %varbit14880 = 1) {
 					if ($int13 = 1) {
-						$int27, $int26, $int31, $int32, $int23 = ~script3042($component4, $component1, $int8, $int16, $obj17, $int18, $int19, $int21, $int20, $int22, $int24, $int27, $int26, $int31, $int32, $int23);
+						$int27, $int26, $int31, $int32, $int23 = ~script4922($component4, $component1, $int8, $int16, $obj17, $int18, $int19, $int21, $int20, $int22, $int24, $int27, $int26, $int31, $int32, $int23);
 					}
 					if (%varbit14881 = 0) {
 						if ($int22 >= 0) {
-							$int14 = ~script1226($int14, $int22);
+							$int14 = ~script3233($int14, $int22);
 						} else {
 							$int14 = ^max_32bit_int;
 						}
 					} else if ($int20 >= 0) {
-						$int14 = ~script1226($int14, $int20);
+						$int14 = ~script3233($int14, $int20);
 					} else {
 						$int14 = ^max_32bit_int;
 					}
@@ -99,7 +99,7 @@ while ($int8 < $int7) {
 			}
 		}
 		if ($int13 = 1 & $int23 = 0) {
-			$int23, $int26 = ~script3043($component1, $comsubid30, $int26);
+			$int23, $int26 = ~script4923($component1, $comsubid30, $int26);
 		}
 		if ($int23 > 0) {
 			if (cc_find($component1, $comsubid28) = ^true) {
@@ -114,15 +114,15 @@ while ($int8 < $int7) {
 		if (cc_find($component1, 4) = ^true) {
 			cc_settext("<~magic_spacer_tostring_extended($int14, ".", 1)> gp");
 		}
-		if (%varbit9607 = 0) {
-			$int5 = ~script1226($int5, $int12);
+		if (%varbit9902 = 0) {
+			$int5 = ~script3233($int5, $int12);
 		} else {
-			$int5 = ~script1226($int5, 1);
+			$int5 = ~script3233($int5, 1);
 		}
-		$int6 = ~script1226($int6, $int14);
+		$int6 = ~script3233($int6, $int14);
 	}
 	$int8 = calc($int8 + 1);
 }
 $int26 = calc($int26 + 42);
-~script3044($int5, $int6);
+~script4924($int5, $int6);
 ~script7135($int26);

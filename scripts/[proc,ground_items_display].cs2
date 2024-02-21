@@ -5,7 +5,7 @@ def_string $string0 = removetags(oc_name($obj0));
 if (stringvector_contains(stringvector_3, $string0, true, false) = true) {
 	return(0);
 }
-if (%varbit9606 = 1 & oc_stockmarket($obj0) = false) {
+if (%varbit9901 = 1 & oc_stockmarket($obj0) = false) {
 	return(0);
 }
 return(1);

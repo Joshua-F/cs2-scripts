@@ -1,26 +1,21 @@
 // 4221
-[proc,script4221](int $int0)(component)
-switch_int ($int0) {
-	case 0 :
-		return(interface_650:72);
-	case 1 :
-		return(interface_650:73);
-	case 2 :
-		return(interface_650:74);
-	case 3 :
-		return(interface_650:75);
-	case 4 :
-		return(interface_650:76);
-	case 5 :
-		return(interface_650:77);
-	case 6 :
-		return(interface_650:78);
-	case 7 :
-		return(interface_650:79);
-	case 8 :
-		return(interface_650:80);
-	case 9 :
-		return(interface_650:81);
-	case default :
-		return(null);
+[proc,script4221](obj $obj0, int $num1)(int)
+cc_clearops;
+def_int $int2 = 0;
+if ($obj0 ! null) {
+	cc_setobject($obj0, $num1);
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_settrans(0);
+	cc_setop(1, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	$int2 = 1;
+} else {
+	cc_settrans(255);
+	cc_setobject(obj_6512, 1);
+	cc_setonop(null);
 }
+cc_setontimer(null);
+if ($int2 = 1) {
+	return(0);
+}
+return(1);

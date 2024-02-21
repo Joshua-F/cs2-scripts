@@ -4,6 +4,6 @@ def_string $string0 = removetags(oc_name($obj0));
 if (string_length($string0) = 0) {
 	return;
 }
-$obj2 = ~script4851($obj2);
+$obj2 = ~script4943($obj2);
 loottracker_lootadd($string0, $obj2, $int3, $int1);
 ~script7158($string0, $obj2, $int3, $int1);

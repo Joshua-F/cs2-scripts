@@ -1,0 +1,56 @@
+// 4918
+[proc,script4918](component $component0, boolean $boolean1, int $comsubid2)
+cc_deleteall(interface_592:20);
+def_int $size3 = 0;
+def_int $size4 = inv_size(inv_869);
+def_int $int5 = calc((42 - 36) * 3 - 2);
+def_int $int6 = calc((36 - 32) * 2);
+def_int $int7 = -1;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_string $string0 = ",";
+def_int $int10 = 1;
+def_int $int11 = 0;
+cc_create(interface_592:20, ^iftype_graphic, $int11);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_dark");
+cc_settiling(true);
+$int11 = calc($int11 + 1);
+$int11 = ~thinbox(interface_592:20, $int11);
+if ($boolean1 = true & ~on_mobile = false) {
+	if (cc_find(interface_592:29, $comsubid2) = ^true) {
+		cc_settrans(100);
+		cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_centre);
+	}
+	while ($size3 < $size4 & $int10 = 1) {
+		if (inv_getobj(inv_869, $size3) ! null) {
+			$int9 = calc($int6 + $size3 / 4 * 36);
+			cc_create(interface_592:20, ^iftype_graphic, $int11);
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			cc_sethide(false);
+			cc_setposition(calc(36 * $size3 + 5), 5, ^setpos_abs_left, ^setpos_abs_top);
+			~script4221(inv_getobj(inv_869, $size3), inv_getnum(inv_869, $size3));
+			$int11 = calc($int11 + 1);
+		} else {
+			$int10 = 0;
+		}
+		$size3 = calc($size3 + 1);
+	}
+	cc_create(interface_592:20, ^iftype_text, $int11);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+	cc_settext("Total value: <col=ffffff><~tostring_spacer(%var263, $string0)> GP</col>");
+} else {
+	if (cc_find(interface_592:29, $comsubid2) = ^true) {
+		cc_settrans(0);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	}
+	~script4454(1, 0);
+}

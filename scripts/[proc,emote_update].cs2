@@ -1,7 +1,7 @@
 // 701
 [proc,emote_update](component $component0, component $component1)
 def_int $int2 = 0;
-while ($int2 <= 52) {
+while ($int2 <= 53) {
 	if (cc_find($component0, $int2) = ^true) {
 		cc_clearops;
 		~script7302($int2);
@@ -9,7 +9,7 @@ while ($int2 <= 52) {
 		~emote_op2_configure($int2);
 		~script7303($int2);
 		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, ~emote_get_name($int2), 25, 120)");
-		if (cc_find($component0, calc(52 + $int2 + 1)) = ^true) {
+		if (cc_find($component0, calc(53 + $int2 + 1)) = ^true) {
 			if (~emote_checkunlocked($int2) = true) {
 				~emote_set_graphic($int2);
 			} else {

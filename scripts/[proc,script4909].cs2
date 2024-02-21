@@ -1,0 +1,18 @@
+// 4909
+[proc,script4909](inv $inv0)(int)
+if ($inv0 = null | $inv0 = inv_315) {
+	return(0);
+}
+if (~speedrunning_world = 1) {
+	return(1);
+}
+if (~league_world = 1) {
+	return(1);
+}
+if (enum(inv, boolean, enum_1173, $inv0) = true) {
+	return(1);
+}
+if (enum(inv, boolean, enum_5393, $inv0) = true) {
+	return(1);
+}
+return(0);

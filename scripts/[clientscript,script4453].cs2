@@ -1,0 +1,14 @@
+// 4453
+[clientscript,script4453](boolean $boolean0, component $component1, int $int2, int $comsubid3, int $trans4, int $trans5)
+if ($boolean0 = true) {
+	sound_synth(synth_7819, 1, 0);
+	if (cc_find($component1, $comsubid3) = ^true) {
+		cc_settrans($trans5);
+	}
+	~script4454($int2, 1);
+} else {
+	if (cc_find($component1, $comsubid3) = ^true) {
+		cc_settrans($trans4);
+	}
+	~script4454($int2, 0);
+}

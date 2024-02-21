@@ -7,6 +7,9 @@ if_sethide(true, $component1);
 if (inv_total(inv, bolt_pouch_9433) <= 0) {
 	return;
 }
+if (~script4916 = 1 | ~script4917 = 1) {
+	return;
+}
 if_sethide(false, $component1);
 cc_create($component0, ^iftype_graphic, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

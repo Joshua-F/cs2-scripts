@@ -1,26 +1,85 @@
 // 4032
-[proc,script4032](int $int0)(component)
-switch_int ($int0) {
-	case 0 :
-		return(interface_650:14);
-	case 1 :
-		return(interface_650:16);
-	case 2 :
-		return(interface_650:17);
-	case 3 :
-		return(interface_650:18);
-	case 4 :
-		return(interface_650:19);
-	case 5 :
-		return(interface_650:20);
-	case 6 :
-		return(interface_650:21);
-	case 7 :
-		return(interface_650:22);
-	case 8 :
-		return(interface_650:23);
-	case 9 :
-		return(interface_650:24);
-	case default :
-		return(null);
+[proc,script4032](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, int $int11, int $int12)
+def_int $int13 = 0;
+~thinbox(interface_592:20, 0);
+def_int $int14 = %var261;
+def_string $string0 = ",";
+if_settext("<~tostring_spacer($int14, $string0)> GP", $component9);
+def_int $size15 = 0;
+def_int $size16 = inv_size(inv_881);
+def_int $int17 = calc((42 - 36) * 3 - 2);
+def_int $int18 = calc((36 - 32) * 2);
+def_obj $obj19 = null;
+def_int $num20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 1;
+cc_create($component0, ^iftype_graphic, $int13);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_dark");
+cc_settiling(true);
+$int13 = calc($int13 + 1);
+$int13 = ~thinbox($component0, $int13);
+while ($size15 < $size16 & $int22 = 1) {
+	if (inv_getobj(inv_881, $size15) ! null) {
+		cc_create($component2, ^iftype_graphic, $size15);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_sethide(false);
+		cc_setposition(calc(36 * $size15 + 5), 2, ^setpos_abs_left, ^setpos_abs_top);
+		~script4221(inv_getobj(inv_881, $size15), inv_getnum(inv_881, $size15));
+		$int13 = calc($int13 + 1);
+	} else {
+		$int22 = 0;
+	}
+	$size15 = calc($size15 + 1);
 }
+$size15 = 0;
+$int14 = %var262;
+if_settext("<~tostring_spacer($int14, $string0)> GP", $component10);
+$size16 = inv_size(inv_870);
+$int13 = 0;
+cc_create($component1, ^iftype_graphic, $int13);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_dark");
+cc_settiling(true);
+$int13 = calc($int13 + 1);
+$int13 = ~thinbox($component1, $int13);
+while ($size15 < $size16) {
+	$obj19 = inv_getobj(inv_870, $size15);
+	$num20 = inv_getnum(inv_870, $size15);
+	if ($obj19 ! null & $num20 > 0) {
+		cc_create($component3, ^iftype_graphic, $size15);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_sethide(false);
+		cc_setposition(calc(36 * $size15 + 5), 2, ^setpos_abs_left, ^setpos_abs_top);
+		~script4221($obj19, $num20);
+	}
+	$size15 = calc($size15 + 1);
+}
+$int13 = 0;
+if (%var263 > %var261) {
+	if_sethide(false, interface_592:29);
+	cc_deleteall(interface_592:29);
+	cc_create(interface_592:29, ^iftype_graphic, $int13);
+	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic("options_icons,28");
+	if (~on_mobile = false) {
+		if_setonmouseleave("script2080(interface_592:29, false, $int13)", interface_592:29);
+		if_setonmouserepeat("script2080(interface_592:29, true, $int13)", interface_592:29);
+	} else {
+		if_setonop("script2080(interface_592:29, true, $int13)", interface_592:29);
+	}
+}
+def_boolean $boolean23 = false;
+if ($int11 > 0) {
+	$boolean23 = true;
+}
+~script4222($boolean23);
+~script4298($component7, $component8, $boolean23);
+~script4454(0, 0);

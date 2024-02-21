@@ -1,0 +1,26 @@
+// 4902
+[proc,script4902](component $component0, dbrow $dbrow1, int $int2)(int)
+def_coord $coord3 = db_getfield($dbrow1, dbtable_62:2, 0);
+if ($coord3 = null) {
+	return($int2);
+}
+def_graphic $graphic4 = "graphic_5534";
+def_graphic $graphic5 = "graphic_5535";
+if (~coord_distance(coord, $coord3) <= 10) {
+	$graphic4, $graphic5 = "graphic_5536", "graphic_5537";
+} else if (~script4904($dbrow1) = false) {
+	$graphic4, $graphic5 = "graphic_5532", "graphic_5533";
+}
+def_int $int6 = calc(scale(calc(coordx($coord3) - 920), 1125, 462) - 15);
+def_int $int7 = calc(scale(calc(coordz($coord3) - 2834), 615, 260) - 15);
+$int6 = ~minmax(1, 431, calc($int6 + db_getfield($dbrow1, dbtable_62:3, 0)));
+$int7 = ~minmax(1, 229, calc($int7 + db_getfield($dbrow1, dbtable_62:4, 0)));
+cc_create($component0, ^iftype_graphic, $int2);
+cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic4);
+cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setop(1, db_getfield($dbrow1, dbtable_62:1, 0));
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic5, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic4, null)");
+cc_setonop("script4903(event_com, event_comsubid, $graphic5)");
+return(calc($int2 + 1));

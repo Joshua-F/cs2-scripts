@@ -17,7 +17,7 @@ while ($int2 < $int5) {
 	$string0 = loottracker_sourcename($int3);
 	$height4 = loottracker_sourcecount($string0);
 	if ($height4 ! 0) {
-		~script4298($component1, $string0, $int3, $height4);
+		~script4937($component1, $string0, $int3, $height4);
 	}
 	$int2 = calc($int2 + 1);
 }
@@ -25,9 +25,9 @@ def_int $int6 = 0;
 $int5 = loottracker_sourcequery_new(0, 10, 3);
 $int2 = 0;
 while ($int2 < $int5) {
-	$component1 = ~script4032($int2);
+	$component1 = ~script4933($int2);
 	$int6 = loottracker_sourcequery_get($int2);
 	$string0 = loottracker_sourcedropname($int6);
-	~script4452($component1, $string0, $int6);
+	~script4938($component1, $string0, $int6);
 	$int2 = calc($int2 + 1);
 }

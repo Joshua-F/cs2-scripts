@@ -1222,11 +1222,11 @@
 [**1219**](scripts/[clientscript,script1219].cs2)  
 [**1220**](scripts/[clientscript,loottracker_debug_output_single_source].cs2) `[clientscript,loottracker_debug_output_single_source]`  
 [**1221**](scripts/[clientscript,loottracker_debug_ignore_items_output].cs2) `[clientscript,loottracker_debug_ignore_items_output]`  
-[**1222**](scripts/[proc,script1222].cs2)  
+[**1222**](scripts/[clientscript,loottracker_debug_output].cs2) `[clientscript,loottracker_debug_output]`  
 [**1223**](scripts/[clientscript,loottracker_debug_clear].cs2) `[clientscript,loottracker_debug_clear]`  
 [**1224**](scripts/[clientscript,loottracker_debug_clear_source_npc].cs2) `[clientscript,loottracker_debug_clear_source_npc]`  
 [**1225**](scripts/[clientscript,loottracker_debug_clear_source_loc].cs2) `[clientscript,loottracker_debug_clear_source_loc]`  
-[**1226**](scripts/[proc,script1226].cs2)  
+[**1226**](scripts/[clientscript,script1226].cs2)  
 [**1227**](scripts/[clientscript,loottracker_debug_ignore_item_add].cs2) `[clientscript,loottracker_debug_ignore_item_add]`  
 [**1228**](scripts/[clientscript,loottracker_debug_ignore_item_remove].cs2) `[clientscript,loottracker_debug_ignore_item_remove]`  
 [**1229**](scripts/[clientscript,loottracker_debug_ignore_item_str_add].cs2) `[clientscript,loottracker_debug_ignore_item_str_add]`  
@@ -2232,7 +2232,7 @@
 [**2230**](scripts/[proc,shop_quantity].cs2) `[proc,shop_quantity]`  
 [**2231**](scripts/[clientscript,shop_quantity_op].cs2) `[clientscript,shop_quantity_op]`  
 [**2232**](scripts/[clientscript,magic_flash].cs2) `[clientscript,magic_flash]`  
-[**2233**](scripts/[proc,script2233].cs2)  
+[**2233**](scripts/[clientscript,script2233].cs2)  
 [**2234**](scripts/[clientscript,camera_do_zoom].cs2) `[clientscript,camera_do_zoom]`  
 [**2235**](scripts/[clientscript,script2235].cs2)  
 [**2236**](scripts/[clientscript,script2236].cs2)  
@@ -3041,8 +3041,8 @@
 [**3039**](scripts/[clientscript,adventurepath_side_settings_back_op].cs2) `[clientscript,adventurepath_side_settings_back_op]`  
 [**3040**](scripts/[clientscript,script3040].cs2)  
 [**3041**](scripts/[proc,league_create_dropdown].cs2) `[proc,league_create_dropdown]`  
-[**3042**](scripts/[proc,script3042].cs2)  
-[**3043**](scripts/[proc,script3043].cs2)  
+[**3042**](scripts/[clientscript,script3042].cs2)  
+[**3043**](scripts/[loadloc,rocks_50509].cs2) `[loadloc,rocks_50509]`  
 [**3044**](scripts/[proc,script3044].cs2)  
 [**3045**](scripts/[clientscript,trawler_water_init].cs2) `[clientscript,trawler_water_init]`  
 [**3046**](scripts/[clientscript,trawler_water_update].cs2) `[clientscript,trawler_water_update]`  
@@ -3232,8 +3232,8 @@
 [**3230**](scripts/[clientscript,league_side_panel_hudtoggle].cs2) `[clientscript,league_side_panel_hudtoggle]`  
 [**3231**](scripts/[clientscript,league_side_panel_hudop].cs2) `[clientscript,league_side_panel_hudop]`  
 [**3232**](scripts/[proc,league_side_panel_hudtoggle].cs2) `[proc,league_side_panel_hudtoggle]`  
-[**3233**](scripts/[clientscript,loottracker_debug_output_drops].cs2) `[clientscript,loottracker_debug_output_drops]`  
-[**3234**](scripts/[clientscript,loottracker_debug_output_items_with_source_ids].cs2) `[clientscript,loottracker_debug_output_items_with_source_ids]`  
+[**3233**](scripts/[proc,script3233].cs2)  
+[**3234**](scripts/[clientscript,script3234].cs2)  
 [**3235**](scripts/[proc,update_diary_entry_grey].cs2) `[proc,update_diary_entry_grey]`  
 [**3236**](scripts/[proc,script3236].cs2)  
 [**3237**](scripts/[proc,script3237].cs2)  
@@ -3291,7 +3291,7 @@
 [**3289**](scripts/[clientscript,league_reward_confirm_back].cs2) `[clientscript,league_reward_confirm_back]`  
 [**3290**](scripts/[proc,league_reward_shop_showpoints].cs2) `[proc,league_reward_shop_showpoints]`  
 [**3291**](scripts/[clientscript,league_reward_shop_showpoints].cs2) `[clientscript,league_reward_shop_showpoints]`  
-[**3292**](scripts/[clientscript,script3292].cs2)  
+[**3292**](scripts/[proc,script3292].cs2)  
 [**3293**](scripts/[clientscript,boardgames_draughts_options_update_ranked].cs2) `[clientscript,boardgames_draughts_options_update_ranked]`  
 [**3294**](scripts/[proc,boardgames_draughts_options_update_ranked].cs2) `[proc,boardgames_draughts_options_update_ranked]`  
 [**3295**](scripts/[clientscript,boardgames_runeversi_options_init].cs2) `[clientscript,boardgames_runeversi_options_init]`  
@@ -3506,8 +3506,8 @@
 [**3504**](scripts/[clientscript,script3504].cs2)  
 [**3505**](scripts/[proc,inv_freespace].cs2) `[proc,inv_freespace]`  
 [**3506**](scripts/[proc,script3506].cs2)  
-[**3507**](scripts/[clientscript,loottracker_debug_output].cs2) `[clientscript,loottracker_debug_output]`  
-[**3508**](scripts/[clientscript,loottracker_debug_ui_output_drop_info_components].cs2) `[clientscript,loottracker_debug_ui_output_drop_info_components]`  
+[**3507**](scripts/[clientscript,script3507].cs2)  
+[**3508**](scripts/[proc,script3508].cs2)  
 [**3509**](scripts/[proc,adventurepath_voucher_init].cs2) `[proc,adventurepath_voucher_init]`  
 [**3510**](scripts/[proc,script3510].cs2)  
 [**3511**](scripts/[proc,script3511].cs2)  
@@ -3621,9 +3621,9 @@
 [**3619**](scripts/[proc,partydrop_side_build].cs2) `[proc,partydrop_side_build]`  
 [**3620**](scripts/[proc,partydrop_side_drawitem].cs2) `[proc,partydrop_side_drawitem]`  
 [**3621**](scripts/[clientscript,partydrop_side_reorder].cs2) `[clientscript,partydrop_side_reorder]`  
-[**3622**](scripts/[proc,loottracker_debug_ui_output_drop_info_components].cs2) `[proc,loottracker_debug_ui_output_drop_info_components]`  
-[**3623**](scripts/[clientscript,loottracker_debug_ui_output_drop_display_components].cs2) `[clientscript,loottracker_debug_ui_output_drop_display_components]`  
-[**3624**](scripts/[proc,loottracker_debug_ui_output_drop_display_components].cs2) `[proc,loottracker_debug_ui_output_drop_display_components]`  
+[**3622**](scripts/[proc,script3622].cs2)  
+[**3623**](scripts/[clientscript,script3623].cs2)  
+[**3624**](scripts/[proc,script3624].cs2)  
 [**3625**](scripts/[clientscript,imp_box_deposit_init].cs2) `[clientscript,imp_box_deposit_init]`  
 [**3626**](scripts/[clientscript,imp_box_text_update].cs2) `[clientscript,imp_box_text_update]`  
 [**3627**](scripts/[proc,imp_box_text_update].cs2) `[proc,imp_box_text_update]`  
@@ -4136,7 +4136,6 @@
 [**4134**](scripts/[proc,diary_reward_get].cs2) `[proc,diary_reward_get]`  
 [**4135**](scripts/[proc,script4135].cs2)  
 [**4136**](scripts/[proc,quest_is_complete].cs2) `[proc,quest_is_complete]`  
-[**4137**](scripts/[proc,script4137].cs2)  
 [**4138**](scripts/[proc,script4138].cs2)  
 [**4139**](scripts/[clientscript,tutorial_displayname_allow_input].cs2) `[clientscript,tutorial_displayname_allow_input]`  
 [**4140**](scripts/[proc,tutorial_displayname_allow_input].cs2) `[proc,tutorial_displayname_allow_input]`  
@@ -4452,8 +4451,8 @@
 [**4450**](scripts/[proc,clan_create_player_component].cs2) `[proc,clan_create_player_component]`  
 [**4451**](scripts/[clientscript,script4451].cs2)  
 [**4452**](scripts/[proc,script4452].cs2)  
-[**4453**](scripts/[proc,script4453].cs2)  
-[**4454**](scripts/[clientscript,script4454].cs2)  
+[**4453**](scripts/[clientscript,script4453].cs2)  
+[**4454**](scripts/[proc,script4454].cs2)  
 [**4455**](scripts/[clientscript,clan_create_targetmode].cs2) `[clientscript,clan_create_targetmode]`  
 [**4456**](scripts/[proc,clan_permission_get].cs2) `[proc,clan_permission_get]`  
 [**4457**](scripts/[clientscript,clan_permission_init].cs2) `[clientscript,clan_permission_init]`  
@@ -4849,8 +4848,8 @@
 [**4847**](scripts/[clientscript,ca_boss_tab_click].cs2) `[clientscript,ca_boss_tab_click]`  
 [**4848**](scripts/[proc,ca_boss_tab_details].cs2) `[proc,ca_boss_tab_details]`  
 [**4849**](scripts/[proc,dynamic_stone_button_filled].cs2) `[proc,dynamic_stone_button_filled]`  
-[**4850**](scripts/[proc,script4850].cs2)  
-[**4851**](scripts/[proc,script4851].cs2)  
+[**4850**](scripts/[clientscript,script4850].cs2)  
+[**4851**](scripts/[clientscript,script4851].cs2)  
 [**4852**](scripts/[clientscript,script4852].cs2)  
 [**4853**](scripts/[proc,script4853].cs2)  
 [**4854**](scripts/[clientscript,script4854].cs2)  
@@ -4862,6 +4861,87 @@
 [**4860**](scripts/[proc,script4860].cs2)  
 [**4861**](scripts/[clientscript,ca_tasks_reviewsize].cs2) `[clientscript,ca_tasks_reviewsize]`  
 [**4862**](scripts/[proc,script4862].cs2)  
+[**4863**](scripts/[proc,script4863].cs2)  
+[**4864**](scripts/[clientscript,script4864].cs2)  
+[**4865**](scripts/[clientscript,script4865].cs2)  
+[**4866**](scripts/[clientscript,script4866].cs2)  
+[**4867**](scripts/[clientscript,script4867].cs2)  
+[**4868**](scripts/[clientscript,script4868].cs2)  
+[**4869**](scripts/[proc,script4869].cs2)  
+[**4870**](scripts/[proc,script4870].cs2)  
+[**4871**](scripts/[clientscript,script4871].cs2)  
+[**4872**](scripts/[clientscript,script4872].cs2)  
+[**4873**](scripts/[clientscript,script4873].cs2)  
+[**4874**](scripts/[proc,script4874].cs2)  
+[**4875**](scripts/[proc,script4875].cs2)  
+[**4876**](scripts/[proc,script4876].cs2)  
+[**4877**](scripts/[proc,script4877].cs2)  
+[**4878**](scripts/[clientscript,script4878].cs2)  
+[**4879**](scripts/[proc,script4879].cs2)  
+[**4880**](scripts/[clientscript,script4880].cs2)  
+[**4881**](scripts/[proc,script4881].cs2)  
+[**4882**](scripts/[clientscript,script4882].cs2)  
+[**4883**](scripts/[clientscript,script4883].cs2)  
+[**4884**](scripts/[proc,script4884].cs2)  
+[**4885**](scripts/[proc,script4885].cs2)  
+[**4886**](scripts/[proc,script4886].cs2)  
+[**4887**](scripts/[proc,script4887].cs2)  
+[**4888**](scripts/[clientscript,script4888].cs2)  
+[**4889**](scripts/[clientscript,script4889].cs2)  
+[**4890**](scripts/[clientscript,script4890].cs2)  
+[**4891**](scripts/[clientscript,script4891].cs2)  
+[**4892**](scripts/[proc,script4892].cs2)  
+[**4893**](scripts/[clientscript,script4893].cs2)  
+[**4894**](scripts/[clientscript,script4894].cs2)  
+[**4895**](scripts/[clientscript,script4895].cs2)  
+[**4896**](scripts/[proc,script4896].cs2)  
+[**4897**](scripts/[proc,script4897].cs2)  
+[**4898**](scripts/[clientscript,script4898].cs2)  
+[**4899**](scripts/[clientscript,script4899].cs2)  
+[**4900**](scripts/[clientscript,script4900].cs2)  
+[**4901**](scripts/[proc,script4901].cs2)  
+[**4902**](scripts/[proc,script4902].cs2)  
+[**4903**](scripts/[clientscript,script4903].cs2)  
+[**4904**](scripts/[proc,script4904].cs2)  
+[**4905**](scripts/[clientscript,script4905].cs2)  
+[**4906**](scripts/[proc,script4906].cs2)  
+[**4907**](scripts/[proc,script4907].cs2)  
+[**4908**](scripts/[proc,script4908].cs2)  
+[**4909**](scripts/[proc,script4909].cs2)  
+[**4910**](scripts/[proc,script4910].cs2)  
+[**4911**](scripts/[proc,script4911].cs2)  
+[**4912**](scripts/[clientscript,script4912].cs2)  
+[**4913**](scripts/[clientscript,script4913].cs2)  
+[**4914**](scripts/[proc,script4914].cs2)  
+[**4915**](scripts/[proc,script4915].cs2)  
+[**4916**](scripts/[proc,script4916].cs2)  
+[**4917**](scripts/[proc,script4917].cs2)  
+[**4918**](scripts/[proc,script4918].cs2)  
+[**4919**](scripts/[proc,script4919].cs2)  
+[**4920**](scripts/[proc,script4920].cs2)  
+[**4921**](scripts/[proc,script4921].cs2)  
+[**4922**](scripts/[proc,script4922].cs2)  
+[**4923**](scripts/[proc,script4923].cs2)  
+[**4924**](scripts/[proc,script4924].cs2)  
+[**4925**](scripts/[clientscript,loottracker_debug_output_drops].cs2) `[clientscript,loottracker_debug_output_drops]`  
+[**4926**](scripts/[clientscript,loottracker_debug_output_items_with_source_ids].cs2) `[clientscript,loottracker_debug_output_items_with_source_ids]`  
+[**4927**](scripts/[clientscript,loottracker_debug_ui_output_drop_info_components].cs2) `[clientscript,loottracker_debug_ui_output_drop_info_components]`  
+[**4928**](scripts/[proc,loottracker_debug_ui_output_drop_info_components].cs2) `[proc,loottracker_debug_ui_output_drop_info_components]`  
+[**4929**](scripts/[clientscript,loottracker_debug_ui_output_drop_display_components].cs2) `[clientscript,loottracker_debug_ui_output_drop_display_components]`  
+[**4930**](scripts/[proc,loottracker_debug_ui_output_drop_display_components].cs2) `[proc,loottracker_debug_ui_output_drop_display_components]`  
+[**4931**](scripts/[proc,script4931].cs2)  
+[**4932**](scripts/[proc,script4932].cs2)  
+[**4933**](scripts/[proc,script4933].cs2)  
+[**4934**](scripts/[proc,script4934].cs2)  
+[**4935**](scripts/[proc,script4935].cs2)  
+[**4936**](scripts/[proc,script4936].cs2)  
+[**4937**](scripts/[proc,script4937].cs2)  
+[**4938**](scripts/[proc,script4938].cs2)  
+[**4939**](scripts/[proc,script4939].cs2)  
+[**4940**](scripts/[clientscript,script4940].cs2)  
+[**4941**](scripts/[clientscript,script4941].cs2)  
+[**4942**](scripts/[proc,script4942].cs2)  
+[**4943**](scripts/[proc,script4943].cs2)  
 [**5165**](scripts/[clientscript,script5165].cs2)  
 [**5166**](scripts/[proc,script5166].cs2)  
 [**5167**](scripts/[clientscript,helper_agility_highlight_course].cs2) `[clientscript,helper_agility_highlight_course]`  

@@ -1,0 +1,13 @@
+// 4912
+[clientscript,script4912](component $component0, component $component1, component $component2)
+if_sethide(true, $component0);
+if_setop(1, "", $component1);
+if_setop(2, "", $component1);
+if_setop(10, "", $component1);
+if (map_members = ^false) {
+	return;
+}
+if_sethide(false, $component0);
+~script4914($component2, $component1);
+if_setoninvtransmit("script4913($component2, $component1){inv, worn}", $component0);
+if_setonvartransmit("script4913($component2, $component1){var4116, var4117}", $component0);

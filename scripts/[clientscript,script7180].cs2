@@ -1,13 +1,13 @@
 // 7180
 [clientscript,script7180](int $opindex0, int $int1, int $comsubid2)
 def_int $int3 = 0;
-switch_int (%varbit9607) {
+switch_int (%varbit9902) {
 	case 0 :
 		$int3 = 0;
 	case 1 :
 		$int3 = 2;
 }
-def_component $component4 = ~script4031($int3, $int1);
+def_component $component4 = ~script4932($int3, $int1);
 def_obj $obj5 = null;
 def_int $int6 = -1;
 def_int $int7 = -1;

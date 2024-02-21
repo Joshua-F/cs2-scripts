@@ -1,9 +1,16 @@
 // 2906
-[proc,script2906](int $int0, int $int1)(int)
-if (calc(^max_32bit_int - $int0 * $int1) <= 0) {
-	return(^max_32bit_int);
+[proc,script2906](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Weapons", 0);
+	case 1 :
+		return("Armour", 1);
+	case 2 :
+		return("Shortcuts", 1);
+	case 3 :
+		return("Areas", 1);
+	case 4 :
+		return("Barbarian", 1);
+	case default :
+		return("", -1);
 }
-if ($int0 = ^max_32bit_int & $int1 = ^max_32bit_int) {
-	return(^max_32bit_int);
-}
-return(calc($int0 * $int1));

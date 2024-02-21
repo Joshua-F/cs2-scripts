@@ -1,14 +1,37 @@
 // 4031
-[proc,script4031](int $int0, int $int1)(component)
-switch_int ($int0) {
-	case 0 :
-		return(~script7168($int1));
-	case 1 :
-		return(~script7167($int1));
-	case 2 :
-		return(~script4032($int1));
-	case 3 :
-		return(~script4221($int1));
-	case default :
-		return(null);
+[proc,script4031](component $component0, struct $struct1, int $int2, int $int3)(int)
+def_string $string0 = struct_param($struct1, param_1894);
+def_string $string1 = ~script3508($struct1);
+def_int $colour4 = ^white;
+def_int $int5 = 38797317;
+def_int $y6 = calc($int2 * 28);
+def_boolean $boolean7 = struct_param($struct1, param_1899);
+def_int $int8 = 0;
+if ($boolean7 = true) {
+	$int8 = ~script4877($struct1);
 }
+if ($int8 = 2) {
+	$string0 = append($string0, " (II)");
+} else if ($int8 = 3) {
+	$string0 = append($string0, " (III)");
+}
+if (calc($int2 % 2) = 0) {
+	$colour4 = ^black;
+}
+cc_create($component0, ^iftype_rectangle, $int3);
+cc_setsize(0, 28, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $y6, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_settrans(220);
+cc_setcolour($colour4);
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_text, $int3);
+cc_setposition(0, $y6, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setsize(8192, 28, ^setsize_2, ^setsize_abs);
+cc_settext($string0);
+$int3 = calc($int3 + 1);
+return($int3);

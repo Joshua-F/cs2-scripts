@@ -2,7 +2,7 @@
 [clientscript,script7179](int $opindex0, int $int1)
 def_int $int2 = 0;
 def_int $int3 = 0;
-switch_int (%varbit9607) {
+switch_int (%varbit9902) {
 	case 0 :
 		$int2 = 0;
 		$int3 = 10;
@@ -10,7 +10,7 @@ switch_int (%varbit9607) {
 		$int2 = 2;
 		$int3 = 10;
 }
-def_component $component4 = ~script4031($int2, $int1);
+def_component $component4 = ~script4932($int2, $int1);
 def_int $intarray0(10);
 def_int $int5 = -1;
 def_component $component6 = null;
@@ -26,9 +26,9 @@ switch_int ($opindex0) {
 		$int5 = 0;
 		while ($int5 < $int3) {
 			if ($int5 >= $int1) {
-				$component6 = ~script4031($int2, calc($int5 + 1));
+				$component6 = ~script4932($int2, calc($int5 + 1));
 			} else {
-				$component6 = ~script4031($int2, $int5);
+				$component6 = ~script4932($int2, $int5);
 			}
 			if ($component6 = null) {
 				$intarray0($int5) = 1;
@@ -52,7 +52,7 @@ switch_int ($opindex0) {
 		~script7166;
 		$int5 = 0;
 		while ($int5 < $int3) {
-			$component6 = ~script4031($int2, $int5);
+			$component6 = ~script4932($int2, $int5);
 			if ($intarray0($int5) = -1) {
 				$intarray0($int5) = 0;
 			}

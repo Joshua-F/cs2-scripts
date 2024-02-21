@@ -6,5 +6,5 @@ if_setonvartransmit("questlist_qp($component4){var101, var904, var3368, var3369,
 if_setonvartransmit("questlist_completed($component5){var904, var2920, var3365}", $component5);
 cc_deleteall($component0);
 ~steelbox($component0, 0, false);
-~questlist_draw($component0, $component1, $component2, $component3, $component6, false);
+~questlist_draw($component0, $component1, $component2, $component3, $component6, 0);
 ~questlist_settings_button_init($component7);

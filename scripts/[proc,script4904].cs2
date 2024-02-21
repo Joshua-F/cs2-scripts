@@ -1,0 +1,10 @@
+// 4904
+[proc,script4904](dbrow $dbrow0)(boolean)
+if (db_getfield($dbrow0, dbtable_62:5, 0) = true) {
+	return(true);
+}
+def_int $index1 = db_getfield($dbrow0, dbtable_62:0, 0);
+if ($index1 > 30) {
+	return(false);
+}
+return(~int_to_bool(testbit(%var4150, $index1)));

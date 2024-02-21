@@ -1,0 +1,12 @@
+// 4874
+[proc,script4874](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5)
+$int5 = ~script1776($int5);
+def_string $text0 = ~script4159($int5, 1);
+def_string $text1 = ~tostring_spacer(%var4107, ",");
+if (%var4107 = ^max_32bit_int) {
+	$text1 = "Lots!";
+}
+cc_deleteall($component0);
+if_settext($text1, $component3);
+if_settext($text0, $component2);
+if_settext(tostring($int4), $component1);

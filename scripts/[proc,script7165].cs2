@@ -21,9 +21,9 @@ while (cc_find($component0, $int14) = ^true) {
 	$obj5, $int6, $int7, $int8, $int9, $int10, $int11 = ~script7173($component0, $int14);
 	if ($int11 = 0 | %varbit14880 = 1) {
 		if (%varbit14881 = 0) {
-			$int15 = ~script1226($int15, $int10);
+			$int15 = ~script3233($int15, $int10);
 		} else {
-			$int15 = ~script1226($int15, $int9);
+			$int15 = ~script3233($int15, $int9);
 		}
 	}
 	$int14 = calc($int14 + 1);
@@ -34,8 +34,8 @@ if (cc_find($component1, 4) = ^true) {
 def_int $width16 = if_getscrollwidth(interface_650:2);
 def_int $int17 = if_getscrollheight(interface_650:2);
 if (%varbit14881 = 0) {
-	$int17 = ~script1226($int17, $int8);
+	$int17 = ~script3233($int17, $int8);
 } else {
-	$int17 = ~script1226($int17, $int7);
+	$int17 = ~script3233($int17, $int7);
 }
-~script3044($width16, $int17);
+~script4924($width16, $int17);

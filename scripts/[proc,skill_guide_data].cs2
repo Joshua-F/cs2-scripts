@@ -10,121 +10,7 @@ switch_int ($int0) {
 	case 1 :
 		return(~skill_guide_data_attack($int1, $int2));
 	case 2 :
-		switch_int ($int1) {
-			case 0 :
-				switch_int ($int2) {
-					case 0 :
-						return(1, bronze_warhammer_1337, "Bronze warhammer");
-					case 1 :
-						return(1, iron_warhammer_1335, "Iron warhammer");
-					case 2 :
-						return(5, steel_warhammer_1339, "Steel warhammer");
-					case 3 :
-						return(5, black_halberd_3196, "Members: Black halberd<br> (with 10 Attack)");
-					case 4 :
-						return(5, white_halberd_6599, "Members: White halberd<br> (with 10 Attack)");
-					case 5 :
-						return(10, black_warhammer_1341, "Black warhammer");
-					case 6 :
-						return(10, white_warhammer_6613, "Members: White warhammer<br> (with 10 Prayer)");
-					case 7 :
-						return(10, mithril_halberd_3198, "Members: Mithril halberd<br> (with 20 Attack)");
-					case 8 :
-						return(15, adamant_halberd_3200, "Members: Adamant halberd<br> (with 30 Attack)");
-					case 9 :
-						return(20, mithril_warhammer_1343, "Mithril warhammer");
-					case 10 :
-						return(20, rune_halberd_3202, "Members: Rune halberd<br> (with 40 Attack)");
-					case 11 :
-						return(30, adamant_warhammer_1345, "Adamant warhammer");
-					case 12 :
-						return(30, dragon_halberd_3204, "Members: Dragon halberd<br> (with 60 Attack)");
-					case 13 :
-						return(40, rune_warhammer_1347, "Rune warhammer");
-					case 14 :
-						return(40, barrelchest_anchor_10887, "Members: Barrelchest Anchor<br> (with 60 Attack)");
-					case 15 :
-						return(42, void_knight_mace_8841, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
-					case 16 :
-						return(50, granite_maul_4153, "Members: Granite maul<br> (with 50 Attack)");
-					case 17 :
-						return(50, granite_longsword_21646, "Members: Granite longsword<br> (with 50 Attack)");
-					case 18 :
-						return(60, tzhaar_ket_om_6528, "Members: TzHaar-Ket-Om");
-					case 19 :
-						return(60, dragon_warhammer_13576, "Members: Dragon warhammer");
-					case 20 :
-						return(60, ancient_sceptre_27624, "Members: Ancient sceptre<br> (requires Secrets of the North, 50 Attack and 70 Magic)");
-					case 21 :
-						return(70, dharoks_greataxe_4718, "Members: Dharok's greataxe<br> (with 70 Attack)");
-					case 22 :
-						return(70, torags_hammers_4747, "Members: Torag's hammers<br> (with 70 Attack)");
-					case 23 :
-						return(70, abyssal_bludgeon_13263, "Members: Abyssal bludgeon<br> (with 70 Attack)");
-					case 24 :
-						return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Attack)");
-					case 25 :
-						return(80, soulreaper_axe_28338, "Members: Soulreaper axe<br> (with 80 Attack)");
-					case 26 :
-						return(90, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 80 Attack)");
-				}
-			case 1 :
-				switch_int ($int2) {
-					case 0 :
-						return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
-					case 1 :
-						return(50, granite_helm_10589, "Granite armour<br> (with 50 Defence)");
-					case 2 :
-						return(70, inquisitors_great_helm_24419, "Members: Inquisitor's armour<br> (with 30 Defence)");
-					case 3 :
-						return(75, primordial_boots_13239, "Primordial boots<br> (with 75 Defence)");
-				}
-			case 2 :
-				switch_int ($int2) {
-					case 0 :
-						return(19, agility_balance_6515, "Cross the River Lum to Al Kharid<br> (with 8 Agility and 37 Ranged)");
-					case 1 :
-						return(21, agility_balance_6515, "Karamja<br> (with 53 Agility and 42 Ranged)");
-					case 2 :
-						return(22, agility_balance_6515, "Escape from the water obelisk island<br> (with 36 Agility and 39 Ranged)");
-					case 3 :
-						return(28, agility_balance_6515, "Scale the Observatory cliff<br> (with 23 Agility and 24 Ranged, after completing the Observatory quest)");
-					case 4 :
-						return(35, agility_climb_6517, "Scale the Catherby cliff<br> (with 32 Agility and 35 Ranged)");
-					case 5 :
-						return(37, agility_climb_6517, "Scale Falador wall<br> (with 11 Agility and 19 Ranged)");
-					case 6 :
-						return(38, agility_climb_6517, "Scale Yanille wall<br> (with 39 Agility and 21 Ranged)");
-					case 7 :
-						return(70, agility_balance_6515, "Cross cave, south of Dorgesh-Kaan <br> (with 70 Agility and 70 Strength, after completing Death to the Dorgeshuun)");
-				}
-			case 3 :
-				if ($int2 = 0) {
-					return(60, agility_jump_11793, "Access the God Wars Dungeon via the Strength route");
-				} else if ($int2 = 1) {
-					return(70, agility_jump_11793, "Enter the Bandos area of the God Wars Dungeon");
-				}
-			case 4 :
-				switch_int ($int2) {
-					case 0 :
-						return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
-					case 1 :
-						return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Agility & 48 Fishing)");
-					case 2 :
-						return(30, leaping_salmon_11330, "Leaping salmon<br> (with 30 Agility & 58 Fishing)");
-					case 3 :
-						return(35, raw_tuna_359, "Tuna<br> (with 55 Fishing)");
-					case 4 :
-						return(35, raw_harpoonfish_25564, "Harpoonfish<br> (with 55 Fishing)");
-					case 5 :
-						return(45, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility & 70 Fishing)");
-					case 6 :
-						return(50, raw_swordfish_371, "Swordfish<br> (with 70 Fishing)");
-					case 7 :
-						return(76, raw_shark_383, "Shark<br> (with 96 Fishing)");
-				}
-		}
-		return(-1, null, "");
+		return(~script2907($int1, $int2));
 	case 5 :
 		return(~skill_guide_data_defence($int1, $int2));
 	case 3 :
@@ -191,17 +77,23 @@ switch_int ($int0) {
 				case 9 :
 					return(55, red_chinchompa_10034, "Carnivorous chinchompas");
 				case 10 :
-					return(60, dragon_dart_11230, "Dragon darts");
+					return(55, hunters_spear_29351, "Hunter's Spears");
 				case 11 :
-					return(60, dragon_knife_22804, "Dragon knives");
+					return(60, dragon_dart_11230, "Dragon darts");
 				case 12 :
-					return(60, toktz_xil_ul_6522, "TokTz-Xil-Ul");
+					return(60, dragon_knife_22804, "Dragon knives");
 				case 13 :
-					return(61, dragon_thrownaxe_20849, "Dragon thrownaxes");
+					return(60, toktz_xil_ul_6522, "TokTz-Xil-Ul");
 				case 14 :
-					return(65, black_chinchompa_11959, "Black chinchompas");
+					return(61, dragon_thrownaxe_20849, "Dragon thrownaxes");
 				case 15 :
+					return(65, black_chinchompa_11959, "Black chinchompas");
+				case 16 :
+					return(75, eclipse_atlatl_29003, "Eclipse Atlatl<br> Ammo: Atlatl darts");
+				case 17 :
 					return(75, toxic_blowpipe_empty_12924, "Toxic blowpipe");
+				case 18 :
+					return(75, tonalztics_of_ralos_28932, "Members: Tonalztics of Ralos");
 				case default :
 					return(-1, null, "");
 			}
@@ -233,12 +125,14 @@ switch_int ($int0) {
 				case 11 :
 					return(64, dragon_crossbow_21902, "Members: Dragon crossbow<br> Ammo: Bolts up to dragon");
 				case 12 :
-					return(70, dragon_hunter_crossbow_21012, "Members: Dragon hunter crossbow<br> Ammo: Bolts up to dragon");
+					return(66, hunters_sunlight_crossbow_28847, "Members: Sunlight hunters' crossbow<br> Ammo: Antler bolts.");
 				case 13 :
-					return(70, armadyl_crossbow_11785, "Members: Armadyl crossbow<br> Ammo: Bolts up to dragon");
+					return(70, dragon_hunter_crossbow_21012, "Members: Dragon hunter crossbow<br> Ammo: Bolts up to dragon");
 				case 14 :
-					return(70, karils_crossbow_4734, "Members: Karil's crossbow");
+					return(70, armadyl_crossbow_11785, "Members: Armadyl crossbow<br> Ammo: Bolts up to dragon");
 				case 15 :
+					return(70, karils_crossbow_4734, "Members: Karil's crossbow");
+				case 16 :
 					return(80, zaryte_crossbow_26374, "Members: Zaryte crossbow<br> Ammo: Bolts up to dragon");
 				case default :
 					return(-1, null, "");
@@ -333,12 +227,16 @@ switch_int ($int0) {
 				case 42 :
 					return(70, boots_of_brimstone_22951, "Members: Boots of brimstone<br>(with 70 Defence and Magic)");
 				case 43 :
-					return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Defence)");
+					return(75, dizanas_quiver_28965, "Dizana's Quiver<br>Ammo storage: Bolts or Arrows");
 				case 44 :
-					return(75, twisted_buckler_21000, "Members: Twisted buckler<br> (with 75 Defence)");
+					return(75, eclipse_moon_helm_29012, "Members: Eclipse set<br> (with 50 Defence)");
 				case 45 :
-					return(80, zaryte_vambraces_26235, "Members: Zaryte vambraces<br> (with 45 Defence)");
+					return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Defence)");
 				case 46 :
+					return(75, twisted_buckler_21000, "Members: Twisted buckler<br> (with 75 Defence)");
+				case 47 :
+					return(80, zaryte_vambraces_26235, "Members: Zaryte vambraces<br> (with 45 Defence)");
+				case 48 :
 					return(80, masori_body_27229, "Members: Masori armour<br> (with 30 Defence)");
 				case default :
 					return(-1, null, "");
@@ -447,80 +345,98 @@ switch_int ($int0) {
 				case 18 :
 					return(-1, pike_351, "Pike: Restores 8 Hitpoints");
 				case 19 :
-					return(-1, salmon_329, "Salmon: Restores 9 Hitpoints");
+					return(-1, cooked_wild_kebbit_29168, "Wild kebbit: Restores 8 Hitpoints<br>(Members)");
 				case 20 :
-					return(-1, redberry_pie_2325, "Redberry pie: Restores 9 Hitpoints");
+					return(-1, salmon_329, "Salmon: Restores 9 Hitpoints");
 				case 21 :
-					return(-1, tuna_361, "Tuna: Restores 10 Hitpoints");
+					return(-1, redberry_pie_2325, "Redberry pie: Restores 9 Hitpoints");
 				case 22 :
-					return(-1, crab_meat_7518, "Crab meat: Restores 10 Hitpoints<br>(Members)");
+					return(-1, tuna_361, "Tuna: Restores 10 Hitpoints");
 				case 23 :
-					return(-1, cooked_fishcake_7530, "Cooked fishcake: Restores 11 Hitpoints<br>(Members)");
+					return(-1, crab_meat_7518, "Crab meat: Restores 10 Hitpoints<br>(Members)");
 				case 24 :
-					return(-1, jug_of_wine_1993, "Jug of wine: Restores 11 Hitpoints");
+					return(-1, cooked_fishcake_7530, "Cooked fishcake: Restores 11 Hitpoints<br>(Members)");
 				case 25 :
-					return(-1, meat_pie_2327, "Meat pie: Restores 11 Hitpoints");
+					return(-1, jug_of_wine_1993, "Jug of wine: Restores 11 Hitpoints");
 				case 26 :
-					return(-1, lava_eel_2149, "Lava Eel: Restores 11 Hitpoints<br>(Members)");
+					return(-1, meat_pie_2327, "Meat pie: Restores 11 Hitpoints");
 				case 27 :
-					return(-1, garden_pie_7178, "Garden pie: Restores 12 Hitpoints<br>(Members)");
+					return(-1, lava_eel_2149, "Lava Eel: Restores 11 Hitpoints<br>(Members)");
 				case 28 :
-					return(-1, fish_pie_7188, "Fish pie: Restores 12 Hitpoints<br>(Members)");
+					return(-1, cooked_larupia_29186, "Larupia: Restores 11 Hitpoints<br>(Members)");
 				case 29 :
-					return(-1, cake_1891, "Cake: Restores 12 Hitpoints");
+					return(-1, garden_pie_7178, "Garden pie: Restores 12 Hitpoints<br>(Members)");
 				case 30 :
-					return(-1, lobster_379, "Lobster: Restores 12 Hitpoints");
+					return(-1, fish_pie_7188, "Fish pie: Restores 12 Hitpoints<br>(Members)");
 				case 31 :
-					return(-1, bass_365, "Bass: Restores 13 Hitpoints<br>(Members)");
+					return(-1, cake_1891, "Cake: Restores 12 Hitpoints");
 				case 32 :
-					return(-1, swordfish_373, "Swordfish: Restores 14 Hitpoints");
+					return(-1, lobster_379, "Lobster: Restores 12 Hitpoints");
 				case 33 :
-					return(-1, plain_pizza_2289, "Plain pizza: Restores 14 Hitpoints");
+					return(-1, cooked_barb_tailed_kebbit_29171, "Barb-tailed kebbit: Restores 12 Hitpoints<br>(Members)");
 				case 34 :
-					return(-1, apple_pie_2323, "Apple pie: Restores 14 Hitpoints");
+					return(-1, bass_365, "Bass: Restores 13 Hitpoints<br>(Members)");
 				case 35 :
-					return(-1, potato_with_butter_6703, "Potato with butter: Restores 14 Hitpoints<br>(Members)");
+					return(-1, swordfish_373, "Swordfish: Restores 14 Hitpoints");
 				case 36 :
-					return(-1, chilli_potato_7054, "Chilli Potato: Restores 14 Hitpoints<br>(Members)");
+					return(-1, plain_pizza_2289, "Plain pizza: Restores 14 Hitpoints");
 				case 37 :
-					return(-1, chocolate_cake_1897, "Chocolate Cake: Restores 15 Hitpoints");
+					return(-1, apple_pie_2323, "Apple pie: Restores 14 Hitpoints");
 				case 38 :
-					return(-1, monkfish_7946, "Monkfish: Restores 16 Hitpoints<br>(Members)");
+					return(-1, potato_with_butter_6703, "Potato with butter: Restores 14 Hitpoints<br>(Members)");
 				case 39 :
-					return(-1, admiral_pie_7198, "Admiral pie: Restores 16 Hitpoints<br>(Members)");
+					return(-1, chilli_potato_7054, "Chilli Potato: Restores 14 Hitpoints<br>(Members)");
 				case 40 :
-					return(-1, meat_pizza_2293, "Meat pizza: Restores 16 Hitpoints");
+					return(-1, cooked_graahk_29189, "Graahk: Restores 14 Hitpoints<br>(Members)");
 				case 41 :
-					return(-1, potato_with_cheese_6705, "Potato with cheese: Restores 16 Hitpoints<br>(Members)");
+					return(-1, chocolate_cake_1897, "Chocolate Cake: Restores 15 Hitpoints");
 				case 42 :
-					return(-1, egg_potato_7056, "Egg Potato: Restores 16 Hitpoints<br>(Members)");
+					return(-1, monkfish_7946, "Monkfish: Restores 16 Hitpoints<br>(Members)");
 				case 43 :
-					return(-1, cooked_karambwan_3144, "Cooked karambwan: Restores 18 Hitpoints<br>(Members)");
+					return(-1, admiral_pie_7198, "Admiral pie: Restores 16 Hitpoints<br>(Members)");
 				case 44 :
-					return(-1, anchovy_pizza_2297, "Anchovy pizza: Restores 18 Hitpoints");
+					return(-1, meat_pizza_2293, "Meat pizza: Restores 16 Hitpoints");
 				case 45 :
-					return(-1, ugthanki_kebab_1885, "Ugthanki kebab: Restores 19 Hitpoints<br>(Members)");
+					return(-1, potato_with_cheese_6705, "Potato with cheese: Restores 16 Hitpoints<br>(Members)");
 				case 46 :
-					return(-1, shark_385, "Shark: Restores 20 Hitpoints<br>(Members)");
+					return(-1, egg_potato_7056, "Egg Potato: Restores 16 Hitpoints<br>(Members)");
 				case 47 :
-					return(-1, mushroom_potato_7058, "Mushroom Potato: Restores 20 Hitpoints<br>(Members)");
+					return(-1, cooked_kyatt_29192, "Kyatt: Restores 17 Hitpoints<br>(Members)");
 				case 48 :
-					return(-1, sea_turtle_397, "Sea Turtle: Restores 21 Hitpoints<br>(Members)");
+					return(-1, cooked_karambwan_3144, "Cooked karambwan: Restores 18 Hitpoints<br>(Members)");
 				case 49 :
-					return(-1, manta_ray_391, "Manta Ray: Restores 22 Hitpoints<br>(Members)");
+					return(-1, anchovy_pizza_2297, "Anchovy pizza: Restores 18 Hitpoints");
 				case 50 :
-					return(-1, dark_crab_11936, "Dark Crab: Restores 22 Hitpoints<br>(Members)");
+					return(-1, ugthanki_kebab_1885, "Ugthanki kebab: Restores 19 Hitpoints<br>(Members)");
 				case 51 :
-					return(-1, tuna_potato_7060, "Tuna Potato: Restores 22 Hitpoints<br>(Members)");
+					return(-1, cooked_pyre_fox_29177, "Pyre fox: Restores 19 Hitpoints<br>(Members)");
 				case 52 :
-					return(-1, wild_pie_7208, "Wild pie: Restores 22 Hitpoints<br>(Members)");
+					return(-1, shark_385, "Shark: Restores 20 Hitpoints<br>(Members)");
 				case 53 :
-					return(-1, summer_pie_7218, "Summer pie: Restores 22 Hitpoints<br>(Members)");
+					return(-1, mushroom_potato_7058, "Mushroom Potato: Restores 20 Hitpoints<br>(Members)");
 				case 54 :
-					return(-1, pineapple_pizza_2301, "Pineapple pizza: Restores 22 Hitpoints<br>(Members)");
+					return(-1, sea_turtle_397, "Sea Turtle: Restores 21 Hitpoints<br>(Members)");
 				case 55 :
-					return(-1, anglerfish_13441, "Anglerfish: Restores Hitpoints based on your Hitpoints level up to a maximum of 22 - can boost beyond your level<br>(Members)");
+					return(-1, cooked_sunlight_antelope_29180, "Sunlight antelope: Restores 21 Hitpoints<br>(Members)");
 				case 56 :
+					return(-1, manta_ray_391, "Manta Ray: Restores 22 Hitpoints<br>(Members)");
+				case 57 :
+					return(-1, dark_crab_11936, "Dark Crab: Restores 22 Hitpoints<br>(Members)");
+				case 58 :
+					return(-1, tuna_potato_7060, "Tuna Potato: Restores 22 Hitpoints<br>(Members)");
+				case 59 :
+					return(-1, wild_pie_7208, "Wild pie: Restores 22 Hitpoints<br>(Members)");
+				case 60 :
+					return(-1, summer_pie_7218, "Summer pie: Restores 22 Hitpoints<br>(Members)");
+				case 61 :
+					return(-1, pineapple_pizza_2301, "Pineapple pizza: Restores 22 Hitpoints<br>(Members)");
+				case 62 :
+					return(-1, cooked_dashing_kebbit_29174, "Dashing kebbit: Restores 23 Hitpoints and 10 Run Energy<br>(Members)");
+				case 63 :
+					return(-1, cooked_moonlight_antelope_29183, "Moonlight antelope: Restores 26 Hitpoints and cures 1 level of poison<br>(Members)");
+				case 64 :
+					return(-1, anglerfish_13441, "Anglerfish: Restores Hitpoints based on your Hitpoints level up to a maximum of 22 - can boost beyond your level<br>(Members)");
+				case 65 :
 					return(-1, saradomin_brew_3_6687, "Saradomin brew: Restores 15% of your Hitpoints level plus 2 - can boost beyond your level<br>(Members)");
 			}
 		} else if ($int1 = 2) {
@@ -884,60 +800,66 @@ switch_int ($int0) {
 					case 22 :
 						return(47, snakeskin_vambraces_6330, "Members: Snakeskin vambraces");
 					case 23 :
-						return(48, snakeskin_bandana_6326, "Members: Snakeskin bandana");
-					case 24 :
 						return(51, snakeskin_chaps_6324, "Members: Snakeskin chaps");
-					case 25 :
+					case 24 :
 						return(52, serpentine_helm_12931, "Members: Serpentine helm");
-					case 26 :
+					case 25 :
 						return(53, snakeskin_body_6322, "Members: Snakeskin body");
-					case 27 :
+					case 26 :
 						return(55, slayer_helmet_11864, "Members: Slayer helm");
-					case 28 :
+					case 27 :
 						return(56, snakeskin_shield_22272, "Members: Snakeskin shield");
-					case 29 :
+					case 28 :
 						return(57, green_dhide_vambraces_1065, "Members: Green dragonhide vambraces");
-					case 30 :
+					case 29 :
 						return(60, green_dhide_chaps_1099, "Members: Green dragonhide chaps");
-					case 31 :
+					case 30 :
 						return(60, splitbark_gauntlets_3391, "Members: Splitbark gauntlets");
-					case 32 :
+					case 31 :
 						return(60, splitbark_boots_3393, "Members: Splitbark boots");
-					case 33 :
+					case 32 :
 						return(61, splitbark_helm_3385, "Members: Splitbark helm");
-					case 34 :
+					case 33 :
 						return(62, green_dhide_shield_22275, "Members: Green dragonhide shield");
-					case 35 :
+					case 34 :
 						return(62, splitbark_body_3387, "Members: Splitbark body");
-					case 36 :
+					case 35 :
 						return(62, splitbark_legs_3389, "Members: Splitbark legs");
-					case 37 :
+					case 36 :
 						return(63, green_dhide_body_1135, "Members: Green dragonhide body");
-					case 38 :
+					case 37 :
 						return(66, blue_dhide_vambraces_2487, "Members: Blue dragonhide vambraces");
-					case 39 :
+					case 38 :
 						return(68, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
+					case 39 :
+						return(68, mixed_hide_cape_29336, "Members: Mixed hide cape");
 					case 40 :
-						return(69, blue_dhide_shield_22278, "Members: Blue dragonhide shield");
+						return(69, mixed_hide_boots_29334, "Members: Mixed hide boots");
 					case 41 :
-						return(71, blue_dhide_body_2499, "Members: Blue dragonhide body");
+						return(69, blue_dhide_shield_22278, "Members: Blue dragonhide shield");
 					case 42 :
-						return(73, red_dhide_vambraces_2489, "Members: Red dragonhide vambraces");
+						return(71, blue_dhide_body_2499, "Members: Blue dragonhide body");
 					case 43 :
-						return(75, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
+						return(71, mixed_hide_legs_29332, "Members: Mixed hide legs");
 					case 44 :
-						return(76, red_dhide_shield_22281, "Members: Red dragonhide shield");
+						return(72, mixed_hide_top_29330, "Members: Mixed hide body");
 					case 45 :
-						return(77, red_dhide_body_2501, "Members: Red dragonhide body");
+						return(73, red_dhide_vambraces_2489, "Members: Red dragonhide vambraces");
 					case 46 :
-						return(79, black_dhide_vambraces_2491, "Members: Black dragonhide vambraces");
+						return(75, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
 					case 47 :
-						return(82, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
+						return(76, red_dhide_shield_22281, "Members: Red dragonhide shield");
 					case 48 :
-						return(83, black_dhide_shield_22284, "Members: Black dragonhide shield");
+						return(77, red_dhide_body_2501, "Members: Red dragonhide body");
 					case 49 :
-						return(84, black_dhide_body_2503, "Members: Black dragonhide body");
+						return(79, black_dhide_vambraces_2491, "Members: Black dragonhide vambraces");
 					case 50 :
+						return(82, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
+					case 51 :
+						return(83, black_dhide_shield_22284, "Members: Black dragonhide shield");
+					case 52 :
+						return(84, black_dhide_body_2503, "Members: Black dragonhide body");
+					case 53 :
 						return(90, masori_body_f_27238, "Members: Break down armadylean armour and fortify Masori armour");
 					case default :
 						return(-1, null, "");
@@ -1275,22 +1197,30 @@ switch_int ($int0) {
 					case 5 :
 						return(35, teak_bird_house_21521, "Craft a birdhouse trap from teak logs");
 					case 6 :
-						return(38, dense_essence_block_13445, "Dense essence<br>(with 38 Mining)");
+						return(35, small_fur_pouch_29345, "Craft small hunters' pouches");
 					case 7 :
-						return(45, maple_bird_house_22192, "Craft a birdhouse trap from maple logs");
+						return(35, padded_spoon_28657, "Craft a padded spoon<br>(with 25 Woodcutting)");
 					case 8 :
-						return(50, mahogany_bird_house_22195, "Craft a birdhouse trap from mahogany logs");
+						return(38, dense_essence_block_13445, "Dense essence<br>(with 38 Mining)");
 					case 9 :
-						return(50, clothes_pouch_28163, "Craft a clothes pouch<br>(with 50 Woodcutting)");
+						return(45, maple_bird_house_22192, "Craft a birdhouse trap from maple logs");
 					case 10 :
-						return(56, colossal_pouch_26784, "Craft a colossal pouch from essence pouches");
+						return(50, mahogany_bird_house_22195, "Craft a birdhouse trap from mahogany logs");
 					case 11 :
-						return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
+						return(50, clothes_pouch_28163, "Craft a clothes pouch<br>(with 50 Woodcutting)");
 					case 12 :
-						return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
+						return(50, medium_fur_pouch_29347, "Craft medium hunters' pouches");
 					case 13 :
-						return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
+						return(56, colossal_pouch_26784, "Craft a colossal pouch from essence pouches");
 					case 14 :
+						return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
+					case 15 :
+						return(65, large_fur_pouch_29349, "Craft large hunters' pouches");
+					case 16 :
+						return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
+					case 17 :
+						return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
+					case 18 :
 						return(90, redwood_bird_house_22204, "Craft a birdhouse trap from redwood logs");
 					case default :
 						return(-1, null, "");
@@ -1426,18 +1356,22 @@ switch_int ($int0) {
 				case 17 :
 					return(61, adamant_bolts_9143, "Adamantite bolts");
 				case 18 :
-					return(63, ruby_bolts_9339, "Ruby-tipped adamantite bolts");
+					return(62, sunlight_antler_bolts_28850, "Sunlight bolts");
 				case 19 :
-					return(65, diamond_bolts_9340, "Diamond-tipped adamantite bolts");
+					return(63, ruby_bolts_9339, "Ruby-tipped adamantite bolts");
 				case 20 :
-					return(69, runite_bolts_9144, "Runite bolts");
+					return(65, diamond_bolts_9340, "Diamond-tipped adamantite bolts");
 				case 21 :
-					return(71, dragonstone_bolts_9341, "Dragonstone-tipped runite bolts");
+					return(69, runite_bolts_9144, "Runite bolts");
 				case 22 :
-					return(73, onyx_bolts_9342, "Onyx-tipped runite bolts");
+					return(71, dragonstone_bolts_9341, "Dragonstone-tipped runite bolts");
 				case 23 :
-					return(76, amethyst_broad_bolts_21316, "Amethyst broad bolts");
+					return(72, moonlight_antler_bolts_28852, "Moonlight bolts");
 				case 24 :
+					return(73, onyx_bolts_9342, "Onyx-tipped runite bolts");
+				case 25 :
+					return(76, amethyst_broad_bolts_21316, "Amethyst broad bolts");
+				case 26 :
 					return(84, dragon_bolts_21905, "Dragon bolts");
 				case default :
 					return(-1, null, "");
@@ -1484,6 +1418,8 @@ switch_int ($int0) {
 				case 6 :
 					return(69, yew_stock_9452, "Runite/yew crossbows");
 				case 7 :
+					return(74, hunters_sunlight_crossbow_28847, "Sunlight hunters' crossbow");
+				case 8 :
 					return(78, magic_stock_21952, "Dragon/magic crossbows");
 				case default :
 					return(-1, null, "");
@@ -1537,6 +1473,8 @@ switch_int ($int0) {
 			switch_int ($int2) {
 				case 0 :
 					return(40, battlestaff_1391, "Battlestaves");
+				case 2 :
+					return(60, hunters_spear_29351, "Hunter's spears");
 				case default :
 					return(-1, null, "");
 			}
@@ -1580,40 +1518,42 @@ switch_int ($int0) {
 				case 16 :
 					return(40, uncut_red_topaz_1629, "Members: Gem rocks");
 				case 17 :
-					return(42, volcanic_sulphur_13571, "Members: Volcanic sulphur");
+					return(41, calcified_deposit_28920, "Members: Calcified rocks in Cam Torum");
 				case 18 :
-					return(43, dynamite_13573, "Members: Lovakengj Blast Mine");
+					return(42, volcanic_sulphur_13571, "Members: Volcanic sulphur");
 				case 19 :
-					return(45, granite_5kg_6983, "Members: Granite");
+					return(43, dynamite_13573, "Members: Lovakengj Blast Mine");
 				case 20 :
-					return(50, iron_ore_fragment_21532, "Members: Volcanic Mine (with 150 Kudos)");
+					return(45, granite_5kg_6983, "Members: Granite");
 				case 21 :
-					return(55, mithril_ore_447, "Mithril ore");
+					return(50, iron_ore_fragment_21532, "Members: Volcanic Mine (with 150 Kudos)");
 				case 22 :
-					return(60, daeyalt_essence_24704, "Members: Daeyalt essence<br>(after Sins of the Father)");
+					return(55, mithril_ore_447, "Mithril ore");
 				case 23 :
-					return(64, tainted_essence_chunk_28591, "Members: Tainted essence chunk");
+					return(60, daeyalt_essence_24704, "Members: Daeyalt essence<br>(after Sins of the Father)");
 				case 24 :
-					return(65, lovakite_ore_13356, "Members: Lovakite ore");
+					return(64, tainted_essence_chunk_28591, "Members: Tainted essence chunk");
 				case 25 :
-					return(70, adamantite_ore_449, "Adamantite ore");
+					return(65, lovakite_ore_13356, "Members: Lovakite ore");
 				case 26 :
-					return(70, soft_clay_1761, "Members: Soft clay");
+					return(70, adamantite_ore_449, "Adamantite ore");
 				case 27 :
-					return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
+					return(70, soft_clay_1761, "Members: Soft clay");
 				case 28 :
-					return(72, te_salt_22593, "Members: Te Salt");
+					return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
 				case 29 :
-					return(72, efh_salt_22595, "Members: Efh Salt");
+					return(72, te_salt_22593, "Members: Te Salt");
 				case 30 :
-					return(72, urt_salt_22597, "Members: Urt Salt");
+					return(72, efh_salt_22595, "Members: Efh Salt");
 				case 31 :
-					return(72, basalt_22603, "Members: Basalt");
+					return(72, urt_salt_22597, "Members: Urt Salt");
 				case 32 :
-					return(75, ancient_essence_50_27619, "Members: Ancient essence<br>(after Secrets of the North)");
+					return(72, basalt_22603, "Members: Basalt");
 				case 33 :
-					return(85, runite_ore_451, "Runite ore");
+					return(75, ancient_essence_50_27619, "Members: Ancient essence<br>(after Secrets of the North)");
 				case 34 :
+					return(85, runite_ore_451, "Runite ore");
+				case 35 :
 					return(92, amethyst_21347, "Members: Amethyst");
 				case default :
 					return(-1, null, "");
@@ -1939,45 +1879,63 @@ switch_int ($int0) {
 				case 21 :
 					return(22, fat_snail_meat_3373, "Members: Fat snail");
 				case 22 :
-					return(25, salmon_329, "Salmon");
+					return(23, cooked_wild_kebbit_29168, "Members: Wild kebbit");
 				case 23 :
-					return(28, cooked_slimy_eel_3381, "Members: Slimy eel");
+					return(25, salmon_329, "Salmon");
 				case 24 :
-					return(30, tuna_361, "Tuna");
+					return(28, cooked_slimy_eel_3381, "Members: Slimy eel");
 				case 25 :
-					return(30, cooked_chompy_2878, "Members: Roasted chompy");
+					return(30, tuna_361, "Tuna");
 				case 26 :
-					return(31, cooked_fishcake_7530, "Members: Fishcakes");
+					return(30, cooked_chompy_2878, "Members: Roasted chompy");
 				case 27 :
-					return(35, rainbow_fish_10136, "Members: Rainbow fish");
+					return(31, cooked_fishcake_7530, "Members: Fishcakes");
 				case 28 :
-					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Woodcutting)");
+					return(31, cooked_larupia_29186, "Members: Larupia");
 				case 29 :
-					return(38, cave_eel_5003, "Members: Cave eel");
+					return(32, cooked_barb_tailed_kebbit_29171, "Members: Barb-tailed kebbit");
 				case 30 :
-					return(40, lobster_379, "Lobster");
+					return(35, rainbow_fish_10136, "Members: Rainbow fish");
 				case 31 :
-					return(41, cooked_jubbly_7568, "Members: Jubbly");
+					return(35, foresters_ration_28157, "Members: Forester's ration<br>(with 35 Woodcutting)");
 				case 32 :
-					return(43, bass_365, "Members: Bass");
+					return(38, cave_eel_5003, "Members: Cave eel");
 				case 33 :
-					return(45, swordfish_373, "Swordfish");
+					return(40, lobster_379, "Lobster");
 				case 34 :
-					return(53, lava_eel_2149, "Members: Lava eel");
+					return(41, cooked_jubbly_7568, "Members: Jubbly");
 				case 35 :
-					return(62, monkfish_7946, "Members: Monkfish");
+					return(41, cooked_graahk_29189, "Members: Graahk");
 				case 36 :
-					return(72, sacred_eel_13339, "Members: Dissect sacred eels");
+					return(43, bass_365, "Members: Bass");
 				case 37 :
-					return(80, shark_385, "Members: Shark");
+					return(45, swordfish_373, "Swordfish");
 				case 38 :
-					return(82, sea_turtle_397, "Members: Sea turtle");
+					return(51, cooked_kyatt_29192, "Members: Kyatt");
 				case 39 :
-					return(84, anglerfish_13441, "Members: Anglerfish");
+					return(53, lava_eel_2149, "Members: Lava eel");
 				case 40 :
-					return(90, dark_crab_11936, "Members: Dark crab");
+					return(59, cooked_pyre_fox_29177, "Members: Pyre fox");
 				case 41 :
+					return(62, monkfish_7946, "Members: Monkfish");
+				case 42 :
+					return(68, cooked_sunlight_antelope_29180, "Members: Sunlight antelope");
+				case 43 :
+					return(72, sacred_eel_13339, "Members: Dissect sacred eels");
+				case 44 :
+					return(80, shark_385, "Members: Shark");
+				case 45 :
+					return(82, sea_turtle_397, "Members: Sea turtle");
+				case 46 :
+					return(82, cooked_dashing_kebbit_29174, "Members: Dashing kebbit");
+				case 47 :
+					return(84, anglerfish_13441, "Members: Anglerfish");
+				case 48 :
+					return(90, dark_crab_11936, "Members: Dark crab");
+				case 49 :
 					return(91, manta_ray_391, "Members: Manta ray");
+				case 50 :
+					return(92, cooked_moonlight_antelope_29183, "Members: Moonlight antelope");
 				case default :
 					return(-1, null, "");
 			}
@@ -2511,20 +2469,22 @@ switch_int ($int0) {
 				case 12 :
 					return(27, cosmic_rune_564, "Members: Cosmic runes");
 				case 13 :
-					return(35, chaos_rune_562, "Members: Chaos runes");
+					return(33, sunfire_rune_28939, "Members: Sunfire runes");
 				case 14 :
-					return(40, astral_rune_9075, "Members: Astral runes");
+					return(35, chaos_rune_562, "Members: Chaos runes");
 				case 15 :
-					return(44, nature_rune_561, "Members: Nature runes");
+					return(40, astral_rune_9075, "Members: Astral runes");
 				case 16 :
-					return(54, law_rune_563, "Members: Law runes");
+					return(44, nature_rune_561, "Members: Nature runes");
 				case 17 :
-					return(65, death_rune_560, "Members: Death runes");
+					return(54, law_rune_563, "Members: Law runes");
 				case 18 :
-					return(77, blood_rune_565, "Members: Blood runes");
+					return(65, death_rune_560, "Members: Death runes");
 				case 19 :
-					return(90, soul_rune_566, "Members: Soul runes");
+					return(77, blood_rune_565, "Members: Blood runes");
 				case 20 :
+					return(90, soul_rune_566, "Members: Soul runes");
+				case 21 :
 					return(95, wrath_rune_21880, "Members: Wrath runes");
 				case default :
 					return(-1, null, "");
@@ -2559,48 +2519,52 @@ switch_int ($int0) {
 				case 12 :
 					return(46, body_rune_559, "2 Body runes per essence");
 				case 13 :
-					return(52, earth_rune_557, "3 Earth runes per essence");
+					return(49, sunfire_rune_28939, "2 Sunfire runes per essence");
 				case 14 :
-					return(55, air_rune_556, "6 Air runes per essence");
+					return(52, earth_rune_557, "3 Earth runes per essence");
 				case 15 :
-					return(56, mind_rune_558, "5 Mind runes per essence");
+					return(55, air_rune_556, "6 Air runes per essence");
 				case 16 :
-					return(57, water_rune_555, "4 Water runes per essence");
+					return(56, mind_rune_558, "5 Mind runes per essence");
 				case 17 :
-					return(59, cosmic_rune_564, "Members: 2 Cosmic runes per essence");
+					return(57, water_rune_555, "4 Water runes per essence");
 				case 18 :
-					return(66, air_rune_556, "7 Air runes per essence");
+					return(59, cosmic_rune_564, "Members: 2 Cosmic runes per essence");
 				case 19 :
-					return(70, mind_rune_558, "6 Mind runes per essence");
+					return(66, air_rune_556, "7 Air runes per essence");
 				case 20 :
-					return(70, fire_rune_554, "3 Fire runes per essence");
+					return(70, mind_rune_558, "6 Mind runes per essence");
 				case 21 :
-					return(74, chaos_rune_562, "Members: 2 Chaos runes per essence");
+					return(70, fire_rune_554, "3 Fire runes per essence");
 				case 22 :
-					return(76, water_rune_555, "5 Water runes per essence");
+					return(74, chaos_rune_562, "Members: 2 Chaos runes per essence");
 				case 23 :
-					return(77, air_rune_556, "8 Air runes per essence");
+					return(76, water_rune_555, "5 Water runes per essence");
 				case 24 :
-					return(78, earth_rune_557, "4 Earth runes per essence");
+					return(77, air_rune_556, "8 Air runes per essence");
 				case 25 :
-					return(82, astral_rune_9075, "Members: 2 Astral runes per essence");
+					return(78, earth_rune_557, "4 Earth runes per essence");
 				case 26 :
-					return(84, mind_rune_558, "7 Mind runes per essence");
+					return(82, astral_rune_9075, "Members: 2 Astral runes per essence");
 				case 27 :
-					return(88, air_rune_556, "9 Air runes per essence");
+					return(84, mind_rune_558, "7 Mind runes per essence");
 				case 28 :
-					return(91, nature_rune_561, "Members: 2 Nature runes per essence");
+					return(88, air_rune_556, "9 Air runes per essence");
 				case 29 :
-					return(92, body_rune_559, "3 Body runes per essence");
+					return(91, nature_rune_561, "Members: 2 Nature runes per essence");
 				case 30 :
-					return(95, water_rune_555, "6 Water runes per essence");
+					return(92, body_rune_559, "3 Body runes per essence");
 				case 31 :
-					return(95, law_rune_563, "Members: 2 Law runes per essence");
+					return(95, water_rune_555, "6 Water runes per essence");
 				case 32 :
-					return(98, mind_rune_558, "8 Mind runes per essence");
+					return(95, law_rune_563, "Members: 2 Law runes per essence");
 				case 33 :
-					return(99, air_rune_556, "10 Air runes per essence");
+					return(98, mind_rune_558, "8 Mind runes per essence");
 				case 34 :
+					return(98, sunfire_rune_28939, "3 Sunfire runes per essence");
+				case 35 :
+					return(99, air_rune_556, "10 Air runes per essence");
+				case 36 :
 					return(99, death_rune_560, "Members: 2 Death runes per essence");
 				case default :
 					return(-1, null, "");
