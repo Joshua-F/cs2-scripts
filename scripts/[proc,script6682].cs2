@@ -39,3 +39,8 @@ if ($boolean3 = true) {
 	minimap_setzoom(~minmax(2, 8, %varcint1146));
 	cc_setontimer("script7052($component1, %varcint1146, $boolean3)");
 }
+cc_create($component1, ^iftype_rectangle, 3);
+cc_settrans(255);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_setonstattransmit("script4871(false)");

@@ -1,29 +1,32 @@
 // 298
-[clientscript,bankside_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, component $component4, component $component5, component $component6, component $component7)
-def_int $size8 = inv_size(inv);
-if ($comsubid2 < 0 | $comsubid2 >= $size8) {
+[clientscript,bankside_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+def_int $size10 = inv_size(inv);
+if ($comsubid2 < 0 | $comsubid2 >= $size10) {
 	return;
 }
-if ($dropsubid3 < 0 | $dropsubid3 >= $size8) {
+if ($dropsubid3 < 0 | $dropsubid3 >= $size10) {
 	return;
 }
 if ($drop0 ! $drop1) {
 	return;
 }
-def_obj $obj9 = inv_getobj(inv, $comsubid2);
-if ($obj9 = null) {
+def_obj $obj11 = inv_getobj(inv, $comsubid2);
+if ($obj11 = null) {
 	return;
 }
-def_obj $obj10 = inv_getobj(inv, $dropsubid3);
+def_obj $obj12 = inv_getobj(inv, $dropsubid3);
 if (cc_find($drop0, $dropsubid3) = ^true) {
-	~bankside_drawitem($obj9, inv_getnum(inv, $comsubid2), $comsubid2, $drop0, $component4, 0, $component5, $component6, $component7);
+	~bankside_drawitem($obj11, inv_getnum(inv, $comsubid2), $comsubid2, $drop0, $component4, 0, $component5, $component6, $component7, $component8, $component9);
 }
 if (cc_find($drop0, $comsubid2) = ^true) {
-	~bankside_drawitem($obj10, inv_getnum(inv, $dropsubid3), $dropsubid3, $drop0, $component4, 0, $component5, $component6, $component7);
+	~bankside_drawitem($obj12, inv_getnum(inv, $dropsubid3), $dropsubid3, $drop0, $component4, 0, $component5, $component6, $component7, $component8, $component9);
 }
-if ($obj9 = looting_bag_11941 | $obj9 = looting_bag_22586 | $obj10 = looting_bag_11941 | $obj10 = looting_bag_22586) {
-	cc_deleteall($component4);
-}
-if ($obj9 = extradimensional_bag_25106 | $obj9 = extradimensional_bag_25108 | $obj10 = extradimensional_bag_25106 | $obj10 = extradimensional_bag_25108) {
-	cc_deleteall($component4);
+switch_obj ($obj11) {
+	case looting_bag_11941, looting_bag_22586, extradimensional_bag_25106, extradimensional_bag_25108, rune_pouch_12791, rune_pouch_l_24416, divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+		cc_deleteall($component4);
+	case default :
+		switch_obj ($obj12) {
+			case looting_bag_11941, looting_bag_22586, extradimensional_bag_25106, extradimensional_bag_25108, rune_pouch_12791, rune_pouch_l_24416, divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+				cc_deleteall($component4);
+		}
 }

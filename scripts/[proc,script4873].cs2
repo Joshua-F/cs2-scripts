@@ -1,0 +1,17 @@
+// 4873
+[proc,script4873]
+highlight_npctype_clear(13);
+highlight_loctype_clear(16);
+def_dbrow $dbrow0 = null;
+if (%varbit9619 = 1) {
+	if (%var3679 ! null) {
+		~script4874(%var3679);
+	}
+} else if (%varbit9619 = 2) {
+	db_listall(quest);
+	$dbrow0 = db_findnext;
+	while ($dbrow0 ! null) {
+		~script4874($dbrow0);
+		$dbrow0 = db_findnext;
+	}
+}

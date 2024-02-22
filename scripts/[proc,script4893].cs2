@@ -1,0 +1,7 @@
+// 4893
+[proc,script4893](int $comsubid0, namedobj $namedobj1, int $int2)
+def_int $int3 = enum(obj, int, enum_55, $namedobj1);
+if ($int3 = 0) {
+	$int2 = 0;
+}
+~script4894($comsubid0, $int3, $int2);

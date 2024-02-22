@@ -1,14 +1,18 @@
 // 6805
 [proc,script6805](dbrow $dbrow0, int $int1)(int)
-def_int $int2 = 0;
-def_int $int3 = db_getfieldcount($dbrow0, quest:speedrunning_ranks);
-def_int $int4 = 0;
+def_dbrow $dbrow2 = ~script4865($dbrow0);
+if ($dbrow2 = null | db_getrowtable($dbrow2) ! dbtable_61) {
+	return(0);
+}
+def_int $int3 = 0;
+def_int $int4 = db_getfieldcount($dbrow2, dbtable_61:2);
 def_int $int5 = 0;
-while ($int2 < $int3) {
-	$int4, $int5 = db_getfield($dbrow0, quest:speedrunning_ranks, $int2);
-	if ($int4 = $int1) {
-		return($int5);
+def_int $int6 = 0;
+while ($int3 < $int4) {
+	$int5, $int6 = db_getfield($dbrow2, dbtable_61:2, $int3);
+	if ($int5 = $int1) {
+		return($int6);
 	}
-	$int2 = calc($int2 + 1);
+	$int3 = calc($int3 + 1);
 }
 return(0);

@@ -1,0 +1,19 @@
+// 4894
+[proc,script4894](int $comsubid0, int $int1, int $int2)
+if ($int2 <= 0) {
+	$int1, $int2 = 0, 0;
+}
+switch_int ($comsubid0) {
+	case 1 :
+		%varbit29, %varbit1624 = $int1, $int2;
+	case 2 :
+		%varbit1622, %varbit1625 = $int1, $int2;
+	case 3 :
+		%varbit1623, %varbit1626 = $int1, $int2;
+	case 4 :
+		%varbit14285, %varbit14286 = $int1, $int2;
+	case 5 :
+		%varbit15373, %varbit15375 = $int1, $int2;
+	case 6 :
+		%varbit15374, %varbit15376 = $int1, $int2;
+}

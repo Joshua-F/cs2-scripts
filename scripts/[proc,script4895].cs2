@@ -1,0 +1,60 @@
+// 4895
+[proc,script4895](int $int0, int $int1)(int, int)
+def_int $int2 = 0;
+def_int $num3 = 0;
+switch_int ($int0) {
+	case 1 :
+		switch_int ($int1) {
+			case 1 :
+				$int2 = calc(pow(2, 4) * %varbit9725 + pow(2, 0) * %varbit9717);
+				$num3 = %varbit9686;
+			case 2 :
+				$int2 = calc(pow(2, 4) * %varbit9726 + pow(2, 0) * %varbit9722);
+				$num3 = %varbit9690;
+			case 3 :
+				$int2, $num3 = %varbit9681, %varbit9696;
+			case 4 :
+				$int2, $num3 = %varbit9682, %varbit9700;
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 1 :
+				$int2, $num3 = %varbit9685, %varbit9705;
+			case 2 :
+				$int2, $num3 = %varbit9687, %varbit9707;
+			case 3 :
+				$int2, $num3 = %varbit9688, %varbit9708;
+			case 4 :
+				$int2, $num3 = %varbit9689, %varbit9712;
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 1 :
+				$int2, $num3 = %varbit9691, %varbit9713;
+			case 2 :
+				$int2, $num3 = %varbit9694, %varbit9715;
+			case 3 :
+				$int2, $num3 = %varbit9695, %varbit9716;
+			case 4 :
+				$int2, $num3 = %varbit9697, %varbit9718;
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 1 :
+				$int2, $num3 = %varbit9698, %varbit9721;
+			case 2 :
+				$int2, $num3 = %varbit9699, %varbit9723;
+			case 3 :
+				$int2 = %varbit9703;
+				$num3 = calc(pow(2, 10) * %varbit9714 + pow(2, 6) * %varbit9709 + pow(2, 0) * %varbit9706);
+			case 4 :
+				$int2, $num3 = %varbit9704, %varbit9724;
+		}
+}
+if (enum(int, namedobj, enum_982, $int2) ! null) {
+	if ($num3 >= 16000 | $num3 < 0) {
+		$num3 = 0;
+	}
+	return($int2, $num3);
+}
+return(0, 0);

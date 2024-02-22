@@ -17,10 +17,17 @@ while ($size5 < $size2) {
 		cc_setgraphicshadow(0x333333);
 		cc_setobject($obj3, inv_getnum($inv1, $size5));
 		cc_settrans(0);
-		cc_setop(1, "Deposit-1");
-		cc_setop(2, "Deposit-5");
-		cc_setop(3, "Deposit-All");
-		cc_setop(4, "Deposit-X");
+		cc_setop(1, "Deposit-<~script2579>");
+		if (%varbit6590 ! 0) {
+			cc_setop(2, "Deposit-1");
+		}
+		cc_setop(3, "Deposit-5");
+		cc_setop(4, "Deposit-10");
+		if (%varbit3960 > 0) {
+			cc_setop(5, "Deposit-<tostring(%varbit3960)>");
+		}
+		cc_setop(6, "Deposit-X");
+		cc_setop(7, "Deposit-All");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 0)");
 		cc_setopbase("<col=ff9040><oc_name($obj3)></col>");

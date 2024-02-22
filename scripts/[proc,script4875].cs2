@@ -1,0 +1,13 @@
+// 4875
+[proc,script4875](string $string0, dbrow $dbrow0, int $int1)(string)
+switch_dbrow ($dbrow0) {
+	case dbrow_3467 :
+		if ($int1 = 0) {
+			if (~script1788 = 0) {
+				$string0 = "<$string0><col=800000>Warriors' Guild Access<br>";
+			} else {
+				$string0 = "<$string0><str>Warriors' Guild Access<br>";
+			}
+		}
+}
+return($string0);

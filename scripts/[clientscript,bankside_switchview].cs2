@@ -1,16 +1,7 @@
 // 490
-[clientscript,bankside_switchview](int $int0, component $component1, component $component2, component $component3, int $int4)
-if ($int0 = 1 & ($int4 = 1 | $int4 = 2 | $int4 = 0)) {
+[clientscript,bankside_switchview](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
+if ($int0 = 1) {
 	sound_synth(interface_select1, 1, 0);
-	if ($int4 = 1) {
-		%varbit4139 = 1;
-		%varbit9545 = 0;
-	} else if ($int4 = 2) {
-		%varbit4139 = 0;
-		%varbit9545 = 1;
-	} else {
-		%varbit4139 = 0;
-		%varbit9545 = 0;
-	}
+	%varbit9727 = $int6;
 }
-~bankside_switchview($component1, $component2, $component3);
+~bankside_switchview($component1, $component2, $component3, $component4, $component5);

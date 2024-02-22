@@ -1,0 +1,9 @@
+// 4865
+[proc,script4865](dbrow $dbrow0)(dbrow)
+if (db_getrowtable($dbrow0) = quest) {
+	if (db_getfieldcount($dbrow0, quest:31) > 0) {
+		return(db_getfield($dbrow0, quest:31, 0));
+	}
+	return(null);
+}
+return(null);

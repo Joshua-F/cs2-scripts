@@ -1,7 +1,0 @@
-// 6830
-[proc,script6830](dbrow $dbrow0)(int)
-def_int $int1 = db_getfieldcount($dbrow0, quest:statreq);
-if (db_getfield($dbrow0, quest:comlevelreq, 0) > 3) {
-	$int1 = calc($int1 + 1);
-}
-return($int1);

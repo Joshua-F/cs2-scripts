@@ -1,0 +1,13 @@
+// 4891
+[proc,script4891](int $int0)(namedobj, int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+$int1, $int2 = ~script4892($int0);
+def_namedobj $namedobj3 = null;
+if ($int2 > 0) {
+	$namedobj3 = enum(int, namedobj, enum_982, $int1);
+	if ($namedobj3 ! null) {
+		return($namedobj3, $int2);
+	}
+}
+return(null, 0);

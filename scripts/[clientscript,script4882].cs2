@@ -1,0 +1,20 @@
+// 4882
+[clientscript,script4882](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $comsubid4, int $int5)
+if ($drop0 ! $drop1) {
+	return;
+}
+if ($comsubid2 < 1 | $dropsubid3 < 1 | $comsubid2 > $comsubid4 | $dropsubid3 > $comsubid4) {
+	return;
+}
+def_namedobj $namedobj6 = null;
+def_int $int7 = 0;
+$namedobj6, $int7 = ~script4891($comsubid2);
+if ($namedobj6 = null | $int7 <= 0) {
+	return;
+}
+def_namedobj $namedobj8 = null;
+def_int $int9 = 0;
+$namedobj8, $int9 = ~script4891($dropsubid3);
+~script4893($comsubid2, $namedobj8, $int9);
+~script4893($dropsubid3, $namedobj6, $int7);
+~script4881($drop0, $int5);

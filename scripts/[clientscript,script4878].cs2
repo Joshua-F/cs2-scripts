@@ -1,0 +1,11 @@
+// 4878
+[clientscript,script4878](boolean $boolean0, component $component1, int $comsubid2, int $trans3, int $trans4)
+if (cc_find($component1, $comsubid2) = ^true) {
+	if ($boolean0 = true) {
+		cc_settrans($trans3);
+		cc_setontimer("script4879(calc(clientclock + 2), event_com, event_comsubid, $trans4)");
+	} else {
+		cc_settrans($trans4);
+		cc_setontimer(null);
+	}
+}

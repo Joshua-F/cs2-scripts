@@ -1,15 +1,26 @@
 // 491
-[proc,bankside_switchview](component $component0, component $component1, component $component2)
-if (%varbit4139 = 1) {
+[proc,bankside_switchview](component $component0, component $component1, component $component2, component $component3, component $component4)
+if (%varbit9727 = 1) {
 	if_sethide(true, $component0);
 	if_sethide(false, $component1);
 	if_sethide(true, $component2);
-} else if (%varbit9545 = 1 & ~script3688 = 1) {
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
+} else if (%varbit9727 = 2 & ~script3688 = 1) {
 	if_sethide(true, $component0);
 	if_sethide(true, $component1);
 	if_sethide(false, $component2);
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
+} else if (%varbit9727 = 3 | %varbit9727 = 4) {
+	if_sethide(true, $component0);
+	if_sethide(true, $component1);
+	if_sethide(true, $component2);
+	if_sethide(false, $component3);
 } else {
 	if_sethide(false, $component0);
 	if_sethide(true, $component1);
 	if_sethide(true, $component2);
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
 }

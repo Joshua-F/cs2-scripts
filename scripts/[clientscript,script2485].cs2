@@ -6,11 +6,15 @@ if (~rental_world = 0) {
 def_dbrow $dbrow1 = ~script6154($int0);
 def_int $int2 = ~script2486($int0, 0, 1);
 def_int $int3 = ~script2486($int0, 1, 1);
-if ($int2 ! db_getfield($dbrow1, quest:37, 0)) {
-	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite direct differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:37, 0))></col>  Actual: <col=0059de><tostring($int2)></col>");
+if ($dbrow1 = dbrow_162) {
+	$int2 = calc($int2 + 1);
+	$int3 = calc($int3 + 7);
 }
-if ($int3 ! db_getfield($dbrow1, quest:38, 0)) {
-	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite indirect differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:38, 0))></col>  Actual: <col=0059de><tostring($int3)></col>");
+if ($int2 ! db_getfield($dbrow1, quest:33, 0)) {
+	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite direct differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:33, 0))></col>  Actual: <col=0059de><tostring($int2)></col>");
+}
+if ($int3 ! db_getfield($dbrow1, quest:34, 0)) {
+	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite indirect differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:34, 0))></col>  Actual: <col=0059de><tostring($int3)></col>");
 }
 if ($int0 = db_listall_with_count(quest)) {
 	~debug_mes_info("Quest", "All quests verified, check above for any warnings.");

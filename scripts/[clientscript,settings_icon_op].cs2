@@ -39,7 +39,7 @@ if ($int7 > 0) {
 			~settings_set_slider($setting0, calc(%varbit12427 / 5));
 		case ^setting_volumeareasounds :
 			if (%varbit12428 <= 0) {
-				%varbit12428 = 50;
+				%varbit12428 = 40;
 			}
 			~settings_set_slider($setting0, calc(%varbit12428 / 5));
 	}

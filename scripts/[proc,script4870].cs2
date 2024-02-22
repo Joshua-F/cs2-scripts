@@ -1,0 +1,36 @@
+// 4870
+[proc,script4870](component $component0, component $component1, component $component2, component $component3)
+if (%varbit9667 <= 0) {
+	if_sethide(true, $component2);
+} else {
+	if_sethide(false, $component2);
+}
+if (%varbit9667 >= 5) {
+	if_sethide(true, $component3);
+} else {
+	if_sethide(false, $component3);
+}
+def_string $text0 = "";
+def_string $text1 = "";
+switch_int (%varbit9667) {
+	case 0 :
+		$text0 = "Gryff Aldock<br>Raminme Altrodor<br>Layte Aubury<br>Ingald Belger<br>Asyff Bymajique<br>Baraek Brigson<br>Brugsen Bursen<br>Jeremy Clerksin<br>Daerig Clod<br>Phillipa DeMarne<br>Trista Donaldson<br>Straven Enroy";
+		$text1 = "Town Crier<br>Cook<br>Rune Seller<br>Apothecary<br>Clothes Seller<br>Fur Seller<br>Economist<br>Cart Expert<br>Unemployed<br>Minor Noble<br>Banker<br>'Businessman'";
+	case 1 :
+		$text0 = "Gertrude Fairweather<br>Shilop Fairweather<br>Walter Fairweather<br>Wilough Fairweather<br>Dimintheis Fitzharmon<br>Eustace Forthwright<br>Romeo Gontamue<br>Everard Grafham<br>Matthew Grey<br>Grimesquit Grime<br>Phingspet Grime<br>Benny Gutenberg";
+		$text1 = "Housewife<br>Baby<br>Travelling Merchant<br>Baby<br>Former Noble<br>Guard<br>Minor Noble<br>Natural Historian<br>Sailor<br>Profession Withheld<br>Profession Withheld<br>Journalist";
+	case 2 :
+		$text0 = "Haig Halen<br>Ritchard Haring<br>Randulf Harlow<br>Tobias Hills<br>Hendry Jamison<br>Louisiana Jones<br>Lawrence Lambare<br>Wimock Landsdown<br>Stuart Lea<br>Draul Leptoc<br>Juliet Leptoc<br>Phearthee Levalsyx";
+		$text1 = "Museum Curator<br>Dietician<br>Vampyre Hunter<br>Guard<br>Bartender<br>Student<br>Priest<br>Teacher<br>Playwright<br>Lord<br>Noble<br>Mugger";
+	case 3 :
+		$text0 = "Charles Lyeman<br>Surok Magis<br>Gaffit Malore<br>Mabel Malore<br>Alfi Marino<br>Aris Maye<br>Iffie Nitter<br>Thessalia Nitter<br>Elsie Parks<br>Fred Parks<br>Ethel Prim<br>Hartwin Prim";
+		$text1 = "Unemployed<br>Mage<br>Librarian<br>Information Clerk<br>Chef<br>Fortune Teller<br>Retired<br>Clothes Seller<br>Retired<br>Retired<br>Servant<br>Student";
+	case 4 :
+		$text0 = "Enhtor Prysin<br>Idonea Ramlock<br>Trevick Ramlock<br>Aeonisig Raispher<br>Katrine Raven<br>Horvik Ravitz<br>Roald Remanis III<br>Milo Rovin<br>Martina Scorsby<br>Stephan Scorsby<br>Sani Semiv<br>Herbert Spiccanspan";
+		$text1 = "Knight<br>Teacher<br>Banker<br>Royal Advisor<br>Wallet Relocator<br>Apprentice Blacksmith<br>Our Glorious King<br>Captain of the Guard<br>Washerwoman<br>Guard<br>Master Smith<br>Street Cleaner";
+	case 5 :
+		$text0 = "Brana Talvoy<br>Launa Talvoy<br>Reldo Trimmly<br>Jack Tylner<br>Romily Weeklax<br>Treznor Withings";
+		$text1 = "Farmer<br>Farmer<br>Assistant Librarian<br>Rat Exterminator<br>Pie Salesman<br>Kitchen Boy";
+}
+if_settext($text0, $component0);
+if_settext($text1, $component1);

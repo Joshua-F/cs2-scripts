@@ -1,0 +1,6 @@
+// 1788
+[proc,script1788]()(int)
+if (calc(stat_base(attack) + stat_base(strength)) >= 130 | stat_base(attack) >= 99 | stat_base(strength) >= 99) {
+	return(1);
+}
+return(0);

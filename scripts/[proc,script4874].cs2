@@ -1,0 +1,20 @@
+// 4874
+[proc,script4874](dbrow $dbrow0)
+if (~script7327($dbrow0) = 1 | ~quest_is_subquest($dbrow0) = 1 | db_getfield($dbrow0, quest:autodisable, 0) = true | ~quest_status_get($dbrow0) ! 1) {
+	return;
+}
+if (%varbit9622 = 1 & ~quest_requirement_check($dbrow0) = 0) {
+	return;
+}
+def_int $int1 = db_getfieldcount($dbrow0, quest:14);
+def_int $int2 = db_getfieldcount($dbrow0, quest:15);
+def_int $int3 = 0;
+while ($int3 < $int1) {
+	highlight_npctype_on(db_getfield($dbrow0, quest:14, $int3), 13);
+	$int3 = calc($int3 + 1);
+}
+$int3 = 0;
+while ($int3 < $int2) {
+	highlight_loctype_on(db_getfield($dbrow0, quest:15, $int3), 16);
+	$int3 = calc($int3 + 1);
+}

@@ -1,0 +1,10 @@
+// 4872
+[proc,script4872]
+if (%varbit9619 = 0) {
+	highlight_npctype_setup(13, null, 1, 0, 0);
+	highlight_loctype_setup(16, null, 1, 0, 0);
+} else {
+	highlight_npctype_setup(13, ^cyan, 2, 30, 1);
+	highlight_loctype_setup(16, ^cyan, 2, 30, 1);
+	~script4873;
+}

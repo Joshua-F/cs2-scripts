@@ -1,0 +1,22 @@
+// 4892
+[proc,script4892](int $int0)(int, int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+switch_int ($int0) {
+	case 1 :
+		$int1, $int2 = %varbit29, %varbit1624;
+	case 2 :
+		$int1, $int2 = %varbit1622, %varbit1625;
+	case 3 :
+		$int1, $int2 = %varbit1623, %varbit1626;
+	case 4 :
+		$int1, $int2 = %varbit14285, %varbit14286;
+	case 5 :
+		$int1, $int2 = %varbit15373, %varbit15375;
+	case 6 :
+		$int1, $int2 = %varbit15374, %varbit15376;
+}
+if ($int2 > 0) {
+	return($int1, $int2);
+}
+return(0, 0);

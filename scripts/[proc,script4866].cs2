@@ -1,0 +1,9 @@
+// 4866
+[proc,script4866](dbrow $dbrow0)(dbrow)
+if (db_getrowtable($dbrow0) = dbtable_61) {
+	if (db_getfieldcount($dbrow0, dbtable_61:0) > 0) {
+		return(db_getfield($dbrow0, dbtable_61:0, 0));
+	}
+	return(null);
+}
+return(null);

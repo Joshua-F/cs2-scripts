@@ -1,0 +1,40 @@
+// 4883
+[clientscript,script4883](int $int0, component $component1, component $component2, component $component3, component $component4)
+cc_deleteall($component1);
+def_int $int5 = 0;
+cc_create($component1, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(220);
+while ($int5 <= 4) {
+	cc_create($component1, ^iftype_graphic, $int5);
+	$int5 = calc($int5 + 1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+}
+def_int $int6 = 0;
+while ($int6 < 4) {
+	cc_create($component1, ^iftype_graphic, $int5);
+	$int5 = calc($int5 + 1);
+	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("mod_icons_interface,11");
+	cc_settrans(0);
+	$int6 = calc($int6 + 1);
+}
+def_int $y7 = calc((32 + 1 - 13) / 2);
+~script4890(false, $component2);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script4888(true, event_com)", $component2);
+}
+if_setonmouseleave("script4888(false, event_com)", $component2);
+if_setop(1, "Load", $component2);
+if_setonop("opsound(event_op, 2)", $component2);
+if_setontimer(null, $component2);
+def_int $int8 = calc(if_getwidth($component1) - (if_getx($component2) + if_getwidth($component2)));
+~script4885($int0, $component1, $int8, $y7, $component3, $component4);
+if_setonvartransmit("script4884($int0, event_com, $int8, $y7, $component3, $component4){var115, var1139, var1140, var3574, var4017, var2979, var2978, var2975, var1205, var1204, var1203, var1202, var4095, var4096, var4097}", $component1);
+if_setoninvtransmit("script4884($int0, event_com, $int8, $y7, $component3, $component4){bank, inv}", $component1);

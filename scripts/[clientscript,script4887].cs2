@@ -1,0 +1,12 @@
+// 4887
+[clientscript,script4887](int $clock0, component $component1, int $comsubid2)
+def_int $int3 = 0;
+if (cc_find($component1, $comsubid2) = ^true) {
+	$int3 = calc(clientclock - $clock0);
+	if ($int3 >= 20) {
+		cc_settrans(254);
+		cc_setontimer(null);
+	} else {
+		cc_settrans(scale($int3, 20, 254));
+	}
+}

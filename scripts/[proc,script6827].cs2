@@ -1,5 +1,6 @@
 // 6827
 [proc,script6827](string $string0, dbrow $dbrow0)(string)
+$string0 = ~script4875($string0, $dbrow0, 1);
 if (db_getfield($dbrow0, quest:comlevelreq, 0) > 3) {
 	$string0 = "<$string0><~questjournal_overview_combat_requirement(db_getfield($dbrow0, quest:comlevelreq, 0))><br>";
 }
@@ -14,4 +15,5 @@ while ($int4 < $int3) {
 	}
 	$int4 = calc($int4 + 1);
 }
+$string0 = ~script4875($string0, $dbrow0, 0);
 return($string0);
