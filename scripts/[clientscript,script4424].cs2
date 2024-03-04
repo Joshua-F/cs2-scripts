@@ -29,11 +29,8 @@ def_int $width11 = calc(if_getwidth($component2) - 30);
 def_int $int12 = 0;
 def_string $string0 = "";
 def_graphic $graphic13 = null;
-def_int $int14 = 0;
+def_boolean $boolean14 = enum(enum, boolean, enum_5279, $enum0);
 def_int $intarray0(enum_getoutputcount($enum0));
-if (~script441($enum0) = 1) {
-	$int14 = 1;
-}
 while ($int12 < $int7) {
 	cc_create($component1, ^iftype_text, $int10);
 	cc_setposition(0, calc($int12 * $int8), ^setpos_abs_centre, ^setpos_abs_top);
@@ -48,7 +45,7 @@ while ($int12 < $int7) {
 		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int6)");
 	}
 	cc_setonop("script4428(event_op, $int12, $enum0, $component2, $comsubid3, $component4, $component5, $int6)");
-	if ($int14 = 1) {
+	if ($boolean14 = true) {
 		$intarray0(calc($int10 - 1)) = $int10;
 	}
 	if ($enum0 = enum_3795) {
@@ -63,7 +60,7 @@ while ($int12 < $int7) {
 	cc_settext(~script4193($string0, $width11, p11_full));
 	$int12, $int10 = calc($int12 + 1), calc($int10 + 1);
 }
-if ($int14 = 1) {
+if ($boolean14 = true) {
 	~quicksort_cctext(intarray0, $component1, 0, $int7);
 	$int12 = 0;
 	while ($int12 < enum_getoutputcount($enum0)) {

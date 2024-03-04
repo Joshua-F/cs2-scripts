@@ -1,81 +1,88 @@
 // 1584
-[clientscript,killcounts](string $string0, string $string1, string $string2, int $int0, string $text3)
-def_component $component1 = interface_549:12;
-def_component $component2 = interface_549:13;
-def_component $component3 = interface_549:14;
-def_component $component4 = interface_549:15;
-def_component $component5 = interface_549:16;
-def_component $component6 = interface_549:5;
-def_component $component7 = interface_549:4;
-def_int $int8 = 0;
-def_int $index9 = string_indexof_string($string0, "|", 0);
-def_int $index10 = string_indexof_string($string1, "|", 0);
-def_int $index11 = string_indexof_string($string2, "|", 0);
+[clientscript,killcounts](string $string0, string $string1, string $string2, int $int0, string $text3, boolean $boolean1)
+def_component $component2 = interface_549:12;
+def_component $component3 = interface_549:13;
+def_component $component4 = interface_549:14;
+def_component $component5 = interface_549:15;
+def_component $component6 = interface_549:16;
+def_component $component7 = interface_549:5;
+def_component $component8 = interface_549:4;
+def_int $int9 = 0;
+def_int $index10 = string_indexof_string($string0, "|", 0);
+def_int $index11 = string_indexof_string($string1, "|", 0);
+def_int $index12 = string_indexof_string($string2, "|", 0);
 def_string $text4 = "";
 def_string $text5 = "";
 def_string $text6 = "";
-def_graphic $graphic12 = "reset,0";
-def_graphic $graphic13 = "reset,1";
-def_int $int14 = 18;
-cc_deleteall($component1);
+def_graphic $graphic13 = "reset,0";
+def_graphic $graphic14 = "reset,1";
+def_int $int15 = 18;
 cc_deleteall($component2);
 cc_deleteall($component3);
 cc_deleteall($component4);
 cc_deleteall($component5);
+cc_deleteall($component6);
 ~script1586;
-while ($int8 <= $int0 & $index9 ! -1 & $index10 ! -1 & $index11 ! -1) {
-	$text4 = substring($string0, 0, $index9);
-	$text5 = substring($string1, 0, $index10);
-	$text6 = substring($string2, 0, $index11);
-	if (calc($int8 % 2) = 0) {
-		cc_create($component1, ^iftype_rectangle, calc($int8 / 2));
+while ($int9 <= $int0 & $index10 ! -1 & $index11 ! -1 & $index12 ! -1) {
+	$text4 = substring($string0, 0, $index10);
+	$text5 = substring($string1, 0, $index11);
+	$text6 = substring($string2, 0, $index12);
+	if (calc($int9 % 2) = 0) {
+		cc_create($component2, ^iftype_rectangle, calc($int9 / 2));
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(245);
-		cc_setposition(0, calc($int8 * $int14), ^setpos_abs_centre, ^setpos_abs_top);
-		cc_setsize(0, $int14, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, calc($int9 * $int15), ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setsize(0, $int15, ^setsize_minus, ^setsize_abs);
 	}
-	cc_create($component2, ^iftype_text, $int8);
+	cc_create($component3, ^iftype_text, $int9);
 	cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, calc($int8 * $int14), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(0, calc($int9 * $int15), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_left, ^settextalign_bottom, 15);
 	cc_settext($text4);
 	cc_settextshadow(true);
-	cc_create($component3, ^iftype_text, $int8);
+	cc_create($component4, ^iftype_text, $int9);
 	cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, calc($int8 * $int14), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(0, calc($int9 * $int15), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_right, ^settextalign_bottom, 15);
 	cc_settext($text5);
 	cc_settextshadow(true);
-	cc_create($component4, ^iftype_text, $int8);
+	cc_create($component5, ^iftype_text, $int9);
 	cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, calc($int8 * $int14), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(0, calc($int9 * $int15), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_right, ^settextalign_bottom, 15);
 	cc_settext($text6);
 	cc_settextshadow(true);
-	cc_create($component5, ^iftype_graphic, $int8);
+	cc_create($component6, ^iftype_graphic, $int9);
 	cc_setsize(15, 14, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, calc($int8 * $int14), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(0, calc($int9 * $int15), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("reset,0");
-	cc_setonmouseover("cc_graphic_swapper($component5, $int8, $graphic13, null)");
-	cc_setonmouseleave("cc_graphic_swapper($component5, $int8, $graphic12, null)");
-	cc_setonop("script1587($component5, $int8)");
-	cc_setop(1, "Reset Streak");
-	$string0 = substring($string0, calc($index9 + 1), string_length($string0));
-	$string1 = substring($string1, calc($index10 + 1), string_length($string1));
-	$string2 = substring($string2, calc($index11 + 1), string_length($string2));
-	$int8 = calc($int8 + 1);
-	$index9 = string_indexof_string($string0, "|", 0);
-	$index10 = string_indexof_string($string1, "|", 0);
-	$index11 = string_indexof_string($string2, "|", 0);
+	if ($boolean1 = true) {
+		cc_setonmouseover("cc_graphic_swapper($component6, $int9, $graphic14, null)");
+		cc_setonmouseleave("cc_graphic_swapper($component6, $int9, $graphic13, null)");
+		cc_setonop("script1587($component6, $int9)");
+		cc_setop(1, "Reset Streak");
+		cc_setopbase("<col=ff9040><$text4></col>");
+	} else {
+		cc_settrans(120);
+		cc_clearops;
+		cc_setonop(null);
+	}
+	$string0 = substring($string0, calc($index10 + 1), string_length($string0));
+	$string1 = substring($string1, calc($index11 + 1), string_length($string1));
+	$string2 = substring($string2, calc($index12 + 1), string_length($string2));
+	$int9 = calc($int9 + 1);
+	$index10 = string_indexof_string($string0, "|", 0);
+	$index11 = string_indexof_string($string1, "|", 0);
+	$index12 = string_indexof_string($string2, "|", 0);
 }
-if_setscrollsize(0, calc($int8 * $int14 + $int14), $component6);
-if_setscrollpos(0, 0, $component6);
-~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, calc($int9 * $int15 + $int15), $component7);
+if_setscrollpos(0, 0, $component7);
+~scrollbar_vertical($component8, $component7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if_settext($text3, interface_549:3);

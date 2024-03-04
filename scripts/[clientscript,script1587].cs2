@@ -3,6 +3,12 @@
 def_int $int2 = 0;
 def_int $int3 = 0;
 if (cc_find($component0, $int1) = ^true & .cc_find(interface_549:13, $int1) = ^true) {
+	if (string_indexof_string(.cc_gettext, "(Awakened)", 0) ! -1) {
+		sound_synth(pillory_wrong, 1, 0);
+		mes("The Awakened version of a boss shares its streak with the standard version.");
+		return;
+	}
+	sound_synth(interface_select1, 1, 0);
 	if_settext("Reset streak:<br><.cc_gettext>", interface_549:24);
 	if_setsize(calc(parawidth(if_gettext(interface_549:24), 75, p11_full) + 10), 50, ^setsize_abs, ^setsize_abs, interface_549:19);
 	if (paraheight(if_gettext(interface_549:24), if_getwidth(interface_549:24), p11_full) > 4) {
