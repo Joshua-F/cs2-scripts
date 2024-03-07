@@ -1,0 +1,74 @@
+// 441
+[clientscript,script441](dbrow $dbrow0, int $int1, component $component2)
+~script4206(interface_289:1, interface_289:2, interface_289:3, $int1, $component2);
+if_sethide(true, interface_289:7);
+if_sethide(true, interface_289:8);
+def_string $string0 = db_getfield($dbrow0, dbtable_62:0, 0);
+~steelborder(interface_289:4, $string0, 1);
+~scrollbar_vertical(interface_289:9, interface_289:6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_deleteall(interface_289:6);
+def_int $int3 = 0;
+def_int $int4 = db_getfield($dbrow0, dbtable_62:2, 0);
+def_int $int5 = 0;
+if (~on_mobile = true) {
+	$int4, $int5 = db_getfield($dbrow0, dbtable_62:3, 0), 1;
+}
+def_int $int6 = db_getfield($dbrow0, dbtable_62:4, 0);
+def_int $int7 = calc(($int6 + 4) / 2);
+def_int $int8 = calc(($int4 - $int6) / 2);
+def_int $int9 = 0;
+def_string $string1 = "Nothing";
+def_graphic $graphic10 = null;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = db_getfieldcount($dbrow0, dbtable_62:1);
+def_int $int15 = calc(parawidth($string0, 512, b12_full) + 20);
+while ($int13 < $int14) {
+	$int9, $string1, $graphic10 = db_getfield($dbrow0, dbtable_62:1, $int13);
+	cc_create(interface_289:6, ^iftype_rectangle, $int3);
+	$int3 = calc($int3 + 1);
+	cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	if (calc($int13 % 2) = 0) {
+		cc_settrans(225);
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 225, null)");
+	} else {
+		cc_settrans(245);
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 245, null)");
+	}
+	if ($int5 = 0) {
+		cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+	}
+	cc_setonclick("script4208($int9, interface_289:1, interface_289:2, interface_289:3, $component2)");
+	cc_setontimer(null);
+	cc_create(interface_289:6, ^iftype_text, $int3);
+	$int3 = calc($int3 + 1);
+	.cc_create(interface_289:6, ^iftype_graphic, $int3);
+	$int3 = calc($int3 + 1);
+	cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
+	.cc_setsize($int6, $int6, ^setsize_abs, ^setsize_abs);
+	if ($graphic10 = "blank") {
+		cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+	} else {
+		cc_setposition($int7, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	if ($int9 = $int1) {
+		cc_setcolour(^white);
+		$int12 = calc($int11 + $int4 / 2);
+	} else {
+		cc_setcolour(0xff981f);
+	}
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext($string1);
+	.cc_setgraphic($graphic10);
+	.cc_setposition(calc(0 - (parawidth($string1, 512, p12_full) + 4) / 2), calc($int11 + $int8), ^setpos_abs_centre, ^setpos_abs_top);
+	$int15 = ~max($int15, calc(parawidth($string1, 512, p12_full) + 42 + ($int7 + 4) * 2));
+	$int11 = calc($int11 + $int4);
+	$int13 = calc($int13 + 1);
+}
+~clan_rankpopup_setsize($int15, $int11, $int12, if_getheight(interface_289:1));

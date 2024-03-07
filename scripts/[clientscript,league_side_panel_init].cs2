@@ -4,7 +4,7 @@ cc_deleteall($component0);
 cc_deleteall($component1);
 cc_deleteall($component2);
 cc_deleteall($component3);
-if_settext(~league_get_league_name, $component4);
+if_settext(~script4901, $component4);
 ~v2_stone_button_filled($component0);
 if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($component0, 0)", $component0);

@@ -21,6 +21,16 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				} else {
 					$text0 = "N/A";
 				}
+			case struct_852 :
+				if (~gim_option_get(struct_849) = 1) {
+					if (%varclansetting99 = -1) {
+						$text0 = "All";
+					} else {
+						$text0 = enum(int, string, enum_3967, %varclansetting99);
+					}
+				} else {
+					$text0 = "N/A";
+				}
 			case struct_4227 :
 				if (~gim_option_get(struct_4226) = 1) {
 					if (%varclansetting53 > 1) {

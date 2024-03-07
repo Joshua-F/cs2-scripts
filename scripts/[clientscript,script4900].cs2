@@ -1,0 +1,18 @@
+// 4900
+[clientscript,script4900](int $count0, struct $struct1, int $int2)
+~collection_toggle_search(false);
+def_enum $enum3 = null;
+switch_int ($count0) {
+	case 0 :
+		$enum3 = enum_2103;
+	case 1 :
+		$enum3 = enum_2104;
+	case 2 :
+		$enum3 = enum_2105;
+	case 3 :
+		$enum3 = enum_2106;
+	case 4 :
+		$enum3 = enum_2107;
+}
+~collection_draw_tabs_all($count0);
+~collection_draw_log($struct1, $enum3, $int2);

@@ -441,6 +441,7 @@
 [**438**](scripts/[proc,tournament_world].cs2) `[proc,tournament_world]`  
 [**439**](scripts/[clientscript,script439].cs2)  
 [**440**](scripts/[clientscript,settings_client_type].cs2) `[clientscript,settings_client_type]`  
+[**441**](scripts/[clientscript,script441].cs2)  
 [**442**](scripts/[proc,script442].cs2)  
 [**443**](scripts/[clientscript,castlewarstrade_init].cs2) `[clientscript,castlewarstrade_init]`  
 [**444**](scripts/[clientscript,barbassault_turret_data].cs2) `[clientscript,barbassault_turret_data]`  
@@ -4899,6 +4900,8 @@
 [**4897**](scripts/[clientscript,script4897].cs2)  
 [**4898**](scripts/[clientscript,script4898].cs2)  
 [**4899**](scripts/[proc,script4899].cs2)  
+[**4900**](scripts/[clientscript,script4900].cs2)  
+[**4901**](scripts/[proc,script4901].cs2)  
 [**5165**](scripts/[clientscript,script5165].cs2)  
 [**5166**](scripts/[proc,script5166].cs2)  
 [**5167**](scripts/[clientscript,helper_agility_highlight_course].cs2) `[clientscript,helper_agility_highlight_course]`  

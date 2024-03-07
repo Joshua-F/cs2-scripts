@@ -5,7 +5,7 @@ def_int $int8 = 0;
 def_int $count9 = enum_getoutputcount($enum7);
 def_int $int10 = 15;
 def_int $height11 = 0;
-def_int $trans12 = 255;
+def_int $int12 = 255;
 def_string $text0 = "";
 def_struct $struct13 = null;
 if (~on_mobile = true) {
@@ -32,11 +32,11 @@ while ($int8 < $count9) {
 	cc_setcolour(^white);
 	cc_setfill(true);
 	if (calc($int8 % 2) = 0) {
-		$trans12 = 235;
+		$int12 = 235;
 	} else {
-		$trans12 = 255;
+		$int12 = 255;
 	}
-	cc_settrans($trans12);
+	cc_settrans($int12);
 	cc_setop(1, "Check");
 	cc_setopbase("<col=ff9040><$text0></col>");
 	if ($int8 = $int5) {
@@ -47,8 +47,8 @@ while ($int8 < $count9) {
 		cc_setonmouseleave(null);
 		~collection_draw_log($struct13, $enum7, $int8);
 	} else if (~on_mobile = false) {
-		cc_setonmouseover("cc_settrans(event_com, event_comsubid, 225, null)");
-		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $trans12, null)");
+		cc_setonmouseover("cc_settrans(event_com, event_comsubid, calc($int12 - 40), null)");
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int12, null)");
 	} else {
 		cc_setonmouseover(null);
 		cc_setonmouseleave(null);

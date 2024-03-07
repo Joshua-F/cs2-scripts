@@ -73,6 +73,16 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				} else {
 					$text0 = "<col=9f9f9f>N/A</col>";
 				}
+			case combat_achievement_task_threshold_854 :
+				if (~clan_permission_get(combat_achievement_task_broadcasts_853) ! 128) {
+					if (%varclansetting101 = -1) {
+						$text0 = "All";
+					} else {
+						$text0 = enum(int, string, enum_3967, %varclansetting101);
+					}
+				} else {
+					$text0 = "<col=9f9f9f>N/A</col>";
+				}
 			case pk_broadcast_value_4247 :
 				if (~clan_permission_get(pk_broadcasts_4246) ! 128) {
 					if (%varclansetting65 > 1) {

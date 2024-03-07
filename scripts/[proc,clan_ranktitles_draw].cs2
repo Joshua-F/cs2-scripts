@@ -100,6 +100,7 @@ while ($int10 <= 265) {
 def_int $int11 = 0;
 def_string $string0 = "";
 def_graphic $graphic12 = null;
+def_int $x13 = calc((13 + 4) / 2);
 $int10 = 0;
 while ($int10 < $int0) {
 	$int11 = enum(int, int, enum_3795, $int10);
@@ -153,7 +154,12 @@ while ($int10 < $int0) {
 	}
 	if (cc_find($component2, calc($int8 + 1)) = ^true & .cc_find($component2, calc($int8 + 2)) = ^true) {
 		cc_settext($string0);
-		.cc_setposition(calc(0 - (parawidth($string0, 512, p12_full) + 8 + 13) / 2), .cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
+		if ($graphic12 = null) {
+			cc_setposition(0, cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
+		} else {
+			cc_setposition($x13, cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
+		}
+		.cc_setposition(calc(0 - (parawidth($string0, 512, p12_full) + 4) / 2), .cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
 		.cc_setgraphic($graphic12);
 		cc_sethide(false);
 		.cc_sethide(false);

@@ -1,5 +1,5 @@
 // 6156
-[proc,scrollbar_horizontal](component $component0, component $component1, graphic $graphic2, graphic $graphic3, graphic $graphic4, graphic $graphic5, graphic $graphic6, graphic $graphic7)
+[proc,scrollbar_horizontal](component $component0, component $component1, graphic $graphic2, graphic $graphic3, graphic $graphic4, graphic $graphic5, graphic $graphic6, graphic $graphic7, int $int8)
 cc_create($component0, ^iftype_graphic, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(32, 0, ^setsize_minus, ^setsize_minus);
@@ -10,18 +10,18 @@ cc_setonscrollwheel("scrollbar_horizontal_wheel($component0, $component1, event_
 cc_setnoclickthrough(true);
 .cc_create($component0, ^iftype_graphic, 1);
 .cc_setposition(0, 16, ^setpos_abs_left, ^setpos_abs_centre);
-def_int $width8 = if_getscrollwidth($component1);
-if ($width8 <= 0) {
-	$width8 = if_getwidth($component1);
+def_int $width9 = if_getscrollwidth($component1);
+if ($width9 <= 0) {
+	$width9 = if_getwidth($component1);
 }
-def_int $int9 = 0;
-if ($width8 > 0) {
-	$int9 = calc((if_getwidth($component0) - 32) * if_getwidth($component1) / $width8);
+def_int $int10 = 0;
+if ($width9 > 0) {
+	$int10 = calc((if_getwidth($component0) - 32) * if_getwidth($component1) / $width9);
 } else {
-	$int9 = calc(if_getwidth($component0) - 32);
+	$int10 = calc(if_getwidth($component0) - 32);
 }
-$int9 = ~max(10, $int9);
-.cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+$int10 = ~max(10, $int10);
+.cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
 .cc_setgraphic($graphic4);
 .cc_settiling(false);
 .cc_setdraggable($component0, 0);
@@ -52,3 +52,6 @@ cc_setgraphic($graphic7);
 cc_settiling(false);
 cc_setonhold("scrollbar_horizontal_hold($component0, $component1, 4)");
 cc_setnoclickthrough(true);
+if ($int8 = 1) {
+	if_setonscrollwheel("scrollbar_horizontal_wheel($component0, $component1, event_mousey)", $component1);
+}
