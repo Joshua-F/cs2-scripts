@@ -3,7 +3,7 @@
 ~script4206(interface_389:1, interface_389:2, interface_389:3, 0, $component0);
 ~stonebutton_init("<col=0dc10d>Okay</col>", interface_389:10, "p12_full", 0);
 if_setonop("script4208(1, interface_389:1, interface_389:2, interface_389:3, $component0)", interface_389:10);
-def_int $int5 = ~max(1, calc((21 + (6 - 1)) / 6));
+def_int $int5 = ~max(1, calc((22 + (6 - 1)) / 6));
 def_int $int6 = calc(if_getwidth(interface_389:6) - 4);
 def_int $int7 = calc($int6 / 6);
 def_int $int8 = calc(2 + ($int6 - $int7 * 6) / 2);
@@ -23,7 +23,7 @@ def_int $int16 = calc(($int7 - $int15) / 2);
 def_int $int17 = calc(($int12 - $int15) / 2);
 cc_deleteall(interface_389:6);
 def_int $int18 = 0;
-while ($int18 <= 21) {
+while ($int18 <= 22) {
 	cc_create(interface_389:6, ^iftype_rectangle, $int18);
 	$int18 = calc($int18 + 1);
 	cc_sethide(true);
@@ -34,7 +34,7 @@ def_int $int21 = 0;
 def_boolean $boolean22 = ~on_mobile;
 def_namedobj $namedobj23 = null;
 def_int $int24 = 0;
-while ($int24 <= 21) {
+while ($int24 <= 22) {
 	$namedobj23 = enum(int, namedobj, enum_982, $int24);
 	if ($namedobj23 ! null) {
 		$int20 = calc($int8 + $int19 % 6 * $int7);

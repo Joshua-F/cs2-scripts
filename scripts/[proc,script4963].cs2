@@ -1,0 +1,7 @@
+// 4963
+[proc,script4963](component $component0, int $int1, int $comsubid2, int $int3, int $int4, int $int5, boolean $boolean6)
+if (~on_mobile = false) {
+	if_setonmouseover("script4964(true, event_com, $int1, $comsubid2, $int3, $int4)", $component0);
+}
+if_setonmouseleave("script4964(false, event_com, $int1, $comsubid2, $int3, $int4)", $component0);
+if_setonop("script4966(event_op, event_com, $int1, $comsubid2, $int3, $int4, $int5, $boolean6)", $component0);

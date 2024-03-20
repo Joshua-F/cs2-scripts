@@ -3,7 +3,7 @@
 def_int $int0 = 0;
 def_int $int1 = -1;
 def_int $int2 = 0;
-while ($int2 <= 21) {
+while ($int2 <= 22) {
 	if (enum(int, namedobj, enum_982, $int2) ! null) {
 		if (cc_find(interface_389:6, $int2) = ^true) {
 			if (testbit(%var3450, $int2) = ^true) {
@@ -12,7 +12,7 @@ while ($int2 <= 21) {
 				cc_setop(1, "Disable");
 			}
 		}
-		$int1 = calc(21 + 1 + $int0 * 3);
+		$int1 = calc(22 + 1 + $int0 * 3);
 		if (cc_find(interface_389:6, calc($int1 + 1)) = ^true) {
 			if (testbit(%var3450, $int2) = ^true) {
 				cc_setcolour(0x9f9f9f);

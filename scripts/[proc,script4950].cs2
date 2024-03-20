@@ -1,0 +1,7 @@
+// 4950
+[proc,script4950](string $text0, string $text1)
+def_component $component0 = interface_865:19;
+def_component $component1 = interface_865:21;
+~script4914($component1, 0, b12_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_top, 0, 36, ^setsize_minus, ^setsize_abs, $text0, true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
+~script4914($component1, 1, p12_full, 0, 20, ^setpos_abs_centre, ^setpos_abs_top, 0, 56, ^setsize_minus, ^setsize_minus, $text1, true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 13);
+if_sethide(false, $component0);

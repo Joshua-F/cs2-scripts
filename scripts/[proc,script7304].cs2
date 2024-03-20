@@ -117,9 +117,11 @@ if (string_indexof_string($string0, "yes", 0) = 0 | string_indexof_string($strin
 } else if (string_indexof_string($string0, "trick", 0) = 0 | string_indexof_string($string0, "bats", 0) = 0) {
 	$comsubid0 = 52;
 } else if (string_indexof_string($string0, "crab", 0) = 0) {
-	$comsubid0 = 53;
-} else if (string_indexof_string($string0, "sit", 0) = 0) {
 	$comsubid0 = 54;
+} else if (string_indexof_string($string0, "sit", 0) = 0) {
+	$comsubid0 = 55;
+} else if (string_indexof_string($string0, "fortissalute", 0) = 0 | string_indexof_string($string0, "fortis", 0) = 0) {
+	$comsubid0 = 53;
 }
 if (cc_find(interface_216:2, $comsubid0) = ^true) {
 	cc_triggerop(1);

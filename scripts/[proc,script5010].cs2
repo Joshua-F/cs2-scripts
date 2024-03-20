@@ -1,0 +1,14 @@
+// 5010
+[proc,script5010](component $component0, dbrow $dbrow1, int $int2)(int)
+if (~script5015($dbrow1) = true) {
+	return($int2);
+}
+def_int $x3 = db_getfield($dbrow1, dbtable_64:4, 0);
+def_int $y4 = db_getfield($dbrow1, dbtable_64:5, 0);
+cc_create($component0, ^iftype_model, $int2);
+cc_setsize(46, 46, ^setsize_abs, ^setsize_abs);
+cc_setmodel(model_51199);
+cc_setmodelangle(0, 0, 513, 0, 0, 600);
+cc_setposition($x3, $y4, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setmodelorthog(true);
+return(calc($int2 + 1));

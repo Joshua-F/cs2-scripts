@@ -1,0 +1,66 @@
+// 4930
+[proc,script4930](int $int0, int $flags1)
+def_component $component2 = interface_864:7;
+cc_deleteall($component2);
+def_int $int3 = 0;
+def_string $string0 = ~script4159(~script1776(%var4136), 1);
+def_int $int4 = ~script1776(%var4137);
+def_string $text1 = ~script4159($int4, 1);
+def_string $text2 = tostring(%var4132);
+if (%var4132 = ^max_32bit_int) {
+	$text2 = "Lots!";
+}
+def_int $int5 = calc(100 * $int0);
+if ($int0 = 12) {
+	$int5 = calc($int5 + 1000);
+}
+def_int $int6 = 0;
+def_int $int7 = %var4136;
+if ($int7 > 0 & $int7 < 500) {
+	$int6 = calc((500 - $int7) * $int0);
+}
+def_int $int8 = 0;
+def_int $count9 = 0;
+def_int $count10 = enum_getoutputcount(enum_5312);
+def_struct $struct11 = null;
+def_int $int12 = 1;
+while ($count9 < $count10) {
+	$struct11 = enum(int, struct, enum_5312, $count9);
+	if ($struct11 ! null & ~script4978($struct11, $flags1) = 1) {
+		if (struct_param($struct11, param_1901) = true) {
+			$int12 = ~script4980($struct11);
+		} else {
+			$int12 = 1;
+		}
+		$int8 = calc($int8 + struct_param($struct11, param_1903));
+	}
+	$count9 = calc($count9 + 1);
+}
+def_int $int13 = 0;
+if (%var4134 <= 0) {
+	$int13 = calc($int0 * 100);
+}
+def_string $text3 = "Wave complete: ";
+~script4914($component2, 0, p12_full, 0, 5, ^setpos_abs_left, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, 0xff981f, ^settextalign_right, ^settextalign_centre, 0);
+$text3 = " <col=0dc10d>+<tostring($int5)></col>";
+~script4914($component2, 1, p12_full, 0, 5, ^setpos_abs_right, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, ^white, ^settextalign_left, ^settextalign_centre, 0);
+$text3 = "Speed bonus: ";
+~script4914($component2, 2, p12_full, 0, 27, ^setpos_abs_left, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, 0xff981f, ^settextalign_right, ^settextalign_centre, 0);
+$text3 = " <col=0dc10d>+<tostring($int6)></col> (<$string0>)";
+~script4914($component2, 3, p12_full, 0, 27, ^setpos_abs_right, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, ^white, ^settextalign_left, ^settextalign_centre, 0);
+$text3 = "Modifier choice: ";
+~script4914($component2, 4, p12_full, 0, 49, ^setpos_abs_left, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, 0xff981f, ^settextalign_right, ^settextalign_centre, 0);
+$text3 = " <col=0dc10d>+<tostring($int8)></col>";
+~script4914($component2, 5, p12_full, 0, 49, ^setpos_abs_right, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, ^white, ^settextalign_left, ^settextalign_centre, 0);
+$text3 = "Damage taken: ";
+~script4914($component2, 6, p12_full, 0, 71, ^setpos_abs_left, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, 0xff981f, ^settextalign_right, ^settextalign_centre, 0);
+$text3 = " <col=0dc10d>+<tostring($int13)></col> (<tostring(%var4134)>)";
+~script4914($component2, 7, p12_full, 0, 71, ^setpos_abs_right, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, ^white, ^settextalign_left, ^settextalign_centre, 0);
+$text3 = "Total Glory";
+~script4914($component2, 8, b12_full, 0, 100, ^setpos_abs_left, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
+$text3 = "Total time";
+~script4914($component2, 9, b12_full, 0, 100, ^setpos_abs_right, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
+$text3 = $text2;
+~script4914($component2, 10, p12_full, 0, 120, ^setpos_abs_left, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, ^white, ^settextalign_centre, ^settextalign_centre, 0);
+$text3 = $text1;
+~script4914($component2, 11, p12_full, 0, 120, ^setpos_abs_right, ^setpos_abs_top, 8192, 20, ^setsize_2, ^setsize_abs, $text3, true, ^white, ^settextalign_centre, ^settextalign_centre, 0);

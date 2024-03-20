@@ -1,0 +1,10 @@
+// 4924
+[proc,script4924]
+def_component $component0 = interface_864:6;
+cc_deleteall($component0);
+def_int $int1 = 0;
+def_int $int2 = calc((if_getwidth($component0) - 4) / 2);
+$int1 = ~script5293($component0, $int1, 0, $int2, 4, 0x726451, "Loot", p12_full, 0xff981f, 0, null, 0, 0, 0, 0, ~is_equal(0, %varcint1195));
+cc_setonclick("script4925(0)");
+$int1 = ~script5293($component0, $int1, 1, $int2, 4, 0x726451, "Summary", p12_full, 0xff981f, 0, null, 0, 0, 0, 0, ~is_equal(1, %varcint1195));
+cc_setonclick("script4925(1)");

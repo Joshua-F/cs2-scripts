@@ -7,7 +7,7 @@ if (map_members = ^true | %varbit5314 = 1) {
 	$int1 = ~script3648($obj2);
 }
 if ($int1 <= 0) {
-	if_sethide(true, interface_593:35);
+	if_sethide(true, interface_593:36);
 	if_setsize(190, 28, ^setsize_abs, ^setsize_abs, interface_593:2);
 	return;
 }
@@ -15,14 +15,14 @@ if (~on_mobile = true) {
 	if_setsize(190, 16, ^setsize_abs, ^setsize_abs, interface_593:2);
 }
 def_int $int4 = 0;
-if (if_gethide(interface_593:35) = true) {
+if (if_gethide(interface_593:36) = true) {
 	$int4 = 1;
 }
-if_sethide(false, interface_593:35);
+if_sethide(false, interface_593:36);
 if (%var301 > 0) {
-	if_setcolour(^yellow, interface_593:40);
+	if_setcolour(^yellow, interface_593:41);
 } else {
-	if_setcolour(0x000010, interface_593:40);
+	if_setcolour(0x000010, interface_593:41);
 }
 def_int $int5 = %var300;
 def_int $int6 = 1000;
@@ -36,25 +36,25 @@ if ($obj2 = soulreaper_axe_28338) {
 	if ($int5 > 0) {
 		$int3 = 1;
 	}
-	if_settext("Special Attack: <tostring($int5)>/5", interface_593:40);
+	if_settext("Special Attack: <tostring($int5)>/5", interface_593:41);
 } else if (~league_relic_active(weapon_master_4721) = 1 & $int5 < $int7 & stat(hitpoints) > 25) {
 	$int5 = calc((stat(hitpoints) - 1) / 25);
 	$int6 = calc((stat_base(hitpoints) - 1) / 25);
 	$int8 = 1;
-	if_settext("Special Attack: <tostring($int5)>/<tostring($int6)>", interface_593:40);
+	if_settext("Special Attack: <tostring($int5)>/<tostring($int6)>", interface_593:41);
 } else {
-	if_settext("Special Attack: <tostring(calc($int5 / 10))>%", interface_593:40);
+	if_settext("Special Attack: <tostring(calc($int5 / 10))>%", interface_593:41);
 }
 ~combat_interface_sp_updatebar($component0, $int5, $int6, $int4);
 if ($int5 >= $int1 | $int8 = 1) {
 	$int3 = 1;
 }
 if ($int3 = 1) {
-	if_setcolour(0x397d3b, interface_593:39);
+	if_setcolour(0x397d3b, interface_593:40);
 } else {
-	if_setcolour(0x00326b, interface_593:39);
+	if_setcolour(0x00326b, interface_593:40);
 }
-~options_button_off(interface_593:36, 0);
+~options_button_off(interface_593:37, 0);
 def_string $string0 = "<enum(obj, string, enum_1739, $obj2)> (<tostring(calc($int7 / 10))>%)";
 switch_obj ($obj2) {
 	case dragon_hasta_22731, dragon_hasta_p_22734, dragon_hasta_p_22737, dragon_hasta_p_22740, dragon_hasta_kp_22743 :
@@ -62,15 +62,20 @@ switch_obj ($obj2) {
 	case soulreaper_axe_28338 :
 		$string0 = "<enum(obj, string, enum_1739, $obj2)> 0-5";
 }
+def_obj $obj9 = inv_getobj(worn, 13);
+def_obj $obj10 = inv_getobj(worn, 1);
+if ($obj9 = null & $obj10 ! null & oc_param($obj10, param_1910) = 1) {
+	$obj9 = inv_getobj(inv_879, 0);
+}
 if (%varbit5712 = 0) {
-	if (($obj2 = dark_bow_11235 | $obj2 = dark_bow_20408 | $obj2 = dark_bow_12765 | $obj2 = dark_bow_12768 | $obj2 = dark_bow_12767) & (inv_getobj(worn, 13) = dragon_arrow_11212 | inv_getobj(worn, 13) = dragon_arrow_p_11227 | inv_getobj(worn, 13) = dragon_arrow_p_11228 | inv_getobj(worn, 13) = dragon_arrow_p_11229)) {
+	if (($obj2 = dark_bow_11235 | $obj2 = dark_bow_20408 | $obj2 = dark_bow_12765 | $obj2 = dark_bow_12768 | $obj2 = dark_bow_12767) & ($obj9 = dragon_arrow_11212 | $obj9 = dragon_arrow_p_11227 | $obj9 = dragon_arrow_p_11228 | $obj9 = dragon_arrow_p_11229)) {
 		$string0 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 8 per hit). (<tostring(calc(~script3648($obj2) / 10))>%)";
 	}
-	if ($obj2 = dark_bow_bh_27853 & (inv_getobj(worn, 13) = dragon_arrow_11212 | inv_getobj(worn, 13) = dragon_arrow_p_11227 | inv_getobj(worn, 13) = dragon_arrow_p_11228 | inv_getobj(worn, 13) = dragon_arrow_p_11229)) {
+	if ($obj2 = dark_bow_bh_27853 & ($obj9 = dragon_arrow_11212 | $obj9 = dragon_arrow_p_11227 | $obj9 = dragon_arrow_p_11228 | $obj9 = dragon_arrow_p_11229)) {
 		$string0 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 10 per hit). (<tostring(calc(~script3648($obj2) / 10))>%)";
 	}
-	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:42, $string0, 25, 160)", interface_593:35);
-	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:35);
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:43, $string0, 25, 160)", interface_593:36);
+	if_setonmouseleave("deltooltip(interface_593:43)", interface_593:36);
 } else {
-	if_setonmouserepeat(null, interface_593:35);
+	if_setonmouserepeat(null, interface_593:36);
 }

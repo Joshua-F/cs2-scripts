@@ -1,0 +1,26 @@
+// 4945
+[proc,script4945](int $int0, int $int1, struct $struct2, component $component3)(int)
+def_boolean $boolean4 = struct_param($struct2, param_1901);
+def_int $int5 = 0;
+def_string $string0 = struct_param($struct2, param_1896);
+if ($boolean4 = true) {
+	$int5 = ~script4980($struct2);
+}
+if ($int5 = 2) {
+	$string0 = append($string0, " (II)");
+} else if ($int5 = 3) {
+	$string0 = append($string0, " (III)");
+}
+def_enum $enum6 = enum(int, enum, enum_5364, $int5);
+def_graphic $graphic7 = enum(int, graphic, $enum6, struct_param($struct2, param_1914));
+~create_graphic($component3, $int0, $graphic7, calc($int1 * 46 - 10), 0, ^setpos_abs_left, ^setpos_abs_centre, 64, 64, ^setsize_abs, ^setsize_abs);
+cc_settiling(false);
+$int0 = calc($int0 + 1);
+cc_create($component3, ^iftype_text, $int0);
+cc_setsize(40, 40, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int1 * 46 + 2), 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setopbase("<col=ff9040><$string0></col>");
+cc_setop(1, "Details");
+def_string $mes1 = "<$string0> - <~script4921($struct2)>";
+cc_setonop("script4946($mes1)");
+return(calc($int0 + 1));

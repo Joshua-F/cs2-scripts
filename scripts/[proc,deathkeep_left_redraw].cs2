@@ -69,6 +69,13 @@ while ($int25 > 0) {
 	$int9, $int10, $int11 = ~deathkeep_left_keepitem(old_school_bond_untradeable_13192, 1, burnt_fish_323, $int1, $int2, $int3, $int9, $int11);
 	$int25 = calc($int25 - 1);
 }
+if (~script5027 = 1 | ~script5028(inv) = 1) {
+	if ($int0 = 1) {
+		$int14, $int15 = ~script4906(%var4142, %var4141, $int1, $int2, $int3, $int14, "Dizana's quiver");
+	} else {
+		$int12, $int13 = ~script4905(%var4142, %var4141, $int1, $int2, $int3, $int12, "Dizana's quiver");
+	}
+}
 cc_deleteall(interface_4:5);
 def_int $int26 = 0;
 def_int $int27 = 0;

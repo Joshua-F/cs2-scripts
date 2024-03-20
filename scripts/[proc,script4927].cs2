@@ -1,0 +1,12 @@
+// 4927
+[proc,script4927]
+def_component $component0 = interface_864:7;
+def_component $component1 = interface_864:12;
+if_sethide(true, $component0);
+if_sethide(true, $component1);
+switch_int (%varcint1195) {
+	case 0 :
+		if_sethide(false, $component1);
+	case 1 :
+		if_sethide(false, $component0);
+}

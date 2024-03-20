@@ -1,0 +1,6 @@
+// 4973
+[clientscript,script4973](component $component0, component $component1, component $component2, component $component3)
+~script4975($component1, $component2, $component3);
+if_setoninvtransmit("script4974($component1, $component2, $component3){inv, worn}", $component0);
+if_setonvartransmit("script4974($component1, $component2, $component3){var4141, var4142}", $component0);
+if_setopkey(1, ^key_escape, 0, $component3);

@@ -79,6 +79,14 @@ if ($int11 = 1) {
 				$int12 = 0;
 			}
 			$string0 = "<$string0>Completed Client of Kourend.</col>";
+		case civitas_illa_fortis_855 :
+			if (~quest_is_complete(dbrow_3512) = 1) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Completed Twilight's Promise.</col>";
 		case troll_stronghold_467, weiss_592 :
 			if (%varbit6528 >= 200) {
 				$string0 = "<$string0><col=0dc10d>";

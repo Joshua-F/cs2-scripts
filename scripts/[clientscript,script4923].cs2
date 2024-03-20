@@ -1,0 +1,18 @@
+// 4923
+[clientscript,script4923](int $int0, int $flags1)
+def_int $int2 = 56623105;
+def_component $component3 = interface_864:2;
+def_int $int4 = 56623107;
+def_string $text0 = "Fortis Colosseum";
+~steelborder($component3, $text0, 0);
+%varcint1195 = 0;
+def_component $component5 = interface_864:5;
+~script5288($component5, 0, 0, 0, if_getwidth($component5), if_getheight($component5), struct_3712, 0x726451);
+~script4924;
+~script4930($int0, $flags1);
+def_component $component6 = interface_864:9;
+def_component $component7 = interface_864:10;
+def_component $component8 = interface_864:11;
+~script4944($flags1, $component6, $component7, $component8);
+%varcint1195 = 0;
+~script4927;

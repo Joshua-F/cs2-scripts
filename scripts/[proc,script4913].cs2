@@ -1,0 +1,15 @@
+// 4913
+[proc,script4913](boolean $boolean0, component $component1, int $flags2, graphic $graphic3, int $width4, int $height5)
+def_int $comsubid6 = 0;
+if (testbit($flags2, 0) = ^true) {
+	if ($boolean0 = true) {
+		$comsubid6 = ~v2_stone_button_in_filled($component1);
+	} else {
+		$comsubid6 = ~v2_stone_button_filled($component1);
+	}
+} else if ($boolean0 = true) {
+	$comsubid6 = ~v2_stone_button_in($component1);
+} else {
+	$comsubid6 = ~v2_stone_button($component1);
+}
+~create_graphic($component1, $comsubid6, $graphic3, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $width4, $height5, ^setsize_abs, ^setsize_abs);

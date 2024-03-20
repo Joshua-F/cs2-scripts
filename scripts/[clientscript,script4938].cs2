@@ -1,0 +1,11 @@
+// 4938
+[clientscript,script4938](int $int0, int $int1, int $int2, int $int3, int $int4)
+if (%varbit9788 = $int0) {
+	%varbit9788 = 0;
+} else {
+	%varbit9788 = $int0;
+}
+sound_synth(interface_select1, 1, 0);
+~script4934($int1, $int2, $int3, $int4);
+~script4948(0);
+~script4932($int4);

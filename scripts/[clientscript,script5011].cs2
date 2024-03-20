@@ -1,0 +1,21 @@
+// 5011
+[clientscript,script5011](component $component0, int $comsubid1, int $int2, int $int3, boolean $boolean4, component $component5, component $component6, component $component7, component $component8, model $model9, boolean $boolean10)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $component5);
+	if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $component6);
+	if_setmodel($model9, $component6);
+	if_sethide(false, $component5);
+	if_sethide(false, $component6);
+	if ($boolean4 = false) {
+		if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $component7);
+		if_sethide(false, $component7);
+	} else {
+		if_sethide(true, $component7);
+	}
+	if ($boolean10 = true) {
+		if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $component8);
+		if_sethide(false, $component8);
+	} else {
+		if_sethide(true, $component8);
+	}
+}

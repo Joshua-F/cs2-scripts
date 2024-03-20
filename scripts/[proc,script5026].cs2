@@ -1,0 +1,31 @@
+// 5026
+[proc,script5026](component $component0, int $int1)
+def_int $num2 = %var4141;
+def_obj $obj3 = %var4142;
+def_int $int4 = 0;
+if ($int1 = 0) {
+	$int4 = 150;
+}
+if ($obj3 = null) {
+	cc_create($component0, ^iftype_graphic, 0);
+	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settrans($int4);
+	cc_setgraphic(enum(int, graphic, enum_904, 13));
+	if_setop(2, "Fill", $component0);
+	if_setopbase("<col=ff9040>Dizana's quiver</col>", $component0);
+	if_setonop("script4977($component0, min(200, calc($int4 + 100)), $int4, false)", $component0);
+} else {
+	cc_create($component0, ^iftype_graphic, 0);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setobject($obj3, $num2);
+	cc_settrans($int4);
+	if_setop(1, "Quiver-Remove", $component0);
+	if_setop(2, "Swap", $component0);
+	if_setop(10, "Examine", $component0);
+	if_setonop("script4977($component0, min(200, calc($int4 + 100)), $int4, false)", $component0);
+	if_setopbase("<col=ff9040><~script1787($obj3)></col>", $component0);
+}

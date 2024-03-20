@@ -1,0 +1,37 @@
+// 4957
+[proc,script4957](component $component0, struct $struct1, int $int2, int $int3)(int)
+def_string $string0 = struct_param($struct1, param_1896);
+def_string $string1 = ~script4920($struct1);
+def_int $colour4 = ^white;
+def_int $int5 = 41025541;
+def_int $y6 = calc($int2 * 28);
+def_boolean $boolean7 = struct_param($struct1, param_1901);
+def_int $int8 = 0;
+if ($boolean7 = true) {
+	$int8 = ~script4980($struct1);
+}
+if ($int8 = 2) {
+	$string0 = append($string0, " (II)");
+} else if ($int8 = 3) {
+	$string0 = append($string0, " (III)");
+}
+if (calc($int2 % 2) = 0) {
+	$colour4 = ^black;
+}
+cc_create($component0, ^iftype_rectangle, $int3);
+cc_setsize(0, 28, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $y6, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_settrans(220);
+cc_setcolour($colour4);
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_text, $int3);
+cc_setposition(0, $y6, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setsize(8192, 28, ^setsize_2, ^setsize_abs);
+cc_settext($string0);
+$int3 = calc($int3 + 1);
+return($int3);

@@ -41,7 +41,11 @@ if (cc_find($component0, 0) = ^true) {
 }
 if (cc_find($component0, 1) = ^true) {
 	cc_sethide(false);
-	cc_settext("Level <tostring(oc_param($obj1, spell_levelreq))>: <oc_param($obj1, spell_name)>");
+	if (oc_param($obj1, spell_levelreq) > 0 & oc_param($obj1, param_1884) = false) {
+		cc_settext("Level <tostring(oc_param($obj1, spell_levelreq))>: <oc_param($obj1, spell_name)>");
+	} else {
+		cc_settext(oc_param($obj1, spell_name));
+	}
 }
 if (cc_find($component0, 2) = ^true) {
 	cc_sethide(false);

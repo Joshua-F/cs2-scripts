@@ -1,0 +1,25 @@
+// 5008
+[proc,script5008](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component0);
+if_sethide(true, $component1);
+if_sethide(true, $component2);
+def_string $string0 = "";
+def_int $int6 = db_listall_with_count(dbtable_64);
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_dbrow $dbrow9 = null;
+while ($int7 < $int6) {
+	$dbrow9 = db_findbyindex($int7);
+	if ($dbrow9 ! null) {
+		$int8 = ~script5009($component0, $dbrow9, $int8, $component1, $component2, $component3, $component4, $component5);
+	}
+	$int7 = calc($int7 + 1);
+}
+$int7 = 0;
+while ($int7 < $int6) {
+	$dbrow9 = db_findbyindex($int7);
+	if ($dbrow9 ! null) {
+		$int8 = ~script5010($component0, $dbrow9, $int8);
+	}
+	$int7 = calc($int7 + 1);
+}

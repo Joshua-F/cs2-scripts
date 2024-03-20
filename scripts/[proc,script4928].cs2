@@ -1,0 +1,42 @@
+// 4928
+[proc,script4928]
+def_component $component0 = interface_864:16;
+def_component $component1 = interface_864:17;
+def_component $component2 = interface_864:13;
+def_component $component3 = interface_864:14;
+def_component $component4 = interface_864:15;
+cc_deleteall($component0);
+cc_deleteall($component1);
+def_int $int5 = 0;
+cc_create($component0, ^iftype_rectangle, $int5);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(^black);
+cc_settrans(200);
+cc_setfill(true);
+$int5 = calc($int5 + 1);
+$int5 = ~thinbox($component0, $int5);
+$int5 = 0;
+def_obj $obj6 = null;
+def_int $size7 = 0;
+def_int $int8 = 0;
+while ($size7 < inv_size(inv_843)) {
+	$obj6 = inv_getobj(inv_843, $size7);
+	if ($obj6 ! null) {
+		$int5 = ~script4953($component1, $int5, $obj6, inv_getnum(inv_843, $size7), $int8, 5);
+		cc_setop(1, "Take");
+		cc_setop(2, "Take-5");
+		cc_setop(3, "Take-All");
+		cc_setop(4, "Take-X");
+		cc_setop(5, "Examine");
+		$int8 = calc($int8 + 1);
+	}
+	$size7 = calc($size7 + 1);
+}
+if ($int8 = 0) {
+	~script4914($component1, $int5, p12_full, 0, -20, ^setpos_abs_centre, ^setpos_abs_centre, 40, 40, ^setsize_minus, ^setsize_minus, "You do not have any more loot.", true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
+	$int5 = calc($int5 + 1);
+}
+~script4910($component2, 0, "bankbuttons,6", 29, 22, "");
+~script4910($component3, 0, "bankbuttons,4", 29, 22, "Take-all");
+~script4910($component4, 0, "bankbuttons,5", 29, 22, "");

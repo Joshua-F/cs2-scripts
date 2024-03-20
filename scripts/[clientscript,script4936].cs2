@@ -1,0 +1,26 @@
+// 4936
+[clientscript,script4936](component $component0, int $comsubid1, int $colour2, int $int3)
+def_component $component4 = interface_865:26;
+def_component $component5 = interface_865:27;
+def_component $component6 = interface_865:28;
+def_component $component7 = interface_865:29;
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setcolour($colour2);
+}
+if ($colour2 = 0xb8a182) {
+	sound_synth(synth_7986, 1, 0);
+}
+if (%varcint1196 = 0) {
+	if_sethide(true, $component4);
+	if_sethide(true, $component5);
+	if_sethide(true, $component6);
+	if_sethide(true, $component7);
+	switch_int ($int3) {
+		case 1 :
+			if_sethide(false, $component5);
+		case 2 :
+			if_sethide(false, $component6);
+		case 3 :
+			if_sethide(false, $component7);
+	}
+}

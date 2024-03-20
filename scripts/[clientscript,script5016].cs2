@@ -1,0 +1,14 @@
+// 5016
+[clientscript,script5016](dbrow $dbrow0, int $int1)
+if (db_getfield($dbrow0, dbtable_64:6, 0) = true) {
+	return;
+}
+def_int $index2 = db_getfield($dbrow0, dbtable_64:0, 0);
+if ($index2 > 30) {
+	return;
+}
+if ($int1 = 1) {
+	%var4182 = setbit(%var4182, $index2);
+} else {
+	%var4182 = clearbit(%var4182, $index2);
+}

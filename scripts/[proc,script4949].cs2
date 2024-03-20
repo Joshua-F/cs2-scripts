@@ -1,0 +1,35 @@
+// 4949
+[proc,script4949]
+def_component $component0 = interface_865:26;
+def_component $component1 = interface_865:27;
+def_component $component2 = interface_865:28;
+def_component $component3 = interface_865:29;
+def_component $component4 = interface_865:35;
+def_component $component5 = interface_865:38;
+def_component $component6 = interface_865:30;
+if_sethide(true, $component0);
+if_sethide(true, $component1);
+if_sethide(true, $component2);
+if_sethide(true, $component3);
+if_sethide(true, $component4);
+if_sethide(true, $component5);
+if_sethide(true, $component6);
+def_int $int7 = 0;
+switch_int (%varcint1196) {
+	case 0 :
+		if_sethide(false, $component6);
+		switch_int (%varbit9788) {
+			case 0 :
+				if_sethide(false, $component0);
+			case 1 :
+				if_sethide(false, $component1);
+			case 2 :
+				if_sethide(false, $component2);
+			case 3 :
+				if_sethide(false, $component3);
+		}
+	case 1 :
+		if_sethide(false, $component4);
+	case 2 :
+		if_sethide(false, $component5);
+}

@@ -1,0 +1,47 @@
+// 4935
+[proc,script4935](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5)
+def_struct $struct6 = null;
+def_int $int7 = 0;
+if (%varbit9788 = $int1) {
+	$int7 = 1;
+}
+switch_int ($int1) {
+	case 1 :
+		$struct6 = enum(int, struct, enum_5312, $int2);
+	case 2 :
+		$struct6 = enum(int, struct, enum_5312, $int3);
+	case 3 :
+		$struct6 = enum(int, struct, enum_5312, $int4);
+}
+def_string $string0 = struct_param($struct6, param_1896);
+def_boolean $boolean8 = struct_param($struct6, param_1901);
+def_int $int9 = 0;
+if ($boolean8 = true) {
+	$int9 = ~script4980($struct6);
+}
+if ($int9 = 1) {
+	$string0 = append($string0, " (II)");
+} else if ($int9 = 2) {
+	$string0 = append($string0, " (III)");
+}
+def_enum $enum10 = enum(int, enum, enum_5364, calc($int9 + 1));
+def_graphic $graphic11 = enum(int, graphic, $enum10, struct_param($struct6, param_1914));
+def_graphic $graphic12 = enum(int, graphic, enum_5363, calc($int9 + 1));
+cc_deleteall($component0);
+def_int $int13 = 0;
+def_int $colour14 = 0x726451;
+if ($int7 = 1) {
+	$colour14 = 0xff981f;
+}
+$int13 = ~script5288($component0, 0, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3714, $colour14);
+if (~on_mobile = false & $int7 = 0) {
+	cc_setonmouseover("script4936(event_com, event_comsubid, 0xb8a182, $int1)");
+	cc_setonmouseleave("script4937(event_com, event_comsubid, $colour14, $int1)");
+}
+~create_graphic($component0, $int13, $graphic12, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 64, 64, ^setsize_abs, ^setsize_abs);
+$int13 = calc($int13 + 1);
+~create_graphic($component0, $int13, $graphic11, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 64, 64, ^setsize_abs, ^setsize_abs);
+$int13 = calc($int13 + 1);
+if_setop(1, "Set", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);
+if_setonop("script4938($int1, $int2, $int3, $int4, $int5)", $component0);

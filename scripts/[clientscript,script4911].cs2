@@ -1,0 +1,8 @@
+// 4911
+[clientscript,script4911](boolean $boolean0, component $component1, int $flags2, graphic $graphic3, int $width4, int $height5)
+~script4913($boolean0, $component1, $flags2, $graphic3, $width4, $height5);
+if ($boolean0 = true) {
+	if_setontimer("script4912(calc(clientclock + 2), event_com, $flags2, $graphic3, $width4, $height5)", $component1);
+} else {
+	if_setontimer(null, $component1);
+}

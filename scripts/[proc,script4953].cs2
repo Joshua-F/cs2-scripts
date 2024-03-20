@@ -1,0 +1,16 @@
+// 4953
+[proc,script4953](component $component0, int $int1, obj $obj2, int $num3, int $int4, int $int5)(int)
+def_int $int6 = calc($int4 % $int5);
+def_int $int7 = calc($int4 / $int5);
+def_int $int8 = calc((if_getwidth($component0) - $int5 * 36) / ($int5 + 1));
+def_int $x9 = calc($int6 * 36 + ($int6 + 1) * $int8);
+def_int $y10 = calc($int7 * 32 + ($int7 + 1) * $int8);
+cc_create($component0, ^iftype_graphic, $int1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setposition($x9, $y10, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject($obj2, $num3);
+cc_setopbase("<col=ff9040><oc_name($obj2)></col>");
+cc_setop(1, "Examine");
+return(calc($int1 + 1));

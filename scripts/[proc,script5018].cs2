@@ -1,0 +1,4 @@
+// 5018
+[proc,script5018](int $int0)(dbrow)
+db_find(dbtable_64:0, $int0);
+return(db_findnext);

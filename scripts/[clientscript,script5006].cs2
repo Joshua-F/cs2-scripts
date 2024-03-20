@@ -1,0 +1,9 @@
+// 5006
+[clientscript,script5006](model $model0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, string $text0, string $text1)
+if_settext($text0, interface_873:3);
+if_settext($text1, interface_873:12);
+if_setmodel($model0, interface_873:8);
+if_setmodelangle($int1, $int2, $int3, $int4, $int5, $int6, interface_873:8);
+if ($int7 = 1) {
+	if_setontimer("spinmodel($int1, $int2, 0, -1, 0, interface_873:8, -1)", interface_873:8);
+}

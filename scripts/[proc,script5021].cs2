@@ -1,0 +1,12 @@
+// 5021
+[proc,script5021](inv $inv0)(int)
+if (~kots_world = 1) {
+	return(0);
+}
+if (enum(inv, boolean, enum_1174, $inv0) = true) {
+	return(0);
+}
+if (enum(inv, boolean, enum_5412, $inv0) = true) {
+	return(0);
+}
+return(1);

@@ -1,0 +1,44 @@
+// 4969
+[proc,script4969](component $component0, component $component1, component $component2, component $component3, component $component4)
+~steelborder($component0, "Are you sure you want to claim your loot?", 1);
+def_string $text0 = "Claiming your loot early will <col=ffff00>forfeit your run</col>, not allowing you to proceed any further.";
+if (inv_total(inv_844, smol_heredit_28960) > 0) {
+	$text0 = "<$text0> You might not see that pet again for a while...";
+}
+if_settext($text0, $component3);
+def_string $op1 = "Confirm";
+def_int $colour5 = ^white;
+def_boolean $boolean6 = ~on_mobile;
+def_int $comsubid7 = ~v2_stone_button($component1);
+cc_create($component1, ^iftype_text, $comsubid7);
+if_setop(1, $op1, $component1);
+if_setopbase("<col=ff981f>Claim</col>", $component1);
+if ($boolean6 = false) {
+	if_setonmouseleave("script4915($component1, false, $op1, $colour5)", $component1);
+	if_setonmouserepeat("script4915($component1, true, $op1, $colour5)", $component1);
+}
+if_setonop("script4971", $component1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext($op1);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour($colour5);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$comsubid7 = ~v2_stone_button($component2);
+cc_create($component2, ^iftype_text, $comsubid7);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+$op1 = "Cancel";
+cc_settext($op1);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setop(1, $op1, $component2);
+if_setopbase("<col=ff981f>Claim</col>", $component2);
+if ($boolean6 = false) {
+	if_setonmouseleave("script4915($component2, false, $op1, $colour5)", $component2);
+	if_setonmouserepeat("script4915($component2, true, $op1, $colour5)", $component2);
+}
+if_setonop("script4972($component4)", $component2);

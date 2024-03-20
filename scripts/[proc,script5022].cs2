@@ -1,0 +1,6 @@
+// 5022
+[proc,script5022](inv $inv0)(int)
+if (enum(inv, boolean, enum_5412, $inv0) = true) {
+	return(1);
+}
+return(0);

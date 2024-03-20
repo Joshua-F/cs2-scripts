@@ -1,0 +1,96 @@
+// 4965
+[proc,script4965](int $int0, int $int1)
+cc_deleteall(interface_626:20);
+def_int $int2 = 0;
+def_int $int3 = 0;
+if ($int0 = 0 & %varcint1194 ! 0) {
+	$int0 = %varcint1194;
+} else if ($int0 = 1) {
+	$int3 = %var264;
+} else if ($int0 = 2) {
+	$int3 = %var265;
+} else if ($int0 = 3) {
+	$int3 = %var266;
+}
+def_struct $struct4 = enum(int, struct, enum_5312, $int3);
+def_string $string0 = struct_param($struct4, param_1896);
+def_string $text1 = ~script4920($struct4);
+def_int $int5 = ~script4980($struct4);
+if ($int5 = 1) {
+	$string0 = append($string0, " (II)");
+} else if ($int5 = 2) {
+	$string0 = append($string0, " (III)");
+}
+cc_create(interface_626:20, ^iftype_graphic, $int2);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_dark");
+cc_settiling(true);
+$int2 = calc($int2 + 1);
+$int2 = ~thinbox(interface_626:20, $int2);
+if ($int1 = 1 & $int3 ! 0) {
+	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settext($string0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$int2 = calc($int2 + 1);
+	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settext($text1);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$int2 = calc($int2 + 1);
+	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_settext("+<tostring(struct_param($struct4, param_1903))> Glory per wave");
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0x0dc10d);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+} else if (%varcint1194 ! 0) {
+	$int3 = %varcint1194;
+	if ($int3 = 1) {
+		$int3 = %var264;
+	} else if ($int3 = 2) {
+		$int3 = %var265;
+	} else if ($int3 = 3) {
+		$int3 = %var266;
+	}
+	$struct4 = enum(int, struct, enum_5312, $int3);
+	$string0 = struct_param($struct4, param_1896);
+	$text1 = ~script4920($struct4);
+	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settext($string0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$int2 = calc($int2 + 1);
+	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settext($text1);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$int2 = calc($int2 + 1);
+	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_settext("+<tostring(struct_param($struct4, param_1903))> Glory per wave");
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0x0dc10d);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+}

@@ -1,0 +1,9 @@
+// 2080
+[proc,script2080](wma $wma0, coord $coord1)(int)
+switch_wma ($wma0) {
+	case cam_torum, neypotzli :
+		if (~inzone(0_23_149_8_0, 3_23_149_63_63, $coord1) = 1) {
+			return(1);
+		}
+}
+return(0);

@@ -1,331 +1,296 @@
 // 1599
 [proc,skill_guide_data_hunter](int $int0, int $int1)(int, namedobj, string)
 if ($int0 = 0) {
-	if ($int1 = 0) {
-		return(1, kebbit_9953, "Polar kebbits (snow)");
+	switch_int ($int1) {
+		case 0 :
+			return(1, kebbit_9953, "Polar kebbits (snow)");
+		case 1 :
+			return(3, kebbit_9954, "Common kebbits (woodland)");
+		case 2 :
+			return(7, kebbit_9955, "Feldip weasels (jungle)");
+		case 3 :
+			return(13, kebbit_9956, "Desert devils (desert)");
+		case 4 :
+			return(49, kebbit_9961, "Razor-backed kebbits (woodland)");
+		case 5 :
+			return(80, herbiboar_21511, "Herbiboar (with 31 Herblore)");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(3, kebbit_9954, "Common kebbits (woodland)");
-	}
-	if ($int1 = 2) {
-		return(7, kebbit_9955, "Feldip weasels (jungle)");
-	}
-	if ($int1 = 3) {
-		return(13, kebbit_9956, "Desert devils (desert)");
-	}
-	if ($int1 = 4) {
-		return(49, kebbit_9961, "Razor-backed kebbits (woodland)");
-	}
-	if ($int1 = 5) {
-		return(80, herbiboar_21511, "Herbiboar (with 31 Herblore)");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 1) {
-	if ($int1 = 0) {
-		return(1, crimson_swift_9965, "Crimson swifts (jungle)");
+	switch_int ($int1) {
+		case 0 :
+			return(1, crimson_swift_9965, "Crimson swifts (jungle)");
+		case 1 :
+			return(5, golden_warbler_9968, "Golden warblers (desert)");
+		case 2 :
+			return(9, copper_longtail_9966, "Copper longtails (woodland)");
+		case 3 :
+			return(11, cerulean_twitch_9967, "Cerulean twitches (snow)");
+		case 4 :
+			return(19, tropical_wagtail_9969, "Tropical wagtails (jungle)");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(5, golden_warbler_9968, "Golden warblers (desert)");
-	}
-	if ($int1 = 2) {
-		return(9, copper_longtail_9966, "Copper longtails (woodland)");
-	}
-	if ($int1 = 3) {
-		return(11, cerulean_twitch_9967, "Cerulean twitches (snow)");
-	}
-	if ($int1 = 4) {
-		return(19, tropical_wagtail_9969, "Tropical wagtails (jungle)");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 2) {
-	if ($int1 = 0) {
-		return(15, butterfly_9970, "Ruby harvest butterflies (woodland)");
+	switch_int ($int1) {
+		case 0 :
+			return(15, butterfly_9970, "Ruby harvest butterflies (woodland)");
+		case 1 :
+			return(25, butterfly_9970, "Barehanded: Ruby harvest butterflies (woodland)");
+		case 2 :
+			return(25, butterfly_9971, "Sapphire glacialis butterflies (snow)");
+		case 3 :
+			return(35, butterfly_9971, "Barehanded: Sapphire glacialis butterflies (snow)");
+		case 4 :
+			return(35, butterfly_9972, "Snowy knight butterflies (snow)");
+		case 5 :
+			return(45, butterfly_9972, "Barehanded: Snowy knight butterflies (snow)");
+		case 6 :
+			return(45, butterfly_9973, "Black warlock butterflies (jungle)");
+		case 7 :
+			return(55, butterfly_9973, "Barehanded: Black warlock butterflies (jungle)");
+		case 8 :
+			return(65, sunlight_moth_28863, "Sunlight moths (savannah)");
+		case 9 :
+			return(75, sunlight_moth_28863, "Barehanded: Sunlight moths (savannah)");
+		case 10 :
+			return(75, moonlight_moth_28864, "Moonlight moths (caverns)");
+		case 11 :
+			return(85, moonlight_moth_28864, "Barehanded: Moonlight moths (caverns)");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(25, butterfly_9971, "Sapphire glacialis butterflies (snow)");
-	}
-	if ($int1 = 2) {
-		return(35, butterfly_9972, "Snowy knight butterflies (snow)");
-	}
-	if ($int1 = 3) {
-		return(45, butterfly_9973, "Black warlock butterflies (jungle)");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 3) {
-	if ($int1 = 0) {
-		return(17, baby_impling_jar_11238, "Baby implings");
+	switch_int ($int1) {
+		case 0 :
+			return(17, baby_impling_jar_11238, "Baby implings");
+		case 1 :
+			return(22, young_impling_jar_11240, "Young implings");
+		case 2 :
+			return(27, baby_impling_jar_11238, "Barehanded: Baby implings");
+		case 3 :
+			return(28, gourmet_impling_jar_11242, "Gourmet implings");
+		case 4 :
+			return(32, young_impling_jar_11240, "Barehanded: Young implings");
+		case 5 :
+			return(36, earth_impling_jar_11244, "Earth implings");
+		case 6 :
+			return(38, gourmet_impling_jar_11242, "Barehanded: Gourmet implings");
+		case 7 :
+			return(42, essence_impling_jar_11246, "Essence implings");
+		case 8 :
+			return(46, earth_impling_jar_11244, "Barehanded: Earth implings");
+		case 9 :
+			return(50, eclectic_impling_jar_11248, "Eclectic implings");
+		case 10 :
+			return(52, essence_impling_jar_11246, "Barehanded: Essence implings");
+		case 11 :
+			return(58, nature_impling_jar_11250, "Nature implings");
+		case 12 :
+			return(60, eclectic_impling_jar_11248, "Barehanded: Eclectic implings");
+		case 13 :
+			return(65, magpie_impling_jar_11252, "Magpie implings");
+		case 14 :
+			return(68, nature_impling_jar_11250, "Barehanded: Nature implings");
+		case 15 :
+			return(74, ninja_impling_jar_11254, "Ninja implings");
+		case 16 :
+			return(75, magpie_impling_jar_11252, "Barehanded: Magpie implings");
+		case 17 :
+			return(80, crystal_impling_jar_23768, "Crystal implings");
+		case 18 :
+			return(83, dragon_impling_jar_11256, "Dragon implings");
+		case 19 :
+			return(84, ninja_impling_jar_11254, "Barehanded: Ninja implings");
+		case 20 :
+			return(89, lucky_impling_jar_19732, "Lucky implings");
+		case 21 :
+			return(90, crystal_impling_jar_23768, "Barehanded: Crystal implings");
+		case 22 :
+			return(93, dragon_impling_jar_11256, "Barehanded: Dragon implings");
+		case 23 :
+			return(99, lucky_impling_jar_19732, "Barehanded: Lucky implings");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(22, young_impling_jar_11240, "Young implings");
-	}
-	if ($int1 = 2) {
-		return(27, baby_impling_jar_11238, "Barehanded: Baby implings");
-	}
-	if ($int1 = 3) {
-		return(28, gourmet_impling_jar_11242, "Gourmet implings");
-	}
-	if ($int1 = 4) {
-		return(32, young_impling_jar_11240, "Barehanded: Young implings");
-	}
-	if ($int1 = 5) {
-		return(36, earth_impling_jar_11244, "Earth implings");
-	}
-	if ($int1 = 6) {
-		return(38, gourmet_impling_jar_11242, "Barehanded: Gourmet implings");
-	}
-	if ($int1 = 7) {
-		return(42, essence_impling_jar_11246, "Essence implings");
-	}
-	if ($int1 = 8) {
-		return(46, earth_impling_jar_11244, "Barehanded: Earth implings");
-	}
-	if ($int1 = 9) {
-		return(50, eclectic_impling_jar_11248, "Eclectic implings");
-	}
-	if ($int1 = 10) {
-		return(52, essence_impling_jar_11246, "Barehanded: Essence implings");
-	}
-	if ($int1 = 11) {
-		return(58, nature_impling_jar_11250, "Nature implings");
-	}
-	if ($int1 = 12) {
-		return(60, eclectic_impling_jar_11248, "Barehanded: Eclectic implings");
-	}
-	if ($int1 = 13) {
-		return(65, magpie_impling_jar_11252, "Magpie implings");
-	}
-	if ($int1 = 14) {
-		return(68, nature_impling_jar_11250, "Barehanded: Nature implings");
-	}
-	if ($int1 = 15) {
-		return(74, ninja_impling_jar_11254, "Ninja implings");
-	}
-	if ($int1 = 16) {
-		return(75, magpie_impling_jar_11252, "Barehanded: Magpie implings");
-	}
-	if ($int1 = 17) {
-		return(80, crystal_impling_jar_23768, "Crystal implings");
-	}
-	if ($int1 = 18) {
-		return(83, dragon_impling_jar_11256, "Dragon implings");
-	}
-	if ($int1 = 19) {
-		return(84, ninja_impling_jar_11254, "Barehanded: Ninja implings");
-	}
-	if ($int1 = 20) {
-		return(89, lucky_impling_jar_19732, "Lucky implings");
-	}
-	if ($int1 = 21) {
-		return(90, crystal_impling_jar_23768, "Barehanded: Crystal implings");
-	}
-	if ($int1 = 22) {
-		return(93, dragon_impling_jar_11256, "Barehanded: Dragon implings");
-	}
-	if ($int1 = 23) {
-		return(99, lucky_impling_jar_19732, "Barehanded: Lucky implings");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 4) {
-	if ($int1 = 0) {
-		return(23, kebbit_9962, "Wild kebbits (woodland)<br>Preferred bait: Raw meat");
+	switch_int ($int1) {
+		case 0 :
+			return(23, kebbit_9962, "Wild kebbits (woodland)<br>Preferred bait: Raw meat");
+		case 1 :
+			return(33, kebbit_9958, "Barb-tailed kebbits (jungle)<br>Preferred bait: Raw rainbow fish ");
+		case 2 :
+			return(37, kebbit_9957, "Prickly kebbits (northern woodland)<br>Preferred bait: Barley");
+		case 3 :
+			return(51, kebbit_9959, "Sabre-toothed kebbits (snow)<br>Preferred bait: Raw meat");
+		case 4 :
+			return(57, pyre_fox_28865, "Pyre foxes (savannah)<br>Preferred bait: Embertailed jerboa tail");
+		case 5 :
+			return(60, monkey_19556, "Maniacal monkeys (Ape Atoll)<br>Preferred bait: Banana");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(33, kebbit_9958, "Barb-tailed kebbits (jungle)<br>Preferred bait: Raw rainbow fish ");
-	}
-	if ($int1 = 2) {
-		return(37, kebbit_9957, "Prickly kebbits (northern woodland)<br>Preferred bait: Barley");
-	}
-	if ($int1 = 3) {
-		return(51, kebbit_9959, "Sabre-toothed kebbits (snow)<br>Preferred bait: Raw meat");
-	}
-	if ($int1 = 4) {
-		return(60, monkey_19556, "Maniacal monkeys (Ape Atoll)<br>Preferred bait: Banana");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 5) {
-	if ($int1 = 0) {
-		return(27, ferret_10092, "Ferrets (woodland)");
+	switch_int ($int1) {
+		case 0 :
+			return(27, ferret_10092, "Ferrets (woodland)");
+		case 1 :
+			return(39, embertailed_jerboa_28866, "Embertailed jerboa (savannah)");
+		case 2 :
+			return(53, chinchompa_9976, "Chinchompas (woodland)<br>Preferred bait: Spicy chopped tomatoes");
+		case 3 :
+			return(63, red_chinchompa_9977, "Red chinchompas (jungle)<br>Preferred bait: Spicy minced meat");
+		case 4 :
+			return(73, dummy_chinchompa_5091, "Black chinchompas (woodland)<br>Preferred bait: Spicy minced meat");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(53, chinchompa_9976, "Chinchompas (woodland)<br>Preferred bait: Spicy chopped tomatoes");
-	}
-	if ($int1 = 2) {
-		return(63, red_chinchompa_9977, "Red chinchompas (jungle)<br>Preferred bait: Spicy minced meat");
-	}
-	if ($int1 = 3) {
-		return(73, dummy_chinchompa_5091, "Black chinchompas (woodland)<br>Preferred bait: Spicy minced meat");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 6) {
-	if ($int1 = 0) {
-		return(29, swamp_lizard_10149, "Swamp lizards (swamp)<br>Preferred bait: Guam tar");
+	switch_int ($int1) {
+		case 0 :
+			return(29, swamp_lizard_10149, "Swamp lizards (swamp)<br>Preferred bait: Guam tar");
+		case 1 :
+			return(47, orange_salamander_10146, "Orange salamanders (desert)<br>Preferred bait: Marrentill tar");
+		case 2 :
+			return(59, red_salamander_10147, "Red salamanders (lava)<br>Preferred bait: Tarromin tar");
+		case 3 :
+			return(67, black_salamander_10148, "Black salamanders (lava)<br>Preferred bait: Harralander tar");
+		case 4 :
+			return(79, tecu_salamander_28834, "Tecu salamanders (mountain)<br>Preferred bait: Irit tar");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(47, orange_salamander_10146, "Orange salamanders (desert)<br>Preferred bait: Marrentill tar");
-	}
-	if ($int1 = 2) {
-		return(59, red_salamander_10147, "Red salamanders (lava)<br>Preferred bait: Tarromin tar");
-	}
-	if ($int1 = 3) {
-		return(67, black_salamander_10148, "Black salamanders (lava)<br>Preferred bait: Harralander tar");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 7) {
-	if ($int1 = 0) {
-		return(31, larupia_hat_10045, "Spined larupias (jungle)");
+	switch_int ($int1) {
+		case 0 :
+			return(31, larupia_hat_10045, "Spined larupias (jungle)");
+		case 1 :
+			return(41, graahk_headdress_10051, "Horned graahks (Karamja)");
+		case 2 :
+			return(55, kyatt_hat_10039, "Sabre-toothed kyatts (snow)");
+		case 3 :
+			return(72, sunlight_antelope_28867, "Sunlight antelope (savannah)");
+		case 4 :
+			return(91, moonlight_antelope_28868, "Moonlight antelope (caverns)");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(41, graahk_headdress_10051, "Horned graahks (Karamja)");
-	}
-	if ($int1 = 2) {
-		return(55, kyatt_hat_10039, "Sabre-toothed kyatts (snow)");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 8) {
-	if ($int1 = 0) {
-		return(35, bluegill_22826, "Bluegill<br>(With 43 fishing)");
+	switch_int ($int1) {
+		case 0 :
+			return(35, bluegill_22826, "Bluegill<br>(With 43 fishing)");
+		case 1 :
+			return(43, kebbit_9960, "Spotted kebbits (woodland)");
+		case 2 :
+			return(51, common_tench_22829, "Common tench<br>(With 56 fishing)");
+		case 3 :
+			return(57, kebbit_9963, "Dark kebbits (woodland)");
+		case 4 :
+			return(68, mottled_eel_22832, "Mottled eel<br>(With 73 fishing)");
+		case 5 :
+			return(69, kebbit_9964, "Dashing kebbits (woodland)");
+		case 6 :
+			return(87, greater_siren_22835, "Greater siren<br>(With 91 fishing)");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(43, kebbit_9960, "Spotted kebbits (woodland)");
-	}
-	if ($int1 = 2) {
-		return(51, common_tench_22829, "Common tench<br>(With 56 fishing)");
-	}
-	if ($int1 = 3) {
-		return(57, kebbit_9963, "Dark kebbits (woodland)");
-	}
-	if ($int1 = 4) {
-		return(68, mottled_eel_22832, "Mottled eel<br>(With 73 fishing)");
-	}
-	if ($int1 = 5) {
-		return(69, kebbit_9964, "Dashing kebbits (woodland)");
-	}
-	if ($int1 = 6) {
-		return(87, greater_siren_22835, "Greater siren<br>(With 91 fishing)");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 9) {
-	if ($int1 = 0) {
-		return(1, footprint_9951, "Lay 1 trap at a time");
+	switch_int ($int1) {
+		case 0 :
+			return(1, footprint_9951, "Lay 1 trap at a time");
+		case 1 :
+			return(1, bird_snare_10006, "Set a bird trap");
+		case 2 :
+			return(1, noose_wand_10150, "Use a noose wand in tracking");
+		case 3 :
+			return(15, butterfly_net_10010, "Net butterflies");
+		case 4 :
+			return(20, footprint_9951, "Lay up to 2 traps at a time");
+		case 5 :
+			return(23, logs_1511, "Set a deadfall trap (limit of 1)");
+		case 6 :
+			return(27, box_trap_10008, "Set a box trap<br>(After Eagles' Peak quest)");
+		case 7 :
+			return(27, rabbit_snare_10031, "Set a rabbit snare");
+		case 8 :
+			return(29, small_fishing_net_303, "Set a net trap");
+		case 9 :
+			return(31, teasing_stick_10029, "Set a pitfall trap");
+		case 10 :
+			return(39, lit_torch_594, "Use smoke to mask the scent on a trap");
+		case 11 :
+			return(40, footprint_9951, "Lay up to 3 traps at a time");
+		case 12 :
+			return(43, falconers_glove_10023, "Hunt with a falcon");
+		case 13 :
+			return(60, footprint_9951, "Lay up to 4 traps at a time");
+		case 14 :
+			return(71, magic_box_10025, "Set an imp trap");
+		case 15 :
+			return(80, footprint_9951, "Lay up to 5 traps at a time");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(1, bird_snare_10006, "Set a bird trap");
-	}
-	if ($int1 = 2) {
-		return(1, noose_wand_10150, "Use a noose wand in tracking");
-	}
-	if ($int1 = 3) {
-		return(15, butterfly_net_10010, "Net butterflies");
-	}
-	if ($int1 = 4) {
-		return(20, footprint_9951, "Lay up to 2 traps at a time");
-	}
-	if ($int1 = 5) {
-		return(23, logs_1511, "Set a deadfall trap (limit of 1)");
-	}
-	if ($int1 = 6) {
-		return(27, box_trap_10008, "Set a box trap<br>(After Eagles' Peak quest)");
-	}
-	if ($int1 = 7) {
-		return(27, rabbit_snare_10031, "Set a rabbit snare");
-	}
-	if ($int1 = 8) {
-		return(29, small_fishing_net_303, "Set a net trap");
-	}
-	if ($int1 = 9) {
-		return(31, teasing_stick_10029, "Set a pitfall trap");
-	}
-	if ($int1 = 10) {
-		return(39, lit_torch_594, "Use smoke to mask the scent on a trap");
-	}
-	if ($int1 = 11) {
-		return(40, footprint_9951, "Lay up to 3 traps at a time");
-	}
-	if ($int1 = 12) {
-		return(43, falconers_glove_10023, "Hunt with a falcon");
-	}
-	if ($int1 = 13) {
-		return(60, footprint_9951, "Lay up to 4 traps at a time");
-	}
-	if ($int1 = 14) {
-		return(71, magic_box_10025, "Set an imp trap");
-	}
-	if ($int1 = 15) {
-		return(80, footprint_9951, "Lay up to 5 traps at a time");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 10) {
-	if ($int1 = 0) {
-		return(1, polar_camo_top_10065, "Polar kebbit fur clothing (snow)");
+	switch_int ($int1) {
+		case 0 :
+			return(1, polar_camo_top_10065, "Polar kebbit fur clothing (snow)");
+		case 1 :
+			return(1, wood_camo_top_10053, "Common kebbit fur clothing (woodland)");
+		case 2 :
+			return(4, jungle_camo_top_10057, "Feldip weasel fur clothing (jungle)");
+		case 3 :
+			return(10, desert_camo_top_10061, "Desert devil fur clothing (desert)");
+		case 4 :
+			return(24, strung_rabbit_foot_10132, "Lucky rabbit's foot");
+		case 5 :
+			return(28, larupia_hat_10045, "Larupia fur clothing");
+		case 6 :
+			return(38, graahk_headdress_10051, "Graahk hide clothing");
+		case 7 :
+			return(40, spotted_cape_10069, "Spotted capes");
+		case 8 :
+			return(52, kyatt_hat_10039, "Kyatt fur clothing");
+		case 9 :
+			return(54, gloves_of_silence_10075, "Gloves of silence");
+		case 10 :
+			return(66, spottier_cape_10071, "Spottier capes");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(1, wood_camo_top_10053, "Common kebbit fur clothing (woodland)");
-	}
-	if ($int1 = 2) {
-		return(4, jungle_camo_top_10057, "Feldip weasel fur clothing (jungle)");
-	}
-	if ($int1 = 3) {
-		return(10, desert_camo_top_10061, "Desert devil fur clothing (desert)");
-	}
-	if ($int1 = 4) {
-		return(24, strung_rabbit_foot_10132, "Lucky rabbit's foot");
-	}
-	if ($int1 = 5) {
-		return(28, larupia_hat_10045, "Larupia fur clothing");
-	}
-	if ($int1 = 6) {
-		return(38, graahk_headdress_10051, "Graahk hide clothing");
-	}
-	if ($int1 = 7) {
-		return(40, spotted_cape_10069, "Spotted capes");
-	}
-	if ($int1 = 8) {
-		return(52, kyatt_hat_10039, "Kyatt fur clothing");
-	}
-	if ($int1 = 9) {
-		return(54, gloves_of_silence_10075, "Gloves of silence");
-	}
-	if ($int1 = 10) {
-		return(66, spottier_cape_10071, "Spottier capes");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 11) {
-	if ($int1 = 0) {
-		return(1, raw_guanic_bat_0_20870, "Guanic bat");
+	switch_int ($int1) {
+		case 0 :
+			return(1, raw_guanic_bat_0_20870, "Guanic bat");
+		case 1 :
+			return(15, raw_prael_bat_1_20872, "Prael bat");
+		case 2 :
+			return(30, raw_giral_bat_2_20874, "Giral bat");
+		case 3 :
+			return(45, raw_phluxia_bat_3_20876, "Phluxia bat");
+		case 4 :
+			return(60, raw_kryket_bat_4_20878, "Kryket bat");
+		case 5 :
+			return(75, raw_murng_bat_5_20880, "Murng bat");
+		case 6 :
+			return(90, raw_psykk_bat_6_20882, "Psykk bat");
+		case 7 :
+			return(99, raw_psykk_bat_6_20882, "Barehanded bat-catching");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(15, raw_prael_bat_1_20872, "Prael bat");
-	}
-	if ($int1 = 2) {
-		return(30, raw_giral_bat_2_20874, "Giral bat");
-	}
-	if ($int1 = 3) {
-		return(45, raw_phluxia_bat_3_20876, "Phluxia bat");
-	}
-	if ($int1 = 4) {
-		return(60, raw_kryket_bat_4_20878, "Kryket bat");
-	}
-	if ($int1 = 5) {
-		return(75, raw_murng_bat_5_20880, "Murng bat");
-	}
-	if ($int1 = 6) {
-		return(90, raw_psykk_bat_6_20882, "Psykk bat");
-	}
-	if ($int1 = 7) {
-		return(99, raw_psykk_bat_6_20882, "Barehanded bat-catching");
-	}
-	return(-1, null, "");
 }
 if ($int0 = 12) {
 	switch_int ($int1) {
@@ -352,21 +317,31 @@ if ($int0 = 12) {
 	}
 }
 if ($int0 = 13) {
-	if ($int1 = 0) {
-		return(15, sandworms_13431, "Dig for sandworms (Piscarillius Beach)");
+	switch_int ($int1) {
+		case 0 :
+			return(15, sandworms_13431, "Dig for sandworms (Piscarillius Beach)");
+		case 1 :
+			return(20, raw_moss_lizard_29076, "Mossy Lizards traps (Neypotzli)");
+		case 2 :
+			return(27, giant_eagle_9974, "Giant eagles(various)");
+		case 3 :
+			return(27, rabbit_9975, "White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole");
+		case 4 :
+			return(44, pufferfish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
+		case 5 :
+			return(46, footprint_9951, "Access to the Hunter Guild & Tier 1 Hunters' Rumours");
+		case 6 :
+			return(50, hunters_sunlight_crossbow_28869, "Equip the Sunlight hunters' crossbow (with 66 Ranged)");
+		case 7 :
+			return(57, footprint_9951, "Tier 2 Hunters' Rumours");
+		case 8 :
+			return(71, imp_9952, "Imps (worldwide)<br>Preferred bait: Magical beads");
+		case 9 :
+			return(72, footprint_9951, "Tier 3 Hunters' Rumours");
+		case 10 :
+			return(91, footprint_9951, "Tier 4 Hunters' Rumours");
+		case default :
+			return(-1, null, "");
 	}
-	if ($int1 = 1) {
-		return(27, giant_eagle_9974, "Giant eagles(various)");
-	}
-	if ($int1 = 2) {
-		return(27, rabbit_9975, "White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole");
-	}
-	if ($int1 = 3) {
-		return(44, pufferfish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
-	}
-	if ($int1 = 4) {
-		return(71, imp_9952, "Imps (worldwide)<br>Preferred bait: Magical beads");
-	}
-	return(-1, null, "");
 }
 return(-1, null, "");

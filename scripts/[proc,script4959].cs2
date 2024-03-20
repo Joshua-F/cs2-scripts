@@ -1,0 +1,21 @@
+// 4959
+[proc,script4959](obj $obj0, int $num1)(int)
+cc_clearops;
+def_int $int2 = 0;
+if ($obj0 ! null) {
+	cc_setobject($obj0, $num1);
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_settrans(0);
+	cc_setop(1, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	$int2 = 1;
+} else {
+	cc_settrans(255);
+	cc_setobject(obj_6512, 1);
+	cc_setonop(null);
+}
+cc_setontimer(null);
+if ($int2 = 1) {
+	return(0);
+}
+return(1);

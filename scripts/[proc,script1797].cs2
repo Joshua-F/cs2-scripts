@@ -12,6 +12,8 @@ if (%varbit15023 = 0) {
 		$int0 = scale(1, 4, $int0);
 	} else if (~inzone(0_32_99_18_22, 0_32_99_48_52, %var3916) = 1 & %var3968 < 5) {
 		$int0 = scale(1, 4, $int0);
+	} else if (~inzone(0_28_48_17_17, 1_28_48_50_52, %var3916) = 1 & %var4131 < 50) {
+		$int0 = scale(1, 4, $int0);
 	}
 }
 return($int0);

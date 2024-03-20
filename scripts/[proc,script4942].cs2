@@ -1,0 +1,33 @@
+// 4942
+[proc,script4942](int $int0)
+def_component $component1 = interface_865:36;
+def_component $component2 = interface_865:37;
+cc_deleteall($component1);
+cc_deleteall($component2);
+def_int $int3 = 0;
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(^black);
+cc_settrans(200);
+cc_setfill(true);
+$int3 = calc($int3 + 1);
+$int3 = ~thinbox($component1, $int3);
+$int3 = 0;
+def_obj $obj4 = null;
+def_int $size5 = 0;
+def_int $int6 = 0;
+while ($size5 < inv_size(inv_843)) {
+	$obj4 = inv_getobj(inv_843, $size5);
+	if ($obj4 ! null) {
+		$int3 = ~script4953($component2, $int3, $obj4, inv_getnum(inv_843, $size5), $int6, 5);
+		$int6 = calc($int6 + 1);
+	}
+	$size5 = calc($size5 + 1);
+}
+if ($int6 = 0) {
+	~script4914($component2, $int3, p12_full, 0, -20, ^setpos_abs_centre, ^setpos_abs_centre, 40, 40, ^setsize_minus, ^setsize_minus, "You have not earned any loot yet.", true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
+	$int3 = calc($int3 + 1);
+}
+def_string $string0 = ",";
+~script4914($component2, $int3, p12_full, 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 0, 20, ^setsize_minus, ^setsize_abs, "<~tostring_spacer($int0, $string0)> GP", true, ^white, ^settextalign_centre, ^settextalign_centre, 0);
