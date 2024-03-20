@@ -4903,8 +4903,8 @@
 [**4900**](scripts/[clientscript,script4900].cs2)  
 [**4901**](scripts/[proc,script4901].cs2)  
 [**4902**](scripts/[clientscript,script4902].cs2)  
-[**4903**](scripts/[proc,script4903].cs2)  
-[**4904**](scripts/[proc,script4904].cs2)  
+[**4903**](scripts/[proc,skill_guide_subsection_strength].cs2) `[proc,skill_guide_subsection_strength]`  
+[**4904**](scripts/[proc,skill_guide_data_strength].cs2) `[proc,skill_guide_data_strength]`  
 [**4905**](scripts/[proc,script4905].cs2)  
 [**4906**](scripts/[proc,script4906].cs2)  
 [**4907**](scripts/[clientscript,script4907].cs2)  
