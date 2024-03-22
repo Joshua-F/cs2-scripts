@@ -3,7 +3,7 @@
 cc_deleteall($component1);
 if_setscrollpos(0, 0, $component2);
 if_setontimer("music_init_counter($component4)", $component4);
-~script7321($component1, $component4);
+~music_vartransmit_setup($component1, $component4);
 def_int $int11 = db_find_with_count(dbtable_44:8, false);
 def_int $intarray0($int11);
 def_int $int12 = 0;

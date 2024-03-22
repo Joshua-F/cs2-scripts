@@ -1,4 +1,4 @@
 // 1890
 [clientscript,script1890](component $component0, inv $inv1)
-~script1892($component0, $inv1);
-if_setoninvtransmit("script1891($component0, $inv1){$inv1}", $component0);
+~pog_interface_inv_update($component0, $inv1);
+if_setoninvtransmit("pog_interface_inv_update($component0, $inv1){$inv1}", $component0);

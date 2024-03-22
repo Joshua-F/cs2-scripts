@@ -37,7 +37,7 @@ while ($int22 <= 600) {
 	$int22 = calc($int22 + 1);
 }
 if (worldlist_fetch = true) {
-	~script7269($component0, $component1, $component3, $component4, $component5, $component6, $int19, $int21, $int20, $component7, $component8, $component9, $component10, $component11, $component12, $component14, $component15, $component16, $component17);
+	~worldswitcher_loaded($component0, $component1, $component3, $component4, $component5, $component6, $int19, $int21, $int20, $component7, $component8, $component9, $component10, $component11, $component12, $component14, $component15, $component16, $component17);
 	if_setontimer(null, $component0);
 } else {
 	if_setontimer("worldswitcher_loading($component0, $component1, $component3, $component4, $component5, $component6, $int19, $int21, $int20, $component7, $component8, $component9, $component10, $component11, $component12, $component14, $component15, $component16, $component17)", $component0);

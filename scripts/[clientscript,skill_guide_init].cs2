@@ -13,7 +13,7 @@ if (~on_mobile = true) {
 		%varcint1171 = if_gety($component12);
 	}
 	if_setontimer("script6110($component10, -1)", $component10);
-	if_setonresize("script1898", $component10);
+	if_setonresize("skill_guide_rebuild", $component10);
 }
 if_setonvartransmit("skill_guide_build($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10){var965}", $component0);
 ~script1911(-1, -1, $component10, $component0);

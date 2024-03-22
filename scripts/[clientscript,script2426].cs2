@@ -1,6 +1,6 @@
 // 2426
 [clientscript,script2426](boolean $boolean0, string $text0, component $component1, graphic $graphic2, int $flags3)
-~script2428($boolean0, $text0, $graphic2, $flags3, $component1);
+~stonebutton_draw($boolean0, $text0, $graphic2, $flags3, $component1);
 if ($boolean0 = true) {
 	if_setontimer("script2427(calc(clientclock + 2), $text0, event_com, $graphic2, $flags3)", $component1);
 } else {

@@ -1,11 +1,11 @@
 // 2433
 [clientscript,script2433](boolean $boolean0, string $text0, component $component1, graphic $graphic2)
 if (%varcint454 = 1) {
-	~script2428(true, $text0, $graphic2, 0, $component1);
+	~stonebutton_draw(true, $text0, $graphic2, 0, $component1);
 	if_setontimer(null, $component1);
 	return;
 }
-~script2428($boolean0, $text0, $graphic2, 0, $component1);
+~stonebutton_draw($boolean0, $text0, $graphic2, 0, $component1);
 if ($boolean0 = true) {
 	if_setontimer("script2427(calc(clientclock + 2), $text0, event_com, $graphic2, 0)", $component1);
 } else {

@@ -170,7 +170,7 @@ if (%varbit12200 = 1) {
 	~stonebutton_init("<col=0dc10d>Save</col>", $component6, "p12_full", 0);
 	if_setonop("opsound(event_op, 2)", $component6);
 } else {
-	~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component6);
+	~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component6);
 	if_setonmouserepeat(null, $component6);
 	if_setonmouseleave(null, $component6);
 	if_clearops($component6);

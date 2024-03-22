@@ -1,0 +1,8 @@
+// 7278
+[clientscript,worldswitcher_options_filters_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+def_boolean $boolean5 = ~on_mobile;
+~worldswitcher_options_filters_initbutton($component0, "Membership", $boolean5, $component0, $component1, $component2, $component3, $component4);
+~worldswitcher_options_filters_initbutton($component1, "Location", $boolean5, $component0, $component1, $component2, $component3, $component4);
+~worldswitcher_options_filters_initbutton($component2, "Mode", $boolean5, $component0, $component1, $component2, $component3, $component4);
+~worldswitcher_options_filters_initbutton($component3, "", $boolean5, $component0, $component1, $component2, $component3, $component4);
+~worldswitcher_options_filters_initbutton($component4, "Reset", $boolean5, $component0, $component1, $component2, $component3, $component4);

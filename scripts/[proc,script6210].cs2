@@ -2,8 +2,8 @@
 [proc,script6210](component $component0, component $component1, component $component2)
 if (%varbit14029 = 1) {
 	if_settext("Please <col=ffb83f>wait</col> while your opponent considers your load-out.", $component0);
-	~script2428(true, "<col=9f9f9f>Confirmed</col>", "p12_full", 0, $component1);
-	~script2428(true, "<col=9f9f9f>Copy Load-out</col>", "p12_full", 0, $component2);
+	~stonebutton_draw(true, "<col=9f9f9f>Confirmed</col>", "p12_full", 0, $component1);
+	~stonebutton_draw(true, "<col=9f9f9f>Copy Load-out</col>", "p12_full", 0, $component2);
 	if_clearops($component1);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);

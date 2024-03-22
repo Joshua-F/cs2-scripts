@@ -26,8 +26,8 @@ while ($size5 < inv_size(inv_843)) {
 	$size5 = calc($size5 + 1);
 }
 if ($int6 = 0) {
-	~script4914($component2, $int3, p12_full, 0, -20, ^setpos_abs_centre, ^setpos_abs_centre, 40, 40, ^setsize_minus, ^setsize_minus, "You have not earned any loot yet.", true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
+	~create_text($component2, $int3, p12_full, 0, -20, ^setpos_abs_centre, ^setpos_abs_centre, 40, 40, ^setsize_minus, ^setsize_minus, "You have not earned any loot yet.", true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
 	$int3 = calc($int3 + 1);
 }
 def_string $string0 = ",";
-~script4914($component2, $int3, p12_full, 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 0, 20, ^setsize_minus, ^setsize_abs, "<~tostring_spacer($int0, $string0)> GP", true, ^white, ^settextalign_centre, ^settextalign_centre, 0);
+~create_text($component2, $int3, p12_full, 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 0, 20, ^setsize_minus, ^setsize_abs, "<~tostring_spacer($int0, $string0)> GP", true, ^white, ^settextalign_centre, ^settextalign_centre, 0);

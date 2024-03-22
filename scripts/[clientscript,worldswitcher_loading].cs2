@@ -2,5 +2,5 @@
 [clientscript,worldswitcher_loading](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, int $int8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18)
 if (worldlist_fetch = true) {
 	if_setontimer(null, $component0);
-	~script7269($component0, $component1, $component2, $component3, $component4, $component5, $int6, $int7, $int8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+	~worldswitcher_loaded($component0, $component1, $component2, $component3, $component4, $component5, $int6, $int7, $int8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
 }

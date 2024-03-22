@@ -65,7 +65,7 @@ if (~on_mobile = false) {
 	if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, $colour6)", $component8);
 }
 ~league_side_panel_hudtoggle($component8, $component7);
-def_int $int11 = ~script2452($component9, $component7, $colour6);
+def_int $int11 = ~league_side_panel_rank($component9, $component7, $colour6);
 def_int $int12 = calc((if_getwidth(interface_656:1) - $int10 - $int11) / 2 - 2);
 if_setposition(calc(0 - $int10 / 2 - 5 + $int12), 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component8);
 if_setposition(calc($int11 / 2 + 5 + $int12), 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component9);

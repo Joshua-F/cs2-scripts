@@ -1,0 +1,82 @@
+// 1917
+[proc,deadmanprotect_draw](int $int0, component $component1, component $component2, component $component3)
+if_setonvartransmit("deadmanprotect_draw(false, $int0, $component1, $component2, $component3){var3717}", $component1);
+if_setoninvtransmit("deadmanprotect_draw(false, $int0, $component1, $component2, $component3){inv_554}", $component1);
+cc_deleteall($component1);
+def_int $int4 = 0;
+def_int $int5 = 0;
+$int4, $int5 = ~deadmanprotect_createtab(0, "deadman_deathtype,0", "PvM", $int4, $int5, $int0, $component1, $component2, $component3);
+$int4, $int5 = ~deadmanprotect_createtab(1, "deadman_deathtype,1", "PvP", $int4, $int5, $int0, $component1, $component2, $component3);
+$int4, $int5 = ~deadmanprotect_createtab(2, "deadman_deathtype,2", "Skulled", $int4, $int5, $int0, $component1, $component2, $component3);
+$int4, $int5 = ~deadmanprotect_createtab(3, "deadman_deathtype,3", "Guarded", $int4, $int5, $int0, $component1, $component2, $component3);
+def_int $int6 = ~deadman_world;
+def_string $text0 = "";
+switch_int ($int0) {
+	case 0 :
+		$text0 = "In Deadman mode, when you die <col=ffffff>unskulled</col> from <col=ffffff>PvM combat</col>, you lose only the items you are carrying at the time. Your 3 most valuable items are protected.<br><br>You may lose more if you are <col=ffffff>skulled</col> at the time.";
+	case default :
+		if ($int6 = 3) {
+			$text0 = "In this Deadman event, dying in <col=ffffff>PvP combat</col> results in you losing <col=ffffff>all</col> of the items you're carrying and <col=ffffff>80%</col> from each of your <col=ffffff>10</col> most valuable item stacks in the bank.";
+		} else {
+			$text0 = "In Deadman mode, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.";
+		}
+	case 2 :
+		if ($int6 = 3) {
+			$text0 = "In this Deadman event, if you die whilst <col=ffffff>skulled</col>, you lose <col=ffffff>all</col> of the items you're carrying and <col=ffffff>80%</col> from each of your <col=ffffff>10</col> most valuable item stacks in the bank.";
+		} else {
+			$text0 = "In Deadman mode, if you die whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.";
+		}
+	case 3 :
+		if ($int6 = 3) {
+			$text0 = "In this Deadman event, if you die in a <col=ffffff>guarded</col> area whilst <col=ffffff>skulled</col>, you lose <col=ffffff>all</col> of the items you're carrying and <col=ffffff>80%</col> from each of your <col=ffffff>10</col> most valuable item stacks in the bank.";
+		} else {
+			$text0 = "In Deadman mode, if you die in a <col=ffffff>guarded</col> area whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.";
+		}
+}
+if_settext($text0, $component2);
+cc_deleteall($component3);
+def_int $int7 = calc(7 * 36 + 6 * 10);
+$int5 = calc((if_getwidth($component3) - $int7) / 2);
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+if ($int6 = 3 | $int6 = 2) {
+	$int11 = 1;
+}
+def_obj $obj12 = null;
+def_int $int13 = 0;
+if ($int0 ! 0) {
+	$int8 = inv_size(inv_554);
+	while ($int9 < $int8) {
+		cc_create($component3, ^iftype_graphic, $int9);
+		$obj12, $int13 = inv_getobj(inv_554, $int9), inv_getnum(inv_554, $int9);
+		if ($int11 = 1) {
+			$int13 = ~min($int13, ~max(4, scale(8, 10, $int13)));
+		}
+		if ($obj12 ! null) {
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(calc($int5 + $int10 % 7 * (36 + 10)), calc(10 + $int10 / 7 * (32 + 10)), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			cc_setobject($obj12, $int13);
+			cc_setopbase("<col=ff9040><oc_name($obj12)>");
+			cc_setop(1, "Examine");
+			cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
+			$int10 = calc($int10 + 1);
+		} else {
+			cc_sethide(true);
+		}
+		$int9 = calc($int9 + 1);
+	}
+}
+if ($int10 = 0) {
+	cc_create($component3, ^iftype_text, $int10);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0x9f9f9f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext("None");
+}

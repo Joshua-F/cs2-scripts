@@ -16,7 +16,7 @@ def_int $count6 = 0;
 def_int $count7 = enum_getoutputcount(enum_5312);
 def_struct $struct8 = null;
 if ($flags0 = 0) {
-	~script4914($component3, 0, p12_full, 0, 0, ^setpos_abs_right, ^setpos_abs_top, 0, 0, ^setsize_minus, ^setsize_minus, "You have no modifiers yet.", true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
+	~create_text($component3, 0, p12_full, 0, 0, ^setpos_abs_right, ^setpos_abs_top, 0, 0, ^setsize_minus, ^setsize_minus, "You have no modifiers yet.", true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
 } else {
 	while ($count6 < $count7) {
 		$struct8 = enum(int, struct, enum_5312, $count6);

@@ -1,9 +1,0 @@
-// 1900
-[clientscript,script1900](int $clock0, int $int1, int $int2, int $int3, component $component4, component $component5, component $component6)
-if (clientclock < $clock0) {
-	return;
-}
-%varcint1170, %varcint1171 = $int1, $int2;
-if_setondrag("script1899(event_mousex, event_mousey, $int1, $int2, $int3, $component4, $component5, $component6)", interface_214:9);
-if_setontimer(null, $component6);
-if_callonresize($component4);

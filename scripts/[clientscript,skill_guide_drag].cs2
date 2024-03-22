@@ -1,0 +1,19 @@
+// 1899
+[clientscript,skill_guide_drag](int $mousex0, int $mousey1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7)
+def_int $height8 = if_getheight($component6);
+def_int $width9 = if_getwidth($component6);
+def_int $int10 = $int2;
+def_int $int11 = $int3;
+def_int $width12 = if_getwidth($component5);
+def_int $int13 = calc(if_getheight($component5) - $int4);
+$int10, $int11 = calc($int10 + ($mousex0 - $int2)), calc($int11 + ($mousey1 - $int3));
+if ($int10 < 10) {
+	$int10 = 0;
+}
+if ($int11 < calc($int4 + 10)) {
+	$int11 = $int4;
+}
+$int10 = max(0, min($int10, calc($width12 - $width9)));
+$int11 = max($int4, min($int11, calc($int4 + $int13 - $height8)));
+if_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top, $component6);
+if_setontimer("skill_guide_drag_end(calc(clientclock + 3), $int10, $int11, $int4, $component5, $component6, $component7)", $component7);

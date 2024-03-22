@@ -1,0 +1,23 @@
+// 7279
+[proc,worldswitcher_options_filters_initbutton](component $component0, string $op0, boolean $boolean1, component $component2, component $component3, component $component4, component $component5, component $component6)
+if_clearops($component0);
+def_string $string1 = "";
+if ($component0 = $component5) {
+	$string1 = ~worldswitcher_search_get;
+	if (string_length($string1) > 0) {
+		~worldswitcher_options_filters_drawbutton($component0, 1, $boolean1, $component5, $component6);
+	} else {
+		~worldswitcher_options_filters_drawbutton($component0, 0, $boolean1, $component5, $component6);
+	}
+	if_setontimer("script7280($string1, %varcint5, $component0, $boolean1, $component2, $component3, $component4, $component5, $component6)", $component0);
+	if_setop(1, "Search", $component0);
+} else {
+	~worldswitcher_options_filters_redrawbutton($component0, $boolean1, $component2, $component3, $component4, $component5, $component6);
+	if_setonvartransmit("worldswitcher_options_filters_redrawbutton(event_com, $boolean1, $component2, $component3, $component4, $component5, $component6){var735}", $component0);
+	if ($component0 = $component6) {
+		if_setop(1, $op0, $component0);
+	} else {
+		if_setop(1, "Filter", $component0);
+		if_setopbase("<col=ff9040><$op0></col>", $component0);
+	}
+}

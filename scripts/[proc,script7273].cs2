@@ -10,11 +10,11 @@ def_int $int21 = -1;
 if ($layer15 ! null) {
 	$int21 = 0;
 }
-$world17, $flags18, $string0, $int19, $int20, $string1 = ~script7297;
+$world17, $flags18, $string0, $int19, $int20, $string1 = ~worldswitcher_list_start;
 while ($world17 > 0) {
 	switch_int ($int3) {
 		case -1 :
-			if (~script961($world17, $flags18) = 1 & ~script7295($world17, $flags18, $string0, $int19) = 1) {
+			if (~script961($world17, $flags18) = 1 & ~worldswitcher_filterlink($world17, $flags18, $string0, $int19) = 1) {
 				$int1 = ~worldswitcher_entry_draw($component0, $int1, $int2, $component4, $world17, $world17, $flags18, $string0, $int19, $int20, $int5, $graphic6, $fontmetrics7, $int21, $width8, $width9, $width10, $width11, $width12, $int13, $int14, $component16);
 				$int2 = calc($int2 + $int5);
 				if ($layer15 ! null) {
@@ -22,7 +22,7 @@ while ($world17 > 0) {
 				}
 			}
 		case default :
-			if ($int3 = $int19 & ~script961($world17, $flags18) = 1 & ~script7295($world17, $flags18, $string0, $int19) = 1) {
+			if ($int3 = $int19 & ~script961($world17, $flags18) = 1 & ~worldswitcher_filterlink($world17, $flags18, $string0, $int19) = 1) {
 				$int1 = ~worldswitcher_entry_draw($component0, $int1, $int2, $component4, $world17, $world17, $flags18, $string0, $int19, $int20, $int5, $graphic6, $fontmetrics7, $int21, $width8, $width9, $width10, $width11, $width12, $int13, $int14, $component16);
 				$int2 = calc($int2 + $int5);
 				if ($layer15 ! null) {
@@ -34,7 +34,7 @@ while ($world17 > 0) {
 				case 0, -73, -42 :
 					$int1 = $int1;
 				case default :
-					if (~script961($world17, $flags18) = 1 & ~script7295($world17, $flags18, $string0, $int19) = 1) {
+					if (~script961($world17, $flags18) = 1 & ~worldswitcher_filterlink($world17, $flags18, $string0, $int19) = 1) {
 						$int1 = ~worldswitcher_entry_draw($component0, $int1, $int2, $component4, $world17, $world17, $flags18, $string0, $int19, $int20, $int5, $graphic6, $fontmetrics7, $int21, $width8, $width9, $width10, $width11, $width12, $int13, $int14, $component16);
 						$int2 = calc($int2 + $int5);
 						if ($layer15 ! null) {
@@ -43,6 +43,6 @@ while ($world17 > 0) {
 					}
 			}
 	}
-	$world17, $flags18, $string0, $int19, $int20, $string1 = ~script7298;
+	$world17, $flags18, $string0, $int19, $int20, $string1 = ~worldswitcher_list_next;
 }
 return($int1, $int2);

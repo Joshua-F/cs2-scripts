@@ -159,7 +159,7 @@ if ($boolean0 = true) {
 		}
 		if_sethide(false, $component3);
 		if ($int13 = 1) {
-			~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
+			~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
 			if_setonmouserepeat(null, $component4);
 			if_setonmouseleave(null, $component4);
 			if_clearops($component4);
@@ -167,7 +167,7 @@ if ($boolean0 = true) {
 			$text0 = "You have currently loaded a <col=ffb93f>PvP Arena</col> group.<br><br>You can see its details via the <col=ffb93f>Grouping</col> tab.";
 		} else if (activeclanchannel_find_listened = true) {
 			if (%varbit12169 = 1) {
-				~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
+				~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
 				if_setonmouserepeat(null, $component4);
 				if_setonmouseleave(null, $component4);
 				if_clearops($component4);
@@ -196,7 +196,7 @@ if ($boolean0 = true) {
 			$text0 = "No-one is currently chatting in this clan's channel.";
 		} else {
 			if (%varbit12169 = 1) {
-				~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
+				~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
 				if_setonmouserepeat(null, $component4);
 				if_setonmouseleave(null, $component4);
 				if_clearops($component4);
@@ -282,7 +282,7 @@ if ($boolean0 = true) {
 		if_sethide(false, $component3);
 		if (activeclanchannel_find_affined(^clantype_clan) = true) {
 			if (%varbit13806 = 1) {
-				~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
+				~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
 				if_setonmouserepeat(null, $component4);
 				if_setonmouseleave(null, $component4);
 				if_clearops($component4);
@@ -311,7 +311,7 @@ if ($boolean0 = true) {
 		} else {
 			$text0 = "You are not currently chatting in this clan's channel.";
 			if (%varbit13806 = 1) {
-				~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
+				~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
 				if_setonmouserepeat(null, $component4);
 				if_setonmouseleave(null, $component4);
 				if_clearops($component4);
@@ -360,13 +360,13 @@ if ($boolean0 = true) {
 	if_setposition(62, 2, ^setpos_abs_right, ^setpos_abs_bottom, $component5);
 	if_setposition(1, 2, ^setpos_abs_right, ^setpos_abs_bottom, $component6);
 }
-~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
+~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component4);
 if_setonmouserepeat(null, $component4);
 if_setonmouseleave(null, $component4);
 if_clearops($component4);
 if_setonop(null, $component4);
 if_setontimer(null, $component4);
-~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component5);
+~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component5);
 if_setonmouserepeat(null, $component5);
 if_setonmouseleave(null, $component5);
 if_clearops($component5);

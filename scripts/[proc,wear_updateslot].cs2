@@ -63,7 +63,7 @@ if ($boolean2 = true) {
 				}
 				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){var1190}", $component0);
 			case escape_crystal_22517 :
-				if_setop(4, ~script1786($obj3, 3), $component0);
+				if_setop(4, ~inventory_op_override($obj3, 3), $component0);
 				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){var3150}", $component0);
 			case default :
 				if_setonvartransmit(null, $component0);

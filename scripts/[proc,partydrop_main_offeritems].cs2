@@ -46,7 +46,7 @@ if ($int7 = 1) {
 	~stonebutton_init("Confirm", $component6, "p12_full", 0);
 	if_setonop("partydrop_main_confirm_op(event_op, event_com)", $component6);
 } else {
-	~script2428(true, "<col=9f9f9f>Confirm</col>", "p12_full", 0, $component6);
+	~stonebutton_draw(true, "<col=9f9f9f>Confirm</col>", "p12_full", 0, $component6);
 	if_setonmouserepeat(null, $component6);
 	if_setonmouseleave(null, $component6);
 	if_setonop("opsound(event_op, 2)", $component6);

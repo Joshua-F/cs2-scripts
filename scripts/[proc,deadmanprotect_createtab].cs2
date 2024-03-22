@@ -43,12 +43,12 @@ cc_setcolour(^black);
 cc_setfill(true);
 cc_settrans(255);
 cc_setop(1, $op0);
-cc_setonop("script1916(true, $int0, $component5, $component6, $component7)");
+cc_setonop("deadmanprotect_draw(true, $int0, $component5, $component6, $component7)");
 if ($int0 = $int4 | ~on_mobile = true) {
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
 } else {
-	cc_setonmouserepeat("script1918(true, event_com, $comsubid8, $comsubid9, $comsubid10)");
-	cc_setonmouseleave("script1918(false, event_com, $comsubid8, $comsubid9, $comsubid10)");
+	cc_setonmouserepeat("deadmanprotect_hovertab(true, event_com, $comsubid8, $comsubid9, $comsubid10)");
+	cc_setonmouseleave("deadmanprotect_hovertab(false, event_com, $comsubid8, $comsubid9, $comsubid10)");
 }
 return($int2, calc($int3 + 51 + 1));

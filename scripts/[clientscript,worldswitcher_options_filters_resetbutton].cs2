@@ -1,0 +1,6 @@
+// 7285
+[clientscript,worldswitcher_options_filters_resetbutton](int $opindex0)
+if ($opindex0 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	~worldswitcher_search_set("");
+}

@@ -85,7 +85,7 @@ if_setsize(0, $height29, ^setsize_minus, ^setsize_abs, $component4);
 if_setsize(0, $height29, ^setsize_minus, ^setsize_abs, $component3);
 if ($layer28 ! null) {
 	%varcint63 = ~max(0, %varcint63);
-	~script7276($layer28, $component0, $component2, $component1, $int6, $int7, ~max(180, $height29), if_getheight($layer28));
+	~worldswitcher_options_setsize($layer28, $component0, $component2, $component1, $int6, $int7, ~max(180, $height29), if_getheight($layer28));
 } else {
 	%varcint69 = ~max(0, %varcint69);
 	~scrollbar_resize($component2, $component1, %varcint69);
@@ -101,13 +101,13 @@ def_int $int34 = 0;
 def_string $string1 = "";
 if (%varbit4597 > 0) {
 	if_sethide(true, $component18);
-	$world31, $flags32, $string0, $int33, $int34, $string1 = ~script7296(%varbit4597);
+	$world31, $flags32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4597);
 	if (~script961($world31, $flags32) = 0) {
 		$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 	}
 	~worldswitcher_entry_draw($component16, 0, 0, $component16, -1, $world31, $flags32, $string0, $int33, $int34, $int5, $graphic8, $fontmetrics9, -1, $width21, $width22, $width23, $width24, $x30, $int26, $int27, $component19);
 	if (%varbit4598 > 0) {
-		$world31, $flags32, $string0, $int33, $int34, $string1 = ~script7296(%varbit4598);
+		$world31, $flags32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4598);
 		if (~script961($world31, $flags32) = 0) {
 			$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 		}
@@ -119,7 +119,7 @@ if (%varbit4597 > 0) {
 	~worldswitcher_wipe_favourite($component16);
 	if (%varbit4598 > 0) {
 		if_sethide(true, $component18);
-		$world31, $flags32, $string0, $int33, $int34, $string1 = ~script7296(%varbit4598);
+		$world31, $flags32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4598);
 		if (~script961($world31, $flags32) = 0) {
 			$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 		}

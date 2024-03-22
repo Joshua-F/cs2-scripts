@@ -8,7 +8,7 @@ if ($int0 > 0) {
 	if_setonop("script4933", $component2);
 } else {
 	$comsubid3 = ~v2_stone_button($component2);
-	~script4914($component2, $comsubid3, p12_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 0, 0, ^setsize_minus, ^setsize_minus, "Claim", true, 0x9f9f9f, ^settextalign_centre, ^settextalign_centre, 0);
+	~create_text($component2, $comsubid3, p12_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 0, 0, ^setsize_minus, ^setsize_minus, "Claim", true, 0x9f9f9f, ^settextalign_centre, ^settextalign_centre, 0);
 	if_setonop(null, $component2);
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
@@ -18,7 +18,7 @@ if (%varbit9788 > 0) {
 	~stonebutton_init("Continue", $component1, "p12_full", 0);
 } else {
 	$comsubid3 = ~v2_stone_button($component1);
-	~script4914($component1, $comsubid3, p12_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 0, 0, ^setsize_minus, ^setsize_minus, "Continue", true, 0x9f9f9f, ^settextalign_centre, ^settextalign_centre, 0);
+	~create_text($component1, $comsubid3, p12_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 0, 0, ^setsize_minus, ^setsize_minus, "Continue", true, 0x9f9f9f, ^settextalign_centre, ^settextalign_centre, 0);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);
 }

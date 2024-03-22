@@ -1,7 +1,7 @@
 // 6166
 [proc,script6166](component $component0)
 if (%varbit14027 = 1) {
-	~script2428(true, "<col=9f9f9f>Accepted</col>", "p12_full", 0, $component0);
+	~stonebutton_draw(true, "<col=9f9f9f>Accepted</col>", "p12_full", 0, $component0);
 	if_clearops($component0);
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);

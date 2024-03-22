@@ -3,7 +3,7 @@
 if (%varcint5 = $int0 & calc(clientclock % 20) ! 0) {
 	return;
 }
-def_string $string1 = ~script7329;
+def_string $string1 = ~worldswitcher_search_get;
 if (~script7281($string1, $string0) = 1) {
 	~worldswitcher_draw($component1, $component2, $component3, $component4, $component5, $int6, $int7, $int8, $graphic9, $fontmetrics10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20);
 }

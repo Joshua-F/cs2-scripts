@@ -15,38 +15,38 @@ def_int $int7 = calc($int2 - $int3 * 24);
 def_int $int8 = calc($int0 - $int2 * 60);
 if ($int5 > 0) {
 	if ($int6 > 0) {
-		$string0 = "<tostring($int5)> <~script1881($int5, "month", "months")> <tostring($int6)> <~script1881($int6, "day", "days")>";
+		$string0 = "<tostring($int5)> <~text_plural($int5, "month", "months")> <tostring($int6)> <~text_plural($int6, "day", "days")>";
 	} else {
-		$string0 = "<tostring($int5)> <~script1881($int5, "month", "months")>";
+		$string0 = "<tostring($int5)> <~text_plural($int5, "month", "months")>";
 	}
 	$string1 = $string0;
 } else if ($int6 > 0) {
 	if ($int7 > 0) {
-		$string0 = "<tostring($int6)> <~script1881($int6, "day", "days")> <tostring($int7)> <~script1881($int7, "hr", "hrs")>";
+		$string0 = "<tostring($int6)> <~text_plural($int6, "day", "days")> <tostring($int7)> <~text_plural($int7, "hr", "hrs")>";
 	} else {
-		$string0 = "<tostring($int6)> <~script1881($int6, "day", "days")>";
+		$string0 = "<tostring($int6)> <~text_plural($int6, "day", "days")>";
 	}
 	if ($int7 > 0) {
-		$string1 = "<tostring($int6)> <~script1881($int6, "day", "days")> <tostring($int7)> <~script1881($int7, "hour", "hours")>";
+		$string1 = "<tostring($int6)> <~text_plural($int6, "day", "days")> <tostring($int7)> <~text_plural($int7, "hour", "hours")>";
 	} else {
-		$string1 = "<tostring($int6)> <~script1881($int6, "day", "days")>";
+		$string1 = "<tostring($int6)> <~text_plural($int6, "day", "days")>";
 	}
 } else {
 	$int8 = calc($int0 - $int2 * 60);
 	if ($int7 > 0) {
 		if ($int8 > 0) {
-			$string0 = "<tostring($int7)> <~script1881($int7, "hr", "hrs")> <tostring($int8)> <~script1881($int8, "min", "mins")>";
+			$string0 = "<tostring($int7)> <~text_plural($int7, "hr", "hrs")> <tostring($int8)> <~text_plural($int8, "min", "mins")>";
 		} else {
-			$string0 = "<tostring($int7)> <~script1881($int7, "hr", "hrs")>";
+			$string0 = "<tostring($int7)> <~text_plural($int7, "hr", "hrs")>";
 		}
 		if ($int8 > 0) {
-			$string1 = "<tostring($int7)> <~script1881($int7, "hour", "hours")> <tostring($int8)> <~script1881($int8, "minute", "minutes")>";
+			$string1 = "<tostring($int7)> <~text_plural($int7, "hour", "hours")> <tostring($int8)> <~text_plural($int8, "minute", "minutes")>";
 		} else {
-			$string1 = "<tostring($int7)> <~script1881($int7, "hour", "hours")>";
+			$string1 = "<tostring($int7)> <~text_plural($int7, "hour", "hours")>";
 		}
 	} else {
-		$string0 = "<tostring($int8)> <~script1881($int8, "min", "mins")>";
-		$string1 = "<tostring($int8)> <~script1881($int8, "minute", "minutes")>";
+		$string0 = "<tostring($int8)> <~text_plural($int8, "min", "mins")>";
+		$string1 = "<tostring($int8)> <~text_plural($int8, "minute", "minutes")>";
 	}
 }
 return($string0, $string1);

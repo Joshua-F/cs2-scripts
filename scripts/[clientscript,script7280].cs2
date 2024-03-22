@@ -3,9 +3,9 @@
 if (%varcint5 = $int0 & calc(clientclock % 20) ! 0) {
 	return;
 }
-def_string $string1 = ~script7329;
+def_string $string1 = ~worldswitcher_search_get;
 if (~script7281($string1, $string0) = 1) {
-	~script7283($component1, $boolean2, $component3, $component4, $component5, $component6, $component7);
-	~script7283($component7, $boolean2, $component3, $component4, $component5, $component6, $component7);
+	~worldswitcher_options_filters_redrawbutton($component1, $boolean2, $component3, $component4, $component5, $component6, $component7);
+	~worldswitcher_options_filters_redrawbutton($component7, $boolean2, $component3, $component4, $component5, $component6, $component7);
 }
 if_setontimer("script7280($string1, %varcint5, $component1, $boolean2, $component3, $component4, $component5, $component6, $component7)", $component1);

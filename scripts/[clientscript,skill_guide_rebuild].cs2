@@ -1,0 +1,20 @@
+// 1898
+[clientscript,skill_guide_rebuild]
+def_component $component0 = interface_214:0;
+def_component $component1 = interface_214:1;
+def_component $component2 = interface_214:9;
+def_int $width3 = if_getwidth($component1);
+def_int $height4 = if_getheight($component1);
+def_int $width5 = if_getwidth($component0);
+def_int $int6 = ~script1912;
+def_int $int7 = calc(if_getheight($component0) - $int6);
+def_int $int8 = max(0, min(%varcint1170, calc($width5 - $width3)));
+def_int $int9 = max($int6, min(%varcint1171, calc($int6 + $int7 - $height4)));
+if_setposition($int8, $int9, ^setpos_abs_left, ^setpos_abs_top, $component1);
+if (getwindowmode = ^windowmode_fixed | ~on_mobile = true) {
+	if_setop(1, "", $component2);
+	if_setondrag(null, $component2);
+} else {
+	if_setop(1, "Move", $component2);
+	if_setondrag("skill_guide_drag(event_mousex, event_mousey, $int8, $int9, $int6, $component0, $component1, $component2)", $component2);
+}

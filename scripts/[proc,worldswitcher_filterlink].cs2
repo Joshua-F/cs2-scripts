@@ -1,0 +1,85 @@
+// 7295
+[proc,worldswitcher_filterlink](int $world0, int $flags1, string $string0, int $int2)(int)
+if (%varbit14967 ! 0) {
+	if (testbit(%varbit14967, 0) = ^true & testbit($flags1, 0) = ^false) {
+		return(0);
+	} else if (testbit(%varbit14967, 1) = ^true & testbit($flags1, 0) = ^true) {
+		return(0);
+	}
+}
+if (%varbit14968 ! 0) {
+	switch_int ($int2) {
+		case 0 :
+			if (testbit(%varbit14968, 1) = ^true) {
+				return(0);
+			}
+		case 1 :
+			if (testbit(%varbit14968, 0) = ^true) {
+				return(0);
+			}
+		case 3 :
+			if (testbit(%varbit14968, 5) = ^true) {
+				return(0);
+			}
+		case 7 :
+			if (testbit(%varbit14968, 4) = ^true) {
+				return(0);
+			}
+		case -73 :
+			if (testbit(%varbit14968, 2) = ^true) {
+				return(0);
+			}
+		case -42 :
+			if (testbit(%varbit14968, 3) = ^true) {
+				return(0);
+			}
+	}
+}
+def_int $int3 = -1;
+if (%varbit14969 ! 0) {
+	if (testbit(%varbit14969, 0) = ^true & testbit($flags1, 7) = ^true) {
+		return(0);
+	}
+	if (testbit(%varbit14969, 1) = ^true & ~script7323($flags1) = 1) {
+		return(0);
+	}
+	if (testbit(%varbit14969, 2) = ^true & ~script7324($flags1) = 1) {
+		return(0);
+	}
+	if (testbit(%varbit14969, 3) = ^true & ~script6942($flags1) ! 0) {
+		return(0);
+	}
+	if (testbit(%varbit14969, 4) = ^true & ~script6810($flags1) = 1) {
+		return(0);
+	}
+	if (testbit(%varbit14969, 5) = ^true & ~script5739($flags1) = 1) {
+		return(0);
+	}
+	if (testbit(%varbit14969, 6) = ^true) {
+		if (testbit($flags1, 30) = ^true) {
+			return(0);
+		}
+		if (~script206($flags1) = 1) {
+			return(0);
+		}
+		$int3 = ~script6942($flags1);
+		if ($int3 ! 0 & $int3 ! 1) {
+			return(0);
+		}
+	}
+	if (testbit(%varbit14969, 7) = ^true) {
+		if (~script7266($flags1) = 1) {
+			return(0);
+		} else if (testbit($flags1, 25) = ^true) {
+			return(0);
+		}
+	}
+	if (testbit(%varbit14969, 8) = ^true & ~script6812($flags1) = 1) {
+		return(0);
+	}
+}
+def_string $string1 = ~worldswitcher_search_get;
+if (string_length($string1) > 0 & string_indexof_string(lowercase($string0), lowercase($string1), 0) = -1) {
+	return(0);
+}
+return(1);

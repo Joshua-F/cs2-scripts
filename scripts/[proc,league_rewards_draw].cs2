@@ -70,7 +70,7 @@ cc_deleteall($component13);
 if ($int0 ! -1) {
 	$text0, $string1, $int30, $struct32 = ~script3286($int0);
 	%varbit10110 = $int0;
-	~script2284(false, $text0, $component8);
+	~league_rewards_confirmdraw(false, $text0, $component8);
 	while ($int27 < $int0) {
 		cc_create($component7, ^iftype_rectangle, $int27);
 		cc_sethide(true);
@@ -87,8 +87,8 @@ if ($int0 ! -1) {
 	}
 	cc_setopbase("<col=ff981f><$text0></col>");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("script2283(true, $text0, $component8)");
-		cc_setonmouseleave("script2283(false, $text0, $component8)");
+		cc_setonmouserepeat("league_rewards_confirmdraw(true, $text0, $component8)");
+		cc_setonmouseleave("league_rewards_confirmdraw(false, $text0, $component8)");
 	}
 	cc_setonop("league_reward_shop_confirmop(event_op, $component9, $struct32)");
 	~script2285;

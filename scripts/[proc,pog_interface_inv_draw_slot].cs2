@@ -1,0 +1,28 @@
+// 1893
+[proc,pog_interface_inv_draw_slot](inv $inv0, int $slot1, component $component2)
+def_obj $obj3 = null;
+if (cc_find($component2, $slot1) = ^true) {
+	$obj3 = inv_getobj($inv0, $slot1);
+	if ($obj3 ! null) {
+		cc_setobject($obj3, inv_getnum($inv0, $slot1));
+		cc_setopbase("<col=ff9040><oc_name($obj3)></col>");
+		if ($obj3 = %var856) {
+			cc_setop(1, "Deselect");
+		} else {
+			cc_setop(1, "Select");
+		}
+		cc_setop(10, "Examine");
+		cc_setgraphicshadow(0x333333);
+		if ($obj3 = %var856) {
+			cc_setoutline(2);
+		} else {
+			cc_setoutline(1);
+		}
+		cc_setonop("script1894(event_com, event_comsubid, event_op, $inv0, $component2)");
+	} else {
+		cc_setobject(null, 0);
+		cc_setopbase("");
+		cc_clearops;
+	}
+	cc_settrans(0);
+}

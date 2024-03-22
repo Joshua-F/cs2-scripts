@@ -3,6 +3,6 @@
 def_component $component0 = interface_865:26;
 cc_deleteall($component0);
 def_string $text0 = "Select a modifier";
-~script4914($component0, 0, b12_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_top, 0, 20, ^setsize_minus, ^setsize_abs, $text0, true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 13);
+~create_text($component0, 0, b12_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_top, 0, 20, ^setsize_minus, ^setsize_abs, $text0, true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 13);
 $text0 = "Use the buttons below to select a modifier before continuing to the next wave.<br><br>Alternatively, you may end this run now and claim the loot you've earned so far.";
-~script4914($component0, 1, p11_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, 0, 20, ^setsize_minus, ^setsize_minus, $text0, true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 11);
+~create_text($component0, 1, p11_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, 0, 20, ^setsize_minus, ^setsize_minus, $text0, true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 11);

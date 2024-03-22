@@ -1,7 +1,7 @@
 // 6709
 [clientscript,script6709](int $opindex0, string $string0, component $component1, graphic $graphic2)
 sound_synth(interface_select1, 1, 0);
-~script2428(true, $string0, $graphic2, 0, $component1);
+~stonebutton_draw(true, $string0, $graphic2, 0, $component1);
 if_setonmouserepeat(null, $component1);
 if_setonmouseleave(null, $component1);
 if_setontimer("script6710(calc(clientclock + 20), $string0, event_com, $graphic2)", $component1);

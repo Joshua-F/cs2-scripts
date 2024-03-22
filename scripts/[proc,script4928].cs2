@@ -34,7 +34,7 @@ while ($size7 < inv_size(inv_843)) {
 	$size7 = calc($size7 + 1);
 }
 if ($int8 = 0) {
-	~script4914($component1, $int5, p12_full, 0, -20, ^setpos_abs_centre, ^setpos_abs_centre, 40, 40, ^setsize_minus, ^setsize_minus, "You do not have any more loot.", true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
+	~create_text($component1, $int5, p12_full, 0, -20, ^setpos_abs_centre, ^setpos_abs_centre, 40, 40, ^setsize_minus, ^setsize_minus, "You do not have any more loot.", true, 0xff981f, ^settextalign_centre, ^settextalign_centre, 0);
 	$int5 = calc($int5 + 1);
 }
 ~script4910($component2, 0, "bankbuttons,6", 29, 22, "");

@@ -73,7 +73,7 @@ if ($int10 = 1) {
 	~stonebutton_init("<col=ff0000>Discard</col>", $component7, "p12_full", 0);
 } else {
 	$text2 = "<$string3> - Waiting for group leader.";
-	~script2428(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component6);
+	~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component6);
 	if_setonmouserepeat(null, $component6);
 	if_setonmouseleave(null, $component6);
 	if_clearops($component6);

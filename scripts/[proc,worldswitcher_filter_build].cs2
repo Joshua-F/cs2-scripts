@@ -1,0 +1,80 @@
+// 7288
+[proc,worldswitcher_filter_build](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5, int $int6)
+cc_deleteall($component3);
+def_enum $enum7 = enum(int, enum, enum_4993, %varbit14979);
+if ($enum7 = null) {
+	return;
+}
+def_int $int8 = 21;
+if ($boolean5 = true) {
+	$int8 = 29;
+}
+def_int $count9 = enum_getoutputcount($enum7);
+def_int $int10 = 0;
+while ($int10 < $count9) {
+	cc_create($component3, ^iftype_rectangle, $int10);
+	cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc(5 + $int10 * $int8), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^white);
+	if ($int10 = $int6) {
+		cc_settrans(200);
+		cc_setontimer("worldswitcher_filter_endhighlight(calc(clientclock + 50), event_com, event_comsubid, 255, 225, $boolean5)");
+	} else {
+		cc_settrans(255);
+		if ($boolean5 = false) {
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 225, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+		}
+	}
+	cc_setop(1, "Switch");
+	cc_setonop("worldswitcher_filter_op(event_op, $enum7, event_comsubid, $component0, $component1, $component2, $component3, $component4, $boolean5)");
+	$int10 = calc($int10 + 1);
+}
+def_coord $coord11 = enum(enum, coord, enum_4994, $enum7);
+def_int $x12 = coordx($coord11);
+def_int $z13 = coordz($coord11);
+def_int $int14 = calc(($int8 - $z13) / 2);
+def_int $int15 = calc(($int8 - 17) / 2);
+def_int $int16 = 25;
+def_int $int17 = calc($int16 + $x12 + 5);
+def_string $string0 = "";
+def_int $int18 = 0;
+def_struct $struct19 = null;
+def_int $count20 = 0;
+while ($count20 < $count9) {
+	$struct19 = enum(int, struct, $enum7, $count20);
+	if ($struct19 ! null) {
+		cc_create($component3, ^iftype_graphic, $int10);
+		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+		cc_setposition(3, calc(5 + $count20 * $int8 + $int15), ^setpos_abs_left, ^setpos_abs_top);
+		if (~worldswitcher_filter_getvalue($enum7, $struct19) = true) {
+			cc_setgraphic("options_radio_buttons,1");
+		} else {
+			cc_setgraphic("options_radio_buttons,2");
+		}
+		$int10 = calc($int10 + 1);
+		cc_create($component3, ^iftype_graphic, $int10);
+		cc_setsize($x12, $z13, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int16, calc(5 + $count20 * $int8 + $int14), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic(struct_param($struct19, param_1789));
+		$int10 = calc($int10 + 1);
+		cc_create($component3, ^iftype_text, $int10);
+		cc_setsize($int17, $int8, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, calc(5 + $count20 * $int8), ^setpos_abs_right, ^setpos_abs_top);
+		cc_setcolour(0xff981f);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		$string0 = struct_param($struct19, param_1788);
+		cc_settext($string0);
+		$int18 = ~max($int18, parawidth($string0, 512, p12_full));
+		$int10 = calc($int10 + 1);
+	}
+	$count20 = calc($count20 + 1);
+}
+$int18 = calc($int18 + 5);
+def_int $int21 = calc(23 + ($int17 + $int18) + 1 + 16 + 2);
+def_int $int22 = calc(5 + $count9 * $int8 + 5);
+def_int $int23 = 84;
+~worldswitcher_filter_setsize(~max($int21, 190), $int22, $int23, if_getheight($component0), $component0, $component2, $component3, $component4);
