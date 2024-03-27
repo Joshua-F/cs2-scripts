@@ -17,7 +17,7 @@ if ($component8 ! null) {
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	if ($int1 < 0) {
-		$int1, $string1, $string2 = calc(0 - $int1), "https://crmintegration.development.rs.aws.jagex.network/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", "https://crmintegration.development.rs.aws.jagex.network/";
+		$int1, $string1, $string2 = calc(0 - $int1), "https://crmintegration.development.rs.aws.jagex.com/getlatestcampaign/bcac1d70-f282-42e4-82b6-7a6c9494033e/?userHash=123456789", "https://crmintegration.development.rs.aws.jagex.com/";
 	}
 	cc_crmview_init($string1, $string2, enum(int, string, enum_1268, $int1));
 	$int5, $int6 = 0, enum_getoutputcount(enum_1269);
