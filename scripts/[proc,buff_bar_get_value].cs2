@@ -116,8 +116,12 @@ switch_struct ($struct0) {
 			return(%varbit8430);
 		}
 	case buff_divine_defence_potion_3098 :
-		if (%varbit13663 = 0 & %varbit13664 = 0 & %varbit13665 = 0) {
+		if (%varbit13663 = 0 & %varbit13664 = 0 & %varbit13665 = 0 & %varbit10029 = 0) {
 			return(%varbit8431);
+		}
+	case buff_moonlight_potion_912 :
+		if (%varbit10029 > 0) {
+			return(%varbit10029);
 		}
 	case buff_divine_magic_potion_3099 :
 		if (%varbit13665 = 0) {
