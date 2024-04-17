@@ -1,0 +1,10 @@
+// 5071
+[proc,script5071](int $int0, string $string0, string $string1)(string)
+switch_int ($int0) {
+	case 0, 1 :
+		return($string0);
+	case 2 :
+		return($string1);
+	case default :
+		return("");
+}
