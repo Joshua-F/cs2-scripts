@@ -1,0 +1,6 @@
+// 5108
+[clientscript,script5108](int $clock0, component $component1, string $text0, graphic $graphic2, int $int3)
+if (clientclock >= $clock0) {
+	if_setontimer(null, $component1);
+	~script5109(false, $component1, $text0, $graphic2, $int3);
+}

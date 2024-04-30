@@ -1,0 +1,13 @@
+// 5099
+[clientscript,script5099](boolean $boolean0, component $component1, int $comsubid2)
+if ($boolean0 = true) {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_settrans(220);
+	}
+	if_setontimer("script5100(calc(clientclock + 2), event_com, $comsubid2)", $component1);
+} else {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_settrans(255);
+	}
+	if_setontimer(null, $component1);
+}

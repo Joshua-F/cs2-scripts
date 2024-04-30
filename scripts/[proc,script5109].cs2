@@ -1,0 +1,18 @@
+// 5109
+[proc,script5109](boolean $boolean0, component $component1, string $text0, graphic $graphic2, int $int3)(int)
+def_int $int4 = 0;
+if ($boolean0 = true) {
+	$int4 = ~beige_stone_button_in($component1, $int4);
+} else {
+	$int4 = ~beige_stone_button_out($component1, $int4);
+}
+cc_create($component1, ^iftype_text, $int4);
+$int4 = calc($int4 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0x403020);
+cc_settextfont($graphic2);
+cc_settextshadow(false);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, $int3);
+cc_settext($text0);
+return(0);

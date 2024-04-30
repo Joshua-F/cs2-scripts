@@ -1,0 +1,9 @@
+// 5107
+[clientscript,script5107](boolean $boolean0, component $component1, string $text0, graphic $graphic2, int $int3)
+cc_deleteall($component1);
+~script5109($boolean0, $component1, $text0, $graphic2, $int3);
+if ($boolean0 = true) {
+	if_setontimer("script5108(calc(clientclock + 2), event_com, $text0, $graphic2, $int3)", $component1);
+} else {
+	if_setontimer(null, $component1);
+}

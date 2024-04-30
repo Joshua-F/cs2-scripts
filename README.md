@@ -133,7 +133,6 @@
 [**130**](scripts/[clientscript,ignore_op].cs2) `[clientscript,ignore_op]`  
 [**131**](scripts/[clientscript,closebutton_key].cs2) `[clientscript,closebutton_key]`  
 [**132**](scripts/[clientscript,barrows_overlay_init].cs2) `[clientscript,barrows_overlay_init]`  
-[**133**](scripts/[clientscript,snapshot_onkey].cs2) `[clientscript,snapshot_onkey]`  
 [**134**](scripts/[proc,v2_stone_button_filled].cs2) `[proc,v2_stone_button_filled]`  
 [**135**](scripts/[clientscript,if_settextfont].cs2) `[clientscript,if_settextfont]`  
 [**136**](scripts/[clientscript,abyssalsire_overseer].cs2) `[clientscript,abyssalsire_overseer]`  
@@ -1104,7 +1103,6 @@
 [**1101**](scripts/[proc,bugreport_drawbutton].cs2) `[proc,bugreport_drawbutton]`  
 [**1102**](scripts/[clientscript,bugreport_continue].cs2) `[clientscript,bugreport_continue]`  
 [**1103**](scripts/[clientscript,bugreport_submit].cs2) `[clientscript,bugreport_submit]`  
-[**1104**](scripts/[clientscript,snapshot_init].cs2) `[clientscript,snapshot_init]`  
 [**1105**](scripts/[clientscript,skill_guide_sidepanelop].cs2) `[clientscript,skill_guide_sidepanelop]`  
 [**1106**](scripts/[proc,abyssalsire_overseer_update].cs2) `[proc,abyssalsire_overseer_update]`  
 [**1107**](scripts/[proc,script1107].cs2)  
@@ -1120,10 +1118,6 @@
 [**1117**](scripts/[proc,farming_view_tabpanel].cs2) `[proc,farming_view_tabpanel]`  
 [**1118**](scripts/[clientscript,farming_view_panel_loading].cs2) `[clientscript,farming_view_panel_loading]`  
 [**1119**](scripts/[clientscript,farming_view_setpanel].cs2) `[clientscript,farming_view_setpanel]`  
-[**1120**](scripts/[clientscript,snapshot_rules_init].cs2) `[clientscript,snapshot_rules_init]`  
-[**1121**](scripts/[proc,snapshot_rules_write].cs2) `[proc,snapshot_rules_write]`  
-[**1122**](scripts/[clientscript,snapshot_rules_hover].cs2) `[clientscript,snapshot_rules_hover]`  
-[**1123**](scripts/[clientscript,snapshot_rules_send].cs2) `[clientscript,snapshot_rules_send]`  
 [**1124**](scripts/[proc,script1124].cs2)  
 [**1125**](scripts/[proc,league_points_earned].cs2) `[proc,league_points_earned]`  
 [**1126**](scripts/[proc,script1126].cs2)  
@@ -1324,9 +1318,6 @@
 [**1321**](scripts/[clientscript,script1321].cs2)  
 [**1322**](scripts/[clientscript,script1322].cs2)  
 [**1323**](scripts/[proc,script1323].cs2)  
-[**1324**](scripts/[clientscript,snapshot_mute].cs2) `[clientscript,snapshot_mute]`  
-[**1325**](scripts/[clientscript,snapshot_ignore].cs2) `[clientscript,snapshot_ignore]`  
-[**1326**](scripts/[proc,snapshot_toggle].cs2) `[proc,snapshot_toggle]`  
 [**1327**](scripts/[clientscript,ii_tracker_build].cs2) `[clientscript,ii_tracker_build]`  
 [**1328**](scripts/[proc,ii_tracker_build_split].cs2) `[proc,ii_tracker_build_split]`  
 [**1329**](scripts/[proc,ii_tracker_build_element].cs2) `[proc,ii_tracker_build_element]`  
@@ -2752,7 +2743,6 @@
 [**2749**](scripts/[proc,farming_tools_main_recreate].cs2) `[proc,farming_tools_main_recreate]`  
 [**2750**](scripts/[clientscript,farming_tools_side_recreate].cs2) `[clientscript,farming_tools_side_recreate]`  
 [**2751**](scripts/[proc,farming_tools_side_recreate].cs2) `[proc,farming_tools_side_recreate]`  
-[**2752**](scripts/[clientscript,snapshot_openkeyboard].cs2) `[clientscript,snapshot_openkeyboard]`  
 [**2753**](scripts/[clientscript,wint_timer_init].cs2) `[clientscript,wint_timer_init]`  
 [**2754**](scripts/[clientscript,wint_timer_resynch].cs2) `[clientscript,wint_timer_resynch]`  
 [**2755**](scripts/[proc,wint_timer_resynch].cs2) `[proc,wint_timer_resynch]`  
@@ -5084,6 +5074,32 @@
 [**5081**](scripts/[proc,script5081].cs2)  
 [**5082**](scripts/[proc,script5082].cs2)  
 [**5083**](scripts/[proc,script5083].cs2)  
+[**5084**](scripts/[clientscript,script5084].cs2)  
+[**5085**](scripts/[clientscript,script5085].cs2)  
+[**5086**](scripts/[clientscript,script5086].cs2)  
+[**5087**](scripts/[clientscript,script5087].cs2)  
+[**5088**](scripts/[clientscript,script5088].cs2)  
+[**5089**](scripts/[proc,script5089].cs2)  
+[**5090**](scripts/[proc,script5090].cs2)  
+[**5091**](scripts/[proc,script5091].cs2)  
+[**5092**](scripts/[clientscript,script5092].cs2)  
+[**5093**](scripts/[clientscript,script5093].cs2)  
+[**5094**](scripts/[clientscript,script5094].cs2)  
+[**5095**](scripts/[proc,script5095].cs2)  
+[**5096**](scripts/[clientscript,script5096].cs2)  
+[**5097**](scripts/[proc,script5097].cs2)  
+[**5098**](scripts/[proc,script5098].cs2)  
+[**5099**](scripts/[clientscript,script5099].cs2)  
+[**5100**](scripts/[clientscript,script5100].cs2)  
+[**5101**](scripts/[clientscript,script5101].cs2)  
+[**5102**](scripts/[proc,script5102].cs2)  
+[**5103**](scripts/[proc,script5103].cs2)  
+[**5104**](scripts/[clientscript,script5104].cs2)  
+[**5105**](scripts/[clientscript,script5105].cs2)  
+[**5106**](scripts/[proc,script5106].cs2)  
+[**5107**](scripts/[clientscript,script5107].cs2)  
+[**5108**](scripts/[clientscript,script5108].cs2)  
+[**5109**](scripts/[proc,script5109].cs2)  
 [**5165**](scripts/[clientscript,script5165].cs2)  
 [**5166**](scripts/[proc,script5166].cs2)  
 [**5167**](scripts/[clientscript,helper_agility_highlight_course].cs2) `[clientscript,helper_agility_highlight_course]`  

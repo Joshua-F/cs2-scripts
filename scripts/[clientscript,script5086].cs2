@@ -1,0 +1,9 @@
+// 5086
+[clientscript,script5086](component $component0)
+def_graphic $graphic1 = "close_buttons,6";
+if_setgraphic($graphic1, $component0);
+if_setonmouseleave("script2809(event_com, $graphic1)", $component0);
+$graphic1 = "close_buttons,7";
+if_setonmouseover("script2809(event_com, $graphic1)", $component0);
+if_setonop("opsound(event_op, 2)", $component0);
+if_setonkey("script5087(event_keycode, event_keychar, event_com)", $component0);

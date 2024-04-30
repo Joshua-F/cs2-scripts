@@ -1,0 +1,88 @@
+// 5084
+[clientscript,script5084](int $int0, int $int1, string $string0)
+if (%varcint11 = 1) {
+	if_close;
+}
+if ($int1 = 1) {
+	%varcstring370 = $string0;
+}
+~script5106(interface_875:5, "Next", "p12_full", 15);
+if_setop(1, "Next", interface_875:5);
+if_setonop("script5088(true)", interface_875:5);
+~script5106(interface_875:13, "Edit Name", "p12_full", 15);
+if_setop(1, "Edit Name", interface_875:13);
+if_setonop("script5088(false)", interface_875:13);
+if_setonclick("script5088(false)", interface_875:11);
+~script5106(interface_875:6, "Law-breaking content", "p12_full", 15);
+if_setop(1, "Law-breaking content", interface_875:6);
+if_setonop("script5094", interface_875:6);
+~script5106(interface_875:21, "Law-breaking content", "p12_full", 15);
+if_setop(1, "Law-breaking content", interface_875:21);
+if_setonop("script5094", interface_875:21);
+if_setonkey("script5093(event_keycode, event_keychar)", interface_875:4);
+~script5090;
+%varcint224 = $int0;
+~script5095(0);
+if (string_length(%varcstring370) > 0) {
+	~script5097;
+} else {
+	~script5091;
+}
+if (%varcint6 = 1 | %varcint6 = 0) {
+} else {
+	%varcint6 = 0;
+}
+if (%varcint140 = 1 | %varcint140 = 0) {
+} else {
+	%varcint140 = 1;
+}
+~script5098(interface_875:10, "Add player to Ignore list", true);
+if (playermod = true | staffmodlevel > 0) {
+	if_setposition(5, 24, ^setpos_abs_left, ^setpos_abs_top, interface_875:10);
+	~script5098(interface_875:9, "Mute player", false);
+} else {
+	if_setposition(5, 13, ^setpos_abs_left, ^setpos_abs_top, interface_875:10);
+	if_sethide(true, interface_875:9);
+	if_setonop(null, interface_875:9);
+	if_setontimer(null, interface_875:9);
+}
+def_int $height2 = 19;
+if (~on_mobile = true) {
+	$height2 = 25;
+}
+cc_deleteall(interface_875:18);
+def_int $int3 = 0;
+cc_deleteall(interface_875:8);
+def_int $int4 = 0;
+$int3, $int4 = ~script5103("Macroing or use of bots", 7, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Seriously offensive language", 16, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Advertising websites", 11, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Scamming", 15, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Breaking real-world laws", 21, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Real-life threats", 20, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Real-world trading", 9, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Offensive display name", 19, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Buying/selling accounts and services", 6, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Asking for or providing contact information", 13, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Solicitation", 17, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Encouraging rule breaking", 9, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Player-run Games of Chance", 22, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Exploiting a bug", 4, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Disruptive behaviour", 18, $int3, $int4, $height2);
+$int3, $int4 = ~script5103("Staff impersonation", 5, $int3, $int4, $height2);
+if (~deadman_world = 3) {
+	$int3, $int4 = ~script5103("Boxing in the Deadman Tournament", 8, $int3, $int4, $height2);
+	$int3, $int4 = ~script5103("Muling in the Deadman Tournament", 12, $int3, $int4, $height2);
+}
+def_int $height5 = if_getheight(interface_875:18);
+$height2 = calc($int4 * $height2);
+if ($height2 > $height5) {
+	if_setscrollsize(0, $height2, interface_875:18);
+	~scrollbar_vertical(interface_875:19, interface_875:18, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+	%varcint67 = ~minmax(0, calc($height2 - $height5), %varcint67);
+	~scrollbar_resize(interface_875:19, interface_875:18, %varcint67);
+} else {
+	if_setscrollsize(0, 0, interface_875:18);
+	%varcint67 = 0;
+	~scrollbar_vertical(interface_875:19, interface_875:18, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+}

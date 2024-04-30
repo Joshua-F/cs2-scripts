@@ -1,0 +1,27 @@
+// 5105
+[clientscript,script5105](boolean $boolean0, char $char1, string $string0, int $int2)
+if ($boolean0 = false) {
+	if ($char1 = null | ~keypress_permit(null, overlayinterface_875) = 0) {
+		return;
+	} else if (string_indexof_char($string0, $char1) = -1 & string_indexof_char(lowercase($string0), $char1) = -1) {
+		return;
+	}
+}
+if (string_length(%varcstring370) > 0) {
+	sound_synth(interface_select1, 1, 0);
+	if (%varcint224 = 0 | $int2 = 7 & compare(%varcstring370, %varcstring371) = 0) {
+		mes("Thank-you, your abuse report has been received.");
+	} else {
+		chat_sendabusereport(%varcstring370, $int2, ~script5102(false));
+	}
+	if (~script5102(true) = 1) {
+		ignore_add(%varcstring370);
+	}
+	if ($int2 = 7) {
+		%varcstring371 = %varcstring370;
+	}
+	if_triggerop(interface_875:22, -1, 1);
+} else {
+	~script5095(1);
+	~script5089(false);
+}

@@ -13,7 +13,6 @@ if (~on_mobile = true) {
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_162:34);
 	if_setsize(519, 30, ^setsize_abs, ^setsize_minus, interface_162:34);
 	~mobile_chatbox_resize;
-	if_setop(1, "Report options", interface_162:31);
 	if_setsize(56, 0, ^setsize_abs, ^setsize_minus, interface_162:31);
 	if_setgraphic("chat_tab_button,5", interface_162:32);
 	if_setonmouseover(null, interface_162:31);
@@ -27,7 +26,6 @@ if (~on_mobile = true) {
 	if_setsize(519, 23, ^setsize_abs, ^setsize_abs, interface_162:1);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:34);
 	if_setsize(519, 23, ^setsize_abs, ^setsize_minus, interface_162:34);
-	if_setop(1, "", interface_162:31);
 	if_setsize(79, 0, ^setsize_abs, ^setsize_minus, interface_162:31);
 	if_setgraphic($graphic0, interface_162:32);
 	if_setonmouseleave("graphic_swapper(interface_162:32, $graphic0)", interface_162:31);
@@ -57,10 +55,15 @@ if (%varbit542 = 1 & getwindowmode ! ^windowmode_fixed) {
 } else {
 	if_sethide(false, interface_162:1);
 }
-if (%varbit5983 = 1 & if_hassub(interface_162:565) = true) {
+if (%varbit10670 = 1 & if_hassub(interface_162:565) = true) {
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, interface_162:565);
 } else {
 	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, interface_162:565);
+}
+if (%varbit10689 = 1 & if_hassub(interface_162:564) = true) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, interface_162:564);
+} else {
+	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, interface_162:564);
 }
 ~redraw_chat_buttons;
 def_int $mesuid6 = ~script553;

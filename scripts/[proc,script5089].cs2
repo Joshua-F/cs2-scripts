@@ -1,0 +1,22 @@
+// 5089
+[proc,script5089](boolean $boolean0)
+def_int $int1 = 0;
+if ($boolean0 = true) {
+	$int1 = string_length(%varcstring370);
+	if ($int1 > 0) {
+		while ($int1 > 0 & compare(substring(%varcstring370, calc($int1 - 1), $int1), " ") = 0) {
+			%varcstring370 = substring(%varcstring370, 0, calc($int1 - 1));
+			$int1 = string_length(%varcstring370);
+		}
+		if ($int1 > 0) {
+			sound_synth(interface_select1, 1, 0);
+			~script5097;
+			return;
+		}
+	}
+	sound_synth(pillory_wrong, 1, 0);
+	~script5095(1);
+} else {
+	sound_synth(interface_select1, 1, 0);
+}
+~script5091;

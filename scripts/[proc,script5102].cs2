@@ -1,0 +1,9 @@
+// 5102
+[proc,script5102](boolean $boolean0)(int)
+if ($boolean0 = true) {
+	return(%varcint140);
+}
+if (playermod = true | staffmodlevel > 0) {
+	return(%varcint6);
+}
+return(0);

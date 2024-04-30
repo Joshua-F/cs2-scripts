@@ -1,0 +1,9 @@
+// 5106
+[proc,script5106](component $component0, string $text0, graphic $graphic1, int $int2)
+cc_deleteall($component0);
+~script5109(false, $component0, $text0, $graphic1, $int2);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script5107(true, $component0, $text0, $graphic1, $int2)", $component0);
+	if_setonmouseleave("script5107(false, $component0, $text0, $graphic1, $int2)", $component0);
+	if_setontimer(null, $component0);
+}

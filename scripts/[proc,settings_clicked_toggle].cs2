@@ -80,6 +80,8 @@ switch_int ($setting0) {
 		%varbit8060 = calc(1 - %varbit8060);
 	case 312 :
 		%varbit6580 = calc(1 - %varbit6580);
+	case 372 :
+		%varbit1334 = calc(1 - %varbit1334);
 	case ^setting_store_button_mobile :
 		~settings_store_button_mobile;
 	case ^setting_store_button_desktop :

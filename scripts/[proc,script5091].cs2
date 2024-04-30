@@ -1,0 +1,10 @@
+// 5091
+[proc,script5091]
+if_sethide(false, interface_875:2);
+if_sethide(true, interface_875:8);
+if (~on_mobile = true) {
+	~keyboard_show(0, 12);
+	if_setonclick("script5092(0, 12)", interface_875:4);
+} else {
+	if_setonclick(null, interface_875:4);
+}

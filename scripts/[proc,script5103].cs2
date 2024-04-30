@@ -1,0 +1,52 @@
+// 5103
+[proc,script5103](string $text0, int $int0, int $int1, int $int2, int $height3)(int, int)
+def_int $y4 = calc($int2 * $height3);
+def_int $trans5 = 255;
+if (calc($int2 % 2) = 0) {
+	$trans5 = 240;
+}
+cc_create(interface_875:18, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(0, $height3, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $y4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans($trans5);
+cc_setop(1, "Report for");
+cc_setopbase("<col=ff9040><$text0></col>");
+if (~on_mobile = false) {
+	cc_setonmouserepeat("script5104(true, event_com, event_comsubid, $trans5, 210)");
+	cc_setonmouseleave("script5104(false, event_com, event_comsubid, $trans5, 210)");
+}
+cc_setonop("script5105(true, null, "null", $int0)");
+cc_create(interface_875:18, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(20, $height3, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $y4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0x605040);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(false);
+def_string $string1 = "";
+if ($int2 < 9) {
+	$string1 = tostring(calc($int2 + 1));
+} else {
+	$string1 = enum(int, string, enum_1401, calc($int2 - 8));
+}
+cc_settext($string1);
+cc_create(interface_875:8, ^iftype_rectangle, $int2);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^white);
+cc_settrans(255);
+cc_setonkey("script5105(false, event_keychar, $string1, $int0)");
+cc_create(interface_875:18, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(20, $height3, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $y4, ^setpos_abs_right, ^setpos_abs_top);
+cc_setcolour(0x302010);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(false);
+cc_settext($text0);
+return($int1, calc($int2 + 1));
