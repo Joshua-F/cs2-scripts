@@ -14,7 +14,7 @@ if ($int6 < 50) {
 		cc_settrans(interpolate(0, $int6, 0, 50, 255));
 	}
 	if (cc_find($component0, $comsubid2) = ^true) {
-		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_3, ^setpos_abs_top);
+		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_proportion_left, ^setpos_abs_top);
 	}
 	return;
 }
@@ -30,7 +30,7 @@ if ($int6 < calc(50 * 3)) {
 		cc_settrans(interpolate(0, $int6, 0, 50, 255));
 	}
 	if (cc_find($component0, $comsubid2) = ^true) {
-		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_5, ^setpos_abs_top);
+		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_proportion_right, ^setpos_abs_top);
 	}
 	return;
 }

@@ -22,7 +22,7 @@ cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(67, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-cc_setobject_always_num(old_school_bond_13190, $int2);
+cc_setobject_alwaysnum(old_school_bond_13190, $int2);
 cc_create($component0, ^iftype_graphic, $int1);
 $int1 = calc($int1 + 1);
 cc_setsize(coordx($coord4), coordz($coord4), ^setsize_abs, ^setsize_abs);

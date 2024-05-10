@@ -18,7 +18,7 @@ while ($int13 < 500) {
 	cc_create($component2, ^iftype_rectangle, $int12);
 	$int12 = calc($int12 + 1);
 	cc_sethide(true);
-	cc_setsize($width10, $int11, ^setsize_2, ^setsize_abs);
+	cc_setsize($width10, $int11, ^setsize_proportion, ^setsize_abs);
 	cc_setfill(true);
 	cc_setcolour(^white);
 	cc_setop(1, "Unban");
@@ -29,7 +29,7 @@ while ($int13 < 500) {
 	cc_create($component2, ^iftype_text, $int12);
 	$int12 = calc($int12 + 1);
 	cc_sethide(true);
-	cc_setsize($width10, $int11, ^setsize_2, ^setsize_abs);
+	cc_setsize($width10, $int11, ^setsize_proportion, ^setsize_abs);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -49,7 +49,7 @@ cc_deleteall($component4);
 cc_create($component4, ^iftype_rectangle, 0);
 .cc_create($component4, ^iftype_text, 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-.cc_setsize(0, calc(16384 / 2), ^setsize_minus, ^setsize_2);
+.cc_setsize(0, calc(16384 / 2), ^setsize_minus, ^setsize_proportion);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setcolour(^black);

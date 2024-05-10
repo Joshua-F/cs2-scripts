@@ -1,6 +1,6 @@
 // 2142
 [proc,fossil_driftnet_store_update]
-cc_setobject_always_num(drift_net_21652, %varbit243);
+cc_setobject_alwaysnum(drift_net_21652, %varbit243);
 if (%varbit243 > 0) {
 	cc_settrans(0);
 	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");

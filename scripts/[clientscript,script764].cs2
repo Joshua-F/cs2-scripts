@@ -6,14 +6,14 @@ switch_int ($int0) {
 			if (%varcint994 <= $int2) {
 				if (calc(%varcint996 + 50) <= clientclock) {
 					%varcint995 = ~max($int1, calc(%varcint995 - 75));
-					if_setsize(%varcint995, 0, ^setsize_2, ^setsize_minus, $component3);
+					if_setsize(%varcint995, 0, ^setsize_proportion, ^setsize_minus, $component3);
 				}
 			} else {
 				%varcint996 = clientclock;
 			}
 		} else {
 			%varcint995 = $int1;
-			if_setsize(%varcint995, 0, ^setsize_2, ^setsize_minus, $component3);
+			if_setsize(%varcint995, 0, ^setsize_proportion, ^setsize_minus, $component3);
 		}
 		%varcint994 = $int2;
 		if (%varcint995 = $int1) {
@@ -24,14 +24,14 @@ switch_int ($int0) {
 			if (%varcint997 <= $int2) {
 				if (calc(%varcint999 + 50) <= clientclock) {
 					%varcint998 = ~max($int1, calc(%varcint998 - 75));
-					if_setsize(%varcint998, 0, ^setsize_2, ^setsize_minus, $component3);
+					if_setsize(%varcint998, 0, ^setsize_proportion, ^setsize_minus, $component3);
 				}
 			} else {
 				%varcint999 = clientclock;
 			}
 		} else {
 			%varcint998 = $int1;
-			if_setsize(%varcint998, 0, ^setsize_2, ^setsize_minus, $component3);
+			if_setsize(%varcint998, 0, ^setsize_proportion, ^setsize_minus, $component3);
 		}
 		%varcint997 = $int2;
 		if (%varcint998 = $int1) {

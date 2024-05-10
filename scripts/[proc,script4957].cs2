@@ -31,7 +31,7 @@ cc_setcolour(^white);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_setsize(8192, 28, ^setsize_2, ^setsize_abs);
+cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext($string0);
 $int3 = calc($int3 + 1);
 return($int3);

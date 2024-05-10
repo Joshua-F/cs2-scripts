@@ -21,7 +21,7 @@ while ($count5 < $count6) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((36 + $int3) * ($count5 % 4)), calc($count5 / 4 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
 		$opbase0 = "<col=ff981f><oc_name($namedobj7)>";
-		cc_setobject_always_num($namedobj7, %varbit12271);
+		cc_setobject_alwaysnum($namedobj7, %varbit12271);
 		if (%varbit12271 = 0) {
 			cc_settrans(128);
 		}

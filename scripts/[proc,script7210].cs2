@@ -20,10 +20,10 @@ if ($setsize5 = ^setsize_abs) {
 }
 cc_setsize($int2, $int3, $setsize4, $setsize5);
 cc_input_setwidth(calc(cc_getwidth - 2));
-if ($setposh8 ! ^setpos_abs_centre & $setposh8 < ^setpos_3) {
+if ($setposh8 ! ^setpos_abs_centre & $setposh8 < ^setpos_proportion_left) {
 	$int6 = calc($int6 + 5);
 }
-if ($setposv9 ! ^setpos_abs_centre & $setposv9 < ^setpos_3) {
+if ($setposv9 ! ^setpos_abs_centre & $setposv9 < ^setpos_proportion_top) {
 	$int7 = calc($int7 + 5);
 }
 cc_setposition($int6, $int7, $setposh8, $setposv9);

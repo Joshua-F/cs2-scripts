@@ -97,15 +97,15 @@ if ($int1 = 0) {
 		}
 	} else {
 		cc_create(interface_162:35, ^iftype_rectangle, 0);
-		cc_setsize(0, 16384, ^setsize_minus, ^setsize_2);
+		cc_setsize(0, 16384, ^setsize_minus, ^setsize_proportion);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 		cc_setcolour(^black);
 		cc_setfill(true);
 		cc_settrans(225);
 		cc_create(interface_162:54, ^iftype_rectangle, 0);
 		.cc_create(interface_162:54, ^iftype_rectangle, 1);
-		cc_setsize(16384, 1, ^setsize_2, ^setsize_abs);
-		.cc_setsize(16384, 1, ^setsize_2, ^setsize_abs);
+		cc_setsize(16384, 1, ^setsize_proportion, ^setsize_abs);
+		.cc_setsize(16384, 1, ^setsize_proportion, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setposition(0, 15, ^setpos_abs_left, ^setpos_abs_bottom);
 		cc_setcolour(^white);

@@ -24,6 +24,6 @@ if (cc_find(interface_729:8, $comsubid1) = ^true) {
 		cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
 	} else {
 		cc_setcolour(0x006600);
-		cc_setsize($width8, 15, ^setsize_2, ^setsize_abs);
+		cc_setsize($width8, 15, ^setsize_proportion, ^setsize_abs);
 	}
 }

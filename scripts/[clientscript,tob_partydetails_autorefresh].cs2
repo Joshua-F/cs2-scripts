@@ -6,5 +6,5 @@ if ($int4 >= 500) {
 	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component1);
 	~script890($component2, $string0, $component0, enum(component, int, enum_1939, $component2), false);
 } else {
-	if_setsize(scale(~max(0, calc(500 - $int4)), 500, 16384), 0, ^setsize_2, ^setsize_minus, $component1);
+	if_setsize(scale(~max(0, calc(500 - $int4)), 500, 16384), 0, ^setsize_proportion, ^setsize_minus, $component1);
 }

@@ -9,7 +9,7 @@ if ($int4 = 1) {
 		cc_sethide(false);
 	}
 	if (string_length($string0) > 0) {
-		.cc_setposition(0, scale(18, 50, 16384), ^setpos_abs_centre, ^setpos_3);
+		.cc_setposition(0, scale(18, 50, 16384), ^setpos_abs_centre, ^setpos_proportion_top);
 		.cc_sethide(false);
 		.cc_settext($string0);
 		.cc_setontimer("tob_hud_cleartext(event_comsubid, calc(clientclock + 150))");
@@ -58,7 +58,7 @@ if ($int14 = 0) {
 	}
 }
 if (string_length($string0) > 0) {
-	.cc_setposition(0, scale(18, 50, 16384), ^setpos_abs_centre, ^setpos_3);
+	.cc_setposition(0, scale(18, 50, 16384), ^setpos_abs_centre, ^setpos_proportion_top);
 	.cc_sethide(false);
 	.cc_settext($string0);
 	.cc_setontimer("tob_hud_cleartext(event_comsubid, calc(clientclock + 150))");

@@ -50,7 +50,7 @@ if ($int10 <= 0) {
 	cc_create(interface_372:17, ^iftype_text, $int9);
 	$int9 = calc($int9 + 1);
 	cc_setsize(20, 16, ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, -8, ^setpos_4, ^setpos_abs_centre);
+	cc_setposition(0, -8, ^setpos_proportion_centre, ^setpos_abs_centre);
 	cc_settext($text0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);

@@ -31,7 +31,7 @@ while ($int12 < 10) {
 	cc_create($component2, ^iftype_rectangle, $int11);
 	$int11 = calc($int11 + 1);
 	cc_sethide(true);
-	cc_setsize($width9, $height10, ^setsize_2, ^setsize_abs);
+	cc_setsize($width9, $height10, ^setsize_proportion, ^setsize_abs);
 	cc_setfill(true);
 	cc_setcolour(^white);
 	if ($int7 = 1) {
@@ -44,7 +44,7 @@ while ($int12 < 10) {
 	cc_create($component2, ^iftype_text, $int11);
 	$int11 = calc($int11 + 1);
 	cc_sethide(true);
-	cc_setsize($width9, $height10, ^setsize_2, ^setsize_abs);
+	cc_setsize($width9, $height10, ^setsize_proportion, ^setsize_abs);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

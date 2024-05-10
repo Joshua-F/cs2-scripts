@@ -1,6 +1,6 @@
 // 2015
 [clientscript,fossil_pool_progress_update](int $int0)
-if_setsize(interpolate(0, 16384, 0, 10, $int0), 0, ^setsize_2, ^setsize_minus, interface_606:19);
+if_setsize(interpolate(0, 16384, 0, 10, $int0), 0, ^setsize_proportion, ^setsize_minus, interface_606:19);
 def_int $int1 = 0;
 def_int $int2 = 0;
 if ($int0 <= 2) {

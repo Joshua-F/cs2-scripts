@@ -14,7 +14,7 @@ def_int $total8 = inv_total(inv_536, $namedobj7);
 def_int $total9 = inv_total(inv, $namedobj7);
 def_int $int10 = max(0, calc($int6 - ($total8 + $total9)));
 if (cc_find($component0, $comsubid1) = ^true) {
-	cc_setobject_always_num($namedobj7, $total8);
+	cc_setobject_alwaysnum($namedobj7, $total8);
 	if ($total8 > 0) {
 		cc_settrans(0);
 	} else {
@@ -24,7 +24,7 @@ if (cc_find($component0, $comsubid1) = ^true) {
 	cc_setonclick("mes($mes0)");
 }
 if (cc_find($component0, $comsubid2) = ^true) {
-	cc_setobject_always_num($namedobj7, $total9);
+	cc_setobject_alwaysnum($namedobj7, $total9);
 	if ($total9 > 0) {
 		cc_settrans(0);
 	} else {
@@ -34,7 +34,7 @@ if (cc_find($component0, $comsubid2) = ^true) {
 	cc_setonclick("mes($mes0)");
 }
 if (cc_find($component0, $comsubid3) = ^true) {
-	cc_setobject_always_num($namedobj7, $int10);
+	cc_setobject_alwaysnum($namedobj7, $int10);
 	if ($int10 > 0) {
 		cc_settrans(0);
 	} else {

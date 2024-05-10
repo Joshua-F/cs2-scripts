@@ -8,7 +8,7 @@ cc_settext($text0);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_setposition(0, 0, ^setpos_4, ^setpos_4);
+cc_setposition(0, 0, ^setpos_proportion_centre, ^setpos_proportion_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setonmouseover("light_puzzle_text_mouseover(event_com, event_comsubid, ^white)");
 cc_setonmouseleave("light_puzzle_text_mouseover(event_com, event_comsubid, 0xff981f)");

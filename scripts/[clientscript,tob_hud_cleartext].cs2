@@ -4,11 +4,11 @@ def_int $int2 = 0;
 if (cc_find(interface_28:1, $comsubid0) = ^true) {
 	$int2 = calc(clientclock - $int1);
 	if ($int2 <= 0) {
-		cc_setposition(0, scale(18, 50, 16384), ^setpos_abs_centre, ^setpos_3);
+		cc_setposition(0, scale(18, 50, 16384), ^setpos_abs_centre, ^setpos_proportion_top);
 		return;
 	}
 	if ($int2 <= 18) {
-		cc_setposition(0, scale(calc(18 - $int2), 50, 16384), ^setpos_abs_centre, ^setpos_3);
+		cc_setposition(0, scale(calc(18 - $int2), 50, 16384), ^setpos_abs_centre, ^setpos_proportion_top);
 		return;
 	}
 	if ($int2 <= 22) {

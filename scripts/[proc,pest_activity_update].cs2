@@ -4,7 +4,7 @@ if (%varbit5662 > 0) {
 	cc_setcolour(0x009f00);
 	.cc_setcolour(0x009f00);
 	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
-	.cc_setsize(scale(%varbit5662, 50, 16384), 0, ^setsize_2, ^setsize_minus);
+	.cc_setsize(scale(%varbit5662, 50, 16384), 0, ^setsize_proportion, ^setsize_minus);
 } else {
 	cc_setcolour(^red);
 	.cc_setcolour(^red);

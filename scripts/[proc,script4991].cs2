@@ -2,7 +2,7 @@
 [proc,script4991](obj $obj0, int $num1, component $component2, int $comsubid3)
 cc_settrans(0);
 if (oc_stackable($obj0) = true) {
-	cc_setobject_always_num($obj0, $num1);
+	cc_setobject_alwaysnum($obj0, $num1);
 } else {
 	cc_setobject($obj0, $num1);
 }

@@ -18,7 +18,7 @@ def_string $string1 = "";
 def_int $colour14 = ^white;
 cc_create($component0, ^iftype_text, $int3);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 1, ^setpos_4, ^setpos_abs_top);
+cc_setposition(0, 1, ^setpos_proportion_centre, ^setpos_abs_top);
 cc_settext("League Top 100 Rankings");
 cc_settextfont(b12_full);
 cc_setcolour($colour14);

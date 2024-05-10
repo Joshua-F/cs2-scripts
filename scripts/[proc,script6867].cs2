@@ -40,12 +40,12 @@ switch_int (%varcint988) {
 def_int $y15 = calc(if_getheight($component4) * $int11 / 100);
 def_int $y16 = calc(if_getheight($component4) * $int12 / 100);
 def_int $y17 = calc(if_getheight($component4) * $int13 / 100);
-if_setsize(calc($int9 * 2), 7372, ^setsize_minus, ^setsize_2, $component2);
-if_setposition(0, $int9, ^setpos_4, ^setpos_abs_top, $component2);
-if_setsize(calc($int9 * 2), 5734, ^setsize_minus, ^setsize_2, $component4);
-if_setposition(0, $int9, ^setpos_4, ^setpos_abs_bottom, $component4);
-if_setposition(0, $y16, ^setpos_4, ^setpos_abs_top, interface_786:15);
-if_setposition(0, $y16, ^setpos_4, ^setpos_abs_top, interface_786:14);
+if_setsize(calc($int9 * 2), 7372, ^setsize_minus, ^setsize_proportion, $component2);
+if_setposition(0, $int9, ^setpos_proportion_centre, ^setpos_abs_top, $component2);
+if_setsize(calc($int9 * 2), 5734, ^setsize_minus, ^setsize_proportion, $component4);
+if_setposition(0, $int9, ^setpos_proportion_centre, ^setpos_abs_bottom, $component4);
+if_setposition(0, $y16, ^setpos_proportion_centre, ^setpos_abs_top, interface_786:15);
+if_setposition(0, $y16, ^setpos_proportion_centre, ^setpos_abs_top, interface_786:14);
 if (%varbit14580 = 1) {
 	if_sethide(true, interface_786:15);
 	if_sethide(false, interface_786:14);
@@ -91,7 +91,7 @@ if (%varbit14580 = 0) {
 	if ($int0 = 0) {
 		cc_create($component4, ^iftype_text, $int19);
 		$int19 = calc($int19 + 1);
-		cc_setposition(0, $y15, ^setpos_4, ^setpos_abs_top);
+		cc_setposition(0, $y15, ^setpos_proportion_centre, ^setpos_abs_top);
 		cc_settextfont(verdana_15pt_regular);
 		cc_setcolour(0xff981f);
 		cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
@@ -101,7 +101,7 @@ if (%varbit14580 = 0) {
 	} else {
 		cc_create($component4, ^iftype_text, $int19);
 		$int19 = calc($int19 + 1);
-		cc_setposition(0, $y15, ^setpos_4, ^setpos_abs_top);
+		cc_setposition(0, $y15, ^setpos_proportion_centre, ^setpos_abs_top);
 		cc_settextfont(verdana_15pt_regular);
 		cc_setcolour(0xff981f);
 		cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
@@ -110,7 +110,7 @@ if (%varbit14580 = 0) {
 		cc_settext("<col=db3e32>You are currently unable to opt out");
 		cc_create($component4, ^iftype_text, $int19);
 		$int19 = calc($int19 + 1);
-		cc_setposition(0, $y17, ^setpos_4, ^setpos_abs_top);
+		cc_setposition(0, $y17, ^setpos_proportion_centre, ^setpos_abs_top);
 		cc_settextfont($fontmetrics8);
 		cc_setsize(30, 10, ^setsize_minus, ^setsize_minus);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, $int14);
@@ -139,7 +139,7 @@ if (%varbit14580 = 0) {
 			cc_settextfont(verdana_15pt_regular);
 		}
 		cc_settext("<col=ffff00>You have <$string0> remaining before opt out");
-		cc_setposition(0, $y15, ^setpos_4, ^setpos_abs_top);
+		cc_setposition(0, $y15, ^setpos_proportion_centre, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_top, 12);
 	} else {
 		if (%varcint988 < 1) {
@@ -148,7 +148,7 @@ if (%varbit14580 = 0) {
 			cc_settextfont(verdana_15pt_regular);
 		}
 		cc_settext("<col=ffff00>You have opted out<br><br><col=ffff00>Please relog to complete the transfer");
-		cc_setposition(0, 0, ^setpos_4, ^setpos_abs_top);
+		cc_setposition(0, 0, ^setpos_proportion_centre, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
 		if_sethide(true, interface_786:14);
 	}

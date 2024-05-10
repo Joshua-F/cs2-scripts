@@ -25,5 +25,5 @@ if ($int4 <= 0 | $int5 <= 0) {
 	if_setontimer(null, $component0);
 	return;
 }
-if_setsize($int4, 0, ^setsize_2, ^setsize_minus, $component1);
+if_setsize($int4, 0, ^setsize_proportion, ^setsize_minus, $component1);
 if_setontimer("tog_sidepanel_timer_update($component0, $component1, $int4, calc($int4 / $int5), clientclock)", $component0);

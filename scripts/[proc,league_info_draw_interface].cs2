@@ -30,15 +30,15 @@ if_setsize(calc($width19 / 2 + 3), 23, ^setsize_minus, ^setsize_abs, $component0
 if_setsize(calc($width19 / 2 + 3), 23, ^setsize_minus, ^setsize_abs, $component1);
 switch_int (%varcint988) {
 	case 0 :
-		if_setposition(0, 45, ^setpos_4, ^setpos_abs_top, interface_654:13);
+		if_setposition(0, 45, ^setpos_proportion_centre, ^setpos_abs_top, interface_654:13);
 		if_setsize(calc($width19 / 2 + 3), 31, ^setsize_minus, ^setsize_minus, $component2);
 		if_setsize(calc($width19 / 2 + 3), 31, ^setsize_minus, ^setsize_minus, $component3);
 	case 1, 2 :
-		if_setposition(0, 49, ^setpos_4, ^setpos_abs_top, interface_654:13);
+		if_setposition(0, 49, ^setpos_proportion_centre, ^setpos_abs_top, interface_654:13);
 		if_setsize(calc($width19 / 2 + 3), 33, ^setsize_minus, ^setsize_minus, $component2);
 		if_setsize(calc($width19 / 2 + 3), 33, ^setsize_minus, ^setsize_minus, $component3);
 	case 3 :
-		if_setposition(0, 53, ^setpos_4, ^setpos_abs_top, interface_654:13);
+		if_setposition(0, 53, ^setpos_proportion_centre, ^setpos_abs_top, interface_654:13);
 		if_setsize(calc($width19 / 2 + 3), 35, ^setsize_minus, ^setsize_minus, $component2);
 		if_setsize(calc($width19 / 2 + 3), 35, ^setsize_minus, ^setsize_minus, $component3);
 }

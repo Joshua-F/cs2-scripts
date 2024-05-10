@@ -3,10 +3,10 @@
 def_int $total18 = inv_total(inv, old_school_bond_untradeable_13192);
 def_int $total19 = inv_total(inv, coins_995);
 if (cc_find($component5, $int6) = ^true) {
-	cc_setobject_always_num(old_school_bond_untradeable_13192, $total18);
+	cc_setobject_alwaysnum(old_school_bond_untradeable_13192, $total18);
 }
 if (cc_find($component5, $int7) = ^true) {
-	cc_setobject_always_num(coins_995, $total19);
+	cc_setobject_alwaysnum(coins_995, $total19);
 }
 def_int $int20 = 0;
 if (%var263 > 0) {

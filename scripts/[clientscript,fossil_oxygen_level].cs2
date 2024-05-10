@@ -1,6 +1,6 @@
 // 1997
 [clientscript,fossil_oxygen_level](component $component0, component $component1, component $component2)
-if_setsize(interpolate(0, 16384, 0, 1000, %varbit5811), 0, ^setsize_2, ^setsize_minus, $component0);
+if_setsize(interpolate(0, 16384, 0, 1000, %varbit5811), 0, ^setsize_proportion, ^setsize_minus, $component0);
 if (if_getwidth($component0) = 0 & %varbit5811 ! 0) {
 	if_setsize(1, 0, ^setsize_abs, ^setsize_minus, $component0);
 }

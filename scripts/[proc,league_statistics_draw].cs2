@@ -17,7 +17,7 @@ def_int $int17 = calc($int3 + $int4 + $int5 + $int6);
 def_int $int18 = 15;
 cc_create($component0, ^iftype_text, $int7);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 1, ^setpos_4, ^setpos_abs_top);
+cc_setposition(0, 1, ^setpos_proportion_centre, ^setpos_abs_top);
 cc_settext("League Statistics - <$string0>");
 cc_settextfont(b12_full);
 cc_setcolour($colour15);

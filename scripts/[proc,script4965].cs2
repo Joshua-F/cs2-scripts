@@ -30,7 +30,7 @@ $int2 = calc($int2 + 1);
 $int2 = ~thinbox(interface_626:20, $int2);
 if ($int1 = 1 & $int3 ! 0) {
 	cc_create(interface_626:20, ^iftype_text, $int2);
-	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settext($string0);
 	cc_settextfont(p12_full);
@@ -39,7 +39,7 @@ if ($int1 = 1 & $int3 ! 0) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$int2 = calc($int2 + 1);
 	cc_create(interface_626:20, ^iftype_text, $int2);
-	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_settext($text1);
 	cc_settextfont(p12_full);
@@ -48,7 +48,7 @@ if ($int1 = 1 & $int3 ! 0) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$int2 = calc($int2 + 1);
 	cc_create(interface_626:20, ^iftype_text, $int2);
-	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_settext("+<tostring(struct_param($struct4, param_1903))> Glory per wave");
 	cc_settextfont(p12_full);
@@ -68,7 +68,7 @@ if ($int1 = 1 & $int3 ! 0) {
 	$string0 = struct_param($struct4, param_1896);
 	$text1 = ~script4920($struct4);
 	cc_create(interface_626:20, ^iftype_text, $int2);
-	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settext($string0);
 	cc_settextfont(p12_full);
@@ -77,7 +77,7 @@ if ($int1 = 1 & $int3 ! 0) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$int2 = calc($int2 + 1);
 	cc_create(interface_626:20, ^iftype_text, $int2);
-	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_settext($text1);
 	cc_settextfont(p12_full);
@@ -86,7 +86,7 @@ if ($int1 = 1 & $int3 ! 0) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$int2 = calc($int2 + 1);
 	cc_create(interface_626:20, ^iftype_text, $int2);
-	cc_setsize(5, 5406, ^setsize_minus, ^setsize_2);
+	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_settext("+<tostring(struct_param($struct4, param_1903))> Glory per wave");
 	cc_settextfont(p12_full);

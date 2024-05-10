@@ -9,7 +9,7 @@ cc_setposition(0, -10, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 $int10 = calc($int10 + 1);
 cc_create($component1, ^iftype_text, $int10);
-cc_setposition(20, 5, ^setpos_3, ^setpos_abs_centre);
+cc_setposition(20, 5, ^setpos_proportion_left, ^setpos_abs_centre);
 cc_setsize(140, 36, ^setsize_abs, ^setsize_abs);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);

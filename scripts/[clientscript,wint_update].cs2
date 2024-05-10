@@ -4,7 +4,7 @@ if ($int1 = 0) {
 	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, interface_396:18);
 	if_settext("Wintertodt's Energy: 0%", interface_396:20);
 } else if ($int1 ! -1) {
-	if_setsize(interpolate(1, 16384, 0, 3500, $int1), 0, ^setsize_2, ^setsize_minus, interface_396:18);
+	if_setsize(interpolate(1, 16384, 0, 3500, $int1), 0, ^setsize_proportion, ^setsize_minus, interface_396:18);
 	if_settext("Wintertodt's Energy: <tostring(interpolate(1, 100, 0, 3500, $int1))>%", interface_396:20);
 }
 if_settext("Points<br><tostring($int0)>", interface_396:6);

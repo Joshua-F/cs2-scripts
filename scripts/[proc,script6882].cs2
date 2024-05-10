@@ -6,7 +6,7 @@ def_component $component0 = interface_785:5;
 ~script5288($component0, 0, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3712, 0xb69362);
 def_component $component1 = interface_785:6;
 def_int $width2 = calc(if_getwidth($component0) - 40);
-if_setposition(0, 45, ^setpos_4, ^setpos_abs_top, $component1);
+if_setposition(0, 45, ^setpos_proportion_centre, ^setpos_abs_top, $component1);
 if_setsize($width2, 95, ^setsize_abs, ^setsize_minus, $component1);
 def_int $int3 = 0;
 $int3 = ~script5288($component1, $int3, 0, 0, if_getwidth($component1), if_getheight($component1), struct_3712, 0xb69362);

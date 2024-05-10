@@ -1,10 +1,10 @@
 // 1277
 [proc,script1277](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $width4, int $width5, component $component6, component $component7, component $component8)(int)
 if (cc_find($component0, $comsubid1) = ^true) {
-	cc_setobject_always_num(old_school_bond_13190, %var261);
+	cc_setobject_alwaysnum(old_school_bond_13190, %var261);
 }
 if (cc_find($component0, $comsubid2) = ^true) {
-	cc_setobject_always_num(old_school_bond_untradeable_13192, %var262);
+	cc_setobject_alwaysnum(old_school_bond_untradeable_13192, %var262);
 }
 def_int $int9 = 0;
 def_string $string0 = "";

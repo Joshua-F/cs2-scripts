@@ -13,8 +13,8 @@ if ($int4 <= 0) {
 		cc_sethide(true);
 	}
 	if (cc_find($component1, 3) = ^true & .cc_find($component1, 4) = ^true) {
-		cc_setposition(-40, $y2, ^setpos_abs_left, ^setpos_3);
-		.cc_setposition(-40, $y2, ^setpos_abs_right, ^setpos_3);
+		cc_setposition(-40, $y2, ^setpos_abs_left, ^setpos_proportion_top);
+		.cc_setposition(-40, $y2, ^setpos_abs_right, ^setpos_proportion_top);
 	}
 	return;
 }
@@ -32,8 +32,8 @@ if ($int4 < 20) {
 	}
 	if (cc_find($component1, 3) = ^true & .cc_find($component1, 4) = ^true) {
 		$int3 = calc(scale($int4, 30, $int5) - 40);
-		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_3);
-		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_3);
+		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_proportion_top);
+		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_proportion_top);
 	}
 	if ($int4 = 5) {
 		sound_synth(cosmic_star, 1, 0);
@@ -52,8 +52,8 @@ if ($int4 < 40) {
 	}
 	if (cc_find($component1, 3) = ^true & .cc_find($component1, 4) = ^true) {
 		$int3 = calc(scale(~min(30, $int4), 30, $int5) - 40);
-		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_3);
-		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_3);
+		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_proportion_top);
+		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_proportion_top);
 	}
 	return;
 }
@@ -69,8 +69,8 @@ if ($int4 < 150) {
 	}
 	if (cc_find($component1, 3) = ^true & .cc_find($component1, 4) = ^true) {
 		$int3 = calc($int5 - 40);
-		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_3);
-		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_3);
+		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_proportion_top);
+		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_proportion_top);
 	}
 	return;
 }
@@ -86,8 +86,8 @@ if ($int4 < 170) {
 	}
 	if (cc_find($component1, 3) = ^true & .cc_find($component1, 4) = ^true) {
 		$int3 = calc(scale(calc(180 - $int4), 30, $int5) - 40);
-		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_3);
-		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_3);
+		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_proportion_top);
+		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_proportion_top);
 	}
 	if ($int4 = 150) {
 		sound_synth(cosmic_star, 1, 0);
@@ -106,8 +106,8 @@ if ($int4 < 180) {
 	}
 	if (cc_find($component1, 3) = ^true & .cc_find($component1, 4) = ^true) {
 		$int3 = calc(scale(calc(180 - $int4), 30, $int5) - 40);
-		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_3);
-		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_3);
+		cc_setposition($int3, $y2, ^setpos_abs_left, ^setpos_proportion_top);
+		.cc_setposition($int3, $y2, ^setpos_abs_right, ^setpos_proportion_top);
 	}
 	return;
 }

@@ -42,7 +42,7 @@ if (~instance_check(coord) = 1) {
 		$int22 = scale(4, 7, $int21);
 		$int23 = calc($int21 - $int20);
 		if ($int22 <= $int23) {
-			if_setsize(scale(4, 7, 16384), if_getheight($component4), ^setsize_2, ^setsize_abs, $component4);
+			if_setsize(scale(4, 7, 16384), if_getheight($component4), ^setsize_proportion, ^setsize_abs, $component4);
 		} else {
 			if_setsize($int20, if_getheight($component4), ^setsize_minus, ^setsize_abs, $component4);
 		}
