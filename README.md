@@ -133,6 +133,7 @@
 [**130**](scripts/[clientscript,ignore_op].cs2) `[clientscript,ignore_op]`  
 [**131**](scripts/[clientscript,closebutton_key].cs2) `[clientscript,closebutton_key]`  
 [**132**](scripts/[clientscript,barrows_overlay_init].cs2) `[clientscript,barrows_overlay_init]`  
+[**133**](scripts/[proc,script133].cs2)  
 [**134**](scripts/[proc,v2_stone_button_filled].cs2) `[proc,v2_stone_button_filled]`  
 [**135**](scripts/[clientscript,if_settextfont].cs2) `[clientscript,if_settextfont]`  
 [**136**](scripts/[clientscript,abyssalsire_overseer].cs2) `[clientscript,abyssalsire_overseer]`  
@@ -1103,6 +1104,7 @@
 [**1101**](scripts/[proc,bugreport_drawbutton].cs2) `[proc,bugreport_drawbutton]`  
 [**1102**](scripts/[clientscript,bugreport_continue].cs2) `[clientscript,bugreport_continue]`  
 [**1103**](scripts/[clientscript,bugreport_submit].cs2) `[clientscript,bugreport_submit]`  
+[**1104**](scripts/[loadloc,rocks_53240].cs2) `[loadloc,rocks_53240]`  
 [**1105**](scripts/[clientscript,skill_guide_sidepanelop].cs2) `[clientscript,skill_guide_sidepanelop]`  
 [**1106**](scripts/[proc,abyssalsire_overseer_update].cs2) `[proc,abyssalsire_overseer_update]`  
 [**1107**](scripts/[proc,script1107].cs2)  
@@ -1118,6 +1120,10 @@
 [**1117**](scripts/[proc,farming_view_tabpanel].cs2) `[proc,farming_view_tabpanel]`  
 [**1118**](scripts/[clientscript,farming_view_panel_loading].cs2) `[clientscript,farming_view_panel_loading]`  
 [**1119**](scripts/[clientscript,farming_view_setpanel].cs2) `[clientscript,farming_view_setpanel]`  
+[**1120**](scripts/[loadloc,rocks_53238].cs2) `[loadloc,rocks_53238]`  
+[**1121**](scripts/[loadloc,rocks_53254].cs2) `[loadloc,rocks_53254]`  
+[**1122**](scripts/[loadloc,rocks_53252].cs2) `[loadloc,rocks_53252]`  
+[**1123**](scripts/[proc,script1123].cs2)  
 [**1124**](scripts/[proc,script1124].cs2)  
 [**1125**](scripts/[proc,league_points_earned].cs2) `[proc,league_points_earned]`  
 [**1126**](scripts/[proc,script1126].cs2)  
@@ -1318,6 +1324,9 @@
 [**1321**](scripts/[clientscript,script1321].cs2)  
 [**1322**](scripts/[clientscript,script1322].cs2)  
 [**1323**](scripts/[proc,script1323].cs2)  
+[**1324**](scripts/[proc,script1324].cs2)  
+[**1325**](scripts/[loadloc,crevice_53258].cs2) `[loadloc,crevice_53258]`  
+[**1326**](scripts/[loadloc,dry_stone_wall_53256].cs2) `[loadloc,dry_stone_wall_53256]`  
 [**1327**](scripts/[clientscript,ii_tracker_build].cs2) `[clientscript,ii_tracker_build]`  
 [**1328**](scripts/[proc,ii_tracker_build_split].cs2) `[proc,ii_tracker_build_split]`  
 [**1329**](scripts/[proc,ii_tracker_build_element].cs2) `[proc,ii_tracker_build_element]`  
@@ -2743,6 +2752,7 @@
 [**2749**](scripts/[proc,farming_tools_main_recreate].cs2) `[proc,farming_tools_main_recreate]`  
 [**2750**](scripts/[clientscript,farming_tools_side_recreate].cs2) `[clientscript,farming_tools_side_recreate]`  
 [**2751**](scripts/[proc,farming_tools_side_recreate].cs2) `[proc,farming_tools_side_recreate]`  
+[**2752**](scripts/[loadloc,climbing_rocks_53255].cs2) `[loadloc,climbing_rocks_53255]`  
 [**2753**](scripts/[clientscript,wint_timer_init].cs2) `[clientscript,wint_timer_init]`  
 [**2754**](scripts/[clientscript,wint_timer_resynch].cs2) `[clientscript,wint_timer_resynch]`  
 [**2755**](scripts/[proc,wint_timer_resynch].cs2) `[proc,wint_timer_resynch]`  
@@ -5100,6 +5110,25 @@
 [**5107**](scripts/[clientscript,script5107].cs2)  
 [**5108**](scripts/[clientscript,script5108].cs2)  
 [**5109**](scripts/[proc,script5109].cs2)  
+[**5110**](scripts/[loadloc,stepping_stone_53241].cs2) `[loadloc,stepping_stone_53241]`  
+[**5111**](scripts/[loadloc,rocks_53236].cs2) `[loadloc,rocks_53236]`  
+[**5112**](scripts/[loadloc,rocks_53234].cs2) `[loadloc,rocks_53234]`  
+[**5113**](scripts/[loadloc,crevice_53242].cs2) `[loadloc,crevice_53242]`  
+[**5114**](scripts/[loadloc,tunnel_53250].cs2) `[loadloc,tunnel_53250]`  
+[**5115**](scripts/[loadloc,tunnel_53251].cs2) `[loadloc,tunnel_53251]`  
+[**5116**](scripts/[loadloc,stepping_stone_53237].cs2) `[loadloc,stepping_stone_53237]`  
+[**5117**](scripts/[loadloc,crevice_53259].cs2) `[loadloc,crevice_53259]`  
+[**5118**](scripts/[loadloc,stepping_stone_14917].cs2) `[loadloc,stepping_stone_14917]`  
+[**5119**](scripts/[proc,script5119].cs2)  
+[**5120**](scripts/[proc,script5120].cs2)  
+[**5121**](scripts/[proc,script5121].cs2)  
+[**5122**](scripts/[proc,script5122].cs2)  
+[**5123**](scripts/[proc,script5123].cs2)  
+[**5124**](scripts/[proc,script5124].cs2)  
+[**5125**](scripts/[proc,script5125].cs2)  
+[**5126**](scripts/[proc,script5126].cs2)  
+[**5127**](scripts/[proc,script5127].cs2)  
+[**5128**](scripts/[proc,script5128].cs2)  
 [**5165**](scripts/[clientscript,script5165].cs2)  
 [**5166**](scripts/[proc,script5166].cs2)  
 [**5167**](scripts/[clientscript,helper_agility_highlight_course].cs2) `[clientscript,helper_agility_highlight_course]`  

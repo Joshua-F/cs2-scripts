@@ -1,5 +1,3 @@
 // 1634
-[clientscript,motherlode_hud_update](component $component0, int $comsubid1)
-if (cc_find($component0, $comsubid1) = ^true) {
-	~motherlode_hud_update($component0);
-}
+[clientscript,motherlode_hud_update](component $component0, component $component1)
+~motherlode_hud_update($component0, $component1);

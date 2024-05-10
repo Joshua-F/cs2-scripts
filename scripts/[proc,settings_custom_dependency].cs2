@@ -39,5 +39,13 @@ switch_int ($setting1) {
 		if (%varbit4470 = 0) {
 			return(0);
 		}
+	case 380 :
+		if (%var77 ! 2 & %var76 < 6) {
+			return(0);
+		}
+	case 381 :
+		if (%varbit9610 < 3) {
+			return(0);
+		}
 }
 return(1);

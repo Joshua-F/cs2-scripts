@@ -48,7 +48,7 @@ while ($int4 > 0) {
 				}
 			} else {
 				$obj12 = enum(obj, namedobj, enum_3303, $namedobj9);
-				if ($obj12 ! null) {
+				if ($obj12 ! null & enum(obj, boolean, enum_5434, $obj12) = false) {
 					$string0 = oc_name($obj12);
 					if (string_length(%varcstring359) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring359), 0) ! -1) {
 						cc_create(interface_162:50, ^iftype_rectangle, $int3);

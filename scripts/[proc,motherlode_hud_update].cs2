@@ -1,12 +1,13 @@
 // 1635
-[proc,motherlode_hud_update](component $component0)
-cc_settext(tostring(%varbit5558));
-def_int $int1 = 81;
+[proc,motherlode_hud_update](component $component0, component $component1)
+if_settext(tostring(%varbit5558), $component0);
+def_int $int2 = 108;
 if (%varbit5556 = 1) {
-	$int1 = 162;
+	$int2 = 189;
 }
-if (%varbit5558 >= $int1) {
-	cc_setcolour(^red);
+if (%varbit5558 >= $int2) {
+	if_setcolour(^red, $component0);
 } else {
-	cc_setcolour(0xc8c8c8);
+	if_setcolour(0xc8c8c8, $component0);
 }
+~script1123($component0, $component1, $int2);

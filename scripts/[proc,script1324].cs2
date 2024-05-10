@@ -1,0 +1,12 @@
+// 1324
+[proc,script1324](obj $obj0)(int)
+switch_obj ($obj0) {
+	case runite_ore_451, adamantite_ore_449, mithril_ore_447, gold_ore_444, coal_453 :
+		return(1);
+	case golden_nugget_12012 :
+		return(1);
+	case pay_dirt_12011 :
+		return(1);
+	case default :
+		return(0);
+}

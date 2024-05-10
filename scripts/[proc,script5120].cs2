@@ -1,0 +1,6 @@
+// 5120
+[proc,script5120](int $int0, string $string0, string $string1)(string)
+if ($int0 ! 1) {
+	return("<~tostring_commas($int0)> <$string1>");
+}
+return($string0);

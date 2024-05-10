@@ -10,9 +10,9 @@ switch_int ($int0) {
 			case 2 :
 				return(1, agility_arena_ticket_2996, "Low-level Agility Arena obstacles");
 			case 3 :
-				return(5, shayzien_helm_1_13359, "Shayzien Basic Course");
+				return(1, shayzien_helm_1_13359, "Shayzien Basic Course");
 			case 4 :
-				return(10, mark_of_grace_11849, "Draynor Village Rooftop Course");
+				return(1, mark_of_grace_11849, "Draynor Village Rooftop Course");
 			case 5 :
 				return(20, mark_of_grace_11849, "Al Kharid Rooftop Course");
 			case 6 :
@@ -34,7 +34,7 @@ switch_int ($int0) {
 			case 14 :
 				return(48, ninja_monkey_greegree_4024, "Ape Atoll Agility Course");
 			case 15 :
-				return(48, shayzien_helm_5_13379, "Shayzien Advanced Course");
+				return(45, shayzien_helm_5_13379, "Shayzien Advanced Course");
 			case 16 :
 				return(50, mark_of_grace_11849, "Falador Rooftop Course");
 			case 17 :
@@ -122,161 +122,185 @@ switch_int ($int0) {
 			case 18 :
 				return(32, agility_climb_6517, "Scale the Catherby cliff<br> (with 35 Strength and 35 Ranged)");
 			case 19 :
-				return(33, agility_balance_6515, "Ardougne log balance shortcut");
+				return(32, agility_jump_6514, "Shilo Village river crossing");
 			case 20 :
-				return(34, agility_contortion_6516, "Kourend Catacombs Agility shortcut");
+				return(33, agility_balance_6515, "Ardougne log balance shortcut");
 			case 21 :
-				return(36, agility_climb_6517, "Escape from the water obelisk island<br> (with 22 Strength and 39 Ranged)");
+				return(34, agility_contortion_6516, "Kourend Catacombs Agility shortcut");
 			case 22 :
-				return(37, agility_climb_6517, "Gnome Stronghold shortcut");
+				return(36, agility_climb_6517, "Escape from the water obelisk island<br> (with 22 Strength and 39 Ranged)");
 			case 23 :
-				return(38, agility_climb_6517, "Al Kharid Mining pit cliffside scramble");
+				return(37, agility_climb_6517, "Gnome Stronghold shortcut");
 			case 24 :
-				return(39, agility_climb_6517, "Scale Yanille wall<br> (with 38 Strength and 21 Ranged)");
+				return(38, agility_climb_6517, "Al Kharid Mining pit cliffside scramble");
 			case 25 :
-				return(40, agility_jump_6514, "Hosidius lake isle jump");
+				return(39, agility_climb_6517, "Scale Yanille wall<br> (with 38 Strength and 21 Ranged)");
 			case 26 :
-				return(41, agility_climb_6517, "Trollheim easy cliffside scramble");
+				return(40, agility_jump_6514, "Hosidius lake isle jump");
 			case 27 :
-				return(42, agility_contortion_6516, "Dwarven Mine narrow crevice");
+				return(41, agility_climb_6517, "Trollheim easy cliffside scramble");
 			case 28 :
-				return(42, agility_contortion_6516, "Draynor narrow tunnel");
+				return(42, agility_contortion_6516, "Dwarven Mine narrow crevice");
 			case 29 :
-				return(43, agility_climb_6517, "Trollheim medium cliffside scramble");
+				return(42, agility_contortion_6516, "Draynor narrow tunnel");
 			case 30 :
-				return(44, agility_climb_6517, "Trollheim advanced cliffside scramble");
+				return(43, agility_climb_6517, "Trollheim medium cliffside scramble");
 			case 31 :
-				return(45, agility_jump_6514, "Hosidius river jump");
+				return(43, agility_jump_6514, "Fremennik Slayer Dungeon spiked blades jump");
 			case 32 :
-				return(46, agility_contortion_6516, "Cosmic Temple - medium narrow walkway");
+				return(44, agility_climb_6517, "Trollheim advanced cliffside scramble");
 			case 33 :
-				return(46, agility_contortion_6516, "Deep Wilderness - narrow tunnel");
+				return(45, agility_jump_6514, "Hosidius river jump");
 			case 34 :
-				return(47, agility_climb_6517, "Trollheim hard cliffside scramble");
+				return(46, agility_contortion_6516, "Cosmic Temple - medium narrow walkway");
 			case 35 :
-				return(47, agility_climb_6517, "Ralos' Rise rock climb");
+				return(46, agility_contortion_6516, "Deep Wilderness - narrow tunnel");
 			case 36 :
-				return(48, agility_balance_6515, "Log balance to Fremennik Province");
+				return(47, agility_climb_6517, "Trollheim hard cliffside scramble");
 			case 37 :
-				return(49, agility_jump_6514, "Arceuus essence mine boulder leap");
+				return(47, agility_climb_6517, "Ralos' Rise rock climb");
 			case 38 :
-				return(50, agility_jump_6514, "Stepping stone into Morytania near the Nature Grotto");
+				return(48, agility_balance_6515, "Log balance to Fremennik Province");
 			case 39 :
-				return(51, agility_contortion_6516, "Pipe from Edgeville dungeon to Varrock Sewers");
+				return(49, agility_jump_6514, "Arceuus essence mine boulder leap");
 			case 40 :
-				return(52, agility_climb_6517, "Arceuus essence mine eastern scramble");
+				return(50, agility_jump_6514, "Stepping stone into Morytania near the Nature Grotto");
 			case 41 :
-				return(53, agility_climb_6517, "Karamja crossing, south of volcano<br> (with 21 Strength and 42 Ranged)");
+				return(51, agility_contortion_6516, "Pipe from Edgeville dungeon to Varrock Sewers");
 			case 42 :
-				return(54, agility_contortion_6516, "Motherlode Mine dark tunnel");
+				return(52, agility_climb_6517, "Arceuus essence mine eastern scramble");
 			case 43 :
-				return(55, agility_jump_6514, "Stepping stone by Miscellania docks");
+				return(53, agility_climb_6517, "Karamja crossing, south of volcano<br> (with 21 Strength and 42 Ranged)");
 			case 44 :
-				return(56, agility_climb_6517, "Rock climb in the Temple of the Eye");
+				return(54, agility_contortion_6516, "Motherlode Mine dark tunnel");
 			case 45 :
-				return(57, agility_climb_6517, "Rellekka east fence shortcut");
+				return(55, agility_jump_6514, "Stepping stone by Miscellania docks");
 			case 46 :
-				return(58, agility_climb_6517, "Port Phasmatys ectopool shortcut");
+				return(56, agility_climb_6517, "Rock climb in the Temple of the Eye");
 			case 47 :
-				return(59, agility_climb_6517, "Elven overpass easy cliffside scramble");
+				return(56, agility_jump_6514, "Brimhaven Dungeon eastern stepping stones");
 			case 48 :
-				return(60, agility_climb_6517, "Wilderness from the God Wars Dungeon area climb");
+				return(57, agility_climb_6517, "Rellekka east fence shortcut");
 			case 49 :
-				return(60, agility_jump_6514, "Estuary crossing on Mos Le'Harmless");
+				return(58, agility_climb_6517, "Port Phasmatys ectopool shortcut");
 			case 50 :
-				return(60, agility_jump_6514, "Pillars in the Wintertodt's Prison");
+				return(59, agility_climb_6517, "Elven overpass easy cliffside scramble");
 			case 51 :
-				return(60, agility_jump_6514, "Stepping stone in the Tombs of Amascut");
+				return(60, agility_climb_6517, "Wilderness from the God Wars Dungeon area climb");
 			case 52 :
-				return(61, agility_climb_6517, "Slayer Tower medium spiked chain climb");
+				return(60, agility_jump_6514, "Estuary crossing on Mos Le'Harmless");
 			case 53 :
-				return(62, agility_contortion_6516, "Slayer Dungeon narrow crevice");
+				return(60, agility_jump_6514, "Pillars in the Wintertodt's Prison");
 			case 54 :
-				return(62, agility_climb_6517, "Mount Karuulm upper cliffside climb");
+				return(60, agility_jump_6514, "Stepping stone in the Tombs of Amascut");
 			case 55 :
-				return(62, agility_jump_6514, "Stepping stones in the Necropolis");
+				return(61, agility_climb_6517, "Slayer Tower medium spiked chain climb");
 			case 56 :
-				return(63, agility_climb_6517, "Taverley dungeon lesser demon fence shortcut");
+				return(61, agility_contortion_6516, "Fremennik Slayer Dungeon narrow crevice");
 			case 57 :
-				return(63, agility_climb_6517, "Darkmeyer wall climb");
+				return(62, agility_climb_6517, "Mount Karuulm upper cliffside climb");
 			case 58 :
-				return(64, agility_climb_6517, "Trollheim Wilderness route");
+				return(62, agility_jump_6514, "Stepping stones in the Necropolis");
 			case 59 :
-				return(64, agility_climb_6517, "Rope to the Fossil Island volcano");
+				return(63, agility_climb_6517, "Taverley dungeon lesser demon fence shortcut");
 			case 60 :
-				return(65, agility_climb_6517, "Temple on the Salve to Morytania shortcut");
+				return(63, agility_climb_6517, "Forthos Dungeon Floor spikes shortcut");
 			case 61 :
-				return(65, agility_jump_6514, "Revenant cave jump (easy)");
+				return(63, agility_climb_6517, "Darkmeyer wall climb");
 			case 62 :
-				return(66, agility_contortion_6516, "Cosmic Temple advanced narrow walkway");
+				return(64, agility_climb_6517, "Trollheim Wilderness route");
 			case 63 :
-				return(66, agility_jump_6514, "Lumbridge Swamp to the Desert");
+				return(64, agility_climb_6517, "Rope to the Fossil Island volcano");
 			case 64 :
-				return(67, agility_contortion_6516, "Heroes' Guild tunnel");
+				return(65, agility_climb_6517, "Temple on the Salve to Morytania shortcut");
 			case 65 :
-				return(68, agility_climb_6517, "Elven overpass medium cliffside scramble");
+				return(65, agility_jump_6514, "Revenant cave jump (easy)");
 			case 66 :
-				return(68, agility_climb_6517, "Ice Mountain western scramble");
+				return(66, agility_contortion_6516, "Cosmic Temple advanced narrow walkway");
 			case 67 :
-				return(69, agility_climb_6517, "Arceuus essence mine northern scramble");
+				return(66, agility_jump_6514, "Lumbridge Swamp to the Desert");
 			case 68 :
-				return(70, agility_contortion_6516, "Taverley Dungeon shortcuts to blue dragons");
+				return(63, agility_jump_6514, "Forthos Dungeon spiked blades jump");
 			case 69 :
-				return(70, agility_contortion_6516, "Fossil island hardwood shortcut");
+				return(66, agility_contortion_6516, "Taverley wall shortcut");
 			case 70 :
-				return(70, agility_contortion_6516, "Al Kharid Palace southern window");
+				return(67, agility_contortion_6516, "Heroes' Guild tunnel");
 			case 71 :
-				return(71, agility_climb_6517, "Slayer Tower advanced spiked chain climb");
+				return(68, agility_climb_6517, "Elven overpass medium cliffside scramble");
 			case 72 :
-				return(71, agility_climb_6517, "Gu'Tanoth wall climb<br> (after completing the Watchtower quest)");
+				return(68, agility_climb_6517, "Ice Mountain western scramble");
 			case 73 :
-				return(72, agility_contortion_6516, "Stronghold Slayer Cave narrow tunnel");
+				return(69, agility_climb_6517, "Arceuus essence mine northern scramble");
 			case 74 :
-				return(72, agility_contortion_6516, "Asgarnian Ice Dungeon wyvern tunnel");
+				return(70, agility_contortion_6516, "Taverley Dungeon shortcuts to blue dragons");
 			case 75 :
-				return(73, agility_climb_6517, "Troll Stronghold wall-climb");
+				return(70, agility_contortion_6516, "Fossil island hardwood shortcut");
 			case 76 :
-				return(73, agility_climb_6517, "Arceuus essence mine western descent");
+				return(70, agility_contortion_6516, "Al Kharid Palace southern window");
 			case 77 :
-				return(74, agility_jump_6514, "Lava Dragon Isle jump");
+				return(71, agility_climb_6517, "Slayer Tower advanced spiked chain climb");
 			case 78 :
-				return(74, agility_contortion_6516, "Meiyerditch Laboratory tunnels");
+				return(71, agility_climb_6517, "Gu'Tanoth wall climb<br> (after completing the Watchtower quest)");
 			case 79 :
-				return(75, agility_jump_6514, "Forthos Dungeon spiked blades jump");
+				return(71, agility_climb_6517, "Pollniveach stepping stone");
 			case 80 :
-				return(75, agility_jump_6514, "Revenant cave jump (medium)");
+				return(72, agility_contortion_6516, "Stronghold Slayer Cave narrow tunnel");
 			case 81 :
-				return(76, agility_jump_6514, "Island crossing near Zul-Andra");
+				return(72, agility_contortion_6516, "Basic Asgarnian Ice Dungeon wyvern tunnel");
 			case 82 :
-				return(77, agility_jump_6514, "Shilo Village river crossing");
+				return(72, agility_jump_6514, "Chaos temple Stepping Stone");
 			case 83 :
-				return(78, agility_contortion_6516, "Iorwerth Dungeon northern shortcut");
+				return(72, agility_jump_6514, "Barrows wall-jump");
 			case 84 :
-				return(79, agility_climb_6517, "Kharazi Jungle vine climb<br> (with Legends' Guild access)");
+				return(73, agility_climb_6517, "Troll Stronghold wall-climb");
 			case 85 :
-				return(80, agility_jump_6514, "Taverley Dungeon spiked blades jump");
+				return(73, agility_climb_6517, "Arceuus essence mine western descent");
 			case 86 :
-				return(81, agility_jump_6514, "Fremennik Slayer Dungeon spiked blades jump");
+				return(74, agility_jump_6514, "Lava Dragon Isle jump");
 			case 87 :
-				return(82, agility_jump_6514, "Lava Maze northern jump");
+				return(74, agility_contortion_6516, "Meiyerditch Laboratory tunnels");
 			case 88 :
-				return(83, agility_jump_6514, "Brimhaven Dungeon eastern stepping stones");
+				return(75, agility_jump_6514, "Revenant cave jump (medium)");
 			case 89 :
-				return(84, agility_contortion_6516, "Iorwerth Dungeon southern shortcut");
+				return(76, agility_jump_6514, "Island crossing near Zul-Andra");
 			case 90 :
-				return(85, agility_climb_6517, "Elven overpass advanced cliffside scramble");
+				return(77, agility_jump_6514, "Wilderness Slayer Dungeon Crevices");
 			case 91 :
-				return(86, agility_contortion_6516, "Kalphite Lair shortcut");
+				return(78, agility_contortion_6516, "Iorwerth Dungeon northern shortcut");
 			case 92 :
-				return(87, agility_climb_6517, "Brimhaven Dungeon vine to baby green dragons");
+				return(79, agility_climb_6517, "Shilo village rock climb");
 			case 93 :
-				return(88, agility_contortion_6516, "Karuulm Dungeon pipe");
+				return(79, agility_climb_6517, "Kharazi Jungle vine climb<br> (with Legends' Guild access)");
 			case 94 :
-				return(89, agility_jump_6514, "Revenant cave jump (hard)");
+				return(80, agility_jump_6514, "Taverley Dungeon spiked blades jump");
 			case 95 :
-				return(91, agility_climb_6517, "Viyeldi Caves cliff climb");
+				return(81, agility_contortion_6516, "Waterbirth Dungeon crevice");
 			case 96 :
+				return(82, agility_jump_6514, "Lava Maze northern jump");
+			case 97 :
+				return(82, agility_jump_6514, "Adept Asgarnian Ice Dungeon wyvern tunnel");
+			case 98 :
+				return(84, agility_contortion_6516, "Iorwerth Dungeon southern shortcut");
+			case 99 :
+				return(84, agility_contortion_6516, "Crandor rock-climb");
+			case 100 :
+				return(85, agility_climb_6517, "Elven overpass advanced cliffside scramble");
+			case 101 :
+				return(85, agility_climb_6517, "Waterbirth Island rock-climb");
+			case 102 :
+				return(86, agility_contortion_6516, "Kalphite Lair shortcut");
+			case 103 :
+				return(87, agility_climb_6517, "Brimhaven Dungeon vine to baby green dragons");
+			case 104 :
+				return(88, agility_contortion_6516, "Karuulm Dungeon pipe");
+			case 105 :
+				return(89, agility_jump_6514, "Revenant cave jump (hard)");
+			case 106 :
+				return(91, agility_climb_6517, "Viyeldi Caves cliff climb");
+			case 107 :
 				return(93, agility_contortion_6516, "Meiyerditch Laboratories advanced shortcut.");
+			case 108 :
+				return(96, agility_contortion_6516, "Viyeldi caves crevice (after completing the legends quest)");
 			case default :
 				return(-1, null, "");
 		}

@@ -1,0 +1,24 @@
+// 1123
+[proc,script1123](component $component0, component $component1, int $int2)
+def_int $size3 = 0;
+def_int $int4 = 0;
+def_obj $obj5 = null;
+while ($size3 < inv_size(inv)) {
+	$obj5 = inv_getobj(inv, $size3);
+	if ($obj5 ! null & ~script1324($obj5) = 0) {
+		$int4 = calc($int4 + 1);
+	}
+	$size3 = calc($size3 + 1);
+}
+def_int $int6 = calc($int2 - %varbit5558);
+if ($int6 = 0) {
+	if_setcolour(^white, $component1);
+	if_settext("Space: 0", $component1);
+	return;
+}
+if ($int6 <= 0) {
+	if_setcolour(^red, $component1);
+} else {
+	if_setcolour(^white, $component1);
+}
+if_settext("Space: <tostring($int6)>", $component1);

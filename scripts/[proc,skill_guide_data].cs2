@@ -1219,16 +1219,18 @@ switch_int ($int0) {
 					case 12 :
 						return(50, medium_fur_pouch_29301, "Craft medium hunters' pouches");
 					case 13 :
-						return(56, colossal_pouch_26784, "Craft a colossal pouch from essence pouches");
+						return(52, light_orb_10973, "Replace Dorgeshuun light orbs");
 					case 14 :
-						return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
+						return(56, colossal_pouch_26784, "Craft a colossal pouch from essence pouches");
 					case 15 :
-						return(65, large_fur_pouch_29303, "Craft large hunters' pouches");
+						return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
 					case 16 :
-						return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
+						return(65, large_fur_pouch_29303, "Craft large hunters' pouches");
 					case 17 :
-						return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
+						return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
 					case 18 :
+						return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
+					case 19 :
 						return(90, redwood_bird_house_22204, "Craft a birdhouse trap from redwood logs");
 					case default :
 						return(-1, null, "");
@@ -1396,9 +1398,9 @@ switch_int ($int0) {
 				case 3 :
 					return(52, mithril_dart_809, "Mithril darts");
 				case 4 :
-					return(53, toxic_blowpipe_12926, "Toxic blowpipe");
-				case 5 :
 					return(67, adamant_dart_810, "Adamant darts");
+				case 5 :
+					return(78, toxic_blowpipe_12926, "Toxic blowpipe");
 				case 6 :
 					return(81, rune_dart_811, "Rune darts");
 				case 7 :
@@ -1534,21 +1536,21 @@ switch_int ($int0) {
 				case 20 :
 					return(45, granite_5kg_6983, "Members: Granite");
 				case 21 :
-					return(50, iron_ore_fragment_21532, "Members: Volcanic Mine (with 150 Kudos)");
+					return(50, iron_ore_fragment_21532, "Members: Volcanic Mine");
 				case 22 :
 					return(55, mithril_ore_447, "Mithril ore");
 				case 23 :
-					return(60, daeyalt_essence_24704, "Members: Daeyalt essence<br>(after Sins of the Father)");
+					return(57, pay_dirt_12011, "Members: Motherlode mine (upper level)");
 				case 24 :
-					return(64, tainted_essence_chunk_28591, "Members: Tainted essence chunk");
+					return(60, daeyalt_essence_24704, "Members: Daeyalt essence<br>(after Sins of the Father)");
 				case 25 :
-					return(65, lovakite_ore_13356, "Members: Lovakite ore");
+					return(64, tainted_essence_chunk_28591, "Members: Tainted essence chunk");
 				case 26 :
-					return(70, adamantite_ore_449, "Adamantite ore");
+					return(65, lovakite_ore_13356, "Members: Lovakite ore");
 				case 27 :
-					return(70, soft_clay_1761, "Members: Soft clay");
+					return(70, adamantite_ore_449, "Adamantite ore");
 				case 28 :
-					return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
+					return(70, soft_clay_1761, "Members: Soft clay");
 				case 29 :
 					return(72, te_salt_22593, "Members: Te Salt");
 				case 30 :
@@ -1608,9 +1610,9 @@ switch_int ($int0) {
 				case 0 :
 					return(30, pay_dirt_12011, "Members: Motherlode Mine");
 				case 1 :
-					return(60, mithril_ore_447, "Mining Guild");
+					return(57, pay_dirt_12011, "Members: Motherlode Mine upper area");
 				case 2 :
-					return(72, pay_dirt_12011, "Members: Motherlode Mine upper area");
+					return(60, mithril_ore_447, "Mining Guild");
 				case default :
 					return(-1, null, "");
 			}
