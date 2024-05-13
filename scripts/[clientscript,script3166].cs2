@@ -22,7 +22,7 @@ if (cc_find($component0, $comsubid7) = ^true) {
 	$int8 = cc_getx;
 	$int9 = cc_gety;
 	cc_create($component0, ^iftype_graphic, $count5);
-	cc_setgraphic("tick");
+	cc_setgraphic(tick);
 	cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int8 + 50), calc($int9 + 50), ^setpos_abs_left, ^setpos_abs_top);
 }

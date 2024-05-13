@@ -12,14 +12,14 @@ def_int $int11 = 600;
 if (~league_world = 1) {
 	$int11 = 1000;
 }
-def_graphic $graphic12 = "graphic_4655";
-def_graphic $graphic13 = "graphic_4660";
+def_graphic $graphic12 = graphic_4655;
+def_graphic $graphic13 = graphic_4660;
 if ($int4 >= 300) {
-	$graphic12 = "graphic_4657";
-	$graphic13 = "graphic_4662";
+	$graphic12 = graphic_4657;
+	$graphic13 = graphic_4662;
 } else if ($int4 >= 150) {
-	$graphic12 = "graphic_4656";
-	$graphic13 = "graphic_4661";
+	$graphic12 = graphic_4656;
+	$graphic13 = graphic_4661;
 }
 if_setgraphic($graphic13, $component2);
 if (cc_find($component0, 0) = ^false) {
@@ -38,7 +38,7 @@ if (cc_find($component0, 0) = ^false) {
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(calc($width8 - 4), 12, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 3, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("graphic_4658");
+	cc_setgraphic(graphic_4658);
 	cc_settiling(true);
 	$int7 = calc($int7 + 1);
 	cc_create($component0, ^iftype_graphic, $int7);
@@ -50,24 +50,24 @@ if (cc_find($component0, 0) = ^false) {
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
 	cc_setposition(-5, 1, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("graphic_4659");
+	cc_setgraphic(graphic_4659);
 	$int7 = calc($int7 + 1);
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
 	$int10 = scale(150, $int11, $width9);
 	cc_setposition(calc($int10 - 2), 1, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("graphic_4659");
+	cc_setgraphic(graphic_4659);
 	$int7 = calc($int7 + 1);
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
 	$int10 = scale(300, $int11, $width9);
 	cc_setposition(calc($int10 - 2), 1, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("graphic_4659");
+	cc_setgraphic(graphic_4659);
 	$int7 = calc($int7 + 1);
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(10, 16, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($width9 - 1), 1, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("graphic_4659");
+	cc_setgraphic(graphic_4659);
 	$int7 = calc($int7 + 1);
 }
 def_int $width14 = scale($int4, $int11, $width9);

@@ -10,7 +10,7 @@ if (string_length($string0) > 0) {
 	$int11 = calc($int11 + 1);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setgraphic("tradebacking_light");
+	cc_setgraphic(tradebacking_light);
 	cc_settiling(true);
 	$int11 = ~thinbox(interface_4:3, $int11);
 	cc_create(interface_4:3, ^iftype_text, $int11);

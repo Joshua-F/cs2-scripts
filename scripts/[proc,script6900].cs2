@@ -8,20 +8,20 @@ def_int $int4 = 8;
 def_int $int5 = 0;
 def_int $int6 = 5;
 def_int $int7 = 12;
-def_fontmetrics $fontmetrics8 = verdana_11pt_regular;
+def_graphic $graphic8 = verdana_11pt_regular;
 def_fontmetrics $fontmetrics9 = verdana_11pt_regular;
 switch_int (%varcint988) {
 	case 1 :
 		$int4 = 10;
 		$int6 = 9;
 		$int7 = 14;
-		$fontmetrics8 = verdana_13pt_regular;
+		$graphic8 = verdana_13pt_regular;
 		$fontmetrics9 = verdana_13pt_regular;
 	case 2, 3 :
 		$int4 = 8;
 		$int6 = 10;
 		$int7 = 13;
-		$fontmetrics8 = verdana_13pt_regular;
+		$graphic8 = verdana_13pt_regular;
 		$fontmetrics9 = verdana_13pt_regular;
 }
 def_int $int10 = 0;
@@ -63,7 +63,7 @@ while ($int10 < $int16) {
 	if ($int14 >= 0) {
 		cc_create($component0, ^iftype_text, $int10);
 		cc_setposition($int4, $int15, ^setpos_abs_left, ^setpos_abs_top);
-		cc_settextfont($fontmetrics8);
+		cc_settextfont($graphic8);
 		if (calc($int10 % 2) = 0) {
 			cc_setcolour(0xff981f);
 		} else {

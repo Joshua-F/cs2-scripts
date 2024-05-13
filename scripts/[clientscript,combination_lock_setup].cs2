@@ -34,7 +34,7 @@ while ($int5 < $int2) {
 	cc_create($component1, ^iftype_graphic, $int8);
 	cc_setsize(46, 112, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int9, 0, ^setpos_abs_left, ^setpos_abs_centre);
-	cc_setgraphic("combination_lock");
+	cc_setgraphic(combination_lock);
 	$int8 = calc($int8 + 1);
 	if ($int13 = 0) {
 		cc_create($component1, ^iftype_text, $int8);

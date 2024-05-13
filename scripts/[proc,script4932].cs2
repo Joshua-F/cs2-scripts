@@ -4,7 +4,7 @@ def_component $component1 = interface_865:41;
 def_component $component2 = interface_865:10;
 def_int $comsubid3 = 0;
 if ($int0 > 0) {
-	~stonebutton_init("Claim", $component2, "p12_full", 0);
+	~stonebutton_init("Claim", $component2, p12_full, 0);
 	if_setonop("script4933", $component2);
 } else {
 	$comsubid3 = ~v2_stone_button($component2);
@@ -15,7 +15,7 @@ if ($int0 > 0) {
 }
 $comsubid3 = 0;
 if (%varbit9788 > 0) {
-	~stonebutton_init("Continue", $component1, "p12_full", 0);
+	~stonebutton_init("Continue", $component1, p12_full, 0);
 } else {
 	$comsubid3 = ~v2_stone_button($component1);
 	~create_text($component1, $comsubid3, p12_full, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 0, 0, ^setsize_minus, ^setsize_minus, "Continue", true, 0x9f9f9f, ^settextalign_centre, ^settextalign_centre, 0);

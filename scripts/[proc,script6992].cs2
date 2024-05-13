@@ -15,13 +15,13 @@ while ($int4 < $int1) {
 	cc_setposition(calc($int4 * 17 + 2), 0, ^setpos_abs_left, ^setpos_abs_centre);
 	switch_int ($int3) {
 		case 0 :
-			$graphic5 = "graphic_4734";
+			$graphic5 = graphic_4734;
 		case 1 :
-			$graphic5 = "graphic_4735";
+			$graphic5 = graphic_4735;
 		case 2 :
-			$graphic5 = "graphic_4736";
+			$graphic5 = graphic_4736;
 		case 3 :
-			$graphic5 = "graphic_4737";
+			$graphic5 = graphic_4737;
 	}
 	cc_setgraphic($graphic5);
 	$int4 = calc($int4 + 1);

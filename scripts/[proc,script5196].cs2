@@ -32,8 +32,8 @@ if (string_length($string0) > 0) {
 	$int6 = ~max(5, calc(($width2 + 2 - $int5 * 2) / 3));
 	if_setposition($int6, $int4, ^setpos_abs_left, ^setpos_abs_top, interface_289:7);
 	if_setposition($int6, $int4, ^setpos_abs_right, ^setpos_abs_top, interface_289:8);
-	~stonebutton_init($string2, interface_289:7, "p12_full", 0);
-	~stonebutton_init($string0, interface_289:8, "p12_full", 0);
+	~stonebutton_init($string2, interface_289:7, p12_full, 0);
+	~stonebutton_init($string0, interface_289:8, p12_full, 0);
 	$int4 = calc($int4 + 30 + 5);
 	if_setonop("script4208(0, interface_289:1, interface_289:2, interface_289:3, $component0)", interface_289:7);
 	if_setonop("script4208(1, interface_289:1, interface_289:2, interface_289:3, $component0)", interface_289:8);
@@ -42,7 +42,7 @@ if (string_length($string0) > 0) {
 	$int5 = calc(20 + parawidth($string2, 512, p12_full));
 	if_setsize($int5, 30, ^setsize_abs, ^setsize_abs, interface_289:7);
 	if_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top, interface_289:7);
-	~stonebutton_init($string2, interface_289:7, "p12_full", 0);
+	~stonebutton_init($string2, interface_289:7, p12_full, 0);
 	$int4 = calc($int4 + 30 + 5);
 	if_setonop("script4208(0, interface_289:1, interface_289:2, interface_289:3, $component0)", interface_289:7);
 	cc_deleteall(interface_289:8);

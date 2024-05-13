@@ -50,7 +50,7 @@ def_int $int17 = 3;
 def_int $int18 = 7;
 def_int $int19 = 74;
 def_int $int20 = 110;
-def_fontmetrics $fontmetrics21 = p12_full;
+def_graphic $graphic21 = p12_full;
 def_int $int22 = 496;
 def_int $int23 = 0;
 def_string $string0 = db_getfield($dbrow2, dbtable_39:13, 0);
@@ -62,7 +62,7 @@ switch_int (%varcint988) {
 	case 1 :
 		$int17 = 4;
 		$int19 = 78;
-		$fontmetrics21 = verdana_11pt_regular;
+		$graphic21 = verdana_11pt_regular;
 		$int22 = 1446;
 		$int23 = 1;
 		if (%var3871 = 1) {
@@ -74,7 +74,7 @@ switch_int (%varcint988) {
 		$int20 = 130;
 		$int19 = 82;
 		$int18 = 10;
-		$fontmetrics21 = verdana_13pt_regular;
+		$graphic21 = verdana_13pt_regular;
 		$int22 = 1446;
 		$int23 = 1;
 		if (%var3871 = 1) {
@@ -86,7 +86,7 @@ switch_int (%varcint988) {
 		$int20 = 130;
 		$int19 = 86;
 		$int18 = 12;
-		$fontmetrics21 = verdana_13pt_regular;
+		$graphic21 = verdana_13pt_regular;
 		$int22 = 1446;
 		$int23 = 2;
 		if (%var3871 = 1) {
@@ -144,7 +144,7 @@ cc_setposition(calc($int26 + 7), calc($int27 + 27 + $int18 + $int23), ^setpos_ab
 cc_setsize(calc($int25 - 14), 40, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics21);
+cc_settextfont($graphic21);
 cc_setcolour(0xff981f);
 cc_settext($string1);
 if (%var3871 = 1) {

@@ -2,14 +2,14 @@
 [proc,script6091]
 def_component $component0 = interface_753:12;
 def_component $component1 = interface_753:13;
-def_fontmetrics $fontmetrics2 = b12_full;
+def_graphic $graphic2 = b12_full;
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics2 = verdana_13pt_bold;
+		$graphic2 = verdana_13pt_bold;
 	case 2 :
-		$fontmetrics2 = verdana_13pt_bold;
+		$graphic2 = verdana_13pt_bold;
 	case 3 :
-		$fontmetrics2 = verdana_13pt_bold;
+		$graphic2 = verdana_13pt_bold;
 }
-if_settextfont($fontmetrics2, $component0);
+if_settextfont($graphic2, $component0);
 if_settext(tostring(%var3436), $component1);

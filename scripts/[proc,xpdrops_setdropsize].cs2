@@ -1,5 +1,5 @@
 // 996
-[proc,xpdrops_setdropsize](component $component0, int $int1, fontmetrics $fontmetrics2, fontmetrics $fontmetrics3, string $string0)
+[proc,xpdrops_setdropsize](component $component0, int $int1, fontmetrics $fontmetrics2, graphic $graphic3, string $string0)
 def_int $int4 = 0;
 if (string_length($string0) > 0) {
 	$int4 = parawidth($string0, 512, $fontmetrics2);
@@ -22,7 +22,7 @@ if (~on_mobile = true | %varbit4692 = 0) {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
 }
 if_setsize($width8, 0, ^setsize_abs, ^setsize_minus, $component0);
-cc_settextfont($fontmetrics3);
+cc_settextfont($graphic3);
 cc_setsize(0, $int1, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
 $int7 = 1;

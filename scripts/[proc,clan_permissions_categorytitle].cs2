@@ -4,7 +4,7 @@ cc_create($component2, ^iftype_graphic, $int0);
 $int0 = calc($int0 + 1);
 cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int1, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setgraphic("tradebacking");
+cc_setgraphic(tradebacking);
 cc_settiling(true);
 cc_create($component2, ^iftype_text, $int0);
 $int0 = calc($int0 + 1);

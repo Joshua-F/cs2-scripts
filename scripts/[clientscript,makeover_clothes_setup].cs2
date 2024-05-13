@@ -55,7 +55,7 @@ while ($int8 < 29) {
 	} else {
 		cc_setposition(calc(($int8 - 15) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	cc_setgraphic("overlay_multiway");
+	cc_setgraphic(overlay_multiway);
 	~makeover_indicator($int8, 3);
 	cc_setonvartransmit("makeover_indicator(event_com, event_comsubid, $int8, 3){var263}");
 	$int8 = calc($int8 + 1);

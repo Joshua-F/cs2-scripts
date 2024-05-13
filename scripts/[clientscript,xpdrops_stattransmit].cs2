@@ -165,7 +165,7 @@ if ($boolean0 = true) {
 def_int $int37 = 0;
 def_int $int38 = 0;
 def_fontmetrics $fontmetrics39 = p11_full;
-def_fontmetrics $fontmetrics40 = p11_full;
+def_graphic $graphic40 = p11_full;
 def_int $int41 = 16;
 def_int $int42 = 0;
 def_int $int43 = 0;
@@ -176,9 +176,9 @@ def_component $component47 = null;
 def_string $string0 = "";
 if ($int35 > 0 & $xp16 > 0 & ~script6065 = 1) {
 	if (%varbit4693 = 1 & ~on_mobile = false) {
-		$fontmetrics39, $fontmetrics40, $int41 = p12_full, p12_full, 25;
+		$fontmetrics39, $graphic40, $int41 = p12_full, p12_full, 25;
 	} else if (%varbit4693 = 2 & ~on_mobile = false) {
-		$fontmetrics39, $fontmetrics40, $int41 = b12_full, b12_full, 25;
+		$fontmetrics39, $graphic40, $int41 = b12_full, b12_full, 25;
 	}
 	$int42 = if_getheight($component8);
 	if ($int42 < 100) {
@@ -222,7 +222,7 @@ if ($int35 > 0 & $xp16 > 0 & ~script6065 = 1) {
 				cc_settext($string0);
 				cc_setposition(0, 0, ^setpos_abs_left, ^setpos_proportion_bottom);
 				cc_sethide(true);
-				~xpdrops_setdropsize($component47, $int41, $fontmetrics39, $fontmetrics40, $string0);
+				~xpdrops_setdropsize($component47, $int41, $fontmetrics39, $graphic40, $string0);
 			}
 			if_setontimer("xpdrops_dropletmove($component47, $int44)", $component47);
 			%varcint71 = $int44;

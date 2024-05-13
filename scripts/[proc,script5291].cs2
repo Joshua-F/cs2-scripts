@@ -1,5 +1,5 @@
 // 5291
-[proc,script5291](component $component0, int $int1, int $int2, int $int3, int $int4, int $colour5, string $text0, fontmetrics $fontmetrics6, int $colour7, int $int8, graphic $graphic9, int $int10, int $int11, int $int12, int $int13, int $int14)(int)
+[proc,script5291](component $component0, int $int1, int $int2, int $int3, int $int4, int $colour5, string $text0, graphic $graphic6, int $colour7, int $int8, graphic $graphic9, int $int10, int $int11, int $int12, int $int13, int $int14)(int)
 def_int $int15 = 4;
 def_int $int16 = 1;
 def_int $int17 = calc($int2 * ($int3 + $int4));
@@ -54,7 +54,7 @@ $int1 = calc($int1 + 1);
 $int1 = calc($int1 + 1);
 cc_create($component0, ^iftype_text, $int1);
 def_int $int21 = 0;
-if ($fontmetrics6 = null) {
+if ($graphic6 = null) {
 	cc_sethide(true);
 } else {
 	$int21 = calc(8 + $int10 + $int8);
@@ -62,7 +62,7 @@ if ($fontmetrics6 = null) {
 	cc_setsize(calc($int21 + 6), $int3, ^setsize_minus, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics6);
+	cc_settextfont($graphic6);
 	cc_setcolour($colour7);
 	cc_settext($text0);
 }

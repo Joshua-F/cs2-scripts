@@ -33,7 +33,7 @@ if (~toplevel_chatbox_maketransparent = 0) {
 		cc_create(interface_162:35, ^iftype_graphic, 0);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setgraphic("chat_background");
+		cc_setgraphic(chat_background);
 		cc_settiling(false);
 		cc_settrans(0);
 		cc_create(interface_162:54, ^iftype_rectangle, 0);

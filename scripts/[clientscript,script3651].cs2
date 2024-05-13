@@ -3,13 +3,13 @@
 ~script4206(interface_74:1, interface_74:2, interface_74:3, ^max_32bit_int, $component1);
 ~steelborder(interface_74:4, "Group Raffle", 1);
 ~script6069($component0, $component1, $int2);
-~stonebutton_init("<col=ff0000>Close</col>", interface_74:14, "p12_full", 0);
+~stonebutton_init("<col=ff0000>Close</col>", interface_74:14, p12_full, 0);
 if (%var266 = 0) {
-	~stonebutton_init("<col=0dc10d>Join Raffle</col>", interface_74:15, "p12_full", 0);
+	~stonebutton_init("<col=0dc10d>Join Raffle</col>", interface_74:15, p12_full, 0);
 } else if (%var266 = 1) {
-	~stonebutton_init("<col=ff0000>Leave Raffle</col>", interface_74:15, "p12_full", 0);
+	~stonebutton_init("<col=ff0000>Leave Raffle</col>", interface_74:15, p12_full, 0);
 } else {
-	~stonebutton_init("<col=808080>Join Raffle</col>", interface_74:15, "p12_full", 0);
+	~stonebutton_init("<col=808080>Join Raffle</col>", interface_74:15, p12_full, 0);
 }
 if_setonop("script4208(0, interface_74:1, interface_74:2, interface_74:3, $component1)", interface_74:14);
 if_setonop("script4208(1, interface_74:1, interface_74:2, interface_74:3, $component1)", interface_74:15);

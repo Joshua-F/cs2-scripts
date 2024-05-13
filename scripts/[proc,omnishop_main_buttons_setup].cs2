@@ -6,21 +6,21 @@ def_component $component3 = interface_819:27;
 def_component $component4 = interface_819:28;
 def_component $component5 = interface_819:24;
 def_component $component6 = interface_819:19;
-def_fontmetrics $fontmetrics7 = p11_full;
+def_graphic $graphic7 = p11_full;
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics7 = verdana_11pt_regular;
+		$graphic7 = verdana_11pt_regular;
 	case 2 :
-		$fontmetrics7 = verdana_11pt_regular;
+		$graphic7 = verdana_11pt_regular;
 	case 3 :
-		$fontmetrics7 = verdana_13pt_regular;
+		$graphic7 = verdana_13pt_regular;
 }
 cc_create($component6, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics7);
+cc_settextfont($graphic7);
 cc_setcolour(0xff981f);
 cc_settext($text0);
 def_int $int8 = calc((if_getwidth($component6) - 18) / 4);

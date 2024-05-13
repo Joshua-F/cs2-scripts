@@ -6,7 +6,7 @@ cc_create($component0, ^iftype_graphic, $int10);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-cc_setgraphic("tradebacking");
+cc_setgraphic(tradebacking);
 cc_settiling(true);
 cc_setonclick("script6242($component0, $component3, $component4, $component5, $component6, $layer7, $enum1, $enum2)");
 cc_create($component0, ^iftype_rectangle, $int10);

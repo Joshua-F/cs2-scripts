@@ -3,9 +3,9 @@
 def_graphic $graphic0 = null;
 def_string $op0 = "";
 if (%varbit14880 = 1) {
-	$graphic0, $op0 = "graphic_4914", "Hide";
+	$graphic0, $op0 = graphic_4914, "Hide";
 } else {
-	$graphic0, $op0 = "graphic_4913", "Show";
+	$graphic0, $op0 = graphic_4913, "Show";
 }
 if_setop(1, $op0, interface_650:39);
 if_setgraphic($graphic0, interface_650:39);

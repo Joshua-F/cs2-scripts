@@ -20,33 +20,33 @@ if (%var3871 = 1) {
 		if_setonop("omnishop_main_info_closebutton_click", $component12);
 	}
 }
-def_fontmetrics $fontmetrics13 = b12_full;
+def_graphic $graphic13 = b12_full;
 def_fontmetrics $fontmetrics14 = b12_full;
-def_fontmetrics $fontmetrics15 = p12_full;
+def_graphic $graphic15 = p12_full;
 def_fontmetrics $fontmetrics16 = p12_full;
 def_int $int17 = 10;
 def_int $int18 = 10;
 def_int $int19 = 16;
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics13 = verdana_13pt_bold;
+		$graphic13 = verdana_13pt_bold;
 		$fontmetrics14 = verdana_13pt_bold;
-		$fontmetrics15 = verdana_13pt_regular;
+		$graphic15 = verdana_13pt_regular;
 		$fontmetrics16 = verdana_13pt_regular;
 		$int17 = 12;
 		$int18 = 12;
 	case 2 :
-		$fontmetrics13 = verdana_13pt_bold;
+		$graphic13 = verdana_13pt_bold;
 		$fontmetrics14 = verdana_13pt_bold;
-		$fontmetrics15 = verdana_13pt_regular;
+		$graphic15 = verdana_13pt_regular;
 		$fontmetrics16 = verdana_13pt_regular;
 		$int17 = 16;
 		$int18 = 14;
 		$int19 = 17;
 	case 3 :
-		$fontmetrics13 = verdana_13pt_bold;
+		$graphic13 = verdana_13pt_bold;
 		$fontmetrics14 = verdana_13pt_bold;
-		$fontmetrics15 = verdana_13pt_regular;
+		$graphic15 = verdana_13pt_regular;
 		$fontmetrics16 = verdana_13pt_regular;
 		$int17 = 22;
 		$int18 = 16;
@@ -81,7 +81,7 @@ cc_setposition($int17, $int17, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width23 - $int17 * 2), $int25, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, $int19);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics13);
+cc_settextfont($graphic13);
 cc_setcolour(0xff981f);
 cc_settext($string1);
 $int21 = calc($int21 + 1);
@@ -111,7 +111,7 @@ if (string_length($string0) > 0) {
 	cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics15);
+	cc_settextfont($graphic15);
 	cc_setcolour(0xff981f);
 	cc_settext($text2);
 	$int21 = calc($int21 + 1);
@@ -121,7 +121,7 @@ if (string_length($string0) > 0) {
 	cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics13);
+	cc_settextfont($graphic13);
 	cc_setcolour(0xefefef);
 	cc_settext("Cost");
 	$int21 = calc($int21 + 1);
@@ -139,7 +139,7 @@ if (string_length($string0) > 0) {
 		cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		cc_settextfont($fontmetrics13);
+		cc_settextfont($graphic13);
 		cc_setcolour(0xefefef);
 		if ($dbrow26 = dbrow_3353) {
 			$text3 = db_getfield($dbrow26, dbtable_41:1, 0);
@@ -176,7 +176,7 @@ cc_setposition($int17, $int22, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width23 - $int17 * 2), $int25, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_left, ^settextalign_top, $int19);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics15);
+cc_settextfont($graphic15);
 cc_setcolour(0xff981f);
 cc_settext($string1);
 $int21 = calc($int21 + 1);

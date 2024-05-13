@@ -39,7 +39,7 @@ while ($int2 <= 58) {
 	if ($int2 < 58) {
 		cc_create(interface_210:3, ^iftype_graphic, $int0);
 		$int0 = calc($int0 + 1);
-		cc_setgraphic("tradebacking");
+		cc_setgraphic(tradebacking);
 		cc_settiling(true);
 		cc_setsize($width4, 1, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, calc($int2 * 40 + 39), ^setpos_abs_left, ^setpos_abs_top);

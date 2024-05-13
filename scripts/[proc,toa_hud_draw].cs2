@@ -18,11 +18,11 @@ if (%varbit14355 = 1) {
 	if_setsize(69, calc($int30 * 34 + ($int30 - 1)), ^setsize_abs, ^setsize_abs, $component1);
 }
 if (%varbit14380 >= 300) {
-	if_setgraphic("graphic_4662", $component4);
+	if_setgraphic(graphic_4662, $component4);
 } else if (%varbit14380 >= 150) {
-	if_setgraphic("graphic_4661", $component4);
+	if_setgraphic(graphic_4661, $component4);
 } else {
-	if_setgraphic("graphic_4660", $component4);
+	if_setgraphic(graphic_4660, $component4);
 }
 if_settext("Level: <tostring(%varbit14380)>", $component5);
 def_int $int31 = 0;
@@ -38,22 +38,22 @@ switch_int (%varbit14381) {
 	case 1 :
 		if_sethide(false, $component2);
 		if_sethide(true, $component3);
-		if_setgraphic("graphic_4635", $component6);
+		if_setgraphic(graphic_4635, $component6);
 		if_settext(tostring(%varbit14377), $component7);
 	case 2 :
 		if_sethide(false, $component2);
 		if_sethide(true, $component3);
-		if_setgraphic("graphic_4636", $component6);
+		if_setgraphic(graphic_4636, $component6);
 		if_settext(tostring(%varbit14378), $component7);
 	case 3 :
 		if_sethide(false, $component2);
 		if_sethide(true, $component3);
-		if_setgraphic("graphic_4637", $component6);
+		if_setgraphic(graphic_4637, $component6);
 		if_settext(tostring(%varbit14379), $component7);
 	case 4 :
 		if_sethide(false, $component2);
 		if_sethide(true, $component3);
-		if_setgraphic("graphic_4638", $component6);
+		if_setgraphic(graphic_4638, $component6);
 		if_settext(tostring(%varbit14376), $component7);
 	case 5, 6 :
 		if_sethide(true, $component2);

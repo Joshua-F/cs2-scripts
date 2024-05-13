@@ -8,7 +8,7 @@ if ($int0 = 1) {
 	def_int $int1 = 10;
 	def_int $int2 = 6;
 	def_int $int3 = 13;
-	def_fontmetrics $fontmetrics4 = p12_full;
+	def_graphic $graphic4 = p12_full;
 	def_fontmetrics $fontmetrics5 = p12_full;
 	def_int $int6 = 0;
 	def_int $width7 = calc(460 - $int1 * 2);
@@ -27,7 +27,7 @@ if ($int0 = 1) {
 		cc_create(interface_788:49, ^iftype_text, $int10);
 		$int10 = calc($int10 + 1);
 		cc_setposition($int1, $int9, ^setpos_abs_left, ^setpos_abs_top);
-		cc_settextfont($fontmetrics4);
+		cc_settextfont($graphic4);
 		if (calc($int6 % 2) = 0) {
 			cc_setcolour(0xff981f);
 		} else {

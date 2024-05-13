@@ -14,11 +14,11 @@ switch_enum ($enum1) {
 			if_setposition($x2, 0, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_pre_eoc:95);
 		}
 		if (%varbit4084 = 1) {
-			if_setclickmask("resize_map_mask", enum(component, component, $enum1, toplevel_osrs_stretch:30));
+			if_setclickmask(resize_map_mask, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		} else if (%varbit13037 = 1) {
-			if_setclickmask("resize_map_clickmask_bond", enum(component, component, $enum1, toplevel_osrs_stretch:30));
+			if_setclickmask(resize_map_clickmask_bond, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		} else {
-			if_setclickmask("resize_map_clickmask", enum(component, component, $enum1, toplevel_osrs_stretch:30));
+			if_setclickmask(resize_map_clickmask, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		}
 		%varcint384 = clientclock;
 		if (~on_enhanced_desktop = 1) {
@@ -26,11 +26,11 @@ switch_enum ($enum1) {
 		}
 	case enum_1130 :
 		if (%varbit4084 = 1) {
-			if_setclickmask("resize_map_mask", enum(component, component, $enum1, toplevel_osrs_stretch:30));
+			if_setclickmask(resize_map_mask, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		} else if (%varbit13037 = 1) {
-			if_setclickmask("resize_map_clickmask_bond", enum(component, component, $enum1, toplevel_osrs_stretch:30));
+			if_setclickmask(resize_map_clickmask_bond, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		} else {
-			if_setclickmask("resize_map_clickmask", enum(component, component, $enum1, toplevel_osrs_stretch:30));
+			if_setclickmask(resize_map_clickmask, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		}
 		%varcint384 = clientclock;
 		if (~on_enhanced_desktop = 1) {
@@ -38,9 +38,9 @@ switch_enum ($enum1) {
 		}
 	case enum_1129 :
 		if (~wiki_icon_enabled = 1) {
-			if_setclickmask("fixed_map_clickmask_wiki", enum(component, component, $enum1, toplevel_osrs_stretch:30));
+			if_setclickmask(fixed_map_clickmask_wiki, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		} else {
-			if_setclickmask("fixed_map_clickmask", enum(component, component, $enum1, toplevel_osrs_stretch:30));
+			if_setclickmask(fixed_map_clickmask, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		}
 	case enum_1745 :
 		if (%varbit6257 = 1 | %varbit542 = 1) {
@@ -50,16 +50,16 @@ switch_enum ($enum1) {
 			_2308(true, toplevel_osm:26);
 			switch_int (%varbit6255) {
 				case 2 :
-					if_setgraphic("graphic_1718", toplevel_osm:46);
+					if_setgraphic(graphic_1718, toplevel_osm:46);
 					if_setop(1, "Toggle single-tap mode", toplevel_osm:26);
 				case 1 :
-					if_setgraphic("graphic_1717", toplevel_osm:46);
+					if_setgraphic(graphic_1717, toplevel_osm:46);
 					if_setop(1, "Toggle tap-to-drop mode", toplevel_osm:26);
 				case 3 :
-					if_setgraphic("graphic_1716", toplevel_osm:46);
+					if_setgraphic(graphic_1716, toplevel_osm:46);
 					if_setop(1, "Show Keyboard", toplevel_osm:26);
 				case default :
-					if_setgraphic("graphic_1715", toplevel_osm:46);
+					if_setgraphic(graphic_1715, toplevel_osm:46);
 					if_setop(1, "", toplevel_osm:26);
 			}
 			if (%varbit6255 ! 3 & %varbit6256 = 0) {

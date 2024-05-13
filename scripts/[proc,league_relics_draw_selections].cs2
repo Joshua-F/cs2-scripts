@@ -26,7 +26,7 @@ if ($struct19 ! null) {
 cc_create($component0, ^iftype_graphic, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("tradebacking_light");
+cc_setgraphic(tradebacking_light);
 if_sethide(false, $component7);
 if_sethide(false, $component8);
 if_sethide(false, $component1);
@@ -70,15 +70,15 @@ def_struct $struct44 = null;
 def_int $int45 = 0;
 def_int $count46 = 0;
 def_int $int47 = 0;
-def_fontmetrics $fontmetrics48 = null;
+def_graphic $graphic48 = null;
 def_int $int49 = 6;
 switch_int (%varcint988) {
 	case 0 :
-		$fontmetrics48 = p11_full;
+		$graphic48 = p11_full;
 		$int49 = 6;
 		if_setsize(0, 18, ^setsize_minus, ^setsize_minus, $component7);
 	case default :
-		$fontmetrics48 = p12_full;
+		$graphic48 = p12_full;
 		$int49 = 8;
 		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component7);
 }
@@ -121,14 +121,14 @@ while ($int45 < $int23) {
 		cc_create($component2, ^iftype_graphic, $int45);
 		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
 		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic("tradebacking_dark");
+		cc_setgraphic(tradebacking_dark);
 		cc_settiling(true);
 		$int31, $string0, $int32, $int33, $int39, $colour35, $colour37 = 255, "", 1, 0, 1, 0xaaaaaa, 0xdddddd;
 	} else if ($int30 = 0 & $enum24 ! null & %var2615 >= struct_param($struct22, param_877)) {
 		cc_create($component2, ^iftype_graphic, $int45);
 		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
 		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic("tradebacking_light");
+		cc_setgraphic(tradebacking_light);
 		cc_settiling(true);
 		$int31, $string0, $int32, $int33, $int39, $colour35, $colour37 = 127, "", 1, 1, 1, null, null;
 		$int30 = 1;
@@ -136,14 +136,14 @@ while ($int45 < $int23) {
 		cc_create($component2, ^iftype_graphic, $int45);
 		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
 		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic("tradebacking_dark");
+		cc_setgraphic(tradebacking_dark);
 		cc_settiling(true);
 		$int31, $string0, $int32, $int33, $int39, $colour35, $colour37 = 255, "", 1, 0, 1, null, null;
 	}
 	cc_create($component0, ^iftype_text, calc($int45 + 1));
 	cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
 	cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont($fontmetrics48);
+	cc_settextfont($graphic48);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_setcolour($colour20);
@@ -170,7 +170,7 @@ while ($int45 < $int23) {
 		cc_setsize(calc($int26 - 10), 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($width29 + 5), calc($int28 + $int27 / 2 + 1), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext($text1);
-		cc_settextfont($fontmetrics48);
+		cc_settextfont($graphic48);
 		if ($struct40 ! $struct44) {
 			if ($colour35 ! null) {
 				$colour34 = $colour35;
@@ -265,11 +265,11 @@ if ($int30 = 1) {
 	cc_create($component1, ^iftype_graphic, 0);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("tradebacking_light");
+	cc_setgraphic(tradebacking_light);
 	cc_create($component1, ^iftype_text, 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont($fontmetrics48);
+	cc_settextfont($graphic48);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_setcolour($colour20);
@@ -287,6 +287,6 @@ if ($int49 < $int23) {
 	}
 	if_setscrollpos($x16, 0, $component7);
 	cc_deleteall($component8);
-	~scrollbar_horizontal($component8, $component7, "graphic_4538", "graphic_4537", "graphic_4536", "graphic_4535", "scrollbar_v2,2", "scrollbar_v2,3", 1);
+	~scrollbar_horizontal($component8, $component7, graphic_4538, graphic_4537, graphic_4536, graphic_4535, "scrollbar_v2,2", "scrollbar_v2,3", 1);
 	~scrollbar_horizontal_rebuild($component8, $component7);
 }

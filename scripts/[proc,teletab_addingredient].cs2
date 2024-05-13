@@ -26,11 +26,11 @@ $int3 = calc($int3 + 1);
 if ($int5 >= $int1) {
 	cc_setcolour(0xff981f);
 	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-	.cc_setgraphic("tick");
+	.cc_setgraphic(tick);
 } else {
 	cc_setcolour(0x9f9f9f);
 	.cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
-	.cc_setgraphic("cross");
+	.cc_setgraphic(cross);
 }
 cc_settext("<~magic_tostring($int5)>/<tostring($int1)>");
 return($int3, calc($int4 + 1));

@@ -30,7 +30,7 @@ cc_create($component0, ^iftype_graphic, $int4);
 $int4 = calc($int4 + 1);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($width2, $int3, ^setsize_abs, ^setsize_abs);
-cc_setgraphic("tradebacking");
+cc_setgraphic(tradebacking);
 cc_settiling(true);
 cc_settrans(255);
 if_setonmouseover("cc_settrans(event_com, cc_getid, 190, null)", $component0);

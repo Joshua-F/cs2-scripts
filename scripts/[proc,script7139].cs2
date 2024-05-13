@@ -1,15 +1,15 @@
 // 7139
 [proc,script7139](component $component0, string $string0, boolean $boolean1, boolean $boolean2)
 def_int $int3 = 0;
-def_fontmetrics $fontmetrics4 = p11_full;
+def_graphic $graphic4 = p11_full;
 cc_deleteall($component0);
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics4 = verdana_13pt_regular;
+		$graphic4 = verdana_13pt_regular;
 	case 2 :
-		$fontmetrics4 = verdana_13pt_regular;
+		$graphic4 = verdana_13pt_regular;
 	case 3 :
-		$fontmetrics4 = verdana_13pt_bold;
+		$graphic4 = verdana_13pt_bold;
 }
 if ($boolean1 = true & $boolean2 = false) {
 	$int3 = ~v2_stone_button($component0);
@@ -19,7 +19,7 @@ if ($boolean1 = true & $boolean2 = false) {
 cc_create($component0, ^iftype_text, $int3);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_settextfont($fontmetrics4);
+cc_settextfont($graphic4);
 cc_settextshadow(true);
 if ($boolean1 = true) {
 	cc_setcolour(0xff981f);

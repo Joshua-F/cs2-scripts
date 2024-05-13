@@ -1,10 +1,10 @@
 // 4914
-[proc,create_text](component $component0, int $comsubid1, fontmetrics $fontmetrics2, int $x3, int $y4, int $setposh5, int $setposv6, int $width7, int $height8, int $setsize9, int $setsize10, string $text0, boolean $boolean11, int $colour12, int $settextalignh13, int $settextalignv14, int $int15)
+[proc,create_text](component $component0, int $comsubid1, graphic $graphic2, int $x3, int $y4, int $setposh5, int $setposv6, int $width7, int $height8, int $setsize9, int $setsize10, string $text0, boolean $boolean11, int $colour12, int $settextalignh13, int $settextalignv14, int $int15)
 cc_create($component0, ^iftype_text, $comsubid1);
 cc_setposition($x3, $y4, $setposh5, $setposv6);
 cc_setsize($width7, $height8, $setsize9, $setsize10);
 cc_settext($text0);
-cc_settextfont($fontmetrics2);
+cc_settextfont($graphic2);
 cc_settextshadow($boolean11);
 cc_setcolour($colour12);
 cc_settextalign($settextalignh13, $settextalignv14, $int15);

@@ -3,7 +3,7 @@
 def_int $comsubid3 = 0;
 $comsubid3 = ~v2_stone_button_filled($component0);
 cc_create($component0, ^iftype_graphic, $comsubid3);
-cc_setgraphic("graphic_2209");
+cc_setgraphic(graphic_2209);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(26, 26, ^setsize_abs, ^setsize_abs);
 if_setop(1, "Show<col=ff9040> Settings", $component0);

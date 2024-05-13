@@ -6,9 +6,9 @@ def_component $component4 = interface_819:9;
 def_component $component5 = interface_819:35;
 def_component $component6 = interface_819:36;
 def_component $component7 = interface_819:37;
-def_graphic $graphic8 = "graphic_4735";
+def_graphic $graphic8 = graphic_4735;
 if (%var3871 = 1) {
-	$graphic8 = "graphic_4737";
+	$graphic8 = graphic_4737;
 }
 ~create_graphic($component2, 0, $graphic8, 2, 2, ^setpos_abs_left, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
 if_setonclick("script7155($dbrow0, $inv1)", $component2);

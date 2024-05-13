@@ -21,9 +21,9 @@ while ($int7 <= 37) {
 		cc_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top);
 		.cc_setposition(0, $height6, ^setpos_abs_centre, ^setpos_abs_top);
 		if (calc($int5 % 2) = 0) {
-			cc_setgraphic("tradebacking");
+			cc_setgraphic(tradebacking);
 		} else {
-			cc_setgraphic("tradebacking_light");
+			cc_setgraphic(tradebacking_light);
 		}
 		cc_settiling(true);
 		.cc_setcolour(0xff981f);
@@ -49,7 +49,7 @@ if ($height6 > if_getheight(interface_129:13)) {
 	$int4 = calc($int4 + 1);
 	cc_setsize(0, $height6, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-	cc_setgraphic("tradebacking_dark");
+	cc_setgraphic(tradebacking_dark);
 	cc_settiling(true);
 }
 ~scrollbar_vertical(interface_129:14, interface_129:13, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

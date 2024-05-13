@@ -88,7 +88,7 @@ while ($int12 <= 15) {
 }
 $int11 = calc($int11 + $int8);
 ~clan_interests_setsize(~max(180, calc(23 + $int7 + $int6 + 3 + 16)), $int11, if_getheight(interface_691:1));
-~stonebutton_init("<col=ff0000>Cancel</col>", interface_691:9, "p12_full", 0);
+~stonebutton_init("<col=ff0000>Cancel</col>", interface_691:9, p12_full, 0);
 if_setonop("script4208(0, interface_691:1, interface_691:2, interface_691:3, $component0)", interface_691:9);
-~stonebutton_init("<col=0dc10d>Save</col>", interface_691:10, "p12_full", 0);
+~stonebutton_init("<col=0dc10d>Save</col>", interface_691:10, p12_full, 0);
 if_setonop("script4208(1, interface_691:1, interface_691:2, interface_691:3, $component0)", interface_691:10);

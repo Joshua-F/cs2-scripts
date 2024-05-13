@@ -82,7 +82,7 @@ if (%varbit4440 = 1) {
 				cc_create(interface_237:2, ^iftype_graphic, $int6);
 				$int6 = calc($int6 + 1);
 				cc_setsize($width4, $int12, ^setsize_abs, ^setsize_abs);
-				cc_setgraphic("tradebacking_light");
+				cc_setgraphic(tradebacking_light);
 				cc_settiling(true);
 				if (calc($size3 % 4) < 2) {
 					cc_settrans(0);

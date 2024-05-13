@@ -1,26 +1,26 @@
 // 228
 [proc,steelborder](component $component0, string $text0, int $flags1)(int)
-def_fontmetrics $fontmetrics2 = b12_full;
+def_graphic $graphic2 = b12_full;
 def_int $y3 = calc(35 - 21);
 def_int $int4 = 0;
 if (testbit($flags1, 4) = ^true) {
 	switch_int (%varcint988) {
 		case 1 :
-			$fontmetrics2 = verdana_13pt_bold;
+			$graphic2 = verdana_13pt_bold;
 			$y3 = calc(37 - 21);
 			$int4 = 1;
 		case 2 :
-			$fontmetrics2 = verdana_13pt_bold;
+			$graphic2 = verdana_13pt_bold;
 			$y3 = calc(37 - 21);
 			$int4 = 1;
 		case 3 :
-			$fontmetrics2 = verdana_15pt_regular;
+			$graphic2 = verdana_15pt_regular;
 			$y3 = calc(39 - 21);
 			$int4 = 2;
 	}
 }
 cc_deleteall($component0);
-~create_graphic($component0, 0, "tradebacking", 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 2, 2, ^setsize_minus, ^setsize_minus);
+~create_graphic($component0, 0, tradebacking, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 2, 2, ^setsize_minus, ^setsize_minus);
 if (testbit($flags1, 3) = ^true) {
 	cc_settrans(120);
 } else {
@@ -32,7 +32,7 @@ cc_setsize(12, 24, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics2);
+cc_settextfont($graphic2);
 cc_settext($text0);
 def_int $comsubid5 = cc_getid;
 ~create_graphic($component0, 2, "steelborder,0", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 25, 30, ^setsize_abs, ^setsize_abs);
@@ -73,6 +73,6 @@ if (testbit($flags1, 0) = ^false) {
 	$comsubid12 = 12;
 }
 if (testbit($flags1, 1) = ^true) {
-	~create_graphic($component0, $comsubid12, "map_resize", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 8, 8, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $comsubid12, map_resize, 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 8, 8, ^setsize_abs, ^setsize_abs);
 }
 return($comsubid5);

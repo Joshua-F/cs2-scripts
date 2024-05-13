@@ -1,5 +1,5 @@
 // 5293
-[proc,script5293](component $component0, int $int1, int $int2, int $int3, int $int4, int $colour5, string $text0, fontmetrics $fontmetrics6, int $colour7, int $int8, graphic $graphic9, int $int10, int $int11, int $int12, int $int13, int $int14)(int)
+[proc,script5293](component $component0, int $int1, int $int2, int $int3, int $int4, int $colour5, string $text0, graphic $graphic6, int $colour7, int $int8, graphic $graphic9, int $int10, int $int11, int $int12, int $int13, int $int14)(int)
 def_int $int15 = 4;
 def_int $int16 = 1;
 def_int $int17 = calc($int2 * ($int3 + $int4));
@@ -50,7 +50,7 @@ $int1 = calc($int1 + 1);
 $int1 = calc($int1 + 1);
 ~create_graphic($component0, $int1, struct_param($struct18, param_1389), calc($int17 + $int3 - $int15), 0, ^setpos_abs_left, ^setpos_abs_top, $int15, $int15, ^setsize_abs, ^setsize_abs);
 $int1 = calc($int1 + 1);
-if ($fontmetrics6 = null) {
+if ($graphic6 = null) {
 	$int19 = calc($int17 + $int3 / 2 - $int10 / 2 + $int13);
 } else {
 	$int19 = calc($int17 + 4 + $int12);
@@ -63,7 +63,7 @@ def_int $settextalignh22 = ^settextalign_left;
 if ($graphic9 = null) {
 	$settextalignh22 = ^settextalign_centre;
 }
-if ($fontmetrics6 = null) {
+if ($graphic6 = null) {
 	cc_sethide(true);
 } else {
 	$x21 = calc($int17 + 8 + $int10 + $int8);
@@ -71,7 +71,7 @@ if ($fontmetrics6 = null) {
 	cc_setsize(calc($int3 - 8 + $int10 - $int8 - 8), calc(2 * $int15 - $int16), ^setsize_abs, ^setsize_minus);
 	cc_settextalign($settextalignh22, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics6);
+	cc_settextfont($graphic6);
 	cc_setcolour($colour7);
 	cc_settext($text0);
 }

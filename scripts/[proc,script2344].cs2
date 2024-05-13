@@ -4,13 +4,13 @@ if (~on_enhanced_any = 1) {
 	~mouseover_tooltip_setup($string0, $string1, mouse_getx, mouse_gety, $component2, $component0, $int1, 1);
 	return;
 }
-def_fontmetrics $fontmetrics4 = p12_full;
+def_graphic $graphic4 = p12_full;
 def_int $int5 = 12;
 def_int $int6 = 4;
 if ($fontmetrics3 = p11_full) {
-	$fontmetrics4, $int5, $int6 = p11_full, 10, 2;
+	$graphic4, $int5, $int6 = p11_full, 10, 2;
 } else if ($fontmetrics3 = b12_full) {
-	$fontmetrics4 = b12_full;
+	$graphic4 = b12_full;
 }
 def_string $string2 = "";
 def_string $string3 = "";
@@ -100,13 +100,13 @@ cc_setsize(4, 1, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_settext($string2);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-cc_settextfont($fontmetrics4);
+cc_settextfont($graphic4);
 cc_setcolour(^black);
 cc_create($component2, ^iftype_text, 3);
 cc_setsize(4, 1, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_settext($string3);
 cc_settextalign(^settextalign_right, ^settextalign_top, 0);
-cc_settextfont($fontmetrics4);
+cc_settextfont($graphic4);
 cc_setcolour(^black);
 %varcint2 = 1;

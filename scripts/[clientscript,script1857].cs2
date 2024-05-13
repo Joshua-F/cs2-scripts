@@ -56,7 +56,7 @@ cc_create(interface_838:3, ^iftype_graphic, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
-cc_setgraphic("tradebacking");
+cc_setgraphic(tradebacking);
 ~script4215(interface_838:5, "Close");
 if_setonop("closebutton_click", interface_838:5);
 if_setonop("script1858", interface_838:4);

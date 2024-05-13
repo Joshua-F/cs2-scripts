@@ -1,7 +1,7 @@
 // 5506
 [proc,gim_icon_draw]
 def_graphic $graphic0 = "iron_icons,3";
-def_graphic $graphic1 = "graphic_3597";
+def_graphic $graphic1 = graphic_3597;
 def_int $colour2 = 0x9d9d9d;
 def_int $colour3 = 0x31a2f2;
 if (%varclansetting41 > 0 & %varclansetting40 <= 0) {
@@ -13,11 +13,11 @@ if (~script829 = 1) {
 	$colour3 = 0x2c694f;
 }
 if (%varclansetting37 = 3) {
-	$graphic1 = "graphic_3598";
+	$graphic1 = graphic_3598;
 } else if (%varclansetting37 = 4) {
-	$graphic1 = "graphic_3599";
+	$graphic1 = graphic_3599;
 } else if (%varclansetting37 = 5) {
-	$graphic1 = "graphic_3600";
+	$graphic1 = graphic_3600;
 }
 def_component $component4 = interface_730:5;
 def_int $int5 = 0;

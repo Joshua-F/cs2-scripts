@@ -1,5 +1,5 @@
 // 807
-[proc,ge_offers_initboxes](boolean $boolean0, int $int1, component $component2, component $component3, fontmetrics $fontmetrics4)(int, int, int, int, int, int, int, int, int)
+[proc,ge_offers_initboxes](boolean $boolean0, int $int1, component $component2, component $component3, graphic $graphic4)(int, int, int, int, int, int, int, int, int)
 def_int $width5 = if_getwidth($component2);
 def_int $height6 = if_getheight($component2);
 def_int $int7 = calc($width5 - 30);
@@ -25,7 +25,7 @@ def_int $int10 = $int1;
 $int1 = calc($int1 + 1);
 cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(70, 31, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("graphic_1120");
+cc_setgraphic(graphic_1120);
 cc_create($component2, ^iftype_graphic, $int1);
 def_int $comsubid11 = $int1;
 $int1 = calc($int1 + 1);
@@ -72,7 +72,7 @@ if ($boolean0 = true) {
 	cc_setposition(15, 118, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int13 + 1), 20, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(0xffb83f);
-	cc_settextfont($fontmetrics4);
+	cc_settextfont($graphic4);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	$int1 = ~script771($component2, $int1, calc(15 + $int13), 93, calc($int7 - $int13), 76);
@@ -106,7 +106,7 @@ if ($boolean0 = true) {
 }
 cc_setsize($int13, 20, ^setsize_abs, ^setsize_abs);
 cc_setcolour(0xffb83f);
-cc_settextfont($fontmetrics4);
+cc_settextfont($graphic4);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 def_int $comsubid17 = -1;
@@ -118,7 +118,7 @@ if ($boolean0 = false) {
 	cc_setposition(0, 172, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($width5, 20, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(^white);
-	cc_settextfont($fontmetrics4);
+	cc_settextfont($graphic4);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 }

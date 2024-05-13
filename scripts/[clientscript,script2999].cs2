@@ -1,7 +1,7 @@
 // 2999
 [clientscript,script2999](component $component0, int $int1, int $int2, int $int3)
 if (cc_find($component0, 0) = ^true) {
-	cc_setgraphic("tradebacking");
+	cc_setgraphic(tradebacking);
 }
 if (cc_find($component0, 1) = ^true) {
 	cc_setgraphic("v2_stone_button,0");
@@ -29,8 +29,8 @@ if (cc_find($component0, 8) = ^true) {
 }
 if (cc_find($component0, 9) = ^true) {
 	if ($int1 = $int2) {
-		cc_setgraphic("graphic_2223");
+		cc_setgraphic(graphic_2223);
 	} else {
-		cc_setgraphic("graphic_2224");
+		cc_setgraphic(graphic_2224);
 	}
 }

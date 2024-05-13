@@ -11,13 +11,13 @@ def_string $string1 = "";
 def_string $string2 = "";
 def_int $int2 = 0;
 if (%var3345 = 1) {
-	$string0, $string1, $string2, $graphic1 = "Unwavering Warrior", "Unholy Warrior", "Improved Melee Accuracy<br><col=cfcfcf>on 0 Prayer", "graphic_4236";
+	$string0, $string1, $string2, $graphic1 = "Unwavering Warrior", "Unholy Warrior", "Improved Melee Accuracy<br><col=cfcfcf>on 0 Prayer", graphic_4236;
 }
 if (%var3345 = 2) {
-	$string0, $string1, $string2, $graphic1 = "Focused Ranger", "Bottomless Quiver", "Chance to save Ammo and Ranged Weapon Charges.", "graphic_4239";
+	$string0, $string1, $string2, $graphic1 = "Focused Ranger", "Bottomless Quiver", "Chance to save Ammo and Ranged Weapon Charges.", graphic_4239;
 }
 if (%var3345 = 3) {
-	$string0, $string1, $string2, $graphic1 = "Masterful Wizard", "Arcane Conduit", "Chance to save Runes and Magic Weapon Charges.", "graphic_4241";
+	$string0, $string1, $string2, $graphic1 = "Masterful Wizard", "Arcane Conduit", "Chance to save Runes and Magic Weapon Charges.", graphic_4241;
 }
 if_sethide(false, interface_737:20);
 cc_deleteall(interface_737:22);

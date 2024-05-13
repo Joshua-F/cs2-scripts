@@ -77,11 +77,11 @@ if (string_length($string0) > 0) {
 			$string11 = "N/A";
 		}
 		$int6 = .cc_gety;
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:12, "", $string3, $int7, $int6, $int18, $int13, $int5, "<col=ffffff>", "b12_full", ^settextalign_centre);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:12, "", $string3, $int7, $int6, $int18, $int13, $int5, "<col=ffffff>", b12_full, ^settextalign_centre);
 		$int6 = calc($int6 + $int13);
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:13, "", $string4, $int7, $int6, $int18, $int13, $int5, "<col=ffffff>", "b12_full", ^settextalign_centre);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:13, "", $string4, $int7, $int6, $int18, $int13, $int5, "<col=ffffff>", b12_full, ^settextalign_centre);
 		$int6 = calc($int6 + $int13);
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:18, "By", $string11, $int7, $int6, $int18, $int13, $int5, "<col=ffb83f>", "p11_full", ^settextalign_centre);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:18, "By", $string11, $int7, $int6, $int18, $int13, $int5, "<col=ffb83f>", p11_full, ^settextalign_centre);
 		$int6, $int7 = .cc_gety, calc($int18 + 10);
 		cc_create(interface_703:10, ^iftype_rectangle, calc($int5 * 4));
 		cc_setsize(calc($int15 - 2 - 1 - $int18 - 4), calc($int12 + $int20), ^setsize_abs, ^setsize_abs);
@@ -103,17 +103,17 @@ if (string_length($string0) > 0) {
 		cc_setposition(2, calc($int6 + 1), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setfill(false);
 		cc_setcolour(0x474745);
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:16, "", $string8, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", "b12_full", ^settextalign_left);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:16, "", $string8, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", b12_full, ^settextalign_left);
 		$int6 = calc($int6 + $int13);
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:15, "Type", $string7, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", "p11_full", ^settextalign_left);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:15, "Type", $string7, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", p11_full, ^settextalign_left);
 		$int7 = calc($int7 + $int17 + $int16);
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:17, "Sub Type", $string9, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", "p11_full", ^settextalign_left);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:17, "Sub Type", $string9, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", p11_full, ^settextalign_left);
 		$int6, $int7 = calc($int6 + $int13), calc($int18 + 10);
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:14, "Days", $string5, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", "p11_full", ^settextalign_left);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:14, "Days", $string5, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", p11_full, ^settextalign_left);
 		$int7 = calc($int7 + $int17 + $int16);
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:11, "World", $string6, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", "p11_full", ^settextalign_left);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:11, "World", $string6, $int7, $int6, 0, $int13, $int5, "<col=ffb83f>", p11_full, ^settextalign_left);
 		$int7 = calc($int7 + $int17 + $int16);
-		$int14, $int17 = ~clan_events_create_text_component(interface_703:19, "Rank", $string10, $int7, $int6, calc(if_getwidth(interface_703:19) - $int7 - 13 - 4), $int13, $int5, "<col=ffb83f>", "p11_full", ^settextalign_left);
+		$int14, $int17 = ~clan_events_create_text_component(interface_703:19, "Rank", $string10, $int7, $int6, calc(if_getwidth(interface_703:19) - $int7 - 13 - 4), $int13, $int5, "<col=ffb83f>", p11_full, ^settextalign_left);
 		$int7, $int6 = calc($int7 + $int17 + 4), calc($int6 + 13 / 4);
 		cc_create(interface_703:20, ^iftype_graphic, $int5);
 		cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);

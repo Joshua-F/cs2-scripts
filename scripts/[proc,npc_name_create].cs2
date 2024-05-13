@@ -8,20 +8,20 @@ if (%varbit542 = 1) {
 	return;
 }
 def_fontmetrics $fontmetrics4 = null;
-def_fontmetrics $fontmetrics5 = null;
+def_graphic $graphic5 = null;
 def_int $colour6 = ^black;
 if (%varbit14168 = 1 & %varbit14169 > 0 & (highlight_group_get(~script6690($npc3), 6) = true | highlight_npc_get($npc_uid1, $int2, 6) = true)) {
 	if (%varbit14169 = 1) {
-		$fontmetrics4, $fontmetrics5 = p12_full, p12_full;
+		$fontmetrics4, $graphic5 = p12_full, p12_full;
 	} else {
-		$fontmetrics4, $fontmetrics5 = b12_full, b12_full;
+		$fontmetrics4, $graphic5 = b12_full, b12_full;
 	}
 	$colour6 = ~settings_get_colour_or_default(263);
 } else if (%varbit14178 > 0) {
 	if (%varbit14178 = 1) {
-		$fontmetrics4, $fontmetrics5 = p12_full, p12_full;
+		$fontmetrics4, $graphic5 = p12_full, p12_full;
 	} else {
-		$fontmetrics4, $fontmetrics5 = b12_full, b12_full;
+		$fontmetrics4, $graphic5 = b12_full, b12_full;
 	}
 	$colour6 = ~settings_get_colour_or_default(266);
 } else {
@@ -32,7 +32,7 @@ def_int $width7 = parawidth($string0, 1000, $fontmetrics4);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize($width7, 20, ^setsize_abs, ^setsize_abs);
 cc_setcolour($colour6);
-cc_settextfont($fontmetrics5);
+cc_settextfont($graphic5);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
 cc_settextshadow(true);
 cc_settext($string0);

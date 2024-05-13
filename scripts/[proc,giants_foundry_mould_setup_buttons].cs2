@@ -4,12 +4,12 @@ def_component $component0 = interface_718:5;
 def_component $component1 = interface_718:6;
 def_component $component2 = interface_718:32;
 def_component $component3 = interface_718:34;
-def_fontmetrics $fontmetrics4 = b12_full;
+def_graphic $graphic4 = b12_full;
 if (%varcint988 >= 1) {
-	$fontmetrics4 = verdana_13pt_bold;
+	$graphic4 = verdana_13pt_bold;
 }
-if_settextfont($fontmetrics4, $component2);
-if_settextfont($fontmetrics4, $component3);
+if_settextfont($graphic4, $component2);
+if_settextfont($graphic4, $component3);
 cc_deleteall($component0);
 cc_deleteall($component1);
 if (%varbit13910 ! 0 | %varbit13911 ! 0 | %varbit13912 ! 0) {

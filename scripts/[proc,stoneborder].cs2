@@ -3,7 +3,7 @@
 cc_deleteall($component0);
 def_int $width2 = if_getwidth($component0);
 def_int $height3 = if_getheight($component0);
-~create_graphic($component0, 0, "tradebacking", 1, 1, ^setpos_abs_left, ^setpos_abs_top, calc($width2 - 2), calc($height3 - 2), ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 0, tradebacking, 1, 1, ^setpos_abs_left, ^setpos_abs_top, calc($width2 - 2), calc($height3 - 2), ^setsize_abs, ^setsize_abs);
 cc_create($component0, ^iftype_text, 1);
 cc_setposition(6, 6, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width2 - 12), 23, ^setsize_abs, ^setsize_abs);

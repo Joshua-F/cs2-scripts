@@ -218,9 +218,9 @@ while ($int41 < $length1) {
 		cc_setposition($int44, calc(%varcint49 + ($int39 - 11) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(interpolate(0, $intarray0($int41), 0, $int40, $int45), 11, ^setsize_abs, ^setsize_abs);
 		if ($int41 = $intarray0(36)) {
-			cc_setgraphic("tradebacking_dark");
+			cc_setgraphic(tradebacking_dark);
 		} else {
-			cc_setgraphic("tradebacking");
+			cc_setgraphic(tradebacking);
 		}
 		cc_settiling(true);
 	} else {

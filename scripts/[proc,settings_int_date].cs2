@@ -7,7 +7,7 @@ def_int $int3 = 0;
 $int3 = calc($int3 + 1);
 .cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-.cc_setgraphic("tradebacking");
+.cc_setgraphic(tradebacking);
 .cc_settiling(true);
 cc_create($component1, ^iftype_rectangle, $int3);
 $int3 = calc($int3 + 1);

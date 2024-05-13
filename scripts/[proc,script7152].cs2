@@ -13,19 +13,19 @@ if ($dbrow1 = null) {
 if_sethide(false, $component2);
 def_string $text0 = db_getfield($dbrow1, dbtable_41:2, 0);
 def_int $int7 = ~omnishop_var_getter($dbrow1);
-def_fontmetrics $fontmetrics8 = b12_full;
-def_fontmetrics $fontmetrics9 = q8_full;
+def_graphic $graphic8 = b12_full;
+def_graphic $graphic9 = q8_full;
 switch_int (%varcint988) {
 	case 1 :
 	case 2 :
 	case 3 :
 }
 if_settext($text0, $component3);
-if_settextfont($fontmetrics8, $component3);
+if_settextfont($graphic8, $component3);
 if_settext($text0, $component5);
-if_settextfont($fontmetrics8, $component5);
+if_settextfont($graphic8, $component5);
 if_settext(tostring($int7), $component4);
-if_settextfont($fontmetrics9, $component4);
+if_settextfont($graphic9, $component4);
 if_settext(tostring($int7), $component6);
-if_settextfont($fontmetrics9, $component6);
+if_settextfont($graphic9, $component6);
 return(1);

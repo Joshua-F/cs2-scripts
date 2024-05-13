@@ -9,7 +9,7 @@ def_int $comsubid2 = ~options_button_on($component1, 0);
 cc_create($component1, ^iftype_graphic, $comsubid2);
 cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic("graphic_2410");
+cc_setgraphic(graphic_2410);
 cc_settrans(180);
 if_setonmouserepeat(null, $component1);
 if_setonmouseleave(null, $component1);

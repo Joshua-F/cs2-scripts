@@ -14,7 +14,7 @@ def_int $int11 = 0;
 cc_create(interface_626:20, ^iftype_graphic, $int11);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic("tradebacking_dark");
+cc_setgraphic(tradebacking_dark);
 cc_settiling(true);
 $int11 = calc($int11 + 1);
 $int11 = ~thinbox(interface_626:20, $int11);

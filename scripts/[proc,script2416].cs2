@@ -1,20 +1,20 @@
 // 2416
 [proc,script2416](boolean $boolean0, boolean $boolean1, component $component2)
-def_graphic $graphic3 = "graphic_5260";
+def_graphic $graphic3 = graphic_5260;
 def_int $comsubid4 = 0;
 if ($boolean0 = true) {
 	$comsubid4 = ~v2_stone_button_in_filled($component2);
 	if ($boolean1 = true) {
-		$graphic3 = "graphic_5263";
+		$graphic3 = graphic_5263;
 	} else {
-		$graphic3 = "graphic_5262";
+		$graphic3 = graphic_5262;
 	}
 } else {
 	$comsubid4 = ~v2_stone_button_filled($component2);
 	if ($boolean1 = true) {
-		$graphic3 = "graphic_5261";
+		$graphic3 = graphic_5261;
 	} else {
-		$graphic3 = "graphic_5260";
+		$graphic3 = graphic_5260;
 	}
 }
 cc_create($component2, ^iftype_graphic, $comsubid4);

@@ -8,9 +8,9 @@ cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settiling(true);
 if ($int3 >= $int1) {
-	cc_setgraphic("tradebacking_light");
+	cc_setgraphic(tradebacking_light);
 } else {
-	cc_setgraphic("tradebacking_dark");
+	cc_setgraphic(tradebacking_dark);
 }
 $int4 = ~thinbox($component0, $int4);
 cc_create($component0, ^iftype_text, $int4);

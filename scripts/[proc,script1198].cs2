@@ -62,7 +62,7 @@ if (%varbit5557 = 0) {
 	if_setcolour(^red, $component22);
 } else {
 	if_sethide(false, $component24);
-	if_setgraphic("tick", $component24);
+	if_setgraphic(tick, $component24);
 	if_setop(6, "Deactivate", $component21);
 	if_settext("Activated", $component22);
 	if_setcolour(^white, $component22);

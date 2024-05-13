@@ -7,10 +7,10 @@ if_setonop("settings_side_switch_tab(0)", interface_116:63);
 if_setonop("settings_side_switch_tab(1)", interface_116:68);
 if_setonop("settings_side_switch_tab(2)", interface_116:69);
 if (~on_mobile = true) {
-	if_setgraphic("graphic_2933", interface_116:77);
+	if_setgraphic(graphic_2933, interface_116:77);
 	return;
 }
-if_setgraphic("graphic_2932", interface_116:77);
+if_setgraphic(graphic_2932, interface_116:77);
 if_setonmouserepeat("settings_side_tab_highlight(interface_116:64, interface_116:65, interface_116:66, 0)", interface_116:63);
 if_setonmouserepeat("settings_side_tab_highlight(interface_116:70, interface_116:71, interface_116:72, 1)", interface_116:68);
 if_setonmouserepeat("settings_side_tab_highlight(interface_116:74, interface_116:75, interface_116:76, 2)", interface_116:69);

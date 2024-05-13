@@ -136,10 +136,10 @@ if ($component7 ! null) {
 $component7 = enum(component, component, $enum1, toplevel_osrs_stretch:38);
 if ($component7 ! null) {
 	if (%varbit4609 = 1) {
-		if_setgraphic("tradebacking_dark", $component7);
+		if_setgraphic(tradebacking_dark, $component7);
 		if_settrans(0, $component7);
 	} else {
-		if_setgraphic("tradebacking_light", $component7);
+		if_setgraphic(tradebacking_light, $component7);
 		if_settrans(150, $component7);
 	}
 }
@@ -155,10 +155,10 @@ if ($component7 ! null) {
 		}
 	}
 	if (%varbit4605 = 1 & %varbit542 = 0) {
-		if_setgraphic("overlay_multiway", $component7);
+		if_setgraphic(overlay_multiway, $component7);
 		if_sethide(false, $component7);
 	} else if (%varbit5961 = 1 & %varbit542 = 0) {
-		if_setgraphic("graphic_2518", $component7);
+		if_setgraphic(graphic_2518, $component7);
 		if_sethide(false, $component7);
 	} else {
 		if_sethide(true, $component7);

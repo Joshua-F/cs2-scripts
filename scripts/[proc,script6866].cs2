@@ -6,21 +6,21 @@ def_component $component2 = interface_786:25;
 def_int $int3 = 0;
 def_int $y4 = 15;
 def_string $text0 = "<col=e6dbca>Once confirmed, you will enter a <col=ff981f>three day countdown<col=e6dbca> before your account is transfered to the main game. During this time you <col=ff981f>cannot use the Grand Exchange<col=e6dbca>.<br><br>You <col=ff981f>can change your mind at any time<col=e6dbca> during the countdown by opening this interface again and cancelling your opt out.";
-def_fontmetrics $fontmetrics5 = p11_full;
+def_graphic $graphic5 = p11_full;
 def_int $int6 = 20;
 def_int $int7 = 13;
 def_int $int8 = 19;
 def_int $int9 = 55;
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics5 = verdana_13pt_regular;
+		$graphic5 = verdana_13pt_regular;
 		$int7 = 16;
 		$int6 = 30;
 		$int8 = 25;
 		$int9 = 55;
 		$y4 = 35;
 	case 2, 3 :
-		$fontmetrics5 = verdana_15pt_regular;
+		$graphic5 = verdana_15pt_regular;
 		$y4 = 50;
 		$int7 = 17;
 		$int6 = 40;
@@ -37,7 +37,7 @@ if_setposition(0, $y11, ^setpos_proportion_centre, ^setpos_abs_top, interface_78
 cc_create($component0, ^iftype_text, $int3);
 $int3 = calc($int3 + 1);
 cc_setposition(0, $y4, ^setpos_abs_left, ^setpos_abs_top);
-cc_settextfont($fontmetrics5);
+cc_settextfont($graphic5);
 cc_setcolour(0xe6dbca);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_top, $int7);

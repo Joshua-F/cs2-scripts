@@ -22,7 +22,7 @@ cc_create($component0, ^iftype_graphic, $int10);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic("tradebacking_dark");
+cc_setgraphic(tradebacking_dark);
 cc_settiling(true);
 cc_create($component0, ^iftype_rectangle, $int10);
 $int10 = calc($int10 + 1);

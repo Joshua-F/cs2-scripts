@@ -20,7 +20,7 @@ cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(125, 96, ^setsize_abs, ^setsize_abs);
 cc_setcolour(0x7f460f);
 cc_setfill(false);
-~create_graphic($component1, 2, "tradebacking_light", 4, 4, ^setpos_abs_left, ^setpos_abs_top, 121, 17, ^setsize_abs, ^setsize_abs);
+~create_graphic($component1, 2, tradebacking_light, 4, 4, ^setpos_abs_left, ^setpos_abs_top, 121, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(100);
 cc_create($component1, ^iftype_text, 3);
@@ -32,18 +32,10 @@ cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("Rumble Party");
-~create_graphic($component1, 4, "tradebacking_dark", 4, 22, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+~create_graphic($component1, 4, tradebacking_dark, 4, 22, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(150);
-~create_graphic($component1, 5, "tradebacking", 4, 37, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
-cc_sethide($boolean2);
-cc_settrans(150);
-if ($boolean0 = true) {
-	cc_setop(1, "Kick player");
-	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
-	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
-}
-~create_graphic($component1, 6, "tradebacking", 4, 52, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+~create_graphic($component1, 5, tradebacking, 4, 37, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(150);
 if ($boolean0 = true) {
@@ -51,7 +43,7 @@ if ($boolean0 = true) {
 	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
 }
-~create_graphic($component1, 7, "tradebacking", 4, 67, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+~create_graphic($component1, 6, tradebacking, 4, 52, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(150);
 if ($boolean0 = true) {
@@ -59,7 +51,15 @@ if ($boolean0 = true) {
 	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
 }
-~create_graphic($component1, 8, "tradebacking", 4, 82, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+~create_graphic($component1, 7, tradebacking, 4, 67, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($boolean0 = true) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
+}
+~create_graphic($component1, 8, tradebacking, 4, 82, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
 cc_sethide($boolean2);
 cc_settrans(150);
 if ($boolean0 = true) {

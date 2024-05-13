@@ -8,7 +8,7 @@ def_int $int7 = 0;
 def_int $int8 = 4;
 cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int7);
 $int7 = calc($int7 + 1);
-cc_setgraphic("tradebacking");
+cc_setgraphic(tradebacking);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settrans(110);

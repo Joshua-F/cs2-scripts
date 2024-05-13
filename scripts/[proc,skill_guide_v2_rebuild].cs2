@@ -105,7 +105,7 @@ def_component $component24 = interface_860:8;
 def_component $component25 = interface_860:10;
 def_int $int26 = 20;
 def_int $int27 = 0;
-def_fontmetrics $fontmetrics28 = p12_full;
+def_graphic $graphic28 = p12_full;
 def_fontmetrics $fontmetrics29 = p12_full;
 def_int $int30 = 1;
 def_int $int31 = 6;
@@ -134,7 +134,7 @@ def_int $int35 = 0;
 def_int $int36 = 0;
 $string0, $int16 = ~skill_guide_subsection(%varcint1172, $int36);
 while (string_length($string0) > 0) {
-	$int35 = ~script5291($component22, $int35, $int36, $int26, $int27, 0x726451, $string0, $fontmetrics28, 0xff981f, $int30, null, 0, 0, 0, 0, ~is_equal($int36, %varcint1173));
+	$int35 = ~script5291($component22, $int35, $int36, $int26, $int27, 0x726451, $string0, $graphic28, 0xff981f, $int30, null, 0, 0, 0, 0, ~is_equal($int36, %varcint1173));
 	cc_setonop("script1906($int36)");
 	$int36 = calc($int36 + 1);
 	$string0, $int16 = ~skill_guide_subsection(%varcint1172, $int36);
@@ -173,7 +173,7 @@ while ($namedobj41 ! null) {
 	cc_setsize(16, $int32, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics28);
+	cc_settextfont($graphic28);
 	cc_setcolour(0xff981f);
 	cc_settext(tostring($int37));
 	if ($int37 = -1) {
@@ -207,7 +207,7 @@ while ($namedobj41 ! null) {
 	cc_setsize($width40, calc($int34 - $int31 * 2), ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, $int33);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics28);
+	cc_settextfont($graphic28);
 	cc_setcolour(0xff981f);
 	cc_settext($string0);
 	$int35 = calc($int35 + 1);

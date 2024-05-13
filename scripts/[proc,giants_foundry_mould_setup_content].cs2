@@ -9,30 +9,30 @@ def_component $component3 = interface_718:12;
 def_component $component4 = interface_718:8;
 cc_deleteall($component3);
 def_int $int5 = 0;
-def_fontmetrics $fontmetrics6 = p12_full;
+def_graphic $graphic6 = p12_full;
 def_int $int7 = 38;
 def_int $int8 = 3;
 def_int $int9 = 5;
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics6 = verdana_13pt_regular;
+		$graphic6 = verdana_13pt_regular;
 		$int7 = 40;
 		$int9 = 6;
 	case 2 :
-		$fontmetrics6 = verdana_13pt_regular;
+		$graphic6 = verdana_13pt_regular;
 		$int7 = 40;
 		$int9 = 6;
 	case 3 :
-		$fontmetrics6 = verdana_13pt_regular;
+		$graphic6 = verdana_13pt_regular;
 		$int7 = 45;
 		$int8 = 4;
 		$int9 = 7;
 }
-$int5 = ~script5291($component3, $int5, 0, $int7, $int8, 0x726451, "Forte", $fontmetrics6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(0, %varbit13909));
+$int5 = ~script5291($component3, $int5, 0, $int7, $int8, 0x726451, "Forte", $graphic6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(0, %varbit13909));
 cc_setonclick("giants_foundry_mould_setup_tab_select(0)");
-$int5 = ~script5291($component3, $int5, 1, $int7, $int8, 0x726451, "Blades", $fontmetrics6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(1, %varbit13909));
+$int5 = ~script5291($component3, $int5, 1, $int7, $int8, 0x726451, "Blades", $graphic6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(1, %varbit13909));
 cc_setonclick("giants_foundry_mould_setup_tab_select(1)");
-$int5 = ~script5291($component3, $int5, 2, $int7, $int8, 0x726451, "Tips", $fontmetrics6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(2, %varbit13909));
+$int5 = ~script5291($component3, $int5, 2, $int7, $int8, 0x726451, "Tips", $graphic6, 0xff981f, $int9, null, 0, 0, 0, 0, ~is_equal(2, %varbit13909));
 cc_setonclick("giants_foundry_mould_setup_tab_select(2)");
 ~giants_foundry_mould_setup_list;
 ~giants_foundry_mould_setup_commission;

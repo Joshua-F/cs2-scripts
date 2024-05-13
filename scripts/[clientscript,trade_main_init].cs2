@@ -51,8 +51,8 @@ while ($size7 < $size6) {
 	$comsubid8 = calc($size6 + $size7);
 	cc_create($component1, ^iftype_graphic, $comsubid8);
 	.cc_create($component3, ^iftype_graphic, $comsubid8);
-	cc_setgraphic("exclamation_mark");
-	.cc_setgraphic("exclamation_mark");
+	cc_setgraphic(exclamation_mark);
+	.cc_setgraphic(exclamation_mark);
 	cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
 	cc_sethide(false);

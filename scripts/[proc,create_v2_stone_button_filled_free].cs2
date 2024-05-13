@@ -6,7 +6,7 @@ def_int $y12 = calc($int3 - 9 + $int5);
 def_int $width13 = calc($int2 - 18);
 def_int $height14 = calc($int3 - 18);
 if ($int9 = 0) {
-	~create_graphic($component0, $int1, "tradebacking", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $int2, $int3, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int1, tradebacking, $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $int2, $int3, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 1), "v2_stone_button,0", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 2), "v2_stone_button,1", $x11, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 3), "v2_stone_button,2", $int4, $y12, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
@@ -16,7 +16,7 @@ if ($int9 = 0) {
 	~create_graphic($component0, calc($int1 + 7), "v2_stone_button,6", $x11, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $height14, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 8), "v2_stone_button,7", calc($int4 + 9), $y12, ^setpos_abs_left, ^setpos_abs_top, $width13, 9, ^setsize_abs, ^setsize_abs);
 } else {
-	~create_graphic($component0, $int1, "tradebacking_dark", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $int2, $int3, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int1, tradebacking_dark, $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $int2, $int3, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 1), "v2_stone_button_in,0", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 2), "v2_stone_button_in,1", $x11, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 3), "v2_stone_button_in,2", $int4, $y12, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);

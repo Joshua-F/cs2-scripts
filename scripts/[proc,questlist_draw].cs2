@@ -6,7 +6,7 @@ if (%varbit13889 = 1) {
 }
 def_int $int7 = db_listall_with_count(quest);
 def_int $int8 = 1;
-def_fontmetrics $fontmetrics9 = p11_full;
+def_graphic $graphic9 = p11_full;
 def_fontmetrics $fontmetrics10 = p11_full;
 def_int $int11 = 11;
 def_int $int12 = 5;
@@ -14,7 +14,7 @@ if (~on_mobile = true) {
 	$int12 = 11;
 }
 if (%varbit13780 = 1) {
-	$fontmetrics9 = p12_full;
+	$graphic9 = p12_full;
 	$fontmetrics10 = p12_full;
 	$int11 = 13;
 	$int12 = calc($int12 + 2);
@@ -31,7 +31,7 @@ while ($int8 <= $int7) {
 	$dbrow13 = ~script6154($int8);
 	cc_create($component4, ^iftype_text, $int8);
 	cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
-	cc_settextfont($fontmetrics9);
+	cc_settextfont($graphic9);
 	if (%varbit13781 = 1) {
 		cc_settextshadow(false);
 	} else {

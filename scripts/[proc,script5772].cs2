@@ -53,7 +53,7 @@ def_int $width19 = if_getwidth($component1);
 if (~on_mobile = true & calc($int7 * enum_getoutputcount($enum4)) > if_getheight($component1)) {
 	if_setsize(calc(if_getwidth($component0) * 2), calc($int9 + $height14 - 1), ^setsize_abs, ^setsize_abs, $component0);
 }
-~create_graphic($component1, $int18, "tradebacking", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 0, 0, ^setsize_minus, ^setsize_minus);
+~create_graphic($component1, $int18, tradebacking, 0, 0, ^setpos_abs_left, ^setpos_abs_top, 0, 0, ^setsize_minus, ^setsize_minus);
 $int18 = calc($int18 + 1);
 $int17 = ~thinbox_specific($component0, $int17, 0, $int16, if_getwidth($component0), $int9, ^setpos_abs_left, ^setpos_abs_top);
 def_int $int20 = 0;
@@ -88,20 +88,20 @@ $int17 = calc($int17 + 1);
 def_int $int23 = calc((if_getheight($component3) - 16) / 2);
 if ($int15 = 1) {
 	if (~on_mobile = true) {
-		~create_graphic($component0, $int17, "tradebacking", calc($width19 - if_getheight($component3) + (if_getheight($component3) - 16) / 2), $int23, ^setpos_abs_left, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
+		~create_graphic($component0, $int17, tradebacking, calc($width19 - if_getheight($component3) + (if_getheight($component3) - 16) / 2), $int23, ^setpos_abs_left, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
 		$int17 = calc($int17 + 1);
 		~create_graphic($component0, $int17, "scrollbar_v2,0", calc($width19 - if_getheight($component3) + (if_getheight($component3) - 16) / 2), $int23, ^setpos_abs_left, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
 	} else {
-		~create_graphic($component0, $int17, "tradebacking", $int23, $int23, ^setpos_abs_right, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
+		~create_graphic($component0, $int17, tradebacking, $int23, $int23, ^setpos_abs_right, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
 		$int17 = calc($int17 + 1);
 		~create_graphic($component0, $int17, "scrollbar_v2,0", $int23, $int23, ^setpos_abs_right, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
 	}
 } else if (~on_mobile = true) {
-	~create_graphic($component0, $int17, "tradebacking", calc($width19 - if_getheight($component3) + (if_getheight($component3) - 16) / 2), $int23, ^setpos_abs_left, ^setpos_abs_bottom, 16, 16, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int17, tradebacking, calc($width19 - if_getheight($component3) + (if_getheight($component3) - 16) / 2), $int23, ^setpos_abs_left, ^setpos_abs_bottom, 16, 16, ^setsize_abs, ^setsize_abs);
 	$int17 = calc($int17 + 1);
 	~create_graphic($component0, $int17, "scrollbar_v2,0", calc($width19 - if_getheight($component3) + (if_getheight($component3) - 16) / 2), $int23, ^setpos_abs_left, ^setpos_abs_bottom, 16, 16, ^setsize_abs, ^setsize_abs);
 } else {
-	~create_graphic($component0, $int17, "tradebacking", $int23, $int23, ^setpos_abs_right, ^setpos_abs_bottom, 16, 16, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int17, tradebacking, $int23, $int23, ^setpos_abs_right, ^setpos_abs_bottom, 16, 16, ^setsize_abs, ^setsize_abs);
 	$int17 = calc($int17 + 1);
 	~create_graphic($component0, $int17, "scrollbar_v2,0", $int23, $int23, ^setpos_abs_right, ^setpos_abs_bottom, 16, 16, ^setsize_abs, ^setsize_abs);
 }

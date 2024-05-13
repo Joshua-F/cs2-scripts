@@ -7,7 +7,7 @@ if_setonclansettingstransmit("gim_options_settitle($component1, $comsubid9)", $c
 def_string $string0 = "<col=ff0000>Back</col>";
 def_int $int10 = ~max(70, calc(parawidth($string0, 512, p12_full) + 20));
 if_setsize($int10, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
-~stonebutton_init($string0, $component2, "p12_full", 0);
+~stonebutton_init($string0, $component2, p12_full, 0);
 if_setonop("opsound(event_op, 2)", $component2);
 $int10 = calc($int10 + 20);
 def_enum $enum11 = null;
@@ -45,7 +45,7 @@ cc_deleteall($component7);
 def_int $int19 = 0;
 while ($int19 <= $int14) {
 	cc_create($component7, ^iftype_graphic, $int19);
-	cc_setgraphic("tradebacking");
+	cc_setgraphic(tradebacking);
 	cc_settiling(true);
 	$int19 = calc($int19 + 1);
 }

@@ -1,14 +1,14 @@
 // 3728
 [proc,script3728](component $component0, int $int1, string $string0)(int)
-def_graphic $graphic2 = "graphic_2572";
-def_graphic $graphic3 = "graphic_2573";
+def_graphic $graphic2 = graphic_2572;
+def_graphic $graphic3 = graphic_2573;
 def_int $colour4 = 0xff981f;
 if ($int1 = 1) {
 	$colour4 = 0xffa82f;
 } else if ($int1 = 0) {
-	$graphic2, $graphic3 = "graphic_2574", "graphic_2575";
+	$graphic2, $graphic3 = graphic_2574, graphic_2575;
 } else if ($int1 = 2) {
-	$graphic2, $graphic3 = "graphic_2576", "graphic_2577";
+	$graphic2, $graphic3 = graphic_2576, graphic_2577;
 }
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);

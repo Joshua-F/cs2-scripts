@@ -35,7 +35,7 @@ cc_create($component3, ^iftype_graphic, $comsubid6);
 $comsubid6 = calc($comsubid6 + 1);
 cc_setsize($int8, 120, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic("tradebacking_light");
+cc_setgraphic(tradebacking_light);
 cc_settiling(true);
 while ($comsubid6 <= $comsubid0) {
 	cc_create($component3, ^iftype_rectangle, $comsubid6);

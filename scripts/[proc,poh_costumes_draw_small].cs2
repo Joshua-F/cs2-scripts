@@ -74,7 +74,7 @@ if (cc_find($component11, $int13) = ^true) {
 		$int1 = calc($int1 + 1);
 	}
 	if ($int22 = 1) {
-		cc_setgraphic("tradebacking_light");
+		cc_setgraphic(tradebacking_light);
 		cc_settrans(120);
 		if ($boolean10 = true) {
 			cc_setop(1, "Set");
@@ -99,7 +99,7 @@ if (cc_find($component11, $int13) = ^true) {
 			}
 		}
 	} else {
-		cc_setgraphic("tradebacking_dark");
+		cc_setgraphic(tradebacking_dark);
 		cc_settrans(0);
 		if ($boolean10 = true & $int21 = 0) {
 			cc_setop(1, "Set");

@@ -3,12 +3,12 @@
 cc_deleteall($component0);
 def_int $int4 = 0;
 cc_create($component0, ^iftype_graphic, $int4);
-cc_setgraphic("graphic_4955");
+cc_setgraphic(graphic_4955);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(28, 65, ^setsize_abs, ^setsize_abs);
 $int4 = calc($int4 + 1);
 cc_create($component0, ^iftype_graphic, $int4);
-cc_setgraphic("graphic_4956");
+cc_setgraphic(graphic_4956);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setsize(28, 65, ^setsize_abs, ^setsize_abs);
 $int4 = calc($int4 + 1);

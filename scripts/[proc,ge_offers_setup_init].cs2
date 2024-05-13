@@ -19,7 +19,7 @@ def_int $comsubid13 = $int12;
 $int12 = calc($int12 + 1);
 cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(70, 31, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("graphic_1121");
+cc_setgraphic(graphic_1121);
 cc_setop(1, "Choose item");
 cc_setonop("opsound(event_op, 2)");
 cc_create($component0, ^iftype_graphic, $int12);

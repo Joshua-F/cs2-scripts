@@ -4,10 +4,10 @@ cc_deleteall($component0);
 if (%varbit14017 = 0 | %varbit14016 <= 0) {
 	return;
 }
-def_fontmetrics $fontmetrics1 = quill_oblique_large;
+def_graphic $graphic1 = quill_oblique_large;
 if (%varbit14017 = 1) {
 	if_setsize(55, 23, ^setsize_abs, ^setsize_abs, $component0);
-	$fontmetrics1 = b12_full;
+	$graphic1 = b12_full;
 } else {
 	if_setsize(75, 36, ^setsize_abs, ^setsize_abs, $component0);
 }
@@ -16,7 +16,7 @@ cc_create($component0, ^iftype_graphic, $int2);
 $int2 = calc($int2 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic("tradebacking_light");
+cc_setgraphic(tradebacking_light);
 cc_settiling(true);
 cc_settrans(120);
 $int2 = ~thinstonebox($component0, $int2);
@@ -27,6 +27,6 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(^red);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_settextfont($fontmetrics1);
+cc_settextfont($graphic1);
 ~pvpa_hud_writetime;
 cc_setontimer("pvpa_hud_writetime(event_com, event_comsubid)");

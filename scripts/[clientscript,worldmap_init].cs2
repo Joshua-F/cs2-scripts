@@ -252,7 +252,7 @@ $int25 = calc($int25 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settiling(true);
-cc_setgraphic("tradebacking_dark");
+cc_setgraphic(tradebacking_dark);
 .cc_create($component11, ^iftype_text, $int25);
 def_int $int39 = $int25;
 $int25 = calc($int25 + 1);
@@ -280,7 +280,7 @@ def_wma $wma40 = enum(int, wma, enum_1697, 0);
 def_coord $coord41 = null;
 def_coord $coord42 = null;
 def_fontmetrics $fontmetrics43 = null;
-def_fontmetrics $fontmetrics44 = null;
+def_graphic $graphic44 = null;
 $string0, $int29, $int28, $int36 = "", 0, 0, 0;
 def_wma $wma45 = enum(int, wma, enum_1697, $int28);
 while ($wma45 ! null) {
@@ -291,11 +291,11 @@ while ($wma45 ! null) {
 	cc_setsize(0, $int27, ^setsize_minus, ^setsize_abs);
 	cc_setcolour(0xff981f);
 	if ($wma45 = main) {
-		$fontmetrics43, $fontmetrics44 = p12_full, p12_full;
+		$fontmetrics43, $graphic44 = p12_full, p12_full;
 	} else {
-		$fontmetrics43, $fontmetrics44 = p11_full, p11_full;
+		$fontmetrics43, $graphic44 = p11_full, p11_full;
 	}
-	cc_settextfont($fontmetrics44);
+	cc_settextfont($graphic44);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$string0 = worldmap_getmapname($wma45);
@@ -383,7 +383,7 @@ cc_create($component12, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic("tradebacking");
+cc_setgraphic(tradebacking);
 cc_settiling(true);
 cc_setonclick("worldmap_maplist_open($component12, $component13, $component16, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2))");
 if_setonclick("worldmap_maplist_close($component12, $component13)", $component14);

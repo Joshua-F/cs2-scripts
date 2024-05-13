@@ -50,7 +50,7 @@ while ($int13 < $int14) {
 	$int3 = calc($int3 + 1);
 	cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
 	.cc_setsize($int6, $int6, ^setsize_abs, ^setsize_abs);
-	if ($graphic10 = "blank") {
+	if ($graphic10 = blank) {
 		cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
 	} else {
 		cc_setposition($int7, $int11, ^setpos_abs_centre, ^setpos_abs_top);

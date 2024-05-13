@@ -14,9 +14,9 @@ $int6 = calc($int6 + 1);
 cc_setposition(2, calc($int7 + 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(4, calc(33 - 4), ^setsize_minus, ^setsize_abs);
 if ($boolean3 = false) {
-	cc_setgraphic("tradebacking_dark");
+	cc_setgraphic(tradebacking_dark);
 } else {
-	cc_setgraphic("graphic_4948");
+	cc_setgraphic(graphic_4948);
 }
 cc_settiling(true);
 if ($int4 = 1) {

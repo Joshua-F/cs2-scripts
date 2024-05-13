@@ -14,7 +14,7 @@ if ($enum3 = enum_1745) {
 		if_setposition(62, 37, ^setpos_abs_right, ^setpos_abs_top, $component0);
 	}
 	if_setsize(40, 40, ^setsize_abs, ^setsize_abs, $component0);
-	if_setgraphic("ring_40", $component1);
+	if_setgraphic(ring_40, $component1);
 	if_setsize(40, 40, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(32, 32, ^setsize_abs, ^setsize_abs, $component2);
 } else if (~on_enhanced_desktop = 1 & $enum3 ! enum_1129) {
@@ -24,19 +24,19 @@ if ($enum3 = enum_1745) {
 		if_setposition(62, 37, ^setpos_abs_right, ^setpos_abs_top, $component0);
 	}
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component0);
-	if_setgraphic("ring_30", $component1);
+	if_setgraphic(ring_30, $component1);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component2);
 } else if ($enum3 = enum_1129) {
 	if_setposition(10, 115, ^setpos_abs_right, ^setpos_abs_top, $component0);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component0);
-	if_setgraphic("ring_30", $component1);
+	if_setgraphic(ring_30, $component1);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component2);
 } else {
 	if_setposition(0, 115, ^setpos_abs_right, ^setpos_abs_top, $component0);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component0);
-	if_setgraphic("ring_30", $component1);
+	if_setgraphic(ring_30, $component1);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component2);
 }

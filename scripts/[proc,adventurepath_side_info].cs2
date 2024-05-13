@@ -144,7 +144,7 @@ if ($struct13 ! null & ~adventurepath_return_task_status($index14) = 0 & struct_
 	cc_create($component6, ^iftype_graphic, $int8);
 	cc_setposition(2, 2, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setgraphic("tradebacking_dark");
+	cc_setgraphic(tradebacking_dark);
 	cc_settrans(90);
 }
 $int8 = 0;

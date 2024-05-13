@@ -5,7 +5,7 @@ def_int $int7 = 73;
 def_int $int8 = 11;
 def_int $int9 = 19;
 def_int $int10 = 34;
-def_fontmetrics $fontmetrics11 = p11_full;
+def_graphic $graphic11 = p11_full;
 def_int $int12 = 55;
 switch_int (%varcint988) {
 	case 1 :
@@ -14,7 +14,7 @@ switch_int (%varcint988) {
 		$height6 = 3;
 		$int7 = 100;
 		$int8 = 28;
-		$fontmetrics11 = verdana_11pt_regular;
+		$graphic11 = verdana_11pt_regular;
 		$int12 = 58;
 	case 2 :
 		$int9 = 20;
@@ -22,7 +22,7 @@ switch_int (%varcint988) {
 		$height6 = 3;
 		$int7 = 131;
 		$int8 = 23;
-		$fontmetrics11 = verdana_11pt_regular;
+		$graphic11 = verdana_11pt_regular;
 		$int12 = 81;
 	case 3 :
 		$int9 = 20;
@@ -30,7 +30,7 @@ switch_int (%varcint988) {
 		$height6 = 4;
 		$int7 = 166;
 		$int8 = 22;
-		$fontmetrics11 = verdana_11pt_regular;
+		$graphic11 = verdana_11pt_regular;
 		$int12 = 97;
 }
 def_int $int13 = calc($int2 + 1);
@@ -65,7 +65,7 @@ cc_setposition(calc($int12 + $int2 * ($int7 + $int8)), calc($int1 + $int9), ^set
 cc_setsize($int7, 14, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics11);
+cc_settextfont($graphic11);
 cc_setcolour(0xeeeeee);
 if ($int4 = 1) {
 	cc_setcolour(0x9f9f9f);
@@ -77,7 +77,7 @@ cc_setposition(calc($int12 + $int2 * ($int7 + $int8)), calc($int1 + $int9), ^set
 cc_setsize($int7, 14, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics11);
+cc_settextfont($graphic11);
 cc_setcolour(0xeeeeee);
 if ($int4 = 1) {
 	cc_setcolour(0x9f9f9f);

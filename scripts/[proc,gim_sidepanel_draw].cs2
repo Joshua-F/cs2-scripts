@@ -1,20 +1,20 @@
 // 5257
 [proc,gim_sidepanel_draw](component $component0, int $comsubid1, int $comsubid2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, component $component8, component $component9, component $component10)
 if (%varbit13063 = 1) {
-	~stonebutton_init("<col=0dc10d>Inviting</col>", $component9, "p12_full", 0);
+	~stonebutton_init("<col=0dc10d>Inviting</col>", $component9, p12_full, 0);
 	if_setonop("opsound(event_op, 2)", $component9);
 } else if (%varbit13063 = 2) {
-	~stonebutton_init("<col=ff0000>Not inviting</col>", $component9, "p12_full", 0);
+	~stonebutton_init("<col=ff0000>Not inviting</col>", $component9, p12_full, 0);
 	if_setonop("opsound(event_op, 2)", $component9);
 } else {
 	if_setonmouserepeat(null, $component9);
 	if_setonmouseleave(null, $component9);
 	if_setontimer(null, $component9);
-	~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component9);
+	~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component9);
 	if_setop(1, "Invite", $component9);
 	if_setonop("opsound(0, 0)", $component9);
 }
-~stonebutton_init("<col=ff981f>Settings</col>", $component10, "p12_full", 0);
+~stonebutton_init("<col=ff981f>Settings</col>", $component10, p12_full, 0);
 if_setonop("opsound(event_op, 2)", $component10);
 cc_deleteall($component8);
 def_int $int11 = 0;
@@ -68,7 +68,7 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 				$int24 = parawidth($string0, 190, p11_full);
 				cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
 				cc_settext($string0);
-				.cc_setgraphic("heart_icon");
+				.cc_setgraphic(heart_icon);
 				$int24 = calc($int24 + 3 + 13);
 				$int20 = calc($width19 / 2 + ($width19 / 2 - $int24) / 2);
 				.cc_setposition($int20, -1, ^setpos_abs_left, ^setpos_abs_centre);

@@ -1,6 +1,6 @@
 // 2423
 [proc,script2423](string $string0, component $component0)
-~stonebutton_draw(true, "<col=ffffff><$string0></col>", "p12_full", 1, $component0);
+~stonebutton_draw(true, "<col=ffffff><$string0></col>", p12_full, 1, $component0);
 if_setop(1, removetags($string0), $component0);
 if_setonmouserepeat(null, $component0);
 if_setonmouseleave(null, $component0);

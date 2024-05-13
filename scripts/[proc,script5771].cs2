@@ -4,7 +4,7 @@ def_string $text0 = enum(int, string, $enum1, $int2);
 def_int $count4 = enum_getoutputcount($enum1);
 cc_deleteall($component0);
 def_int $int5 = 0;
-~create_graphic($component0, $int5, "tradebacking", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 0, 0, ^setsize_minus, ^setsize_minus);
+~create_graphic($component0, $int5, tradebacking, 0, 0, ^setpos_abs_left, ^setpos_abs_top, 0, 0, ^setsize_minus, ^setsize_minus);
 $int5 = calc($int5 + 1);
 $int5 = ~thinbox($component0, $int5);
 ~create_graphic($component0, $int5, "scrollbar_v2,1", calc((if_getheight($component0) - 16) / 2), calc((if_getheight($component0) - 16) / 2), ^setpos_abs_right, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);

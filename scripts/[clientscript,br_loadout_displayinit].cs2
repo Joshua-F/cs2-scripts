@@ -6,7 +6,7 @@ cc_create($component8, ^iftype_graphic, $count12);
 $count12 = calc($count12 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic("tradebacking");
+cc_setgraphic(tradebacking);
 cc_settiling(true);
 cc_setonclick("script6522($int1, $component8, $component9, $component10)");
 cc_create($component8, ^iftype_rectangle, $count12);
@@ -104,7 +104,7 @@ while ($int14 < $int15) {
 	if (cc_find($component5, $countarray0($int14)) = ^true) {
 		cc_sethide(false);
 		cc_settiling(true);
-		cc_setgraphic("tradebacking_light");
+		cc_setgraphic(tradebacking_light);
 		cc_settrans(255);
 		cc_setsize(0, 34, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, $height18, ^setpos_abs_centre, ^setpos_abs_top);

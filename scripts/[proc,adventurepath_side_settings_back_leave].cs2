@@ -1,7 +1,7 @@
 // 3037
 [proc,adventurepath_side_settings_back_leave](component $component0, int $int1, int $colour2)
 if (cc_find($component0, calc($int1 + 0)) = ^true) {
-	cc_setgraphic("tradebacking");
+	cc_setgraphic(tradebacking);
 }
 if (cc_find($component0, calc($int1 + 1)) = ^true) {
 	cc_setgraphic("v2_stone_button,0");

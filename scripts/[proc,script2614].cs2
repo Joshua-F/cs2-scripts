@@ -85,26 +85,26 @@ if (~magic_spellbook_hasrunes($obj0, inv_getobj(worn, 3), inv_getobj(worn, 5)) =
 }
 if (~script5556($obj0) = 0) {
 	if ($int2 >= 40) {
-		return(0, "graphic_3362");
+		return(0, graphic_3362);
 	}
-	return(0, "graphic_3013");
+	return(0, graphic_3013);
 }
 if (~script4510($obj0) = 0) {
 	if ($int2 >= 40) {
-		return(0, "graphic_3363");
+		return(0, graphic_3363);
 	}
-	return(0, "graphic_3014");
+	return(0, graphic_3014);
 }
 if (~script4128($obj0) = 0) {
 	if ($int2 >= 40) {
-		return(0, "graphic_3361");
+		return(0, graphic_3361);
 	}
-	return(0, "graphic_3012");
+	return(0, graphic_3012);
 }
 if (~script4129($obj0) = 0) {
 	if ($int2 >= 40) {
-		return(0, "graphic_3360");
+		return(0, graphic_3360);
 	}
-	return(0, "graphic_3011");
+	return(0, graphic_3011);
 }
 return(1, null);

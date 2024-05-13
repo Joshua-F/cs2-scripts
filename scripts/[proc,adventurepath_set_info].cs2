@@ -231,7 +231,7 @@ if (~script2973($int0, $int43) ! $int0) {
 	$int23 = ~v2_stone_button_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
-	cc_setgraphic("graphic_2223");
+	cc_setgraphic(graphic_2223);
 	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
@@ -244,7 +244,7 @@ if (~script2973($int0, $int43) ! $int0) {
 	cc_create($component22, ^iftype_graphic, $int23);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setgraphic("tick");
+	cc_setgraphic(tick);
 	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
@@ -254,7 +254,7 @@ if (~script2973($int0, $int43) ! $int0) {
 	$int23 = ~v2_stone_button_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
-	cc_setgraphic("graphic_2224");
+	cc_setgraphic(graphic_2224);
 	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);

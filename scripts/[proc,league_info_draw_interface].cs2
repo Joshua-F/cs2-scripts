@@ -64,11 +64,11 @@ def_enum $enum22 = struct_param($struct16, param_888);
 def_enum $enum23 = struct_param($struct16, param_889);
 def_int $int24 = struct_param($struct16, param_872);
 def_int $int25 = calc(1 + ($int24 - %varbit9535));
-def_fontmetrics $fontmetrics26 = p12_full;
+def_graphic $graphic26 = p12_full;
 def_fontmetrics $fontmetrics27 = p12_full;
 def_int $int28 = ~on_ios;
 if (~on_mobile = true) {
-	$fontmetrics26, $fontmetrics27 = p12_full, p12_full;
+	$graphic26, $fontmetrics27 = p12_full, p12_full;
 }
 if ($int25 < 1) {
 	$int25 = 1;
@@ -155,7 +155,7 @@ while ($int29 < enum_getoutputcount($enum20)) {
 	cc_create($component4, ^iftype_text, $int30);
 	cc_setposition(5, $height32, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string0);
-	cc_settextfont($fontmetrics26);
+	cc_settextfont($graphic26);
 	cc_settextshadow(true);
 	cc_setcolour($colour18);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
@@ -231,7 +231,7 @@ while ($int29 < enum_getoutputcount($enum22)) {
 	cc_create($component5, ^iftype_text, $int30);
 	cc_setposition($x31, $height33, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string0);
-	cc_settextfont($fontmetrics26);
+	cc_settextfont($graphic26);
 	cc_settextshadow(true);
 	cc_setcolour($colour18);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);

@@ -33,12 +33,12 @@ if ($int10 = 1) {
 	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
 	if (~script7225(stringvector_4, $obj5, true) = 1) {
-		$graphic15 = "graphic_4905";
-		$graphic16 = "graphic_4906";
+		$graphic15 = graphic_4905;
+		$graphic16 = graphic_4906;
 		$string0 = "Unhighlight <col=ff981f><removetags(oc_name($obj5))>";
 	} else {
-		$graphic15 = "graphic_4901";
-		$graphic16 = "graphic_4902";
+		$graphic15 = graphic_4901;
+		$graphic16 = graphic_4902;
 		$string0 = "Highlight <col=ff981f><removetags(oc_name($obj5))>";
 	}
 	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
@@ -50,12 +50,12 @@ if ($int10 = 1) {
 	.cc_setop(1, $string0);
 	.cc_setonop("ground_items_highlight($obj5)");
 	if (~script7225(stringvector_3, $obj5, true) = 1) {
-		$graphic15 = "graphic_4907";
-		$graphic16 = "graphic_4908";
+		$graphic15 = graphic_4907;
+		$graphic16 = graphic_4908;
 		$string0 = "Unignore <col=ff981f><removetags(oc_name($obj5))>";
 	} else {
-		$graphic15 = "graphic_4903";
-		$graphic16 = "graphic_4904";
+		$graphic15 = graphic_4903;
+		$graphic16 = graphic_4904;
 		$string0 = "Ignore <col=ff981f><removetags(oc_name($obj5))>";
 	}
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);

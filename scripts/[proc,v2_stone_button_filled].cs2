@@ -7,7 +7,7 @@ def_int $x3 = calc($width1 - 9);
 def_int $y4 = calc($height2 - 9);
 def_int $width5 = calc($width1 - 18);
 def_int $height6 = calc($height2 - 18);
-~create_graphic($component0, 0, "tradebacking", 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 2, 2, ^setsize_minus, ^setsize_minus);
+~create_graphic($component0, 0, tradebacking, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 2, 2, ^setsize_minus, ^setsize_minus);
 ~create_graphic($component0, 1, "v2_stone_button,0", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 ~create_graphic($component0, 2, "v2_stone_button,1", $x3, 0, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 ~create_graphic($component0, 3, "v2_stone_button,2", 0, $y4, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);

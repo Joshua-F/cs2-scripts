@@ -16,7 +16,7 @@ if (~on_mobile = true) {
 }
 def_int $width3 = calc(parawidth($string0, $int2, p11_full) + 8);
 def_int $height4 = calc(paraheight($string0, $int2, p11_full) * 10 + 3 + 8);
-~create_graphic($component1, 0, "tradebacking", 0, 2, ^setpos_abs_centre, ^setpos_abs_top, $width3, $height4, ^setsize_abs, ^setsize_abs);
+~create_graphic($component1, 0, tradebacking, 0, 2, ^setpos_abs_centre, ^setpos_abs_top, $width3, $height4, ^setsize_abs, ^setsize_abs);
 cc_settrans(50);
 cc_create($component1, ^iftype_rectangle, 1);
 cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);

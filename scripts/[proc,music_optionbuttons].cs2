@@ -2,15 +2,15 @@
 [proc,music_optionbuttons](component $component0, component $component1, component $component2)
 switch_int (%var18) {
 	case 0 :
-		if_setgraphic("graphic_4926", $component0);
-		if_setgraphic("graphic_4925", $component1);
-		if_setgraphic("graphic_4925", $component2);
+		if_setgraphic(graphic_4926, $component0);
+		if_setgraphic(graphic_4925, $component1);
+		if_setgraphic(graphic_4925, $component2);
 	case 1 :
-		if_setgraphic("graphic_4925", $component0);
-		if_setgraphic("graphic_4926", $component1);
-		if_setgraphic("graphic_4925", $component2);
+		if_setgraphic(graphic_4925, $component0);
+		if_setgraphic(graphic_4926, $component1);
+		if_setgraphic(graphic_4925, $component2);
 	case 2 :
-		if_setgraphic("graphic_4925", $component0);
-		if_setgraphic("graphic_4925", $component1);
-		if_setgraphic("graphic_4926", $component2);
+		if_setgraphic(graphic_4925, $component0);
+		if_setgraphic(graphic_4925, $component1);
+		if_setgraphic(graphic_4926, $component2);
 }

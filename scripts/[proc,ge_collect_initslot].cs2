@@ -8,7 +8,7 @@ cc_create($component0, ^iftype_graphic, $int5);
 $int5 = calc($int5 + 1);
 cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("tradebacking_light");
+cc_setgraphic(tradebacking_light);
 cc_settiling(true);
 def_int $int6 = calc($height4 - 44);
 cc_create($component0, ^iftype_graphic, $int5);

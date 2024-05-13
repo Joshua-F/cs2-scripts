@@ -143,14 +143,14 @@ if (~pvp_world = 1) {
 		if (%varbit14017 = 1) {
 			if_setgraphic("pvpw_icons,0", interface_90:46);
 		} else {
-			if_setgraphic("overlay_duel", interface_90:46);
+			if_setgraphic(overlay_duel, interface_90:46);
 		}
 		if_sethide(false, interface_90:1);
 		if_setgradientmode(2, interface_90:1);
 		~script6247(interface_90:1);
 		if_setontimer("script6246(event_com)", interface_90:1);
 	} else {
-		if_setgraphic("overlay_duel", interface_90:46);
+		if_setgraphic(overlay_duel, interface_90:46);
 		if_setontimer(null, interface_90:1);
 		if_sethide(true, interface_90:1);
 	}

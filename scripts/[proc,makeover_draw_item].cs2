@@ -1,9 +1,9 @@
 // 7073
 [proc,makeover_draw_item](component $component0, dbrow $dbrow1, int $int2, int $int3, int $int4)(int)
 if (%varcint1148 = $int2) {
-	~create_graphic($component0, $int2, "tradebacking_light", $int3, $int4, ^setpos_abs_centre, ^setpos_abs_top, 85, 80, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, tradebacking_light, $int3, $int4, ^setpos_abs_centre, ^setpos_abs_top, 85, 80, ^setsize_abs, ^setsize_abs);
 } else {
-	~create_graphic($component0, $int2, "tradebacking_dark", $int3, $int4, ^setpos_abs_centre, ^setpos_abs_top, 85, 80, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, tradebacking_dark, $int3, $int4, ^setpos_abs_centre, ^setpos_abs_top, 85, 80, ^setsize_abs, ^setsize_abs);
 }
 if (~on_mobile = false) {
 	cc_setonmouserepeat("makeover_hover_item(event_com, event_comsubid, true)");

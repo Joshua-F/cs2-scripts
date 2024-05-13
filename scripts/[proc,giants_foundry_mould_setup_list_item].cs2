@@ -14,33 +14,33 @@ def_int $width6 = 0;
 def_int $int7 = 40;
 def_int $lvl8 = struct_param($struct1, param_1622);
 def_int $int9 = 1;
-def_fontmetrics $fontmetrics10 = b12_full;
+def_graphic $graphic10 = b12_full;
 def_int $int11 = 2;
-def_fontmetrics $fontmetrics12 = p12_full;
+def_graphic $graphic12 = p12_full;
 def_int $int13 = 5;
 def_int $int14 = 5;
 def_int $int15 = 10;
 def_int $int16 = 20;
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics10 = verdana_13pt_bold;
-		$fontmetrics12 = verdana_13pt_regular;
+		$graphic10 = verdana_13pt_bold;
+		$graphic12 = verdana_13pt_regular;
 		$int7 = 42;
 		$int13 = 6;
 		$int14 = 6;
 		$int15 = 12;
 		$int16 = 22;
 	case 2 :
-		$fontmetrics10 = verdana_13pt_bold;
-		$fontmetrics12 = verdana_13pt_regular;
+		$graphic10 = verdana_13pt_bold;
+		$graphic12 = verdana_13pt_regular;
 		$int7 = 44;
 		$int13 = 27;
 		$int14 = 7;
 		$int15 = 14;
 		$int16 = 23;
 	case 3 :
-		$fontmetrics10 = verdana_13pt_bold;
-		$fontmetrics12 = verdana_13pt_regular;
+		$graphic10 = verdana_13pt_bold;
+		$graphic12 = verdana_13pt_regular;
 		$int7 = 48;
 		$int13 = 39;
 		$int14 = 9;
@@ -97,7 +97,7 @@ cc_setposition(calc(40 + $int13 + $int15), calc($int3 + $int11), ^setpos_abs_lef
 cc_setsize(55, 16, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics10);
+cc_settextfont($graphic10);
 cc_setcolour($colour17);
 cc_settext(struct_param($struct1, param_1621));
 $int4 = calc($int4 + 1);
@@ -106,7 +106,7 @@ cc_setposition(calc(~max($int15, $int13) + $int16), calc($int3 + $int11), ^setpo
 cc_setsize(55, 16, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics12);
+cc_settextfont($graphic12);
 cc_setcolour($colour17);
 cc_settext("Smithing Level:");
 if ($int9 = 0) {
@@ -118,7 +118,7 @@ cc_setposition(~max($int15, $int13), calc($int3 + $int11), ^setpos_abs_right, ^s
 cc_setsize(55, 16, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics12);
+cc_settextfont($graphic12);
 cc_setcolour($colour17);
 cc_settext(tostring($lvl8));
 if ($int9 = 0) {

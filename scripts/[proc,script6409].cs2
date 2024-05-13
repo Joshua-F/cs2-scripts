@@ -1,7 +1,7 @@
 // 6409
 [proc,script6409](string $string0, int $colour0, int $int1, int $int2, boolean $boolean3, int $int4, int $int5, int $int6, int $int7, component $component8)(int, int, int, int)
 def_fontmetrics $fontmetrics9 = null;
-def_fontmetrics $fontmetrics10 = null;
+def_graphic $graphic10 = null;
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 0;
@@ -12,7 +12,7 @@ def_string $string2 = "null";
 if ($int1 < 0) {
 	$int12 = ~cr_ui_list_entry_description_width($component8);
 	$fontmetrics9 = p11_full;
-	$fontmetrics10 = p11_full;
+	$graphic10 = p11_full;
 	$int11 = 12;
 	$int15 = calc($int11 + 1);
 } else {
@@ -21,7 +21,7 @@ if ($int1 < 0) {
 	}
 	$int12 = ~cr_ui_list_entry_details_width(1, $component8);
 	$fontmetrics9 = p11_full;
-	$fontmetrics10 = p11_full;
+	$graphic10 = p11_full;
 	$int11 = 12;
 	$int15 = calc($int11 + 1);
 }
@@ -49,7 +49,7 @@ if ($int1 < 0) {
 }
 cc_setposition(cc_getx, calc(cc_gety + 1), ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
-cc_settextfont($fontmetrics10);
+cc_settextfont($graphic10);
 cc_settextshadow(true);
 cc_setcolour($colour0);
 cc_settextalign(^settextalign_left, ^settextalign_centre, $int15);

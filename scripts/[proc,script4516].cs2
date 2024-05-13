@@ -5,7 +5,7 @@ cc_create($component0, ^iftype_graphic, $int2);
 $int2 = calc($int2 + 1);
 cc_setsize(4, 35, ^setsize_abs, ^setsize_abs);
 cc_setposition($x4, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("tradebacking");
+cc_setgraphic(tradebacking);
 cc_settrans(100);
 cc_settiling(true);
 cc_setontimer("script4520($component0, $int2, $boolean3)");

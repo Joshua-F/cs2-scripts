@@ -13,15 +13,15 @@ def_namedobj $namedobj7 = null;
 def_string $string0 = "";
 def_int $int8 = calc(if_getwidth(interface_675:4) / 2);
 def_int $width9 = calc($int8 - 20);
-def_graphic $graphic10 = "p12_full";
+def_graphic $graphic10 = p12_full;
 def_int $int11 = 0;
 def_int $count12 = enum_getoutputcount($enum0);
 def_int $count13 = 0;
 while ($count13 < $count12) {
 	$namedobj7 = enum(int, namedobj, $enum0, $count13);
 	$string0 = enum(obj, string, enum_3302, $namedobj7);
-	if ($graphic10 = "p12_full" & parawidth($string0, 512, p12_full) > $width9) {
-		$graphic10 = "p11_full";
+	if ($graphic10 = p12_full & parawidth($string0, 512, p12_full) > $width9) {
+		$graphic10 = p11_full;
 	}
 	cc_create(interface_675:4, ^iftype_graphic, $int6);
 	$int5, $int6 = calc($int5 + 1), calc($int6 + 1);
@@ -30,7 +30,7 @@ while ($count13 < $count12) {
 	cc_create(interface_675:4, ^iftype_graphic, $int6);
 	$int5, $int6 = calc($int5 + 1), calc($int6 + 1);
 	cc_setsize(12, 10, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic("graphic_2496");
+	cc_setgraphic(graphic_2496);
 	cc_settrans(50);
 	cc_create(interface_675:4, ^iftype_graphic, $int6);
 	$int5, $int6 = calc($int5 + 1), calc($int6 + 1);

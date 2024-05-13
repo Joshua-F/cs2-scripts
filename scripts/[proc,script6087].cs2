@@ -36,31 +36,31 @@ def_int $int10 = 3;
 def_int $int11 = 7;
 def_int $int12 = 90;
 def_int $int13 = 100;
-def_fontmetrics $fontmetrics14 = p12_full;
-def_fontmetrics $fontmetrics15 = b12_full;
+def_graphic $graphic14 = p12_full;
+def_graphic $graphic15 = b12_full;
 def_int $int16 = 0;
 switch_int (%varcint988) {
 	case 1 :
 		$int10 = 4;
 		$int12 = 94;
-		$fontmetrics14 = verdana_11pt_regular;
-		$fontmetrics15 = verdana_13pt_bold;
+		$graphic14 = verdana_11pt_regular;
+		$graphic15 = verdana_13pt_bold;
 		$int16 = 1;
 	case 2 :
 		$int10 = 6;
 		$int13 = 120;
 		$int12 = 100;
 		$int11 = 10;
-		$fontmetrics14 = verdana_13pt_regular;
-		$fontmetrics15 = verdana_13pt_bold;
+		$graphic14 = verdana_13pt_regular;
+		$graphic15 = verdana_13pt_bold;
 		$int16 = 1;
 	case 3 :
 		$int10 = 7;
 		$int13 = 120;
 		$int12 = 110;
 		$int11 = 12;
-		$fontmetrics14 = verdana_13pt_regular;
-		$fontmetrics15 = verdana_13pt_bold;
+		$graphic14 = verdana_13pt_regular;
+		$graphic15 = verdana_13pt_bold;
 		$int16 = 2;
 }
 def_int $int17 = calc(if_getwidth($component5) / $int13);
@@ -107,7 +107,7 @@ cc_setposition(calc($int19 + 7), calc($int20 + 27 + $int11 + $int16), ^setpos_ab
 cc_setsize(calc($int18 - 14), 40, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics14);
+cc_settextfont($graphic14);
 cc_setcolour(0xff981f);
 if ($obj6 ! null) {
 	cc_settext(oc_name($obj6));
@@ -120,7 +120,7 @@ cc_setposition(calc($int19 + 5), calc($int20 + 60 + $int11 + $int16 * 2), ^setpo
 cc_setsize(calc($int18 - 10), 20, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics15);
+cc_settextfont($graphic15);
 cc_setcolour(0xff981f);
 cc_settext(tostring(struct_param($struct3, param_1638)));
 $int0 = calc($int0 + 1);

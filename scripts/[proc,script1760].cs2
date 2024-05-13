@@ -9,14 +9,14 @@ def_int $int8 = 3;
 def_int $int9 = 7;
 def_int $int10 = 74;
 def_int $int11 = 100;
-def_fontmetrics $fontmetrics12 = p12_full;
+def_graphic $graphic12 = p12_full;
 def_int $int13 = 496;
 def_int $int14 = 0;
 switch_int (%varcint988) {
 	case 1 :
 		$int8 = 4;
 		$int10 = 78;
-		$fontmetrics12 = verdana_11pt_regular;
+		$graphic12 = verdana_11pt_regular;
 		$int13 = 1446;
 		$int14 = 1;
 	case 2 :
@@ -24,7 +24,7 @@ switch_int (%varcint988) {
 		$int11 = 120;
 		$int10 = 82;
 		$int9 = 10;
-		$fontmetrics12 = verdana_13pt_regular;
+		$graphic12 = verdana_13pt_regular;
 		$int13 = 1446;
 		$int14 = 1;
 	case 3 :
@@ -32,7 +32,7 @@ switch_int (%varcint988) {
 		$int11 = 120;
 		$int10 = 86;
 		$int9 = 12;
-		$fontmetrics12 = verdana_13pt_regular;
+		$graphic12 = verdana_13pt_regular;
 		$int13 = 1446;
 		$int14 = 2;
 }
@@ -104,7 +104,7 @@ cc_setposition(calc($int17 + 7), calc($int18 + 27 + $int9 + $int14), ^setpos_abs
 cc_setsize(calc($int16 - 14), 40, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics12);
+cc_settextfont($graphic12);
 cc_setcolour(0xff981f);
 cc_settext(oc_name($namedobj3));
 $int0 = calc($int0 + 1);

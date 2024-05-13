@@ -6,7 +6,7 @@ def_int $y13 = calc($int3 - 9 + $int5);
 def_int $width14 = calc($width2 - 18);
 def_int $height15 = calc($int3 - 18);
 if ($int9 = 0) {
-	~create_graphic($component0, $int1, "tradebacking", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $width2, $int3, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int1, tradebacking, $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $width2, $int3, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 1), "v2_stone_button,0", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 2), "v2_stone_button,1", $x12, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 3), "v2_stone_button,2", $int4, $y13, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
@@ -16,7 +16,7 @@ if ($int9 = 0) {
 	~create_graphic($component0, calc($int1 + 7), "v2_stone_button,6", $x12, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $height15, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 8), "v2_stone_button,7", calc($int4 + 9), $y13, ^setpos_abs_left, ^setpos_abs_top, $width14, 9, ^setsize_abs, ^setsize_abs);
 } else {
-	~create_graphic($component0, $int1, "tradebacking_dark", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $width2, $int3, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int1, tradebacking_dark, $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $width2, $int3, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 1), "v2_stone_button_in,0", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 2), "v2_stone_button_in,1", $x12, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc($int1 + 3), "v2_stone_button_in,2", $int4, $y13, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);

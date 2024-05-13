@@ -4,7 +4,7 @@ def_int $int0 = 20;
 def_int $width1 = calc(if_getwidth(interface_784:34) - $int0);
 def_int $height2 = calc(if_getheight(interface_784:34) - $int0);
 def_int $int3 = 0;
-def_fontmetrics $fontmetrics4 = verdana_11pt_regular;
+def_graphic $graphic4 = verdana_11pt_regular;
 def_int $int5 = 12;
 def_int $x6 = calc($int0 / 2);
 def_int $y7 = 10;
@@ -21,7 +21,7 @@ cc_setcolour(^black);
 cc_settrans(235);
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics4 = verdana_13pt_regular;
+		$graphic4 = verdana_13pt_regular;
 		$int5 = 14;
 		$y7 = 25;
 		$y8 = 75;
@@ -29,7 +29,7 @@ switch_int (%varcint988) {
 		$y10 = 185;
 		$y11 = 250;
 	case 2, 3 :
-		$fontmetrics4 = verdana_15pt_regular;
+		$graphic4 = verdana_15pt_regular;
 		$int5 = 16;
 		$y7 = 40;
 		$y8 = 100;
@@ -42,8 +42,8 @@ def_string $text1 = "Who is making the best progress? Who has the highest skill 
 def_string $text2 = "Earn points by playing the game: skilling, quests, bosses, diaries, clues, they all earn you points.";
 def_string $text3 = "The points are weighted to try and encourage trying out different things. The first time you kill a boss you'll get a 20x multiplier on that bosses points. So explore and fight as many different things as you can!";
 def_string $text4 = "There are no buyable rewards for earned points, it's all pure competition!";
-$int3 = ~script6890($int3, $text0, $x6, $y7, $width1, $height2, $fontmetrics4, $int5, 0xe6dbca);
-$int3 = ~script6890($int3, $text1, $x6, $y8, $width1, $height2, $fontmetrics4, $int5, 0xccb794);
-$int3 = ~script6890($int3, $text2, $x6, $y9, $width1, $height2, $fontmetrics4, $int5, 0xe6dbca);
-$int3 = ~script6890($int3, $text3, $x6, $y10, $width1, $height2, $fontmetrics4, $int5, 0xccb794);
-$int3 = ~script6890($int3, $text4, $x6, $y11, $width1, $height2, $fontmetrics4, $int5, 0xe6dbca);
+$int3 = ~script6890($int3, $text0, $x6, $y7, $width1, $height2, $graphic4, $int5, 0xe6dbca);
+$int3 = ~script6890($int3, $text1, $x6, $y8, $width1, $height2, $graphic4, $int5, 0xccb794);
+$int3 = ~script6890($int3, $text2, $x6, $y9, $width1, $height2, $graphic4, $int5, 0xe6dbca);
+$int3 = ~script6890($int3, $text3, $x6, $y10, $width1, $height2, $graphic4, $int5, 0xccb794);
+$int3 = ~script6890($int3, $text4, $x6, $y11, $width1, $height2, $graphic4, $int5, 0xe6dbca);

@@ -18,7 +18,7 @@ def_int $int8 = 10;
 def_int $height9 = 70;
 def_int $height10 = 100;
 def_int $y11 = 90;
-def_fontmetrics $fontmetrics12 = verdana_11pt_regular;
+def_graphic $graphic12 = verdana_11pt_regular;
 switch_int (%varcint988) {
 	case 1 :
 		$int5 = 340;
@@ -28,7 +28,7 @@ switch_int (%varcint988) {
 		$y11 = 120;
 		$int7 = 220;
 		$int4 = 15;
-		$fontmetrics12 = verdana_13pt_regular;
+		$graphic12 = verdana_13pt_regular;
 }
 def_int $int13 = calc($int5 - 20);
 def_int $int14 = calc($int6 - 20);
@@ -42,14 +42,14 @@ def_int $int20 = -10;
 ~script6899(interface_788:17, ^white, -10);
 if_setposition($int4, $int4, ^setpos_abs_left, ^setpos_abs_top, interface_788:6);
 if_setsize($int13, $int7, ^setsize_abs, ^setsize_abs, interface_788:23);
-if_settextfont($fontmetrics12, interface_788:22);
+if_settextfont($graphic12, interface_788:22);
 if_setposition(calc($int5 / 2 - if_getwidth(interface_788:26) / 2), 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_788:26);
 if_setposition(calc($int5 / 2 - if_getwidth(interface_788:27) / 2 - $int8), 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_788:27);
 if_setsize($int6, calc($int4 * 2), ^setsize_abs, ^setsize_minus, interface_788:7);
 ~script6899(interface_788:31, ^white, -10);
 if_setposition($int4, $int4, ^setpos_abs_right, ^setpos_abs_top, interface_788:7);
 if_setsize($int14, $int7, ^setsize_abs, ^setsize_abs, interface_788:37);
-if_settextfont($fontmetrics12, interface_788:36);
+if_settextfont($graphic12, interface_788:36);
 if (%varcint988 >= 2) {
 	if_setsize($int13, $height10, ^setsize_abs, ^setsize_abs, interface_788:19);
 	if_setsize($int14, $height10, ^setsize_abs, ^setsize_abs, interface_788:33);
@@ -63,14 +63,14 @@ if (%varcint988 >= 2) {
 }
 switch_int (%varcint988) {
 	case 1 :
-		if_setgraphic("graphic_4673", interface_788:21);
-		if_setgraphic("graphic_4676", interface_788:35);
+		if_setgraphic(graphic_4673, interface_788:21);
+		if_setgraphic(graphic_4676, interface_788:35);
 	case 2, 3 :
-		if_setgraphic("graphic_4672", interface_788:21);
-		if_setgraphic("graphic_4675", interface_788:35);
+		if_setgraphic(graphic_4672, interface_788:21);
+		if_setgraphic(graphic_4675, interface_788:35);
 	case default :
-		if_setgraphic("graphic_4674", interface_788:21);
-		if_setgraphic("graphic_4677", interface_788:35);
+		if_setgraphic(graphic_4674, interface_788:21);
+		if_setgraphic(graphic_4677, interface_788:35);
 }
 ~script6899(interface_788:24, ^black, 0);
 ~script6899(interface_788:38, ^black, 0);

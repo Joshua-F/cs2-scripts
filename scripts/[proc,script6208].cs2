@@ -99,7 +99,7 @@ cc_create($component2, ^iftype_graphic, $int17);
 $int17 = calc($int17 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic("tradebacking_light");
+cc_setgraphic(tradebacking_light);
 cc_settiling(true);
 cc_create($component2, ^iftype_rectangle, $int17);
 $int17 = calc($int17 + 1);

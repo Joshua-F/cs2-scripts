@@ -2,7 +2,7 @@
 [clientscript,script2985](component $component0, int $int1, graphic $graphic2)
 sound_synth(interface_select1, 1, 0);
 if (cc_find($component0, calc($int1 + 0)) = ^true) {
-	cc_setgraphic("tradebacking");
+	cc_setgraphic(tradebacking);
 }
 if (cc_find($component0, calc($int1 + 1)) = ^true) {
 	cc_setgraphic("v2_stone_button_in,0");

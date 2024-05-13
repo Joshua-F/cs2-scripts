@@ -71,7 +71,7 @@ while ($int10 <= 265) {
 			}
 		} else {
 			.cc_settrans(225);
-			cc_setgraphic("tradebacking");
+			cc_setgraphic(tradebacking);
 			if (%varbit12200 = 1) {
 				if ($boolean9 = false) {
 					cc_setonmouserepeat("cc_settrans(event_com, $int8, 200, null)");
@@ -120,7 +120,7 @@ while ($int10 < $int0) {
 		} else {
 			cc_sethide(false);
 			if ($intarray0($int11) ! 0) {
-				cc_setgraphic("tradebacking");
+				cc_setgraphic(tradebacking);
 				.cc_settrans(225);
 				if (%varbit12200 = 1) {
 					if ($boolean9 = false) {
@@ -167,14 +167,14 @@ while ($int10 < $int0) {
 	$int10 = calc($int10 + 1);
 }
 if (%varbit12200 = 1) {
-	~stonebutton_init("<col=0dc10d>Save</col>", $component6, "p12_full", 0);
+	~stonebutton_init("<col=0dc10d>Save</col>", $component6, p12_full, 0);
 	if_setonop("opsound(event_op, 2)", $component6);
 } else {
-	~stonebutton_draw(true, "<col=9f9f9f>---</col>", "p12_full", 0, $component6);
+	~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component6);
 	if_setonmouserepeat(null, $component6);
 	if_setonmouseleave(null, $component6);
 	if_clearops($component6);
 	if_setonop(null, $component6);
 }
-~stonebutton_init("<col=ff0000>Back</col>", $component5, "p12_full", 0);
+~stonebutton_init("<col=ff0000>Back</col>", $component5, p12_full, 0);
 if_setonop("opsound(event_op, 2)", $component5);

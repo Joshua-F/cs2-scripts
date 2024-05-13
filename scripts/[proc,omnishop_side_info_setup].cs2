@@ -13,28 +13,28 @@ if_sethide(false, $component7);
 def_component $component9 = interface_806:6;
 cc_deleteall($component9);
 def_obj $obj10 = inv_getobj(inv, $slot0);
-def_fontmetrics $fontmetrics11 = b12_full;
+def_graphic $graphic11 = b12_full;
 def_fontmetrics $fontmetrics12 = b12_full;
-def_fontmetrics $fontmetrics13 = p12_full;
+def_graphic $graphic13 = p12_full;
 def_fontmetrics $fontmetrics14 = p12_full;
 def_int $int15 = 10;
 def_int $int16 = 10;
 def_int $int17 = 16;
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics11 = verdana_13pt_bold;
+		$graphic11 = verdana_13pt_bold;
 		$fontmetrics12 = verdana_13pt_bold;
-		$fontmetrics13 = verdana_13pt_regular;
+		$graphic13 = verdana_13pt_regular;
 		$fontmetrics14 = verdana_13pt_regular;
 	case 2 :
-		$fontmetrics11 = verdana_13pt_bold;
+		$graphic11 = verdana_13pt_bold;
 		$fontmetrics12 = verdana_13pt_bold;
-		$fontmetrics13 = verdana_13pt_regular;
+		$graphic13 = verdana_13pt_regular;
 		$fontmetrics14 = verdana_13pt_regular;
 	case 3 :
-		$fontmetrics11 = verdana_13pt_bold;
+		$graphic11 = verdana_13pt_bold;
 		$fontmetrics12 = verdana_13pt_bold;
-		$fontmetrics13 = verdana_13pt_regular;
+		$graphic13 = verdana_13pt_regular;
 		$fontmetrics14 = verdana_13pt_regular;
 }
 def_int $int18 = 0;
@@ -54,7 +54,7 @@ cc_setposition($int15, 3, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($width20 - $int15 * 2), $int21, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, $int17);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics11);
+cc_settextfont($graphic11);
 cc_setcolour(0xff981f);
 cc_settext($string1);
 $int18 = calc($int18 + 1);
@@ -74,7 +74,7 @@ if (string_length($string0) > 0) {
 	cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics13);
+	cc_settextfont($graphic13);
 	cc_setcolour(0xff981f);
 	cc_settext($text2);
 	$int18 = calc($int18 + 1);
@@ -94,7 +94,7 @@ if (string_length($string0) > 0) {
 	cc_setsize(50, 16, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics11);
+	cc_settextfont($graphic11);
 	cc_setcolour(0xefefef);
 	cc_settext("Value");
 	$int18 = calc($int18 + 1);
@@ -149,7 +149,7 @@ if (string_length($string0) > 0) {
 	cc_setsize(calc($width20 - $int15 * 2), $int21, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, $int17);
 	cc_settextshadow(true);
-	cc_settextfont($fontmetrics13);
+	cc_settextfont($graphic13);
 	cc_setcolour(0xff981f);
 	cc_settext($string0);
 	$int18 = calc($int18 + 1);

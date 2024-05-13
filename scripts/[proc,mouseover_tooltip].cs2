@@ -136,7 +136,7 @@ if ($int5 = 1) {
 	cc_create($component1, ^iftype_graphic, $int0);
 	cc_setsize(calc($int23 - 4), calc($int8 - 4), ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int24 + 2), calc($int25 + 2), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("tradebacking");
+	cc_setgraphic(tradebacking);
 	cc_settiling(true);
 	cc_settrans($trans22);
 	$int0 = calc($int0 + 1);
@@ -169,7 +169,7 @@ if (string_length($string4) > 0) {
 	cc_create($component1, ^iftype_graphic, $int0);
 	cc_setsize(calc($int23 - 4), calc($int19 - 4), ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int24 + 2), calc($int25 + 2), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("tradebacking");
+	cc_setgraphic(tradebacking);
 	cc_settiling(true);
 	cc_settrans($trans22);
 	$int0 = calc($int0 + 1);
@@ -224,7 +224,7 @@ if (%varbit13133 = 0 & $int3 > 1 & $int5 = 1) {
 	cc_create($component1, ^iftype_graphic, $int0);
 	cc_setposition(calc($int11 + 2), calc($int25 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int9 - 4), calc($int10 - 4), ^setsize_abs, ^setsize_abs);
-	cc_setgraphic("tradebacking");
+	cc_setgraphic(tradebacking);
 	cc_settiling(true);
 	cc_settrans($trans22);
 	$int0 = calc($int0 + 1);

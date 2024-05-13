@@ -1,5 +1,5 @@
 // 6887
-[proc,script6887](int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, fontmetrics $fontmetrics8)(int)
+[proc,script6887](int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, graphic $graphic8)(int)
 def_int $int9 = calc($int2 + ($int4 / 2 - $int6 / 2));
 def_int $int10 = calc($int3 + ($int5 / 2 - $int7 / 2));
 .cc_create($component1, ^iftype_rectangle, $int0);
@@ -24,7 +24,7 @@ cc_settrans(235);
 cc_create($component1, ^iftype_text, $int0);
 $int0 = calc($int0 + 1);
 cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
-cc_settextfont($fontmetrics8);
+cc_settextfont($graphic8);
 cc_setcolour(^white);
 cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, $int7);

@@ -12,7 +12,7 @@ def_int $int8 = calc($int0 * 46);
 cc_create(interface_383:3, ^iftype_graphic, $int6);
 cc_setposition(0, $int8, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 46, ^setsize_minus, ^setsize_abs);
-cc_setgraphic("tradebacking_light");
+cc_setgraphic(tradebacking_light);
 cc_settiling(true);
 if (calc($int0 % 2) = 0) {
 	cc_settrans(0);

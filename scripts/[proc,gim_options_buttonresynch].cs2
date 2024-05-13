@@ -97,7 +97,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 	}
 	if ($int9 = 1) {
 		if (cc_find($component0, $comsubid2) = ^true) {
-			cc_setgraphic("tradebacking");
+			cc_setgraphic(tradebacking);
 		}
 		if (cc_find($component0, $int1) = ^true) {
 			cc_settrans(245);
@@ -115,7 +115,7 @@ if (cc_find($component0, $comsubid3) = ^true) {
 	cc_settext($text0);
 }
 if (cc_find($component0, $comsubid2) = ^true) {
-	cc_setgraphic("tradebacking_dark");
+	cc_setgraphic(tradebacking_dark);
 }
 if (cc_find($component0, $int1) = ^true) {
 	cc_settrans(255);

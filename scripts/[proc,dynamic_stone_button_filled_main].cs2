@@ -1,10 +1,10 @@
 // 5845
-[proc,dynamic_stone_button_filled_main](component $component0, component $component1, string $string0, fontmetrics $fontmetrics2, int $colour3, int $colour4, int $colour5, int $int6, int $int7, int $int8, int $int9, int $int10, int $comsubid11, int $int12, int $int13)(int)
+[proc,dynamic_stone_button_filled_main](component $component0, component $component1, string $string0, graphic $graphic2, int $colour3, int $colour4, int $colour5, int $int6, int $int7, int $int8, int $int9, int $int10, int $comsubid11, int $int12, int $int13)(int)
 def_int $int14 = calc($int8 - 9);
 def_int $int15 = calc($int9 - 9);
 def_int $width16 = calc($int8 - 18);
 def_int $height17 = calc($int9 - 18);
-~create_graphic($component0, $int10, "tradebacking", $int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $int8, $int9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, $int10, tradebacking, $int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $int8, $int9, ^setsize_abs, ^setsize_abs);
 if ($int13 = 1) {
 	~create_graphic($component0, calc(1 + $int10), "v2_stone_button_in,0", $int6, $int7, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component0, calc(2 + $int10), "v2_stone_button_in,1", calc($int6 + $int14), $int7, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
@@ -50,7 +50,7 @@ if (string_length($string0) > 0) {
 	cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string0);
-	cc_settextfont($fontmetrics2);
+	cc_settextfont($graphic2);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	if ($int12 = 1) {

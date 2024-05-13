@@ -1,7 +1,7 @@
 // 6192
 [proc,script6192](int $int0, component $component1)
 if (testbit(%varbit642, $int0) = ^true) {
-	cc_setgraphic("stop");
+	cc_setgraphic(stop);
 	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, enum(int, string, enum_4388, $int0), 25, 300)");
 } else {
 	cc_setgraphic(null);

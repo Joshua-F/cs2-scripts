@@ -58,14 +58,14 @@ while ($loc18 ! null) {
 			$int6 = calc($int6 + 1);
 			cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 			cc_setposition(244, $y10, ^setpos_abs_left, ^setpos_abs_top);
-			cc_setgraphic("tick");
+			cc_setgraphic(tick);
 		}
 		if ($int14 = 1) {
 			cc_create($component0, ^iftype_graphic, $int6);
 			$int6 = calc($int6 + 1);
 			cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 			cc_setposition(286, $y10, ^setpos_abs_left, ^setpos_abs_top);
-			cc_setgraphic("tick");
+			cc_setgraphic(tick);
 		}
 		$int16 = calc($int17 + 1);
 		$loc18 = enum(int, loc, $enum2, $int16);
@@ -87,14 +87,14 @@ while ($loc18 ! null) {
 		$int6 = calc($int6 + 1);
 		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		cc_setposition(12, $y10, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic("tick");
+		cc_setgraphic(tick);
 	}
 	if ($int13 = 1) {
 		cc_create($component0, ^iftype_graphic, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		cc_setposition(54, $y10, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic("tick");
+		cc_setgraphic(tick);
 	}
 	if ($comsubid7 ! -1 & cc_find($component0, $comsubid7) = ^true) {
 		cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);

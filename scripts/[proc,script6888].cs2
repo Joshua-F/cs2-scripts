@@ -7,18 +7,18 @@ def_int $int2 = db_getfieldcount(dbrow_173, dbtable_33:0);
 def_int $int3 = 0;
 def_int $int4 = 2;
 def_int $int5 = 50;
-def_fontmetrics $fontmetrics6 = p11_full;
+def_graphic $graphic6 = p11_full;
 def_int $int7 = 9;
 switch_int (%varcint988) {
 	case 1 :
 		$int4 = 2;
 		$int5 = 60;
-		$fontmetrics6 = verdana_11pt_regular;
+		$graphic6 = verdana_11pt_regular;
 		$int7 = 10;
 	case 2, 3 :
 		$int4 = 3;
 		$int5 = 70;
-		$fontmetrics6 = verdana_13pt_regular;
+		$graphic6 = verdana_13pt_regular;
 		$int7 = 11;
 }
 def_int $int8 = calc((if_getwidth(interface_784:5) - 56) / $int4);
@@ -59,7 +59,7 @@ while ($int3 < $int2) {
 	$int11 = calc($int11 + 1);
 	cc_setposition(calc($int12 * $int8 + $int15 / 2), calc($int13 * $int10 - $int7), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int8, $int10, ^setsize_abs, ^setsize_abs);
-	cc_settextfont($fontmetrics6);
+	cc_settextfont($graphic6);
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, $int10);
 	cc_settextshadow(true);
@@ -68,7 +68,7 @@ while ($int3 < $int2) {
 	$int11 = calc($int11 + 1);
 	cc_setposition(calc($int12 * $int8 + $int15 / 2), calc($int13 * $int10 + $int7), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int8, $int10, ^setsize_abs, ^setsize_abs);
-	cc_settextfont($fontmetrics6);
+	cc_settextfont($graphic6);
 	cc_setcolour(0xe6dbca);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, $int10);
 	cc_settextshadow(true);

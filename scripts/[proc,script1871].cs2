@@ -1,7 +1,7 @@
 // 1871
 [proc,script1871]
 def_int $int0 = 20;
-def_fontmetrics $fontmetrics1 = p11_full;
+def_graphic $graphic1 = p11_full;
 def_fontmetrics $fontmetrics2 = p11_full;
 def_int $int3 = 150;
 def_int $int4 = 115;
@@ -12,7 +12,7 @@ def_int $int8 = 85;
 def_int $int9 = calc(if_getwidth(interface_847:4) - 40);
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics1 = p12_full;
+		$graphic1 = p12_full;
 		$fontmetrics2 = p12_full;
 		$int0 = 40;
 		$int3 = 175;
@@ -22,7 +22,7 @@ switch_int (%varcint988) {
 		$int7 = 24;
 		$int8 = 95;
 	case 2, 3 :
-		$fontmetrics1 = verdana_13pt_regular;
+		$graphic1 = verdana_13pt_regular;
 		$fontmetrics2 = verdana_13pt_regular;
 		$int0 = 50;
 		$int3 = 180;
@@ -61,7 +61,7 @@ cc_setsize(if_getwidth(interface_847:20), 0, ^setsize_abs, ^setsize_abs);
 cc_setcolour(0xb69362);
 cc_create(interface_847:21, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_proportion_centre, ^setpos_proportion_centre);
-cc_settextfont($fontmetrics1);
+cc_settextfont($graphic1);
 cc_setcolour(0xff981f);
 cc_setsize($int3, 25, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 25);
@@ -69,7 +69,7 @@ cc_settextshadow(true);
 cc_settext("Task");
 cc_create(interface_847:37, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_proportion_centre, ^setpos_proportion_centre);
-cc_settextfont($fontmetrics1);
+cc_settextfont($graphic1);
 cc_setcolour(0xff981f);
 cc_setsize($int3, 25, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 25);
@@ -77,7 +77,7 @@ cc_settextshadow(true);
 cc_settext("Points");
 cc_create(interface_847:38, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_proportion_centre, ^setpos_proportion_centre);
-cc_settextfont($fontmetrics1);
+cc_settextfont($graphic1);
 cc_setcolour(0xff981f);
 cc_setsize($int3, 25, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 25);
@@ -128,7 +128,7 @@ while ($int22 < $int21) {
 	cc_create(interface_847:23, ^iftype_text, $int27);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int3 / 2 - $int26 / 2 + $int15 + 4), $int12, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont($fontmetrics1);
+	cc_settextfont($graphic1);
 	cc_setcolour($colour25);
 	cc_setsize($int3, $int20, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, $int6);
@@ -141,7 +141,7 @@ while ($int22 < $int21) {
 		$int28 = calc($int28 + 1);
 		cc_setposition(0, $int12, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, $int6);
-		cc_settextfont($fontmetrics1);
+		cc_settextfont($graphic1);
 		cc_setcolour($colour25);
 		cc_setsize($int4, $int20, ^setsize_abs, ^setsize_abs);
 		cc_settextshadow(true);
@@ -150,7 +150,7 @@ while ($int22 < $int21) {
 	cc_create(interface_847:26, ^iftype_text, $int29);
 	$int29 = calc($int29 + 1);
 	cc_setposition(calc($int23 / 2), $int12, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont($fontmetrics1);
+	cc_settextfont($graphic1);
 	cc_setcolour($colour25);
 	cc_setsize(calc($int10 - $int23), $int20, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, $int6);

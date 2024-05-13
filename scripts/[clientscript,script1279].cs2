@@ -30,7 +30,7 @@ if (string_length($string1) > 0) {
 	$int5 = calc($int5 + 1);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setgraphic("tradebacking_dark");
+	cc_setgraphic(tradebacking_dark);
 	cc_settiling(true);
 	cc_settrans(75);
 	cc_create($component4, ^iftype_text, $int5);

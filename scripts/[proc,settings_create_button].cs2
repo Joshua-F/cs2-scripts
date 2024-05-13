@@ -55,7 +55,7 @@ def_int $y20 = calc($int13 - 9 + $int1);
 def_int $width21 = calc($int11 - 18);
 def_int $height22 = calc($int13 - 18);
 if ($int17 = 1) {
-	~create_graphic($component7, $int2, "tradebacking", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, $int11, $int13, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, $int2, tradebacking, $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, $int11, $int13, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 1), "v2_stone_button,0", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 2), "v2_stone_button,1", $x19, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 3), "v2_stone_button,2", $int15, $y20, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
@@ -65,7 +65,7 @@ if ($int17 = 1) {
 	~create_graphic($component7, calc($int2 + 7), "v2_stone_button,6", $x19, calc(9 + $int1), ^setpos_abs_left, ^setpos_abs_top, 9, $height22, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 8), "v2_stone_button,7", calc($int15 + 9), $y20, ^setpos_abs_left, ^setpos_abs_top, $width21, 9, ^setsize_abs, ^setsize_abs);
 } else {
-	~create_graphic($component7, $int2, "tradebacking_dark", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, $int11, $int13, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, $int2, tradebacking_dark, $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, $int11, $int13, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 1), "v2_stone_button_in,0", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 2), "v2_stone_button_in,1", $x19, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 3), "v2_stone_button_in,2", $int15, $y20, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);

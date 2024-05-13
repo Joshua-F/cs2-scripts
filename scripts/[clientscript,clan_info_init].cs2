@@ -14,7 +14,7 @@ def_int $comsubid14 = cc_getid;
 ~clan_info_draw($component1, $comsubid13, $component2, $comsubid14, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component11, $component12);
 if_setonvartransmit("clan_info_draw($component1, $comsubid13, $component2, $comsubid14, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component11, $component12){var3019}", $component0);
 if_setonclansettingstransmit("clan_info_draw($component1, $comsubid13, $component2, $comsubid14, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component11, $component12)", $component0);
-~stonebutton_init("Titles", $component10, "p12_full", 0);
+~stonebutton_init("Titles", $component10, p12_full, 0);
 if_setonop("opsound(event_op, 2)", $component10);
 if_setonop("opsound(event_op, 2)", $component5);
 if_setonop("opsound(event_op, 2)", $component6);

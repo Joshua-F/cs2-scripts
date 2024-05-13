@@ -1,5 +1,5 @@
 // 611
-[proc,poll_addlink](string $string0, string $string1, component $component0, int $int1, int $int2, fontmetrics $fontmetrics3, fontmetrics $fontmetrics4, int $int5, int $int6)
+[proc,poll_addlink](string $string0, string $string1, component $component0, int $int1, int $int2, graphic $graphic3, fontmetrics $fontmetrics4, int $int5, int $int6)
 $string0 = removetags($string0);
 if (string_length($string0) <= 0 | string_length($string1) <= 0) {
 	return;
@@ -26,7 +26,7 @@ cc_settrans(255);
 %varcint43 = calc(%varcint43 + 1);
 .cc_setsize($width8, $int9, ^setsize_abs, ^setsize_abs);
 .cc_setposition(calc($int7 + 15 + $int6), %varcint49, ^setpos_abs_left, ^setpos_abs_top);
-.cc_settextfont($fontmetrics3);
+.cc_settextfont($graphic3);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
 ~poll_setuplink($component0, cc_getid, .cc_getid, $string0, $string1);
@@ -36,5 +36,5 @@ cc_settrans(255);
 .cc_setposition($int7, calc(%varcint49 + ($int9 - 15) / 2), ^setpos_abs_left, ^setpos_abs_top);
 .cc_setgraphicshadow(0x333333);
 .cc_settiling(true);
-.cc_setgraphic("mapfunction_infoicon");
+.cc_setgraphic(mapfunction_infoicon);
 %varcint49 = calc(%varcint49 + $int9 + 3);

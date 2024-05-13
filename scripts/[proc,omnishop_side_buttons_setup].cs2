@@ -6,21 +6,21 @@ def_component $component3 = interface_806:10;
 def_component $component4 = interface_806:11;
 def_component $component5 = interface_806:2;
 def_component $component6 = interface_806:3;
-def_fontmetrics $fontmetrics7 = p11_full;
+def_graphic $graphic7 = p11_full;
 switch_int (%varcint988) {
 	case 1 :
-		$fontmetrics7 = verdana_11pt_regular;
+		$graphic7 = verdana_11pt_regular;
 	case 2 :
-		$fontmetrics7 = verdana_11pt_regular;
+		$graphic7 = verdana_11pt_regular;
 	case 3 :
-		$fontmetrics7 = verdana_13pt_regular;
+		$graphic7 = verdana_13pt_regular;
 }
 cc_create($component5, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 cc_settextshadow(true);
-cc_settextfont($fontmetrics7);
+cc_settextfont($graphic7);
 cc_setcolour(0xff981f);
 cc_settext($text0);
 def_int $int8 = calc((if_getwidth($component5) - 18) / 4);
@@ -69,7 +69,7 @@ if ($boolean9 = true) {
 } else {
 	if_clearops($component4);
 }
-~create_graphic($component6, 0, "graphic_4737", 0, -1, ^setpos_abs_left, ^setpos_abs_centre, 16, 16, ^setsize_abs, ^setsize_abs);
+~create_graphic($component6, 0, graphic_4737, 0, -1, ^setpos_abs_left, ^setpos_abs_centre, 16, 16, ^setsize_abs, ^setsize_abs);
 cc_create($component6, ^iftype_text, 1);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setsize(26, 18, ^setsize_minus, ^setsize_abs);
