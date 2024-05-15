@@ -35,7 +35,7 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settext("<col=ffffff>Deactivation settings</col><br>Avoid accidentally downgrading your <text_gender("Iron Man", "Iron Woman", "")> status.");
 if (%varbit1776 = 2) {
-	if (if_find($component12) = true) {
+	if (if_find($component12) = ^true) {
 		cc_setsize(400, 220, ^setsize_abs, ^setsize_abs);
 	}
 } else {

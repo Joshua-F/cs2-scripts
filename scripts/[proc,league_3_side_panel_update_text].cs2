@@ -6,17 +6,17 @@ def_string $string0 = enum(int, string, enum_4146, calc($int7 + 1));
 if ($int5 ! -1 & $int4 ! -1) {
 	$int6 = calc($int5 - $int4);
 }
-if ($int6 <= 0 & if_find($component0) = true) {
+if ($int6 <= 0 & if_find($component0) = ^true) {
 	cc_settext("<col=ffffff>You have unlocked all Tiers!</col>");
-} else if (if_find($component0) = true) {
+} else if (if_find($component0) = ^true) {
 	cc_settext("<col=ffffff><tostring($int6)></col> points until Tier <$string0>.");
 }
-if (if_find($component1) = true) {
+if (if_find($component1) = ^true) {
 	cc_settext(tostring($int4));
 }
-if (if_find($component2) = true) {
+if (if_find($component2) = ^true) {
 	cc_settext(tostring(%varbit10046));
 }
-if (if_find($component3) = true) {
+if (if_find($component3) = ^true) {
 	cc_settext(tostring(%var3276));
 }

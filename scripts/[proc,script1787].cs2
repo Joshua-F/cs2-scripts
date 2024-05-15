@@ -1,7 +1,7 @@
 // 1787
 [proc,script1787](obj $obj0)(string)
 def_string $string0 = oc_name($obj0);
-if (map_members = ^true | oc_members($obj0) = ^false) {
+if (map_members = true | oc_members($obj0) = ^false) {
 	switch_obj ($obj0) {
 		case escape_crystal_22517 :
 			if (%varbit14838 = 1) {

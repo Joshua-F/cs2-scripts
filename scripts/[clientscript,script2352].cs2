@@ -1,6 +1,6 @@
 // 2352
 [clientscript,script2352]
-def_int $int0 = 0;
+def_boolean $boolean0 = false;
 if (%var281 = 1000 | %var2686 = 1000) {
 	~steam_set_unlocked(0, 0);
 }
@@ -75,4 +75,4 @@ if (%varbit11860 = 1) {
 if (%var176 >= 10) {
 	~steam_set_unlocked(19, 0);
 }
-$int0 = steam_storestats;
+$boolean0 = steam_storestats;

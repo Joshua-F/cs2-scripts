@@ -1,7 +1,7 @@
 // 1786
 [proc,inventory_op_override](obj $obj0, int $opindex1)(string)
 def_string $op0 = oc_iop($obj0, $opindex1);
-if (map_members = ^true | oc_members($obj0) = ^false) {
+if (map_members = true | oc_members($obj0) = ^false) {
 	switch_obj ($obj0) {
 		case escape_crystal_22517 :
 			if ($opindex1 = 3) {

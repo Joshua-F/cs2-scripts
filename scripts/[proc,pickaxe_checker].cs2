@@ -2,7 +2,7 @@
 [proc,pickaxe_checker]()(int)
 def_int $lvl0 = stat(mining);
 def_obj $obj1 = inv_getobj(worn, 3);
-if (map_members = ^true) {
+if (map_members = true) {
 	if ($lvl0 >= oc_param(trailblazer_pickaxe_25112, levelrequire) & ($obj1 = trailblazer_pickaxe_25112 | inv_total(inv, trailblazer_pickaxe_25112) > 0)) {
 		return(25112);
 	} else if ($lvl0 >= oc_param(crystal_pickaxe_23680, levelrequire) & ($obj1 = crystal_pickaxe_23680 | inv_total(inv, crystal_pickaxe_23680) > 0)) {

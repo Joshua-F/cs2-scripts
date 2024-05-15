@@ -347,7 +347,7 @@ if (testbit($int2, 11) = ^true & $component40 ! null & if_hassub($component40) =
 		}
 	}
 }
-if (testbit($int2, 17) = ^true & %varcint490 ! null & if_find(%varcint490) = true & if_gethide(%varcint490) = false) {
+if (testbit($int2, 17) = ^true & %varcint490 ! null & if_find(%varcint490) = ^true & if_gethide(%varcint490) = false) {
 	$flags41 = setbit($flags41, 17);
 	$int42 = if_getheight(%varcint490);
 	$int38 = ~script2372(%varcint490);

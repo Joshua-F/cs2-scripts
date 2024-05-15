@@ -21,7 +21,7 @@ switch_int (%varcint178) {
 }
 $int0 = calc($int0 + 8);
 if (string_length($string0) > 0) {
-	if (if_find($component2) = true) {
+	if (if_find($component2) = ^true) {
 		if_sethide(false, $component2);
 		if_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top, $component2);
 		if_setsize(13, 13, ^setsize_abs, ^setsize_abs, $component2);
@@ -31,7 +31,7 @@ if (string_length($string0) > 0) {
 		if_setcolour(0xffd600, $component2);
 		$int0 = calc($int0 + if_getwidth($component2) + 8);
 	}
-	if (if_find($component3) = true) {
+	if (if_find($component3) = ^true) {
 		if_sethide(false, $component3);
 		if_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top, $component3);
 		if_setsize(13, 13, ^setsize_abs, ^setsize_abs, $component3);

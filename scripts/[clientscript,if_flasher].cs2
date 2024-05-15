@@ -3,7 +3,7 @@
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
-if (if_find($component0) = true) {
+if (if_find($component0) = ^true) {
 	$int3 = clientclock;
 	$int4 = calc($int3 - $int1);
 	if ($int4 >= 750) {

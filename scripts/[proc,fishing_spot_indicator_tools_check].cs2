@@ -1,7 +1,7 @@
 // 4557
 [proc,fishing_spot_indicator_tools_check](namedobj $namedobj0)(int)
 def_int $int1 = 0;
-def_int $bool2 = map_members;
+def_boolean $boolean2 = map_members;
 switch_namedobj ($namedobj0) {
 	case small_fishing_net_303 :
 		if (inv_total(inv, small_fishing_net_303) > 0) {
@@ -14,7 +14,7 @@ switch_namedobj ($namedobj0) {
 	case harpoon_311 :
 		$int1 = ~script4558;
 	case fishing_rod_307 :
-		if ($bool2 = ^true & (inv_total(inv, pearl_fishing_rod_22846) > 0 | inv_total(worn, pearl_fishing_rod_22846) > 0)) {
+		if ($boolean2 = true & (inv_total(inv, pearl_fishing_rod_22846) > 0 | inv_total(worn, pearl_fishing_rod_22846) > 0)) {
 			$int1 = 1;
 		}
 		if (inv_total(inv, fishing_rod_307) > 0) {
@@ -25,7 +25,7 @@ switch_namedobj ($namedobj0) {
 			$int1 = 1;
 		}
 	case fly_fishing_rod_309 :
-		if ($bool2 = ^true & (inv_total(inv, pearl_fly_fishing_rod_22844) > 0 | inv_total(worn, pearl_fly_fishing_rod_22844) > 0)) {
+		if ($boolean2 = true & (inv_total(inv, pearl_fly_fishing_rod_22844) > 0 | inv_total(worn, pearl_fly_fishing_rod_22844) > 0)) {
 			$int1 = 1;
 		}
 		if (inv_total(inv, fly_fishing_rod_309) > 0) {

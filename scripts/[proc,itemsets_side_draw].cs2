@@ -13,7 +13,7 @@ while ($int3 > 0) {
 			cc_sethide(false);
 			cc_setobject($obj1, inv_getnum(inv, $int3));
 			if (enum(obj, enum, enum_1034, $obj1) ! null | enum(obj, enum, enum_1034, oc_uncert($obj1)) ! null) {
-				if (map_members = ^false & oc_members($obj1) = ^true) {
+				if (map_members = false & oc_members($obj1) = ^true) {
 					cc_settrans(130);
 					cc_setonop(null);
 				} else {

@@ -7,7 +7,7 @@ def_int $count4 = enum_getoutputcount(enum_1913);
 def_obj $obj5 = null;
 while ($count3 < $count4) {
 	$obj5 = enum(int, obj, enum_1913, $count3);
-	if ((oc_members($obj5) = ^false | map_members = ^true) & ($boolean0 = false | $lvl1 >= oc_param($obj5, levelrequire)) & ($obj2 = $obj5 | inv_total(inv, $obj5) > 0)) {
+	if ((oc_members($obj5) = ^false | map_members = true) & ($boolean0 = false | $lvl1 >= oc_param($obj5, levelrequire)) & ($obj2 = $obj5 | inv_total(inv, $obj5) > 0)) {
 		return($obj5);
 	}
 	$count3 = calc($count3 + 1);

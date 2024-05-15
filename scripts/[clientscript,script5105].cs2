@@ -14,7 +14,7 @@ if (string_length(%varcstring370) > 0) {
 	} else {
 		chat_sendabusereport(%varcstring370, $int2, ~script5102(false));
 	}
-	if (~script5102(true) = 1) {
+	if (~script5102(true) = true) {
 		ignore_add(%varcstring370);
 	}
 	if ($int2 = 7) {

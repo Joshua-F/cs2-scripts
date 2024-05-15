@@ -6,7 +6,7 @@ if (worldlist_fetch = false) {
 if_setontimer(null, interface_788:1);
 worldlist_sort(8, false, 0, false);
 def_int $int1 = 0;
-if (map_members = ^true) {
+if (map_members = true) {
 	$int1 = 1;
 }
 def_int $int2 = 0;

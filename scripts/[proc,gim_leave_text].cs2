@@ -15,7 +15,7 @@ if ($int1 = 1) {
 	cc_setcolour(0xffa82f);
 } else if ($int1 = 2) {
 	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
-	if (map_members = ^true) {
+	if (map_members = true) {
 		cc_settext("Group <text_gender("Iron Man", "Iron Woman", "")> - Retain your Group <text_gender("Iron", "Iron", "")> Status<br><br>By choosing to remain as a Group <text_gender("Iron Man", "Iron Woman", "")>, you must make a new group, the same size or larger than your last group, with you as the owner.<br>You will only be able to recruit new players into your group.<br><br>You will lose ALL tradeable items. This includes items that have untradeable cosmetics applied to them.");
 	} else {
 		cc_settext("Group Ironman - Retain your Iron Status<br><br>By choosing to remain as a Group <text_gender("Iron Man", "Iron Woman", "")>, you will be put into your own group, the same size as your last group, with you as the owner.<br>You will only be able to recruit fresh accounts into your group.<br><br>You will also lose ALL tradeable items. This includes items that have untradeable cosmetics applied to them.<br><br><col=ff0000>As you are on a F2P world, you will also lose ALL members-only items. </col><br>Consider logging into a members world before proceeding.");

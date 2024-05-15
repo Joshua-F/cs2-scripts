@@ -9,7 +9,7 @@ def_component $component4 = null;
 if ($int1 = 1 | clientclock > calc(%varcint455 + 10)) {
 	$struct3 = enum(int, struct, $enum2, $count0);
 	$component4 = struct_param($struct3, param_1235);
-	if (if_find($component4) = true) {
+	if (if_find($component4) = ^true) {
 		if_setmodel(struct_param($struct3, param_1237), $component4);
 	}
 }

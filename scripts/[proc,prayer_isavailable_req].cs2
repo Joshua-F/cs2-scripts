@@ -1,68 +1,68 @@
 // 4561
-[proc,prayer_isavailable_req](obj $obj0, int $int1, int $int2, boolean $boolean3, int $int4, int $int5, int $int6)(int)
+[proc,prayer_isavailable_req](obj $obj0, boolean $boolean1, int $int2, boolean $boolean3, int $int4, int $int5, int $int6)(int)
 switch_obj ($obj0) {
 	case chivalry_20828 :
-		if ($int1 = 0 | $int2 < 65 | $boolean3 = false) {
+		if ($boolean1 = false | $int2 < 65 | $boolean3 = false) {
 			return(0);
 		}
 	case piety_20829 :
-		if ($int1 = 0 | $int2 < 70 | $boolean3 = false) {
+		if ($boolean1 = false | $int2 < 70 | $boolean3 = false) {
 			return(0);
 		}
 	case retribution_20818, redemption_20819, smite_20820 :
-		if ($int1 = 0) {
+		if ($boolean1 = false) {
 			return(0);
 		}
 	case rigour_20827 :
-		if ($int1 = 0 | $int2 < 70 | $int4 = 0) {
+		if ($boolean1 = false | $int2 < 70 | $int4 = 0) {
 			return(0);
 		}
 	case augury_20830 :
-		if ($int1 = 0 | $int2 < 70 | $int5 = 0) {
+		if ($boolean1 = false | $int2 < 70 | $int5 = 0) {
 			return(0);
 		}
 	case preserve_20831 :
-		if ($int1 = 0 | %varbit5453 = 0 | $int6 = 1) {
+		if ($boolean1 = false | %varbit5453 = 0 | $int6 = 1) {
 			return(0);
 		}
 	case decimate_25970 :
-		if ($int1 = 0 | %varbit14852 = 0) {
+		if ($boolean1 = false | %varbit14852 = 0) {
 			return(0);
 		}
 	case annihilate_25969 :
-		if ($int1 = 0 | %varbit14853 = 0) {
+		if ($boolean1 = false | %varbit14853 = 0) {
 			return(0);
 		}
 	case vaporise_25989 :
-		if ($int1 = 0 | %varbit14854 = 0) {
+		if ($boolean1 = false | %varbit14854 = 0) {
 			return(0);
 		}
 	case fumus_vow_26981 :
-		if ($int1 = 0 | %varbit14855 = 0) {
+		if ($boolean1 = false | %varbit14855 = 0) {
 			return(0);
 		}
 	case cruors_vow_25978 :
-		if ($int1 = 0 | %varbit14858 = 0) {
+		if ($boolean1 = false | %varbit14858 = 0) {
 			return(0);
 		}
 	case umbras_vow_25977 :
-		if ($int1 = 0 | %varbit14859 = 0) {
+		if ($boolean1 = false | %varbit14859 = 0) {
 			return(0);
 		}
 	case glacies_vow_25954 :
-		if ($int1 = 0 | %varbit14860 = 0) {
+		if ($boolean1 = false | %varbit14860 = 0) {
 			return(0);
 		}
 	case intensify_25951 :
-		if ($int1 = 0 | %varbit14977 = 0) {
+		if ($boolean1 = false | %varbit14977 = 0) {
 			return(0);
 		}
 	case rebuke_25948 :
-		if ($int1 = 0 | %varbit14856 = 0) {
+		if ($boolean1 = false | %varbit14856 = 0) {
 			return(0);
 		}
 	case vindication_25945 :
-		if ($int1 = 0 | %varbit14861 = 0) {
+		if ($boolean1 = false | %varbit14861 = 0) {
 			return(0);
 		}
 	case rapid_heal_20810, rapid_restore_20809 :

@@ -3,7 +3,7 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-if (map_members = ^false & struct_param($struct0, param_1264) = true & struct_param($struct0, param_1267) = true) {
+if (map_members = false & struct_param($struct0, param_1264) = true & struct_param($struct0, param_1267) = true) {
 	return;
 }
 def_int $int3 = 1;

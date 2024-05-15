@@ -25,7 +25,7 @@ if ($int4 ! -1 & $int5 ! -1 & $int4 > 0 & $int5 ! $int4) {
 } else {
 	$width6 = 130;
 }
-if (if_find($component0) = true) {
+if (if_find($component0) = ^true) {
 	cc_setsize($width6, 0, ^setsize_abs, ^setsize_minus);
 }
 ~league_side_panel_update_text(interface_656:6, interface_656:7, interface_656:16, interface_656:14, $int1, $int4);

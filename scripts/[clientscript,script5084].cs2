@@ -28,11 +28,11 @@ if (string_length(%varcstring370) > 0) {
 } else {
 	~script5091;
 }
-if (%varcint140 = 1 | %varcint140 = 0) {
+if (%varcint140 = true | %varcint140 = false) {
 } else {
-	%varcint140 = 1;
+	%varcint140 = true;
 }
-%varcint6 = 0;
+%varcint6 = false;
 ~script5098(interface_875:10, "Add player to Ignore list", true);
 if (playermod = true | staffmodlevel > 0) {
 	if_setposition(5, 24, ^setpos_abs_left, ^setpos_abs_top, interface_875:10);

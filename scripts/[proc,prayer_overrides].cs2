@@ -1,14 +1,14 @@
 // 3656
-[proc,prayer_overrides]()(int, int, int, int, boolean, int, int)
+[proc,prayer_overrides]()(int, int, int, int, boolean, boolean, int)
 def_int $int0 = stat_base(prayer);
 def_int $int1 = stat_base(defence);
 def_int $int2 = %varbit5451;
 def_int $int3 = %varbit5452;
 def_boolean $boolean4 = ~int_to_bool(calc(%varbit3909 - 7));
-def_int $int5 = map_members;
+def_boolean $boolean5 = map_members;
 def_int $int6 = 0;
 if (%varbit5314 = 1 & ~instance_check(coord) = 1) {
-	$int0, $int2, $int3, $boolean4, $int5, $int6 = 99, 1, 1, true, 1, 1;
+	$int0, $int2, $int3, $boolean4, $boolean5, $int6 = 99, 1, 1, true, true, 1;
 	switch_int (%varbit13005) {
 		case default :
 			$int1 = 75;
@@ -18,4 +18,4 @@ if (%varbit5314 = 1 & ~instance_check(coord) = 1) {
 			$int1 = 1;
 	}
 }
-return($int0, $int1, $int2, $int3, $boolean4, $int5, $int6);
+return($int0, $int1, $int2, $int3, $boolean4, $boolean5, $int6);

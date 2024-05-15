@@ -23,7 +23,7 @@ $int2 = calc($int2 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_settrans(50);
-if (~script5102($boolean1) = 1) {
+if (~script5102($boolean1) = true) {
 	cc_setgraphic("options_radio_buttons,6");
 } else {
 	cc_setgraphic("options_radio_buttons,5");

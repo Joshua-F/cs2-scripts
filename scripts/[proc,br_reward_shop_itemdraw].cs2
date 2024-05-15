@@ -38,7 +38,7 @@ def_int $num15 = inv_getnum(inv_422, $int0);
 def_int $int16 = enum(int, int, enum_2636, $int0);
 def_string $mes0 = "";
 def_int $int17 = 0;
-if (oc_members($namedobj10) = ^true & map_members = ^false) {
+if (oc_members($namedobj10) = ^true & map_members = false) {
 	cc_setcolour(0x9f9f9f);
 	$mes0 = "You must be on a members' world to purchase that item.";
 	.cc_setonop("br_reward_shop_refuse($mes0, $component4, $component5, $component6, $component7)");

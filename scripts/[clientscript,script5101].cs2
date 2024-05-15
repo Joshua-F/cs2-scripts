@@ -1,19 +1,19 @@
 // 5101
 [clientscript,script5101](component $component0, string $string0, boolean $boolean1)
-def_int $int2 = ~script5102($boolean1);
+def_boolean $boolean2 = ~script5102($boolean1);
 if ($boolean1 = true) {
 	sound_synth(interface_select1, 1, 0);
-	if ($int2 = 1) {
-		%varcint140 = 0;
+	if ($boolean2 = true) {
+		%varcint140 = false;
 	} else {
-		%varcint140 = 1;
+		%varcint140 = true;
 	}
 } else if (playermod = true | staffmodlevel > 0) {
 	sound_synth(interface_select1, 1, 0);
-	if ($int2 = 1) {
-		%varcint6 = 0;
+	if ($boolean2 = true) {
+		%varcint6 = false;
 	} else {
-		%varcint6 = 1;
+		%varcint6 = true;
 	}
 }
 ~script5098($component0, $string0, $boolean1);

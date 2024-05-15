@@ -107,7 +107,7 @@ if (string_length($string1) <= 0) {
 $int4, $height5 = ~script6194($int4, $height5, $width3, "During the duel:", $string1);
 def_int $flags6 = 229499867;
 def_int $flags7 = 229630939;
-if (map_members = ^false) {
+if (map_members = false) {
 	$flags1, $flags2 = setbit($flags1, 13), setbit($flags2, 13);
 	$flags6, $flags7 = setbit($flags6, 13), setbit($flags7, 13);
 }

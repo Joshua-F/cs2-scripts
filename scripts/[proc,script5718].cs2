@@ -6,7 +6,7 @@ if (~on_enhanced_any = 0) {
 def_entityoverlay $entityoverlay0 = entityoverlay_create_loc(2, 0, 1, 25, 0);
 if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	~helper_agility_vartransmit($entityoverlay0, loc_type, loc_coord);
-	if (map_members = ^true) {
+	if (map_members = true) {
 		if (enum(loc, int, enum_4077, loc_type) > 0) {
 			cc_setonstattransmit("helper_agility_stattransmit($entityoverlay0, stat(ranged), stat(agility), stat(strength), loc_type, loc_coord){ranged, agility, strength}");
 		} else if (enum(loc, int, enum_4078, loc_type) = 1 & enum(coord, int, enum_4079, loc_coord) > 0) {

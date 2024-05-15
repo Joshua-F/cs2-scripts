@@ -1,7 +1,7 @@
 // 4558
 [proc,script4558]()(int)
 def_int $lvl0 = stat(fishing);
-if (map_members = ^true) {
+if (map_members = true) {
 	if (inv_total(worn, trailblazer_harpoon_25114) > 0 | inv_total(inv, trailblazer_harpoon_25114) > 0) {
 		return(1);
 	}

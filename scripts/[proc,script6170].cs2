@@ -11,7 +11,7 @@ cc_setfill(true);
 cc_setcolour(^white);
 def_boolean $boolean2 = ~on_mobile;
 ~script6171($component1, $string1, interface_755:99, $boolean2);
-if ($index0 = 13 & map_members = ^false) {
+if ($index0 = 13 & map_members = false) {
 	$string0 = "<col=999999><$string0></col>";
 } else {
 	if_setonop("script6172(event_op, $index0, $string0, event_com, cc_getid, $string1, interface_755:99, $boolean2)", $component1);

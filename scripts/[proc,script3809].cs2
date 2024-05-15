@@ -1,6 +1,6 @@
 // 3809
 [proc,script3809](int $lvl0, stat $stat1, int $int2)(int)
-if (map_members = ^false & enum(stat, boolean, enum_1497, $stat1) = true) {
+if (map_members = false & enum(stat, boolean, enum_1497, $stat1) = true) {
 	if ($int2 = 1) {
 		mes("You need to be on a members' world to gain experience in <enum(stat, string, enum_680, $stat1)>.");
 	}

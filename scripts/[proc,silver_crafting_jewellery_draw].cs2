@@ -11,7 +11,7 @@ def_int $int6 = 0;
 if_setop(1, "Craft", $component0);
 if_setopbase("<col=ff9040><$string0></col>", $component0);
 def_int $int7 = 0;
-if (inv_total(inv, $obj4) > 0 & stat(crafting) >= $lvl2 & (map_members = ^true | oc_members($obj1) = ^false)) {
+if (inv_total(inv, $obj4) > 0 & stat(crafting) >= $lvl2 & (map_members = true | oc_members($obj1) = ^false)) {
 	$int7 = 1;
 }
 if (%varbit13893 = enum(component, int, enum_4319, $component0) & %varbit13893 ! 0 & $int7 = 1) {
@@ -66,7 +66,7 @@ if ($int7 = 1) {
 	if_setonmouserepeat("silver_crafting_mouseeffect(^white, event_com, cc_getid, .cc_getid)", $component0);
 	if_setonmouseleave("silver_crafting_mouseeffect(0xff981f, event_com, cc_getid, .cc_getid)", $component0);
 } else {
-	if (map_members = ^false & oc_members($obj1) = ^true) {
+	if (map_members = false & oc_members($obj1) = ^true) {
 		.cc_settext("");
 	} else {
 		.cc_settext("Level <tostring($lvl2)>");

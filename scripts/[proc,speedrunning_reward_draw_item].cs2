@@ -31,7 +31,7 @@ def_int $int24 = struct_param($struct3, param_1725);
 def_int $int25 = ~script6803($struct3);
 def_string $mes0 = "";
 def_string $string1 = ",";
-if (oc_members($namedobj22) = ^true & map_members = ^false) {
+if (oc_members($namedobj22) = ^true & map_members = false) {
 	cc_setcolour(0x9f9f9f);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
 	if ($int25 = 1) {

@@ -1,6 +1,6 @@
 // 5989
 [proc,quest_requirement_check](dbrow $dbrow0)(int)
-if (db_getfield($dbrow0, quest:members, 0) = true & map_members = ^false & %varcint103 = 0) {
+if (db_getfield($dbrow0, quest:members, 0) = true & map_members = false & %varcint103 = 0) {
 	return(0);
 }
 def_int $int1 = db_getfieldcount($dbrow0, quest:questreq);
