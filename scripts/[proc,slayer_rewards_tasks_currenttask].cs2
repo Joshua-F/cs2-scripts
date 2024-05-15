@@ -104,13 +104,21 @@ cc_setgraphic("combatboxesmed,0");
 .cc_settextfont(p11_full);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
-if ($int11 = 1) {
+if ($int11 = 1 & $int10 = 1) {
+	.cc_settext("Swap Task");
+} else if ($int11 = 1) {
 	.cc_settext("Unstore task");
 } else {
 	.cc_settext("Store task");
 }
 if (%varbit12442 = 1) {
-	if ($int10 = 1 & $int11 = 0) {
+	if ($int10 = 1 & $int11 = 1) {
+		.cc_setcolour(0xff981f);
+		cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
+		cc_setop(1, "Swap");
+		cc_setonop("slayer_rewards_tasks_canceltask($string0, 10, $component3, $component4, $component5, $component6, $component7)");
+	} else if ($int10 = 1 & $int11 = 0) {
 		.cc_setcolour(0xff981f);
 		cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");

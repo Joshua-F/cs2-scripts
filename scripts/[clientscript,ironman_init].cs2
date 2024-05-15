@@ -1,16 +1,16 @@
 // 687
 [clientscript,ironman_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
-~steelborder($component2, "<text_gender("Iron Man", "Iron Woman", "")> Setup", 0);
-~ironman_modebutton_init($component3, 0, "None", "No <text_gender("Iron Man", "Iron Woman", "")> restrictions will apply to this account.", $component3, $component4, $component5, $component6, $component7, $component8);
-~ironman_modebutton_init($component4, 1, "Standard <text_gender("Iron Man", "Iron Woman", "")>", "An <text_gender("Iron Man", "Iron Woman", "")> cannot trade, stake, receive PK loot, scavenge dropped items, nor play certain multiplayer minigames.", $component3, $component4, $component5, $component6, $component7, $component8);
-~ironman_modebutton_init($component5, 3, "Hardcore <text_gender("Iron Man", "Iron Woman", "")>", "In addition to the standard <text_gender("Iron Man", "Iron Woman", "")> rules, a Hardcore <text_gender("Iron Man", "Iron Woman", "")> only has 1 life. A dangerous death will result in being downgraded to a standard <text_gender("Iron Man", "Iron Woman", "")>.", $component3, $component4, $component5, $component6, $component7, $component8);
-~ironman_modebutton_init($component6, 2, "Ultimate <text_gender("Iron Man", "Iron Woman", "")>", "In addition to the standard <text_gender("Iron Man", "Iron Woman", "")> rules, an Ultimate <text_gender("Iron Man", "Iron Woman", "")> cannot use banks, nor retain any items on death in dangerous areas.", $component3, $component4, $component5, $component6, $component7, $component8);
+~steelborder($component2, "Ironman Setup", 0);
+~ironman_modebutton_init($component3, 0, "None", "No Ironman restrictions will apply to this account.", $component3, $component4, $component5, $component6, $component7, $component8);
+~ironman_modebutton_init($component4, 1, "Standard Ironman", "An Ironman cannot trade, stake, receive PK loot, scavenge dropped items, nor play certain multiplayer minigames.", $component3, $component4, $component5, $component6, $component7, $component8);
+~ironman_modebutton_init($component5, 3, "Hardcore Ironman", "In addition to the standard Ironman rules, a Hardcore Ironman only has 1 life. A dangerous death will result in being downgraded to a standard Ironman.", $component3, $component4, $component5, $component6, $component7, $component8);
+~ironman_modebutton_init($component6, 2, "Ultimate Ironman", "In addition to the standard Ironman rules, an Ultimate Ironman cannot use banks, nor retain any items on death in dangerous areas.", $component3, $component4, $component5, $component6, $component7, $component8);
 if (~is_group_iron = 1 | ~inzone(0_48_48_48_4, 0_49_48_8_26, coord) = 1) {
-	~ironman_modebutton_init($component7, 4, "Group <text_gender("Iron Man", "Iron Woman", "")>", "Group <text_gender("Iron Men", "Iron Women", "")> cannot trade with anyone outside the group, stake, receive PK loot, scavenge dropped items, nor play certain multiplayer minigames.", $component3, $component4, $component5, $component6, $component7, $component8);
+	~ironman_modebutton_init($component7, 4, "Group Ironman", "Group Ironmen cannot trade with anyone outside the group, stake, receive PK loot, scavenge dropped items, nor play certain multiplayer minigames.", $component3, $component4, $component5, $component6, $component7, $component8);
 } else {
-	~ironman_modebutton_init($component7, 4, "Unranked Group <text_gender("Iron Man", "Iron Woman", "")>", "Unranked Group <text_gender("Iron Men", "Iron Women", "")> cannot trade with anyone outside the group, stake, receive PK loot, or scavenge dropped items. Unranked group <text_gender("Iron Men", "Iron Women", "")> do not show up on the hiscores.", $component3, $component4, $component5, $component6, $component7, $component8);
+	~ironman_modebutton_init($component7, 4, "Unranked Group Ironman", "Unranked Group Ironmen cannot trade with anyone outside the group, stake, receive PK loot, or scavenge dropped items. Unranked Group Ironmen do not show up on the hiscores.", $component3, $component4, $component5, $component6, $component7, $component8);
 }
-~ironman_modebutton_init($component8, 5, "Hardcore Group <text_gender("Iron Man", "Iron Woman", "")>", "In addition to the standard Group <text_gender("Iron Men", "Iron Women", "")> rules, Hardcore Group <text_gender("Iron Men", "Iron Women", "")> have a set number of lives. A dangerous death will result in losing one of your lives. Upon reaching 0 lives left, you will all be downgraded to regular Group <text_gender("Iron Men", "Iron Women", "")>.", $component3, $component4, $component5, $component6, $component7, $component8);
+~ironman_modebutton_init($component8, 5, "Hardcore Group Ironman", "In addition to the standard Group Ironmen rules, Hardcore Group Ironmen have a set number of lives. A dangerous death will result in losing one of your lives. Upon reaching 0 lives left, you will all be downgraded to regular Group Ironmen.", $component3, $component4, $component5, $component6, $component7, $component8);
 cc_deleteall($component9);
 def_int $int18 = 0;
 .cc_create($component9, ^iftype_rectangle, $int18);
@@ -33,7 +33,7 @@ cc_setcolour(0xff981f);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-cc_settext("<col=ffffff>Deactivation settings</col><br>Avoid accidentally downgrading your <text_gender("Iron Man", "Iron Woman", "")> status.");
+cc_settext("<col=ffffff>Deactivation settings</col><br>Avoid accidentally downgrading your Ironman status.");
 if (%varbit1776 = 2) {
 	if (if_find($component12) = ^true) {
 		cc_setsize(400, 220, ^setsize_abs, ^setsize_abs);

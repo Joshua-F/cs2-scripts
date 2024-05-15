@@ -11,10 +11,12 @@ if (~script6391 = 0) {
 if_setonop("opsound(event_op, 2)", $component3);
 if_setop(2, "", $component3);
 if_setopkey(2, ^key_escape, 0, $component3);
+def_int $int7 = calc((if_gety(if_getlayer($component5)) - if_getheight($component3)) / 2);
+if_setposition($int7, $int7, ^setpos_abs_right, ^setpos_abs_top, $component3);
 cc_deleteall($component0);
-def_int $int7 = 0;
-while ($int7 < 8) {
-	cc_create($component0, ^iftype_graphic, $int7);
+def_int $int8 = 0;
+while ($int8 < 8) {
+	cc_create($component0, ^iftype_graphic, $int8);
 	cc_settiling(true);
 	cc_settrans(255);
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
@@ -22,22 +24,22 @@ while ($int7 < 8) {
 	cc_setdraggable($component0, -1);
 	cc_setdragdeadzone(1);
 	cc_setdragdeadtime(5);
-	$int7 = calc($int7 + 1);
+	$int8 = calc($int8 + 1);
 }
 cc_deleteall($component6);
-$int7 = 0;
-while ($int7 < 4) {
-	cc_create($component6, ^iftype_rectangle, $int7);
-	cc_setsize(calc($int7 * 2), calc($int7 * 2), ^setsize_minus, ^setsize_minus);
+$int8 = 0;
+while ($int8 < 4) {
+	cc_create($component6, ^iftype_rectangle, $int8);
+	cc_setsize(calc($int8 * 2), calc($int8 * 2), ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x9f9f9f);
 	cc_setfill(false);
-	cc_settrans(calc(100 + $int7 * 10));
-	$int7 = calc($int7 + 1);
+	cc_settrans(calc(100 + $int8 * 10));
+	$int8 = calc($int8 + 1);
 }
-def_int $int8 = 0;
+def_int $int9 = 0;
 if (~on_mobile = true) {
-	$int8 = calc(165 - (23 + 30));
+	$int9 = calc(165 - (23 + 30));
 }
 if (%varcint1011 < ~cr_ui_min_width) {
 	%varcint1011 = ~cr_ui_default_width;
@@ -48,11 +50,11 @@ if (%varcint1012 < ~cr_ui_min_height) {
 if (%varcint1009 < 0) {
 	%varcint1009 = calc((if_getwidth($component0) - %varcint1011) / 2);
 }
-if (%varcint1010 < $int8) {
-	%varcint1010 = ~max($int8, calc((if_getheight($component0) - %varcint1012) / 2));
+if (%varcint1010 < $int9) {
+	%varcint1010 = ~max($int9, calc((if_getheight($component0) - %varcint1012) / 2));
 }
-~cr_ui_rebuild_window(1, $int8, $component0, $component1, $component6);
-~cr_ui_size_handler(1, $int8, ^min_32bit_int, ^min_32bit_int, $component0, $component1, $component6);
+~cr_ui_rebuild_window(1, $int9, $component0, $component1, $component6);
+~cr_ui_size_handler(1, $int9, ^min_32bit_int, ^min_32bit_int, $component0, $component1, $component6);
 if (%varcint1008 = null) {
 	%varcint1008 = enum(int, dbrow, enum_4593, 0);
 }

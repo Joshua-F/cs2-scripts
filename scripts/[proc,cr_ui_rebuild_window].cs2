@@ -13,16 +13,16 @@ if_sethide(true, $component4);
 if_setposition(%varcint1009, %varcint1010, ^setpos_abs_left, ^setpos_abs_top, $component3);
 if_setsize(%varcint1011, %varcint1012, ^setsize_abs, ^setsize_abs, $component3);
 def_int $height9 = calc(%varcint1012 - 6 * 2);
-def_int $width10 = calc(%varcint1011 - 6 * 2);
+def_int $int10 = calc(%varcint1011 - 6 * 2);
 def_int $x11 = calc(%varcint1009 + %varcint1011 - 6);
 def_int $y12 = calc(%varcint1010 + %varcint1012 - 6);
 if (cc_find($component2, 0) = ^true) {
-	cc_setsize($width10, 29, ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int10 - 27), 29, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(%varcint1009 + 6), %varcint1010, ^setpos_abs_left, ^setpos_abs_top);
 	~script6384($int1, $component2, $component3, $component4);
 }
 if (cc_find($component2, 1) = ^true) {
-	cc_setsize($width10, 6, ^setsize_abs, ^setsize_abs);
+	cc_setsize($int10, 6, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(%varcint1009 + 6), $y12, ^setpos_abs_left, ^setpos_abs_top);
 	~script6384($int1, $component2, $component3, $component4);
 }

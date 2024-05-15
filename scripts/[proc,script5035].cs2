@@ -8,5 +8,6 @@ switch_int ($int0) {
 	case 2 :
 		return("Them");
 	case default :
-		return("");
+		~script5129("Pronouns not correctly set. Pronouns are set to <tostring($int0)> but should be 0, 1 or 2.");
+		return("Them");
 }

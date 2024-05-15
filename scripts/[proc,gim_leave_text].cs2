@@ -8,22 +8,22 @@ cc_settextfont(p12_full);
 if ($int1 = 1) {
 	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
 	if (%varbit1777 = 6) {
-		cc_settext("Unranked Group <text_gender("Iron Man", "Iron Woman", "")> - Retain your Group <text_gender("Iron", "Iron", "")> Status<br><br>By choosing to remain an unranked Group <text_gender("Iron Man", "Iron Woman", "")>, you will keep your status as a Group <text_gender("Iron Man", "Iron Woman", "")>. You will also keep all your items and experience.<br><br>Your progress will still not be shown on the Group Ironman hiscores.<br><br>You will only be able to group with anyone who is willing to play unranked.");
+		cc_settext("Unranked Group Ironman - Retain your Group Ironman Status<br><br>By choosing to remain an unranked Group Ironman, you will keep your status as a Group Ironman. You will also keep all your items and experience.<br><br>Your progress will still not be shown on the Group Ironman hiscores.<br><br>You will only be able to group with anyone who is willing to play unranked.");
 	} else {
-		cc_settext("Unranked Group <text_gender("Iron Man", "Iron Woman", "")> - Retain your Group <text_gender("Iron", "Iron", "")> Status<br><br>By choosing to become an Unranked Group <text_gender("Iron Man", "Iron Woman", "")>, you will keep your status as a Group <text_gender("Iron Man", "Iron Woman", "")>. You will also get to keep all your items and experience.<br><br>Your progress will no longer be shown on the Group Ironman hiscores.<br><br>You will only be able to group with anyone who is willing to play unranked.<br><br>You cannot go back to being a ranked Group <text_gender("Iron Man", "Iron Woman", "")>.");
+		cc_settext("Unranked Group Ironman - Retain your Group Ironman Status<br><br>By choosing to become an Unranked Group Ironman, you will keep your status as a Group Ironman. You will also get to keep all your items and experience.<br><br>Your progress will no longer be shown on the Group Ironman hiscores.<br><br>You will only be able to group with anyone who is willing to play unranked.<br><br>You cannot go back to being a ranked Group Ironman.");
 	}
 	cc_setcolour(0xffa82f);
 } else if ($int1 = 2) {
 	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
 	if (map_members = true) {
-		cc_settext("Group <text_gender("Iron Man", "Iron Woman", "")> - Retain your Group <text_gender("Iron", "Iron", "")> Status<br><br>By choosing to remain as a Group <text_gender("Iron Man", "Iron Woman", "")>, you must make a new group, the same size or larger than your last group, with you as the owner.<br>You will only be able to recruit new players into your group.<br><br>You will lose ALL tradeable items. This includes items that have untradeable cosmetics applied to them.");
+		cc_settext("Group Ironman - Retain your Group Ironman Status<br><br>By choosing to remain as a Group Ironman, you must make a new group, the same size or larger than your last group, with you as the owner.<br>You will only be able to recruit new players into your group.<br><br>You will lose ALL tradeable items. This includes items that have untradeable cosmetics applied to them.");
 	} else {
-		cc_settext("Group Ironman - Retain your Iron Status<br><br>By choosing to remain as a Group <text_gender("Iron Man", "Iron Woman", "")>, you will be put into your own group, the same size as your last group, with you as the owner.<br>You will only be able to recruit fresh accounts into your group.<br><br>You will also lose ALL tradeable items. This includes items that have untradeable cosmetics applied to them.<br><br><col=ff0000>As you are on a F2P world, you will also lose ALL members-only items. </col><br>Consider logging into a members world before proceeding.");
+		cc_settext("Group Ironman - Retain your Iron Status<br><br>By choosing to remain as a Group Ironman, you will be put into your own group, the same size as your last group, with you as the owner.<br>You will only be able to recruit fresh accounts into your group.<br><br>You will also lose ALL tradeable items. This includes items that have untradeable cosmetics applied to them.<br><br><col=ff0000>As you are on a F2P world, you will also lose ALL members-only items. </col><br>Consider logging into a members world before proceeding.");
 	}
 	cc_setcolour(0xffa82f);
 } else if ($int1 = 3) {
 	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
-	cc_settext("Regular Account - Lose your Iron Status<br><br>By choosing to become a regular account, you will lose your Iron Status.<br>You will not be able to become an <text_gender("Iron Man", "Iron Woman", "")> again.<br><br>You will not lose any items.");
+	cc_settext("Regular Account - Lose your Iron Status<br><br>By choosing to become a regular account, you will lose your Iron Status.<br>You will not be able to become an Ironman again.<br><br>You will not lose any items.");
 	cc_setcolour(0xffa82f);
 } else {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
