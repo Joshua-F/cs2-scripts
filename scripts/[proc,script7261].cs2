@@ -9,4 +9,4 @@ if ($int5 < 0) {
 	~debug_mes("Cost overflowed with base_cost=<tostring($int0)> at <~mescoord(coord)>, for %shopbuy=<tostring($int2)> and %shophaggle=<tostring($int1)>. Corrected to 2 billion.");
 }
 $int5 = ~script2287($int5, $namedobj4);
-return($int5);
+return(max($int5, 1));

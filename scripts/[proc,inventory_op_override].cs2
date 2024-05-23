@@ -26,6 +26,20 @@ if (map_members = true | oc_members($obj0) = ^false) {
 					$op0 = "Un-note-<$op0>";
 				}
 			}
+		case teleport_crystal_5_13102, teleport_crystal_4_6099, teleport_crystal_3_6100, teleport_crystal_2_6101, teleport_crystal_1_6102, eternal_teleport_crystal_23946 :
+			if (%varbit9666 = 0) {
+				if ($opindex1 = 1) {
+					$op0 = "Lletya";
+				} else if ($opindex1 = 2) {
+					$op0 = "Prifddinas";
+				}
+			} else if (%varbit9666 = 1) {
+				if ($opindex1 = 1) {
+					$op0 = "Prifddinas";
+				} else if ($opindex1 = 2) {
+					$op0 = "Lletya";
+				}
+			}
 	}
 }
 return($op0);

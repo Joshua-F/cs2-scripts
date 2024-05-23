@@ -5130,6 +5130,9 @@
 [**5127**](scripts/[proc,script5127].cs2)  
 [**5128**](scripts/[proc,script5128].cs2)  
 [**5129**](scripts/[proc,script5129].cs2)  
+[**5130**](scripts/[proc,script5130].cs2)  
+[**5131**](scripts/[clientscript,script5131].cs2)  
+[**5132**](scripts/[proc,script5132].cs2)  
 [**5165**](scripts/[clientscript,script5165].cs2)  
 [**5166**](scripts/[proc,script5166].cs2)  
 [**5167**](scripts/[clientscript,helper_agility_highlight_course].cs2) `[clientscript,helper_agility_highlight_course]`  

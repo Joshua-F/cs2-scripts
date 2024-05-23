@@ -4,6 +4,7 @@ def_string $string2 = "";
 def_int $width2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
+def_int $int5 = 5;
 if (string_length($string1) > 0) {
 	$width2 = if_getwidth($component0);
 	if (~script6811 = 1) {
@@ -14,7 +15,7 @@ if (string_length($string1) > 0) {
 		$string2 = "<$string0><br><$string1>";
 	}
 	$int3, $int4 = calc(if_getx($component0) + parawidth($string1, $width2, p11_full) + 5), calc(if_gety($component0) + paraheight($string2, $width2, p11_full) * 15 + 2);
-	$int3, $int4 = calc($int3 - (if_getwidth($component1) - 15) / 2), calc($int4 - (11 + if_getheight($component1) / 2));
+	$int3, $int4 = calc($int3 - (if_getwidth($component1) - $int5) / 2), calc($int4 - (11 + if_getheight($component1) / 2));
 	if_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top, $component1);
 	if (~script6811 = 1) {
 		if_sethide(true, $component1);
