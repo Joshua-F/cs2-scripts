@@ -1,0 +1,15 @@
+// 5141
+[clientscript,script5141]
+if (%varbit10750 = 1) {
+	if (%varbit10748 = 1) {
+		if (%varbit10749 = 0) {
+			rt7_sd;
+		} else {
+			rt7_hd;
+		}
+	} else {
+		rt7_setenabled(false);
+	}
+} else {
+	rt7_setenabled(false);
+}
