@@ -1,7 +1,7 @@
 // 4708
 [proc,helper_generic_draw_title](int $int0, int $int1)
 def_int $height2 = paraheight(~helper_generic_get_string($int0), %varcint492, b12_full);
-def_int $int3 = calc($height2 * 20);
+def_int $int3 = calc($height2 * 15);
 if (cc_find(interface_711:5, $int0) = ^true) {
 	cc_setsize(%varcint492, $int3, ^setsize_abs, ^setsize_abs);
 	if ($int1 = 1) {
@@ -13,10 +13,10 @@ if (cc_find(interface_711:5, $int0) = ^true) {
 	cc_settextfont(b12_full);
 	cc_settextshadow(true);
 	if ($int1 = 1) {
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
 	} else {
-		cc_settextalign(^settextalign_left, ^settextalign_centre, 20);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
 	}
 	cc_settext(~helper_generic_get_string($int0));
-	~helper_generic_set_height($int3);
+	~helper_generic_set_height(calc($int3 + 2));
 }

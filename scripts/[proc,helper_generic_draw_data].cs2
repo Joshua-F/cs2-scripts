@@ -2,8 +2,8 @@
 [proc,helper_generic_draw_data](int $int0)
 def_int $width1 = parawidth(~helper_generic_get_string($int0), calc(140 / 2), p12_full);
 def_int $width2 = parawidth(~helper_generic_get_string(calc($int0 + 1)), calc(140 - $width1), p12_full);
-def_int $int3 = calc(paraheight(~helper_generic_get_string($int0), $width1, p12_full) * 12);
-def_int $int4 = calc(paraheight(~helper_generic_get_string(calc($int0 + 1)), $width2, p12_full) * 12);
+def_int $int3 = calc(paraheight(~helper_generic_get_string($int0), $width1, p12_full) * 14);
+def_int $int4 = calc(paraheight(~helper_generic_get_string(calc($int0 + 1)), $width2, p12_full) * 14);
 def_int $int5 = ~max($int3, $int4);
 if (cc_find(interface_711:5, $int0) = ^true) {
 	cc_setsize($width1, $int5, ^setsize_abs, ^setsize_abs);
@@ -11,7 +11,7 @@ if (cc_find(interface_711:5, $int0) = ^true) {
 	cc_setcolour(^white);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
-	cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 	cc_settext(~helper_generic_get_string($int0));
 }
 if (cc_find(interface_711:5, calc($int0 + 1)) = ^true) {
@@ -20,7 +20,7 @@ if (cc_find(interface_711:5, calc($int0 + 1)) = ^true) {
 	cc_setcolour(^white);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
-	cc_settextalign(^settextalign_right, ^settextalign_centre, 12);
+	cc_settextalign(^settextalign_right, ^settextalign_centre, 14);
 	cc_settext(~helper_generic_get_string(calc($int0 + 1)));
 	~helper_generic_set_height($int5);
 }
