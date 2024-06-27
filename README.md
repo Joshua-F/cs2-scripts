@@ -5952,7 +5952,7 @@
 [**5982**](scripts/[clientscript,script5982].cs2)  
 [**5983**](scripts/[proc,script5983].cs2)  
 [**5984**](scripts/[clientscript,script5984].cs2)  
-[**5985**](scripts/[proc,cr_utility_module_v1_init].cs2) `[proc,cr_utility_module_v1_init]`  
+[**5985**](scripts/[clientscript,script5985].cs2)  
 [**5986**](scripts/[clientscript,script5986].cs2)  
 [**5989**](scripts/[proc,quest_requirement_check].cs2) `[proc,quest_requirement_check]`  
 [**5990**](scripts/[proc,script5990].cs2)  
