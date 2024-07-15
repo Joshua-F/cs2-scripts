@@ -211,8 +211,11 @@ cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, nu
 cc_setop(2, "Customise");
 if (%varbit4284 > 0) {
 	cc_setop(1, "-<~script5130>");
+} else {
+	cc_setop(1, "");
 }
 cc_setonvartransmit("script5131($component0, $comsubid30, true, "-"){var3750}");
+cc_setonop("script5154(event_op, false)");
 cc_create($component0, ^iftype_graphic, $int15);
 def_int $comsubid31 = $int15;
 $int15 = calc($int15 + 1);
@@ -228,8 +231,11 @@ cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, nu
 cc_setop(2, "Customise");
 if (%varbit4284 > 0) {
 	cc_setop(1, "+<~script5130>");
+} else {
+	cc_setop(1, "");
 }
 cc_setonvartransmit("script5131($component0, $comsubid31, true, "+"){var3750}");
+cc_setonop("script5154(event_op, true)");
 def_int $comsubid32 = 0;
 def_int $comsubid33 = 0;
 def_int $comsubid34 = 0;

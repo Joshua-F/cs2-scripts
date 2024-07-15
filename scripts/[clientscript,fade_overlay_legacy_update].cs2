@@ -1,14 +1,14 @@
 // 952
 [clientscript,fade_overlay_legacy_update](int $clock0)
-if_setcolour(^black, interface_174:1);
+if_setcolour(^black, interface_174:2);
 def_int $int1 = calc(clientclock - $clock0);
 if ($int1 < 50) {
-	if_settrans(calc(255 - interpolate(0, $int1, 0, 50, 255)), interface_174:1);
+	if_settrans(calc(255 - interpolate(0, $int1, 0, 50, 255)), interface_174:2);
 } else if ($int1 < 800) {
-	if_settrans(0, interface_174:1);
+	if_settrans(0, interface_174:2);
 } else if ($int1 < 850) {
 	$int1 = calc($int1 - 800);
-	if_settrans(interpolate(0, $int1, 0, 50, 255), interface_174:1);
+	if_settrans(interpolate(0, $int1, 0, 50, 255), interface_174:2);
 } else {
-	if_setontimer(null, interface_174:1);
+	if_setontimer(null, interface_174:2);
 }

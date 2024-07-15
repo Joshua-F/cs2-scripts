@@ -4,4 +4,7 @@ def_string $string0 = enum(int, string, enum_835, $int0);
 if (%varbit5037 = 1) {
 	$string0 = ~string_findandreplace($string0, "Nieve", "Steve");
 }
+if (%varbit10782 ! 0) {
+	$string0 = ~string_findandreplace($string0, "Duradel", "Kuradal");
+}
 return($string0);

@@ -22,7 +22,7 @@ switch_struct ($struct0) {
 		if (%varcint480 > 0) {
 			return(~script5942(%varcint480, %varbit6539, 8));
 		}
-	case buff_stamina_potion_3086 :
+	case buff_stamina_boost_3086 :
 		if (%varbit25 = 1) {
 			return(~script5942(%varcint481, calc(%varbit10385 + %varbit24), 10));
 		}
@@ -464,6 +464,16 @@ switch_struct ($struct0) {
 	case buff_ancient_wyvern_shield_special_cooldown_840 :
 		if (%varcint1191 > 0) {
 			return(~script4678(%varcint1191));
+		}
+	case buff_stone_of_jas_empowerment_964 :
+		return(%varbit10934);
+	case buff_smouldering_heart_energy_965 :
+		if (%varbit10944 > 0) {
+			return(~script5942(%var4244, %varbit10944, struct_param($struct0, param_1541)));
+		}
+	case buff_smouldering_gland_blessing_966 :
+		if (%varbit10945 > 0) {
+			return(~script5942(%var4245, %varbit10945, struct_param($struct0, param_1541)));
 		}
 }
 return(struct_param($struct0, param_1540));

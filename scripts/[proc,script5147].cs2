@@ -1,0 +1,17 @@
+// 5147
+[proc,script5147](component $component0, int $width1, int $height2, component $component3, component $component4)
+def_int $int5 = $height2;
+if ($int5 < 334) {
+	$int5 = 334;
+} else if ($int5 > 1000) {
+	$int5 = 1000;
+}
+def_int $int6 = invpow(calc($int5 - 334), 2);
+def_int $int7 = invpow(calc(1000 - 334), 2);
+def_int $int8 = calc(250 - interpolate(0, $int6, 0, $int7, 125));
+def_int $int9 = calc(550 - interpolate(0, $int6, 0, $int7, 275));
+if_setmodelangle(0, 0, 306, 2047, 0, $int8, $component3);
+if_setmodelangle(0, 0, 381, 1951, 0, $int9, $component4);
+def_int $y10 = calc(32 - interpolate(0, $int6, 0, $int7, -48));
+if_setposition(5, $y10, ^setpos_abs_centre, ^setpos_abs_centre, $component4);
+if_setontimer("script5146($component0, $width1, $height2, $component3, $component4)", $component0);

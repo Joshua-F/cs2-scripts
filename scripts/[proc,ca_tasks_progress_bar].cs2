@@ -53,7 +53,11 @@ def_string $text1 = "";
 def_graphic $graphic23 = p12_full;
 if ($int7 = 1) {
 	$graphic23 = b12_full;
-	$text1 = "You have rewards to collect from Ghommal!";
+	if (%varbit10792 ! 0) {
+		$text1 = "You have rewards to collect from Laidee Gnonock!";
+	} else {
+		$text1 = "You have rewards to collect from Ghommal!";
+	}
 } else if ($int3 >= 6) {
 	$text1 = "Total Points: <tostring(%varbit14815)>";
 } else {

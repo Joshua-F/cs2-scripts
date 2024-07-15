@@ -1,0 +1,13 @@
+// 5154
+[clientscript,script5154](int $opindex0, boolean $boolean1)
+if ($opindex0 = 1) {
+	if (%varbit4284 > 0) {
+		if ($boolean1 = true) {
+			sound_synth(ge_up_amount, 1, 0);
+		} else {
+			sound_synth(ge_down_amount, 1, 0);
+		}
+	}
+} else {
+	sound_synth(interface_select1, 1, 0);
+}

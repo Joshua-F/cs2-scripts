@@ -11,6 +11,9 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 if (db_getrowtable($dbrow4) = dbtable_15) {
 	$npc5 = db_getfield($dbrow4, dbtable_15:0, 0);
+	if ($npc5 = ghommal_multi_13646 & %varbit10792 ! 0) {
+		$npc5 = laidee_gnonock_multi_13647;
+	}
 	if (npc_type = $npc5) {
 		switch_dbtable (db_getrowtable($dbrow1)) {
 			case dbtable_13 :

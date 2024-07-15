@@ -12,6 +12,9 @@ if ($chattype0 = ^chattype_dialogue) {
 if ($chattype0 = ^chattype_mesbox) {
 	return(0);
 }
+if ($chattype0 = 116) {
+	return(0);
+}
 if (~in_league_tutorial = 1) {
 	return(0);
 }

@@ -1,0 +1,5 @@
+// 5153
+[proc,script5153](int $int0, int $int1, int $int2, int $int3, int $int4, component $component5, int $colour6, int $trans7, component $component8)
+if_setcolour($colour6, $component8);
+if_settrans($trans7, $component8);
+~fade_overlay($int0, $int1, $int2, $int3, $int4, $component5);

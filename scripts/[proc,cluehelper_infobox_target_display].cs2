@@ -10,6 +10,12 @@ switch_dbtable (db_getrowtable($dbrow0)) {
 		if ($npc2 = ismail_the_kebab_seller_11876 & %varbit334 < 28) {
 			$npc2 = null;
 		}
+		if ($npc2 = turael_13618 & %varbit10782 ! 0) {
+			$npc2 = aya_13619;
+		}
+		if ($npc2 = ghommal_13613 & %varbit10792 ! 0) {
+			$npc2 = laidee_gnonock_13614;
+		}
 		if ($npc2 ! null) {
 			$int1 = ~helper_generic_add_text(nc_name($npc2));
 		} else {
