@@ -5155,6 +5155,8 @@
 [**5152**](scripts/[clientscript,script5152].cs2)  
 [**5153**](scripts/[proc,script5153].cs2)  
 [**5154**](scripts/[clientscript,script5154].cs2)  
+[**5155**](scripts/[proc,script5155].cs2)  
+[**5156**](scripts/[clientscript,script5156].cs2)  
 [**5165**](scripts/[clientscript,script5165].cs2)  
 [**5166**](scripts/[proc,script5166].cs2)  
 [**5167**](scripts/[clientscript,helper_agility_highlight_course].cs2) `[clientscript,helper_agility_highlight_course]`  
@@ -6864,7 +6866,6 @@
 [**6907**](scripts/[proc,script6907].cs2)  
 [**6908**](scripts/[proc,script6908].cs2)  
 [**6909**](scripts/[proc,script6909].cs2)  
-[**6910**](scripts/[clientscript,script6910].cs2)  
 [**6911**](scripts/[proc,script6911].cs2)  
 [**6912**](scripts/[proc,script6912].cs2)  
 [**6913**](scripts/[proc,script6913].cs2)  

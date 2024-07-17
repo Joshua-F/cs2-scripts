@@ -102,9 +102,14 @@ def_int $int27 = 0;
 def_int $int28 = 0;
 def_string $text3 = "";
 def_string $string4 = ",";
+def_dbrow $dbrow29 = null;
 if (string_length($string0) > 0) {
 	if ($int3 = -1) {
 		$text2 = "Unlimited stock";
+	}
+	$dbrow29 = db_getfield($dbrow0, dbtable_39:5, $int2);
+	if (db_getfield($dbrow29, dbtable_40:15, 0) = true) {
+		$text2 = "Currently unavailable";
 	}
 	cc_create($component8, ^iftype_text, $int21);
 	cc_setposition(0, $int22, ^setpos_abs_centre, ^setpos_abs_top);

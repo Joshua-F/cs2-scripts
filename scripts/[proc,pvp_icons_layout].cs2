@@ -43,7 +43,7 @@ if (~pvp_world = 1) {
 	~pvp_icons_toggletargetsystem(true);
 	if (if_gethide(interface_90:50) = false) {
 		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
-	} else if (%varbit4605 = 1 | %varbit10465 > 0) {
+	} else if (%varbit4605 = 1 | %varbit5961 = 1 | %varbit10960 > 0 | %varbit10465 > 0) {
 		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
 	} else {
 		if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
@@ -157,7 +157,7 @@ if (~pvp_world = 1) {
 	~pvp_icons_toggletargetsystem(true);
 	if (if_gethide(interface_90:50) = false) {
 		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
-	} else if (%varbit4605 = 1 | %varbit10465 > 0) {
+	} else if (%varbit4605 = 1 | %varbit5961 = 1 | %varbit10960 > 0 | %varbit10465 > 0) {
 		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
 	} else {
 		if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
@@ -252,7 +252,7 @@ if (~pvp_world = 1) {
 	}
 	if (if_gethide(interface_90:50) = false) {
 		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
-	} else if (%varbit4605 = 1 | %varbit10465 > 0) {
+	} else if (%varbit4605 = 1 | %varbit5961 = 1 | %varbit10960 > 0 | %varbit10465 > 0) {
 		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
 	} else {
 		if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);

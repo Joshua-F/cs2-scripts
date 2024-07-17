@@ -1,8 +1,16 @@
 // 5227
 [proc,script5227]()(int, int)
 switch_int (%varbit13025) {
-	case 5 :
-		return(3, 126);
+	case 10 :
+		return(111, 126);
+	case 9 :
+		return(91, calc(111 - 1));
+	case 8 :
+		return(71, calc(91 - 1));
+	case 7 :
+		return(51, calc(71 - 1));
+	case 6 :
+		return(45, calc(51 - 1));
 	case 4 :
 		return(111, 126);
 	case 3 :
@@ -12,5 +20,5 @@ switch_int (%varbit13025) {
 	case 1 :
 		return(51, calc(71 - 1));
 	case default :
-		return(3, 126);
+		return(3, calc(51 - 1));
 }

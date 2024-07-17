@@ -475,5 +475,9 @@ switch_struct ($struct0) {
 		if (%varbit10945 > 0) {
 			return(~script5942(%var4245, %varbit10945, struct_param($struct0, param_1541)));
 		}
+	case buff_deadman_blighted_overload_977 :
+		if (%varcint1197 > 0) {
+			return(~script5942(%varcint1197, %varbit10954, 25));
+		}
 }
 return(struct_param($struct0, param_1540));

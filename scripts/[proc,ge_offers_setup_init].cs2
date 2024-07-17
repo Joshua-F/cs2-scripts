@@ -114,7 +114,6 @@ if ($boolean3 = true) {
 	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
 	cc_setop(1, "Enter quantity");
-	cc_setonop("opsound(event_op, 2)");
 }
 cc_create($component0, ^iftype_graphic, $int15);
 def_int $comsubid24 = $int15;
@@ -303,7 +302,7 @@ if (cc_find($component0, $comsubid22) = ^true) {
 	cc_setonop("ge_offers_setup_changequantity($boolean3, ^max_32bit_int, event_op, $component0, $comsubid16, $comsubid22, $comsubid41, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $comsubid36, $comsubid37, $comsubid38, $comsubid39, $comsubid40, $component2, $comsubid42, $comsubid23)");
 }
 if (cc_find($component0, $comsubid23) = ^true) {
-	cc_setonop("script6910($boolean3, ^max_32bit_int, event_op, $component0, $comsubid16, $comsubid22, $comsubid41, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $comsubid36, $comsubid37, $comsubid38, $comsubid39, $comsubid40, $component2, $comsubid42, $comsubid23)");
+	cc_setonop("script5156($boolean3, ^max_32bit_int, event_op, $component0, $comsubid16, $comsubid22, $comsubid41, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $comsubid36, $comsubid37, $comsubid38, $comsubid39, $comsubid40, $component2, $comsubid42, $comsubid23)");
 }
 if (cc_find($component0, $comsubid24) = ^true) {
 	cc_setonop("ge_offers_setup_changeprice($boolean3, -1, event_op, $component0, $comsubid16, $comsubid22, $comsubid41, $comsubid32, $comsubid33, $comsubid34, $comsubid35, $comsubid36, $comsubid37, $comsubid38, $comsubid39, $comsubid40, $component2, $comsubid42, $comsubid23)");

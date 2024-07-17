@@ -1,5 +1,8 @@
-// 6910
-[clientscript,script6910](boolean $boolean0, int $int1, int $opindex2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $component16, int $comsubid17, int $comsubid18)
+// 5156
+[clientscript,script5156](boolean $boolean0, int $int1, int $opindex2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $component16, int $comsubid17, int $comsubid18)
+if ($opindex2 = 1) {
+	sound_synth(interface_select1, 1, 0);
+}
 if ($opindex2 ! 2) {
 	return;
 }
@@ -14,5 +17,7 @@ if (%varbit4397 = 0 & %varbit4398 > 0) {
 		}
 	}
 	sound_synth(ge_up_amount, 1, 0);
+} else {
+	sound_synth(interface_select1, 1, 0);
 }
 ~ge_offers_setup_draw($boolean0, $component3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $comsubid15, $component16, $comsubid17, $comsubid18);
