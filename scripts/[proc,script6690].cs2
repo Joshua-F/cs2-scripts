@@ -1,15 +1,15 @@
 // 6690
 [proc,script6690](npc $npc0)(string)
 def_string $string0 = "2|";
-$string0 = append($string0, nc_minimenuname($npc0, 1, false));
+$string0 = append($string0, nc_getopbase($npc0, 1, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, nc_minimenuop($npc0, 1, false));
+$string0 = append($string0, nc_getop($npc0, 1, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, nc_minimenuop($npc0, 2, false));
+$string0 = append($string0, nc_getop($npc0, 2, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, nc_minimenuop($npc0, 3, false));
+$string0 = append($string0, nc_getop($npc0, 3, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, nc_minimenuop($npc0, 4, false));
+$string0 = append($string0, nc_getop($npc0, 4, false));
 $string0 = append($string0, "|");
-$string0 = append($string0, nc_minimenuop($npc0, 5, false));
+$string0 = append($string0, nc_getop($npc0, 5, false));
 return($string0);

@@ -6,7 +6,7 @@ cc_setsize($int2, $int3, $setsize4, $setsize5);
 cc_setposition($int6, $int7, $setposh8, $setposv9);
 cc_setfill(true);
 cc_setcolour(0x372e22);
-cc_create($component0, ^iftype_input, $int1);
+cc_create($component0, ^iftype_inputfield, $int1);
 $int1 = calc($int1 + 1);
 if ($setsize4 = ^setsize_abs) {
 	$int2 = calc($int2 - 4);

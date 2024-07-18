@@ -5941,10 +5941,10 @@
 [**5953**](scripts/[proc,entity_highlight_active_obj].cs2) `[proc,entity_highlight_active_obj]`  
 [**5954**](scripts/[proc,entity_highlight_active_player].cs2) `[proc,entity_highlight_active_player]`  
 [**5955**](scripts/[proc,entity_highlight_minimenu].cs2) `[proc,entity_highlight_minimenu]`  
-[**5956**](scripts/[trigger_80,_].cs2) `[trigger_80,_]`  
-[**5957**](scripts/[trigger_78,_].cs2) `[trigger_78,_]`  
-[**5958**](scripts/[trigger_79,_].cs2) `[trigger_79,_]`  
-[**5959**](scripts/[trigger_81,_].cs2) `[trigger_81,_]`  
+[**5956**](scripts/[onclicknpc,_].cs2) `[onclicknpc,_]`  
+[**5957**](scripts/[onclickloc,_].cs2) `[onclickloc,_]`  
+[**5958**](scripts/[onclickobj,_].cs2) `[onclickobj,_]`  
+[**5959**](scripts/[onclickplayer,_].cs2) `[onclickplayer,_]`  
 [**5960**](scripts/[trigger_82,_].cs2) `[trigger_82,_]`  
 [**5961**](scripts/[proc,interact_entity_highlight_pulse_start].cs2) `[proc,interact_entity_highlight_pulse_start]`  
 [**5962**](scripts/[clientscript,interact_entity_highlight_pulse].cs2) `[clientscript,interact_entity_highlight_pulse]`  
@@ -7160,7 +7160,7 @@
 [**7223**](scripts/[proc,script7223].cs2)  
 [**7224**](scripts/[proc,script7224].cs2)  
 [**7225**](scripts/[proc,script7225].cs2)  
-[**7226**](scripts/[trigger_45,_].cs2) `[trigger_45,_]`  
+[**7226**](scripts/[updateobjstack,_].cs2) `[updateobjstack,_]`  
 [**7227**](scripts/[proc,ground_items_setup].cs2) `[proc,ground_items_setup]`  
 [**7228**](scripts/[proc,script7228].cs2)  
 [**7229**](scripts/[clientscript,ground_items_transmit].cs2) `[clientscript,ground_items_transmit]`  

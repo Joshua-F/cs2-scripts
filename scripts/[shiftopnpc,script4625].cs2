@@ -1,7 +1,7 @@
 // 4625
 [shiftopnpc,script4625]
-if (highlight_npc_get(npc_uid, npc_spawncycle, 1) = true) {
-	highlight_npc_off(npc_uid, npc_spawncycle, 1);
+if (highlight_npc_get(npc_uid, npc_creationcycle, 1) = true) {
+	highlight_npc_off(npc_uid, npc_creationcycle, 1);
 } else {
-	highlight_npc_on(npc_uid, npc_spawncycle, 1);
+	highlight_npc_on(npc_uid, npc_creationcycle, 1);
 }

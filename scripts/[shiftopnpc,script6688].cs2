@@ -3,9 +3,9 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-if (highlight_npc_get(npc_uid, npc_spawncycle, 6) = true) {
-	highlight_npc_off(npc_uid, npc_spawncycle, 6);
+if (highlight_npc_get(npc_uid, npc_creationcycle, 6) = true) {
+	highlight_npc_off(npc_uid, npc_creationcycle, 6);
 } else {
-	highlight_npc_on(npc_uid, npc_spawncycle, 6);
+	highlight_npc_on(npc_uid, npc_creationcycle, 6);
 }
-~npc_name_setup(npc_uid, npc_spawncycle, npc_name, npc_type);
+~npc_name_setup(npc_uid, npc_creationcycle, npc_name, npc_type);
