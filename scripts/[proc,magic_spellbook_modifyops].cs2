@@ -45,6 +45,12 @@ switch_component ($component0) {
 	case magic_spellbook:108 :
 		if (%varbit5006 = 10 & %varbit5037 = 1) {
 			if_setop(2, "Steve", $component0);
+		} else if (%varbit5006 = 6 & %varbit10782 ! 0) {
+			if_setop(2, "Aya", $component0);
+		} else if (%varbit5006 = 7 & %varbit10782 = 1) {
+			if_setop(2, "Achtryn", $component0);
+		} else if (%varbit5006 = 11 & %varbit10782 ! 0) {
+			if_setop(2, "Kuradel", $component0);
 		} else {
 			if_setop(2, enum(int, string, enum_1702, %varbit5006), $component0);
 		}

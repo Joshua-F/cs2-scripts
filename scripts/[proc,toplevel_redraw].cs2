@@ -160,6 +160,16 @@ if ($component7 ! null) {
 	} else if (%varbit5961 = 1 & %varbit542 = 0) {
 		if_setgraphic(graphic_2518, $component7);
 		if_sethide(false, $component7);
+	} else if (%varbit10960 > 0 & %varbit542 = 0) {
+		switch_int (%varbit10960) {
+			case 1 :
+				if_setgraphic(graphic_5641, $component7);
+			case 2 :
+				if_setgraphic(graphic_5642, $component7);
+			case 3 :
+				if_setgraphic(graphic_5643, $component7);
+		}
+		if_sethide(false, $component7);
 	} else {
 		if_sethide(true, $component7);
 	}

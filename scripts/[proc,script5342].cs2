@@ -10,6 +10,10 @@ switch_struct ($struct0) {
 		if (%var102 >= 1000000) {
 			return(~script5347(%var102));
 		}
+	case buff_burn_damage_accumulated_989 :
+		if (%varbit10965 > 0) {
+			return(%varbit10965);
+		}
 	case buff_time_till_next_decay_hit_4457 :
 		if (%varbit14692 = 50) {
 			return(calc(1 + (%varbit14692 - 5) / 5));
