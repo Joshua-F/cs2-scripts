@@ -33,6 +33,10 @@ switch_obj ($obj0) {
 		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);
 		}
+	case vengeance_other_9135 :
+		if (~script1897 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
+			return(1);
+		}
 	case vengeance_9136 :
 		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);

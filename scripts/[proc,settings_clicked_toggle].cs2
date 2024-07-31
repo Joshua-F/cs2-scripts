@@ -443,7 +443,7 @@ switch_int ($setting0) {
 	case 315 :
 		%varbit9452 = calc(1 - %varbit9452);
 	case 316 :
-		%varbit14819 = calc(1 - %varbit14819);
+		%varbit10971 = calc(1 - %varbit10971);
 	case 320 :
 		~settings_popout_loottools;
 	case 321 :
@@ -472,6 +472,10 @@ switch_int ($setting0) {
 		%varbit6068 = calc(1 - %varbit6068);
 	case 353 :
 		%varbit15310 = calc(1 - %varbit15310);
+	case 386 :
+		if (%varbit1777 = 2) {
+			%varbit10987 = calc(1 - %varbit10987);
+		}
 	case 363 :
 		~script724;
 	case 368 :

@@ -5,9 +5,6 @@ sound_synth(interface_select1, 1, 0);
 if_sethide(false, $component4);
 if_setonclick("script4428(1, -1, $enum0, $component2, $comsubid3, $component4, $component5, $int6)", $component4);
 def_int $int7 = calc(enum_getoutputcount($enum0) - 1);
-if ($enum0 = enum_3795) {
-	$int7 = calc($int7 - 1);
-}
 def_int $int8 = 14;
 if (~on_mobile = true) {
 	$int8 = 18;
@@ -27,8 +24,7 @@ $int10 = calc($int10 + 1);
 .cc_sethide(true);
 def_int $width11 = calc(if_getwidth($component2) - 30);
 def_int $int12 = 0;
-def_string $string0 = "";
-def_graphic $graphic13 = null;
+def_int $int13 = -1;
 def_boolean $boolean14 = enum(enum, boolean, enum_5279, $enum0);
 def_int $intarray0(enum_getoutputcount($enum0));
 while ($int12 < $int7) {
@@ -48,16 +44,7 @@ while ($int12 < $int7) {
 	if ($boolean14 = true) {
 		$intarray0(calc($int10 - 1)) = $int10;
 	}
-	if ($enum0 = enum_3795) {
-		if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
-			$string0, $graphic13 = ~script4302(enum(int, int, enum_3795, $int12));
-		} else {
-			$string0 = "Error";
-		}
-	} else {
-		$string0 = enum(int, string, $enum0, $int12);
-	}
-	cc_settext(~script4193($string0, $width11, p11_full));
+	cc_settext(~script4193(enum(int, string, $enum0, $int12), $width11, p11_full));
 	$int12, $int10 = calc($int12 + 1), calc($int10 + 1);
 }
 if ($boolean14 = true) {
@@ -70,7 +57,7 @@ if ($boolean14 = true) {
 		$int12 = calc($int12 + 1);
 	}
 }
-cc_deleteall(interface_704:27);
-~scrollbar_vertical(interface_704:27, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_deleteall(interface_704:34);
+~scrollbar_vertical(interface_704:34, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if_setscrollpos(0, 0, $component1);
-~script4426($int9, null, 334, $component2, if_getwidth($component2), interface_704:27, $component1, $component5);
+~script4426($int9, null, 334, $component2, if_getwidth($component2), interface_704:34, $component1, $component5);

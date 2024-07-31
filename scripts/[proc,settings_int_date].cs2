@@ -4,11 +4,17 @@ def_int $colour2 = 0xff981f;
 cc_deleteall($component1);
 def_int $int3 = 0;
 .cc_create($component1, ^iftype_graphic, $int3);
-$int3 = calc($int3 + 1);
 .cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 .cc_setgraphic(tradebacking);
 .cc_settiling(true);
+.cc_settrans(0);
+if_setonop("opsound(event_op, 2)", $component1);
+if (~on_mobile = false) {
+	if_setonmouseover("cc_settrans(event_com, $int3, 100, null)", $component1);
+	if_setonmouseleave("cc_settrans(event_com, $int3, 0, null)", $component1);
+}
+$int3 = calc($int3 + 1);
 cc_create($component1, ^iftype_rectangle, $int3);
 $int3 = calc($int3 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);

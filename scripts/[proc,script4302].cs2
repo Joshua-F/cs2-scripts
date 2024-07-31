@@ -42,6 +42,26 @@ switch_int ($int0) {
 		$int1 = getbit_range(%varclansetting5, 0, 9);
 	case 120 :
 		$int1 = getbit_range(%varclansetting5, 10, 19);
+	case 95 :
+		$int1 = getbit_range(%varclansetting5, 20, 29);
+	case 96 :
+		$int1 = getbit_range(%varclansetting102, 0, 9);
+	case 97 :
+		$int1 = getbit_range(%varclansetting102, 10, 19);
+	case 98 :
+		$int1 = getbit_range(%varclansetting102, 20, 29);
+	case 99 :
+		$int1 = getbit_range(%varclansetting103, 0, 9);
+	case 101 :
+		$int1 = getbit_range(%varclansetting103, 10, 19);
+	case 102 :
+		$int1 = getbit_range(%varclansetting103, 20, 29);
+	case 103 :
+		$int1 = getbit_range(%varclansetting104, 0, 9);
+	case 104 :
+		$int1 = getbit_range(%varclansetting104, 10, 19);
+	case 124 :
+		$int1 = getbit_range(%varclansetting104, 20, 29);
 }
 def_string $string0 = enum(int, string, enum_3797, $int1);
 if (string_length($string0) > 0) {
