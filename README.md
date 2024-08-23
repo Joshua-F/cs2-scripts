@@ -230,6 +230,7 @@
 [**227**](scripts/[clientscript,steelborder].cs2) `[clientscript,steelborder]`  
 [**228**](scripts/[proc,steelborder].cs2) `[proc,steelborder]`  
 [**229**](scripts/[clientscript,cc_graphic_swapper].cs2) `[clientscript,cc_graphic_swapper]`  
+[**230**](scripts/[clientscript,script230].cs2)  
 [**231**](scripts/[proc,scrollbar_vertical_rebuild].cs2) `[proc,scrollbar_vertical_rebuild]`  
 [**232**](scripts/[clientscript,league_rewards_init].cs2) `[clientscript,league_rewards_init]`  
 [**233**](scripts/[clientscript,motw_setmodel].cs2) `[clientscript,motw_setmodel]`  
@@ -498,6 +499,7 @@
 [**496**](scripts/[clientscript,wilderness_lootingbag_draw].cs2) `[clientscript,wilderness_lootingbag_draw]`  
 [**497**](scripts/[proc,wilderness_lootingbag_draw].cs2) `[proc,wilderness_lootingbag_draw]`  
 [**498**](scripts/[clientscript,killdeathratio_init].cs2) `[clientscript,killdeathratio_init]`  
+[**499**](scripts/[proc,script499].cs2)  
 [**502**](scripts/[clientscript,script502].cs2)  
 [**503**](scripts/[proc,league_rewards_draw].cs2) `[proc,league_rewards_draw]`  
 [**504**](scripts/[clientscript,bankmain_switchtab].cs2) `[clientscript,bankmain_switchtab]`  
@@ -4803,7 +4805,6 @@
 [**4815**](scripts/[proc,script4815].cs2)  
 [**4816**](scripts/[clientscript,ca_tasks_init].cs2) `[clientscript,ca_tasks_init]`  
 [**4817**](scripts/[clientscript,ca_tasks_draw_list].cs2) `[clientscript,ca_tasks_draw_list]`  
-[**4818**](scripts/[proc,ca_tasks_draw_list].cs2) `[proc,ca_tasks_draw_list]`  
 [**4819**](scripts/[proc,ca_task_display].cs2) `[proc,ca_task_display]`  
 [**4820**](scripts/[clientscript,ca_info_hover].cs2) `[clientscript,ca_info_hover]`  
 [**4821**](scripts/[clientscript,ca_task_filter_init].cs2) `[clientscript,ca_task_filter_init]`  

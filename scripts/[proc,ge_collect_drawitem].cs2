@@ -1,33 +1,37 @@
 // 792
-[proc,ge_collect_drawitem](int $slot0, inv $inv1, component $component2, int $comsubid3)
-def_graphic $graphic4 = graphic_1120;
-def_graphic $graphic5 = graphic_1121;
+[proc,ge_collect_drawitem](int $slot0, inv $inv1, component $component2, int $comsubid3, component $component4, component $component5)
+def_graphic $graphic6 = graphic_1120;
+def_graphic $graphic7 = graphic_1121;
 if (.cc_find($component2, $comsubid3) = ^true) {
-	.cc_setgraphic($graphic4);
+	.cc_setgraphic($graphic6);
 }
-def_obj $obj6 = inv_getobj($inv1, $slot0);
-def_int $num7 = 0;
-if ($obj6 ! null) {
-	$num7 = inv_getnum($inv1, $slot0);
+def_obj $obj8 = inv_getobj($inv1, $slot0);
+def_int $num9 = 0;
+if ($obj8 ! null) {
+	$num9 = inv_getnum($inv1, $slot0);
 	cc_sethide(false);
 	cc_clearops;
-	cc_setonmouserepeat("cc_graphic_swapper(event_com, $comsubid3, $graphic5, null)");
-	cc_setonmouseleave("cc_graphic_swapper(event_com, $comsubid3, $graphic4, null)");
-	if (oc_cert($obj6) ! $obj6) {
-		if ($num7 = 1) {
-			cc_setop(1, "Collect-item");
-			cc_setop(2, "Collect-note");
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, $comsubid3, $graphic7, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, $comsubid3, $graphic6, null)");
+	if ($component4 ! null) {
+		if (oc_cert($obj8) ! $obj8) {
+			if ($num9 = 1) {
+				cc_setop(1, "Collect-item");
+				cc_setop(2, "Collect-note");
+			} else {
+				cc_setop(1, "Collect-notes");
+				cc_setop(2, "Collect-items");
+			}
 		} else {
-			cc_setop(1, "Collect-notes");
-			cc_setop(2, "Collect-items");
+			cc_setop(2, "Collect");
 		}
-	} else {
-		cc_setop(2, "Collect");
 	}
-	cc_setop(3, "Bank");
+	if ($component5 ! null) {
+		cc_setop(3, "Bank");
+	}
 	cc_setop(10, "Examine");
-	cc_setobject($obj6, $num7);
-	cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
+	cc_setobject($obj8, $num9);
+	cc_setopbase("<col=ff9040><oc_name($obj8)></col>");
 } else {
 	cc_sethide(true);
 	cc_clearops;

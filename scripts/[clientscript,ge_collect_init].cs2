@@ -1,11 +1,15 @@
 // 788
-[clientscript,ge_collect_init](int $int0, component $component1, component $component2, component $component3)
-def_int $int4 = 0;
-def_component $component5 = enum(int, component, enum_1011, $int4);
-while ($component5 ! null) {
-	~ge_collect_initslot($component5, $int4, $component3);
-	$int4 = calc($int4 + 1);
-	$component5 = enum(int, component, enum_1011, $int4);
+[clientscript,ge_collect_init](int $int0, enum $enum1, component $component2, component $component3, component $component4)
+def_int $int5 = 0;
+def_component $component6 = enum(int, component, $enum1, $int5);
+while ($component6 ! null) {
+	~ge_collect_initslot($component6, $int5, $component4, $component2, $component3);
+	$int5 = calc($int5 + 1);
+	$component6 = enum(int, component, $enum1, $int5);
 }
-~ge_collect_all_init($component1, "Inventory", "Collect to inventory");
-~ge_collect_all_init($component2, "Bank", "Collect to bank");
+if ($component2 ! null) {
+	~ge_collect_all_init($component2, "Inventory", "Collect to inventory");
+}
+if ($component3 ! null) {
+	~ge_collect_all_init($component3, "Bank", "Collect to bank");
+}

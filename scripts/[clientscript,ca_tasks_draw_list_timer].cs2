@@ -4,4 +4,179 @@ if (clientclock < calc($clock14 + 1)) {
 	return;
 }
 if_setontimer(null, $component1);
-~ca_tasks_draw_list($int0, $component1, $component2, $component3, $component4, $component5, $component7, $component6, $component8, $component9, $component10, $component11, $component12, $int13);
+def_int $int15 = -1;
+if ($int0 = -1 & %varcint139 ! -1) {
+	$int15 = %varcint139;
+}
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+cc_deleteall($component7);
+cc_deleteall($component8);
+cc_deleteall($component9);
+cc_deleteall($component10);
+def_int $int16 = 0;
+def_int $length17 = 6;
+def_enum $enumarray0($length17);
+$enumarray0(0) = enum_3981;
+$enumarray0(1) = enum_3982;
+$enumarray0(2) = enum_3983;
+$enumarray0(3) = enum_3984;
+$enumarray0(4) = enum_3985;
+$enumarray0(5) = enum_3986;
+def_int $colour18 = 0xff981f;
+def_int $length19 = ~script5241;
+def_struct $structarray1($length19);
+def_int $int20 = 0;
+def_int $length21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+while ($length21 < $length17) {
+	$int23 = enum_getoutputcount($enumarray0($length21));
+	while ($int20 < $int23) {
+		$structarray1($int22) = enum(int, struct, $enumarray0($length21), $int20);
+		$int22, $int20 = calc($int22 + 1), calc($int20 + 1);
+	}
+	$int20, $length21 = 0, calc($length21 + 1);
+}
+$int20 = 0;
+def_struct $struct24 = null;
+def_int $int25 = 0;
+def_int $int26 = 40;
+def_int $trans27 = 255;
+def_graphic $graphic28 = "open_buttons_small,1";
+def_graphic $graphic29 = "open_buttons_small,0";
+def_int $int30 = -1;
+def_int $int31 = -1;
+def_string $text0 = "null";
+def_string $string1 = "null";
+def_int $int32 = -1;
+def_int $int33 = -1;
+def_int $int34 = -1;
+def_int $int35 = 0;
+def_int $int36 = -1;
+def_boolean $boolean37 = ~on_mobile;
+if (cc_find($component2, $int13) = ^true) {
+	cc_setcolour($colour18);
+}
+while ($int20 < $length19) {
+	$struct24 = $structarray1($int20);
+	$int30 = ~script4834(struct_param($struct24, param_1306));
+	$int31 = struct_param($struct24, param_1310);
+	$text0 = struct_param($struct24, param_1308);
+	$string1 = struct_param($struct24, param_1309);
+	$int32 = struct_param($struct24, param_1311);
+	$int33 = struct_param($struct24, param_1312);
+	if (~ca_task_display($struct24, $int31, $int30, $int32, $int33) = 1) {
+		if (struct_param($struct24, param_1306) = $int15) {
+			$int0, %varcint139, $int36 = $int20, -1, $int25;
+		}
+		cc_create($component4, ^iftype_rectangle, $int16);
+		if ($int20 = $int0) {
+			$int34 = paraheight("Description: <$string1>", calc(if_getwidth($component4) - 10), p11_full);
+			cc_setsize(0, calc($int26 + (10 * $int34 + 25)), ^setsize_minus, ^setsize_abs);
+			$graphic28 = "open_buttons_small,3";
+			$graphic29 = "open_buttons_small,2";
+		} else {
+			cc_setsize(0, $int26, ^setsize_minus, ^setsize_abs);
+			$graphic28 = "open_buttons_small,1";
+			$graphic29 = "open_buttons_small,0";
+		}
+		cc_setposition(0, $int25, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		if (calc($int16 % 2) = 1) {
+			$trans27 = 230;
+		} else {
+			$trans27 = 245;
+		}
+		if ($int20 = $int0 & $boolean37 = false) {
+			cc_settrans(210);
+		} else {
+			cc_settrans($trans27);
+		}
+		if ($boolean37 = false) {
+			cc_setonmouserepeat("ca_info_hover(event_comsubid, $component4, $component9, 210, $graphic28)");
+			cc_setonmouseleave("ca_info_hover(event_comsubid, $component4, $component9, $trans27, $graphic29)");
+		} else {
+			cc_setonmouserepeat(null);
+			cc_setonmouseleave(null);
+		}
+		cc_setopbase("<col=ff981f><$text0></col>");
+		if ($int20 = $int0) {
+			cc_setop(1, "Collapse");
+			cc_setonop("ca_tasks_draw_list(-1, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $int13, clientclock)");
+		} else {
+			cc_setop(1, "Expand");
+			cc_setonop("ca_tasks_draw_list($int20, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $int13, clientclock)");
+		}
+		cc_create($component9, ^iftype_graphic, $int16);
+		cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
+		cc_setposition(5, calc($int25 + ($int26 - 18) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic($graphic29);
+		cc_create($component10, ^iftype_graphic, $int16);
+		cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
+		cc_setposition(28, calc($int25 + ($int26 - 24) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic(enum(int, graphic, enum_3965, $int31));
+		cc_create($component5, ^iftype_text, $int16);
+		cc_settext($text0);
+		cc_setsize(55, 16, ^setsize_minus, ^setsize_abs);
+		cc_setposition(55, calc($int25 + $int26 / 2 - 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		if ($int30 = 1) {
+			cc_setcolour(0x0dc10d);
+		} else {
+			cc_setcolour(0x9f9f9f);
+		}
+		cc_create($component7, ^iftype_text, $int16);
+		cc_settext("Monster: <col=ffffff><enum(int, string, enum_3971, $int33)></col>");
+		cc_setsize(55, 11, ^setsize_minus, ^setsize_abs);
+		cc_setposition(55, calc($int25 + $int26 / 2 + 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p11_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_setcolour($colour18);
+		if ($int20 = $int0) {
+			cc_create($component6, ^iftype_text, 0);
+			$int35 = enum(int, int, enum_4846, $int31);
+			if ($int35 > 1) {
+				cc_settext("Type: <col=ffffff><enum(int, string, enum_3969, $int32)></col> <col=dfdfdf>(+<tostring($int35)> points)</col>");
+			} else {
+				cc_settext("Type: <col=ffffff><enum(int, string, enum_3969, $int32)></col> <col=dfdfdf>(+<tostring($int35)> point)</col>");
+			}
+			cc_setsize(55, 11, ^setsize_minus, ^setsize_abs);
+			cc_setposition(5, calc($int25 + $int26), ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextfont(p11_full);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_settextshadow(true);
+			cc_setcolour($colour18);
+			cc_create($component8, ^iftype_text, 0);
+			cc_settext("Description: <col=ffffff><$string1></col>");
+			cc_setsize(10, calc(10 * $int34), ^setsize_minus, ^setsize_abs);
+			cc_setposition(5, calc($int25 + $int26 + 19), ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextfont(p11_full);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_settextshadow(true);
+			cc_setcolour($colour18);
+		}
+		if ($int20 = $int0) {
+			$int25 = calc($int25 + $int34 * 10 + $int26 + 25);
+		} else {
+			$int25 = calc($int25 + $int26);
+		}
+		$int16 = calc($int16 + 1);
+	}
+	$int20 = calc($int20 + 1);
+}
+if ($int16 = 0) {
+	if_sethide(false, $component11);
+} else {
+	if_sethide(true, $component11);
+}
+~script4862($int25, if_getlayer($component1), $component1, $component3, $component12);
+if ($int36 ! -1) {
+	~scrollbar_resize($component12, $component3, $int36);
+}
+if_setonvartransmit("ca_tasks_draw_list($int0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $int13, clientclock){var3131, var3132}", $component4);
