@@ -131,6 +131,15 @@ if ($component0 = $component3) {
 } else {
 	return;
 }
-sound_synth(poh_build_wood, 1, 0);
+switch_int (random(4)) {
+	case 0 :
+		sound_synth(brew_place_logs, 1, 0);
+	case 1 :
+		sound_synth(hammer_wood, 2, 0);
+	case 2 :
+		sound_synth(observatory_hammer, 2, 0);
+	case default :
+		sound_synth(hammering_3, 1, 0);
+}
 ~macro_beekeeper_update(1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10);
 if_setontimer("macro_beekeeper_timer(calc(clientclock + 3), $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10)", $component2);

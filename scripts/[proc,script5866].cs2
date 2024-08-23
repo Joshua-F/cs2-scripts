@@ -1,0 +1,16 @@
+// 5866
+[proc,script5866](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+switch_int (%var263) {
+	case 0 :
+		~script5987($component0, $component1, 1);
+		~script5987($component2, $component3, 0);
+		~script5987($component4, $component5, 0);
+	case 1 :
+		~script5987($component0, $component1, 0);
+		~script5987($component2, $component3, 1);
+		~script5987($component4, $component5, 0);
+	case 2 :
+		~script5987($component0, $component1, 0);
+		~script5987($component2, $component3, 0);
+		~script5987($component4, $component5, 1);
+}

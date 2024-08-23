@@ -1,0 +1,16 @@
+// 5164
+[proc,script5164](component $component0, component $component1, int $int2)
+if (%varcint1198 = 0) {
+	if_setmodelangle(0, 180, 100, 200, 0, 850, $component0);
+} else {
+	switch_int (%varbit4130) {
+		case 3, 4 :
+			if_setmodelangle(0, 250, 100, 200, 0, 300, $component0);
+		case 5 :
+			if_setmodelangle(0, 120, 100, 200, 0, 500, $component0);
+		case 6 :
+			if_setmodelangle(4, 0, 100, 200, 0, 300, $component0);
+		case 7 :
+			if_setmodelangle(4, 200, 100, 200, 0, 100, $component0);
+	}
+}

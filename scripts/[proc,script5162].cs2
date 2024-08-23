@@ -1,0 +1,42 @@
+// 5162
+[proc,script5162](component $component0, int $int1, int $int2, int $int3, model $model4, boolean $boolean5)(int)
+cc_create($component0, ^iftype_model, $int1);
+$int1 = calc($int1 + 1);
+if ($boolean5 = true) {
+	cc_setsize(120, 118, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_setsize(66, 64, ^setsize_abs, ^setsize_abs);
+}
+cc_setmodel($model4);
+switch_int (%varbit4130) {
+	case 0, 1 :
+		cc_setmodelangle(0, 0, 0, 200, 0, 400);
+	case 3 :
+		if (%varbit10989 = 0) {
+			cc_setmodelangle(0, 160, 100, 200, 0, 500);
+		} else {
+			cc_setmodelangle(0, 180, 100, 200, 0, 300);
+		}
+	case 4 :
+		if (%varbit10989 = 0) {
+			cc_setmodelangle(0, 160, 100, 200, 0, 500);
+		} else {
+			cc_setmodelangle(0, 160, 100, 200, 0, 400);
+		}
+	case 5 :
+		if (%varbit10989 = 0) {
+			cc_setmodelangle(0, 35, 100, 200, 0, 1000);
+		} else {
+			cc_setmodelangle(0, 35, 100, 200, 0, 1050);
+		}
+	case 6 :
+		cc_setmodelangle(4, -5, 100, 200, 0, 250);
+	case 7 :
+		if (%varbit10989 = 0) {
+			cc_setmodelangle(0, 120, 100, 200, 0, 150);
+		} else {
+			cc_setmodelangle(0, 110, 100, 200, 0, 150);
+		}
+}
+cc_setposition(calc($int2 + 2), calc($int3 + 40), ^setpos_abs_centre, ^setpos_abs_top);
+return($int1);

@@ -1,5 +1,18 @@
 // 5090
 [proc,script5090]
-def_string $text0 = escape(%varcstring370);
-if_settext("<$text0><col=0000ff>|</col>", interface_875:4);
-if_settext($text0, interface_875:11);
+def_string $string0 = escape(%varcstring370);
+if_settext("<$string0><col=0000ff>|</col>", interface_875:4);
+if_settext($string0, interface_875:12);
+def_int $length0 = string_length($string0);
+while ($length0 > 0 & compare(substring($string0, calc($length0 - 1), $length0), " ") = 0) {
+	$string0 = substring($string0, 0, calc($length0 - 1));
+	$length0 = string_length($string0);
+}
+if ($length0 > 0) {
+	$string0 = ~string_findandreplace($string0, " ", " ");
+	~script5161($string0);
+	if_setonchattransmit("script5160($string0)", interface_875:7);
+} else {
+	if_settext("<col=6f6f6f>Recent chat from the named player will be shown here.</col>", interface_875:7);
+	if_setonchattransmit(null, interface_875:7);
+}

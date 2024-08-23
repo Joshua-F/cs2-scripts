@@ -1,0 +1,41 @@
+// 5161
+[proc,script5161](string $string0)
+def_int $width0 = calc(if_getwidth(interface_875:7) - 10);
+def_string $string1 = lowercase($string0);
+def_int $chattype1 = ^chattype_gamemessage;
+def_int $int2 = -1;
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_int $int3 = 0;
+def_string $string5 = "";
+def_int $int4 = 0;
+def_int $chatfilter5 = chat_getfilter_public;
+def_string $string6 = "";
+def_int $int6 = 0;
+def_string $string7 = "";
+def_int $int7 = 0;
+def_int $mesuid8 = ~script553;
+while ($mesuid8 ! -1) {
+	$chattype1, $int2, $string2, $string3, $string4, $int3, $string5, $int4 = chat_gethistory_byuid($mesuid8);
+	if (string_length($string2) > 0) {
+		$string2 = removetags($string2);
+		if (compare(lowercase($string2), $string1) = 0 & ($chatfilter5 = ^chatfilter_autochat | $chattype1 ! ^chattype_autotyper & $chattype1 ! ^chattype_modautotyper)) {
+			$string6 = "<$string2>: <col=0000ff><$string4>";
+			$int6 = string_length($string6);
+			if ($int6 > 0 & parawidth($string6, ^max_32bit_int, p12_full) > $width0) {
+				while ($int6 > 1 & $int7 = 0) {
+					$int6 = calc($int6 - 1);
+					$string7 = append(substring($string6, 0, $int6), "...");
+					if (parawidth($string7, ^max_32bit_int, p12_full) <= $width0) {
+						$string6, $int7 = $string7, 1;
+					}
+				}
+			}
+			if_settext($string6, interface_875:7);
+			return;
+		}
+	}
+	$mesuid8 = chat_getprevuid($mesuid8);
+}
+if_settext("<col=6f6f6f><$string0>: No recent chat found.</col>", interface_875:7);

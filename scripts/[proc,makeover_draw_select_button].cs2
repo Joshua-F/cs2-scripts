@@ -1,5 +1,5 @@
 // 7068
-[proc,makeover_draw_select_button](component $component0, int $int1)
+[proc,makeover_draw_select_button](component $component0, string $string0, int $int1)
 def_int $comsubid2 = 0;
 if ($int1 = 0) {
 	$comsubid2 = ~v2_stone_button_filled($component0);
@@ -12,12 +12,12 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
-cc_settext("Select");
+cc_settext($string0);
 cc_setopbase("<col=ff9040>Style");
 if ($int1 = 0) {
 	cc_setcolour(0xff981f);
-	cc_setop(1, "Select");
-	cc_setonop("makeover_select_style($component0)");
+	cc_setop(1, $string0);
+	cc_setonop("makeover_select_style($component0, $string0)");
 	if (~on_mobile = false) {
 		if_setonmouserepeat("v2_stone_button_change_in(event_com, 0)", $component0);
 		if_setonmouseleave("v2_stone_button_change_out(event_com, 0)", $component0);

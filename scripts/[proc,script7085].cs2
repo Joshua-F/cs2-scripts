@@ -1,5 +1,5 @@
 // 7085
-[proc,script7085](component $component0, int $comsubid1, component $component2, component $component3)
+[proc,script7085](component $component0, int $comsubid1, component $component2, component $component3, int $int4)
 if (~on_mobile = true) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component0);
 	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, $component0);
@@ -11,11 +11,11 @@ cc_create($component0, ^iftype_graphic, $comsubid1);
 cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("menu_buttons,0");
-def_graphic $graphic4 = "menu_buttons,1";
-def_graphic $graphic5 = "menu_buttons,0";
+def_graphic $graphic5 = "menu_buttons,1";
+def_graphic $graphic6 = "menu_buttons,0";
 if (~on_mobile = false) {
-	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic4, null)");
-	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic5, null)");
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic5, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic6, null)");
 }
-if_setonop("script7086(event_op, $component0, $component2, $comsubid1, $component3)", $component0);
+if_setonop("script7086(event_op, $component0, $component2, $comsubid1, $component3, $int4)", $component0);
 if_setop(1, "Show Menu", $component0);

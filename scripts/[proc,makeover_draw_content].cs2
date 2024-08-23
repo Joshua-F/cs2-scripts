@@ -1,7 +1,9 @@
 // 7070
-[proc,makeover_draw_content](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
-~makeover_draw_items($component1, $component6);
-~makeover_draw_scrollbar($component1, $component5);
-~script7074($component2);
-~makeover_draw_colours($component3);
-~makeover_draw_select_button($component4, 0);
+[proc,makeover_draw_content](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, enum $enum10, enum $enum11, enum $enum12, boolean $boolean13)
+~makeover_draw_items($component1, $component9, $enum12, $boolean13);
+~makeover_draw_scrollbar($component1, $component8, $enum12, $boolean13);
+~script7074($component2, $component3);
+def_int $int14 = ~makeover_draw_colours($component4, $enum10, $enum11);
+if_setposition(if_getx($component5), calc($int14 - 4), ^setpos_abs_left, ^setpos_abs_centre, $component5);
+~makeover_draw_select_button($component6, "Apply", 0);
+~makeover_draw_select_button($component7, "Confirm", 0);

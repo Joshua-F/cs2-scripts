@@ -48,14 +48,14 @@ while ($layer18 ! $layer6) {
 	$int15, $int16 = calc($int15 + if_getx($layer18) - if_getscrollx($layer18)), calc($int16 + if_gety($layer18) - if_getscrolly($layer18));
 	$layer18 = if_getlayer($layer18);
 }
-if (~on_mobile = true) {
+if (~on_mobile = true & $setting8 ! 387) {
 	$int17 = ~max(0, calc($int16 + 20 - $height14));
 } else {
 	$int17 = calc($int16 + if_getheight($component0) - 1);
 }
 if_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top, $component3);
 def_int $height19 = calc(if_getheight($layer6) - $int17);
-if (~on_mobile = true) {
+if (~on_mobile = true & $setting8 ! 387) {
 	$height19 = calc($int16 + 20 - $int17);
 }
 if ($height14 > $height19) {

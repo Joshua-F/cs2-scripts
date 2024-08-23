@@ -1,0 +1,7 @@
+// 5988
+[clientscript,script5988](component $component0, component $component1, component $component2, int $int3, int $opindex4)
+if (testbit(2, $opindex4) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+}
+%var261 = $int3;
+~makeovermage_gender($component0, $component1, $component2, $int3);

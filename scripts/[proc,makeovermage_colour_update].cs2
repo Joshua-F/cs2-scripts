@@ -13,6 +13,7 @@ while ($int3 ! -1) {
 def_int $int4 = ~min(27, calc((if_getheight($component0) - 2) / (7 + 1 + $int1)));
 def_int $int5 = 1;
 def_int $int6 = -1;
+if_setposition(0, calc(38 + (if_getheight($component0) - $int4 * (7 + 1 + $int1)) / 2), ^setpos_abs_centre, ^setpos_abs_top, $component0);
 cc_deleteall($component0);
 def_int $int7 = 0;
 $int2 = enum(int, int, enum_999, $int7);

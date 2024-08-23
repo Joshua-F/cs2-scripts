@@ -1,26 +1,27 @@
 // 7071
-[proc,makeover_draw_scrollbar](component $component0, component $component1)
+[proc,makeover_draw_scrollbar](component $component0, component $component1, enum $enum2, boolean $boolean3)
 cc_deleteall($component1);
-def_int $height2 = if_getheight($component0);
-def_int $int3 = -1;
-def_int $int4 = 0;
-if (%varbit4130 = 0 | %varbit4130 = 1) {
-	$int4 = enum_getoutputcount(enum_496);
+def_int $height4 = if_getheight($component0);
+def_int $int5 = -1;
+def_int $count6 = enum_getoutputcount($enum2);
+def_int $int7 = 90;
+def_int $int8 = 3;
+if ($boolean3 = true) {
+	$int7 = 140;
+	$int8 = 2;
+}
+def_int $int9 = ~max(1, calc($count6 / $int8));
+if (calc($count6 % $int8) ! 0) {
+	$int9 = calc($int9 + 1);
+}
+def_int $height10 = calc(10 + $int9 * $int7);
+def_int $height11 = if_getheight(if_getlayer($component0));
+if ($height10 > $height11) {
+	$height4 = $height10;
 } else {
-	$int4 = enum_getoutputcount(enum_2630);
+	$height4 = 0;
 }
-def_int $int5 = ~max(1, calc($int4 / 3));
-if (calc($int4 % 3) ! 0) {
-	$int5 = calc($int5 + 1);
-}
-def_int $height6 = calc(10 + $int5 * 90);
-def_int $height7 = if_getheight(if_getlayer($component0));
-if ($height6 > $height7) {
-	$height2 = $height6;
-} else {
-	$height2 = 0;
-}
-if_setscrollsize(0, $height2, $component0);
+if_setscrollsize(0, $height4, $component0);
 if_setscrollpos(0, %varcint1153, $component0);
 ~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~scrollbar_resize($component1, $component0, %varcint1153);

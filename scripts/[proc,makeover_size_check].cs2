@@ -1,12 +1,16 @@
 // 7091
-[proc,makeover_size_check](component $component0, component $component1, int $width2, int $height3, component $component4, component $component5)
-def_int $width6 = if_getwidth($component1);
-def_int $height7 = if_getheight($component1);
-if ($width6 = $width2 & $height7 = $height3) {
+[proc,makeover_size_check](component $component0, component $component1, int $width2, int $height3, component $component4, component $component5, enum $enum6)
+def_int $width7 = if_getwidth($component1);
+def_int $height8 = if_getheight($component1);
+if ($width7 = $width2 & $height8 = $height3) {
 	return;
 }
-def_int $int8 = ~min(800, calc($height7 - 3));
-if_setsize(512, $int8, ^setsize_abs, ^setsize_abs, $component0);
-if_setposition(0, calc(($height7 - $int8) / 2), ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
-~makeover_draw_scrollbar($component5, $component4);
-if_setontimer("makeover_size_check($component0, $component1, $width6, $height7, $component4, $component5)", $component0);
+def_int $int9 = ~min(800, calc($height8 - 3));
+if_setsize(512, $int9, ^setsize_abs, ^setsize_abs, $component0);
+if_setposition(0, calc(($height8 - $int9) / 2), ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
+def_boolean $boolean10 = false;
+if ($enum6 = enum_5499 | $enum6 = enum_5498) {
+	$boolean10 = true;
+}
+~makeover_draw_scrollbar($component5, $component4, $enum6, $boolean10);
+if_setontimer("makeover_size_check($component0, $component1, $width7, $height8, $component4, $component5, $enum6)", $component0);

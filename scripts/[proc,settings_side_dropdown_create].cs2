@@ -12,6 +12,9 @@ def_int $setting9 = struct_param($struct7, param_1077);
 if ($enum8 = null) {
 	return;
 }
+if (compare($string0, "") ! 0) {
+	$string0 = "<$string0>:";
+}
 def_int $int10 = 0;
 cc_create($component0, ^iftype_graphic, $int10);
 $int10 = calc($int10 + 1);
@@ -52,7 +55,7 @@ cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-cc_settext("<$string0>:");
+cc_settext($string0);
 ~xpdrops_setup_display_hoveroff($component0);
 switch_int ($setting9) {
 	case 55 :
