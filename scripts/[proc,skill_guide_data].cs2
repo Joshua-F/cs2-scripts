@@ -455,6 +455,8 @@ switch_int ($int0) {
 					return(50, harmonised_nightmare_staff_24423, "Nightmare Staff (with orb)<br> (with <tostring(82)> Magic)");
 				case 3 :
 					return(75, ring_of_suffering_19550, "Enchanted zenyte jewellery");
+				case 4 :
+					return(90, amulet_of_rancour_29801, "Amulet of Rancour");
 			}
 		}
 		return(-1, null, "");
@@ -571,7 +573,7 @@ switch_int ($int0) {
 					case 52 :
 						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
 					case 53 :
-						return(88, lily_of_the_sands_27272, "Menaphite remedy<br>Dwarf weed & Lily of the sands ");
+						return(88, lily_of_the_sands_27272, "Menaphite remedy<br>Dwarf weed & Lily of the sands");
 					case 54 :
 						return(90, torstol_269, "Super combat potion<br>Super attack potion, super defence potion, super strength potion & torstol");
 					case 55 :
@@ -579,7 +581,7 @@ switch_int ($int0) {
 					case 56 :
 						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & crushed superior dragon bones<br>(after Dragon Slayer II)");
 					case 57 :
-						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
+						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol. Upgraded to an Extended Anti-venom+ with a <oc_name(araxyte_venom_sack_29784)>");
 					case 58 :
 						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
 					case 59 :
@@ -1104,21 +1106,24 @@ switch_int ($int0) {
 					return(84, onyx_bracelet_11130, "Members: Onyx bracelet");
 				}
 				if ($int2 = 57) {
-					return(89, zenyte_19493, "Members: Cut zenyte");
+					return(86, amulet_of_rancour_29801, "Members: Amulet of Rancour");
 				}
 				if ($int2 = 58) {
-					return(89, zenyte_ring_19538, "Members: Zenyte ring");
+					return(89, zenyte_19493, "Members: Cut zenyte");
 				}
 				if ($int2 = 59) {
-					return(90, onyx_amulet_6581, "Members: Onyx amulet");
+					return(89, zenyte_ring_19538, "Members: Zenyte ring");
 				}
 				if ($int2 = 60) {
-					return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
+					return(90, onyx_amulet_6581, "Members: Onyx amulet");
 				}
 				if ($int2 = 61) {
-					return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
+					return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
 				}
 				if ($int2 = 62) {
+					return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
+				}
+				if ($int2 = 63) {
 					return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
 				}
 				return(-1, null, "");
@@ -1143,17 +1148,9 @@ switch_int ($int0) {
 					case 8 :
 						return(66, air_battlestaff_1397, "Air battlestaff");
 					case 9 :
-						return(74, purging_staff_29594, "Purging staff");
+						return(72, noxious_halberd_29796, "Noxious Halberd (With 72 Smithing)");
 					case 10 :
-						return(83, amethyst_bolt_tips_5_4768, "Amethyst bolt tips");
-					case 11 :
-						return(85, amethyst_arrowtips_21350, "Amethyst arrowtips");
-					case 12 :
-						return(85, accursed_sceptre_27665, "Accursed Sceptre");
-					case 13 :
-						return(87, amethyst_javelin_heads_5_13220, "Amethyst javelin heads");
-					case 14 :
-						return(89, amethyst_dart_tip_25853, "Amethyst dart tips");
+						return(74, purging_staff_29594, "Purging staff");
 					case default :
 						return(-1, null, "");
 				}
