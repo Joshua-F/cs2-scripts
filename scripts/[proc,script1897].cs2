@@ -1,15 +1,3 @@
 // 1897
 [proc,script1897]()(int)
-if (%varbit5963 = 1) {
-	return(1);
-}
-if (%varbit14888 = 1 & ~target_world = 1) {
-	return(1);
-}
-if (~deadman_world ! 0) {
-	return(1);
-}
-if (~pvp_world = 1) {
-	return(1);
-}
-return(0);
+return(%varbit11028);
