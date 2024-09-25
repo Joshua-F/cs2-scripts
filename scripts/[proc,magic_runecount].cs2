@@ -123,6 +123,9 @@ switch_obj ($obj0) {
 		if (~fake_runes_enabled = 1) {
 			return(inv_total(inv, earth_rune_11689));
 		}
+		if ($obj2 = tome_of_earth_30064) {
+			return(^max_32bit_int);
+		}
 		$int12 = inv_total(inv, earth_rune_557);
 		if (map_members = true) {
 			$int12 = ~add($int12, inv_total(inv, dust_rune_4696));

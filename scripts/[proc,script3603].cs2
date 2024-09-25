@@ -1,0 +1,7 @@
+// 3603
+[proc,script3603](graphic $graphic0, component $component1, int $int2, int $int3, int $int4, int $width5, int $height6, int $setposh7, int $setposv8, int $int9, int $int10)(int)
+cc_create($component1, ^iftype_graphic, $int2);
+cc_setsize($width5, $height6, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int3 + $int9), calc($int4 + $int10), $setposh7, $setposv8);
+cc_setgraphic($graphic0);
+return(calc($int2 + 1));

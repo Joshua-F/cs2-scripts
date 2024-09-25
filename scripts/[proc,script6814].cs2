@@ -1,0 +1,19 @@
+// 6814
+[proc,script6814](component $component0, int $int1, string $string0, string $string1, string $string2)
+sound_synth(synth_8415, 1, 0);
+db_find(dbtable_72:0, $int1);
+def_dbrow $dbrow2 = db_findnext;
+if ($dbrow2 ! null & ~script6830($dbrow2) = 0) {
+	mes("You must activate the Statue of Ates at that location to teleport there.");
+	return;
+}
+cc_setcolour(^white);
+cc_settext("Please wait...");
+cc_setonop(null);
+.cc_setonkey(null);
+if_setop(1, "", $component0);
+if_setonop(null, $component0);
+if_setopbase("", $component0);
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+.cc_resume_pausebutton;

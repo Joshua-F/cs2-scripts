@@ -1,0 +1,11 @@
+// 7363
+[proc,script7363](dbrow $dbrow0, int $int1)
+def_int $int2 = db_getfield($dbrow0, dbtable_77:0, 0);
+def_component $component3 = db_getfield($dbrow0, dbtable_77:2, 0);
+def_int $int4 = 0;
+while ($int4 < $int1) {
+	if (cc_find($component3, $int4) = ^true) {
+		~script7364($int2, ~script7366($int2, $int4), $int1);
+	}
+	$int4 = calc($int4 + 1);
+}

@@ -1,0 +1,45 @@
+// 7338
+[clientscript,script7338](obj $obj0)
+if_setobject($obj0, 1, interface_886:2);
+if_setobject($obj0, 1, interface_886:3);
+~steelborder(interface_886:1, "Pre-pot Device", 0);
+def_int $int1 = oc_param($obj0, param_1978);
+def_int $int2 = 36;
+def_int $int3 = calc((if_getwidth(interface_886:7) - $int2 * $int1) / $int1);
+cc_deleteall(interface_886:7);
+def_int $int4 = 0;
+def_int $int5 = calc($int3 / 2);
+while ($int4 < $int1) {
+	cc_create(interface_886:7, ^iftype_graphic, $int4);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_proportion_centre);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + $int2 + $int3);
+}
+if_setoninvtransmit("script7339($int1){inv_911}", interface_886:7);
+~script7340($int1);
+cc_deleteall(interface_886:12);
+def_int $int6 = 7;
+def_int $int7 = 4;
+$int3 = calc((if_getwidth(interface_886:12) - 36 * $int6) / $int6);
+$int5 = calc($int3 / 2);
+def_int $int8 = calc((if_getheight(interface_886:12) - 32 * $int7) / $int7);
+def_int $int9 = calc($int8 / 2);
+def_int $size10 = inv_size(inv);
+def_int $size11 = 0;
+while ($size11 < $size10) {
+	cc_create(interface_886:12, ^iftype_graphic, $size11);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + $size11 % 7 * (36 + $int3)), calc($int9 + $size11 / 7 * (32 + $int8)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$size11 = calc($size11 + 1);
+}
+if_setoninvtransmit("script7343{inv}", interface_886:12);
+~script7344;

@@ -1,0 +1,20 @@
+// 7359
+[proc,script7359](int $int0)
+def_int $height1 = 0;
+def_component $component2 = null;
+db_listall(dbtable_77);
+def_dbrow $dbrow3 = db_findnext;
+while ($dbrow3 ! null) {
+	~script7360($dbrow3, $int0);
+	$component2 = db_getfield($dbrow3, dbtable_77:1, 0);
+	$height1 = max($height1, calc(if_gety($component2) + if_getheight($component2)));
+	$dbrow3 = db_findnext;
+}
+if_setscrollpos(0, 0, interface_15:53);
+if ($height1 > if_getheight(interface_15:53)) {
+	if_setscrollsize(0, calc($height1 + 2), interface_15:53);
+} else {
+	if_setscrollsize(0, 0, interface_15:53);
+}
+~scrollbar_vertical(interface_15:52, interface_15:53, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setonvartransmit("script7361($int0){var4453, var4454, var4455, var4456, var4457, var4458, var4459, var4460, var4461, var4462, var4463, var4464, var4465, var4466, var4467, var4468, var4469, var4470, var4471, var4472, var4473, var4474, var4475, var4476, var4477}", interface_15:53);

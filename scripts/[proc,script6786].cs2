@@ -1,0 +1,15 @@
+// 6786
+[proc,script6786](component $component0, boolean $boolean1, boolean $boolean2, boolean $boolean3, int $int4)(int)
+cc_create($component0, ^iftype_model, $int4);
+cc_setsize(44, 44, ^setsize_abs, ^setsize_abs);
+if ($boolean1 = false) {
+	cc_setmodel(model_54543);
+} else if ($boolean2 = true | $boolean3 = true) {
+	cc_setmodel(model_54544);
+} else {
+	cc_setmodel(model_54541);
+}
+cc_setmodelangle(1, 0, 513, 0, 0, 700);
+cc_setmodelorthog(true);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+return(calc($int4 + 1));

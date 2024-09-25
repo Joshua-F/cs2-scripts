@@ -1,0 +1,15 @@
+// 7342
+[clientscript,script7342](component $drop0, component $drop1, int $comsubid2, int $dropsubid3)
+if ($drop1 ! $drop0 | $comsubid2 = $dropsubid3) {
+	return;
+}
+def_obj $obj4 = inv_getobj(inv_911, $comsubid2);
+def_int $total5 = inv_total(inv_911, $obj4);
+def_obj $obj6 = inv_getobj(inv_911, $dropsubid3);
+def_int $total7 = inv_total(inv_911, $obj6);
+if (cc_find($drop0, $comsubid2) = ^true) {
+	~script7341($obj6, $total7);
+}
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~script7341($obj4, $total5);
+}

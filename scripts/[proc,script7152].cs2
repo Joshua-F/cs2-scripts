@@ -1,31 +1,17 @@
 // 7152
-[proc,script7152](dbrow $dbrow0)(int)
-def_dbrow $dbrow1 = db_getfield($dbrow0, dbtable_39:2, 0);
-def_component $component2 = interface_819:18;
-def_component $component3 = interface_819:22;
-def_component $component4 = interface_819:23;
-def_component $component5 = interface_819:40;
-def_component $component6 = interface_819:41;
-if ($dbrow1 = null) {
-	if_sethide(true, $component2);
-	return(0);
+[proc,script7152](dbrow $dbrow0, int $int1)(int, int)
+def_component $component2 = interface_819:10;
+def_int $int3 = db_getfieldcount($dbrow0, dbtable_39:2);
+def_int $int4 = 0;
+def_int $int5 = 0;
+if ($int3 > 0) {
+	$int4 = 1;
+	if ($int4 = 1) {
+		$int5 = ~script3165($dbrow0, $int3, $int1);
+	}
+	if ($int5 = 1) {
+		~script3166($dbrow0, $int3, if_getwidth($component2));
+	}
+	return($int4, $int5);
 }
-if_sethide(false, $component2);
-def_string $text0 = db_getfield($dbrow1, dbtable_41:2, 0);
-def_int $int7 = ~omnishop_var_getter($dbrow1);
-def_graphic $graphic8 = b12_full;
-def_graphic $graphic9 = q8_full;
-switch_int (%varcint988) {
-	case 1 :
-	case 2 :
-	case 3 :
-}
-if_settext($text0, $component3);
-if_settextfont($graphic8, $component3);
-if_settext($text0, $component5);
-if_settextfont($graphic8, $component5);
-if_settext(tostring($int7), $component4);
-if_settextfont($graphic9, $component4);
-if_settext(tostring($int7), $component6);
-if_settextfont($graphic9, $component6);
-return(1);
+return($int4, $int5);

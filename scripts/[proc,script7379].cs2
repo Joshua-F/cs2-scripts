@@ -1,0 +1,20 @@
+// 7379
+[proc,script7379](int $int0, int $int1, int $int2, component $component3, component $component4)(int)
+cc_create($component3, ^iftype_graphic, $int0);
+cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);
+def_graphic $graphic5 = graphic_5652;
+def_graphic $graphic6 = graphic_5651;
+cc_setgraphic($graphic6);
+cc_setop(1, "Back");
+cc_setonop("script7381($component4)");
+cc_setonkey("script7380(event_keycode, $component4)");
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic5, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic6, null)");
+$int0 = calc($int0 + 1);
+cc_create($component3, ^iftype_graphic, $int0);
+cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int1 + 6), calc($int2 + 6), ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(graphic_5661);
+$int0 = calc($int0 + 1);
+return($int0);

@@ -1,0 +1,14 @@
+// 7383
+[proc,script7383](int $int0)(int)
+if (%varcint1202 <= 0) {
+	%varcint1202 = calc($int0 + 1);
+} else if (%varcint1203 <= 0) {
+	%varcint1203 = calc($int0 + 1);
+} else if (%varcint1204 <= 0) {
+	%varcint1204 = calc($int0 + 1);
+} else if (%varcint1205 <= 0) {
+	%varcint1205 = calc($int0 + 1);
+} else {
+	return(0);
+}
+return(1);

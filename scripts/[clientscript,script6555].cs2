@@ -1,0 +1,16 @@
+// 6555
+[clientscript,script6555](component $component0, int $comsubid1, enum $enum2)
+def_int $int3 = ~script4818($enum2);
+def_namedobj $namedobj4 = enum(int, namedobj, $enum2, $int3);
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setobject($namedobj4, -1);
+}
+def_string $string0 = enum(enum, string, enum_4827, $enum2);
+if (string_length($string0) = 0) {
+	$string0 = oc_name($namedobj4);
+} else {
+	$string0 = "<$string0>(<tostring($int3)>)";
+}
+if (cc_find($component0, calc($comsubid1 + 1)) = ^true) {
+	cc_settext($string0);
+}

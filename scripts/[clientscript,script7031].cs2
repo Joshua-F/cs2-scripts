@@ -1,0 +1,16 @@
+// 7031
+[clientscript,script7031](component $component0, int $width1, int $int2)
+if ($int2 ! -1 & clientclock < $int2) {
+	return;
+}
+def_int $width3 = if_getwidth($component0);
+if ($width3 = $width1) {
+	if_setsize($width1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+	if_setontimer(null, $component0);
+	return;
+}
+if ($width3 < $width1) {
+	if_setsize(calc($width3 + 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+} else if ($width3 > $width1) {
+	if_setsize(calc($width3 - 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+}

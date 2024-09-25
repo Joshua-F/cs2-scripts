@@ -1,0 +1,29 @@
+// 3749
+[proc,script3749](component $component0, graphic $graphic1, graphic $graphic2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
+def_string $string0 = ~script7396($int3, 100000, 10000000, ",");
+switch_int (string_length($string0)) {
+	case 1 :
+		$int4, $int5 = calc($int4 + 13), calc($int5 - 15);
+	case 2 :
+		$int4, $int5 = calc($int4 + 10), calc($int5 - 10);
+	case 3 :
+		$int4, $int5 = calc($int4 + 8), calc($int5 - 8);
+	case 4 :
+		$int4, $int5 = calc($int4 + 4), calc($int5 - 4);
+	case 6 :
+		$int4, $int5 = calc($int4 + 0), calc($int5 + 5);
+}
+cc_create($component0, ^iftype_graphic, $int7);
+cc_setposition($int4, $int6, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic1);
+$int7 = calc($int7 + 1);
+cc_create($component0, ^iftype_text, $int7);
+cc_setposition($int5, calc(1 + $int6), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+cc_settext($string0);
+cc_settextshadow(true);
+cc_settextfont($graphic2);
+cc_setcolour(0xefefef);
+cc_settextalign(^settextalign_right, ^settextalign_bottom, 0);
+return(calc($int7 + 1));

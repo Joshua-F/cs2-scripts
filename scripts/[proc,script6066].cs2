@@ -1,0 +1,7 @@
+// 6066
+[proc,script6066](int $count0)(enum)
+def_int $count1 = enum_getoutputcount(enum_4826);
+if ($count0 < $count1) {
+	return(enum(int, enum, enum_4826, $count0));
+}
+return(enum(int, enum, enum_4829, calc($count0 - $count1)));

@@ -12,7 +12,7 @@ def_int $int8 = 0;
 def_obj $obj9 = null;
 def_int $int10 = 50;
 def_int $int11 = 40;
-while ($int8 < 92) {
+while ($int8 < 93) {
 	$obj9 = inv_getobj(inv_626, $int8);
 	cc_create($component0, ^iftype_graphic, $int8);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -156,7 +156,7 @@ def_int $intarray2(calc($int7 + 1));
 def_int $int18 = 0;
 $int14 = 0;
 def_int $index19 = -1;
-while ($int8 < 92) {
+while ($int8 < 93) {
 	$obj9 = inv_getobj(inv_626, $int8);
 	if ($obj9 ! null & ~seed_vault_filteritem($obj9) = 1) {
 		$index19 = oc_param(oc_unplaceholder($obj9), param_709);

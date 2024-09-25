@@ -1,0 +1,23 @@
+// 7337
+[clientscript,script7337](int $int0, boolean $boolean1)
+if (~on_mobile = true) {
+	return;
+}
+def_component $component2 = interface_885:4;
+def_dbrow $dbrow3 = enum(int, dbrow, enum_5565, $int0);
+if ($dbrow3 = null) {
+	return;
+}
+if ($boolean1 = true) {
+	if_sethide(false, db_getfield($dbrow3, dbtable_76:2, 0));
+	if_setmodel(model_17359, db_getfield($dbrow3, dbtable_76:3, 0));
+	if (cc_find($component2, calc($int0 * 2 + 1)) = ^true) {
+		cc_setcolour(^white);
+	}
+} else {
+	if_sethide(true, db_getfield($dbrow3, dbtable_76:2, 0));
+	if_setmodel(model_17360, db_getfield($dbrow3, dbtable_76:3, 0));
+	if (cc_find($component2, calc($int0 * 2 + 1)) = ^true) {
+		cc_setcolour(0xff981f);
+	}
+}

@@ -1,0 +1,5 @@
+// 7389
+[clientscript,script7389](component $component0)
+if_setonop(null, $component0);
+resume_countdialog(tostring(^max_32bit_int));
+if_setontimer("script7390($component0, calc(clientclock + 40))", $component0);

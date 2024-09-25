@@ -1,0 +1,9 @@
+// 7396
+[proc,script7396](int $int0, int $int1, int $int2, string $string0)(string)
+if ($int0 >= max(1000000, $int2)) {
+	return("<~tostring_spacer(calc($int0 / 1000000), $string0)>m");
+}
+if ($int0 >= max(1000, $int1)) {
+	return("<~tostring_spacer(calc($int0 / 1000), $string0)>k");
+}
+return(~tostring_spacer($int0, $string0));

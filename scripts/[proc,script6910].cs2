@@ -1,0 +1,20 @@
+// 6910
+[proc,script6910](component $component0, component $component1, int $int2, int $int3)
+if ($int2 <= 0) {
+	return;
+}
+cc_deleteall($component0);
+def_int $height4 = if_getheight($component1);
+if_setscrollpos(0, 0, $component1);
+if ($int2 <= $height4) {
+	if_setscrollsize(0, 0, $component1);
+} else {
+	if_setscrollsize(0, $int2, $component1);
+}
+~scrollbar_vertical($component0, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+$int3 = ~minmax(0, $int2, $int3);
+if ($int3 > 0 & cc_find($component0, 1) = ^true) {
+	~scrollbar_vertical_doscroll($component0, $component1, $int3, true);
+} else {
+	if_setscrollpos(0, 0, $component1);
+}

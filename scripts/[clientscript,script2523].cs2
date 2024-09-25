@@ -1,19 +1,10 @@
 // 2523
 [clientscript,script2523](boolean $boolean0, int $int1)
-cc_deleteall(interface_119:3);
-def_int $height2 = if_getheight(interface_119:3);
-def_int $height3 = calc($int1 * 20);
-if ($height3 <= $height2) {
-	if_setscrollpos(0, 0, interface_119:3);
-	if_setscrollsize(0, 0, interface_119:3);
-	~scrollbar_vertical(interface_119:204, interface_119:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-	return;
-}
-$height3 = calc($height3 + scale(1, 3, $height2));
-if_setscrollsize(0, $height3, interface_119:3);
-~scrollbar_vertical(interface_119:204, interface_119:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+def_component $component2 = interface_119:5;
+def_component $component3 = interface_119:6;
+cc_deleteall($component2);
+def_int $int4 = ^max_32bit_int;
 if ($boolean0 = true) {
-	if_setscrollpos(0, 0, interface_119:3);
-} else if (cc_find(interface_119:204, 1) = ^true) {
-	~scrollbar_vertical_doscroll(interface_119:204, interface_119:3, $height3, true);
+	$int4 = 0;
 }
+~script6949($component3, $component2, $int1, $int4);

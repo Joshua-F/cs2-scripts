@@ -1,0 +1,34 @@
+// 7347
+[proc,script7347](obj $obj0, int $int1, int $int2)(int)
+cc_sethide(false);
+cc_clearops;
+cc_setontimer(null);
+def_enum $enum3 = null;
+def_int $int4 = 0;
+def_int $int5 = 0;
+if ($obj0 ! null & $int1 > 0) {
+	$enum3, $int4, $int5 = ~script7370($obj0);
+	cc_settrans(0);
+	cc_setobject(enum(int, namedobj, $enum3, min($int1, $int5)), $int1);
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("script7348(true, event_com, event_comsubid, 0)");
+	}
+	cc_setonmouseleave("script7348(false, event_com, event_comsubid, 0)");
+	return(1);
+}
+cc_settrans(200);
+cc_setobject_nonum(vial_229, 1);
+if ($int2 = 1) {
+	cc_setopbase("<col=ff9040>Empty slot</col>");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 170, 200)");
+} else {
+	cc_setopbase("null");
+	cc_setonop(null);
+}
+if (~on_mobile = false) {
+	cc_setonmouserepeat("script7348(true, event_com, event_comsubid, 200)");
+}
+cc_setonmouseleave("script7348(false, event_com, event_comsubid, 200)");
+return(0);

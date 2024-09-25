@@ -1,0 +1,18 @@
+// 7394
+[proc,script7394](component $component0, int $int1)
+sound_synth(synth_6652, 1, 0);
+if (cc_find($component0, 0) = ^true) {
+	if ($int1 = 0) {
+		cc_setgraphic(graphic_5652);
+	} else {
+		cc_setgraphic(graphic_5651);
+	}
+}
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setonop(null, $component0);
+if_setonkey(null, $component0);
+if_clearops($component0);
+def_int $int2 = calc((%varcint1202 - 1) * 1000 + (%varcint1203 - 1) * 100 + (%varcint1204 - 1) * 10 + (%varcint1205 - 1));
+resume_countdialog(tostring($int2));
+if_setontimer("script7395($component0, calc(clientclock + 40))", $component0);

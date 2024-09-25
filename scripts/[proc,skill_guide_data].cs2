@@ -225,24 +225,32 @@ switch_int ($int0) {
 				case 40 :
 					return(70, zamorak_dhide_body_10370, "Members: God dragonhide armour<br> (with 40 Defence)");
 				case 41 :
-					return(70, armadyl_helmet_11826, "Members: Armadyl armour<br> (with 70 Defence)");
+					return(70, hueycoatl_hide_vambraces_30082, "Members: <oc_name(hueycoatl_hide_vambraces_30082)>");
 				case 42 :
-					return(70, karils_leathertop_4736, "Members: Karil's leather armour<br> (with 70 Defence)");
+					return(70, hueycoatl_hide_chaps_30079, "Members: <oc_name(hueycoatl_hide_chaps_30079)>");
 				case 43 :
-					return(70, dragonfire_ward_22002, "Members: Dragonfire ward<br>(with 75 Defence)");
+					return(70, hueycoatl_hide_body_30076, "Members: <oc_name(hueycoatl_hide_body_30076)><br> (with 40 Defence)");
 				case 44 :
-					return(70, boots_of_brimstone_22951, "Members: Boots of brimstone<br>(with 70 Defence and Magic)");
+					return(70, hueycoatl_hide_coif_30073, "Members: <oc_name(hueycoatl_hide_coif_30073)><br> (with 40 Defence)");
 				case 45 :
-					return(75, dizanas_quiver_28951, "Dizana's Quiver<br>Ammo storage: Bolts or Arrows");
+					return(70, armadyl_helmet_11826, "Members: Armadyl armour<br> (with 70 Defence)");
 				case 46 :
-					return(75, eclipse_moon_helm_29010, "Members: Eclipse set<br> (with 50 Defence)");
+					return(70, karils_leathertop_4736, "Members: Karil's leather armour<br> (with 70 Defence)");
 				case 47 :
-					return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Defence)");
+					return(70, dragonfire_ward_22002, "Members: Dragonfire ward<br>(with 75 Defence)");
 				case 48 :
-					return(75, twisted_buckler_21000, "Members: Twisted buckler<br> (with 75 Defence)");
+					return(70, boots_of_brimstone_22951, "Members: Boots of brimstone<br>(with 70 Defence and Magic)");
 				case 49 :
-					return(80, zaryte_vambraces_26235, "Members: Zaryte vambraces<br> (with 45 Defence)");
+					return(75, dizanas_quiver_28951, "Dizana's Quiver<br>Ammo storage: Bolts or Arrows");
 				case 50 :
+					return(75, eclipse_moon_helm_29010, "Members: Eclipse set<br> (with 50 Defence)");
+				case 51 :
+					return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Defence)");
+				case 52 :
+					return(75, twisted_buckler_21000, "Members: Twisted buckler<br> (with 75 Defence)");
+				case 53 :
+					return(80, zaryte_vambraces_26235, "Members: Zaryte vambraces<br> (with 45 Defence)");
+				case 54 :
 					return(80, masori_body_27229, "Members: Masori armour<br> (with 30 Defence)");
 				case default :
 					return(-1, null, "");
@@ -515,76 +523,82 @@ switch_int ($int0) {
 					case 23 :
 						return(53, kebbit_teeth_10109, "Hunting potion - Avantoe & ground sabre-toothed kebbit teeth");
 					case 24 :
-						return(55, limpwurt_root_225, "Super strength potion<br>Kwuarm & limpwurt root");
+						return(54, aldarium_29993, "Goading potion<br>Harralander & aldarium");
 					case 25 :
-						return(55, irit_tar_28837, "Irit tar<br>Irit leaf & swamp tar");
+						return(55, limpwurt_root_225, "Super strength potion<br>Kwuarm & limpwurt root");
 					case 26 :
-						return(57, gorak_claws_9016, "Magic essence potion<br>Star flower & ground gorak's claw");
+						return(55, irit_tar_28837, "Irit tar<br>Irit leaf & swamp tar");
 					case 27 :
-						return(60, dragon_scale_dust_241, "Weapon poison<br>Kwuarm & ground blue dragon scale");
+						return(57, gorak_claws_9016, "Magic essence potion<br>Star flower & ground gorak's claw");
 					case 28 :
-						return(63, red_spiders_eggs_223, "Super restore potion<br>Snapdragon & red spiders' eggs");
+						return(58, aldarium_29993, "Prayer regeneration potion<br>Huasca & aldarium");
 					case 29 :
-						return(65, nail_beast_nails_10937, "Sanfew serum cure all<br>Super restore potion, snake weed, ground unicorn horn and nail beast nails.");
+						return(60, dragon_scale_dust_241, "Weapon poison<br>Kwuarm & ground blue dragon scale");
 					case 30 :
-						return(66, white_berries_239, "Super defence potion<br>Cadantine & white berries");
+						return(63, red_spiders_eggs_223, "Super restore potion<br>Snapdragon & red spiders' eggs");
 					case 31 :
-						return(68, yew_roots_6049, "Antidote+<br>Coconut milk, toadflax & yew roots");
+						return(65, nail_beast_nails_10937, "Sanfew serum cure all<br>Super restore potion, snake weed, ground unicorn horn and nail beast nails.");
 					case 32 :
-						return(69, dragon_scale_dust_241, "Anti-firebreath potion<br>Lantadyme & ground blue dragon scale");
+						return(66, white_berries_239, "Super defence potion<br>Cadantine & white berries");
 					case 33 :
-						return(70, crystal_dust_23964, "Divine super attack potion<br>Crystal dust & super attack potion");
+						return(68, yew_roots_6049, "Antidote+<br>Coconut milk, toadflax & yew roots");
 					case 34 :
-						return(70, crystal_dust_23964, "Divine super strength potion<br>Crystal dust & super strength potion");
+						return(69, dragon_scale_dust_241, "Anti-firebreath potion<br>Lantadyme & ground blue dragon scale");
 					case 35 :
-						return(70, crystal_dust_23964, "Divine super defence potion<br>Crystal dust & super defence potion");
+						return(70, crystal_dust_23964, "Divine super attack potion<br>Crystal dust & super attack potion");
 					case 36 :
-						return(72, wine_of_zamorak_245, "Ranging potion<br>Dwarf weed & wine of Zamorak");
+						return(70, crystal_dust_23964, "Divine super strength potion<br>Crystal dust & super strength potion");
 					case 37 :
-						return(73, cactus_spine_6016, "Weapon poison(+)<br>Coconut milk, cactus spine & red spiders' eggs");
+						return(70, crystal_dust_23964, "Divine super defence potion<br>Crystal dust & super defence potion");
 					case 38 :
-						return(74, crystal_dust_23964, "Divine ranging potion<br>Crystal dust & ranging potion");
+						return(72, wine_of_zamorak_245, "Ranging potion<br>Dwarf weed & wine of Zamorak");
 					case 39 :
-						return(76, potato_cactus_3138, "Magic potion<br>Lantadyme & potato cactus");
+						return(73, cactus_spine_6016, "Weapon poison(+)<br>Coconut milk, cactus spine & red spiders' eggs");
 					case 40 :
-						return(77, amylase_crystal_5_3961, "Stamina potion<br>Amylase & super energy potion");
+						return(74, crystal_dust_23964, "Divine ranging potion<br>Crystal dust & ranging potion");
 					case 41 :
-						return(78, jangerberries_247, "Zamorak brew<br>Torstol & jangerberries");
+						return(76, potato_cactus_3138, "Magic potion<br>Lantadyme & potato cactus");
 					case 42 :
-						return(78, crystal_dust_23964, "Divine magic potion<br>Crystal dust & magic potion");
+						return(77, amylase_crystal_5_3961, "Stamina potion<br>Amylase & super energy potion");
 					case 43 :
-						return(79, magic_roots_6051, "Antidote++<br>Coconut milk, irit leaf & magic tree roots");
+						return(78, jangerberries_247, "Zamorak brew<br>Torstol & jangerberries");
 					case 44 :
-						return(80, wine_of_zamorak_245, "Bastion potion<br>Cadantine & wine of Zamorak mixed in a vial of blood");
+						return(78, crystal_dust_23964, "Divine magic potion<br>Crystal dust & magic potion");
 					case 45 :
-						return(80, potato_cactus_3138, "Battlemage potion<br>Cadantine & potato cactus mixed in a vial of blood");
+						return(79, magic_roots_6051, "Antidote++<br>Coconut milk, irit leaf & magic tree roots");
 					case 46 :
-						return(81, crushed_nest_6693, "Saradomin brew<br>Toadflax & crushed birdnest");
+						return(80, wine_of_zamorak_245, "Bastion potion<br>Cadantine & wine of Zamorak mixed in a vial of blood");
 					case 47 :
-						return(82, poison_ivy_berries_6018, "Weapon poison(++)<br>Coconut milk, nightshade & poison ivy berries");
+						return(80, potato_cactus_3138, "Battlemage potion<br>Cadantine & potato cactus mixed in a vial of blood");
 					case 48 :
-						return(84, lava_scale_shard_5_3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
+						return(81, crushed_nest_6693, "Saradomin brew<br>Toadflax & crushed birdnest");
 					case 49 :
-						return(85, nihil_dust_26368, "Ancient brew<br>Dwarf weed & nihil dust");
+						return(82, poison_ivy_berries_6018, "Weapon poison(++)<br>Coconut milk, nightshade & poison ivy berries");
 					case 50 :
-						return(86, crystal_dust_23964, "Divine bastion potion<br>Crystal dust & bastion potion");
+						return(84, lava_scale_shard_5_3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
 					case 51 :
-						return(86, crystal_dust_23964, "Divine battlemage potion<br>Crystal dust & battlemage potion");
+						return(85, nihil_dust_26368, "Ancient brew<br>Dwarf weed & nihil dust");
 					case 52 :
-						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
+						return(86, crystal_dust_23964, "Divine bastion potion<br>Crystal dust & bastion potion");
 					case 53 :
-						return(88, lily_of_the_sands_27272, "Menaphite remedy<br>Dwarf weed & Lily of the sands");
+						return(86, crystal_dust_23964, "Divine battlemage potion<br>Crystal dust & battlemage potion");
 					case 54 :
-						return(90, torstol_269, "Super combat potion<br>Super attack potion, super defence potion, super strength potion & torstol");
+						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
 					case 55 :
-						return(91, ancient_essence_27616, "Forgotten brew<br>Ancient brew & ancient essence");
+						return(88, lily_of_the_sands_27272, "Menaphite remedy<br>Dwarf weed & Lily of the sands");
 					case 56 :
-						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & crushed superior dragon bones<br>(after Dragon Slayer II)");
+						return(90, torstol_269, "Super combat potion<br>Super attack potion, super defence potion, super strength potion & torstol");
 					case 57 :
-						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol. Upgraded to an Extended Anti-venom+ with a <oc_name(araxyte_venom_sack_29784)>");
+						return(91, ancient_essence_27616, "Forgotten brew<br>Ancient brew & ancient essence");
 					case 58 :
-						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & crushed superior dragon bones<br>(after Dragon Slayer II)");
 					case 59 :
+						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
+					case 60 :
+						return(94, araxyte_venom_sack_29784, "Extended anti-venom+<br>Anti-venom+ & <oc_name(araxyte_venom_sack_29784)>");
+					case 61 :
+						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+					case 62 :
 						return(98, lava_scale_shard_5_3256, "Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)");
 					case default :
 						return(-1, null, "");
@@ -616,14 +630,16 @@ switch_int ($int0) {
 					case 11 :
 						return(54, kwuarm_263, "Kwuarm");
 					case 12 :
-						return(59, snapdragon_3000, "Snapdragon");
+						return(58, huasca_30097, "Huasca");
 					case 13 :
-						return(65, cadantine_265, "Cadantine");
+						return(59, snapdragon_3000, "Snapdragon");
 					case 14 :
-						return(67, lantadyme_2481, "Lantadyme");
+						return(65, cadantine_265, "Cadantine");
 					case 15 :
-						return(70, dwarf_weed_267, "Dwarf weed");
+						return(67, lantadyme_2481, "Lantadyme");
 					case 16 :
+						return(70, dwarf_weed_267, "Dwarf weed");
+					case 17 :
 						return(75, torstol_269, "Torstol");
 					case default :
 						return(-1, null, "");
@@ -742,6 +758,28 @@ switch_int ($int0) {
 						return(31, herbiboar_21511, "Harvest herbs from the <$string0>Herbiboar</col> on <$string0>Fossil Island</col> (with 80 Hunter).");
 					case 1 :
 						return(58, herb_sack_13226, "Use the Herb Sack reward item, purchased from the Tithe Farm or Slayer Masters.");
+					case 2 :
+						return(60, mammoth_might_mix_30011, "<oc_name(mammoth_might_mix_30011)> (Mastering Mixology).");
+					case 3 :
+						return(60, mystic_mana_amalgam_30012, "<oc_name(mystic_mana_amalgam_30012)> (Mastering Mixology).");
+					case 4 :
+						return(60, marleys_moonlight_30013, "<oc_name(marleys_moonlight_30013)> (Mastering Mixology).");
+					case 5 :
+						return(64, mixalot_30020, "<oc_name(mixalot_30020)> (Mastering Mixology).");
+					case 6 :
+						return(68, azure_aura_mix_30016, "<oc_name(azure_aura_mix_30016)> (Mastering Mixology).");
+					case 7 :
+						return(72, aqualux_amalgam_30015, "<oc_name(aqualux_amalgam_30015)> (Mastering Mixology).");
+					case 8 :
+						return(76, alco_augmentator_30014, "<oc_name(alco_augmentator_30014)> (Mastering Mixology).");
+					case 9 :
+						return(80, megalite_liquid_30019, "<oc_name(megalite_liquid_30019)> (Mastering Mixology).");
+					case 10 :
+						return(84, anti_leech_lotion_30018, "<oc_name(anti_leech_lotion_30018)> (Mastering Mixology).");
+					case 11 :
+						return(86, liplack_liquor_30017, "<oc_name(liplack_liquor_30017)> (Mastering Mixology).");
+					case 12 :
+						return(81, reagent_pouch_29996, "Use the Secondary Pouch reward item, purchased from the Mastering Mixology activity.");
 					case default :
 						return(-1, null, "");
 				}
@@ -874,6 +912,14 @@ switch_int ($int0) {
 					case 53 :
 						return(84, black_dhide_body_2503, "Members: Black dragonhide body");
 					case 54 :
+						return(86, hueycoatl_hide_vambraces_30082, "Members: <oc_name(hueycoatl_hide_vambraces_30082)>");
+					case 55 :
+						return(86, hueycoatl_hide_coif_30073, "Members: <oc_name(hueycoatl_hide_coif_30073)>");
+					case 56 :
+						return(87, hueycoatl_hide_chaps_30079, "Members: <oc_name(hueycoatl_hide_chaps_30079)>");
+					case 57 :
+						return(88, hueycoatl_hide_body_30076, "Members: <oc_name(hueycoatl_hide_body_30076)>");
+					case 58 :
 						return(90, masori_body_f_27238, "Members: Break down armadylean armour and fortify Masori armour");
 					case default :
 						return(-1, null, "");
@@ -1151,6 +1197,16 @@ switch_int ($int0) {
 						return(72, noxious_halberd_29796, "Noxious Halberd (With 72 Smithing)");
 					case 10 :
 						return(74, purging_staff_29594, "Purging staff");
+					case 11 :
+						return(83, amethyst_bolt_tips_5_4768, "Amethyst bolt tips");
+					case 12 :
+						return(85, amethyst_arrowtips_21350, "Amethyst arrowtips");
+					case 13 :
+						return(85, accursed_sceptre_27665, "Accursed Sceptre");
+					case 14 :
+						return(87, amethyst_javelin_heads_5_13220, "Amethyst javelin heads");
+					case 15 :
+						return(89, amethyst_dart_tip_25853, "Amethyst dart tips");
 					case default :
 						return(-1, null, "");
 				}

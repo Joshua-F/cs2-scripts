@@ -1,0 +1,10 @@
+// 7172
+[proc,script7172](component $component0, string $string0, string $op1, string $string2)
+if (~on_mobile = false) {
+	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component0, $string0, 25, 200)");
+	cc_setonmouseleave("deltooltip($component0)");
+} else {
+	cc_setop(1, $op1);
+	cc_setopbase("<col=ff9040><$string2>");
+	cc_setonop("script7201($string0)");
+}

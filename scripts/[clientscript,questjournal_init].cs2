@@ -1,29 +1,32 @@
 // 6819
-[clientscript,questjournal_init](component $component0, component $component1, component $component2)
-def_int $int3 = 0;
+[clientscript,questjournal_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+def_int $int10 = 0;
 if (~speedrunning_world = 1) {
-	$int3 = 1;
+	$int10 = 1;
 }
-if ($int3 = 1) {
-	if_sethide(false, $component1);
-} else {
-	if_sethide(true, $component1);
-}
-def_int $int4 = 1;
-if ($int4 = 1) {
+if ($int10 = 1) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-if ($int3 = 1) {
-	if_setposition(77, 54, ^setpos_abs_left, ^setpos_abs_top, $component2);
+def_int $int11 = 1;
+if ($int11 = 1) {
+	if_sethide(false, $component3);
 } else {
-	if_setposition(48, 54, ^setpos_abs_left, ^setpos_abs_top, $component2);
+	if_sethide(true, $component3);
 }
-if ($int3 = 1 & $int4 = 1) {
-	if_setposition(111, 56, ^setpos_abs_left, ^setpos_abs_top, $component0);
-} else if ($int3 = 1 | $int4 = 1) {
-	if_setposition(82, 56, ^setpos_abs_left, ^setpos_abs_top, $component0);
+if ($int10 = 1) {
+	if_setposition(29, 0, ^setpos_abs_left, ^setpos_abs_top, $component3);
 } else {
-	if_setposition(53, 56, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component3);
 }
+if_setopkey(1, ^key_escape, 0, $component4);
+if ($int10 = 1 & $int11 = 1) {
+	if_setposition(63, 2, ^setpos_abs_left, ^setpos_abs_top, $component1);
+} else if ($int10 = 1 | $int11 = 1) {
+	if_setposition(34, 2, ^setpos_abs_left, ^setpos_abs_top, $component1);
+} else {
+	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component1);
+}
+~script6924($component0, $component5, $component6, $component7, $component8, $component9);
+if_setontimer("script6923($component0, $component5, $component6, $component7, $component8, $component9)", $component0);

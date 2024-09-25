@@ -1,0 +1,9 @@
+// 7344
+[proc,script7344]
+def_int $int0 = inv_size(inv);
+while ($int0 > 0) {
+	$int0 = calc($int0 - 1);
+	if (cc_find(interface_886:12, $int0) = ^true) {
+		~script7345(inv_getobj(inv, $int0), inv_getnum(inv, $int0));
+	}
+}

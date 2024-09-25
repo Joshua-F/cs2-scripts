@@ -1,0 +1,17 @@
+// 6561
+[clientscript,script6561]
+~chatdefault_stopinput;
+cc_deleteall(interface_879:0);
+def_int $int0 = db_listall_with_count(dbtable_72);
+def_int $int1 = 1;
+def_dbrow $dbrow2 = null;
+def_component $component3 = null;
+while ($int1 <= $int0) {
+	db_find(dbtable_72:0, $int1);
+	$dbrow2 = db_findnext;
+	if ($dbrow2 ! null) {
+		$component3 = db_getfield($dbrow2, dbtable_72:3, 0);
+		~script6562($component3, $dbrow2);
+	}
+	$int1 = calc($int1 + 1);
+}

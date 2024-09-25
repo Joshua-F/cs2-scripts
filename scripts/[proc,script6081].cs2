@@ -1,0 +1,47 @@
+// 6081
+[proc,script6081](int $int0, int $int1, string $text0, int $y2, int $height3)(int)
+def_int $x4 = calc(if_getwidth(interface_12:52) / 2);
+~create_graphic(interface_12:52, $int0, tradebacking, 0, calc($int1 * 36), ^setpos_abs_left, ^setpos_abs_top, 0, 36, ^setsize_minus, ^setsize_abs);
+$int0 = calc($int0 + 1);
+cc_create(interface_12:52, ^iftype_rectangle, $int0);
+cc_setposition(0, calc(($int1 + 1) * 36 - 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 1, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0x726451);
+$int0 = calc($int0 + 1);
+cc_create(interface_12:52, ^iftype_text, $int0);
+cc_setposition(0, calc($int1 * 36), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, calc(36 - 2), ^setsize_minus, ^setsize_abs);
+cc_settextfont(b12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+cc_settext($text0);
+$int0 = calc($int0 + 1);
+cc_create(interface_12:52, ^iftype_rectangle, $int0);
+cc_setposition($x4, $y2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(1, $height3, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x726451);
+$int0 = calc($int0 + 1);
+cc_create(interface_12:52, ^iftype_text, $int0);
+cc_setposition(3, calc($int1 * 36 + 36 / 2), ^setpos_abs_right, ^setpos_abs_top);
+def_string $string1 = "Vials: <tostring(%var4286)>";
+cc_setsize(parawidth($string1, 3000, p12_full), calc(36 - 2 - 36 / 2), ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_right, ^settextalign_bottom, 0);
+cc_settext($string1);
+cc_setop(1, "Withdraw-<~script2579>");
+if (%varbit6590 ! 0) {
+	cc_setop(2, "Withdraw-1");
+}
+cc_setop(3, "Withdraw-5");
+cc_setop(4, "Withdraw-10");
+if (%varbit3960 > 0) {
+	cc_setop(5, "Withdraw-<tostring(%varbit3960)>");
+}
+cc_setop(6, "Withdraw-X");
+cc_setop(7, "Withdraw-All");
+cc_setop(8, "Withdraw-All-but-1");
+$int0 = calc($int0 + 1);
+return($int0);

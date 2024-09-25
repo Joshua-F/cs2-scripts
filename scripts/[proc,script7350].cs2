@@ -1,0 +1,13 @@
+// 7350
+[proc,script7350](obj $obj0)(int)
+if (~script7351($obj0) = 0) {
+	return(0);
+}
+def_enum $enum1 = null;
+def_int $int2 = 0;
+def_int $int3 = 0;
+$enum1, $int2, $int3 = ~script7370($obj0);
+if ($enum1 = null) {
+	return(0);
+}
+return(1);

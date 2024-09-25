@@ -1,0 +1,17 @@
+// 7034
+[proc,script7034](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8)
+def_int $int9 = $int8;
+$int8 = ~max(0, calc($int8 - 3));
+if_settrans($int8, $component0);
+if_settrans($int8, $component1);
+if_settrans($int8, $component2);
+if_settrans($int8, $component3);
+if_settrans($int8, $component4);
+if_settrans($int8, $component5);
+if_settrans($int8, $component6);
+if_settrans($int8, $component7);
+if ($int8 <= 0) {
+	if_setontimer(null, $component0);
+	return;
+}
+if_setontimer("script7033($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $int8)", $component0);

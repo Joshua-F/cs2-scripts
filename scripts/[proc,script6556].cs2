@@ -1,0 +1,8 @@
+// 6556
+[proc,script6556](int $int0, int $int1)(int, int)
+if ($int0 = 0) {
+	$int0 = 1;
+} else {
+	$int0, $int1 = 0, calc($int1 + 1);
+}
+return($int0, $int1);

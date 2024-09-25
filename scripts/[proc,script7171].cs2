@@ -1,0 +1,6 @@
+// 7171
+[proc,script7171](int $int0, int $int1)(string, namedobj, graphic)
+def_string $string0 = enum(int, string, enum_5545, $int1);
+def_namedobj $namedobj2 = enum(int, namedobj, enum_5542, $int0);
+def_graphic $graphic3 = enum(int, graphic, enum_5546, $int1);
+return($string0, $namedobj2, $graphic3);

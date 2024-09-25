@@ -1,0 +1,10 @@
+// 7382
+[proc,script7382](component $component0, int $int1)
+if (~script7384 = 0) {
+	if ($int1 = 0) {
+		sound_synth(synth_6651, 1, 0);
+	}
+	return;
+}
+~script7387($component0);
+sound_synth(synth_6649, 1, 0);

@@ -1,0 +1,50 @@
+// 7064
+[proc,script7064](component $component0, int $int1, component $component2)(int)
+def_int $height3 = 28;
+def_int $int4 = calc(if_getwidth($component0) / 3);
+def_int $int5 = 20;
+def_int $int6 = 0;
+def_int $int7 = 10;
+def_int $int8 = calc($int5 * -1);
+def_int $int9 = 5;
+def_int $int10 = 0;
+def_graphic $graphic11 = null;
+def_string $string0 = "";
+def_int $int12 = 1;
+while ($int12 <= 3) {
+	switch_int ($int12) {
+		case 1 :
+			$graphic11, $int10, $string0 = graphic_5666, %varbit11321, "Mox reagent";
+		case 2 :
+			$graphic11, $int10, $string0 = graphic_5667, %varbit11322, "Aga reagent";
+		case 3 :
+			$graphic11, $int10, $string0 = graphic_5668, %varbit11323, "Lye reagent";
+	}
+	if ($graphic11 ! null) {
+		cc_create($component0, ^iftype_graphic, $int1);
+		cc_setposition(calc($int6 + $int4 / 2 + $int8), calc($int7 + $int5 / 4), ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setsize($int5, $int5, ^setsize_abs, ^setsize_abs);
+		cc_setgraphic($graphic11);
+		$int1 = calc($int1 + 1);
+		cc_create($component0, ^iftype_text, $int1);
+		cc_setposition(calc($int6 + $int4 / 2 + $int9), calc($int7 - 1), ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setsize($int5, $height3, ^setsize_abs, ^setsize_abs);
+		cc_settext(tostring($int10));
+		cc_setcolour(0xeeeeee);
+		cc_settextfont(q8_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		$int1 = calc($int1 + 1);
+		cc_create($component0, ^iftype_rectangle, $int1);
+		cc_setposition(calc($int6 + $int4 / 2 + $int8), $int7, ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setsize(calc($int5 * 2), $height3, ^setsize_abs, ^setsize_abs);
+		cc_setfill(false);
+		cc_setcolour(^black);
+		cc_settrans(255);
+		~script7172($component2, $string0, "Info", "reagent");
+		$int1 = calc($int1 + 1);
+		$int6 = calc($int6 + $int4);
+	}
+	$int12 = calc($int12 + 1);
+}
+return($int1);

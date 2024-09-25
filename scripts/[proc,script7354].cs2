@@ -1,0 +1,30 @@
+// 7354
+[proc,script7354](int $int0)
+cc_deleteall(interface_15:50);
+def_int $int1 = 0;
+cc_create(interface_15:49, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(220);
+def_int $int2 = 36;
+def_int $int3 = calc((if_getwidth(interface_15:50) - $int2 * $int0) / $int0);
+def_int $int4 = calc($int3 / 2);
+$int1 = 0;
+while ($int1 < $int0) {
+	cc_create(interface_15:50, ^iftype_graphic, $int1);
+	cc_setsize($int2, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int4, 0, ^setpos_abs_left, ^setpos_proportion_centre);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	cc_sethide(true);
+	$int1 = calc($int1 + 1);
+	$int4 = calc($int4 + $int2 + $int3);
+}
+if_setonvartransmit("script7355($int0){var115, var304, var1666}", interface_15:50);
+if_setoninvtransmit("script7355($int0){inv_911}", interface_15:50);
+~script7356($int0);

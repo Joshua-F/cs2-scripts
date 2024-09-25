@@ -1,0 +1,40 @@
+// 7335
+[clientscript,script7335]
+def_component $component0 = interface_885:3;
+def_component $component1 = interface_885:4;
+def_component $component2 = interface_885:5;
+def_int $index3 = ~script7334(coord);
+def_int $flags4 = ~script7333($index3);
+cc_deleteall($component0);
+cc_deleteall($component1);
+cc_deleteall($component2);
+~thinbox($component0, 0);
+def_int $intarray0(enum_getoutputcount(enum_5565));
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_dbrow $dbrow8 = enum(int, dbrow, enum_5565, $int5);
+while ($dbrow8 ! null) {
+	$dbrow8;
+	$int6, $int7 = ~script7336(intarray0, $int6, $int7, $flags4, 0);
+	$int5 = calc($int5 + 1);
+	$dbrow8 = enum(int, dbrow, enum_5565, $int5);
+}
+def_int $int9 = $int7;
+~quicksort_cctext(intarray0, $component1, 0, calc($int9 - 1));
+$int5 = 0;
+while ($int5 < $int9) {
+	if (cc_find($component1, calc($intarray0($int5) - 1)) = ^true) {
+		cc_setposition(0, calc($int5 * 20), ^setpos_abs_left, ^setpos_abs_top);
+		if (calc($int5 % 2) = 0) {
+			cc_setgraphic(tradebacking_dark);
+		}
+	}
+	if (cc_find($component1, $intarray0($int5)) = ^true) {
+		cc_setposition(4, calc($int5 * 20), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	$int5 = calc($int5 + 1);
+}
+if_setscrollsize(if_getwidth($component1), calc($int9 * 20), $component1);
+~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component2, $component1, if_getscrolly($component1));

@@ -1,0 +1,20 @@
+// 7357
+[proc,script7357](obj $obj0, int $int1, int $int2)
+if (~script7347($obj0, $int1, 0) = 1) {
+	cc_setop(1, "Deposit-<~script2579>");
+	if (%varbit6590 ! 0) {
+		cc_setop(2, "Deposit-1");
+	}
+	cc_setop(3, "Deposit-5");
+	cc_setop(4, "Deposit-10");
+	if (%varbit3960 > 0) {
+		cc_setop(5, "Deposit-<tostring(%varbit3960)>");
+	}
+	cc_setop(6, "Deposit-X");
+	cc_setop(7, "Deposit-All");
+	cc_setop(8, "Fill-X");
+	cc_setop(9, "Fill-All");
+	cc_setop(10, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+}
+cc_setondragcomplete("script7358($int2, event_com, event_com2, event_comsubid, event_comsubid2)");

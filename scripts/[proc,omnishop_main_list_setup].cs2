@@ -26,9 +26,11 @@ while ($int6 < $int12) {
 	}
 	$int6 = calc($int6 + 1);
 }
+if_setscrollsize(if_getwidth($component4), $height11, $component4);
 if ($int3 = 1) {
 	if_setscrollpos(0, 0, $component4);
+} else {
+	if_setscrollpos(0, %varcint1199, $component4);
 }
-if_setscrollsize(if_getwidth($component4), $height11, $component4);
 ~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_vertical_rebuild($component5, $component4);
+~scrollbar_resize($component5, $component4, %varcint1199);

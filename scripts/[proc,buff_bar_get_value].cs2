@@ -255,6 +255,10 @@ switch_struct ($struct0) {
 		if (%varbit14448 > 0) {
 			return(~script5942(%varcint1088, %varbit14448, 25));
 		}
+	case buff_prayer_regeneration_1014 :
+		if (%varbit11361 > 0) {
+			return(~script5942(%varcint1200, %varbit11361, 12));
+		}
 	case buff_weapon_specialist_3773 :
 		if (~script2278(0) = 1) {
 			return(1);
@@ -482,6 +486,10 @@ switch_struct ($struct0) {
 	case buff_deadman_blighted_overload_977 :
 		if (%varcint1197 > 0) {
 			return(~script5942(%varcint1197, %varbit10954, 25));
+		}
+	case buff_goading_potion_1023 :
+		if (%varbit11294 > 0) {
+			return(~script5942(%varcint1206, %varbit11294, 6));
 		}
 }
 return(struct_param($struct0, param_1540));

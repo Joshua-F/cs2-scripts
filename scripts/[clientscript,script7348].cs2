@@ -1,0 +1,15 @@
+// 7348
+[clientscript,script7348](boolean $boolean0, component $component1, int $comsubid2, int $int3)
+if (cc_find($component1, $comsubid2) = ^true) {
+	if ($boolean0 = true) {
+		if ($int3 >= 200) {
+			cc_settrans(calc($int3 - 30));
+		} else {
+			cc_settrans(calc($int3 + 40));
+		}
+		cc_setontimer("script4879(calc(clientclock + 2), event_com, event_comsubid, $int3)");
+	} else {
+		cc_settrans($int3);
+		cc_setontimer(null);
+	}
+}

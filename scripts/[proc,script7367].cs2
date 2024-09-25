@@ -1,0 +1,79 @@
+// 7367
+[proc,script7367](int $int0, int $int1, obj $obj2, int $int3)
+if ($obj2 ! null & ~script7350($obj2) = 0) {
+	return;
+}
+$int3 = max(0, min($int3, 100));
+if ($int3 >= 100) {
+	$int3 = 0;
+}
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_obj $obj6 = null;
+def_int $int7 = 0;
+if ($obj2 ! null) {
+	$int5 = inv_size(inv_911);
+	while ($int4 < $int5) {
+		if ($int4 ! $int1) {
+			$obj6, $int7 = ~script7366($int0, $int4);
+			if ($obj6 = $obj2) {
+				~script7367($int0, $int4, null, 0);
+			}
+		}
+		$int4 = calc($int4 + 1);
+	}
+}
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				%var4458, %varbit11389 = $obj2, $int3;
+			case 1 :
+				%var4459, %varbit11390 = $obj2, $int3;
+			case 2 :
+				%var4460, %varbit11391 = $obj2, $int3;
+			case 3 :
+				%var4461, %varbit11392 = $obj2, $int3;
+			case 4 :
+				%var4462, %varbit11393 = $obj2, $int3;
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				%var4463, %varbit11394 = $obj2, $int3;
+			case 1 :
+				%var4464, %varbit11395 = $obj2, $int3;
+			case 2 :
+				%var4465, %varbit11396 = $obj2, $int3;
+			case 3 :
+				%var4466, %varbit11397 = $obj2, $int3;
+			case 4 :
+				%var4467, %varbit11398 = $obj2, $int3;
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				%var4468, %varbit11399 = $obj2, $int3;
+			case 1 :
+				%var4469, %varbit11400 = $obj2, $int3;
+			case 2 :
+				%var4470, %varbit11401 = $obj2, $int3;
+			case 3 :
+				%var4471, %varbit11402 = $obj2, $int3;
+			case 4 :
+				%var4472, %varbit11403 = $obj2, $int3;
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				%var4473, %varbit11404 = $obj2, $int3;
+			case 1 :
+				%var4474, %varbit11405 = $obj2, $int3;
+			case 2 :
+				%var4475, %varbit11406 = $obj2, $int3;
+			case 3 :
+				%var4476, %varbit11407 = $obj2, $int3;
+			case 4 :
+				%var4477, %varbit11408 = $obj2, $int3;
+		}
+}

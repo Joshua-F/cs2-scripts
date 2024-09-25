@@ -1,275 +1,291 @@
 // 1939
-[proc,bookofscrolls_populate](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29, component $component30, component $component31, component $component32, component $component33)
-if_settext(tostring(%varbit5672), $component17);
+[proc,bookofscrolls_populate](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29, component $component30, component $component31, component $component32, component $component33, component $component34, component $component35)
+if_settext(tostring(%varbit5672), $component18);
 if (%varbit5672 > 0) {
-	if_setcolour(^yellow, $component17);
+	if_setcolour(^yellow, $component18);
 	if (~script5157 = 1) {
 		if_setobject_nonum(dummy_nardah_teleport_21374, 0, $component0);
 	} else {
 		if_setobject_nonum(nardah_teleport_12402, 0, $component0);
 	}
 } else {
-	if_setcolour(0xc80000, $component17);
+	if_setcolour(0xc80000, $component18);
 	if (~script5157 = 1) {
 		if_setobject_nonum(dummy_nardah_teleport_21374, 0, $component0);
 	} else {
 		if_setobject_nonum(dummy_nardah_teleport_21361, 0, $component0);
 	}
 }
-if_settext(tostring(%varbit5673), $component18);
+if_settext(tostring(%varbit5673), $component19);
 if (%varbit5673 > 0) {
-	if_setcolour(^yellow, $component18);
+	if_setcolour(^yellow, $component19);
 	if (~script5157 = 2) {
 		if_setobject_nonum(dummy_digsite_teleport_21375, 0, $component1);
 	} else {
 		if_setobject_nonum(digsite_teleport_12403, 0, $component1);
 	}
 } else {
-	if_setcolour(0xc80000, $component18);
+	if_setcolour(0xc80000, $component19);
 	if (~script5157 = 2) {
 		if_setobject_nonum(dummy_digsite_teleport_21375, 0, $component1);
 	} else {
 		if_setobject_nonum(dummy_digsite_teleport_21362, 0, $component1);
 	}
 }
-if_settext(tostring(%varbit5674), $component19);
+if_settext(tostring(%varbit5674), $component20);
 if (%varbit5674 > 0) {
-	if_setcolour(^yellow, $component19);
+	if_setcolour(^yellow, $component20);
 	if (~script5157 = 3) {
 		if_setobject_nonum(dummy_feldip_hills_teleport_21376, 0, $component2);
 	} else {
 		if_setobject_nonum(feldip_hills_teleport_12404, 0, $component2);
 	}
 } else {
-	if_setcolour(0xc80000, $component19);
+	if_setcolour(0xc80000, $component20);
 	if (~script5157 = 3) {
 		if_setobject_nonum(dummy_feldip_hills_teleport_21376, 0, $component2);
 	} else {
 		if_setobject_nonum(dummy_feldip_hills_teleport_21363, 0, $component2);
 	}
 }
-if_settext(tostring(%varbit5675), $component20);
+if_settext(tostring(%varbit5675), $component21);
 if (%varbit5675 > 0) {
-	if_setcolour(^yellow, $component20);
+	if_setcolour(^yellow, $component21);
 	if (~script5157 = 4) {
 		if_setobject_nonum(dummy_lunar_isle_teleport_21377, 0, $component3);
 	} else {
 		if_setobject_nonum(lunar_isle_teleport_12405, 0, $component3);
 	}
 } else {
-	if_setcolour(0xc80000, $component20);
+	if_setcolour(0xc80000, $component21);
 	if (~script5157 = 4) {
 		if_setobject_nonum(dummy_lunar_isle_teleport_21377, 0, $component3);
 	} else {
 		if_setobject_nonum(dummy_lunar_isle_teleport_21364, 0, $component3);
 	}
 }
-if_settext(tostring(%varbit5676), $component21);
+if_settext(tostring(%varbit5676), $component22);
 if (%varbit5676 > 0) {
-	if_setcolour(^yellow, $component21);
+	if_setcolour(^yellow, $component22);
 	if (~script5157 = 5) {
 		if_setobject_nonum(dummy_mortton_teleport_21378, 0, $component4);
 	} else {
 		if_setobject_nonum(mortton_teleport_12406, 0, $component4);
 	}
 } else {
-	if_setcolour(0xc80000, $component21);
+	if_setcolour(0xc80000, $component22);
 	if (~script5157 = 5) {
 		if_setobject_nonum(dummy_mortton_teleport_21378, 0, $component4);
 	} else {
 		if_setobject_nonum(dummy_mortton_teleport_21365, 0, $component4);
 	}
 }
-if_settext(tostring(%varbit5677), $component22);
+if_settext(tostring(%varbit5677), $component23);
 if (%varbit5677 > 0) {
-	if_setcolour(^yellow, $component22);
+	if_setcolour(^yellow, $component23);
 	if (~script5157 = 6) {
 		if_setobject_nonum(dummy_pest_control_teleport_21379, 0, $component5);
 	} else {
 		if_setobject_nonum(pest_control_teleport_12407, 0, $component5);
 	}
 } else {
-	if_setcolour(0xc80000, $component22);
+	if_setcolour(0xc80000, $component23);
 	if (~script5157 = 6) {
 		if_setobject_nonum(dummy_pest_control_teleport_21379, 0, $component5);
 	} else {
 		if_setobject_nonum(dummy_pest_control_teleport_21366, 0, $component5);
 	}
 }
-if_settext(tostring(%varbit5678), $component23);
+if_settext(tostring(%varbit5678), $component24);
 if (%varbit5678 > 0) {
-	if_setcolour(^yellow, $component23);
+	if_setcolour(^yellow, $component24);
 	if (~script5157 = 7) {
 		if_setobject_nonum(dummy_piscatoris_teleport_21380, 0, $component6);
 	} else {
 		if_setobject_nonum(piscatoris_teleport_12408, 0, $component6);
 	}
 } else {
-	if_setcolour(0xc80000, $component23);
+	if_setcolour(0xc80000, $component24);
 	if (~script5157 = 7) {
 		if_setobject_nonum(dummy_piscatoris_teleport_21380, 0, $component6);
 	} else {
 		if_setobject_nonum(dummy_piscatoris_teleport_21367, 0, $component6);
 	}
 }
-if_settext(tostring(%varbit5679), $component24);
+if_settext(tostring(%varbit5679), $component25);
 if (%varbit5679 > 0) {
-	if_setcolour(^yellow, $component24);
+	if_setcolour(^yellow, $component25);
 	if (~script5157 = 8) {
 		if_setobject_nonum(dummy_tai_bwo_wannai_teleport_21381, 0, $component7);
 	} else {
 		if_setobject_nonum(tai_bwo_wannai_teleport_12409, 0, $component7);
 	}
 } else {
-	if_setcolour(0xc80000, $component24);
+	if_setcolour(0xc80000, $component25);
 	if (~script5157 = 8) {
 		if_setobject_nonum(dummy_tai_bwo_wannai_teleport_21381, 0, $component7);
 	} else {
 		if_setobject_nonum(dummy_tai_bwo_wannai_teleport_21368, 0, $component7);
 	}
 }
-if_settext(tostring(%varbit5680), $component25);
+if_settext(tostring(%varbit5680), $component26);
 if (%varbit5680 > 0) {
-	if_setcolour(^yellow, $component25);
+	if_setcolour(^yellow, $component26);
 	if (~script5157 = 9) {
 		if_setobject_nonum(dummy_iorwerth_camp_teleport_21382, 0, $component8);
 	} else {
 		if_setobject_nonum(iorwerth_camp_teleport_12410, 0, $component8);
 	}
 } else {
-	if_setcolour(0xc80000, $component25);
+	if_setcolour(0xc80000, $component26);
 	if (~script5157 = 9) {
 		if_setobject_nonum(dummy_iorwerth_camp_teleport_21382, 0, $component8);
 	} else {
 		if_setobject_nonum(dummy_iorwerth_camp_teleport_21369, 0, $component8);
 	}
 }
-if_settext(tostring(%varbit5681), $component26);
+if_settext(tostring(%varbit5681), $component27);
 if (%varbit5681 > 0) {
-	if_setcolour(^yellow, $component26);
+	if_setcolour(^yellow, $component27);
 	if (~script5157 = 10) {
 		if_setobject_nonum(dummy_mos_leharmless_teleport_21383, 0, $component9);
 	} else {
 		if_setobject_nonum(mos_leharmless_teleport_12411, 0, $component9);
 	}
 } else {
-	if_setcolour(0xc80000, $component26);
+	if_setcolour(0xc80000, $component27);
 	if (~script5157 = 10) {
 		if_setobject_nonum(dummy_mos_leharmless_teleport_21383, 0, $component9);
 	} else {
 		if_setobject_nonum(dummy_mos_leharmless_teleport_21370, 0, $component9);
 	}
 }
-if_settext(tostring(%varbit5682), $component27);
+if_settext(tostring(%varbit5682), $component28);
 if (%varbit5682 > 0) {
-	if_setcolour(^yellow, $component27);
+	if_setcolour(^yellow, $component28);
 	if (~script5157 = 11) {
 		if_setobject_nonum(dummy_lumberyard_teleport_21384, 0, $component10);
 	} else {
 		if_setobject_nonum(lumberyard_teleport_12642, 0, $component10);
 	}
 } else {
-	if_setcolour(0xc80000, $component27);
+	if_setcolour(0xc80000, $component28);
 	if (~script5157 = 11) {
 		if_setobject_nonum(dummy_lumberyard_teleport_21384, 0, $component10);
 	} else {
 		if_setobject_nonum(dummy_lumberyard_teleport_21371, 0, $component10);
 	}
 }
-if_settext(tostring(%varbit5683), $component28);
+if_settext(tostring(%varbit5683), $component29);
 if (%varbit5683 > 0) {
-	if_setcolour(^yellow, $component28);
+	if_setcolour(^yellow, $component29);
 	if (~script5157 = 12) {
 		if_setobject_nonum(dummy_zul_andra_teleport_21385, 0, $component11);
 	} else {
 		if_setobject_nonum(zul_andra_teleport_12938, 0, $component11);
 	}
 } else {
-	if_setcolour(0xc80000, $component28);
+	if_setcolour(0xc80000, $component29);
 	if (~script5157 = 12) {
 		if_setobject_nonum(dummy_zul_andra_teleport_21385, 0, $component11);
 	} else {
 		if_setobject_nonum(dummy_zul_andra_teleport_21372, 0, $component11);
 	}
 }
-if_settext(tostring(%varbit5684), $component29);
+if_settext(tostring(%varbit5684), $component30);
 if (%varbit5684 > 0) {
-	if_setcolour(^yellow, $component29);
+	if_setcolour(^yellow, $component30);
 	if (~script5157 = 13) {
 		if_setobject_nonum(dummy_key_master_teleport_21386, 0, $component12);
 	} else {
 		if_setobject_nonum(key_master_teleport_13249, 0, $component12);
 	}
 } else {
-	if_setcolour(0xc80000, $component29);
+	if_setcolour(0xc80000, $component30);
 	if (~script5157 = 13) {
 		if_setobject_nonum(dummy_key_master_teleport_21386, 0, $component12);
 	} else {
 		if_setobject_nonum(dummy_key_master_teleport_21373, 0, $component12);
 	}
 }
-if_settext(tostring(%varbit6056), $component30);
+if_settext(tostring(%varbit6056), $component31);
 if (%varbit6056 > 0) {
-	if_setcolour(^yellow, $component30);
+	if_setcolour(^yellow, $component31);
 	if (~script5157 = 14) {
 		if_setobject_nonum(dummy_revenant_cave_teleport_21790, 0, $component13);
 	} else {
 		if_setobject_nonum(revenant_cave_teleport_21802, 0, $component13);
 	}
 } else {
-	if_setcolour(0xc80000, $component30);
+	if_setcolour(0xc80000, $component31);
 	if (~script5157 = 14) {
 		if_setobject_nonum(dummy_revenant_cave_teleport_21790, 0, $component13);
 	} else {
 		if_setobject_nonum(dummy_revenant_cave_teleport_21789, 0, $component13);
 	}
 }
-def_int $int34 = ~script2832;
-if_settext(tostring($int34), $component31);
-if ($int34 > 0) {
-	if_setcolour(^yellow, $component31);
+def_int $int36 = ~script2832;
+if_settext(tostring($int36), $component32);
+if ($int36 > 0) {
+	if_setcolour(^yellow, $component32);
 	if (~script5157 = 15) {
 		if_setobject_nonum(dummy_watson_teleport_7672, 0, $component14);
 	} else {
 		if_setobject_nonum(watson_teleport_23387, 0, $component14);
 	}
 } else {
-	if_setcolour(0xc80000, $component31);
+	if_setcolour(0xc80000, $component32);
 	if (~script5157 = 15) {
 		if_setobject_nonum(dummy_watson_teleport_7672, 0, $component14);
 	} else {
 		if_setobject_nonum(dummy_watson_teleport_7674, 0, $component14);
 	}
 }
-if_settext(tostring(%varbit10967), $component32);
+if_settext(tostring(%varbit10967), $component33);
 if (%varbit10967 > 0) {
-	if_setcolour(^yellow, $component32);
+	if_setcolour(^yellow, $component33);
 	if (~script5157 = 16) {
 		if_setobject_nonum(dummy_guthixian_temple_teleport_29683, 0, $component15);
 	} else {
 		if_setobject_nonum(guthixian_temple_teleport_29684, 0, $component15);
 	}
 } else {
-	if_setcolour(0xc80000, $component32);
+	if_setcolour(0xc80000, $component33);
 	if (~script5157 = 16) {
 		if_setobject_nonum(dummy_guthixian_temple_teleport_29683, 0, $component15);
 	} else {
 		if_setobject_nonum(dummy_guthixian_temple_teleport_29682, 0, $component15);
 	}
 }
-if_settext(tostring(%varbit10995), $component33);
+if_settext(tostring(%varbit10995), $component34);
 if (%varbit10995 > 0) {
-	if_setcolour(^yellow, $component33);
+	if_setcolour(^yellow, $component34);
 	if (~script5157 = 17) {
 		if_setobject_nonum(dummy_spider_cave_teleport_29779, 0, $component16);
 	} else {
 		if_setobject_nonum(spider_cave_teleport_29782, 0, $component16);
 	}
 } else {
-	if_setcolour(0xc80000, $component33);
+	if_setcolour(0xc80000, $component34);
 	if (~script5157 = 17) {
 		if_setobject_nonum(dummy_spider_cave_teleport_29779, 0, $component16);
 	} else {
 		if_setobject_nonum(dummy_spider_cave_teleport_29778, 0, $component16);
+	}
+}
+if_settext(tostring(%varbit11029), $component35);
+if (%varbit11029 > 0) {
+	if_setcolour(^yellow, $component35);
+	if (~script5157 = 18) {
+		if_setobject_nonum(dummy_guthixian_temple_teleport_29866, 0, $component17);
+	} else {
+		if_setobject_nonum(colossal_wyrm_teleport_scroll_30040, 0, $component17);
+	}
+} else {
+	if_setcolour(0xc80000, $component35);
+	if (~script5157 = 18) {
+		if_setobject_nonum(dummy_guthixian_temple_teleport_29866, 0, $component17);
+	} else {
+		if_setobject_nonum(dummy_guthixian_temple_teleport_29865, 0, $component17);
 	}
 }

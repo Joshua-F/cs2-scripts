@@ -1,0 +1,9 @@
+// 7353
+[proc,script7353](obj $obj0)
+if (%varcint1201 ! null & %varcint1201 = $obj0) {
+	return;
+}
+%varcint1201 = $obj0;
+def_int $int1 = oc_param($obj0, param_1978);
+~script7354($int1);
+~script7359($int1);

@@ -1,0 +1,17 @@
+// 7351
+[proc,script7351](obj $obj0)(int)
+switch_int (oc_param($obj0, param_468)) {
+	case 44, 49, 51, 54, 55, 56, 57, 58, 59, 0 :
+		return(0);
+	case default :
+		if (oc_param($obj0, param_403) ! 0) {
+			return(0);
+		}
+		if (oc_param($obj0, param_181) > 0) {
+			return(0);
+		}
+		if (oc_param($obj0, param_59) = 1) {
+			return(0);
+		}
+		return(1);
+}

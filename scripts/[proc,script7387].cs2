@@ -1,0 +1,55 @@
+// 7387
+[proc,script7387](component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(16, 19, ^setsize_abs, ^setsize_abs);
+cc_setposition(3, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_setcolour(0xfcfcfc);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_int $int1 = ~script7385(0);
+if ($int1 < 0) {
+	cc_settext("-");
+} else {
+	cc_settext(tostring($int1));
+}
+cc_create($component0, ^iftype_text, 1);
+cc_setsize(16, 19, ^setsize_abs, ^setsize_abs);
+cc_setposition(23, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_setcolour(0xfcfcfc);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int1 = ~script7385(1);
+if ($int1 < 0) {
+	cc_settext("-");
+} else {
+	cc_settext(tostring($int1));
+}
+cc_create($component0, ^iftype_text, 2);
+cc_setsize(16, 19, ^setsize_abs, ^setsize_abs);
+cc_setposition(43, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_setcolour(0xfcfcfc);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int1 = ~script7385(2);
+if ($int1 < 0) {
+	cc_settext("-");
+} else {
+	cc_settext(tostring($int1));
+}
+cc_create($component0, ^iftype_text, 3);
+cc_setsize(16, 19, ^setsize_abs, ^setsize_abs);
+cc_setposition(63, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_setcolour(0xfcfcfc);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int1 = ~script7385(3);
+if ($int1 < 0) {
+	cc_settext("-");
+} else {
+	cc_settext(tostring($int1));
+}

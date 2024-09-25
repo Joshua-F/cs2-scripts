@@ -1,0 +1,11 @@
+// 3601
+[proc,script3601](string $text0, component $component0, int $int1, int $x2, int $y3, int $setposh4, int $setposv5, int $settextalignh6, int $width7, int $height8)(int)
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($x2, $y3, $setposh4, $setposv5);
+cc_setsize($width7, $height8, ^setsize_abs, ^setsize_abs);
+cc_settext($text0);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign($settextalignh6, $settextalignh6, 0);
+return(calc($int1 + 1));

@@ -1,0 +1,24 @@
+// 6078
+[clientscript,script6078](component $component0)
+def_int $int1 = 0;
+if (%varbit11295 = 0) {
+	cc_deleteall($component0);
+	if_setonop(null, $component0);
+	if_setop(1, "", $component0);
+	if_sethide(true, $component0);
+	if (~on_mobile = false) {
+		if_setonmouseleave(null, $component0);
+		if_setonmouserepeat(null, $component0);
+	}
+} else {
+	cc_create($component0, ^iftype_model, $int1);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setmodel(potion_storage_54550);
+	cc_setmodelangle(0, 40, 145, 1950, 0, 1000);
+	$int1 = calc($int1 + 1);
+	if_setop(1, "Potion store", $component0);
+	if_sethide(false, $component0);
+}
+if_setonvartransmit("script6079{var4278, var4279, var4280, var4281, var4282, var4283, var4284, var4285, var4287, var4288, var4289, var4290, var4291, var4292, var4293, var4294, var4295, var4297, var4298, var4299, var4300, var4301, var4302, var4303, var4304, var4305, var4306, var4307, var4308, var4309, var4310, var4311, var4312, var4313, var4315, var4316, var4317, var4318, var4319, var4320, var4321, var4322, var4323, var4324, var4325, var4326, var4327, var4328, var4329, var4330, var4331, var4332, var4333, var4334, var4335, var4336, var4337, var4338, var4339, var4340, var4342, var4343, var4344, var4345, var4346, var4347, var4348, var4349, var4350, var4351, var4352, var4353, var4354, var4355, var4356, var4357, var4358, var4359, var4360, var4361, var4362, var4363, var4364, var4365, var4366, var4367, var4368, var4369, var4370, var4371, var4372, var4373, var4374, var4375, var4376, var4377, var4378, var4379, var4380, var4381, var4382, var4383, var4384, var4286}", interface_12:52);
+~script6080;

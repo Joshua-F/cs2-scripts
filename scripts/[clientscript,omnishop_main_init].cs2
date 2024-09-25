@@ -11,4 +11,5 @@ if_setonresize("omnishop_main_setup($dbrow0, $inv1, true)", $component2);
 if ($inv1 ! null) {
 	if_setoninvtransmit("omnishop_main_setup($dbrow0, $inv1, true){$inv1}", $component2);
 }
+if_setonvartransmit("omnishop_main_setup($dbrow0, $inv1, false){var4271}", $component2);
 ~omnishop_main_info_setup($dbrow0, $inv1, %var3869, 0, 0, 0, null, "", true);

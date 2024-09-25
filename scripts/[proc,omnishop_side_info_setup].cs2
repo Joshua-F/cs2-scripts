@@ -82,12 +82,14 @@ if (string_length($string0) > 0) {
 }
 def_int $int22 = 0;
 def_int $int23 = 1;
-def_inv $inv24 = db_getfield($dbrow1, dbtable_39:1, 0);
-def_dbrow $dbrow25 = null;
+def_graphic $graphic24 = null;
+def_graphic $graphic25 = null;
+def_inv $inv26 = db_getfield($dbrow1, dbtable_39:1, 0);
+def_dbrow $dbrow27 = null;
 if ($int5 ! -1) {
-	$dbrow25 = db_getfield($dbrow1, dbtable_39:5, $int5);
+	$dbrow27 = db_getfield($dbrow1, dbtable_39:5, $int5);
 }
-def_dbrow $dbrow26 = null;
+def_dbrow $dbrow28 = null;
 if (string_length($string0) > 0) {
 	cc_create($component9, ^iftype_text, $int18);
 	cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
@@ -100,32 +102,38 @@ if (string_length($string0) > 0) {
 	$int18 = calc($int18 + 1);
 	$int19 = calc($int19 + 20);
 	if ($int5 ! -1) {
-		$dbrow26, $int4 = ~omnishop_cost($dbrow1, $inv24, $int5, $int22, 0);
+		$dbrow28, $int4 = ~omnishop_cost($dbrow1, $inv26, $int5, $int22, 0);
 	}
-	if ($int5 ! -1 & db_getfield($dbrow25, dbtable_40:13, 0) = false) {
+	if ($int5 ! -1 & db_getfield($dbrow27, dbtable_40:13, 0) = false) {
 		$int4 = 0;
 	}
 	while ($int4 > 0) {
-		if ($int4 = 1) {
-			$string1 = "<tostring($int4)> <db_getfield($dbrow26, dbtable_41:1, 0)>";
+		$graphic24, $graphic25 = db_getfield($dbrow28, dbtable_41:3, 0);
+		if ($graphic25 ! null) {
+			$int18 = ~script3749($component9, $graphic25, p11_full, $int4, -20, 4, $int19, $int18);
+			$int19 = calc($int19 + 24);
 		} else {
-			$string1 = "<tostring($int4)> <db_getfield($dbrow26, dbtable_41:2, 0)>";
+			if ($int4 = 1) {
+				$string1 = "<tostring($int4)> <db_getfield($dbrow28, dbtable_41:1, 0)>";
+			} else {
+				$string1 = "<tostring($int4)> <db_getfield($dbrow28, dbtable_41:2, 0)>";
+			}
+			cc_create($component9, ^iftype_text, $int18);
+			cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
+			cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_settextshadow(true);
+			cc_settextfont(p11_full);
+			cc_setcolour(0xefefef);
+			if ($dbrow28 = dbrow_3353) {
+				$string1 = db_getfield($dbrow28, dbtable_41:1, 0);
+			}
+			cc_settext($string1);
+			$int18 = calc($int18 + 1);
+			$int19 = calc($int19 + 16);
 		}
-		cc_create($component9, ^iftype_text, $int18);
-		cc_setposition(0, $int19, ^setpos_abs_centre, ^setpos_abs_top);
-		cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextshadow(true);
-		cc_settextfont(p11_full);
-		cc_setcolour(0xefefef);
-		if ($dbrow26 = dbrow_3353) {
-			$string1 = db_getfield($dbrow26, dbtable_41:1, 0);
-		}
-		cc_settext($string1);
-		$int18 = calc($int18 + 1);
-		$int19 = calc($int19 + 16);
 		$int22 = calc($int22 + 1);
-		$dbrow26, $int4 = ~omnishop_cost($dbrow1, $inv24, $int5, $int22, 0);
+		$dbrow28, $int4 = ~omnishop_cost($dbrow1, $inv26, $int5, $int22, 0);
 	}
 	if ($int22 = 0) {
 		cc_create($component9, ^iftype_text, $int18);

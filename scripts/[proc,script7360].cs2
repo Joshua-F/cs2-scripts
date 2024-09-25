@@ -1,0 +1,56 @@
+// 7360
+[proc,script7360](dbrow $dbrow0, int $int1)
+def_int $int2 = 0;
+def_component $component3 = db_getfield($dbrow0, dbtable_77:1, 0);
+cc_deleteall($component3);
+cc_create($component3, ^iftype_rectangle, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(220);
+def_component $component4 = db_getfield($dbrow0, dbtable_77:2, 0);
+cc_deleteall($component4);
+def_int $int5 = 36;
+def_int $int6 = 32;
+def_int $int7 = calc(if_getwidth($component4) / $int5);
+def_int $int8 = calc($int1 / $int7);
+if (calc($int1 % $int7) > 0) {
+	$int8 = calc($int8 + 1);
+}
+def_int $int9 = calc((if_getwidth($component4) - $int5 * $int7) / $int7);
+def_int $int10 = calc((if_getheight($component4) - $int6 * $int8) / $int8);
+$int2 = 0;
+while ($int2 < $int1) {
+	cc_create($component4, ^iftype_graphic, $int2);
+	cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int2 % $int7 * ($int5 + $int9) + $int9 / 2), calc($int2 / $int7 * ($int6 + $int10) + $int10 / 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	cc_sethide(true);
+	$int2 = calc($int2 + 1);
+}
+def_int $int11 = calc($int1 * 2);
+while ($int2 < $int11) {
+	cc_create($component4, ^iftype_graphic, $int2);
+	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("mod_icons_interface,11");
+	cc_settrans(0);
+	if (.cc_find($component4, calc($int2 - $int1)) = ^true) {
+		cc_setposition(calc(.cc_getx + (.cc_getwidth - cc_getwidth)), calc(.cc_gety + (.cc_getheight - cc_getheight)), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	cc_sethide(true);
+	$int2 = calc($int2 + 1);
+}
+def_component $component12 = db_getfield($dbrow0, dbtable_77:3, 0);
+~stonebutton_init("Load", $component12, p11_full, 1);
+if_setop(1, "Load", $component12);
+if_setonop("opsound(event_op, 2)", $component12);
+def_component $component13 = db_getfield($dbrow0, dbtable_77:4, 0);
+~stonebutton_init("Save", $component13, p11_full, 1);
+if_setop(1, "Save", $component13);
+if_setonop("opsound(event_op, 2)", $component13);
+~script7363($dbrow0, $int1);

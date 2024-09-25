@@ -1,0 +1,7 @@
+// 6559
+[proc,script6559](int $int0, obj $obj1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8)
+if ($int0 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	~script6560($int8, $obj1);
+}
+~bankside_switchview($component2, $component3, $component4, $component5, $component6, $component7);

@@ -1,0 +1,8 @@
+// 7362
+[proc,script7362](int $int0)
+db_listall(dbtable_77);
+def_dbrow $dbrow1 = db_findnext;
+while ($dbrow1 ! null) {
+	~script7363($dbrow1, $int0);
+	$dbrow1 = db_findnext;
+}

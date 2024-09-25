@@ -535,38 +535,40 @@ switch_int ($int0) {
 			case 15 :
 				return(65, 3rd_age_wand_12422, "Members: 3rd age wand");
 			case 16 :
-				return(70, ahrims_staff_4710, "Members: Ahrim's staff<br> (with 70 Attack)");
+				return(65, dragon_hunter_wand_30070, "Members: Dragon hunter wand");
 			case 17 :
-				return(70, ancient_sceptre_27624, "Members: Ancient sceptre<br> (requires Secrets of the North, 50 Attack and 60 Strength)");
+				return(70, ahrims_staff_4710, "Members: Ahrim's staff<br> (with 70 Attack)");
 			case 18 :
-				return(70, accursed_sceptre_27665, "Members: Accursed Sceptre");
+				return(70, ancient_sceptre_27624, "Members: Ancient sceptre<br> (requires Secrets of the North, 50 Attack and 60 Strength)");
 			case 19 :
-				return(72, nightmare_staff_24422, "Members: Nightmare Staff (without orb)<br> (with 50 Hitpoints)");
+				return(70, accursed_sceptre_27665, "Members: Accursed Sceptre");
 			case 20 :
-				return(75, staff_of_the_dead_11791, "Members: Staff of the Dead (with 75 Attack)");
+				return(72, nightmare_staff_24422, "Members: Nightmare Staff (without orb)<br> (with 50 Hitpoints)");
 			case 21 :
-				return(75, smoke_ancient_sceptre_28264, "Members: Upgraded Ancient Sceptre (requires Desert Treasure II, 50 Attack and 60 Strength)");
+				return(75, staff_of_the_dead_11791, "Members: Staff of the Dead (with 75 Attack)");
 			case 22 :
-				return(75, staff_of_light_22296, "Members: Staff of Light (with 75 Attack)");
+				return(75, smoke_ancient_sceptre_28264, "Members: Upgraded Ancient Sceptre (requires Desert Treasure II, 50 Attack and 60 Strength)");
 			case 23 :
-				return(75, staff_of_balance_24144, "Members: Staff of Balance<br> (with 75 Attack)");
+				return(75, staff_of_light_22296, "Members: Staff of Light (with 75 Attack)");
 			case 24 :
-				return(75, trident_of_the_seas_full_11905, "Members: Trident of the Seas");
+				return(75, staff_of_balance_24144, "Members: Staff of Balance<br> (with 75 Attack)");
 			case 25 :
-				return(75, slayers_staff_e_21255, "Members: Slayer's staff (e)<br> (with 55 Slayer)");
+				return(75, trident_of_the_seas_full_11905, "Members: Trident of the Seas");
 			case 26 :
-				return(75, blue_moon_spear_28988, "Members: Frostmoon Spear<br> (with 70 Attack)");
+				return(75, slayers_staff_e_21255, "Members: Slayer's staff (e)<br> (with 55 Slayer)");
 			case 27 :
-				return(77, purging_staff_29594, "Members: Purging staff (with 50 Attack)");
+				return(75, blue_moon_spear_28988, "Members: Frostmoon Spear<br> (with 70 Attack)");
 			case 28 :
-				return(78, trident_of_the_swamp_12899, "Members: Trident of the Swamp");
+				return(77, purging_staff_29594, "Members: Purging staff (with 50 Attack)");
 			case 29 :
-				return(80, kodai_wand_21006, "Members: Kodai Wand");
+				return(78, trident_of_the_swamp_12899, "Members: Trident of the Swamp");
 			case 30 :
-				return(82, sanguinesti_staff_22323, "Members: Sanguinesti staff");
+				return(80, kodai_wand_21006, "Members: Kodai Wand");
 			case 31 :
-				return(82, harmonised_nightmare_staff_24423, "Members: Nightmare Staff (with orb)<br> (with 50 Hitpoints)");
+				return(82, sanguinesti_staff_22323, "Members: Sanguinesti staff");
 			case 32 :
+				return(82, harmonised_nightmare_staff_24423, "Members: Nightmare Staff (with orb)<br> (with 50 Hitpoints)");
+			case 33 :
 				return(85, tumekens_shadow_27275, "Members: Tumeken's Shadow");
 			case default :
 				return(-1, null, "");
@@ -576,12 +578,14 @@ switch_int ($int0) {
 			case 0 :
 				return(50, tome_of_water_25574, "Tome of Water");
 			case 1 :
-				return(50, tome_of_fire_20714, "Tome of Fire");
+				return(50, tome_of_earth_30064, "Tome of Earth");
 			case 2 :
-				return(66, ancient_wyvern_shield_21633, "Make Ancient Wyvern shield");
+				return(50, tome_of_fire_20714, "Tome of Fire");
 			case 3 :
-				return(70, ancient_wyvern_shield_21633, "Wield Ancient Wyvern shield<br>(with 75 Defence)");
+				return(66, ancient_wyvern_shield_21633, "Make Ancient Wyvern shield");
 			case 4 :
+				return(70, ancient_wyvern_shield_21633, "Wield Ancient Wyvern shield<br>(with 75 Defence)");
+			case 5 :
 				return(80, elidinis_ward_25985, "Elidinis' Ward<br>(with 80 Prayer and 80 Defence)");
 			case default :
 				return(-1, null, "");

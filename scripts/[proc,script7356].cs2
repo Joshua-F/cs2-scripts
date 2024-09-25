@@ -1,0 +1,11 @@
+// 7356
+[proc,script7356](int $int0)
+def_int $int1 = 0;
+def_obj $obj2 = null;
+while ($int1 < $int0) {
+	if (cc_find(interface_15:50, $int1) = ^true) {
+		$obj2 = inv_getobj(inv_911, $int1);
+		~script7357($obj2, inv_total(inv_911, $obj2), $int0);
+	}
+	$int1 = calc($int1 + 1);
+}

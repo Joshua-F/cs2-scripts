@@ -1,0 +1,5 @@
+// 6813
+[clientscript,script6813](component $component0, int $int1, string $string0, string $string1, string $string2)
+if (cc_find($component0, 0) = ^true & .cc_find(interface_879:0, calc($int1 - 1)) = ^true) {
+	~script6814($component0, $int1, $string0, $string1, $string2);
+}

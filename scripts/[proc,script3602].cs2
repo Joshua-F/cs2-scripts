@@ -1,0 +1,15 @@
+// 3602
+[proc,script3602](int $int0, int $int1, int $int2, component $component3, int $int4, int $x5, int $y6, int $setposh7, int $setposv8, int $settextalignh9, int $width10, int $height11)(int)
+cc_create($component3, ^iftype_text, $int4);
+cc_setposition($x5, $y6, $setposh7, $setposv8);
+cc_setsize($width10, $height11, ^setsize_abs, ^setsize_abs);
+if ($int0 >= 1000000000) {
+	cc_settext("Lots");
+} else {
+	cc_settext(~script7396($int0, $int1, $int2, ","));
+}
+cc_settextfont(q8_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign($settextalignh9, $settextalignh9, 0);
+return(calc($int4 + 1));

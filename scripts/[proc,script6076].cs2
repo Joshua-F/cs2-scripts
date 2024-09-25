@@ -1,0 +1,37 @@
+// 6076
+[proc,script6076](namedobj $namedobj0)(enum)
+def_int $int1 = 0;
+def_int $int2 = 1;
+def_enum $enum3 = enum_4826;
+def_enum $enum4 = enum(int, enum, $enum3, $int1);
+def_namedobj $namedobj5 = null;
+while ($enum4 ! null) {
+	$int2 = 1;
+	$namedobj5 = enum(int, namedobj, $enum4, $int2);
+	while ($namedobj5 ! null) {
+		if ($namedobj0 = $namedobj5) {
+			return($enum4);
+		}
+		$int2 = calc($int2 + 1);
+		$namedobj5 = enum(int, namedobj, $enum4, $int2);
+	}
+	$int1 = calc($int1 + 1);
+	$enum4 = enum(int, enum, $enum3, $int1);
+}
+$int1 = 0;
+$enum3 = enum_4829;
+$enum4 = enum(int, enum, $enum3, $int1);
+while ($enum4 ! null) {
+	$int2 = 1;
+	$namedobj5 = enum(int, namedobj, $enum4, $int2);
+	while ($namedobj5 ! null) {
+		if ($namedobj0 = $namedobj5) {
+			return($enum4);
+		}
+		$int2 = calc($int2 + 1);
+		$namedobj5 = enum(int, namedobj, $enum4, $int2);
+	}
+	$int1 = calc($int1 + 1);
+	$enum4 = enum(int, enum, $enum3, $int1);
+}
+return(null);

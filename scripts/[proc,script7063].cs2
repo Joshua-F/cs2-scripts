@@ -1,0 +1,73 @@
+// 7063
+[proc,script7063](component $component0, int $int1, component $component2, int $height3)(int)
+def_int $int4 = 26;
+def_int $int5 = calc($int4 * 3);
+def_int $width6 = if_getwidth($component0);
+def_int $width7 = scale(85, 100, $width6);
+def_int $int8 = scale(15, 100, $width6);
+def_int $int9 = 1;
+def_int $int10 = 0;
+def_int $int11 = 20;
+def_string $string0 = "";
+def_namedobj $namedobj12 = null;
+def_graphic $graphic13 = null;
+def_int $int14 = 0;
+while ($int9 <= 3) {
+	$int5 = calc($int5 - $int4);
+	switch_int ($int9) {
+		case 1 :
+			$string0, $namedobj12, $graphic13 = ~script7171(%varbit11315, %varbit11316);
+		case 2 :
+			$string0, $namedobj12, $graphic13 = ~script7171(%varbit11317, %varbit11318);
+		case 3 :
+			$string0, $namedobj12, $graphic13 = ~script7171(%varbit11319, %varbit11320);
+	}
+	if ($namedobj12 ! null) {
+		if (stat_base(herblore) < enum(obj, int, enum_5548, $namedobj12)) {
+			$int14 = 0;
+			cc_create($component0, ^iftype_rectangle, $int1);
+			cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setsize($width6, $int4, ^setsize_abs, ^setsize_abs);
+			cc_setfill(false);
+			cc_setcolour(^black);
+			cc_settrans(255);
+			~script7172($component2, "You need level <tostring(enum(obj, int, enum_5548, $namedobj12))> Herblore for this order", "Info", "Order");
+			$int1 = calc($int1 + 1);
+		} else {
+			$int14 = 1;
+		}
+		if ($graphic13 ! null) {
+			cc_create($component0, ^iftype_graphic, $int1);
+			cc_setposition(calc($int10 + 3), calc($int11 + 3), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+			cc_setgraphic($graphic13);
+			if ($int14 = 1) {
+				~script7172($component2, $string0, "Info", "Potion modifier");
+				cc_settrans(0);
+			} else {
+				cc_settrans(100);
+			}
+			$int1 = calc($int1 + 1);
+		}
+		cc_create($component0, ^iftype_text, $int1);
+		cc_setposition(calc($int10 + $int8 + 3), $int11, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize($width7, $int4, ^setsize_abs, ^setsize_abs);
+		if ($int14 = 0) {
+			cc_setcolour(0x9f9f9f);
+			cc_settext("<str><oc_name($namedobj12)></str>");
+		} else {
+			cc_setcolour(0xeeeeee);
+			cc_settext(oc_name($namedobj12));
+		}
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		$int1 = calc($int1 + 1);
+		$int11 = calc($int11 + $int4);
+	}
+	$int9 = calc($int9 + 1);
+}
+if ($int5 > 0) {
+	if_setsize(if_getwidth($component0), calc($height3 - $int5), ^setsize_abs, ^setsize_abs, $component0);
+}
+return($int1);

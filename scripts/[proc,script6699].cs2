@@ -1,0 +1,22 @@
+// 6699
+[proc,script6699](component $component0, boolean $boolean1, string $string0, boolean $boolean2, boolean $boolean3, int $int4, int $int5)(int)
+if ($boolean1 = false) {
+	return($int4);
+}
+cc_create($component0, ^iftype_text, $int4);
+cc_setsize(4, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+if ($boolean2 = true | $boolean3 = true) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0xff981f);
+}
+if ($boolean3 = true) {
+	cc_settext("Please wait...");
+} else {
+	cc_settext("<tostring($int5)>: <$string0>");
+}
+return(calc($int4 + 1));

@@ -1,0 +1,17 @@
+// 7365
+[clientscript,script7365](int $int0, int $int1, component $drop2, component $drop3, int $comsubid4, int $dropsubid5)
+if ($drop3 ! $drop2 | $comsubid4 = $dropsubid5 | $comsubid4 < 0 | $dropsubid5 < 0) {
+	return;
+}
+def_obj $obj6 = null;
+def_int $int7 = 0;
+def_obj $obj8 = null;
+def_int $int9 = 0;
+$obj6, $int7 = ~script7366($int0, $comsubid4);
+$obj8, $int9 = ~script7366($int0, $dropsubid5);
+if (cc_find($drop2, $comsubid4) = ^true) {
+	~script7364($int0, $obj8, $int9, $int1);
+}
+if (cc_find($drop2, $dropsubid5) = ^true) {
+	~script7364($int0, $obj6, $int7, $int1);
+}

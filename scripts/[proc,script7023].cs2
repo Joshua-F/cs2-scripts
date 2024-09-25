@@ -1,0 +1,27 @@
+// 7023
+[proc,script7023](component $component0, component $component1, component $component2, component $component3, boolean $boolean4)
+if_settext("<tostring(%varbit11199)>%", $component0);
+def_int $width5 = if_getwidth($component1);
+def_int $int6 = scale(%varbit11199, 100, $width5);
+if ($int6 = 0 & %varbit11199 > 0) {
+	$int6 = 1;
+}
+if ($int6 = $width5 & %varbit11199 < 100) {
+	$int6 = calc($int6 - 1);
+}
+if ($boolean4 = true) {
+	if_setsize($int6, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component2);
+	if_setsize($int6, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
+	if_setontimer(null, $component2);
+	return;
+}
+def_int $width7 = if_getwidth($component3);
+if ($int6 < $width7) {
+	if_setsize($int6, if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
+	if (if_getwidth($component2) < $width7) {
+		if_setsize($width7, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
+	}
+	if_setontimer("script7030($component2, $int6, calc(clientclock + 20))", $component2);
+} else {
+	if_setontimer("script7030($component3, $int6, -1)", $component3);
+}

@@ -1,0 +1,9 @@
+// 6077
+[proc,script6077](enum $enum0, namedobj $namedobj1)(int)
+def_int $int2 = 1;
+def_namedobj $namedobj3 = enum(int, namedobj, $enum0, $int2);
+while ($namedobj1 ! $namedobj3 & $namedobj3 ! null) {
+	$int2 = calc($int2 + 1);
+	$namedobj3 = enum(int, namedobj, $enum0, $int2);
+}
+return($int2);

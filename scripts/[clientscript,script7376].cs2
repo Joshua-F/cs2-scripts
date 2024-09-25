@@ -1,0 +1,8 @@
+// 7376
+[clientscript,script7376](char $keychar0, int $int1, component $component2)
+if ($keychar0 = null | ~keypress_permit(interface_888, null) = 0) {
+	return;
+}
+if (string_indexof_char(tostring($int1), $keychar0) ! -1) {
+	~script7378($int1, $component2, 1);
+}

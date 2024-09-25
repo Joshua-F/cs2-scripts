@@ -1,0 +1,30 @@
+// 7370
+[proc,script7370](obj $obj0)(enum, int, int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_enum $enum3 = enum(int, enum, enum_710, $int1);
+while ($enum3 ! null) {
+	$int2 = 4;
+	while ($int2 >= 0) {
+		if ($obj0 = enum(int, namedobj, $enum3, $int2)) {
+			return($enum3, $int2, 4);
+		}
+		$int2 = calc($int2 - 1);
+	}
+	$int1 = calc($int1 + 1);
+	$enum3 = enum(int, enum, enum_710, $int1);
+}
+$int1 = 0;
+$enum3 = enum(int, enum, enum_741, $int1);
+while ($enum3 ! null) {
+	$int2 = 2;
+	while ($int2 >= 0) {
+		if ($obj0 = enum(int, namedobj, $enum3, $int2)) {
+			return($enum3, $int2, 2);
+		}
+		$int2 = calc($int2 - 1);
+	}
+	$int1 = calc($int1 + 1);
+	$enum3 = enum(int, enum, enum_741, $int1);
+}
+return(null, -1, -1);

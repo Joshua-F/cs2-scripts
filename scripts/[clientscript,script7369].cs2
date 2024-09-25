@@ -1,0 +1,11 @@
+// 7369
+[clientscript,script7369]
+def_int $flags0 = 1;
+def_graphic $graphic1 = "bankbuttons,2";
+def_int $width2 = 29;
+def_int $height3 = 22;
+~script4913(false, interface_887:3, $flags0, $graphic1, $width2, $height3);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script4911(true, event_com, $flags0, $graphic1, $width2, $height3)", interface_887:3);
+}
+if_setonmouseleave("script4911(false, event_com, $flags0, $graphic1, $width2, $height3)", interface_887:3);

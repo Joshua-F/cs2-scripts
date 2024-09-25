@@ -1,0 +1,28 @@
+// 6924
+[proc,script6924](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)(int)
+def_model $model6 = model_49521;
+def_int $x7 = 3;
+def_int $y8 = -6;
+def_int $x9 = 1;
+def_int $y10 = 0;
+def_int $height11 = 225;
+def_int $height12 = 334;
+def_int $height13 = if_getheight($component0);
+if ($height13 >= 580) {
+	$model6 = model_49519;
+	$x7 = 3;
+	$y8 = 0;
+	$x9 = 1;
+	$y10 = 0;
+	$height11 = 498;
+	$height12 = 580;
+}
+if ($height12 = if_getheight($component1)) {
+	return(0);
+}
+if_setsize(if_getwidth($component1), $height12, ^setsize_abs, ^setsize_abs, $component1);
+if_setmodel($model6, $component3);
+if_setposition($x7, $y8, ^setpos_abs_centre, ^setpos_abs_centre, $component3);
+if_setsize(if_getwidth($component2), $height11, ^setsize_abs, ^setsize_abs, $component2);
+if_setposition($x9, $y10, ^setpos_abs_centre, ^setpos_abs_centre, $component2);
+return(1);

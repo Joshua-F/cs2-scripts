@@ -1,0 +1,54 @@
+// 7364
+[proc,script7364](int $int0, obj $obj1, int $int2, int $int3)
+def_enum $enum4 = null;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_boolean $boolean7 = false;
+def_int $size8 = inv_size(bank);
+def_int $size9 = inv_size(inv);
+def_int $size10 = 0;
+def_int $int11 = 0;
+if ($int2 <= 0) {
+	$int2 = 100;
+}
+if (~script7347($obj1, $int2, 1) = 1) {
+	$enum4, $int5, $int6 = ~script7370($obj1);
+	if (inv_total(inv_911, $obj1) > 0) {
+		$boolean7 = true;
+	} else {
+		while ($size10 < $size8 & $boolean7 = false) {
+			$int11 = 1;
+			while ($int11 <= $int6 & $boolean7 = false) {
+				if (inv_getobj(bank, $size10) = enum(int, namedobj, $enum4, $int11)) {
+					$boolean7 = true;
+				} else if ($size10 < $size9 & inv_getobj(inv, $size10) = enum(int, namedobj, $enum4, $int11)) {
+					$boolean7 = true;
+				}
+				$int11 = calc($int11 + 1);
+			}
+			$size10 = calc($size10 + 1);
+		}
+	}
+	if (.cc_find(cc_getlayer, calc(cc_getid + $int3)) = ^true) {
+		.cc_sethide($boolean7);
+	}
+	if ($boolean7 = true) {
+		cc_settrans(0);
+	} else {
+		cc_settrans(120);
+		if (~on_mobile = false) {
+			cc_setonmouserepeat("script7348(true, event_com, event_comsubid, 120)");
+		}
+		cc_setonmouseleave("script7348(false, event_com, event_comsubid, 120)");
+	}
+	cc_setop(1, "Change");
+	cc_setop(2, "Clear");
+	cc_setop(3, "Set-doses");
+	cc_setop(10, "Examine");
+} else {
+	cc_setop(1, "Set");
+	if (.cc_find(cc_getlayer, calc(cc_getid + $int3)) = ^true) {
+		.cc_sethide(true);
+	}
+}
+cc_setondragcomplete("script7365($int0, $int3, event_com, event_com2, event_comsubid, event_comsubid2)");

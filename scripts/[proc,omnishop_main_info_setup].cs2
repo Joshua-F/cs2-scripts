@@ -100,15 +100,17 @@ def_string $text2 = "<tostring($int3)> in stock";
 def_dbrow $dbrow26 = null;
 def_int $int27 = 0;
 def_int $int28 = 0;
+def_graphic $graphic29 = null;
+def_graphic $graphic30 = null;
 def_string $text3 = "";
 def_string $string4 = ",";
-def_dbrow $dbrow29 = null;
+def_dbrow $dbrow31 = null;
 if (string_length($string0) > 0) {
 	if ($int3 = -1) {
 		$text2 = "Unlimited stock";
 	}
-	$dbrow29 = db_getfield($dbrow0, dbtable_39:5, $int2);
-	if (db_getfield($dbrow29, dbtable_40:15, 0) = true) {
+	$dbrow31 = db_getfield($dbrow0, dbtable_39:5, $int2);
+	if (db_getfield($dbrow31, dbtable_40:15, 0) = true) {
 		$text2 = "Currently unavailable";
 	}
 	cc_create($component8, ^iftype_text, $int21);
@@ -130,28 +132,34 @@ if (string_length($string0) > 0) {
 	cc_setcolour(0xefefef);
 	cc_settext("Cost");
 	$int21 = calc($int21 + 1);
-	$int22 = calc($int22 + 20);
+	$int22 = calc($int22 + 22);
 	$dbrow26, $int5 = ~omnishop_cost($dbrow0, $inv1, $int2, $int28, 1);
 	while ($dbrow26 ! null) {
-		$text3 = ~tostring_spacer($int5, $string4);
-		if ($int5 = 1) {
-			$text3 = "<$text3> <db_getfield($dbrow26, dbtable_41:1, 0)>";
+		$graphic29, $graphic30 = db_getfield($dbrow26, dbtable_41:3, 0);
+		if ($graphic29 ! null) {
+			$int21 = ~script3749($component8, $graphic29, $graphic13, $int5, -25, 6, $int22, $int21);
+			$int22 = calc($int22 + 24);
 		} else {
-			$text3 = "<$text3> <db_getfield($dbrow26, dbtable_41:2, 0)>";
+			$text3 = ~tostring_spacer($int5, $string4);
+			if ($int5 = 1) {
+				$text3 = "<$text3> <db_getfield($dbrow26, dbtable_41:1, 0)>";
+			} else {
+				$text3 = "<$text3> <db_getfield($dbrow26, dbtable_41:2, 0)>";
+			}
+			cc_create($component8, ^iftype_text, $int21);
+			cc_setposition(0, $int22, ^setpos_abs_centre, ^setpos_abs_top);
+			cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_settextshadow(true);
+			cc_settextfont($graphic13);
+			cc_setcolour(0xefefef);
+			if ($dbrow26 = dbrow_3353) {
+				$text3 = db_getfield($dbrow26, dbtable_41:1, 0);
+			}
+			cc_settext($text3);
+			$int21 = calc($int21 + 1);
+			$int22 = calc($int22 + 20);
 		}
-		cc_create($component8, ^iftype_text, $int21);
-		cc_setposition(0, $int22, ^setpos_abs_centre, ^setpos_abs_top);
-		cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextshadow(true);
-		cc_settextfont($graphic13);
-		cc_setcolour(0xefefef);
-		if ($dbrow26 = dbrow_3353) {
-			$text3 = db_getfield($dbrow26, dbtable_41:1, 0);
-		}
-		cc_settext($text3);
-		$int21 = calc($int21 + 1);
-		$int22 = calc($int22 + 20);
 		$int28 = calc($int28 + 1);
 		$dbrow26, $int5 = ~omnishop_cost($dbrow0, $inv1, $int2, $int28, 1);
 	}

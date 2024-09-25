@@ -1,32 +1,34 @@
 // 6820
-[clientscript,questjournal_overview_init](component $component0, component $component1, component $component2, int $int3, int $int4, int $int5)
-def_int $int6 = 0;
+[clientscript,questjournal_overview_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6, component $component7, component $component8, component $component9, component $component10)
+def_int $int11 = 0;
 if (~speedrunning_world = 1) {
-	$int6 = 1;
+	$int11 = 1;
 }
-if ($int6 = 1) {
-	if_sethide(false, $component1);
-} else {
-	if_sethide(true, $component1);
-}
-def_int $int7 = 0;
-if (~quest_status_get(%var3679) ! 1) {
-	$int7 = 1;
-}
-if ($int7 = 1) {
+if ($int11 = 1) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-if ($int6 = 1) {
-	if_setposition(77, 54, ^setpos_abs_left, ^setpos_abs_top, $component2);
-} else {
-	if_setposition(48, 54, ^setpos_abs_left, ^setpos_abs_top, $component2);
+def_int $int12 = 0;
+if (~quest_status_get(%var3679) ! 1) {
+	$int12 = 1;
 }
-if ($int6 = 1 & $int7 = 1) {
-	if_setposition(111, 56, ^setpos_abs_left, ^setpos_abs_top, $component0);
-} else if ($int6 = 1 | $int7 = 1) {
-	if_setposition(82, 56, ^setpos_abs_left, ^setpos_abs_top, $component0);
+if ($int12 = 1) {
+	if_sethide(false, $component3);
 } else {
-	if_setposition(53, 56, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_sethide(true, $component3);
 }
+if ($int11 = 1) {
+	if_setposition(29, 0, ^setpos_abs_left, ^setpos_abs_top, $component3);
+} else {
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component3);
+}
+if_setopkey(1, ^key_escape, 0, $component4);
+if ($int11 = 1 & $int12 = 1) {
+	if_setposition(63, 2, ^setpos_abs_left, ^setpos_abs_top, $component1);
+} else if ($int11 = 1 | $int12 = 1) {
+	if_setposition(34, 2, ^setpos_abs_left, ^setpos_abs_top, $component1);
+} else {
+	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component1);
+}
+~script6924($component0, $component8, $component9, $component10, $component7, $component5);

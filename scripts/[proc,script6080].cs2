@@ -1,0 +1,169 @@
+// 6080
+[proc,script6080]
+cc_deleteall(interface_12:52);
+cc_deleteall(interface_12:53);
+cc_deleteall(interface_12:16);
+if (%varbit4150 = 15) {
+	if_sethide(false, interface_12:15);
+	~create_graphic(interface_12:16, 0, tradebacking, 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 0, 0, ^setsize_minus, ^setsize_minus);
+	def_int $int0 = 0;
+	def_int $int1 = 0;
+	def_int $int2 = 0;
+	def_int $int3 = 0;
+	def_int $int4 = 0;
+	def_int $int5 = 0;
+	def_int $int6 = 0;
+	def_int $int7 = 0;
+	def_int $int8 = 0;
+	def_int $int9 = 0;
+	def_int $int10 = 0;
+	def_int $int11 = 0;
+	def_enum $enum12 = null;
+	def_int $int13 = 0;
+	def_int $int14 = 0;
+	$int4 = $int3;
+	$int3 = calc($int3 + 1);
+	def_int $int15 = 0;
+	def_int $int16 = 0;
+	def_int $int17 = 0;
+	def_int $int18 = 0;
+	def_int $int19 = $int2;
+	def_int $int20 = $int3;
+	if (%var4278 ! null) {
+		$int2, $int3 = ~script6556($int2, $int3);
+		$int8 = 1;
+	}
+	if (%var4279 ! null) {
+		$int2, $int3 = ~script6556($int2, $int3);
+		$int8 = 1;
+	}
+	if (%var4280 ! null) {
+		$int2, $int3 = ~script6556($int2, $int3);
+		$int8 = 1;
+	}
+	if (%var4281 ! null) {
+		$int2, $int3 = ~script6556($int2, $int3);
+		$int8 = 1;
+	}
+	if (%var4282 ! null) {
+		$int2, $int3 = ~script6556($int2, $int3);
+		$int8 = 1;
+	}
+	if (%var4283 ! null) {
+		$int2, $int3 = ~script6556($int2, $int3);
+		$int8 = 1;
+	}
+	if (%var4284 ! null) {
+		$int2, $int3 = ~script6556($int2, $int3);
+		$int8 = 1;
+	}
+	if (%var4285 ! null) {
+		$int2, $int3 = ~script6556($int2, $int3);
+		$int8 = 1;
+	}
+	if ($int2 = 1) {
+		$int2, $int3 = 0, calc($int3 + 1);
+	}
+	if ($int8 = 0) {
+		$int3 = calc($int3 - 1);
+	}
+	$int13 = 0;
+	$int5 = $int3;
+	$int3 = calc($int3 + 1);
+	$int0 = 0;
+	$enum12 = enum(int, enum, enum_4826, $int0);
+	while ($enum12 ! null) {
+		if (~script6074($enum12) = 1) {
+			$int14, $int1, $int19, $int20 = ~script6360($int1, $int19, $int20, $enum12, 1, $int11);
+			$int11 = calc($int11 + 1);
+		} else {
+			$int14, $int1, $int2, $int3 = ~script6360($int1, $int2, $int3, $enum12, 0, $int13);
+			if ($int14 = 1) {
+				$int13 = calc($int13 + 1);
+				$int15 = $int2;
+				$int16 = $int13;
+			}
+		}
+		$int0 = calc($int0 + 1);
+		$enum12 = enum(int, enum, enum_4826, $int0);
+	}
+	if ($int2 = 1) {
+		$int2, $int3 = 0, calc($int3 + 1);
+	}
+	if (calc($int3 - 1) ! $int5) {
+		$int9 = 1;
+	} else {
+		$int3 = calc($int3 - 1);
+	}
+	$int13 = 0;
+	$int6 = $int3;
+	$int3 = calc($int3 + 1);
+	$int0 = 0;
+	$enum12 = enum(int, enum, enum_4829, $int0);
+	while ($enum12 ! null) {
+		if (~script6074($enum12) = 1) {
+			$int14, $int1, $int19, $int20 = ~script6360($int1, $int19, $int20, $enum12, 1, $int11);
+			$int11 = calc($int11 + 1);
+		} else {
+			$int14, $int1, $int2, $int3 = ~script6360($int1, $int2, $int3, $enum12, 0, $int13);
+			if ($int14 = 1) {
+				$int13 = calc($int13 + 1);
+				$int17 = $int2;
+				$int18 = $int13;
+			}
+		}
+		$int0 = calc($int0 + 1);
+		$enum12 = enum(int, enum, enum_4829, $int0);
+	}
+	if ($int2 = 1) {
+		$int2, $int3 = 0, calc($int3 + 1);
+	}
+	if (calc($int3 - 1) ! $int6) {
+		$int10 = 1;
+	} else {
+		$int3 = calc($int3 - 1);
+	}
+	$int7 = $int3;
+	def_int $int21 = calc(if_getwidth(interface_12:52) / 2);
+	def_int $x22 = calc($int21 + 1);
+	if ($int8 = 1) {
+		if ($int19 > 0 & calc($int20 % 2) ! 0) {
+			~create_graphic(interface_12:52, $int1, tradebacking_dark, $x22, calc($int20 * 36), ^setpos_abs_left, ^setpos_abs_top, $int21, 36, ^setsize_abs, ^setsize_abs);
+			$int1 = calc($int1 + 1);
+		}
+		$int1 = ~script6081($int1, $int4, "Favourites <tostring(~script6075)>/<tostring(8)>", calc(($int4 + 1) * 36), calc(($int5 - ($int4 + 1)) * 36));
+	}
+	if ($int9 = 1) {
+		if ($int15 > 0 & calc($int16 / 2 % 2) = 0) {
+			~create_graphic(interface_12:52, $int1, tradebacking_dark, $x22, calc(($int6 - 1) * 36), ^setpos_abs_left, ^setpos_abs_top, $int21, 36, ^setsize_abs, ^setsize_abs);
+			$int1 = calc($int1 + 1);
+		}
+		$int1 = ~script6081($int1, $int5, "Potions", calc(($int5 + 1) * 36), calc(($int6 - ($int5 + 1)) * 36));
+	}
+	if ($int10 = 1) {
+		if ($int17 > 0 & calc($int18 / 2 % 2) = 0) {
+			~create_graphic(interface_12:52, $int1, tradebacking_dark, $x22, calc(($int7 - 1) * 36), ^setpos_abs_left, ^setpos_abs_top, $int21, 36, ^setsize_abs, ^setsize_abs);
+			$int1 = calc($int1 + 1);
+		}
+		$int1 = ~script6081($int1, $int6, "Unfinished Potions", calc(($int6 + 1) * 36), calc(($int7 - ($int6 + 1)) * 36));
+	}
+	if ($int8 = 0 & $int9 = 0 & $int10 = 0) {
+		cc_create(interface_12:52, ^iftype_text, $int1);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(20, 40, ^setsize_minus, ^setsize_minus);
+		cc_settextfont(p12_full);
+		cc_setcolour(0xff981f);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+		cc_settext("Welcome to your potion storage. You may use this space to store any finished or unfinished potions.<br><br>Empty vials can also be stored here which will also be needed to withdraw potions.<br><br>Empty vials will be added to the storage when depositing potions and will needed to withdraw potions.<br><br>You may add up to 8 favourite potions using the heart icon. These potions will be shown at the top of the list.");
+		$int1 = calc($int1 + 1);
+	}
+	def_int $y23 = min(if_getscrolly(interface_12:52), calc(if_getscrollheight(interface_12:52) - if_getheight(interface_12:52)));
+	if_setscrollsize(0, max(if_getheight(interface_12:52), calc($int3 * 36)), interface_12:52);
+	if_setscrollpos(0, $y23, interface_12:52);
+	~scrollbar_vertical(interface_12:53, interface_12:52, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if_setonresize("script6557($int3)", interface_12:52);
+	~scrollbar_vertical_rebuild(interface_12:53, interface_12:52);
+	return;
+}
+if_sethide(true, interface_12:15);

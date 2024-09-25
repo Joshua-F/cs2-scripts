@@ -1,0 +1,55 @@
+// 7333
+[proc,script7333](int $index0)(int)
+def_int $flags1 = setbit(0, $index0);
+switch_int ($index0) {
+	case 6 :
+		$flags1 = setbit($flags1, 3);
+	case 3 :
+		$flags1 = setbit($flags1, 6);
+	case 7 :
+		$flags1 = setbit($flags1, 4);
+		$flags1 = setbit($flags1, 12);
+		$flags1 = setbit($flags1, 13);
+	case 4 :
+		$flags1 = setbit($flags1, 7);
+	case 12 :
+		$flags1 = setbit($flags1, 7);
+		$flags1 = setbit($flags1, 13);
+	case 13 :
+		$flags1 = setbit($flags1, 7);
+		$flags1 = setbit($flags1, 12);
+	case 15 :
+		$flags1 = setbit($flags1, 16);
+	case 16 :
+		$flags1 = setbit($flags1, 15);
+}
+if (%var302 < 61) {
+	$flags1 = setbit($flags1, 3);
+	$flags1 = setbit($flags1, 6);
+}
+if (%var655 < 140) {
+	$flags1 = setbit($flags1, 3);
+}
+if (%var365 < 2 | %var150 < 160) {
+	$flags1 = setbit($flags1, 8);
+}
+if (%var328 < 15) {
+	$flags1 = setbit($flags1, 9);
+}
+if (%var176 < 2 | %var176 > 9) {
+	$flags1 = setbit($flags1, 0);
+}
+if (%varbit9016 < 200) {
+	$flags1 = setbit($flags1, 11);
+}
+if (%varbit4897 = 0) {
+	$flags1 = setbit($flags1, 12);
+	$flags1 = setbit($flags1, 13);
+}
+if (%varbit9650 = 0) {
+	$flags1 = setbit($flags1, 14);
+	$flags1 = setbit($flags1, 16);
+	$flags1 = setbit($flags1, 15);
+}
+$flags1 = setbit($flags1, 17);
+return($flags1);

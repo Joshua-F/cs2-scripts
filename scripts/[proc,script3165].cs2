@@ -1,0 +1,49 @@
+// 3165
+[proc,script3165](dbrow $dbrow0, int $int1, int $int2)(int)
+def_component $component3 = interface_819:18;
+def_component $component4 = interface_819:22;
+def_component $component5 = interface_819:23;
+cc_deleteall($component3);
+if_settext("", $component4);
+if_settextfont(b12_full, $component4);
+if_settext("", $component5);
+if_settextfont(q8_full, $component5);
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 2;
+def_int $int10 = calc($int2 / ~minmax(1, 3, $int1));
+def_dbrow $dbrow11 = null;
+def_string $string0 = "";
+def_int $int12 = 0;
+def_int $int13 = ^max_32bit_int;
+def_int $int14 = ^max_32bit_int;
+def_graphic $graphic15 = null;
+def_graphic $graphic16 = null;
+def_int $int17 = 0;
+def_int $int18 = 0;
+if ($int1 > 1) {
+	$int13, $int14 = 100000, 10000000;
+}
+while ($int6 < $int1) {
+	$dbrow11 = db_getfield($dbrow0, dbtable_39:2, $int6);
+	if ($dbrow11 ! null) {
+		$string0 = db_getfield($dbrow11, dbtable_41:2, 0);
+		$graphic15, $graphic16 = db_getfield($dbrow11, dbtable_41:3, 0);
+		$int12 = ~omnishop_var_getter($dbrow11);
+		$int7 = ~script3747($component3, $int7, $int8, $int9, $int10, 40, "You have <~tostring_spacer($int12, ",")> <$string0> to spend in this shop.", $string0);
+		if ($graphic15 ! null) {
+			$int18 = calc($int18 + 1);
+			$int7 = ~script3603($graphic15, $component3, $int7, $int8, $int9, 20, 20, ^setpos_abs_left, ^setpos_abs_top, calc($int10 / 2 - 10), 0);
+		} else {
+			$int7 = ~script3601($string0, $component3, $int7, $int8, $int9, ^setpos_abs_left, ^setpos_abs_top, ^settextalign_centre, $int10, 20);
+		}
+		$int7 = ~script3602($int12, $int13, $int14, $component3, $int7, $int8, $int9, ^setpos_abs_left, ^setpos_abs_bottom, ^settextalign_centre, $int10, 20);
+		$int8 = calc($int8 + $int10);
+	}
+	$int6 = calc($int6 + 1);
+}
+if ($int1 = 1 | $int1 > 1 & $int18 = $int1) {
+	$int17 = 1;
+}
+return($int17);

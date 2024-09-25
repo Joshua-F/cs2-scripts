@@ -1,0 +1,21 @@
+// 7341
+[proc,script7341](obj $obj0, int $total1)
+def_enum $enum2 = null;
+def_int $int3 = 1;
+def_int $int4 = 0;
+if (~script7347($obj0, $total1, 0) = 1) {
+	$enum2, $int3, $int4 = ~script7370($obj0);
+	cc_setop(1, "Withdraw-<tostring($int4)>");
+	cc_setop(2, "Withdraw-1");
+	cc_setop(3, "Withdraw-All");
+	cc_setop(4, "Withdraw-X");
+	cc_setop(5, "Fill-1");
+	cc_setop(6, "Fill-5");
+	cc_setop(7, "Fill-All");
+	cc_setop(8, "Fill-X");
+	cc_setop(10, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	cc_setondragcomplete("script7342(event_com, event_com2, event_comsubid, event_comsubid2)");
+} else {
+	cc_setondragcomplete("script7342(event_com, event_com2, event_comsubid, event_comsubid2)");
+}

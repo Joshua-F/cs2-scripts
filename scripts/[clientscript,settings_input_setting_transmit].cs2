@@ -11,11 +11,11 @@ if (cc_find($component5, $comsubid2) = ^true) {
 	}
 	$int8 = ~script4398($setting1);
 	if ($int8 > 1) {
-		cc_settext("<~tostring_spacer($int8, $string0)> <struct_param($struct0, param_1112)>");
+		cc_settext("<~tostring_spacer($int8, $string0)><struct_param($struct0, param_1112)>");
 	} else if ($int8 = 0) {
 		cc_settext(struct_param($struct0, param_1113));
 	} else {
-		cc_settext("1 <struct_param($struct0, param_1111)>");
+		cc_settext("1<struct_param($struct0, param_1111)>");
 	}
 }
 if (cc_find($component5, $comsubid4) = ^true) {

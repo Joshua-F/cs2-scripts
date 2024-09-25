@@ -1,0 +1,5 @@
+// 6557
+[clientscript,script6557](int $int0)
+if_setscrollsize(if_getwidth(interface_12:52), max(if_getheight(interface_12:52), calc($int0 * 36)), interface_12:52);
+if_setscrollpos(0, min(if_getscrolly(interface_12:52), calc(if_getscrollheight(interface_12:52) - if_getheight(interface_12:52))), interface_12:52);
+~scrollbar_vertical_rebuild(interface_12:53, interface_12:52);
