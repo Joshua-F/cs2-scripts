@@ -1,6 +1,6 @@
 // 6360
 [proc,script6360](int $int0, int $int1, int $int2, enum $enum3, int $int4, int $int5)(int, int, int, int)
-def_int $int6 = ~script3750($enum3);
+def_int $int6 = max(~script3750($enum3), 0);
 def_int $int7 = ~script4818($enum3);
 def_namedobj $namedobj8 = enum(int, namedobj, $enum3, $int7);
 def_int $int9 = calc(if_getwidth(interface_12:52) / 2);

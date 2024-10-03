@@ -104,7 +104,7 @@ if (string_length($string0) > 0) {
 	if ($int5 ! -1) {
 		$dbrow28, $int4 = ~omnishop_cost($dbrow1, $inv26, $int5, $int22, 0);
 	}
-	if ($int5 ! -1 & db_getfield($dbrow27, dbtable_40:13, 0) = false) {
+	if ($int5 ! -1 & db_getfield($dbrow27, dbtable_40:14, 0) = false) {
 		$int4 = 0;
 	}
 	while ($int4 > 0) {

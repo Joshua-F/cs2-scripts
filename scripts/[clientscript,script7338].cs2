@@ -2,7 +2,7 @@
 [clientscript,script7338](obj $obj0)
 if_setobject($obj0, 1, interface_886:2);
 if_setobject($obj0, 1, interface_886:3);
-~steelborder(interface_886:1, "Pre-pot Device", 0);
+~steelborder(interface_886:1, "Chugging Barrel", 0);
 def_int $int1 = oc_param($obj0, param_1978);
 def_int $int2 = 36;
 def_int $int3 = calc((if_getwidth(interface_886:7) - $int2 * $int1) / $int1);

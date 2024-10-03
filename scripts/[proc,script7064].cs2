@@ -6,7 +6,7 @@ def_int $int5 = 20;
 def_int $int6 = 0;
 def_int $int7 = 10;
 def_int $int8 = calc($int5 * -1);
-def_int $int9 = 5;
+def_int $int9 = 6;
 def_int $int10 = 0;
 def_graphic $graphic11 = null;
 def_string $string0 = "";
@@ -14,11 +14,11 @@ def_int $int12 = 1;
 while ($int12 <= 3) {
 	switch_int ($int12) {
 		case 1 :
-			$graphic11, $int10, $string0 = graphic_5666, %varbit11321, "Mox reagent";
+			$graphic11, $int10, $string0 = graphic_5666, %varbit11431, "Mox reagent";
 		case 2 :
-			$graphic11, $int10, $string0 = graphic_5667, %varbit11322, "Aga reagent";
+			$graphic11, $int10, $string0 = graphic_5667, %varbit11432, "Aga reagent";
 		case 3 :
-			$graphic11, $int10, $string0 = graphic_5668, %varbit11323, "Lye reagent";
+			$graphic11, $int10, $string0 = graphic_5668, %varbit11433, "Lye reagent";
 	}
 	if ($graphic11 ! null) {
 		cc_create($component0, ^iftype_graphic, $int1);

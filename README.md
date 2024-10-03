@@ -2075,6 +2075,7 @@
 [**2072**](scripts/[proc,deadman_spectator_chat].cs2) `[proc,deadman_spectator_chat]`  
 [**2073**](scripts/[clientscript,sailing_menu_init].cs2) `[clientscript,sailing_menu_init]`  
 [**2074**](scripts/[proc,script2074].cs2)  
+[**2075**](scripts/[proc,script2075].cs2)  
 [**2077**](scripts/[clientscript,vm_kudos_init].cs2) `[clientscript,vm_kudos_init]`  
 [**2078**](scripts/[clientscript,vm_kudos_update].cs2) `[clientscript,vm_kudos_update]`  
 [**2079**](scripts/[proc,vm_kudos_update].cs2) `[proc,vm_kudos_update]`  

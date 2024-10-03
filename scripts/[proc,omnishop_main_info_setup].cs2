@@ -110,7 +110,7 @@ if (string_length($string0) > 0) {
 		$text2 = "Unlimited stock";
 	}
 	$dbrow31 = db_getfield($dbrow0, dbtable_39:5, $int2);
-	if (db_getfield($dbrow31, dbtable_40:15, 0) = true) {
+	if (db_getfield($dbrow31, dbtable_40:16, 0) = true) {
 		$text2 = "Currently unavailable";
 	}
 	cc_create($component8, ^iftype_text, $int21);

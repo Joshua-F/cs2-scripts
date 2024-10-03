@@ -3,9 +3,9 @@
 if (~script7349($obj0) = 1) {
 	mes("Don't be silly.");
 } else if (oc_param($obj0, param_468) = 44) {
-	mes("The pre-pot device can't hold that kind of drink.");
+	mes("The chugging barrel can't hold that kind of drink.");
 } else if (oc_param($obj0, param_468) > 0) {
-	mes("The pre-pot device can't hold that kind of potion.");
+	mes("The chugging barrel can't hold that kind of potion.");
 } else {
-	mes("You can't store that in the pre-pot device.");
+	mes("You can't store that in the chugging barrel.");
 }
