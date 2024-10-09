@@ -50,11 +50,13 @@ if ($int18 = 1) {
 	$int19 = 2;
 	if_setsize(460, 39, ^setsize_abs, ^setsize_minus, $component2);
 	if_setsize(16, 39, ^setsize_abs, ^setsize_minus, $component3);
+	if_setsize(53, 39, ^setsize_minus, ^setsize_minus, interface_12:15);
 	if_setposition(28, 42, ^setpos_abs_right, ^setpos_abs_top, $component1);
 } else {
 	if_sethide(false, $component8);
 	if_setsize(460, 81, ^setsize_abs, ^setsize_minus, $component2);
 	if_setsize(16, 81, ^setsize_abs, ^setsize_minus, $component3);
+	if_setsize(53, 81, ^setsize_minus, ^setsize_minus, interface_12:15);
 	if_setposition(12, 42, ^setpos_abs_right, ^setpos_abs_top, $component1);
 }
 if (%varbit4150 = 15) {

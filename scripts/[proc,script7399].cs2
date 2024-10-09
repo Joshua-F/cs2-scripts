@@ -1,0 +1,9 @@
+// 7399
+[proc,script7399](component $component0)
+if (%varbit11437 = 1) {
+	cc_setgraphic("options_radio_buttons,2");
+	if_setop(1, "Disable", $component0);
+} else {
+	cc_setgraphic("options_radio_buttons,1");
+	if_setop(1, "Enable", $component0);
+}

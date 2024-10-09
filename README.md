@@ -518,14 +518,8 @@
 [**515**](scripts/[clientscript,script515].cs2)  
 [**516**](scripts/[proc,bank_tabforslot].cs2) `[proc,bank_tabforslot]`  
 [**517**](scripts/[clientscript,script517].cs2)  
-[**518**](scripts/[proc,script518].cs2)  
-[**519**](scripts/[proc,script519].cs2)  
-[**520**](scripts/[proc,script520].cs2)  
-[**521**](scripts/[clientscript,script521].cs2)  
 [**522**](scripts/[clientscript,script522].cs2)  
 [**523**](scripts/[proc,script523].cs2)  
-[**524**](scripts/[proc,script524].cs2)  
-[**525**](scripts/[proc,script525].cs2)  
 [**526**](scripts/[clientscript,tooltip_mouserepeat].cs2) `[clientscript,tooltip_mouserepeat]`  
 [**527**](scripts/[proc,settings_colour_input_update].cs2) `[proc,settings_colour_input_update]`  
 [**528**](scripts/[proc,settings_buff_corruption].cs2) `[proc,settings_buff_corruption]`  
@@ -2076,6 +2070,7 @@
 [**2073**](scripts/[clientscript,sailing_menu_init].cs2) `[clientscript,sailing_menu_init]`  
 [**2074**](scripts/[proc,script2074].cs2)  
 [**2075**](scripts/[proc,script2075].cs2)  
+[**2076**](scripts/[clientscript,script2076].cs2)  
 [**2077**](scripts/[clientscript,vm_kudos_init].cs2) `[clientscript,vm_kudos_init]`  
 [**2078**](scripts/[clientscript,vm_kudos_update].cs2) `[clientscript,vm_kudos_update]`  
 [**2079**](scripts/[proc,vm_kudos_update].cs2) `[proc,vm_kudos_update]`  
@@ -7149,6 +7144,7 @@
 [**7148**](scripts/[clientscript,omnishop_main_info_closebutton_click].cs2) `[clientscript,omnishop_main_info_closebutton_click]`  
 [**7149**](scripts/[clientscript,omnishop_main_info_closebutton_key].cs2) `[clientscript,omnishop_main_info_closebutton_key]`  
 [**7150**](scripts/[proc,omnishop_main_info_closebutton].cs2) `[proc,omnishop_main_info_closebutton]`  
+[**7151**](scripts/[clientscript,script7151].cs2)  
 [**7152**](scripts/[proc,script7152].cs2)  
 [**7153**](scripts/[proc,script7153].cs2)  
 [**7154**](scripts/[clientscript,omnishop_main_help].cs2) `[clientscript,omnishop_main_help]`  
@@ -7394,3 +7390,6 @@
 [**7394**](scripts/[proc,script7394].cs2)  
 [**7395**](scripts/[clientscript,script7395].cs2)  
 [**7396**](scripts/[proc,script7396].cs2)  
+[**7397**](scripts/[clientscript,script7397].cs2)  
+[**7398**](scripts/[clientscript,script7398].cs2)  
+[**7399**](scripts/[proc,script7399].cs2)  

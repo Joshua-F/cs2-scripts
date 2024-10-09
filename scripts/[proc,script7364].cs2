@@ -6,8 +6,7 @@ def_int $int6 = 0;
 def_boolean $boolean7 = false;
 def_int $size8 = inv_size(bank);
 def_int $size9 = inv_size(inv);
-def_int $size10 = 0;
-def_int $int11 = 0;
+def_int $int10 = 0;
 if ($int2 <= 0) {
 	$int2 = 100;
 }
@@ -15,18 +14,17 @@ if (~script7347($obj1, $int2, 1) = 1) {
 	$enum4, $int5, $int6 = ~script7370($obj1);
 	if (inv_total(inv_911, $obj1) > 0) {
 		$boolean7 = true;
+	} else if (%varbit4150 = 15 & ~script3750($enum4) > 0) {
+		$boolean7 = true;
 	} else {
-		while ($size10 < $size8 & $boolean7 = false) {
-			$int11 = 1;
-			while ($int11 <= $int6 & $boolean7 = false) {
-				if (inv_getobj(bank, $size10) = enum(int, namedobj, $enum4, $int11)) {
-					$boolean7 = true;
-				} else if ($size10 < $size9 & inv_getobj(inv, $size10) = enum(int, namedobj, $enum4, $int11)) {
-					$boolean7 = true;
-				}
-				$int11 = calc($int11 + 1);
+		$int10 = 1;
+		while ($int10 <= $int6 & $boolean7 = false) {
+			if (%varbit4150 ! 15 & inv_total(bank, enum(int, namedobj, $enum4, $int10)) > 0) {
+				$boolean7 = true;
+			} else if (inv_total(inv, enum(int, namedobj, $enum4, $int10)) > 0) {
+				$boolean7 = true;
 			}
-			$size10 = calc($size10 + 1);
+			$int10 = calc($int10 + 1);
 		}
 	}
 	if (.cc_find(cc_getlayer, calc(cc_getid + $int3)) = ^true) {
