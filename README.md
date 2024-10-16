@@ -518,6 +518,7 @@
 [**515**](scripts/[clientscript,script515].cs2)  
 [**516**](scripts/[proc,bank_tabforslot].cs2) `[proc,bank_tabforslot]`  
 [**517**](scripts/[clientscript,script517].cs2)  
+[**518**](scripts/[clientscript,script518].cs2)  
 [**522**](scripts/[clientscript,script522].cs2)  
 [**523**](scripts/[proc,script523].cs2)  
 [**526**](scripts/[clientscript,tooltip_mouserepeat].cs2) `[clientscript,tooltip_mouserepeat]`  
