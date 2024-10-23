@@ -4,117 +4,122 @@ def_int $int4 = -1;
 def_int $int5 = -1;
 def_int $int6 = -1;
 def_int $int7 = -1;
-def_obj $obj8 = null;
-def_component $component9 = null;
-def_int $int10 = 0;
-def_int $size11 = inv_size(worn);
-while ($int10 < $size11) {
-	$component9 = enum(int, component, $enum3, $int10);
-	if ($component9 ! null) {
-		cc_deleteall($component9);
-		cc_create($component9, ^iftype_graphic, 0);
+def_int $int8 = -1;
+def_obj $obj9 = null;
+def_component $component10 = null;
+def_int $int11 = 0;
+def_int $size12 = inv_size(worn);
+while ($int11 < $size12) {
+	$component10 = enum(int, component, $enum3, $int11);
+	if ($component10 ! null) {
+		cc_deleteall($component10);
+		cc_create($component10, ^iftype_graphic, 0);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("miscgraphics,0");
-		cc_create($component9, ^iftype_graphic, 1);
+		cc_create($component10, ^iftype_graphic, 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		$obj8 = inv_getobj(inv_207, $int10);
-		if ($obj8 ! null) {
+		$obj9 = inv_getobj(inv_207, $int11);
+		if ($obj9 ! null) {
 			cc_settrans(0);
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
-			cc_setobject($obj8, inv_getnum(inv_207, $int10));
-			cc_setopbase("<col=ff9040><oc_name($obj8)></col>");
+			cc_setobject($obj9, inv_getnum(inv_207, $int11));
+			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
 			cc_setop(10, "Examine");
 			cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
-			if (oc_param($obj8, loadout_iteminfo) ! 13) {
-				switch_int (oc_param($obj8, loadout_ammotype)) {
+			if (oc_param($obj9, loadout_iteminfo) ! 13) {
+				switch_int (oc_param($obj9, loadout_ammotype)) {
 					case 3 :
-						$int4 = ~max($int4, oc_param($obj8, loadout_ammoreq));
+						$int4 = max($int4, oc_param($obj9, loadout_ammoreq));
 					case 5 :
-						$int5 = ~max($int5, oc_param($obj8, loadout_ammoreq));
+						$int5 = max($int5, oc_param($obj9, loadout_ammoreq));
 					case -6 :
-						$int6 = ~max($int6, oc_param($obj8, loadout_ammoreq));
+						$int6 = max($int6, oc_param($obj9, loadout_ammoreq));
 					case -7 :
-						$int7 = ~max($int7, oc_param($obj8, loadout_ammoreq));
+						$int7 = max($int7, oc_param($obj9, loadout_ammoreq));
+					case -8 :
+						$int8 = max($int8, oc_param($obj9, loadout_ammoreq));
 				}
 			}
 		} else {
 			cc_settrans(255);
 			cc_clearops;
-			cc_create($component9, ^iftype_graphic, 2);
+			cc_create($component10, ^iftype_graphic, 2);
 			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-			cc_setgraphic(enum(int, graphic, enum_904, $int10));
+			cc_setgraphic(enum(int, graphic, enum_904, $int11));
 		}
 	}
-	$int10 = calc($int10 + 1);
+	$int11 = calc($int11 + 1);
 }
 cc_deleteall($component0);
-def_int $int12 = calc((if_getwidth($component0) - 6 - 4 * 36) / 3 + 36);
-def_int $int13 = calc((if_getheight($component0) - 6 - 7 * 32) / 6 + 32);
-$int10 = 0;
-def_int $int14 = $size11;
-def_int $size15 = inv_size(inv);
-while ($int10 < $size15) {
-	$obj8 = inv_getobj(inv_207, $int14);
-	cc_create($component0, ^iftype_graphic, $int10);
-	cc_setposition(calc(4 + $int12 * ($int10 % 4)), calc(3 + $int13 * ($int10 / 4)), ^setpos_abs_left, ^setpos_abs_top);
+def_int $int13 = calc((if_getwidth($component0) - 6 - 4 * 36) / 3 + 36);
+def_int $int14 = calc((if_getheight($component0) - 6 - 7 * 32) / 6 + 32);
+$int11 = 0;
+def_int $int15 = $size12;
+def_int $size16 = inv_size(inv);
+while ($int11 < $size16) {
+	$obj9 = inv_getobj(inv_207, $int15);
+	cc_create($component0, ^iftype_graphic, $int11);
+	cc_setposition(calc(4 + $int13 * ($int11 % 4)), calc(3 + $int14 * ($int11 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	if ($obj8 ! null) {
+	if ($obj9 ! null) {
 		cc_settrans(0);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		cc_setobject($obj8, inv_getnum(inv_207, $int14));
-		cc_setopbase("<col=ff9040><oc_name($obj8)></col>");
-		if ($obj8 = rune_pouch_27086) {
+		cc_setobject($obj9, inv_getnum(inv_207, $int15));
+		cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
+		if ($obj9 = rune_pouch_27086) {
 			cc_setop(1, "Check");
 		}
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
-		if (oc_param($obj8, loadout_iteminfo) ! 13) {
-			switch_int (oc_param($obj8, loadout_ammotype)) {
+		if (oc_param($obj9, loadout_iteminfo) ! 13) {
+			switch_int (oc_param($obj9, loadout_ammotype)) {
 				case 3 :
-					$int4 = ~max($int4, oc_param($obj8, loadout_ammoreq));
+					$int4 = max($int4, oc_param($obj9, loadout_ammoreq));
 				case 5 :
-					$int5 = ~max($int5, oc_param($obj8, loadout_ammoreq));
+					$int5 = max($int5, oc_param($obj9, loadout_ammoreq));
 				case -6 :
-					$int6 = ~max($int6, oc_param($obj8, loadout_ammoreq));
+					$int6 = max($int6, oc_param($obj9, loadout_ammoreq));
 				case -7 :
-					$int7 = ~max($int7, oc_param($obj8, loadout_ammoreq));
+					$int7 = max($int7, oc_param($obj9, loadout_ammoreq));
+				case -8 :
+					$int8 = max($int8, oc_param($obj9, loadout_ammoreq));
 			}
 		}
 	} else {
 		cc_settrans(255);
 		cc_clearops;
 	}
-	$int10, $int14 = calc($int10 + 1), calc($int14 + 1);
+	$int11, $int15 = calc($int11 + 1), calc($int15 + 1);
 }
-def_int $int16 = $int10;
-$int16 = ~thinbox($component0, $int16);
+def_int $int17 = $int11;
+$int17 = ~thinbox($component0, $int17);
 cc_deleteall($component2);
-def_int $int17 = 0;
-cc_create($component2, ^iftype_graphic, $int17);
-$int17 = calc($int17 + 1);
+def_int $int18 = 0;
+cc_create($component2, ^iftype_graphic, $int18);
+$int18 = calc($int18 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(tradebacking_light);
 cc_settiling(true);
-cc_create($component2, ^iftype_rectangle, $int17);
-$int17 = calc($int17 + 1);
+cc_create($component2, ^iftype_rectangle, $int18);
+$int18 = calc($int18 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
-cc_create($component2, ^iftype_rectangle, $int17);
-$int17 = calc($int17 + 1);
+cc_create($component2, ^iftype_rectangle, $int18);
+$int18 = calc($int18 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_setcolour(0x474745);
-cc_create($component2, ^iftype_text, $int17);
-$int17 = calc($int17 + 1);
+cc_create($component2, ^iftype_text, $int18);
+$int18 = calc($int18 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextfont(p12_full);
@@ -122,7 +127,6 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
 cc_settext(enum(int, string, enum_4208, %varbit14031));
-def_int $int18 = 0;
 def_int $int19 = 0;
 def_int $int20 = 0;
 def_int $int21 = 0;
@@ -134,126 +138,131 @@ def_int $int26 = 0;
 def_int $int27 = 0;
 def_int $int28 = 0;
 def_int $int29 = 0;
-$int22, $int23, $int24, $int25, $int26, $int27, $int28, $int29 = ~script6335(%varbit14024);
+def_int $int30 = 0;
+$int23, $int24, $int25, $int26, $int27, $int28, $int29, $int30 = ~script6335(%varbit14024);
 def_int $intarray0(calc(23 + 1));
-def_int $int30 = 23;
-while ($int30 > 0) {
-	switch_int ($int30) {
+def_int $int31 = 23;
+while ($int31 > 0) {
+	switch_int ($int31) {
 		case 1 :
-			$intarray0($int30) = $int22;
+			$intarray0($int31) = $int23;
 		case 2 :
-			$intarray0($int30) = $int23;
+			$intarray0($int31) = $int24;
 		case 3 :
-			$intarray0($int30) = $int24;
+			$intarray0($int31) = $int25;
 		case 4 :
-			$intarray0($int30) = $int25;
+			$intarray0($int31) = $int26;
 		case 5 :
-			$intarray0($int30) = $int26;
+			$intarray0($int31) = $int27;
 		case 6 :
-			$intarray0($int30) = $int27;
+			$intarray0($int31) = $int28;
 		case 7 :
-			$intarray0($int30) = $int28;
+			$intarray0($int31) = $int29;
 		case default :
-			$intarray0($int30) = $int29;
+			$intarray0($int31) = $int30;
 	}
-	$int30 = calc($int30 - 1);
+	$int31 = calc($int31 - 1);
 }
-def_int $count31 = enum_getoutputcount(enum_4390);
-$int10 = $count31;
-def_int $intarray1(calc($count31 + 1));
-def_int $count32 = enum_getoutputcount(enum_4392);
-def_obj $objarray2($count32);
-def_int $intarray3($count32);
-def_int $int33 = 0;
-def_int $int34 = ^max_32bit_int;
-while ($int10 > 0) {
-	$obj8 = enum(int, namedobj, enum_4390, $int10);
-	if ($obj8 ! null) {
-		$intarray1($int10) = inv_total(inv_207, $obj8);
-		$int34 = enum(obj, int, enum_4392, $obj8);
-		if ($int34 < ^max_32bit_int) {
-			$int33 = $count32;
-			while ($int33 > 0) {
-				$int33 = calc($int33 - 1);
-				if ($objarray2($int33) = null) {
-					$intarray3($int33) = $int34;
-					$objarray2($int33) = $obj8;
-					$int33 = -1;
-				} else if ($obj8 = $objarray2($int33)) {
-					$int33 = -1;
+def_int $count32 = enum_getoutputcount(enum_4390);
+$int11 = $count32;
+def_int $intarray1(calc($count32 + 1));
+def_int $count33 = enum_getoutputcount(enum_4392);
+def_obj $objarray2($count33);
+def_int $intarray3($count33);
+def_int $int34 = 0;
+def_int $int35 = ^max_32bit_int;
+while ($int11 > 0) {
+	$obj9 = enum(int, namedobj, enum_4390, $int11);
+	if ($obj9 ! null) {
+		$intarray1($int11) = inv_total(inv_207, $obj9);
+		$int35 = enum(obj, int, enum_4392, $obj9);
+		if ($int35 < ^max_32bit_int) {
+			$int34 = $count33;
+			while ($int34 > 0) {
+				$int34 = calc($int34 - 1);
+				if ($objarray2($int34) = null) {
+					$intarray3($int34) = $int35;
+					$objarray2($int34) = $obj9;
+					$int34 = -1;
+				} else if ($obj9 = $objarray2($int34)) {
+					$int34 = -1;
 				}
 			}
 		}
 	}
-	$int10 = calc($int10 - 1);
+	$int11 = calc($int11 - 1);
 }
-def_int $int35 = 0;
 def_int $int36 = 0;
+def_int $int37 = 0;
 if (%varbit14031 ! ~script6325(%varbit14024)) {
-	$int36 = 1;
+	$int37 = 1;
 } else if (%var3533 ! ~script6432(%varbit14024) & inv_total(inv_207, rune_pouch_27086) > 0) {
-	$int36 = 1;
+	$int37 = 1;
 }
-$int10 = $size11;
-while ($int10 > 0) {
-	$int10 = calc($int10 - 1);
-	$int35 = ~script6322(%varbit14024, $int10);
-	$obj8 = enum(int, namedobj, enum_4390, $int35);
-	if ($obj8 ! null) {
-		if (oc_stackable($obj8) = true) {
-			$intarray1($int35) = calc($intarray1($int35) - 5000);
+$int11 = $size12;
+while ($int11 > 0) {
+	$int11 = calc($int11 - 1);
+	$int36 = ~script6322(%varbit14024, $int11);
+	$obj9 = enum(int, namedobj, enum_4390, $int36);
+	if ($obj9 ! null) {
+		if (oc_stackable($obj9) = true) {
+			$intarray1($int36) = calc($intarray1($int36) - 5000);
 		} else {
-			$intarray1($int35) = calc($intarray1($int35) - 1);
+			$intarray1($int36) = calc($intarray1($int36) - 1);
 		}
-		if ($intarray1($int35) < 0) {
-			$int36 = 1;
+		if ($intarray1($int36) < 0) {
+			$int37 = 1;
 		}
 	}
-	$obj8 = inv_getobj(inv_207, $int10);
-	if ($obj8 ! null) {
-		$int18 = 0;
-		$int34 = enum(obj, int, enum_4392, $obj8);
-		if ($int34 < ^max_32bit_int) {
-			$int33 = $count32;
-			while ($int33 > 0) {
-				$int33 = calc($int33 - 1);
-				if ($objarray2($int33) = $obj8) {
-					if ($intarray3($int33) > 0) {
-						$intarray3($int33) = calc($intarray3($int33) - 1);
+	$obj9 = inv_getobj(inv_207, $int11);
+	if ($obj9 ! null) {
+		$int19 = 0;
+		$int35 = enum(obj, int, enum_4392, $obj9);
+		if ($int35 < ^max_32bit_int) {
+			$int34 = $count33;
+			while ($int34 > 0) {
+				$int34 = calc($int34 - 1);
+				if ($objarray2($int34) = $obj9) {
+					if ($intarray3($int34) > 0) {
+						$intarray3($int34) = calc($intarray3($int34) - 1);
 					} else {
-						$int18, $int21 = 1, 1;
+						$int19, $int22 = 1, 1;
 					}
-					$int33 = -1;
+					$int34 = -1;
 				}
 			}
 		}
-		if (oc_param($obj8, param_434) ! null & oc_param($obj8, param_436) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_434))) | oc_param($obj8, param_435) ! null & oc_param($obj8, param_437) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_435))) | oc_param($obj8, param_191) ! null & oc_param($obj8, param_613) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_191))) | oc_param($obj8, param_579) ! null & oc_param($obj8, param_614) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_579))) | oc_param($obj8, param_610) ! null & oc_param($obj8, param_615) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_610))) | oc_param($obj8, param_611) ! null & oc_param($obj8, param_616) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_611))) | oc_param($obj8, param_612) ! null & oc_param($obj8, param_617) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_612)))) {
-			$int18, $int19 = 1, 1;
+		if (oc_param($obj9, param_434) ! null & oc_param($obj9, param_436) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_434))) | oc_param($obj9, param_435) ! null & oc_param($obj9, param_437) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_435))) | oc_param($obj9, param_191) ! null & oc_param($obj9, param_613) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_191))) | oc_param($obj9, param_579) ! null & oc_param($obj9, param_614) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_579))) | oc_param($obj9, param_610) ! null & oc_param($obj9, param_615) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_610))) | oc_param($obj9, param_611) ! null & oc_param($obj9, param_616) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_611))) | oc_param($obj9, param_612) ! null & oc_param($obj9, param_617) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_612)))) {
+			$int19, $int20 = 1, 1;
 		}
-		if (oc_param($obj8, loadout_iteminfo) = 13) {
-			switch_int (oc_param($obj8, loadout_ammotype)) {
+		if (oc_param($obj9, loadout_iteminfo) = 13) {
+			switch_int (oc_param($obj9, loadout_ammotype)) {
 				case 3 :
-					if ($int4 < oc_param($obj8, loadout_ammoreq)) {
-						$int18, $int20 = 1, 1;
+					if ($int4 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
 					}
 				case 5 :
-					if ($int5 < oc_param($obj8, loadout_ammoreq)) {
-						$int18, $int20 = 1, 1;
+					if ($int5 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
 					}
 				case -6 :
-					if ($int6 < oc_param($obj8, loadout_ammoreq)) {
-						$int18, $int20 = 1, 1;
+					if ($int6 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
 					}
 				case -7 :
-					if ($int7 < oc_param($obj8, loadout_ammoreq)) {
-						$int18, $int20 = 1, 1;
+					if ($int7 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
+					}
+				case -8 :
+					if ($int8 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
 					}
 			}
 		}
-		if ($int18 = 1) {
-			$component9 = enum(int, component, $enum3, $int10);
-			if ($component9 ! null) {
-				cc_create($component9, ^iftype_model, 2);
+		if ($int19 = 1) {
+			$component10 = enum(int, component, $enum3, $int11);
+			if ($component10 ! null) {
+				cc_create($component10, ^iftype_model, 2);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 				cc_setposition(1, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 				cc_setmodel(bank_filler_7669);
@@ -262,67 +271,71 @@ while ($int10 > 0) {
 		}
 	}
 }
-$int10 = 0;
-while ($int10 < $size15) {
-	$int35 = ~script6321(%varbit14024, $int10);
-	$obj8 = enum(int, namedobj, enum_4390, $int35);
-	if ($obj8 ! null) {
-		if (oc_stackable($obj8) = true) {
-			$intarray1($int35) = calc($intarray1($int35) - 5000);
+$int11 = 0;
+while ($int11 < $size16) {
+	$int36 = ~script6321(%varbit14024, $int11);
+	$obj9 = enum(int, namedobj, enum_4390, $int36);
+	if ($obj9 ! null) {
+		if (oc_stackable($obj9) = true) {
+			$intarray1($int36) = calc($intarray1($int36) - 5000);
 		} else {
-			$intarray1($int35) = calc($intarray1($int35) - 1);
+			$intarray1($int36) = calc($intarray1($int36) - 1);
 		}
-		if ($intarray1($int35) < 0) {
-			$int36 = 1;
+		if ($intarray1($int36) < 0) {
+			$int37 = 1;
 		}
 	}
-	cc_create($component0, ^iftype_model, $int16);
-	$int16 = calc($int16 + 1);
-	$obj8 = inv_getobj(inv_207, calc($int10 + $size11));
-	if ($obj8 ! null) {
-		$int18 = 0;
-		$int34 = enum(obj, int, enum_4392, $obj8);
-		if ($int34 < ^max_32bit_int) {
-			$int33 = $count32;
-			while ($int33 > 0) {
-				$int33 = calc($int33 - 1);
-				if ($objarray2($int33) = $obj8) {
-					if ($intarray3($int33) > 0) {
-						$intarray3($int33) = calc($intarray3($int33) - 1);
+	cc_create($component0, ^iftype_model, $int17);
+	$int17 = calc($int17 + 1);
+	$obj9 = inv_getobj(inv_207, calc($int11 + $size12));
+	if ($obj9 ! null) {
+		$int19 = 0;
+		$int35 = enum(obj, int, enum_4392, $obj9);
+		if ($int35 < ^max_32bit_int) {
+			$int34 = $count33;
+			while ($int34 > 0) {
+				$int34 = calc($int34 - 1);
+				if ($objarray2($int34) = $obj9) {
+					if ($intarray3($int34) > 0) {
+						$intarray3($int34) = calc($intarray3($int34) - 1);
 					} else {
-						$int18, $int21 = 1, 1;
+						$int19, $int22 = 1, 1;
 					}
-					$int33 = -1;
+					$int34 = -1;
 				}
 			}
 		}
-		if (oc_param($obj8, param_434) ! null & oc_param($obj8, param_436) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_434))) | oc_param($obj8, param_435) ! null & oc_param($obj8, param_437) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_435))) | oc_param($obj8, param_191) ! null & oc_param($obj8, param_613) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_191))) | oc_param($obj8, param_579) ! null & oc_param($obj8, param_614) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_579))) | oc_param($obj8, param_610) ! null & oc_param($obj8, param_615) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_610))) | oc_param($obj8, param_611) ! null & oc_param($obj8, param_616) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_611))) | oc_param($obj8, param_612) ! null & oc_param($obj8, param_617) > $intarray0(enum(stat, int, enum_81, oc_param($obj8, param_612)))) {
-			$int18, $int19 = 1, 1;
+		if (oc_param($obj9, param_434) ! null & oc_param($obj9, param_436) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_434))) | oc_param($obj9, param_435) ! null & oc_param($obj9, param_437) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_435))) | oc_param($obj9, param_191) ! null & oc_param($obj9, param_613) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_191))) | oc_param($obj9, param_579) ! null & oc_param($obj9, param_614) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_579))) | oc_param($obj9, param_610) ! null & oc_param($obj9, param_615) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_610))) | oc_param($obj9, param_611) ! null & oc_param($obj9, param_616) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_611))) | oc_param($obj9, param_612) ! null & oc_param($obj9, param_617) > $intarray0(enum(stat, int, enum_81, oc_param($obj9, param_612)))) {
+			$int19, $int20 = 1, 1;
 		}
-		if (oc_param($obj8, loadout_iteminfo) = 13) {
-			switch_int (oc_param($obj8, loadout_ammotype)) {
+		if (oc_param($obj9, loadout_iteminfo) = 13) {
+			switch_int (oc_param($obj9, loadout_ammotype)) {
 				case 3 :
-					if ($int4 < oc_param($obj8, loadout_ammoreq)) {
-						$int18, $int20 = 1, 1;
+					if ($int4 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
 					}
 				case 5 :
-					if ($int5 < oc_param($obj8, loadout_ammoreq)) {
-						$int18, $int20 = 1, 1;
+					if ($int5 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
 					}
 				case -6 :
-					if ($int6 < oc_param($obj8, loadout_ammoreq)) {
-						$int18, $int20 = 1, 1;
+					if ($int6 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
 					}
 				case -7 :
-					if ($int7 < oc_param($obj8, loadout_ammoreq)) {
-						$int18, $int20 = 1, 1;
+					if ($int7 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
+					}
+				case -8 :
+					if ($int8 < oc_param($obj9, loadout_ammoreq)) {
+						$int19, $int21 = 1, 1;
 					}
 			}
 		}
-		if ($int18 = 1) {
+		if ($int19 = 1) {
 			cc_sethide(false);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc(4 + $int12 * ($int10 % 4)), calc(3 + $int13 * ($int10 / 4)), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc(4 + $int13 * ($int11 % 4)), calc(3 + $int14 * ($int11 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setmodel(bank_filler_7669);
 			cc_setmodelangle(0, 0, 512, 512, 0, 1800);
 		} else {
@@ -331,24 +344,24 @@ while ($int10 < $size15) {
 	} else {
 		cc_sethide(true);
 	}
-	$int10 = calc($int10 + 1);
+	$int11 = calc($int11 + 1);
 }
-if ($int36 = 0) {
-	$int10 = $count31;
-	while ($int10 > 0 & $int36 = 0) {
-		if (enum(int, namedobj, enum_4390, $int10) ! null & $intarray1($int10) ! 0) {
-			$int36 = 1;
+if ($int37 = 0) {
+	$int11 = $count32;
+	while ($int11 > 0 & $int37 = 0) {
+		if (enum(int, namedobj, enum_4390, $int11) ! null & $intarray1($int11) ! 0) {
+			$int37 = 1;
 		}
-		$int10 = calc($int10 - 1);
+		$int11 = calc($int11 - 1);
 	}
 }
-if ($int19 = 1) {
+if ($int20 = 1) {
 	if_settext("This build's <col=ff0000>stats</col> will not permit equipping some of the items.", $component1);
-} else if ($int21 = 1) {
+} else if ($int22 = 1) {
 	if_settext("This load-out contains <col=ff0000>too many</col> of certain items.", $component1);
-} else if ($int20 = 1) {
+} else if ($int21 = 1) {
 	if_settext("Your opponent has ammo that <col=ff0000>cannot be fired</col> by their weaponry.", $component1);
-} else if ($int36 = 1) {
+} else if ($int37 = 1) {
 	if_settext("Your opponent's load-out <col=ff0000>does not match</col> yours.", $component1);
 } else {
 	if_settext("You and your opponent have <col=ffb83f>the same options</col> in your load-outs.", $component1);

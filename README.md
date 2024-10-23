@@ -519,8 +519,13 @@
 [**516**](scripts/[proc,bank_tabforslot].cs2) `[proc,bank_tabforslot]`  
 [**517**](scripts/[clientscript,script517].cs2)  
 [**518**](scripts/[clientscript,script518].cs2)  
+[**519**](scripts/[clientscript,script519].cs2)  
+[**520**](scripts/[proc,script520].cs2)  
+[**521**](scripts/[clientscript,script521].cs2)  
 [**522**](scripts/[clientscript,script522].cs2)  
 [**523**](scripts/[proc,script523].cs2)  
+[**524**](scripts/[clientscript,script524].cs2)  
+[**525**](scripts/[proc,script525].cs2)  
 [**526**](scripts/[clientscript,tooltip_mouserepeat].cs2) `[clientscript,tooltip_mouserepeat]`  
 [**527**](scripts/[proc,settings_colour_input_update].cs2) `[proc,settings_colour_input_update]`  
 [**528**](scripts/[proc,settings_buff_corruption].cs2) `[proc,settings_buff_corruption]`  
@@ -682,7 +687,7 @@
 [**684**](scripts/[clientscript,bankpin_button_mouseover].cs2) `[clientscript,bankpin_button_mouseover]`  
 [**685**](scripts/[clientscript,bankpin_button_op].cs2) `[clientscript,bankpin_button_op]`  
 [**686**](scripts/[clientscript,bankpin_otherbutton].cs2) `[clientscript,bankpin_otherbutton]`  
-[**687**](scripts/[clientscript,ironman_init].cs2) `[clientscript,ironman_init]`  
+[**687**](scripts/[clientscript,script687].cs2)  
 [**688**](scripts/[clientscript,trail_slidepuzzle_init].cs2) `[clientscript,trail_slidepuzzle_init]`  
 [**689**](scripts/[clientscript,trail_slidepuzzle_synch].cs2) `[clientscript,trail_slidepuzzle_synch]`  
 [**690**](scripts/[proc,trail_slidepuzzle_synch].cs2) `[proc,trail_slidepuzzle_synch]`  
@@ -1286,7 +1291,6 @@
 [**1288**](scripts/[proc,glidermap_hideshow].cs2) `[proc,glidermap_hideshow]`  
 [**1289**](scripts/[clientscript,glidermap_fly].cs2) `[clientscript,glidermap_fly]`  
 [**1290**](scripts/[proc,glidermap_fly].cs2) `[proc,glidermap_fly]`  
-[**1291**](scripts/[clientscript,script1291].cs2)  
 [**1292**](scripts/[clientscript,br_loadout_init].cs2) `[clientscript,br_loadout_init]`  
 [**1293**](scripts/[clientscript,br_loadout_menuop].cs2) `[clientscript,br_loadout_menuop]`  
 [**1294**](scripts/[clientscript,br_loadout_menureset].cs2) `[clientscript,br_loadout_menureset]`  
@@ -2089,9 +2093,7 @@
 [**2091**](scripts/[clientscript,xpdrops_fake].cs2) `[clientscript,xpdrops_fake]`  
 [**2092**](scripts/[clientscript,oculus_flashers].cs2) `[clientscript,oculus_flashers]`  
 [**2093**](scripts/[proc,script2093].cs2)  
-[**2094**](scripts/[proc,ironman_modebutton_init].cs2) `[proc,ironman_modebutton_init]`  
-[**2095**](scripts/[clientscript,ironman_modebutton_redraw].cs2) `[clientscript,ironman_modebutton_redraw]`  
-[**2096**](scripts/[proc,ironman_modebutton_redraw].cs2) `[proc,ironman_modebutton_redraw]`  
+[**2094**](scripts/[proc,script2094].cs2)  
 [**2097**](scripts/[clientscript,autocast_setup].cs2) `[clientscript,autocast_setup]`  
 [**2098**](scripts/[proc,autocast_setup].cs2) `[proc,autocast_setup]`  
 [**2099**](scripts/[clientscript,hp_hud_init].cs2) `[clientscript,hp_hud_init]`  
@@ -2110,14 +2112,6 @@
 [**2112**](scripts/[clientscript,storage_main_update].cs2) `[clientscript,storage_main_update]`  
 [**2113**](scripts/[clientscript,script2113].cs2)  
 [**2114**](scripts/[clientscript,script2114].cs2)  
-[**2115**](scripts/[clientscript,ironman_modebutton_op].cs2) `[clientscript,ironman_modebutton_op]`  
-[**2116**](scripts/[proc,script2116].cs2)  
-[**2117**](scripts/[clientscript,script2117].cs2)  
-[**2118**](scripts/[proc,script2118].cs2)  
-[**2119**](scripts/[clientscript,script2119].cs2)  
-[**2120**](scripts/[clientscript,ironman_miscellaneous_redraw].cs2) `[clientscript,ironman_miscellaneous_redraw]`  
-[**2121**](scripts/[proc,ironman_miscellaneous_redraw].cs2) `[proc,ironman_miscellaneous_redraw]`  
-[**2122**](scripts/[clientscript,script2122].cs2)  
 [**2123**](scripts/[clientscript,script2123].cs2)  
 [**2124**](scripts/[clientscript,script2124].cs2)  
 [**2125**](scripts/[proc,script2125].cs2)  
@@ -5143,9 +5137,6 @@
 [**5145**](scripts/[clientscript,script5145].cs2)  
 [**5146**](scripts/[clientscript,script5146].cs2)  
 [**5147**](scripts/[proc,script5147].cs2)  
-[**5148**](scripts/[clientscript,script5148].cs2)  
-[**5149**](scripts/[clientscript,script5149].cs2)  
-[**5150**](scripts/[clientscript,script5150].cs2)  
 [**5151**](scripts/[clientscript,script5151].cs2)  
 [**5152**](scripts/[clientscript,script5152].cs2)  
 [**5153**](scripts/[proc,script5153].cs2)  
@@ -5240,10 +5231,6 @@
 [**5242**](scripts/[proc,script5242].cs2)  
 [**5243**](scripts/[proc,ca_task_is_disabled].cs2) `[proc,ca_task_is_disabled]`  
 [**5244**](scripts/[clientscript,ca_tasks_draw_list_timer].cs2) `[clientscript,ca_tasks_draw_list_timer]`  
-[**5245**](scripts/[clientscript,ironman_tabs_init].cs2) `[clientscript,ironman_tabs_init]`  
-[**5246**](scripts/[clientscript,ironman_tabs_transmit].cs2) `[clientscript,ironman_tabs_transmit]`  
-[**5247**](scripts/[proc,ironman_tabs_create].cs2) `[proc,ironman_tabs_create]`  
-[**5248**](scripts/[clientscript,ironman_tabs_select].cs2) `[clientscript,ironman_tabs_select]`  
 [**5249**](scripts/[clientscript,gim_leaving_init].cs2) `[clientscript,gim_leaving_init]`  
 [**5250**](scripts/[clientscript,gim_buttons_click].cs2) `[clientscript,gim_buttons_click]`  
 [**5251**](scripts/[proc,gim_leave_text].cs2) `[proc,gim_leave_text]`  
@@ -7394,3 +7381,11 @@
 [**7397**](scripts/[clientscript,script7397].cs2)  
 [**7398**](scripts/[clientscript,script7398].cs2)  
 [**7399**](scripts/[proc,script7399].cs2)  
+[**7400**](scripts/[clientscript,script7400].cs2)  
+[**7401**](scripts/[proc,script7401].cs2)  
+[**7402**](scripts/[proc,script7402].cs2)  
+[**7403**](scripts/[clientscript,script7403].cs2)  
+[**7404**](scripts/[clientscript,script7404].cs2)  
+[**7405**](scripts/[proc,script7405].cs2)  
+[**7406**](scripts/[clientscript,script7406].cs2)  
+[**7407**](scripts/[proc,script7407].cs2)  

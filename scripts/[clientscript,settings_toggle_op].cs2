@@ -1,6 +1,6 @@
 // 3847
 [clientscript,settings_toggle_op](struct $struct0, int $setting1, component $component2, int $comsubid3, boolean $boolean4, boolean $boolean5)
-if (~settings_op_checker($struct0) = 0) {
+if (~settings_op_checker($struct0) = false) {
 	return;
 }
 ~settings_clicked_toggle($setting1);

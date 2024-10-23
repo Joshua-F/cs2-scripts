@@ -1,0 +1,14 @@
+// 520
+[proc,script520](int $int0, component $component1, component $component2, component $component3, int $height4)
+def_int $int5 = min(calc($height4 - 10), calc(50 + $int0));
+if_setsize(if_getwidth($component3), $int5, ^setsize_abs, ^setsize_abs, $component3);
+def_int $int6 = calc($int5 - 50);
+if ($int0 > $int6) {
+	if_setscrollsize(0, $int0, $component1);
+	~scrollbar_resize($component2, $component1, min(calc($int0 - $int6), max(0, %varcint63)));
+} else {
+	if_setscrollpos(0, 0, $component1);
+	if_setscrollsize(0, 0, $component1);
+	~scrollbar_resize($component2, $component1, 0);
+}
+if_setontimer("script521($int0, $component1, $component2, $component3, $height4)", if_getlayer($component3));

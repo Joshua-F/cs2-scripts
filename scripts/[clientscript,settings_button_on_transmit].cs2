@@ -1,7 +1,7 @@
 // 3867
 [clientscript,settings_button_on_transmit](struct $struct0, component $component1, int $comsubid2, int $int3, int $comsubid4)
-def_int $int5 = ~script3957($struct0);
-if ($int5 = 1) {
+def_boolean $boolean5 = ~script3957($struct0);
+if ($boolean5 = true) {
 	if (cc_find($component1, $comsubid2) = ^true) {
 		cc_setcolour(0xff981f);
 	}

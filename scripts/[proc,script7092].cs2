@@ -31,7 +31,7 @@ if ($boolean9 = true & $int14 < 20) {
 	$int14 = 20;
 }
 def_int $int15 = calc($int14 + 12 + $int11);
-def_int $int16 = ~script3957($struct0);
+def_boolean $boolean16 = ~script3957($struct0);
 cc_create($component1, ^iftype_rectangle, $int6);
 $int6 = calc($int6 + 1);
 cc_setsize(10, $int15, ^setsize_minus, ^setsize_abs);
@@ -46,7 +46,7 @@ cc_setposition(10, calc($int4 + 6), ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
-if ($int16 = 1) {
+if ($boolean16 = true) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
@@ -80,7 +80,7 @@ if ($boolean9 = false) {
 	cc_setposition(10, calc($int4 + ($int15 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_settrans(250);
-	if ($int16 = 1) {
+	if ($boolean16 = true) {
 		cc_setonmouserepeat("cc_settrans_temporarily(event_com, event_comsubid, 220, 250)");
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 250, null)");
 	}

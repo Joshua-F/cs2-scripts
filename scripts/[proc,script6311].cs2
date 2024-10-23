@@ -5,120 +5,124 @@ def_int $int6 = -1;
 def_int $int7 = -1;
 def_int $int8 = -1;
 def_int $int9 = -1;
-def_component $component10 = null;
-def_int $int11 = 0;
-def_namedobj $namedobj12 = null;
-def_enum $enum13 = enum(int, enum, $enum5, $int0);
-def_int $int14 = 0;
-def_int $size15 = inv_size(worn);
-while ($int14 < $size15) {
-	$component10 = enum(int, component, $enum13, $int14);
-	if ($component10 ! null) {
-		cc_deleteall($component10);
-		cc_create($component10, ^iftype_graphic, 0);
+def_int $int10 = -1;
+def_component $component11 = null;
+def_int $int12 = 0;
+def_namedobj $namedobj13 = null;
+def_enum $enum14 = enum(int, enum, $enum5, $int0);
+def_int $int15 = 0;
+def_int $size16 = inv_size(worn);
+while ($int15 < $size16) {
+	$component11 = enum(int, component, $enum14, $int15);
+	if ($component11 ! null) {
+		cc_deleteall($component11);
+		cc_create($component11, ^iftype_graphic, 0);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("miscgraphics,0");
-		cc_create($component10, ^iftype_graphic, 1);
+		cc_create($component11, ^iftype_graphic, 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		$int11 = ~script6322($int0, $int14);
-		$namedobj12 = enum(int, namedobj, enum_4390, $int11);
-		if ($namedobj12 ! null) {
+		$int12 = ~script6322($int0, $int15);
+		$namedobj13 = enum(int, namedobj, enum_4390, $int12);
+		if ($namedobj13 ! null) {
 			cc_settrans(0);
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
-			if (oc_stackable($namedobj12) = true) {
-				cc_setobject($namedobj12, 5000);
+			if (oc_stackable($namedobj13) = true) {
+				cc_setobject($namedobj13, 5000);
 			} else {
-				cc_setobject($namedobj12, 1);
+				cc_setobject($namedobj13, 1);
 			}
-			$intarray0($int11) = ~min(calc($intarray0($int11) + 1), enum(obj, int, enum_4392, $namedobj12));
-			cc_setopbase("<col=ff9040><oc_name($namedobj12)></col>");
+			$intarray0($int12) = ~min(calc($intarray0($int12) + 1), enum(obj, int, enum_4392, $namedobj13));
+			cc_setopbase("<col=ff9040><oc_name($namedobj13)></col>");
 			cc_setop(1, "Discard");
 			cc_setop(10, "Examine");
 			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 			cc_setdraggable($component1, -1);
-			cc_setondragcomplete("script6313($int0, event_com, event_comsubid, event_com2, event_comsubid2, $int11, $component1, $component2, $drop3, $component4, $enum5)");
+			cc_setondragcomplete("script6313($int0, event_com, event_comsubid, event_com2, event_comsubid2, $int12, $component1, $component2, $drop3, $component4, $enum5)");
 			cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, 1)");
 			cc_setdragdeadzone(5);
 			cc_setdragdeadtime(5);
-			if (oc_param($namedobj12, loadout_iteminfo) ! 13) {
-				switch_int (oc_param($namedobj12, loadout_ammotype)) {
+			if (oc_param($namedobj13, loadout_iteminfo) ! 13) {
+				switch_int (oc_param($namedobj13, loadout_ammotype)) {
 					case 3 :
-						$int6 = ~max($int6, oc_param($namedobj12, loadout_ammoreq));
+						$int6 = max($int6, oc_param($namedobj13, loadout_ammoreq));
 					case 5 :
-						$int7 = ~max($int7, oc_param($namedobj12, loadout_ammoreq));
+						$int7 = max($int7, oc_param($namedobj13, loadout_ammoreq));
 					case -6 :
-						$int8 = ~max($int8, oc_param($namedobj12, loadout_ammoreq));
+						$int8 = max($int8, oc_param($namedobj13, loadout_ammoreq));
 					case -7 :
-						$int9 = ~max($int9, oc_param($namedobj12, loadout_ammoreq));
+						$int9 = max($int9, oc_param($namedobj13, loadout_ammoreq));
+					case -8 :
+						$int10 = max($int10, oc_param($namedobj13, loadout_ammoreq));
 				}
 			}
 		} else {
 			cc_settrans(255);
 			cc_clearops;
-			cc_create($component10, ^iftype_graphic, 2);
+			cc_create($component11, ^iftype_graphic, 2);
 			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-			cc_setgraphic(enum(int, graphic, enum_904, $int14));
+			cc_setgraphic(enum(int, graphic, enum_904, $int15));
 		}
 	}
-	$int14 = calc($int14 + 1);
+	$int15 = calc($int15 + 1);
 }
 cc_deleteall($component2);
-def_int $int16 = calc((if_getwidth($component2) - 6 - 4 * 36) / 3 + 36);
-def_int $int17 = calc((if_getheight($component2) - 6 - 7 * 32) / 6 + 32);
-$int14 = 0;
-def_int $size18 = inv_size(inv);
-while ($int14 < $size18) {
-	$int11 = ~script6321($int0, $int14);
-	$namedobj12 = enum(int, namedobj, enum_4390, $int11);
-	cc_create($component2, ^iftype_graphic, $int14);
-	cc_setposition(calc(4 + $int16 * ($int14 % 4)), calc(3 + $int17 * ($int14 / 4)), ^setpos_abs_left, ^setpos_abs_top);
+def_int $int17 = calc((if_getwidth($component2) - 6 - 4 * 36) / 3 + 36);
+def_int $int18 = calc((if_getheight($component2) - 6 - 7 * 32) / 6 + 32);
+$int15 = 0;
+def_int $size19 = inv_size(inv);
+while ($int15 < $size19) {
+	$int12 = ~script6321($int0, $int15);
+	$namedobj13 = enum(int, namedobj, enum_4390, $int12);
+	cc_create($component2, ^iftype_graphic, $int15);
+	cc_setposition(calc(4 + $int17 * ($int15 % 4)), calc(3 + $int18 * ($int15 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	if ($namedobj12 ! null) {
+	if ($namedobj13 ! null) {
 		cc_settrans(0);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		if (oc_stackable($namedobj12) = true) {
-			cc_setobject($namedobj12, 5000);
+		if (oc_stackable($namedobj13) = true) {
+			cc_setobject($namedobj13, 5000);
 		} else {
-			cc_setobject($namedobj12, 1);
+			cc_setobject($namedobj13, 1);
 		}
-		$intarray0($int11) = ~min(calc($intarray0($int11) + 1), enum(obj, int, enum_4392, $namedobj12));
-		cc_setopbase("<col=ff9040><oc_name($namedobj12)></col>");
-		if ($namedobj12 = rune_pouch_27086) {
+		$intarray0($int12) = min(calc($intarray0($int12) + 1), enum(obj, int, enum_4392, $namedobj13));
+		cc_setopbase("<col=ff9040><oc_name($namedobj13)></col>");
+		if ($namedobj13 = rune_pouch_27086) {
 			cc_setop(1, "Configure");
 		}
 		cc_setop(2, "Discard");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 		cc_setdraggable($component1, -1);
-		cc_setondragcomplete("script6313($int0, event_com, event_comsubid, event_com2, event_comsubid2, $int11, $component1, $component2, $drop3, $component4, $enum5)");
-		cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, $size18)");
+		cc_setondragcomplete("script6313($int0, event_com, event_comsubid, event_com2, event_comsubid2, $int12, $component1, $component2, $drop3, $component4, $enum5)");
+		cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, $size19)");
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);
-		if (oc_param($namedobj12, loadout_iteminfo) ! 13) {
-			switch_int (oc_param($namedobj12, loadout_ammotype)) {
+		if (oc_param($namedobj13, loadout_iteminfo) ! 13) {
+			switch_int (oc_param($namedobj13, loadout_ammotype)) {
 				case 3 :
-					$int6 = ~max($int6, oc_param($namedobj12, loadout_ammoreq));
+					$int6 = max($int6, oc_param($namedobj13, loadout_ammoreq));
 				case 5 :
-					$int7 = ~max($int7, oc_param($namedobj12, loadout_ammoreq));
+					$int7 = max($int7, oc_param($namedobj13, loadout_ammoreq));
 				case -6 :
-					$int8 = ~max($int8, oc_param($namedobj12, loadout_ammoreq));
+					$int8 = max($int8, oc_param($namedobj13, loadout_ammoreq));
 				case -7 :
-					$int9 = ~max($int9, oc_param($namedobj12, loadout_ammoreq));
+					$int9 = max($int9, oc_param($namedobj13, loadout_ammoreq));
+				case -8 :
+					$int10 = max($int10, oc_param($namedobj13, loadout_ammoreq));
 			}
 		}
 	} else {
 		cc_settrans(255);
 		cc_clearops;
 	}
-	$int14 = calc($int14 + 1);
+	$int15 = calc($int15 + 1);
 }
-def_int $int19 = $int14;
-def_int $int20 = 0;
+def_int $int20 = $int15;
 def_int $int21 = 0;
 def_int $int22 = 0;
 def_int $int23 = 0;
@@ -130,69 +134,74 @@ def_int $int28 = 0;
 def_int $int29 = 0;
 def_int $int30 = 0;
 def_int $int31 = 0;
-$int24, $int25, $int26, $int27, $int28, $int29, $int30, $int31 = ~script6335($int0);
+def_int $int32 = 0;
+$int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32 = ~script6335($int0);
 def_int $intarray1(calc(23 + 1));
-def_int $int32 = 23;
-while ($int32 > 0) {
-	switch_int ($int32) {
+def_int $int33 = 23;
+while ($int33 > 0) {
+	switch_int ($int33) {
 		case 1 :
-			$intarray1($int32) = $int24;
+			$intarray1($int33) = $int25;
 		case 2 :
-			$intarray1($int32) = $int25;
+			$intarray1($int33) = $int26;
 		case 3 :
-			$intarray1($int32) = $int26;
+			$intarray1($int33) = $int27;
 		case 4 :
-			$intarray1($int32) = $int27;
+			$intarray1($int33) = $int28;
 		case 5 :
-			$intarray1($int32) = $int28;
+			$intarray1($int33) = $int29;
 		case 6 :
-			$intarray1($int32) = $int29;
+			$intarray1($int33) = $int30;
 		case 7 :
-			$intarray1($int32) = $int30;
+			$intarray1($int33) = $int31;
 		case default :
-			$intarray1($int32) = $int31;
+			$intarray1($int33) = $int32;
 	}
-	$int32 = calc($int32 - 1);
+	$int33 = calc($int33 - 1);
 }
-$int14 = $size15;
-while ($int14 > 0) {
-	$int14 = calc($int14 - 1);
-	$component10 = enum(int, component, $enum13, $int14);
-	if ($component10 ! null) {
-		$int11 = ~script6322($int0, $int14);
-		$namedobj12 = enum(int, namedobj, enum_4390, $int11);
-		if ($namedobj12 ! null) {
-			$int20 = 0;
-			if ($intarray0($int11) > 0) {
-				$intarray0($int11) = calc($intarray0($int11) - 1);
+$int15 = $size16;
+while ($int15 > 0) {
+	$int15 = calc($int15 - 1);
+	$component11 = enum(int, component, $enum14, $int15);
+	if ($component11 ! null) {
+		$int12 = ~script6322($int0, $int15);
+		$namedobj13 = enum(int, namedobj, enum_4390, $int12);
+		if ($namedobj13 ! null) {
+			$int21 = 0;
+			if ($intarray0($int12) > 0) {
+				$intarray0($int12) = calc($intarray0($int12) - 1);
 			} else {
-				$int20, $int23 = 1, 1;
+				$int21, $int24 = 1, 1;
 			}
-			if (oc_param($namedobj12, param_434) ! null & oc_param($namedobj12, param_436) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_434))) | oc_param($namedobj12, param_435) ! null & oc_param($namedobj12, param_437) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_435))) | oc_param($namedobj12, param_191) ! null & oc_param($namedobj12, param_613) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_191))) | oc_param($namedobj12, param_579) ! null & oc_param($namedobj12, param_614) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_579))) | oc_param($namedobj12, param_610) ! null & oc_param($namedobj12, param_615) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_610))) | oc_param($namedobj12, param_611) ! null & oc_param($namedobj12, param_616) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_611))) | oc_param($namedobj12, param_612) ! null & oc_param($namedobj12, param_617) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_612)))) {
-				$int20, $int21 = 1, 1;
+			if (oc_param($namedobj13, param_434) ! null & oc_param($namedobj13, param_436) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_434))) | oc_param($namedobj13, param_435) ! null & oc_param($namedobj13, param_437) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_435))) | oc_param($namedobj13, param_191) ! null & oc_param($namedobj13, param_613) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_191))) | oc_param($namedobj13, param_579) ! null & oc_param($namedobj13, param_614) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_579))) | oc_param($namedobj13, param_610) ! null & oc_param($namedobj13, param_615) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_610))) | oc_param($namedobj13, param_611) ! null & oc_param($namedobj13, param_616) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_611))) | oc_param($namedobj13, param_612) ! null & oc_param($namedobj13, param_617) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_612)))) {
+				$int21, $int22 = 1, 1;
 			}
-			if (oc_param($namedobj12, loadout_iteminfo) = 13) {
-				switch_int (oc_param($namedobj12, loadout_ammotype)) {
+			if (oc_param($namedobj13, loadout_iteminfo) = 13) {
+				switch_int (oc_param($namedobj13, loadout_ammotype)) {
 					case 3 :
-						if ($int6 < oc_param($namedobj12, loadout_ammoreq)) {
-							$int20, $int22 = 1, 1;
+						if ($int6 < oc_param($namedobj13, loadout_ammoreq)) {
+							$int21, $int23 = 1, 1;
 						}
 					case 5 :
-						if ($int7 < oc_param($namedobj12, loadout_ammoreq)) {
-							$int20, $int22 = 1, 1;
+						if ($int7 < oc_param($namedobj13, loadout_ammoreq)) {
+							$int21, $int23 = 1, 1;
 						}
 					case -6 :
-						if ($int8 < oc_param($namedobj12, loadout_ammoreq)) {
-							$int20, $int22 = 1, 1;
+						if ($int8 < oc_param($namedobj13, loadout_ammoreq)) {
+							$int21, $int23 = 1, 1;
 						}
 					case -7 :
-						if ($int9 < oc_param($namedobj12, loadout_ammoreq)) {
-							$int20, $int22 = 1, 1;
+						if ($int9 < oc_param($namedobj13, loadout_ammoreq)) {
+							$int21, $int23 = 1, 1;
+						}
+					case -8 :
+						if ($int10 < oc_param($namedobj13, loadout_ammoreq)) {
+							$int21, $int23 = 1, 1;
 						}
 				}
 			}
-			if ($int20 = 1) {
-				cc_create($component10, ^iftype_model, 2);
+			if ($int21 = 1) {
+				cc_create($component11, ^iftype_model, 2);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 				cc_setposition(1, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 				cc_setmodel(bank_filler_7669);
@@ -201,46 +210,50 @@ while ($int14 > 0) {
 		}
 	}
 }
-$int14 = 0;
-while ($int14 < $size18) {
-	cc_create($component2, ^iftype_model, $int19);
-	$int19 = calc($int19 + 1);
-	$int11 = ~script6321($int0, $int14);
-	$namedobj12 = enum(int, namedobj, enum_4390, $int11);
-	if ($namedobj12 ! null) {
-		$int20 = 0;
-		if ($intarray0($int11) > 0) {
-			$intarray0($int11) = calc($intarray0($int11) - 1);
+$int15 = 0;
+while ($int15 < $size19) {
+	cc_create($component2, ^iftype_model, $int20);
+	$int20 = calc($int20 + 1);
+	$int12 = ~script6321($int0, $int15);
+	$namedobj13 = enum(int, namedobj, enum_4390, $int12);
+	if ($namedobj13 ! null) {
+		$int21 = 0;
+		if ($intarray0($int12) > 0) {
+			$intarray0($int12) = calc($intarray0($int12) - 1);
 		} else {
-			$int20, $int23 = 1, 1;
+			$int21, $int24 = 1, 1;
 		}
-		if (oc_param($namedobj12, param_434) ! null & oc_param($namedobj12, param_436) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_434))) | oc_param($namedobj12, param_435) ! null & oc_param($namedobj12, param_437) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_435))) | oc_param($namedobj12, param_191) ! null & oc_param($namedobj12, param_613) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_191))) | oc_param($namedobj12, param_579) ! null & oc_param($namedobj12, param_614) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_579))) | oc_param($namedobj12, param_610) ! null & oc_param($namedobj12, param_615) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_610))) | oc_param($namedobj12, param_611) ! null & oc_param($namedobj12, param_616) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_611))) | oc_param($namedobj12, param_612) ! null & oc_param($namedobj12, param_617) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj12, param_612)))) {
-			$int20, $int21 = 1, 1;
+		if (oc_param($namedobj13, param_434) ! null & oc_param($namedobj13, param_436) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_434))) | oc_param($namedobj13, param_435) ! null & oc_param($namedobj13, param_437) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_435))) | oc_param($namedobj13, param_191) ! null & oc_param($namedobj13, param_613) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_191))) | oc_param($namedobj13, param_579) ! null & oc_param($namedobj13, param_614) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_579))) | oc_param($namedobj13, param_610) ! null & oc_param($namedobj13, param_615) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_610))) | oc_param($namedobj13, param_611) ! null & oc_param($namedobj13, param_616) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_611))) | oc_param($namedobj13, param_612) ! null & oc_param($namedobj13, param_617) > $intarray1(enum(stat, int, enum_81, oc_param($namedobj13, param_612)))) {
+			$int21, $int22 = 1, 1;
 		}
-		if (oc_param($namedobj12, loadout_iteminfo) = 13) {
-			switch_int (oc_param($namedobj12, loadout_ammotype)) {
+		if (oc_param($namedobj13, loadout_iteminfo) = 13) {
+			switch_int (oc_param($namedobj13, loadout_ammotype)) {
 				case 3 :
-					if ($int6 < oc_param($namedobj12, loadout_ammoreq)) {
-						$int20, $int22 = 1, 1;
+					if ($int6 < oc_param($namedobj13, loadout_ammoreq)) {
+						$int21, $int23 = 1, 1;
 					}
 				case 5 :
-					if ($int7 < oc_param($namedobj12, loadout_ammoreq)) {
-						$int20, $int22 = 1, 1;
+					if ($int7 < oc_param($namedobj13, loadout_ammoreq)) {
+						$int21, $int23 = 1, 1;
 					}
 				case -6 :
-					if ($int8 < oc_param($namedobj12, loadout_ammoreq)) {
-						$int20, $int22 = 1, 1;
+					if ($int8 < oc_param($namedobj13, loadout_ammoreq)) {
+						$int21, $int23 = 1, 1;
 					}
 				case -7 :
-					if ($int9 < oc_param($namedobj12, loadout_ammoreq)) {
-						$int20, $int22 = 1, 1;
+					if ($int9 < oc_param($namedobj13, loadout_ammoreq)) {
+						$int21, $int23 = 1, 1;
+					}
+				case -8 :
+					if ($int10 < oc_param($namedobj13, loadout_ammoreq)) {
+						$int21, $int23 = 1, 1;
 					}
 			}
 		}
-		if ($int20 = 1) {
+		if ($int21 = 1) {
 			cc_sethide(false);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc(4 + $int16 * ($int14 % 4)), calc(3 + $int17 * ($int14 / 4)), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc(4 + $int17 * ($int15 % 4)), calc(3 + $int18 * ($int15 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setmodel(bank_filler_7669);
 			cc_setmodelangle(0, 0, 512, 512, 0, 1800);
 		} else {
@@ -249,20 +262,20 @@ while ($int14 < $size18) {
 	} else {
 		cc_sethide(true);
 	}
-	$int14 = calc($int14 + 1);
+	$int15 = calc($int15 + 1);
 }
-$int19 = ~thinbox($component2, $int19);
-if ($int21 = 1) {
+$int20 = ~thinbox($component2, $int20);
+if ($int22 = 1) {
 	if_settextfont(p11_full, $component4);
 	if_setcolour(~tob_hud_nameflasher, $component4);
 	if_setontimer("tob_hud_nameflasher($component4)", $component4);
 	if_settext("This build's stats will not permit you to equip some of your items.", $component4);
-} else if ($int23 = 1) {
+} else if ($int24 = 1) {
 	if_settextfont(p11_full, $component4);
 	if_setcolour(~tob_hud_nameflasher, $component4);
 	if_setontimer("tob_hud_nameflasher($component4)", $component4);
 	if_settext("Your load-out contains too many of certain items - please discard some.", $component4);
-} else if ($int22 = 1) {
+} else if ($int23 = 1) {
 	if_settextfont(p11_full, $component4);
 	if_setcolour(~tob_hud_nameflasher, $component4);
 	if_setontimer("tob_hud_nameflasher($component4)", $component4);

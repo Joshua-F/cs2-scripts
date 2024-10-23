@@ -1,0 +1,17 @@
+// 525
+[proc,script525](component $component0, int $comsubid1, int $comsubid2, int $comsubid3)
+def_obj $obj4 = enum(int, obj, enum_5592, %varbit1777);
+if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+	cc_setobject_nonum($obj4, 1);
+	.cc_setobject_nonum($obj4, 1);
+	if (%varbit1777 ! 0) {
+		cc_settrans(0);
+		.cc_settrans(0);
+	} else {
+		cc_settrans(120);
+		.cc_settrans(120);
+	}
+}
+if (cc_find($component0, $comsubid3) = ^true) {
+	cc_settext("Your mode: <col=ffffff><enum(int, string, enum_859, %varbit1777)></col>");
+}

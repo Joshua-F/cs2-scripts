@@ -30,7 +30,7 @@ if ($enum20 ! null) {
 }
 def_int $setting21 = struct_param($struct6, param_1077);
 def_boolean $boolean22 = struct_param($struct6, param_1085);
-def_int $int23 = ~script3957($struct6);
+def_boolean $boolean23 = ~script3957($struct6);
 def_int $int24 = 0;
 .cc_create($component8, ^iftype_rectangle, $int2);
 .cc_setsize(10, $int17, ^setsize_minus, ^setsize_abs);
@@ -51,7 +51,7 @@ cc_setposition(0, calc($int0 + 6), ^setpos_abs_centre, ^setpos_abs_top);
 cc_settext(append($string0, $string2));
 cc_settextfont(b12_full);
 cc_settextshadow(true);
-if ($int23 = 1) {
+if ($boolean23 = true) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
@@ -112,7 +112,7 @@ def_boolean $boolean37 = struct_param($struct6, param_1108);
 cc_create($component7, ^iftype_graphic, $int3);
 $int3 = calc($int3 + 1);
 def_graphic $graphic38 = "settings_slider,7";
-if ($int23 = 1) {
+if ($boolean23 = true) {
 	if ($boolean37 = true) {
 		$graphic38 = "settings_slider,8";
 	} else {

@@ -1,7 +1,7 @@
 // 3958
-[proc,settings_check_dependency](struct $struct0, int $int1)(int)
+[proc,settings_check_dependency](struct $struct0, int $int1)(boolean)
 if ($struct0 = null) {
-	return(0);
+	return(false);
 }
 def_enum $enum2 = struct_param($struct0, param_1080);
 def_enum $enum3 = struct_param($struct0, param_1081);
@@ -10,7 +10,7 @@ if ($int1 = 1) {
 	$enum3 = struct_param($struct0, param_1083);
 }
 if ($enum2 = null | $enum3 = null) {
-	return(0);
+	return(false);
 }
 def_struct $struct4 = null;
 def_int $count5 = 0;
@@ -26,11 +26,11 @@ while ($count5 < $count6) {
 		$int8 = struct_param($struct4, param_1078);
 		$setting9 = struct_param($struct4, param_1077);
 		$int11 = enum(int, int, $enum3, $count5);
-		if (struct_param($struct4, param_1080) ! null & ~settings_check_dependency($struct4, 0) = 0) {
-			return(0);
+		if (struct_param($struct4, param_1080) ! null & ~settings_check_dependency($struct4, 0) = false) {
+			return(false);
 		}
-		if (struct_param($struct4, param_1082) ! null & ~settings_check_dependency($struct4, 1) = 0) {
-			return(0);
+		if (struct_param($struct4, param_1082) ! null & ~settings_check_dependency($struct4, 1) = false) {
+			return(false);
 		} else if ($setting9 ! 0) {
 			switch_int ($int8) {
 				case 0 :
@@ -46,16 +46,16 @@ while ($count5 < $count6) {
 				if ($int11 = $int7) {
 					$int10 = 0;
 				} else {
-					return(0);
+					return(false);
 				}
 			} else if ($int11 = $int7) {
-				return(0);
+				return(false);
 			}
 			$count5 = calc($count5 + 1);
 		}
-		return(0);
+		return(false);
 	} else {
-		return(0);
+		return(false);
 	}
 }
-return(1);
+return(true);

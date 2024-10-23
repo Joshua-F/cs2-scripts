@@ -39,7 +39,7 @@ if (struct_param($struct5, param_1100) ! -1 & struct_param($struct5, param_1100)
 $int1 = calc($int1 + $int16);
 $int15 = calc($int15 + 5);
 $int11 = calc($int11 - 10);
-def_int $int17 = ~script3957($struct5);
+def_boolean $boolean17 = ~script3957($struct5);
 def_int $setting18 = struct_param($struct5, param_1077);
 cc_create($component6, ^iftype_rectangle, $int3);
 cc_setsize($int11, $int13, ^setsize_abs, ^setsize_abs);
@@ -54,7 +54,7 @@ def_int $x19 = calc($int11 - 9 + $int15);
 def_int $y20 = calc($int13 - 9 + $int1);
 def_int $width21 = calc($int11 - 18);
 def_int $height22 = calc($int13 - 18);
-if ($int17 = 1) {
+if ($boolean17 = true) {
 	~create_graphic($component7, $int2, tradebacking, $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, $int11, $int13, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 1), "v2_stone_button,0", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
 	~create_graphic($component7, calc($int2 + 2), "v2_stone_button,1", $x19, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
@@ -82,7 +82,7 @@ cc_setposition(calc($int15 + 5), calc($int1 + 5), ^setpos_abs_left, ^setpos_abs_
 cc_settext($string0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
-if ($int17 = 1) {
+if ($boolean17 = true) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
@@ -95,7 +95,7 @@ cc_setposition($int15, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
-if ($int17 = 1 & ~on_mobile = false) {
+if ($boolean17 = true & ~on_mobile = false) {
 	cc_setonmouseover("v2_stone_button_change_in($component7, calc($int2 - 10))");
 	cc_setonmouseleave("v2_stone_button_change_out($component7, calc($int2 - 10))");
 }

@@ -1,14 +1,14 @@
 // 3855
 [clientscript,setting_dropdown_transmit](int $int0, struct $struct1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5, enum $enum6, int $setting7, component $component8, component $component9, component $component10, component $component11, component $component12)
 def_int $int13 = 0;
-def_int $int14 = ~script3957($struct1);
+def_boolean $boolean14 = ~script3957($struct1);
 if (cc_find($component5, $comsubid2) = ^true) {
 	if ($int0 = 2) {
 		$int13 = ~settings_get_dropdown($setting7);
 	} else {
 		$int13 = ~settings_get_keybind($setting7);
 	}
-	if ($int14 = 1) {
+	if ($boolean14 = true) {
 		cc_setcolour(0xff981f);
 	} else {
 		cc_setcolour(0x9f9f9f);
@@ -16,14 +16,14 @@ if (cc_find($component5, $comsubid2) = ^true) {
 	cc_settext(enum(int, string, $enum6, $int13));
 }
 if (cc_find($component5, $comsubid3) = ^true) {
-	if ($int14 = 1) {
+	if ($boolean14 = true) {
 		cc_setcolour(0xff981f);
 	} else {
 		cc_setcolour(0x9f9f9f);
 	}
 }
 if (~on_mobile = false & cc_find($component5, $comsubid4) = ^true) {
-	if ($int14 = 1) {
+	if ($boolean14 = true) {
 		cc_setonmouseover("cc_settrans($component5, $comsubid4, 220, null)");
 		cc_setonmouseleave("cc_settrans($component5, $comsubid4, 255, null)");
 	} else {
@@ -31,7 +31,7 @@ if (~on_mobile = false & cc_find($component5, $comsubid4) = ^true) {
 		cc_setonmouseleave(null);
 	}
 }
-if (%varbit9657 = $setting7 & $int14 = 0) {
+if (%varbit9657 = $setting7 & $boolean14 = false) {
 	cc_deleteall($component8);
 	cc_deleteall($component9);
 	cc_deleteall($component10);

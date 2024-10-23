@@ -1,0 +1,107 @@
+// 7401
+[proc,script7401](int $width0, component $component1, component $component2, component $component3, component $component4)
+cc_deleteall($component1);
+def_int $int5 = 0;
+def_int $int6 = 0;
+if (%var265 = 1 | %varbit1777 = 0 | ~is_group_iron = 1 | %varbit1775 ! 0) {
+	if_sethide(true, $component2);
+	if_sethide(true, $component3);
+	if_clearops($component2);
+	if_clearops($component3);
+	if_setonmouseover(null, $component2);
+	if_setonmouseover(null, $component3);
+	if_setonmouserepeat(null, $component2);
+	if_setonmouserepeat(null, $component3);
+	if_setonmouseleave(null, $component2);
+	if_setonmouseleave(null, $component3);
+	if_setontimer(null, $component2);
+	if_setontimer(null, $component3);
+	if_setonop(null, $component2);
+	if_setonop(null, $component3);
+	if_sethide(false, $component4);
+	$int6 = calc(if_getwidth($component1) - (if_getx($component4) + if_getwidth($component4)));
+	if (%var265 = 1 | %varbit1777 = 0 | ~is_group_iron = 1) {
+		$int5 = ~thinstonebox($component1, $int5);
+		cc_create($component1, ^iftype_text, $int5);
+		$int5 = calc($int5 + 1);
+		cc_setsize(calc(2 * $int6 + 5 + if_getwidth($component4)), 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition($int6, 0, ^setpos_abs_left, ^setpos_abs_centre);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+		cc_settextshadow(true);
+		cc_setcolour(0x9f9f9f);
+		if (%varbit1777 = 0) {
+			cc_settext("Downgrade options are not applicable.");
+		} else if (~is_group_iron = 1) {
+			cc_settext("Speak to the tutors on The Node for downgrade options.");
+		} else {
+			cc_settext("Downgrade options are not available on this game world.");
+		}
+		~stonebutton_draw(true, "Downgrade", b12_full, 0, $component4);
+		if_setonmouseover(null, $component4);
+		if_setonmouserepeat(null, $component4);
+		if_setonmouseleave(null, $component4);
+		if_setontimer(null, $component4);
+		if_setop(1, "Downgrade", $component4);
+		if_setonop("settings_op_sound(false)", $component4);
+		return;
+	}
+	$int5 = ~thinstonebox($component1, $int5);
+	cc_create($component1, ^iftype_text, $int5);
+	$int5 = calc($int5 + 1);
+	cc_setsize(calc(2 * $int6 + 5 + if_getwidth($component4)), 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition($int6, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	if (%var263 > 1) {
+		if (%varbit1775 = 3) {
+			cc_settext("In <col=ff0000><tostring(%var263)> days</col>, you will downgrade to <col=ff0000><enum(int, string, enum_859, 6)></col>.<br>Once this happens, it cannot be undone.");
+		} else if (%varbit1775 = 2) {
+			cc_settext("You will downgrade in <col=ff0000><tostring(%var263)> days</col>, after which you will <col=ff0000>no longer be an Ironman</col>.<br>Once this happens, it cannot be undone.");
+		} else if (%varbit1777 = 3 | %varbit1777 = 2) {
+			cc_settext("You will downgrade in <col=ff0000><tostring(%var263)> days</col>, after which you will be a <col=ff0000>standard <enum(int, string, enum_859, 1)></col>.<br>Once this happens, it cannot be undone.");
+		} else if (%varbit1777 = 5) {
+			cc_settext("In <col=ff0000><tostring(%var263)> days</col>, your <col=ff0000><enum(int, string, enum_859, %varbit1777)> status</col> will downgrade.<br>Once this happens, it cannot be undone.");
+		} else {
+			cc_settext("You will downgrade in <col=ff0000><tostring(%var263)> days</col>, after which you will <col=ff0000>no longer be an Ironman</col>.<br>Once this happens, it cannot be undone.");
+		}
+	} else if (%var263 = 1) {
+		if (%varbit1775 = 3) {
+			cc_settext("In <col=ff0000>one day</col>, you will downgrade to <col=ff0000><enum(int, string, enum_859, 6)></col>.<br>Once this happens, it cannot be undone.");
+		} else if (%varbit1775 = 2) {
+			cc_settext("You will downgrade in <col=ff0000>one day</col>, after which you will <col=ff0000>no longer be an Ironman</col>.<br>Once this happens, it cannot be undone.");
+		} else if (%varbit1777 = 3 | %varbit1777 = 2) {
+			cc_settext("You will downgrade in <col=ff0000>one day</col>, after which you will be a <col=ff0000>standard <enum(int, string, enum_859, 1)></col>.<br>Once this happens, it cannot be undone.");
+		} else if (%varbit1777 = 5) {
+			cc_settext("In <col=ff0000>one day</col>, your <col=ff0000><enum(int, string, enum_859, %varbit1777)> status</col> will downgrade.<br>Once this happens, it cannot be undone.");
+		} else {
+			cc_settext("You will downgrade in <col=ff0000>one day</col>, after which you will <col=ff0000>no longer be an Ironman</col>.<br>Once this happens, it cannot be undone.");
+		}
+	} else if (%varbit1775 = 3) {
+		cc_settext("<col=ff0000>Later today</col>, you will downgrade to <col=ff0000><enum(int, string, enum_859, 6)></col>.<br>Once this happens, it cannot be undone.");
+	} else if (%varbit1775 = 2) {
+		cc_settext("You will downgrade <col=ff0000>imminently</col>, after which you will <col=ff0000>no longer be an Ironman</col>.<br>Once this happens, it cannot be undone.");
+	} else if (%varbit1777 = 3 | %varbit1777 = 2) {
+		cc_settext("You will downgrade <col=ff0000>imminently</col>, after which you will be a <col=ff0000>standard <enum(int, string, enum_859, 1)></col>.<br>Once this happens, it cannot be undone.");
+	} else if (%varbit1777 = 5) {
+		cc_settext("<col=ff0000>Later today</col>, your <col=ff0000><enum(int, string, enum_859, %varbit1777)> status</col> will downgrade.<br>Once this happens, it cannot be undone.");
+	} else {
+		cc_settext("You will downgrade <col=ff0000>imminently</col>, after which you will <col=ff0000>no longer be an Ironman</col>.<br>Once this happens, it cannot be undone.");
+	}
+	~stonebutton_init("<col=ffffff>Cancel downgrade</col>", $component4, b12_full, 1);
+	if_setonop("opsound(event_op, 2)", $component4);
+	return;
+}
+if_sethide(false, $component2);
+if_sethide(false, $component3);
+if_sethide(true, $component4);
+if_clearops($component4);
+if_setonmouseover(null, $component4);
+if_setonmouserepeat(null, $component4);
+if_setonmouseleave(null, $component4);
+if_setontimer(null, $component4);
+if_setonop(null, $component4);
+~script7402(1, $component2, $width0);
+~script7402(0, $component3, $width0);

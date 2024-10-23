@@ -1,10 +1,10 @@
 // 3858
 [clientscript,settings_input_setting_transmit](struct $struct0, int $setting1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5, int $comsubid6)
-def_int $int7 = ~script3957($struct0);
+def_boolean $boolean7 = ~script3957($struct0);
 def_string $string0 = ",";
 def_int $int8 = 0;
 if (cc_find($component5, $comsubid2) = ^true) {
-	if ($int7 = 1) {
+	if ($boolean7 = true) {
 		cc_setcolour(0xff981f);
 	} else {
 		cc_setcolour(0x9f9f9f);
@@ -19,14 +19,14 @@ if (cc_find($component5, $comsubid2) = ^true) {
 	}
 }
 if (cc_find($component5, $comsubid4) = ^true) {
-	if ($int7 = 1) {
+	if ($boolean7 = true) {
 		cc_setcolour(0xff981f);
 	} else {
 		cc_setcolour(0x9f9f9f);
 	}
 }
 if (cc_find($component5, $comsubid3) = ^true) {
-	if (~on_mobile = false & $int7 = 1) {
+	if (~on_mobile = false & $boolean7 = true) {
 		cc_setonmouseover("cc_settrans($component5, $comsubid3, 220, null)");
 		cc_setonmouseleave("cc_settrans($component5, $comsubid3, 255, null)");
 	} else {

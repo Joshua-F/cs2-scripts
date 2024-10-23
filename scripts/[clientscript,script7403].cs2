@@ -1,0 +1,13 @@
+// 7403
+[clientscript,script7403](component $component0, int $comsubid1, boolean $boolean2, int $trans3, int $trans4)
+if ($boolean2 = true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_settrans($trans3);
+	}
+	if_setontimer("script7404(calc(clientclock + 2), event_com, $comsubid1, $trans4)", $component0);
+} else {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_settrans($trans4);
+	}
+	if_setontimer(null, $component0);
+}

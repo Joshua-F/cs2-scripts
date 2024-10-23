@@ -40,7 +40,7 @@ if ($boolean16 = true & $int22 < 20) {
 }
 def_int $int23 = calc($int22 + 12 + $int19);
 def_boolean $boolean24 = struct_param($struct5, param_1085);
-def_int $int25 = ~script3957($struct5);
+def_boolean $boolean25 = ~script3957($struct5);
 cc_create($component7, ^iftype_rectangle, $int2);
 cc_setsize(10, $int23, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
@@ -54,7 +54,7 @@ cc_setposition(10, calc($int0 + 6), ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
-if ($int25 = 1) {
+if ($boolean25 = true) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
@@ -94,7 +94,7 @@ $int2 = calc($int2 + 1);
 cc_setsize($int17, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(28, calc($int0 + ($int23 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
 cc_settextfont(p12_full);
-if ($int25 = 1) {
+if ($boolean25 = true) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
@@ -121,7 +121,7 @@ cc_settrans(255);
 if ($boolean24 = true) {
 	~settings_dropdown_choose_transmit(2, $struct5, calc($int2 - 1), calc($int2 - 6), $int2, $component7, $enum15, $setting27, $component8, $component9, $component10, $component11, $component13);
 }
-if ($int25 = 1 & ~on_mobile = false) {
+if ($boolean25 = true & ~on_mobile = false) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");
 }

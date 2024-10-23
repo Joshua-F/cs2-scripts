@@ -6,10 +6,10 @@ def_int $int5 = 0;
 while ($int4 > 0) {
 	$int4 = calc($int4 - 1);
 	if (cc_find($component1, $int4) = ^true) {
-		$obj3 = invother_getobj(inv_582, $int4);
+		$obj3 = invother_getobj(inv_916, $int4);
 		if ($obj3 ! null) {
 			cc_sethide(false);
-			cc_setobject($obj3, invother_getnum(inv_582, $int4));
+			cc_setobject($obj3, invother_getnum(inv_916, $int4));
 			cc_setopbase("<col=ff9040><oc_name($obj3)></col>");
 			$int5 = calc($int5 + 1);
 		} else {

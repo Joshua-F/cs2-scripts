@@ -1,6 +1,6 @@
 // 3866
 [clientscript,settings_button_op](struct $struct0, int $setting1)
-if (~settings_op_checker($struct0) = 0) {
+if (~settings_op_checker($struct0) = false) {
 	return;
 }
 ~settings_clicked_button($setting1);

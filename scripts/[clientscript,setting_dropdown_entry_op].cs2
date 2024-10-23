@@ -1,6 +1,6 @@
 // 3852
 [clientscript,setting_dropdown_entry_op](int $int0, string $text0, int $comsubid1, int $count2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, enum $enum9, int $setting10, int $comsubid11, boolean $boolean12)
-~settings_op_sound(1);
+~settings_op_sound(true);
 if (cc_find($component3, $comsubid1) = ^true) {
 	cc_settext($text0);
 	if ($boolean12 = false) {

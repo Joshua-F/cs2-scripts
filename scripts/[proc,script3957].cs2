@@ -1,25 +1,25 @@
 // 3957
-[proc,script3957](struct $struct0)(int)
+[proc,script3957](struct $struct0)(boolean)
 if ($struct0 = null) {
-	return(0);
+	return(false);
 }
-def_int $int1 = 1;
+def_boolean $boolean1 = true;
 if (struct_param($struct0, param_1186) = true & ~on_mobile = true) {
-	return($int1);
+	return($boolean1);
 }
 if (struct_param($struct0, param_1115) = true) {
-	$int1 = ~settings_custom_dependency($struct0);
+	$boolean1 = ~settings_custom_dependency($struct0);
 }
-if ($int1 = 0) {
-	return($int1);
+if ($boolean1 = false) {
+	return($boolean1);
 }
 if (struct_param($struct0, param_1080) ! null) {
-	$int1 = ~settings_check_dependency($struct0, 0);
+	$boolean1 = ~settings_check_dependency($struct0, 0);
 }
-if ($int1 = 0) {
-	return($int1);
+if ($boolean1 = false) {
+	return($boolean1);
 }
 if (struct_param($struct0, param_1082) ! null) {
-	$int1 = ~settings_check_dependency($struct0, 1);
+	$boolean1 = ~settings_check_dependency($struct0, 1);
 }
-return($int1);
+return($boolean1);

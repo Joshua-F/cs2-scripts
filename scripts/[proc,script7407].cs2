@@ -1,0 +1,59 @@
+// 7407
+[proc,script7407](component $component0, int $int1)
+def_string $op0 = enum(int, string, enum_859, $int1);
+if (%varbit1777 = $int1) {
+	.cc_setgraphic(tradebacking_light);
+	~stonebutton_draw(true, "<col=ffffff><$op0></col>", p12_full, 0, $component0);
+	if_setonmouseover(null, $component0);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setontimer(null, $component0);
+	if_setop(1, $op0, $component0);
+	if_setonop("opsound(event_op, 2)", $component0);
+	return;
+}
+def_int $int2 = 0;
+if (%var265 = 1) {
+	$int2 = 0;
+} else if (%var266 = 1) {
+	if ($int1 ! 6) {
+		$int2 = 1;
+	}
+} else {
+	switch_int (%varbit1777) {
+		case 1 :
+			if ($int1 = 6 | $int1 = 0) {
+				$int2 = 1;
+			}
+		case 2, 3 :
+			if ($int1 = 1 | $int1 = 6 | $int1 = 0) {
+				$int2 = 1;
+			}
+		case 4 :
+			if ($int1 = 6 | $int1 = 0) {
+				$int2 = 1;
+			}
+		case 5 :
+			if ($int1 = 4 | $int1 = 6 | $int1 = 0) {
+				$int2 = 1;
+			}
+		case 6 :
+			if ($int1 = 0) {
+				$int2 = 1;
+			}
+	}
+}
+if ($int2 = 1) {
+	.cc_setgraphic(tradebacking_light);
+	~stonebutton_init("<col=ffffff><$op0></col>", $component0, p12_full, 0);
+	if_setonop("opsound(event_op, 2)", $component0);
+} else {
+	.cc_setgraphic(tradebacking_dark);
+	~stonebutton_draw(true, "<col=ff0000><$op0></col>", p12_full, 0, $component0);
+	if_setonmouseover(null, $component0);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setontimer(null, $component0);
+	if_setop(1, $op0, $component0);
+	if_setonop("settings_op_sound(false)", $component0);
+}

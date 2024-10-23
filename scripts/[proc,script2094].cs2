@@ -1,0 +1,108 @@
+// 2094
+[proc,script2094]
+if (stat_base(cooking) < 40) {
+	if_setmodel(model_16803, interface_75:6);
+} else {
+	if_setmodel(model_16802, interface_75:6);
+}
+if (stat_base(fishing) < 15) {
+	if_setmodel(model_16807, interface_75:42);
+} else {
+	if_setmodel(model_16806, interface_75:42);
+}
+if (%varbit1527 < 160) {
+	if_setmodel(model_16809, interface_75:9);
+} else {
+	if_setmodel(model_16808, interface_75:9);
+}
+if (%var359 < 100) {
+	if_setmodel(model_16801, interface_75:12);
+} else {
+	if_setmodel(model_16800, interface_75:12);
+}
+if (%var492 < 4) {
+	if_setmodel(model_16281, interface_75:15);
+} else {
+	if_setmodel(model_16280, interface_75:15);
+}
+if (%varbit3618 < 16 | %varbit9653 > 660) {
+	if_setmodel(model_24990, interface_75:45);
+} else {
+	if_setmodel(cyrisus_24978, interface_75:45);
+}
+if (%varbit4897 = 0) {
+	if_setmodel(model_30952, interface_75:48);
+} else {
+	if_setmodel(smoggy_30953, interface_75:48);
+}
+if (%varbit3618 < 28) {
+	if_setmodel(model_24992, interface_75:60);
+} else {
+	if_setmodel(model_24991, interface_75:60);
+}
+if (%varbit5037 = 1) {
+	if_setop(1, "Steve", interface_75:32);
+	if_settext("Steve", interface_75:34);
+	if_setmodel(model_547, interface_75:33);
+} else {
+	if_setop(1, "Nieve", interface_75:32);
+	if_settext("Nieve", interface_75:34);
+	if_setmodel(model_16282, interface_75:33);
+}
+if (%varbit5195 = 0) {
+	if_setmodel(model_32306, interface_75:54);
+} else {
+	if_setmodel(watson_32305, interface_75:54);
+}
+if (%var77 ! 2 & %var76 < 6) {
+	if_setmodel(model_33204, interface_75:57);
+} else {
+	if_setmodel(barbarian_guard_33203, interface_75:57);
+}
+if (%varbit10582 < 40) {
+	if_setmodel(model_40888, interface_75:69);
+} else {
+	if_setmodel(model_40889, interface_75:69);
+}
+if (%varbit10782 ! 0) {
+	if_setop(1, "Aya", interface_75:20);
+	if_settext("Aya", interface_75:22);
+	if_setmodel(model_54028, interface_75:21);
+	if_setop(1, "Kuradal", interface_75:35);
+	if_settext("Kuradal", interface_75:37);
+	if_setmodel(model_54029, interface_75:36);
+} else {
+	if_setop(1, "Turael", interface_75:20);
+	if_settext("Turael", interface_75:22);
+	if_setmodel(model_16810, interface_75:21);
+	if_setop(1, "Duradel", interface_75:35);
+	if_settext("Duradel", interface_75:37);
+	if_setmodel(model_16817, interface_75:36);
+}
+if (%varbit10782 = 1) {
+	if_setop(1, "Achtryn", interface_75:23);
+	if_settext("Achtryn", interface_75:25);
+	if_setmodel(model_54030, interface_75:24);
+} else {
+	if_setop(1, "Mazchna", interface_75:23);
+	if_settext("Mazchna", interface_75:25);
+	if_setmodel(model_16811, interface_75:24);
+}
+if (%varbit10562 = 0) {
+	if_setmodel(model_40851, interface_75:63);
+	if_setop(2, "", interface_75:62);
+} else {
+	if_setmodel(model_40852, interface_75:63);
+	switch_int (%var261) {
+		case default :
+			if_setop(2, "", interface_75:62);
+		case 1 :
+			if_setop(2, "Beginner Contract", interface_75:62);
+		case 2 :
+			if_setop(2, "Novice Contract", interface_75:62);
+		case 3 :
+			if_setop(2, "Adept Contract", interface_75:62);
+		case 4 :
+			if_setop(2, "Expert Contract", interface_75:62);
+	}
+}

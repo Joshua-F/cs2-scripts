@@ -1,6 +1,6 @@
 // 3863
 [clientscript,settings_slider_on_transmit](struct $struct0, int $setting1, int $int2, int $int3, int $int4, component $component5, int $int6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, string $string0, int $int12, enum $enum13, boolean $boolean14)
-def_int $int15 = ~script3957($struct0);
+def_boolean $boolean15 = ~script3957($struct0);
 def_int $int16 = ~settings_get_slider($setting1);
 def_string $string1 = "";
 def_graphic $graphic17 = "settings_slider,7";
@@ -12,7 +12,7 @@ if (cc_find($component5, $int6) = ^true) {
 	} else {
 		cc_setposition(calc($int8 + scale(calc($int16 * 2), calc(($int2 - 1) * 2), calc($int4 - 16))), $y7, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if ($int15 = 1) {
+	if ($boolean15 = true) {
 		if ($boolean14 = true) {
 			$graphic17 = "settings_slider,8";
 		} else {
@@ -26,7 +26,7 @@ if (cc_find($component10, $comsubid11) = ^true) {
 		$string1 = ~script2364($setting1);
 	}
 	cc_settext(append($string0, $string1));
-	if ($int15 = 1) {
+	if ($boolean15 = true) {
 		cc_setcolour(0xff981f);
 	} else {
 		cc_setcolour(0x9f9f9f);
@@ -37,7 +37,7 @@ if ($enum13 ! null) {
 	$int18 = 0;
 	while ($int18 < $int3) {
 		if (cc_find($component10, $int12) = ^true) {
-			if ($int15 = 1) {
+			if ($boolean15 = true) {
 				cc_setcolour(0xff981f);
 			} else {
 				cc_setcolour(0x9f9f9f);

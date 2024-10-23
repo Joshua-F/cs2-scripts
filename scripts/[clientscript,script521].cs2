@@ -1,0 +1,6 @@
+// 521
+[clientscript,script521](int $int0, component $component1, component $component2, component $component3, int $height4)
+def_int $height5 = if_getheight(if_getlayer($component3));
+if ($height5 ! $height4) {
+	~script520($int0, $component1, $component2, $component3, $height5);
+}

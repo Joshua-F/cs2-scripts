@@ -4,7 +4,7 @@ def_string $text0 = struct_param($struct2, param_1360);
 if (~script7107($setting3) = 1) {
 	$text0 = ~script7108($setting3, 30);
 }
-def_int $int6 = ~script3957($struct2);
+def_boolean $boolean6 = ~script3957($struct2);
 def_boolean $boolean7 = ~on_mobile;
 def_int $int8 = 4;
 if ($boolean7 = true) {
@@ -14,7 +14,7 @@ if (cc_find($component0, $int1) = ^true) {
 	if (.cc_find($component0, calc($int1 + $int8)) = ^true) {
 		.cc_settext($text0);
 	}
-	if ($int6 = 1) {
+	if ($boolean6 = true) {
 		if ($boolean7 = false & .cc_find($component0, calc($int1 + 1)) = ^true) {
 			.cc_setonmouserepeat("cc_settrans_temporarily(event_com, calc($int1 + 1), 220, 250)");
 			.cc_setonmouseleave("cc_settrans(event_com, calc($int1 + 1), 250, null)");

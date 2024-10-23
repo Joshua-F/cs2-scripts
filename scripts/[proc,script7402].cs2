@@ -1,0 +1,58 @@
+// 7402
+[proc,script7402](int $int0, component $component1, int $width2)
+if_setsize($width2, 0, ^setsize_abs, ^setsize_minus, $component1);
+cc_deleteall($component1);
+def_int $int3 = 0;
+cc_create($component1, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(245);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script7403(event_com, cc_getid, true, 220, 245)", $component1);
+	if_setonmouseleave("script7403(event_com, cc_getid, false, 220, 245)", $component1);
+}
+$int3 = ~thinstonebox($component1, $int3);
+cc_create($component1, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(7, 0, ^setpos_abs_left, ^setpos_abs_centre);
+if ($int0 = 1) {
+	if (%varbit1776 = 1) {
+		cc_setgraphic("options_radio_buttons,2");
+	} else {
+		cc_setgraphic("options_radio_buttons,1");
+	}
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, $component1);
+} else {
+	if (%varbit1776 ! 1) {
+		cc_setgraphic("options_radio_buttons,2");
+	} else {
+		cc_setgraphic("options_radio_buttons,1");
+	}
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre, $component1);
+}
+cc_create($component1, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(30, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(3, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+if ($int0 = 1) {
+	cc_settext("Mode can be downgraded after a warning period of <tostring(7)> days.");
+	if_setop(1, "<tostring(7)> days", $component1);
+} else if (%var264 = 1) {
+	cc_settext("Mode can be downgraded after a warning period of <tostring(90)> days.");
+	if_setop(1, "<tostring(90)> days", $component1);
+} else if (%varbit1776 = 2) {
+	cc_settext("Limited to Unranked GIM, unless the character is imported to a Jagex Account for protection.");
+	if_setop(1, "Permanent", $component1);
+} else {
+	cc_settext("Mode cannot be downgraded unless the character is imported to a Jagex Account, for protection.");
+	if_setop(1, "Permanent", $component1);
+}
+if_setonop("opsound(event_op, 2)", $component1);
