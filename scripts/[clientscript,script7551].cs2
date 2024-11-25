@@ -1,0 +1,7 @@
+// 7551
+[clientscript,script7551]
+def_int $int0 = hiscore_getoverallrank;
+def_int $int1 = 0;
+def_int $int2 = 0;
+$int1, $int2 = hiscore_getoverallxp;
+mes("Overall rank: <tostring($int0)>, Score: <tostring($int1)> billion plus <tostring($int2)>");

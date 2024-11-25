@@ -3,4 +3,10 @@
 if (~on_enhanced_desktop = 0) {
 	return;
 }
-~script5484($int0);
+if ($int0 = 0) {
+	highlight_tile_setup(6, ~settings_get_colour_or_default(^setting_tile_highlight_colour_colour), 2, 50, 90);
+	shiftop_tile_set(1, "Mark tile", script4762);
+} else {
+	highlight_tile_setup(6, null, 0, 0, 64);
+	shiftop_tile_del(1);
+}

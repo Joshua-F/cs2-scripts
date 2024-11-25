@@ -1,0 +1,20 @@
+// 7542
+[shiftopplayer,script7542]
+if (~on_enhanced_desktop = 1 & %varbit13982 = 1) {
+	return;
+}
+if (~on_enhanced_mobile = 1 & %varbit13981 = 0) {
+	return;
+}
+def_string $string0 = player_name;
+if (string_length($string0) <= 0) {
+	return;
+}
+if (%varbit13090 ! 3) {
+	if (cc_find(interface_728:6, calc(3 - 1)) = ^true) {
+		%varcstring1233 = $string0;
+		cc_triggerop(1);
+	}
+} else {
+	~script7529($string0, %varcint1227);
+}

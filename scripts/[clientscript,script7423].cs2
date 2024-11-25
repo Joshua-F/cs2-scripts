@@ -1,0 +1,78 @@
+// 7423
+[clientscript,script7423](int $opindex0, int $int1, struct $struct2, component $component3)
+switch_int ($int1) {
+	case 19 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 10, true, 1);
+	case 6 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 3, true, 1);
+	case 7 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 4, true, 1);
+	case 8 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 5, true, 1);
+	case 9 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 6, true, 1);
+	case 10 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 0, true, 1);
+	case 11 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 2, true, 1);
+	case 12 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 1, true, 1);
+	case 13 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 12, true, 1);
+	case 14 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 13, true, 1);
+	case 15 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 7, true, 1);
+	case 17 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 8, true, 1);
+	case 16 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 9, true, 1);
+	case 18 :
+		~toplevel_sidebutton_op(~toplevel_getcomponents, 11, true, 1);
+	case 4 :
+		~script7435;
+	case 5 :
+		~script7437;
+	case 1 :
+		~script7434;
+	case 2 :
+		~script7433;
+	case 3 :
+		if ($opindex0 = 1) {
+			~script7585;
+		} else if ($opindex0 = 2) {
+			~script7589;
+		}
+	case 25 :
+		if ($opindex0 = 1) {
+			~script7583;
+		}
+	case 24 :
+		if ($opindex0 = 1) {
+			~script7440;
+		} else if ($opindex0 = 2) {
+			~script7439;
+		}
+	case 20 :
+	case 21 :
+		if ($opindex0 = 2) {
+			return;
+		}
+		if (%varbit6254 = 0) {
+			~orbs_toggle_prayer($opindex0, interface_897:17, interface_897:20, interface_897:15);
+		} else {
+			~orbs_toggle_prayer($opindex0, interface_898:18, interface_898:21, interface_898:16);
+		}
+	case 22 :
+		if (%varbit6254 = 0) {
+			~orbs_toggle_runmode($opindex0, interface_897:25, interface_897:28);
+		} else {
+			~orbs_toggle_runmode($opindex0, interface_898:26, interface_898:29);
+		}
+	case 23 :
+		if (%varbit6254 = 0) {
+			~orbs_toggle_spec_op($opindex0, interface_897:29, interface_897:32, interface_897:34, interface_897:33, interface_897:30, interface_897:31);
+		} else {
+			~orbs_toggle_spec_op($opindex0, interface_898:30, interface_898:33, interface_898:35, interface_898:34, interface_898:31, interface_898:32);
+		}
+}

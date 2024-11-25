@@ -1,0 +1,27 @@
+// 7485
+[proc,script7485]
+def_int $int0 = calc(enum_getoutputcount(enum_5626) + 9 + 1);
+def_int $count1 = enum_getoutputcount(enum_5626);
+def_int $count2 = 0;
+def_dbrow $dbrow3 = null;
+while ($count2 < $count1) {
+	$dbrow3 = enum(int, dbrow, enum_5626, $count2);
+	if ($dbrow3 ! null) {
+		if (cc_find(interface_894:9, $int0) = ^true) {
+			cc_settext("--");
+		}
+		if (cc_find(interface_894:9, $count2) = ^true) {
+			~script7516(db_getfield($dbrow3, dbtable_81:0, 0), 0, 0);
+		}
+	} else {
+		if (cc_find(interface_894:9, $int0) = ^true) {
+			cc_settext("--");
+		}
+		if (cc_find(interface_894:9, $count2) = ^true) {
+			~script7519;
+		}
+	}
+	$int0 = calc($int0 + 2);
+	$count2 = calc($count2 + 1);
+}
+~deltooltip_action(interface_894:2);

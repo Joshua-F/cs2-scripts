@@ -137,12 +137,13 @@ def_int $width20 = if_getwidth($component3);
 def_int $int21 = 0;
 def_int $height22 = 0;
 def_int $int23 = 15;
+def_int $int24 = ~on_enhanced_any;
 if (~on_mobile = true) {
 	$int23 = scale(8, 5, $int23);
 }
-def_int $int24 = 0;
-while ($int24 < $int15) {
-	$text0, $world16, $rank17 = clan_getchatusername($int24), clan_getchatuserworld($int24), clan_getchatuserrank($int24);
+def_int $int25 = 0;
+while ($int25 < $int15) {
+	$text0, $world16, $rank17 = clan_getchatusername($int25), clan_getchatuserworld($int25), clan_getchatuserrank($int25);
 	cc_create($component8, ^iftype_text, $int21);
 	$int21 = calc($int21 + 1);
 	cc_setsize($width20, $int23, ^setsize_minus, ^setsize_abs);
@@ -170,11 +171,11 @@ while ($int24 < $int15) {
 	.cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
 	.cc_setposition(1, calc($height22 + ($int23 - 9) / 2), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setgraphic(enum(int, graphic, enum_1543, $rank17));
-	if (clan_isself($int24) = false) {
-		if (clan_isfriend($int24) = true) {
+	if (clan_isself($int25) = false) {
+		if (clan_isfriend($int25) = true) {
 			cc_setop(9, "Remove friend");
 			.cc_setop(9, "Remove friend");
-		} else if (clan_isignore($int24) = true) {
+		} else if (clan_isignore($int25) = true) {
 			cc_setop(10, "Remove ignore");
 			.cc_setop(10, "Remove ignore");
 		} else {
@@ -183,6 +184,10 @@ while ($int24 < $int15) {
 			cc_setop(8, "Add ignore");
 			.cc_setop(8, "Add ignore");
 		}
+		if ($int24 = 1) {
+			cc_setop(5, "Switch world");
+			.cc_setop(5, "Switch world");
+		}
 	}
 	if (~wildwars_world = 0 & $rank18 >= $rank19 & $rank18 > $rank17) {
 		cc_setop(6, "Kick user");
@@ -190,9 +195,9 @@ while ($int24 < $int15) {
 	}
 	cc_setopbase("<col=ff9040><$text0></col>");
 	.cc_setopbase("<col=ff9040><$text0></col>");
-	cc_setonop("friendschat_op(event_opbase, event_op)");
-	.cc_setonop("friendschat_op(event_opbase, event_op)");
-	$int24, $height22 = calc($int24 + 1), calc($height22 + $int23);
+	cc_setonop("friendschat_op(event_opbase, event_op, $world16)");
+	.cc_setonop("friendschat_op(event_opbase, event_op, $world16)");
+	$int25, $height22 = calc($int25 + 1), calc($height22 + $int23);
 }
 if ($int15 >= 1) {
 	$height22 = calc($height22 + 5);

@@ -1,7 +1,7 @@
 // 2701
 [proc,tooltip_build](component $component0, int $int1, component $component2, string $string0, int $width3)
 if (~on_enhanced_any = 1) {
-	~mouseover_tooltip_setup($string0, "", mouse_getx, mouse_gety, $component2, $component0, $int1, 1);
+	~mouseover_tooltip_setup($string0, "", mouse_getx, mouse_gety, $component2, $component0, $int1, 0, 0, 1);
 	return;
 }
 def_component $layer4 = if_getlayer($component2);

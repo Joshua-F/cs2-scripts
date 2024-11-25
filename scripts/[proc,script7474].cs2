@@ -1,0 +1,13 @@
+// 7474
+[proc,script7474](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6)(string, string)
+def_int $int7 = calc($int0 / 2 * 100);
+def_int $int8 = calc(($int1 + $int2) * 100);
+$int7 = calc(($int8 + $int7) / 4);
+def_int $int9 = calc(scale(13, 40, calc(($int3 + $int4) * 100)) + $int7);
+def_int $int10 = calc(scale(13, 40, calc($int5 / 2 + $int5)) * 100 + $int7);
+def_int $int11 = calc(scale(13, 40, calc($int6 / 2 + $int6)) * 100 + $int7);
+$int7 = ~max($int9, ~max($int10, $int11));
+def_int $length12 = string_length(tostring($int7));
+def_string $string0 = tostring($int7);
+$string0 = substring($string0, calc($length12 - 2), $length12);
+return(tostring(calc($int7 / 100)), $string0);

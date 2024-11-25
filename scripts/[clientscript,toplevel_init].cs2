@@ -10,6 +10,9 @@ while ($component3 ! null) {
 	if ($component3 ! null) {
 		if_setop(1, enum(int, string, enum_1141, $int2), $component3);
 		if_setonop("toplevel_sidebutton_op(event_op, $enum1, $int2)", $component3);
+		if ($enum1 = enum_1745) {
+			if_setnoclickthrough(true, $component3);
+		}
 	}
 	$int2 = calc($int2 + 1);
 	$component3 = enum(int, component, enum_1138, $int2);
@@ -19,19 +22,7 @@ if (%varcint171 <= 0 & enum(enum, boolean, enum_1134, $enum1) = false) {
 }
 %varcint172, %varcint173 = null, -1;
 $component3 = enum(component, component, $enum1, toplevel_osrs_stretch:31);
-if ($component3 ! null) {
-	cc_deleteall($component3);
-	cc_create($component3, ^iftype_text, 0);
-	.cc_create($component3, ^iftype_text, 1);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setnoclickthrough(true);
-	cc_setonclick("opsound(0, 0)");
-	~toplevel_compass_setops;
-	.cc_setonvartransmit("toplevel_compass_setops(event_com, event_comsubid){var1021}");
-}
+~script7560($component3, $enum1);
 ~script1044;
 if ($enum1 = enum_139) {
 	setshowmouseovertext(false);
@@ -48,8 +39,13 @@ if ($enum1 = enum_139) {
 	~script4729(toplevel_osm:7, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
 	~script4729(toplevel_osm:19, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
 	~script4729(toplevel_osm:16, null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, false);
-	~script868(toplevel_osm:24);
-	~script957(toplevel_osm:25);
+	~script868(toplevel_osm:38);
+	~script957(toplevel_osm:39);
+	~script7608;
+	~script7612;
+	if (if_getheight(toplevel_osm:20) < 503) {
+		if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_osm:50);
+	}
 } else {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
@@ -67,4 +63,4 @@ if ($component4 ! null & $component5 ! null) {
 }
 ~toplevel_redraw($component0, $enum1);
 ~toplevel_subchange($component0, $enum1);
-~toplevel_sidebutton_switch(%varcint171, $enum1);
+~toplevel_sidebutton_switch(%varcint171, $enum1, 0);

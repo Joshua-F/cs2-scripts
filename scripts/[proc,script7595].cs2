@@ -1,0 +1,36 @@
+// 7595
+[proc,script7595](boolean $boolean0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 38862853;
+def_int $int4 = 38862857;
+def_int $int5 = 38862861;
+def_int $int6 = 38862865;
+def_component $component7 = interface_593:45;
+def_int $int8 = 38862875;
+def_int $int9 = 38862870;
+cc_deleteall($component7);
+if ($boolean0 = true) {
+	$int1 = ~options_button_on($component7, $int1);
+} else {
+	$int1 = ~options_button_off($component7, $int1);
+}
+def_boolean $boolean10 = false;
+if ($boolean0 = false) {
+	$boolean10 = true;
+}
+if_setonclick("script7594($boolean10)", $component7);
+if_sethide(false, $component7);
+cc_create($component7, ^iftype_text, $int1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Info");
+~script7600($boolean0);
+~script7596($boolean0);
+if ($boolean0 = false) {
+	cc_deleteall(interface_593:46);
+}

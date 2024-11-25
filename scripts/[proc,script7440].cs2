@@ -1,0 +1,8 @@
+// 7440
+[proc,script7440]
+~settings_ground_items_edit_mode(calc(1 - %varbit14872));
+if (%varbit14872 = 0) {
+	mes("Ground items edit mode disabled!");
+} else {
+	mes("Ground items edit mode enabled!");
+}

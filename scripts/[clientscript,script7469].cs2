@@ -1,0 +1,20 @@
+// 7469
+[clientscript,script7469](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
+~script7520($component2, $component3, $component4, $component5, $component6);
+~script7525($component7);
+cc_input_setonsubmit("script7527(event_com, event_comsubid)");
+cc_input_setonfocuschange("script7526(event_com, event_comsubid)");
+if (~script7487 = 1) {
+	~script7490;
+	~script7495;
+	~script7500;
+} else {
+	~script7472($component8);
+	~script7478($component9);
+	~script7483($component10);
+}
+~script7511;
+if_setonresize("script7510", $component0);
+if (string_length(%varcstring1233) > 0) {
+	if_setontimer("script7470(clientclock, $component0)", $component0);
+}

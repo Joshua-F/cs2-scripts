@@ -1,0 +1,32 @@
+// 7496
+[proc,script7496]
+def_int $int0 = calc(9 + 1 + enum_getoutputcount(enum_5624) + 1);
+def_int $count1 = enum_getoutputcount(enum_5624);
+def_dbrow $dbrow2 = null;
+def_int $count3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_string $text0 = "0";
+def_string $string1 = "";
+def_string $string2 = ",";
+def_string $string3 = "";
+while ($count3 < $count1) {
+	$dbrow2 = enum(int, dbrow, enum_5624, $count3);
+	if ($dbrow2 ! null) {
+		$string1 = db_getfield($dbrow2, dbtable_79:0, 0);
+		$int4 = db_getfield($dbrow2, dbtable_79:1, 0);
+		$text0 = ~tostring_spacer(hiscore_getmembercontributedxp_byname(lowercase($string1)), $string2);
+		if (cc_find(interface_894:17, $int0) = ^true) {
+			cc_settext($text0);
+		}
+		$string3 = $string1;
+		if (cc_find(interface_894:17, $count3) = ^true) {
+			~script7516($string3, 0, 0);
+		}
+		$int0 = calc($int0 + 2);
+	}
+	$count3 = calc($count3 + 1);
+}
+if (cc_find(interface_894:17, $int0) = ^true) {
+	cc_settext(~tostring_spacer(hiscore_getgrouptotalxp, $string2));
+}

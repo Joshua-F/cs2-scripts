@@ -1,0 +1,30 @@
+// 2118
+[proc,script2118]
+def_int $int0 = 58392590;
+def_int $int1 = 58392589;
+def_int $int2 = 58392592;
+def_int $int3 = 58392614;
+def_int $int4 = 58392594;
+def_int $int5 = 58392616;
+def_int $int6 = 58392618;
+def_int $int7 = 58392596;
+def_int $int8 = 58392620;
+def_int $int9 = 58392622;
+def_int $int10 = 58392598;
+def_int $int11 = 58392624;
+def_int $int12 = 58392625;
+def_int $int13 = 58392600;
+def_int $int14 = 58392627;
+def_int $int15 = 5;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = %varbit11539;
+def_struct $struct19 = null;
+while ($int16 < $int15) {
+	$int17 = ~script7445($int18, $int16);
+	if ($int17 >= 0) {
+		$struct19 = enum(int, struct, enum_5607, $int17);
+		~script2119($int16, $struct19);
+	}
+	$int16 = calc($int16 + 1);
+}

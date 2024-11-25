@@ -1,0 +1,30 @@
+// 5246
+[clientscript,script5246](struct $struct0, component $drop1)
+if_setsize(0, 0, ^setsize_abs, ^setsize_abs, interface_891:33);
+if_sethide(true, interface_891:33);
+def_int $int2 = -1;
+switch_component ($drop1) {
+	case interface_891:15 :
+		$int2 = 0;
+	case interface_891:39 :
+		$int2 = 1;
+	case interface_891:43 :
+		$int2 = 2;
+	case interface_891:47 :
+		$int2 = 3;
+	case interface_891:50 :
+		$int2 = 4;
+}
+def_struct $struct3 = enum(int, struct, enum_5607, ~script7445(%varbit11539, $int2));
+if (~script7444($struct3, 0) = 1) {
+	mes("You cannot remove the <struct_param($struct3, param_1991)> hotkey right now");
+	return;
+}
+if (~script7444($struct0, 1) = 1) {
+	mes("You cannot assign the <struct_param($struct0, param_1991)> hotkey right now");
+	return;
+}
+def_string $string0 = enum(int, string, enum_5612, %varbit11539);
+def_int $int4 = struct_param($struct0, param_1986);
+~script7446(%varbit11539, $int2, $int4);
+~script2118;

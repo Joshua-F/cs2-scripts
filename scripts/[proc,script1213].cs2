@@ -21,6 +21,10 @@ if (if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:74)) = tr
 	if ($component1 ! null) {
 		if_sethide(true, $component1);
 	}
+	$component1 = enum(component, component, $enum0, toplevel_osm:42);
+	if ($component1 ! null) {
+		if_sethide(true, $component1);
+	}
 } else {
 	$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:75);
 	if ($component1 ! null) {
@@ -35,6 +39,10 @@ if (if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:74)) = tr
 		if_sethide(false, $component1);
 	}
 	$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:42);
+	if ($component1 ! null) {
+		if_sethide(false, $component1);
+	}
+	$component1 = enum(component, component, $enum0, toplevel_osm:42);
 	if ($component1 ! null) {
 		if_sethide(false, $component1);
 	}

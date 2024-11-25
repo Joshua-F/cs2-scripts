@@ -1,0 +1,41 @@
+// 7603
+[proc,script7603](int $int0)(string, string, graphic, string, string, graphic, string, string, graphic, string, string, graphic)
+def_int $int1 = db_find_with_count(dbtable_78:0, $int0);
+def_dbrow $dbrow2 = db_findnext;
+def_int $int3 = -1;
+def_string $op0 = "";
+def_string $string1 = "";
+def_graphic $graphic4 = null;
+def_string $op2 = "";
+def_string $string3 = "";
+def_graphic $graphic5 = null;
+def_string $op4 = "";
+def_string $string5 = "";
+def_graphic $graphic6 = null;
+def_string $op6 = "";
+def_string $string7 = "";
+def_graphic $graphic7 = null;
+def_string $op8 = "";
+def_string $string9 = "";
+def_graphic $graphic8 = null;
+def_int $int9 = 0;
+def_int $int10 = db_getfieldcount($dbrow2, dbtable_78:1);
+while ($int9 < $int10) {
+	$int3 = -1;
+	$op0 = "";
+	$string1 = "";
+	$graphic4 = null;
+	$int3, $op0, $string1, $graphic4 = db_getfield($dbrow2, dbtable_78:1, $int9);
+	switch_int ($int3) {
+		case 0 :
+			$op2, $string3, $graphic5 = $op0, $string1, $graphic4;
+		case 1 :
+			$op4, $string5, $graphic6 = $op0, $string1, $graphic4;
+		case 2 :
+			$op6, $string7, $graphic7 = $op0, $string1, $graphic4;
+		case 3 :
+			$op8, $string9, $graphic8 = $op0, $string1, $graphic4;
+	}
+	$int9 = calc($int9 + 1);
+}
+return($op2, $string3, $graphic5, $op4, $string5, $graphic6, $op6, $string7, $graphic7, $op8, $string9, $graphic8);

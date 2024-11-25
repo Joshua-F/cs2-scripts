@@ -1,0 +1,14 @@
+// 7541
+[proc,script7541]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (~on_enhanced_desktop = 1 & %varbit13982 = 1) {
+	shiftop_player_del(1);
+} else if (~on_enhanced_mobile = 1 & %varbit13981 = 0) {
+	shiftop_player_del(1);
+} else if (%varbit11519 = 1) {
+	shiftop_player_set(1, "Lookup", script7542);
+} else {
+	shiftop_player_del(1);
+}

@@ -4,8 +4,10 @@ if (~on_enhanced_any = 0) {
 	return;
 }
 def_component $component0 = interface_160:40;
-if (~on_mobile = true) {
-	$component0 = interface_311:42;
+if (~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
+	$component0 = interface_895:37;
+} else if (~on_mobile = true & %varbit6254 = 1) {
+	$component0 = interface_898:37;
 }
 if_setontimer(null, $component0);
 cc_deleteall($component0);

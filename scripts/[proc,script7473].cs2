@@ -1,0 +1,82 @@
+// 7473
+[proc,script7473]
+def_int $int0 = calc(enum_getoutputcount(enum_5624) + 2 + 9 + 1);
+def_int $count1 = enum_getoutputcount(enum_5624);
+def_dbrow $dbrow2 = null;
+def_int $count3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_string $string0 = "";
+def_int $int19 = 0;
+def_int $int20 = 0;
+while ($count3 < $count1) {
+	$dbrow2 = enum(int, dbrow, enum_5624, $count3);
+	if ($dbrow2 ! null) {
+		$int4 = db_getfield($dbrow2, dbtable_79:1, 0);
+		$int5 = hiscore_getskillxp($int4);
+		$int8 = calc(hiscore_getskillrank($int4) + 1);
+		$int6 = calc($int6 + $int5);
+		$int10 = ~script7514($int5);
+		$int11 = calc($int11 + $int10);
+		switch_dbrow ($dbrow2) {
+			case dbrow_3986 :
+				$int14, $int7 = $int10, calc($int7 + $int5);
+			case dbrow_3975 :
+				$int15, $int7 = $int10, calc($int7 + $int5);
+			case dbrow_3980 :
+				$int16, $int7 = $int10, calc($int7 + $int5);
+			case dbrow_3974 :
+				$int17, $int7 = $int10, calc($int7 + $int5);
+			case dbrow_3977 :
+				$int18, $int7 = $int10, calc($int7 + $int5);
+			case dbrow_3989 :
+				$int12, $int7 = $int10, calc($int7 + $int5);
+			case dbrow_3983 :
+				$int13, $int7 = $int10, calc($int7 + $int5);
+		}
+		if (cc_find(interface_894:7, $int0) = ^true) {
+			cc_settext(tostring($int10));
+		}
+		$int20, $int19 = ~script7515($int5);
+		if ($int20 = 0 & $int19 = 0) {
+			$string0 = "Skill: <db_getfield($dbrow2, dbtable_79:0, 0)><br>Rank: <~tostring_spacer($int8, ",")><br>Experience: <~tostring_spacer($int5, ",")>";
+		} else {
+			$string0 = "Skill: <db_getfield($dbrow2, dbtable_79:0, 0)><br>Rank: <~tostring_spacer($int8, ",")><br>Experience: <~tostring_spacer($int5, ",")><br>Remaining XP: <~tostring_spacer(calc($int19 - $int20), ",")>";
+		}
+		if (cc_find(interface_894:7, $count3) = ^true) {
+			~script7516($string0, $int20, $int19);
+		}
+		$int0 = calc($int0 + 2);
+	}
+	$count3 = calc($count3 + 1);
+}
+def_string $text1 = "0";
+def_string $string2 = "0";
+$text1, $string2 = ~script7474($int14, $int15, $int16, $int17, $int18, $int13, $int12);
+if (cc_find(interface_894:7, $int0) = ^true) {
+	cc_settext($text1);
+}
+if (cc_find(interface_894:7, $count1) = ^true) {
+	~script7516("Combat<br>Exact Combat Level: <$text1>.<$string2><br>Experience: <~tostring_spacer($int7, ",")>", 0, 0);
+}
+$int0 = calc($int0 + 2);
+if (cc_find(interface_894:7, $int0) = ^true) {
+	cc_settext(tostring($int11));
+}
+$int9 = calc(hiscore_getoverallrank + 1);
+if (cc_find(interface_894:7, calc($count1 + 1)) = ^true) {
+	~script7516("Overall<br>Rank: <~tostring_spacer($int9, ",")><br>Experience: <~tostring_spacer($int6, ",")>", 0, 0);
+}

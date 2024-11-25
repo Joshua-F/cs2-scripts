@@ -1,0 +1,22 @@
+// 7544
+[proc,script7544]
+cc_deleteall(interface_894:21);
+def_string $text0 = "";
+if_setonop("opsound(event_op, 2046)", interface_894:21);
+if (%varbit11519 = 1) {
+	$text0 = "<col=ff981f>In-world lookup: </col><col=00ff00>Enabled</col>";
+	~stonebutton_draw(false, "<col=ff981f>In-world lookup: </col><col=00ff00>Enabled</col>", p12_full, -1, interface_894:21);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script2426(true, $text0, event_com, p12_full, -1)", interface_894:21);
+	}
+	if_setonmouseleave("script2426(false, $text0, event_com, p12_full, -1)", interface_894:21);
+	if_setop(1, "Disable in-world lookup", interface_894:21);
+} else {
+	$text0 = "<col=ff981f>In-world lookup: </col><col=ff0000>Disabled</col>";
+	~stonebutton_draw(false, "<col=ff981f>In-world lookup: </col><col=ff0000>Disabled</col>", p12_full, -1, interface_894:21);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script2426(true, $text0, event_com, p12_full, -1)", interface_894:21);
+	}
+	if_setonmouseleave("script2426(false, $text0, event_com, p12_full, -1)", interface_894:21);
+	if_setop(1, "Enable in-world lookup", interface_894:21);
+}

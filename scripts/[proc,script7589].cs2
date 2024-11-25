@@ -1,0 +1,14 @@
+// 7589
+[proc,script7589]
+if (~on_enhanced_mobile = 0) {
+	return;
+}
+if (%varcint1215 = 1) {
+	%varcint1215 = 0;
+} else {
+	%varcint1215 = 1;
+}
+if (%varcint1215 = 1 & %varcint1214 = 1) {
+	~script7586(0);
+}
+~script7591;

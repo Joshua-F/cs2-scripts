@@ -1,0 +1,12 @@
+// 7591
+[proc,script7591]
+if (~on_enhanced_mobile = 0) {
+	return;
+}
+def_int $colour0 = ~settings_get_colour_or_default(^setting_tile_highlight_colour_colour);
+if (%varcint1215 = 1) {
+	highlight_tile_setup(6, null, 0, 0, 64);
+} else {
+	highlight_tile_setup(6, $colour0, 2, 50, 90);
+}
+~script7432(3);

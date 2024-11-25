@@ -1,44 +1,63 @@
 // 5355
 [proc,script5355](enum $enum0)
-def_component $component1 = enum(component, component, $enum0, toplevel_osrs_stretch:34);
-$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:35);
-def_int $int2 = -1;
-def_int $int3 = -1;
+def_component $component1 = enum(component, component, $enum0, toplevel_osrs_stretch:35);
+def_component $component2 = enum(component, component, $enum0, toplevel_osrs_stretch:96);
+def_int $width3 = -1;
+def_int $int4 = -1;
+def_boolean $boolean5 = ~on_mobile;
 if ($component1 ! null) {
 	~popout_tooltip_clear;
-	if (~popout_available(-1) = 1) {
+	if (~popout_available(-1) = true) {
 		if_sethide(false, interface_728:0);
-		if (if_hassub(interface_728:14) = true) {
-			$int3, $int2 = 1, calc(42 + 270);
-		} else {
-			$int3, $int2 = 0, 42;
-		}
-		$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:35);
-		if ($component1 ! null) {
-			if_setsize($int2, 0, ^setsize_abs, ^setsize_minus, $component1);
-		}
-		$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:34);
-		if (~on_mobile = true) {
-			~script1282;
-			$int2 = ~min(safearea_getmaxx, calc(if_getwidth($component1) - scale(%varcint381, 16384, if_getwidth($component1))));
-			$int2 = calc(if_getwidth($component1) - $int2 + 42);
-			if ($component1 ! null) {
-				if_setsize($int2, 0, ^setsize_minus, ^setsize_minus, $component1);
+		if ($boolean5 = true) {
+			if (%varbit542 = 1) {
+				if_sethide(true, interface_728:0);
+				return;
 			}
+			if (%varcint1223 ! 1 & %varcint1223 ! 2 & %varcint1223 ! 0) {
+				%varcint1223 = 0;
+			}
+			if_setposition(6, 6, ^setpos_abs_right, ^setpos_abs_top, interface_728:9);
+			if_setsize(70, 12, ^setsize_minus, ^setsize_minus, interface_728:9);
+			if (%varcint1223 = 1) {
+				if_setposition(6, calc(20 + if_getheight($component2)), ^setpos_abs_right, ^setpos_abs_top, interface_728:9);
+				if_setsize(70, 12, ^setsize_minus, ^setsize_minus, interface_728:9);
+			}
+			if_setposition(0, 4, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
+			if_setonop("script7567", interface_728:36);
+			if_sethide(true, interface_728:4);
+			if_sethide(false, interface_728:7);
+			if_setonvartransmit("script7570(%varbit13090){var1021}", interface_728:24);
+			~script7568($enum0);
+			~script7571;
 		} else {
+			if (if_hassub(interface_728:9) = true) {
+				$int4, $width3 = 1, calc(42 + 270);
+			} else {
+				$int4, $width3 = 0, 42;
+			}
+			$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:35);
 			if ($component1 ! null) {
-				if_setsize($int2, 0, ^setsize_minus, ^setsize_minus, $component1);
+				if_setsize($width3, 0, ^setsize_abs, ^setsize_minus, $component1);
+			}
+			if_setposition(6, 6, ^setpos_abs_left, ^setpos_abs_top, interface_728:9);
+			if_setsize(48, 12, ^setsize_minus, ^setsize_minus, interface_728:9);
+			if_sethide(false, interface_728:4);
+			if_sethide(true, interface_728:7);
+			$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:34);
+			if ($component1 ! null) {
+				if_setsize($width3, 0, ^setsize_minus, ^setsize_minus, $component1);
 			}
 			if (~on_enhanced_desktop = 1) {
 				sidebar_setwidth(0, 42);
-				if ($int3 = 1) {
+				if ($int4 = 1) {
 					sidebar_setwidth(1, 270);
 				} else {
 					sidebar_clearwidth(true);
 				}
 			}
+			~script5356;
 		}
-		~script5356;
 	} else {
 		if_sethide(true, interface_728:0);
 		$component1 = enum(component, component, $enum0, toplevel_osrs_stretch:34);
@@ -60,3 +79,4 @@ if ($component1 ! null) {
 		sidebar_clearwidth(true);
 	}
 }
+~script7541;

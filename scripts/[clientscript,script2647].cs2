@@ -1,11 +1,11 @@
 // 2647
 [clientscript,script2647](component $component0)
 if (%var281 ! 200 & %var2686 ! 200) {
-	if_setgraphic("orb_frame,0", $component0);
+	if_setgraphic(~graphic_device("orb_frame,0", graphic_5791), $component0);
 	return;
 }
 if (calc(clientclock % 20) < 10) {
-	if_setgraphic("orb_frame,2", $component0);
+	if_setgraphic(~graphic_device("orb_frame,2", graphic_5793), $component0);
 } else {
-	if_setgraphic("orb_frame,0", $component0);
+	if_setgraphic(~graphic_device("orb_frame,0", graphic_5791), $component0);
 }

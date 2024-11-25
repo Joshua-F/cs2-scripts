@@ -1,0 +1,12 @@
+// 7536
+[clientscript,script7536](component $component0, component $component1)
+def_int $comsubid2 = ~v2_stone_button_filled($component0);
+cc_create($component0, ^iftype_graphic, $comsubid2);
+cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic(graphic_2410);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script7537($component0, $component1)", $component0);
+	if_setonmouseleave("script7538($component0, $component1)", $component0);
+}
+if_setonop("settings_side_op_sound", $component0);

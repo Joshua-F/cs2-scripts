@@ -43,33 +43,8 @@ switch_enum ($enum1) {
 			if_setclickmask(fixed_map_clickmask, enum(component, component, $enum1, toplevel_osrs_stretch:30));
 		}
 	case enum_1745 :
-		if (%varbit6257 = 1 | %varbit542 = 1) {
-			if_sethide(true, toplevel_osm:26);
-		} else {
-			if_sethide(false, toplevel_osm:26);
-			_2308(true, toplevel_osm:26);
-			switch_int (%varbit6255) {
-				case 2 :
-					if_setgraphic(graphic_1718, toplevel_osm:46);
-					if_setop(1, "Toggle single-tap mode", toplevel_osm:26);
-				case 1 :
-					if_setgraphic(graphic_1717, toplevel_osm:46);
-					if_setop(1, "Toggle tap-to-drop mode", toplevel_osm:26);
-				case 3 :
-					if_setgraphic(graphic_1716, toplevel_osm:46);
-					if_setop(1, "Show Keyboard", toplevel_osm:26);
-				case default :
-					if_setgraphic(graphic_1715, toplevel_osm:46);
-					if_setop(1, "", toplevel_osm:26);
-			}
-			if (%varbit6255 ! 3 & %varbit6256 = 0) {
-				if_settrans(155, toplevel_osm:46);
-			} else {
-				if_settrans(0, toplevel_osm:46);
-			}
-		}
 		~mobile_chatbox_resize;
-		if_sethide(~int_to_bool(%varbit6254), toplevel_osm:38);
+		if_sethide(~int_to_bool(%varbit6254), toplevel_osm:31);
 		~script2526;
 		%varcint384 = clientclock;
 }

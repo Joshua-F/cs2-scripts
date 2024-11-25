@@ -1,0 +1,23 @@
+// 7597
+[proc,script7597](int $int0, int $int1)(int)
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_component $component4 = enum(int, component, enum_5605, $int0);
+if (if_gethide($component4) = false) {
+	$int2 = if_getx($component4);
+	$int3 = if_gety($component4);
+	if ($int0 = 4 | $int0 = 5) {
+		$int2 = calc($int2 + if_getx(interface_593:21));
+		$int3 = calc($int3 + if_gety(interface_593:21));
+	}
+	cc_create(interface_593:47, ^iftype_rectangle, $int1);
+	$int1 = calc($int1 + 1);
+	cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(if_getwidth($component4), if_getheight($component4), ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_settrans(255);
+	cc_setonclick("script7598($int0)");
+	cc_setnoclickthrough(true);
+}
+return($int1);

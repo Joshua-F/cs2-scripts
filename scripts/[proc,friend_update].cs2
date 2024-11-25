@@ -13,22 +13,24 @@ def_int $world11 = 0;
 def_int $height12 = 0;
 def_int $int13 = 15;
 def_boolean $boolean14 = null;
-def_int $count15 = friend_count;
-if ($count15 <= -2) {
+def_int $int15 = ~on_enhanced_any;
+def_int $world16 = map_world;
+def_int $count17 = friend_count;
+if ($count17 <= -2) {
 	if (%varbit8119 = 1) {
 		if_settext("Loading friends list<br>Please wait...", $component7);
 	} else {
 		if_settext("You must set a name<br>before using this.", $component7);
 	}
 	if_sethide(true, $component0);
-} else if ($count15 = -1) {
+} else if ($count17 = -1) {
 	if (%varbit8119 = 1) {
 		if_settext("Loading friends list<br>Please wait...", $component7);
 	} else {
 		if_settext("You must set a name<br>before using this.", $component7);
 	}
 	if_sethide(true, $component0);
-} else if ($count15 = 0) {
+} else if ($count17 = 0) {
 	if_settext("You may add friends by using the button below, or by <~text_device("right-clicking", "long pressing")> on a message from them and selecting to add them as a friend.", $component7);
 	if_sethide(true, $component0);
 } else {
@@ -84,7 +86,7 @@ if ($count15 <= -2) {
 			}
 	}
 	_3639;
-	while ($count9 < $count15) {
+	while ($count9 < $count17) {
 		$string0, $string1 = friend_getname($count9);
 		cc_create($component5, ^iftype_text, $int10);
 		$int10 = calc($int10 + 1);
@@ -100,6 +102,11 @@ if ($count15 <= -2) {
 		if ($world11 ! 0) {
 			cc_setop(1, "Message");
 			cc_setop(2, "");
+			if ($int15 = 1 & $world16 ! $world11) {
+				cc_setop(4, "Switch world");
+			} else {
+				cc_setop(4, "");
+			}
 		} else {
 			cc_setop(1, "");
 			cc_setop(2, "Message");
@@ -114,18 +121,18 @@ if ($count15 <= -2) {
 		if (string_length($string1) > 0) {
 			if ($boolean14 = true) {
 				cc_setop(10, "Reveal previous name");
-				cc_setonop("friend_op(event_op, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0)");
+				cc_setonop("friend_op(event_op, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0, $world11)");
 			} else {
 				$string1 = "Previous name:<br><$string1>";
 				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component8, $string1, 25, 190)");
 				cc_setonmouseleave("deltooltip($component8)");
-				cc_setonop("friend_op(event_op, event_opbase, null, -1, -1, "null", "null")");
+				cc_setonop("friend_op(event_op, event_opbase, null, -1, -1, "null", "null", $world11)");
 			}
 			.cc_sethide(false);
 		} else {
 			cc_setonmouseover("deltooltip($component8)");
 			.cc_sethide(true);
-			cc_setonop("friend_op(event_op, event_opbase, null, -1, -1, "null", "null")");
+			cc_setonop("friend_op(event_op, event_opbase, null, -1, -1, "null", "null", $world11)");
 		}
 		cc_create($component5, ^iftype_text, $int10);
 		$int10 = calc($int10 + 1);
@@ -150,7 +157,7 @@ if ($count15 <= -2) {
 		}
 		$count9, $height12 = calc($count9 + 1), calc($height12 + $int13);
 	}
-	if ($count15 >= 1) {
+	if ($count17 >= 1) {
 		$height12 = calc($height12 + 5);
 	}
 }

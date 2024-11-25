@@ -1,0 +1,16 @@
+// 7585
+[proc,script7585]
+if (~on_enhanced_mobile = 0) {
+	return;
+}
+if (%varcint1214 = 1) {
+	%varcint1214 = 0;
+	mes("Tile highlighting disabled!");
+} else {
+	%varcint1214 = 1;
+	mes("Tile highlighting enabled!");
+}
+if (%varcint1214 = 1 & %varcint1215 = 1) {
+	~script7590(0);
+}
+~script7587;

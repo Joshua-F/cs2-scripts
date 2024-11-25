@@ -1,6 +1,6 @@
 // 6687
 [proc,script6687](int $int0)
-if (~on_enhanced_desktop = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 def_int $colour1 = ~settings_get_colour_or_default(262);
@@ -17,11 +17,7 @@ if ($int0 = 1) {
 	}
 	highlight_npc_setup(6, $colour1, 2, 50, $flags2);
 	highlight_group_setup(6, $colour1, 2, 50, $flags2);
-	shiftop_npc_set(1, "Tag", script6688);
-	shiftop_npc_set(2, "Tag-All", script6689);
 } else {
 	highlight_npc_setup(6, null, 0, 0, 75);
 	highlight_group_setup(6, null, 0, 0, 75);
-	shiftop_npc_del(1);
-	shiftop_npc_del(2);
 }

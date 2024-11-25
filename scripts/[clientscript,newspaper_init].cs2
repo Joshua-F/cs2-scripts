@@ -19,11 +19,3 @@ cc_setop(1, "Close");
 cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic2, null)");
 cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic3, null)");
 cc_setonop("closebutton_click");
-def_string $url0 = "https://osrs.game/Gazette";
-if (~on_ios = 0) {
-	~gazette_button(interface_659:3, false);
-	if_setonmouserepeat("gazette_button(interface_659:3, true)", interface_659:3);
-	if_setonmouseleave("gazette_button(interface_659:3, false)", interface_659:3);
-	if_setop(1, "Link", interface_659:3);
-	if_setonop("openurl_raw($url0, true, true)", interface_659:3);
-}

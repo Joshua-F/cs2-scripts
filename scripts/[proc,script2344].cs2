@@ -1,7 +1,7 @@
 // 2344
 [proc,script2344](component $component0, int $int1, component $component2, string $string0, string $string1, fontmetrics $fontmetrics3)
 if (~on_enhanced_any = 1) {
-	~mouseover_tooltip_setup($string0, $string1, mouse_getx, mouse_gety, $component2, $component0, $int1, 1);
+	~mouseover_tooltip_setup($string0, $string1, mouse_getx, mouse_gety, $component2, $component0, $int1, 0, 0, 1);
 	return;
 }
 def_graphic $graphic4 = p12_full;

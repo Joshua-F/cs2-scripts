@@ -1,0 +1,8 @@
+// 7470
+[clientscript,script7470](int $clock0, component $component1)
+if (calc(clientclock - $clock0) < 50) {
+	return;
+}
+if_setontimer(null, $component1);
+~script7529(%varcstring1233, %varcint1227);
+%varcstring1233 = "";

@@ -15,7 +15,7 @@ if (~on_mobile = true) {
 	} else {
 		if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
 	}
-	~script4729(interface_90:4, $component0, clearbit(clearbit(52968, 13), 12), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script4729(interface_90:4, $component0, 52968, ^setpos_abs_left, ^setpos_abs_top, false);
 } else if (%varbit6715 = 3) {
 	if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 	~script4729(interface_90:4, $component0, clearbit(clearbit(52968, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);

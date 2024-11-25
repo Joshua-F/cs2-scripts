@@ -51,10 +51,11 @@ def_int $int18 = 0;
 def_int $int19 = 0;
 def_int $int20 = 0;
 def_int $int21 = 0;
+def_int $int22 = 0;
 if (clientclock > %varcint1) {
 	$string2, $string3 = "", "";
 }
-def_int $trans22 = 150;
+def_int $trans23 = 150;
 if ($int6 = 1 & string_length(%varcstring1014) > 0) {
 	if (string_length(%varcstring1015) > 0) {
 		$string6, $string8 = ~script632($string2);
@@ -90,93 +91,101 @@ if ($int6 = 1 & string_length(%varcstring1014) > 0) {
 				$int13, $int14 = 0, 0;
 			}
 		}
+		if (%varcint1218 > 0) {
+			$int18 = ~max($int18, 110);
+			$int22 = 20;
+		}
 		$int18 = calc($int18 + 6);
-		$int19 = calc($int17 * 16 + 6);
+		$int19 = calc($int17 * 16 + $int22 + 6);
 	} else {
 		$string4 = $string2;
 		$int19 = calc(paraheight($string4, 194, p12_full) * 14 + 6);
 		$int18 = calc(parawidth($string4, 194, p12_full) + 6);
+		if (%varcint1218 > 0) {
+			$int18 = ~max($int18, 110);
+			$int22 = 20;
+		}
 	}
-	$trans22 = 64;
+	$trans23 = 64;
 }
-def_int $int23 = ~max($int7, $int18);
-$int23 = ~max($int23, $int9);
-def_int $int24 = mouse_getx;
-def_int $int25 = mouse_gety;
-def_boolean $boolean26 = ~on_mobile;
-if ($boolean26 = true & %varcint1016 >= 0 & %varcint1017 >= 0) {
-	$int24 = %varcint1016;
-	$int25 = %varcint1017;
+def_int $int24 = ~max($int7, $int18);
+$int24 = ~max($int24, $int9);
+def_int $int25 = mouse_getx;
+def_int $int26 = mouse_gety;
+def_boolean $boolean27 = ~on_mobile;
+if ($boolean27 = true & %varcint1016 >= 0 & %varcint1017 >= 0) {
+	$int25 = %varcint1016;
+	$int26 = %varcint1017;
 }
 if ($enum4 = enum_1745) {
-	$int24 = calc($int24 - if_getx(toplevel_osm:19));
-	$int25 = calc($int25 - if_gety(toplevel_osm:19));
+	$int25 = calc($int25 - if_getx(toplevel_osm:19));
+	$int26 = calc($int26 - if_gety(toplevel_osm:19));
 }
-if ($boolean26 = true) {
-	$int24 = ~max(calc($int24 - 0 - $int23), 0);
+if ($boolean27 = true) {
+	$int25 = ~max(calc($int25 - 0 - $int24), 0);
 } else {
-	$int24 = ~min(calc($int24 + 0), calc(if_getwidth($component1) - $int23));
+	$int25 = ~min(calc($int25 + 0), calc(if_getwidth($component1) - $int24));
 }
-$int25 = ~min(calc($int25 + 24), calc(if_getheight($component1) - ($int8 + $int19 + $int10 - 2)));
+$int26 = ~min(calc($int26 + 24), calc(if_getheight($component1) - ($int8 + $int19 + $int10 - 2)));
 if ($int5 = 1) {
 	cc_create($component1, ^iftype_rectangle, $int0);
-	cc_setposition($int24, $int25, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize($int23, $int8, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int25, $int26, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int24, $int8, ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0x0e0e0c);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_rectangle, $int0);
-	cc_setposition(calc($int24 + 1), calc($int25 + 1), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($int23 - 2), calc($int8 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int25 + 1), calc($int26 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int24 - 2), calc($int8 - 2), ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0x474745);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_graphic, $int0);
-	cc_setsize(calc($int23 - 4), calc($int8 - 4), ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int24 + 2), calc($int25 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int24 - 4), calc($int8 - 4), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int25 + 2), calc($int26 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic(tradebacking);
 	cc_settiling(true);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_text, $int0);
-	cc_setsize(calc($int23 - 8), calc($int8 - 8), ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int24 + 4), calc($int25 + 4), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int24 - 8), calc($int8 - 8), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int25 + 4), calc($int26 + 4), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settext($string0);
 	cc_setcolour(^white);
 	$int0 = calc($int0 + 1);
-	$int25 = calc($int25 + $int8 - 1);
+	$int26 = calc($int26 + $int8 - 1);
 }
 if (string_length($string4) > 0) {
 	cc_create($component1, ^iftype_rectangle, $int0);
-	cc_setposition($int24, $int25, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize($int23, $int19, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int25, $int26, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int24, calc($int19 + $int22), ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0x0e0e0c);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_rectangle, $int0);
-	cc_setposition(calc($int24 + 1), calc($int25 + 1), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($int23 - 2), calc($int19 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int25 + 1), calc($int26 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int24 - 2), calc($int19 - 2 + $int22), ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0x474745);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_graphic, $int0);
-	cc_setsize(calc($int23 - 4), calc($int19 - 4), ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int24 + 2), calc($int25 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int24 - 4), calc($int19 - 4 + $int22), ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int25 + 2), calc($int26 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic(tradebacking);
 	cc_settiling(true);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	if (string_length($string5) > 0) {
 		cc_create($component1, ^iftype_text, $int0);
-		cc_setsize(calc($int23 - 6), calc($int19 - 6), ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int24 + 3), calc($int25 + 3), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(calc($int24 - 6), calc($int19 - 6), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int25 + 3), calc($int26 + 3), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 16);
@@ -184,8 +193,8 @@ if (string_length($string4) > 0) {
 		cc_setcolour(^white);
 		$int0 = calc($int0 + 1);
 		cc_create($component1, ^iftype_text, $int0);
-		cc_setsize(calc($int23 - 6), calc($int19 - 6), ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int24 + 3), calc($int25 + 3), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(calc($int24 - 6), calc($int19 - 6), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int25 + 3), calc($int26 + 3), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_right, ^settextalign_centre, 16);
@@ -194,8 +203,8 @@ if (string_length($string4) > 0) {
 		$int0 = calc($int0 + 1);
 	} else {
 		cc_create($component1, ^iftype_text, $int0);
-		cc_setsize(calc($int23 - 6), calc($int19 - 6), ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int24 + 3), calc($int25 + 3), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(calc($int24 - 6), calc($int19 - 6), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int25 + 3), calc($int26 + 3), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -203,33 +212,47 @@ if (string_length($string4) > 0) {
 		cc_setcolour(^white);
 		$int0 = calc($int0 + 1);
 	}
-	$int25 = calc($int25 + $int19 - 1);
+	if (%varcint1218 > 0) {
+		cc_create($component1, ^iftype_rectangle, $int0);
+		cc_setposition(calc($int25 + 5), calc($int26 + $int19), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(calc($int24 - 10), 15, ^setsize_abs, ^setsize_abs);
+		cc_setfill(true);
+		cc_setcolour(0x002200);
+		$int0 = calc($int0 + 1);
+		cc_create($component1, ^iftype_rectangle, $int0);
+		cc_setposition(calc($int25 + 5), calc($int26 + $int19), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(scale(%varcint1217, %varcint1218, calc($int24 - 12)), 15, ^setsize_abs, ^setsize_abs);
+		cc_setfill(true);
+		cc_setcolour(0x006600);
+		$int0 = calc($int0 + 1);
+	}
+	$int26 = calc($int26 + $int19 - 1);
 }
 if (%varbit13133 = 0 & $int3 > 1 & $int5 = 1) {
-	$int11 = calc($int24 + ($int23 - $int9));
+	$int11 = calc($int25 + ($int24 - $int9));
 	cc_create($component1, ^iftype_rectangle, $int0);
-	cc_setposition($int11, $int25, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition($int11, $int26, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0x0e0e0c);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_rectangle, $int0);
-	cc_setposition(calc($int11 + 1), calc($int25 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int11 + 1), calc($int26 + 1), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int9 - 2), calc($int10 - 2), ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0x474745);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_graphic, $int0);
-	cc_setposition(calc($int11 + 2), calc($int25 + 2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int11 + 2), calc($int26 + 2), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int9 - 4), calc($int10 - 4), ^setsize_abs, ^setsize_abs);
 	cc_setgraphic(tradebacking);
 	cc_settiling(true);
-	cc_settrans($trans22);
+	cc_settrans($trans23);
 	$int0 = calc($int0 + 1);
 	cc_create($component1, ^iftype_text, $int0);
-	cc_setposition(calc($int11 + 3), calc($int25 + 4), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int11 + 3), calc($int26 + 4), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int9 - 6), calc($int10 - 6), ^setsize_abs, ^setsize_abs);
 	cc_settextfont(p11_full);
 	cc_settextshadow(true);

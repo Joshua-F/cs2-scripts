@@ -1,0 +1,16 @@
+// 7435
+[proc,script7435]
+if (~on_mobile = false) {
+	return;
+}
+if (%varbit11528 = 1) {
+	if (%varcint1214 = 1) {
+		~script7586(0);
+		mes("Tile highlighting disabled!");
+	} else {
+		mes("Walk enabled!");
+	}
+} else {
+	mes("Walk disabled!");
+}
+~script7436;

@@ -1,6 +1,10 @@
 // 180
 [proc,chat_alert_enable](int $int0)
-if ($int0 = %varcint41) {
+def_int $int1 = 0;
+if (~on_mobile = true & %varcint1220 = 1) {
+	$int1 = 1;
+}
+if ($int0 = %varcint41 & $int1 = 0) {
 	return;
 }
 if ($int0 = 3 & %var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0)) {
@@ -10,4 +14,8 @@ if (~chat_alert_get($int0) > 24) {
 	return;
 }
 ~chat_alert_set($int0, 249);
-if_setontimer("chat_alert_flash($int0)", enum(int, component, enum_683, $int0));
+if ($int1 = 1) {
+	if_setontimer("chat_alert_flash($int0)", toplevel_osm:46);
+} else {
+	if_setontimer("chat_alert_flash($int0)", enum(int, component, enum_683, $int0));
+}

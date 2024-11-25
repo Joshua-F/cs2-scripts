@@ -1,6 +1,10 @@
 // 6657
 [proc,script6657](dbrow $dbrow0)(int)
 switch_dbrow ($dbrow0) {
+	case dbrow_3936 :
+		if (%varbit6108 >= 45) {
+			return(1);
+		}
 	case dbrow_1037 :
 		if (%varbit9016 >= 192) {
 			return(1);

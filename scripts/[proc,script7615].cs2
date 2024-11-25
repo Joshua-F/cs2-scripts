@@ -1,0 +1,13 @@
+// 7615
+[proc,script7615]
+if (%varcint1222 = 1) {
+	if_setgraphic("side_icons,42", toplevel_osm:110);
+	if_setop(1, "Show More", toplevel_osm:103);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, toplevel_osm:85);
+	if_setsize(58, 280, ^setsize_abs, ^setsize_abs, toplevel_osm:50);
+} else {
+	if_setgraphic("side_icons,41", toplevel_osm:110);
+	if_setop(1, "Show Less", toplevel_osm:103);
+	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, toplevel_osm:85);
+	if_setsize(85, 280, ^setsize_abs, ^setsize_abs, toplevel_osm:50);
+}

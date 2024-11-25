@@ -1,0 +1,13 @@
+// 7534
+[proc,script7534](int $int0)
+def_string $string0 = stringvector_get(stringvector_5, $int0);
+if (string_length($string0) <= 0) {
+	return;
+}
+hiscore_setapi(0);
+hiscore_lookup($string0, 0);
+if_sethide(false, interface_894:3);
+cc_deleteall(interface_894:3);
+~loading_icon_init(interface_894:3, null, enum_3789, 10, 500, 3000, 512, 1024, 0, 3, "");
+if_setontimer("script7530($string0, 1)", interface_894:1);
+if_setontimer("script7535($int0)", interface_894:1);

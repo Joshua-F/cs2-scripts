@@ -1,0 +1,24 @@
+// 7411
+[proc,script7411](component $component0, int $int1, struct $struct2)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+def_int $int3 = ~script7422($int1);
+if (struct_param($struct2, param_1994) = 1) {
+	if ($int3 = 1) {
+		$int3 = 0;
+	} else {
+		$int3 = 1;
+	}
+}
+~script7421($int1, $int3);
+cc_settiling(true);
+.cc_create($component0, ^iftype_graphic, 1);
+.cc_setsize(struct_param($struct2, param_1989), struct_param($struct2, param_1990), ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_settiling(true);
+if_setonop("script7423(event_op, $int1, $struct2, $component0)", $component0);
+~script7425($int1, $component0, $struct2);
+~script7424($int1, $struct2);
+~script7420($int1, $component0, $struct2);

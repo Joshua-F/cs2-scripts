@@ -1,0 +1,8 @@
+// 7516
+[proc,script7516](string $string0, int $int0, int $int1)
+if (~on_mobile = false) {
+	cc_setonmouserepeat("script7606(event_com, event_comsubid, interface_894:2, $string0, $int0, $int1)");
+	cc_setonmouseleave("deltooltip(interface_894:2)");
+} else {
+	cc_setonclick("script7517(event_com, event_comsubid, interface_894:2, $string0, $int0, $int1)");
+}

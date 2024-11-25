@@ -1,0 +1,10 @@
+// 7613
+[clientscript,script7613](int $int0)
+if ($int0 = %varbit3756) {
+	return;
+}
+if (%varbit3756 = 0) {
+	if_setgraphic(graphic_5767, toplevel_osm:103);
+	if_sethide(false, toplevel_osm:110);
+}
+if_setonvartransmit("script7613(%varbit3756){var1021}", toplevel_osm:103);

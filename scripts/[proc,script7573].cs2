@@ -1,0 +1,13 @@
+// 7573
+[proc,script7573](int $comsubid0)
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (~rental_world = 0 & ($comsubid0 = 0 | $comsubid0 > 5000 | $comsubid0 <= 260)) {
+	mes("That player is not on an Old School RuneScape world.");
+} else if (cc_find(interface_896:1, $comsubid0) = ^true) {
+	mes("Attempting to switch worlds...");
+	cc_triggerop(1);
+} else {
+	mes("Unable to join that players world.");
+}

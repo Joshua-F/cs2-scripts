@@ -1,6 +1,10 @@
 // 4743
 [proc,highlighting_channel_setup]
-~script6681;
+if (~on_enhanced_desktop = 1) {
+	~script6681;
+} else {
+	~script7584;
+}
 ~entity_highlight_setup(5, 2, 0, true, true, true, true);
 ~entity_highlight_setup(4, 2, 0, true, true, true, true);
 ~script5198;

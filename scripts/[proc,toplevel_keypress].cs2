@@ -42,5 +42,5 @@ if ($int7 = -1 | $int7 = calc(%varbit3756 - 1)) {
 def_component $component8 = enum(int, component, enum_1137, $int7);
 $component8 = enum(component, component, $enum1, $component8);
 if (if_hassub($component8) = true) {
-	~toplevel_sidebutton_op($enum1, $int7, $boolean2);
+	~toplevel_sidebutton_op($enum1, $int7, $boolean2, 0);
 }

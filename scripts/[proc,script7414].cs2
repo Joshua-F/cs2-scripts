@@ -1,0 +1,8 @@
+// 7414
+[proc,script7414]
+%varbit11555 = calc(1 - %varbit11555);
+if (%varbit11555 = 1) {
+	if_setop(6, "Unlock", interface_892:16);
+} else {
+	if_setop(6, "Lock", interface_892:16);
+}

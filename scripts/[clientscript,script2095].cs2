@@ -1,0 +1,14 @@
+// 2095
+[clientscript,script2095]
+if (%varcint1209 < 0) {
+	%varcint1209 = 0;
+}
+%varcint1208 = -1;
+%varbit11539 = 0;
+def_component $component0 = interface_891:0;
+def_int $int1 = 58392577;
+def_int $int2 = 58392578;
+def_int $int3 = 58392579;
+if_setontimer("script6110($component0, -1)", $component0);
+if_setonresize("script2096", $component0);
+~script2116;

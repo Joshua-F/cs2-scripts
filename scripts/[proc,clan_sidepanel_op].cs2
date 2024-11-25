@@ -1,6 +1,10 @@
 // 4401
-[proc,clan_sidepanel_op](int $int0, int $int1, string $username0, int $clanslot2, int $int3)
+[proc,clan_sidepanel_op](int $int0, int $int1, string $username0, int $clanslot2, int $int3, int $comsubid4)
 switch_int ($int0) {
+	case 5 :
+		if ($comsubid4 ! -1) {
+			~script7573($comsubid4);
+		}
 	case 6 :
 		return;
 	case 7 :

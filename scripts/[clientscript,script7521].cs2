@@ -1,0 +1,69 @@
+// 7521
+[clientscript,script7521](component $component0, component $component1, component $component2, component $component3, component $component4, int $comsubid5, int $comsubid6, int $comsubid7)
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+if_setonop("script7523($component1, $component2, $component3, $component4, $component0, $comsubid5)", $component2);
+def_int $count8 = 0;
+def_int $count9 = enum_getoutputcount(enum_5621);
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 30;
+def_int $int13 = 0;
+def_int $trans14 = 220;
+def_string $string0 = "";
+def_int $int15 = 0;
+while ($count8 < $count9) {
+	cc_create($component3, ^iftype_rectangle, $int11);
+	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_settrans($trans14);
+	if (~on_mobile = false) {
+		cc_setonmouseover("cc_settrans($component3, $int11, 240, null)");
+		cc_setonmouseleave("cc_settrans($component3, $int11, $trans14, null)");
+	}
+	$int11 = calc($int11 + 1);
+	cc_create($component3, ^iftype_text, $int11);
+	$int10 = enum(int, int, enum_5621, $count8);
+	$string0 = enum(int, string, enum_5622, $int10);
+	$int15 = parawidth($string0, 500, p12_full);
+	cc_settext($string0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
+	cc_setposition(calc(2 + 13 / 2), $int13, ^setpos_abs_centre, ^setpos_abs_top);
+	$int11 = calc($int11 + 1);
+	cc_create($component3, ^iftype_graphic, $int11);
+	$int11 = calc($int11 + 1);
+	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(0 - 13 / 2 - $int15 / 2 - 2), calc($int13 + 13 / 2), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setgraphic(enum(int, graphic, enum_5623, $int10));
+	cc_create($component3, ^iftype_rectangle, $int11);
+	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_settrans(255);
+	cc_setop(1, "Select");
+	cc_setonop(null);
+	cc_setonop("script7522($component1, $component2, $component3, $component4, $component0, $comsubid5, $comsubid6, $comsubid7, $int10)");
+	$int11 = calc($int11 + 1);
+	$int13 = calc($int13 + $int12);
+	$count8 = calc($count8 + 1);
+	if ($trans14 = 220) {
+		$trans14 = 200;
+	} else {
+		$trans14 = 220;
+	}
+}
+if_setsize(if_getwidth($component0), calc($int13 + 4), ^setsize_abs, ^setsize_abs, $component1);
+if_setposition(10, calc(if_gety($component0) + if_getheight($component0)), ^setpos_abs_left, ^setpos_abs_top, $component1);
+if_sethide(false, $component4);
+if (cc_find($component0, $comsubid5) = ^true) {
+	cc_setgraphic("scrollbar_v2,0");
+}

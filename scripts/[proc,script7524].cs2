@@ -1,0 +1,11 @@
+// 7524
+[proc,script7524](component $component0, component $component1, component $component2, component $component3, component $component4, int $comsubid5)
+if (cc_find($component4, $comsubid5) = ^true) {
+	cc_setgraphic("scrollbar_v2,1");
+}
+cc_deleteall($component0);
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+if_setonop(null, $component1);
+if_sethide(true, $component3);

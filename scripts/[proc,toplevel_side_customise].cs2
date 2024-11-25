@@ -2,6 +2,10 @@
 [proc,toplevel_side_customise](enum $enum0)
 def_component $component1 = null;
 def_component $component2 = null;
+def_int $x3 = 0;
+def_int $y4 = 0;
+def_int $setposh5 = ^setpos_abs_left;
+def_int $setposv6 = ^setpos_abs_top;
 if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 	if (%varcint171 ! -1) {
 		$component1 = enum(int, component, enum_1137, %varcint171);
@@ -9,20 +13,27 @@ if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 	$component2 = enum(component, component, $enum0, toplevel_pre_eoc:96);
 	if ((if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:74)) = true | $component1 ! null & if_hassub(enum(component, component, $enum0, $component1)) = true) & ~script4138 = 0) {
 		if_sethide(false, $component2);
-		if ($enum0 = enum_1745) {
-			switch_component ($component1) {
-				case toplevel_osrs_stretch:76, toplevel_osrs_stretch:81, toplevel_osrs_stretch:82, toplevel_osrs_stretch:88, toplevel_osrs_stretch:84, toplevel_osrs_stretch:85, toplevel_osrs_stretch:83 :
-					if (if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:74)) = true & if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:16)) = true) {
-						if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
-					} else {
-						if_setposition(37, 87, ^setpos_abs_left, ^setpos_abs_centre, $component2);
-					}
-				case default :
-					if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
-			}
-		}
 	} else {
 		if_sethide(true, $component2);
+	}
+	if ($enum0 = enum_1745) {
+		if (if_getheight(toplevel_osm:20) < 503) {
+			if (%varcint1222 = 1) {
+				$x3, $y4, $setposh5, $setposv6 = 58, 4, ^setpos_abs_right, ^setpos_abs_bottom;
+			} else {
+				$x3, $y4, $setposh5, $setposv6 = 85, 4, ^setpos_abs_right, ^setpos_abs_bottom;
+			}
+		} else if (%varcint1222 = 1) {
+			$x3, $y4, $setposh5, $setposv6 = 58, 87, ^setpos_abs_right, ^setpos_abs_centre;
+		} else {
+			$x3, $y4, $setposh5, $setposv6 = 85, 87, ^setpos_abs_right, ^setpos_abs_centre;
+		}
+		if (%varcint1225 = 1 & %varbit11558 = 1 & ~script7562 = 0) {
+			$setposh5 = ^setpos_abs_left;
+			$x3 = 58;
+		}
+		if_setposition($x3, $y4, $setposh5, $setposv6, $component2);
+		if_setposition(0, $y4, ^setpos_abs_right, $setposv6, toplevel_osm:50);
 	}
 	~script2526;
 	%varcint384 = clientclock;

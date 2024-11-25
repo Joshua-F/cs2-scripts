@@ -1,0 +1,87 @@
+// 7425
+[proc,script7425](int $int0, component $component1, struct $struct2)
+if_setop(2, "", $component1);
+switch_int ($int0) {
+	case 20 :
+		if (%var102 > 0 | %var456 > 0 | %varbit10151 > 0) {
+			if_setop(1, struct_param($struct2, param_1991), $component1);
+		} else {
+			if_setop(1, "", $component1);
+		}
+	case 23 :
+		if (map_members = false & %varbit5314 = 0 | ~script3648(inv_getobj(worn, 3)) <= 0) {
+			if_setop(1, "", $component1);
+		} else {
+			if_setop(1, struct_param($struct2, param_1991), $component1);
+		}
+	case 16 :
+		if (%varbit6516 = 0) {
+			if_setop(1, "Friends List", $component1);
+		} else {
+			if_setop(1, "Ignore List", $component1);
+		}
+	case 11 :
+		switch_int (%varbit8168) {
+			case default :
+				if_setop(1, "Character Summary", $component1);
+			case 1 :
+				if_setop(1, "Quest List", $component1);
+			case 2 :
+				if_setop(1, "Achievement Diaries", $component1);
+			case 3 :
+				if_setop(1, "Adventure Paths", $component1);
+			case 4 :
+				if_setop(1, "Leagues", $component1);
+		}
+	case 15 :
+		if_setop(1, enum(int, string, enum_3839, %varbit13071), $component1);
+	case 3 :
+		if (%varcint1214 = 0) {
+			if_setop(1, "Mark highlighted tiles", $component1);
+		} else {
+			if_setop(1, "Stop marking highlighted tiles", $component1);
+		}
+		if (%varcint1215 = 1) {
+			if_setop(2, "Show tile highlights", $component1);
+		} else {
+			if_setop(2, "Hide tile highlights", $component1);
+		}
+	case 21 :
+		if_setopbase("Quick-prayers", $component1);
+		if_setop(2, "Setup", $component1);
+		if (%varbit12142 > 0) {
+			if (%varbit4103 = 1) {
+				if_setop(1, "Deactivate", $component1);
+			} else {
+				if_setop(1, "Activate", $component1);
+			}
+		} else if (%varbit4103 = 1) {
+			if_setop(1, "Deactivate", $component1);
+		} else {
+			if_setop(1, "Activate", $component1);
+		}
+	case 25 :
+		if (%varbit11518 = 0) {
+			if_setop(1, "Edit NPC tags", $component1);
+		} else {
+			if_setop(1, "Stop editing NPC tags", $component1);
+		}
+		if (%varbit14168 = 0) {
+			if_setop(2, "Show tagged NPCs", $component1);
+		} else {
+			if_setop(2, "Hide tagged NPCs", $component1);
+		}
+	case 24 :
+		if (%varbit14872 = 0) {
+			if_setop(1, "Edit ground items", $component1);
+		} else {
+			if_setop(1, "Stop editing ground items", $component1);
+		}
+		if (%varbit14869 = 0) {
+			if_setop(2, "Show ground items", $component1);
+		} else {
+			if_setop(2, "Hide ground items", $component1);
+		}
+	case default :
+		if_setop(1, struct_param($struct2, param_1991), $component1);
+}

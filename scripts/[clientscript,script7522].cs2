@@ -1,0 +1,46 @@
+// 7522
+[clientscript,script7522](component $component0, component $component1, component $component2, component $component3, component $component4, int $comsubid5, int $comsubid6, int $comsubid7, int $int8)
+if (~script7487 = 1 & $int8 ! 7 & $int8 ! 8) {
+	~script7472(interface_894:7);
+	~script7478(interface_894:8);
+	~script7483(interface_894:9);
+	~script7493;
+	~script7498;
+	~script7508;
+	~script7511;
+}
+%varcint1227 = ~minmax(0, 9, $int8);
+def_string $string0 = enum(int, string, enum_5622, %varcint1227);
+def_int $width9 = parawidth($string0, 500, p12_full);
+if (cc_find($component4, $comsubid6) = ^true) {
+	cc_settext($string0);
+	cc_setsize($width9, 20, ^setsize_abs, ^setsize_minus);
+	cc_setposition(calc(-16 + 13 / 2), 0, ^setpos_abs_centre, ^setpos_abs_centre);
+}
+if (cc_find($component4, $comsubid7) = ^true) {
+	cc_setgraphic(enum(int, graphic, enum_5623, %varcint1227));
+	cc_setposition(calc(-18 - 13 / 2 - $width9 / 2), 0, ^setpos_abs_centre, ^setpos_abs_centre);
+}
+def_string $string1 = "";
+if (cc_find(interface_894:12, 2) = ^true) {
+	$string1 = removetags(cc_gettext);
+	if (string_length($string1) > 0) {
+		~script7529($string1, %varcint1227);
+	}
+}
+~script7524($component0, $component1, $component2, $component3, $component4, $comsubid5);
+%varcint1234 = 0;
+if (~script7487 = 1) {
+	~script7490;
+	~script7495;
+	~script7500;
+	~script7476;
+	~script7481;
+	~script7486;
+	~script7511;
+} else {
+	~script7493;
+	~script7498;
+	~script7508;
+	~script7511;
+}

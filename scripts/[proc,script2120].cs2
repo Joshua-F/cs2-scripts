@@ -1,0 +1,126 @@
+// 2120
+[proc,script2120](int $int0)
+def_int $int1 = 0;
+def_int $count2 = enum_getoutputcount(enum_5606);
+def_struct $struct3 = null;
+def_component $component4 = interface_891:29;
+def_component $component5 = interface_891:30;
+def_component $component6 = interface_891:27;
+def_component $component7 = interface_891:2;
+cc_deleteall($component4);
+cc_deleteall($component5);
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 45;
+def_int $int12 = 0;
+def_int $int13 = 15;
+def_int $int14 = 0;
+def_int $int15 = 20;
+while ($int1 < $count2) {
+	$struct3 = enum(int, struct, enum_5606, $int1);
+	if (%varcint1209 = 0 | struct_param($struct3, param_1987) = %varcint1209) {
+		$int12 = $int11;
+		cc_create($component4, ^iftype_graphic, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(10, calc($int8 + $int11 / 2 - struct_param($struct3, param_1990) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(struct_param($struct3, param_1989), struct_param($struct3, param_1990), ^setsize_abs, ^setsize_abs);
+		cc_setgraphic(struct_param($struct3, param_1988));
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, $int8, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+		cc_settextfont(b12_full);
+		cc_settextshadow(true);
+		cc_setcolour(0xff981f);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+		cc_settext(struct_param($struct3, param_1991));
+		cc_create($component4, ^iftype_graphic, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(10, calc($int8 + $int11 / 2 - $int13 / 2), ^setpos_abs_right, ^setpos_abs_top);
+		cc_setsize($int13, $int13, ^setsize_abs, ^setsize_abs);
+		cc_setgraphic(toa_info_icon);
+		cc_create($component4, ^iftype_rectangle, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, $int8, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(calc($int13 + 30), $int11, ^setsize_minus, ^setsize_abs);
+		cc_setfill(true);
+		cc_setcolour(^white);
+		cc_settrans(255);
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(6);
+		cc_setdraggable($component7, -1);
+		cc_setondragcomplete("script5246($struct3, event_com2)");
+		cc_setondrag("script5245($struct3, event_mousex, event_mousey)");
+		cc_create($component4, ^iftype_rectangle, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, $int8, ^setpos_abs_right, ^setpos_abs_top);
+		cc_setsize(calc($int13 + 30), $int11, ^setsize_abs, ^setsize_abs);
+		cc_setonclick("script5150($int1)");
+		cc_setfill(true);
+		cc_setcolour(^white);
+		cc_settrans(255);
+		if (%varcint1208 = $int1) {
+			cc_create($component4, ^iftype_text, $int9);
+			$int9 = calc($int9 + 1);
+			$int14 = calc($int15 + 12 * paraheight(struct_param($struct3, param_1992), calc(if_getwidth($component4) - $int15), p12_full));
+			cc_setposition(0, calc($int8 + $int11), ^setpos_abs_centre, ^setpos_abs_top);
+			cc_setsize($int15, $int14, ^setsize_minus, ^setsize_abs);
+			cc_settextfont(p12_full);
+			cc_settextshadow(true);
+			cc_setcolour(0xff981f);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+			cc_settext(struct_param($struct3, param_1992));
+			cc_input_setwidth(100);
+			cc_input_setwrapmode(1);
+			$int12 = calc($int12 + $int14);
+		} else {
+			cc_create($component4, ^iftype_text, $int9);
+			$int9 = calc($int9 + 1);
+			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+		}
+		$int9 = ~thinbox_specific($component4, $int9, 0, $int8, if_getwidth($component4), $int12, ^setpos_abs_left, ^setpos_abs_top);
+		$int8 = calc($int8 + $int12);
+	} else {
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+		cc_create($component4, ^iftype_text, $int9);
+		$int9 = calc($int9 + 1);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+	}
+	$int1 = calc($int1 + 1);
+}
+def_int $y16 = if_getscrolly($component4);
+if_setscrollsize(0, $int8, $component4);
+~script7605($component6, $component4);
+if (cc_find($component6, 1) = ^true) {
+	~scrollbar_vertical_doscroll($component6, $component4, $y16, true);
+}

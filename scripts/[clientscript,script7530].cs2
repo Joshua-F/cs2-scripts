@@ -1,0 +1,24 @@
+// 7530
+[clientscript,script7530](string $string0, int $int0)
+def_int $int1 = 0;
+def_string $string1 = "";
+if (calc(clientclock % 10) = 0) {
+	$int1 = hiscore_getstatus;
+	switch_int ($int1) {
+		case default :
+			~script7531;
+		case 1 :
+			return;
+		case 2 :
+			~script7532;
+		case 3 :
+			~script7533;
+			$string1 = hiscore_geterror;
+			if (string_length($string1) > 0) {
+				mes("Unable to load hiscores for <$string0>: <$string1>");
+			} else {
+				mes("Unable to load hiscores for <$string0>.");
+			}
+			sound_synth(pillory_wrong, 1, 0);
+	}
+}

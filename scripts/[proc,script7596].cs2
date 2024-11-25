@@ -1,0 +1,18 @@
+// 7596
+[proc,script7596](boolean $boolean0)
+def_int $int1 = 0;
+cc_deleteall(interface_593:47);
+if ($boolean0 = true) {
+	$int1 = ~script7597(0, $int1);
+	$int1 = ~script7597(1, $int1);
+	$int1 = ~script7597(2, $int1);
+	$int1 = ~script7597(3, $int1);
+	if (if_gethide(interface_593:21) = false) {
+		$int1 = ~script7597(4, $int1);
+		$int1 = ~script7597(5, $int1);
+	}
+	$int1 = ~script7597(6, $int1);
+	$int1 = ~script7597(7, $int1);
+	$int1 = ~script7597(8, $int1);
+	~script7601;
+}

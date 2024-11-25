@@ -1,0 +1,33 @@
+// 7529
+[proc,script7529](string $string0, int $int0)
+def_int $int1 = hiscore_getstatus;
+if ($int1 = 2 | $int1 = 3) {
+	hiscore_clear;
+} else if ($int1 = 1) {
+	mes("You can't do that right now, already loading a players hiscores.");
+	return;
+}
+$string0 = removetags($string0);
+if (string_length($string0) <= 0) {
+	return;
+}
+%varcint1227 = ~minmax(0, 9, $int0);
+if (~script7487 = 1) {
+	hiscore_setapi(2);
+} else {
+	hiscore_setapi(0);
+}
+hiscore_lookup($string0, %varcint1227);
+if (cc_find(interface_894:12, 2) = ^true) {
+	cc_settext($string0);
+}
+if (cc_find(interface_894:14, 5) = ^true) {
+	cc_setgraphic(enum(int, graphic, enum_5623, %varcint1227));
+}
+if (cc_find(interface_894:14, 4) = ^true) {
+	cc_settext(enum(int, string, enum_5622, %varcint1227));
+}
+if_sethide(false, interface_894:3);
+cc_deleteall(interface_894:3);
+~loading_icon_init(interface_894:3, null, enum_3789, 10, 500, 3000, 512, 1024, 0, 3, "");
+if_setontimer("script7530($string0, 1)", interface_894:1);

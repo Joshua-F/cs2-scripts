@@ -1,0 +1,26 @@
+// 7535
+[clientscript,script7535](int $int0)
+def_int $int1 = 0;
+def_string $string0 = "";
+def_string $string1 = hiscore_getmembername($int0);
+if (calc(clientclock % 10) = 0) {
+	$int1 = hiscore_getstatus;
+	switch_int ($int1) {
+		case default :
+			~script7531;
+		case 1 :
+			return;
+		case 2 :
+			~script7531;
+			~script7503($int0);
+		case 3 :
+			~script7531;
+			$string0 = hiscore_geterror;
+			if (string_length($string0) > 0) {
+				mes("Unable to load individual hiscores for <$string1>: <$string0>");
+			} else {
+				mes("Unable to load individual hiscores for <$string1>.");
+			}
+			sound_synth(pillory_wrong, 1, 0);
+	}
+}

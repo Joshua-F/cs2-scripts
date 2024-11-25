@@ -1,7 +1,10 @@
 // 38
 [clientscript,addtooltip](component $component0, component $component1, int $int2, int $width3, string $string0)
+if (~on_mobile = true) {
+	return;
+}
 if (~on_enhanced_any = 1) {
-	~mouseover_tooltip_setup($string0, "", mouse_getx, mouse_gety, $component1, $component0, -1, 1);
+	~mouseover_tooltip_setup($string0, "", mouse_getx, mouse_gety, $component1, $component0, -1, 0, 0, 1);
 	return;
 }
 def_int $x4 = 0;

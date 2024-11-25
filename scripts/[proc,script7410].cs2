@@ -1,0 +1,38 @@
+// 7410
+[proc,script7410]
+def_int $count0 = 0;
+def_int $count1 = enum_getoutputcount(enum_5611);
+def_int $int2 = 1;
+$int2 = calc($int2 + 9);
+def_int $int3 = 0;
+def_component $component4 = null;
+def_struct $struct5 = null;
+def_int $int6 = 0;
+while ($count0 < $count1) {
+	$component4 = enum(int, component, enum_5611, $count0);
+	if ($component4 ! null) {
+		$int3 = ~script7441(calc($count0 + 1));
+		$struct5 = enum(int, struct, enum_5607, $int3);
+		if ((%varbit11559 = 1 | $struct5 ! null & $int3 > 0) & %varcint1224 ! 1) {
+			if_sethide(false, $component4);
+			~script7411($component4, $int3, $struct5);
+			if_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+			$int6 = 1;
+			$int2 = calc($int2 + 40 - 1);
+		} else {
+			cc_deleteall($component4);
+			if_sethide(true, $component4);
+			if_setonop(null, $component4);
+			if_setop(1, "", $component4);
+		}
+	}
+	$count0 = calc($count0 + 1);
+}
+if ($int6 = 1) {
+	if_setsize(0, 33, ^setsize_minus, ^setsize_abs, interface_892:16);
+} else {
+	if_setsize(0, calc(33 + 9), ^setsize_minus, ^setsize_abs, interface_892:16);
+}
+$int2 = calc($int2 + 33);
+if_setsize(58, $int2, ^setsize_abs, ^setsize_abs, interface_892:1);
+~script7412(~toplevel_getcomponents);

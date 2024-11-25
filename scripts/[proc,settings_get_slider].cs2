@@ -17,6 +17,8 @@ switch_int ($setting0) {
 		return(%varbit11864);
 	case ^setting_draw_distance :
 		return(interpolate(0, struct_param(view_distance_3656, param_1101), 25, 90, deviceoption_get(^deviceoption_draw_distance)));
+	case 393 :
+		return(%varbit11523);
 	case default :
 		return(0);
 }

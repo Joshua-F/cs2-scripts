@@ -1,13 +1,13 @@
 // 7132
 [proc,loottools_size]
 if_sethide(true, interface_650:30);
-if_sethide(true, interface_650:55);
+if_sethide(true, interface_650:65);
 switch_int (%varbit14883) {
 	case 0 :
 		if_sethide(false, interface_650:30);
 		~script7135(if_getheight(interface_650:34));
 	case 1 :
-		if_sethide(false, interface_650:55);
+		if_sethide(false, interface_650:65);
 	case default :
 		return;
 }

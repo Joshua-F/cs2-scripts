@@ -1,7 +1,7 @@
 // 6681
 [proc,script6681]
 def_int $colour0 = ~settings_get_colour_or_default(^setting_tile_highlight_colour_colour);
-if (%varbit12342 = 0 & ~on_enhanced_desktop = 1) {
+if (%varbit12342 = 0) {
 	highlight_tile_setup(6, $colour0, 2, 50, 90);
 	shiftop_tile_set(1, "Mark tile", script4762);
 } else {

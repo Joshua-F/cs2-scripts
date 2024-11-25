@@ -1,0 +1,31 @@
+// 7488
+[proc,script7488](component $component0, int $int1, int $int2, int $int3, graphic $graphic4, int $int5, int $int6, int $int7, int $comsubid8)(int, int, int)
+def_int $int9 = 0;
+if ($int3 = 0) {
+	$int3 = 1;
+} else {
+	$int9 = $int7;
+	$int3 = 0;
+}
+cc_create($component0, ^iftype_graphic, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int9 + 3), $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic4);
+.cc_create($component0, ^iftype_text, $int2);
+$int2 = calc($int2 + 1);
+.cc_settextfont(p11_full);
+.cc_settextshadow(true);
+.cc_setcolour(0xff981f);
+.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+.cc_settext("  --  ");
+.cc_setsize(~max($int5, 36), $int6, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc($int9 + $int5 + 8), $int1, ^setpos_abs_left, ^setpos_abs_top);
+if (cc_find($component0, $comsubid8) = ^true) {
+	cc_setsize(calc($int7 - 6), $int6, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int9 + 3), $int1, ^setpos_abs_left, ^setpos_abs_top);
+}
+if (calc($int3 % 2) = 0) {
+	$int1 = calc($int1 + ($int6 + 5));
+}
+return($int2, $int1, $int3);

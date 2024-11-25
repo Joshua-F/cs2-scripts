@@ -1,36 +1,36 @@
 // 192
 [proc,chatalerts](int $mesuid0)
 def_int $clock1 = %varcint57;
+def_boolean $boolean2 = ~on_mobile;
 %varcint57 = clientclock;
-if (%varcint41 = 0) {
+if (%varcint41 = 0 & ($boolean2 = false | %varcint1220 = 0)) {
 	return;
 }
-def_int $int2 = 0;
+def_int $int3 = 0;
 if (%varcint41 = 1337) {
-	$int2 = 1;
+	$int3 = 1;
 }
-def_int $chattype3 = ^chattype_gamemessage;
-def_int $clock4 = -1;
+def_int $chattype4 = ^chattype_gamemessage;
+def_int $clock5 = -1;
 def_string $string0 = "";
 def_string $string1 = "";
 def_string $string2 = "";
-def_int $int5 = 0;
-def_string $string3 = "";
 def_int $int6 = 0;
-def_boolean $boolean7 = ~on_mobile;
+def_string $string3 = "";
+def_int $int7 = 0;
 while ($mesuid0 ! -1) {
-	$chattype3, $clock4, $string0, $string1, $string2, $int5, $string3, $int6 = chat_gethistory_byuid($mesuid0);
-	if ($clock4 <= $clock1) {
+	$chattype4, $clock5, $string0, $string1, $string2, $int6, $string3, $int7 = chat_gethistory_byuid($mesuid0);
+	if ($clock5 <= $clock1) {
 		return;
 	}
-	if (~filtertest($chattype3, $string0, ~affixtimestamp($string3, $string2, "null"), $string2, $clock4, $int2, removetags(chat_playername), $int5) = 1 & ~trade_partner_check($chattype3, $string0, $int5) = 0) {
-		switch_int ($chattype3) {
+	if (~filtertest($chattype4, $string0, ~affixtimestamp($string3, $string2, "null"), $string2, $clock5, $int3, removetags(chat_playername), $int6) = 1 & ~trade_partner_check($chattype4, $string0, $int6) = 0) {
+		switch_int ($chattype4) {
 			case ^chattype_modchat, ^chattype_publicchat :
 				~chat_alert_enable(2);
 			case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat :
 				~chat_alert_enable(3);
 			case ^chattype_loginlogoutnotification :
-				if ($boolean7 = false) {
+				if ($boolean2 = false) {
 					~chat_alert_enable(3);
 				}
 			case ^chattype_tradereq, ^chattype_trade, ^chattype_chalreq_trade, 113 :
@@ -52,7 +52,7 @@ while ($mesuid0 ! -1) {
 					~chat_alert_enable(5);
 				}
 			case default :
-				if (enum(int, boolean, enum_892, $chattype3) = true & $chattype3 ! 108) {
+				if (enum(int, boolean, enum_892, $chattype4) = true & $chattype4 ! 108) {
 					~chat_alert_enable(1);
 				}
 		}

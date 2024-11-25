@@ -1,0 +1,36 @@
+// 7409
+[proc,script7409]
+cc_deleteall(interface_892:16);
+cc_create(interface_892:16, ^iftype_graphic, 0);
+cc_setsize(0, 43, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+.cc_create(interface_892:16, ^iftype_graphic, 1);
+.cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
+if (%varcint1224 = 1) {
+	cc_setgraphic(graphic_5782);
+	.cc_setgraphic("side_icons,49");
+	if_setop(1, "Show", interface_892:16);
+} else {
+	cc_setgraphic(graphic_5783);
+	.cc_setgraphic("side_icons,48");
+	if_setop(1, "Hide", interface_892:16);
+}
+if_setop(2, "Customise", interface_892:16);
+if_setop(3, "Swap-to Loadout 1", interface_892:16);
+if_setop(4, "Swap-to Loadout 2", interface_892:16);
+if_setop(5, "Swap-to Loadout 3", interface_892:16);
+if (%varbit11555 = 1) {
+	if_setop(6, "Unlock", interface_892:16);
+} else {
+	if_setop(6, "Lock", interface_892:16);
+}
+cc_create(interface_892:16, ^iftype_text, 2);
+cc_setsize(0, 14, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settextfont(p11_full);
+cc_setcolour(^white);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Hotkeys");
+if_setonop("script7413(event_op)", interface_892:16);

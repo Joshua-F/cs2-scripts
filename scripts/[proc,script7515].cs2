@@ -1,0 +1,9 @@
+// 7515
+[proc,script7515](int $int0)(int, int)
+def_int $int1 = ~script7514($int0);
+if ($int1 = 99) {
+	return(0, 0);
+}
+def_int $int2 = calc($int0 - enum(int, int, enum_256, $int1));
+def_int $int3 = calc(enum(int, int, enum_256, calc($int1 + 1)) - enum(int, int, enum_256, $int1));
+return($int2, $int3);

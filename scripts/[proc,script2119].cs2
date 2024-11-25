@@ -1,0 +1,37 @@
+// 2119
+[proc,script2119](int $int0, struct $struct1)
+def_component $component2 = null;
+def_component $component3 = null;
+def_component $component4 = null;
+switch_int ($int0) {
+	case 0 :
+		$component2 = interface_891:14;
+		$component3 = interface_891:13;
+		$component4 = interface_891:16;
+	case 1 :
+		$component2 = interface_891:38;
+		$component3 = interface_891:18;
+		$component4 = interface_891:40;
+	case 2 :
+		$component2 = interface_891:42;
+		$component3 = interface_891:20;
+		$component4 = interface_891:44;
+	case 3 :
+		$component2 = interface_891:46;
+		$component3 = interface_891:22;
+		$component4 = interface_891:48;
+	case 4 :
+		$component2 = interface_891:49;
+		$component3 = interface_891:24;
+		$component4 = interface_891:51;
+}
+if ($struct1 = null) {
+	if_setobject_nonum(obj_11526, 1, $component3);
+	if_settext("---", $component2);
+	if_sethide(true, $component4);
+} else {
+	if_setobject(null, 0, $component3);
+	if_setgraphic(struct_param($struct1, param_1988), $component3);
+	if_settext(struct_param($struct1, param_1991), $component2);
+	if_sethide(false, $component4);
+}

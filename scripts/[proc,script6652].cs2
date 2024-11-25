@@ -4,7 +4,7 @@ switch_dbtable (db_getrowtable($dbrow0)) {
 	case dbtable_8 :
 		return(db_getfield($dbrow0, dbtable_8:8, 0), db_getfield($dbrow0, dbtable_8:9, 0));
 	case dbtable_9 :
-		return(db_getfield($dbrow0, dbtable_9:7, 0), db_getfield($dbrow0, dbtable_9:8, 0));
+		return(db_getfield($dbrow0, dbtable_9:7, 0), db_getfield($dbrow0, dbtable_9:8, ~script1291($dbrow0)));
 	case default :
 		return(null, null);
 }

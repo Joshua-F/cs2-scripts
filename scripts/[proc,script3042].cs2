@@ -23,7 +23,7 @@ if ($int5 > 0) {
 } else {
 	.cc_setobject($obj4, ^max_32bit_int);
 }
-def_component $component17 = interface_650:67;
+def_component $component17 = interface_650:80;
 def_string $string0 = ~script7174($obj4, $int5, $int6, $int7, $int8, $int9);
 .cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component17, $string0, 0, 512)");
 .cc_setonmouseleave("deltooltip($component17)");

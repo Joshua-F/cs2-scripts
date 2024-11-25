@@ -18,16 +18,20 @@ if (if_hassub(interface_162:565) = true) {
 }
 ~toplevel_sidebuttons_enable($enum1);
 def_component $component2 = null;
+def_int $int3 = 0;
 if (%varcint171 ! -1) {
+	if (%varcint1225 = 1) {
+		$int3 = 1;
+	}
 	$component2 = enum(int, component, enum_1137, %varcint171);
 	$component2 = enum(component, component, $enum1, $component2);
 	if ($component2 ! null) {
 		if (if_hassub($component2) = true) {
 			if (if_gethide($component2) = true) {
-				~toplevel_sidebutton_switch(%varcint171, $enum1);
+				~toplevel_sidebutton_switch(%varcint171, $enum1, $int3);
 			}
 		} else if (if_gethide($component2) = false) {
-			~toplevel_sidebutton_switch(%varcint171, $enum1);
+			~toplevel_sidebutton_switch(%varcint171, $enum1, $int3);
 		}
 	}
 }

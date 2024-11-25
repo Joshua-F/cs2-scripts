@@ -1,0 +1,36 @@
+// 7413
+[clientscript,script7413](int $opindex0)
+switch_int ($opindex0) {
+	case 1 :
+		if (%varbit11555 = 1) {
+			return;
+		}
+		if (%varcint1224 = 1) {
+			%varcint1224 = 0;
+		} else {
+			%varcint1224 = 1;
+		}
+		if (cc_find(interface_892:16, 0) = ^true & .cc_find(interface_892:16, 1) = ^true) {
+			if (%varcint1224 = 1) {
+				cc_setgraphic(graphic_5782);
+				.cc_setgraphic("side_icons,49");
+				if_setop(1, "Show", interface_892:16);
+			} else {
+				cc_setgraphic(graphic_5783);
+				.cc_setgraphic("side_icons,48");
+				if_setop(1, "Hide", interface_892:16);
+			}
+		}
+		~script7410;
+		return;
+	case 2 :
+		return;
+	case 3, 4, 5 :
+		~script7415($opindex0);
+		return;
+	case 6 :
+		~script7414;
+		return;
+	case default :
+		return;
+}

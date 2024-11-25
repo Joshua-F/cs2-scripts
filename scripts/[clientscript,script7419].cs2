@@ -1,0 +1,16 @@
+// 7419
+[clientscript,script7419](int $int0, component $component1, struct $struct2)
+def_int $int3 = ~script7422($int0);
+if (cc_find($component1, 0) = ^true & .cc_find($component1, 1) = ^true) {
+	~script7425($int0, $component1, $struct2);
+	~script7424($int0, $struct2);
+	~script7420($int0, $component1, $struct2);
+	if (struct_param($struct2, param_1994) = 1) {
+		if ($int3 = 1) {
+			$int3 = 0;
+		} else {
+			$int3 = 1;
+		}
+	}
+	~script7421($int0, $int3);
+}

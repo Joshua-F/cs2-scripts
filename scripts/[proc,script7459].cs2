@@ -1,0 +1,6 @@
+// 7459
+[proc,script7459](int $count0)
+%varbit11522 = min(7, $count0);
+def_int $int1 = 0;
+$int1 = calc(%varbit11522 + 1);
+gameoption_set(13, $int1);

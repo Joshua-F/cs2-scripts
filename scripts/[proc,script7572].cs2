@@ -1,0 +1,13 @@
+// 7572
+[proc,script7572]
+if (~on_enhanced_any = 0) {
+	return;
+}
+cc_deleteall(interface_896:1);
+def_int $int0 = 0;
+while ($int0 <= 600) {
+	cc_create(interface_896:1, ^iftype_graphic, $int0);
+	cc_setsize(1, 1, ^setsize_minus, ^setsize_abs);
+	cc_sethide(true);
+	$int0 = calc($int0 + 1);
+}

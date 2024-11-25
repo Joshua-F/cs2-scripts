@@ -1,0 +1,15 @@
+// 7507
+[clientscript,script7507](component $component0, component $component1, component $component2, component $component3, component $component4, int $comsubid5, int $comsubid6, int $int7)
+if (~script7487 = 0 | %varcint1234 = 0) {
+	~script7524($component0, $component1, $component2, $component3, $component4, $comsubid5);
+	return;
+}
+def_string $string0 = stringvector_get(stringvector_5, $int7);
+def_int $width8 = parawidth($string0, 500, p12_full);
+if (cc_find($component4, $comsubid6) = ^true) {
+	cc_settext($string0);
+	cc_setsize($width8, 20, ^setsize_abs, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+}
+~script7524($component0, $component1, $component2, $component3, $component4, $comsubid5);
+~script7501($int7);

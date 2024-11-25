@@ -1,6 +1,6 @@
 // 312
 [clientscript,welcome_screen_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10)
-~script4729($component1, $component0, setbit(setbit(0, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);
+~script4729($component1, $component0, setbit(setbit(0, 12), 4), ^setpos_abs_centre, ^setpos_abs_top, false);
 ~welcome_screen_lastlogin($component3);
 if_setonvartransmit("welcome_screen_lastlogin($component3){var261}", $component3);
 ~welcome_screen_messages($component5, $component6, $component7);

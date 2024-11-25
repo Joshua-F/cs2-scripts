@@ -1,0 +1,9 @@
+// 7452
+[proc,script7452]
+if (~on_mobile = false) {
+	return;
+}
+%varbit11558 = calc(1 - %varbit11558);
+if (%varbit11558 = 1) {
+	mes("<col=ff0000>Warning! opening the popout panel will overlap left-aligned side panels.</col>");
+}

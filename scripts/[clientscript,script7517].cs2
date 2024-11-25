@@ -1,0 +1,11 @@
+// 7517
+[clientscript,script7517](component $component0, int $comsubid1, component $component2, string $string0, int $int3, int $int4)
+if (%varcint1231 ! $component0 | %varcint1232 ! $comsubid1) {
+	~script7607($component0, $comsubid1, $component2, $string0, $int3, $int4);
+	%varcint1231, %varcint1232 = $component0, $comsubid1;
+	if_setontimer("script7518(clientclock, $component0, $component2)", $component0);
+	return;
+}
+if_setontimer(null, $component0);
+~deltooltip_action($component2);
+%varcint1231, %varcint1232 = null, -1;

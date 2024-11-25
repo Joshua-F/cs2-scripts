@@ -1,0 +1,7 @@
+// 7464
+[proc,script7464]()(int)
+def_int $width0 = if_getwidth(toplevel_osm:19);
+def_int $int1 = calc(($width0 - 748) / 2);
+$int1 = max(0, $int1);
+def_int $int2 = scale($int1, $width0, 16384);
+return(min($int2, 2200));

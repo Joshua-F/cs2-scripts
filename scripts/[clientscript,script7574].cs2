@@ -1,0 +1,48 @@
+// 7574
+[clientscript,script7574](int $int0, int $int1)
+def_int $x2 = -1;
+def_int $y3 = -1;
+def_component $component4 = enum(int, component, enum_5598, $int0);
+if ($component4 = null) {
+	return;
+}
+def_int $int5 = 0;
+switch_int ($int1) {
+	case 1 :
+		$x2, $y3 = 39, 32;
+	case 2 :
+		$x2, $y3 = 39, 61;
+	case 3 :
+		$x2, $y3 = 39, 90;
+	case 4 :
+		$x2, $y3 = 39, 119;
+	case 5 :
+		$x2, $y3 = 39, 148;
+	case 6 :
+		$x2, $y3 = 39, 177;
+	case 7 :
+		$x2, $y3 = 39, 206;
+	case 8 :
+		$x2, $y3 = 39, 235;
+	case 9 :
+		$x2, $y3 = 39, 264;
+	case default :
+		$int5 = 1;
+		switch_int ($int0) {
+			case 1 :
+				$x2, $y3 = 348, 48;
+			case 2 :
+				$x2, $y3 = 348, 114;
+			case 3 :
+				$x2, $y3 = 348, 180;
+			case 4 :
+				$x2, $y3 = 348, 246;
+		}
+}
+if ($int5 = 1) {
+	if_setop(1, "Select", $component4);
+} else {
+	if_setop(1, "Remove", $component4);
+}
+if_setposition($x2, $y3, ^setpos_abs_left, ^setpos_abs_top, $component4);
+~script7576(0);

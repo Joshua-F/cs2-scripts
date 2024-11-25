@@ -1,29 +1,29 @@
 // 916
-[proc,toplevel_sidebutton_switch](int $int0, enum $enum1)
-def_component $component2 = null;
+[proc,toplevel_sidebutton_switch](int $int0, enum $enum1, int $int2)
 def_component $component3 = null;
 def_component $component4 = null;
-def_int $int5 = 0;
-def_component $component6 = enum(int, component, enum_1138, $int5);
-while ($component6 ! null) {
-	$component6 = enum(component, component, $enum1, $component6);
-	if ($component6 ! null) {
-		if_setgraphic(null, $component6);
-		$component2 = enum(int, component, enum_1137, $int5);
-		$component2 = enum(component, component, $enum1, $component2);
-		if_sethide(true, $component2);
-		if ($int5 = $int0) {
-			$component3, $component4 = $component2, $component6;
+def_component $component5 = null;
+def_int $int6 = 0;
+def_component $component7 = enum(int, component, enum_1138, $int6);
+while ($component7 ! null) {
+	$component7 = enum(component, component, $enum1, $component7);
+	if ($component7 ! null) {
+		if_setgraphic(null, $component7);
+		$component3 = enum(int, component, enum_1137, $int6);
+		$component3 = enum(component, component, $enum1, $component3);
+		if_sethide(true, $component3);
+		if ($int6 = $int0) {
+			$component4, $component5 = $component3, $component7;
 		}
 	}
-	$int5 = calc($int5 + 1);
-	$component6 = enum(int, component, enum_1138, $int5);
+	$int6 = calc($int6 + 1);
+	$component7 = enum(int, component, enum_1138, $int6);
 }
-if ($component3 ! null & $component4 ! null) {
+if ($component4 ! null & $component5 ! null) {
 	%varcint171 = $int0;
-	if (if_hassub($component3) = true) {
-		if_sethide(false, $component3);
-		~toplevel_sidebutton_highlight($component4);
+	if (if_hassub($component4) = true) {
+		if_sethide(false, $component4);
+		~toplevel_sidebutton_highlight($component5);
 		switch_int ($int0) {
 			case 3 :
 				~inventory_build(inventory:0, inv_size(inv), true, null);
@@ -36,4 +36,13 @@ if ($component3 ! null & $component4 ! null) {
 } else {
 	%varcint171 = -1;
 }
+if ($int2 = 1) {
+	%varcint1225 = 1;
+} else {
+	%varcint1225 = 0;
+}
 ~toplevel_side_customise($enum1);
+if ($enum1 = enum_1745) {
+	~script7428(1);
+}
+if_setonvartransmit("script7418(%varbit11558, $enum1){var3053}", interface_892:0);

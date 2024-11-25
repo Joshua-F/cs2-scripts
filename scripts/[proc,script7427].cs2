@@ -1,0 +1,20 @@
+// 7427
+[proc,script7427](int $int0)
+switch_int ($int0) {
+	case 4 :
+		if (%varcint1214 = 1) {
+			return;
+		}
+		~script7436;
+	case 5 :
+		if (%varcint1214 = 1) {
+			return;
+		}
+		~script7438;
+	case 3 :
+		if (%varcint1214 = 0) {
+			return;
+		}
+		%varcint1214 = 0;
+		~script7587;
+}

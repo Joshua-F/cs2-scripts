@@ -1,0 +1,8 @@
+// 7458
+[proc,script7458]
+%varbit11520 = calc(1 - %varbit11520);
+if (%varbit11520 = 1) {
+	gameoption_set(13, calc(%varbit11522 + 1));
+} else {
+	gameoption_set(13, 0);
+}

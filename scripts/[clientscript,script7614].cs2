@@ -1,0 +1,11 @@
+// 7614
+[clientscript,script7614]
+if (%varcint1222 = 1) {
+	%varcint1222 = 0;
+} else {
+	%varcint1222 = 1;
+}
+if_setgraphic(graphic_5767, toplevel_osm:103);
+if_sethide(false, toplevel_osm:110);
+~script7615;
+~toplevel_side_customise(enum_1745);

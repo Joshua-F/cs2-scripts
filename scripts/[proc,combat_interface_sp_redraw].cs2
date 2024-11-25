@@ -7,22 +7,23 @@ if (map_members = true | %varbit5314 = 1) {
 	$int1 = ~script3648($obj2);
 }
 if ($int1 <= 0) {
-	if_sethide(true, interface_593:36);
-	if_setsize(190, 28, ^setsize_abs, ^setsize_abs, interface_593:2);
+	if_sethide(true, interface_593:37);
+	if_setsize(190, 28, ^setsize_abs, ^setsize_abs, interface_593:3);
+	~script7602;
 	return;
 }
 if (~on_mobile = true) {
-	if_setsize(190, 16, ^setsize_abs, ^setsize_abs, interface_593:2);
+	if_setsize(190, 16, ^setsize_abs, ^setsize_abs, interface_593:3);
 }
 def_int $int4 = 0;
-if (if_gethide(interface_593:36) = true) {
+if (if_gethide(interface_593:37) = true) {
 	$int4 = 1;
 }
-if_sethide(false, interface_593:36);
+if_sethide(false, interface_593:37);
 if (%var301 > 0) {
-	if_setcolour(^yellow, interface_593:41);
+	if_setcolour(^yellow, interface_593:42);
 } else {
-	if_setcolour(0x000010, interface_593:41);
+	if_setcolour(0x000010, interface_593:42);
 }
 def_int $int5 = %var300;
 def_int $int6 = 1000;
@@ -36,25 +37,25 @@ if ($obj2 = soulreaper_axe_28338) {
 	if ($int5 > 0) {
 		$int3 = 1;
 	}
-	if_settext("Special Attack: <tostring($int5)>/5", interface_593:41);
+	if_settext("Special Attack: <tostring($int5)>/5", interface_593:42);
 } else if (~league_relic_active(weapon_master_4721) = 1 & $int5 < $int7 & stat(hitpoints) > 25) {
 	$int5 = calc((stat(hitpoints) - 1) / 25);
 	$int6 = calc((stat_base(hitpoints) - 1) / 25);
 	$int8 = 1;
-	if_settext("Special Attack: <tostring($int5)>/<tostring($int6)>", interface_593:41);
+	if_settext("Special Attack: <tostring($int5)>/<tostring($int6)>", interface_593:42);
 } else {
-	if_settext("Special Attack: <tostring(calc($int5 / 10))>%", interface_593:41);
+	if_settext("Special Attack: <tostring(calc($int5 / 10))>%", interface_593:42);
 }
 ~combat_interface_sp_updatebar($component0, $int5, $int6, $int4);
 if ($int5 >= $int1 | $int8 = 1) {
 	$int3 = 1;
 }
 if ($int3 = 1) {
-	if_setcolour(0x397d3b, interface_593:40);
+	if_setcolour(0x397d3b, interface_593:41);
 } else {
-	if_setcolour(0x00326b, interface_593:40);
+	if_setcolour(0x00326b, interface_593:41);
 }
-~options_button_off(interface_593:37, 0);
+~options_button_off(interface_593:38, 0);
 def_string $string0 = "<enum(obj, string, enum_1739, $obj2)> (<tostring(calc($int7 / 10))>%)";
 switch_obj ($obj2) {
 	case dragon_hasta_22731, dragon_hasta_p_22734, dragon_hasta_p_22737, dragon_hasta_p_22740, dragon_hasta_kp_22743 :
@@ -74,8 +75,9 @@ if (%varbit5712 = 0) {
 	if ($obj2 = dark_bow_bh_27853 & ($obj9 = dragon_arrow_11212 | $obj9 = dragon_arrow_p_11227 | $obj9 = dragon_arrow_p_11228 | $obj9 = dragon_arrow_p_11229)) {
 		$string0 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 10 per hit). (<tostring(calc(~script3648($obj2) / 10))>%)";
 	}
-	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:43, $string0, 25, 160)", interface_593:36);
-	if_setonmouseleave("deltooltip(interface_593:43)", interface_593:36);
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:44, $string0, 25, 160)", interface_593:37);
+	if_setonmouseleave("deltooltip(interface_593:44)", interface_593:37);
 } else {
-	if_setonmouserepeat(null, interface_593:36);
+	if_setonmouserepeat(null, interface_593:37);
 }
+~script7602;

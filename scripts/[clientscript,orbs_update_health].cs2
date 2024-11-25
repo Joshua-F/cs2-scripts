@@ -37,14 +37,15 @@ if (%var102 > 0) {
 } else {
 	if_sethide(true, $component5);
 }
-def_graphic $graphic11 = "orb_frame,1";
+def_graphic $graphic11 = ~graphic_device("orb_frame,1", graphic_5792);
 if ((%var102 > 0 | %var456 > 0 | %varbit10151 > 0) & ~toplevel_check_sidepanel(3) = true) {
 	if_setonmouserepeat("graphic_swapper($component7, $graphic11)", $component8);
-	$graphic11 = "orb_frame,0";
+	$graphic11 = ~graphic_device("orb_frame,0", graphic_5791);
 	if_setonmouseleave("graphic_swapper($component7, $graphic11)", $component8);
+	if_setgraphic($graphic11, $component7);
 	if_sethide(false, $component8);
 } else {
-	if_setgraphic("orb_frame,0", $component7);
+	if_setgraphic(~graphic_device("orb_frame,0", graphic_5791), $component7);
 	if_setonmouserepeat(null, $component8);
 	if_setonmouseleave(null, $component8);
 	if_sethide(true, $component8);

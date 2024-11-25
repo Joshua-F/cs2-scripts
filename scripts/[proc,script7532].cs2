@@ -1,0 +1,49 @@
+// 7532
+[proc,script7532]
+def_int $int0 = 0;
+def_int $int1 = 5;
+def_int $count2 = 0;
+def_int $count3 = enum_getoutputcount(enum_5624);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_string $string0 = "";
+def_string $string1 = ",";
+def_dbrow $dbrow6 = null;
+~script7531;
+if (~script7487 = 1) {
+	~script7491;
+	~script7496;
+	%varcint1234 = 1;
+	stringvector_clear(stringvector_5);
+	stringvector_clear(stringvector_6);
+	while ($int0 < $int1) {
+		$string0 = hiscore_getmembername($int0);
+		if (string_length($string0) > 0) {
+			stringvector_add(stringvector_5, $string0);
+			hiscore_getmemberhiscores($int0);
+			while ($count2 < $count3) {
+				$dbrow6 = enum(int, dbrow, enum_5624, $count2);
+				if ($dbrow6 ! null) {
+					$int4 = hiscore_getvalue(lowercase(db_getfield($dbrow6, dbtable_79:0, 0)));
+					stringvector_add(stringvector_6, ~tostring_spacer($int4, $string1));
+					$int5 = calc($int5 + $int4);
+					$int4 = 0;
+					$count2 = calc($count2 + 1);
+				}
+			}
+			stringvector_add(stringvector_6, ~tostring_spacer($int5, $string1));
+			$int5 = 0;
+		}
+		$string0 = "";
+		$int0 = calc($int0 + 1);
+		$count2 = 0;
+	}
+	~script7500;
+} else {
+	~script7473;
+	~script7479;
+	~script7484;
+	%varcint1234 = 0;
+	stringvector_clear(stringvector_5);
+	stringvector_clear(stringvector_6);
+}

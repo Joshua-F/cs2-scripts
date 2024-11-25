@@ -1,0 +1,114 @@
+// 7599
+[proc,script7599](int $int0)
+def_component $component1 = enum(int, component, enum_5605, $int0);
+def_component $component2 = interface_593:46;
+def_obj $obj3 = inv_getobj(worn, 3);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = -1;
+def_int $int7 = -1;
+def_int $int8 = -1;
+def_obj $obj9 = null;
+def_obj $obj10 = null;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_int $int11 = -1;
+def_int $int12 = 0;
+switch_int ($int0) {
+	case 0 :
+		$string0, $string1 = ~script7604(0);
+	case 1 :
+		$string0, $string1 = ~script7604(1);
+	case 2 :
+		$string0, $string1 = ~script7604(2);
+	case 3 :
+		$string0, $string1 = ~script7604(3);
+	case 4 :
+		$string0 = "Autocast (defensive)";
+		$string1 = "Select a spell to autocast.<br>Damage provides some defensive xp.";
+	case 5 :
+		$string0 = "Autocast";
+		$string1 = "Select a spell to autocast.";
+	case 6 :
+		$string0 = "Auto-retaliate";
+		$string1 = "When active your character will automatically fight back if attacked.";
+	case 7 :
+		$string0 = "Set effect";
+		$string1 = "Toggles the current weapons set effect.";
+	case 8 :
+		$string2 = "<enum(obj, string, enum_1739, $obj3)> (<tostring(calc(~script3648($obj3) / 10))>%)";
+		switch_obj ($obj3) {
+			case dragon_hasta_22731, dragon_hasta_p_22734, dragon_hasta_p_22737, dragon_hasta_p_22740, dragon_hasta_kp_22743 :
+				$string2 = "<enum(obj, string, enum_1739, $obj3)> 5-100% ";
+			case soulreaper_axe_28338 :
+				$string2 = "<enum(obj, string, enum_1739, $obj3)> 0-5";
+		}
+		$obj9 = inv_getobj(worn, 13);
+		$obj10 = inv_getobj(worn, 1);
+		if ($obj9 = null & $obj10 ! null & oc_param($obj10, param_1910) = 1) {
+			$obj9 = inv_getobj(inv_879, 0);
+		}
+		if (%varbit5712 = 0) {
+			if (($obj3 = dark_bow_11235 | $obj3 = dark_bow_20408 | $obj3 = dark_bow_12765 | $obj3 = dark_bow_12768 | $obj3 = dark_bow_12767) & ($obj9 = dragon_arrow_11212 | $obj9 = dragon_arrow_p_11227 | $obj9 = dragon_arrow_p_11228 | $obj9 = dragon_arrow_p_11229)) {
+				$string2 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 8 per hit). (<tostring(calc(~script3648($obj3) / 10))>%)";
+			}
+			if ($obj3 = dark_bow_bh_27853 & ($obj9 = dragon_arrow_11212 | $obj9 = dragon_arrow_p_11227 | $obj9 = dragon_arrow_p_11228 | $obj9 = dragon_arrow_p_11229)) {
+				$string2 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 10 per hit). (<tostring(calc(~script3648($obj3) / 10))>%)";
+			}
+		}
+		$string0 = "Special attack";
+		$string1 = $string2;
+}
+cc_deleteall($component2);
+def_int $int13 = calc(max(parawidth($string1, 182, p11_full), parawidth($string0, 182, p12_full)) + 6);
+def_int $int14 = calc(paraheight($string1, 182, p11_full) * 14);
+def_int $int15 = calc($int14 + 16);
+def_int $int16 = if_gety($component1);
+if ($int0 = 4 | $int0 = 5) {
+	$int16 = calc($int16 + if_gety(interface_593:21));
+}
+$int4 = calc($int16 + if_getheight($component1) + 5);
+if (calc($int4 + $int15) > if_getheight($component2)) {
+	$int4 = max(0, calc($int16 - $int15 - 5));
+}
+cc_create($component2, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize($int13, $int15, ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(42);
+cc_setnoclickthrough(true);
+cc_create($component2, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(1, calc($int4 + 1), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(calc($int13 - 1), calc($int15 - 1), ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x2e2b23);
+cc_create($component2, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(calc($int13 - 1), calc($int15 - 1), ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x726451);
+cc_create($component2, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(calc($int13 - 6), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(false);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+cc_create($component2, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(calc($int13 - 6), $int14, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, calc($int4 + 14), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xaf6a1a);
+cc_settextshadow(false);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string1);

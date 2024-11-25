@@ -1,7 +1,7 @@
 // 3361
-[proc,gazette_button](component $component0, boolean $boolean1)
+[proc,gazette_button](component $component0, int $int1)
 def_int $int2 = 0;
-if ($boolean1 = true) {
+if ($int1 = 1) {
 	$int2 = ~beige_stone_button_out($component0, $int2);
 } else {
 	$int2 = ~beige_stone_button_in($component0, $int2);

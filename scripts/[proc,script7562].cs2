@@ -1,0 +1,21 @@
+// 7562
+[proc,script7562]()(int)
+if (~on_mobile = false) {
+	return(0);
+}
+if (cc_find(interface_12:13, 0) = ^true) {
+	return(1);
+}
+if (cc_find(interface_192:2, 0) = ^true) {
+	return(1);
+}
+if (cc_find(interface_402:5, 0) = ^true) {
+	return(1);
+}
+if (cc_find(interface_451:2, 0) = ^true) {
+	return(1);
+}
+if (cc_find(interface_465:25, 0) = ^true) {
+	return(1);
+}
+return(0);

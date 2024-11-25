@@ -1,0 +1,5 @@
+// 7548
+[clientscript,script7548](string $string0)
+def_int $int0 = hiscore_getrank($string0);
+def_int $int1 = hiscore_getvalue($string0);
+mes("Rank for <$string0>: <tostring($int0)>, Score: <tostring($int1)>");

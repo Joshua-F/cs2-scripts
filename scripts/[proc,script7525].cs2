@@ -1,0 +1,30 @@
+// 7525
+[proc,script7525](component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(192);
+if (~on_mobile = false) {
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 192, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 225, null)");
+}
+cc_create($component0, ^iftype_rectangle, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_settrans(128);
+cc_create($component0, ^iftype_inputfield, 2);
+cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p12_full);
+cc_setcolour(^white);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_input_setsubmitmode(1);
+cc_input_setselectcolour(^black);
+cc_input_setselectbgcolour(^white);
+cc_input_setlinecountlimit(1);
+cc_input_setlinewidthlimit(12);

@@ -1,0 +1,16 @@
+// 7412
+[proc,script7412](enum $enum0)
+if ($enum0 = null | $enum0 ! enum_1745) {
+	return;
+}
+def_component $component1 = enum(component, component, $enum0, toplevel_osm:40);
+def_component $component2 = enum(component, component, $enum0, toplevel_osm:41);
+def_component $component3 = enum(component, component, $enum0, toplevel_osrs_stretch:34);
+if ($component1 = null | $component2 = null | $component3 = null) {
+	return;
+}
+if (if_getheight(toplevel_osm:20) < 503) {
+	if_setposition(0, calc(4 + 46), ^setpos_abs_left, ^setpos_abs_bottom, $component1);
+} else {
+	if_setposition(0, 60, ^setpos_abs_left, ^setpos_abs_centre, $component1);
+}

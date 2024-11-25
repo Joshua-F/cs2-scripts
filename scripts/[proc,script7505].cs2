@@ -1,0 +1,57 @@
+// 7505
+[proc,script7505](int $y0)(int)
+cc_deleteall(interface_894:22);
+if_setposition(0, $y0, ^setpos_abs_centre, ^setpos_abs_top, interface_894:22);
+def_int $int1 = 0;
+cc_create(interface_894:22, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic(tradebacking_dark);
+cc_settiling(true);
+cc_create(interface_894:22, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create(interface_894:22, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create(interface_894:22, ^iftype_graphic, $int1);
+def_int $comsubid2 = $int1;
+$int1 = calc($int1 + 1);
+if (%varcint1234 = 1) {
+	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_centre);
+	cc_setgraphic("scrollbar_v2,1");
+}
+cc_create(interface_894:22, ^iftype_text, $int1);
+def_int $comsubid3 = $int1;
+$int1 = calc($int1 + 1);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_string $string0 = "Select a group member";
+if (%varcint1234 = 0) {
+	$string0 = "Search for a group to view members";
+}
+def_int $width4 = parawidth($string0, 500, p12_full);
+cc_settext($string0);
+cc_setsize($width4, 20, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%varcint1234 = 1) {
+	if (~on_enhanced_mobile = 0) {
+		if_setonmouseover("cc_settrans(interface_894:22, $int1, 220, null)", interface_894:22);
+		if_setonmouseleave("cc_settrans(interface_894:22, $int1, 255, null)", interface_894:22);
+	}
+	if_setop(1, "Select <col=ff981f>Group member", interface_894:22);
+	if_setonop("script7506($comsubid2, $comsubid3)", interface_894:22);
+} else {
+	if_clearops(interface_894:22);
+}
+return(30);

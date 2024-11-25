@@ -1,8 +1,10 @@
 // 6057
 [proc,script6057]
 def_component $component0 = interface_160:15;
-if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
-	$component0 = interface_311:17;
+if (~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
+	$component0 = interface_895:12;
+} else if (~on_mobile = true & %varbit6254 = 1) {
+	$component0 = interface_898:12;
 }
 cc_deleteall($component0);
 if_setontimer(null, $component0);

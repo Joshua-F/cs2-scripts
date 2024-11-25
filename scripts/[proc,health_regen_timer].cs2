@@ -4,8 +4,12 @@ if (~on_enhanced_any = 0) {
 	return;
 }
 def_component $component4 = interface_160:15;
-if (~on_mobile = true & %varbit6254 = 1 | ~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
-	$component4 = interface_311:17;
+if (~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
+	$component4 = interface_895:12;
+} else if (~on_mobile = true & %varbit6254 = 0) {
+	$component4 = interface_897:11;
+} else if (~on_mobile = true & %varbit6254 = 1) {
+	$component4 = interface_898:12;
 }
 cc_deleteall($component4);
 if_setonstattransmit("health_orb_stattransmit{hitpoints}", $component4);

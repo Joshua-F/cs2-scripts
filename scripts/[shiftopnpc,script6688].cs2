@@ -1,6 +1,6 @@
 // 6688
 [shiftopnpc,script6688]
-if (~on_enhanced_desktop = 0) {
+if (~on_enhanced_any = 0) {
 	return;
 }
 if (highlight_npc_get(npc_uid, npc_creationcycle, 6) = true) {

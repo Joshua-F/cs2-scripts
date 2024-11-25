@@ -1,0 +1,8 @@
+// 7415
+[proc,script7415](int $opindex0)
+if (%var281 < 1000 & %var2686 < 1000) {
+	mes("You cannot switch loadouts during the tutorial");
+	return;
+}
+def_int $int1 = calc($opindex0 - 2);
+~script7447($int1, 0);

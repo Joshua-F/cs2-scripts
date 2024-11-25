@@ -1,0 +1,24 @@
+// 7604
+[proc,script7604](int $int0)(string, string)
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_graphic $graphic1 = null;
+def_int $int2 = -1;
+def_int $int3 = 0;
+db_find(dbtable_78:0, %varbit357);
+def_dbrow $dbrow4 = db_findnext;
+def_int $int5 = db_getfieldcount($dbrow4, dbtable_78:1);
+while ($int3 < $int5) {
+	$int2 = -1;
+	$string2 = "";
+	$string3 = "";
+	$graphic1 = null;
+	$int2, $string2, $string3, $graphic1 = db_getfield($dbrow4, dbtable_78:1, $int3);
+	if ($int2 = $int0) {
+		$string0, $string1 = $string2, $string3;
+	}
+	$int3 = calc($int3 + 1);
+}
+return($string0, $string1);

@@ -1,0 +1,31 @@
+// 7484
+[proc,script7484]
+def_int $int0 = calc(enum_getoutputcount(enum_5626) + 9 + 1);
+def_int $count1 = enum_getoutputcount(enum_5626);
+def_dbrow $dbrow2 = null;
+def_int $count3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_varp $varp6 = null;
+def_string $string0 = "";
+while ($count3 < $count1) {
+	$dbrow2 = enum(int, dbrow, enum_5626, $count3);
+	if ($dbrow2 ! null) {
+		$varp6 = db_getfield($dbrow2, dbtable_81:2, 0);
+		$int4 = ~max(0, hiscore_getbosskills($varp6));
+		$int5 = ~max(0, calc(hiscore_getbossrank($varp6) + 1));
+		if (cc_find(interface_894:9, $int0) = ^true) {
+			cc_settext(~script7513($int4));
+		}
+		if ($int5 > 0) {
+			$string0 = "Boss: <db_getfield($dbrow2, dbtable_81:0, 0)><br>Rank: <~tostring_spacer($int5, ",")><br>Score: <~tostring_spacer($int4, ",")>";
+		} else {
+			$string0 = "Boss: <db_getfield($dbrow2, dbtable_81:0, 0)><br>Rank: Unranked";
+		}
+		if (cc_find(interface_894:9, $count3) = ^true) {
+			~script7516($string0, 0, 0);
+		}
+		$int0 = calc($int0 + 2);
+	}
+	$count3 = calc($count3 + 1);
+}

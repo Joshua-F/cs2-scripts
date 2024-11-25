@@ -1,0 +1,35 @@
+// 7608
+[proc,script7608]
+def_int $int0 = 0;
+cc_create(toplevel_osm:46, ^iftype_graphic, 0);
+cc_setsize(58, 40, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%varcint1220 = 1) {
+	cc_setgraphic(graphic_5773);
+} else {
+	cc_setgraphic(graphic_5774);
+}
+cc_create(toplevel_osm:46, ^iftype_graphic, 1);
+cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("options_icons,5");
+if_setop(1, "Toggle Chatbox", toplevel_osm:46);
+if_setop(2, "Toggle Filters", toplevel_osm:46);
+if_setop(3, "Report player abuse", toplevel_osm:46);
+if_setop(4, "Toggle report minimenu option", toplevel_osm:46);
+if_setop(5, "Report game bug", toplevel_osm:46);
+if_setonop("script7610(event_op)", toplevel_osm:46);
+cc_create(toplevel_osm:48, ^iftype_graphic, 0);
+cc_setsize(58, 40, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setgraphic(graphic_5774);
+cc_create(toplevel_osm:48, ^iftype_graphic, 1);
+cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("side_icons,40");
+if_setop(1, "Start chatting", toplevel_osm:48);
+if (%varcint1220 = 1) {
+	if_sethide(true, toplevel_osm:48);
+} else {
+	if_sethide(false, toplevel_osm:48);
+}

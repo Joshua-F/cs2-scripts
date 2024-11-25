@@ -1,0 +1,12 @@
+// 7432
+[proc,script7432](int $int0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+$int2, $int1 = ~script7443($int0);
+if ($int2 = 0) {
+	return;
+}
+def_component $component3 = enum(int, component, enum_5611, calc($int1 - 1));
+if ($component3 ! null) {
+	~script7411($component3, $int0, enum(int, struct, enum_5607, $int0));
+}

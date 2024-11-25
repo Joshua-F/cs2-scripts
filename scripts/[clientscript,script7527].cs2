@@ -1,0 +1,7 @@
+// 7527
+[clientscript,script7527](component $component0, int $comsubid1)
+def_string $string0 = "";
+if ($comsubid1 ! -1 & cc_find($component0, $comsubid1) = ^true) {
+	$string0 = removetags(cc_gettext);
+	~script7529($string0, %varcint1227);
+}

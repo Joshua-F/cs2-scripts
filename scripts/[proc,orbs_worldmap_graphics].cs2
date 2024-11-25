@@ -7,8 +7,8 @@ if (~toplevel_getcomponents = enum_1745) {
 		$graphic0 = "worldmap_icon_large,2";
 		$graphic1 = "worldmap_icon_large,2";
 	} else {
-		$graphic0 = "worldmap_icon_large,0";
-		$graphic1 = "worldmap_icon_large,0";
+		$graphic0 = ~graphic_device("worldmap_icon_large,0", "orb_icon,13");
+		$graphic1 = ~graphic_device("worldmap_icon_large,0", "orb_icon,13");
 	}
 } else if (%varbit9178 = 1) {
 	$graphic0 = "worldmap_icon,2";

@@ -1,0 +1,5 @@
+// 7546
+[clientscript,script7546](int $int0)
+def_int $int1 = hiscore_getskillrank($int0);
+def_int $int2 = hiscore_getskillxp($int0);
+mes("Rank for skill index <tostring($int0)>: <tostring($int1)>, Scores: <tostring($int2)>");

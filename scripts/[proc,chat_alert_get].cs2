@@ -13,6 +13,26 @@ switch_int ($int0) {
 		return(%varcint47);
 	case 6 :
 		return(%varcint48);
+	case 73 :
+		if (%varcint44 > 0) {
+			return(%varcint44);
+		}
+		if (%varcint45 > 0) {
+			return(%varcint45);
+		}
+		if (%varcint46 > 0) {
+			return(%varcint46);
+		}
+		if (%varcint438 > 0) {
+			return(%varcint438);
+		}
+		if (%varcint47 > 0) {
+			return(%varcint47);
+		}
+		if (%varcint48 > 0) {
+			return(%varcint48);
+		}
+		return(0);
 	case default :
 		return(0);
 }

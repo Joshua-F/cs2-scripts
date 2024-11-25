@@ -1,0 +1,10 @@
+// 7602
+[proc,script7602]
+if (~on_mobile = true) {
+	if (if_gethide(interface_593:1) = true) {
+		~script7596(false);
+	} else {
+		~script7596(true);
+		~script7601;
+	}
+}

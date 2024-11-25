@@ -1,0 +1,13 @@
+// 7526
+[clientscript,script7526](component $component0, int $comsubid1)
+def_string $string0 = "";
+if ($comsubid1 ! -1) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		if (cc_input_getfocus = true) {
+			return;
+		}
+		$string0 = removetags(cc_gettext);
+	}
+} else if (if_input_getfocus($component0) = true) {
+	return;
+}

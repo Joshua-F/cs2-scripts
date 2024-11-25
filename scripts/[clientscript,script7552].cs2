@@ -1,0 +1,5 @@
+// 7552
+[clientscript,script7552]
+def_int $int0 = 0;
+$int0 = hiscore_getstatus;
+mes("Hiscores status: <tostring($int0)>");

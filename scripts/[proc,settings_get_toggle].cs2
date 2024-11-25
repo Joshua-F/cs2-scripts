@@ -68,11 +68,15 @@ switch_int ($setting0) {
 	case 50 :
 		return(%varbit5599);
 	case 51 :
-		return(%varbit5542);
+		return(%varbit11556);
 	case 48 :
 		return(%var170);
-	case ^setting_function_button :
-		return(%varbit6257);
+	case 408 :
+		return(%varbit11557);
+	case 414 :
+		return(%varbit11558);
+	case 415 :
+		return(%varbit11559);
 	case 54 :
 		return(%varbit4611);
 	case ^setting_escape_closes_interface :
@@ -131,6 +135,10 @@ switch_int ($setting0) {
 		return(%varbit11893);
 	case 112 :
 		return(%varbit12342);
+	case 410 :
+		return(%varcint1214);
+	case 409 :
+		return(%varcint1215);
 	case ^setting_mouseover_tooltips :
 		return(%varbit12344);
 	case ^setting_mouseover_text :
@@ -395,6 +403,8 @@ switch_int ($setting0) {
 		return(%varbit14177);
 	case 261 :
 		return(%varbit14168);
+	case 416 :
+		return(%varbit11518);
 	case 260 :
 		return(%varbit14170);
 	case 265 :
@@ -507,6 +517,32 @@ switch_int ($setting0) {
 		return(%varbit10748);
 	case 385 :
 		return(%varbit10946);
+	case 391 :
+		return(%varbit11520);
+	case 396 :
+		return(%varbit11524);
+	case 397 :
+		return(%varbit11525);
+	case 398 :
+		return(%varbit11526);
+	case 399 :
+		return(%varbit11527);
+	case 400 :
+		return(%varbit11528);
+	case 401 :
+		return(%varbit11529);
+	case 402 :
+		return(%varbit11530);
+	case 403 :
+		return(%varbit11531);
+	case 404 :
+		return(%varbit11532);
+	case 405 :
+		return(%varbit11533);
+	case 406 :
+		return(%varbit11521);
+	case 417 :
+		return(%varbit11519);
 	case default :
 		return(0);
 }

@@ -4,8 +4,8 @@ def_int $width2 = 512;
 def_int $int3 = 0;
 ~popout_tooltip_clear;
 if (~on_mobile = true) {
-	~tooltip_build($component0, $int1, interface_728:16, $string0, $width2);
-	if_setontimer("popout_tooltip_remove_delayed(calc(clientclock + 240))", interface_728:16);
+	~tooltip_build($component0, $int1, interface_728:8, $string0, $width2);
+	if_setontimer("popout_tooltip_remove_delayed(calc(clientclock + 240))", interface_728:8);
 } else {
-	~tooltip_mouserepeat($component0, $int1, interface_728:16, $string0, $int3, $width2);
+	~tooltip_mouserepeat($component0, $int1, interface_728:8, $string0, $int3, $width2);
 }

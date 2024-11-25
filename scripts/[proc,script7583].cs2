@@ -1,0 +1,7 @@
+// 7583
+[proc,script7583]
+if (~on_enhanced_mobile = 0) {
+	return;
+}
+%varbit11518 = calc(1 - %varbit11518);
+~script7432(25);

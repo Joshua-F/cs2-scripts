@@ -1,0 +1,147 @@
+// 7500
+[proc,script7500]
+cc_deleteall(interface_894:19);
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $count3 = enum_getoutputcount(enum_5624);
+while ($int2 < calc($count3 * 2 + 3)) {
+	cc_create(interface_894:19, ^iftype_rectangle, $int1);
+	$int1 = calc($int1 + 1);
+	$int2 = calc($int2 + 1);
+}
+$int2 = 0;
+$int1, $int0 = ~script7512(interface_894:19, "Group members", $int1, $int0);
+.cc_setonclick("script7499");
+$int0 = calc($int0 + 10);
+$int0 = calc($int0 + ~script7505($int0));
+$int0 = calc($int0 + 10);
+cc_create(interface_894:19, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Skills");
+cc_setsize(12, 12, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
+$int0 = calc($int0 + cc_getheight);
+$int0 = calc($int0 + 10);
+def_dbrow $dbrow4 = null;
+def_int $int5 = 0;
+def_int $int6 = calc(if_getwidth(interface_894:19) / 3);
+def_int $int7 = 0;
+def_string $string0 = "";
+while ($int2 < $count3) {
+	$dbrow4 = enum(int, dbrow, enum_5624, $int2);
+	if ($dbrow4 ! null) {
+		$int1, $int0, $int5 = ~script7509(interface_894:19, $int0, $int1, $int5, db_getfield($dbrow4, dbtable_79:2, 0), 25, 25, $int6, $int2);
+		$string0 = db_getfield($dbrow4, dbtable_79:0, 0);
+		~script7516($string0, 0, 0);
+	}
+	$int2 = calc($int2 + 1);
+}
+if ($int5 ! 0) {
+	$int0 = calc($int0 + (25 + 5));
+}
+$int6 = calc(if_getwidth(interface_894:19) / 2);
+cc_create(interface_894:19, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int6 / 2 - 36), $int0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("side_icons,0");
+cc_settiling(true);
+.cc_create(interface_894:19, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+.cc_settextfont(p12_full);
+.cc_settextshadow(true);
+.cc_setcolour(0xff981f);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settext("--");
+.cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc($int6 / 2), $int0, ^setpos_abs_left, ^setpos_abs_top);
+if (cc_find(interface_894:19, $count3) = ^true) {
+	cc_setsize(66, 36, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int6 / 2 - 36), $int0, ^setpos_abs_left, ^setpos_abs_top);
+	~script7516("Combat", 0, 0);
+}
+cc_create(interface_894:19, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int6 / 2), $int0, ^setpos_abs_right, ^setpos_abs_top);
+cc_setgraphic("side_icons,1");
+cc_settiling(true);
+.cc_create(interface_894:19, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+.cc_settextfont(p12_full);
+.cc_settextshadow(true);
+.cc_setcolour(0xff981f);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settext("--");
+.cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc($int6 / 2 - 36), $int0, ^setpos_abs_right, ^setpos_abs_top);
+if (cc_find(interface_894:19, calc($count3 + 1)) = ^true) {
+	cc_setsize(66, 36, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int6 / 2 - 36), $int0, ^setpos_abs_right, ^setpos_abs_top);
+	~script7516("Overall", 0, 0);
+}
+if ($int5 ! 0) {
+	$int0 = calc($int0 + (36 + 5));
+}
+$int0 = calc($int0 + 10);
+cc_create(interface_894:19, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Contribution xp");
+cc_setsize(12, 12, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
+$int0 = calc($int0 + cc_getheight);
+$int0 = calc($int0 + 10);
+$count3 = enum_getoutputcount(enum_5624);
+$dbrow4 = null;
+$int2 = 0;
+$int5 = 0;
+$int6 = calc(if_getwidth(interface_894:19) / 2);
+$string0 = "";
+while ($int2 < $count3) {
+	$dbrow4 = enum(int, dbrow, enum_5624, $int2);
+	if ($dbrow4 ! null) {
+		$int1, $int0, $int5 = ~script7488(interface_894:19, $int0, $int1, $int5, db_getfield($dbrow4, dbtable_79:2, 0), 25, 25, $int6, calc($int2 + 2 + $count3));
+		$string0 = db_getfield($dbrow4, dbtable_79:0, 0);
+		~script7516($string0, 0, 0);
+	}
+	$int2 = calc($int2 + 1);
+}
+if ($int5 ! 0) {
+	$int0 = calc($int0 + (25 + 5));
+}
+cc_create(interface_894:19, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int6 / 2 - 33 + 8), $int0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("side_icons,1");
+cc_settiling(true);
+.cc_create(interface_894:19, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+.cc_settextfont(p12_full);
+.cc_settextshadow(true);
+.cc_setcolour(0xff981f);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settext("--");
+.cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc($int6 / 2 + 40), $int0, ^setpos_abs_left, ^setpos_abs_top);
+if (cc_find(interface_894:19, calc($count3 * 2 + 3)) = ^true) {
+	cc_setsize(120, 36, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int6 / 2 - 30), $int0, ^setpos_abs_left, ^setpos_abs_top);
+	~script7516("Total contribution XP", 0, 0);
+}
+if ($int5 ! 0) {
+	$int0 = calc($int0 + (36 + 5));
+}
+$int0 = calc($int0 + 10);
+if_setsize(0, $int0, ^setsize_minus, ^setsize_abs, interface_894:19);
+if_setcolour($int0, interface_894:19);
+~script7511;

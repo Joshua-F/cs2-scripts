@@ -1,0 +1,95 @@
+// 7511
+[proc,script7511]
+def_int $height0 = 126;
+if (~script7487 = 1) {
+	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:15);
+	if (%varcint1235 = 1) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:15);
+		if (cc_find(interface_894:15, 4) = ^true) {
+			cc_setgraphic(graphic_4918);
+		}
+	} else {
+		if_setsize(0, if_getcolour(interface_894:15), ^setsize_minus, ^setsize_abs, interface_894:15);
+		if (cc_find(interface_894:15, 4) = ^true) {
+			cc_setgraphic(graphic_4917);
+		}
+	}
+	$height0 = calc($height0 + if_getheight(interface_894:15));
+	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:17);
+	if (%varcint1236 = 1) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:17);
+		if (cc_find(interface_894:17, 4) = ^true) {
+			cc_setgraphic(graphic_4918);
+		}
+	} else {
+		if_setsize(0, if_getcolour(interface_894:17), ^setsize_minus, ^setsize_abs, interface_894:17);
+		if (cc_find(interface_894:17, 4) = ^true) {
+			cc_setgraphic(graphic_4917);
+		}
+	}
+	$height0 = calc($height0 + if_getheight(interface_894:17));
+	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:19);
+	if (%varcint1237 = 1) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:19);
+		$height0 = calc($height0 + if_getheight(interface_894:19));
+		if_setsize(0, 0, ^setsize_abs, ^setsize_abs, interface_894:22);
+		if (cc_find(interface_894:19, 4) = ^true) {
+			cc_setgraphic(graphic_4918);
+		}
+	} else {
+		if_setsize(0, if_getcolour(interface_894:19), ^setsize_minus, ^setsize_abs, interface_894:19);
+		if_setsize(10, 30, ^setsize_minus, ^setsize_abs, interface_894:22);
+		if_setposition(0, calc($height0 + 43), ^setpos_abs_centre, ^setpos_abs_top, interface_894:22);
+		$height0 = calc($height0 + if_getheight(interface_894:19) + 10);
+		if (cc_find(interface_894:19, 4) = ^true) {
+			cc_setgraphic(graphic_4917);
+		}
+	}
+} else {
+	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:7);
+	if (%varcint1228 = 1) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:7);
+		if (cc_find(interface_894:7, 4) = ^true) {
+			cc_setgraphic(graphic_4918);
+		}
+	} else {
+		if_setsize(0, if_getcolour(interface_894:7), ^setsize_minus, ^setsize_abs, interface_894:7);
+		if (cc_find(interface_894:7, 4) = ^true) {
+			cc_setgraphic(graphic_4917);
+		}
+	}
+	$height0 = calc($height0 + if_getheight(interface_894:7));
+	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:8);
+	if (%varcint1229 = 1) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:8);
+		if (cc_find(interface_894:8, 4) = ^true) {
+			cc_setgraphic(graphic_4918);
+		}
+	} else {
+		if_setsize(0, if_getcolour(interface_894:8), ^setsize_minus, ^setsize_abs, interface_894:8);
+		if (cc_find(interface_894:8, 4) = ^true) {
+			cc_setgraphic(graphic_4917);
+		}
+	}
+	$height0 = calc($height0 + if_getheight(interface_894:8));
+	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:9);
+	if (%varcint1230 = 1) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:9);
+		if (cc_find(interface_894:9, 4) = ^true) {
+			cc_setgraphic(graphic_4918);
+		}
+	} else {
+		if_setsize(0, if_getcolour(interface_894:9), ^setsize_minus, ^setsize_abs, interface_894:9);
+		if (cc_find(interface_894:9, 4) = ^true) {
+			cc_setgraphic(graphic_4917);
+		}
+	}
+	$height0 = calc($height0 + if_getheight(interface_894:9));
+}
+if ($height0 > if_getheight(interface_894:6)) {
+	if_setscrollsize(0, $height0, interface_894:6);
+} else {
+	if_setscrollsize(0, 0, interface_894:6);
+}
+if_setscrollpos(0, 0, interface_894:6);
+~scrollbar_vertical(interface_894:5, interface_894:6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

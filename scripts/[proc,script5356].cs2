@@ -5,9 +5,9 @@ def_int $count1 = enum_getoutputcount(enum_4067);
 def_int $int2 = 0;
 def_struct $struct3 = null;
 while ($int0 < $count1) {
-	cc_create(interface_728:15, ^iftype_graphic, $int0);
+	cc_create(interface_728:6, ^iftype_graphic, $int0);
 	$int0 = calc($int0 + 1);
-	if (~popout_available_inner($int0) = 1) {
+	if (~popout_available_inner($int0) = true) {
 		$struct3 = enum(int, struct, enum_4067, $int0);
 		cc_setopbase("<col=ff9040><struct_param($struct3, param_1413)></col>");
 		if (%varbit13090 = $int0) {
@@ -16,14 +16,14 @@ while ($int0 < $count1) {
 			cc_setop(1, "Open");
 		}
 		cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setgraphic(struct_param($struct3, param_1412));
 		cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 128, null)");
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
 		switch_struct ($struct3) {
 			case struct_3742 :
-				cc_setonstattransmit("xptracker_stattransmit");
-				cc_setontimer("xptracker_set_xph(event_comsubid)");
+				if_setonstattransmit("xptracker_stattransmit", interface_728:3);
+				if_setontimer("xptracker_set_xph(event_comsubid)", interface_728:3);
 		}
 		$int2 = calc($int2 + 36);
 	}

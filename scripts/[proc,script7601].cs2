@@ -1,0 +1,10 @@
+// 7601
+[proc,script7601]
+def_int $height0 = calc(if_gety(interface_593:37) + if_getheight(interface_593:37) - if_gety(interface_593:1) + 4);
+if (if_gethide(interface_593:1) = true) {
+	return;
+}
+if (if_gethide(interface_593:37) = true) {
+	$height0 = calc(if_gety(interface_593:31) + if_getheight(interface_593:31) - if_gety(interface_593:1) + 4);
+}
+if_setsize(if_getwidth(interface_593:1), $height0, ^setsize_abs, ^setsize_abs, interface_593:1);

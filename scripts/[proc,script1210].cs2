@@ -21,7 +21,7 @@ switch_int ($index0) {
 		if (testbit(%varcint1189, $index0) = ^true) {
 			$enum2 = ~toplevel_getcomponents;
 			if ($enum2 = enum_1745) {
-				~toplevel_sidebutton_switch(-1, $enum2);
+				~toplevel_sidebutton_switch(-1, $enum2, 0);
 				~toplevel_side_customise($enum2);
 			}
 		}

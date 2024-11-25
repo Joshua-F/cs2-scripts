@@ -7,12 +7,24 @@ if ($enum0 ! enum_1745) {
 def_component $component1 = enum(int, component, enum_1137, %varcint171);
 def_component $component2 = enum(component, component, $enum0, toplevel_pre_eoc:96);
 if (if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:74)) = true & if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:16)) = true) {
-	return(1);
+	if (%varcint1222 = 1) {
+		return(3);
+	}
+	return(4);
 }
-if ($component1 = toplevel_osrs_stretch:77 | $component1 = toplevel_osrs_stretch:78 | $component1 = toplevel_osrs_stretch:79 | $component1 = toplevel_osrs_stretch:80 | $component1 = toplevel_osrs_stretch:86 | $component1 = toplevel_osrs_stretch:87 | $component1 = toplevel_osrs_stretch:89) {
-	return(1);
+if ($component1 ! null) {
+	if (%varcint1222 = 1) {
+		return(3);
+	}
+	return(4);
 }
-if (if_getx($component2) ! 37 & if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:74)) = true) {
-	return(1);
+if (if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:74)) = true) {
+	if (%varcint1222 = 1) {
+		return(3);
+	}
+	return(4);
 }
-return(0);
+if (%varcint1222 ! 1) {
+	return(2);
+}
+return(1);

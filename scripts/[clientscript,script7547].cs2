@@ -1,0 +1,5 @@
+// 7547
+[clientscript,script7547](int $int0)
+def_int $int1 = hiscore_getgamerank($int0);
+def_int $int2 = hiscore_getgamecompletions($int0);
+mes("Rank for game index <tostring($int0)>: <tostring($int1)>, Score: <tostring($int2)>");

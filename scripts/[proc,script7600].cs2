@@ -1,0 +1,9 @@
+// 7600
+[proc,script7600](boolean $boolean0)
+def_component $component1 = interface_593:1;
+if ($boolean0 = true) {
+	if_sethide(false, $component1);
+	~script7601;
+} else {
+	if_sethide(true, $component1);
+}

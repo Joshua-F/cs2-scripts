@@ -1,0 +1,16 @@
+// 7514
+[proc,script7514](int $int0)(int)
+def_int $int1 = 2;
+def_int $count2 = enum_getoutputcount(enum_256);
+def_int $int3 = 1;
+def_int $int4 = 0;
+while ($int1 < 100) {
+	$int4 = enum(int, int, enum_256, $int1);
+	if ($int0 >= $int4) {
+		$int3 = calc($int3 + 1);
+		$int1 = calc($int1 + 1);
+	} else {
+		return($int3);
+	}
+}
+return(99);

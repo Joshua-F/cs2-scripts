@@ -1,0 +1,20 @@
+// 7592
+[clientscript,script7592]
+def_component $component0 = interface_593:45;
+def_component $component1 = interface_593:1;
+def_int $int2 = 0;
+if (~on_mobile = true) {
+	while ($int2 < 4) {
+		cc_create($component1, ^iftype_rectangle, $int2);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(calc($int2 * 2), calc($int2 * 2), ^setsize_minus, ^setsize_minus);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		cc_settrans(220);
+		$int2 = calc($int2 + 1);
+	}
+	~script7595(false);
+} else {
+	if_sethide(true, $component0);
+}
+~combat_interface_setup;

@@ -1,0 +1,15 @@
+// 7513
+[proc,script7513](int $int0)(string)
+if ($int0 >= ^max_32bit_int) {
+	return("*");
+}
+if ($int0 >= 1000000000) {
+	return(append(tostring(calc($int0 / 1000000000)), "B"));
+}
+if ($int0 >= 1000000) {
+	return(append(tostring(calc($int0 / 1000000)), "M"));
+}
+if ($int0 >= 10000) {
+	return(append(tostring(calc($int0 / 1000)), "K"));
+}
+return(tostring($int0));
