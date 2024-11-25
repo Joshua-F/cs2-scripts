@@ -2654,11 +2654,11 @@ switch_int ($int0) {
 				case 2 :
 					return(25, medium_pouch_5510, "Medium pouch: Holds 6 extra essence");
 				case 3 :
-					return(50, large_pouch_5512, "Large pouch: Holds 9 extra essence");
+					return(25, colossal_pouch_26784, "Colossal pouch: Holds up to 40 essence, depending on your Runecraft level");
 				case 4 :
-					return(75, giant_pouch_5514, "Giant pouch: Holds 12 extra essence");
+					return(50, large_pouch_5512, "Large pouch: Holds 9 extra essence");
 				case 5 :
-					return(85, colossal_pouch_26784, "Colossal pouch: Holds 40 essence");
+					return(75, giant_pouch_5514, "Giant pouch: Holds 12 extra essence");
 				case default :
 					return(-1, null, "");
 			}
