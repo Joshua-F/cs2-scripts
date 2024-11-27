@@ -1,0 +1,9 @@
+// 7739
+[proc,script7739](string $string0)
+if (~on_mobile = true) {
+	cc_setop(1, $string0);
+	cc_setonop("script7740($string0)");
+	return;
+}
+cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, interface_529:25, $string0, 25, 512)");
+cc_setonmouseleave("deltooltip(interface_529:25)");

@@ -1,0 +1,49 @@
+// 7725
+[proc,script7725]
+def_component $component0 = interface_529:14;
+def_component $component1 = interface_529:15;
+~thinbox_light($component0, 0);
+def_int $int2 = ~script7733($component1, $int2, "Masteries");
+def_int $int3 = 40;
+def_int $int4 = 0;
+if (%varbit11580 > 0) {
+	$int4 = calc($int4 + 1);
+}
+if (%varbit11581 > 0) {
+	$int4 = calc($int4 + 1);
+}
+if (%varbit11582 > 0) {
+	$int4 = calc($int4 + 1);
+}
+def_boolean $boolean5 = ~int_to_bool($int4);
+if ($boolean5 = false) {
+	$int4 = 3;
+}
+def_int $int6 = calc($int4 * $int3);
+def_int $int7 = calc(if_getwidth($component1) - $int6);
+def_int $int8 = calc($int7 / ($int4 + 1));
+def_int $int9 = $int8;
+def_int $int10 = 24;
+def_int $int11 = 0;
+if ($boolean5 = false) {
+	$int10 = calc($int10 + 3);
+	$int2 = ~script7726($component1, $int2, graphic_6217, $int9, $int10, 0, "");
+	$int9 = calc($int9 + $int3 + $int8);
+	$int2 = ~script7726($component1, $int2, graphic_6223, $int9, $int10, 0, "");
+	$int9 = calc($int9 + $int3 + $int8);
+	$int2 = ~script7726($component1, $int2, graphic_6229, $int9, $int10, 0, "");
+	$int9 = calc($int9 + $int3 + $int8);
+	return;
+}
+if (%varbit11580 > 0) {
+	$int2 = ~script7726($component1, $int2, ~script7683(enum_5691, %varbit11580), $int9, $int10, %varbit11580, "Melee");
+	$int9 = calc($int9 + $int3 + $int8);
+}
+if (%varbit11581 > 0) {
+	$int2 = ~script7726($component1, $int2, ~script7683(enum_5692, %varbit11581), $int9, $int10, %varbit11581, "Ranged");
+	$int9 = calc($int9 + $int3 + $int8);
+}
+if (%varbit11582 > 0) {
+	$int2 = ~script7726($component1, $int2, ~script7683(enum_5693, %varbit11582), $int9, $int10, %varbit11582, "Magic");
+	$int9 = calc($int9 + $int3 + $int8);
+}

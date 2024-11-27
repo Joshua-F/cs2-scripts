@@ -17,11 +17,22 @@ def_string $text1 = "";
 def_string $string2 = "";
 def_int $int19 = 0;
 def_int $int20 = enum(int, int, $enum0, $int19);
+def_int $int21 = 0;
+def_int $int22 = 0;
+if (~league_relic_active(slayer_master_1129) = 1) {
+	$int21 = 1;
+}
 while ($int20 ! -1 & $int20 <= 56) {
 	$text1 = enum(int, string, enum_834, $int20);
 	~debug_mes("$bit <tostring($int20)> <$text1>");
 	$string2 = ~slayer_rewards_unlock_desc($int20);
-	$string0 = "<$string2> <col=ff0000>(<tostring(enum(int, int, enum_836, $int20))> points)</col>";
+	if ($int21 = 1) {
+		$int22 = 0;
+		$string0 = "<$string2> <col=06600c>(<tostring($int22)> points)</col>";
+	} else {
+		$int22 = enum(int, int, enum_836, $int20);
+		$string0 = "<$string2> <col=ff0000>(<tostring($int22)> points)</col>";
+	}
 	$int15 = calc(paraheight($string0, $width11, p11_full) * 10 + 2);
 	if (calc($int19 % 2) = 1) {
 		$int16 = enum(int, int, $enum0, calc($int19 - 1));

@@ -1,0 +1,17 @@
+// 7672
+[proc,script7672](component $component0, int $colour1)(int)
+def_component $component2 = interface_311:73;
+def_int $int3 = 27;
+def_graphic $graphic4 = p12_full;
+if_setsize(0, $int3, ^setsize_minus, ^setsize_abs, $component2);
+if_setsize(0, $int3, ^setsize_minus, ^setsize_minus, $component0);
+cc_deleteall($component2);
+def_int $int5 = 0;
+def_int $int6 = calc((if_getwidth($component2) - 6) / 3);
+$int5 = ~script5293($component2, $int5, 0, $int6, 3, 0x726451, "Masteries", $graphic4, $colour1, 0, null, 0, 0, 0, 0, ~is_equal(%varbit11596, 0));
+cc_setonop("script7673(0, 1)");
+$int5 = ~script5293($component2, $int5, 1, $int6, 3, 0x726451, "Mastery Points", $graphic4, $colour1, 0, null, 0, 0, 0, 0, ~is_equal(%varbit11596, 1));
+cc_setonop("script7673(1, 1)");
+$int5 = ~script5293($component2, $int5, 2, $int6, 3, 0x726451, "Combat Summary", $graphic4, $colour1, 0, null, 0, 0, 0, 0, ~is_equal(%varbit11596, 2));
+cc_setonop("script7673(2, 1)");
+return(calc($int3 - 4));

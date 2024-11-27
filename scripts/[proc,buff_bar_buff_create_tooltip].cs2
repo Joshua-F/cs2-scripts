@@ -6,7 +6,7 @@ cc_setsize(calc(37 - 3), calc(37 - 3), ^setsize_abs, ^setsize_abs);
 cc_setcolour(^black);
 cc_settrans(255);
 def_boolean $boolean6 = struct_param($struct0, param_1482);
-if ($boolean6 = false & string_length(struct_param($struct0, param_1279)) <= 0 | %varbit9529 = 1 | %varbit9528 = 1 & %varbit12383 = 1) {
+if ($boolean6 = false & string_length(struct_param($struct0, param_1279)) <= 0 | (%varbit9529 = 1 | %varbit9528 = 1)) {
 	cc_setonclick(null);
 	cc_setnoclickthrough(false);
 	cc_setonmouserepeat(null);

@@ -1,0 +1,55 @@
+// 7686
+[proc,script7686](component $component0, component $component1, component $component2, int $colour3)
+def_int $count4 = 1;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $colour7 = $colour3;
+def_int $colour8 = ^black;
+def_struct $struct9 = null;
+def_string $text0 = "Task to get point.";
+def_graphic $graphic10 = p12_full;
+def_int $int11 = 15;
+switch_int (%varcint988) {
+	case 1, 2, 3 :
+		$int11 = calc(if_getheight($component0) / 8);
+	case default :
+		if_settextfont(p12_full, $component2);
+		$int11 = calc(if_getheight($component0) / 5);
+}
+while ($count4 <= enum_getoutputcount(enum_5695)) {
+	$struct9 = enum(int, struct, enum_5695, $count4);
+	if ($struct9 ! null) {
+		$text0 = struct_param($struct9, param_2028);
+		if (~script7656($struct9) = 1) {
+			$colour7 = $colour3;
+		} else {
+			$colour7 = 0x9f9f9f;
+		}
+	}
+	cc_create($component0, ^iftype_rectangle, $int5);
+	cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour($colour8);
+	cc_setfill(true);
+	if (calc($count4 % 2) = 0) {
+		cc_settrans(220);
+	} else {
+		cc_settrans(255);
+	}
+	$int5 = calc($int5 + 1);
+	cc_create($component0, ^iftype_text, $int5);
+	cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext($text0);
+	cc_settextfont($graphic10);
+	cc_settextshadow(true);
+	cc_setcolour($colour7);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$int5 = calc($int5 + 1);
+	$int6 = calc($int6 + $int11);
+	$count4 = calc($count4 + 1);
+}
+if_setscrollsize(0, $int6, $component0);
+if_setscrollpos(0, 0, $component0);
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component1, $component0, 0);

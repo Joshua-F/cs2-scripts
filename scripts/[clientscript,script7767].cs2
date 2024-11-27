@@ -1,0 +1,6 @@
+// 7767
+[clientscript,script7767](component $component0, component $component1, component $component2, component $component3)
+if (calc(clientclock % 2) = 0) {
+	%varbit17573 = max(0, calc(%varbit17573 - 1));
+}
+~stat_boosts_hud_update_displays($component0, $component1, $component2, $component3);

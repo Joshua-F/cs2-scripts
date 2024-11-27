@@ -1,0 +1,7 @@
+// 7636
+[proc,script7636](int $int0, component $component1)
+db_find(dbtable_85:7, $int0);
+def_dbrow $dbrow2 = db_findnext;
+if (cc_find($component1, 1) = ^true) {
+	~script7644($dbrow2, $component1);
+}

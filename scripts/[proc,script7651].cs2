@@ -1,0 +1,38 @@
+// 7651
+[proc,script7651](struct $struct0)(int)
+if (~league_world = 0) {
+	return(0);
+}
+if ($struct0 = null) {
+	return(0);
+}
+def_enum $enum1 = null;
+def_int $int2 = -1;
+switch_int (struct_param($struct0, param_2027)) {
+	case 3 :
+		$enum1, $int2 = enum_5691, %varbit11580;
+	case 4 :
+		$enum1, $int2 = enum_5692, %varbit11581;
+	case 5 :
+		$enum1, $int2 = enum_5693, %varbit11582;
+}
+if ($enum1 = null) {
+	return(0);
+}
+def_int $count3 = 1;
+def_int $int4 = -1;
+def_int $int5 = 0;
+while ($count3 <= enum_getoutputcount($enum1) & $int5 = 0) {
+	if (enum(int, struct, $enum1, $count3) = $struct0) {
+		$int5, $int4 = 1, $count3;
+	} else {
+		$count3 = calc($count3 + 1);
+	}
+}
+if ($int4 = -1) {
+	return(0);
+}
+if ($int4 <= $int2) {
+	return(1);
+}
+return(0);

@@ -1,0 +1,8 @@
+// 7676
+[clientscript,script7676](int $int0)
+sound_synth(pillory_wrong, 1, 0);
+if ($int0 = 2) {
+	mes("You have already unlocked this Combat mastery.");
+} else if ($int0 = 0) {
+	mes("You haven't earned enough Combat Mastery points to unlock that.");
+}

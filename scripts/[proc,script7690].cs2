@@ -1,0 +1,88 @@
+// 7690
+[proc,script7690](int $colour0)
+def_component $component1 = interface_311:18;
+def_component $component2 = interface_311:19;
+def_component $component3 = interface_311:20;
+def_component $component4 = interface_311:21;
+def_int $int5 = 0;
+cc_create($component2, ^iftype_graphic, $int5);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(tradebacking_dark);
+cc_settiling(true);
+$int5 = calc($int5 + 1);
+~thinbox_light($component2, $int5);
+if_settextalign(^settextalign_centre, ^settextalign_centre, 20, $component1);
+if_setcolour($colour0, $component1);
+if_settextfont(b12_full, $component1);
+if_settextshadow(true, $component1);
+if_settext("Passive Summary", $component1);
+def_graphic $graphic6 = p12_full;
+def_int $int7 = 55;
+def_int $colour8 = ^black;
+def_int $int9 = ~script7654;
+switch_int (%varcint988) {
+	case 0 :
+		$int7 = calc($int7 + 12);
+}
+def_int $count10 = 1;
+def_int $int11 = 0;
+def_int $height12 = 0;
+def_int $int13 = 0;
+def_struct $struct14 = null;
+def_string $text0 = "";
+while ($count10 <= enum_getoutputcount(enum_5694)) {
+	$struct14 = enum(int, struct, enum_5694, $count10);
+	if (~script7652($struct14) = 1) {
+		$text0 = struct_param($struct14, param_2028);
+		cc_create($component3, ^iftype_rectangle, $int11);
+		cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $height12, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour($colour8);
+		cc_setfill(true);
+		if (calc($count10 % 2) > 0) {
+			cc_settrans(220);
+		} else {
+			cc_settrans(255);
+		}
+		$int11 = calc($int11 + 1);
+		cc_create($component3, ^iftype_text, $int11);
+		cc_setsize(7, $int7, ^setsize_minus, ^setsize_abs);
+		cc_setposition(4, $height12, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settext($text0);
+		cc_settextfont($graphic6);
+		cc_settextshadow(true);
+		cc_setcolour($colour0);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+		$int11 = calc($int11 + 1);
+		$height12 = calc($height12 + $int7);
+		$int13 = calc($int13 + 1);
+	}
+	$count10 = calc($count10 + 1);
+}
+if ($int13 <= 0) {
+	cc_create($component3, ^iftype_text, 0);
+	cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(4, $height12, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settext("You have no passive effects active.");
+	cc_settextfont($graphic6);
+	cc_settextshadow(true);
+	cc_setcolour($colour0);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+} else if ($height12 < if_getheight($component3)) {
+	cc_create($component3, ^iftype_rectangle, $int11);
+	cc_setsize(0, calc(if_getheight($component3) - $height12), ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $height12, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour($colour8);
+	cc_setfill(true);
+	if (calc($int13 % 2) = 0) {
+		cc_settrans(220);
+	} else {
+		cc_settrans(255);
+	}
+	$int11 = calc($int11 + 1);
+}
+def_int $height15 = max($height12, if_getheight($component3));
+if_setscrollsize(0, $height15, $component3);
+if_setscrollpos(0, 0, $component3);
+~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

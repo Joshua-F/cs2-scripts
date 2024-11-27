@@ -1,0 +1,8 @@
+// 5484
+[proc,script5484](int $int0)(string)
+db_find(dbtable_82:0, $int0);
+def_dbrow $dbrow1 = db_findnext;
+if ($dbrow1 ! null) {
+	return(db_getfield($dbrow1, dbtable_82:1, 0));
+}
+return("Undefined region");

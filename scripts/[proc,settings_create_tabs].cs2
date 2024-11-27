@@ -7,32 +7,41 @@ if_sethide(true, $component11);
 cc_deleteall($component10);
 cc_deleteall($component9);
 def_int $int17 = 0;
-def_int $count18 = 0;
-def_int $count19 = enum_getoutputcount(enum_422);
-def_struct $struct20 = null;
-def_int $int21 = -1;
-def_int $int22 = 0;
-def_int $int23 = 0;
-def_int $int24 = 4;
-while ($count18 < $count19) {
-	$struct20 = enum(int, struct, enum_422, $count18);
-	if ($struct20 ! null) {
-		$int21 = struct_param($struct20, param_743);
-		$int17 = ~settings_check_block($struct20);
-		if ($int17 = 1) {
-			cc_create($component0, ^iftype_rectangle, $int23);
-			cc_sethide(true);
-			$int23 = calc($int23 + 1);
-		} else if ($int2 ! $int21 | %varbit9638 = 1) {
-			$int22, $int23, $int24 = ~settings_tab_not_selected($int22, $int23, $int24, $component1, $component0, $struct20, $int21, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16);
+def_int $int18 = ~league_world;
+def_int $int19 = 0;
+def_int $count20 = 0;
+def_int $count21 = enum_getoutputcount(enum_422);
+def_struct $struct22 = null;
+def_int $int23 = -1;
+def_int $int24 = 0;
+def_int $int25 = 0;
+def_int $int26 = 4;
+while ($count20 < $count21) {
+	$struct22 = enum(int, struct, enum_422, $count20);
+	if ($struct22 ! null) {
+		if ($struct22 = struct_1108 & $int18 = 0) {
+			$int19 = 1;
 		} else {
-			$int22, $int23, $int24 = ~settings_tab_selected($int22, $int23, $int24, $component1, $component0, $struct20, $int21, $component3, $component4, $component5);
+			$int19 = 0;
+		}
+		if ($int19 = 0) {
+			$int23 = struct_param($struct22, param_743);
+			$int17 = ~settings_check_block($struct22);
+			if ($int17 = 1) {
+				cc_create($component0, ^iftype_rectangle, $int25);
+				cc_sethide(true);
+				$int25 = calc($int25 + 1);
+			} else if ($int2 ! $int23 | %varbit9638 = 1) {
+				$int24, $int25, $int26 = ~settings_tab_not_selected($int24, $int25, $int26, $component1, $component0, $struct22, $int23, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16);
+			} else {
+				$int24, $int25, $int26 = ~settings_tab_selected($int24, $int25, $int26, $component1, $component0, $struct22, $int23, $component3, $component4, $component5);
+			}
 		}
 	} else {
-		cc_create($component0, ^iftype_rectangle, $int23);
+		cc_create($component0, ^iftype_rectangle, $int25);
 		cc_sethide(true);
-		$int23 = calc($int23 + 1);
+		$int25 = calc($int25 + 1);
 	}
-	$count18 = calc($count18 + 1);
+	$count20 = calc($count20 + 1);
 }
 if_setonvartransmit("settings_tab_transmit($component0, $component1, %varbit9638, $int2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16){var2855}", $component0);

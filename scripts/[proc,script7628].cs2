@@ -1,0 +1,19 @@
+// 7628
+[proc,script7628]()(stat)
+def_int $int0 = 1;
+def_stat $stat1 = enum(int, stat, enum_681, $int0);
+def_stat $stat2 = $stat1;
+def_int $int3 = stat_xp($stat1);
+def_int $int4 = 0;
+while ($stat1 ! null) {
+	if ($stat2 ! $stat1) {
+		$int4 = stat_xp($stat1);
+		if ($int4 > $int3) {
+			$int3 = $int4;
+			$stat2 = $stat1;
+		}
+	}
+	$int0 = calc($int0 + 1);
+	$stat1 = enum(int, stat, enum_681, $int0);
+}
+return($stat2);

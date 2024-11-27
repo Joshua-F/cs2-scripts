@@ -1,0 +1,8 @@
+// 7735
+[proc,script7735]()(int)
+def_struct $struct0 = enum(int, struct, enum_2670, %varbit10032);
+def_int $colour1 = ^white;
+if ($struct0 ! null) {
+	$colour1 = struct_param($struct0, param_1028);
+}
+return($colour1);

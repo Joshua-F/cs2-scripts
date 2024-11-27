@@ -1,0 +1,10 @@
+// 6474
+[clientscript,script6474](component $component0, int $int1)
+def_int $int2 = 0;
+cc_deleteall($component0);
+while ($int2 < $int1) {
+	cc_create($component0, ^iftype_rectangle, $int2);
+	cc_setcolour(^black);
+	$int2 = calc($int2 + 1);
+}
+%varbit14190 = 1;

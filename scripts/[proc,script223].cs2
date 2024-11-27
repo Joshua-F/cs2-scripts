@@ -16,7 +16,7 @@ def_string $string2 = "";
 def_int $width3 = 0;
 if (%varbit8119 = 1) {
 	if (~league_world = 1) {
-		$string2 = "<img=22><chat_playername>";
+		$string2 = "<~script7776><chat_playername>";
 	} else if (~speedrunning_world = 1) {
 		$string2 = "<img=52><chat_playername>";
 	} else {
@@ -56,7 +56,7 @@ if (%varbit8119 = 1) {
 	if_setonop(null, interface_162:55);
 } else {
 	if (~league_world = 1) {
-		$string2 = "<img=22> You must set a name before you can chat.";
+		$string2 = "<~script7776> You must set a name before you can chat.";
 	} else if (~speedrunning_world = 1) {
 		$string2 = "<img=52> You must set a name before you can chat.";
 	} else {

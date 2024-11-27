@@ -1,5 +1,11 @@
 // 2614
 [proc,script2614](obj $obj0, component $component1, int $int2)(int, graphic)
+switch_obj ($obj0) {
+	case high_level_alchemy_3303, low_level_alchemy_3284 :
+		if (~league_relic_active(golden_god_1131) = 1) {
+			return(1, null);
+		}
+}
 if (stat(magic) < oc_param($obj0, spell_levelreq)) {
 	if_settrans(0, $component1);
 	return(0, null);

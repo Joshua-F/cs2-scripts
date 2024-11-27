@@ -1,0 +1,7 @@
+// 7648
+[proc,script7648](component $component0, boolean $boolean1)
+if ($boolean1 = true & ~on_mobile = false) {
+	~v2_stone_button_in($component0);
+} else {
+	~v2_stone_button($component0);
+}

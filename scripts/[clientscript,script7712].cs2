@@ -1,0 +1,5 @@
+// 7712
+[clientscript,script7712](int $comsubid0, int $trans1)
+if (cc_find(interface_525:7, $comsubid0) = ^true) {
+	cc_settrans($trans1);
+}

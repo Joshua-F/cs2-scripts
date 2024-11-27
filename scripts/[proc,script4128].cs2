@@ -4,6 +4,8 @@ def_dbrow $dbrow1 = oc_param($obj0, param_1189);
 if ($dbrow1 ! null) {
 	if (oc_param($obj0, param_1228) = true & %varbit5314 = 1) {
 		return(1);
+	} else if (~league_relic_active(grimoire_1132) = 1) {
+		return(1);
 	} else if (~quest_is_complete($dbrow1) = 0) {
 		return(0);
 	}

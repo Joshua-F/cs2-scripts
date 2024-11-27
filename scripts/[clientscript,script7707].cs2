@@ -1,0 +1,7 @@
+// 7707
+[clientscript,script7707](int $flags0, int $flags1, dbrow $dbrow2)
+def_component $component3 = interface_525:0;
+if_setontimer("script6110($component3, -1)", $component3);
+if_setonresize("script7708($flags0, $flags1, $dbrow2)", $component3);
+if_setsize(250, 314, ^setsize_abs, ^setsize_abs, interface_525:2);
+~script7709($flags0, $flags1, $dbrow2);

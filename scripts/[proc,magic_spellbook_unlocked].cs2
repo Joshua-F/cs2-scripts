@@ -1,5 +1,8 @@
 // 4131
 [proc,magic_spellbook_unlocked](obj $obj0)(int)
+if (~script7627($obj0) = 1) {
+	return(1);
+}
 if (~script4510($obj0) = 0) {
 	return(0);
 }

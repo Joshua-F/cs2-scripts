@@ -3,18 +3,8 @@
 if (~league_world = 0 | %varbit12383 = 1) {
 	return(0);
 }
-switch_int (%varbit10032) {
-	case 1 :
-		if (~script2279($int0) ! 0) {
-			return(1);
-		}
-	case 2 :
-		if (~script2279($int0) ! 0) {
-			return(1);
-		}
-	case 4 :
-		if (~script2279($int0) ! 0) {
-			return(1);
-		}
+def_struct $struct1 = enum(int, struct, enum_2670, %varbit10032);
+if (struct_param($struct1, param_870) ! null & ~script2279($int0) ! 0) {
+	return(1);
 }
 return(0);

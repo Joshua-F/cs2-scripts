@@ -1,0 +1,50 @@
+// 7640
+[proc,script7640](component $component0, int $int1, int $colour2, graphic $graphic3)(int)
+cc_deleteall($component0);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 10;
+def_int $width8 = if_getwidth($component0);
+def_int $int9 = 5;
+def_int $int10 = 0;
+def_fontmetrics $fontmetrics11 = p11_full;
+def_int $int12 = 496;
+def_string $text0 = "";
+if ($graphic3 = p12_full) {
+	$fontmetrics11 = p12_full;
+}
+db_find(dbtable_85:7, $int1);
+def_dbrow $dbrow13 = db_findnext;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_namedobj $namedobj16 = null;
+if ($dbrow13 ! null) {
+	$int14 = db_getfieldcount($dbrow13, dbtable_85:2);
+}
+while ($int15 < $int14) {
+	$namedobj16 = db_getfield($dbrow13, dbtable_85:2, $int15);
+	if ($namedobj16 ! null) {
+		cc_create($component0, ^iftype_graphic, $int4);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(2, $int9, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setoutline(1);
+		cc_setobject($namedobj16, -1);
+		$int4 = calc($int4 + 1);
+		$text0 = oc_name($namedobj16);
+		cc_create($component0, ^iftype_text, $int4);
+		cc_setposition(calc(36 + 4), $int9, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+		cc_setcolour($colour2);
+		cc_settextshadow(true);
+		cc_settextfont(b12_full);
+		cc_settext($text0);
+		$int4 = calc($int4 + 1);
+		$int9 = calc($int9 + 32 + $int7);
+		$int4, $int9 = ~script7641($namedobj16, $dbrow13, $int15, $int1, $component0, $graphic3, $fontmetrics11, $colour2, $int4, $int9);
+		$int9 = calc($int9 + $int6 + $int7);
+	}
+	$int15 = calc($int15 + 1);
+}
+return($int9);

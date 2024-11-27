@@ -12,6 +12,10 @@ if (map_members = true | %varcint103 = 1) {
 	$string0 = "Total XP:|Free Total Level:";
 	$string1 = "<~stats_tostring_totalxp(~stats_totalxp)>|<tostring(~stat_f2plevel)>";
 }
+if (~league_relic_active(equilibrium_1736) = 1) {
+	$string0 = append($string0, "|<~script7699>");
+	$string1 = append($string1, "|<~tostring_spacer(~script7698(null), ",")>");
+}
 if (~on_mobile = true) {
 	if_setop(1, "Toggle Total XP", $component0);
 	if_setonop("stats_op(event_op, event_com, -1, $component1, $string0, $string1, p12_full)", $component0);

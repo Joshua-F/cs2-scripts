@@ -48,6 +48,9 @@ def_int $int12 = 0;
 def_int $int13 = 0;
 switch_obj ($obj0) {
 	case air_rune_556 :
+		if ($obj2 = devils_element_30371) {
+			return(^max_32bit_int);
+		}
 		if (enum(obj, boolean, enum_988, $obj1) = true) {
 			return(^max_32bit_int);
 		}
@@ -81,6 +84,9 @@ switch_obj ($obj0) {
 		}
 		return($int12);
 	case water_rune_555 :
+		if ($obj2 = devils_element_30371) {
+			return(^max_32bit_int);
+		}
 		if (enum(obj, boolean, enum_989, $obj1) = true) {
 			return(^max_32bit_int);
 		}
@@ -117,6 +123,9 @@ switch_obj ($obj0) {
 		}
 		return($int12);
 	case earth_rune_557 :
+		if ($obj2 = devils_element_30371) {
+			return(^max_32bit_int);
+		}
 		if (enum(obj, boolean, enum_996, $obj1) = true) {
 			return(^max_32bit_int);
 		}
@@ -153,6 +162,9 @@ switch_obj ($obj0) {
 		}
 		return($int12);
 	case fire_rune_554 :
+		if ($obj2 = devils_element_30371) {
+			return(^max_32bit_int);
+		}
 		if (enum(obj, boolean, enum_997, $obj1) = true) {
 			return(^max_32bit_int);
 		}

@@ -1,5 +1,8 @@
 // 4129
 [proc,script4129](obj $obj0)(int)
+if (~league_relic_active(grimoire_1132) = 1) {
+	return(1);
+}
 def_int $int1 = oc_param($obj0, param_1190);
 if ($int1 ! 0 & ~diary_reward_get($int1) = 0) {
 	return(0);

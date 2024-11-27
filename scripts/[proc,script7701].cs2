@@ -1,0 +1,17 @@
+// 7701
+[proc,script7701](component $component0, int $colour1)
+def_component $component2 = interface_656:7;
+def_component $component3 = interface_656:9;
+def_component $component4 = interface_656:6;
+if_setcolour($colour1, $component3);
+if_setop(1, "Show <col=ff9040>Summary</col>", $component2);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script7702(true, $component3, $colour1)", $component2);
+	if_setonmouseleave("script7702(false, $component3, $colour1)", $component2);
+}
+def_string $string0 = "Open your league summary";
+if (~on_mobile = false) {
+	if_setonmouserepeat("tooltip_mouserepeat($component2, 0, $component0, $string0, 25, 190)", $component4);
+	if_setonmouseleave("deltooltip($component0)", $component4);
+}
+def_int $int5 = ~script3953($component4, $int5, 24, if_getwidth($component4), 0, 0, 0);

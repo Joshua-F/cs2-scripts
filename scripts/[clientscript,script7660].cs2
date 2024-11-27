@@ -1,0 +1,15 @@
+// 7660
+[clientscript,script7660]
+def_component $component0 = interface_311:76;
+def_component $component1 = interface_311:0;
+def_component $component2 = interface_311:57;
+def_component $component3 = interface_311:61;
+def_component $component4 = interface_311:12;
+def_component $component5 = interface_311:59;
+def_int $int6 = ~script7678;
+~leagues_close_button($component0, false, 0);
+~steelborder(interface_311:3, "Combat Masteries", 1);
+if_setontimer("script6110($component1, -1)", $component1);
+if_setonresize("script7661(%varcint1238, $int6)", $component1);
+~steelborder($component5, "", 1);
+~script7751($component3, $component2, $component4);

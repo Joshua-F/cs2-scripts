@@ -19,6 +19,10 @@ if (%varbit4181 = 0) {
 	$string2 = append($string2, "|Next level at:");
 	$string3 = append($string3, "|<~tostring_spacer(enum(int, int, enum_256, calc($lvl4 + 1)), $string1)>");
 }
+if (~league_relic_active(equilibrium_1736) = 1) {
+	$string2 = append($string2, "|<~script7699>");
+	$string3 = append($string3, "|<~tostring_spacer(~script7698($stat0), $string1)>");
+}
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = 0;

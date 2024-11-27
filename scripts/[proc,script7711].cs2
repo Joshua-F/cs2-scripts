@@ -1,0 +1,15 @@
+// 7711
+[proc,script7711](int $int0, int $int1, int $int2, int $int3, int $int4)(int)
+def_int $y5 = calc($int1 * $int2);
+cc_create(interface_525:7, ^iftype_rectangle, $int0);
+cc_setposition(0, $y5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int2, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^black);
+cc_settrans($int3);
+cc_setfill(true);
+if ($int4 = 1) {
+	cc_setonmouserepeat("script7712($int0, calc($int3 + 30))");
+	cc_setonmouseleave("script7712($int0, $int3)");
+}
+$int0 = calc($int0 + 1);
+return($int0);

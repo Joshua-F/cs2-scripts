@@ -1,0 +1,11 @@
+// 7744
+[proc,script7744](component $component0, component $component1)
+switch_int (%varcint988) {
+	case 1 :
+		if_setsize(600, 392, ^setsize_abs, ^setsize_abs, $component0);
+	case 2, 3 :
+		if_setsize(720, 470, ^setsize_abs, ^setsize_abs, $component0);
+	case default :
+		if_setsize(480, 314, ^setsize_abs, ^setsize_abs, $component0);
+}
+~script1785($component1);

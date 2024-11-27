@@ -1,152 +1,136 @@
 // 3669
-[proc,league_areas_show_detailed](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $int15, component $component16, component $component17, component $component18, int $int19, int $int20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26)
-cc_deleteall($component12);
-cc_deleteall($component13);
-def_struct $struct27 = enum(int, struct, enum_2670, %varbit10032);
-def_int $comsubid28 = 0;
-def_string $op0 = "";
-def_string $string1 = "";
-def_string $text2 = enum(int, string, enum_3330, $int0);
-def_graphic $graphic29 = enum(int, graphic, enum_3337, $int0);
-if ($struct27 = null) {
+[proc,league_areas_show_detailed](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, int $int11, int $int12, int $int13, component $component14, int $int15, int $int16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22)
+cc_deleteall($component9);
+cc_deleteall($component8);
+def_struct $struct23 = enum(int, struct, enum_2670, %varbit10032);
+def_int $comsubid24 = 0;
+def_string $text0 = ~script5484($int0);
+def_graphic $graphic25 = ~script7621($int0);
+if ($struct23 = null) {
 	return;
 }
-def_int $int30 = struct_param($struct27, param_1027);
-def_int $int31 = struct_param($struct27, param_1028);
-if_setcolour($int30, $component6);
-if_setcolour($int30, $component11);
-if_setcolour($int30, $component22);
+def_int $colour26 = struct_param($struct23, param_1027);
+def_int $int27 = struct_param($struct23, param_1028);
+if_setcolour($colour26, $component6);
+if_setcolour($colour26, $component7);
+if_setcolour($colour26, $component18);
 if_sethide(false, $component4);
-if_sethide(true, $component26);
-if_sethide(true, $component25);
+if_sethide(true, $component21);
 if_sethide(true, $component1);
 if_sethide(true, $component2);
 if_sethide(true, $component3);
-~start_slideshow($component14, enum(int, enum, enum_3339, $int0), 5, 4, 1);
-if_settext($text2, $component6);
-if_setgraphic($graphic29, $component5);
-$string1 = "Overview";
-~script3725($component7, 0, $string1, $int30, $int31);
-if_setop(1, $string1, $component7);
-if_setonop("league_areas_tab_click($component7, $int0, $component7, $component8, $component9, $component10, $component11, $int30, $int31, $component16, $component17)", $component7);
-$string1 = "Key Info";
-~script3725($component8, 0, $string1, $int30, $int31);
-if_setop(1, $string1, $component8);
-if_setonop("league_areas_tab_click($component8, $int0, $component7, $component8, $component9, $component10, $component11, $int30, $int31, $component16, $component17)", $component8);
-$string1 = "Unlocks";
-~script3725($component9, 0, $string1, $int30, $int31);
-if_setop(1, $string1, $component9);
-if_setonop("league_areas_tab_click($component9, $int0, $component7, $component8, $component9, $component10, $component11, $int30, $int31, $component16, $component17)", $component9);
-$string1 = "Drops";
-~script3725($component10, 0, $string1, $int30, $int31);
-if_setop(1, $string1, $component10);
-if_setonop("league_areas_tab_click($component10, $int0, $component7, $component8, $component9, $component10, $component11, $int30, $int31, $component16, $component17)", $component9);
-~league_areas_tab_details($component7, $int0, $component7, $component8, $component9, $component10, $component11, $int30, $int31, $component16, $component17);
-if ($int15 = 2) {
-	$comsubid28 = ~v2_stone_button($component12);
-	$op0 = "Unlock";
-	if_setop(1, $op0, $component12);
-	if_setopbase("<col=ff981f><$text2></col>", $component12);
-} else if ($int15 = 1) {
-	$comsubid28 = ~v2_stone_button($component12);
-	$op0 = "Teleport";
-	if_setop(1, "Teleport to", $component12);
-	if_setopbase("<col=ff981f><$text2></col>", $component12);
+~start_slideshow($component10, ~script7624($int0), 5, 4, 1);
+if_settext($text0, $component6);
+if_setgraphic($graphic25, $component5);
+def_string $op1 = "";
+if ($int11 = 2) {
+	$comsubid24 = ~v2_stone_button($component8);
+	$op1 = "Unlock";
+	if_setop(1, $op1, $component8);
+	if_setopbase("<col=ff981f><$text0></col>", $component8);
+} else if ($int11 = 1) {
+	$comsubid24 = ~v2_stone_button($component8);
+	$op1 = "Teleport";
+	if_setop(1, "Teleport to", $component8);
+	if_setopbase("<col=ff981f><$text0></col>", $component8);
 } else {
-	$comsubid28 = ~v2_stone_button_in($component12);
-	$op0 = "Locked";
-	if_setop(1, $op0, $component12);
-	if_setopbase("", $component12);
+	$comsubid24 = ~v2_stone_button_in($component8);
+	$op1 = "Locked";
+	if_setop(1, $op1, $component8);
+	if_setopbase("", $component8);
 }
-cc_create($component12, ^iftype_text, $comsubid28);
+cc_create($component8, ^iftype_text, $comsubid24);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_settext($op0);
+cc_settext($op1);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if ($int15 = 2) {
+if ($int11 = 2) {
 	cc_setcolour(0x53d93c);
 	if (~on_mobile = false) {
-		if_setonmouseleave("league_area_button_hover($component12, false, $op0, 0x53d93c)", $component12);
-		if_setonmouserepeat("league_area_button_hover($component12, true, $op0, 0xaaaaaa)", $component12);
+		if_setonmouseleave("league_area_button_hover($component8, false, $op1, 0x53d93c)", $component8);
+		if_setonmouserepeat("league_area_button_hover($component8, true, $op1, 0xaaaaaa)", $component8);
 	}
-	if_setonop("league_area_confirm($component18, $component12, false, $op0, 0x53d93c)", $component12);
-} else if ($int15 = 1) {
+	if_setonop("league_area_confirm($component14, $component8, false, $op1, 0x53d93c)", $component8);
+} else if ($int11 = 1) {
 	if (~in_league_tutorial = 1) {
 		cc_setcolour(0xaaaaaa);
-		if_setonmouseleave(null, $component12);
-		if_setonmouserepeat(null, $component12);
-		if_setonop("script3677", $component12);
+		if_setonmouseleave(null, $component8);
+		if_setonmouserepeat(null, $component8);
+		if_setonop("script3677", $component8);
 	} else {
 		cc_setcolour(0x53d93c);
 		if (~on_mobile = false) {
-			if_setonmouseleave("league_area_button_hover($component12, false, $op0, 0x53d93c)", $component12);
-			if_setonmouserepeat("league_area_button_hover($component12, true, $op0, 0xaaaaaa)", $component12);
+			if_setonmouseleave("league_area_button_hover($component8, false, $op1, 0x53d93c)", $component8);
+			if_setonmouserepeat("league_area_button_hover($component8, true, $op1, 0xaaaaaa)", $component8);
 		}
-		if_setonop("league_area_teleport($component12, false, $op0, 0x53d93c)", $component12);
+		if_setonop("league_area_teleport($component8, false, $op1, 0x53d93c)", $component8);
 	}
 } else {
 	cc_setcolour(0xaaaaaa);
-	if_setonmouseleave(null, $component12);
-	if_setonmouserepeat(null, $component12);
-	if_setonop("league_area_not_available($int15)", $component12);
+	if_setonmouseleave(null, $component8);
+	if_setonmouserepeat(null, $component8);
+	if_setonop("league_area_not_available($int11)", $component8);
 }
-$comsubid28 = ~v2_stone_button($component13);
-cc_create($component13, ^iftype_text, $comsubid28);
+$comsubid24 = ~v2_stone_button($component9);
+cc_create($component9, ^iftype_text, $comsubid24);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-$op0 = "Back";
-cc_settext($op0);
+$op1 = "Back";
+cc_settext($op1);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if_setop(1, $op0, $component13);
+if_setop(1, $op1, $component9);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_area_button_hover($component13, false, $op0, ^white)", $component13);
-	if_setonmouserepeat("league_area_button_hover($component13, true, $op0, 0xaaaaaa)", $component13);
+	if_setonmouseleave("league_area_button_hover($component9, false, $op1, ^white)", $component9);
+	if_setonmouserepeat("league_area_button_hover($component9, true, $op1, 0xaaaaaa)", $component9);
 }
-if_setonop("league_area_back($component1, $component2, $component3, $component4, $component14, $component26)", $component13);
-def_int $comsubid32 = ~steelborder($component21, $text2, 1);
-if (cc_find($component21, $comsubid32) = ^true) {
-	cc_setcolour($int30);
+if_setonop("league_area_back($component1, $component2, $component3, $component4, $component10, $component22)", $component9);
+%varcint1239 = 0;
+%varcint1240 = 0;
+~script7630;
+def_int $comsubid28 = ~steelborder($component17, $text0, 1);
+if (cc_find($component17, $comsubid28) = ^true) {
+	cc_setcolour($colour26);
 }
 if ($int0 = 2) {
-	if_settext("You are about to unlock <col=ffffff>Karamja</col> as your second area.<br><br>All participants are given <col=ffffff>Misthalin</col> and <col=ffffff>Karamja</col> as their first two areas. For later unlocks, you can choose which area you want to select.", $component22);
+	if_settext("You are about to unlock <col=ffffff>Karamja</col> as your second area.<br><br>All participants are given <col=ffffff>Misthalin</col> and <col=ffffff>Karamja</col> as their first two areas. For later unlocks, you can choose which area you want to select.", $component18);
 } else {
-	if_settext("Are you sure that you wish to unlock the <col=ffffff><$text2></col> area?<br><br>You can only unlock <col=ffffff>five</col> areas in total, and you <col=ffffff>cannot</col> go back on this decision at any later point.", $component22);
+	if_settext("Are you sure that you wish to unlock the <col=ffffff><$text0></col> area?<br><br>You can only unlock <col=ffffff>five</col> areas in total, and you <col=ffffff>cannot</col> go back on this decision at any later point.", $component18);
 }
-$comsubid28 = ~v2_stone_button($component23);
-cc_create($component23, ^iftype_text, $comsubid28);
+$comsubid24 = ~v2_stone_button($component19);
+cc_create($component19, ^iftype_text, $comsubid24);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-$op0 = "Confirm";
-cc_settext($op0);
+$op1 = "Confirm";
+cc_settext($op1);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if_setop(1, $op0, $component23);
-if_setopbase("<col=ff981f>Selection</col>", $component23);
+if_setop(1, $op1, $component19);
+if_setopbase("<col=ff981f>Selection</col>", $component19);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_area_button_hover($component23, false, $op0, ^white)", $component23);
-	if_setonmouserepeat("league_area_button_hover($component23, true, $op0, 0xaaaaaa)", $component23);
+	if_setonmouseleave("league_area_button_hover($component19, false, $op1, ^white)", $component19);
+	if_setonmouserepeat("league_area_button_hover($component19, true, $op1, 0xaaaaaa)", $component19);
 }
-if_setonop("league_area_confirm_selection", $component23);
-$comsubid28 = ~v2_stone_button($component24);
-cc_create($component24, ^iftype_text, $comsubid28);
+if_setonop("league_area_confirm_selection", $component19);
+$comsubid24 = ~v2_stone_button($component20);
+cc_create($component20, ^iftype_text, $comsubid24);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-$op0 = "Cancel";
-cc_settext($op0);
+$op1 = "Cancel";
+cc_settext($op1);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if_setop(1, $op0, $component24);
+if_setop(1, $op1, $component20);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_area_button_hover($component24, false, $op0, ^white)", $component24);
-	if_setonmouserepeat("league_area_button_hover($component24, true, $op0, 0xaaaaaa)", $component24);
+	if_setonmouseleave("league_area_button_hover($component20, false, $op1, ^white)", $component20);
+	if_setonmouserepeat("league_area_button_hover($component20, true, $op1, 0xaaaaaa)", $component20);
 }
-if_setonop("league_area_confirm_back($component18)", $component24);
+if_setonop("league_area_confirm_back($component14)", $component20);

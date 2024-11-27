@@ -1,5 +1,8 @@
 // 3690
 [proc,script3690](int $int0)(int)
+if (~script7714 = false) {
+	return(0);
+}
 switch_int ($int0) {
 	case 17 :
 		return(1);
@@ -34,6 +37,8 @@ switch_int ($int0) {
 	case 22 :
 		return(1);
 	case 21 :
+		return(1);
+	case 56 :
 		return(1);
 	case default :
 		return(0);

@@ -1,0 +1,21 @@
+// 7671
+[proc,script7671](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9)(int, int)
+def_int $colour10 = 0x3b3b3b;
+if ($int8 = 1) {
+	$colour10 = 0xc8f0d9;
+} else if ($int8 = 2) {
+	$colour10 = 0xe94a93;
+}
+cc_create($component1, ^iftype_rectangle, $int7);
+cc_setsize(calc($int5 + 4), calc($int4 + 4), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int2 - 2), calc($int3 - 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+$int7 = calc($int7 + 1);
+cc_create($component0, ^iftype_rectangle, $int6);
+cc_setsize($int5, $int4, ^setsize_abs, ^setsize_abs);
+cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour($colour10);
+$int6 = calc($int6 + 1);
+return($int6, $int7);

@@ -1,0 +1,47 @@
+// 7642
+[proc,script7642](component $component0, int $int1, int $int2, int $int3, int $int4, int $colour5, graphic $graphic6, int $int7, string $text0, string $text1, string $text2, string $text3, string $text4)(int, int)
+def_int $int8 = 1;
+def_int $int9 = 0;
+def_string $text5 = "";
+def_int $int10 = calc($int3 / $int7);
+while ($int8 <= $int7) {
+	if ($int7 = 1) {
+		cc_create($component0, ^iftype_rectangle, $int1);
+		cc_setsize(calc($int10 + 1), $int4, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int9, $int2, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setfill(true);
+		cc_setcolour(^black);
+		cc_settrans(240);
+		$int1 = calc($int1 + 1);
+	}
+	cc_create($component0, ^iftype_rectangle, $int1);
+	cc_setsize(calc($int10 + 1), $int4, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int9, $int2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(false);
+	cc_setcolour(0x726451);
+	$int1 = calc($int1 + 1);
+	switch_int ($int8) {
+		case 1 :
+			$text5 = $text0;
+		case 2 :
+			$text5 = $text1;
+		case 3 :
+			$text5 = $text2;
+		case 4 :
+			$text5 = $text3;
+		case 5 :
+			$text5 = $text4;
+	}
+	cc_create($component0, ^iftype_text, $int1);
+	cc_setsize($int10, $int4, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int9, $int2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+	cc_setcolour($colour5);
+	cc_settextshadow(true);
+	cc_settextfont($graphic6);
+	cc_settext($text5);
+	$int9 = calc($int9 + $int10);
+	$int1 = calc($int1 + 1);
+	$int8 = calc($int8 + 1);
+}
+return($int1, calc($int2 + ($int4 - 1)));

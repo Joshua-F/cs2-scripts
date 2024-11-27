@@ -1,0 +1,7 @@
+// 7619
+[proc,script7619](int $int0)(graphic)
+def_dbrow $dbrow1 = ~script3994($int0);
+if ($dbrow1 ! null) {
+	return(db_getfield($dbrow1, dbtable_82:4, 0));
+}
+return(null);

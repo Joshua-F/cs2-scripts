@@ -1,0 +1,8 @@
+// 7764
+[clientscript,script7764](component $component0)
+if (~on_enhanced_any = 1) {
+	return;
+}
+if (cc_find($component0, 3) = ^true) {
+	cc_setontimer("script7765($component0)");
+}

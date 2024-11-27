@@ -1,0 +1,9 @@
+// 7756
+[proc,script7756](int $int0, int $flags1, int $int2)(int)
+if (testbit($flags1, $int2) = ^false) {
+	return(0);
+}
+if (togglebit($int0, $int2) > 0) {
+	return(1);
+}
+return(2);

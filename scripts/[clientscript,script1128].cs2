@@ -19,8 +19,9 @@ def_int $int16 = 0;
 def_enum $enum17 = enum_2778;
 def_int $int18 = ~league_world;
 def_int $int19 = 0;
-if ($int18 = 1) {
-	$enum17 = enum_5238;
+def_struct $struct20 = enum(int, struct, enum_2670, ~league_current_league);
+if ($int18 = 1 & struct_param($struct20, param_2041) ! null) {
+	$enum17 = struct_param($struct20, param_2041);
 }
 while ($int16 < 30) {
 	$intarray0($int16) = 1;
@@ -115,8 +116,8 @@ if ($int6 <= if_getheight(interface_447:3)) {
 if_setscrollpos(0, 0, interface_447:3);
 ~scrollbar_vertical(interface_447:4, interface_447:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 $int6 = 0;
-def_struct $struct20 = leagues_i_twisted_723;
-def_int $int21 = 0;
+def_struct $struct21 = leagues_i_twisted_723;
+def_int $int22 = 0;
 if ($int18 = 1) {
 	if ($int19 = 1) {
 		~script2451($int15);
@@ -127,8 +128,8 @@ if ($int18 = 1) {
 }
 while ($int11 < $int10) {
 	if ($intarray0(calc($int11 + 1)) = 0) {
-		$int21 = 1;
-		$struct20 = enum(int, struct, enum_2670, calc($int11 + 1));
+		$int22 = 1;
+		$struct21 = enum(int, struct, enum_2670, calc($int11 + 1));
 		cc_create(interface_447:3, ^iftype_text, $int15);
 		cc_setsize(20, 15, ^setsize_minus, ^setsize_abs);
 		cc_setposition(10, calc($int6 + 5), ^setpos_abs_left, ^setpos_abs_top);
@@ -136,7 +137,7 @@ while ($int11 < $int10) {
 		cc_settextshadow(true);
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-		cc_settext(struct_param($struct20, param_858));
+		cc_settext(struct_param($struct21, param_858));
 		$int15 = calc($int15 + 1);
 		cc_create(interface_447:3, ^iftype_line, $int15);
 		cc_setsize(20, 0, ^setsize_minus, ^setsize_abs);
@@ -146,6 +147,6 @@ while ($int11 < $int10) {
 	}
 	$int11 = calc($int11 + 1);
 }
-if ($int21 = 0) {
+if ($int22 = 0) {
 	~script2450($int15);
 }

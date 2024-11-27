@@ -95,10 +95,19 @@ if ($graphic12 ! null) {
 }
 $int1 = calc($int1 + 1);
 cc_create($component2, ^iftype_text, $int1);
-cc_setposition($int6, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+if (struct_param($struct0, param_1998) = true) {
+	cc_setposition($int6, calc($int7 + 6), ^setpos_abs_left, ^setpos_abs_bottom);
+} else {
+	cc_setposition($int6, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+}
 cc_setsize(calc(37 - 3), 12, ^setsize_abs, ^setsize_abs);
 cc_setcolour(^white);
-cc_settextfont(p11_full);
+def_graphic $graphic15 = struct_param($struct0, param_1997);
+if ($graphic15 ! null) {
+	cc_settextfont($graphic15);
+} else {
+	cc_settextfont(p11_full);
+}
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if (~script5945($struct0) = 1) {
@@ -120,6 +129,6 @@ if (struct_param($struct0, param_1553) = true) {
 	cc_settext("");
 }
 $int1 = calc($int1 + 1);
-def_component $component15 = interface_651:5;
-~buff_bar_buff_create_tooltip($struct0, $component2, $int1, $component15, $int6, $int7);
+def_component $component16 = interface_651:5;
+~buff_bar_buff_create_tooltip($struct0, $component2, $int1, $component16, $int6, $int7);
 $int1 = calc($int1 + 1);

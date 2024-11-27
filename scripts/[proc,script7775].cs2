@@ -1,0 +1,6 @@
+// 7775
+[proc,script7775](int $int0, int $int1)(int)
+if ($int0 = $int1) {
+	return($int0);
+}
+return(calc(randominc(calc($int1 - $int0)) + $int0));

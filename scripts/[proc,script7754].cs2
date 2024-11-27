@@ -1,0 +1,41 @@
+// 7754
+[proc,script7754](int $int0)(string)
+db_find(dbtable_84:8, $int0);
+db_find_refine(dbtable_84:12:0, the_sage_14144);
+def_dbrow $dbrow1 = db_findnext;
+def_int $int2 = -1;
+def_int $int3 = 0;
+def_string $string0 = "";
+def_string $string1 = "null";
+def_int $int4 = -1;
+def_int $int5 = -1;
+def_int $int6 = -1;
+def_int $int7 = 1;
+while ($dbrow1 ! null) {
+	$int7 = 1;
+	$string1 = db_getfield($dbrow1, dbtable_84:10, 0);
+	$int4 = max(db_getfield($dbrow1, dbtable_84:4, 0), db_getfield($dbrow1, dbtable_84:1, 0));
+	$int4 = max($int4, 3);
+	$int5 = db_getfield($dbrow1, dbtable_84:5, 0);
+	if ($int0 ! 1 & $int0 ! 2) {
+		$int6 = calc(db_getfieldcount($dbrow1, dbtable_84:8) - 1);
+		while ($int6 >= 0 & $int7 = 1) {
+			if (db_getfield($dbrow1, dbtable_84:8, $int6) = 1) {
+				$int7 = 0;
+			}
+			$int6 = calc($int6 - 1);
+		}
+		$int6 = calc(db_getfieldcount($dbrow1, dbtable_84:8) - 1);
+		while ($int6 >= 0 & $int7 = 1) {
+			if (db_getfield($dbrow1, dbtable_84:8, $int6) = 2) {
+				$int7 = 0;
+			}
+			$int6 = calc($int6 - 1);
+		}
+	}
+	if ($int7 = 1) {
+		$string0 = "<$string0>- <$string1> (<tostring($int4)> - <tostring($int5)>)<br>";
+	}
+	$dbrow1 = db_findnext;
+}
+return($string0);

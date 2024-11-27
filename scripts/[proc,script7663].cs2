@@ -1,0 +1,160 @@
+// 7663
+[proc,script7663](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14, int $x15, int $int16, int $int17, int $int18, int $int19)
+def_int $int20 = 49;
+def_graphic $graphic21 = graphic_6283;
+def_int $height22 = 50;
+def_int $width23 = 44;
+switch_int (%varcint988) {
+	case 2, 3 :
+		$int20 = 96;
+		$graphic21 = graphic_6284;
+		$width23, $height22 = 78, 96;
+}
+def_int $int24 = calc($int20 + 4);
+def_int $int25 = calc((if_getwidth($component0) - $int24) / $int14);
+def_int $int26 = if_getheight($component0);
+def_int $int27 = $int26;
+def_int $width28 = 0;
+def_int $width29 = $width28;
+def_int $int30 = 0;
+def_int $int31 = 0;
+def_int $int32 = 1;
+def_int $int33 = 0;
+def_int $int34 = 0;
+def_int $int35 = 0;
+def_int $int36 = 0;
+def_int $int37 = 0;
+def_int $int38 = 0;
+def_int $int39 = 0;
+def_graphic $graphic40 = null;
+def_enum $enum41 = null;
+def_struct $struct42 = null;
+def_graphic $graphic43 = null;
+def_boolean $boolean44 = ~on_mobile;
+def_int $int45 = 0;
+def_int $int46 = 0;
+$int26 = calc(($int27 - 6) / enum_getoutputcount(enum_5690));
+~script7664($component8, $int24, $int25, $int26, $int27);
+while ($int31 < enum_getoutputcount(enum_5690)) {
+	$int32 = 1;
+	$width28 = $int24;
+	$enum41 = enum(int, enum, enum_5690, $int31);
+	if ($enum41 ! null) {
+		while ($int32 <= enum_getoutputcount($enum41)) {
+			$struct42 = enum(int, struct, $enum41, $int32);
+			if ($struct42 ! null) {
+				if (~script7651($struct42) = 1) {
+					$int45 = 2;
+				} else if (~script7657($struct42) = 1) {
+					$int45 = 1;
+				} else {
+					$int45 = 0;
+				}
+				if ($int32 > 1) {
+					$int35, $int34 = ~script7671($component1, $component2, calc($width28 - $int18 / 2 - 10), calc($int30 + $int26 / 2), 2, $int25, $int35, $int34, $int45, $int17);
+				} else {
+					$int35, $int34 = ~script7671($component1, $component2, calc($width28 - $int20 / 2), calc($int30 + $int26 / 2), 2, calc($int25 - 5), $int35, $int34, $int45, $int17);
+					if ($int31 = 0) {
+						$int35, $int34 = ~script7671($component1, $component2, calc($width28 - $int20 / 2), calc($int30 + $int26 / 2), $int26, 2, $int35, $int34, $int45, $int17);
+					} else if ($int31 = 2) {
+						$int35, $int34 = ~script7671($component1, $component2, calc($width28 - $int20 / 2), calc($int30 + 2 - $int26 / 2), calc($int26 - 1), 2, $int35, $int34, $int45, $int17);
+					}
+				}
+				cc_create($component5, ^iftype_graphic, $int33);
+				cc_setsize($width23, $height22, ^setsize_abs, ^setsize_abs);
+				cc_setposition(calc($width28 + $int25 / 2 - $int18 / 2 - 2), calc($int30 + $int26 / 2 - $int18 / 2 - 2), ^setpos_abs_left, ^setpos_abs_top);
+				if ($int18 = 74) {
+					if ($int45 = 1) {
+						cc_setgraphic(graphic_6288);
+						cc_setontimer("script7679($component5, $int33, true, 0)");
+					} else {
+						cc_setgraphic(graphic_6286);
+					}
+				} else if ($int45 = 1) {
+					cc_setgraphic(graphic_6287);
+					cc_setontimer("script7679($component5, $int33, true, 0)");
+				} else {
+					cc_setgraphic(graphic_6285);
+				}
+				if ($int45 = 2) {
+					cc_settrans(127);
+				} else if ($int45 = 1) {
+					cc_settrans(0);
+				} else {
+					cc_settrans(255);
+				}
+				if ($int45 = 2) {
+					if ($int18 = 40) {
+						$graphic43 = struct_param($struct42, param_2031);
+					} else {
+						$graphic43 = struct_param($struct42, param_2033);
+					}
+					~create_graphic($component4, $int33, $graphic43, calc($width28 + $int25 / 2 - $int18 / 2), calc($int30 + $int26 / 2 - $int18 / 2), ^setpos_abs_left, ^setpos_abs_top, $int18, $int18, ^setsize_abs, ^setsize_abs);
+				} else {
+					if ($int18 = 40) {
+						$graphic43 = struct_param($struct42, param_2032);
+					} else {
+						$graphic43 = struct_param($struct42, param_2034);
+					}
+					~create_graphic($component4, $int33, $graphic43, calc($width28 + $int25 / 2 - $int18 / 2), calc($int30 + $int26 / 2 - $int18 / 2), ^setpos_abs_left, ^setpos_abs_top, $int18, $int18, ^setsize_abs, ^setsize_abs);
+				}
+				cc_settiling(false);
+				~script7665($component9, $component10, $int25, $int26, $width28, $int30, $int33, struct_param($struct42, param_2026));
+				cc_setonop("script7666($component10, event_com, $component11, $int18, $struct42, $int45, $int33, $int32)");
+				if ($boolean44 = false) {
+					cc_setonmouserepeat("script7667(event_com, $component11, $int18, $struct42, $int45, $int33, true, $int32)");
+					cc_setonmouseleave("script7667(event_com, $component11, $int18, $struct42, $int45, $int33, false, $int32)");
+				}
+				if ($int45 = 2) {
+					$int38 = ~script7680($component7, $int38, calc($width28 + 3), calc($int30 + $int26 / 2 - 16), enum_5724);
+					if ($int18 = 40) {
+						$int37, $graphic40 = 16, enum(int, graphic, enum_5696, $int32);
+					} else {
+						$int37, $graphic40 = 32, enum(int, graphic, enum_5698, $int32);
+					}
+					~create_graphic($component3, $int36, $graphic40, calc($width28 + $int25 / 2 - $int37 / 2), calc($int30 + $int26 / 2 + scale(72, 100, $int37)), ^setpos_abs_left, ^setpos_abs_top, $int37, $int37, ^setsize_abs, ^setsize_abs);
+				} else {
+					if ($int18 = 40) {
+						$int37, $graphic40 = 16, enum(int, graphic, enum_5697, $int32);
+					} else {
+						$int37, $graphic40 = 32, enum(int, graphic, enum_5699, $int32);
+					}
+					~create_graphic($component3, $int36, $graphic40, calc($width28 + $int25 / 2 - $int37 / 2), calc($int30 + $int26 / 2 + scale(72, 100, $int37)), ^setpos_abs_left, ^setpos_abs_top, $int37, $int37, ^setsize_abs, ^setsize_abs);
+				}
+				cc_settiling(false);
+				$int36 = calc($int36 + 1);
+				$int33 = calc($int33 + 1);
+				$width28 = calc($width28 + $int25);
+				if ($width28 > $width29) {
+					$width29 = $width28;
+				}
+			}
+			$int32 = calc($int32 + 1);
+		}
+	}
+	$int30 = calc($int30 + $int26);
+	$int31 = calc($int31 + 1);
+}
+def_int $int47 = 2;
+def_int $int48 = $int47;
+if ($int18 = 74) {
+	$int47, $int48 = 5, -12;
+}
+~create_graphic($component1, $int35, $graphic21, 5, calc($int26 * 3 / 2 - $int20 / 2 - $int47), ^setpos_abs_left, ^setpos_abs_top, $int20, $int20, ^setsize_abs, ^setsize_abs);
+cc_settiling(false);
+$int38 = ~script7680($component7, $int38, calc($int20 / 2 - 10), calc($int26 * 3 / 2 - $int20 / 2 - $int48), enum_5723);
+if ($width29 > if_getwidth($component0)) {
+	if_setscrollsize($width29, 0, $component13);
+} else {
+	if_setscrollsize(0, 0, $component13);
+}
+if ($int16 = 1) {
+	$x15 = %varcint1238;
+	if ($x15 = -1) {
+		$x15 = if_getscrollx($component13);
+	}
+	if_setscrollpos($x15, 0, $component13);
+	cc_deleteall($component12);
+	~scrollbar_horizontal($component12, $component13, graphic_4538, graphic_4537, graphic_4536, graphic_4535, "scrollbar_v2,2", "scrollbar_v2,3", 1);
+	~scrollbar_horizontal_rebuild($component12, $component13);
+}

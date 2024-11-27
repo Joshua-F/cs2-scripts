@@ -30,7 +30,7 @@ cc_settextshadow(true);
 def_int $int25 = struct_param($struct3, param_151);
 def_string $string0 = "";
 def_string $string1 = ",";
-def_int $int26 = ~script2455;
+def_boolean $boolean26 = ~script7714;
 def_int $colour27 = ^white;
 def_string $string2 = "<col=ffffff>";
 if ($int5 = $int4) {
@@ -39,9 +39,9 @@ if ($int5 = $int4) {
 	.cc_setonmouseleave(null);
 } else if (oc_members($namedobj23) = ^true & map_members = false) {
 	$colour27, $string2 = 0x9f9f9f, "<col=9f9f9f>";
-} else if (%var2613 < $int25 & $int26 = 0) {
+} else if (%var2613 < $int25 & $boolean26 = false) {
 	$colour27, $string2 = 0x9f9f9f, "<col=9f9f9f>";
-} else if ($int26 = 1) {
+} else if ($boolean26 = true) {
 	$colour27, $string2 = 0x9f9f9f, "<col=9f9f9f>";
 } else {
 	$colour27, $string2 = 0x0dc10d, "<col=ff891f>";

@@ -21,21 +21,27 @@ switch_int ($int0) {
 	case 97 :
 		return("Woodcutting leprechaun's luck: <tostring(%varbit15344)>/255<br>5 consumed per successful chop");
 	case 101 :
-		return(~script2281(0, %varbit10049));
+		return(~script7704(0, %varbit10049));
 	case 102 :
-		return(~script2281(1, %varbit10050));
+		return(~script7704(1, %varbit10050));
 	case 103 :
-		return(~script2281(2, %varbit10051));
+		return(~script7704(2, %varbit10051));
 	case 104 :
-		return(~script2281(3, %varbit10052));
+		return(~script7704(3, %varbit10052));
 	case 105 :
-		return(~script2281(4, %varbit10053));
+		return(~script7704(4, %varbit10053));
 	case 106 :
-		return(~script2281(5, %varbit11696));
+		return(~script7704(5, %varbit11696));
 	case 107 :
-		return(~script2281(6, %varbit17301));
+		return(~script7704(6, %varbit17301));
 	case 108 :
-		return(~script2281(7, %varbit17302));
+		return(~script7704(7, %varbit17302));
+	case 123 :
+		return("Melee Mastery: <tostring(%varbit11580)> / <tostring(enum_getoutputcount(enum_5691))>");
+	case 124 :
+		return("Ranged Mastery: <tostring(%varbit11581)> / <tostring(enum_getoutputcount(enum_5692))>");
+	case 125 :
+		return("Magic Mastery: <tostring(%varbit11582)> / <tostring(enum_getoutputcount(enum_5693))>");
 	case default :
 		return("Buff");
 }

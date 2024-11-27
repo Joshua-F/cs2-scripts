@@ -3,24 +3,30 @@
 def_int $lvl0 = stat(mining);
 def_obj $obj1 = inv_getobj(worn, 3);
 if (map_members = true) {
-	if ($lvl0 >= oc_param(trailblazer_pickaxe_25112, levelrequire) & ($obj1 = trailblazer_pickaxe_25112 | inv_total(inv, trailblazer_pickaxe_25112) > 0)) {
+	if ($lvl0 >= oc_param(echo_pickaxe_25112, levelrequire) & ($obj1 = echo_pickaxe_25112 | inv_total(inv, echo_pickaxe_25112) > 0)) {
 		return(25112);
 	} else if ($lvl0 >= oc_param(crystal_pickaxe_23680, levelrequire) & ($obj1 = crystal_pickaxe_23680 | inv_total(inv, crystal_pickaxe_23680) > 0)) {
 		return(23680);
 	} else if ($lvl0 >= oc_param(infernal_pickaxe_or_25063, levelrequire) & ($obj1 = infernal_pickaxe_or_25063 | inv_total(inv, infernal_pickaxe_or_25063) > 0)) {
 		return(25063);
+	} else if ($lvl0 >= oc_param(infernal_pickaxe_or_30345, levelrequire) & ($obj1 = infernal_pickaxe_or_30345 | inv_total(inv, infernal_pickaxe_or_30345) > 0)) {
+		return(30345);
 	} else if ($lvl0 >= oc_param(infernal_pickaxe_13243, levelrequire) & ($obj1 = infernal_pickaxe_13243 | inv_total(inv, infernal_pickaxe_13243) > 0)) {
 		return(13243);
 	} else if ($lvl0 >= oc_param(crystal_pickaxe_inactive_23682, levelrequire) & ($obj1 = crystal_pickaxe_inactive_23682 | inv_total(inv, crystal_pickaxe_inactive_23682) > 0)) {
 		return(23682);
 	} else if ($lvl0 >= oc_param(infernal_pickaxe_uncharged_25369, levelrequire) & ($obj1 = infernal_pickaxe_uncharged_25369 | inv_total(inv, infernal_pickaxe_uncharged_25369) > 0)) {
 		return(25369);
+	} else if ($lvl0 >= oc_param(infernal_pickaxe_uncharged_30346, levelrequire) & ($obj1 = infernal_pickaxe_uncharged_30346 | inv_total(inv, infernal_pickaxe_uncharged_30346) > 0)) {
+		return(30346);
 	} else if ($lvl0 >= oc_param(infernal_pickaxe_uncharged_13244, levelrequire) & ($obj1 = infernal_pickaxe_uncharged_13244 | inv_total(inv, infernal_pickaxe_uncharged_13244) > 0)) {
 		return(13244);
 	} else if ($lvl0 >= oc_param(3rd_age_pickaxe_20014, levelrequire) & ($obj1 = 3rd_age_pickaxe_20014 | inv_total(inv, 3rd_age_pickaxe_20014) > 0)) {
 		return(20014);
 	} else if ($lvl0 >= oc_param(dragon_pickaxe_or_25376, levelrequire) & ($obj1 = dragon_pickaxe_or_25376 | inv_total(inv, dragon_pickaxe_or_25376) > 0)) {
 		return(25376);
+	} else if ($lvl0 >= oc_param(dragon_pickaxe_or_30351, levelrequire) & ($obj1 = dragon_pickaxe_or_30351 | inv_total(inv, dragon_pickaxe_or_30351) > 0)) {
+		return(30351);
 	} else if ($lvl0 >= oc_param(dragon_pickaxe_12797, levelrequire) & ($obj1 = dragon_pickaxe_12797 | inv_total(inv, dragon_pickaxe_12797) > 0)) {
 		return(12797);
 	} else if ($lvl0 >= oc_param(dragon_pickaxe_or_23677, levelrequire) & ($obj1 = dragon_pickaxe_or_23677 | inv_total(inv, dragon_pickaxe_or_23677) > 0)) {

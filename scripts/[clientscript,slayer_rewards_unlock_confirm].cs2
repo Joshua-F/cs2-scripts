@@ -9,6 +9,10 @@ if_sethide(false, $component5);
 def_string $string1 = "Extend everything";
 def_string $op2 = "Confirm";
 def_string $text3 = "";
+def_int $int8 = 0;
+if (~league_relic_active(slayer_master_1129) = 1) {
+	$int8 = 1;
+}
 if ($int1 = calc(56 + 9)) {
 	$text3 = "<u=ff981f><$string1></u><br><br>All task extensions will be unlocked. You can re-lock them individually later, but will not receive a refund.<br><br><col=ff0000>Pay <tostring($int7)> points?</col>";
 } else if ($int1 = 35 & $boolean0 = false) {
@@ -25,7 +29,11 @@ if ($int1 = calc(56 + 9)) {
 	$op2 = "Unlock";
 	$text3 = "<u=ff981f><$string1></u><br><br><$string0>";
 	if (enum(int, int, enum_836, $int1) > 0) {
-		$text3 = "<$text3><br><br><col=ff0000>Pay <~tostring_spacer(enum(int, int, enum_836, $int1), ",")> points?</col>";
+		if ($int8 = 1) {
+			$text3 = "<$text3><br><br><col=06600c>Unlock for free?</col>";
+		} else {
+			$text3 = "<$text3><br><br><col=ff0000>Pay <~tostring_spacer(enum(int, int, enum_836, $int1), ",")> points?</col>";
+		}
 	}
 } else {
 	$string1 = enum(int, string, enum_834, $int1);
@@ -36,11 +44,11 @@ if ($int1 = calc(56 + 9)) {
 	}
 }
 if_settext($text3, $component4);
-def_int $int8 = 0;
-while ($int8 < $int1) {
-	cc_create($component5, ^iftype_rectangle, $int8);
+def_int $int9 = 0;
+while ($int9 < $int1) {
+	cc_create($component5, ^iftype_rectangle, $int9);
 	cc_sethide(true);
-	$int8 = calc($int8 + 1);
+	$int9 = calc($int9 + 1);
 }
 cc_create($component5, ^iftype_rectangle, $int1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

@@ -1,0 +1,46 @@
+// 7710
+[proc,script7710](int $int0, int $int1, int $int2, int $int3, int $int4, graphic $graphic5, dbrow $dbrow6)(int, int)
+def_component $component7 = interface_525:8;
+def_component $component8 = interface_525:7;
+def_int $colour9 = 0xff981f;
+def_int $int10 = 1;
+if ($graphic5 = "toggle_box,4" & ~on_mobile = false) {
+	$colour9 = 0xb37732;
+	$int10 = 0;
+}
+def_int $int11 = calc($int2 * $int3);
+$int1 = ~script7711($int1, $int2, $int3, $int4, $int10);
+cc_create($component7, ^iftype_rectangle, $int0);
+cc_setposition(4, $int11, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(6, $int3, ^setsize_minus, ^setsize_abs);
+cc_settrans(255);
+cc_setop(1, "Toggle");
+cc_setopbase("<col=ff9040>animation");
+cc_setonclick("script7713($int2)");
+$int0 = calc($int0 + 1);
+def_int $int12 = 18;
+def_int $y13 = calc($int11 + ($int3 - $int12) / 2);
+cc_create($component8, ^iftype_graphic, $int1);
+cc_setposition(calc(if_getwidth($component8) - ($int12 + 6)), $y13, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int12, $int12, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic5);
+$int1 = calc($int1 + 1);
+cc_create($component8, ^iftype_text, $int1);
+cc_setposition(6, $int11, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(6, $int3, ^setsize_minus, ^setsize_abs);
+cc_settext(db_getfield($dbrow6, dbtable_83:1:0, $int2));
+cc_settextalign(^settextalign_left, ^settextalign_centre, $int3);
+cc_settextfont(p12_full);
+cc_setcolour($colour9);
+cc_settextshadow(true);
+$int1 = calc($int1 + 1);
+def_int $int14 = $int3;
+def_int $y15 = calc($int11 + ($int3 - $int14) / 2);
+cc_create($component8, ^iftype_graphic, $int1);
+cc_setposition(calc(if_getwidth($component8) - ($int12 + $int14 + 12)), $y15, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int14, $int14, ^setsize_abs, ^setsize_abs);
+cc_setobject(db_getfield($dbrow6, dbtable_83:1:1, $int2), 1);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+$int1 = calc($int1 + 1);
+return($int0, $int1);

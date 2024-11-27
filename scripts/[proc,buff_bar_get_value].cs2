@@ -95,7 +95,7 @@ switch_struct ($struct0) {
 		if (%var4030 > 0 & $int1 > 0) {
 			return(~script5941(%var4030, $int1));
 		}
-	case buff_undying_retribution_cooldown_5895 :
+	case buff_last_stand_cooldown_5895 :
 		if (%varcint1185 > 0) {
 			return(~script5940(%varcint1185, calc(%varcint1186 - 3)));
 		}
@@ -317,6 +317,18 @@ switch_struct ($struct0) {
 		}
 	case buff_last_recall_5904 :
 		if (~script2277(7) = 1) {
+			return(1);
+		}
+	case buff_last_recall_1112 :
+		if (~script7658 = true & %varbit11580 > 0) {
+			return(1);
+		}
+	case buff_last_recall_1113 :
+		if (~script7658 = true & %varbit11581 > 0) {
+			return(1);
+		}
+	case buff_last_recall_1114 :
+		if (~script7658 = true & %varbit11582 > 0) {
 			return(1);
 		}
 	case buff_twin_strikes_4099 :

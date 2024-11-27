@@ -1,0 +1,102 @@
+// 7630
+[proc,script7630]
+def_component $component0 = inventory_ranging:79;
+def_component $component1 = inventory_ranging:74;
+def_component $component2 = inventory_ranging:62;
+def_component $component3 = inventory_ranging:70;
+def_component $component4 = inventory_ranging:64;
+def_component $component5 = inventory_ranging:89;
+cc_deleteall($component0);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component1);
+def_struct $struct6 = enum(int, struct, enum_2670, %varbit10032);
+def_int $int7 = %varbit11693;
+if ($struct6 = null) {
+	return;
+}
+def_int $colour8 = struct_param($struct6, param_1027);
+def_graphic $graphic9 = p12_full;
+def_int $int10 = 0;
+def_int $int11 = 0;
+~script5288($component4, 0, 0, 0, if_getwidth($component4), if_getheight($component4), struct_3712, 0x726451);
+def_int $int12 = calc(if_getwidth($component0) / 3);
+switch_int (%varcint988) {
+	case 1 :
+		$int10, $int11 = calc($int12 / 2 - 33), calc($int12 / 2 - 33);
+	case 2 :
+		$int10, $int11 = calc($int12 / 2 - 33), calc($int12 / 2 - 33);
+	case 3 :
+		$int10, $int11 = calc($int12 / 2 - 33), calc($int12 / 2 - 33);
+	case default :
+		$graphic9, $int10, $int11 = p12_full, calc($int12 / 2 - 35), calc($int12 / 2 - 35);
+}
+def_int $int13 = 0;
+$int13 = ~script5293($component0, $int13, 0, $int12, 0, 0x726451, "Overview", $graphic9, $colour8, 0, null, 0, 0, 0, 0, ~is_equal(%varcint1239, 0));
+cc_setonop("script7632(0)");
+$int13 = ~script5293($component0, $int13, 1, $int12, 0, 0x726451, "Information", $graphic9, $colour8, 0, null, 0, 0, 0, 0, ~is_equal(%varcint1239, 1));
+cc_setonop("script7632(1)");
+if (~script7659 = true & $int7 ! 1 & $int7 ! 2) {
+	$int13 = ~script5293($component0, $int13, 2, $int12, 0, 0x726451, "Echoes", $graphic9, 0xed00ed, $int11, "league_tiny_relic,4", 19, 19, $int10, -1, ~is_equal(%varcint1239, 2));
+	cc_setonop("script7632(2)");
+}
+def_struct $struct14 = ~script7625($int7);
+if ($struct14 = null) {
+	return;
+}
+def_string $string0 = struct_param($struct14, param_2020);
+def_string $string1 = struct_param($struct14, param_2021);
+def_string $string2 = struct_param($struct14, param_2022);
+def_string $string3 = struct_param($struct14, param_2023);
+$string2 = "<$string2>This region will add the following tasks to your slayer list (Combat level where they are enabled):<br><br><~script7754($int7)>";
+def_component $component15 = inventory_ranging:78;
+def_component $component16 = inventory_ranging:104;
+if_settext("", $component15);
+if_settext("", $component16);
+if_setcolour($colour8, $component15);
+if_setcolour($colour8, $component16);
+if_settextfont($graphic9, $component15);
+if_settextfont($graphic9, $component16);
+def_component $component17 = inventory_ranging:66;
+def_component $component18 = inventory_ranging:65;
+def_component $component19 = inventory_ranging:72;
+def_component $component20 = inventory_ranging:76;
+def_int $height21 = 0;
+cc_deleteall($component17);
+cc_deleteall($component19);
+cc_deleteall($component18);
+cc_deleteall($component20);
+if_setscrollpos(0, 0, $component20);
+if_setscrollpos(0, 0, $component18);
+switch_int (%varcint1239) {
+	case 0 :
+		$height21 = ~script7635($string0, $component15, $component18);
+		~script7631($height21, $component17, $component18);
+	case 1 :
+		~script7633($component3, $component1, $graphic9, $colour8, "Key Info", "Unlocks", "Drops", 3);
+		switch_int (%varcint1240) {
+			case 0 :
+				$height21 = ~script7635($string1, $component16, $component20);
+			case 1 :
+				$height21 = ~script7635($string2, $component16, $component20);
+			case 2 :
+				$height21 = ~script7635($string3, $component16, $component20);
+		}
+		~script7631($height21, $component19, $component20);
+	case 2 :
+		~script7633($component3, $component1, $graphic9, $colour8, "Boss", "Items", "", 2);
+		~script7636($int7, $component5);
+		~script7645(0, $int7);
+		switch_int (%varcint1240) {
+			case 0 :
+				$height21 = ~script7637($component20, $int7, $colour8, $graphic9);
+			case 1 :
+				$height21 = ~script7640($component20, $int7, $colour8, $graphic9);
+		}
+		~script7631($height21, $component19, $component20);
+		return;
+}
+~script7645(1, $int7);
+if (cc_find($component5, 1) = ^false) {
+	~start_slideshow($component5, ~script7624($int7), 5, 4, 1);
+}

@@ -1,0 +1,31 @@
+// 7652
+[proc,script7652](struct $struct0)(int)
+if (~league_world = 0) {
+	return(0);
+}
+def_int $count1 = 1;
+def_int $int2 = -1;
+def_int $int3 = 0;
+if ($struct0 = null) {
+	return(0);
+}
+while ($count1 <= enum_getoutputcount(enum_5694) & $int3 = 0) {
+	if (enum(int, struct, enum_5694, $count1) = $struct0) {
+		$int3, $int2 = 1, $count1;
+	} else {
+		$count1 = calc($count1 + 1);
+	}
+}
+if ($int2 = -1) {
+	return(0);
+}
+if (%varbit11580 >= $int2) {
+	return(1);
+}
+if (%varbit11581 >= $int2) {
+	return(1);
+}
+if (%varbit11582 >= $int2) {
+	return(1);
+}
+return(0);

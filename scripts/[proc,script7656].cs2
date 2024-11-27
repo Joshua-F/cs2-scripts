@@ -1,0 +1,64 @@
+// 7656
+[proc,script7656](struct $struct0)(int)
+def_int $count1 = 1;
+def_int $int2 = -1;
+def_int $int3 = 0;
+def_int $int4 = 1;
+if ($struct0 = null) {
+	return(0);
+}
+if (struct_param($struct0, param_2029) > 0) {
+	$int4 = struct_param($struct0, param_2029);
+}
+while ($count1 <= enum_getoutputcount(enum_5695) & $int3 = 0) {
+	if (enum(int, struct, enum_5695, $count1) = $struct0) {
+		$int3, $int2 = 1, $count1;
+	} else {
+		$count1 = calc($count1 + 1);
+	}
+}
+switch_int ($int2) {
+	case 1 :
+		if (%varbit11585 >= $int4) {
+			return(1);
+		}
+	case 2 :
+		if (%varbit11586 >= $int4) {
+			return(1);
+		}
+	case 3 :
+		if (%varbit11587 >= $int4) {
+			return(1);
+		}
+	case 4 :
+		if (%varbit11588 >= $int4) {
+			return(1);
+		}
+	case 5 :
+		if (%varbit11589 >= $int4) {
+			return(1);
+		}
+	case 6 :
+		if (%varbit11590 >= $int4) {
+			return(1);
+		}
+	case 7 :
+		if (%varbit11591 >= $int4) {
+			return(1);
+		}
+	case 8 :
+		if (%varbit11592 >= $int4) {
+			return(1);
+		}
+	case 9 :
+		if (%varbit11593 >= $int4) {
+			return(1);
+		}
+	case 10 :
+		if (%varbit11594 >= $int4) {
+			return(1);
+		}
+	case default :
+		return(0);
+}
+return(0);

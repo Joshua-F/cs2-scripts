@@ -10,12 +10,12 @@ def_int $int5 = -1;
 if ($struct2 ! null) {
 	$int4 = struct_param($struct2, param_877);
 } else {
-	$int4 = 400;
+	$int4 = 750;
 }
 if ($struct3 ! null) {
 	$int5 = struct_param($struct3, param_877);
 } else {
-	$int5 = 400;
+	$int5 = 750;
 }
 def_int $width6 = -1;
 def_int $int7 = calc($int1 - $int5);
@@ -28,4 +28,4 @@ if ($int4 ! -1 & $int5 ! -1 & $int4 > 0 & $int5 ! $int4) {
 if (if_find($component0) = ^true) {
 	cc_setsize($width6, 0, ^setsize_abs, ^setsize_minus);
 }
-~league_side_panel_update_text(interface_656:6, interface_656:7, interface_656:16, interface_656:14, $int1, $int4);
+~league_side_panel_update_text(interface_656:18, interface_656:19, interface_656:28, interface_656:26, $int1, $int4);

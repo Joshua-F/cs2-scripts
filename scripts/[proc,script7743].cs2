@@ -1,0 +1,33 @@
+// 7743
+[proc,script7743](component $component0, component $component1, component $component2, int $int3, int $height4, int $y5, string $text0, int $int6, int $int7, int $colour8, int $int9)(int)
+cc_create($component0, ^iftype_rectangle, $int9);
+cc_setsize(calc($int3 - 12), $height4, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $y5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int7 = $int6) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int9 = calc($int9 + 1);
+cc_create($component0, ^iftype_text, $int9);
+cc_setsize(calc($int3 - 12), $height4, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $y5, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($text0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int7 = $int6) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour($colour8);
+	if (~on_mobile = false) {
+		cc_setonmouseover("league_info_mouseover($component0, $int9)");
+		cc_setonmouseleave("league_info_mouseleave($component0, $int9, $colour8)");
+	}
+}
+cc_setop(1, "View <$text0>");
+cc_setonop("league_menu_frame_click($component1, $component0, $component2)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+return(calc($int9 + 1));

@@ -1,0 +1,20 @@
+// 7722
+[proc,script7722]
+def_component $component0 = interface_529:12;
+def_component $component1 = interface_529:13;
+~thinbox_light($component0, 0);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = calc(if_getheight($component1) / 3);
+while ($int2 <= 2) {
+	switch_int ($int2) {
+		case 0 :
+			$int3, $int4 = ~script7723($component1, "Points", ~tostring_spacer(%var2614, ","), $int4, $int3, $int2, $int5);
+		case 1 :
+			$int3, $int4 = ~script7723($component1, "Tasks", ~tostring_spacer(%varbit10046, ","), $int4, $int3, $int2, $int5);
+		case 2 :
+			$int3, $int4 = ~script7724($component1, "Rank", enum(int, string, enum_5203, ~league_current_rank), $int4, $int3, $int2, calc($int5 + 1));
+	}
+	$int2 = calc($int2 + 1);
+}

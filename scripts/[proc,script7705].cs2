@@ -1,0 +1,30 @@
+// 7705
+[proc,script7705](enum $enum0, int $int1)(struct)
+def_struct $struct2 = enum(int, struct, $enum0, $int1);
+if ($struct2 = null) {
+	return(null);
+}
+def_enum $enum3 = struct_param($struct2, param_878);
+if ($enum3 = null) {
+	return(null);
+}
+switch_int ($int1) {
+	case 0 :
+		return(enum(int, struct, $enum3, %varbit17554));
+	case 1 :
+		return(enum(int, struct, $enum3, %varbit17555));
+	case 2 :
+		return(enum(int, struct, $enum3, %varbit17556));
+	case 3 :
+		return(enum(int, struct, $enum3, %varbit17557));
+	case 4 :
+		return(enum(int, struct, $enum3, %varbit17558));
+	case 5 :
+		return(enum(int, struct, $enum3, %varbit17559));
+	case 6 :
+		return(enum(int, struct, $enum3, %varbit17560));
+	case 7 :
+		return(enum(int, struct, $enum3, %varbit17561));
+	case default :
+		return(null);
+}

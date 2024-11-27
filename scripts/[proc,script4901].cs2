@@ -1,8 +1,8 @@
 // 4901
 [proc,script4901]()(string)
-if (%varbit10032 = 0 | %varbit10032 > 4) {
-	~debug_mes("League variable was incorrectly set. Previous value: <tostring(%varbit10032)>. New Value: <tostring(4)>.");
-	%varbit10032 = 4;
+if (%varbit10032 = 0 | %varbit10032 > 5) {
+	~debug_mes("League variable was incorrectly set. Previous value: <tostring(%varbit10032)>. New Value: <tostring(5)>.");
+	%varbit10032 = 5;
 }
 def_string $string0 = struct_param(enum(int, struct, enum_2670, %varbit10032), param_1882);
 if (string_length($string0) > 0) {

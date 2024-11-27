@@ -1,0 +1,5 @@
+// 7732
+[clientscript,script7732](int $int0, int $x1, int $y2)
+def_component $component3 = interface_529:20;
+if_setmodelangle(0, 0, 0, 0, 0, $int0, $component3);
+if_setposition($x1, $y2, ^setpos_abs_centre, ^setpos_abs_centre, $component3);

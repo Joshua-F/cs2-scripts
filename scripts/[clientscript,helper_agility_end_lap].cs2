@@ -1,12 +1,12 @@
 // 5174
-[clientscript,helper_agility_end_lap](int $int0)
+[clientscript,helper_agility_end_lap](int $int0, int $int1)
 if (%varcint537 ! %varbit12633) {
 	return;
 }
 if (%varcint532 = 0) {
 	return;
 }
-%varcint533 = calc(%varcint533 + 1);
+%varcint533 = calc(%varcint533 + (1 + $int1));
 %varcint539 = calc(%varcint536 / 10);
 %varcint536 = 0;
 ~script5172;

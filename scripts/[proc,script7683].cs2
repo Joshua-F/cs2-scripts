@@ -1,0 +1,7 @@
+// 7683
+[proc,script7683](enum $enum0, int $int1)(graphic)
+def_struct $struct2 = enum(int, struct, $enum0, $int1);
+if ($struct2 = null) {
+	return(null);
+}
+return(struct_param($struct2, param_2031));

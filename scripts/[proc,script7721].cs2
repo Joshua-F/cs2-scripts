@@ -1,0 +1,9 @@
+// 7721
+[proc,script7721]
+if (%varbit12933 = 1) {
+	cc_setop(1, "Hide");
+} else {
+	cc_setop(1, "Reveal");
+}
+cc_setopbase("<col=ff9040>Time played</col>");
+cc_setonop("script7753");

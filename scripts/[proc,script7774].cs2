@@ -1,0 +1,19 @@
+// 7774
+[proc,script7774](int $int0)(string)
+def_int $int1 = calc($int0 % 100);
+switch_int ($int1) {
+	case 11, 12, 13 :
+		return("<tostring($int0)>th");
+	case default :
+		$int1 = calc($int0 % 10);
+		switch_int ($int1) {
+			case 1 :
+				return("<tostring($int0)>st");
+			case 2 :
+				return("<tostring($int0)>nd");
+			case 3 :
+				return("<tostring($int0)>rd");
+			case default :
+				return("<tostring($int0)>th");
+		}
+}

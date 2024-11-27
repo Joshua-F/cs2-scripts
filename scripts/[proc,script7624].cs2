@@ -1,0 +1,7 @@
+// 7624
+[proc,script7624](int $int0)(enum)
+def_dbrow $dbrow1 = ~script3994($int0);
+if ($dbrow1 ! null) {
+	return(db_getfield($dbrow1, dbtable_82:9, 0));
+}
+return(null);

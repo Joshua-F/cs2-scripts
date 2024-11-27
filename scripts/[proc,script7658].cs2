@@ -1,0 +1,10 @@
+// 7658
+[proc,script7658]()(boolean)
+if (~league_world = 0) {
+	return(false);
+}
+def_struct $struct0 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct0 = null) {
+	return(false);
+}
+return(struct_param($struct0, param_2025));

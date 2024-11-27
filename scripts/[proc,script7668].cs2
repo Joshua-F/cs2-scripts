@@ -1,0 +1,57 @@
+// 7668
+[proc,script7668](component $component0, component $component1, int $int2, struct $struct3, int $int4, int $int5, boolean $boolean6, int $int7)
+def_graphic $graphic8 = null;
+def_graphic $graphic9 = null;
+def_int $int10 = 16777215;
+def_int $int11 = -1;
+if ($boolean6 = true) {
+	if ($int2 = 40) {
+		if ($int4 = 1 | $int4 = 2) {
+			$graphic8 = struct_param($struct3, param_2031);
+			$graphic9 = enum(int, graphic, enum_5696, $int7);
+		} else {
+			$graphic8 = struct_param($struct3, param_2032);
+			$graphic9 = enum(int, graphic, enum_5697, $int7);
+		}
+	} else if ($int4 = 1 | $int4 = 2) {
+		$graphic8 = struct_param($struct3, param_2033);
+		$graphic9 = enum(int, graphic, enum_5698, $int7);
+	} else {
+		$graphic8 = struct_param($struct3, param_2034);
+		$graphic9 = enum(int, graphic, enum_5699, $int7);
+	}
+	if ($int4 = 0) {
+		$int11 = 127;
+	} else {
+		$int11 = 0;
+	}
+	~tooltip_mouserepeat($component0, $int5, $component1, struct_param($struct3, param_2028), 25, 200);
+} else {
+	if ($int2 = 40) {
+		if ($int4 = 2) {
+			$graphic8 = struct_param($struct3, param_2031);
+			$graphic9 = enum(int, graphic, enum_5696, $int7);
+		} else {
+			$graphic8 = struct_param($struct3, param_2032);
+			$graphic9 = enum(int, graphic, enum_5697, $int7);
+		}
+	} else if ($int4 = 2) {
+		$graphic8 = struct_param($struct3, param_2033);
+		$graphic9 = enum(int, graphic, enum_5698, $int7);
+	} else {
+		$graphic8 = struct_param($struct3, param_2034);
+		$graphic9 = enum(int, graphic, enum_5699, $int7);
+	}
+	if ($int4 = 2) {
+		$int11 = 127;
+	} else if ($int4 = 1) {
+		$int11 = 255;
+	} else {
+		$int11 = 255;
+	}
+	~deltooltip_action($component1);
+}
+if ($graphic9 = null) {
+	~debug_mes("Testing.");
+}
+~script7669($int11, $graphic8, $graphic9, $int5, $boolean6, $int4);

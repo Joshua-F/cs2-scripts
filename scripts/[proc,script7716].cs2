@@ -1,0 +1,44 @@
+// 7716
+[proc,script7716](int $int0)(int)
+if ($int0 = -1) {
+	return(0);
+}
+def_int $int1 = 0;
+while ($int1 < $int0) {
+	switch_int ($int1) {
+		case 0 :
+			if (%varbit10049 = 0) {
+				return(0);
+			}
+		case 1 :
+			if (%varbit10050 = 0) {
+				return(0);
+			}
+		case 2 :
+			if (%varbit10051 = 0) {
+				return(0);
+			}
+		case 3 :
+			if (%varbit10052 = 0) {
+				return(0);
+			}
+		case 4 :
+			if (%varbit10053 = 0) {
+				return(0);
+			}
+		case 5 :
+			if (%varbit11696 = 0) {
+				return(0);
+			}
+		case 6 :
+			if (%varbit17301 = 0) {
+				return(0);
+			}
+		case 7 :
+			if (%varbit17302 = 0) {
+				return(0);
+			}
+	}
+	$int1 = calc($int1 + 1);
+}
+return(1);

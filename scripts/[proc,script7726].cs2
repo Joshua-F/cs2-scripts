@@ -1,0 +1,10 @@
+// 7726
+[proc,script7726](component $component0, int $int1, graphic $graphic2, int $int3, int $int4, int $int5, string $string0)(int)
+$int1 = ~script7773($component0, $int1, $graphic2, $int3, $int4, ^setpos_abs_left, ^setpos_abs_top, 40, 40, ^setsize_abs, ^setsize_abs);
+if ($int5 > 0) {
+	~script7739("<$string0> mastery progress: <tostring($int5)>");
+	$int1 = ~script7773($component0, $int1, enum(int, graphic, enum_5696, $int5), calc($int3 + 12), calc($int4 + 33), ^setpos_abs_left, ^setpos_abs_top, 16, 16, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_settrans(200);
+}
+return($int1);

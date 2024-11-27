@@ -1,0 +1,15 @@
+// 7669
+[proc,script7669](int $int0, graphic $graphic1, graphic $graphic2, int $comsubid3, boolean $boolean4, int $int5)
+def_component $component6 = interface_311:33;
+def_component $component7 = interface_311:32;
+def_component $component8 = interface_311:34;
+$int0 = ~minmax(0, 255, $int0);
+if (cc_find($component7, $comsubid3) = ^true & $int5 ! 1) {
+	cc_settrans($int0);
+}
+if (cc_find($component6, $comsubid3) = ^true) {
+	cc_setgraphic($graphic1);
+}
+if (cc_find($component8, $comsubid3) = ^true) {
+	cc_setgraphic($graphic2);
+}

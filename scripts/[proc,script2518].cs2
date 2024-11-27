@@ -1,0 +1,7 @@
+// 2518
+[proc,script2518]
+if (~league_world = 0) {
+	return;
+}
+%varbit11562 = calc(1 - %varbit11562);
+~buff_bar_layout_redraw;

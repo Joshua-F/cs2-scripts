@@ -1,0 +1,10 @@
+// 7742
+[clientscript,script7742](component $component0)
+def_int $int1 = 0;
+def_string $string0 = "";
+while ($int1 <= 500) {
+	if (cc_find($component0, $int1) = ^true & string_length(cc_gettext) > 0) {
+		~debug_mes("Component found - ID = <tostring($int1)> - text = <cc_gettext>");
+	}
+	$int1 = calc($int1 + 1);
+}

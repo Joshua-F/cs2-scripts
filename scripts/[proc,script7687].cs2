@@ -1,0 +1,7 @@
+// 7687
+[proc,script7687](int $colour0)
+def_int $width1 = if_getwidth(interface_311:15);
+if_setsize(scale(40, 100, $width1), 10, ^setsize_minus, ^setsize_minus, interface_311:16);
+if_setsize(calc(scale(60, 100, $width1) + 5), 10, ^setsize_minus, ^setsize_minus, interface_311:17);
+~script7689($colour0);
+~script7690($colour0);

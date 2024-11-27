@@ -1,0 +1,33 @@
+// 7727
+[proc,script7727]
+def_component $component0 = interface_529:16;
+def_component $component1 = interface_529:17;
+~thinbox_light($component0, 0);
+def_int $int2 = ~script7733($component1, $int2, "Relics");
+def_int $int3 = 32;
+def_int $int4 = 4;
+def_int $int5 = calc($int4 * $int3);
+def_int $int6 = calc(if_getwidth($component1) - $int5);
+def_int $int7 = calc($int6 / ($int4 + 1));
+def_int $int8 = 2;
+def_int $int9 = calc($int8 * $int3);
+def_int $int10 = calc(if_getheight($component1) - 20 - $int9);
+def_int $int11 = calc($int10 / ($int8 + 1));
+def_int $int12 = $int7;
+def_int $int13 = calc(20 + $int11);
+$int2 = ~script7728($component1, $int2, 0, %varbit10049, $int12, $int13);
+$int12 = calc($int12 + $int3 + $int7);
+$int2 = ~script7728($component1, $int2, 2, %varbit10051, $int12, $int13);
+$int12 = calc($int12 + $int3 + $int7);
+$int2 = ~script7728($component1, $int2, 4, %varbit10053, $int12, $int13);
+$int12 = calc($int12 + $int3 + $int7);
+$int2 = ~script7728($component1, $int2, 6, %varbit17301, $int12, $int13);
+$int12 = $int7;
+$int13 = calc($int13 + $int3 + $int11);
+$int2 = ~script7728($component1, $int2, 1, %varbit10050, $int12, $int13);
+$int12 = calc($int12 + $int3 + $int7);
+$int2 = ~script7728($component1, $int2, 3, %varbit10052, $int12, $int13);
+$int12 = calc($int12 + $int3 + $int7);
+$int2 = ~script7728($component1, $int2, 5, %varbit11696, $int12, $int13);
+$int12 = calc($int12 + $int3 + $int7);
+$int2 = ~script7728($component1, $int2, 7, %varbit17302, $int12, $int13);

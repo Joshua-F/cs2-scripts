@@ -1,0 +1,17 @@
+// 7633
+[proc,script7633](component $component0, component $component1, graphic $graphic2, int $colour3, string $string0, string $string1, string $string2, int $int4)
+~script7770($component0, 0, 0, 0, if_getwidth($component0), if_getheight($component0), ^setpos_abs_left, ^setpos_abs_top, 0x2e2b23, 0x726451);
+def_int $int5 = calc(if_getwidth($component1) / $int4);
+def_int $int6 = 0;
+if (string_length($string0) > 0) {
+	$int6 = ~script5293($component1, $int6, 0, $int5, 0, 0x726451, $string0, $graphic2, $colour3, 0, null, 0, 0, 0, 0, ~is_equal(%varcint1240, 0));
+	cc_setonop("script7634(0)");
+}
+if (string_length($string1) > 0) {
+	$int6 = ~script5293($component1, $int6, 1, $int5, 0, 0x726451, $string1, $graphic2, $colour3, 0, null, 0, 0, 0, 0, ~is_equal(%varcint1240, 1));
+	cc_setonop("script7634(1)");
+}
+if (string_length($string2) > 0) {
+	$int6 = ~script5293($component1, $int6, 2, $int5, 0, 0x726451, $string2, $graphic2, $colour3, 0, null, 0, 0, 0, 0, ~is_equal(%varcint1240, 2));
+	cc_setonop("script7634(2)");
+}

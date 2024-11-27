@@ -1,5 +1,5 @@
 // 3225
-[clientscript,league_side_panel_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+[clientscript,league_side_panel_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
 cc_deleteall($component0);
 cc_deleteall($component1);
 cc_deleteall($component2);
@@ -29,46 +29,27 @@ if (~on_mobile = false) {
 	if_setonmouseover("league_side_panel_button_hover($component3, 1)", $component3);
 }
 if_setonop("button_select_sound", $component3);
-def_struct $struct5 = enum(int, struct, enum_2670, %varbit10032);
-def_int $colour6 = 0xff981f;
-if ($struct5 ! null) {
-	if_setgraphic(struct_param($struct5, param_1024), interface_656:11);
-	if_setgraphic(struct_param($struct5, param_1025), interface_656:10);
-	$colour6 = struct_param($struct5, param_1027);
+def_struct $struct6 = enum(int, struct, enum_2670, %varbit10032);
+def_int $colour7 = 0xff981f;
+if ($struct6 ! null) {
+	if_setgraphic(struct_param($struct6, param_1024), interface_656:23);
+	if_setgraphic(struct_param($struct6, param_1025), interface_656:22);
+	if_setgraphic(struct_param($struct6, param_2055), interface_656:24);
+	$colour7 = struct_param($struct6, param_1027);
 }
-if_setcolour($colour6, interface_656:2);
-if_setcolour($colour6, interface_656:6);
-if_setcolour($colour6, interface_656:7);
-if_setcolour($colour6, interface_656:13);
-if_setcolour($colour6, interface_656:15);
-def_string $string0 = "Display Relics";
-def_component $component7 = interface_656:36;
-def_component $component8 = interface_656:34;
-def_component $component9 = interface_656:35;
-def_int $int10 = calc(parawidth($string0, 190, p11_full) + 20);
-if_setopbase("<col=ff9040><$string0></col>", $component8);
-if_setsize($int10, if_getheight($component8), ^setsize_abs, ^setsize_abs, $component8);
-cc_create($component8, ^iftype_graphic, 0);
-cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, 5, ^setpos_abs_left, ^setpos_abs_top);
-.cc_create($component8, ^iftype_text, 1);
-.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-.cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
-.cc_setcolour($colour6);
-.cc_settextfont(p11_full);
-.cc_settextshadow(true);
-.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-.cc_settext($string0);
-.cc_setonmouseleave("deltooltip($component7)");
+if_setcolour($colour7, interface_656:4);
+if_setcolour($colour7, interface_656:18);
+if_setcolour($colour7, interface_656:19);
+if_setcolour($colour7, interface_656:25);
+if_setcolour($colour7, interface_656:27);
+def_component $component8 = interface_656:46;
+~league_side_panel_rank($component8, $colour7);
+~script7701($component8, $colour7);
+def_string $string0 = "Open League Info";
 if (~on_mobile = false) {
-	if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $component8);
-	if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, $colour6)", $component8);
+	if_setonmouserepeat("tooltip_mouserepeat($component5, 0, $component8, $string0, 25, 190)", $component5);
+	if_setonmouseleave("deltooltip($component8)", $component5);
 }
-~league_side_panel_hudtoggle($component8, $component7);
-def_int $int11 = ~league_side_panel_rank($component9, $component7, $colour6);
-def_int $int12 = calc((if_getwidth(interface_656:1) - $int10 - $int11) / 2 - 2);
-if_setposition(calc(0 - $int10 / 2 - 5 + $int12), 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component8);
-if_setposition(calc($int11 / 2 + 5 + $int12), 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component9);
-if_setonvartransmit("league_side_panel_hudtoggle($component8, cc_getid, .cc_getid, $component7){var1734}", $component8);
-if_setonop("league_side_panel_hudop(event_op, $component8, cc_getid, .cc_getid, $component7)", $component8);
-~league_side_panel_update_bar(interface_656:11, %var2615);
+if_setonop("script7753", $component5);
+if_setopbase("<col=ff981f>League Info</col>", $component5);
+~league_side_panel_update_bar(interface_656:23, %var2615);

@@ -1,0 +1,32 @@
+// 7675
+[clientscript,script7675](string $text0, string $string1, int $colour0)
+sound_synth(interface_select1, 1, 0);
+if_sethide(false, interface_311:12);
+if (cc_find(interface_311:59, 1) = ^true) {
+	cc_settext($text0);
+	cc_setcolour($colour0);
+}
+if_settext($string1, interface_311:64);
+if_setcolour($colour0, interface_311:64);
+def_int $int1 = calc(paraheight($string1, calc(if_getwidth(interface_311:12) - 52), p12_full) * 15);
+def_int $int2 = 0;
+if ($int1 <= 139) {
+	if_setsize(16, 45, ^setsize_minus, ^setsize_minus, interface_311:62);
+	if_sethide(true, interface_311:65);
+	$int2 = max(125, parawidth($string1, calc(if_getwidth(interface_311:12) - 52), p12_full));
+	if_setsize(calc($int2 + 22), calc(57 + $int1), ^setsize_abs, ^setsize_abs, interface_311:58);
+	if_setsize($int2, 6, ^setsize_abs, ^setsize_minus, interface_311:64);
+	if_setscrollsize(0, 0, interface_311:62);
+	if_setscrollpos(0, 0, interface_311:62);
+	cc_deleteall(interface_311:65);
+	return;
+}
+if_setsize(32, 45, ^setsize_minus, ^setsize_minus, interface_311:62);
+if_sethide(false, interface_311:65);
+$int2 = max(125, parawidth($string1, calc(if_getwidth(interface_311:12) - 68), p12_full));
+$int1 = calc(paraheight($string1, calc(if_getwidth(interface_311:12) - 68), p12_full) * 15);
+if_setsize(calc($int2 + 38), 30, ^setsize_abs, ^setsize_minus, interface_311:58);
+if_setsize($int2, calc($int1 + 12), ^setsize_abs, ^setsize_abs, interface_311:64);
+if_setscrollsize(0, calc($int1 + 12), interface_311:62);
+if_setscrollpos(0, 0, interface_311:62);
+~scrollbar_vertical(interface_311:65, interface_311:62, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

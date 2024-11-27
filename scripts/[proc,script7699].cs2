@@ -1,0 +1,8 @@
+// 7699
+[proc,script7699]()(string)
+def_struct $struct0 = enum(int, struct, enum_2670, ~league_current_league);
+def_string $string0 = struct_param($struct0, param_2051);
+if (~on_enhanced_any = 1) {
+	$string0 = struct_param($struct0, param_2050);
+}
+return("<$string0>Equilibrium XP:</col>");

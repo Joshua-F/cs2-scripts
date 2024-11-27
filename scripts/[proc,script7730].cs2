@@ -1,0 +1,17 @@
+// 7730
+[proc,script7730](component $component0, int $int1, int $int2, int $x3, int $int4, string $text0)(int)
+$int1 = ~script7773($component0, $int1, ~script7736($int2), $x3, $int4, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+if ($int2 = 0) {
+	cc_settrans(200);
+} else {
+	~script7739(~script7737($int2));
+}
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition($x3, calc($int4 + 32), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(32, 20, ^setsize_abs, ^setsize_abs);
+cc_setcolour(~script7735);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($text0);
+return(calc($int1 + 1));

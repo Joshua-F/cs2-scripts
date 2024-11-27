@@ -1,0 +1,33 @@
+// 7645
+[proc,script7645](int $int0, int $int1)
+def_component $component2 = inventory_ranging:82;
+def_component $component3 = inventory_ranging:60;
+def_component $component4 = inventory_ranging:80;
+def_int $int5 = 0;
+def_string $string0 = ~script5484($int1);
+def_string $string1 = "";
+cc_deleteall($component4);
+if_setop(1, "", $component4);
+if_setopbase("", $component4);
+if_setonop(null, $component4);
+if ($int0 = 1) {
+	if_sethide(false, $component2);
+	if_sethide(true, $component4);
+	return;
+}
+if_sethide(true, $component2);
+if_sethide(false, $component4);
+if_setop(1, "Locate", $component4);
+if_setopbase("<col=ff9040>Raging Echo</col>", $component4);
+def_int $int6 = ~v2_stone_button($component4);
+if (~in_league_tutorial = 1) {
+	if_setonmouseleave(null, $component4);
+	if_setonmouserepeat(null, $component4);
+	if_setonop("script7649", $component4);
+} else {
+	if (~on_mobile = false) {
+		if_setonmouseleave("script7647($component4, false)", $component4);
+		if_setonmouserepeat("script7647($component4, true)", $component4);
+	}
+	if_setonop("script7646($component3, $component4, false)", $component4);
+}

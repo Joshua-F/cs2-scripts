@@ -1,0 +1,55 @@
+// 7670
+[proc,script7670](component $component0, component $component1)
+cc_deleteall($component0);
+if_setop(1, "", $component0);
+if_setopbase("", $component0);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $width4 = if_getwidth($component0);
+def_struct $struct5 = enum(int, struct, enum_2670, %varbit10032);
+def_string $string0 = "";
+cc_create($component0, ^iftype_rectangle, $int3);
+cc_setsize(calc($width4 - 4), 29, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x474745);
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_graphic, $int3);
+cc_setsize(calc($width4 - 6), 27, ^setsize_abs, ^setsize_abs);
+cc_setposition(3, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(struct_param($struct5, param_1025));
+cc_settiling(true);
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_graphic, $int3);
+cc_setsize(scale(%varbit11584, enum_getoutputcount(enum_5695), $width4), 27, ^setsize_abs, ^setsize_abs);
+cc_setposition(3, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(struct_param($struct5, param_1024));
+cc_settiling(true);
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_text, $int3);
+cc_setsize(calc($width4 - 2), 2, ^setsize_abs, ^setsize_minus);
+cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(struct_param($struct5, param_1032));
+cc_setcolour(struct_param($struct5, param_1029));
+cc_settextshadow(struct_param($struct5, param_1030));
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if (%varbit11583 > 0) {
+	cc_settext("You have <tostring(%varbit11583)> Combat Mastery <~text_plural(%varbit11583, "point", "points")> to use!");
+} else if (%varbit11584 >= enum_getoutputcount(enum_5695)) {
+	cc_settext("You have earned all Combat Mastery points!");
+} else {
+	cc_settext("Combat mastery points <tostring(%varbit11584)> / <tostring(enum_getoutputcount(enum_5695))>");
+}
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_rectangle, $int3);
+cc_setsize($width4, 33, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_rectangle, $int3);
+cc_setsize(calc($width4 - 2), 31, ^setsize_abs, ^setsize_abs);
+cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+$int3 = calc($int3 + 1);

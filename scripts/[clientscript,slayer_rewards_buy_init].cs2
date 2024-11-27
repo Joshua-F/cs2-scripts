@@ -12,6 +12,10 @@ def_int $height15 = 0;
 def_int $num16 = 0;
 def_int $int17 = 0;
 def_namedobj $namedobj18 = enum(int, namedobj, enum_840, $int17);
+def_int $int19 = 0;
+if (~league_relic_active(slayer_master_1129) = 1) {
+	$int19 = 1;
+}
 while ($namedobj18 ! null) {
 	$int13, $int14 = calc($int17 % 5 * $int10), calc($int17 / 5 * $int11);
 	cc_create($component1, ^iftype_graphic, $int17);
@@ -30,7 +34,11 @@ while ($namedobj18 ! null) {
 	.cc_settextfont(p12_full);
 	.cc_settextshadow(true);
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	.cc_settext(~tostring_spacer(enum(obj, int, enum_842, $namedobj18), ","));
+	if ($int19 = 1 & ($namedobj18 = rune_pouch_12791 | $namedobj18 = looting_bag_11941 | $namedobj18 = herb_sack_13226)) {
+		.cc_settext("Free");
+	} else {
+		.cc_settext(~tostring_spacer(enum(obj, int, enum_842, $namedobj18), ","));
+	}
 	switch_namedobj ($namedobj18) {
 		case herb_sack_13226, rune_pouch_12791, looting_bag_11941 :
 			cc_setop(2, "Buy 1");

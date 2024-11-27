@@ -1,0 +1,104 @@
+// 7641
+[proc,script7641](namedobj $namedobj0, dbrow $dbrow1, int $dbfield2, int $int3, component $component4, graphic $graphic5, fontmetrics $fontmetrics6, int $colour7, int $int8, int $int9)(int, int)
+if ($namedobj0 = null) {
+	return($int8, $int9);
+}
+def_string $string0 = "";
+def_int $int10 = 0;
+$string0 = oc_param($namedobj0, param_2059);
+$int10 = calc(paraheight($string0, if_getwidth($component4), $fontmetrics6) * 15);
+cc_create($component4, ^iftype_text, $int8);
+cc_setposition(0, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+cc_setcolour($colour7);
+cc_settextshadow(true);
+cc_settextfont($graphic5);
+cc_settext($string0);
+$int8 = calc($int8 + 1);
+$int9 = calc($int9 + $int10 + 10);
+$string0 = oc_param($namedobj0, param_2060);
+if (string_length($string0) > 0) {
+	$string0 = "<col=0xffffff>Special Attack: </col><$string0>";
+	$int10 = calc(paraheight($string0, if_getwidth($component4), $fontmetrics6) * 15);
+	cc_create($component4, ^iftype_text, $int8);
+	cc_setposition(0, $int9, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+	cc_setcolour($colour7);
+	cc_settextshadow(true);
+	cc_settextfont($graphic5);
+	cc_settext($string0);
+	$int8 = calc($int8 + 1);
+	$int9 = calc($int9 + $int10 + 10);
+}
+def_int $int11 = 0;
+if ($dbrow1 ! null) {
+	$int11 = db_getfield($dbrow1, dbtable_85:3, $dbfield2);
+	if ($int11 = 1) {
+		$string0 = "Guarenteed";
+	} else {
+		$string0 = "1 / <tostring($int11)>";
+	}
+} else {
+	$string0 = "";
+}
+if (string_length($string0) > 0) {
+	$string0 = "This item has a drop rate of <col=0xffffff><$string0>.";
+	$int10 = calc(paraheight($string0, if_getwidth($component4), $fontmetrics6) * 15);
+	cc_create($component4, ^iftype_text, $int8);
+	cc_setposition(0, $int9, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+	cc_setcolour($colour7);
+	cc_settextshadow(true);
+	cc_settextfont($graphic5);
+	cc_settext($string0);
+	$int8 = calc($int8 + 1);
+	$int9 = calc($int9 + $int10 + 10);
+}
+def_int $int12 = 240;
+def_int $int13 = 22;
+switch_int (%varcint988) {
+	case 1 :
+		$int12 = 300;
+	case 2 :
+		$int12 = 360;
+	case 3 :
+		$int12 = 420;
+}
+def_string $text1 = ~script7643(oc_param($namedobj0, param_0));
+def_string $text2 = ~script7643(oc_param($namedobj0, param_1));
+def_string $text3 = ~script7643(oc_param($namedobj0, param_2));
+def_string $text4 = ~script7643(oc_param($namedobj0, param_3));
+def_string $text5 = ~script7643(oc_param($namedobj0, param_4));
+def_string $text6 = ~script7643(oc_param($namedobj0, param_5));
+def_string $text7 = ~script7643(oc_param($namedobj0, param_6));
+def_string $text8 = ~script7643(oc_param($namedobj0, param_7));
+def_string $text9 = ~script7643(oc_param($namedobj0, param_8));
+def_string $text10 = ~script7643(oc_param($namedobj0, param_9));
+def_string $text11 = ~script7643(oc_param($namedobj0, param_10));
+def_string $text12 = ~script7643(oc_param($namedobj0, param_189));
+def_int $int14 = oc_param($namedobj0, param_299);
+if ($int14 > 0) {
+	$int14 = calc($int14 / 10);
+}
+def_string $text13 = "<~script7643($int14)>%";
+def_string $text14 = ~script7643(oc_param($namedobj0, param_11));
+def_string $text15 = "<tostring(oc_param($namedobj0, param_14))> ticks (0.6s per)";
+def_int $int15 = max(1, oc_param($namedobj0, param_13));
+def_string $text16 = "<tostring($int15)> <~text_plural($int15, "tile", "tiles")>";
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 1, "Attack Bonuses", "", "", "", "");
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 5, "Stab", "Slash", "Crush", "Magic", "Range");
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 5, $text1, $text2, $text3, $text4, $text5);
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 1, "Defence Bonuses", "", "", "", "");
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 5, "Stab", "Slash", "Crush", "Magic", "Range");
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 5, $text6, $text7, $text8, $text9, $text10);
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 1, "Other Stats", "", "", "", "");
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 4, "Melee Str", "Range Str", "Magic Str", "Prayer", "");
+$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 4, $text11, $text12, $text13, $text14, "0");
+if (oc_param($namedobj0, param_2061) = false) {
+	$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 2, "Attack speed", "Attack range", "", "", "");
+	$int8, $int9 = ~script7642($component4, $int8, $int9, $int12, $int13, $colour7, $graphic5, 2, $text15, $text16, "0", "0", "0");
+}
+return($int8, $int9);

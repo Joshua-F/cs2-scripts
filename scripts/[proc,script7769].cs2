@@ -1,0 +1,7 @@
+// 7769
+[proc,script7769](stat $stat0)(int)
+def_int $lvl1 = stat($stat0);
+if ($stat0 ! attack & $stat0 ! strength & $stat0 ! defence & $stat0 ! ranged & $stat0 ! magic) {
+	return($lvl1);
+}
+return(max(%varbit17573, calc(stat_base($stat0) + 15)));

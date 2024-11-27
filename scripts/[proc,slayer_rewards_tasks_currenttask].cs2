@@ -1,39 +1,49 @@
 // 422
 [proc,slayer_rewards_tasks_currenttask](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
-if (%varbit12442 = 1) {
+def_int $int9 = 0;
+if (~league_relic_active(slayer_master_1129) = 1) {
+	$int9 = 1;
+}
+if ($int9 = 1) {
+	if (%varbit12442 = 1) {
+		if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=06600c>(Free)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=06600c>(Free)</col><br>You may also <col=ffffff>store</col> your current task for later.", $component1);
+	} else {
+		if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=06600c>(Free)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=06600c>(Free)</col><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.", $component1);
+	}
+} else if (%varbit12442 = 1) {
 	if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=ff0000>(<tostring(30)> points)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=ff0000>(<tostring(100)> points)</col><br>You may also <col=ffffff>store</col> your current task for later.", $component1);
 } else {
 	if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=ff0000>(<tostring(30)> points)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=ff0000>(<tostring(100)> points)</col><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.", $component1);
 }
 cc_deleteall($component0);
-def_int $int9 = 0;
 def_int $int10 = 0;
+def_int $int11 = 0;
 def_string $string0 = "Creature";
 if (%var262 = 98) {
 	if (%var261 > 0) {
-		$int10, $string0 = 1, struct_param(enum(int, struct, enum_5008, %var263), param_1801);
+		$int11, $string0 = 1, struct_param(enum(int, struct, enum_5008, %var263), param_1801);
 		if_settext("<tostring(%var261)> x <$string0>", $component2);
 	} else if (%var261 = -1) {
-		$int10, $string0 = 1, struct_param(enum(int, struct, enum_5008, %var263), param_1801);
+		$int11, $string0 = 1, struct_param(enum(int, struct, enum_5008, %var263), param_1801);
 		if_settext($string0, $component2);
 	} else {
 		if_settext("None", $component2);
 	}
 } else if (%var261 > 0 & %var262 ! 0) {
-	$int10, $string0 = 1, enum(int, string, enum_693, %var262);
+	$int11, $string0 = 1, enum(int, string, enum_693, %var262);
 	if_settext("<tostring(%var261)> x <$string0>", $component2);
 } else {
 	if_settext("None", $component2);
 }
-def_int $int11 = 0;
+def_int $int12 = 0;
 def_string $string1 = "Creature";
 if (%var265 = 98) {
 	if (%var264 > 0) {
-		$int11, $string1 = 1, struct_param(enum(int, struct, enum_5008, %var266), param_1801);
+		$int12, $string1 = 1, struct_param(enum(int, struct, enum_5008, %var266), param_1801);
 		if_settext("<tostring(%var264)> x <$string1>", $component8);
 		if_setcolour(^white, $component8);
 	} else if (%var264 = -1) {
-		$int11, $string1 = 1, struct_param(enum(int, struct, enum_5008, %var266), param_1801);
+		$int12, $string1 = 1, struct_param(enum(int, struct, enum_5008, %var266), param_1801);
 		if_settext($string1, $component8);
 		if_setcolour(^white, $component8);
 	} else {
@@ -41,17 +51,17 @@ if (%var265 = 98) {
 		if_setcolour(0x9f9f9f, $component8);
 	}
 } else if (%var264 > 0 & %var265 ! 0) {
-	$int11, $string1 = 1, enum(int, string, enum_693, %var265);
+	$int12, $string1 = 1, enum(int, string, enum_693, %var265);
 	if_settext("<tostring(%var264)> x <$string1>", $component8);
 	if_setcolour(^white, $component8);
 } else {
 	if_settext("No stored task", $component8);
 	if_setcolour(0x9f9f9f, $component8);
 }
-cc_create($component0, ^iftype_graphic, $int9);
-$int9 = calc($int9 + 1);
-.cc_create($component0, ^iftype_text, $int9);
-$int9 = calc($int9 + 1);
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+.cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
 cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 .cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(218, 47, ^setpos_abs_left, ^setpos_abs_top);
@@ -61,7 +71,7 @@ cc_setgraphic("combatboxesmed,0");
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
 .cc_settext("Cancel task");
-if ($int10 = 1) {
+if ($int11 = 1) {
 	.cc_setcolour(0xff981f);
 	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
@@ -70,10 +80,10 @@ if ($int10 = 1) {
 } else {
 	.cc_setcolour(0x7f4c0f);
 }
-cc_create($component0, ^iftype_graphic, $int9);
-$int9 = calc($int9 + 1);
-.cc_create($component0, ^iftype_text, $int9);
-$int9 = calc($int9 + 1);
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+.cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
 cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 .cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(301, 47, ^setpos_abs_left, ^setpos_abs_top);
@@ -83,7 +93,7 @@ cc_setgraphic("combatboxesmed,0");
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
 .cc_settext("Block task");
-if ($int10 = 1 & %var262 ! 97 & %var262 ! 105 & %var262 ! 98) {
+if ($int11 = 1 & %var262 ! 97 & %var262 ! 105 & %var262 ! 98) {
 	.cc_setcolour(0xff981f);
 	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
@@ -92,10 +102,10 @@ if ($int10 = 1 & %var262 ! 97 & %var262 ! 105 & %var262 ! 98) {
 } else {
 	.cc_setcolour(0x7f4c0f);
 }
-cc_create($component0, ^iftype_graphic, $int9);
-$int9 = calc($int9 + 1);
-.cc_create($component0, ^iftype_text, $int9);
-$int9 = calc($int9 + 1);
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+.cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
 cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 .cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(384, 47, ^setpos_abs_left, ^setpos_abs_top);
@@ -104,27 +114,27 @@ cc_setgraphic("combatboxesmed,0");
 .cc_settextfont(p11_full);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
-if ($int11 = 1 & $int10 = 1) {
+if ($int12 = 1 & $int11 = 1) {
 	.cc_settext("Swap Task");
-} else if ($int11 = 1) {
+} else if ($int12 = 1) {
 	.cc_settext("Unstore task");
 } else {
 	.cc_settext("Store task");
 }
 if (%varbit12442 = 1) {
-	if ($int10 = 1 & $int11 = 1) {
+	if ($int11 = 1 & $int12 = 1) {
 		.cc_setcolour(0xff981f);
 		cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 		cc_setop(1, "Swap");
 		cc_setonop("slayer_rewards_tasks_canceltask($string0, 10, $component3, $component4, $component5, $component6, $component7)");
-	} else if ($int10 = 1 & $int11 = 0) {
+	} else if ($int11 = 1 & $int12 = 0) {
 		.cc_setcolour(0xff981f);
 		cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 		cc_setop(1, "Store");
 		cc_setonop("slayer_rewards_tasks_canceltask($string0, 10, $component3, $component4, $component5, $component6, $component7)");
-	} else if ($int10 = 0 & $int11 = 1) {
+	} else if ($int11 = 0 & $int12 = 1) {
 		.cc_setcolour(0xff981f);
 		cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");

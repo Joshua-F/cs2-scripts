@@ -1,0 +1,9 @@
+// 7665
+[proc,script7665](component $component0, component $component1, int $int2, int $int3, int $width4, int $int5, int $comsubid6, string $string0)
+cc_create($component0, ^iftype_rectangle, $comsubid6);
+cc_setsize(scale(70, 100, $int2), scale(70, 100, $int3), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(scale(10, 100, $int2) + $width4), calc(scale(10, 100, $int3) + $int5), ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_settrans(255);
+cc_setop(1, "View");
+cc_setopbase("<col=ff981f><$string0></col>");

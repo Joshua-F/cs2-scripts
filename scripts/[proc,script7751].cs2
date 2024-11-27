@@ -1,0 +1,25 @@
+// 7751
+[proc,script7751](component $component0, component $component1, component $component2)
+def_graphic $graphic3 = "close_buttons,0";
+def_graphic $graphic4 = "close_buttons,1";
+def_int $x5 = 3;
+def_int $y6 = 6;
+def_int $width7 = 26;
+def_int $height8 = 23;
+if (~on_mobile = true) {
+	$graphic3 = "steelborder_close_button,0";
+	$graphic4 = "steelborder_close_button,0";
+	$x5 = 1;
+	$y6 = 1;
+	$width7 = 33;
+	$height8 = 33;
+}
+if_setposition($x5, $y6, ^setpos_abs_right, ^setpos_abs_top, $component0);
+if_setsize($width7, $height8, ^setsize_abs, ^setsize_abs, $component0);
+~create_graphic($component0, 0, $graphic3, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $width7, $height8, ^setsize_abs, ^setsize_abs);
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic3, null)");
+cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic4, null)");
+if_setop(1, "Close", $component0);
+if_setonop("script7752($component2)", $component0);
+if_setop(1, "Close", $component1);
+if_setonop("script7752($component2)", $component1);

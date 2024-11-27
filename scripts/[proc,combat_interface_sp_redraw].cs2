@@ -38,6 +38,9 @@ if ($obj2 = soulreaper_axe_28338) {
 		$int3 = 1;
 	}
 	if_settext("Special Attack: <tostring($int5)>/5", interface_593:42);
+} else if ($obj2 = sunlight_spear_30369) {
+	$int5, $int6 = %var4600, 20;
+	if_settext("Special Attack: <tostring($int5)>/<tostring(20)>", interface_593:42);
 } else if (~league_relic_active(weapon_master_4721) = 1 & $int5 < $int7 & stat(hitpoints) > 25) {
 	$int5 = calc((stat(hitpoints) - 1) / 25);
 	$int6 = calc((stat_base(hitpoints) - 1) / 25);
@@ -62,6 +65,8 @@ switch_obj ($obj2) {
 		$string0 = "<enum(obj, string, enum_1739, $obj2)> 5-100% ";
 	case soulreaper_axe_28338 :
 		$string0 = "<enum(obj, string, enum_1739, $obj2)> 0-5";
+	case sunlight_spear_30369 :
+		$string0 = "<enum(obj, string, enum_1739, $obj2)> (<tostring($int5)> / <tostring(20)>)";
 }
 def_obj $obj9 = inv_getobj(worn, 13);
 def_obj $obj10 = inv_getobj(worn, 1);

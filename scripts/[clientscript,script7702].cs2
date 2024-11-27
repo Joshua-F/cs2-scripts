@@ -1,0 +1,7 @@
+// 7702
+[clientscript,script7702](boolean $boolean0, component $component1, int $colour2)
+if ($boolean0 = true) {
+	if_setcolour(^white, $component1);
+} else {
+	if_setcolour($colour2, $component1);
+}

@@ -1,0 +1,17 @@
+// 7678
+[proc,script7678]()(int)
+def_int $count0 = 0;
+def_enum $enum1 = null;
+def_int $int2 = 0;
+def_int $int3 = 0;
+while ($count0 < enum_getoutputcount(enum_5690)) {
+	$enum1 = enum(int, enum, enum_5690, $count0);
+	if ($enum1 ! null) {
+		$int3 = enum_getoutputcount($enum1);
+		if ($int3 > $int2) {
+			$int2 = $int3;
+		}
+	}
+	$count0 = calc($count0 + 1);
+}
+return($int2);

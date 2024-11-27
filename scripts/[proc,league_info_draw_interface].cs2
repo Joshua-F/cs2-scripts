@@ -82,12 +82,12 @@ def_int $int34 = 0;
 def_string $string0 = "";
 def_int $width35 = if_getwidth($component4);
 def_int $width36 = if_getwidth($component5);
-def_string $string1 = "<img=13> <~text_device("Click", "Tap")> to open the Leagues blog!<br>";
-def_int $int37 = calc(12 * paraheight($string1, calc($width35 - 10), p12_full) + 10);
-def_string $string2 = "<img=13> <~text_device("Click", "Tap")> to open the <~league_get_league_name> blog!<br>";
-def_string $url3 = "https://osrs.game/Leagues";
-def_string $url4 = "https://secure.runescape.com/m=news/a=97/leagues-iv---trailblazer-reloaded?oldschool=1";
-def_int $int38 = calc(12 * paraheight($string2, calc($width36 - 10), p12_full) + 10);
+def_string $string1 = "<img=13> <~text_device("Click", "Tap")> to open the <~league_get_league_name> blog!<br>";
+def_string $string2 = $string1;
+def_int $int37 = calc(12 * paraheight($string2, calc($width35 - 10), p12_full) + 10);
+def_string $url3 = "https://secure.runescape.com/m=news/leagues-v-raging-echoes-out-now?oldschool=1";
+def_string $url4 = $url3;
+def_int $int38 = calc(12 * paraheight($string1, calc($width36 - 10), p12_full) + 10);
 def_int $int39 = $int38;
 if ($int37 > $int38) {
 	$int39 = $int37;
@@ -111,7 +111,7 @@ while ($int29 < enum_getoutputcount($enum20)) {
 		cc_create($component4, ^iftype_text, $int30);
 		cc_setposition(0, $height32, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settext($string1);
+		cc_settext($string2);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_setcolour($colour18);
@@ -121,7 +121,7 @@ while ($int29 < enum_getoutputcount($enum20)) {
 			cc_setonmouseleave("league_info_mouseleave($component4, $int30, $colour18)");
 		}
 		cc_setop(1, "Open Link");
-		cc_setonop("league_blog_click($url3)");
+		cc_setonop("league_blog_click($url4)");
 		$height32 = calc($height32 + $int39);
 		$int30 = calc($int30 + 1);
 	}
@@ -179,7 +179,7 @@ while ($int29 < enum_getoutputcount($enum22)) {
 		cc_create($component5, ^iftype_text, $int30);
 		cc_setposition(0, $height33, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settext($string2);
+		cc_settext($string1);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_setcolour($colour18);
@@ -190,7 +190,7 @@ while ($int29 < enum_getoutputcount($enum22)) {
 			cc_setonmouseleave("league_info_mouseleave($component5, $int30, $colour18)");
 		}
 		cc_setop(1, "Open Link");
-		cc_setonop("league_blog_click($url4)");
+		cc_setonop("league_blog_click($url3)");
 		$height33 = calc($height33 + $int39);
 		$int30 = calc($int30 + 1);
 	}

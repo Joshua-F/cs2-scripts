@@ -1,67 +1,65 @@
 // 3658
-[proc,league_areas_draw_interface](component $component0, component $component1, component $component2, component $component3, int $comsubid4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29, component $component30, component $component31, component $component32, component $component33, component $component34, component $component35, component $component36, component $component37, component $component38, component $component39)
+[proc,league_areas_draw_interface](component $component0, component $component1, component $component2, component $component3, int $comsubid4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29, component $component30, component $component31, component $component32, component $component33, component $component34, component $component35, component $component36, component $component37)
 ~script726(inventory_ranging:1, inventory_ranging:4);
-~league_areas_progress_bar($component38, $component39, 0, 1);
-cc_deleteall($component37);
-def_struct $struct40 = enum(int, struct, enum_2670, %varbit10032);
-if ($struct40 = null) {
+~league_areas_progress_bar($component36, $component37, 0, 1);
+cc_deleteall($component35);
+def_struct $struct38 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct38 = null) {
 	return;
 }
-def_int $colour41 = struct_param($struct40, param_1027);
+def_int $colour39 = struct_param($struct38, param_1027);
 if (cc_find(inventory_ranging:3, $comsubid4) = ^true) {
-	cc_setcolour($colour41);
+	cc_setcolour($colour39);
 }
 ~script3659;
-~league_areas_setup_events(1, $component5, $component15, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(2, $component6, $component16, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(6, $component7, $component17, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(5, $component8, $component18, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(3, $component9, $component19, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(4, $component10, $component20, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(8, $component11, $component21, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(7, $component12, $component22, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(11, $component13, $component23, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-~league_areas_setup_events(20, $component14, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36);
-def_struct $struct42 = ~script3682(0);
-def_int $int43 = 0;
+~league_areas_setup_events(1, $component5, $component16, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(2, $component6, $component17, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(6, $component7, $component18, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(5, $component8, $component19, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(3, $component9, $component20, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(4, $component10, $component21, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(8, $component11, $component22, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(7, $component12, $component23, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(11, $component13, $component24, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(20, $component14, $component25, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(21, $component15, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+def_struct $struct40 = ~script3682(0);
+def_int $int41 = 0;
 def_string $text0 = "";
-def_int $int44 = 1;
+def_int $int42 = 1;
 if (%varbit10666 > 0) {
-	$int44 = 5;
+	$int42 = 5;
 } else if (%varbit10665 > 0) {
-	$int44 = 4;
+	$int42 = 4;
 } else if (%varbit10664 > 0) {
-	$int44 = 3;
+	$int42 = 3;
 } else if (%varbit10663 > 0) {
-	$int44 = 2;
+	$int42 = 2;
 } else {
-	$int44 = 1;
+	$int42 = 1;
 }
-if ($struct42 ! null) {
-	$int43 = calc(struct_param($struct42, param_1010) - %varbit10046);
-	if ($int43 < 0) {
-		$int43 = 0;
+if ($struct40 ! null) {
+	$int41 = calc(struct_param($struct40, param_1010) - %varbit10046);
+	if ($int41 < 0) {
+		$int41 = 0;
 	}
-	if ($int43 = 0) {
+	if ($int41 = 0) {
 		$text0 = "You have a new area available for selection!";
-	} else if ($int43 = 1) {
-		$text0 = "You have unlocked <tostring($int44)>/5 areas.";
+	} else if ($int41 = 1) {
+		$text0 = "You have unlocked <tostring($int42)>/5 areas.";
 	} else {
-		$text0 = "You have unlocked <tostring($int44)>/5 areas.";
+		$text0 = "You have unlocked <tostring($int42)>/5 areas.";
 	}
 }
-if ($int44 = 5) {
+if ($int42 = 5) {
 	$text0 = "You have unlocked 5/5 areas!";
 }
-cc_create($component37, ^iftype_graphic, 0);
+cc_create($component35, ^iftype_text, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 0, ^setpos_proportion_centre, ^setpos_proportion_top);
-cc_setgraphic(tradebacking_light);
-cc_create($component37, ^iftype_text, 1);
-cc_setsize(0, 12, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_setcolour($colour41);
+cc_setcolour($colour39);
 cc_settext($text0);
+~script7630;

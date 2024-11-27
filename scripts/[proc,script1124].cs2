@@ -1,16 +1,19 @@
 // 1124
-[proc,script1124](int $int0, int $int1, int $int2, int $int3)(int)
-def_int $int4 = 0;
+[proc,script1124](int $int0, int $int1, int $int2, int $int3, int $int4)(int)
+def_int $int5 = 0;
 if ($int0 > 0) {
-	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
 }
 if ($int1 > 0) {
-	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
 }
 if ($int2 > 0) {
-	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
 }
 if ($int3 > 0) {
-	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
 }
-return($int4);
+if ($int4 > 0) {
+	$int5 = calc($int5 + 1);
+}
+return($int5);

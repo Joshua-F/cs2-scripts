@@ -2,7 +2,7 @@
 [proc,script4558]()(int)
 def_int $lvl0 = stat(fishing);
 if (map_members = true) {
-	if (inv_total(worn, trailblazer_harpoon_25114) > 0 | inv_total(inv, trailblazer_harpoon_25114) > 0) {
+	if (inv_total(worn, echo_harpoon_25114) > 0 | inv_total(inv, echo_harpoon_25114) > 0) {
 		return(1);
 	}
 	if ($lvl0 >= 71) {
@@ -17,11 +17,17 @@ if (map_members = true) {
 			return(1);
 		} else if (inv_total(worn, infernal_harpoon_or_25059) > 0 | inv_total(inv, infernal_harpoon_or_25059) > 0) {
 			return(1);
+		} else if (inv_total(worn, infernal_harpoon_or_30342) > 0 | inv_total(inv, infernal_harpoon_or_30342) > 0) {
+			return(1);
 		} else if (inv_total(worn, infernal_harpoon_uncharged_21033) > 0 | inv_total(inv, infernal_harpoon_uncharged_21033) > 0) {
 			return(1);
 		} else if (inv_total(worn, infernal_harpoon_uncharged_25367) > 0 | inv_total(inv, infernal_harpoon_uncharged_25367) > 0) {
 			return(1);
 		} else if (inv_total(worn, dragon_harpoon_or_25373) > 0 | inv_total(inv, dragon_harpoon_or_25373) > 0) {
+			return(1);
+		} else if (inv_total(worn, infernal_harpoon_uncharged_30343) > 0 | inv_total(inv, infernal_harpoon_uncharged_30343) > 0) {
+			return(1);
+		} else if (inv_total(worn, dragon_harpoon_or_30349) > 0 | inv_total(inv, dragon_harpoon_or_30349) > 0) {
 			return(1);
 		} else if (inv_total(worn, dragon_harpoon_21028) > 0 | inv_total(inv, dragon_harpoon_21028) > 0) {
 			return(1);

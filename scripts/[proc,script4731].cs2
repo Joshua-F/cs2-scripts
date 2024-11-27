@@ -295,14 +295,14 @@ if (testbit($int2, 14) = ^true) {
 }
 $component39 = enum(component, component, $enum25, toplevel_osrs_stretch:5);
 $int31 = 0;
-if (testbit($int2, 15) = ^true & $int24 = 1 & $component39 ! null & if_hassub($component39) = true & if_gethide(interface_708:2) = false & ~script6263 = 1) {
+if (testbit($int2, 15) = ^true & $int24 = 1 & $component39 ! null & if_hassub($component39) = true & if_gethide(interface_708:3) = false & ~script6263 = 1) {
 	if ($boolean23 = false & $setposh27 = ^setpos_abs_left | $boolean23 = true & $setposh27 = ^setpos_abs_right) {
 		$int17 = calc($int17 + 35);
 	} else if ($setposh27 = ^setpos_abs_centre) {
 		if ($setposv4 = ^setpos_abs_bottom) {
-			$int31 = ~script4738($component1, $int15, calc(0 - $int17), interface_708:2, ~script4735($component39));
+			$int31 = ~script4738($component1, $int15, calc(0 - $int17), interface_708:3, ~script4735($component39));
 		} else {
-			$int31 = ~script4738($component1, $int15, $int14, interface_708:2, ~script4735($component39));
+			$int31 = ~script4738($component1, $int15, $int14, interface_708:3, ~script4735($component39));
 		}
 		if ($int31 = 1) {
 			$int17 = calc($int17 + 35);

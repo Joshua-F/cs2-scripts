@@ -1,13 +1,13 @@
 // 3228
 [proc,league_side_panel_update_text](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5)
 def_int $int6 = -1;
+def_struct $struct7 = enum(int, struct, enum_2670, ~league_current_league);
+def_int $count8 = enum_getoutputcount(struct_param($struct7, param_870));
 if ($int5 ! -1 & $int4 ! -1) {
 	$int6 = calc($int5 - $int4);
 }
 if ($int6 <= 0 & if_find($component1) = ^true) {
-	if (%varbit11696 = 0 & %varbit10032 = 2) {
-		cc_settext("<col=ffffff>You can unlock a new Relic!</col>");
-	} else if (%varbit17302 = 0 & %varbit10032 = 4) {
+	if (~script7715 < $count8) {
 		cc_settext("<col=ffffff>You can unlock a new Relic!</col>");
 	} else {
 		cc_settext("<col=ffffff>You have unlocked all Relics!</col>");
@@ -15,14 +15,14 @@ if ($int6 <= 0 & if_find($component1) = ^true) {
 } else if (if_find($component1) = ^true) {
 	cc_settext("<col=ffffff><tostring($int6)></col> points until next Relic.");
 }
-def_int $int7 = -1;
-def_struct $struct8 = ~script3682(0);
-if ($struct8 ! null) {
-	$int7 = struct_param($struct8, param_1010);
+def_int $int9 = -1;
+def_struct $struct10 = ~script3682(0);
+if ($struct10 ! null) {
+	$int9 = struct_param($struct10, param_1010);
 } else {
-	$int7 = 1;
+	$int9 = 1;
 }
-$int6 = calc($int7 - %varbit10046);
+$int6 = calc($int9 - %varbit10046);
 if ($int6 <= 0 & if_find($component0) = ^true) {
 	if (%varbit10666 = 0) {
 		cc_settext("<col=ffffff>You can unlock a new Area!</col>");

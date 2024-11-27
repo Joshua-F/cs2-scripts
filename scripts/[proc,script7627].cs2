@@ -1,0 +1,8 @@
+// 7627
+[proc,script7627](obj $obj0)(int)
+switch_obj ($obj0) {
+	case high_level_alchemy_3303, low_level_alchemy_3284 :
+		return(~league_relic_active(golden_god_1131));
+	case default :
+		return(0);
+}

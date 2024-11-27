@@ -1,0 +1,20 @@
+// 7684
+[proc,script7684](int $colour0)
+def_component $component1 = interface_311:23;
+def_component $component2 = interface_311:24;
+def_component $component3 = interface_311:25;
+def_component $component4 = interface_311:26;
+def_int $int5 = 0;
+cc_create($component2, ^iftype_graphic, $int5);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(tradebacking_dark);
+cc_settiling(true);
+$int5 = calc($int5 + 1);
+~thinbox_light($component2, $int5);
+if_settextalign(^settextalign_centre, ^settextalign_centre, 20, $component1);
+if_setcolour($colour0, $component1);
+if_settextfont(b12_full, $component1);
+if_settextshadow(true, $component1);
+if_settext("Unlock combat mastery points by completing any of the following tasks. Once complete, the task will be highlighted below.", $component1);
+~script7686($component3, $component4, $component1, $colour0);

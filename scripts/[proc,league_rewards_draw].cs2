@@ -16,7 +16,7 @@ def_struct $struct25 = null;
 def_enum $enum26 = null;
 def_int $int27 = 0;
 def_int $int28 = 0;
-def_int $int29 = ~script2455;
+def_boolean $boolean29 = ~script7714;
 %varbit10110 = -1;
 while ($int22 <= $count20) {
 	$struct25 = enum(int, struct, $enum19, $int22);
@@ -80,7 +80,7 @@ if ($int0 ! -1) {
 	cc_sethide(false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	if ($int29 = 1) {
+	if ($boolean29 = true) {
 		cc_setop(1, "Info");
 	} else {
 		cc_setop(1, "Confirm");
@@ -93,7 +93,7 @@ if ($int0 ! -1) {
 	cc_setonop("league_reward_shop_confirmop(event_op, $component9, $struct32)");
 	~script2285;
 	~steelborder($component10, $text0, 1);
-	if ($int29 = 1) {
+	if ($boolean29 = true) {
 		if_settext("<br><col=ffffff><$text0></col><br><$string1><br>It will cost <col=ffffff><~tostring_spacer($int30, $string3)></col> points.", $component11);
 	} else {
 		if_settext("<col=ffffff><$text0></col><br><br><$string1><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int30, $string3)></col> points?<br><col=ffffff>You cannot sell this item back</col> if you change your mind.", $component11);
@@ -104,8 +104,8 @@ if ($int0 ! -1) {
 	if_setop(1, $op2, $component12);
 	if_setopbase("<col=ff981f>League reward</col>", $component12);
 	if (~on_mobile = false) {
-		if_setonmouseleave("league_relic_button_hover($component12, false, $op2, ^white)", $component12);
-		if_setonmouseover("league_relic_button_hover($component12, true, $op2, 0xaaaaaa)", $component12);
+		if_setonmouseleave("script7747($component12, false, $op2, ^white)", $component12);
+		if_setonmouseover("script7747($component12, true, $op2, 0xaaaaaa)", $component12);
 	}
 	if_setonop("league_reward_shop_buy", $component12);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -120,7 +120,7 @@ if ($int0 ! -1) {
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	$op2 = "Cancel";
-	if ($int29 = 1) {
+	if ($boolean29 = true) {
 		$op2 = "Back";
 	}
 	cc_settext($op2);
@@ -131,8 +131,8 @@ if ($int0 ! -1) {
 	if_setop(1, $op2, $component13);
 	if_setopbase("<col=ff981f>League reward</col>", $component13);
 	if (~on_mobile = false) {
-		if_setonmouseleave("league_relic_button_hover($component13, false, $op2, ^white)", $component13);
-		if_setonmouseover("league_relic_button_hover($component13, true, $op2, 0xaaaaaa)", $component13);
+		if_setonmouseleave("script7747($component13, false, $op2, ^white)", $component13);
+		if_setonmouseover("script7747($component13, true, $op2, 0xaaaaaa)", $component13);
 	}
 	if_setonop("league_reward_confirm_back($int0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14)", $component13);
 } else {
@@ -144,7 +144,7 @@ if ($int0 ! -1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(false);
-	if ($int29 = 1) {
+	if ($boolean29 = true) {
 		cc_settext("Info");
 	} else {
 		cc_settext("Confirm");
@@ -159,7 +159,7 @@ if ($height17 > if_getheight($component6)) {
 }
 if_setscrollpos(0, $y15, $component6);
 ~scrollbar_vertical_rebuild($component14, $component6);
-if ($int29 = 1) {
+if ($boolean29 = true) {
 	if_sethide(true, interface_658:22);
 	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_658:23);
 	if_settext("You can purchase these rewards on a Non-Leagues world.", interface_658:12);

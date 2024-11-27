@@ -1,0 +1,8 @@
+// 7635
+[proc,script7635](string $string0, component $component0, component $component1)(int)
+if_settext($string0, $component0);
+def_int $height2 = calc(paraheight($string0, if_getwidth($component0), p12_full) * 15 + 11);
+if ($height2 > if_getheight($component1)) {
+	return($height2);
+}
+return(0);

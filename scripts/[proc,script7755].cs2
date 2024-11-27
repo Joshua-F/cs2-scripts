@@ -1,0 +1,47 @@
+// 7755
+[proc,script7755](int $int0)(int)
+def_int $flags1 = -1;
+def_int $int2 = -1;
+switch_dbrow (%var4559) {
+	case dbrow_4096 :
+		$flags1 = %var4565;
+		$int2 = ~script7756(%var4564, $flags1, $int0);
+		if ($int2 ! 1) {
+			return($int2);
+		}
+		%var4564 = togglebit(%var4564, $int0);
+		~script7709(%var4564, $flags1, %var4559);
+	case dbrow_4092 :
+		$flags1 = ~script7757;
+		$int2 = ~script7756(%var4561, $flags1, $int0);
+		if ($int2 ! 1) {
+			return($int2);
+		}
+		%var4561 = togglebit(%var4561, $int0);
+		~script7709(%var4561, $flags1, %var4559);
+	case dbrow_4093 :
+		$flags1 = ~script7758;
+		$int2 = ~script7756(%var4560, $flags1, $int0);
+		if ($int2 ! 1) {
+			return($int2);
+		}
+		%var4560 = togglebit(%var4560, $int0);
+		~script7709(%var4560, $flags1, %var4559);
+	case dbrow_4094 :
+		$flags1 = ~script7759;
+		$int2 = ~script7756(%var4562, $flags1, $int0);
+		if ($int2 ! 1) {
+			return($int2);
+		}
+		%var4562 = togglebit(%var4562, $int0);
+		~script7709(%var4562, $flags1, %var4559);
+	case dbrow_4095 :
+		$flags1 = ~script7760;
+		$int2 = ~script7756(%var4563, $flags1, $int0);
+		if ($int2 ! 1) {
+			return($int2);
+		}
+		%var4563 = togglebit(%var4563, $int0);
+		~script7709(%var4563, $flags1, %var4559);
+}
+return(1);

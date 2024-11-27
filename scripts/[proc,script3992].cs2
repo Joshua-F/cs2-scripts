@@ -1,0 +1,15 @@
+// 3992
+[proc,script3992](component $component0)
+def_struct $struct1 = null;
+if (~script6790 = 1) {
+	if_setgraphic("achievement_diary_icons,11", $component0);
+} else if (~league_world = 1) {
+	$struct1 = enum(int, struct, enum_2670, %varbit10032);
+	if ($struct1 ! null) {
+		if_setgraphic(struct_param($struct1, param_2054), $component0);
+	} else {
+		if_setgraphic("achievement_diary_icons,13", $component0);
+	}
+} else if (~deadman_world = 1) {
+	if_setgraphic("achievement_diary_icons,12", $component0);
+}

@@ -1,27 +1,44 @@
 // 2280
 [proc,script2280](int $int0, int $int1)(graphic)
+def_graphic $graphic2 = graphic_6040;
 if ($int1 <= 0) {
-	return(null);
+	return($graphic2);
 }
-def_struct $struct2 = enum(int, struct, enum_2670, %varbit10032);
-if ($struct2 = null) {
-	return(null);
+def_struct $struct3 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct3 = null) {
+	return($graphic2);
 }
-def_enum $enum3 = struct_param($struct2, param_870);
-if ($enum3 = null) {
-	return(null);
+def_enum $enum4 = struct_param($struct3, param_870);
+if ($enum4 = null) {
+	return($graphic2);
 }
-def_struct $struct4 = enum(int, struct, $enum3, $int0);
-if ($struct4 = null) {
-	return(null);
+def_struct $struct5 = enum(int, struct, $enum4, $int0);
+if ($struct5 = null) {
+	return($graphic2);
 }
-def_enum $enum5 = struct_param($struct4, param_878);
-if ($enum5 = null) {
-	return(null);
+def_enum $enum6 = struct_param($struct5, param_878);
+if ($enum6 = null) {
+	return($graphic2);
 }
-def_struct $struct6 = enum(int, struct, $enum5, $int1);
-if ($struct6 = null) {
-	return(null);
+def_struct $struct7 = enum(int, struct, $enum6, $int1);
+if ($struct7 = null) {
+	return($graphic2);
 }
-def_graphic $graphic7 = struct_param($struct6, param_882);
-return($graphic7);
+def_graphic $graphic8 = struct_param($struct7, param_881);
+def_int $int9 = struct_param($struct7, param_2046);
+def_struct $struct10 = null;
+if ($int9 ! -1) {
+	$struct10 = ~script7705($enum4, $int9);
+	if ($struct10 ! null) {
+		$graphic8 = struct_param($struct10, param_881);
+	}
+} else if (struct_param($struct7, param_2047) = true) {
+	$struct10 = ~script7705($enum4, ~script7696);
+	if ($struct10 ! null) {
+		$graphic8 = struct_param($struct10, param_881);
+	}
+}
+if ($graphic8 = null) {
+	$graphic8 = $graphic2;
+}
+return($graphic8);

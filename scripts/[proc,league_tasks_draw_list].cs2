@@ -110,6 +110,9 @@ if ($int25 = 1) {
 } else {
 	~steelborder(interface_657:2, "League Tasks <col=ffffff><tostring($int31)>/<tostring($count35)></col>", 3);
 }
+if (cc_find(interface_657:2, 1) = ^true) {
+	cc_setcolour($int33);
+}
 def_int $int36 = 0;
 def_int $int37 = 0;
 def_struct $struct38 = null;
@@ -124,24 +127,35 @@ def_int $int44 = -1;
 def_int $int45 = -1;
 def_int $int46 = 0;
 def_string $string2 = %varcstring1180;
-def_int $length47 = string_length($string2);
-def_int $int48 = %varbit10033;
+def_int $length47 = string_length(~script7124($string2));
+def_int $int48 = 1;
+if (%varbit10033 = 0 & %varbit11689 = 0 & %varbit11692 = 0 & $length47 <= 1) {
+	$int48 = 0;
+}
+def_int $int49 = 1;
 while ($int36 < $count35) {
 	$struct38 = enum(int, struct, $enum34, $int36);
 	$int40 = ~league_task_is_completed($struct38);
-	$int41 = struct_param($struct38, param_1852);
+	$int41 = struct_param($struct38, param_2044);
 	$string0 = struct_param($struct38, league_task_name);
 	$string1 = struct_param($struct38, league_task_description);
 	$int42 = enum(int, int, enum_2671, $int41);
 	$int43 = struct_param($struct38, league_task_category);
 	$int44 = struct_param($struct38, league_task_area);
-	if (~league_task_display($int41, $int40, $int43, $int44, struct_param($struct38, league_task_skill), $string0, $string1, $string2, $length47, $int48) = 1) {
+	if ($int48 = 1) {
+		$int49 = ~league_task_display($int41, $int40, $int43, $int44, struct_param($struct38, league_task_skill), $string0, $string1, $string2, $length47);
+	} else if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $int40) {
+		$int49 = 0;
+	} else {
+		$int49 = 1;
+	}
+	if ($int49 = 1) {
 		cc_create($component2, ^iftype_rectangle, $int31);
 		cc_setposition(0, $height39, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		if ($int36 = $int0) {
-			$int45 = paraheight("Description: <$string1>", calc(if_getwidth($component2) - 10), p11_full);
+			$int45 = paraheight("Description: <$string1>.", calc(if_getwidth($component2) - 10), p11_full);
 			cc_setsize(0, calc(40 + (10 * $int45 + 25)), ^setsize_minus, ^setsize_abs);
 			cc_settrans(210);
 			if ($boolean26 = false) {
@@ -153,7 +167,7 @@ while ($int36 < $count35) {
 				}
 			}
 			cc_setop(1, "Collapse");
-			cc_setonop("league_tasks_draw_list(-1, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)");
+			cc_setonop("script7700(-1, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)");
 			cc_setopbase("<col=ff981f><$string0></col>");
 			cc_create($component5, ^iftype_text, 0);
 			cc_settext("Type: <col=ffffff><enum(int, string, enum_3411, $int43)></col>");
@@ -172,7 +186,7 @@ while ($int36 < $count35) {
 			cc_settextshadow(true);
 			cc_setcolour($int33);
 			cc_create($component7, ^iftype_text, 0);
-			cc_settext("Description: <col=ffffff><$string1></col>");
+			cc_settext("Description: <col=ffffff><$string1>.</col>");
 			cc_setsize(10, calc(10 * $int45), ^setsize_minus, ^setsize_abs);
 			cc_setposition(5, calc($height39 + 59), ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);
@@ -197,7 +211,7 @@ while ($int36 < $count35) {
 				cc_settrans(245);
 			}
 			cc_setop(1, "Expand");
-			cc_setonop("league_tasks_draw_list($int36, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)");
+			cc_setonop("script7700($int36, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)");
 			cc_setopbase("<col=ff981f><$string0></col>");
 			cc_create($component8, ^iftype_graphic, $int31);
 			cc_setgraphic("open_buttons_small,0");

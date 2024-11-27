@@ -1,0 +1,10 @@
+// 7664
+[proc,script7664](component $component0, int $x1, int $width2, int $height3, int $height4)
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setposition($x1, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width2, $height4, ^setsize_abs, ^setsize_abs);
+cc_settrans(255);
+cc_create($component0, ^iftype_rectangle, 1);
+cc_setposition($x1, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $height3, ^setsize_minus, ^setsize_abs);
+cc_settrans(255);

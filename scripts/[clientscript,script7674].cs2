@@ -1,0 +1,178 @@
+// 7674
+[clientscript,script7674](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, struct $struct17, struct $struct18)
+def_struct $struct19 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct19 = null) {
+	return;
+}
+def_int $colour20 = struct_param($struct19, param_1027);
+def_string $string0 = ~script3739($colour20, "u");
+def_int $int21 = 0;
+if (~script7651($struct17) = 1) {
+	$int21 = 2;
+} else if (~script7657($struct17) = 1) {
+	$int21 = 1;
+}
+if_setcolour($colour20, $component5);
+if_setcolour($colour20, $component6);
+if_setcolour($colour20, $component7);
+if_setcolour($colour20, $component15);
+if_setcolour($colour20, $component16);
+if_setcolour($colour20, $component12);
+def_int $comsubid22 = -1;
+def_string $op1 = "";
+def_string $string2 = struct_param($struct17, param_2028);
+def_string $string3 = struct_param($struct18, param_2028);
+def_int $width23 = if_getwidth(interface_311:43);
+if_sethide(true, $component3);
+if_sethide(true, $component0);
+if_sethide(true, $component1);
+if_sethide(false, $component2);
+if_sethide(true, interface_311:73);
+if_sethide(true, interface_311:12);
+if_setgraphic(struct_param($struct17, param_2035), $component4);
+if_settext("<$string0><struct_param($struct17, param_2026)></u>", $component5);
+if_settext("Combat Mastery Effect:", $component6);
+def_int $int24 = calc(paraheight($string2, $width23, p12_full) * 15);
+def_int $height25 = calc(paraheight($string3, if_getwidth(interface_311:51), p12_full) * 15);
+if_settext($string2, $component7);
+if_setsize(0, $int24, ^setsize_minus, ^setsize_abs, $component7);
+def_int $int26 = calc($int24 + 12 + if_getheight($component6));
+def_string $text4 = "Passive Effects";
+def_int $int27 = calc(if_getheight($component2) - 41);
+if ($int26 > calc($int27 - 53)) {
+	if_setsize(148, 96, ^setsize_minus, ^setsize_minus, interface_311:40);
+	if_setposition(8, 33, ^setpos_abs_left, ^setpos_abs_top, interface_311:40);
+	if_setsize(148, 53, ^setsize_minus, ^setsize_abs, interface_311:47);
+	if_setposition(8, 8, ^setpos_abs_left, ^setpos_abs_bottom, interface_311:47);
+} else {
+	if_setsize(148, calc($int26 + 6), ^setsize_minus, ^setsize_abs, interface_311:40);
+	if_setposition(8, 33, ^setpos_abs_left, ^setpos_abs_top, interface_311:40);
+	if_setsize(148, calc($int27 - $int26 - 8), ^setsize_minus, ^setsize_abs, interface_311:47);
+	if_setposition(8, calc($int26 + 41), ^setpos_abs_left, ^setpos_abs_top, interface_311:47);
+}
+cc_deleteall(interface_311:46);
+if ($int26 > if_getheight(interface_311:43)) {
+	if_setscrollsize(0, $int26, interface_311:43);
+} else {
+	if_setscrollsize(0, 0, interface_311:43);
+}
+if_setscrollpos(0, 0, interface_311:43);
+~scrollbar_vertical(interface_311:46, interface_311:43, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_sethide(false, interface_311:46);
+if ($struct18 ! null) {
+	if ($height25 > if_getheight(interface_311:51)) {
+		if_settext("<~text_device("Click", "Tap")> to expand...", $component16);
+		if_setop(1, "Expand", interface_311:52);
+		if_setonop("script7675($text4, $string3, $colour20)", interface_311:52);
+		if_sethide(false, interface_311:52);
+		if_setsize(148, 53, ^setsize_minus, ^setsize_abs, interface_311:47);
+	} else {
+		if_settext($string3, $component16);
+		if_setop(1, "", interface_311:52);
+		if_setonop(null, interface_311:52);
+		if_sethide(true, interface_311:52);
+		if_setsize(148, calc(33 + $height25), ^setsize_minus, ^setsize_abs, interface_311:47);
+	}
+	if_settext("Passive Effect:", $component15);
+	if_sethide(false, $component16);
+	if_sethide(false, $component15);
+} else {
+	if_settext("", $component16);
+	if_settext("", $component15);
+	if_sethide(true, $component16);
+	if_sethide(true, $component15);
+}
+$int27 = calc(if_getheight(interface_311:40) + if_getheight(interface_311:47) + 2);
+if ($int27 > 192) {
+	if_setsize(if_getwidth(interface_311:1), if_getheight(interface_311:1), ^setsize_abs, ^setsize_abs, interface_311:1);
+} else {
+	if_setsize(if_getwidth(interface_311:1), 320, ^setsize_abs, ^setsize_abs, interface_311:1);
+}
+if ($int21 = 1) {
+	$comsubid22 = ~v2_stone_button($component8);
+	$op1 = "Select";
+	if_setopbase("<col=ff981f><struct_param($struct17, param_2026)></col>", $component8);
+} else {
+	$comsubid22 = ~v2_stone_button_in($component8);
+	if ($int21 = 2) {
+		$op1 = "Unlocked";
+	} else {
+		$op1 = "Locked";
+	}
+	if_setopbase("", $component8);
+}
+cc_create($component8, ^iftype_text, $comsubid22);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext($op1);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setop(1, $op1, $component8);
+if ($int21 = 1) {
+	cc_setcolour(0x53d93c);
+	if (~on_mobile = false) {
+		if_setonmouseleave("script7747($component8, false, $op1, 0x53d93c)", $component8);
+		if_setonmouserepeat("script7747($component8, true, $op1, 0xaaaaaa)", $component8);
+	}
+	if_setonop("script7750($component10, $component8, false, $op1, 0x53d93c)", $component8);
+} else {
+	cc_setcolour(0xaaaaaa);
+	if_setonmouseleave(null, $component8);
+	if_setonmouserepeat(null, $component8);
+	if_setonop("script7676($int21)", $component8);
+}
+$comsubid22 = ~v2_stone_button($component9);
+cc_create($component9, ^iftype_text, $comsubid22);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+$op1 = "Back";
+cc_settext($op1);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setop(1, $op1, $component9);
+if (~on_mobile = false) {
+	if_setonmouseleave("script7747($component9, false, $op1, ^white)", $component9);
+	if_setonmouserepeat("script7747($component9, true, $op1, 0xaaaaaa)", $component9);
+}
+if_setonop("script7677($component0, $component1, $component2, $component3)", $component9);
+def_int $comsubid28 = ~steelborder($component11, struct_param($struct17, param_2026), 1);
+if (cc_find($component11, $comsubid28) = ^true) {
+	cc_setcolour($colour20);
+}
+if_settext("Are you sure that you wish to unlock the <col=ffffff><struct_param($struct17, param_2026)></col> Combat mastery?<br><br>You <col=ffffff>cannot</col> go back on this decision at any later point.", $component12);
+$comsubid22 = ~v2_stone_button($component13);
+cc_create($component13, ^iftype_text, $comsubid22);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+$op1 = "Confirm";
+cc_settext($op1);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setop(1, $op1, $component13);
+if_setopbase("<col=ff981f>Selection</col>", $component13);
+if (~on_mobile = false) {
+	if_setonmouseleave("script7747($component13, false, $op1, ^white)", $component13);
+	if_setonmouserepeat("script7747($component13, true, $op1, 0xaaaaaa)", $component13);
+}
+if_setonop("button_select_sound", $component13);
+$comsubid22 = ~v2_stone_button($component14);
+cc_create($component14, ^iftype_text, $comsubid22);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+$op1 = "Cancel";
+cc_settext($op1);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setop(1, $op1, $component14);
+if (~on_mobile = false) {
+	if_setonmouseleave("script7747($component14, false, $op1, ^white)", $component14);
+	if_setonmouserepeat("script7747($component14, true, $op1, 0xaaaaaa)", $component14);
+}
+if_setonop("script7749($component10)", $component14);
