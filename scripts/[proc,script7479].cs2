@@ -22,18 +22,18 @@ while ($count3 < $count1) {
 			case dbrow_3997 :
 				if ($int5 > 0) {
 					$string0 = "<db_getfield($dbrow2, dbtable_80:1, 0)><br>All: <~tostring_spacer(~min($int4, ^max_32bit_int), ",")> Rank: <~tostring_spacer($int5, ",")>";
-					$int7 = calc(hiscore_getbossrank(varp_2201) + 1);
-					$string0 = append($string0, "<br>Beginner: <~tostring_spacer(~max(0, hiscore_getbosskills(varp_2201)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
-					$int7 = calc(hiscore_getbossrank(varp_1111) + 1);
-					$string0 = append($string0, "<br>Easy: <~tostring_spacer(~max(0, hiscore_getbosskills(varp_1111)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
-					$int7 = calc(hiscore_getbossrank(varp_1112) + 1);
-					$string0 = append($string0, "<br>Medium: <~tostring_spacer(~max(0, hiscore_getbosskills(varp_1112)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
-					$int7 = calc(hiscore_getbossrank(varp_1354) + 1);
-					$string0 = append($string0, "<br>Hard: <~tostring_spacer(~max(0, hiscore_getbosskills(varp_1354)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
-					$int7 = calc(hiscore_getbossrank(varp_1533) + 1);
-					$string0 = append($string0, "<br>Elite: <~tostring_spacer(~max(0, hiscore_getbosskills(varp_1533)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
-					$int7 = calc(hiscore_getbossrank(varp_1534) + 1);
-					$string0 = append($string0, "<br>Master: <~tostring_spacer(~max(0, hiscore_getbosskills(varp_1534)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$int7 = calc(hiscore_getbossrank(var2201) + 1);
+					$string0 = append($string0, "<br>Beginner: <~tostring_spacer(~max(0, hiscore_getbosskills(var2201)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$int7 = calc(hiscore_getbossrank(var1111) + 1);
+					$string0 = append($string0, "<br>Easy: <~tostring_spacer(~max(0, hiscore_getbosskills(var1111)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$int7 = calc(hiscore_getbossrank(var1112) + 1);
+					$string0 = append($string0, "<br>Medium: <~tostring_spacer(~max(0, hiscore_getbosskills(var1112)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$int7 = calc(hiscore_getbossrank(var1354) + 1);
+					$string0 = append($string0, "<br>Hard: <~tostring_spacer(~max(0, hiscore_getbosskills(var1354)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$int7 = calc(hiscore_getbossrank(var1533) + 1);
+					$string0 = append($string0, "<br>Elite: <~tostring_spacer(~max(0, hiscore_getbosskills(var1533)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$int7 = calc(hiscore_getbossrank(var1534) + 1);
+					$string0 = append($string0, "<br>Master: <~tostring_spacer(~max(0, hiscore_getbosskills(var1534)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
 				} else {
 					$string0 = "<db_getfield($dbrow2, dbtable_80:1, 0)><br>Rank: Unranked";
 				}
