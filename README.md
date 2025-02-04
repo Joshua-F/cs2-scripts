@@ -1,3 +1,5 @@
+# This repo has been archived in favor of [Joshua-F/osrs-dumps](https://github.com/Joshua-F/osrs-dumps).
+
 [![Discord](https://img.shields.io/discord/384870460640329728.svg?logo=discord)](https://discord.gg/G2kxrnU)
 
 [**0**](scripts/[clientscript,tt_rewards_init].cs2) `[clientscript,tt_rewards_init]`  
